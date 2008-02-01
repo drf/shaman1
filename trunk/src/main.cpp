@@ -23,7 +23,7 @@ int main(int argc, char **argv)
 	
 	mainwin.show();
 	
-	//mainwin.populatePackagesView(aHandler->searchPackages(NULL,NULL,0));
+	mainwin.populatePackagesView();
 	mainwin.populateRepoColumn();
 	
 	return app.exec();

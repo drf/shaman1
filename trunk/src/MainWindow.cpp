@@ -34,7 +34,7 @@ bool MainWindow::removePackagesView()
 	return true;
 }
 
-bool MainWindow::populatePackagesView(alpm_list_t *pkgs)
+bool MainWindow::populatePackagesView()
 {
 	QWidget *pbarWG = new QWidget();
 	QVBoxLayout *layout = new QVBoxLayout;
@@ -45,10 +45,7 @@ bool MainWindow::populatePackagesView(alpm_list_t *pkgs)
 	
 	label->setFrameStyle(QFrame::Panel | QFrame::Sunken);
 	label->setText(QString("Loading View, please wait..."));
-	label->setIndent(10);
-	
-	pbar->reset();
-	pbar->setRange(0, alpm_list_count(pkgs));
+	label->setIndent(10);	
 	
 	layout->addWidget(label);
 	layout->addWidget(pbar);
@@ -57,66 +54,44 @@ bool MainWindow::populatePackagesView(alpm_list_t *pkgs)
 	
 	pbarWG->show();
 	label->show();
-
+	
 	removePackagesView();
-	
-	currentpkgs = pkgs;
-	
-	currentpkgs = alpm_list_first(currentpkgs);
 	
 	databases = aHandle->getAvailableRepos();
 	
-	while(currentpkgs != NULL)
-	{
-		pmpkg_t *pkg = (pmpkg_t *)alpm_list_getdata(currentpkgs);
-		QTreeWidgetItem *item = new QTreeWidgetItem(pkgsViewWG);
-		alpm_list_t *strings;
-		
-		item->setText(2, alpm_pkg_get_name(pkg));
-		item->setText(3, alpm_pkg_get_version(pkg));
-		item->setText(4, alpm_pkg_get_desc(pkg));
-		
-		databases = alpm_list_first(databases);
-		
-		while(databases != NULL)
-		{
-			pmdb_t *dbcrnt = (pmdb_t *)alpm_list_getdata(databases);
-			
-			strings = strsplit(alpm_pkg_get_url(pkg), '/');
-			
-			while(strings != NULL)
-			{
-				if(!strcmp((char *)alpm_list_getdata(strings), alpm_db_get_name(dbcrnt)))
-				{
-					item->setText(5, alpm_db_get_name(dbcrnt));
-					found = 1;
-					break;
-				}
-				strings = alpm_list_next(strings);
-			}
-			
-			if(found == 1)
-			{
-				found = 0;
-				break;
-			}
-			
-			databases = alpm_list_next(databases);
-		}
-		
-		databases = alpm_list_first(databases);
-				
-		//pkgsViewWG->addTopLevelItem(item);
-		
-		//printf("%s", alpm_pkg_get_name(pkg));
-		
-		currentpkgs = alpm_list_next(currentpkgs);
-		
-		pbar->setValue( count );
-		
-		count++;
-	}
+	databases = alpm_list_first(databases);
 	
+	while(databases != NULL)
+	{
+		pmdb_t *dbcrnt = (pmdb_t *)alpm_list_getdata(databases);
+	
+		currentpkgs = alpm_db_getpkgcache(dbcrnt);
+		pbar->setRange(0, alpm_list_count(currentpkgs));
+		pbar->reset();
+		count = 0;
+		
+		while(currentpkgs != NULL)
+		{
+			pmpkg_t *pkg = (pmpkg_t *)alpm_list_getdata(currentpkgs);
+			QTreeWidgetItem *item = new QTreeWidgetItem(pkgsViewWG);
+						
+			item->setText(2, alpm_pkg_get_name(pkg));
+			item->setText(3, alpm_pkg_get_version(pkg));
+			item->setText(4, alpm_pkg_get_desc(pkg));
+			item->setText(5, alpm_db_get_name(dbcrnt));
+			
+			currentpkgs = alpm_list_next(currentpkgs);
+			
+			pbar->setValue( count );
+							
+			count++;
+		}
+	
+		databases = alpm_list_next(databases);
+	}
+		
+	databases = alpm_list_first(databases);
+				
 	pbarWG->close();
 	
 	delete(layout);
@@ -158,14 +133,49 @@ bool MainWindow::populateRepoColumn()
 	return true;
 }
 
+void MainWindow::refinePkgView(char *repo, char *searches)
+{
+	int index = 0;
+	QTreeWidgetItem *itm;
+	
+	itm = pkgsViewWG->topLevelItem(index);
+	
+	while(itm != NULL)
+	{
+		int set = 0;
+		
+		if(repo != NULL)
+		{
+			set = 1;
+			if(!strcmp(repo, itm->text(5).toAscii().data()))
+				itm->setHidden(false);
+			else
+				itm->setHidden(true);
+		}
+		if(searches != NULL)
+		{
+			if(set != 1 || itm->isHidden())
+			{
+				itm->setHidden(false);
+			}
+			set = 1;
+		}
+		if(!set)
+			itm->setHidden(false);
+		
+		index++;
+		itm = pkgsViewWG->topLevelItem(index);
+	}
+}
+
 void MainWindow::changePackagesView(QListWidgetItem *itm)
 {
 	QString data = itm->text();
 	
 	if(!data.compare("All Repositories"))
-		populatePackagesView(aHandle->searchPackages(NULL,NULL,0));
+		refinePkgView(NULL,NULL);
 	else	
-		populatePackagesView(aHandle->searchPackages(NULL,data.toAscii().data(),0));
+		refinePkgView(data.toAscii().data(),NULL);
 }
 
 void MainWindow::showPkgInfo(QTreeWidgetItem *itm)

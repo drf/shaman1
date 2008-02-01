@@ -19,9 +19,10 @@ public:
 	virtual ~MainWindow();
 	bool removePackagesView();
 	bool removeRepoColumn();
+	void refinePkgView(char *repo, char *searches);
 	
 public slots:
-	bool populatePackagesView(alpm_list_t *pkgs);
+	bool populatePackagesView();
 	void changePackagesView(QListWidgetItem *itm);
 	bool populateRepoColumn();
 	void showPkgInfo(QTreeWidgetItem*);
