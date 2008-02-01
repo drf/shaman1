@@ -100,8 +100,8 @@ bool MainWindow::populatePackagesView()
 	
 	pkgsViewWG->sortItems(2, Qt::AscendingOrder);
 	
-	connect(pkgsViewWG, SIGNAL(itemClicked(QTreeWidgetItem*, int)), this, 
-			SLOT(showPkgInfo(QTreeWidgetItem*)));
+	connect(pkgsViewWG, SIGNAL(itemSelectionChanged()), this, 
+			SLOT(showPkgInfo()));
 	
 	return true;
 }
@@ -178,14 +178,52 @@ void MainWindow::changePackagesView(QListWidgetItem *itm)
 		refinePkgView(data.toAscii().data(),NULL);
 }
 
-void MainWindow::showPkgInfo(QTreeWidgetItem *itm)
+void MainWindow::showPkgInfo()
 {
-	char *name = itm->text(2).toAscii().data();
+	QTreeWidgetItem *itm = pkgsViewWG->currentItem();
+	char *pkgname = itm->text(2).toAscii().data();
 	char *db = itm->text(5).toAscii().data();
+	QString description;
 	pmpkg_t *pkg;
+	alpm_list_t *databases;
+	pmdb_t *curdb = NULL;
 	
-	//pkg = alpm_db_get_pkg(db, name);
+	databases = aHandle->getAvailableRepos();
+		
+	databases = alpm_list_first(databases);
+	printf("%s:", db);
 	
+	while(databases != NULL)
+	{
+		if(!strcmp(db, alpm_db_get_name((pmdb_t *)alpm_list_getdata(databases))))
+		{
+			curdb = (pmdb_t *)alpm_list_getdata(databases);
+			break;
+		}
+		printf("%s,", alpm_db_get_name((pmdb_t *)alpm_list_getdata(databases)));
+		databases = alpm_list_next(databases);
+	}
+	
+	printf("%s\n", pkgname);
+	
+	pkg = alpm_db_get_pkg(curdb, pkgname);
+	
+	databases = alpm_list_first(databases);
+
+	printf("\n");
+	
+	description.append("<b>");
+	description.append(alpm_pkg_get_name(pkg));
+	description.append(" (");
+	description.append(alpm_pkg_get_version(pkg));
+	description.append(")</b><br><br>");
+	description.append(alpm_pkg_get_desc(pkg));
+			/*"Provides: %s<br>"
+			"Depends on: %s<br>"
+			"Conflicts with: %s<br>", alpm_pkg_get_name(pkg), alpm_pkg_get_version(pkg),
+			alpm_pkg_get_desc(pkg), provides, depends, conflicts);*/
+
+	pkgInfo->setHtml(description);
 	
 }
 

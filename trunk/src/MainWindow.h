@@ -25,7 +25,7 @@ public slots:
 	bool populatePackagesView();
 	void changePackagesView(QListWidgetItem *itm);
 	bool populateRepoColumn();
-	void showPkgInfo(QTreeWidgetItem*);
+	void showPkgInfo();
 	
 private:
 	alpm_list_t *currentpkgs;

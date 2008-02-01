@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'MainWindow.ui'
 **
-** Created: Fri Feb 1 12:20:02 2008
+** Created: Fri Feb 1 15:58:28 2008
 **      by: Qt User Interface Compiler version 4.3.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -61,7 +61,7 @@ public:
     QListWidget *repoList;
     QTabWidget *PkgInfos;
     QWidget *tab;
-    QTextEdit *textEdit;
+    QTextEdit *pkgInfo;
     QWidget *tab_2;
     QMenuBar *menubar;
     QMenu *menuFile;
@@ -150,14 +150,14 @@ public:
     PkgInfos->setGeometry(QRect(170, 280, 611, 171));
     tab = new QWidget();
     tab->setObjectName(QString::fromUtf8("tab"));
-    textEdit = new QTextEdit(tab);
-    textEdit->setObjectName(QString::fromUtf8("textEdit"));
-    textEdit->setEnabled(true);
-    textEdit->setGeometry(QRect(0, 0, 601, 131));
-    textEdit->setAcceptDrops(false);
-    textEdit->setUndoRedoEnabled(false);
-    textEdit->setReadOnly(true);
-    textEdit->setAcceptRichText(false);
+    pkgInfo = new QTextEdit(tab);
+    pkgInfo->setObjectName(QString::fromUtf8("pkgInfo"));
+    pkgInfo->setEnabled(true);
+    pkgInfo->setGeometry(QRect(0, 0, 601, 131));
+    pkgInfo->setAcceptDrops(false);
+    pkgInfo->setUndoRedoEnabled(false);
+    pkgInfo->setReadOnly(true);
+    pkgInfo->setAcceptRichText(false);
     PkgInfos->addTab(tab, QString());
     tab_2 = new QWidget();
     tab_2->setObjectName(QString::fromUtf8("tab_2"));
@@ -266,7 +266,7 @@ public:
     pkgsViewWG->headerItem()->setText(3, QApplication::translate("MainWindow", "Version", 0, QApplication::UnicodeUTF8));
     pkgsViewWG->headerItem()->setText(4, QApplication::translate("MainWindow", "Description", 0, QApplication::UnicodeUTF8));
     pkgsViewWG->headerItem()->setText(5, QApplication::translate("MainWindow", "Repo", 0, QApplication::UnicodeUTF8));
-    textEdit->setHtml(QApplication::translate("MainWindow", "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+    pkgInfo->setHtml(QApplication::translate("MainWindow", "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; font-weight:600;\">Welcome in qtPacman</span></p></body></html>", 0, QApplication::UnicodeUTF8));

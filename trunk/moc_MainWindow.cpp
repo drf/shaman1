@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'MainWindow.h'
 **
-** Created: Fri Feb 1 14:56:45 2008
+** Created: Fri Feb 1 16:24:03 2008
 **      by: The Qt Meta Object Compiler version 59 (Qt 4.3.3)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -38,7 +38,7 @@ static const uint qt_meta_data_MainWindow[] = {
 static const char qt_meta_stringdata_MainWindow[] = {
     "MainWindow\0\0bool\0populatePackagesView()\0"
     "itm\0changePackagesView(QListWidgetItem*)\0"
-    "populateRepoColumn()\0showPkgInfo(QTreeWidgetItem*)\0"
+    "populateRepoColumn()\0showPkgInfo()\0"
 };
 
 const QMetaObject MainWindow::staticMetaObject = {
@@ -71,7 +71,7 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 1: changePackagesView((*reinterpret_cast< QListWidgetItem*(*)>(_a[1]))); break;
         case 2: { bool _r = populateRepoColumn();
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = _r; }  break;
-        case 3: showPkgInfo((*reinterpret_cast< QTreeWidgetItem*(*)>(_a[1]))); break;
+        case 3: showPkgInfo(); break;
         }
         _id -= 4;
     }

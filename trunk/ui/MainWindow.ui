@@ -91,7 +91,7 @@
      <attribute name="title" >
       <string>Package Information</string>
      </attribute>
-     <widget class="QTextEdit" name="textEdit" >
+     <widget class="QTextEdit" name="pkgInfo" >
       <property name="enabled" >
        <bool>true</bool>
       </property>
