@@ -8,36 +8,39 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <time.h> /* time_t */
+#include <QtGui>
 
 #include "ConfigurationParser.h"
 
 using namespace std;
 
-alpm_list_t *ConfigurationParser::setrepeatingoption(const char *ptr)
+alpm_list_t *ConfigurationParser::setrepeatingoption(QString ptr)
 {
-	char *p = (char*)ptr;
-	char *q;
+	QStringList strlist;
 	alpm_list_t *list = NULL;
+	printf("here\n");
 
-	while((q = strchr(p, ' '))) {
-		*q = '\0';
-		list = alpm_list_add(list, p);
-		p = q;
-		p++;
+	strlist = ptr.split(" ", QString::SkipEmptyParts);
+	
+	for (int i = 0; i < strlist.size(); ++i)
+	{
+		printf("here\n");
+		char *dest = (char *)malloc(strlist.at(i).length()*sizeof(char));
+		strcpy(dest, strlist.at(i).toAscii().data());
+		
+		list = alpm_list_add(list, dest);
 	}
-	list = alpm_list_add(list, p);
+		
 	return list;
 }
 
-void ConfigurationParser::parsePacmanConfig(const char *file, const char *givensection,
-		char *givendb)
+void ConfigurationParser::parsePacmanConfig(QString file, QString givensection,
+		QString givendb)
 {
-	FILE *fp = NULL;
-	char line[PATH_MAX+1];
+	QFile fp(file);
+	QString line, db(NULL), section(NULL);
 	int linenum = 0;
-	char *ptr, *section = NULL;
-	char *db = NULL;
-	
+		
 	if(!pacData.loaded)
 	{
 		pacData.syncdbs = NULL;
@@ -46,37 +49,46 @@ void ConfigurationParser::parsePacmanConfig(const char *file, const char *givens
 	
 	pacData.loaded = true;
 
-	fp = fopen(file, "r");
-	if(fp == NULL)
+	if(!fp.open(QIODevice::ReadOnly | QIODevice::Text))
 	{
 		pacData.loaded = false;
 		return;
 	}
+	
+	QTextStream in(&fp);
 
 	/* if we are passed a section, use it as our starting point */
 	if(givensection != NULL) 
-		section = strdup(givensection);	
+		section.operator=(givensection);	
 		
 	/* if we are passed a db, use it as our starting point */
 	if(givendb != NULL)
-		db = givendb;
+		db.operator=(givendb);
 
-	while(fgets(line, PATH_MAX, fp)) 
+	while(!in.atEnd()) 
 	{
+		line = in.readLine();
 		linenum++;
-		strtrim(line);
+		//strtrim(line);
+		while(line.contains('\n'))
+			line.remove(line.indexOf('\n'), 1);
 
 		/* ignore whole line and end of line comments */
-		if(strlen(line) == 0 || line[0] == '#') 
+		if(line.length() == 0 || line.startsWith('#')) 
 			continue;
 
-		if((ptr = strchr(line, '#'))) 
-			*ptr = '\0';
+		if(line.indexOf("#") != -1) 
+			line.truncate(line.indexOf("#"));
 
-		if(line[0] == '[' && line[strlen(line)-1] == ']') 
+		if(line.startsWith('[') && line.endsWith(']')) 
 		{
 			/* new config section, skip the '[' */
-			ptr = line;
+			line.remove(0,1);
+			line.remove(line.length()-1, line.length());
+			section.operator=(line);
+			while(section.contains(' '))
+				section.remove(section.indexOf(' '), 1);
+			/*ptr = line;
 			ptr++;
 			if(section)
 				free(section);
@@ -87,114 +99,107 @@ void ConfigurationParser::parsePacmanConfig(const char *file, const char *givens
 			{
 				pacData.loaded = false;
 				return;
-			}
+			}*/
 			
 			/* if we are not looking at the options section, register a db and also
 			 * ensure we have set all of our library paths as the library is too stupid
 			 * at the moment to do lazy opening of the databases */
 			
-			if(strcmp(section, "options") != 0)
+			if(section.operator!=("options"))
 			{
-				char *tmp = (char *)malloc(strlen(section) * sizeof(char));
-				
-				strcpy(tmp, section);
-				
-				pacData.syncdbs = alpm_list_add(pacData.syncdbs, tmp);
-				
-				db = (char *)malloc(strlen(section) * sizeof(char));
-				
-				strcpy(db,section);
+				char *dest = (char *)malloc(section.length()*sizeof(char));
+				strcpy(dest, section.toAscii().data());
+				pacData.syncdbs = alpm_list_add(pacData.syncdbs, dest);
+								
+				db.operator=(line);
 			}
 		}
 		else 
 		{
 			/* directive */
-			char *key, *upperkey;
+			QString key;
+			QStringList templst;
 			/* strsep modifies the 'line' string: 'key \0 ptr' */
-			key = line;
-			ptr = line;
-			strsep(&ptr, "=");
-			strtrim(key);
-			strtrim(ptr);
+			templst = line.split("=");
+			if(templst.size() != 2)
+			{
+				pacData.loaded = false;
+				
+				return;
+			}
+			key.operator=(templst.at(0));
+			line.operator=(templst.at(1));
 
 			if(key == NULL)
 			{
 				pacData.loaded = false;
 				return;
 			}
-			/* For each directive, compare to the uppercase and camelcase string.
-			 * This prevents issues with certain locales where characters don't
-			 * follow the toupper() rules we may expect, e.g. tr_TR where i != I.
-			 */
-			upperkey = strtoupper(strdup(key));
+			
 			if(section == NULL) 
 			{
 				pacData.loaded = false;
 				return;
 			}
+			
+			while(key.contains(' '))
+				key.remove(key.indexOf(' '), 1);
 
-			if(ptr == NULL && strcmp(section, "options") == 0) 
+			if(line == NULL && section.compare("options", Qt::CaseInsensitive) == 0) 
 			{
 				/* directives without settings, all in [options] */
-				if(strcmp(key, "NoPassiveFTP") == 0 || strcmp(upperkey, "NOPASSIVEFTP") == 0)
+				if(key.compare("NoPassiveFTP", Qt::CaseInsensitive) == 0)
 					pacData.noPassiveFTP = 1;
-				else if(strcmp(key, "UseSyslog") == 0 || strcmp(upperkey, "USESYSLOG") == 0)
+				else if(key.compare("UseSyslog", Qt::CaseInsensitive) == 0)
 					pacData.useSysLog = 1;
-				else if(strcmp(key, "UseDelta") == 0 || strcmp(upperkey, "USEDELTA") == 0)
+				else if(key.compare("UseDelta", Qt::CaseInsensitive) == 0)
 					pacData.useDelta = 1; 
 				
-			} 
+			}
 			else
 			{
 				/* directives with settings */
-				if(strcmp(key, "Include") == 0 || strcmp(upperkey, "INCLUDE") == 0)
+				if(key.compare("Include", Qt::CaseInsensitive) == 0)
 				{
-					parsePacmanConfig(ptr, section, db);
+					while(line.contains(' '))
+						line.remove(line.indexOf(' '), 1);
+					parsePacmanConfig(line, section, db);
 					if(!pacData.loaded)
 					{
 						pacData.loaded = false;
+						
 						return;
 					}
 				}
 					/* Ignore include failures... assume non-critical */
-				else if(strcmp(section, "options") == 0)
+				else if(section.compare("options", Qt::CaseInsensitive) == 0)
 				{
-					if(strcmp(key, "NoUpgrade") == 0
-							|| strcmp(upperkey, "NOUPGRADE") == 0)
-						pacData.NoUpgrade = setrepeatingoption(ptr);
-					else if(strcmp(key, "NoExtract") == 0
-							|| strcmp(upperkey, "NOEXTRACT") == 0)
-						pacData.NoExtract = setrepeatingoption(ptr);
-					else if(strcmp(key, "IgnorePkg") == 0
-							|| strcmp(upperkey, "IGNOREPKG") == 0)
-						pacData.IgnorePkg = setrepeatingoption(ptr);
-					else if(strcmp(key, "IgnoreGroup") == 0
-							|| strcmp(upperkey, "IGNOREGROUP") == 0)
-						pacData.IgnoreGrp = setrepeatingoption(ptr);
-					else if(strcmp(key, "HoldPkg") == 0
-							|| strcmp(upperkey, "HOLDPKG") == 0)
-						pacData.HoldPkg = setrepeatingoption(ptr);
-					else if (strcmp(key, "XferCommand") == 0 || strcmp(upperkey, "XFERCOMMAND") == 0)
+					if(key.compare("NoUpgrade", Qt::CaseInsensitive) == 0)
+						pacData.NoUpgrade = setrepeatingoption(line);
+					else if(key.compare("NoExtract", Qt::CaseInsensitive) == 0)
+						pacData.NoExtract = setrepeatingoption(line);
+					else if(key.compare("IgnorePkg", Qt::CaseInsensitive) == 0)
+						pacData.IgnorePkg = setrepeatingoption(line);
+					else if(key.compare("IgnoreGroup", Qt::CaseInsensitive) == 0)
+						pacData.IgnoreGrp = setrepeatingoption(line);
+					else if(key.compare("HoldPkg", Qt::CaseInsensitive) == 0)
+						pacData.HoldPkg = setrepeatingoption(line);
+					else if (key.compare("XferCommand", Qt::CaseInsensitive) == 0)
 					{
-						pacData.xferCommand = (char *)malloc(strlen(ptr) * sizeof(char));
-						
-						strcpy(pacData.xferCommand, ptr);	
+						pacData.xferCommand = line.toAscii().data();	
 					}
 											
 				} 
-				else if(strcmp(key, "Server") == 0 || strcmp(upperkey, "SERVER") == 0) 
+				else if(key.compare("Server", Qt::CaseInsensitive) == 0) 
 				{
 					/* let's attempt a replacement for the current repo */
-					char *server = strreplace(ptr, "$repo", section);
-					char *temp;
-					
-					temp = (char *)malloc(strlen(server) * sizeof(char));
-					
-					strcpy(temp, server);
-					
-					pacData.serverAssoc = alpm_list_add(pacData.serverAssoc, temp);
-					
-					free(server);
+					while(line.contains(' '))
+						line.remove(line.indexOf(' '), 1);
+					line.replace("$repo", section);
+					char *dest = (char *)malloc(line.length()*sizeof(char));
+					strcpy(dest, line.toAscii().data());
+										
+					pacData.serverAssoc = alpm_list_add(pacData.serverAssoc, dest);
 				}
 				else 
 				{
@@ -202,14 +207,9 @@ void ConfigurationParser::parsePacmanConfig(const char *file, const char *givens
 					return;
 				}
 			}
-			free(upperkey);
 		}
 	}
-	fclose(fp);
-	if(section)
-		free(section);
-	if(db)
-		free(db);
+	fp.close();
 }
 
 void ConfigurationParser::parsePaKmodConf()

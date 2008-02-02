@@ -45,11 +45,11 @@ public:
 	PaKmodConf getPaKmodConf(bool forcereload);
 	
 protected:
-	alpm_list_t *setrepeatingoption(const char *ptr);
+	alpm_list_t *setrepeatingoption(QString ptr);
 	
 private:
-	void parsePacmanConfig(const char *file, const char *givensection,
-			char *givendb);
+	void parsePacmanConfig(QString file, QString givensection,
+			QString givendb);
 	void parsePaKmodConf();
 	
 private:
