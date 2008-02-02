@@ -3,11 +3,13 @@
 
 #include <iostream>
 #include <string.h>
+#include <QtGui>
 
 #include <alpm_list.h>
 
 class StringUtils
 {
+	
 public:
 	StringUtils();
 	virtual ~StringUtils();

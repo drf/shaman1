@@ -5,12 +5,13 @@
 #include <alpm_list.h>
 #include <iostream>
 #include <string>
+#include <QtGui>
 
 #include "ConfigurationParser.h"
 
 using namespace std;
 
-class AlpmHandler : private ConfigurationParser
+class AlpmHandler : public QObject, private ConfigurationParser
 {
 	/* There goes our main class, that is aimed to... pacman interaction.
 	 * Well, here we are simplyfing things: we don't need all that crap that
@@ -22,6 +23,8 @@ class AlpmHandler : private ConfigurationParser
 	 * files at a glance, without the need of re-parsing it every time, as
 	 * it is done only once, optimizing our flow.
 	 */
+	
+	Q_OBJECT
 	
 public:
 	AlpmHandler(bool init = false);
@@ -61,6 +64,12 @@ private:
 	bool configure();
 	bool parsePacmanConf();
 	bool setUpAlpmSettings();
+	
+signals:
+	void streamDbUpdatingStatus(char *repo, int action);
+	void dbUpdated();
+	void dbQty(int db);
+	void dbUpdatePerformed();
 	
 private:
 	pmdb_t *db_local;

@@ -9,7 +9,7 @@
 
 #define UPDATE_SPEED_SEC 0.2f
 
-CallBacks *CbackReference = new CallBacks();
+CallBacks CbackReference;
 
 CallBacks::CallBacks()
 {
@@ -100,23 +100,23 @@ void CallBacks::cb_log(pmloglevel_t level, char *fmt, va_list args)
 void cb_dl_progress(const char *filename, int file_xfered, int file_total,
 		int list_xfered, int list_total)
 {
-	CbackReference->cb_dl_progress(filename, file_xfered, file_total,
+	CbackReference.cb_dl_progress(filename, file_xfered, file_total,
 			list_xfered, list_total);
 }
 
 void cb_trans_progress(pmtransprog_t event, const char *pkgname, int percent,
                    int howmany, int remain)
 {
-	CbackReference->cb_trans_progress(event,pkgname,percent,howmany,remain);
+	CbackReference.cb_trans_progress(event,pkgname,percent,howmany,remain);
 }
 
 void cb_trans_conv(pmtransconv_t event, void *data1, void *data2,
                    void *data3, int *response)
 {
-	CbackReference->cb_trans_conv(event,data1,data2,data3,response);
+	CbackReference.cb_trans_conv(event,data1,data2,data3,response);
 }
 
 void cb_trans_evt(pmtransevt_t event, void *data1, void *data2)
 {
-	CbackReference->cb_trans_evt(event,data1,data2);
+	CbackReference.cb_trans_evt(event,data1,data2);
 }

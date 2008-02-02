@@ -6,14 +6,20 @@
 
 #include "MainWindow.h"
 #include "callbacks.h"
+#include "UpdateDbDialog.h"
+
+extern CallBacks CbackReference;
 
 
-MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent) : QMainWindow(parent)
+MainWindow::MainWindow(AlpmHandler *handler, QApplication *appl, QMainWindow *parent) : QMainWindow(parent)
 {
 	setupUi(this);
 	currentpkgs = NULL;
 	
 	aHandle = handler;
+	app = appl;
+	
+	connect(actionUpdate_Database, SIGNAL(triggered()), this, SLOT(doDbUpdate()));
 	
 	return;
 	
@@ -34,26 +40,27 @@ bool MainWindow::removePackagesView()
 	return true;
 }
 
+void MainWindow::doUpdView()
+{
+	
+}
+
 bool MainWindow::populatePackagesView()
 {
-	QWidget *pbarWG = new QWidget();
+	QDialog *pbarWG = new QDialog(this);
 	QVBoxLayout *layout = new QVBoxLayout;
-	QLabel *label = new QLabel(pbarWG);
 	QProgressBar *pbar = new QProgressBar(pbarWG);
 	alpm_list_t *databases;
 	int found = 0, count = 0;
 	
-	label->setFrameStyle(QFrame::Panel | QFrame::Sunken);
-	label->setText(QString("Loading View, please wait..."));
-	label->setIndent(10);	
+	pbarWG->show();
 	
-	layout->addWidget(label);
+	layout->addWidget(new QLabel("Loading View..."));
 	layout->addWidget(pbar);
-	
+		
 	pbarWG->setLayout(layout);
 	
-	pbarWG->show();
-	label->show();
+	disconnect(pkgsViewWG, SIGNAL(itemSelectionChanged()), 0, 0);
 	
 	removePackagesView();
 	
@@ -95,7 +102,6 @@ bool MainWindow::populatePackagesView()
 	pbarWG->close();
 	
 	delete(layout);
-	delete(label);
 	delete(pbar);
 	
 	pkgsViewWG->sortItems(2, Qt::AscendingOrder);
@@ -180,9 +186,8 @@ void MainWindow::changePackagesView(QListWidgetItem *itm)
 
 void MainWindow::showPkgInfo()
 {
-	QTreeWidgetItem *itm = pkgsViewWG->currentItem();
-	char *pkgname = itm->text(2).toAscii().data();
-	char *db = itm->text(5).toAscii().data();
+	char *pkgname = pkgsViewWG->currentItem()->text(2).toAscii().data();
+	char *db = pkgsViewWG->currentItem()->text(5).toAscii().data();
 	QString description;
 	pmpkg_t *pkg;
 	alpm_list_t *databases;
@@ -192,6 +197,7 @@ void MainWindow::showPkgInfo()
 		
 	databases = alpm_list_first(databases);
 	printf("%s:", db);
+	printf("%s\n", pkgname);
 	
 	while(databases != NULL)
 	{
@@ -218,12 +224,44 @@ void MainWindow::showPkgInfo()
 	description.append(alpm_pkg_get_version(pkg));
 	description.append(")</b><br><br>");
 	description.append(alpm_pkg_get_desc(pkg));
-			/*"Provides: %s<br>"
-			"Depends on: %s<br>"
-			"Conflicts with: %s<br>", alpm_pkg_get_name(pkg), alpm_pkg_get_version(pkg),
-			alpm_pkg_get_desc(pkg), provides, depends, conflicts);*/
 
 	pkgInfo->setHtml(description);
 	
+}
+
+void MainWindow::doDbUpdate()
+{
+	
+	dbdialog = new UpdateDbDialog(aHandle);
+	
+	dbdialog->show();
+	
+	connect(this, SIGNAL(updateDB()), dbdialog, SLOT(doAction()));
+	
+	app->processEvents();
+	
+	emit updateDB();
+	
+	connect(dbdialog, SIGNAL(killMe()), this, SLOT(finishDbUpdate()));
+	
+	//dbdialog->doAction();
+	
+}
+
+void MainWindow::finishDbUpdate()
+{
+	disconnect(dbdialog, 0,0,0);
+	
+	delete(dbdialog);
+}
+
+UpPkgViewThread::UpPkgViewThread(MainWindow *mW)
+{
+	mainWin = mW;
+}
+
+void UpPkgViewThread::run()
+{
+	mainWin->doUpdView();
 }
 

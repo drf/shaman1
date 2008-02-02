@@ -13,11 +13,14 @@ HEADERS += src/AlpmHandler.h \
            src/callbacks.h \
            src/ConfigurationParser.h \
            src/MainWindow.h \
-           src/StringUtils.h
-FORMS += ui/MainWindow.ui
+           src/StringUtils.h \
+           src/UpdateDbDialog.h
+FORMS += ui/MainWindow.ui \
+	 ui/dbUpdateDialog.ui
 SOURCES += src/AlpmHandler.cpp \
            src/callbacks.cpp \
            src/ConfigurationParser.cpp \
            src/main.cpp \
            src/MainWindow.cpp \
-           src/StringUtils.cpp
+           src/StringUtils.cpp \
+           src/UpdateDbDialog.cpp

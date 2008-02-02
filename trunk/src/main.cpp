@@ -19,11 +19,11 @@ int main(int argc, char **argv)
 		return 1;
 	}
 	
-	MainWindow mainwin(aHandler);
+	MainWindow mainwin(aHandler, &app);
 	
 	mainwin.show();
 	
-	mainwin.populatePackagesView();
+	//mainwin.populatePackagesView();
 	mainwin.populateRepoColumn();
 	
 	return app.exec();

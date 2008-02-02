@@ -1,8 +1,6 @@
 #ifndef CALLBACKS_H_
 #define CALLBACKS_H_
 
-#endif /*CALLBACKS_H_*/
-
 #include <iostream>
 #include <QtGui>
 #include <alpm.h>
@@ -51,3 +49,6 @@ void cb_trans_progress(pmtransprog_t event, const char *pkgname, int percent,
 void cb_dl_progress(const char *filename, int file_xfered, int file_total,
 		int list_xfered, int list_total);
 void cb_log(pmloglevel_t level, char *fmt, va_list args);
+
+
+#endif /*CALLBACKS_H_*/

@@ -6,6 +6,7 @@
 #include <alpm.h>
 #include <alpm_list.h>
 #include <string.h>
+#include <QtGui>
 
 #include "StringUtils.h"
 
@@ -35,6 +36,7 @@ typedef struct PkCnf PaKmodConf;
 
 class ConfigurationParser : private StringUtils
 {
+	
 public:
 	ConfigurationParser();
 	virtual ~ConfigurationParser();

@@ -47,6 +47,8 @@ bool AlpmHandler::initTransaction(pmtranstype_t type, pmtransflag_t flags)
 	if(isTransaction())
 		return false;
 	
+	printf("Well");
+	
 	if(alpm_trans_init(type, flags, cb_trans_evt, cb_trans_conv,
 			cb_trans_progress) == -1)
 		return false;
@@ -109,6 +111,8 @@ bool AlpmHandler::updateDatabase()
 	alpm_list_t *syncdbs;
 	
 	syncdbs = alpm_list_first(sync_databases);
+		
+	emit dbQty(alpm_list_count(syncdbs));
 	
 	if(!initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_ALLDEPS))
 	{
@@ -119,26 +123,24 @@ bool AlpmHandler::updateDatabase()
 	while(syncdbs != NULL)
 	{
 		pmdb_t *dbcrnt = (pmdb_t *)alpm_list_getdata(syncdbs);
-		
-		printf("Aggiorno %s... ", alpm_db_get_name(dbcrnt));
+				
+		emit streamDbUpdatingStatus((char *)alpm_db_get_name(dbcrnt), 0);
 		fflush(stdout);
 		r = alpm_db_update(0, dbcrnt);
 		if(r == 1)
-			printf("Esattamente come prima");
+			emit streamDbUpdatingStatus((char *)alpm_db_get_name(dbcrnt), 3);
 		else if(r < 0)
 			printf("Fallito Miseramente : %s", alpm_strerrorlast());
 		else
 		{
-			updated = true;
-			printf("Aggiornato, stronzi!!");
+			emit dbUpdated();
+			emit streamDbUpdatingStatus((char *)alpm_db_get_name(dbcrnt), 3);
 		}
 		
-		printf("\n");
+		emit dbUpdatePerformed();
+		
 		syncdbs = alpm_list_next(syncdbs);
-		printf("blbl\n");
 	}
-	
-	printf("aaaa\n");
 	
 	if(!releaseTransaction())
 		printf("azzo");
