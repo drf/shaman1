@@ -1,8 +1,11 @@
 #include "UpdateDbDialog.h"
 #include <AlpmHandler.h>
+#include <sstream>
 #include "callbacks.h"
 
 extern CallBacks CbackReference;
+
+using namespace std;
 
 UpdateDbDialog::UpdateDbDialog(AlpmHandler *hnd, QDialog *parent)
 {	
@@ -92,10 +95,11 @@ void UpdateDbDialog::updateTotalProg()
 void UpdateDbDialog::updateDlBar(char *c, int bytedone, int bytetotal, int speed,
 		int i, int j, int k)
 {
-	QString toInsert;
+	QString toInsert, spd;
 	
+	spd.setNum(speed);
 	toInsert.append("%p% at ");
-	//toInsert.append(speed);
+	toInsert.append(spd);
 	toInsert.append(" KB/s");
 	dlProgress->setRange(0, bytetotal);
 	dlProgress->setFormat(toInsert);
