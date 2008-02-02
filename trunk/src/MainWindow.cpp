@@ -17,16 +17,16 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
-
-#include <iostream>
-#include <QtGui>
-#include <QString>
-#include <QListWidgetItem>
-#include <alpm.h>
-
 #include "MainWindow.h"
 #include "callbacks.h"
 #include "UpdateDbDialog.h"
+
+#include <iostream>
+#include <QMenu>
+#include <QString>
+#include <QListWidgetItem>
+#include <QDebug>
+#include <alpm.h>
 
 extern CallBacks CbackReference;
 
@@ -37,8 +37,10 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
    aHandle(handler)
 {
 	setupUi(this);
+        pkgsViewWG->setContextMenuPolicy(Qt::CustomContextMenu);
 	
 	connect(actionUpdate_Database, SIGNAL(triggered()), this, SLOT(doDbUpdate()));
+        connect(pkgsViewWG, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showContextMenu()));
 	
 	return;
 	
@@ -266,6 +268,35 @@ void MainWindow::finishDbUpdate()
 	disconnect(dbdialog, 0,0,0);
 	
 	dbdialog->deleteLater();
+}
+
+void MainWindow::showContextMenu()
+{
+	qDebug() << "Let's show a context menu";
+	QMenu *menu = new QMenu(this);
+        //FIXME: Disable actions if they're not needed f.e. installAction on installed packages
+	QAction *installAction = menu->addAction(tr("Install package"));
+        connect(installAction, SIGNAL(triggered()), SLOT(installPackage()));
+        QAction *removeAction = menu->addAction(tr("Remove package"));
+        connect(removeAction, SIGNAL(triggered()), SLOT(removePackage()));
+        QAction *upgradeAction = menu->addAction(tr("Upgrade package"));
+        connect(upgradeAction, SIGNAL(triggered()), SLOT(upgradePackage()));
+        menu->popup(QCursor::pos());
+}
+
+void MainWindow::installPackage()
+{
+	qDebug();
+}
+
+void MainWindow::removePackage()
+{
+	qDebug();
+}
+
+void MainWindow::upgradePackage()
+{
+	qDebug();
 }
 
 UpPkgViewThread::UpPkgViewThread(MainWindow *mW)

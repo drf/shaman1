@@ -43,10 +43,6 @@ public:
 	void refinePkgView(char *repo, char *searches);
 	void doUpdView();
 	
-private:
-	void loadDbUpdateDialog();
-	void removeDbUpdateDialog();
-	
 public slots:
 	bool populatePackagesView();
 	void changePackagesView(QListWidgetItem *itm);
@@ -54,6 +50,17 @@ public slots:
 	void showPkgInfo();
 	void doDbUpdate();
 	void finishDbUpdate();
+
+private slots:
+	void showContextMenu();
+        void installPackage();
+        void removePackage();
+        void upgradePackage();
+
+	
+private:
+	void loadDbUpdateDialog();
+	void removeDbUpdateDialog();
 	
 private:
 	alpm_list_t *currentpkgs;
