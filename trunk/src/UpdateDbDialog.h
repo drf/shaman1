@@ -22,7 +22,7 @@ class UpdateDbDialog : public QDialog, private Ui::dbUpdateDialog
 	Q_OBJECT
 	
 public:
-	UpdateDbDialog(AlpmHandler *hnd, QDialog *parent = 0);
+	UpdateDbDialog(AlpmHandler *hnd, QWidget *parent = 0);
 	virtual ~UpdateDbDialog();
 	
 	bool dbHasBeenUpdated();

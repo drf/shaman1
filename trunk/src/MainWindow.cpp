@@ -51,7 +51,7 @@ bool MainWindow::populatePackagesView()
 	QVBoxLayout *layout = new QVBoxLayout;
 	QProgressBar *pbar = new QProgressBar(pbarWG);
 	alpm_list_t *databases;
-	int found = 0, count = 0;
+	int count = 0;
 	
 	pbarWG->show();
 	
@@ -232,7 +232,7 @@ void MainWindow::showPkgInfo()
 void MainWindow::doDbUpdate()
 {
 	
-	dbdialog = new UpdateDbDialog(aHandle);
+	dbdialog = new UpdateDbDialog(aHandle, this);
 	
 	dbdialog->show();
 	

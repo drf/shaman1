@@ -7,7 +7,7 @@ extern CallBacks CbackReference;
 
 using namespace std;
 
-UpdateDbDialog::UpdateDbDialog(AlpmHandler *hnd, QDialog *parent)
+UpdateDbDialog::UpdateDbDialog(AlpmHandler *hnd, QWidget *parent) : QDialog(parent)
 {	
 	setupUi(this);
 	

@@ -126,7 +126,7 @@ bool AlpmHandler::updateDatabase()
 				
 		emit streamDbUpdatingStatus((char *)alpm_db_get_name(dbcrnt), 0);
 		fflush(stdout);
-		r = alpm_db_update(1, dbcrnt);
+		r = alpm_db_update(0, dbcrnt);
 		if(r == 1)
 			emit streamDbUpdatingStatus((char *)alpm_db_get_name(dbcrnt), 3);
 		else if(r < 0)
