@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'UpdateDbDialog.h'
 **
-** Created: Sat Feb 2 13:15:01 2008
+** Created: Sat Feb 2 13:59:18 2008
 **      by: The Qt Meta Object Compiler version 59 (Qt 4.3.3)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -47,7 +47,7 @@ static const char qt_meta_stringdata_UpdateDbDialog[] = {
     "range\0setPBarRange(int)\0setUpdated()\0"
     "doAction()\0scopeEnded()\0"
     "c,bytedone,bytetotal,speed,i,j,k\0"
-    "updateDlBar(char*,int,int,float,int,int,float)\0"
+    "updateDlBar(char*,int,int,int,int,int,int)\0"
 };
 
 const QMetaObject UpdateDbDialog::staticMetaObject = {
@@ -82,7 +82,7 @@ int UpdateDbDialog::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 4: setUpdated(); break;
         case 5: doAction(); break;
         case 6: scopeEnded(); break;
-        case 7: updateDlBar((*reinterpret_cast< char*(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3])),(*reinterpret_cast< float(*)>(_a[4])),(*reinterpret_cast< int(*)>(_a[5])),(*reinterpret_cast< int(*)>(_a[6])),(*reinterpret_cast< float(*)>(_a[7]))); break;
+        case 7: updateDlBar((*reinterpret_cast< char*(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4])),(*reinterpret_cast< int(*)>(_a[5])),(*reinterpret_cast< int(*)>(_a[6])),(*reinterpret_cast< int(*)>(_a[7]))); break;
         }
         _id -= 8;
     }

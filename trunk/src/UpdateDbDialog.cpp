@@ -20,8 +20,8 @@ UpdateDbDialog::UpdateDbDialog(AlpmHandler *hnd, QDialog *parent)
 	connect(aHandle, SIGNAL(dbQty(int)), this, SLOT(setPBarRange(int)));
 	connect(aHandle, SIGNAL(dbUpdated()), this, SLOT(setUpdated()));
 	connect(aHandle, SIGNAL(dbUpdatePerformed()), this, SLOT(updateTotalProg()));
-	connect(&CbackReference, SIGNAL(streamTransDlProg(char*,int,int,float,int,int,float)), 
-			this, SLOT(updateDlBar(char*,int,int,float,int,int,float)));
+	connect(&CbackReference, SIGNAL(streamTransDlProg(char*,int,int,int,int,int,int)), 
+			this, SLOT(updateDlBar(char*,int,int,int,int,int,int)));
 }
 
 UpdateDbDialog::~UpdateDbDialog()
@@ -29,7 +29,7 @@ UpdateDbDialog::~UpdateDbDialog()
 	disconnect(aHandle, SIGNAL(streamDbUpdatingStatus(char*,int)), 0, 0);
 	disconnect(aHandle, SIGNAL(dbQty(int)), 0, 0);
 	disconnect(aHandle, SIGNAL(dbUpdated()), 0, 0);
-	disconnect(&CbackReference, SIGNAL(streamTransDlProg(char*,int,int,float,int,int,float)), 0, 0);
+	disconnect(&CbackReference, SIGNAL(streamTransDlProg(char*,int,int,int,int,int,int)), 0, 0);
 }
 
 void UpdateDbDialog::updateLabel(char *repo, int action)
@@ -89,13 +89,13 @@ void UpdateDbDialog::updateTotalProg()
 	totalPBar->setValue(actionDone);
 }
 
-void UpdateDbDialog::updateDlBar(char *c, int bytedone, int bytetotal, float speed,
-		int i, int j, float k)
+void UpdateDbDialog::updateDlBar(char *c, int bytedone, int bytetotal, int speed,
+		int i, int j, int k)
 {
 	QString toInsert;
 	
 	toInsert.append("%p% at ");
-	toInsert.append((int)speed);
+	//toInsert.append(speed);
 	toInsert.append(" KB/s");
 	dlProgress->setRange(0, bytetotal);
 	dlProgress->setFormat(toInsert);

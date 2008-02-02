@@ -35,8 +35,8 @@ private slots:
 	void setUpdated();
 	void doAction();
 	void scopeEnded();
-	void updateDlBar(char *c, int bytedone, int bytetotal, float speed,
-			int i, int j, float k);
+	void updateDlBar(char *c, int bytedone, int bytetotal, int speed,
+			int i, int j, int k);
 	
 signals:
 	void killMe();

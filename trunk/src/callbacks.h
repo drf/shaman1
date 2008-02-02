@@ -34,8 +34,8 @@ signals:
 		        void *data3);
 	void streamTransProgress(pmtransprog_t event, const char *pkgname, int percent,
 			int howmany, int remain);
-	void streamTransDlProg(char *filename, int file_x, int file_t, float spd_f,
-			int list_x, int list_t, float spd_l);
+	void streamTransDlProg(char *filename, int file_x, int file_t, int spd_f,
+			int list_x, int list_t, int spd_l);
 	
 private:
 	int answer;

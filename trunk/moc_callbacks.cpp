@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'callbacks.h'
 **
-** Created: Sat Feb 2 13:11:42 2008
+** Created: Sat Feb 2 13:59:15 2008
 **      by: The Qt Meta Object Compiler version 59 (Qt 4.3.3)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -43,7 +43,7 @@ static const char qt_meta_stringdata_CallBacks[] = {
     "event,pkgname,percent,howmany,remain\0"
     "streamTransProgress(pmtransprog_t,const char*,int,int,int)\0"
     "filename,file_x,file_t,spd_f,list_x,list_t,spd_l\0"
-    "streamTransDlProg(char*,int,int,float,int,int,float)\0"
+    "streamTransDlProg(char*,int,int,int,int,int,int)\0"
 };
 
 const QMetaObject CallBacks::staticMetaObject = {
@@ -74,7 +74,7 @@ int CallBacks::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 0: streamTransEvent((*reinterpret_cast< pmtransevt_t(*)>(_a[1])),(*reinterpret_cast< void*(*)>(_a[2])),(*reinterpret_cast< void*(*)>(_a[3]))); break;
         case 1: streamTransQuestion((*reinterpret_cast< pmtransconv_t(*)>(_a[1])),(*reinterpret_cast< void*(*)>(_a[2])),(*reinterpret_cast< void*(*)>(_a[3])),(*reinterpret_cast< void*(*)>(_a[4]))); break;
         case 2: streamTransProgress((*reinterpret_cast< pmtransprog_t(*)>(_a[1])),(*reinterpret_cast< const char*(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4])),(*reinterpret_cast< int(*)>(_a[5]))); break;
-        case 3: streamTransDlProg((*reinterpret_cast< char*(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3])),(*reinterpret_cast< float(*)>(_a[4])),(*reinterpret_cast< int(*)>(_a[5])),(*reinterpret_cast< int(*)>(_a[6])),(*reinterpret_cast< float(*)>(_a[7]))); break;
+        case 3: streamTransDlProg((*reinterpret_cast< char*(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4])),(*reinterpret_cast< int(*)>(_a[5])),(*reinterpret_cast< int(*)>(_a[6])),(*reinterpret_cast< int(*)>(_a[7]))); break;
         }
         _id -= 4;
     }
@@ -103,7 +103,7 @@ void CallBacks::streamTransProgress(pmtransprog_t _t1, const char * _t2, int _t3
 }
 
 // SIGNAL 3
-void CallBacks::streamTransDlProg(char * _t1, int _t2, int _t3, float _t4, int _t5, int _t6, float _t7)
+void CallBacks::streamTransDlProg(char * _t1, int _t2, int _t3, int _t4, int _t5, int _t6, int _t7)
 {
     void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)), const_cast<void*>(reinterpret_cast<const void*>(&_t3)), const_cast<void*>(reinterpret_cast<const void*>(&_t4)), const_cast<void*>(reinterpret_cast<const void*>(&_t5)), const_cast<void*>(reinterpret_cast<const void*>(&_t6)), const_cast<void*>(reinterpret_cast<const void*>(&_t7)) };
     QMetaObject::activate(this, &staticMetaObject, 3, _a);
