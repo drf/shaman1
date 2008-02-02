@@ -1,23 +1,25 @@
-#include <iostream>
-#include <QtGui>
 #include "AlpmHandler.h"
 #include "alpm_list.h"
 #include "MainWindow.h"
 
+#include <iostream>
+#include <QApplication>
+
 int main(int argc, char **argv)
 {
-	AlpmHandler *aHandler = new AlpmHandler(true);
-	alpm_list_t *getpkg;
-	
-	QApplication app(argc, argv);
-	
+        //FIXME: Translate everything in this file to english
 	uid_t myuid = geteuid();
 	
 	if(myuid > 0)
 	{	
-		printf("Ehi ehi stronzo ma dove credi di andare? Solo root può farlo");
+		printf("Ehi ehi stronzo ma dove credi di andare? Solo root può farlo\n");
 		return 1;
 	}
+
+	QApplication app(argc, argv);
+
+	AlpmHandler *aHandler = new AlpmHandler(true);
+	alpm_list_t *getpkg;
 	
 	MainWindow mainwin(aHandler, &app);
 	
