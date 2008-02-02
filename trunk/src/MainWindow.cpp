@@ -31,13 +31,12 @@
 extern CallBacks CbackReference;
 
 
-MainWindow::MainWindow(AlpmHandler *handler, QApplication *appl, QMainWindow *parent) : QMainWindow(parent)
+MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent) : QMainWindow(parent)
 {
 	setupUi(this);
 	currentpkgs = NULL;
 	
 	aHandle = handler;
-	app = appl;
 	
 	connect(actionUpdate_Database, SIGNAL(triggered()), this, SLOT(doDbUpdate()));
 	
@@ -257,8 +256,6 @@ void MainWindow::doDbUpdate()
 	dbdialog->show();
 	
 	connect(this, SIGNAL(updateDB()), dbdialog, SLOT(doAction()));
-	
-	app->processEvents();
 	
 	emit updateDB();
 	

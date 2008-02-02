@@ -36,7 +36,7 @@ class MainWindow : public QMainWindow, private Ui::MainWindow, private StringUti
 	Q_OBJECT
 	
 public:
-	MainWindow(AlpmHandler *handler, QApplication *appl, QMainWindow *parent = 0);
+	MainWindow(AlpmHandler *handler, QMainWindow *parent = 0);
 	virtual ~MainWindow();
 	bool removePackagesView();
 	bool removeRepoColumn();
@@ -62,7 +62,6 @@ private:
 	alpm_list_t *currentpkgs;
 	AlpmHandler *aHandle;
 	UpdateDbDialog *dbdialog;
-	QApplication *app;
 
 };
 

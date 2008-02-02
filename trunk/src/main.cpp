@@ -43,7 +43,7 @@ int main(int argc, char **argv)
 	AlpmHandler *aHandler = new AlpmHandler(true);
 	alpm_list_t *getpkg;
 	
-	MainWindow mainwin(aHandler, &app);
+	MainWindow mainwin(aHandler);
 	
 	mainwin.show();
 	

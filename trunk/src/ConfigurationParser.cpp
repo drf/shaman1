@@ -59,7 +59,7 @@ void ConfigurationParser::parsePacmanConfig(QString file, QString givensection,
 {
 	QFile fp(file);
 	QString line, db(NULL), section(NULL);
-	int linenum = 0;
+	int linenum = 0, serverparsed = 0;
 		
 	if(!pacData.loaded)
 	{
@@ -130,6 +130,7 @@ void ConfigurationParser::parsePacmanConfig(QString file, QString givensection,
 				char *dest = (char *)malloc(section.length()*sizeof(char));
 				strcpy(dest, section.toAscii().data());
 				pacData.syncdbs = alpm_list_add(pacData.syncdbs, dest);
+				serverparsed = 0;
 								
 				db.operator=(line);
 			}
@@ -212,14 +213,34 @@ void ConfigurationParser::parsePacmanConfig(QString file, QString givensection,
 				} 
 				else if(key.compare("Server", Qt::CaseInsensitive) == 0) 
 				{
+					if(serverparsed == 1)
+						continue;
+					
+					serverparsed = 1;
 					/* let's attempt a replacement for the current repo */
 					while(line.contains(' '))
 						line.remove(line.indexOf(' '), 1);
-					line.replace("$repo", section);
-					char *dest = (char *)malloc(line.length()*sizeof(char));
-					strcpy(dest, line.toAscii().data());
-										
-					pacData.serverAssoc = alpm_list_add(pacData.serverAssoc, dest);
+					
+					
+					if(line.contains('$'))
+					{
+						QStringList tmplst = line.split(QString("$repo"), 
+								QString::SkipEmptyParts, Qt::CaseInsensitive);
+						char *dest = (char *)malloc((tmplst.at(0).length() + 
+								section.length() + tmplst.at(1).length())*sizeof(char));
+						strcpy(dest, tmplst.at(0).toAscii().data());
+						strcat(dest, section.toAscii().data());
+						strcat(dest, tmplst.at(1).toAscii().data());
+						printf("%s\n", dest);
+						pacData.serverAssoc = alpm_list_add(pacData.serverAssoc, dest);
+					}
+					else
+					{
+						char *dest = (char *)malloc(line.length()*sizeof(char));
+						strcpy(dest, line.toAscii().data());
+						printf("%s\n", dest);
+						pacData.serverAssoc = alpm_list_add(pacData.serverAssoc, dest);
+					}
 				}
 				else 
 				{
