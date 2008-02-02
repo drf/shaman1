@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'dbUpdateDialog.ui'
 **
-** Created: Fri Feb 1 22:57:31 2008
+** Created: Sat Feb 2 13:05:58 2008
 **      by: Qt User Interface Compiler version 4.3.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -75,7 +75,7 @@ public:
     {
     dbUpdateDialog->setWindowTitle(QApplication::translate("dbUpdateDialog", "Updating Databases", 0, QApplication::UnicodeUTF8));
     displayAction->setText(QApplication::translate("dbUpdateDialog", "TextLabel", 0, QApplication::UnicodeUTF8));
-    dlProgress->setFormat(QApplication::translate("dbUpdateDialog", "Checking for updates in %s...", 0, QApplication::UnicodeUTF8));
+    dlProgress->setFormat(QApplication::translate("dbUpdateDialog", "%p%", 0, QApplication::UnicodeUTF8));
     Q_UNUSED(dbUpdateDialog);
     } // retranslateUi
 

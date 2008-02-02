@@ -1,8 +1,11 @@
 #include "UpdateDbDialog.h"
 #include <AlpmHandler.h>
+#include "callbacks.h"
+
+extern CallBacks CbackReference;
 
 UpdateDbDialog::UpdateDbDialog(AlpmHandler *hnd, QDialog *parent)
-{
+{	
 	setupUi(this);
 	
 	totalPBar->reset();
@@ -17,6 +20,8 @@ UpdateDbDialog::UpdateDbDialog(AlpmHandler *hnd, QDialog *parent)
 	connect(aHandle, SIGNAL(dbQty(int)), this, SLOT(setPBarRange(int)));
 	connect(aHandle, SIGNAL(dbUpdated()), this, SLOT(setUpdated()));
 	connect(aHandle, SIGNAL(dbUpdatePerformed()), this, SLOT(updateTotalProg()));
+	connect(&CbackReference, SIGNAL(streamTransDlProg(char*,int,int,float,int,int,float)), 
+			this, SLOT(updateDlBar(char*,int,int,float,int,int,float)));
 }
 
 UpdateDbDialog::~UpdateDbDialog()
@@ -24,6 +29,7 @@ UpdateDbDialog::~UpdateDbDialog()
 	disconnect(aHandle, SIGNAL(streamDbUpdatingStatus(char*,int)), 0, 0);
 	disconnect(aHandle, SIGNAL(dbQty(int)), 0, 0);
 	disconnect(aHandle, SIGNAL(dbUpdated()), 0, 0);
+	disconnect(&CbackReference, SIGNAL(streamTransDlProg(char*,int,int,float,int,int,float)), 0, 0);
 }
 
 void UpdateDbDialog::updateLabel(char *repo, int action)
@@ -44,6 +50,7 @@ void UpdateDbDialog::updateLabel(char *repo, int action)
 	case 3:
 		toInsert.append(repo);
 		toInsert.append(" is up to date.");
+		dlProgress->setFormat(toInsert);
 		break;
 	default:
 		break;
@@ -80,6 +87,19 @@ void UpdateDbDialog::updateTotalProg()
 	actionDone++;
 	
 	totalPBar->setValue(actionDone);
+}
+
+void UpdateDbDialog::updateDlBar(char *c, int bytedone, int bytetotal, float speed,
+		int i, int j, float k)
+{
+	QString toInsert;
+	
+	toInsert.append("%p% at ");
+	toInsert.append((int)speed);
+	toInsert.append(" KB/s");
+	dlProgress->setRange(0, bytetotal);
+	dlProgress->setFormat(toInsert);
+	dlProgress->setValue(bytedone);
 }
 
 void UpdateDbDialog::doAction()

@@ -126,13 +126,14 @@ bool AlpmHandler::updateDatabase()
 				
 		emit streamDbUpdatingStatus((char *)alpm_db_get_name(dbcrnt), 0);
 		fflush(stdout);
-		r = alpm_db_update(0, dbcrnt);
+		r = alpm_db_update(1, dbcrnt);
 		if(r == 1)
 			emit streamDbUpdatingStatus((char *)alpm_db_get_name(dbcrnt), 3);
 		else if(r < 0)
 			printf("Fallito Miseramente : %s", alpm_strerrorlast());
 		else
 		{
+			printf("updated");
 			emit dbUpdated();
 			emit streamDbUpdatingStatus((char *)alpm_db_get_name(dbcrnt), 3);
 		}
@@ -221,6 +222,7 @@ bool AlpmHandler::setUpAlpmSettings()
 	if(pdata.xferCommand != NULL)
             alpm_option_set_xfercommand(pdata.xferCommand);
         
+	alpm_option_set_dlcb(cb_dl_progress);
 	alpm_option_set_nopassiveftp(pdata.noPassiveFTP);
 	alpm_option_set_holdpkgs(pdata.HoldPkg);
 	alpm_option_set_ignorepkgs(pdata.IgnorePkg);

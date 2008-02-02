@@ -34,11 +34,17 @@ signals:
 		        void *data3);
 	void streamTransProgress(pmtransprog_t event, const char *pkgname, int percent,
 			int howmany, int remain);
-	void streamTransDlProg(const char *filename, int file_x, int file_t,
-			int list_x, int list_t);
+	void streamTransDlProg(char *filename, int file_x, int file_t, float spd_f,
+			int list_x, int list_t, float spd_l);
 	
 private:
 	int answer;
+	float rate_last;
+	int xfered_last;
+	float rate_total;
+	int xfered_total;
+	int onDl;
+	struct timeval initial_time;
 };
 
 void cb_trans_evt(pmtransevt_t event, void *data1, void *data2);

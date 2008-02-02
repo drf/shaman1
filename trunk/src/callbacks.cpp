@@ -14,6 +14,7 @@ CallBacks CbackReference;
 CallBacks::CallBacks()
 {
 	answer = -1;
+	onDl = 1;
 }
 
 CallBacks::~CallBacks()
@@ -73,6 +74,8 @@ void CallBacks::cb_trans_progress(pmtransprog_t event, const char *pkgname, int 
 {
 	float timediff;
 	
+	printf("Trans called");
+	
 	if(percent == 0) 
 		timediff = get_update_timediff(1);
 	else
@@ -87,7 +90,51 @@ void CallBacks::cb_trans_progress(pmtransprog_t event, const char *pkgname, int 
 void CallBacks::cb_dl_progress(const char *filename, int file_xfered, int file_total,
 		int list_xfered, int list_total)
 {
-	emit streamTransDlProg(filename, file_xfered, file_total, list_xfered, list_total);
+	float timediff = 0.0;
+	float rate_f = 0.0, eta_s_f = 0.0;
+	float rate_l = 0.0, eta_s_l = 0.0;
+	
+	if(onDl == 0)
+	{
+		xfered_total = 0;
+		rate_total = 0.0;
+		onDl = 1;
+	}
+	
+	if(file_xfered == 0)
+	{
+		gettimeofday(&initial_time, NULL);
+		timediff = get_update_timediff(1);
+		xfered_last = 0;
+		rate_last = 0.0;
+	}
+	else
+	{
+		timediff = get_update_timediff(0);
+
+		if(timediff < UPDATE_SPEED_SEC) 
+		{
+			/* return if the calling interval was too short */
+			return;
+		}
+		rate_f = (file_xfered - xfered_last) / (timediff * 1024.0);
+		/* average rate to reduce jumpiness */
+		rate_f = (rate_f + 2*rate_last) / 3;
+		eta_s_f = (file_total - file_xfered) / (rate_f * 1024.0);
+		
+		rate_l = (list_xfered - xfered_total) / (timediff * 1024.0);
+		/* average rate to reduce jumpiness */
+		rate_l = (rate_l + 2*rate_total) / 3;
+		eta_s_l = (list_total - list_xfered) / (rate_l * 1024.0);
+		
+		rate_last = rate_f;
+		xfered_last = file_xfered;
+		rate_total = rate_l;
+		xfered_total = list_xfered;
+	}
+	
+	emit streamTransDlProg((char *)filename, file_xfered, file_total, rate_f,
+			list_xfered, list_total, rate_l);
 }
 
 void CallBacks::cb_log(pmloglevel_t level, char *fmt, va_list args)
@@ -100,6 +147,7 @@ void CallBacks::cb_log(pmloglevel_t level, char *fmt, va_list args)
 void cb_dl_progress(const char *filename, int file_xfered, int file_total,
 		int list_xfered, int list_total)
 {
+	printf("called");
 	CbackReference.cb_dl_progress(filename, file_xfered, file_total,
 			list_xfered, list_total);
 }
