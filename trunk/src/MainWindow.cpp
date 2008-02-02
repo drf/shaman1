@@ -31,12 +31,12 @@
 extern CallBacks CbackReference;
 
 
-MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent) : QMainWindow(parent)
+MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent) 
+ : QMainWindow(parent),
+   currentpkgs(0),
+   aHandle(handler)
 {
 	setupUi(this);
-	currentpkgs = NULL;
-	
-	aHandle = handler;
 	
 	connect(actionUpdate_Database, SIGNAL(triggered()), this, SLOT(doDbUpdate()));
 	
@@ -72,12 +72,12 @@ bool MainWindow::populatePackagesView()
 	alpm_list_t *databases;
 	int count = 0;
 	
-	pbarWG->show();
-	
 	layout->addWidget(new QLabel("Loading View..."));
 	layout->addWidget(pbar);
 		
 	pbarWG->setLayout(layout);
+	
+	pbarWG->show();
 	
 	disconnect(pkgsViewWG, SIGNAL(itemSelectionChanged()), 0, 0);
 	
@@ -120,8 +120,8 @@ bool MainWindow::populatePackagesView()
 				
 	pbarWG->close();
 	
-	delete(layout);
-	delete(pbar);
+	layout->deleteLater();
+	pbar->deleteLater();
 	
 	pkgsViewWG->sortItems(2, Qt::AscendingOrder);
 	
@@ -255,13 +255,9 @@ void MainWindow::doDbUpdate()
 	
 	dbdialog->show();
 	
-	connect(this, SIGNAL(updateDB()), dbdialog, SLOT(doAction()));
-	
-	emit updateDB();
-	
 	connect(dbdialog, SIGNAL(killMe()), this, SLOT(finishDbUpdate()));
 	
-	//dbdialog->doAction();
+	dbdialog->doAction();
 	
 }
 
@@ -269,7 +265,7 @@ void MainWindow::finishDbUpdate()
 {
 	disconnect(dbdialog, 0,0,0);
 	
-	delete(dbdialog);
+	dbdialog->deleteLater();
 }
 
 UpPkgViewThread::UpPkgViewThread(MainWindow *mW)

@@ -55,9 +55,6 @@ public slots:
 	void doDbUpdate();
 	void finishDbUpdate();
 	
-signals:
-	void updateDB();
-	
 private:
 	alpm_list_t *currentpkgs;
 	AlpmHandler *aHandle;

@@ -27,16 +27,17 @@ extern CallBacks CbackReference;
 
 using namespace std;
 
-UpdateDbDialog::UpdateDbDialog(AlpmHandler *hnd, QWidget *parent) : QDialog(parent)
+UpdateDbDialog::UpdateDbDialog(AlpmHandler *hnd, QWidget *parent) 
+ : QDialog(parent),
+   actionDone(0),
+   updated(false),
+   aHandle(hnd)
 {	
 	setupUi(this);
+        setWindowModality(Qt::ApplicationModal);
 	
 	totalPBar->reset();
 	dlProgress->reset();
-	actionDone = 0;
-	updated = false;
-	
-	aHandle = hnd;
 	
 	connect(aHandle, SIGNAL(streamDbUpdatingStatus(char*,int)), this,
 				SLOT(updateLabel(char*, int)));
@@ -115,6 +116,10 @@ void UpdateDbDialog::updateTotalProg()
 void UpdateDbDialog::updateDlBar(char *c, int bytedone, int bytetotal, int speed,
 		int i, int j, int k)
 {
+        Q_UNUSED(c)
+        Q_UNUSED(i)
+        Q_UNUSED(j)
+        Q_UNUSED(k)
 	QString toInsert, spd;
 	
 	spd.setNum(speed);

@@ -46,6 +46,9 @@ public:
 	virtual ~UpdateDbDialog();
 	
 	bool dbHasBeenUpdated();
+
+public slots:
+	void doAction();
 	
 private slots:
 	void updateLabel(char *repo, int action);
@@ -53,7 +56,6 @@ private slots:
 	void updateTotalProg();
 	void setPBarRange(int range);
 	void setUpdated();
-	void doAction();
 	void scopeEnded();
 	void updateDlBar(char *c, int bytedone, int bytetotal, int speed,
 			int i, int j, int k);
