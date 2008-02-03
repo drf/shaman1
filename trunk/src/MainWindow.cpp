@@ -40,8 +40,10 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
         pkgsViewWG->setContextMenuPolicy(Qt::CustomContextMenu);
 	
 	connect(actionUpdate_Database, SIGNAL(triggered()), this, SLOT(doDbUpdate()));
-        connect(pkgsViewWG, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showContextMenu()));
+    connect(pkgsViewWG, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showContextMenu()));
 	connect(actionProcess_Queue, SIGNAL(triggered()), SLOT(processQueue()));
+	connect(switchToRepo, SIGNAL(clicked()), this, SLOT(populateRepoColumn()));
+	connect(switchToGrps, SIGNAL(clicked()), this, SLOT(populateGrpsColumn()));
 	
 	rightColumn = new QString();
 	searchBox = new QString();
@@ -201,8 +203,8 @@ void MainWindow::populateGrpsColumn()
 	{
 		QListWidgetItem *item = new QListWidgetItem(repoList);
 				
-		item->setText(alpm_db_get_name((pmdb_t *)alpm_list_getdata(grps)));
-				
+		item->setText((char *)alpm_list_getdata(grps));
+						
 		grps = alpm_list_next(grps);
 	}
 	
@@ -213,6 +215,8 @@ void MainWindow::populateGrpsColumn()
 	item->setText("All Groups");
 	item->setSelected(true);
 	repoList->insertItem(0, item);
+	
+	alpm_list_free(grps);
 }
 
 void MainWindow::refinePkgView()
@@ -267,11 +271,15 @@ void MainWindow::changeRepoView(QListWidgetItem *lItm)
 
 void MainWindow::changeGrpsView(QListWidgetItem *lItm)
 {
-	rightColumnMode = 0;
-	if(lItm == NULL || !lItm->text().compare("All Repositories"))
+	QStringList lst;
+	
+	rightColumnMode = 1;
+	if(lItm == NULL || !lItm->text().compare("All Groups"))
 		rightColumn = NULL;
 	else
-		rightColumn->operator=(lItm->text());
+	{
+		
+	}
 
 	refinePkgView();
 }

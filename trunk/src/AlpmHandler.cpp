@@ -307,19 +307,24 @@ alpm_list_t *AlpmHandler::searchPackages(char *keywords, char *repo, bool local)
 
 alpm_list_t *AlpmHandler::getPackageGroups()
 {
-	alpm_list_t *grps = NULL, *syncdbs;
+	alpm_list_t *grps = NULL, *retlist = alpm_list_new(), *syncdbs;
 	
 	syncdbs = alpm_list_first(sync_databases);
 	
 	while(syncdbs != NULL)
 	{
-		if(grps == NULL)
-			grps = alpm_db_getgrpcache((pmdb_t *)alpm_list_getdata(syncdbs));
-		else
-			grps = alpm_list_join(grps, alpm_db_getgrpcache(
-					(pmdb_t *)alpm_list_getdata(syncdbs)));
+		grps = alpm_db_getgrpcache((pmdb_t *)alpm_list_getdata(syncdbs));
+		grps = alpm_list_first(grps);
+		
+		while(grps != NULL)
+		{
+			retlist = alpm_list_add(retlist, alpm_list_getdata(grps));
+			grps = alpm_list_next(grps);
+		}
+		
+		syncdbs = alpm_list_next(syncdbs);
 	}
 	
-	return grps;
+	return retlist;
 }
 
