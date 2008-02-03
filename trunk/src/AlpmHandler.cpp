@@ -305,3 +305,21 @@ alpm_list_t *AlpmHandler::searchPackages(char *keywords, char *repo, bool local)
 	return returnlist;
 }
 
+alpm_list_t *AlpmHandler::getPackageGroups()
+{
+	alpm_list_t *grps = NULL, *syncdbs;
+	
+	syncdbs = alpm_list_first(sync_databases);
+	
+	while(syncdbs != NULL)
+	{
+		if(grps == NULL)
+			grps = alpm_db_getgrpcache((pmdb_t *)alpm_list_getdata(syncdbs));
+		else
+			grps = alpm_list_join(grps, alpm_db_getgrpcache(
+					(pmdb_t *)alpm_list_getdata(syncdbs)));
+	}
+	
+	return grps;
+}
+

@@ -32,7 +32,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton" >
+         <widget class="QPushButton" name="switchToRepo" >
           <property name="sizePolicy" >
            <sizepolicy vsizetype="Maximum" hsizetype="Preferred" >
             <horstretch>0</horstretch>
@@ -45,7 +45,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton_3" >
+         <widget class="QPushButton" name="switchToGrps" >
           <property name="sizePolicy" >
            <sizepolicy vsizetype="Maximum" hsizetype="Preferred" >
             <horstretch>0</horstretch>
@@ -167,6 +167,11 @@
              <string>Repo</string>
             </property>
            </column>
+           <column>
+            <property name="text" >
+             <string>Groups</string>
+            </property>
+           </column>
           </widget>
          </item>
         </layout>
@@ -267,7 +272,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>967</width>
-     <height>31</height>
+     <height>27</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile" >

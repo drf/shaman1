@@ -53,6 +53,7 @@ public:
 	bool isTransaction();
 	
 	alpm_list_t *getAvailableRepos();
+	alpm_list_t *getPackageGroups();
 	alpm_list_t *searchPackages(char *keywords, char *repo, bool local);
 	alpm_list_t *getConflicts(string pkgname);
 	alpm_list_t *getUpgradeablePackages();

@@ -38,25 +38,27 @@ class MainWindow : public QMainWindow, private Ui::MainWindow, private StringUti
 public:
 	MainWindow(AlpmHandler *handler, QMainWindow *parent = 0);
 	virtual ~MainWindow();
-	bool removePackagesView();
-	bool removeRepoColumn();
-	void refinePkgView(char *repo, char *searches);
+	void refinePkgView();
 	void doUpdView();
 	
 public slots:
 	bool populatePackagesView();
-	void changePackagesView(QListWidgetItem *itm);
-	bool populateRepoColumn();
+	void changeRepoView(QListWidgetItem *lItm);
+	void changeGrpsView(QListWidgetItem *lItm);
+	void populateRepoColumn();
+	void populateGrpsColumn();
+	void removePackagesView();
+	void removeRepoColumn();
 	void showPkgInfo();
 	void doDbUpdate();
 	void finishDbUpdate();
 
 private slots:
 	void showContextMenu();
-        void installPackage();
-        void removePackage();
-        void upgradePackage();
-        void processQueue();
+    void installPackage();
+    void removePackage();
+    void upgradePackage();
+    void processQueue();
 
 	
 private:
@@ -67,6 +69,12 @@ private:
 	alpm_list_t *currentpkgs;
 	AlpmHandler *aHandle;
 	UpdateDbDialog *dbdialog;
+	
+	/* This is for the integrated search: */
+	QString *rightColumn;
+	int rightColumnMode;
+	int comboBoxAction;
+	QString *searchBox;
 
 };
 

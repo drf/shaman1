@@ -43,6 +43,10 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
         connect(pkgsViewWG, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showContextMenu()));
 	connect(actionProcess_Queue, SIGNAL(triggered()), SLOT(processQueue()));
 	
+	rightColumn = new QString();
+	searchBox = new QString();
+	comboBoxAction = 0;
+	
 	return;
 	
 }
@@ -52,14 +56,23 @@ MainWindow::~MainWindow()
 	return;
 }
 
-bool MainWindow::removePackagesView()
+void MainWindow::removePackagesView()
 {
 	QTreeWidgetItem *itm;
 	
 	while((itm = pkgsViewWG->takeTopLevelItem(0)) != NULL)
 		delete(itm);
+
+}
+
+void MainWindow::removeRepoColumn()
+{
+	QListWidgetItem *itm;
 	
-	return true;
+	while((itm = repoList->takeItem(0)) != 0)
+		delete(itm);
+	
+	disconnect(repoList, SIGNAL(itemPressed(QListWidgetItem*)), 0, 0);
 }
 
 void MainWindow::doUpdView()
@@ -103,11 +116,27 @@ bool MainWindow::populatePackagesView()
 		{
 			pmpkg_t *pkg = (pmpkg_t *)alpm_list_getdata(currentpkgs);
 			QTreeWidgetItem *item = new QTreeWidgetItem(pkgsViewWG);
+			alpm_list_t *grps = (alpm_list_t *)alpm_pkg_get_groups(pkg);
+			QString grStr("");
+			bool first = true;
 						
 			item->setText(2, alpm_pkg_get_name(pkg));
 			item->setText(3, alpm_pkg_get_version(pkg));
 			item->setText(4, alpm_pkg_get_desc(pkg));
 			item->setText(5, alpm_db_get_name(dbcrnt));
+			
+			while(grps != NULL)
+			{
+				if(first)
+					first = false;
+				else
+					grStr.append(",");
+					
+				grStr.append((char *)alpm_list_getdata(grps));
+				grps = alpm_list_next(grps);
+			}
+			
+			item->setText(6, grStr);
 			
 			currentpkgs = alpm_list_next(currentpkgs);
 			
@@ -134,9 +163,11 @@ bool MainWindow::populatePackagesView()
 	return true;
 }
 
-bool MainWindow::populateRepoColumn()
+void MainWindow::populateRepoColumn()
 {
 	alpm_list_t *list = aHandle->getAvailableRepos();
+	
+	removeRepoColumn();
 	
 	list = alpm_list_first(list);
 	
@@ -156,54 +187,93 @@ bool MainWindow::populateRepoColumn()
 	
 	list = alpm_list_first(list);
 	
-	connect(repoList, SIGNAL(itemPressed(QListWidgetItem*)), this, SLOT(changePackagesView(QListWidgetItem*)));
-	
-	return true;
+	connect(repoList, SIGNAL(itemPressed(QListWidgetItem*)), this, 
+			SLOT(changeRepoView(QListWidgetItem*)));
 }
 
-void MainWindow::refinePkgView(char *repo, char *searches)
+void MainWindow::populateGrpsColumn()
+{
+	alpm_list_t *grps = alpm_list_first(aHandle->getPackageGroups());
+	
+	removeRepoColumn();
+	
+	while(grps != NULL)
+	{
+		QListWidgetItem *item = new QListWidgetItem(repoList);
+				
+		item->setText(alpm_db_get_name((pmdb_t *)alpm_list_getdata(grps)));
+				
+		grps = alpm_list_next(grps);
+	}
+	
+	repoList->sortItems(Qt::AscendingOrder);
+	
+	QListWidgetItem *item = new QListWidgetItem();
+			
+	item->setText("All Groups");
+	item->setSelected(true);
+	repoList->insertItem(0, item);
+}
+
+void MainWindow::refinePkgView()
 {
 	int index = 0;
 	QTreeWidgetItem *itm;
 	
 	itm = pkgsViewWG->topLevelItem(index);
 	
+	/* Logic logic logic!!! Don't lose your mind, it's so simple. Whenever
+	 * something gets hidden, we set it invisible and we continue. */
+	
 	while(itm != NULL)
 	{
-		int set = 0;
-		
-		if(repo != NULL)
+		if(rightColumn != NULL)
 		{
-			set = 1;
-			if(!strcmp(repo, itm->text(5).toAscii().data()))
-				itm->setHidden(false);
-			else
-				itm->setHidden(true);
-		}
-		if(searches != NULL)
-		{
-			if(set != 1 || itm->isHidden())
+			if(rightColumnMode == 0)
 			{
-				itm->setHidden(false);
+				if(!rightColumn->compare(itm->text(5)))
+					itm->setHidden(false);
+				else
+				{
+					itm->setHidden(true);
+					index++;
+					itm = pkgsViewWG->topLevelItem(index);
+					continue;
+				}
 			}
-			set = 1;
+			else
+			{
+				continue;
+			}
 		}
-		if(!set)
-			itm->setHidden(false);
+		itm->setHidden(false);
 		
 		index++;
 		itm = pkgsViewWG->topLevelItem(index);
 	}
 }
 
-void MainWindow::changePackagesView(QListWidgetItem *itm)
+void MainWindow::changeRepoView(QListWidgetItem *lItm)
 {
-	QString data = itm->text();
-	
-	if(!data.compare("All Repositories"))
-		refinePkgView(NULL,NULL);
-	else	
-		refinePkgView(data.toAscii().data(),NULL);
+	rightColumnMode = 0;
+	if(lItm == NULL || !lItm->text().compare("All Repositories"))
+		rightColumn = NULL;
+	else
+		rightColumn->operator=(lItm->text());
+
+		
+	refinePkgView();
+}
+
+void MainWindow::changeGrpsView(QListWidgetItem *lItm)
+{
+	rightColumnMode = 0;
+	if(lItm == NULL || !lItm->text().compare("All Repositories"))
+		rightColumn = NULL;
+	else
+		rightColumn->operator=(lItm->text());
+
+	refinePkgView();
 }
 
 void MainWindow::showPkgInfo()
