@@ -10,7 +10,7 @@
    </rect>
   </property>
   <property name="windowTitle" >
-   <string>MainWindow</string>
+   <string>QtPacman</string>
   </property>
   <widget class="QWidget" name="centralwidget" >
    <layout class="QGridLayout" >
