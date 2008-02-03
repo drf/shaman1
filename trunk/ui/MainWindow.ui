@@ -68,7 +68,7 @@
          <item>
           <layout class="QHBoxLayout" >
            <item>
-            <widget class="QComboBox" name="comboBox" >
+            <widget class="QComboBox" name="packageSwitchCombo" >
              <property name="sizePolicy" >
               <sizepolicy vsizetype="Fixed" hsizetype="Maximum" >
                <horstretch>0</horstretch>
@@ -103,7 +103,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit" >
+            <widget class="QLineEdit" name="searchLine" >
              <property name="sizePolicy" >
               <sizepolicy vsizetype="Fixed" hsizetype="MinimumExpanding" >
                <horstretch>0</horstretch>
@@ -194,14 +194,14 @@
             </spacer>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton_7" >
+            <widget class="QPushButton" name="removeButton" >
              <property name="text" >
               <string>Mark for Removal</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton_6" >
+            <widget class="QPushButton" name="installButton" >
              <property name="text" >
               <string>Mark for Installation</string>
              </property>
@@ -272,7 +272,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>967</width>
-     <height>27</height>
+     <height>31</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile" >
