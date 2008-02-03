@@ -39,11 +39,13 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	setupUi(this);
         pkgsViewWG->setContextMenuPolicy(Qt::CustomContextMenu);
 	
-	connect(actionUpdate_Database, SIGNAL(triggered()), this, SLOT(doDbUpdate()));
-    connect(pkgsViewWG, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showContextMenu()));
+	connect(actionUpdate_Database, SIGNAL(triggered()), SLOT(doDbUpdate()));
+        connect(pkgsViewWG, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showContextMenu()));
 	connect(actionProcess_Queue, SIGNAL(triggered()), SLOT(processQueue()));
-	connect(switchToRepo, SIGNAL(clicked()), this, SLOT(populateRepoColumn()));
-	connect(switchToGrps, SIGNAL(clicked()), this, SLOT(populateGrpsColumn()));
+	connect(switchToRepo, SIGNAL(clicked()), SLOT(populateRepoColumn()));
+	connect(switchToGrps, SIGNAL(clicked()), SLOT(populateGrpsColumn()));
+	connect(installButton, SIGNAL(clicked()), SLOT(installPackage()));
+        connect(removeButton, SIGNAL(clicked()), SLOT(removePackage()));
 	
 	rightColumn = new QString();
 	searchBox = new QString();
@@ -354,11 +356,11 @@ void MainWindow::showContextMenu()
 	qDebug() << "Let's show a context menu";
 	QMenu *menu = new QMenu(this);
         //FIXME: Disable actions if they're not needed f.e. installAction on installed packages
-	QAction *installAction = menu->addAction(tr("Install package"));
+	QAction *installAction = menu->addAction(tr("Mark for Installation"));
         connect(installAction, SIGNAL(triggered()), SLOT(installPackage()));
-        QAction *removeAction = menu->addAction(tr("Remove package"));
+        QAction *removeAction = menu->addAction(tr("Mark for Removal"));
         connect(removeAction, SIGNAL(triggered()), SLOT(removePackage()));
-        QAction *upgradeAction = menu->addAction(tr("Upgrade package"));
+        QAction *upgradeAction = menu->addAction(tr("Mark for Upgrade"));
         connect(upgradeAction, SIGNAL(triggered()), SLOT(upgradePackage()));
         menu->popup(QCursor::pos());
 }
