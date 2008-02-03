@@ -5,8 +5,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>794</width>
-    <height>484</height>
+    <width>967</width>
+    <height>664</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -19,118 +19,242 @@
       <property name="orientation" >
        <enum>Qt::Horizontal</enum>
       </property>
-      <property name="childrenCollapsible" >
-       <bool>true</bool>
-      </property>
-      <widget class="QListWidget" name="repoList" >
-       <property name="sizePolicy" >
-        <sizepolicy vsizetype="Maximum" hsizetype="Maximum" >
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
+      <widget class="QWidget" name="verticalLayout" >
+       <layout class="QVBoxLayout" >
+        <item>
+         <widget class="QListWidget" name="repoList" >
+          <property name="sizePolicy" >
+           <sizepolicy vsizetype="Minimum" hsizetype="Preferred" >
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton" >
+          <property name="sizePolicy" >
+           <sizepolicy vsizetype="Maximum" hsizetype="Preferred" >
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text" >
+           <string>Repositories</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_3" >
+          <property name="sizePolicy" >
+           <sizepolicy vsizetype="Maximum" hsizetype="Preferred" >
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text" >
+           <string>Package Groups</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
       <widget class="QSplitter" name="splitter" >
        <property name="orientation" >
         <enum>Qt::Vertical</enum>
        </property>
-       <widget class="QTreeWidget" name="pkgsViewWG" >
-        <property name="sizePolicy" >
-         <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="indentation" >
-         <number>0</number>
-        </property>
-        <property name="rootIsDecorated" >
-         <bool>true</bool>
-        </property>
-        <property name="itemsExpandable" >
-         <bool>false</bool>
-        </property>
-        <property name="sortingEnabled" >
-         <bool>true</bool>
-        </property>
-        <column>
-         <property name="text" >
-          <string>Status</string>
-         </property>
-        </column>
-        <column>
-         <property name="text" >
-          <string>Action</string>
-         </property>
-        </column>
-        <column>
-         <property name="text" >
-          <string>Name</string>
-         </property>
-        </column>
-        <column>
-         <property name="text" >
-          <string>Version</string>
-         </property>
-        </column>
-        <column>
-         <property name="text" >
-          <string>Description</string>
-         </property>
-        </column>
-        <column>
-         <property name="text" >
-          <string>Repo</string>
-         </property>
-        </column>
+       <widget class="QWidget" name="verticalLayout_3" >
+        <layout class="QVBoxLayout" >
+         <item>
+          <layout class="QHBoxLayout" >
+           <item>
+            <widget class="QComboBox" name="comboBox" >
+             <property name="sizePolicy" >
+              <sizepolicy vsizetype="Fixed" hsizetype="Maximum" >
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <item>
+              <property name="text" >
+               <string>All packages</string>
+              </property>
+             </item>
+             <item>
+              <property name="text" >
+               <string>Installed packages</string>
+              </property>
+             </item>
+             <item>
+              <property name="text" >
+               <string>Not installed packages</string>
+              </property>
+             </item>
+             <item>
+              <property name="text" >
+               <string>Upgradeable packages</string>
+              </property>
+             </item>
+             <item>
+              <property name="text" >
+               <string>Packages in Queue</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit" >
+             <property name="sizePolicy" >
+              <sizepolicy vsizetype="Fixed" hsizetype="MinimumExpanding" >
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="inputMask" >
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QTreeWidget" name="pkgsViewWG" >
+           <property name="sizePolicy" >
+            <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="indentation" >
+            <number>0</number>
+           </property>
+           <property name="rootIsDecorated" >
+            <bool>true</bool>
+           </property>
+           <property name="itemsExpandable" >
+            <bool>false</bool>
+           </property>
+           <property name="sortingEnabled" >
+            <bool>true</bool>
+           </property>
+           <column>
+            <property name="text" >
+             <string>Status</string>
+            </property>
+           </column>
+           <column>
+            <property name="text" >
+             <string>Action</string>
+            </property>
+           </column>
+           <column>
+            <property name="text" >
+             <string>Name</string>
+            </property>
+           </column>
+           <column>
+            <property name="text" >
+             <string>Version</string>
+            </property>
+           </column>
+           <column>
+            <property name="text" >
+             <string>Description</string>
+            </property>
+           </column>
+           <column>
+            <property name="text" >
+             <string>Repo</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
        </widget>
-       <widget class="QTabWidget" name="PkgInfos" >
-        <property name="sizePolicy" >
-         <sizepolicy vsizetype="Preferred" hsizetype="Minimum" >
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="currentIndex" >
-         <number>0</number>
-        </property>
-        <widget class="QWidget" name="tab" >
-         <attribute name="title" >
-          <string>Package Information</string>
-         </attribute>
-         <layout class="QGridLayout" >
-          <item row="0" column="0" >
-           <widget class="QTextEdit" name="pkgInfo" >
-            <property name="enabled" >
-             <bool>true</bool>
-            </property>
-            <property name="acceptDrops" >
-             <bool>false</bool>
-            </property>
-            <property name="undoRedoEnabled" >
-             <bool>false</bool>
-            </property>
-            <property name="readOnly" >
-             <bool>true</bool>
-            </property>
-            <property name="html" >
-             <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+       <widget class="QWidget" name="verticalLayout_2" >
+        <layout class="QVBoxLayout" >
+         <item>
+          <layout class="QHBoxLayout" >
+           <item>
+            <spacer>
+             <property name="orientation" >
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" >
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_7" >
+             <property name="text" >
+              <string>Mark for Removal</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_6" >
+             <property name="text" >
+              <string>Mark for Installation</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QTabWidget" name="PkgInfos" >
+           <property name="sizePolicy" >
+            <sizepolicy vsizetype="Preferred" hsizetype="Minimum" >
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="currentIndex" >
+            <number>0</number>
+           </property>
+           <widget class="QWidget" name="tab" >
+            <attribute name="title" >
+             <string>Package Information</string>
+            </attribute>
+            <layout class="QGridLayout" >
+             <item row="0" column="0" >
+              <widget class="QTextEdit" name="pkgInfo" >
+               <property name="enabled" >
+                <bool>true</bool>
+               </property>
+               <property name="acceptDrops" >
+                <bool>false</bool>
+               </property>
+               <property name="undoRedoEnabled" >
+                <bool>false</bool>
+               </property>
+               <property name="readOnly" >
+                <bool>true</bool>
+               </property>
+               <property name="html" >
+                <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
 p, li { white-space: pre-wrap; }
 &lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;">
 &lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;span style=" font-size:12pt; font-weight:600;">Welcome in qtPacman&lt;/span>&lt;/p>&lt;/body>&lt;/html></string>
-            </property>
-            <property name="acceptRichText" >
-             <bool>false</bool>
-            </property>
+               </property>
+               <property name="acceptRichText" >
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </widget>
-          </item>
-         </layout>
-        </widget>
-        <widget class="QWidget" name="tab_2" >
-         <attribute name="title" >
-          <string>Files</string>
-         </attribute>
-        </widget>
+           <widget class="QWidget" name="tab_2" >
+            <attribute name="title" >
+             <string>Files</string>
+            </attribute>
+           </widget>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
      </widget>
@@ -142,7 +266,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>794</width>
+     <width>967</width>
      <height>31</height>
     </rect>
    </property>

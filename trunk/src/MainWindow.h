@@ -56,6 +56,7 @@ private slots:
         void installPackage();
         void removePackage();
         void upgradePackage();
+        void processQueue();
 
 	
 private:

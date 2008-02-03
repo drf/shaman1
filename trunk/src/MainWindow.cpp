@@ -41,6 +41,7 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	
 	connect(actionUpdate_Database, SIGNAL(triggered()), this, SLOT(doDbUpdate()));
         connect(pkgsViewWG, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showContextMenu()));
+	connect(actionProcess_Queue, SIGNAL(triggered()), SLOT(processQueue()));
 	
 	return;
 	
@@ -286,17 +287,26 @@ void MainWindow::showContextMenu()
 
 void MainWindow::installPackage()
 {
-	qDebug();
+	qDebug() << "Install Package";
+	//FIXME: Add the package to a list, which will get processed, when "Process Queue" is clicked
 }
 
 void MainWindow::removePackage()
 {
-	qDebug();
+	qDebug() << "Remove Package";
+        //FIXME: Same as installPackage
 }
 
 void MainWindow::upgradePackage()
 {
-	qDebug();
+	qDebug() << "Upgrade Package";
+        //FIXME: Same as installPackage
+}
+
+void MainWindow::processQueue()
+{
+	qDebug() << "Process Queue";
+	//FIXME: Process here the created list...
 }
 
 UpPkgViewThread::UpPkgViewThread(MainWindow *mW)
