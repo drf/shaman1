@@ -122,8 +122,7 @@ bool MainWindow::populatePackagesView()
 			QTreeWidgetItem *item = new QTreeWidgetItem(pkgsViewWG);
 			alpm_list_t *grps = (alpm_list_t *)alpm_pkg_get_groups(pkg);
 			QString grStr("");
-			bool first = true;
-						
+									
 			item->setText(2, alpm_pkg_get_name(pkg));
 			item->setText(3, alpm_pkg_get_version(pkg));
 			item->setText(4, alpm_pkg_get_desc(pkg));
@@ -131,14 +130,12 @@ bool MainWindow::populatePackagesView()
 			
 			while(grps != NULL)
 			{
-				if(first)
-					first = false;
-				else
-					grStr.append(",");
+				grStr.append(" ");
 					
 				grStr.append((char *)alpm_list_getdata(grps));
 				grps = alpm_list_next(grps);
 			}
+			grStr.append(" ");
 			
 			item->setText(6, grStr);
 			
@@ -247,12 +244,8 @@ void MainWindow::refinePkgView()
 			list = pkgsViewWG->findItems(rightColumn, 
 					(Qt::MatchFlags)Qt::MatchExactly, 6);
 			QString tmp = rightColumn;
-			tmp.append(",");
-			printf("%s\n", tmp.toAscii().data());
-			list.operator+=(pkgsViewWG->findItems(tmp, 
-					(Qt::MatchFlags)Qt::MatchContains, 6));
-			tmp = rightColumn;
-			tmp.prepend(",");
+			tmp.append(" ");
+			tmp.prepend(" ");
 			list.operator+=(pkgsViewWG->findItems(tmp, 
 					(Qt::MatchFlags)Qt::MatchContains, 6));
 		}
