@@ -20,6 +20,7 @@
 #include "MainWindow.h"
 #include "callbacks.h"
 #include "UpdateDbDialog.h"
+#include "SysUpgradeDialog.h"
 
 #include <iostream>
 #include <QMenu>
@@ -414,7 +415,39 @@ void MainWindow::startUpgrading()
 		
 	dbdialog->deleteLater();
 	
+	if(!aHandle->getUpgradeablePackages())
+	{
+		/* Display a simple popup saying the system is up-to-date. */
+		/* TODO: Lukas, that's your job I suppose :) Just a small popup
+		 * saying "Your system is up-to-date" and an OK button. */
+		qDebug() << "System is up to date";
+	}
+	else
+	{
+		/* Something to upgrade! Cool! Let's show our user the
+		 * upgrade dialog */
+		/* TODO: When preferences will be implemented, add
+		 * a switch here in case the user has a predefined
+		 * action 
+		 * */
+		
+		upDl = new SysUpgradeDialog(aHandle, this);
+		
+		connect(upDl, SIGNAL(aborted()), SLOT(upgradeAborted()));
+		connect(upDl, SIGNAL(upgradeNow()), SLOT(processQueue()));
+		connect(upDl, SIGNAL(addToPkgQueue()), SLOT(addUpgradeableToQueue()));
+	}
 	
+}
+
+void MainWindow::upgradeAborted()
+{
+	upDl->deleteLater();
+}
+
+void MainWindow::addUpgradeableToQueue()
+{
+	return;
 }
 
 void MainWindow::fullSysUpgrade()

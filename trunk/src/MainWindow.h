@@ -30,6 +30,7 @@
 #include "AlpmHandler.h"
 #include "StringUtils.h"
 #include "UpdateDbDialog.h"
+#include "SysUpgradeDialog.h"
 
 class MainWindow : public QMainWindow, private Ui::MainWindow, private StringUtils
 {
@@ -52,6 +53,8 @@ public slots:
 	void finishDbUpdate();
 	void startUpgrading();
 	void fullSysUpgrade();
+	void upgradeAborted();
+	void addUpgradeableToQueue();
 
 private slots:
 	void showContextMenu();
@@ -69,6 +72,7 @@ private:
 	alpm_list_t *currentpkgs;
 	AlpmHandler *aHandle;
 	UpdateDbDialog *dbdialog;
+	SysUpgradeDialog *upDl;
 
 };
 
