@@ -1,6 +1,8 @@
 /***************************************************************************
  *   Copyright (C) 2008 by Dario Freddi                                    *
  *   drf54321@yahoo.it                                                     *
+ *   Copyright (C) 2008 by Lukas Appelhans				   *
+ *   l.appelhans@gmx.de							   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -419,8 +421,23 @@ void MainWindow::startUpgrading()
 	if(!aHandle->getUpgradeablePackages())
 	{
 		/* Display a simple popup saying the system is up-to-date. */
-		/* TODO: Lukas, that's your job I suppose :) Just a small popup
-		 * saying "Your system is up-to-date" and an OK button. */
+		//FIXME: Resizing is not good and add icons...
+		QDialog *dialog = new QDialog(dbdialog);
+                QVBoxLayout *layout = new QVBoxLayout(dialog);
+		QLabel *label = new QLabel(dialog);
+		label->setText(tr("Your system is up to date"));
+		layout->addWidget(label);
+		QPushButton *button = new QPushButton(dialog);
+		button->setText("Ok");
+		button->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
+		connect(button, SIGNAL(clicked()), dialog, SLOT(close()));
+                QHBoxLayout *hblayout = new QHBoxLayout(dialog);
+                hblayout->addItem(new QSpacerItem(20, 20, QSizePolicy::Expanding, QSizePolicy::Minimum));
+                hblayout->addWidget(button);
+		hblayout->addItem(new QSpacerItem(20, 20, QSizePolicy::Expanding, QSizePolicy::Minimum));
+		layout->addLayout(hblayout);
+		dialog->setLayout(layout);
+		dialog->exec();
 		qDebug() << "System is up to date";
 	}
 	else
