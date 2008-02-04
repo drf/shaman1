@@ -46,10 +46,6 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	connect(switchToGrps, SIGNAL(clicked()), SLOT(populateGrpsColumn()));
 	connect(installButton, SIGNAL(clicked()), SLOT(installPackage()));
     connect(removeButton, SIGNAL(clicked()), SLOT(removePackage()));
-    
-    rightColumn = "";
-	
-	comboBoxAction = 0;
 	
 	return;
 	
@@ -189,7 +185,7 @@ void MainWindow::populateRepoColumn()
 	list = alpm_list_first(list);
 	
 	connect(repoList, SIGNAL(itemPressed(QListWidgetItem*)), this, 
-			SLOT(changeRepoView(QListWidgetItem*)));
+			SLOT(refinePkgView()));
 }
 
 void MainWindow::populateGrpsColumn()
@@ -218,7 +214,7 @@ void MainWindow::populateGrpsColumn()
 	alpm_list_free(grps);
 
 	connect(repoList, SIGNAL(itemPressed(QListWidgetItem*)), this, 
-			SLOT(changeGrpsView(QListWidgetItem*)));
+			SLOT(refinePkgView()));
 }
 
 void MainWindow::refinePkgView()
@@ -227,23 +223,26 @@ void MainWindow::refinePkgView()
 	foreach (QTreeWidgetItem *item, pkgsViewWG->findItems(QString(), Qt::MatchContains | Qt::MatchWildcard))
 	{
 		item->setHidden(true);
-        }
+    }
 	
 	QList<QTreeWidgetItem*> list = pkgsViewWG->findItems(QString(), Qt::MatchContains | Qt::MatchWildcard);
 	
 	// Now first: What do we need to refine in the right column?
 	
-	if(rightColumn != NULL)
+	if((repoList->selectedItems().at(0)->text().compare("All Repositories") &&
+			repoList->selectedItems().at(0)->text().compare("All Groups")) &&
+			!repoList->selectedItems().isEmpty())
 	{
-		if(rightColumnMode == 0)
+		if(!repoList->findItems(QString("All Repositories"),
+				(Qt::MatchFlags)Qt::MatchExactly).isEmpty())
 			// First time, so don't check anything.
-			list = pkgsViewWG->findItems(rightColumn, 
+			list = pkgsViewWG->findItems(repoList->selectedItems().at(0)->text(), 
 					(Qt::MatchFlags)Qt::MatchExactly, 5);
 		else
 		{
-			list = pkgsViewWG->findItems(rightColumn, 
+			list = pkgsViewWG->findItems(repoList->selectedItems().at(0)->text(), 
 					(Qt::MatchFlags)Qt::MatchExactly, 6);
-			QString tmp = rightColumn;
+			QString tmp = repoList->selectedItems().at(0)->text();
 			tmp.append(" ");
 			tmp.prepend(" ");
 			list.operator+=(pkgsViewWG->findItems(tmp, 
@@ -263,34 +262,6 @@ void MainWindow::refinePkgView()
 		item->setHidden(false);
 	}
 	
-}
-
-void MainWindow::changeRepoView(QListWidgetItem *lItm)
-{
-	qDebug() << "Change Repo View";
-	
-	rightColumnMode = 0;
-	
-	if(lItm == NULL || !lItm->text().compare("All Repositories"))
-		rightColumn = "";
-	else
-		rightColumn = lItm->text();
-
-	refinePkgView();
-}
-
-void MainWindow::changeGrpsView(QListWidgetItem *lItm)
-{
-	qDebug() << "Change Groups View";
-		
-	rightColumnMode = 1;
-	
-	if(lItm == NULL || !lItm->text().compare("All Groups"))
-		rightColumn = "";
-	else
-		rightColumn = lItm->text();
-
-	refinePkgView();
 }
 
 void MainWindow::showPkgInfo()
