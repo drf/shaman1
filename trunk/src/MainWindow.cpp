@@ -225,9 +225,9 @@ void MainWindow::refinePkgView()
 {
 	//First we hide all items
 	foreach (QTreeWidgetItem *item, pkgsViewWG->findItems(QString(), Qt::MatchContains | Qt::MatchWildcard))
-    {
+	{
 		item->setHidden(true);
-    }
+        }
 	
 	QList<QTreeWidgetItem*> list = pkgsViewWG->findItems(QString(), Qt::MatchContains | Qt::MatchWildcard);
 	

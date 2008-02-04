@@ -5,8 +5,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>967</width>
-    <height>664</height>
+    <width>1195</width>
+    <height>776</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -207,6 +207,13 @@
              </property>
             </widget>
            </item>
+           <item>
+            <widget class="QPushButton" name="pushButton" >
+             <property name="text" >
+              <string>Mark for complete removal (pacman -Rcs)</string>
+             </property>
+            </widget>
+           </item>
           </layout>
          </item>
          <item>
@@ -271,8 +278,8 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>967</width>
-     <height>31</height>
+     <width>1195</width>
+     <height>27</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile" >
