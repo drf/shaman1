@@ -40,15 +40,15 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
         pkgsViewWG->setContextMenuPolicy(Qt::CustomContextMenu);
 	
 	connect(actionUpdate_Database, SIGNAL(triggered()), SLOT(doDbUpdate()));
-        connect(pkgsViewWG, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showContextMenu()));
+    connect(pkgsViewWG, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showContextMenu()));
 	connect(actionProcess_Queue, SIGNAL(triggered()), SLOT(processQueue()));
 	connect(switchToRepo, SIGNAL(clicked()), SLOT(populateRepoColumn()));
 	connect(switchToGrps, SIGNAL(clicked()), SLOT(populateGrpsColumn()));
 	connect(installButton, SIGNAL(clicked()), SLOT(installPackage()));
-        connect(removeButton, SIGNAL(clicked()), SLOT(removePackage()));
+    connect(removeButton, SIGNAL(clicked()), SLOT(removePackage()));
+    
+    rightColumn = "";
 	
-	rightColumn = new QString();
-	searchBox = new QString();
 	comboBoxAction = 0;
 	
 	return;
@@ -219,69 +219,67 @@ void MainWindow::populateGrpsColumn()
 	repoList->insertItem(0, item);
 	
 	alpm_list_free(grps);
+
+	connect(repoList, SIGNAL(itemPressed(QListWidgetItem*)), this, 
+			SLOT(changeGrpsView(QListWidgetItem*)));
 }
 
 void MainWindow::refinePkgView()
 {
-	int index = 0;
-	QTreeWidgetItem *itm;
+	//First we hide all items
+	foreach (QTreeWidgetItem *item, pkgsViewWG->findItems(QString(), Qt::MatchContains | Qt::MatchWildcard))
+    {
+		item->setHidden(true);
+    }
 	
-	itm = pkgsViewWG->topLevelItem(index);
+	QList<QTreeWidgetItem*> list = pkgsViewWG->findItems(QString(), Qt::MatchContains | Qt::MatchWildcard);
 	
-	/* Logic logic logic!!! Don't lose your mind, it's so simple. Whenever
-	 * something gets hidden, we set it invisible and we continue. */
+	// Now first: What do we need to refine in the right column?
 	
-	while(itm != NULL)
+	if(rightColumn != NULL)
 	{
-		if(rightColumn != NULL)
-		{
-			if(rightColumnMode == 0)
-			{
-				if(!rightColumn->compare(itm->text(5)))
-					itm->setHidden(false);
-				else
-				{
-					itm->setHidden(true);
-					index++;
-					itm = pkgsViewWG->topLevelItem(index);
-					continue;
-				}
-			}
-			else
-			{
-				continue;
-			}
-		}
-		itm->setHidden(false);
-		
-		index++;
-		itm = pkgsViewWG->topLevelItem(index);
+		if(rightColumnMode == 0)
+			// First time, so don't check anything.
+			list = pkgsViewWG->findItems(rightColumn, 
+					(Qt::MatchFlags)Qt::MatchExactly, 5);
+		else
+			list = pkgsViewWG->findItems(rightColumn, 
+					(Qt::MatchFlags)Qt::MatchExactly, 6);
 	}
+		
+	
+	
+	foreach (QTreeWidgetItem *item, list)
+	{
+		item->setHidden(false);
+	}
+	
 }
 
 void MainWindow::changeRepoView(QListWidgetItem *lItm)
 {
+	qDebug() << "Change Repo View";
+	
 	rightColumnMode = 0;
+	
 	if(lItm == NULL || !lItm->text().compare("All Repositories"))
-		rightColumn = QString();
+		rightColumn = "";
 	else
 		rightColumn = lItm->text();
 
-		
 	refinePkgView();
 }
 
 void MainWindow::changeGrpsView(QListWidgetItem *lItm)
 {
-	QStringList lst;
-	
-	rightColumnMode = 1;
-	if(lItm == NULL || !lItm->text().compare("All Groups"))
-		rightColumn = QString();
-	else
-	{
+	qDebug() << "Change Groups View";
 		
-	}
+	rightColumnMode = 1;
+	
+	if(lItm == NULL || !lItm->text().compare("All Groups"))
+		rightColumn = "";
+	else
+		rightColumn = lItm->text();
 
 	refinePkgView();
 }

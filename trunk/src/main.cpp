@@ -46,10 +46,9 @@ int main(int argc, char **argv)
 	MainWindow mainwin(aHandler);
 	
 	mainwin.show();
-	
-	mainwin.populatePackagesView();
 	mainwin.populateRepoColumn();
 	
+	mainwin.populatePackagesView();
 	return app.exec();
 	
 	printf("Il database locale ha %d pacchetti\n", alpm_list_count(aHandler->searchPackages(NULL, NULL, true)));

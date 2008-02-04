@@ -55,10 +55,10 @@ public slots:
 
 private slots:
 	void showContextMenu();
-    void installPackage();
-    void removePackage();
-    void upgradePackage();
-    void processQueue();
+	void installPackage();
+	void removePackage();
+	void upgradePackage();
+	void processQueue();
 
 	
 private:
@@ -71,10 +71,10 @@ private:
 	UpdateDbDialog *dbdialog;
 	
 	/* This is for the integrated search: */
-	QString *rightColumn;
+	QString rightColumn;
 	int rightColumnMode;
 	int comboBoxAction;
-	QString *searchBox;
+	QString searchBox;
 
 };
 
