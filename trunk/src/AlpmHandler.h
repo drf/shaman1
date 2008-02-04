@@ -70,11 +70,8 @@ public:
 	bool cleanUpCache(alpm_list_t *cache);
 	bool deleteCache(alpm_list_t *cache);
 	bool isPackage(char *packagename);
-	
-	string getTransactionStatus();
-	float getTransactionItemProgress();
-	string getTransactionCurrentItem();
-	float getTransactionTotalProgress();
+		
+	bool performCurrentTransaction();
 	
 	bool reloadPacmanConfiguration(); // In case the user modifies it.
 	
@@ -85,7 +82,6 @@ private:
 	bool configure();
 	bool parsePacmanConf();
 	bool setUpAlpmSettings();
-	bool performCurrentTransaction();
 	
 signals:
 	void streamDbUpdatingStatus(char *repo, int action);

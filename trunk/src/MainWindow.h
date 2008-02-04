@@ -56,6 +56,7 @@ public slots:
 	void fullSysUpgrade();
 	void upgradeAborted();
 	void addUpgradeableToQueue();
+	void queueProcessingEnded(bool errors);
 
 private slots:
 	void showContextMenu();
@@ -63,7 +64,6 @@ private slots:
 	void removePackage();
 	void upgradePackage();
 	void processQueue();
-
 	
 private:
 	void loadDbUpdateDialog();

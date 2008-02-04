@@ -509,6 +509,16 @@ void MainWindow::processQueue()
 	
 	queueDl->show();
 	
+	connect(queueDl, SIGNAL(terminated(bool)), SLOT(queueProcessingEnded(bool)));
+	
 }
 
-
+void MainWindow::queueProcessingEnded(bool errors)
+{
+	// TODO: popup a message if there were errors
+	
+	delete(queueDl);
+	
+	// Do not uncomment before Qt 4.3.4+
+	//populatePackagesView();
+}
