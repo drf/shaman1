@@ -50,6 +50,8 @@ public slots:
 	void showPkgInfo();
 	void doDbUpdate();
 	void finishDbUpdate();
+	void startUpgrading();
+	void fullSysUpgrade();
 
 private slots:
 	void showContextMenu();
@@ -68,15 +70,6 @@ private:
 	AlpmHandler *aHandle;
 	UpdateDbDialog *dbdialog;
 
-};
-
-class UpPkgViewThread : public QThread
-{
-public:
-	UpPkgViewThread(MainWindow *mW);
-	void run();
-private:
-	MainWindow *mainWin;
 };
 
 #endif /*MAINWINDOW_H_*/

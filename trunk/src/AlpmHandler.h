@@ -62,7 +62,7 @@ public:
 	bool isPerformable(string pkgname, int action);
 	
 	bool updateDatabase();
-	bool upgradeSystem();
+	bool fullSystemUpgrade();
 	
 	bool upgradePackages(alpm_list_t *packages);
 	bool installPackages(alpm_list_t *packages);
@@ -85,6 +85,7 @@ private:
 	bool configure();
 	bool parsePacmanConf();
 	bool setUpAlpmSettings();
+	bool performCurrentTransaction();
 	
 signals:
 	void streamDbUpdatingStatus(char *repo, int action);

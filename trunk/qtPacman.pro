@@ -15,7 +15,8 @@ HEADERS += src/AlpmHandler.h \
            src/ConfigurationParser.h \
            src/MainWindow.h \
            src/StringUtils.h \
-           src/UpdateDbDialog.h
+           src/UpdateDbDialog.h \
+           src/SysUpgradeDialog.h
 FORMS += ui/MainWindow.ui \
 	 ui/dbUpdateDialog.ui
 SOURCES += src/AlpmHandler.cpp \
@@ -24,4 +25,5 @@ SOURCES += src/AlpmHandler.cpp \
            src/main.cpp \
            src/MainWindow.cpp \
            src/StringUtils.cpp \
-           src/UpdateDbDialog.cpp
+           src/UpdateDbDialog.cpp \
+           src/SysUpgradeDialog.cpp

@@ -46,6 +46,7 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	connect(switchToGrps, SIGNAL(clicked()), SLOT(populateGrpsColumn()));
 	connect(installButton, SIGNAL(clicked()), SLOT(installPackage()));
     connect(removeButton, SIGNAL(clicked()), SLOT(removePackage()));
+    connect(actionUpgrade_System, SIGNAL(triggered()), SLOT(fullSysUpgrade()));
 	
 	return;
 	
@@ -73,11 +74,6 @@ void MainWindow::removeRepoColumn()
 		delete(itm);
 	
 	disconnect(repoList, SIGNAL(itemPressed(QListWidgetItem*)), 0, 0);
-}
-
-void MainWindow::doUpdView()
-{
-	
 }
 
 bool MainWindow::populatePackagesView()
@@ -355,6 +351,26 @@ void MainWindow::removePackage()
         //FIXME: Same as installPackage
 }
 
+void MainWindow::startUpgrading()
+{
+	disconnect(dbdialog, 0,0,0);
+		
+	dbdialog->deleteLater();
+	
+	
+}
+
+void MainWindow::fullSysUpgrade()
+{
+	dbdialog = new UpdateDbDialog(aHandle, this);
+		
+	dbdialog->show();
+		
+	connect(dbdialog, SIGNAL(killMe()), this, SLOT(startUpgrading()));
+	
+	dbdialog->doAction();
+}
+
 void MainWindow::upgradePackage()
 {
 	qDebug() << "Upgrade Package";
@@ -367,13 +383,4 @@ void MainWindow::processQueue()
 	//FIXME: Process here the created list...
 }
 
-UpPkgViewThread::UpPkgViewThread(MainWindow *mW)
-{
-	mainWin = mW;
-}
-
-void UpPkgViewThread::run()
-{
-	mainWin->doUpdView();
-}
 

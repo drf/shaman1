@@ -44,10 +44,8 @@ AlpmHandler::AlpmHandler(bool init)
 AlpmHandler::~AlpmHandler()
 {
 	
-	/*if(isTransaction())
-		releaseTransaction();*/
-	
-	printf("ciao zio\n");
+	if(isTransaction())
+		releaseTransaction();
 	
 	sleep(2);
 	
@@ -66,8 +64,6 @@ bool AlpmHandler::initTransaction(pmtranstype_t type, pmtransflag_t flags)
 {
 	if(isTransaction())
 		return false;
-	
-	printf("Well");
 	
 	if(alpm_trans_init(type, flags, cb_trans_evt, cb_trans_conv,
 			cb_trans_progress) == -1)
@@ -107,15 +103,6 @@ alpm_list_t *AlpmHandler::getUpgradeablePackages()
 	
 	if(alpm_sync_sysupgrade(db_local, syncdbs, &syncpkgs) == -1) 
 		return NULL;
-	
-	while(syncdbs != NULL)
-	{
-		pmdb_t *dbcrnt = (pmdb_t *)alpm_list_getdata(syncdbs);
-		
-		printf("%s\n", alpm_db_get_name(dbcrnt));
-		syncdbs = syncdbs->next;
-		
-	}
 	
 	if(!syncpkgs)
 		return NULL;
@@ -328,3 +315,42 @@ alpm_list_t *AlpmHandler::getPackageGroups()
 	return retlist;
 }
 
+bool AlpmHandler::performCurrentTransaction()
+{
+	alpm_list_t *data = NULL;
+	
+	if(alpm_trans_prepare(&data) == -1)
+	{
+		releaseTransaction();
+		return false;
+	}
+	
+	if(alpm_trans_commit(&data) == -1)
+	{
+		releaseTransaction();
+		return false;
+	}
+	
+	if(data)
+		FREELIST(data);
+	
+	releaseTransaction();
+	
+	return true;
+}
+
+bool AlpmHandler::fullSystemUpgrade()
+{
+	
+	if(!initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_ALLDEPS))
+		return false;
+	
+	if(alpm_trans_sysupgrade() == -1)
+	{
+		releaseTransaction();
+		return false;
+	}
+	
+	return true;
+	
+}
