@@ -253,8 +253,8 @@ void MainWindow::refinePkgView()
 		}
 	}
 	qDebug() << "The left TextBox is over, let's do the ComboBox";
-	if (packageSwitchCombo->currentText() != tr("All Packages"))
-        {
+	if(!packageSwitchCombo->currentIndex() == 0)
+    {
 		qDebug() << "Hehe, we should not show all Packages";
 		if (packageSwitchCombo->currentText() == tr("Installed packages"))
 		{
