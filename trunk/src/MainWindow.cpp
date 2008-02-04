@@ -40,13 +40,15 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
         pkgsViewWG->setContextMenuPolicy(Qt::CustomContextMenu);
 	
 	connect(actionUpdate_Database, SIGNAL(triggered()), SLOT(doDbUpdate()));
-    connect(pkgsViewWG, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showContextMenu()));
+	connect(pkgsViewWG, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showContextMenu()));
 	connect(actionProcess_Queue, SIGNAL(triggered()), SLOT(processQueue()));
 	connect(switchToRepo, SIGNAL(clicked()), SLOT(populateRepoColumn()));
 	connect(switchToGrps, SIGNAL(clicked()), SLOT(populateGrpsColumn()));
 	connect(installButton, SIGNAL(clicked()), SLOT(installPackage()));
-    connect(removeButton, SIGNAL(clicked()), SLOT(removePackage()));
-    connect(actionUpgrade_System, SIGNAL(triggered()), SLOT(fullSysUpgrade()));
+	connect(removeButton, SIGNAL(clicked()), SLOT(removePackage()));
+	connect(actionUpgrade_System, SIGNAL(triggered()), SLOT(fullSysUpgrade()));
+	connect(packageSwitchCombo, SIGNAL(currentIndexChanged(int)), SLOT(refinePkgView()));
+	connect(searchLine, SIGNAL(textChanged(const QString&)), SLOT(refinePkgView()));
 	
 	return;
 	
@@ -215,21 +217,22 @@ void MainWindow::populateGrpsColumn()
 
 void MainWindow::refinePkgView()
 {
+	qDebug() << "refinePkgView";
 	//First we hide all items
 	foreach (QTreeWidgetItem *item, pkgsViewWG->findItems(QString(), Qt::MatchContains | Qt::MatchWildcard))
 	{
 		item->setHidden(true);
-    }
+	}
 	
 	QList<QTreeWidgetItem*> list = pkgsViewWG->findItems(QString(), Qt::MatchContains | Qt::MatchWildcard);
 	
 	// Now first: What do we need to refine in the right column?
 	
-	if((repoList->selectedItems().at(0)->text().compare("All Repositories") &&
-			repoList->selectedItems().at(0)->text().compare("All Groups")) &&
+	if((repoList->selectedItems().at(0)->text().compare(tr("All Repositories")) &&
+			repoList->selectedItems().at(0)->text().compare(tr("All Groups"))) &&
 			!repoList->selectedItems().isEmpty())
 	{
-		if(!repoList->findItems(QString("All Repositories"),
+		if(!repoList->findItems(QString(tr("All Repositories")),
 				(Qt::MatchFlags)Qt::MatchExactly).isEmpty())
 			// First time, so don't check anything.
 			list = pkgsViewWG->findItems(repoList->selectedItems().at(0)->text(), 
@@ -241,12 +244,66 @@ void MainWindow::refinePkgView()
 			QString tmp = repoList->selectedItems().at(0)->text();
 			tmp.append(" ");
 			tmp.prepend(" ");
-			list.operator+=(pkgsViewWG->findItems(tmp, 
-					(Qt::MatchFlags)Qt::MatchContains, 6));
+			list += pkgsViewWG->findItems(tmp, 
+					(Qt::MatchFlags)Qt::MatchContains, 6);
 		}
 	}
-	// TODO: Refine list based on what we find in the combo box
-	// TODO: Refine list based on what's up in the search bar
+	qDebug() << "The left TextBox is over, let's do the ComboBox";
+	if (packageSwitchCombo->currentText() != tr("All Packages"))
+        {
+		qDebug() << "Hehe, we should not show all Packages";
+		if (packageSwitchCombo->currentText() == tr("Installed packages"))
+		{
+			//qDebug() << "We should only show the installed packages";
+			foreach (QTreeWidgetItem *item, list)
+			{
+				//qDebug() << "Checking for installed packages" + item->text(2);
+				if (!item->text(0).compare("Installed"))
+					list.removeAt(list.indexOf(item));
+			}
+		}
+		if (packageSwitchCombo->currentText() == tr("Not installed packages"))
+		{
+			foreach (QTreeWidgetItem *item, list)
+			{
+				//qDebug() << "Checking for installed packages" + item->text(2);
+				if (!item->text(0).compare("Not installed"))
+					list.removeAt(list.indexOf(item));
+			}
+		}
+		if (packageSwitchCombo->currentText() == tr("Upgradeable packages"))
+		{
+			foreach (QTreeWidgetItem *item, list)
+			{
+				//qDebug() << "Checking for installed packages" + item->text(2);
+				if (!item->text(0).compare("Upgradeable"))
+					list.removeAt(list.indexOf(item));
+			}
+		}
+		if (packageSwitchCombo->currentText() == tr("Packages in Queue"))
+		{
+			foreach (QTreeWidgetItem *item, list)
+			{
+				//qDebug() << "Checking for installed packages" + item->text(2);
+				if (!item->text(0).compare("In Queue"))
+					list.removeAt(list.indexOf(item));
+			}
+		}
+	}
+	else
+		qDebug() << "Show all packages";
+
+	if (!searchLine->text().isEmpty())
+	{
+		foreach (QTreeWidgetItem *item, list)
+		{
+			if (!item->text(2).contains(searchLine->text(), Qt::CaseInsensitive))
+			{
+				list.removeAt(list.indexOf(item));
+			}
+		}
+	}
+
 	
 	/* When we are here, we have a list that contains the packages refined
 	 * by all of our three components. And then we set that list to be
