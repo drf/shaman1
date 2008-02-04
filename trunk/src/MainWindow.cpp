@@ -21,6 +21,7 @@
 #include "callbacks.h"
 #include "UpdateDbDialog.h"
 #include "SysUpgradeDialog.h"
+#include "QueueDialog.h"
 
 #include <iostream>
 #include <QMenu>
@@ -433,6 +434,8 @@ void MainWindow::startUpgrading()
 		
 		upDl = new SysUpgradeDialog(aHandle, this);
 		
+		upDl->show();
+		
 		connect(upDl, SIGNAL(aborted()), SLOT(upgradeAborted()));
 		connect(upDl, SIGNAL(upgradeNow()), SLOT(processQueue()));
 		connect(upDl, SIGNAL(addToPkgQueue()), SLOT(addUpgradeableToQueue()));
@@ -470,7 +473,25 @@ void MainWindow::upgradePackage()
 void MainWindow::processQueue()
 {
 	qDebug() << "Process Queue";
-	//FIXME: Process here the created list...
+	
+	/* This Function will only do the processing stuff. We'd better
+	 * keep things modular as possible due to libalpm's design.
+	 * So the "Process Queue" button does not point here, but
+	 * to a function that reads the queue and prepares libalpm's
+	 * transaction. 
+	 */
+	
+	if(upDl)
+		upDl->deleteLater();
+	
+	/* Now, everything will be done inside our Queue Dialog.
+	 * So, just create it and let him handle the job.
+	 */
+	
+	queueDl = new QueueDialog(aHandle, this);
+	
+	queueDl->show();
+	
 }
 
 

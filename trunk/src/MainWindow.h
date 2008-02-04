@@ -31,6 +31,7 @@
 #include "StringUtils.h"
 #include "UpdateDbDialog.h"
 #include "SysUpgradeDialog.h"
+#include "QueueDialog.h"
 
 class MainWindow : public QMainWindow, private Ui::MainWindow, private StringUtils
 {
@@ -73,6 +74,7 @@ private:
 	AlpmHandler *aHandle;
 	UpdateDbDialog *dbdialog;
 	SysUpgradeDialog *upDl;
+	QueueDialog *queueDl;
 
 };
 
