@@ -243,10 +243,26 @@ void MainWindow::refinePkgView()
 			list = pkgsViewWG->findItems(rightColumn, 
 					(Qt::MatchFlags)Qt::MatchExactly, 5);
 		else
+		{
 			list = pkgsViewWG->findItems(rightColumn, 
 					(Qt::MatchFlags)Qt::MatchExactly, 6);
+			QString tmp = rightColumn;
+			tmp.append(",");
+			printf("%s\n", tmp.toAscii().data());
+			list.operator+=(pkgsViewWG->findItems(tmp, 
+					(Qt::MatchFlags)Qt::MatchContains, 6));
+			tmp = rightColumn;
+			tmp.prepend(",");
+			list.operator+=(pkgsViewWG->findItems(tmp, 
+					(Qt::MatchFlags)Qt::MatchContains, 6));
+		}
 	}
-		
+	// TODO: Refine list based on what we find in the combo box
+	// TODO: Refine list based on what's up in the search bar
+	
+	/* When we are here, we have a list that contains the packages refined
+	 * by all of our three components. And then we set that list to be
+	 * visible. */
 	
 	
 	foreach (QTreeWidgetItem *item, list)
