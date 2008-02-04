@@ -263,9 +263,9 @@ void MainWindow::changeRepoView(QListWidgetItem *lItm)
 {
 	rightColumnMode = 0;
 	if(lItm == NULL || !lItm->text().compare("All Repositories"))
-		rightColumn = NULL;
+		rightColumn = QString();
 	else
-		rightColumn->operator=(lItm->text());
+		rightColumn = lItm->text();
 
 		
 	refinePkgView();
@@ -277,7 +277,7 @@ void MainWindow::changeGrpsView(QListWidgetItem *lItm)
 	
 	rightColumnMode = 1;
 	if(lItm == NULL || !lItm->text().compare("All Groups"))
-		rightColumn = NULL;
+		rightColumn = QString();
 	else
 	{
 		
