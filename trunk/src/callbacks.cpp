@@ -94,8 +94,6 @@ void CallBacks::cb_trans_progress(pmtransprog_t event, const char *pkgname, int 
 {
 	float timediff;
 	
-	printf("Trans called");
-	
 	if(percent == 0) 
 		timediff = get_update_timediff(1);
 	else

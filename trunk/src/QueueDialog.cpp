@@ -21,6 +21,11 @@ QueueDialog::QueueDialog(AlpmHandler *hnd, QWidget *parent)
 	connect(&CbackReference, SIGNAL(streamTransEvent(pmtransevt_t, void*, void*)),
 			SLOT(changeStatus(pmtransevt_t, void*, void*)));
 	
+	checkTransaction->setText(tr("<b>Check transaction validity</b>"));
+	
+	progressBar->setRange(0, 1);
+	progressBar->setValue(0);
+	
 	status = 0;
 }
 
@@ -38,6 +43,8 @@ void QueueDialog::startProcessing()
 	cTh = new TrCommitThread(aHandle);
 	
 	cTh->run();
+	
+	connect(cTh, SIGNAL(finished()), SLOT(cleanup()));
 }
 
 void TrCommitThread::run()
@@ -129,22 +136,39 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 	}
 }
 
-void QueueDialog::updateProgressBar()
+void QueueDialog::updateProgressBar(char *c, int bytedone, int bytetotal, int speed,
+		int listdone, int listtotal, int speedtotal)
 {
+	Q_UNUSED(speedtotal);
+	progressBar->setFormat(QString("%p% (%1 KB/s)").arg(speed));
+	progressBar->setRange(0, listtotal);
+	progressBar->setValue(listdone);
 	
+	actionDetail->setText(QString(tr("Downloading %1... (%2 KB of %3 KB)")).
+			arg(c).arg(bytedone).arg(bytetotal));
 }
 
 void QueueDialog::startDownload()
 {
+	checkTransaction->setText(tr("Check transaction validity"));
+	downloadPackages->setText(tr("<b>Download Packages</b>"));
 	
+	connect(&CbackReference, SIGNAL(streamTransDlProg(char*,int,int,int,int,int,int)), 
+			SLOT(updateProgressBar(char*,int,int,int,int,int,int)));
 }
 
 void QueueDialog::startProcess()
 {
+	downloadPackages->setText(tr("Download Packages"));
+	processingQueue->setText(tr("<b>Process queue</b>"));
 	
+	disconnect(&CbackReference, SIGNAL(streamTransDlProg(char*,int,int,int,int,int,int)), 0, 0);
 }
 
 void QueueDialog::cleanup()
 {
+	processingQueue->setText(tr("Process queue"));
+	cleaningUp->setText(tr("<b>Cleanup</b>"));
 	
+	emit terminated(false);
 }

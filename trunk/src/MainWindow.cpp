@@ -515,9 +515,15 @@ void MainWindow::processQueue()
 
 void MainWindow::queueProcessingEnded(bool errors)
 {
-	// TODO: popup a message if there were errors
+	if(errors)
+	{
+		// TODO: popup a message if there were errors
+		qDebug() << "Errors Occourred";
+	}
 	
 	delete(queueDl);
+	
+	qDebug() << "Transaction Completed Successfully";
 	
 	// Do not uncomment before Qt 4.3.4+
 	//populatePackagesView();
