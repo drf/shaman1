@@ -165,7 +165,6 @@ void CallBacks::cb_log(pmloglevel_t level, char *fmt, va_list args)
 void cb_dl_progress(const char *filename, int file_xfered, int file_total,
 		int list_xfered, int list_total)
 {
-	printf("called");
 	CbackReference.cb_dl_progress(filename, file_xfered, file_total,
 			list_xfered, list_total);
 }

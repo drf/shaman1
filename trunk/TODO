@@ -2,17 +2,27 @@ TODO-List for qtPacman
 
 
 ***********Core***************
-Basic-functionality (installing, removing packages)
-Dbus-Engine
-Plasma-Data-Engine
+Basic-functionality (installing, removing packages) *almost done* *prio*
+Dbus-Engine (later)
+Plasma-Data-Engine *not really needed, we can use DBus only*
+Implement Error Handling *prio in critical cases such as Queue Processing*
+Implement Interface Configuration (XML?)
+Implement Queue *prio*
+Implement Question Handling *prio*
+Throw all relevant packages informations into the QTreeWidgetItem (missing now: installed and dependencies)
 
 
 
 ***********GUI**************
 More icons
-Complete PkgDetails
+Complete PkgDetails *prio*
 All action-button-actions in context-menu
 Connect all buttons to actions
-Configuration-dialog
-System-Tray-Icon
-Plasmoid
+Configuration-dialog *prio*
+System-Tray-Icon *prio*
+Implement ComboBox (depends on Queue implementation and added info to pkgs)
+Plasmoid (later, and as a separate application?)
+Improve Package Information Dialog
+Add dynamic Icons to packages (icon for action, icon for upgradeable, installed, not installed)
+Add dynamic Icons to QueueDialog (f.e.: add a green "v" for completed operation, a red "x" if errors occourred)
+

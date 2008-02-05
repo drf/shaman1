@@ -169,8 +169,15 @@ void QueueDialog::updateProgressBar(char *c, int bytedone, int bytetotal, int sp
 	progressBar->setRange(0, listtotal);
 	progressBar->setValue(listdone);
 	
-	actionDetail->setText(QString(tr("Downloading %1... (%2 KB of %3 KB)")).
-			arg(c).arg(bytedone).arg(bytetotal));
+	double bt = bytetotal/1024;
+	double bd = bytedone/1024;
+	
+	if(bytetotal > 2048)
+		actionDetail->setText(QString(tr("Downloading %1... (%2 MB of %3 MB)")).
+				arg(c).arg(bd/1024, 0, 'f', 2).arg(bt/1024, 0, 'f', 2));
+	else
+		actionDetail->setText(QString(tr("Downloading %1... (%2 KB of %3 KB)")).
+				arg(c).arg(bd, 0, 'f', 0).arg(bt, 0, 'f', 0));
 }
 
 void QueueDialog::startDownload()
