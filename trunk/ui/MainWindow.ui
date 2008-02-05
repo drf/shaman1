@@ -12,6 +12,9 @@
   <property name="windowTitle" >
    <string>QtPacman</string>
   </property>
+  <property name="toolButtonStyle" >
+   <enum>Qt::ToolButtonTextUnderIcon</enum>
+  </property>
   <widget class="QWidget" name="centralwidget" >
    <layout class="QGridLayout" >
     <item row="0" column="0" >
@@ -198,6 +201,9 @@
              <property name="text" >
               <string>Mark for Installation</string>
              </property>
+             <property name="icon" >
+              <iconset resource="qtpacman.qrc" >:/Icons/icons/list-add.png</iconset>
+             </property>
             </widget>
            </item>
            <item>
@@ -205,12 +211,18 @@
              <property name="text" >
               <string>Mark for Removal</string>
              </property>
+             <property name="icon" >
+              <iconset resource="qtpacman.qrc" >:/Icons/icons/list-remove.png</iconset>
+             </property>
             </widget>
            </item>
            <item>
             <widget class="QPushButton" name="completeRemoveButton" >
              <property name="text" >
               <string>Mark for complete removal (pacman -Rcs)</string>
+             </property>
+             <property name="icon" >
+              <iconset resource="qtpacman.qrc" >:/Icons/icons/edit-delete.png</iconset>
              </property>
             </widget>
            </item>
@@ -436,6 +448,9 @@ p, li { white-space: pre-wrap; }
    </property>
   </action>
   <action name="actionUpdate_Database" >
+   <property name="icon" >
+    <iconset resource="qtpacman.qrc" >:/Icons/icons/view-refresh.png</iconset>
+   </property>
    <property name="text" >
     <string>Update Database</string>
    </property>
@@ -491,6 +506,9 @@ p, li { white-space: pre-wrap; }
    </property>
   </action>
   <action name="actionQuit" >
+   <property name="icon" >
+    <iconset resource="qtpacman.qrc" >:/Icons/icons/application-exit.png</iconset>
+   </property>
    <property name="text" >
     <string>Quit</string>
    </property>
@@ -501,7 +519,9 @@ p, li { white-space: pre-wrap; }
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="qtpacman.qrc" />
+ </resources>
  <connections>
   <connection>
    <sender>actionQuit</sender>

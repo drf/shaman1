@@ -31,3 +31,4 @@ SOURCES += src/AlpmHandler.cpp \
            src/UpdateDbDialog.cpp \
            src/SysUpgradeDialog.cpp \
            src/QueueDialog.cpp
+RESOURCES = ui/qtpacman.qrc
