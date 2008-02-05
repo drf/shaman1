@@ -15,6 +15,8 @@ Throw all relevant packages informations into the QTreeWidgetItem (missing now: 
 
 ***********GUI**************
 More icons
+Splitter-positioning is a bit bad at the moment 
+Same with QTreeWidgetItem-columns ;)
 Complete PkgDetails *prio*
 All action-button-actions in context-menu
 Connect all buttons to actions
