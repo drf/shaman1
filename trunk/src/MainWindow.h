@@ -62,6 +62,7 @@ private slots:
 	void showContextMenu();
 	void installPackage();
 	void removePackage();
+        void completeRemovePackage();
 	void upgradePackage();
 	void processQueue();
 	

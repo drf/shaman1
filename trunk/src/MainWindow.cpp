@@ -30,6 +30,7 @@
 #include <QString>
 #include <QListWidgetItem>
 #include <QDebug>
+#include <QMessageBox>
 #include <alpm.h>
 
 extern CallBacks CbackReference;
@@ -50,6 +51,7 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	connect(switchToGrps, SIGNAL(clicked()), SLOT(populateGrpsColumn()));
 	connect(installButton, SIGNAL(clicked()), SLOT(installPackage()));
 	connect(removeButton, SIGNAL(clicked()), SLOT(removePackage()));
+        connect(completeRemoveButton, SIGNAL(clicked()), SLOT(completeRemovePackage()));
 	connect(actionUpgrade_System, SIGNAL(triggered()), SLOT(fullSysUpgrade()));
 	connect(packageSwitchCombo, SIGNAL(currentIndexChanged(int)), SLOT(refinePkgView()));
 	connect(searchLine, SIGNAL(textChanged(const QString&)), SLOT(refinePkgView()));
@@ -403,15 +405,41 @@ void MainWindow::showContextMenu()
 void MainWindow::installPackage()
 {
 	qDebug() << "Install Package";
-	//FIXME: Add the package to a list, which will get processed, when "Process Queue" is clicked
+	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
+	{
+		item->setText(1, tr("Install"));//FIXME: Also install depencies
+		/**alpm_list_t *deps = new alpm_list_t;
+		deps = package->depends();
+
+		while (!deps)
+		{
+			pmpkg_t *pkg = (pmpkg_t *)alpm_list_getdata(deps);
+									
+			QList<QTreeWidgetItem*> list = pkgsViewWG->findItems(alpm_pkg_get_name(pkg), Qt::MatchExactly, 2);
+			foreach (QTreeWidgetItem *itm, list)
+			{
+				itm->setText(1, tr("Install"));//FIXME: Also add text here, that it's a depencie
+			}
+		}**/
+		
+	}
 }
 
 void MainWindow::removePackage()
 {
 	qDebug() << "Remove Package";
-        //FIXME: Same as installPackage
+        foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
+	{
+		item->setText(1, tr("Uninstall"));//FIXME Also install depencies
+	}
 }
 
+void MainWindow::completeRemovePackage()
+{
+        qDebug() << "Complete Remove Package";
+}
+//TODO: Add a function for complete removal (pacman -Rcs)
+//TODO: Add an option to cancel the action
 void MainWindow::startUpgrading()
 {
 	disconnect(dbdialog, 0,0,0);
@@ -421,23 +449,7 @@ void MainWindow::startUpgrading()
 	if(!aHandle->getUpgradeablePackages())
 	{
 		/* Display a simple popup saying the system is up-to-date. */
-		//FIXME: Resizing is not good and add icons...
-		QDialog *dialog = new QDialog(dbdialog);
-                QVBoxLayout *layout = new QVBoxLayout(dialog);
-		QLabel *label = new QLabel(dialog);
-		label->setText(tr("Your system is up to date"));
-		layout->addWidget(label);
-		QPushButton *button = new QPushButton(dialog);
-		button->setText("Ok");
-		button->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
-		connect(button, SIGNAL(clicked()), dialog, SLOT(close()));
-                QHBoxLayout *hblayout = new QHBoxLayout(dialog);
-                hblayout->addItem(new QSpacerItem(20, 20, QSizePolicy::Expanding, QSizePolicy::Minimum));
-                hblayout->addWidget(button);
-		hblayout->addItem(new QSpacerItem(20, 20, QSizePolicy::Expanding, QSizePolicy::Minimum));
-		layout->addLayout(hblayout);
-		dialog->setLayout(layout);
-		dialog->exec();
+		QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("System-Update"), tr("Your system is up to date!"), QMessageBox::Ok, this); 
 		qDebug() << "System is up to date";
 	}
 	else
@@ -484,7 +496,10 @@ void MainWindow::fullSysUpgrade()
 void MainWindow::upgradePackage()
 {
 	qDebug() << "Upgrade Package";
-        //FIXME: Same as installPackage
+        foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
+	{
+		item->setText(1, tr("Upgrade"));//Look if there are depencies for the upgrade
+	}
 }
 
 void MainWindow::processQueue()
@@ -521,7 +536,7 @@ void MainWindow::queueProcessingEnded(bool errors)
 		qDebug() << "Errors Occourred";
 	}
 	
-	delete(queueDl);
+	queueDl->deleteLater();
 	
 	qDebug() << "Transaction Completed Successfully";
 	

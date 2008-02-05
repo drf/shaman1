@@ -194,13 +194,6 @@
             </spacer>
            </item>
            <item>
-            <widget class="QPushButton" name="removeButton" >
-             <property name="text" >
-              <string>Mark for Removal</string>
-             </property>
-            </widget>
-           </item>
-           <item>
             <widget class="QPushButton" name="installButton" >
              <property name="text" >
               <string>Mark for Installation</string>
@@ -208,7 +201,14 @@
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton" >
+            <widget class="QPushButton" name="removeButton" >
+             <property name="text" >
+              <string>Mark for Removal</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="completeRemoveButton" >
              <property name="text" >
               <string>Mark for complete removal (pacman -Rcs)</string>
              </property>
