@@ -268,7 +268,9 @@ ConfigurationParser::ConfigurationParser()
 	pacData.useDelta = 0;
 	pacData.useSysLog = 0;
 	pacData.noPassiveFTP = 0;
-        pacData.xferCommand = NULL;
+    pacData.xferCommand = NULL;
+    pacData.IgnoreGrp = NULL;
+    pacData.IgnorePkg = NULL;
 	pacData.loaded = false;
 }
 
