@@ -58,6 +58,9 @@
           <property name="text" >
            <string>Package Groups</string>
           </property>
+          <property name="icon" >
+           <iconset resource="qtpacman.qrc" >:/Icons/icons/bookmark-new-list.png</iconset>
+          </property>
          </widget>
         </item>
        </layout>
@@ -274,6 +277,9 @@ p, li { white-space: pre-wrap; }
            <widget class="QWidget" name="tab_2" >
             <attribute name="title" >
              <string>Files</string>
+            </attribute>
+            <attribute name="icon" >
+             <iconset resource="qtpacman.qrc" >:/Icons/icons/document-open-folder.png</iconset>
             </attribute>
            </widget>
           </widget>
@@ -514,6 +520,9 @@ p, li { white-space: pre-wrap; }
    </property>
   </action>
   <action name="actionProcess_Queue" >
+   <property name="icon" >
+    <iconset resource="qtpacman.qrc" >:/Icons/icons/dialog-ok-apply.png</iconset>
+   </property>
    <property name="text" >
     <string>Process Queue</string>
    </property>
