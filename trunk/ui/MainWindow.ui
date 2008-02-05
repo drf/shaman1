@@ -479,6 +479,9 @@ p, li { white-space: pre-wrap; }
    </property>
   </action>
   <action name="actionInstall_Package_From_File_2" >
+   <property name="icon" >
+    <iconset resource="qtpacman.qrc" >:/Icons/icons/document-open.png</iconset>
+   </property>
    <property name="text" >
     <string>Install Package From File</string>
    </property>
