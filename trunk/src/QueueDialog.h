@@ -31,6 +31,8 @@ public slots:
 	void changeStatus(pmtransevt_t event, void *data1, void *data2);
 	void updateProgressBar(char *c, int bytedone, int bytetotal, int speed,
 			int listdone, int listtotal, int speedtotal);
+	void updateProgressBar(pmtransprog_t event, char *pkgname, int percent,
+	        int howmany, int remain);
 	void startDownload();
 	void startProcess();
 	void cleanup();

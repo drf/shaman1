@@ -92,17 +92,28 @@ void CallBacks::cb_trans_conv(pmtransconv_t event, void *data1, void *data2,
 void CallBacks::cb_trans_progress(pmtransprog_t event, const char *pkgname, int percent,
                    int howmany, int remain)
 {
-	float timediff;
+	float timediff = 0.0;
 	
 	if(percent == 0) 
+	{
+		gettimeofday(&initial_time, NULL);
 		timediff = get_update_timediff(1);
+	}
 	else
+	{
 		timediff = get_update_timediff(0);
-	
+
+		if(timediff < UPDATE_SPEED_SEC) 
+		{
+			/* return if the calling interval was too short */
+			return;
+		}
+	}
+
 	if(percent > 0 && percent < 100 && !timediff)
 		return;
-	
-	emit streamTransProgress(event, pkgname, percent, howmany, remain);
+
+	emit streamTransProgress(event, (char *)pkgname, percent, howmany, remain);
 }
 
 void CallBacks::cb_dl_progress(const char *filename, int file_xfered, int file_total,

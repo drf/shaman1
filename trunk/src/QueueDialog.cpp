@@ -105,7 +105,7 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 			actionDetail->setText(QString(tr("Upgrading %1...")).arg(alpm_pkg_get_name((pmpkg_t *)data1)));
 			break;
 		case PM_TRANS_EVT_UPGRADE_DONE:
-			actionDetail->setText(QString(tr("Upgraded %s (%s -> %s)")).arg(
+			actionDetail->setText(QString(tr("Upgraded %1 (%2 -> %3)")).arg(
 			         (char *)alpm_pkg_get_name((pmpkg_t *)data1)).arg((char *)alpm_pkg_get_version((pmpkg_t *)data2)).
 			         arg((char *)alpm_pkg_get_version((pmpkg_t *)data1)));
 			//alpm_logaction(str);
@@ -165,19 +165,43 @@ void QueueDialog::updateProgressBar(char *c, int bytedone, int bytetotal, int sp
 		int listdone, int listtotal, int speedtotal)
 {
 	Q_UNUSED(speedtotal);
-	progressBar->setFormat(QString("%p% (%1 KB/s)").arg(speed));
-	progressBar->setRange(0, listtotal);
-	progressBar->setValue(listdone);
-	
+
 	double bt = bytetotal/1024;
 	double bd = bytedone/1024;
-	
+
+	unsigned int eta_h = 0, eta_m = 0, eta_s = 0;
+
+	eta_s = (listtotal - listdone) / (speedtotal * 1024.0);
+	eta_h = eta_s / 3600;
+	eta_s -= eta_h * 3600;
+	eta_m = eta_s / 60;
+	eta_s -= eta_m * 60;
+
+	progressBar->setFormat(QString("%p% (%1 KB/s, %4:%5:%6 remaining)").
+			arg(speed).arg((int)eta_h,2,10,QChar('0')).arg((int)eta_m,2,10,QChar('0')).
+			arg((int)eta_s,2,10,QChar('0')));
+	progressBar->setRange(0, listtotal);
+	progressBar->setValue(listdone);
+
+
 	if(bytetotal > 2048)
 		actionDetail->setText(QString(tr("Downloading %1... (%2 MB of %3 MB)")).
 				arg(c).arg(bd/1024, 0, 'f', 2).arg(bt/1024, 0, 'f', 2));
 	else
 		actionDetail->setText(QString(tr("Downloading %1... (%2 KB of %3 KB)")).
 				arg(c).arg(bd, 0, 'f', 0).arg(bt, 0, 'f', 0));
+}
+
+void QueueDialog::updateProgressBar(pmtransprog_t event, char *pkgname, int percent,
+        int howmany, int remain)
+{
+	Q_UNUSED(pkgname);
+	Q_UNUSED(event);
+	Q_UNUSED(percent);
+	
+	progressBar->setFormat("%p");
+	progressBar->setRange(0,howmany);
+	progressBar->setValue(remain);
 }
 
 void QueueDialog::startDownload()
@@ -195,10 +219,14 @@ void QueueDialog::startProcess()
 	processingQueue->setText(tr("<b>Process queue</b>"));
 	
 	disconnect(&CbackReference, SIGNAL(streamTransDlProg(char*,int,int,int,int,int,int)), 0, 0);
+	qRegisterMetaType<pmtransprog_t>("pmtransprog_t");
+	connect(&CbackReference, SIGNAL(streamTransProgress(pmtransprog_t,char*,int,int,int)),
+			SLOT(updateProgressBar(pmtransprog_t,char*,int,int,int)));
 }
 
 void QueueDialog::cleanup()
 {
+	disconnect(&CbackReference, SIGNAL(streamTransProgress(pmtransprog_t,const char,int,int,int)), 0, 0);
 	processingQueue->setText(tr("Process queue"));
 	cleaningUp->setText(tr("<b>Cleanup</b>"));
 	
