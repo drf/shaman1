@@ -52,6 +52,7 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	connect(installButton, SIGNAL(clicked()), SLOT(installPackage()));
 	connect(removeButton, SIGNAL(clicked()), SLOT(removePackage()));
         connect(completeRemoveButton, SIGNAL(clicked()), SLOT(completeRemovePackage()));
+	connect(cancelButton, SIGNAL(clicked()), SLOT(cancelAction()));
 	connect(actionUpgrade_System, SIGNAL(triggered()), SLOT(fullSysUpgrade()));
 	connect(packageSwitchCombo, SIGNAL(currentIndexChanged(int)), SLOT(refinePkgView()));
 	connect(searchLine, SIGNAL(textChanged(const QString&)), SLOT(refinePkgView()));
@@ -362,7 +363,6 @@ void MainWindow::showPkgInfo()
 
 void MainWindow::doDbUpdate()
 {
-	
 	dbdialog = new UpdateDbDialog(aHandle, this);
 	
 	dbdialog->show();
@@ -370,7 +370,6 @@ void MainWindow::doDbUpdate()
 	connect(dbdialog, SIGNAL(killMe()), this, SLOT(finishDbUpdate()));
 	
 	dbdialog->doAction();
-	
 }
 
 void MainWindow::finishDbUpdate()
@@ -391,6 +390,8 @@ void MainWindow::showContextMenu()
         connect(removeAction, SIGNAL(triggered()), SLOT(removePackage()));
         QAction *upgradeAction = menu->addAction(tr("Mark for Upgrade"));
         connect(upgradeAction, SIGNAL(triggered()), SLOT(upgradePackage()));
+	QAction *cancelAction = menu->addAction(tr("Cancel Action"));
+	connect(cancelAction, SIGNAL(triggered()), SLOT(cancelAction()));
         menu->popup(QCursor::pos());
 }
 
@@ -430,8 +431,15 @@ void MainWindow::completeRemovePackage()
 {
         qDebug() << "Complete Remove Package";
 }
-//TODO: Add a function for complete removal (pacman -Rcs)
-//TODO: Add an option to cancel the action
+
+void MainWindow::cancelAction()
+{
+	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
+	{
+		item->setText(1, QString());//FIXME: Remove depending packages as well...
+	}
+}
+
 void MainWindow::startUpgrading()
 {
 	disconnect(dbdialog, 0,0,0);
