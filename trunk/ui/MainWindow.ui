@@ -474,6 +474,9 @@ p, li { white-space: pre-wrap; }
    </property>
   </action>
   <action name="actionUpgrade_System" >
+   <property name="icon" >
+    <iconset resource="qtpacman.qrc" >:/Icons/icons/edit-redo.png</iconset>
+   </property>
    <property name="text" >
     <string>Upgrade System</string>
    </property>
