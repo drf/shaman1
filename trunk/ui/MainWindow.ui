@@ -45,6 +45,9 @@
           <property name="text" >
            <string>Repositories</string>
           </property>
+          <property name="icon" >
+           <iconset resource="qtpacman.qrc" >:/Icons/icons/network-server-database.png</iconset>
+          </property>
          </widget>
         </item>
         <item>
@@ -246,6 +249,9 @@
             <attribute name="title" >
              <string>Package Information</string>
             </attribute>
+            <attribute name="icon" >
+             <iconset resource="qtpacman.qrc" >:/Icons/icons/help-about.png</iconset>
+            </attribute>
             <layout class="QGridLayout" >
              <item row="0" column="0" >
               <widget class="QTextEdit" name="pkgInfo" >
@@ -379,11 +385,17 @@ p, li { white-space: pre-wrap; }
   </widget>
   <widget class="QStatusBar" name="statusBar" />
   <action name="actionPackage_Repositories" >
+   <property name="icon" >
+    <iconset resource="qtpacman.qrc" >:/Icons/icons/network-server-database.png</iconset>
+   </property>
    <property name="text" >
     <string>Package Repositories</string>
    </property>
   </action>
   <action name="actionPacman_Preferences" >
+   <property name="icon" >
+    <iconset resource="qtpacman.qrc" >:/Icons/icons/preferences-system.png</iconset>
+   </property>
    <property name="text" >
     <string>Pacman Preferences</string>
    </property>
