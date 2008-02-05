@@ -1,0 +1,18 @@
+TODO-List for qtPacman 
+
+
+***********Core***************
+Basic-functionality (installing, removing packages)
+Dbus-Engine
+Plasma-Data-Engine
+
+
+
+***********GUI**************
+More icons
+Complete PkgDetails
+All action-button-actions in context-menu
+Connect all buttons to actions
+Configuration-dialog
+System-Tray-Icon
+Plasmoid
