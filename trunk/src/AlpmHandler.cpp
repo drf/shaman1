@@ -60,6 +60,22 @@ bool AlpmHandler::isTransaction()
 		return false;
 }
 
+bool AlpmHandler::testLibrary()
+{
+	/* Simulate a transaction to make sure that libalpm is
+	 * ready to rock. For example, if we don't have a lock
+	 * on database this test will reveal it.
+	 */
+	
+	if(!initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_ALLDEPS))
+		return false;
+	
+	if(!releaseTransaction())
+		return false;
+	
+	return true;
+}
+
 bool AlpmHandler::initTransaction(pmtranstype_t type, pmtransflag_t flags)
 {
 	if(isTransaction())

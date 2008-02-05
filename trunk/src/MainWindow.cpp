@@ -325,8 +325,6 @@ void MainWindow::refinePkgView()
 
 void MainWindow::showPkgInfo()
 {
-	char *pkgname = pkgsViewWG->currentItem()->text(2).toAscii().data();
-	char *db = pkgsViewWG->currentItem()->text(5).toAscii().data();
 	QString description;
 	pmpkg_t *pkg;
 	alpm_list_t *databases;
@@ -335,27 +333,21 @@ void MainWindow::showPkgInfo()
 	databases = aHandle->getAvailableRepos();
 		
 	databases = alpm_list_first(databases);
-	printf("%s:", db);
-	printf("%s\n", pkgname);
 	
 	while(databases != NULL)
 	{
-		if(!strcmp(db, alpm_db_get_name((pmdb_t *)alpm_list_getdata(databases))))
+		if(!strcmp(pkgsViewWG->currentItem()->text(5).toAscii().data(),
+				alpm_db_get_name((pmdb_t *)alpm_list_getdata(databases))))
 		{
 			curdb = (pmdb_t *)alpm_list_getdata(databases);
 			break;
 		}
-		printf("%s,", alpm_db_get_name((pmdb_t *)alpm_list_getdata(databases)));
 		databases = alpm_list_next(databases);
 	}
-	
-	printf("%s\n", pkgname);
-	
-	pkg = alpm_db_get_pkg(curdb, pkgname);
+		
+	pkg = alpm_db_get_pkg(curdb, pkgsViewWG->currentItem()->text(2).toAscii().data());
 	
 	databases = alpm_list_first(databases);
-
-	printf("\n");
 	
 	description.append("<b>");
 	description.append(alpm_pkg_get_name(pkg));
@@ -514,7 +506,7 @@ void MainWindow::processQueue()
 	 */
 	
 	if(upDl)
-		upDl->deleteLater();
+		delete(upDl);
 	
 	/* Now, everything will be done inside our Queue Dialog.
 	 * So, just create it and let him handle the job.
@@ -525,6 +517,8 @@ void MainWindow::processQueue()
 	queueDl->show();
 	
 	connect(queueDl, SIGNAL(terminated(bool)), SLOT(queueProcessingEnded(bool)));
+	
+	queueDl->startProcessing();
 	
 }
 

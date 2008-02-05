@@ -51,6 +51,7 @@ public:
 	virtual ~AlpmHandler();
 	
 	bool isTransaction();
+	bool testLibrary();
 	
 	alpm_list_t *getAvailableRepos();
 	alpm_list_t *getPackageGroups();

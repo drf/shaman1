@@ -49,7 +49,7 @@ int main(int argc, char **argv)
 	mainwin.show();
 	mainwin.populateRepoColumn();
 	
-	mainwin.populatePackagesView();
+	//mainwin.populatePackagesView();
 	return app.exec();
 	
 }

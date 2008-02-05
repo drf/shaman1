@@ -18,6 +18,8 @@ QueueDialog::QueueDialog(AlpmHandler *hnd, QWidget *parent)
 	setupUi(this);
 	setWindowModality(Qt::ApplicationModal);
 	
+	qRegisterMetaType<pmtransevt_t>("pmtransevt_t");
+	
 	connect(&CbackReference, SIGNAL(streamTransEvent(pmtransevt_t, void*, void*)),
 			SLOT(changeStatus(pmtransevt_t, void*, void*)));
 	
@@ -42,7 +44,7 @@ void QueueDialog::startProcessing()
 {
 	cTh = new TrCommitThread(aHandle);
 	
-	cTh->run();
+	cTh->start();
 	
 	connect(cTh, SIGNAL(finished()), SLOT(cleanup()));
 }
@@ -69,6 +71,11 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 			actionDetail->setText(QString(tr("Looking for Inter-Conflicts...")));
 			break;
 		case PM_TRANS_EVT_ADD_START:
+			if(status == 1)
+			{
+				status = 2;
+				startProcess();
+			}
 			actionDetail->setText(QString(tr("Installing %1...")).arg(alpm_pkg_get_name((pmpkg_t *)data1)));
 			break;
 		case PM_TRANS_EVT_ADD_DONE:
@@ -77,6 +84,11 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 			//alpm_logaction(str);
 			break;
 		case PM_TRANS_EVT_REMOVE_START:
+			if(status == 1)
+			{
+				status = 2;
+				startProcess();
+			}
 			actionDetail->setText(QString(tr("Removing %1...")).arg(alpm_pkg_get_name((pmpkg_t *)data1)));
 			break;
 		case PM_TRANS_EVT_REMOVE_DONE:
@@ -85,6 +97,11 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 			//alpm_logaction(str);
 			break;
 		case PM_TRANS_EVT_UPGRADE_START:
+			if(status == 1)
+			{
+				status = 2;
+				startProcess();
+			}
 			actionDetail->setText(QString(tr("Upgrading %1...")).arg(alpm_pkg_get_name((pmpkg_t *)data1)));
 			break;
 		case PM_TRANS_EVT_UPGRADE_DONE:
@@ -94,6 +111,11 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 			//alpm_logaction(str);
 			break;
 		case PM_TRANS_EVT_INTEGRITY_START:
+			if(status == 1)
+			{
+				status = 2;
+				startProcess();
+			}
 			actionDetail->setText(QString(tr("Checking package integrity...")));
 			break;
 		case PM_TRANS_EVT_DELTA_INTEGRITY_START:
@@ -119,9 +141,12 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 			actionDetail->setText(QString("%s/%s").arg((char*)data1).arg((char*)data2));
 			break;
 		case PM_TRANS_EVT_RETRIEVE_START:
-			actionDetail->setText(QString(tr("Starting downloading packages from core...")).arg((char*)data1));
+			actionDetail->setText(QString(tr("Starting downloading packages from %1...")).arg((char*)data1));
 			if(status == 0)
+			{
+				status = 1;
 				startDownload();
+			}
 			break;
 		/* all the simple done events, with fallthrough for each */
 		case PM_TRANS_EVT_FILECONFLICTS_DONE:
