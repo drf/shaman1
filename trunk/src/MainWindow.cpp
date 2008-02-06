@@ -429,13 +429,31 @@ void MainWindow::installPackage()
 	qDebug() << "Install Package";
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
 	{
+		installPackage(item->text(2));
+	}
+}
+
+void MainWindow::installPackage(QString package)
+{
+	qDebug() << "Install package: " + package;
+	if (pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 2).isEmpty())
+	{
+		qDebug() << "Can't find package: " + package;
+		return;
+	}
+	QTreeWidgetItem *item = pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 2).first();
+
+	qDebug() << item->text(1);
+	if (item->text(1) == "Installed")
+		return;
+	else
 		item->setText(1, tr("Install"));
 
-		/**
-		foreach (QString package, aHandle->getPackageDependencies(item->text(2), item->text(5)))
-		{
-			pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 2).first().setText(1, tr("Install as dependency of %1") + item->text(2));
-		}**/
+	qDebug() << item->text(5);
+
+	foreach (QString dep, aHandle->getPackageDependencies(package, item->text(5)))
+	{
+		installPackage(dep);
 	}
 }
 

@@ -69,6 +69,7 @@ private slots:
 	void processQueue();
 	
 private:
+	void installPackage(QString package);
 	void loadDbUpdateDialog();
 	void removeDbUpdateDialog();
 	
