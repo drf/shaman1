@@ -493,6 +493,25 @@ void MainWindow::removePackage(QString package)
 void MainWindow::completeRemovePackage()
 {
         qDebug() << "Complete Remove Package";
+	QTreeWidgetItem *item = pkgsViewWG->selectedItems().first();
+
+	qDebug() << item->text(1);
+	if (item->text(1) == "Not installed")
+		return;
+	else
+		item->setText(1, tr("Complete Uninstall"));
+
+	qDebug() << item->text(5);
+
+	//Now we remove the on-package-dependencies and the depencies...
+	foreach (QString onDep, aHandle->getDependenciesOnPackage(item->text(2), item->text(5)))
+	{
+		removePackage(onDep);
+	}
+	foreach (QString dep, aHandle->getPackageDependencies(item->text(2), item->text(5)))
+	{
+		removePackage(dep);
+	}
 }
 
 void MainWindow::cancelAction()
