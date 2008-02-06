@@ -226,7 +226,7 @@ void QueueDialog::startProcess()
 
 void QueueDialog::cleanup()
 {
-	disconnect(&CbackReference, SIGNAL(streamTransProgress(pmtransprog_t,const char,int,int,int)), 0, 0);
+	disconnect(&CbackReference, SIGNAL(streamTransProgress(pmtransprog_t,char*,int,int,int)), 0, 0);
 	processingQueue->setText(tr("Process queue"));
 	cleaningUp->setText(tr("<b>Cleanup</b>"));
 	

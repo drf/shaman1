@@ -27,6 +27,7 @@
 #include <iostream>
 #include <QApplication>
 #include <QString>
+#include <QSettings>
 #include <signal.h>
 
 static void cleanup(int signum)
@@ -93,10 +94,37 @@ int main(int argc, char **argv)
 	signal(SIGINT, cleanup);
 	signal(SIGTERM, cleanup);
 	signal(SIGSEGV, cleanup);
+	
+	QSettings *settings = new QSettings(QSettings::SystemScope, "qtPacman", "qtPacman");
+	
+	if(settings->value("gui/startupmode").toString() == 0)
+	{
+		/* Whoa! This probably means that this is either the first time we
+		 * start qtPacman, or the config file has gone. In both cases,
+		 * let's create some reasonable defaults.
+		 */
+		settings->setValue("gui/startupmode", "window");
+	}
+	
+	settings->deleteLater();
 
 	MainWindow mainwin(aHandler);
+	
+	if(settings->value("gui/startupmode").toString() == "window")
+	{
+		/* case 1: we want to show Main Window
+		 */
+		mainwin.show();
+		
+	}
+	else
+	{
+		/* TODO: case 2: we don't want to show Main Window,
+		 * we want the program to start up in the systray
+		 * only.
+		 */
+	}
 
-	mainwin.show();
 	mainwin.populateRepoColumn();
 
 	mainwin.populatePackagesView();

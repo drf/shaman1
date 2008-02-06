@@ -52,201 +52,107 @@ alpm_list_t *ConfigurationParser::setrepeatingoption(QString ptr)
 	return list;
 }
 
-void ConfigurationParser::parsePacmanConfig(QString file, QString givensection,
-		QString givendb)
+void ConfigurationParser::parsePacmanConfig(QString file, QString givendb)
 {
-	QFile fp(file);
-	QString line, db(NULL), section(NULL);
-	int linenum = 0, serverparsed = 0;
-		
-	if(!pacData.loaded)
-	{
-		pacData.syncdbs = NULL;
-		pacData.serverAssoc = NULL;
-	}
+	QSettings *settings = new QSettings(file, QSettings::NativeFormat);
+	
+	QString db(NULL);
+	int serverparsed = 0;
 	
 	pacData.loaded = true;
-
-	if(!fp.open(QIODevice::ReadOnly | QIODevice::Text))
-	{
-		pacData.loaded = false;
-		return;
-	}
-	
-	QTextStream in(&fp);
-
-	/* if we are passed a section, use it as our starting point */
-	if(givensection != NULL) 
-		section.operator=(givensection);	
 		
 	/* if we are passed a db, use it as our starting point */
 	if(givendb != NULL)
 		db.operator=(givendb);
 
-	while(!in.atEnd()) 
+	foreach(QString str, settings->allKeys())
 	{
-		line = in.readLine();
-		linenum++;
-		//strtrim(line);
-		while(line.contains('\n'))
-			line.remove(line.indexOf('\n'), 1);
-
-		/* ignore whole line and end of line comments */
-		if(line.length() == 0 || line.startsWith('#')) 
-			continue;
-
-		if(line.indexOf("#") != -1) 
-			line.truncate(line.indexOf("#"));
-
-		if(line.startsWith('[') && line.endsWith(']')) 
+		if(!str.contains("options") && str.contains("/") && !str.contains("#"))
 		{
-			/* new config section, skip the '[' */
-			line.remove(0,1);
-			line.remove(line.length()-1, line.length());
-			section.operator=(line);
-			while(section.contains(' '))
-				section.remove(section.indexOf(' '), 1);
-			/*ptr = line;
-			ptr++;
-			if(section)
-				free(section);
-				
-			section = strdup(ptr);
-			section[strlen(section)-1] = '\0';
-			if(!strlen(section))
-			{
-				pacData.loaded = false;
-				return;
-			}*/
+			// Oooh, it's a database!
+			QStringList splitted = str.split('/');
+			pacData.syncdbs.append(splitted.at(0));
+			db.operator=(splitted.at(0));
+			serverparsed = 0;
 			
-			/* if we are not looking at the options section, register a db and also
-			 * ensure we have set all of our library paths as the library is too stupid
-			 * at the moment to do lazy opening of the databases */
-			
-			if(section.operator!=("options"))
+			if(!splitted.at(1).compare("Server"))
 			{
-				char *dest = (char *)malloc(section.length()*sizeof(char));
-				strcpy(dest, section.toAscii().data());
-				pacData.syncdbs = alpm_list_add(pacData.syncdbs, dest);
-				serverparsed = 0;
-								
-				db.operator=(line);
-			}
-		}
-		else 
-		{
-			/* directive */
-			QString key;
-			QStringList templst;
-			/* strsep modifies the 'line' string: 'key \0 ptr' */
-			templst = line.split("=");
-			if(templst.size() != 2)
-			{
-				pacData.loaded = false;
-				
-				return;
-			}
-			key.operator=(templst.at(0));
-			line.operator=(templst.at(1));
 
-			if(key == NULL)
-			{
-				pacData.loaded = false;
-				return;
-			}
-			
-			if(section == NULL) 
-			{
-				pacData.loaded = false;
-				return;
-			}
-			
-			while(key.contains(' '))
-				key.remove(key.indexOf(' '), 1);
-
-			if(line == NULL && section.compare("options", Qt::CaseInsensitive) == 0) 
-			{
-				/* directives without settings, all in [options] */
-				if(key.compare("NoPassiveFTP", Qt::CaseInsensitive) == 0)
-					pacData.noPassiveFTP = 1;
-				else if(key.compare("UseSyslog", Qt::CaseInsensitive) == 0)
-					pacData.useSysLog = 1;
-				else if(key.compare("UseDelta", Qt::CaseInsensitive) == 0)
-					pacData.useDelta = 1; 
+				if(settings->value(str).toString().contains('$'))
+				{
+					QStringList tmplst = settings->value(str).toString().split(QString("$repo"), 
+							QString::SkipEmptyParts, Qt::CaseInsensitive);
+					
+					QString dserv(tmplst.at(0));
+					
+					dserv.append(str);
+					dserv.append(tmplst.at(1));
+					pacData.serverAssoc.append(dserv);
+				}
+				else
+					pacData.serverAssoc.append(settings->value(str).toString());
 				
+				serverparsed = 1;
 			}
-			else
-			{
-				/* directives with settings */
-				if(key.compare("Include", Qt::CaseInsensitive) == 0)
-				{
-					while(line.contains(' '))
-						line.remove(line.indexOf(' '), 1);
-					parsePacmanConfig(line, section, db);
-					if(!pacData.loaded)
-					{
-						pacData.loaded = false;
-						
-						return;
-					}
-				}
-					/* Ignore include failures... assume non-critical */
-				else if(section.compare("options", Qt::CaseInsensitive) == 0)
-				{
-					if(key.compare("NoUpgrade", Qt::CaseInsensitive) == 0)
-						pacData.NoUpgrade = setrepeatingoption(line);
-					else if(key.compare("NoExtract", Qt::CaseInsensitive) == 0)
-						pacData.NoExtract = setrepeatingoption(line);
-					else if(key.compare("IgnorePkg", Qt::CaseInsensitive) == 0)
-						pacData.IgnorePkg = setrepeatingoption(line);
-					else if(key.compare("IgnoreGroup", Qt::CaseInsensitive) == 0)
-						pacData.IgnoreGrp = setrepeatingoption(line);
-					else if(key.compare("HoldPkg", Qt::CaseInsensitive) == 0)
-						pacData.HoldPkg = setrepeatingoption(line);
-					else if (key.compare("XferCommand", Qt::CaseInsensitive) == 0)
-					{
-						pacData.xferCommand = line.toAscii().data();	
-					}
-											
-				} 
-				else if(key.compare("Server", Qt::CaseInsensitive) == 0) 
-				{
-					if(serverparsed == 1)
-						continue;
-					
-					serverparsed = 1;
-					/* let's attempt a replacement for the current repo */
-					while(line.contains(' '))
-						line.remove(line.indexOf(' '), 1);
-					
-					
-					if(line.contains('$'))
-					{
-						QStringList tmplst = line.split(QString("$repo"), 
-								QString::SkipEmptyParts, Qt::CaseInsensitive);
-						char *dest = (char *)malloc((tmplst.at(0).length() + 
-								section.length() + tmplst.at(1).length())*sizeof(char));
-						strcpy(dest, tmplst.at(0).toAscii().data());
-						strcat(dest, section.toAscii().data());
-						strcat(dest, tmplst.at(1).toAscii().data());
-						pacData.serverAssoc = alpm_list_add(pacData.serverAssoc, dest);
-					}
-					else
-					{
-						char *dest = (char *)malloc(line.length()*sizeof(char));
-						strcpy(dest, line.toAscii().data());
-						pacData.serverAssoc = alpm_list_add(pacData.serverAssoc, dest);
-					}
-				}
-				else 
-				{
-					pacData.loaded = false;
-					return;
-				}
-			}
+			
+			
+			if(!splitted.at(1).compare("Include"))
+				parsePacmanConfig(settings->value(str).toString(), db);
 		}
 	}
-	fp.close();
+
+	if(settings->contains("options/NoPassiveFTP"))
+		pacData.noPassiveFTP = 1;
+	if(settings->contains("options/UseSyslog"))
+		pacData.useSysLog = 1;
+	if(settings->contains("options/UseDelta"))
+		pacData.useDelta = 1; 
+
+	if(settings->contains("options/Include"))
+	{
+		parsePacmanConfig(settings->value("options/Include").toString(), db);
+		if(!pacData.loaded)
+		{
+			pacData.loaded = false;
+
+			return;
+		}
+	}
+	if(settings->contains("options/NoUpgrade"))
+		pacData.NoUpgrade = setrepeatingoption(settings->value("options/NoUpgrade").toString());
+	if(settings->contains("options/NoExtract"))
+		pacData.NoExtract = setrepeatingoption(settings->value("options/NoExtract").toString());
+	if(settings->contains("options/IgnorePkg"))
+		pacData.IgnorePkg = setrepeatingoption(settings->value("options/IgnorePkg").toString());
+	if(settings->contains("options/IgnoreGroup"))
+		pacData.IgnoreGrp = setrepeatingoption(settings->value("options/IgnoreGroup").toString());
+	if(settings->contains("options/HoldPkg"))
+		pacData.HoldPkg = setrepeatingoption(settings->value("options/HoldPkg").toString());
+	if(settings->contains("options/XferCommand"))
+		pacData.xferCommand = settings->value("options/XferCommand").toString().toAscii().data();
+
+
+	if(settings->contains("Server")) 
+	{
+		if(serverparsed != 1)
+		{
+			if(settings->value("Server").toString().contains('$'))
+			{
+				QStringList tmplst = settings->value("Server").toString().split(QString("$repo"), 
+						QString::SkipEmptyParts, Qt::CaseInsensitive);
+
+				QString dserv(tmplst.at(0));
+
+				dserv.append(db);
+				dserv.append(tmplst.at(1));
+				pacData.serverAssoc.append(dserv);
+			}
+			else
+				pacData.serverAssoc.append(settings->value("Server").toString());
+
+		}
+		serverparsed = 1;
+	}
 }
 
 void ConfigurationParser::parsePaKmodConf()
@@ -280,7 +186,7 @@ PacmanConf ConfigurationParser::getPacmanConf(bool forcereload = false)
 	if(pacData.loaded && !forcereload)
 		return pacData;
 	
-	parsePacmanConfig("/etc/pacman.conf", NULL, NULL);
+	parsePacmanConfig("/etc/pacman.conf", NULL);
 	
 	return pacData;
 }

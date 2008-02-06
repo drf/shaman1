@@ -52,7 +52,7 @@ signals:
 	void streamTransEvent(pmtransevt_t event, void *data1, void *data2);
 	void streamTransQuestion(pmtransconv_t event, void *data1, void *data2,
 		        void *data3);
-	void streamTransProgress(pmtransprog_t event, const char *pkgname, int percent,
+	void streamTransProgress(pmtransprog_t event, char *pkgname, int percent,
 			int howmany, int remain);
 	void streamTransDlProg(char *filename, int file_x, int file_t, int spd_f,
 			int list_x, int list_t, int spd_l);

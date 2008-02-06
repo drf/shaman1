@@ -216,7 +216,6 @@ bool AlpmHandler::reloadPacmanConfiguration()
 bool AlpmHandler::setUpAlpmSettings()
 {
 	PacmanConf pdata;
-	char *curdb, *temp;
 	int count = 0;
 
 	/* Let's prepare Alpm for the big showdown. First of all, let's set up
@@ -237,28 +236,17 @@ bool AlpmHandler::setUpAlpmSettings()
 
 	/* Register our sync databases, kindly taken from pacdata */
 
-	pdata.syncdbs = alpm_list_first(pdata.syncdbs);
-
-	pdata.serverAssoc = alpm_list_first(pdata.serverAssoc);
-
 	if(!pdata.loaded)
 		printf("La madonna");
 
-	while(pdata.syncdbs != NULL)
+	for(int i = 0; i < pdata.syncdbs.size(); ++i)
 	{
+		dbs_sync = alpm_db_register_sync(pdata.syncdbs.at(i).toAscii().data());
 
-		curdb = (char *)alpm_list_getdata(pdata.syncdbs);
-
-		dbs_sync = alpm_db_register_sync(curdb);
-
-		temp = (char *)alpm_list_getdata(pdata.serverAssoc);
-
-		if(alpm_db_setserver(dbs_sync, temp) == 0)
-			printf("%s --> %s\n", curdb, temp );
-
-		pdata.syncdbs = alpm_list_next(pdata.syncdbs);
-		pdata.serverAssoc = alpm_list_next(pdata.serverAssoc);
-
+		if(alpm_db_setserver(dbs_sync, pdata.serverAssoc.at(i).toAscii().data()) == 0)
+			printf("%s --> %s\n", pdata.syncdbs.at(i).toAscii().data(),
+					pdata.serverAssoc.at(i).toAscii().data());
+		
 		count++;
 	}
 

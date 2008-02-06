@@ -33,7 +33,7 @@
 using namespace std;
 
 struct PcCnf {
-	alpm_list_t *syncdbs;
+	QStringList syncdbs;
 	alpm_list_t *NoUpgrade;
 	alpm_list_t *NoExtract;
 	alpm_list_t *IgnorePkg;
@@ -43,7 +43,7 @@ struct PcCnf {
 	int useDelta;
 	int useSysLog;
 	char *xferCommand;
-	alpm_list_t *serverAssoc;
+	QStringList serverAssoc;
 	bool loaded;
 };
 
@@ -68,8 +68,7 @@ protected:
 	alpm_list_t *setrepeatingoption(QString ptr);
 	
 private:
-	void parsePacmanConfig(QString file, QString givensection,
-			QString givendb);
+	void parsePacmanConfig(QString file, QString givendb);
 	void parsePaKmodConf();
 	
 private:

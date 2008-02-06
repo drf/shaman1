@@ -87,18 +87,20 @@ void MainWindow::removeRepoColumn()
 
 bool MainWindow::populatePackagesView()
 {
+	alpm_list_t *databases;
+	int count = 0;
+	
 	QDialog *pbarWG = new QDialog(this);
 	QVBoxLayout *layout = new QVBoxLayout;
 	QProgressBar *pbar = new QProgressBar(pbarWG);
-	alpm_list_t *databases;
-	int count = 0;
 	
 	layout->addWidget(new QLabel("Loading View..."));
 	layout->addWidget(pbar);
 		
 	pbarWG->setLayout(layout);
 	
-	pbarWG->show();
+	if(this->isVisible())
+		pbarWG->show();
 	
 	disconnect(pkgsViewWG, SIGNAL(itemSelectionChanged()), 0, 0);
 	
@@ -148,7 +150,8 @@ bool MainWindow::populatePackagesView()
 			
 			currentpkgs = alpm_list_next(currentpkgs);
 			
-			pbar->setValue( count );
+			if(this->isVisible())
+				pbar->setValue( count );
 							
 			count++;
 		}
