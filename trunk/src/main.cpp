@@ -26,31 +26,81 @@
 
 #include <iostream>
 #include <QApplication>
+#include <QString>
+#include <signal.h>
+
+static void cleanup(int signum)
+{
+	if(signum==SIGSEGV)
+	{
+		/* write a log message and write to stderr */
+		printf("Segmentation Fault! We're sorry. Please report a bug, so we can fix that\n");
+		exit(signum);
+	} 
+	else if((signum == SIGINT)) 
+	{
+		if(alpm_trans_interrupt() == 0)
+			/* a transaction is being interrupted, don't exit qtPacman yet. */
+			return;
+
+		/* no commiting transaction, we can release it now and then exit pacman */
+		alpm_trans_release();
+		/* output a newline to be sure we clear any line we may be on */
+		printf("\n");
+	}
+
+	/* free alpm library resources */
+	if(alpm_release() == -1) {
+		printf("%s", alpm_strerrorlast());
+	}
+
+	exit(signum);
+}
 
 int main(int argc, char **argv)
 {
 	uid_t myuid = geteuid();
-	
-	if(myuid > 0)
-	{	
-		/* TODO: Create a popup that tells the user he has
-		 * to be root, then return. */
-		
-		printf("Sorry, you have to be root to run qtPacman.\n");
-		return 0;
-	}
 
 	QApplication app(argc, argv);
 
+	if(myuid > 0)
+	{	
+		/* TODO: Add translation */
+
+		QMessageBox *message = new QMessageBox(QMessageBox::Information, "qtPacman", "You have to be root to run qtPacman.\nPlease restart it with root privileges.", QMessageBox::Ok);
+
+		message->show();
+
+		return app.exec();
+	}
+
 	AlpmHandler *aHandler = new AlpmHandler(true);
-	
+
+	if(!aHandler->testLibrary())
+	{
+		/* TODO: Add translation, Give the dialog the 
+		 * ability to clean up pacman cache?
+		 */
+
+		QMessageBox *message = new QMessageBox(QMessageBox::Information, "qtPacman", "There was a problem while testing libalpm.\n Maybe another"
+				"application has a lock on it.", QMessageBox::Ok);
+
+		message->show();
+
+		return app.exec();
+	}
+
+	signal(SIGINT, cleanup);
+	signal(SIGTERM, cleanup);
+	signal(SIGSEGV, cleanup);
+
 	MainWindow mainwin(aHandler);
-	
+
 	mainwin.show();
 	mainwin.populateRepoColumn();
-	
+
 	mainwin.populatePackagesView();
 	return app.exec();
-	
+
 }
 

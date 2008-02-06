@@ -38,13 +38,11 @@ alpm_list_t *ConfigurationParser::setrepeatingoption(QString ptr)
 {
 	QStringList strlist;
 	alpm_list_t *list = NULL;
-	printf("here\n");
 
 	strlist = ptr.split(" ", QString::SkipEmptyParts);
 	
 	for (int i = 0; i < strlist.size(); ++i)
 	{
-		printf("here\n");
 		char *dest = (char *)malloc(strlist.at(i).length()*sizeof(char));
 		strcpy(dest, strlist.at(i).toAscii().data());
 		
@@ -231,14 +229,12 @@ void ConfigurationParser::parsePacmanConfig(QString file, QString givensection,
 						strcpy(dest, tmplst.at(0).toAscii().data());
 						strcat(dest, section.toAscii().data());
 						strcat(dest, tmplst.at(1).toAscii().data());
-						printf("%s\n", dest);
 						pacData.serverAssoc = alpm_list_add(pacData.serverAssoc, dest);
 					}
 					else
 					{
 						char *dest = (char *)malloc(line.length()*sizeof(char));
 						strcpy(dest, line.toAscii().data());
-						printf("%s\n", dest);
 						pacData.serverAssoc = alpm_list_add(pacData.serverAssoc, dest);
 					}
 				}
