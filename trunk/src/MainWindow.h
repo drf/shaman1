@@ -70,6 +70,7 @@ private slots:
 	
 private:
 	void installPackage(QString package);
+	void removePackage(QString package);
 	void loadDbUpdateDialog();
 	void removeDbUpdateDialog();
 	

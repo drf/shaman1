@@ -462,7 +462,31 @@ void MainWindow::removePackage()
 	qDebug() << "Remove Package";
         foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
 	{
-		item->setText(1, tr("Uninstall"));//FIXME Also uninstall dependencies
+		removePackage(item->text(2));
+	}
+}
+
+void MainWindow::removePackage(QString package)
+{
+	qDebug() << "Uninstall package: " + package;
+	if (pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 2).isEmpty())
+	{
+		qDebug() << "Can't find package: " + package;
+		return;
+	}
+	QTreeWidgetItem *item = pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 2).first();
+
+	qDebug() << item->text(1);
+	if (item->text(1) == "Not installed")
+		return;
+	else
+		item->setText(1, tr("Uninstall"));
+
+	qDebug() << item->text(5);
+
+	foreach (QString dep, aHandle->getDependenciesOnPackage(package, item->text(5)))
+	{
+		removePackage(dep);
 	}
 }
 
