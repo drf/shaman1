@@ -1,6 +1,6 @@
 /***************************************************************************
- *   Copyright (C) 2008 by Dario Freddi                                    *
- *   drf54321@yahoo.it                                                     *
+ *   Copyright (C) 2008 by Lukas Appelhans                                 *
+ *   l.appelhans@gmx.de                                                    *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -18,52 +18,12 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 
-#ifndef QUEUEDIALOG_H_
-#define QUEUEDIALOG_H_
+#include "configDialog.h"
 
-#include <iostream>
-#include "../ui_transactionDialog.h"
-#include <alpm.h>
-#include "callbacks.h"
-#include <QtGui>
-#include <AlpmHandler.h>
-
-class TrCommitThread : public QThread
+ConfigDialog::ConfigDialog(QWidget *parent)
+  : QDialog(parent)
 {
-public:
-	TrCommitThread(AlpmHandler *aH);
-	void run();
-private:
-	AlpmHandler *aHandle;
-};
-
-
-class QueueDialog : public QDialog, private Ui::transactionDialog
+}
+ConfigDialog::~ConfigDialog()
 {
-	Q_OBJECT
-	
-public:
-	QueueDialog(AlpmHandler *hnd, QWidget *parent = 0);
-	virtual ~QueueDialog();
-	void startProcessing();
-	
-public slots:
-	void changeStatus(pmtransevt_t event, void *data1, void *data2);
-	void updateProgressBar(char *c, int bytedone, int bytetotal, int speed,
-			int listdone, int listtotal, int speedtotal);
-	void updateProgressBar(pmtransprog_t event, char *pkgname, int percent,
-	        int howmany, int remain);
-	void startDownload();
-	void startProcess();
-	void cleanup();
-	
-signals:
-	void terminated(bool errors);
-	
-private:
-	AlpmHandler *aHandle;
-	TrCommitThread *cTh;
-	int status;
-};
-
-#endif /*QUEUEDIALOG_H_*/
+}
