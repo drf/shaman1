@@ -447,8 +447,10 @@ void MainWindow::installPackage(QString package)
 	if (item->text(1) == "Installed")
 		return;
 	else
+	{
 		item->setText(1, tr("Install"));
-
+		item->setIcon(1, QIcon(":/Icons/icons/list-add.png"));
+	}
 	qDebug() << item->text(5);
 
 	foreach (QString dep, aHandle->getPackageDependencies(package, item->text(5)))
@@ -480,8 +482,10 @@ void MainWindow::removePackage(QString package)
 	if (item->text(1) == "Not installed")
 		return;
 	else
+	{
 		item->setText(1, tr("Uninstall"));
-
+		item->setIcon(1, QIcon(":/Icons/icons/list-remove.png"));
+	}
 	qDebug() << item->text(5);
 
 	foreach (QString dep, aHandle->getDependenciesOnPackage(package, item->text(5)))
@@ -499,8 +503,10 @@ void MainWindow::completeRemovePackage()
 	if (item->text(1) == "Not installed")
 		return;
 	else
+	{
 		item->setText(1, tr("Complete Uninstall"));
-
+		item->setIcon(1, QIcon(":/Icons/icons/edit-delete.png"));
+	}
 	qDebug() << item->text(5);
 
 	//Now we remove the on-package-dependencies and the depencies...
@@ -519,6 +525,7 @@ void MainWindow::cancelAction()
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
 	{
 		item->setText(1, QString());//FIXME: Remove depending packages as well...
+		item->setIcon(1, QIcon());
 	}
 }
 
