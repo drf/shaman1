@@ -358,7 +358,12 @@ void MainWindow::showPkgInfo()
 	description.append(alpm_pkg_get_desc(pkg));
 
 	pkgInfo->setHtml(description);
-	
+
+	dependenciesWidget->clear(); //First clear the widget
+	foreach (QString dep, aHandle->getPackageDependencies((QString) alpm_pkg_get_name(pkg) , pkgsViewWG->currentItem()->text(5)))
+	{
+		dependenciesWidget->addItem(dep);
+	}
 }
 
 void MainWindow::doDbUpdate()
@@ -400,21 +405,13 @@ void MainWindow::installPackage()
 	qDebug() << "Install Package";
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
 	{
-		item->setText(1, tr("Install"));//FIXME: Also install depencies
-		/**alpm_list_t *deps = new alpm_list_t;
-		deps = package->depends();
+		item->setText(1, tr("Install"));
 
-		while (!deps)
+		/**
+		foreach (QString package, aHandle->getPackageDependencies(item->text(2), item->text(5)))
 		{
-			pmpkg_t *pkg = (pmpkg_t *)alpm_list_getdata(deps);
-									
-			QList<QTreeWidgetItem*> list = pkgsViewWG->findItems(alpm_pkg_get_name(pkg), Qt::MatchExactly, 2);
-			foreach (QTreeWidgetItem *itm, list)
-			{
-				itm->setText(1, tr("Install"));//FIXME: Also add text here, that it's a depencie
-			}
+			pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 2).first().setText(1, tr("Install as dependency of %1") + item->text(2));
 		}**/
-		
 	}
 }
 
@@ -423,7 +420,7 @@ void MainWindow::removePackage()
 	qDebug() << "Remove Package";
         foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
 	{
-		item->setText(1, tr("Uninstall"));//FIXME Also install depencies
+		item->setText(1, tr("Uninstall"));//FIXME Also uninstall dependencies
 	}
 }
 
@@ -480,6 +477,7 @@ void MainWindow::upgradeAborted()
 
 void MainWindow::addUpgradeableToQueue()
 {
+	//FIXME: do sth like foreach (pkg, pkgs) item->setText("upgradable")... look in installPackage-function for more information
 	return;
 }
 
