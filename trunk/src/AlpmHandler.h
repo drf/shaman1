@@ -71,6 +71,7 @@ public:
 	QStringList getDependenciesOnPackage(QString name, QString repo);
 
 	bool isPerformable(string pkgname, int action);
+	bool isInstalled(pmpkg_t *pkg);
 
 	bool updateDatabase();
 	bool fullSystemUpgrade();

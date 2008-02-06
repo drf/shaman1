@@ -123,6 +123,12 @@ bool MainWindow::populatePackagesView()
 			QTreeWidgetItem *item = new QTreeWidgetItem(pkgsViewWG);
 			alpm_list_t *grps = (alpm_list_t *)alpm_pkg_get_groups(pkg);
 			QString grStr("");
+			
+			/* TODO: show icons instead of text here */
+			if(aHandle->isInstalled(pkg))
+				item->setText(1, "Installed");
+			else
+				item->setText(1, "Not Installed");
 									
 			item->setText(2, alpm_pkg_get_name(pkg));
 			item->setText(3, alpm_pkg_get_version(pkg));

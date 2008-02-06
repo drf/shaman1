@@ -454,3 +454,15 @@ QStringList AlpmHandler::getDependenciesOnPackage(QString name, QString repo)
 
 	return retlist;
 }
+
+bool AlpmHandler::isInstalled(pmpkg_t *pkg)
+{
+	pmpkg_t *localpackage = alpm_db_get_pkg(db_local, alpm_pkg_get_name(pkg));
+	if(localpackage == NULL)
+		return false;
+	
+	if(alpm_pkg_get_reason(localpackage) != PM_PKG_REASON_DEPEND &&
+			alpm_pkg_get_reason(localpackage) != PM_PKG_REASON_EXPLICIT)
+		return false;
+	return true;
+}
