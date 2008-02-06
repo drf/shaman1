@@ -461,8 +461,5 @@ bool AlpmHandler::isInstalled(pmpkg_t *pkg)
 	if(localpackage == NULL)
 		return false;
 	
-	if(alpm_pkg_get_reason(localpackage) != PM_PKG_REASON_DEPEND &&
-			alpm_pkg_get_reason(localpackage) != PM_PKG_REASON_EXPLICIT)
-		return false;
 	return true;
 }
