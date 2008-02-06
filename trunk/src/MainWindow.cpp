@@ -124,7 +124,7 @@ bool MainWindow::populatePackagesView()
 			alpm_list_t *grps = (alpm_list_t *)alpm_pkg_get_groups(pkg);
 			QString grStr("");
 			
-			/* TODO: show icons instead of text here */
+			/* TODO: show icons instead of text here *///Comment: IMO we should show text and icon here (more usable) (boom1992)
 			if(aHandle->isInstalled(pkg))
 				item->setText(1, "Installed");
 			else
@@ -166,7 +166,7 @@ bool MainWindow::populatePackagesView()
 	pkgsViewWG->sortItems(2, Qt::AscendingOrder);
 	
 	connect(pkgsViewWG, SIGNAL(itemSelectionChanged()), this, 
-			SLOT(showPkgInfo()));
+			SLOT(itemChanged()));
 	
 	return true;
 }
@@ -328,6 +328,24 @@ void MainWindow::refinePkgView()
 		item->setHidden(false);
 	}
 	
+}
+
+void MainWindow::itemChanged()
+{
+	if (pkgsViewWG->selectedItems().first()->text(1) == tr("Installed"))
+	{
+		removeButton->setEnabled(true);
+		installButton->setDisabled(true);
+		completeRemoveButton->setEnabled(true);
+	}
+	if (pkgsViewWG->selectedItems().first()->text(1) == tr("Not Installed"))
+	{
+		removeButton->setDisabled(true);
+		installButton->setEnabled(true);
+		completeRemoveButton->setDisabled(true);
+	}
+	//if (pkgsViewWG->selectedItems().first()->text() == tr("Upgradeable"))
+	showPkgInfo();
 }
 
 void MainWindow::showPkgInfo()

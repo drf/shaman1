@@ -59,6 +59,7 @@ public slots:
 	void queueProcessingEnded(bool errors);
 
 private slots:
+	void itemChanged();
 	void showContextMenu();
 	void installPackage();
 	void removePackage();
