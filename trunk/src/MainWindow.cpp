@@ -239,7 +239,7 @@ void MainWindow::refinePkgView()
 		item->setHidden(true);
 	}
 	
-	QList<QTreeWidgetItem*> list = pkgsViewWG->findItems(QString(), Qt::MatchContains | Qt::MatchWildcard);
+	QList<QTreeWidgetItem*> list = pkgsViewWG->findItems(QString(), Qt::MatchRegExp | Qt::MatchWildcard);
 	
 	// Now first: What do we need to refine in the right column?
 	
