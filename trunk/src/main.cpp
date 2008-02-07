@@ -109,7 +109,7 @@ int main(int argc, char **argv)
 	settings->deleteLater();
 
 	MainWindow mainwin(aHandler);
-	
+
 	if(settings->value("gui/startupmode").toString() == "window")
 	{
 		/* case 1: we want to show Main Window

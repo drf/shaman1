@@ -33,6 +33,7 @@
 #include <QListWidgetItem>
 #include <QDebug>
 #include <QMessageBox>
+#include <QSystemTrayIcon>
 #include <alpm.h>
 
 extern CallBacks CbackReference;
@@ -46,6 +47,10 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	setupUi(this);
         pkgsViewWG->setContextMenuPolicy(Qt::CustomContextMenu);
 	
+	QSystemTrayIcon *systray = new QSystemTrayIcon(this);
+	systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
+	systray->show();
+
 	connect(actionUpdate_Database, SIGNAL(triggered()), SLOT(doDbUpdate()));
 	connect(pkgsViewWG, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showContextMenu()));
 	connect(actionProcess_Queue, SIGNAL(triggered()), SLOT(widgetQueueToAlpmQueue()));
@@ -60,6 +65,8 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	connect(searchLine, SIGNAL(textChanged(const QString&)), SLOT(refinePkgView()));
 	connect(actionPackage_Repositories, SIGNAL(triggered()), SLOT(configureRepositories()));
 	connect(actionPacman_Preferences, SIGNAL(triggered()), SLOT(showSettings()));
+        connect(systray, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), SLOT(systrayActivated(QSystemTrayIcon::ActivationReason)));
+
 	
 	return;
 	
@@ -668,4 +675,15 @@ void MainWindow::showSettings()
 	configDialog = new ConfigDialog(aHandle, this);
 
 	configDialog->exec();
+}
+
+void MainWindow::systrayActivated(QSystemTrayIcon::ActivationReason reason)
+{
+	if (reason == QSystemTrayIcon::Trigger)
+	{
+		if (isHidden())
+			show();
+		else
+			hide();
+	}
 }

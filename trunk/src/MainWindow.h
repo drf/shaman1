@@ -73,6 +73,7 @@ private slots:
 	void upgradePackage();
 	void processQueue();
         void showSettings();
+	void systrayActivated(QSystemTrayIcon::ActivationReason reason);
 	
 private:
 	void installPackage(QString package);
