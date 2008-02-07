@@ -36,6 +36,8 @@ class QueueDialog;
 class RepoDialogCl;
 class ConfigDialog;
 
+class QSystemTrayIcon;
+
 class MainWindow : public QMainWindow, private Ui::MainWindow, private StringUtils
 {
 	Q_OBJECT
@@ -80,6 +82,7 @@ private:
 	void removePackage(QString package);
 	void loadDbUpdateDialog();
 	void removeDbUpdateDialog();
+	void setupSystray();
 	
 private:
 	alpm_list_t *currentpkgs;
@@ -89,6 +92,8 @@ private:
 	QueueDialog *queueDl;
 	RepoDialogCl *repoDl;
 	ConfigDialog *configDialog;
+
+	QSystemTrayIcon *systray;
 
 };
 

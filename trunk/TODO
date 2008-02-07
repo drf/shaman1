@@ -15,7 +15,7 @@ Throw all relevant packages informations into the QTreeWidgetItem (missing now: 
 
 ***********GUI**************
 More icons
-Splitter-positioning is a bit bad at the moment 
+Splitter-positioning is a bit bad at the moment
 Same with QTreeWidgetItem-columns ;)
 Add a clear button in the searchbar, something like kickoff's one, if possible :)
 Complete PkgDetails *prio*

@@ -46,10 +46,8 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 {
 	setupUi(this);
         pkgsViewWG->setContextMenuPolicy(Qt::CustomContextMenu);
-	
-	QSystemTrayIcon *systray = new QSystemTrayIcon(this);
-	systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
-	systray->show();
+
+        setupSystray();
 
 	connect(actionUpdate_Database, SIGNAL(triggered()), SLOT(doDbUpdate()));
 	connect(pkgsViewWG, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showContextMenu()));
@@ -67,14 +65,24 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	connect(actionPacman_Preferences, SIGNAL(triggered()), SLOT(showSettings()));
         connect(systray, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), SLOT(systrayActivated(QSystemTrayIcon::ActivationReason)));
 
-	
 	return;
-	
 }
 
 MainWindow::~MainWindow()
 {
 	return;
+}
+
+void MainWindow::setupSystray()
+{
+	systray = new QSystemTrayIcon(this);
+	systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
+	systray->show();
+	QMenu *systrayMenu = new QMenu(this);
+	QAction *closeAction = systrayMenu->addAction(QIcon(":/Icons/icons/application-exit.png"), tr("Quit"));
+	connect(closeAction, SIGNAL(triggered()), SLOT(close()));
+	//Add actions here ;)
+	systray->setContextMenu(systrayMenu);
 }
 
 void MainWindow::removePackagesView()
@@ -156,7 +164,7 @@ bool MainWindow::populatePackagesView()
 	databases = alpm_list_first(databases);
 	
 	pkgsViewWG->sortItems(2, Qt::AscendingOrder);
-	pkgsViewWG->setSortingEnabled(true);
+	pkgsViewWG->setSortingEnabled(true);//Enable sorting *after* inserting :D
 	
 	connect(pkgsViewWG, SIGNAL(itemSelectionChanged()), this, 
 			SLOT(itemChanged()));
