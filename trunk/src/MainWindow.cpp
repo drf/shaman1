@@ -178,6 +178,7 @@ bool MainWindow::populatePackagesView()
 	pbar->deleteLater();
 	
 	pkgsViewWG->sortItems(2, Qt::AscendingOrder);
+	pkgsViewWG->setSortingEnabled(true);
 	
 	connect(pkgsViewWG, SIGNAL(itemSelectionChanged()), this, 
 			SLOT(itemChanged()));
@@ -660,6 +661,7 @@ void MainWindow::widgetQueueToAlpmQueue()
 	 */
 	
 	/* TODO: When queue implementation is defined and complete.
+	 * We should start with this now, as we have finished the actions...
 	 */
 }
 
