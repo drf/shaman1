@@ -407,6 +407,10 @@ void MainWindow::finishDbUpdate()
 	disconnect(dbdialog, 0,0,0);
 	
 	dbdialog->deleteLater();
+	
+	pkgsViewWG->setSortingEnabled(false);
+	
+	populatePackagesView();
 }
 
 void MainWindow::showContextMenu()
@@ -633,8 +637,8 @@ void MainWindow::queueProcessingEnded(bool errors)
 	
 	qDebug() << "Transaction Completed Successfully";
 	
-	// Do not uncomment before Qt 4.3.4+
-	//populatePackagesView();
+	pkgsViewWG->setSortingEnabled(false);
+	populatePackagesView();
 }
 
 void MainWindow::widgetQueueToAlpmQueue()
