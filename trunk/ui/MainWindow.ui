@@ -253,7 +253,7 @@
             </sizepolicy>
            </property>
            <property name="currentIndex" >
-            <number>2</number>
+            <number>0</number>
            </property>
            <widget class="QWidget" name="tab" >
             <attribute name="title" >
@@ -299,13 +299,7 @@ p, li { white-space: pre-wrap; }
             </attribute>
             <layout class="QGridLayout" >
              <item row="0" column="0" >
-              <widget class="QTreeWidget" name="filesWidget" >
-               <column>
-                <property name="text" >
-                 <string>1</string>
-                </property>
-               </column>
-              </widget>
+              <widget class="QTreeWidget" name="filesWidget" />
              </item>
             </layout>
            </widget>

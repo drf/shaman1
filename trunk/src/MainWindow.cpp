@@ -389,6 +389,50 @@ void MainWindow::showPkgInfo()
 	{
 		dependenciesWidget->addItem(dep);
 	}
+
+	filesWidget->clear();
+	filesWidget->header()->hide();
+	QStringList files = aHandle->getPackageFiles(pkgsViewWG->selectedItems().first()->text(2));
+	foreach (QString file, files)
+	{
+		QStringList splitted = file.split("/");
+		QTreeWidgetItem *parentItem = 0;
+		foreach (QString spl, splitted)
+		{
+			if (spl.isEmpty())
+				continue;
+			if (parentItem)
+			{
+				qDebug() << "Yay, we have a parentItem";
+				bool there = false;
+				int j = parentItem->childCount();
+				for (int i = 0;i != j; i++)
+				{
+					if (parentItem->child(i)->text(0) == spl)
+					{
+						there = true;
+						parentItem = parentItem->child(i);
+						continue;
+					}
+				}
+				if (!there)
+					parentItem->addChild(new QTreeWidgetItem(parentItem, (QStringList) spl));
+			}
+			else
+			{
+				QList<QTreeWidgetItem*> list = filesWidget->findItems(spl, Qt::MatchExactly);
+				if (!list.isEmpty())
+				{
+					qDebug() << "Hehe we have the same item already found";
+					parentItem = list.first();
+				}
+				else
+				{
+					filesWidget->insertTopLevelItem(0, new QTreeWidgetItem(filesWidget, (QStringList) spl));
+				}
+			}
+		}
+	}
 }
 
 void MainWindow::doDbUpdate()
