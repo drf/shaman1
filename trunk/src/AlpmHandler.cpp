@@ -55,7 +55,7 @@ AlpmHandler::~AlpmHandler()
 pmpkg_t *AlpmHandler::getPackageFromName(QString name, QString repo)
 {
 	alpm_list_t *dbsync = alpm_list_first(sync_databases);
-
+	
 	while(dbsync != NULL)
 	{
 		pmdb_t *dbcrnt = (pmdb_t *)alpm_list_getdata(dbsync);
@@ -450,4 +450,39 @@ bool AlpmHandler::isInstalled(pmpkg_t *pkg)
 		return false;
 	
 	return true;
+}
+
+QStringList AlpmHandler::getPackageFiles(pmpkg_t *package)
+{
+	alpm_list_t *files;
+	QStringList retlist;
+	
+	files = alpm_pkg_get_files(alpm_db_get_pkg(db_local, alpm_pkg_get_name(package)));
+	
+	while(files != NULL)
+	{
+		retlist.append(QString((char*)alpm_list_getdata(files)).prepend(alpm_option_get_root()));
+		files = alpm_list_next(files);
+	}
+	
+	return retlist;
+}
+
+QStringList AlpmHandler::getPackageFiles(QString name)
+{
+	alpm_list_t *files;
+	QStringList retlist;
+	
+	printf("asfa\n");
+	
+	files = alpm_pkg_get_files(alpm_db_get_pkg(db_local, name.toAscii().data()));
+	
+	while(files != NULL)
+	{
+		printf("here");
+		retlist.append(QString((char*)alpm_list_getdata(files)).prepend(alpm_option_get_root()));
+		files = alpm_list_next(files);
+	}
+	
+	return retlist;
 }

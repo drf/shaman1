@@ -69,6 +69,9 @@ public:
 
 	QStringList getDependenciesOnPackage(pmpkg_t *package);
 	QStringList getDependenciesOnPackage(QString name, QString repo);
+	
+	QStringList getPackageFiles(pmpkg_t *package);
+	QStringList getPackageFiles(QString name);
 
 	bool isPerformable(string pkgname, int action);
 	bool isInstalled(pmpkg_t *pkg);
