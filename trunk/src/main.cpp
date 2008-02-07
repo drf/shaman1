@@ -76,8 +76,6 @@ int main(int argc, char **argv)
 	}
 
 	AlpmHandler *aHandler = new AlpmHandler(true);
-	
-	return 0;
 
 	if(!aHandler->testLibrary())
 	{
