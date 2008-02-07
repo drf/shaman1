@@ -5,249 +5,243 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>649</width>
-    <height>417</height>
+    <width>651</width>
+    <height>418</height>
    </rect>
   </property>
   <property name="windowTitle" >
    <string>qtPacman - Manage Repositories</string>
   </property>
-  <widget class="QWidget" name="layoutWidget" >
-   <property name="geometry" >
-    <rect>
-     <x>10</x>
-     <y>0</y>
-     <width>631</width>
-     <height>401</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" >
-    <item>
-     <widget class="QTabWidget" name="repoTab" >
-      <property name="currentIndex" >
-       <number>0</number>
-      </property>
-      <widget class="QWidget" name="officialTab" >
-       <attribute name="title" >
-        <string>Arch Linux Official Repositories</string>
-       </attribute>
-       <widget class="QWidget" name="layoutWidget" >
-        <property name="geometry" >
-         <rect>
-          <x>20</x>
-          <y>270</y>
-          <width>541</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <layout class="QHBoxLayout" >
-         <item>
-          <widget class="QLabel" name="mirrorLabel" >
-           <property name="text" >
-            <string>Mirror:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QComboBox" name="mirrorBox" />
-         </item>
-        </layout>
-       </widget>
-       <widget class="QWidget" name="layoutWidget" >
-        <property name="geometry" >
-         <rect>
-          <x>20</x>
-          <y>20</y>
-          <width>522</width>
-          <height>241</height>
-         </rect>
-        </property>
-        <layout class="QVBoxLayout" >
-         <item>
-          <widget class="QLabel" name="officialLabel" >
-           <property name="text" >
-            <string>Here you can choose what repositories to use between Arch Linux's official ones.
+  <layout class="QGridLayout" >
+   <item row="0" column="0" >
+    <layout class="QVBoxLayout" >
+     <item>
+      <widget class="QTabWidget" name="repoTab" >
+       <property name="currentIndex" >
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="officialTab" >
+        <attribute name="title" >
+         <string>Arch Linux Official Repositories</string>
+        </attribute>
+        <widget class="QWidget" name="layoutWidget" >
+         <property name="geometry" >
+          <rect>
+           <x>20</x>
+           <y>270</y>
+           <width>541</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" >
+          <item>
+           <widget class="QLabel" name="mirrorLabel" >
+            <property name="text" >
+             <string>Mirror:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="mirrorBox" />
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="layoutWidget" >
+         <property name="geometry" >
+          <rect>
+           <x>20</x>
+           <y>20</y>
+           <width>522</width>
+           <height>241</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" >
+          <item>
+           <widget class="QLabel" name="officialLabel" >
+            <property name="text" >
+             <string>Here you can choose what repositories to use between Arch Linux's official ones.
 Please note that packages from Unstable and Testing may break your system.</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="coreBox" >
-           <property name="text" >
-            <string>Core</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="extraBox" >
-           <property name="text" >
-            <string>Extra</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="communityBox" >
-           <property name="text" >
-            <string>Community</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="testingBox" >
-           <property name="text" >
-            <string>Testing</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="unstableBox" >
-           <property name="text" >
-            <string>Unstable</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="coreBox" >
+            <property name="text" >
+             <string>Core</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="extraBox" >
+            <property name="text" >
+             <string>Extra</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="communityBox" >
+            <property name="text" >
+             <string>Community</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="testingBox" >
+            <property name="text" >
+             <string>Testing</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="unstableBox" >
+            <property name="text" >
+             <string>Unstable</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
        </widget>
-      </widget>
-      <widget class="QWidget" name="KDEModTab" >
-       <attribute name="title" >
-        <string>KDEMod Repositories</string>
-       </attribute>
-       <widget class="QWidget" name="layoutWidget" >
-        <property name="geometry" >
-         <rect>
-          <x>20</x>
-          <y>20</y>
-          <width>526</width>
-          <height>191</height>
-         </rect>
-        </property>
-        <layout class="QVBoxLayout" >
-         <item>
-          <widget class="QLabel" name="KDEModLabel" >
-           <property name="text" >
-            <string>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an 
+       <widget class="QWidget" name="KDEModTab" >
+        <attribute name="title" >
+         <string>KDEMod Repositories</string>
+        </attribute>
+        <widget class="QWidget" name="layoutWidget" >
+         <property name="geometry" >
+          <rect>
+           <x>20</x>
+           <y>20</y>
+           <width>526</width>
+           <height>191</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" >
+          <item>
+           <widget class="QLabel" name="KDEModLabel" >
+            <property name="text" >
+             <string>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an 
 improved Qt build, compatible with Arch Linux standard Qt's, an improved theme,
 and lots of addons, KDEMod is the best way to taste the ease and the power
 of KDE with the simplicity and the power of Arch.</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="KDEMod3Box" >
-           <property name="text" >
-            <string>KDEMod 3 Repository</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="KDEMod4Box" >
-           <property name="text" >
-            <string>KDEMod 4 Repository (Unstable, testers only)</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="KDEMod3Box" >
+            <property name="text" >
+             <string>KDEMod 3 Repository</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="KDEMod4Box" >
+            <property name="text" >
+             <string>KDEMod 4 Repository (Unstable, testers only)</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
        </widget>
-      </widget>
-      <widget class="QWidget" name="thirdPartyTab" >
-       <attribute name="title" >
-        <string>Third-Party Repositories</string>
-       </attribute>
-       <widget class="QWidget" name="layoutWidget" >
-        <property name="geometry" >
-         <rect>
-          <x>20</x>
-          <y>27</y>
-          <width>563</width>
-          <height>291</height>
-         </rect>
-        </property>
-        <layout class="QVBoxLayout" >
-         <item>
-          <widget class="QLabel" name="thirdPartyLabel" >
-           <property name="text" >
-            <string>You can extend your packages choice by adding other repositories. Third-Party 
+       <widget class="QWidget" name="thirdPartyTab" >
+        <attribute name="title" >
+         <string>Third-Party Repositories</string>
+        </attribute>
+        <widget class="QWidget" name="layoutWidget" >
+         <property name="geometry" >
+          <rect>
+           <x>20</x>
+           <y>27</y>
+           <width>563</width>
+           <height>291</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" >
+          <item>
+           <widget class="QLabel" name="thirdPartyLabel" >
+            <property name="text" >
+             <string>You can extend your packages choice by adding other repositories. Third-Party 
 Repositories act just as normal ones, and will be accessible through both qtPacman
 and Pacman.</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QTreeWidget" name="thirdPartyWidget" >
-           <property name="indentation" >
-            <number>0</number>
-           </property>
-           <property name="itemsExpandable" >
-            <bool>false</bool>
-           </property>
-           <column>
-            <property name="text" >
-             <string>Repository</string>
             </property>
-           </column>
-           <column>
-            <property name="text" >
-             <string>Server</string>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTreeWidget" name="thirdPartyWidget" >
+            <property name="indentation" >
+             <number>0</number>
             </property>
-           </column>
-          </widget>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" >
-           <item>
-            <spacer>
-             <property name="orientation" >
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" >
-              <size>
-               <width>71</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item>
-            <widget class="QPushButton" name="addThirdPartyButton" >
+            <property name="itemsExpandable" >
+             <bool>false</bool>
+            </property>
+            <column>
              <property name="text" >
-              <string>Add New Repository</string>
+              <string>Repository</string>
              </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="editThirdPartyButton" >
+            </column>
+            <column>
              <property name="text" >
-              <string>Edit Repository</string>
+              <string>Server</string>
              </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="removeThirdPartyButton" >
-             <property name="text" >
-              <string>Remove Repository</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-        </layout>
+            </column>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" >
+            <item>
+             <spacer>
+              <property name="orientation" >
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" >
+               <size>
+                <width>71</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="addThirdPartyButton" >
+              <property name="text" >
+               <string>Add New Repository</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="editThirdPartyButton" >
+              <property name="text" >
+               <string>Edit Repository</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="removeThirdPartyButton" >
+              <property name="text" >
+               <string>Remove Repository</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
        </widget>
       </widget>
-     </widget>
-    </item>
-    <item>
-     <widget class="QDialogButtonBox" name="repoButtonBox" >
-      <property name="orientation" >
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="standardButtons" >
-       <set>QDialogButtonBox::Apply|QDialogButtonBox::Cancel|QDialogButtonBox::NoButton|QDialogButtonBox::Ok</set>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
+     </item>
+     <item>
+      <widget class="QDialogButtonBox" name="repoButtonBox" >
+       <property name="orientation" >
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="standardButtons" >
+        <set>QDialogButtonBox::Apply|QDialogButtonBox::Cancel|QDialogButtonBox::NoButton|QDialogButtonBox::Ok</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections>
