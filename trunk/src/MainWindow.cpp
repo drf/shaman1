@@ -101,18 +101,6 @@ bool MainWindow::populatePackagesView()
 	alpm_list_t *databases;
 	int count = 0;
 	
-	QDialog *pbarWG = new QDialog(this);
-	QVBoxLayout *layout = new QVBoxLayout;
-	QProgressBar *pbar = new QProgressBar(pbarWG);
-	
-	layout->addWidget(new QLabel("Loading View...", pbarWG));
-	layout->addWidget(pbar);
-		
-	pbarWG->setLayout(layout);
-	
-	if(this->isVisible())
-		pbarWG->show();
-	
 	disconnect(pkgsViewWG, SIGNAL(itemSelectionChanged()), 0, 0);
 	
 	removePackagesView();
@@ -126,8 +114,6 @@ bool MainWindow::populatePackagesView()
 		pmdb_t *dbcrnt = (pmdb_t *)alpm_list_getdata(databases);
 	
 		currentpkgs = alpm_db_getpkgcache(dbcrnt);
-		pbar->setRange(0, alpm_list_count(currentpkgs));
-		pbar->reset();
 		count = 0;
 		
 		while(currentpkgs != NULL)
@@ -160,9 +146,6 @@ bool MainWindow::populatePackagesView()
 			item->setText(6, grStr);
 			
 			currentpkgs = alpm_list_next(currentpkgs);
-			
-			if(this->isVisible())
-				pbar->setValue( count );
 							
 			count++;
 		}
@@ -171,11 +154,6 @@ bool MainWindow::populatePackagesView()
 	}
 		
 	databases = alpm_list_first(databases);
-				
-	pbarWG->close();
-	
-	layout->deleteLater();
-	pbar->deleteLater();
 	
 	pkgsViewWG->sortItems(2, Qt::AscendingOrder);
 	pkgsViewWG->setSortingEnabled(true);
