@@ -219,9 +219,12 @@ void QueueDialog::updateProgressBar(pmtransprog_t event, char *pkgname, int perc
 	Q_UNUSED(event);
 	Q_UNUSED(percent);
 	
-	progressBar->setFormat("%p");
-	progressBar->setRange(0,howmany);
-	progressBar->setValue(remain);
+	if(progressBar->value() != remain)
+	{
+		progressBar->setFormat("%p");
+		progressBar->setRange(0,howmany);
+		progressBar->setValue(remain);
+	}
 }
 
 void QueueDialog::startDownload()
@@ -249,6 +252,8 @@ void QueueDialog::cleanup()
 	disconnect(&CbackReference, SIGNAL(streamTransProgress(pmtransprog_t,char*,int,int,int)), 0, 0);
 	processingQueue->setText(tr("Process queue"));
 	cleaningUp->setText(tr("<b>Cleanup</b>"));
+	
+	sleep(1);
 	
 	emit terminated(false);
 }

@@ -24,6 +24,7 @@
 #include "UpdateDbDialog.h"
 #include "SysUpgradeDialog.h"
 #include "QueueDialog.h"
+#include "RepoDialogCl.h"
 
 #include <iostream>
 #include <QMenu>
@@ -46,7 +47,7 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	
 	connect(actionUpdate_Database, SIGNAL(triggered()), SLOT(doDbUpdate()));
 	connect(pkgsViewWG, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showContextMenu()));
-	connect(actionProcess_Queue, SIGNAL(triggered()), SLOT(processQueue()));
+	connect(actionProcess_Queue, SIGNAL(triggered()), SLOT(widgetQueueToAlpmQueue()));
 	connect(switchToRepo, SIGNAL(clicked()), SLOT(populateRepoColumn()));
 	connect(switchToGrps, SIGNAL(clicked()), SLOT(populateGrpsColumn()));
 	connect(installButton, SIGNAL(clicked()), SLOT(installPackage()));
@@ -56,6 +57,7 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	connect(actionUpgrade_System, SIGNAL(triggered()), SLOT(fullSysUpgrade()));
 	connect(packageSwitchCombo, SIGNAL(currentIndexChanged(int)), SLOT(refinePkgView()));
 	connect(searchLine, SIGNAL(textChanged(const QString&)), SLOT(refinePkgView()));
+	connect(actionPackage_Repositories, SIGNAL(triggered()), SLOT(configureRepositories()));
 	
 	return;
 	
@@ -94,7 +96,7 @@ bool MainWindow::populatePackagesView()
 	QVBoxLayout *layout = new QVBoxLayout;
 	QProgressBar *pbar = new QProgressBar(pbarWG);
 	
-	layout->addWidget(new QLabel("Loading View..."));
+	layout->addWidget(new QLabel("Loading View...", pbarWG));
 	layout->addWidget(pbar);
 		
 	pbarWG->setLayout(layout);
@@ -549,10 +551,9 @@ void MainWindow::startUpgrading()
 	{
 		/* Something to upgrade! Cool! Let's show our user the
 		 * upgrade dialog */
-		/* TODO: When preferences will be implemented, add
-		 * a switch here in case the user has a predefined
-		 * action 
-		 * */
+		/* Preferences are handled in SysUpgradeDialog, there's
+		 * a reason for that :)
+		 */
 		
 		upDl = new SysUpgradeDialog(aHandle, this);
 		
@@ -638,4 +639,24 @@ void MainWindow::queueProcessingEnded(bool errors)
 	
 	// Do not uncomment before Qt 4.3.4+
 	//populatePackagesView();
+}
+
+void MainWindow::widgetQueueToAlpmQueue()
+{
+	/* This function takes the queue the user defined in the
+	 * GUI and "translates" it to a libalpm transaction queue.
+	 * So THIS is the function that the "Process Queue" buttons 
+	 * should call. processQueue() processes a libalpm queue,
+	 * so you need to "translate" it first.
+	 */
+	
+	/* TODO: When queue implementation is defined and complete.
+	 */
+}
+
+void MainWindow::configureRepositories()
+{
+	repoDl = new RepoDialogCl(aHandle, this);
+	
+	repoDl->show();
 }

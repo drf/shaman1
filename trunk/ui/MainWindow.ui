@@ -6,7 +6,7 @@
     <x>0</x>
     <y>0</y>
     <width>1195</width>
-    <height>776</height>
+    <height>722</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -349,10 +349,6 @@ p, li { white-space: pre-wrap; }
     </property>
     <addaction name="actionPackage_Repositories" />
     <addaction name="actionPacman_Preferences" />
-    <addaction name="separator" />
-    <addaction name="actionABS_Preferences" />
-    <addaction name="separator" />
-    <addaction name="actionPyKMan_Preferences" />
    </widget>
    <widget class="QMenu" name="menuHelp" >
     <property name="title" >
@@ -384,7 +380,6 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionProcess_Queue" />
     <addaction name="actionInstall_Package_From_File_2" />
     <addaction name="separator" />
-    <addaction name="actionClean_Cache_2" />
     <addaction name="actionEmpty_Cache_2" />
     <addaction name="separator" />
     <addaction name="menuInstall_and_Build_from_Source" />
@@ -428,7 +423,7 @@ p, li { white-space: pre-wrap; }
     <iconset resource="qtpacman.qrc" >:/Icons/icons/preferences-system.png</iconset>
    </property>
    <property name="text" >
-    <string>Pacman Preferences</string>
+    <string>Settings</string>
    </property>
   </action>
   <action name="actionPyKMan_Preferences" >
@@ -527,7 +522,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionEmpty_Cache_2" >
    <property name="text" >
-    <string>Empty Cache</string>
+    <string>Database Manteinance</string>
    </property>
   </action>
   <action name="actionUpdate_ABS_Tree_2" >

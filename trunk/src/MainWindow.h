@@ -32,6 +32,7 @@
 #include "UpdateDbDialog.h"
 #include "SysUpgradeDialog.h"
 #include "QueueDialog.h"
+#include "RepoDialogCl.h"
 
 class MainWindow : public QMainWindow, private Ui::MainWindow, private StringUtils
 {
@@ -57,13 +58,15 @@ public slots:
 	void upgradeAborted();
 	void addUpgradeableToQueue();
 	void queueProcessingEnded(bool errors);
+	void widgetQueueToAlpmQueue();
+	void configureRepositories();
 
 private slots:
 	void itemChanged();
 	void showContextMenu();
 	void installPackage();
 	void removePackage();
-        void completeRemovePackage();
+    void completeRemovePackage();
 	void cancelAction();
 	void upgradePackage();
 	void processQueue();
@@ -80,6 +83,7 @@ private:
 	UpdateDbDialog *dbdialog;
 	SysUpgradeDialog *upDl;
 	QueueDialog *queueDl;
+	RepoDialogCl *repoDl;
 
 };
 

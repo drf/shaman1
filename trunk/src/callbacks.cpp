@@ -180,7 +180,9 @@ void CallBacks::cb_dl_progress(const char *filename, int file_xfered, int file_t
 
 void CallBacks::cb_log(pmloglevel_t level, char *fmt, va_list args)
 {
-	
+	Q_UNUSED(level);
+	Q_UNUSED(fmt);
+	Q_UNUSED(args);
 }
 
 /* Now the real suckness is coming... */
