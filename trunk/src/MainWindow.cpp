@@ -133,9 +133,9 @@ bool MainWindow::populatePackagesView()
 			
 			/* TODO: show icons instead of text here *///Comment: IMO we should show text and icon here (more usable) (boom1992)
 			if(aHandle->isInstalled(pkg))
-				item->setText(0, "Installed");
+				item->setText(1, "Installed");
 			else
-				item->setText(0, "Not Installed");
+				item->setText(1, "Not Installed");
 									
 			item->setText(2, alpm_pkg_get_name(pkg));
 			item->setText(3, alpm_pkg_get_version(pkg));
@@ -235,6 +235,7 @@ void MainWindow::refinePkgView()
 	//First we hide all items
 	foreach (QTreeWidgetItem *item, pkgsViewWG->findItems(QString(), Qt::MatchContains | Qt::MatchWildcard))
 	{
+		
 		item->setHidden(true);
 	}
 	
