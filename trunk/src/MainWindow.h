@@ -28,11 +28,13 @@
 #include <alpm_list.h>
 #include "../ui_MainWindow.h"
 #include "AlpmHandler.h"
-#include "StringUtils.h"
-#include "UpdateDbDialog.h"
-#include "SysUpgradeDialog.h"
-#include "QueueDialog.h"
-#include "RepoDialogCl.h"
+
+
+class UpdateDbDialog;
+class SysUpgradeDialog;
+class QueueDialog;
+class RepoDialogCl;
+class ConfigDialog;
 
 class MainWindow : public QMainWindow, private Ui::MainWindow, private StringUtils
 {
@@ -66,10 +68,11 @@ private slots:
 	void showContextMenu();
 	void installPackage();
 	void removePackage();
-    void completeRemovePackage();
+	void completeRemovePackage();
 	void cancelAction();
 	void upgradePackage();
 	void processQueue();
+        void showSettings();
 	
 private:
 	void installPackage(QString package);
@@ -84,6 +87,7 @@ private:
 	SysUpgradeDialog *upDl;
 	QueueDialog *queueDl;
 	RepoDialogCl *repoDl;
+	ConfigDialog *configDialog;
 
 };
 

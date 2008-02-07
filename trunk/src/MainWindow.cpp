@@ -25,6 +25,7 @@
 #include "SysUpgradeDialog.h"
 #include "QueueDialog.h"
 #include "RepoDialogCl.h"
+#include "configDialog.h"
 
 #include <iostream>
 #include <QMenu>
@@ -58,6 +59,7 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	connect(packageSwitchCombo, SIGNAL(currentIndexChanged(int)), SLOT(refinePkgView()));
 	connect(searchLine, SIGNAL(textChanged(const QString&)), SLOT(refinePkgView()));
 	connect(actionPackage_Repositories, SIGNAL(triggered()), SLOT(configureRepositories()));
+	connect(actionPacman_Preferences, SIGNAL(triggered()), SLOT(showSettings()));
 	
 	return;
 	
@@ -659,4 +661,11 @@ void MainWindow::configureRepositories()
 	repoDl = new RepoDialogCl(aHandle, this);
 	
 	repoDl->show();
+}
+
+void MainWindow::showSettings()
+{
+	configDialog = new ConfigDialog(aHandle, this);
+
+	configDialog->exec();
 }

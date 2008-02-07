@@ -23,12 +23,17 @@
 
 #include "ui_configDialog.h"
 
+class AlpmHandler;
+
 class ConfigDialog : public QDialog, public Ui::ConfigDialog
 {
     Q_OBJECT
     public:
-	  ConfigDialog(QWidget *parent = 0);
+	  ConfigDialog(AlpmHandler *handler, QWidget *parent = 0);
 	  ~ConfigDialog();
+
+    private:
+	  AlpmHandler *m_handler;
 };
 
 #endif

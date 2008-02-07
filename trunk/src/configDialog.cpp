@@ -20,9 +20,13 @@
 
 #include "configDialog.h"
 
-ConfigDialog::ConfigDialog(QWidget *parent)
-  : QDialog(parent)
+#include "AlpmHandler.h"
+
+ConfigDialog::ConfigDialog(AlpmHandler *handler, QWidget *parent)
+  : QDialog(parent),
+    m_handler(handler)
 {
+     setupUi(this);
 }
 ConfigDialog::~ConfigDialog()
 {
