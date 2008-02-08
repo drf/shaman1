@@ -92,7 +92,7 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 		actionDetail->setText(QString(tr("Looking for Inter-Conflicts...")));
 		break;
 	case PM_TRANS_EVT_ADD_START:
-		if(status == 1)
+		if(status != 2)
 		{
 			status = 2;
 			startProcess();
@@ -105,7 +105,7 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 		//alpm_logaction(str);
 		break;
 	case PM_TRANS_EVT_REMOVE_START:
-		if(status == 1)
+		if(status != 2)
 		{
 			status = 2;
 			startProcess();
@@ -118,7 +118,7 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 		//alpm_logaction(str);
 		break;
 	case PM_TRANS_EVT_UPGRADE_START:
-		if(status == 1)
+		if(status != 2)
 		{
 			status = 2;
 			startProcess();
@@ -132,7 +132,7 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 		//alpm_logaction(str);
 		break;
 	case PM_TRANS_EVT_INTEGRITY_START:
-		if(status == 1)
+		if(status != 2)
 		{
 			status = 2;
 			startProcess();
@@ -163,7 +163,7 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 		break;
 	case PM_TRANS_EVT_RETRIEVE_START:
 		actionDetail->setText(QString(tr("Starting downloading packages from %1...")).arg((char*)data1));
-		if(status == 0)
+		if(status != 1)
 		{
 			status = 1;
 			startDownload();
@@ -243,9 +243,10 @@ void QueueDialog::startProcess()
 	processingQueue->setText(tr("<b>Process queue</b>"));
 	
 	disconnect(&CbackReference, SIGNAL(streamTransDlProg(char*,int,int,int,int,int,int)), 0, 0);
-	qRegisterMetaType<pmtransprog_t>("pmtransprog_t");
-	connect(&CbackReference, SIGNAL(streamTransProgress(pmtransprog_t,char*,int,int,int)),
-			SLOT(updateProgressBar(pmtransprog_t,char*,int,int,int)));
+	//qRegisterMetaType<pmtransprog_t>("pmtransprog_t");
+	/*connect(&CbackReference, SIGNAL(streamTransProgress(pmtransprog_t,char*,int,int,int)),
+			SLOT(updateProgressBar(pmtransprog_t,char*,int,int,int)));*/
+	progressBar->hide();
 }
 
 void QueueDialog::cleanup()
