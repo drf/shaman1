@@ -65,10 +65,8 @@ int main(int argc, char **argv)
 	QApplication app(argc, argv);
 
 	if(myuid > 0)
-	{	
-		/* TODO: Add translation */
-
-		QMessageBox *message = new QMessageBox(QMessageBox::Information, "qtPacman", "You have to be root to run qtPacman.\nPlease restart it with root privileges.", QMessageBox::Ok);
+	{
+		QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("qtPacman"), QObject::tr("You have to be root to run qtPacman.\nPlease restart it with root privileges."), QMessageBox::Ok);
 
 		message->show();
 
@@ -79,18 +77,17 @@ int main(int argc, char **argv)
 
 	if(!aHandler->testLibrary())
 	{
-		/* TODO: Add translation, Give the dialog the 
+		/* TODO: Give the dialog the 
 		 * ability to clean up pacman cache?
 		 */
 
-		QMessageBox *message = new QMessageBox(QMessageBox::Information, "qtPacman", "There was a problem while testing libalpm.\n Maybe another"
-				"application has a lock on it.", QMessageBox::Ok);
+		QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("qtPacman"), QObject::tr("There was a problem while testing libalpm.\n Maybe another application has a lock on it."), QMessageBox::Ok);
 
 		message->show();
 
 		return app.exec();
 	}
-
+	//TODO: Look if we should translate the program to another language and load it^^
 	signal(SIGINT, cleanup);
 	signal(SIGTERM, cleanup);
 	signal(SIGSEGV, cleanup);
