@@ -63,6 +63,7 @@ int main(int argc, char **argv)
 	uid_t myuid = geteuid();
 
 	QApplication app(argc, argv);
+	app.setQuitOnLastWindowClosed(false);
 
 	if(myuid > 0)
 	{
@@ -125,6 +126,7 @@ int main(int argc, char **argv)
 	mainwin.populateRepoColumn();
 
 	mainwin.populatePackagesView();
+	QObject::connect(&mainwin, SIGNAL(aboutToQuit()), &app, SLOT(quit()));
 	return app.exec();
 
 }

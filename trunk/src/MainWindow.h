@@ -46,6 +46,9 @@ public:
 	MainWindow(AlpmHandler *handler, QMainWindow *parent = 0);
 	virtual ~MainWindow();
 	void doUpdView();
+
+signals:
+	void aboutToQuit();
 	
 public slots:
 	bool populatePackagesView();
@@ -66,6 +69,7 @@ public slots:
 	void configureRepositories();
 
 private slots:
+	void quitApp();
 	void itemChanged();
 	void showContextMenu();
 	void installPackage();

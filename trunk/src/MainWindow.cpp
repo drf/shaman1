@@ -79,10 +79,25 @@ void MainWindow::setupSystray()
 	systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
 	systray->show();
 	QMenu *systrayMenu = new QMenu(this);
+	QAction *updateDBAction = systrayMenu->addAction(QIcon(":/Icons/icons/view-refresh.png"), tr("Update Database"));
+	connect(updateDBAction, SIGNAL(triggered()), SLOT(doDbUpdate()));
+	QAction *upgradeAction = systrayMenu->addAction(QIcon(":/Icons/icons/edit-redo.png"), tr("Upgrade System"));
+	connect(upgradeAction, SIGNAL(triggered()), SLOT(fullSysUpgrade()));
+	QAction *queueAction = systrayMenu->addAction(QIcon(":/Icons/icons/dialog-ok-apply.png"), tr("Process Queue"));
+	connect(queueAction, SIGNAL(triggered()), SLOT(widgetQueueToAlpmQueue()));
+	systrayMenu->addSeparator();
+	QAction *settingsAction = systrayMenu->addAction(QIcon(":/Icons/icons/preferences-system.png"), tr("Settings"));
+	connect(settingsAction, SIGNAL(triggered()), SLOT(showSettings()));
+	systrayMenu->addSeparator();
 	QAction *closeAction = systrayMenu->addAction(QIcon(":/Icons/icons/application-exit.png"), tr("Quit"));
-	connect(closeAction, SIGNAL(triggered()), SLOT(close()));
+	connect(closeAction, SIGNAL(triggered()), SLOT(quitApp()));
 	//Add actions here ;)
 	systray->setContextMenu(systrayMenu);
+}
+
+void MainWindow::quitApp()
+{
+	emit aboutToQuit();
 }
 
 void MainWindow::removePackagesView()
