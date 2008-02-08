@@ -72,6 +72,7 @@ private slots:
 	void removePackage();
 	void completeRemovePackage();
 	void cancelAction();
+	void cancelAction(QString package);
 	void upgradePackage();
 	void processQueue();
         void showSettings();

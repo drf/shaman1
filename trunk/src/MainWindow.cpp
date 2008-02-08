@@ -577,8 +577,32 @@ void MainWindow::cancelAction()
 {
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
 	{
-		item->setText(1, QString());//FIXME: Remove depending packages as well...
+		cancelAction(item->text(2));
+	}
+}
+
+void MainWindow::cancelAction(QString package)
+{
+	qDebug() << "cancel action for: " + package;
+	if (pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 2).isEmpty())
+	{
+		qDebug() << "Can't find package: " + package;
+		return;
+	}
+	QTreeWidgetItem *item = pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 2).first();
+
+        if (item->text(1) == "Install" || item->text(1) == "Uninstall" || item->text(1) == "Complete Uninstall")//FIXME: When status is in 1. column, check if item->text(1).isEmpty()
+	{
+		item->setText(1, QString());
 		item->setIcon(1, QIcon());
+		foreach (QString onDep, aHandle->getDependenciesOnPackage(item->text(2), item->text(5)))
+		{
+			  cancelAction(onDep);
+		}
+		foreach (QString dep, aHandle->getPackageDependencies(item->text(2), item->text(5)))
+		{
+			cancelAction(dep);
+		}
 	}
 }
 
