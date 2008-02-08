@@ -656,8 +656,8 @@ void MainWindow::processQueue()
 	 * transaction. 
 	 */
 	
-	if(upDl)
-		delete(upDl);
+	if (upDl)
+		upDl->deleteLater();
 	
 	/* Now, everything will be done inside our Queue Dialog.
 	 * So, just create it and let him handle the job.
@@ -697,7 +697,11 @@ void MainWindow::widgetQueueToAlpmQueue()
 	 * should call. processQueue() processes a libalpm queue,
 	 * so you need to "translate" it first.
 	 */
-	
+	QList<QTreeWidgetItem*> list = pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 1);
+	list += pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 1);
+	list += pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 1);
+	qDebug() << list.count();
+	//Dario: Here is the list ;)
 	/* TODO: When queue implementation is defined and complete.
 	 * We should start with this now, as we have finished the actions...
 	 */
