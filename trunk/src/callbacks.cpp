@@ -23,6 +23,7 @@
 #include <sys/time.h>
 #include <unistd.h>
 #include <QtGui>
+#include <QMessageBox>
 
 #include "alpm.h"
 #include "callbacks.h"
@@ -39,7 +40,7 @@ CallBacks::CallBacks()
 
 CallBacks::~CallBacks()
 {
-	
+
 }
 
 float CallBacks::get_update_timediff(int first_call)
@@ -78,7 +79,7 @@ void CallBacks::cb_trans_evt(pmtransevt_t event, void *data1, void *data2)
 }
 
 void CallBacks::cb_trans_conv(pmtransconv_t event, void *data1, void *data2,
-                   void *data3, int *response)
+		void *data3, int *response)
 {
 	/* This can become a HUGE problem. libalpm implementation
 	 * here sucks (really?) as it doesn't consider anything
@@ -91,21 +92,70 @@ void CallBacks::cb_trans_conv(pmtransconv_t event, void *data1, void *data2,
 	 * a separate thread and really block the process here until somebody gets
 	 * an answer. libalpm sucks. Really.
 	 */
+
+	QMessageBox *msgBox = new QMessageBox();
 	
-	emit streamTransQuestion(event, data1, data2, data3);
+	msgBox->setIcon(QMessageBox::Question);
+	msgBox->setWindowTitle(QString("Library Question"));
+
+	msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+
+	msgBox->setWindowModality(Qt::ApplicationModal);
 	
-	while(answer == -1)
-		sleep(0.3);
+	switch(event) 
+	{
+	case PM_TRANS_CONV_INSTALL_IGNOREPKG:
+		if(data2) 
+			/* TODO we take this route based on data2 being not null? WTF (you suck)*/
+			msgBox->setText(QString("%1 requires installing %2 from IgnorePkg/IgnoreGroup.\n Install anyway?").arg(alpm_pkg_get_name((pmpkg_t *)data1)).
+					arg(alpm_pkg_get_name((pmpkg_t *)data2)));
+		else
+			msgBox->setText(QString("%1 is in IgnorePkg/IgnoreGroup.\n Install anyway?").arg(alpm_pkg_get_name((pmpkg_t *)data1)));
+
+		break;
+	case PM_TRANS_CONV_REMOVE_HOLDPKG:
+		msgBox->setText(QString("%1 is designated as a HoldPkg.\n Remove anyway?").arg(alpm_pkg_get_name((pmpkg_t *)data1)));
+		break;
+	case PM_TRANS_CONV_REPLACE_PKG:
+		msgBox->setText(QString("Replace %1 with %2/%3?").arg(alpm_pkg_get_name((pmpkg_t *)data1)).
+				arg((char *)data3).arg(alpm_pkg_get_name((pmpkg_t *)data2)));
+		break;
+	case PM_TRANS_CONV_CONFLICT_PKG:
+		msgBox->setText(QString("%1 conflicts with %2.\nRemove %3?").arg((char *)data1).
+				arg((char *)data2).arg((char *)data2));
+		break;
+	case PM_TRANS_CONV_LOCAL_NEWER:
+		msgBox->setText(QString("%1-%2: local version is newer.\nUpgrade anyway?").arg(alpm_pkg_get_name((pmpkg_t *)data1)).
+				arg(alpm_pkg_get_version((pmpkg_t *)data1)));
+		break;
+	case PM_TRANS_CONV_CORRUPTED_PKG:
+		msgBox->setText(QString("File %s is corrupted.\nDo you want to delete it?").arg((char *)data1));
+		break;
+	}
 	
-	*response = answer;
-	answer = -1;
+	switch (msgBox->exec()) {
+	case QMessageBox::Yes:
+		*response = 1;
+		break;
+	case QMessageBox::No:
+		*response = 0;
+		break;
+	default:
+		// should never be reached
+		break;
+	}
+	
+	printf("reached\n");
+	
+	msgBox->deleteLater();
+
 }
 
 void CallBacks::cb_trans_progress(pmtransprog_t event, const char *pkgname, int percent,
-                   int howmany, int remain)
+		int howmany, int remain)
 {
 	float timediff = 0.0;
-	
+
 	if(percent == 0) 
 	{
 		gettimeofday(&initial_time, NULL);
@@ -134,14 +184,14 @@ void CallBacks::cb_dl_progress(const char *filename, int file_xfered, int file_t
 	float timediff = 0.0;
 	float rate_f = 0.0, eta_s_f = 0.0;
 	float rate_l = 0.0, eta_s_l = 0.0;
-	
+
 	if(onDl == 0)
 	{
 		xfered_total = 0;
 		rate_total = 0.0;
 		onDl = 1;
 	}
-	
+
 	if(file_xfered == 0)
 	{
 		gettimeofday(&initial_time, NULL);
@@ -162,18 +212,18 @@ void CallBacks::cb_dl_progress(const char *filename, int file_xfered, int file_t
 		/* average rate to reduce jumpiness */
 		rate_f = (rate_f + 2*rate_last) / 3;
 		eta_s_f = (file_total - file_xfered) / (rate_f * 1024.0);
-		
+
 		rate_l = (list_xfered - xfered_total) / (timediff * 1024.0);
 		/* average rate to reduce jumpiness */
 		rate_l = (rate_l + 2*rate_total) / 3;
 		eta_s_l = (list_total - list_xfered) / (rate_l * 1024.0);
-		
+
 		rate_last = rate_f;
 		xfered_last = file_xfered;
 		rate_total = rate_l;
 		xfered_total = list_xfered;
 	}
-	
+
 	emit streamTransDlProg((char *)filename, file_xfered, file_total, (int)rate_f,
 			list_xfered, list_total, (int)rate_l);
 }
@@ -195,13 +245,13 @@ void cb_dl_progress(const char *filename, int file_xfered, int file_total,
 }
 
 void cb_trans_progress(pmtransprog_t event, const char *pkgname, int percent,
-                   int howmany, int remain)
+		int howmany, int remain)
 {
 	CbackReference.cb_trans_progress(event,pkgname,percent,howmany,remain);
 }
 
 void cb_trans_conv(pmtransconv_t event, void *data1, void *data2,
-                   void *data3, int *response)
+		void *data3, int *response)
 {
 	CbackReference.cb_trans_conv(event,data1,data2,data3,response);
 }

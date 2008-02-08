@@ -88,10 +88,8 @@ void SysUpgradeDialog::initSysUpgrade()
 		
 	if(checkBox->isChecked())
 		settings->setValue("gui/actionupgrade", "upgrade");
-		
-	emit addToPkgQueue();
 	
 	aHandle->fullSystemUpgrade();
-
+	
 	emit upgradeNow();
 }

@@ -76,108 +76,109 @@ void TrCommitThread::run()
 
 void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 {
-		
-	switch(event) {
-		case PM_TRANS_EVT_CHECKDEPS_START:
-		  actionDetail->setText(QString(tr("Validating Dependencies...")));
-			break;
-		case PM_TRANS_EVT_FILECONFLICTS_START:
-			actionDetail->setText(QString(tr("Checking for Conflicts...")));
-			break;
-		case PM_TRANS_EVT_RESOLVEDEPS_START:
-			actionDetail->setText(QString(tr("Resolving Dependencies...")));
-			break;
-		case PM_TRANS_EVT_INTERCONFLICTS_START:
-			actionDetail->setText(QString(tr("Looking for Inter-Conflicts...")));
-			break;
-		case PM_TRANS_EVT_ADD_START:
-			if(status == 1)
-			{
-				status = 2;
-				startProcess();
-			}
-			actionDetail->setText(QString(tr("Installing %1...")).arg(alpm_pkg_get_name((pmpkg_t *)data1)));
-			break;
-		case PM_TRANS_EVT_ADD_DONE:
-			actionDetail->setText(QString(tr("installed %1 (%2)")).arg(
-					alpm_pkg_get_name((pmpkg_t *)data1)).arg(alpm_pkg_get_version((pmpkg_t *)data1)));
-			//alpm_logaction(str);
-			break;
-		case PM_TRANS_EVT_REMOVE_START:
-			if(status == 1)
-			{
-				status = 2;
-				startProcess();
-			}
-			actionDetail->setText(QString(tr("Removing %1...")).arg(alpm_pkg_get_name((pmpkg_t *)data1)));
-			break;
-		case PM_TRANS_EVT_REMOVE_DONE:
-			actionDetail->setText(QString(tr("Removed %1 (%2)")).
-					arg(alpm_pkg_get_name((pmpkg_t *)data1)).arg(alpm_pkg_get_version((pmpkg_t *)data1)));
-			//alpm_logaction(str);
-			break;
-		case PM_TRANS_EVT_UPGRADE_START:
-			if(status == 1)
-			{
-				status = 2;
-				startProcess();
-			}
-			actionDetail->setText(QString(tr("Upgrading %1...")).arg(alpm_pkg_get_name((pmpkg_t *)data1)));
-			break;
-		case PM_TRANS_EVT_UPGRADE_DONE:
-			actionDetail->setText(QString(tr("Upgraded %1 (%2 -> %3)")).arg(
-			         (char *)alpm_pkg_get_name((pmpkg_t *)data1)).arg((char *)alpm_pkg_get_version((pmpkg_t *)data2)).
-			         arg((char *)alpm_pkg_get_version((pmpkg_t *)data1)));
-			//alpm_logaction(str);
-			break;
-		case PM_TRANS_EVT_INTEGRITY_START:
-			if(status == 1)
-			{
-				status = 2;
-				startProcess();
-			}
-			actionDetail->setText(QString(tr("Checking package integrity...")));
-			break;
-		case PM_TRANS_EVT_DELTA_INTEGRITY_START:
-			actionDetail->setText(QString(tr("Checking delta integrity...")));
-			break;
-		case PM_TRANS_EVT_DELTA_PATCHES_START:
-			actionDetail->setText(QString(tr("Applying deltas...")));
-			break;
-		case PM_TRANS_EVT_DELTA_PATCH_START:
-			actionDetail->setText(QString(tr("Generating %1 with %2... ")).arg((char *)data1).
-					arg((char *)data2));
-			break;
-		case PM_TRANS_EVT_DELTA_PATCH_DONE:
-			actionDetail->setText(QString(tr("Success!")));
-			break;
-		case PM_TRANS_EVT_DELTA_PATCH_FAILED:
-			actionDetail->setText(QString(tr("Failed!")));
-			break;
-		case PM_TRANS_EVT_SCRIPTLET_INFO:
-			actionDetail->setText(QString("%s").arg((char*)data1));
-			break;
-		case PM_TRANS_EVT_PRINTURI:
-			actionDetail->setText(QString("%s/%s").arg((char*)data1).arg((char*)data2));
-			break;
-		case PM_TRANS_EVT_RETRIEVE_START:
-			actionDetail->setText(QString(tr("Starting downloading packages from %1...")).arg((char*)data1));
-			if(status == 0)
-			{
-				status = 1;
-				startDownload();
-			}
-			break;
+
+	switch(event) 
+	{
+	case PM_TRANS_EVT_CHECKDEPS_START:
+		actionDetail->setText(QString(tr("Validating Dependencies...")));
+		break;
+	case PM_TRANS_EVT_FILECONFLICTS_START:
+		actionDetail->setText(QString(tr("Checking for Conflicts...")));
+		break;
+	case PM_TRANS_EVT_RESOLVEDEPS_START:
+		actionDetail->setText(QString(tr("Resolving Dependencies...")));
+		break;
+	case PM_TRANS_EVT_INTERCONFLICTS_START:
+		actionDetail->setText(QString(tr("Looking for Inter-Conflicts...")));
+		break;
+	case PM_TRANS_EVT_ADD_START:
+		if(status == 1)
+		{
+			status = 2;
+			startProcess();
+		}
+		actionDetail->setText(QString(tr("Installing %1...")).arg(alpm_pkg_get_name((pmpkg_t *)data1)));
+		break;
+	case PM_TRANS_EVT_ADD_DONE:
+		actionDetail->setText(QString(tr("installed %1 (%2)")).arg(
+				alpm_pkg_get_name((pmpkg_t *)data1)).arg(alpm_pkg_get_version((pmpkg_t *)data1)));
+		//alpm_logaction(str);
+		break;
+	case PM_TRANS_EVT_REMOVE_START:
+		if(status == 1)
+		{
+			status = 2;
+			startProcess();
+		}
+		actionDetail->setText(QString(tr("Removing %1...")).arg(alpm_pkg_get_name((pmpkg_t *)data1)));
+		break;
+	case PM_TRANS_EVT_REMOVE_DONE:
+		actionDetail->setText(QString(tr("Removed %1 (%2)")).
+				arg(alpm_pkg_get_name((pmpkg_t *)data1)).arg(alpm_pkg_get_version((pmpkg_t *)data1)));
+		//alpm_logaction(str);
+		break;
+	case PM_TRANS_EVT_UPGRADE_START:
+		if(status == 1)
+		{
+			status = 2;
+			startProcess();
+		}
+		actionDetail->setText(QString(tr("Upgrading %1...")).arg(alpm_pkg_get_name((pmpkg_t *)data1)));
+		break;
+	case PM_TRANS_EVT_UPGRADE_DONE:
+		actionDetail->setText(QString(tr("Upgraded %1 (%2 -> %3)")).arg(
+				(char *)alpm_pkg_get_name((pmpkg_t *)data1)).arg((char *)alpm_pkg_get_version((pmpkg_t *)data2)).
+				arg((char *)alpm_pkg_get_version((pmpkg_t *)data1)));
+		//alpm_logaction(str);
+		break;
+	case PM_TRANS_EVT_INTEGRITY_START:
+		if(status == 1)
+		{
+			status = 2;
+			startProcess();
+		}
+		actionDetail->setText(QString(tr("Checking package integrity...")));
+		break;
+	case PM_TRANS_EVT_DELTA_INTEGRITY_START:
+		actionDetail->setText(QString(tr("Checking delta integrity...")));
+		break;
+	case PM_TRANS_EVT_DELTA_PATCHES_START:
+		actionDetail->setText(QString(tr("Applying deltas...")));
+		break;
+	case PM_TRANS_EVT_DELTA_PATCH_START:
+		actionDetail->setText(QString(tr("Generating %1 with %2... ")).arg((char *)data1).
+				arg((char *)data2));
+		break;
+	case PM_TRANS_EVT_DELTA_PATCH_DONE:
+		actionDetail->setText(QString(tr("Success!")));
+		break;
+	case PM_TRANS_EVT_DELTA_PATCH_FAILED:
+		actionDetail->setText(QString(tr("Failed!")));
+		break;
+	case PM_TRANS_EVT_SCRIPTLET_INFO:
+		actionDetail->setText(QString("%s").arg((char*)data1));
+		break;
+	case PM_TRANS_EVT_PRINTURI:
+		actionDetail->setText(QString("%s/%s").arg((char*)data1).arg((char*)data2));
+		break;
+	case PM_TRANS_EVT_RETRIEVE_START:
+		actionDetail->setText(QString(tr("Starting downloading packages from %1...")).arg((char*)data1));
+		if(status == 0)
+		{
+			status = 1;
+			startDownload();
+		}
+		break;
 		/* all the simple done events, with fallthrough for each */
-		case PM_TRANS_EVT_FILECONFLICTS_DONE:
-		case PM_TRANS_EVT_EXTRACT_DONE:
-		case PM_TRANS_EVT_CHECKDEPS_DONE:
-		case PM_TRANS_EVT_RESOLVEDEPS_DONE:
-		case PM_TRANS_EVT_INTERCONFLICTS_DONE:
-		case PM_TRANS_EVT_INTEGRITY_DONE:
-		case PM_TRANS_EVT_DELTA_INTEGRITY_DONE:
-		case PM_TRANS_EVT_DELTA_PATCHES_DONE:
-			break;
+	case PM_TRANS_EVT_FILECONFLICTS_DONE:
+	case PM_TRANS_EVT_EXTRACT_DONE:
+	case PM_TRANS_EVT_CHECKDEPS_DONE:
+	case PM_TRANS_EVT_RESOLVEDEPS_DONE:
+	case PM_TRANS_EVT_INTERCONFLICTS_DONE:
+	case PM_TRANS_EVT_INTEGRITY_DONE:
+	case PM_TRANS_EVT_DELTA_INTEGRITY_DONE:
+	case PM_TRANS_EVT_DELTA_PATCHES_DONE:
+		break;
 	}
 }
 
@@ -204,7 +205,7 @@ void QueueDialog::updateProgressBar(char *c, int bytedone, int bytetotal, int sp
 	progressBar->setValue(listdone);
 
 
-	if(bytetotal > 2048)
+	if(bytetotal > 2048000)
 		actionDetail->setText(QString(tr("Downloading %1... (%2 MB of %3 MB)")).
 				arg(c).arg(bd/1024, 0, 'f', 2).arg(bt/1024, 0, 'f', 2));
 	else

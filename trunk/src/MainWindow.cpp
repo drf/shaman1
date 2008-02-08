@@ -56,14 +56,14 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	connect(switchToGrps, SIGNAL(clicked()), SLOT(populateGrpsColumn()));
 	connect(installButton, SIGNAL(clicked()), SLOT(installPackage()));
 	connect(removeButton, SIGNAL(clicked()), SLOT(removePackage()));
-        connect(completeRemoveButton, SIGNAL(clicked()), SLOT(completeRemovePackage()));
+	connect(completeRemoveButton, SIGNAL(clicked()), SLOT(completeRemovePackage()));
 	connect(cancelButton, SIGNAL(clicked()), SLOT(cancelAction()));
 	connect(actionUpgrade_System, SIGNAL(triggered()), SLOT(fullSysUpgrade()));
 	connect(packageSwitchCombo, SIGNAL(currentIndexChanged(int)), SLOT(refinePkgView()));
 	connect(searchLine, SIGNAL(textChanged(const QString&)), SLOT(refinePkgView()));
 	connect(actionPackage_Repositories, SIGNAL(triggered()), SLOT(configureRepositories()));
 	connect(actionPacman_Preferences, SIGNAL(triggered()), SLOT(showSettings()));
-        connect(systray, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), SLOT(systrayActivated(QSystemTrayIcon::ActivationReason)));
+	connect(systray, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), SLOT(systrayActivated(QSystemTrayIcon::ActivationReason)));
 
 	return;
 }
