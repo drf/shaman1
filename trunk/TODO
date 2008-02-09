@@ -6,9 +6,9 @@ Basic-functionality (installing, removing packages) *almost done* *prio*
 Dbus-Engine (later)
 Plasma-Data-Engine *not really needed, we can use DBus only*
 Implement Error Handling *prio in critical cases such as Queue Processing*
-Implement Interface Configuration (XML?)
+#Implement Interface Configuration (XML?) QSettings, done :)
 Implement Queue *prio*
-Implement Question Handling *prio* ---> done?
+#Implement Question Handling  ---> done? done :)
 Throw all relevant packages informations into the QTreeWidgetItem (missing now: installed and dependencies)--->Depencies are not soo good I think, they're 
 													      shown in PkgInfos, which is much better IMO
 
