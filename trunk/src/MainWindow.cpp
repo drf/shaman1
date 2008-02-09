@@ -555,7 +555,7 @@ void MainWindow::removePackage(QString package)
 	QTreeWidgetItem *item = pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 2).first();
 
 	qDebug() << item->text(1);
-	if (item->text(1) == "Not installed")
+	if (item->text(0) == "Not installed")
 		return;
 	else
 	{
