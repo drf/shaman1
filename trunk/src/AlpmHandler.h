@@ -77,6 +77,7 @@ public:
 	void addSyncToQueue(char *toAdd);
 	void addRemoveToQueue(char *toRm);
 	void processQueue();
+	int getNumberOfTargets(int action);
 
 	bool isPerformable(string pkgname, int action);
 	bool isInstalled(pmpkg_t *pkg);

@@ -26,6 +26,7 @@
 #include "QueueDialog.h"
 #include "RepoWidget.h"
 #include "configDialog.h"
+#include "../ui_reviewQueueDialog.h"
 
 #include <iostream>
 #include <QMenu>
@@ -706,6 +707,8 @@ void MainWindow::processQueue()
 
 	if (upDl)
 		upDl->deleteLater();
+	if (reviewQueue)
+		reviewQueue->deleteLater();
 
 	/* Now, everything will be done inside our Queue Dialog.
 	 * So, just create it and let him handle the job.
@@ -770,11 +773,27 @@ void MainWindow::widgetQueueToAlpmQueue()
 	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 1))
 		aHandle->addRemoveToQueue(itm->text(2).toAscii().data());
 	
-	/* TODO: Show something here... a box saying how many packages will be
-	 * modified and so on... Add also a switch to preferences so users
-	 * can avoid to see it. Then we'll switch to QueueDialog.
-	 */
+	
+	reviewQueue = new QDialog(this);
+	Ui::QueueReadyDialog qUi;
+	qUi.setupUi(reviewQueue);
+	
+	reviewQueue->setWindowModality(Qt::ApplicationModal);
+	reviewQueue->show();
+	
+	connect(qUi.processButton, SIGNAL(clicked()), SLOT(processQueue()));
+	connect(qUi.cancelButton, SIGNAL(clicked()), SLOT(destroyReviewQueue()));
+	
+	qUi.queueInfo->setText(QString("Your Queue is about to be processed. "
+			"You are going to:<br />Remove <b>%1 packages</b><br />Install/Upgrade"
+			" <b>%2 packages</b><br />Do you wish to continue?").arg(aHandle->getNumberOfTargets(1)).
+			arg(aHandle->getNumberOfTargets(0)));
 
+}
+
+void MainWindow::destroyReviewQueue()
+{
+	reviewQueue->deleteLater();
 }
 
 void MainWindow::configureRepositories()

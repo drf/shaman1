@@ -511,20 +511,30 @@ void AlpmHandler::initQueue(bool rem, bool syncd)
 
 void AlpmHandler::addSyncToQueue(char *toAdd)
 {
-	toSync = alpm_list_add(toSync, toAdd);
+	char *addItem = (char *)malloc(strlen(toAdd)*sizeof(char));
+	strcpy(addItem, toAdd);
+	toSync = alpm_list_add(toSync, addItem);
 	toSync = alpm_list_first(toSync);
 }
 
 void AlpmHandler::addRemoveToQueue(char *toRm)
 {
-	toRemove = alpm_list_add(toRemove, toRm);
+	char *addItem = (char *)malloc(strlen(toRm)*sizeof(char));
+	strcpy(addItem, toRm);
+	toRemove = alpm_list_add(toRemove, addItem);
 	toRemove = alpm_list_first(toRemove);
+}
+
+int AlpmHandler::getNumberOfTargets(int action)
+{
+	if(action == 0)
+		return alpm_list_count(toSync);
+	else
+		return alpm_list_count(toRemove);
 }
 
 void AlpmHandler::processQueue()
 {
-	if(!isTransaction())
-		return;
 	
 	if(removeAct)
 	{
@@ -533,9 +543,17 @@ void AlpmHandler::processQueue()
 		
 		toRemove = alpm_list_first(toRemove);
 		while(toRemove != NULL)
-			alpm_trans_addtarget((char *)alpm_list_getdata(toRemove));
+		{
+			printf("%s\n", (char *)alpm_list_getdata(toRemove));
+			if(alpm_trans_addtarget((char *)alpm_list_getdata(toRemove)) == -1)
+				printf("Argh!\n");
+			toRemove = alpm_list_next(toRemove);
+		}
 		
 		performCurrentTransaction();
+		
+		//alpm_list_free_inner(toRemove, free);
+		printf("remove!\n");
 	}
 	if(syncAct)
 	{
@@ -544,9 +562,16 @@ void AlpmHandler::processQueue()
 		
 		toSync = alpm_list_first(toSync);
 		while(toSync != NULL)
-			alpm_trans_addtarget((char *)alpm_list_getdata(toSync));
+		{
+			if(alpm_trans_addtarget((char *)alpm_list_getdata(toSync)) == -1)
+				printf("Argh!\n");
+			
+			toSync = alpm_list_next(toSync);
+		}
 		
 		performCurrentTransaction();
+		
+		//alpm_list_free_inner(toSync, free);
 		
 	}
 	if(upgradeAct)

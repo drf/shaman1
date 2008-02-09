@@ -1,0 +1,86 @@
+<ui version="4.0" >
+ <class>QueueReadyDialog</class>
+ <widget class="QDialog" name="QueueReadyDialog" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>429</width>
+    <height>226</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Review Queue</string>
+  </property>
+  <widget class="QWidget" name="" >
+   <property name="geometry" >
+    <rect>
+     <x>20</x>
+     <y>11</y>
+     <width>391</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" >
+    <item>
+     <widget class="QLabel" name="queueInfo" >
+      <property name="text" >
+       <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Your Queue is about to be processed. You are going to:&lt;br />Remove &lt;span style=" font-weight:600;">%1 packages&lt;/span>&lt;br />Install/Upgrade &lt;span style=" font-weight:600;">%2 packages&lt;/span>&lt;/p>
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;">&lt;span style=" font-weight:400;">Do you wish to continue?&lt;/span>&lt;/p>&lt;/body>&lt;/html></string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="turnoffBox" >
+      <property name="text" >
+       <string>Turn off PC when Queue is done</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="trayBox" >
+      <property name="text" >
+       <string>Process in Tray</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" >
+      <item>
+       <widget class="QPushButton" name="cancelButton" >
+        <property name="text" >
+         <string>Cancel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer>
+        <property name="orientation" >
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" >
+         <size>
+          <width>81</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="processButton" >
+        <property name="text" >
+         <string>Process</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

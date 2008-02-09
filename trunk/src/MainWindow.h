@@ -67,6 +67,7 @@ public slots:
 	void queueProcessingEnded(bool errors);
 	void widgetQueueToAlpmQueue();
 	void configureRepositories();
+	void destroyReviewQueue();
 
 private slots:
 	void quitApp();
@@ -99,6 +100,7 @@ private:
 	ConfigDialog *configDialog;
 
 	QSystemTrayIcon *systray;
+	QDialog *reviewQueue;
 
 };
 
