@@ -8,8 +8,9 @@ Plasma-Data-Engine *not really needed, we can use DBus only*
 Implement Error Handling *prio in critical cases such as Queue Processing*
 Implement Interface Configuration (XML?)
 Implement Queue *prio*
-Implement Question Handling *prio*
-Throw all relevant packages informations into the QTreeWidgetItem (missing now: installed and dependencies)
+Implement Question Handling *prio* ---> done?
+Throw all relevant packages informations into the QTreeWidgetItem (missing now: installed and dependencies)--->Depencies are not soo good I think, they're 
+													      shown in PkgInfos, which is much better IMO
 
 
 
@@ -22,7 +23,7 @@ Complete PkgDetails *prio*
 All action-button-actions in context-menu
 Connect all buttons to actions
 Configuration-dialog *prio*
-System-Tray-Icon *prio*
+System-Tray-Icon *prio* --->Mostly done, only a few missing things (change icon, if there are upgradeable packages)
 Implement ComboBox (depends on Queue implementation and added info to pkgs)
 Plasmoid (later, and as a separate application?)
 Improve Package Information Dialog
