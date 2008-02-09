@@ -71,7 +71,7 @@ void QueueDialog::startProcessing()
 
 void TrCommitThread::run()
 {
-	aHandle->performCurrentTransaction();
+	aHandle->processQueue();
 }
 
 void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)

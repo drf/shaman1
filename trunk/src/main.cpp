@@ -63,7 +63,6 @@ int main(int argc, char **argv)
 	uid_t myuid = geteuid();
 
 	QApplication app(argc, argv);
-	app.setQuitOnLastWindowClosed(false);
 
 	if(myuid > 0)
 	{
@@ -88,6 +87,9 @@ int main(int argc, char **argv)
 
 		return app.exec();
 	}
+	
+	app.setQuitOnLastWindowClosed(false);
+	
 	//TODO: Look if we should translate the program to another language and load it^^
 	signal(SIGINT, cleanup);
 	signal(SIGTERM, cleanup);

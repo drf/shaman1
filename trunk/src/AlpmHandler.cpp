@@ -27,6 +27,8 @@
 #include "callbacks.h"
 
 AlpmHandler::AlpmHandler(bool init)
+: toRemove(NULL),
+toSync(NULL)
 {
 
 	/* First, initialize Alpm. Then, make the whole class aware that no
@@ -375,6 +377,10 @@ bool AlpmHandler::fullSystemUpgrade()
 		return false;
 	}
 
+	removeAct = false;
+	syncAct = false;
+	upgradeAct = true;
+
 	return true;
 
 }
@@ -473,16 +479,83 @@ QStringList AlpmHandler::getPackageFiles(QString name)
 	alpm_list_t *files;
 	QStringList retlist;
 	
-	printf("asfa\n");
-	
 	files = alpm_pkg_get_files(alpm_db_get_pkg(db_local, name.toAscii().data()));
 	
 	while(files != NULL)
 	{
-		printf("here");
 		retlist.append(QString((char*)alpm_list_getdata(files)).prepend(alpm_option_get_root()));
 		files = alpm_list_next(files);
 	}
 	
 	return retlist;
+}
+
+void AlpmHandler::initQueue(bool rem, bool syncd)
+{	
+	removeAct = rem;
+	syncAct = syncd;
+	upgradeAct = false;
+
+	if(toSync)
+	{
+		alpm_list_free(toSync);
+		toSync = NULL;
+	}
+	if(toRemove)
+	{
+		alpm_list_free(toRemove);
+		toRemove = NULL;
+	}
+
+}
+
+void AlpmHandler::addSyncToQueue(char *toAdd)
+{
+	toSync = alpm_list_add(toSync, toAdd);
+	toSync = alpm_list_first(toSync);
+}
+
+void AlpmHandler::addRemoveToQueue(char *toRm)
+{
+	toRemove = alpm_list_add(toRemove, toRm);
+	toRemove = alpm_list_first(toRemove);
+}
+
+void AlpmHandler::processQueue()
+{
+	if(!isTransaction())
+		return;
+	
+	if(removeAct)
+	{
+		/* Well, we need to remove packages first. Let's do this. */
+		initTransaction(PM_TRANS_TYPE_REMOVE, PM_TRANS_FLAG_ALLDEPS);
+		
+		toRemove = alpm_list_first(toRemove);
+		while(toRemove != NULL)
+			alpm_trans_addtarget((char *)alpm_list_getdata(toRemove));
+		
+		performCurrentTransaction();
+	}
+	if(syncAct)
+	{
+		/* Time to install and upgrade packages, right? */
+		initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_ALLDEPS);
+		
+		toSync = alpm_list_first(toSync);
+		while(toSync != NULL)
+			alpm_trans_addtarget((char *)alpm_list_getdata(toSync));
+		
+		performCurrentTransaction();
+		
+	}
+	if(upgradeAct)
+	{
+		/* We just have to start the transaction. */
+		initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_ALLDEPS);
+		
+		performCurrentTransaction();
+	}
+	
+	
 }

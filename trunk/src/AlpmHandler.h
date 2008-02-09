@@ -72,6 +72,11 @@ public:
 	
 	QStringList getPackageFiles(pmpkg_t *package);
 	QStringList getPackageFiles(QString name);
+	
+	void initQueue(bool rem, bool syncd);
+	void addSyncToQueue(char *toAdd);
+	void addRemoveToQueue(char *toRm);
+	void processQueue();
 
 	bool isPerformable(string pkgname, int action);
 	bool isInstalled(pmpkg_t *pkg);
@@ -107,7 +112,12 @@ private:
 	alpm_list_t *sync_databases;
 	pmdb_t *dbs_sync;
 	bool onTransaction;
-
+	bool removeAct;
+	bool syncAct;
+	bool upgradeAct;
+	
+	alpm_list_t *toRemove;
+	alpm_list_t *toSync;
 
 
 };
