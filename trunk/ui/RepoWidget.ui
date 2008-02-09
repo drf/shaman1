@@ -1,16 +1,19 @@
 <ui version="4.0" >
- <class>repoDialog</class>
- <widget class="QDialog" name="repoDialog" >
+ <class>RepoWidget</class>
+ <widget class="QWidget" name="RepoWidget" >
   <property name="geometry" >
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>651</width>
-    <height>418</height>
+    <width>584</width>
+    <height>359</height>
    </rect>
   </property>
   <property name="windowTitle" >
-   <string>qtPacman - Manage Repositories</string>
+   <string>Repositories</string>
+  </property>
+  <property name="windowIcon" >
+   <iconset resource="qtpacman.qrc" >:/Icons/icons/network-server-database.png</iconset>
   </property>
   <layout class="QGridLayout" >
    <item row="0" column="0" >
@@ -24,7 +27,7 @@
         <attribute name="title" >
          <string>Arch Linux Official Repositories</string>
         </attribute>
-        <widget class="QWidget" name="layoutWidget" >
+        <widget class="QWidget" name="layoutWidget_2" >
          <property name="geometry" >
           <rect>
            <x>20</x>
@@ -46,7 +49,7 @@
           </item>
          </layout>
         </widget>
-        <widget class="QWidget" name="layoutWidget" >
+        <widget class="QWidget" name="layoutWidget_3" >
          <property name="geometry" >
           <rect>
            <x>20</x>
@@ -106,7 +109,7 @@ Please note that packages from Unstable and Testing may break your system.</stri
         <attribute name="title" >
          <string>KDEMod Repositories</string>
         </attribute>
-        <widget class="QWidget" name="layoutWidget" >
+        <widget class="QWidget" name="layoutWidget_4" >
          <property name="geometry" >
           <rect>
            <x>20</x>
@@ -147,7 +150,7 @@ of KDE with the simplicity and the power of Arch.</string>
         <attribute name="title" >
          <string>Third-Party Repositories</string>
         </attribute>
-        <widget class="QWidget" name="layoutWidget" >
+        <widget class="QWidget" name="layoutWidget_5" >
          <property name="geometry" >
           <rect>
            <x>20</x>
@@ -229,53 +232,12 @@ and Pacman.</string>
        </widget>
       </widget>
      </item>
-     <item>
-      <widget class="QDialogButtonBox" name="repoButtonBox" >
-       <property name="orientation" >
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="standardButtons" >
-        <set>QDialogButtonBox::Apply|QDialogButtonBox::Cancel|QDialogButtonBox::NoButton|QDialogButtonBox::Ok</set>
-       </property>
-      </widget>
-     </item>
     </layout>
    </item>
   </layout>
  </widget>
- <resources/>
- <connections>
-  <connection>
-   <sender>repoButtonBox</sender>
-   <signal>rejected()</signal>
-   <receiver>repoDialog</receiver>
-   <slot>reject()</slot>
-   <hints>
-    <hint type="sourcelabel" >
-     <x>316</x>
-     <y>260</y>
-    </hint>
-    <hint type="destinationlabel" >
-     <x>286</x>
-     <y>274</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>repoButtonBox</sender>
-   <signal>accepted()</signal>
-   <receiver>repoDialog</receiver>
-   <slot>accept()</slot>
-   <hints>
-    <hint type="sourcelabel" >
-     <x>248</x>
-     <y>254</y>
-    </hint>
-    <hint type="destinationlabel" >
-     <x>157</x>
-     <y>274</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <resources>
+  <include location="qtpacman.qrc" />
+ </resources>
+ <connections/>
 </ui>
