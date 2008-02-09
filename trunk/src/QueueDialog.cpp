@@ -259,7 +259,5 @@ void QueueDialog::cleanup()
 	processingQueue->setText(tr("Process queue"));
 	cleaningUp->setText(tr("<b>Cleanup</b>"));
 	
-	sleep(1);
-	
 	emit terminated(false);
 }

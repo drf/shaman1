@@ -738,6 +738,11 @@ void MainWindow::queueProcessingEnded(bool errors)
 
 	pkgsViewWG->setSortingEnabled(false);
 	populatePackagesView();
+	refinePkgView();
+	
+	QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Queue Processed"), tr("Your Queue was successfully processed!"), QMessageBox::Ok);
+
+	message->show();
 }
 
 void MainWindow::widgetQueueToAlpmQueue()
