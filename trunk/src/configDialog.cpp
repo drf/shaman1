@@ -26,8 +26,20 @@ ConfigDialog::ConfigDialog(AlpmHandler *handler, QWidget *parent)
   : QDialog(parent),
     m_handler(handler)
 {
-     setupUi(this);
+    setupUi(this);
+    connect(listWidget, SIGNAL(currentRowChanged(int)), this, SLOT(changeWidget(int)));
 }
 ConfigDialog::~ConfigDialog()
 {
+}
+
+void ConfigDialog::addPage(int position, QWidget *widget)
+{
+    stackedWidget->insertWidget(position, widget);
+    listWidget->insertItem(position, widget->windowTitle());
+}
+
+void ConfigDialog::changeWidget(int position)
+{
+    stackedWidget->setCurrentIndex(position);
 }

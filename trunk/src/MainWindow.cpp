@@ -370,7 +370,7 @@ void MainWindow::itemChanged()
 		installButton->setEnabled(true);
 		completeRemoveButton->setDisabled(true);
 	}
-	//if (pkgsViewWG->selectedItems().first()->text() == tr("Upgradeable"))
+	//if (pkgsViewWG->selectedItems().first()->text(1) == tr("Upgradeable"))
 	showPkgInfo();
 }
 
