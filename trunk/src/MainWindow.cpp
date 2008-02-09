@@ -487,16 +487,45 @@ void MainWindow::finishDbUpdate()
 void MainWindow::showContextMenu()
 {
 	qDebug() << "Let's show a context menu";
+	QTreeWidgetItem *item = pkgsViewWG->selectedItems().first();
 	QMenu *menu = new QMenu(this);
 	//FIXME: Disable actions if they're not needed f.e. installAction on installed packages
-	QAction *installAction = menu->addAction(tr("Mark for Installation"));
+	QAction *installAction = menu->addAction(QIcon(":/Icons/icons/list-add.png"), tr("Mark for Installation"));
 	connect(installAction, SIGNAL(triggered()), SLOT(installPackage()));
-	QAction *removeAction = menu->addAction(tr("Mark for Removal"));
+	QAction *removeAction = menu->addAction(QIcon(":/Icons/icons/list-remove.png"), tr("Mark for Removal"));
 	connect(removeAction, SIGNAL(triggered()), SLOT(removePackage()));
-	QAction *upgradeAction = menu->addAction(tr("Mark for Upgrade"));
+	QAction *upgradeAction = menu->addAction(QIcon(":/Icons/icons/edit-redo.png"), tr("Mark for Upgrade"));
 	connect(upgradeAction, SIGNAL(triggered()), SLOT(upgradePackage()));
-	QAction *cancelAction = menu->addAction(tr("Cancel Action"));
+	QAction *cancelAction = menu->addAction(QIcon(":/Icons/icons/edit-delete.png"), tr("Cancel Action"));
 	connect(cancelAction, SIGNAL(triggered()), SLOT(cancelAction()));
+
+	if (item->text(0) == "Installed")
+	{
+		installAction->setDisabled(true);
+		upgradeAction->setDisabled(true);
+	}
+        else if (item->text(0) == "Not Installed")
+        {
+		removeAction->setDisabled(true);
+		upgradeAction->setDisabled(true);
+        }
+        else//Package is marked as upgradeable
+	{
+		installAction->setDisabled(true);
+		removeAction->setDisabled(true);
+	}//FIXME: Add completeRemove-action
+
+        if (item->text(1).isEmpty())
+		cancelAction->setDisabled(true);
+
+        if (item->text(1) == "Install")
+                installAction->setDisabled(true);
+        else if (item->text(1) == "Uninstall")
+		removeAction->setDisabled(true);
+	else //Upgrade
+		upgradeAction->setDisabled(true);
+
+
 	menu->popup(QCursor::pos());
 }
 
@@ -555,7 +584,7 @@ void MainWindow::removePackage(QString package)
 	QTreeWidgetItem *item = pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 2).first();
 
 	qDebug() << item->text(1);
-	if (item->text(0) == "Not installed")
+	if (item->text(0) == "Not Installed" || item->text(1) == "Remove")
 		return;
 	else
 	{
@@ -576,7 +605,7 @@ void MainWindow::completeRemovePackage()
 	QTreeWidgetItem *item = pkgsViewWG->selectedItems().first();
 
 	qDebug() << item->text(1);
-	if (item->text(0) == "Not installed")
+	if (item->text(0) == "Not Installed")
 		return;
 	else
 	{
