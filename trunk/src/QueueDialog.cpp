@@ -232,16 +232,20 @@ void QueueDialog::startDownload()
 {
 	checkTransaction->setText(tr("Check transaction validity"));
 	downloadPackages->setText(tr("<b>Download Packages</b>"));
-	
+
 	connect(&CbackReference, SIGNAL(streamTransDlProg(char*,int,int,int,int,int,int)), 
 			SLOT(updateProgressBar(char*,int,int,int,int,int,int)));
+
+	if(progressBar->isHidden())
+		progressBar->show();
 }
 
 void QueueDialog::startProcess()
 {
+	checkTransaction->setText(tr("Check transaction validity"));
 	downloadPackages->setText(tr("Download Packages"));
 	processingQueue->setText(tr("<b>Process queue</b>"));
-	
+
 	disconnect(&CbackReference, SIGNAL(streamTransDlProg(char*,int,int,int,int,int,int)), 0, 0);
 	//qRegisterMetaType<pmtransprog_t>("pmtransprog_t");
 	/*connect(&CbackReference, SIGNAL(streamTransProgress(pmtransprog_t,char*,int,int,int)),
