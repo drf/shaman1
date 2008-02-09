@@ -24,7 +24,6 @@
 #include "UpdateDbDialog.h"
 #include "SysUpgradeDialog.h"
 #include "QueueDialog.h"
-#include "RepoWidget.h"
 #include "configDialog.h"
 #include "../ui_reviewQueueDialog.h"
 
@@ -62,7 +61,6 @@ aHandle(handler)
 	connect(actionUpgrade_System, SIGNAL(triggered()), SLOT(fullSysUpgrade()));
 	connect(packageSwitchCombo, SIGNAL(currentIndexChanged(int)), SLOT(refinePkgView()));
 	connect(searchLine, SIGNAL(textChanged(const QString&)), SLOT(refinePkgView()));
-	connect(actionPackage_Repositories, SIGNAL(triggered()), SLOT(configureRepositories()));
 	connect(actionPacman_Preferences, SIGNAL(triggered()), SLOT(showSettings()));
 	connect(systray, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), SLOT(systrayActivated(QSystemTrayIcon::ActivationReason)));
 	connect(actionQuit, SIGNAL(triggered()), SLOT(quitApp()));
@@ -801,17 +799,9 @@ void MainWindow::destroyReviewQueue()
 	reviewQueue->deleteLater();
 }
 
-void MainWindow::configureRepositories()
-{
-	/**repoDl = new RepoDialogCl(aHandle, this);
-
-	repoDl->show();**/
-}
-
 void MainWindow::showSettings()
 {
 	configDialog = new ConfigDialog(aHandle, this);
-	configDialog->addPage(0, new RepoWidget(aHandle, configDialog), tr("Repositories"), QIcon(":/Icons/icons/network-server-database.png"));
 	configDialog->exec();
 }
 

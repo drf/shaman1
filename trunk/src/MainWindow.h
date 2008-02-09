@@ -22,7 +22,6 @@
 #define MAINWINDOW_H_
 
 #include <iostream>
-#include <QtGui>
 #include <QWidget>
 #include <alpm.h>
 #include <alpm_list.h>
@@ -33,7 +32,6 @@
 class UpdateDbDialog;
 class SysUpgradeDialog;
 class QueueDialog;
-class RepoDialogCl;
 class ConfigDialog;
 
 class QSystemTrayIcon;
@@ -66,7 +64,6 @@ public slots:
 	void addUpgradeableToQueue();
 	void queueProcessingEnded(bool errors);
 	void widgetQueueToAlpmQueue();
-	void configureRepositories();
 	void destroyReviewQueue();
 
 private slots:
@@ -96,7 +93,6 @@ private:
 	UpdateDbDialog *dbdialog;
 	SysUpgradeDialog *upDl;
 	QueueDialog *queueDl;
-	RepoDialogCl *repoDl;
 	ConfigDialog *configDialog;
 
 	QSystemTrayIcon *systray;

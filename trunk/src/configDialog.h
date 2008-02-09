@@ -32,16 +32,16 @@ class ConfigDialog : public QDialog, public Ui::ConfigDialog
         ConfigDialog(AlpmHandler *handler, QWidget *parent = 0);
         ~ConfigDialog();
 
-        void addPage(int position, QWidget *newWidget, const QString &title, const QIcon &icon);
-
-    signals:
-	void saveState();
-
     private slots:
         void changeWidget(int position);
+	void openAddDialog();
+
+    private:
+        void setupRepos();
 
     private:
         AlpmHandler *m_handler;
+	QDialog *addDialog;
 };
 
 #endif
