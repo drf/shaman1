@@ -24,7 +24,7 @@
 #include "UpdateDbDialog.h"
 #include "SysUpgradeDialog.h"
 #include "QueueDialog.h"
-#include "RepoDialogCl.h"
+#include "RepoWidget.h"
 #include "configDialog.h"
 
 #include <iostream>
@@ -779,15 +779,15 @@ void MainWindow::widgetQueueToAlpmQueue()
 
 void MainWindow::configureRepositories()
 {
-	repoDl = new RepoDialogCl(aHandle, this);
+	/**repoDl = new RepoDialogCl(aHandle, this);
 
-	repoDl->show();
+	repoDl->show();**/
 }
 
 void MainWindow::showSettings()
 {
 	configDialog = new ConfigDialog(aHandle, this);
-
+	configDialog->addPage(0, new RepoWidget(aHandle, configDialog), tr("Repositories"), QIcon(":/Icons/icons/network-server-database.png"));
 	configDialog->exec();
 }
 

@@ -29,14 +29,15 @@ ConfigDialog::ConfigDialog(AlpmHandler *handler, QWidget *parent)
     setupUi(this);
     connect(listWidget, SIGNAL(currentRowChanged(int)), this, SLOT(changeWidget(int)));
 }
+
 ConfigDialog::~ConfigDialog()
 {
 }
 
-void ConfigDialog::addPage(int position, QWidget *widget)
+void ConfigDialog::addPage(int position, QWidget *newWidget, const QString &title, const QIcon &icon)
 {
-    stackedWidget->insertWidget(position, widget);
-    listWidget->insertItem(position, widget->windowTitle());
+    listWidget->insertItem(position, new QListWidgetItem(icon, title));
+    stackedWidget->insertWidget(position, newWidget);
 }
 
 void ConfigDialog::changeWidget(int position)
