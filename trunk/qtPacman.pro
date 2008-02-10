@@ -18,13 +18,15 @@ HEADERS += src/AlpmHandler.h \
            src/UpdateDbDialog.h \
            src/SysUpgradeDialog.h \
            src/QueueDialog.h \
-           src/configDialog.h 
+           src/configDialog.h \
+           src/manteinanceDialog.h
 FORMS += ui/MainWindow.ui \
 	 ui/dbUpdateDialog.ui \
 	 ui/upgradeDialog.ui \
 	 ui/transactionDialog.ui \
 	 ui/configDialog.ui \
-	 ui/reviewQueueDialog.ui 
+	 ui/reviewQueueDialog.ui \
+	 ui/mantDialog.ui
 SOURCES += src/AlpmHandler.cpp \
            src/callbacks.cpp \
            src/ConfigurationParser.cpp \
@@ -34,5 +36,6 @@ SOURCES += src/AlpmHandler.cpp \
            src/UpdateDbDialog.cpp \
            src/SysUpgradeDialog.cpp \
            src/QueueDialog.cpp \
-           src/configDialog.cpp 
+           src/configDialog.cpp \
+           src/manteinanceDialog.cpp
 RESOURCES = ui/qtpacman.qrc
