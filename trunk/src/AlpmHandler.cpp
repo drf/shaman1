@@ -22,6 +22,14 @@
 #include <string>
 #include <alpm.h>
 #include <alpm_list.h>
+#include <unistd.h>
+#include <dirent.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <limits.h>
 
 #include "AlpmHandler.h"
 #include "callbacks.h"
@@ -578,9 +586,221 @@ void AlpmHandler::processQueue()
 	{
 		/* We just have to start the transaction. */
 		initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_ALLDEPS);
-		
+
 		performCurrentTransaction();
 	}
-	
-	
+
+
 }
+
+bool AlpmHandler::cleanUnusedDb()
+{
+	DIR *dir;
+	struct dirent *ent;
+
+	dir = opendir(alpm_option_get_dbpath());
+	if(dir == NULL)
+		return false;
+
+	rewinddir(dir);
+	/* step through the directory one file at a time */
+	while((ent = readdir(dir)) != NULL) 
+	{
+		char path[4096];
+		int found = 0;
+		char *dname = ent->d_name;
+
+		if(!strcmp(dname, ".") || !strcmp(dname, ".."))
+			continue;
+
+		/* skip the local and sync directories */
+		if(!strcmp(dname, "sync") || !strcmp(dname, "local")) 
+			continue;
+
+		/* We have a directory that doesn't match any syncdb.
+		 * Ask the user if he wants to remove it. */
+		if(!found) 
+			if(rmrf(path)) 
+				return false;
+	}
+	
+	char newpath[4096];
+	
+	sprintf(newpath, "%s%s", alpm_option_get_dbpath(), "sync/");
+	
+	closedir(dir);
+	dir = opendir(newpath);
+	if(dir == NULL)
+		return false;
+	
+	while((ent = readdir(dir)) != NULL) 
+	{
+		char path[4096];
+		alpm_list_t *syncdbs = NULL, *i;
+		int found = 0;
+		char *dname = ent->d_name;
+
+		if(!strcmp(dname, ".") || !strcmp(dname, ".."))
+			continue;
+
+		/* skip the local and sync directories */
+		if(!strcmp(dname, "sync") || !strcmp(dname, "local")) 
+			continue;
+
+		syncdbs = alpm_option_get_syncdbs();
+		for(i = syncdbs; i && !found; i = alpm_list_next(i)) 
+		{
+			pmdb_t *db = (pmdb_t *)alpm_list_getdata(i);
+			found = !strcmp(dname, alpm_db_get_name(db));
+		}
+		
+		/* We have a directory that doesn't match any syncdb.
+		 * Ask the user if he wants to remove it. */
+		if(!found) 
+			if(rmrf(path)) 
+				return false;
+	}
+	
+	return true;
+}
+
+int AlpmHandler::rmrf(const char *path)
+{
+	int errflag = 0;
+	struct dirent *dp;
+	DIR *dirp;
+
+	if(!unlink(path))
+		return(0);
+	else 
+	{
+		if(errno == ENOENT) 
+			return(0);
+		else if(errno == EPERM) { }
+			/* fallthrough */
+		else if(errno == EISDIR) { }
+			/* fallthrough */
+		else if(errno == ENOTDIR)
+			return(1);
+		else
+			/* not a directory */
+			return(1);
+
+		if((dirp = opendir(path)) == (DIR *)-1)
+			return(1);
+		for(dp = readdir(dirp); dp != NULL; dp = readdir(dirp)) 
+		{
+			if(dp->d_ino) 
+			{
+				char name[4096];
+				sprintf(name, "%s/%s", path, dp->d_name);
+				if(strcmp(dp->d_name, "..") && strcmp(dp->d_name, "."))
+					errflag += rmrf(name);
+			}
+		}
+		
+		closedir(dirp);
+		if(rmdir(path))
+			errflag++;
+		
+		return(errflag);
+	}
+}
+
+bool AlpmHandler::cleanCache(bool empty)
+{
+	alpm_list_t* cachedirs = alpm_option_get_cachedirs();
+	const char *cachedir = (const char *)alpm_list_getdata(cachedirs);
+
+	if(!empty) 
+	{
+		/* incomplete cleanup */
+		DIR *dir;
+		struct dirent *ent;
+
+		dir = opendir(cachedir);
+		if(dir == NULL) 
+			return false;
+
+		rewinddir(dir);
+		/* step through the directory one file at a time */
+		while((ent = readdir(dir)) != NULL) 
+		{
+			char path[4096];
+			pmpkg_t *localpkg = NULL, *dbpkg = NULL;
+
+			if(!strcmp(ent->d_name, ".") || !strcmp(ent->d_name, ".."))
+				continue;
+
+			/* build the full filepath */
+			snprintf(path, 4096, "%s/%s", cachedir, ent->d_name);
+
+			/* attempt to load the package, skip file on failures as we may have
+			 * files here that aren't valid packages. we also don't need a full
+			 * load of the package, just the metadata. */
+			if(alpm_pkg_load(path, 0, &localpkg) != 0 || localpkg == NULL)
+				continue;
+			
+			/* check if this package is in the local DB */
+			dbpkg = alpm_db_get_pkg(db_local, alpm_pkg_get_name(localpkg));
+			if(dbpkg == NULL)
+				/* delete package, not present in local DB */
+				unlink(path);
+			else if(alpm_pkg_vercmp(alpm_pkg_get_version(localpkg),
+					alpm_pkg_get_version(dbpkg)) != 0) 
+				/* delete package, it was found but version differs */
+				unlink(path);
+			
+			/* else version was the same, so keep the package */
+			/* free the local file package */
+			alpm_pkg_free(localpkg);
+		}
+	} 
+	else 
+	{
+		/* full cleanup */
+
+		if(rmrf(cachedir)) 
+			return false;
+
+		if(makepath(cachedir)) 
+			return false;
+	}
+
+	return(0);
+}
+
+int AlpmHandler::makepath(const char *path)
+{
+	char *orig, *str, *ptr;
+	char full[PATH_MAX+1] = "";
+	mode_t oldmask;
+
+	oldmask = umask(0000);
+
+	orig = strdup(path);
+	str = orig;
+	while((ptr = strsep(&str, "/"))) 
+	{
+		if(strlen(ptr)) 
+		{
+			struct stat buf;
+
+			strcat(full, "/");
+			strcat(full, ptr);
+			if(stat(full, &buf)) 
+			{
+				if(mkdir(full, 0755)) 
+				{
+					free(orig);
+					umask(oldmask);
+					return(1);
+				}
+			}
+		}
+	}
+	free(orig);
+	umask(oldmask);
+	return(0);
+}
+

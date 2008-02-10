@@ -78,6 +78,12 @@ public:
 	void addRemoveToQueue(char *toRm);
 	void processQueue();
 	int getNumberOfTargets(int action);
+	
+	bool cleanUnusedDb();
+	bool cleanCache(bool empty = false);
+	
+	int rmrf(const char *path);
+	int makepath(const char *path);
 
 	bool isPerformable(string pkgname, int action);
 	bool isInstalled(pmpkg_t *pkg);
@@ -85,11 +91,6 @@ public:
 	bool updateDatabase();
 	bool fullSystemUpgrade();
 
-	bool upgradePackages(alpm_list_t *packages);
-	bool installPackages(alpm_list_t *packages);
-	bool removePackages(alpm_list_t *packages);
-	bool cleanUpCache(alpm_list_t *cache);
-	bool deleteCache(alpm_list_t *cache);
 	bool isPackage(char *packagename);
 
 	bool performCurrentTransaction();
