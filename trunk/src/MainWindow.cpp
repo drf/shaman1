@@ -486,6 +486,9 @@ void MainWindow::finishDbUpdate()
 
 void MainWindow::showContextMenu()
 {
+	if(pkgsViewWG->selectedItems().isEmpty())
+		return;
+	
 	qDebug() << "Let's show a context menu";
 	QTreeWidgetItem *item = pkgsViewWG->selectedItems().first();
 	QMenu *menu = new QMenu(this);
@@ -503,23 +506,23 @@ void MainWindow::showContextMenu()
 		installAction->setDisabled(true);
 		upgradeAction->setDisabled(true);
 	}
-        else if (item->text(0) == tr("Not Installed"))
-        {
+	else if (item->text(0) == tr("Not Installed"))
+	{
 		removeAction->setDisabled(true);
 		upgradeAction->setDisabled(true);
-        }
-        else//Package is marked as upgradeable
+	}
+	else//Package is marked as upgradeable
 	{
 		installAction->setDisabled(true);
 		removeAction->setDisabled(true);
 	}//FIXME: Add completeRemove-action
 
-        if (item->text(1).isEmpty())
+	if (item->text(1).isEmpty())
 		cancelAction->setDisabled(true);
 
-        if (item->text(1) == tr("Install"))
-                installAction->setDisabled(true);
-        else if (item->text(1) == tr("Uninstall"))
+	if (item->text(1) == tr("Install"))
+		installAction->setDisabled(true);
+	else if (item->text(1) == tr("Uninstall"))
 		removeAction->setDisabled(true);
 	else //Upgrade
 		upgradeAction->setDisabled(true);
