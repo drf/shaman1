@@ -64,6 +64,9 @@ aHandle(handler)
 	connect(actionPacman_Preferences, SIGNAL(triggered()), SLOT(showSettings()));
 	connect(systray, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), SLOT(systrayActivated(QSystemTrayIcon::ActivationReason)));
 	connect(actionQuit, SIGNAL(triggered()), SLOT(quitApp()));
+	
+	upActive = false;
+	revActive = false;
 
 	return;
 }
@@ -684,6 +687,8 @@ void MainWindow::startUpgrading()
 		upDl = new SysUpgradeDialog(aHandle, this);
 
 		upDl->show();
+		
+		upActive = true;
 
 		connect(upDl, SIGNAL(aborted()), SLOT(upgradeAborted()));
 		connect(upDl, SIGNAL(upgradeNow()), SLOT(processQueue()));
@@ -695,11 +700,14 @@ void MainWindow::startUpgrading()
 void MainWindow::upgradeAborted()
 {
 	upDl->deleteLater();
+	upActive = false;
 }
 
 void MainWindow::addUpgradeableToQueue()
 {
 	//FIXME: do sth like foreach (pkg, pkgs) item->setText("upgradable")... look in installPackage-function for more information
+	upDl->deleteLater();
+	upActive = false;
 	return;
 }
 
@@ -734,10 +742,13 @@ void MainWindow::processQueue()
 	 * transaction. 
 	 */
 
-	if (upDl)
+	if(upActive)
 		upDl->deleteLater();
-	if (reviewQueue)
+	if(revActive)
 		reviewQueue->deleteLater();
+	
+	upActive = false;
+	revActive = false;
 
 	/* Now, everything will be done inside our Queue Dialog.
 	 * So, just create it and let him handle the job.
@@ -785,13 +796,13 @@ void MainWindow::widgetQueueToAlpmQueue()
 	 * First of all, we need to know what kind of actions we
 	 * need.
 	 */
-	
+
 	if(pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 1).isEmpty() &&
-				pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 1).isEmpty() &&
-				pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 1).isEmpty())
-			return;
+			pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 1).isEmpty() &&
+			pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 1).isEmpty())
+		return;
 	else if(pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 1).isEmpty() &&
-				pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 1).isEmpty())
+			pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 1).isEmpty())
 		aHandle->initQueue(false, true);
 	else if(pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 1).isEmpty())
 		aHandle->initQueue(true, false);
@@ -799,14 +810,16 @@ void MainWindow::widgetQueueToAlpmQueue()
 		aHandle->initQueue(true, true);
 
 	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 1))
-		aHandle->addSyncToQueue(itm->text(2).toAscii().data());
+		aHandle->addSyncToQueue(itm->text(2));
 
 	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 1))
-		aHandle->addRemoveToQueue(itm->text(2).toAscii().data());
+		aHandle->addRemoveToQueue(itm->text(2));
 
 	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 1))
-		aHandle->addRemoveToQueue(itm->text(2).toAscii().data());
+		aHandle->addRemoveToQueue(itm->text(2));
+
 	
+	revActive = true;
 	
 	reviewQueue = new QDialog(this);
 	Ui::QueueReadyDialog qUi;
@@ -827,6 +840,7 @@ void MainWindow::widgetQueueToAlpmQueue()
 
 void MainWindow::destroyReviewQueue()
 {
+	revActive = false;
 	reviewQueue->deleteLater();
 }
 

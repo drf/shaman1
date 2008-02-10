@@ -98,6 +98,9 @@ private:
 
 	QSystemTrayIcon *systray;
 	QDialog *reviewQueue;
+	
+	bool upActive;
+	bool revActive;
 
 };
 

@@ -74,8 +74,8 @@ public:
 	QStringList getPackageFiles(QString name);
 	
 	void initQueue(bool rem, bool syncd);
-	void addSyncToQueue(char *toAdd);
-	void addRemoveToQueue(char *toRm);
+	void addSyncToQueue(QString toAdd);
+	void addRemoveToQueue(QString toRm);
 	void processQueue();
 	int getNumberOfTargets(int action);
 	
@@ -118,8 +118,8 @@ private:
 	bool syncAct;
 	bool upgradeAct;
 	
-	alpm_list_t *toRemove;
-	alpm_list_t *toSync;
+	QStringList toRemove;
+	QStringList toSync;
 
 
 };

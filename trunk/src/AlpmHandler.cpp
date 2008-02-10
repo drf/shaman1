@@ -517,41 +517,28 @@ void AlpmHandler::initQueue(bool rem, bool syncd)
 	syncAct = syncd;
 	upgradeAct = false;
 
-	if(toSync)
-	{
-		alpm_list_free(toSync);
-		toSync = NULL;
-	}
-	if(toRemove)
-	{
-		alpm_list_free(toRemove);
-		toRemove = NULL;
-	}
-
+	if(!toSync.isEmpty())
+		toSync.clear();
+	if(!toRemove.isEmpty())
+		toRemove.clear();
 }
 
-void AlpmHandler::addSyncToQueue(char *toAdd)
+void AlpmHandler::addSyncToQueue(QString toAdd)
 {
-	char *addItem = (char *)malloc(strlen(toAdd)*sizeof(char));
-	strcpy(addItem, toAdd);
-	toSync = alpm_list_add(toSync, addItem);
-	toSync = alpm_list_first(toSync);
+	toSync.append(toAdd);
 }
 
-void AlpmHandler::addRemoveToQueue(char *toRm)
+void AlpmHandler::addRemoveToQueue(QString toRm)
 {
-	char *addItem = (char *)malloc(strlen(toRm)*sizeof(char));
-	strcpy(addItem, toRm);
-	toRemove = alpm_list_add(toRemove, addItem);
-	toRemove = alpm_list_first(toRemove);
+	toRemove.append(toRm);
 }
 
 int AlpmHandler::getNumberOfTargets(int action)
 {
 	if(action == 0)
-		return alpm_list_count(toSync);
+		return toSync.size();
 	else
-		return alpm_list_count(toRemove);
+		return toRemove.size();
 }
 
 void AlpmHandler::processQueue()
@@ -562,37 +549,28 @@ void AlpmHandler::processQueue()
 		/* Well, we need to remove packages first. Let's do this. */
 		initTransaction(PM_TRANS_TYPE_REMOVE, PM_TRANS_FLAG_ALLDEPS);
 		
-		toRemove = alpm_list_first(toRemove);
-		while(toRemove != NULL)
+		for (int i = 0; i < toRemove.size(); ++i)
 		{
-			printf("%s\n", (char *)alpm_list_getdata(toRemove));
-			if(alpm_trans_addtarget((char *)alpm_list_getdata(toRemove)) == -1)
+			if(alpm_trans_addtarget(toRemove.at(i).toAscii().data()) == -1)
 				printf("Argh!\n");
-			toRemove = alpm_list_next(toRemove);
 		}
 		
 		performCurrentTransaction();
 		
-		//alpm_list_free_inner(toRemove, free);
-		printf("remove!\n");
 	}
 	if(syncAct)
 	{
 		/* Time to install and upgrade packages, right? */
 		initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_ALLDEPS);
 		
-		toSync = alpm_list_first(toSync);
-		while(toSync != NULL)
+		for (int i = 0; i < toSync.size(); ++i)
 		{
-			if(alpm_trans_addtarget((char *)alpm_list_getdata(toSync)) == -1)
+			if(alpm_trans_addtarget(toSync.at(i).toAscii().data()) == -1)
 				printf("Argh!\n");
-			
-			toSync = alpm_list_next(toSync);
 		}
 		
 		performCurrentTransaction();
 		
-		//alpm_list_free_inner(toSync, free);
 		
 	}
 	if(upgradeAct)
