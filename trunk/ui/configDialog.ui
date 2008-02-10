@@ -13,7 +13,7 @@
    <string>qtPacman - Configuration</string>
   </property>
   <property name="windowIcon" >
-   <iconset resource="qtpacman.qrc" >:/Icons/icons/preferences-system.png</iconset>
+   <iconset/>
   </property>
   <layout class="QGridLayout" >
    <item row="0" column="0" >
@@ -93,21 +93,21 @@
             <item>
              <layout class="QHBoxLayout" >
               <item>
-               <widget class="QPushButton" name="pushButton" >
+               <widget class="QPushButton" name="cleanDbButton" >
                 <property name="text" >
                  <string>Clean Unused Databases</string>
                 </property>
                </widget>
               </item>
               <item>
-               <widget class="QPushButton" name="pushButton_2" >
+               <widget class="QPushButton" name="cleanCacheButton" >
                 <property name="text" >
                  <string>Clean Cache</string>
                 </property>
                </widget>
               </item>
               <item>
-               <widget class="QPushButton" name="pushButton_3" >
+               <widget class="QPushButton" name="emptyCacheButton" >
                 <property name="text" >
                  <string>Empty Cache</string>
                 </property>
@@ -116,7 +116,7 @@
              </layout>
             </item>
             <item>
-             <widget class="QLabel" name="label" >
+             <widget class="QLabel" name="statusLabel" >
               <property name="text" >
                <string>Waiting.</string>
               </property>

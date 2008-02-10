@@ -22,8 +22,27 @@
 #define CONFIGDIALOG_H
 
 #include "ui_configDialog.h"
+#include <QThread>
 
 class AlpmHandler;
+
+class CleanThread : public QThread
+{
+	Q_OBJECT
+	
+public:
+	CleanThread(AlpmHandler *aH, int act);
+	void run();
+	
+signals:
+	void success(int act);
+	void failure(int act);
+	
+private:
+	AlpmHandler *m_handler;
+	int action;
+};
+
 
 class ConfigDialog : public QDialog, public Ui::ConfigDialog
 {
@@ -35,6 +54,12 @@ class ConfigDialog : public QDialog, public Ui::ConfigDialog
     private slots:
         void changeWidget(int position);
 	void openAddDialog();
+	void cleanUnused();
+	void cleanCache();
+	void clearCache();
+	void showSuccess(int act);
+	void showFailure(int act);
+	void cleanThread();
 
     private:
         void setupRepos();
@@ -43,6 +68,7 @@ class ConfigDialog : public QDialog, public Ui::ConfigDialog
     private:
         AlpmHandler *m_handler;
 	QDialog *addDialog;
+	CleanThread *cTh;
 };
 
 #endif

@@ -39,6 +39,9 @@ ConfigDialog::~ConfigDialog()
 void ConfigDialog::setupGeneral()
 {
     listWidget->insertItem(0, new QListWidgetItem(QIcon(":/Icons/icons/network-server-database.png"), tr("General")));//FIXME: Replace icon
+    connect(cleanDbButton, SIGNAL(clicked()), SLOT(cleanUnused()));
+    connect(cleanCacheButton, SIGNAL(clicked()), SLOT(cleanCache()));
+    connect(emptyCacheButton, SIGNAL(clicked()), SLOT(clearCache()));
 }
 
 void ConfigDialog::setupRepos()
@@ -101,10 +104,145 @@ void ConfigDialog::openAddDialog()
 	addDialog->setLayout(layout);
 	
 	addDialog->exec();
-	connect(addDialog, SIGNAL(accepted()), SLOT(addRepository()));
+	if (addDialog->result() == 1) //QDialog::accepted
+	{
+		//FIXME: Add repository here...
+	}
 }
 
 void ConfigDialog::changeWidget(int position)
 {
     stackedWidget->setCurrentIndex(position);
 }
+
+void ConfigDialog::cleanUnused()
+{
+	cTh = new CleanThread(m_handler, 0);
+
+	cleanDbButton->setEnabled(false);
+	cleanCacheButton->setEnabled(false);
+	emptyCacheButton->setEnabled(false);
+
+	statusLabel->setText(QString(tr("Cleaning up unused Databases...")));
+
+	cTh->start();
+	connect(cTh, SIGNAL(success(int)), SLOT(showSuccess(int)));
+	connect(cTh, SIGNAL(failure(int)), SLOT(showFailure(int)));
+	connect(cTh, SIGNAL(finished()), SLOT(cleanThread()));
+}
+
+void ConfigDialog::cleanCache()
+{
+	cTh = new CleanThread(m_handler, 1);
+
+	cleanDbButton->setEnabled(false);
+	cleanCacheButton->setEnabled(false);
+	emptyCacheButton->setEnabled(false);
+
+	statusLabel->setText(QString(tr("Cleaning up Cache...")));
+
+	cTh->start();
+	connect(cTh, SIGNAL(success(int)), SLOT(showSuccess(int)));
+	connect(cTh, SIGNAL(failure(int)), SLOT(showFailure(int)));
+	connect(cTh, SIGNAL(finished()), SLOT(cleanThread()));
+}
+
+void ConfigDialog::clearCache()
+{
+	cTh = new CleanThread(m_handler, 2);
+
+	cleanDbButton->setEnabled(false);
+	cleanCacheButton->setEnabled(false);
+	emptyCacheButton->setEnabled(false);
+
+	statusLabel->setText(QString(tr("Deleting Cache...")));
+
+	cTh->start();
+	connect(cTh, SIGNAL(success(int)), SLOT(showSuccess(int)));
+	connect(cTh, SIGNAL(failure(int)), SLOT(showFailure(int)));
+	connect(cTh, SIGNAL(finished()), SLOT(cleanThread()));
+}
+
+void ConfigDialog::showFailure(int act)
+{
+	switch(act)
+	{
+	case 0:
+		statusLabel->setText(QString(tr("Cleaning up Unused Databases Failed!")));
+		break;
+
+	case 1:
+		statusLabel->setText(QString(tr("Cleaning up Cache Failed!")));
+		break;
+
+	case 2:
+		statusLabel->setText(QString(tr("Deleting Cache Failed!")));
+		break;
+	}
+
+	cleanDbButton->setEnabled(true);
+	cleanCacheButton->setEnabled(true);
+	emptyCacheButton->setEnabled(true);
+}
+
+void ConfigDialog::showSuccess(int act)
+{
+	switch(act)
+	{
+	case 0:
+		statusLabel->setText(QString(tr("Unused Databases Cleaned up successfully!")));
+		break;
+
+	case 1:
+		statusLabel->setText(QString(tr("Cache Cleaned Up Successfully!")));
+		break;
+
+	case 2:
+		statusLabel->setText(QString(tr("Cache Successfully Deleted!")));
+		break;
+	}
+
+	cleanDbButton->setEnabled(true);
+	cleanCacheButton->setEnabled(true);
+	emptyCacheButton->setEnabled(true);
+}
+
+void ConfigDialog::cleanThread()
+{
+	cTh->deleteLater();
+}
+
+CleanThread::CleanThread(AlpmHandler *aH, int act)
+: m_handler(aH),
+action(act)
+{
+
+}
+
+void CleanThread::run()
+{
+	switch(action)
+	{
+	case 0:
+		if(m_handler->cleanUnusedDb())
+			emit success(action);
+		else
+			emit failure(action);
+		break;
+
+	case 1:
+		if(m_handler->cleanCache())
+			emit success(action);
+		else
+			emit failure(action);
+		break;
+	case 2:
+		if(m_handler->cleanCache(true))
+			emit success(action);
+		else
+			emit failure(action);
+		break;
+
+	}
+}
+
