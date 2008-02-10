@@ -27,6 +27,7 @@ ConfigDialog::ConfigDialog(AlpmHandler *handler, QWidget *parent)
     m_handler(handler)
 {
     setupUi(this);
+    setupGeneral();
     setupRepos();
     connect(listWidget, SIGNAL(currentRowChanged(int)), this, SLOT(changeWidget(int)));
 }
@@ -35,9 +36,14 @@ ConfigDialog::~ConfigDialog()
 {
 }
 
+void ConfigDialog::setupGeneral()
+{
+    listWidget->insertItem(0, new QListWidgetItem(QIcon(":/Icons/icons/network-server-database.png"), tr("General")));//FIXME: Replace icon
+}
+
 void ConfigDialog::setupRepos()
 {
-        listWidget->insertItem(0, new QListWidgetItem(QIcon(":/Icons/icons/network-server-database.png"), tr("Repositories")));
+        listWidget->addItem(new QListWidgetItem(QIcon(":/Icons/icons/network-server-database.png"), tr("Repositories")));
 	alpm_list_t *repos = alpm_list_first(m_handler->getAvailableRepos());
 
 	while(repos != NULL)

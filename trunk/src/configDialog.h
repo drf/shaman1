@@ -38,6 +38,7 @@ class ConfigDialog : public QDialog, public Ui::ConfigDialog
 
     private:
         void setupRepos();
+        void setupGeneral();
 
     private:
         AlpmHandler *m_handler;

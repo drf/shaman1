@@ -45,8 +45,17 @@
      <property name="isWrapping" stdset="0" >
       <bool>true</bool>
      </property>
+     <property name="layoutMode" >
+      <enum>QListView::SinglePass</enum>
+     </property>
+     <property name="spacing" >
+      <number>12</number>
+     </property>
      <property name="viewMode" >
       <enum>QListView::IconMode</enum>
+     </property>
+     <property name="uniformItemSizes" >
+      <bool>true</bool>
      </property>
     </widget>
    </item>
@@ -68,6 +77,77 @@
        <verstretch>0</verstretch>
       </sizepolicy>
      </property>
+     <property name="currentIndex" >
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="Seite" >
+      <layout class="QGridLayout" >
+       <item row="0" column="0" >
+        <widget class="QGroupBox" name="groupBox" >
+         <property name="title" >
+          <string>Maintenance</string>
+         </property>
+         <layout class="QGridLayout" >
+          <item row="0" column="0" >
+           <layout class="QVBoxLayout" >
+            <item>
+             <layout class="QHBoxLayout" >
+              <item>
+               <widget class="QPushButton" name="pushButton" >
+                <property name="text" >
+                 <string>Clean Unused Databases</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_2" >
+                <property name="text" >
+                 <string>Clean Cache</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_3" >
+                <property name="text" >
+                 <string>Empty Cache</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QLabel" name="label" >
+              <property name="text" >
+               <string>Waiting.</string>
+              </property>
+              <property name="alignment" >
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" />
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0" >
+        <spacer>
+         <property name="orientation" >
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" >
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
      <widget class="QWidget" name="page" >
       <layout class="QGridLayout" >
        <item row="0" column="0" >
@@ -286,7 +366,6 @@ and Pacman.</string>
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="page_2" />
     </widget>
    </item>
   </layout>
