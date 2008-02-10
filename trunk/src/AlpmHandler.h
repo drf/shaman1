@@ -73,6 +73,8 @@ public:
 	QStringList getPackageFiles(pmpkg_t *package);
 	QStringList getPackageFiles(QString name);
 	
+	QStringList getProviders(QString name, QString repo);
+	
 	void initQueue(bool rem, bool syncd);
 	void addSyncToQueue(QString toAdd);
 	void addRemoveToQueue(QString toRm);

@@ -790,3 +790,18 @@ int AlpmHandler::makepath(const char *path)
 	return(0);
 }
 
+QStringList AlpmHandler::getProviders(QString name, QString repo)
+{
+	alpm_list_t *provides;
+	QStringList retlist;
+
+	provides = alpm_pkg_get_provides(getPackageFromName(name, repo));
+
+	while(provides != NULL)
+	{
+		retlist.append(QString((char *)alpm_list_getdata(provides)));
+		provides = alpm_list_next(provides);
+	}
+
+	return retlist;
+}
