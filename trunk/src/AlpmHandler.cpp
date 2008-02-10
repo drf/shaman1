@@ -30,6 +30,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <limits.h>
+#include <QDir>
 
 #include "AlpmHandler.h"
 #include "callbacks.h"
@@ -710,47 +711,42 @@ int AlpmHandler::rmrf(const char *path)
 bool AlpmHandler::cleanCache(bool empty)
 {
 	alpm_list_t* cachedirs = alpm_option_get_cachedirs();
-	const char *cachedir = (const char *)alpm_list_getdata(cachedirs);
+	QString cachedir((char *)alpm_list_getdata(cachedirs));
 
 	if(!empty) 
 	{
+		printf("Incomplete\n");
 		/* incomplete cleanup */
-		DIR *dir;
-		struct dirent *ent;
+		QDir dir(cachedir); 
 
-		dir = opendir(cachedir);
-		if(dir == NULL) 
+		if(!dir.exists()) 
 			return false;
 
-		rewinddir(dir);
-		/* step through the directory one file at a time */
-		while((ent = readdir(dir)) != NULL) 
+		dir.setFilter(QDir::Files | QDir::Hidden | QDir::NoSymLinks);
+		QFileInfoList list = dir.entryInfoList();
+
+		for (int i = 0; i < list.size(); ++i)
 		{
-			char path[4096];
+
 			pmpkg_t *localpkg = NULL, *dbpkg = NULL;
-
-			if(!strcmp(ent->d_name, ".") || !strcmp(ent->d_name, ".."))
-				continue;
-
-			/* build the full filepath */
-			snprintf(path, 4096, "%s/%s", cachedir, ent->d_name);
+			QFileInfo fileInfo = list.at(i);
 
 			/* attempt to load the package, skip file on failures as we may have
 			 * files here that aren't valid packages. we also don't need a full
 			 * load of the package, just the metadata. */
-			if(alpm_pkg_load(path, 0, &localpkg) != 0 || localpkg == NULL)
+			if(alpm_pkg_load(fileInfo.absolutePath().toAscii().data(), 0, &localpkg) != 0 || localpkg == NULL)
 				continue;
-			
+
 			/* check if this package is in the local DB */
 			dbpkg = alpm_db_get_pkg(db_local, alpm_pkg_get_name(localpkg));
 			if(dbpkg == NULL)
 				/* delete package, not present in local DB */
-				unlink(path);
+				unlink(fileInfo.absolutePath().toAscii().data());
 			else if(alpm_pkg_vercmp(alpm_pkg_get_version(localpkg),
 					alpm_pkg_get_version(dbpkg)) != 0) 
 				/* delete package, it was found but version differs */
-				unlink(path);
-			
+				unlink(fileInfo.absolutePath().toAscii().data());
+
 			/* else version was the same, so keep the package */
 			/* free the local file package */
 			alpm_pkg_free(localpkg);
@@ -760,14 +756,14 @@ bool AlpmHandler::cleanCache(bool empty)
 	{
 		/* full cleanup */
 
-		if(rmrf(cachedir)) 
+		if(rmrf(cachedir.toAscii().data())) 
 			return false;
 
-		if(makepath(cachedir)) 
+		if(makepath(cachedir.toAscii().data())) 
 			return false;
 	}
 
-	return(0);
+	return true;
 }
 
 int AlpmHandler::makepath(const char *path)

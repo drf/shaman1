@@ -125,10 +125,10 @@ void ConfigDialog::cleanUnused()
 
 	statusLabel->setText(QString(tr("Cleaning up unused Databases...")));
 
-	cTh->start();
 	connect(cTh, SIGNAL(success(int)), SLOT(showSuccess(int)));
 	connect(cTh, SIGNAL(failure(int)), SLOT(showFailure(int)));
 	connect(cTh, SIGNAL(finished()), SLOT(cleanThread()));
+	cTh->start();
 }
 
 void ConfigDialog::cleanCache()
@@ -141,10 +141,10 @@ void ConfigDialog::cleanCache()
 
 	statusLabel->setText(QString(tr("Cleaning up Cache...")));
 
-	cTh->start();
 	connect(cTh, SIGNAL(success(int)), SLOT(showSuccess(int)));
 	connect(cTh, SIGNAL(failure(int)), SLOT(showFailure(int)));
 	connect(cTh, SIGNAL(finished()), SLOT(cleanThread()));
+	cTh->start();
 }
 
 void ConfigDialog::clearCache()
@@ -157,10 +157,10 @@ void ConfigDialog::clearCache()
 
 	statusLabel->setText(QString(tr("Deleting Cache...")));
 
-	cTh->start();
 	connect(cTh, SIGNAL(success(int)), SLOT(showSuccess(int)));
 	connect(cTh, SIGNAL(failure(int)), SLOT(showFailure(int)));
 	connect(cTh, SIGNAL(finished()), SLOT(cleanThread()));
+	cTh->start();
 }
 
 void ConfigDialog::showFailure(int act)
