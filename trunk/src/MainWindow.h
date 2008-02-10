@@ -33,6 +33,7 @@ class UpdateDbDialog;
 class SysUpgradeDialog;
 class QueueDialog;
 class ConfigDialog;
+class ManteinanceDialog;
 
 class QSystemTrayIcon;
 
