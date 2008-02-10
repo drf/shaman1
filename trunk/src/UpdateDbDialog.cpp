@@ -37,9 +37,11 @@ UpdateDbDialog::UpdateDbDialog(AlpmHandler *hnd, QWidget *parent)
 	setupUi(this);
         setWindowModality(Qt::ApplicationModal);
 	
-	totalPBar->reset();
-	dlProgress->reset();
-	
+	//totalPBar->reset();
+	//dlProgress->reset();
+	QGridLayout *layout = static_cast<QGridLayout*>(layout);
+	if (layout)
+		qDebug() << "Add widgets here";
 	connect(aHandle, SIGNAL(streamDbUpdatingStatus(char*,int)), this,
 				SLOT(updateLabel(char*, int)));
 	connect(aHandle, SIGNAL(dbQty(int)), this, SLOT(setPBarRange(int)));
@@ -75,7 +77,7 @@ void UpdateDbDialog::updateLabel(char *repo, int action)
 	case 3:
 		toInsert.append(repo);
 		toInsert.append(" is up to date.");
-		dlProgress->setFormat(toInsert);
+		//dlProgress->setFormat(toInsert);
 		break;
 	default:
 		break;
@@ -87,14 +89,14 @@ void UpdateDbDialog::updateLabel(char *repo, int action)
 		toInsert.append("...");
 	}
 	
-	displayAction->setText(toInsert);
+	//displayAction->setText(toInsert);
 	
 }
 
 void UpdateDbDialog::setPBarRange(int range)
 {
-	totalPBar->setRange(0, range);
-	totalPBar->setValue(0);
+	//totalPBar->setRange(0, range);
+	//totalPBar->setValue(0);
 }
 
 void UpdateDbDialog::setUpdated()
@@ -111,7 +113,7 @@ void UpdateDbDialog::updateTotalProg()
 {
 	actionDone++;
 	
-	totalPBar->setValue(actionDone);
+	//totalPBar->setValue(actionDone);
 }
 
 void UpdateDbDialog::updateDlBar(char *c, int bytedone, int bytetotal, int speed,
@@ -127,9 +129,9 @@ void UpdateDbDialog::updateDlBar(char *c, int bytedone, int bytetotal, int speed
 	toInsert.append("%p% at ");
 	toInsert.append(spd);
 	toInsert.append(" KB/s");
-	dlProgress->setRange(0, bytetotal);
-	dlProgress->setFormat(toInsert);
-	dlProgress->setValue(bytedone);
+	//dlProgress->setRange(0, bytetotal);
+	//dlProgress->setFormat(toInsert);
+	//dlProgress->setValue(bytedone);
 }
 
 void UpdateDbDialog::doAction()
