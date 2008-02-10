@@ -165,8 +165,20 @@ bool AlpmHandler::updateDatabase()
 	alpm_list_t *syncdbs;
 
 	syncdbs = alpm_list_first(sync_databases);
-
-	emit dbQty(alpm_list_count(syncdbs));
+	
+	QStringList list;
+	
+	while(syncdbs != NULL)
+	{
+		pmdb_t *dbcrnt = (pmdb_t *)alpm_list_getdata(syncdbs);
+		
+		list.append(QString((char *)alpm_db_get_name(dbcrnt)));
+		syncdbs = alpm_list_next(syncdbs);
+	}
+	
+	emit dbQty(list);
+	
+	syncdbs = alpm_list_first(sync_databases);
 
 	if(!initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_ALLDEPS))
 	{

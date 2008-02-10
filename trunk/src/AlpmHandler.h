@@ -106,7 +106,7 @@ private:
 signals:
 	void streamDbUpdatingStatus(char *repo, int action);
 	void dbUpdated();
-	void dbQty(int db);
+	void dbQty(QStringList db);
 	void dbUpdatePerformed();
 
 private:

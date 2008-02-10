@@ -37,12 +37,9 @@ UpdateDbDialog::UpdateDbDialog(AlpmHandler *hnd, QWidget *parent)
 	setupUi(this);
         setWindowModality(Qt::ApplicationModal);
 	
-	QGridLayout *layout = static_cast<QGridLayout*>(layout);
-	if (layout)
-		qDebug() << "Add widgets here";
 	connect(aHandle, SIGNAL(streamDbUpdatingStatus(char*,int)), this,
 				SLOT(updateLabel(char*, int)));
-	connect(aHandle, SIGNAL(dbQty(int)), this, SLOT(setPBarRange(int)));
+	connect(aHandle, SIGNAL(dbQty(QStringList)), this, SLOT(createWidgets(QStringList)));
 	connect(aHandle, SIGNAL(dbUpdated()), this, SLOT(setUpdated()));
 	connect(aHandle, SIGNAL(dbUpdatePerformed()), this, SLOT(updateTotalProg()));
 	connect(&CbackReference, SIGNAL(streamTransDlProg(char*,int,int,int,int,int,int)), 
@@ -59,33 +56,26 @@ UpdateDbDialog::~UpdateDbDialog()
 
 void UpdateDbDialog::updateLabel(char *repo, int action)
 {
-	QString toInsert;
+	QLabel *toInsert = labelList.at(actionDone);
 	
 	switch(action)
 	{
 	case 0:
-		toInsert.append("Checking ");
+		toInsert->setText("<i>Checking...</i>");
 		break;
 	case 1:
-		toInsert.append("Downloading ");
+		toInsert->setText("<i>Downloading...</i>");
 		break;
 	case 2:
-		toInsert.append("Installing ");
+		toInsert->setText("<i>Installing...</i>");
 		break;
 	case 3:
-		toInsert.append(repo);
-		toInsert.append(" is up to date.");
+		toInsert->setText("<i>Up to Date</i>");
 		//dlProgress->setFormat(toInsert);
 		break;
 	default:
 		break;
 	}
-	
-	if(action != 3)
-	{
-		toInsert.append(repo);
-		toInsert.append("...");
-	}	
 }
 
 void UpdateDbDialog::setUpdated()
@@ -140,4 +130,28 @@ UpDbThread::UpDbThread(AlpmHandler *aH)
 void UpDbThread::run()
 {
 	aHandle->updateDatabase();
+}
+
+void UpdateDbDialog::createWidgets(QStringList list)
+{
+	//QGridLayout *layout = new QGridLayout(this);
+	
+	for (int i = 0; i < list.size(); ++i)
+	{
+		QLabel *labelDb = new QLabel(this);
+		QLabel *labelStatus = new QLabel(this);
+		
+		labelDb->setText(QString("<b>%1</b>").arg(list.at(i)));
+		labelStatus->setText(QString("<i>Waiting...</i>"));
+		
+		printf("here\n");
+		gridLayout->addWidget(labelDb, i+1, 0);
+		printf("here\n");
+		gridLayout->addWidget(labelStatus, i+1, 1);
+		
+		printf("here\n");
+		
+		labelList.append(labelStatus);
+		
+	}
 }

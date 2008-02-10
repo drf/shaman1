@@ -53,6 +53,7 @@ public slots:
 private slots:
 	void updateLabel(char *repo, int action);
 	//void updateDlProg(float bytetotal, float bytedled, float speed);
+	void createWidgets(QStringList list);
 	void updateTotalProg();
 	void setUpdated();
 	void scopeEnded();
@@ -69,6 +70,7 @@ private:
 	bool updated;
 	AlpmHandler *aHandle;
 	UpDbThread *dbth;
+	QList<QLabel *> labelList;
 	
 };
 
