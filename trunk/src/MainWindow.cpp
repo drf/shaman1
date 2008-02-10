@@ -489,7 +489,6 @@ void MainWindow::showContextMenu()
 	qDebug() << "Let's show a context menu";
 	QTreeWidgetItem *item = pkgsViewWG->selectedItems().first();
 	QMenu *menu = new QMenu(this);
-	//FIXME: Disable actions if they're not needed f.e. installAction on installed packages
 	QAction *installAction = menu->addAction(QIcon(":/Icons/icons/list-add.png"), tr("Mark for Installation"));
 	connect(installAction, SIGNAL(triggered()), SLOT(installPackage()));
 	QAction *removeAction = menu->addAction(QIcon(":/Icons/icons/list-remove.png"), tr("Mark for Removal"));
