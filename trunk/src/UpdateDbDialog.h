@@ -54,7 +54,6 @@ private slots:
 	void updateLabel(char *repo, int action);
 	//void updateDlProg(float bytetotal, float bytedled, float speed);
 	void updateTotalProg();
-	void setPBarRange(int range);
 	void setUpdated();
 	void scopeEnded();
 	void updateDlBar(char *c, int bytedone, int bytetotal, int speed,

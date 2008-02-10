@@ -37,8 +37,6 @@ UpdateDbDialog::UpdateDbDialog(AlpmHandler *hnd, QWidget *parent)
 	setupUi(this);
         setWindowModality(Qt::ApplicationModal);
 	
-	//totalPBar->reset();
-	//dlProgress->reset();
 	QGridLayout *layout = static_cast<QGridLayout*>(layout);
 	if (layout)
 		qDebug() << "Add widgets here";
@@ -87,16 +85,7 @@ void UpdateDbDialog::updateLabel(char *repo, int action)
 	{
 		toInsert.append(repo);
 		toInsert.append("...");
-	}
-	
-	//displayAction->setText(toInsert);
-	
-}
-
-void UpdateDbDialog::setPBarRange(int range)
-{
-	//totalPBar->setRange(0, range);
-	//totalPBar->setValue(0);
+	}	
 }
 
 void UpdateDbDialog::setUpdated()
@@ -112,8 +101,6 @@ bool UpdateDbDialog::dbHasBeenUpdated()
 void UpdateDbDialog::updateTotalProg()
 {
 	actionDone++;
-	
-	//totalPBar->setValue(actionDone);
 }
 
 void UpdateDbDialog::updateDlBar(char *c, int bytedone, int bytetotal, int speed,
@@ -129,14 +116,10 @@ void UpdateDbDialog::updateDlBar(char *c, int bytedone, int bytetotal, int speed
 	toInsert.append("%p% at ");
 	toInsert.append(spd);
 	toInsert.append(" KB/s");
-	//dlProgress->setRange(0, bytetotal);
-	//dlProgress->setFormat(toInsert);
-	//dlProgress->setValue(bytedone);
 }
 
 void UpdateDbDialog::doAction()
 {
-	//displayAction->setText("Please Wait...");
 	dbth = new UpDbThread(aHandle);
 	dbth->start();
 	connect(dbth, SIGNAL(finished()), this, SLOT(scopeEnded()));
