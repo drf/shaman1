@@ -37,25 +37,27 @@ UpdateDbDialog::UpdateDbDialog(AlpmHandler *hnd, QWidget *parent)
 	setupUi(this);
         setWindowModality(Qt::ApplicationModal);
 	
-	connect(aHandle, SIGNAL(streamDbUpdatingStatus(char*,int)), this,
+	connect(aHandle, SIGNAL(streamDbUpdatingStatus(char*,int)),
 				SLOT(updateLabel(char*, int)));
-	connect(aHandle, SIGNAL(dbQty(QStringList)), this, SLOT(createWidgets(QStringList)));
-	connect(aHandle, SIGNAL(dbUpdated()), this, SLOT(setUpdated()));
-	connect(aHandle, SIGNAL(dbUpdatePerformed()), this, SLOT(updateTotalProg()));
+	connect(aHandle, SIGNAL(dbQty(QStringList)), SLOT(createWidgets(QStringList)));
+	connect(aHandle, SIGNAL(dbUpdated()), SLOT(setUpdated()));
+	connect(aHandle, SIGNAL(dbUpdatePerformed()), SLOT(updateTotalProg()));
 	connect(&CbackReference, SIGNAL(streamTransDlProg(char*,int,int,int,int,int,int)), 
-			this, SLOT(updateDlBar(char*,int,int,int,int,int,int)));
+			SLOT(updateDlBar(char*,int,int,int,int,int,int)));
 }
 
 UpdateDbDialog::~UpdateDbDialog()
 {
 	disconnect(aHandle, SIGNAL(streamDbUpdatingStatus(char*,int)), 0, 0);
-	disconnect(aHandle, SIGNAL(dbQty(int)), 0, 0);
+	disconnect(aHandle, SIGNAL(dbQty(QStringList)), 0, 0);
 	disconnect(aHandle, SIGNAL(dbUpdated()), 0, 0);
 	disconnect(&CbackReference, SIGNAL(streamTransDlProg(char*,int,int,int,int,int,int)), 0, 0);
 }
 
 void UpdateDbDialog::updateLabel(char *repo, int action)
 {
+	Q_UNUSED(repo);
+	
 	QLabel *toInsert = labelList.at(actionDone);
 	
 	switch(action)
@@ -71,7 +73,6 @@ void UpdateDbDialog::updateLabel(char *repo, int action)
 		break;
 	case 3:
 		toInsert->setText("<i>Up to Date</i>");
-		//dlProgress->setFormat(toInsert);
 		break;
 	default:
 		break;
@@ -96,16 +97,14 @@ void UpdateDbDialog::updateTotalProg()
 void UpdateDbDialog::updateDlBar(char *c, int bytedone, int bytetotal, int speed,
 		int i, int j, int k)
 {
-        Q_UNUSED(c)
-        Q_UNUSED(i)
-        Q_UNUSED(j)
-        Q_UNUSED(k)
-	QString toInsert, spd;
-	
-	spd.setNum(speed);
-	toInsert.append("%p% at ");
-	toInsert.append(spd);
-	toInsert.append(" KB/s");
+	Q_UNUSED(c)
+	Q_UNUSED(i)
+	Q_UNUSED(j)
+	Q_UNUSED(k)
+	Q_UNUSED(speed);
+	QLabel *toInsert = labelList.at(actionDone);
+
+	toInsert->setText(QString("<i>Downloading... (%1 KB of %2 KB)").arg(bytedone/1024).arg(bytetotal/1024));
 }
 
 void UpdateDbDialog::doAction()
@@ -134,8 +133,6 @@ void UpDbThread::run()
 
 void UpdateDbDialog::createWidgets(QStringList list)
 {
-	//QGridLayout *layout = new QGridLayout(this);
-	
 	for (int i = 0; i < list.size(); ++i)
 	{
 		QLabel *labelDb = new QLabel(this);
@@ -144,12 +141,8 @@ void UpdateDbDialog::createWidgets(QStringList list)
 		labelDb->setText(QString("<b>%1</b>").arg(list.at(i)));
 		labelStatus->setText(QString("<i>Waiting...</i>"));
 		
-		printf("here\n");
 		gridLayout->addWidget(labelDb, i+1, 0);
-		printf("here\n");
 		gridLayout->addWidget(labelStatus, i+1, 1);
-		
-		printf("here\n");
 		
 		labelList.append(labelStatus);
 		
