@@ -63,16 +63,16 @@ void UpdateDbDialog::updateLabel(char *repo, int action)
 	switch(action)
 	{
 	case 0:
-		toInsert->setText("<i>Checking...</i>");
+		toInsert->setText(tr("<i>Checking...</i>"));
 		break;
 	case 1:
-		toInsert->setText("<i>Downloading...</i>");
+		toInsert->setText(tr("<i>Downloading...</i>"));
 		break;
 	case 2:
-		toInsert->setText("<i>Installing...</i>");
+		toInsert->setText(tr("<i>Installing...</i>"));
 		break;
 	case 3:
-		toInsert->setText("<i>Up to Date</i>");
+		toInsert->setText(tr("<i>Up to Date</i>"));
 		break;
 	default:
 		break;
@@ -104,7 +104,7 @@ void UpdateDbDialog::updateDlBar(char *c, int bytedone, int bytetotal, int speed
 	Q_UNUSED(speed);
 	QLabel *toInsert = labelList.at(actionDone);
 
-	toInsert->setText(QString("<i>Downloading... (%1 KB of %2 KB)").arg(bytedone/1024).arg(bytetotal/1024));
+	toInsert->setText(QString(tr("<i>Downloading... (%1 KB of %2 KB)")).arg(bytedone/1024).arg(bytetotal/1024));
 }
 
 void UpdateDbDialog::doAction()
@@ -138,8 +138,8 @@ void UpdateDbDialog::createWidgets(QStringList list)
 		QLabel *labelDb = new QLabel(this);
 		QLabel *labelStatus = new QLabel(this);
 		
-		labelDb->setText(QString("<b>%1</b>").arg(list.at(i)));
-		labelStatus->setText(QString("<i>Waiting...</i>"));
+		labelDb->setText(QString(tr("<b>%1</b>")).arg(list.at(i)));
+		labelStatus->setText(QString(tr("<i>Waiting...</i>")));
 		
 		gridLayout->addWidget(labelDb, i+1, 0);
 		gridLayout->addWidget(labelStatus, i+1, 1);

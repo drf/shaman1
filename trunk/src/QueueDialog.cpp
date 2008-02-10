@@ -198,7 +198,7 @@ void QueueDialog::updateProgressBar(char *c, int bytedone, int bytetotal, int sp
 	eta_m = eta_s / 60;
 	eta_s -= eta_m * 60;
 
-	progressBar->setFormat(QString("%p% (%1 KB/s, %4:%5:%6 remaining)").
+	progressBar->setFormat(QString(tr("%p% (%1 KB/s, %4:%5:%6 remaining)")).
 			arg(speed).arg((int)eta_h,2,10,QChar('0')).arg((int)eta_m,2,10,QChar('0')).
 			arg((int)eta_s,2,10,QChar('0')));
 	progressBar->setRange(0, listtotal);

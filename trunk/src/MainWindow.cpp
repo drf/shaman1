@@ -148,9 +148,9 @@ bool MainWindow::populatePackagesView()
 
 			/* TODO: show icons instead of text here *///Comment: IMO we should show text and icon here (more usable) (boom1992)
 			if(aHandle->isInstalled(pkg))
-				item->setText(0, "Installed");
+				item->setText(0, tr("Installed"));
 			else
-				item->setText(0, "Not Installed");
+				item->setText(0, tr("Not Installed"));
 
 			item->setText(2, alpm_pkg_get_name(pkg));
 			item->setText(3, alpm_pkg_get_version(pkg));
@@ -197,7 +197,7 @@ void MainWindow::populateRepoColumn()
 
 	QListWidgetItem *item = new QListWidgetItem(repoList);
 
-	item->setText("All Repositories");
+	item->setText(tr("All Repositories"));
 	item->setSelected(true);
 
 	while(list != NULL)
@@ -234,7 +234,7 @@ void MainWindow::populateGrpsColumn()
 
 	QListWidgetItem *item = new QListWidgetItem();
 
-	item->setText("All Groups");
+	item->setText(tr("All Groups"));
 	item->setSelected(true);
 	repoList->insertItem(0, item);
 
@@ -296,7 +296,7 @@ void MainWindow::refinePkgView()
 			foreach (QTreeWidgetItem *item, list)
 			{
 				//qDebug() << "Checking for installed packages" + item->text(2);
-				if (!item->text(0).compare("Not Installed"))
+				if (!item->text(0).compare(tr("Not Installed")))
 					list.removeAt(list.indexOf(item));
 			}
 		}
@@ -305,7 +305,7 @@ void MainWindow::refinePkgView()
 			foreach (QTreeWidgetItem *item, list)
 			{
 				//qDebug() << "Checking for installed packages" + item->text(2);
-				if (!item->text(0).compare("Installed"))
+				if (!item->text(0).compare(tr("Installed")))
 					list.removeAt(list.indexOf(item));
 			}
 		}
@@ -314,7 +314,7 @@ void MainWindow::refinePkgView()
 			foreach (QTreeWidgetItem *item, list)
 			{
 				//qDebug() << "Checking for installed packages" + item->text(2);
-				if (!item->text(0).compare("Upgradeable"))
+				if (!item->text(0).compare(tr("Upgradeable")))
 					list.removeAt(list.indexOf(item));
 			}
 		}
@@ -498,12 +498,12 @@ void MainWindow::showContextMenu()
 	QAction *cancelAction = menu->addAction(QIcon(":/Icons/icons/edit-delete.png"), tr("Cancel Action"));
 	connect(cancelAction, SIGNAL(triggered()), SLOT(cancelAction()));
 
-	if (item->text(0) == "Installed")
+	if (item->text(0) == tr("Installed"))
 	{
 		installAction->setDisabled(true);
 		upgradeAction->setDisabled(true);
 	}
-        else if (item->text(0) == "Not Installed")
+        else if (item->text(0) == tr("Not Installed"))
         {
 		removeAction->setDisabled(true);
 		upgradeAction->setDisabled(true);
@@ -517,9 +517,9 @@ void MainWindow::showContextMenu()
         if (item->text(1).isEmpty())
 		cancelAction->setDisabled(true);
 
-        if (item->text(1) == "Install")
+        if (item->text(1) == tr("Install"))
                 installAction->setDisabled(true);
-        else if (item->text(1) == "Uninstall")
+        else if (item->text(1) == tr("Uninstall"))
 		removeAction->setDisabled(true);
 	else //Upgrade
 		upgradeAction->setDisabled(true);
@@ -548,7 +548,7 @@ void MainWindow::installPackage(QString package)
 	QTreeWidgetItem *item = pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 2).first();
 
 	qDebug() << item->text(1);
-	if (item->text(0) == "Installed" || item->text(1) == "Install")
+	if (item->text(0) == tr("Installed") || item->text(1) == tr("Install"))
 		return;
 	else
 	{
@@ -583,7 +583,7 @@ void MainWindow::removePackage(QString package)
 	QTreeWidgetItem *item = pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 2).first();
 
 	qDebug() << item->text(1);
-	if (item->text(0) == "Not Installed" || item->text(1) == "Remove")
+	if (item->text(0) == tr("Not Installed") || item->text(1) == tr("Remove"))
 		return;
 	else
 	{
@@ -604,7 +604,7 @@ void MainWindow::completeRemovePackage()
 	QTreeWidgetItem *item = pkgsViewWG->selectedItems().first();
 
 	qDebug() << item->text(1);
-	if (item->text(0) == "Not Installed")
+	if (item->text(0) == tr("Not Installed"))
 		return;
 	else
 	{
@@ -642,7 +642,7 @@ void MainWindow::cancelAction(QString package)
 	}
 	QTreeWidgetItem *item = pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 2).first();
 
-	if (item->text(1) == "Install" || item->text(1) == "Uninstall" || item->text(1) == "Complete Uninstall")//FIXME: When status is in 1. column, check if item->text(1).isEmpty()
+	if (item->text(1) == tr("Install") || item->text(1) == tr("Uninstall") || item->text(1) == tr("Complete Uninstall"))//FIXME: When status is in 1. column, check if item->text(1).isEmpty()
 	{
 		item->setText(1, QString());
 		item->setIcon(1, QIcon());
@@ -815,9 +815,9 @@ void MainWindow::widgetQueueToAlpmQueue()
 	connect(qUi.processButton, SIGNAL(clicked()), SLOT(processQueue()));
 	connect(qUi.cancelButton, SIGNAL(clicked()), SLOT(destroyReviewQueue()));
 	
-	qUi.queueInfo->setText(QString("Your Queue is about to be processed. "
+	qUi.queueInfo->setText(QString(tr("Your Queue is about to be processed. "
 			"You are going to:<br />Remove <b>%1 packages</b><br />Install/Upgrade"
-			" <b>%2 packages</b><br />Do you wish to continue?").arg(aHandle->getNumberOfTargets(1)).
+			" <b>%2 packages</b><br />Do you wish to continue?")).arg(aHandle->getNumberOfTargets(1)).
 			arg(aHandle->getNumberOfTargets(0)));
 
 }

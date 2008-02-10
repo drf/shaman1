@@ -85,9 +85,9 @@ void ConfigDialog::openAddDialog()
 	addDialog = new QDialog(this);
 	addDialog->setWindowModality(Qt::ApplicationModal);
 	
-	QLabel *nameLabel = new QLabel("Enter Here the Repository's Name", addDialog);
+	QLabel *nameLabel = new QLabel(tr("Enter Here the Repository's Name"), addDialog);
 	QLineEdit *name = new QLineEdit(addDialog);
-	QLabel *serverLabel = new QLabel("Enter Here the Repository's Server", addDialog);
+	QLabel *serverLabel = new QLabel(tr("Enter Here the Repository's Server"), addDialog);
 	QLineEdit *server = new QLineEdit(addDialog);
 	QVBoxLayout *layout = new QVBoxLayout();
 	QDialogButtonBox *buttons = new QDialogButtonBox(addDialog);

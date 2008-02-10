@@ -48,10 +48,10 @@ aHandle(hnd)
 
 		data = aHandle->getUpgradeablePackages();
 
-		upgradeMessage->setText(QString("There are <b>%1 upgradeable "
+		upgradeMessage->setText(QString(tr("There are <b>%1 upgradeable "
 				"packages</b>. You can either<br> upgrade "
 				"immediately or add them to the current Queue"
-				"<br> and process them later.").arg(
+				"<br> and process them later.")).arg(
 						alpm_list_count(data)));
 
 		connect(abortButton, SIGNAL(clicked()), SLOT(abort()));
