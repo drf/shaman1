@@ -17,6 +17,7 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
+#include "StringUtils.h"
 
 #include <iostream>
 #include <string.h>
@@ -28,7 +29,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
-#include <string.h>
 #include <errno.h>
 #include <fcntl.h>
 #include <ctype.h>
@@ -37,8 +37,6 @@
 #include <limits.h>
 
 #include <alpm_list.h>
-
-#include "StringUtils.h"
 
 StringUtils::StringUtils()
 {

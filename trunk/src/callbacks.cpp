@@ -17,16 +17,15 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
+#include "callbacks.h"
 
 #include <iostream>
 #include <string>
 #include <sys/time.h>
 #include <unistd.h>
-#include <QtGui>
 #include <QMessageBox>
 
 #include "alpm.h"
-#include "callbacks.h"
 
 #define UPDATE_SPEED_SEC 0.2f
 

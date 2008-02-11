@@ -25,7 +25,8 @@
 #include <alpm_list.h>
 #include <iostream>
 #include <string>
-#include <QtGui>
+#include <QString>
+#include <QStringList>
 
 #include "ConfigurationParser.h"
 

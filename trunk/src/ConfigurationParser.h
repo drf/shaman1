@@ -26,7 +26,8 @@
 #include <alpm.h>
 #include <alpm_list.h>
 #include <string.h>
-#include <QtGui>
+
+#include <QStringList>
 
 #include "StringUtils.h"
 

@@ -17,6 +17,7 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
+#include "ConfigurationParser.h"
 
 #include <iostream>
 #include <string>
@@ -28,9 +29,8 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <time.h> /* time_t */
-#include <QtGui>
 
-#include "ConfigurationParser.h"
+#include <QSettings>
 
 using namespace std;
 

@@ -17,16 +17,14 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
+#include "SysUpgradeDialog.h"
 
 #include <iostream>
 #include "../ui_upgradeDialog.h"
 #include <alpm.h>
 #include "callbacks.h"
-#include <QtGui>
 #include <QSettings>
 #include <AlpmHandler.h>
-
-#include "SysUpgradeDialog.h"
 
 SysUpgradeDialog::SysUpgradeDialog(AlpmHandler *hnd, QWidget *parent)
 : QDialog(parent),

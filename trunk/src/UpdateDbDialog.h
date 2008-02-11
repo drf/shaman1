@@ -25,8 +25,10 @@
 #include "../ui_dbUpdateDialog.h"
 #include <alpm.h>
 #include "callbacks.h"
-#include <QtGui>
 #include <AlpmHandler.h>
+
+#include <QThread>
+#include <QDialog>
 
 class UpDbThread : public QThread
 {

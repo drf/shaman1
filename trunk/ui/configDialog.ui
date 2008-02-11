@@ -118,7 +118,7 @@
             <item>
              <widget class="QLabel" name="statusLabel" >
               <property name="text" >
-               <string>Waiting.</string>
+               <string comment="waiting for the user to do an action" >Waiting.</string>
               </property>
               <property name="alignment" >
                <set>Qt::AlignCenter</set>

@@ -25,8 +25,9 @@
 #include "../ui_transactionDialog.h"
 #include <alpm.h>
 #include "callbacks.h"
-#include <QtGui>
 #include <AlpmHandler.h>
+
+#include <QThread>
 
 class TrCommitThread : public QThread
 {

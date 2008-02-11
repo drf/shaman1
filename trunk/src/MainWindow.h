@@ -28,14 +28,13 @@
 #include "../ui_MainWindow.h"
 #include "AlpmHandler.h"
 
+#include <QSystemTrayIcon>
 
 class UpdateDbDialog;
 class SysUpgradeDialog;
 class QueueDialog;
 class ConfigDialog;
 class ManteinanceDialog;
-
-class QSystemTrayIcon;
 
 class MainWindow : public QMainWindow, private Ui::MainWindow, private StringUtils
 {

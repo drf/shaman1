@@ -22,8 +22,9 @@
 #define CALLBACKS_H_
 
 #include <iostream>
-#include <QtGui>
 #include <alpm.h>
+
+#include <QObject>
 
 class CallBacks : public QObject
 {

@@ -17,15 +17,13 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
+#include "QueueDialog.h"
 
 #include <iostream>
 #include "../ui_transactionDialog.h"
 #include <alpm.h>
 #include "callbacks.h"
-#include <QtGui>
 #include <AlpmHandler.h>
-
-#include "QueueDialog.h"
 
 extern CallBacks CbackReference;
 

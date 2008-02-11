@@ -22,6 +22,8 @@
 
 #include "AlpmHandler.h"
 
+#include <QLineEdit>
+
 ConfigDialog::ConfigDialog(AlpmHandler *handler, QWidget *parent)
   : QDialog(parent),
     m_handler(handler)

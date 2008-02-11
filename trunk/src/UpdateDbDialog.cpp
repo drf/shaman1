@@ -22,7 +22,6 @@
 #include <AlpmHandler.h>
 #include <sstream>
 #include "callbacks.h"
-#include <QtGui>
 
 extern CallBacks CbackReference;
 

@@ -25,7 +25,6 @@
 #include "../ui_upgradeDialog.h"
 #include <alpm.h>
 #include "callbacks.h"
-#include <QtGui>
 #include <AlpmHandler.h>
 
 class SysUpgradeDialog : public QDialog, private Ui::upgradeDialog

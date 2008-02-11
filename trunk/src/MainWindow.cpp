@@ -34,7 +34,7 @@
 #include <QListWidgetItem>
 #include <QDebug>
 #include <QMessageBox>
-#include <QSystemTrayIcon>
+#include <QHeaderView>
 #include <alpm.h>
 
 extern CallBacks CbackReference;
@@ -621,7 +621,7 @@ void MainWindow::completeRemovePackage()
 	}
 	qDebug() << item->text(5);
 
-	//Now we remove the on-package-dependencies and the depencies...
+	//Now we remove the on-package-dependencies and the dependencies...
 	foreach (QString onDep, aHandle->getDependenciesOnPackage(item->text(2), item->text(5)))
 	{
 		removePackage(onDep);
@@ -729,7 +729,7 @@ void MainWindow::upgradePackage()
 	qDebug() << "Upgrade Package";
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
 	{
-		item->setText(1, tr("Upgrade"));//Look if there are depencies for the upgrade
+		item->setText(1, tr("Upgrade"));//Look if there are dependencies for the upgrade
 	}
 }
 

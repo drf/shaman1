@@ -23,7 +23,6 @@
 
 #include <iostream>
 #include <string.h>
-#include <QtGui>
 
 #include <alpm_list.h>
 

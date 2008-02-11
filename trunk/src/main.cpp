@@ -28,6 +28,7 @@
 #include <QApplication>
 #include <QString>
 #include <QSettings>
+#include <QMessageBox>
 #include <signal.h>
 
 static void cleanup(int signum)
@@ -44,7 +45,7 @@ static void cleanup(int signum)
 			/* a transaction is being interrupted, don't exit qtPacman yet. */
 			return;
 
-		/* no commiting transaction, we can release it now and then exit pacman */
+		/* no committing transaction, we can release it now and then exit pacman */
 		alpm_trans_release();
 		/* output a newline to be sure we clear any line we may be on */
 		printf("\n");
