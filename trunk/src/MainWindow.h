@@ -69,7 +69,8 @@ public slots:
 private slots:
 	void quitApp();
 	void itemChanged();
-	void showContextMenu();
+	void showPkgsViewContextMenu();
+	void showRepoViewContextMenu();
 	void installPackage();
 	void removePackage();
 	void completeRemovePackage();
@@ -80,6 +81,9 @@ private slots:
 	void showSettings();
 	void showAboutDialog();
 	void systrayActivated(QSystemTrayIcon::ActivationReason reason);
+	void installAllPackages();
+	void removeAllPackages();
+	void cancelAllActions();
 	
 private:
 	void installPackage(QString package);

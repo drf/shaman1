@@ -42,16 +42,20 @@ extern CallBacks CbackReference;
 
 MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent) 
 : QMainWindow(parent),
-currentpkgs(0),
-aHandle(handler)
+  currentpkgs(0),
+  aHandle(handler),
+  upActive(false),
+  revActive(false)
 {
 	setupUi(this);
 	pkgsViewWG->setContextMenuPolicy(Qt::CustomContextMenu);
+        repoList->setContextMenuPolicy(Qt::CustomContextMenu);
 
 	setupSystray();
 
 	connect(actionUpdate_Database, SIGNAL(triggered()), SLOT(doDbUpdate()));
-	connect(pkgsViewWG, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showContextMenu()));
+	connect(pkgsViewWG, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showPkgsViewContextMenu()));
+        connect(repoList, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showRepoViewContextMenu()));
 	connect(actionProcess_Queue, SIGNAL(triggered()), SLOT(widgetQueueToAlpmQueue()));
 	connect(switchToRepo, SIGNAL(clicked()), SLOT(populateRepoColumn()));
 	connect(switchToGrps, SIGNAL(clicked()), SLOT(populateGrpsColumn()));
@@ -66,9 +70,6 @@ aHandle(handler)
 	connect(systray, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), SLOT(systrayActivated(QSystemTrayIcon::ActivationReason)));
 	connect(actionQuit, SIGNAL(triggered()), SLOT(quitApp()));
 	connect(actionAbout, SIGNAL(triggered()), SLOT(showAboutDialog()));
-	
-	upActive = false;
-	revActive = false;
 
 	return;
 }
@@ -489,7 +490,7 @@ void MainWindow::finishDbUpdate()
 
 }
 
-void MainWindow::showContextMenu()
+void MainWindow::showPkgsViewContextMenu()
 {
 	if(pkgsViewWG->selectedItems().isEmpty())
 		return;
@@ -534,6 +535,53 @@ void MainWindow::showContextMenu()
 
 
 	menu->popup(QCursor::pos());
+}
+
+void MainWindow::showRepoViewContextMenu()
+{
+	if (repoList->selectedItems().isEmpty())
+		return;
+
+	QListWidgetItem *item = repoList->selectedItems().first();
+	QMenu *menu = new QMenu(this);
+	QAction *installAction = menu->addAction(QIcon(":/Icons/icons/list-add.png"), tr("Mark all for installation"));
+	connect(installAction, SIGNAL(triggered()), SLOT(installAllPackages()));
+	QAction *removeAction = menu->addAction(QIcon(":/Icons/icons/list-remove.png"), tr("Mark all for removal"));
+	connect(removeAction, SIGNAL(triggered()), SLOT(removeAllPackages()));
+	QAction *cancelAction = menu->addAction(QIcon(":/Icons/icons/edit-delete.png"), tr("Cancel all actions"));
+	connect(cancelAction, SIGNAL(triggered()), SLOT(cancelAllActions()));
+
+	menu->popup(QCursor::pos());
+}
+
+void MainWindow::installAllPackages()
+{
+	if (repoList->selectedItems().isEmpty())
+		return;
+
+	QListWidgetItem *item = repoList->selectedItems().first();
+	foreach (QTreeWidgetItem *item, pkgsViewWG->findItems(item->text(), Qt::MatchExactly, 5))
+		installPackage(item->text(2));
+}
+
+void MainWindow::removeAllPackages()
+{
+	if (repoList->selectedItems().isEmpty())
+		return;
+
+	QListWidgetItem *item = repoList->selectedItems().first();
+	foreach (QTreeWidgetItem *item, pkgsViewWG->findItems(item->text(), Qt::MatchExactly, 5))
+		removePackage(item->text(2));
+}
+
+void MainWindow::cancelAllActions()
+{
+	if (repoList->selectedItems().isEmpty())
+		return;
+
+	QListWidgetItem *item = repoList->selectedItems().first();
+	foreach (QTreeWidgetItem *item, pkgsViewWG->findItems(item->text(), Qt::MatchExactly, 5))
+		cancelAction(item->text(2));
 }
 
 void MainWindow::installPackage()
@@ -649,20 +697,20 @@ void MainWindow::cancelAction(QString package)
 		return;
 	}
 	QTreeWidgetItem *item = pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 2).first();
+	if (item->text(1).isEmpty())
+		return;
 
-	if (item->text(1) == tr("Install") || item->text(1) == tr("Uninstall") || item->text(1) == tr("Complete Uninstall"))//FIXME: When status is in 1. column, check if item->text(1).isEmpty()
+	item->setText(1, QString());
+	item->setIcon(1, QIcon());
+	foreach (QString onDep, aHandle->getDependenciesOnPackage(item->text(2), item->text(5)))
 	{
-		item->setText(1, QString());
-		item->setIcon(1, QIcon());
-		foreach (QString onDep, aHandle->getDependenciesOnPackage(item->text(2), item->text(5)))
-		{
-			cancelAction(onDep);
-		}
-		foreach (QString dep, aHandle->getPackageDependencies(item->text(2), item->text(5)))
-		{
-			cancelAction(dep);
-		}
+		cancelAction(onDep);
 	}
+	foreach (QString dep, aHandle->getPackageDependencies(item->text(2), item->text(5)))
+	{
+		cancelAction(dep);
+	}
+
 }
 
 void MainWindow::startUpgrading()
