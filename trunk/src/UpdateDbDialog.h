@@ -45,7 +45,7 @@ class UpdateDbDialog : public QDialog, private Ui::dbUpdateDialog
 	
 public:
 	UpdateDbDialog(AlpmHandler *hnd, QWidget *parent = 0);
-	virtual ~UpdateDbDialog();
+	~UpdateDbDialog();
 	
 	bool dbHasBeenUpdated();
 

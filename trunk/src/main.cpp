@@ -36,7 +36,7 @@ static void cleanup(int signum)
 	if(signum==SIGSEGV)
 	{
 		/* write a log message and write to stderr */
-		printf("Segmentation Fault! We're sorry. Please report a bug, so we can fix that\n");
+		printf("Segmentation Fault! We are sorry. Please report a bug, so we can fix that\n");
 		exit(signum);
 	} 
 	else if((signum == SIGINT)) 

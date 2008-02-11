@@ -45,7 +45,7 @@ class QueueDialog : public QDialog, private Ui::transactionDialog
 	
 public:
 	QueueDialog(AlpmHandler *hnd, QWidget *parent = 0);
-	virtual ~QueueDialog();
+	~QueueDialog();
 	void startProcessing();
 	
 public slots:

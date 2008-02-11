@@ -33,7 +33,7 @@ class SysUpgradeDialog : public QDialog, private Ui::upgradeDialog
 	
 public:
 	SysUpgradeDialog(AlpmHandler *hnd, QWidget *parent = 0);
-	virtual ~SysUpgradeDialog();
+	~SysUpgradeDialog();
 	
 private slots:
 	void abort();
