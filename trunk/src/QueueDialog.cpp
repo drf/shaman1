@@ -24,8 +24,11 @@
 #include <alpm.h>
 #include "callbacks.h"
 #include <AlpmHandler.h>
+#include <QMutex>
+#include <QMutexLocker>
 
 extern CallBacks CbackReference;
+extern QMutex mutex;
 
 using namespace std;
 
@@ -74,7 +77,9 @@ void TrCommitThread::run()
 
 void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 {
-
+	QMutexLocker lock(&mutex);
+	printf("LockedQ\n");
+	
 	switch(event) 
 	{
 	case PM_TRANS_EVT_CHECKDEPS_START:
@@ -178,6 +183,8 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 	case PM_TRANS_EVT_DELTA_PATCHES_DONE:
 		break;
 	}
+	
+	printf("UnlockQ\n");
 }
 
 void QueueDialog::updateProgressBar(char *c, int bytedone, int bytetotal, int speed,
@@ -217,13 +224,7 @@ void QueueDialog::updateProgressBar(pmtransprog_t event, char *pkgname, int perc
 	Q_UNUSED(pkgname);
 	Q_UNUSED(event);
 	Q_UNUSED(percent);
-	
-	if(progressBar->value() != remain)
-	{
-		progressBar->setFormat("%p");
-		progressBar->setRange(0,howmany);
-		progressBar->setValue(remain);
-	}
+	return;
 }
 
 void QueueDialog::startDownload()
@@ -243,7 +244,7 @@ void QueueDialog::startProcess()
 	checkTransaction->setText(tr("Check transaction validity"));
 	downloadPackages->setText(tr("Download Packages"));
 	processingQueue->setText(tr("<b>Process queue</b>"));
-
+	
 	disconnect(&CbackReference, SIGNAL(streamTransDlProg(char*,int,int,int,int,int,int)), 0, 0);
 	//qRegisterMetaType<pmtransprog_t>("pmtransprog_t");
 	/*connect(&CbackReference, SIGNAL(streamTransProgress(pmtransprog_t,char*,int,int,int)),
@@ -253,6 +254,7 @@ void QueueDialog::startProcess()
 
 void QueueDialog::cleanup()
 {
+	QMutexLocker lock(&mutex);
 	disconnect(&CbackReference, SIGNAL(streamTransProgress(pmtransprog_t,char*,int,int,int)), 0, 0);
 	processingQueue->setText(tr("Process queue"));
 	cleaningUp->setText(tr("<b>Cleanup</b>"));

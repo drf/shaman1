@@ -24,12 +24,15 @@
 #include <sys/time.h>
 #include <unistd.h>
 #include <QMessageBox>
+#include <QMutex>
+#include <QMutexLocker>
 
 #include "alpm.h"
 
 #define UPDATE_SPEED_SEC 0.2f
 
 CallBacks CbackReference;
+QMutex mutex;
 
 CallBacks::CallBacks()
 {
@@ -144,8 +147,6 @@ void CallBacks::cb_trans_conv(pmtransconv_t event, void *data1, void *data2,
 		break;
 	}
 	
-	printf("reached\n");
-	
 	msgBox->deleteLater();
 
 }
@@ -153,6 +154,8 @@ void CallBacks::cb_trans_conv(pmtransconv_t event, void *data1, void *data2,
 void CallBacks::cb_trans_progress(pmtransprog_t event, const char *pkgname, int percent,
 		int howmany, int remain)
 {
+	/*mutex.lock();
+	printf("LockedTP\n");
 	float timediff = 0.0;
 
 	if(percent == 0) 
@@ -165,16 +168,16 @@ void CallBacks::cb_trans_progress(pmtransprog_t event, const char *pkgname, int 
 		timediff = get_update_timediff(0);
 
 		if(timediff < UPDATE_SPEED_SEC) 
-		{
-			/* return if the calling interval was too short */
 			return;
-		}
 	}
 
 	if(percent > 0 && percent < 100 && !timediff)
 		return;
 
 	emit streamTransProgress(event, (char *)pkgname, percent, howmany, remain);
+	
+	mutex.unlock();
+	printf("UnLockedTP\n");*/
 }
 
 void CallBacks::cb_dl_progress(const char *filename, int file_xfered, int file_total,
@@ -246,7 +249,7 @@ void cb_dl_progress(const char *filename, int file_xfered, int file_total,
 void cb_trans_progress(pmtransprog_t event, const char *pkgname, int percent,
 		int howmany, int remain)
 {
-	CbackReference.cb_trans_progress(event,pkgname,percent,howmany,remain);
+	//CbackReference.cb_trans_progress(event,pkgname,percent,howmany,remain);
 }
 
 void cb_trans_conv(pmtransconv_t event, void *data1, void *data2,
@@ -257,5 +260,8 @@ void cb_trans_conv(pmtransconv_t event, void *data1, void *data2,
 
 void cb_trans_evt(pmtransevt_t event, void *data1, void *data2)
 {
+	QMutexLocker lock(&mutex);
+	printf("LockedEvt\n");
 	CbackReference.cb_trans_evt(event,data1,data2);
+	printf("UnLockedEvt\n");
 }
