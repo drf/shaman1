@@ -75,7 +75,7 @@ private slots:
 	void removePackage();
 	void completeRemovePackage();
 	void cancelAction();
-	void cancelAction(QString package);
+	void cancelAction(QString *package);
 	void upgradePackage();
 	void processQueue();
 	void showSettings();
@@ -86,8 +86,8 @@ private slots:
 	void cancelAllActions();
 	
 private:
-	void installPackage(QString package);
-	void removePackage(QString package);
+	void installPackage(QString *package);
+	void removePackage(QString *package);
 	void loadDbUpdateDialog();
 	void removeDbUpdateDialog();
 	void setupSystray();

@@ -66,15 +66,15 @@ public:
 	alpm_list_t *getUpgradeablePackages();
 
 	QStringList getPackageDependencies(pmpkg_t *package);
-	QStringList getPackageDependencies(QString name, QString repo);
+	QStringList getPackageDependencies(QString *name, QString *repo);
 
 	QStringList getDependenciesOnPackage(pmpkg_t *package);
-	QStringList getDependenciesOnPackage(QString name, QString repo);
+	QStringList getDependenciesOnPackage(QString *name, QString *repo);
 	
 	QStringList getPackageFiles(pmpkg_t *package);
-	QStringList getPackageFiles(QString name);
+	QStringList getPackageFiles(QString *name);
 	
-	QStringList getProviders(QString name, QString repo);
+	QStringList getProviders(QString *name, QString *repo);
 	
 	void initQueue(bool rem, bool syncd);
 	void addSyncToQueue(QString toAdd);
@@ -104,12 +104,12 @@ private:
 	bool initTransaction(pmtranstype_t type, pmtransflag_t flags);
 	bool releaseTransaction();
 	bool setUpAlpmSettings();
-	pmpkg_t *getPackageFromName(QString name, QString repo);
+	pmpkg_t *getPackageFromName(QString *name, QString *repo);
 
 signals:
 	void streamDbUpdatingStatus(char *repo, int action);
 	void dbUpdated();
-	void dbQty(QStringList db);
+	void dbQty(QStringList *db);
 	void dbUpdatePerformed();
 
 private:
