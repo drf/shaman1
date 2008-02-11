@@ -280,8 +280,8 @@
                <property name="html" >
                 <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
 p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;span style=" font-size:12pt; font-weight:600;">Welcome in qtPacman&lt;/span>&lt;/p>&lt;/body>&lt;/html></string>
+&lt;/style>&lt;/head>&lt;body style=" font-family:'Liberation Sans'; font-size:10pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif';">&lt;span style=" font-size:12pt; font-weight:600;">Welcome in qtPacman&lt;/span>&lt;/p>&lt;/body>&lt;/html></string>
                </property>
                <property name="acceptRichText" >
                 <bool>false</bool>
@@ -334,7 +334,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>1195</width>
-     <height>27</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile" >
@@ -342,13 +342,6 @@ p, li { white-space: pre-wrap; }
      <string>File</string>
     </property>
     <addaction name="actionQuit" />
-   </widget>
-   <widget class="QMenu" name="menuSettings" >
-    <property name="title" >
-     <string>Settings</string>
-    </property>
-    <addaction name="actionPackage_Repositories" />
-    <addaction name="actionPacman_Preferences" />
    </widget>
    <widget class="QMenu" name="menuHelp" >
     <property name="title" >
@@ -367,12 +360,6 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionUpdate_ABS_Tree_2" />
      <addaction name="separator" />
      <addaction name="actionInstall_and_Build_Selected" />
-     <addaction name="separator" />
-     <addaction name="actionBuild_Package_From_File" />
-     <addaction name="actionBuild_and_Install_Package_From_File_2" />
-     <addaction name="separator" />
-     <addaction name="actionClean_Build_Environment_For_Selected" />
-     <addaction name="actionClean_all_Build_Environments" />
     </widget>
     <addaction name="actionUpdate_Database" />
     <addaction name="actionUpgrade_System" />
@@ -380,12 +367,11 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionProcess_Queue" />
     <addaction name="actionInstall_Package_From_File_2" />
     <addaction name="separator" />
-    <addaction name="actionEmpty_Cache_2" />
-    <addaction name="separator" />
     <addaction name="menuInstall_and_Build_from_Source" />
+    <addaction name="separator" />
+    <addaction name="actionPacman_Preferences" />
    </widget>
    <addaction name="menuFile" />
-   <addaction name="menuSettings" />
    <addaction name="menuActions" />
    <addaction name="menuHelp" />
   </widget>
@@ -408,6 +394,8 @@ p, li { white-space: pre-wrap; }
    <addaction name="actionUpdate_Database" />
    <addaction name="actionUpgrade_System" />
    <addaction name="actionProcess_Queue" />
+   <addaction name="separator" />
+   <addaction name="actionPacman_Preferences" />
   </widget>
   <widget class="QStatusBar" name="statusBar" />
   <action name="actionPackage_Repositories" >
@@ -423,7 +411,7 @@ p, li { white-space: pre-wrap; }
     <iconset resource="qtpacman.qrc" >:/Icons/icons/preferences-system.png</iconset>
    </property>
    <property name="text" >
-    <string>Settings</string>
+    <string>Settings...</string>
    </property>
   </action>
   <action name="actionPyKMan_Preferences" >
@@ -482,6 +470,9 @@ p, li { white-space: pre-wrap; }
    </property>
   </action>
   <action name="actionAbout" >
+   <property name="icon" >
+    <iconset resource="qtpacman.qrc" >:/Icons/icons/help-about.png</iconset>
+   </property>
    <property name="text" >
     <string>About...</string>
    </property>

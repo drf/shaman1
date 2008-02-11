@@ -70,7 +70,7 @@ void ConfigDialog::setupRepos()
 		else
 		{
 			QTreeWidgetItem *itm = new QTreeWidgetItem(thirdPartyWidget);
-			itm->setText(0,alpm_db_get_name(curdb));
+			itm->setText(0, alpm_db_get_name(curdb));
 			itm->setText(1, alpm_db_get_url(curdb));
 		}
 		
@@ -78,6 +78,8 @@ void ConfigDialog::setupRepos()
 	}
 	
 	connect(addThirdPartyButton, SIGNAL(clicked()), SLOT(openAddDialog()));
+	connect(editThirdPartyButton, SIGNAL(clicked()), SLOT(openEditDialog()));
+	connect(removeThirdPartyButton, SIGNAL(clicked()), SLOT(removeThirdParty()));
 }
 
 void ConfigDialog::openAddDialog()
@@ -95,6 +97,9 @@ void ConfigDialog::openAddDialog()
 	buttons->addButton(QDialogButtonBox::Ok);
 	buttons->addButton(QDialogButtonBox::Cancel);
 	
+	connect(buttons, SIGNAL(accepted()), addDialog, SLOT(accept()));
+	connect(buttons, SIGNAL(rejected()), addDialog, SLOT(reject()));
+	
 	layout->addWidget(nameLabel);
 	layout->addWidget(name);
 	layout->addWidget(serverLabel);
@@ -106,8 +111,63 @@ void ConfigDialog::openAddDialog()
 	addDialog->exec();
 	if (addDialog->result() == 1) //QDialog::accepted
 	{
-		//FIXME: Add repository here...
+		QTreeWidgetItem *itm = new QTreeWidgetItem(thirdPartyWidget);
+		itm->setText(0, name->text());
+		itm->setText(1, server->text());
 	}
+	
+	addDialog->deleteLater();
+}
+
+void ConfigDialog::openEditDialog()
+{
+	if(!thirdPartyWidget->currentItem())
+		return;
+	
+	addDialog = new QDialog(this);
+	addDialog->setWindowModality(Qt::ApplicationModal);
+	
+	QLabel *nameLabel = new QLabel(tr("Enter Here the Repository's Name"), addDialog);
+	QLineEdit *name = new QLineEdit(addDialog);
+	QLabel *serverLabel = new QLabel(tr("Enter Here the Repository's Server"), addDialog);
+	QLineEdit *server = new QLineEdit(addDialog);
+	QVBoxLayout *layout = new QVBoxLayout();
+	QDialogButtonBox *buttons = new QDialogButtonBox(addDialog);
+	
+	buttons->addButton(QDialogButtonBox::Ok);
+	buttons->addButton(QDialogButtonBox::Cancel);
+	
+	connect(buttons, SIGNAL(accepted()), addDialog, SLOT(accept()));
+	connect(buttons, SIGNAL(rejected()), addDialog, SLOT(reject()));
+	
+	layout->addWidget(nameLabel);
+	layout->addWidget(name);
+	layout->addWidget(serverLabel);
+	layout->addWidget(server);
+	layout->addWidget(buttons);
+	
+	name->setText(thirdPartyWidget->currentItem()->text(0));
+	server->setText(thirdPartyWidget->currentItem()->text(1));
+	
+	addDialog->setLayout(layout);
+	
+	addDialog->exec();
+	if (addDialog->result() == 1) //QDialog::accepted
+	{
+		thirdPartyWidget->currentItem()->setText(0, name->text());
+		thirdPartyWidget->currentItem()->setText(1, server->text());
+	}
+	
+	addDialog->deleteLater();
+}
+
+void ConfigDialog::removeThirdParty()
+{
+	if(!thirdPartyWidget->currentItem())
+		return;
+	
+	delete(thirdPartyWidget->takeTopLevelItem(thirdPartyWidget->indexOfTopLevelItem(
+			thirdPartyWidget->currentItem())));
 }
 
 void ConfigDialog::changeWidget(int position)

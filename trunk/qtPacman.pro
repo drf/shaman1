@@ -24,7 +24,8 @@ FORMS += ui/MainWindow.ui \
 	 ui/upgradeDialog.ui \
 	 ui/transactionDialog.ui \
 	 ui/configDialog.ui \
-	 ui/reviewQueueDialog.ui 
+	 ui/reviewQueueDialog.ui \
+	 ui/aboutDialog.ui 
 SOURCES += src/AlpmHandler.cpp \
            src/callbacks.cpp \
            src/ConfigurationParser.cpp \

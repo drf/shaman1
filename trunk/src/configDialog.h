@@ -46,14 +46,16 @@ private:
 
 class ConfigDialog : public QDialog, public Ui::ConfigDialog
 {
-    Q_OBJECT
-    public:
-        ConfigDialog(AlpmHandler *handler, QWidget *parent = 0);
-        ~ConfigDialog();
+	Q_OBJECT
+public:
+	ConfigDialog(AlpmHandler *handler, QWidget *parent = 0);
+	~ConfigDialog();
 
-    private slots:
-        void changeWidget(int position);
+private slots:
+	void changeWidget(int position);
 	void openAddDialog();
+	void openEditDialog();
+	void removeThirdParty();
 	void cleanUnused();
 	void cleanCache();
 	void clearCache();
@@ -61,12 +63,12 @@ class ConfigDialog : public QDialog, public Ui::ConfigDialog
 	void showFailure(int act);
 	void cleanThread();
 
-    private:
-        void setupRepos();
-        void setupGeneral();
+private:
+	void setupRepos();
+	void setupGeneral();
 
-    private:
-        AlpmHandler *m_handler;
+private:
+	AlpmHandler *m_handler;
 	QDialog *addDialog;
 	CleanThread *cTh;
 };

@@ -78,7 +78,8 @@ private slots:
 	void cancelAction(QString package);
 	void upgradePackage();
 	void processQueue();
-        void showSettings();
+	void showSettings();
+	void showAboutDialog();
 	void systrayActivated(QSystemTrayIcon::ActivationReason reason);
 	
 private:

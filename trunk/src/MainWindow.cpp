@@ -26,6 +26,7 @@
 #include "QueueDialog.h"
 #include "configDialog.h"
 #include "../ui_reviewQueueDialog.h"
+#include "../ui_aboutDialog.h"
 
 #include <iostream>
 #include <QMenu>
@@ -64,6 +65,7 @@ aHandle(handler)
 	connect(actionPacman_Preferences, SIGNAL(triggered()), SLOT(showSettings()));
 	connect(systray, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), SLOT(systrayActivated(QSystemTrayIcon::ActivationReason)));
 	connect(actionQuit, SIGNAL(triggered()), SLOT(quitApp()));
+	connect(actionAbout, SIGNAL(triggered()), SLOT(showAboutDialog()));
 	
 	upActive = false;
 	revActive = false;
@@ -859,4 +861,18 @@ void MainWindow::systrayActivated(QSystemTrayIcon::ActivationReason reason)
 		else
 			hide();
 	}
+}
+
+void MainWindow::showAboutDialog()
+{
+	QDialog *about = new QDialog(this);
+	Ui::aboutDialog ui;
+	
+	ui.setupUi(about);
+	
+	about->setWindowModality(Qt::ApplicationModal);
+	
+	about->exec();
+	
+	about->deleteLater();
 }
