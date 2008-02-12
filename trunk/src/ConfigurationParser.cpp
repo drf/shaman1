@@ -295,6 +295,9 @@ PacmanConf ConfigurationParser::getPacmanConf(bool forcereload = false)
 	if(pacData.loaded && !forcereload)
 		return pacData;
 	
+	pacData.syncdbs.clear();
+	pacData.serverAssoc.clear();
+	
 	parsePacmanConfig("/etc/pacman.conf", NULL);
 	
 	return pacData;

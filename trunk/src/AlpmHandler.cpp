@@ -236,6 +236,8 @@ bool AlpmHandler::reloadPacmanConfiguration()
 		alpm_db_unregister((pmdb_t *)alpm_list_getdata(registered_db));
 		registered_db = alpm_list_next(registered_db);
 	}
+	
+	alpm_db_unregister(db_local);
 
 	setUpAlpmSettings();
 
