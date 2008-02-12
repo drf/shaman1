@@ -31,6 +31,8 @@
 #include <time.h> /* time_t */
 
 #include <QSettings>
+#include <QFile>
+#include <QTextStream>
 
 using namespace std;
 
@@ -54,16 +56,55 @@ alpm_list_t *ConfigurationParser::setrepeatingoption(const QString &ptr)
 
 void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &givendb)
 {
-	QSettings *settings = new QSettings(file, QSettings::NativeFormat);
-	
 	QString db(NULL);
 	int serverparsed = 0;
 	
-	pacData.loaded = true;
-		
 	/* if we are passed a db, use it as our starting point */
 	if(givendb != NULL)
 		db.operator=(givendb);
+
+	if(file.contains(QString("mirrorlist"), Qt::CaseInsensitive))
+	{
+		QFile file_p(file);
+
+		if (!file_p.open(QIODevice::ReadOnly | QIODevice::Text))
+			return;
+
+		QTextStream in(&file_p);
+		while (!in.atEnd()) 
+		{
+			QString line = in.readLine();
+			if(line.startsWith('#'))
+				continue;
+
+			if(!line.contains("server", Qt::CaseInsensitive))
+				continue;
+
+			QStringList list(line.split("=", QString::SkipEmptyParts));
+			QString serverN(list.at(1));
+
+			serverN.remove(QChar(' '), Qt::CaseInsensitive);
+
+			QStringList tmplst = serverN.split(QString("$repo"), 
+					QString::SkipEmptyParts, Qt::CaseInsensitive);
+
+			QString dserv(tmplst.at(0));
+
+			dserv.append(db);
+			dserv.append(tmplst.at(1));
+			pacData.serverAssoc.append(dserv);
+			
+			break;
+		}
+
+		file_p.close();
+		
+		return;
+	}
+	
+	QSettings *settings = new QSettings(file, QSettings::NativeFormat);
+	
+	pacData.loaded = true;
 
 	foreach(QString str, settings->allKeys())
 	{
