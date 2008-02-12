@@ -69,6 +69,7 @@ private slots:
 private:
 	void setupRepos();
 	void setupGeneral();
+	QStringList getMirrorList();
 
 private:
 	AlpmHandler *m_handler;

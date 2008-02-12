@@ -25,6 +25,8 @@
 #include <QLineEdit>
 #include <QSettings>
 #include <QMessageBox>
+#include <QFile>
+#include <QTextStream>
 
 ConfigDialog::ConfigDialog(AlpmHandler *handler, QWidget *parent)
 : QDialog(parent),
@@ -42,6 +44,38 @@ ConfigDialog::~ConfigDialog()
 {
 }
 
+QStringList ConfigDialog::getMirrorList()
+{
+	QFile file("/etc/pacman.d/mirrorlist");
+	QStringList retlist;
+	
+	if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+		return retlist;
+	
+	QTextStream in(&file);
+	while (!in.atEnd()) 
+	{
+		QString line = in.readLine();
+		if(line.startsWith('#'))
+			continue;
+		
+		if(!line.contains("server", Qt::CaseInsensitive))
+			continue;
+		
+		QStringList list(line.split("=", QString::SkipEmptyParts));
+		QString serverN(list.at(1));
+		
+		serverN.remove(QChar(' '), Qt::CaseInsensitive);
+		
+		retlist.append(serverN);
+	}
+	
+	file.close();
+	
+	return retlist;
+
+}
+
 void ConfigDialog::setupGeneral()
 {
 	listWidget->insertItem(0, new QListWidgetItem(QIcon(":/Icons/icons/network-server-database.png"), tr("General")));//FIXME: Replace icon
@@ -55,6 +89,12 @@ void ConfigDialog::setupRepos()
 	listWidget->addItem(new QListWidgetItem(QIcon(":/Icons/icons/network-server-database.png"), tr("Repositories")));
 	alpm_list_t *repos = alpm_list_first(m_handler->getAvailableRepos());
 	QString whichMirror;
+	QStringList mirrors;
+	
+	mirrors = getMirrorList();
+	
+	for(int i = 0; i < mirrors.size(); ++i)
+		mirrorBox->addItem(mirrors.at(i));
 
 	while(repos != NULL)
 	{
