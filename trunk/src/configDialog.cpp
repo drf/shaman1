@@ -27,15 +27,15 @@
 #include <QMessageBox>
 
 ConfigDialog::ConfigDialog(AlpmHandler *handler, QWidget *parent)
-  : QDialog(parent),
-    m_handler(handler),
-    upDb(false)
+: QDialog(parent),
+m_handler(handler),
+upDb(false)
 {
-    setupUi(this);
-    setupGeneral();
-    setupRepos();
-    connect(listWidget, SIGNAL(currentRowChanged(int)), this, SLOT(changeWidget(int)));
-    connect(this, SIGNAL(accepted()), SLOT(saveConfiguration()));
+	setupUi(this);
+	setupGeneral();
+	setupRepos();
+	connect(listWidget, SIGNAL(currentRowChanged(int)), this, SLOT(changeWidget(int)));
+	connect(this, SIGNAL(accepted()), SLOT(saveConfiguration()));
 }
 
 ConfigDialog::~ConfigDialog()
@@ -44,15 +44,15 @@ ConfigDialog::~ConfigDialog()
 
 void ConfigDialog::setupGeneral()
 {
-    listWidget->insertItem(0, new QListWidgetItem(QIcon(":/Icons/icons/network-server-database.png"), tr("General")));//FIXME: Replace icon
-    connect(cleanDbButton, SIGNAL(clicked()), SLOT(cleanUnused()));
-    connect(cleanCacheButton, SIGNAL(clicked()), SLOT(cleanCache()));
-    connect(emptyCacheButton, SIGNAL(clicked()), SLOT(clearCache()));
+	listWidget->insertItem(0, new QListWidgetItem(QIcon(":/Icons/icons/network-server-database.png"), tr("General")));//FIXME: Replace icon
+	connect(cleanDbButton, SIGNAL(clicked()), SLOT(cleanUnused()));
+	connect(cleanCacheButton, SIGNAL(clicked()), SLOT(cleanCache()));
+	connect(emptyCacheButton, SIGNAL(clicked()), SLOT(clearCache()));
 }
 
 void ConfigDialog::setupRepos()
 {
-    listWidget->addItem(new QListWidgetItem(QIcon(":/Icons/icons/network-server-database.png"), tr("Repositories")));
+	listWidget->addItem(new QListWidgetItem(QIcon(":/Icons/icons/network-server-database.png"), tr("Repositories")));
 	alpm_list_t *repos = alpm_list_first(m_handler->getAvailableRepos());
 	QString whichMirror;
 
@@ -83,10 +83,10 @@ void ConfigDialog::setupRepos()
 			itm->setText(0, alpm_db_get_name(curdb));
 			itm->setText(1, alpm_db_get_url(curdb));
 		}
-		
+
 		repos = alpm_list_next(repos);
 	}
-	
+
 	QStringList tmplst = whichMirror.split(QString("core"), 
 			QString::SkipEmptyParts, Qt::CaseInsensitive);
 
@@ -94,10 +94,10 @@ void ConfigDialog::setupRepos()
 
 	dserv.append("$repo");
 	dserv.append(tmplst.at(1));
-	
+
 	if(mirrorBox->findText(dserv) != -1)
 		mirrorBox->setCurrentIndex(mirrorBox->findText(dserv));
-	
+
 	connect(addThirdPartyButton, SIGNAL(clicked()), SLOT(openAddDialog()));
 	connect(editThirdPartyButton, SIGNAL(clicked()), SLOT(openEditDialog()));
 	connect(removeThirdPartyButton, SIGNAL(clicked()), SLOT(removeThirdParty()));
@@ -107,28 +107,28 @@ void ConfigDialog::openAddDialog()
 {
 	addDialog = new QDialog(this);
 	addDialog->setWindowModality(Qt::ApplicationModal);
-	
+
 	QLabel *nameLabel = new QLabel(tr("Enter Here the Repository's Name"), addDialog);
 	QLineEdit *name = new QLineEdit(addDialog);
 	QLabel *serverLabel = new QLabel(tr("Enter Here the Repository's Server"), addDialog);
 	QLineEdit *server = new QLineEdit(addDialog);
 	QVBoxLayout *layout = new QVBoxLayout();
 	QDialogButtonBox *buttons = new QDialogButtonBox(addDialog);
-	
+
 	buttons->addButton(QDialogButtonBox::Ok);
 	buttons->addButton(QDialogButtonBox::Cancel);
-	
+
 	connect(buttons, SIGNAL(accepted()), addDialog, SLOT(accept()));
 	connect(buttons, SIGNAL(rejected()), addDialog, SLOT(reject()));
-	
+
 	layout->addWidget(nameLabel);
 	layout->addWidget(name);
 	layout->addWidget(serverLabel);
 	layout->addWidget(server);
 	layout->addWidget(buttons);
-	
+
 	addDialog->setLayout(layout);
-	
+
 	addDialog->exec();
 	if (addDialog->result() == 1) //QDialog::accepted
 	{
@@ -136,7 +136,7 @@ void ConfigDialog::openAddDialog()
 		itm->setText(0, name->text());
 		itm->setText(1, server->text());
 	}
-	
+
 	addDialog->deleteLater();
 }
 
@@ -144,41 +144,41 @@ void ConfigDialog::openEditDialog()
 {
 	if(!thirdPartyWidget->currentItem())
 		return;
-	
+
 	addDialog = new QDialog(this);
 	addDialog->setWindowModality(Qt::ApplicationModal);
-	
+
 	QLabel *nameLabel = new QLabel(tr("Enter Here the Repository's Name"), addDialog);
 	QLineEdit *name = new QLineEdit(addDialog);
 	QLabel *serverLabel = new QLabel(tr("Enter Here the Repository's Server"), addDialog);
 	QLineEdit *server = new QLineEdit(addDialog);
 	QVBoxLayout *layout = new QVBoxLayout();
 	QDialogButtonBox *buttons = new QDialogButtonBox(addDialog);
-	
+
 	buttons->addButton(QDialogButtonBox::Ok);
 	buttons->addButton(QDialogButtonBox::Cancel);
-	
+
 	connect(buttons, SIGNAL(accepted()), addDialog, SLOT(accept()));
 	connect(buttons, SIGNAL(rejected()), addDialog, SLOT(reject()));
-	
+
 	layout->addWidget(nameLabel);
 	layout->addWidget(name);
 	layout->addWidget(serverLabel);
 	layout->addWidget(server);
 	layout->addWidget(buttons);
-	
+
 	name->setText(thirdPartyWidget->currentItem()->text(0));
 	server->setText(thirdPartyWidget->currentItem()->text(1));
-	
+
 	addDialog->setLayout(layout);
-	
+
 	addDialog->exec();
 	if (addDialog->result() == 1) //QDialog::accepted
 	{
 		thirdPartyWidget->currentItem()->setText(0, name->text());
 		thirdPartyWidget->currentItem()->setText(1, server->text());
 	}
-	
+
 	addDialog->deleteLater();
 }
 
@@ -186,14 +186,14 @@ void ConfigDialog::removeThirdParty()
 {
 	if(!thirdPartyWidget->currentItem())
 		return;
-	
+
 	delete(thirdPartyWidget->takeTopLevelItem(thirdPartyWidget->indexOfTopLevelItem(
 			thirdPartyWidget->currentItem())));
 }
 
 void ConfigDialog::changeWidget(int position)
 {
-    stackedWidget->setCurrentIndex(position);
+	stackedWidget->setCurrentIndex(position);
 }
 
 void ConfigDialog::cleanUnused()
@@ -293,174 +293,157 @@ void ConfigDialog::saveConfiguration()
 	bool dbChanged = false;
 	QString mirror(mirrorBox->currentText());
 	ConfigurationParser parser;
-	
+
 	if(coreBox->checkState() == Qt::Checked)
 	{
-		QString tmp("core/Server");
-		QString tmp2("core/Include");
-		if(!parser.editPacmanKey(&tmp, &mirror, 0))
+		if(!parser.editPacmanKey("core/Server", mirror, 0))
 		{
-			if(parser.editPacmanKey(&tmp, &mirror, 1))
+			if(parser.editPacmanKey("core/Server", mirror, 1))
 				dbChanged = true;
 		}
 		else
 		{
 			dbChanged = true;
-			parser.editPacmanKey(&tmp2, NULL, 2);
+			parser.editPacmanKey("core/Include", NULL, 2);
 		}
 	}
 	else
 	{
-		QString tmp("core");
-		if(parser.editPacmanKey(&tmp, NULL, 2))
+		if(parser.editPacmanKey("core/Server", NULL, 2))
+			dbChanged = true;
+		if(parser.editPacmanKey("core/Include", NULL, 2))
 			dbChanged = true;
 	}
-	
+
 	if(extraBox->checkState() == Qt::Checked)
 	{
-		QString tmp("extra/Server");
-		QString tmp2("extra/Include");
-		if(!parser.editPacmanKey(&tmp, &mirror, 0))
+		if(!parser.editPacmanKey("extra/Server", mirror, 0))
 		{
-			if(parser.editPacmanKey(&tmp, &mirror, 1))
+			if(parser.editPacmanKey("extra/Server", mirror, 1))
 				dbChanged = true;
 		}
 		else
 		{
 			dbChanged = true;
-			parser.editPacmanKey(&tmp2, NULL, 2);
+			parser.editPacmanKey("extra/Include", NULL, 2);
 		}
 	}
 	else
 	{
-		QString tmp("extra");
-		if(parser.editPacmanKey(&tmp, NULL, 2))
+		if(parser.editPacmanKey("extra/Server", NULL, 2))
+			dbChanged = true;
+		if(parser.editPacmanKey("extra/Include", NULL, 2))
 			dbChanged = true;
 	}
-	
+
 	if(communityBox->checkState() == Qt::Checked)
 	{
-		QString tmp("community/Server");
-		QString tmp2("community/Include");
-		if(!parser.editPacmanKey(&tmp, &mirror, 0))
+		if(!parser.editPacmanKey("community/Server", mirror, 0))
 		{
-			if(parser.editPacmanKey(&tmp, &mirror, 1))
+			if(parser.editPacmanKey("community/Server", mirror, 1))
 				dbChanged = true;
 		}
 		else
 		{
 			dbChanged = true;
-			parser.editPacmanKey(&tmp2, NULL, 2);
+			parser.editPacmanKey("community/Include", NULL, 2);
 		}
 	}
 	else
 	{
-		QString tmp("community");
-		if(parser.editPacmanKey(&tmp, NULL, 2))
+		if(parser.editPacmanKey("community/Server", NULL, 2))
+			dbChanged = true;
+		if(parser.editPacmanKey("community/Include", NULL, 2))
 			dbChanged = true;
 	}
 
 	if(testingBox->checkState() == Qt::Checked)
 	{
-		QString tmp("testing/Server");
-		QString tmp2("testing/Include");
-		if(!parser.editPacmanKey(&tmp, &mirror, 0))
+		if(!parser.editPacmanKey("testing/Server", mirror, 0))
 		{
-			if(parser.editPacmanKey(&tmp, &mirror, 1))
+			if(parser.editPacmanKey("testing/Server", mirror, 1))
 				dbChanged = true;
 		}
 		else
 		{
 			dbChanged = true;
-			parser.editPacmanKey(&tmp2, NULL, 2);
+			parser.editPacmanKey("testing/Include", NULL, 2);
 		}
 	}
 	else
 	{
-		QString tmp("testing/Server");
-		if(parser.editPacmanKey(&tmp, NULL, 2))
+		if(parser.editPacmanKey("testing/Server", NULL, 2))
 			dbChanged = true;
-		QString tmp2("testing/Include");
-		if(parser.editPacmanKey(&tmp2, NULL, 2))
+		if(parser.editPacmanKey("testing/Include", NULL, 2))
 			dbChanged = true;
 	}
 
 	if(unstableBox->checkState() == Qt::Checked)
 	{
-		QString tmp("unstable/Server");
-		QString tmp2("unstable/Include");
-		if(!parser.editPacmanKey(&tmp, &mirror, 0))
+		if(!parser.editPacmanKey("unstable/Server", mirror, 0))
 		{
-			if(parser.editPacmanKey(&tmp, &mirror, 1))
+			if(parser.editPacmanKey("unstable/Server", mirror, 1))
 				dbChanged = true;
 		}
 		else
 		{
 			dbChanged = true;
-			parser.editPacmanKey(&tmp2, NULL, 2);
+			parser.editPacmanKey("unstable/Include", NULL, 2);
 		}
 	}
 	else
 	{
-		QString tmp("unstable");
-		if(parser.editPacmanKey(&tmp, NULL, 2))
+		if(parser.editPacmanKey("unstable/Server", NULL, 2))
+			dbChanged = true;
+		if(parser.editPacmanKey("unstable/Include", NULL, 2))
 			dbChanged = true;
 	}
 
 	if(KDEMod3Box->checkState() == Qt::Checked)
 	{
-		QString tmp("kdemod/Server");
 		mirror = "http://kdemod.ath.cx/repo/current/i686";
-		if(!parser.editPacmanKey(&tmp, &mirror, 0))
+		if(!parser.editPacmanKey("kdemod/Server", mirror, 0))
 		{
-			if(parser.editPacmanKey(&tmp, &mirror, 1))
+			if(parser.editPacmanKey("kdemod/Server", mirror, 1))
 				dbChanged = true;
 		}
 		else
 			dbChanged = true;
 	}
 	else
-	{
-		QString tmp("kdemod");
-		if(parser.editPacmanKey(&tmp, NULL, 2))
+		if(parser.editPacmanKey("kdemod/Server", NULL, 2))
 			dbChanged = true;
-	}
-	
+
 	if(KDEMod4Box->checkState() == Qt::Checked)
 	{
-		QString tmp("kdemod-testing/Server");
 		mirror = "http://kdemod.ath.cx/repo/testing/i686";
-		if(!parser.editPacmanKey(&tmp, &mirror, 0))
+		if(!parser.editPacmanKey("kdemod-testing/Server", mirror, 0))
 		{
-			if(parser.editPacmanKey(&tmp, &mirror, 1))
+			if(parser.editPacmanKey("kdemod-testing/Server", mirror, 1))
 				dbChanged = true;
 		}
 		else
 			dbChanged = true;
 	}
 	else
-	{
-		QString tmp("kdemod-testing");
-		if(parser.editPacmanKey(&tmp, NULL, 2))
+		if(parser.editPacmanKey("kdemod-testing/Server", NULL, 2))
 			dbChanged = true;
-	}
-	
+
 	/* Whew, now with the third party elements. We also take the
 	 * chance to free them, for the sake of memory.
 	 */
-	
+
 	QTreeWidgetItem *itm;
-	
+
 	while((itm = thirdPartyWidget->takeTopLevelItem(0)) != NULL)
 	{
 		QString tName(itm->text(0));
-		QString tServer(itm->text(1));
 
 		tName.append("/Server");
-		
-		if(!parser.editPacmanKey(&tName, &tServer, 0))
+
+		if(!parser.editPacmanKey(tName, itm->text(1), 0))
 		{
-			if(parser.editPacmanKey(&tName, &tServer, 1))
+			if(parser.editPacmanKey(tName, itm->text(1), 1))
 				dbChanged = true;
 		}
 		else
@@ -468,15 +451,15 @@ void ConfigDialog::saveConfiguration()
 
 		delete(itm);
 	}
-	
-	
+
+
 	/* Ok, saving finished, commit changes to Alpm now */
 	m_handler->reloadPacmanConfiguration();
-	
+
 	/* Did we change anything in the repos? Better update our
 	 * local DB then.
 	 */
-	
+
 	if(dbChanged)
 	{
 		QMessageBox *msgBox = new QMessageBox(this);

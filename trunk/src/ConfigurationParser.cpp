@@ -175,19 +175,19 @@ void ConfigurationParser::parsePacmanConfig(QString *file, QString *givendb)
 	settings->deleteLater();
 }
 
-bool ConfigurationParser::editPacmanKey(QString *key, QString *value, int action)
+bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value, int action)
 {
 	QSettings settings("/etc/pacman.conf", QSettings::NativeFormat);
 	QString realVal;
-	QString realKey = *key;
+	QString realKey = key;
 	
 	if(value != NULL)
 	{
-		if(value->contains('$'))
+		if(value.contains('$'))
 		{
-			QStringList tmplst = value->split(QString("$repo"), 
+			QStringList tmplst = value.split(QString("$repo"), 
 					QString::SkipEmptyParts, Qt::CaseInsensitive);
-			QStringList tmp2lst = key->split(QString("/"), 
+			QStringList tmp2lst = key.split(QString("/"), 
 					QString::SkipEmptyParts, Qt::CaseInsensitive);
 
 			QString dserv(tmplst.at(0));
@@ -197,7 +197,7 @@ bool ConfigurationParser::editPacmanKey(QString *key, QString *value, int action
 			realVal = dserv;
 		}
 		else
-			realVal = *value;
+			realVal = value;
 	}
 	
 	switch(action)
