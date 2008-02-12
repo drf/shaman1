@@ -5,8 +5,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>710</width>
-    <height>461</height>
+    <width>754</width>
+    <height>528</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -78,7 +78,7 @@
       </sizepolicy>
      </property>
      <property name="currentIndex" >
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="Seite" >
       <layout class="QGridLayout" >
@@ -134,6 +134,133 @@
         </widget>
        </item>
        <item row="1" column="0" >
+        <spacer>
+         <property name="orientation" >
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" >
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="Seite_2" >
+      <layout class="QGridLayout" >
+       <item row="0" column="0" >
+        <widget class="QGroupBox" name="groupBox_2" >
+         <property name="sizePolicy" >
+          <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="title" >
+          <string>Checkable Options</string>
+         </property>
+         <layout class="QGridLayout" >
+          <item row="0" column="0" >
+           <widget class="QCheckBox" name="noPassiveFtpBox" >
+            <property name="text" >
+             <string>Use Active FTP</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" >
+           <widget class="QCheckBox" name="useDeltaBox" >
+            <property name="text" >
+             <string>Use Deltas (needs xdelta to be installed)</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0" >
+        <widget class="QGroupBox" name="groupBox_3" >
+         <property name="title" >
+          <string>Advanced Options</string>
+         </property>
+         <layout class="QGridLayout" >
+          <item row="0" column="0" >
+           <layout class="QVBoxLayout" >
+            <item>
+             <layout class="QGridLayout" >
+              <item row="0" column="0" >
+               <widget class="QLabel" name="label" >
+                <property name="text" >
+                 <string>HoldPkgs:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1" >
+               <widget class="QLineEdit" name="holdPkgLine" />
+              </item>
+              <item row="1" column="0" >
+               <widget class="QLabel" name="label_2" >
+                <property name="text" >
+                 <string>IgnorePkgs:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1" >
+               <widget class="QLineEdit" name="ignorePkgLine" />
+              </item>
+              <item row="2" column="0" >
+               <widget class="QLabel" name="label_3" >
+                <property name="text" >
+                 <string>IgnoreGroups</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1" >
+               <widget class="QLineEdit" name="ignoreGrpsLine" />
+              </item>
+              <item row="3" column="0" >
+               <widget class="QLabel" name="label_4" >
+                <property name="text" >
+                 <string>NoUpgrade</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1" >
+               <widget class="QLineEdit" name="noUpgradeLine" />
+              </item>
+              <item row="4" column="0" >
+               <widget class="QLabel" name="label_5" >
+                <property name="text" >
+                 <string>NoExtract</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1" >
+               <widget class="QLineEdit" name="noExtractLine" />
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" >
+              <item>
+               <widget class="QLabel" name="label_6" >
+                <property name="text" >
+                 <string>XFerCommand (example: /path/to/command %u) Blank for Default</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="xFerCommandLine" />
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="2" column="0" >
         <spacer>
          <property name="orientation" >
           <enum>Qt::Vertical</enum>
