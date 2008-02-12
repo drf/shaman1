@@ -64,7 +64,10 @@ AlpmHandler::~AlpmHandler()
 }
 
 pmpkg_t *AlpmHandler::getPackageFromName(const QString &name, const QString &repo)
-{
+{	
+	if(!repo.compare("local"))
+		return alpm_db_get_pkg(db_local, name.toAscii().data());
+	
 	alpm_list_t *dbsync = alpm_list_first(sync_databases);
 	
 	while(dbsync != NULL)
@@ -823,4 +826,35 @@ QStringList AlpmHandler::getProviders(const QString &name, const QString &repo)
 	}
 
 	return retlist;
+}
+
+bool AlpmHandler::isProviderInstalled(const QString &provider)
+{
+	/* Here's what we need to do: iterate the installed
+	 * packages, and find if something between them provides
+	 * &provider
+	 */
+	
+	alpm_list_t *localpack = alpm_db_getpkgcache(db_local);
+	
+	while(localpack != NULL)
+	{
+		QStringList prv(getProviders(QString(alpm_pkg_get_name(
+				(pmpkg_t *)alpm_list_getdata(localpack))), QString("local")));
+		
+		for(int i = 0; i < prv.size(); ++i)
+		{
+			QStringList tmp(prv.at(i).split("="));
+			if(!tmp.at(0).compare(provider))
+			{
+				printf("Provider is installed and it's %s\n", alpm_pkg_get_name(
+				(pmpkg_t *)alpm_list_getdata(localpack)));
+				return true;
+			}
+		}
+		
+		localpack = alpm_list_next(localpack);
+	}
+	
+	return false;
 }

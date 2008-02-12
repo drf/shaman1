@@ -75,6 +75,7 @@ public:
 	QStringList getPackageFiles(const QString &name);
 	
 	QStringList getProviders(const QString &name, const QString &repo);
+	bool isProviderInstalled(const QString &provider);
 	
 	void initQueue(bool rem, bool syncd);
 	void addSyncToQueue(const QString &toAdd);

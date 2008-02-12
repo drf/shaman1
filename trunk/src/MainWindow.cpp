@@ -611,16 +611,9 @@ void MainWindow::installPackage(const QString &package)
 	QTreeWidgetItem *item = pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 2).first();
 
 	qDebug() << item->text(1);
-	QStringList providers = aHandle->getProviders(package, item->text(5));
-	foreach (QString prov, providers)
-	{
-		qDebug() << "Going to search for providers";
-		if (aHandle->isInstalled(prov))
-		{
-			qDebug() << "Hehe a provider is already installed: " + prov;
-			return;
-		}
-	}
+	if(aHandle->isProviderInstalled(package))
+		return;
+	
 	if (item->text(0) == tr("Installed") || item->text(1) == tr("Install"))
 		return;
 	else
