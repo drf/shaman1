@@ -147,7 +147,7 @@ void ConfigDialog::setupRepos()
 
 void ConfigDialog::setupPacman()
 {
-	listWidget->insertItem(0, new QListWidgetItem(QIcon(":/Icons/icons/network-server-database.png"), tr("Pacman")));//FIXME: Replace icon
+	listWidget->addItem(new QListWidgetItem(QIcon(":/Icons/icons/network-server-database.png"), tr("Pacman")));//FIXME: Replace icon
 }
 
 void ConfigDialog::openAddDialog()
