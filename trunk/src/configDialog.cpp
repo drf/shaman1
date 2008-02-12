@@ -148,6 +148,69 @@ void ConfigDialog::setupRepos()
 void ConfigDialog::setupPacman()
 {
 	listWidget->addItem(new QListWidgetItem(QIcon(":/Icons/icons/network-server-database.png"), tr("Pacman")));//FIXME: Replace icon
+	
+	/* Let's read alpm configuration! */
+	if(alpm_option_get_nopassiveftp())
+		noPassiveFtpBox->setChecked(true);
+	
+	useDeltaBox->setHidden(true);
+	
+	alpm_list_t *tmp;
+	QString tmpStr;
+	
+	tmp = alpm_option_get_holdpkgs();
+	while(tmp != NULL)
+	{
+		tmpStr.append((char *)alpm_list_getdata(tmp));
+		tmpStr.append(" ");
+		tmp = alpm_list_next(tmp);
+	}
+	holdPkgLine->setText(tmpStr);
+	tmpStr = "";
+	
+	tmp = alpm_option_get_ignorepkgs();
+	while(tmp != NULL)
+	{
+		tmpStr.append((char *)alpm_list_getdata(tmp));
+		tmpStr.append(" ");
+		tmp = alpm_list_next(tmp);
+	}
+	ignorePkgLine->setText(tmpStr);
+	tmpStr = "";
+
+	tmp = alpm_option_get_ignoregrps();
+	while(tmp != NULL)
+	{
+		tmpStr.append((char *)alpm_list_getdata(tmp));
+		tmpStr.append(" ");
+		tmp = alpm_list_next(tmp);
+	}
+	ignoreGrpsLine->setText(tmpStr);
+	tmpStr = "";
+	
+	tmp = alpm_option_get_noupgrades();
+	while(tmp != NULL)
+	{
+		tmpStr.append((char *)alpm_list_getdata(tmp));
+		tmpStr.append(" ");
+		tmp = alpm_list_next(tmp);
+	}
+	noUpgradeLine->setText(tmpStr);
+	tmpStr = "";
+
+	tmp = alpm_option_get_noextracts();
+	while(tmp != NULL)
+	{
+		tmpStr.append((char *)alpm_list_getdata(tmp));
+		tmpStr.append(" ");
+		tmp = alpm_list_next(tmp);
+	}
+	noExtractLine->setText(tmpStr);
+	tmpStr = "";
+
+	xFerCommandLine->setText((char *)alpm_option_get_xfercommand());
+	tmpStr = "";
+
 }
 
 void ConfigDialog::openAddDialog()
