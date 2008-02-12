@@ -32,7 +32,7 @@ class SysUpgradeDialog : public QDialog, private Ui::upgradeDialog
 	Q_OBJECT
 	
 public:
-	SysUpgradeDialog(AlpmHandler *hnd, QWidget *parent = 0);
+	explicit SysUpgradeDialog(AlpmHandler *hnd, QWidget *parent = 0);
 	~SysUpgradeDialog();
 	
 private slots:

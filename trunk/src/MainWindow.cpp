@@ -763,7 +763,17 @@ void MainWindow::upgradeAborted()
 
 void MainWindow::addUpgradeableToQueue()
 {
-	//FIXME: do sth like foreach (pkg, pkgs) item->setText("upgradable")... look in installPackage-function for more information
+	qDebug() << "UpgradeableToQueue";
+	if (aHandle->getUpgradeablePackages().isEmpty())
+		return;
+
+	foreach (QString package, aHandle->getUpgradeablePackages())
+	{
+		QTreeWidgetItem *item = pkgsViewWG->findItems(package, Qt::MatchExactly, 2).first();
+		item->setText(0, tr("Upgradable"));
+		item->setText(1, tr("Upgrade"));
+	}
+
 	upDl->deleteLater();
 	upActive = false;
 	return;
@@ -875,7 +885,7 @@ void MainWindow::widgetQueueToAlpmQueue()
 
 	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 1))
 		aHandle->addRemoveToQueue(itm->text(2));
-
+	//TODO: Dario: add upgradableToQueue too :P
 	
 	revActive = true;
 	

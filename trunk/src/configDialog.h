@@ -49,7 +49,7 @@ class ConfigDialog : public QDialog, public Ui::ConfigDialog
 {
 	Q_OBJECT
 public:
-	ConfigDialog(AlpmHandler *handler, QWidget *parent = 0);
+	explicit ConfigDialog(AlpmHandler *handler, QWidget *parent = 0);
 	~ConfigDialog();
 	bool doDbUpdate();
 

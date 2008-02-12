@@ -44,7 +44,7 @@ class QueueDialog : public QDialog, private Ui::transactionDialog
 	Q_OBJECT
 	
 public:
-	QueueDialog(AlpmHandler *hnd, QWidget *parent = 0);
+	explicit QueueDialog(AlpmHandler *hnd, QWidget *parent = 0);
 	~QueueDialog();
 	void startProcessing();
 	

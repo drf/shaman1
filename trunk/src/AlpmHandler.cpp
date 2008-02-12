@@ -32,6 +32,7 @@
 #include <string.h>
 #include <limits.h>
 #include <QDir>
+#include <QDebug>
 
 #include "callbacks.h"
 
@@ -151,14 +152,16 @@ QStringList AlpmHandler::getUpgradeablePackages()
 	retlist.clear();
 
 	syncdbs = alpm_list_first(sync_databases);
+	qDebug() << "First";
 
 	if(alpm_sync_sysupgrade(db_local, syncdbs, &syncpkgs) == -1) 
 		return retlist;
-
+	qDebug() << "Second";
 	if(!syncpkgs)
 		return retlist;
 	else
 	{
+		qDebug() << "Third";
 		while(syncpkgs != NULL)
 		{
 			retlist.append(alpm_pkg_get_name((pmpkg_t *) alpm_list_getdata(syncpkgs)));
@@ -919,7 +922,7 @@ bool AlpmHandler::isProviderInstalled(const QString &provider)
 			QStringList tmp(prv.at(i).split("="));
 			if(!tmp.at(0).compare(provider))
 			{
-				printf("Provider is installed and it's %s\n", alpm_pkg_get_name(
+				printf("Provider is installed and it is %s\n", alpm_pkg_get_name(
 				(pmpkg_t *)alpm_list_getdata(localpack)));
 				return true;
 			}

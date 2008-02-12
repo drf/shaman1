@@ -41,7 +41,7 @@ class MainWindow : public QMainWindow, private Ui::MainWindow, private StringUti
 	Q_OBJECT
 	
 public:
-	MainWindow(AlpmHandler *handler, QMainWindow *parent = 0);
+	explicit MainWindow(AlpmHandler *handler, QMainWindow *parent = 0);
 	~MainWindow();
 	void doUpdView();
 
