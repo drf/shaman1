@@ -224,10 +224,7 @@ bool AlpmHandler::reloadPacmanConfiguration()
 {
 	PacmanConf pdata;
 
-	pdata = getPacmanConf(true);
-
-	if(!pdata.loaded)
-		return false;
+	
 
 	/* After reloading configuration, we immediately commit changes to Alpm,
 	 * otherwise users would have to reboot qtPacman. You know, we're not
@@ -241,6 +238,51 @@ bool AlpmHandler::reloadPacmanConfiguration()
 	}
 	
 	alpm_db_unregister(db_local);
+
+	if(pdata.HoldPkg != NULL)
+		pdata.HoldPkg = alpm_option_get_holdpkgs();
+	if(pdata.IgnorePkg != NULL)
+		pdata.IgnorePkg = alpm_option_get_ignorepkgs();
+	if(pdata.IgnoreGrp != NULL)
+		pdata.IgnoreGrp = alpm_option_get_ignoregrps();
+	if(pdata.NoExtract != NULL)
+		pdata.NoExtract = alpm_option_get_noextracts();
+	if(pdata.NoUpgrade != NULL)
+		pdata.NoUpgrade = alpm_option_get_noupgrades();
+
+	while(pdata.HoldPkg != NULL)
+	{
+		alpm_option_remove_holdpkg((char *)alpm_list_getdata(pdata.HoldPkg));
+		pdata.HoldPkg = alpm_list_next(pdata.HoldPkg);
+	}
+	while(pdata.IgnorePkg != NULL)
+	{
+		alpm_option_remove_ignorepkg((char *)alpm_list_getdata(pdata.IgnorePkg));
+		pdata.IgnorePkg = alpm_list_next(pdata.IgnorePkg);
+	}
+	while(pdata.IgnoreGrp != NULL)
+	{
+		alpm_option_remove_ignoregrp((char *)alpm_list_getdata(pdata.IgnoreGrp));
+		pdata.IgnoreGrp = alpm_list_next(pdata.IgnoreGrp);
+	}
+	while(pdata.NoExtract != NULL)
+	{
+		alpm_option_remove_noextract((char *)alpm_list_getdata(pdata.NoExtract));
+		pdata.NoExtract = alpm_list_next(pdata.NoExtract);
+		printf("figa\n");
+	}
+	while(pdata.NoUpgrade != NULL)
+	{
+		alpm_option_remove_noupgrade((char *)alpm_list_getdata(pdata.NoUpgrade));
+		pdata.NoUpgrade = alpm_list_next(pdata.NoUpgrade);
+	}
+	
+	alpm_option_remove_cachedir("/var/cache/pacman/pkg");
+	
+	pdata = getPacmanConf(true);
+
+		if(!pdata.loaded)
+			return false;
 
 	setUpAlpmSettings();
 
@@ -288,13 +330,35 @@ bool AlpmHandler::setUpAlpmSettings()
 
 	if(pdata.xferCommand != NULL)
 		alpm_option_set_xfercommand(pdata.xferCommand);
-
+	
 	alpm_option_set_dlcb(cb_dl_progress);
 	alpm_option_set_nopassiveftp(pdata.noPassiveFTP);
-	alpm_option_set_holdpkgs(pdata.HoldPkg);
-	alpm_option_set_ignorepkgs(pdata.IgnorePkg);
-	alpm_option_set_ignoregrps(pdata.IgnoreGrp);
-	alpm_option_set_usedelta(pdata.useDelta);
+	while(pdata.HoldPkg != NULL)
+	{
+		alpm_option_add_holdpkg((char *)alpm_list_getdata(pdata.HoldPkg));
+		pdata.HoldPkg = alpm_list_next(pdata.HoldPkg);
+	}
+	while(pdata.IgnorePkg != NULL)
+	{
+		alpm_option_add_ignorepkg((char *)alpm_list_getdata(pdata.IgnorePkg));
+		pdata.IgnorePkg = alpm_list_next(pdata.IgnorePkg);
+	}
+	while(pdata.IgnoreGrp != NULL)
+	{
+		alpm_option_add_ignoregrp((char *)alpm_list_getdata(pdata.IgnoreGrp));
+		pdata.IgnoreGrp = alpm_list_next(pdata.IgnoreGrp);
+	}
+	while(pdata.NoExtract != NULL)
+	{
+		alpm_option_add_noextract((char *)alpm_list_getdata(pdata.NoExtract));
+		pdata.NoExtract = alpm_list_next(pdata.NoExtract);
+	}
+	while(pdata.NoUpgrade != NULL)
+	{
+		alpm_option_add_noupgrade((char *)alpm_list_getdata(pdata.NoUpgrade));
+		pdata.NoUpgrade = alpm_list_next(pdata.NoUpgrade);
+	}
+	//alpm_option_set_usedelta(pdata.useDelta); Until a proper implementation is there
 	alpm_option_set_usesyslog(pdata.useSysLog);
 
 	sync_databases = alpm_option_get_syncdbs();

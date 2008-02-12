@@ -282,6 +282,8 @@ ConfigurationParser::ConfigurationParser()
     pacData.xferCommand = NULL;
     pacData.IgnoreGrp = NULL;
     pacData.IgnorePkg = NULL;
+    pacData.NoExtract = NULL;
+    pacData.NoUpgrade = NULL;
 	pacData.loaded = false;
 }
 
@@ -297,6 +299,16 @@ PacmanConf ConfigurationParser::getPacmanConf(bool forcereload = false)
 	
 	pacData.syncdbs.clear();
 	pacData.serverAssoc.clear();
+
+	pacData.useDelta = 0;
+	pacData.useSysLog = 0;
+	pacData.noPassiveFTP = 0;
+	pacData.xferCommand = NULL;
+	pacData.IgnoreGrp = NULL;
+	pacData.IgnorePkg = NULL;
+	pacData.NoExtract = NULL;
+	pacData.NoUpgrade = NULL;
+	pacData.loaded = false;
 	
 	parsePacmanConfig("/etc/pacman.conf", NULL);
 	

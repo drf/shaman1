@@ -561,6 +561,66 @@ void ConfigDialog::saveConfiguration()
 
 		delete(itm);
 	}
+	
+	/* Well done, let's start committing changes to pacman's options */
+	if(noPassiveFtpBox->checkState() == Qt::Checked)
+		parser.editPacmanKey("options/NoPassiveFtp", "", 0);
+	else
+		parser.editPacmanKey("options/NoPassiveFtp", NULL, 2);
+
+	if(holdPkgLine->isModified())
+	{
+		if(holdPkgLine->text().isEmpty())
+			parser.editPacmanKey("options/HoldPkg", NULL, 2);
+		else
+			if(!parser.editPacmanKey("options/HoldPkg", holdPkgLine->text(), 0))
+				parser.editPacmanKey("options/HoldPkg", holdPkgLine->text(), 1);
+	}
+
+	if(ignorePkgLine->isModified())
+	{
+		if(ignorePkgLine->text().isEmpty())
+			parser.editPacmanKey("options/IgnorePkg", NULL, 2);
+		else
+			if(!parser.editPacmanKey("options/IgnorePkg", ignorePkgLine->text(), 0))
+				parser.editPacmanKey("options/IgnorePkg", ignorePkgLine->text(), 1);
+	}
+
+	if(ignoreGrpsLine->isModified())
+	{
+		if(ignoreGrpsLine->text().isEmpty())
+			parser.editPacmanKey("options/IgnoreGroup", NULL, 2);
+		else
+			if(!parser.editPacmanKey("options/IgnoreGroup", ignoreGrpsLine->text(), 0))
+				parser.editPacmanKey("options/IgnoreGroup", ignoreGrpsLine->text(), 1);
+	}
+
+	if(noUpgradeLine->isModified())
+	{
+		if(noUpgradeLine->text().isEmpty())
+			parser.editPacmanKey("options/NoUpgrade", NULL, 2);
+		else
+			if(!parser.editPacmanKey("options/NoUpgrade", noUpgradeLine->text(), 0))
+				parser.editPacmanKey("options/NoUpgrade", noUpgradeLine->text(), 1);
+	}
+
+	if(noExtractLine->isModified())
+	{
+		if(noExtractLine->text().isEmpty())
+			parser.editPacmanKey("options/NoExtract", NULL, 2);
+		else
+			if(!parser.editPacmanKey("options/NoExtract", noExtractLine->text(), 0))
+				parser.editPacmanKey("options/NoExtract", noExtractLine->text(), 1);
+	}
+
+	if(xFerCommandLine->isModified())
+	{
+		if(xFerCommandLine->text().isEmpty())
+			parser.editPacmanKey("options/XferCommand", NULL, 2);
+		else
+			if(!parser.editPacmanKey("options/XferCommand", xFerCommandLine->text(), 0))
+				parser.editPacmanKey("options/XferCommand", xFerCommandLine->text(), 1);
+	}
 
 
 	/* Ok, saving finished, commit changes to Alpm now */
