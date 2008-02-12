@@ -39,6 +39,7 @@ upDb(false)
 	setupRepos();
 	connect(listWidget, SIGNAL(currentRowChanged(int)), this, SLOT(changeWidget(int)));
 	connect(this, SIGNAL(accepted()), SLOT(saveConfiguration()));
+	connect(addMirrorButton, SIGNAL(clicked()), SLOT(addMirror()));
 }
 
 ConfigDialog::~ConfigDialog()
@@ -658,6 +659,32 @@ void ConfigDialog::saveConfiguration()
 		msgBox->deleteLater();
 	}
 
+}
+
+void ConfigDialog::addMirror()
+{
+	if(addMirrorLine->text().isEmpty())
+		return;
+	
+	QString mirror(addMirrorLine->text());
+	
+	if(!mirror.contains(QString("$repo")) || (!mirror.startsWith(QString("http://")) &&
+			!mirror.startsWith(QString("ftp://"))) || mirror.contains(QString(" ")))
+	{
+		QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Add Mirror"),
+				tr("Mirror Format is incorrect. Your mirror should look like this:\nhttp://mirror.org/$repo/os/i686"), QMessageBox::Ok);
+		message->exec();
+		return;
+	}
+	
+	/* Ok, our mirror should be valid. Let's add it to mirrorlist. */
+	QString toInsert("Server=");
+	toInsert.append(mirror);
+	
+	QFile file("/etc/pacman.d/mirrorlist");
+	file.open(QIODevice::Append | QIODevice::Text);
+	
+	
 }
 
 bool ConfigDialog::doDbUpdate()

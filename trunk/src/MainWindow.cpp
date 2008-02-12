@@ -727,7 +727,7 @@ void MainWindow::startUpgrading()
 
 	dbdialog->deleteLater();
 
-	if(!aHandle->getUpgradeablePackages())
+	if(aHandle->getUpgradeablePackages().isEmpty())
 	{
 		/* Display a simple popup saying the system is up-to-date. */
 		QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("System-Update"), tr("Your system is up to date!"), QMessageBox::Ok, this);

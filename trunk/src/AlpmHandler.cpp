@@ -143,21 +143,29 @@ alpm_list_t *AlpmHandler::getAvailableRepos()
 	return sync_databases;
 }
 
-alpm_list_t *AlpmHandler::getUpgradeablePackages()
+QStringList AlpmHandler::getUpgradeablePackages()
 {
 	alpm_list_t *syncpkgs = NULL;
-
+	QStringList retlist;
 	alpm_list_t *syncdbs;
+	retlist.clear();
 
 	syncdbs = alpm_list_first(sync_databases);
 
 	if(alpm_sync_sysupgrade(db_local, syncdbs, &syncpkgs) == -1) 
-		return NULL;
+		return retlist;
 
 	if(!syncpkgs)
-		return NULL;
+		return retlist;
 	else
-		return syncpkgs;
+	{
+		while(syncpkgs != NULL)
+		{
+			retlist.append(alpm_pkg_get_name((pmpkg_t *) alpm_list_getdata(syncpkgs)));
+			syncpkgs = alpm_list_next(syncpkgs);
+		}
+		return retlist;
+	}
 
 }
 

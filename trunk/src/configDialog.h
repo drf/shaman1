@@ -65,6 +65,7 @@ private slots:
 	void showFailure(int act);
 	void cleanThread();
 	void saveConfiguration();
+	void addMirror();
 
 private:
 	void setupRepos();

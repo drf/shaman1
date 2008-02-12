@@ -63,7 +63,7 @@ public:
 	alpm_list_t *getAvailableRepos();
 	alpm_list_t *getPackageGroups();
 	alpm_list_t *searchPackages(char *keywords, char *repo, bool local);
-	alpm_list_t *getUpgradeablePackages();
+	QStringList getUpgradeablePackages();
 
 	QStringList getPackageDependencies(pmpkg_t *package);
 	QStringList getPackageDependencies(const QString &name, const QString &repo);

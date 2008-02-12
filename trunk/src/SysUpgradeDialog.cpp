@@ -38,8 +38,7 @@ aHandle(hnd)
 		initSysUpgrade();
 	else
 	{
-
-		alpm_list_t *data;
+		QStringList data;
 
 		setupUi(this);
 		setWindowModality(Qt::ApplicationModal);
@@ -50,7 +49,7 @@ aHandle(hnd)
 				"packages</b>. You can either<br> upgrade "
 				"immediately or add them to the current Queue"
 				"<br> and process them later.")).arg(
-						alpm_list_count(data)));
+						data.size()));
 
 		connect(abortButton, SIGNAL(clicked()), SLOT(abort()));
 		connect(addToQueue, SIGNAL(clicked()), SLOT(addPkg()));
