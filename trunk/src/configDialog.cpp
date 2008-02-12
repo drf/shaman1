@@ -665,9 +665,9 @@ void ConfigDialog::addMirror()
 {
 	if(addMirrorLine->text().isEmpty())
 		return;
-	
+
 	QString mirror(addMirrorLine->text());
-	
+
 	if(!mirror.contains(QString("$repo")) || (!mirror.startsWith(QString("http://")) &&
 			!mirror.startsWith(QString("ftp://"))) || mirror.contains(QString(" ")))
 	{
@@ -676,15 +676,26 @@ void ConfigDialog::addMirror()
 		message->exec();
 		return;
 	}
-	
+
 	/* Ok, our mirror should be valid. Let's add it to mirrorlist. */
 	QString toInsert("Server=");
 	toInsert.append(mirror);
-	
+
 	QFile file("/etc/pacman.d/mirrorlist");
 	file.open(QIODevice::Append | QIODevice::Text);
+
+	file.write(toInsert.toAscii().data(), toInsert.length());
+	file.write("\n", 1);
+
+	file.close();
 	
+	mirrorBox->addItem(mirror);
+
+	QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Add Mirror"),
+			tr("Your Mirror was successfully added!\nIt is now available in mirrorlist."), QMessageBox::Ok);
+	message->exec();
 	
+	addMirrorLine->clear();
 }
 
 bool ConfigDialog::doDbUpdate()
