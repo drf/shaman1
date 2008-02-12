@@ -89,6 +89,7 @@ public:
 	int makepath(const char *path);
 	
 	bool isInstalled(pmpkg_t *pkg);
+	bool isInstalled(const QString &pkg);
 
 	bool updateDatabase();
 	bool fullSystemUpgrade();

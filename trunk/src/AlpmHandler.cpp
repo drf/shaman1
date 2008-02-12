@@ -489,6 +489,15 @@ bool AlpmHandler::isInstalled(pmpkg_t *pkg)
 	return true;
 }
 
+bool AlpmHandler::isInstalled(const QString &pkg)
+{
+	pmpkg_t *localpackage = alpm_db_get_pkg(db_local, pkg.toAscii().data());
+	if(localpackage == NULL)
+		return false;
+
+	return true;
+}
+
 QStringList AlpmHandler::getPackageFiles(pmpkg_t *package)
 {
 	alpm_list_t *files;
