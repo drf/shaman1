@@ -34,12 +34,12 @@
 
 using namespace std;
 
-alpm_list_t *ConfigurationParser::setrepeatingoption(QString *ptr)
+alpm_list_t *ConfigurationParser::setrepeatingoption(const QString &ptr)
 {
 	QStringList strlist;
 	alpm_list_t *list = NULL;
 
-	strlist = ptr->split(" ", QString::SkipEmptyParts);
+	strlist = ptr.split(" ", QString::SkipEmptyParts);
 	
 	for (int i = 0; i < strlist.size(); ++i)
 	{
@@ -52,9 +52,9 @@ alpm_list_t *ConfigurationParser::setrepeatingoption(QString *ptr)
 	return list;
 }
 
-void ConfigurationParser::parsePacmanConfig(QString *file, QString *givendb)
+void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &givendb)
 {
-	QSettings *settings = new QSettings(*file, QSettings::NativeFormat);
+	QSettings *settings = new QSettings(file, QSettings::NativeFormat);
 	
 	QString db(NULL);
 	int serverparsed = 0;
@@ -63,7 +63,7 @@ void ConfigurationParser::parsePacmanConfig(QString *file, QString *givendb)
 		
 	/* if we are passed a db, use it as our starting point */
 	if(givendb != NULL)
-		db.operator=(*givendb);
+		db.operator=(givendb);
 
 	foreach(QString str, settings->allKeys())
 	{
@@ -97,10 +97,7 @@ void ConfigurationParser::parsePacmanConfig(QString *file, QString *givendb)
 			
 			
 			if(!splitted.at(1).compare("Include"))
-			{
-				QString tmp(settings->value(str).toString());
-				parsePacmanConfig(&tmp, &db);
-			}
+				parsePacmanConfig(settings->value(str).toString(), db);
 		}
 	}
 
@@ -113,8 +110,7 @@ void ConfigurationParser::parsePacmanConfig(QString *file, QString *givendb)
 
 	if(settings->contains("options/Include"))
 	{
-		QString tmp(settings->value("options/Include").toString());
-		parsePacmanConfig(&tmp, &db);
+		parsePacmanConfig(settings->value("options/Include").toString(), db);
 		if(!pacData.loaded)
 		{
 			pacData.loaded = false;
@@ -123,30 +119,15 @@ void ConfigurationParser::parsePacmanConfig(QString *file, QString *givendb)
 		}
 	}
 	if(settings->contains("options/NoUpgrade"))
-	{
-		QString tmp(settings->value("options/NoUpgrade").toString());
-		pacData.NoUpgrade = setrepeatingoption(&tmp);
-	}
+		pacData.NoUpgrade = setrepeatingoption(settings->value("options/NoUpgrade").toString());
 	if(settings->contains("options/NoExtract"))
-	{
-		QString tmp(settings->value("options/NoExtract").toString());
-		pacData.NoExtract = setrepeatingoption(&tmp);
-	}
+		pacData.NoExtract = setrepeatingoption(settings->value("options/NoExtract").toString());
 	if(settings->contains("options/IgnorePkg"))
-	{
-		QString tmp(settings->value("options/IgnorePkg").toString());
-		pacData.IgnorePkg = setrepeatingoption(&tmp);
-	}
+		pacData.IgnorePkg = setrepeatingoption(settings->value("options/IgnorePkg").toString());
 	if(settings->contains("options/IgnoreGroup"))
-	{
-		QString tmp(settings->value("options/IgnoreGroup").toString());
-		pacData.IgnoreGrp = setrepeatingoption(&tmp);
-	}
+		pacData.IgnoreGrp = setrepeatingoption(settings->value("options/IgnoreGroup").toString());
 	if(settings->contains("options/HoldPkg"))
-	{
-		QString tmp(settings->value("options/HoldPkg").toString());
-		pacData.HoldPkg = setrepeatingoption(&tmp);
-	}
+		pacData.HoldPkg = setrepeatingoption(settings->value("options/HoldPkg").toString());
 	if(settings->contains("options/XferCommand"))
 		pacData.xferCommand = settings->value("options/XferCommand").toString().toAscii().data();
 
@@ -273,8 +254,7 @@ PacmanConf ConfigurationParser::getPacmanConf(bool forcereload = false)
 	if(pacData.loaded && !forcereload)
 		return pacData;
 	
-	QString path("/etc/pacman.conf");
-	parsePacmanConfig(&path, NULL);
+	parsePacmanConfig("/etc/pacman.conf", NULL);
 	
 	return pacData;
 }

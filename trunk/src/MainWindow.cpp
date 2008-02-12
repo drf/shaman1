@@ -415,17 +415,14 @@ void MainWindow::showPkgInfo()
 	pkgInfo->setHtml(description);
 
 	dependenciesWidget->clear(); //First clear the widget
-	QString tmp(alpm_pkg_get_name(pkg));
-	QString tmp2(pkgsViewWG->currentItem()->text(5));
-	foreach (QString dep, aHandle->getPackageDependencies(&tmp , &tmp2))
+	foreach (QString dep, aHandle->getPackageDependencies(alpm_pkg_get_name(pkg) , pkgsViewWG->currentItem()->text(5)))
 	{
 		dependenciesWidget->addItem(dep);
 	}
 
 	filesWidget->clear();
 	filesWidget->header()->hide();
-	QString tmp3(pkgsViewWG->selectedItems().first()->text(2));
-	QStringList files = aHandle->getPackageFiles(&tmp3);
+	QStringList files = aHandle->getPackageFiles(pkgsViewWG->selectedItems().first()->text(2));
 	foreach (QString file, files)
 	{
 		QStringList splitted = file.split("/");
@@ -565,8 +562,7 @@ void MainWindow::installAllPackages()
 	QListWidgetItem *item = repoList->selectedItems().first();
 	foreach (QTreeWidgetItem *item, pkgsViewWG->findItems(item->text(), Qt::MatchExactly, 5))
 	{
-		QString tmp(item->text(2));
-		installPackage(&tmp);
+		installPackage(item->text(2));
 	}
 }
 
@@ -578,8 +574,7 @@ void MainWindow::removeAllPackages()
 	QListWidgetItem *item = repoList->selectedItems().first();
 	foreach (QTreeWidgetItem *item, pkgsViewWG->findItems(item->text(), Qt::MatchExactly, 5))
 	{
-		QString tmp(item->text(2));
-		removePackage(&tmp);
+		removePackage(item->text(2));
 	}
 }
 
@@ -591,8 +586,7 @@ void MainWindow::cancelAllActions()
 	QListWidgetItem *item = repoList->selectedItems().first();
 	foreach (QTreeWidgetItem *item, pkgsViewWG->findItems(item->text(), Qt::MatchExactly, 5))
 	{
-		QString tmp(item->text(2));
-		cancelAction(&tmp);
+		cancelAction(item->text(2));
 	}
 }
 
@@ -600,21 +594,18 @@ void MainWindow::installPackage()
 {
 	qDebug() << "Install Package";
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
-	{
-		QString tmp = item->text(2);
-		installPackage(&tmp);
-	}
+		installPackage(item->text(2));
 }
 
-void MainWindow::installPackage(QString *package)
+void MainWindow::installPackage(const QString &package)
 {
-	qDebug() << "Install package: " + *package;
-	if (pkgsViewWG->findItems(*package, (Qt::MatchFlags)Qt::MatchExactly, 2).isEmpty())
+	qDebug() << "Install package: " + package;
+	if (pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 2).isEmpty())
 	{
-		qDebug() << "Can't find package: " + *package;
+		qDebug() << "Can't find package: " + package;
 		return;
 	}
-	QTreeWidgetItem *item = pkgsViewWG->findItems(*package, (Qt::MatchFlags)Qt::MatchExactly, 2).first();
+	QTreeWidgetItem *item = pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 2).first();
 
 	qDebug() << item->text(1);
 	if (item->text(0) == tr("Installed") || item->text(1) == tr("Install"))
@@ -625,12 +616,10 @@ void MainWindow::installPackage(QString *package)
 		item->setIcon(1, QIcon(":/Icons/icons/list-add.png"));
 	}
 	qDebug() << item->text(5);
-	
-	QString tmp(item->text(5));
 
-	foreach (QString dep, aHandle->getPackageDependencies(package, &tmp))
+	foreach (QString dep, aHandle->getPackageDependencies(package, item->text(5)))
 	{
-		installPackage(&dep);
+		installPackage(dep);
 	}
 }
 
@@ -638,21 +627,18 @@ void MainWindow::removePackage()
 {
 	qDebug() << "Remove Package";
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
-	{
-		QString tmp(item->text(2));
-		removePackage(&tmp);
-	}
+		removePackage(item->text(2));
 }
 
-void MainWindow::removePackage(QString *package)
+void MainWindow::removePackage(const QString &package)
 {
-	qDebug() << "Uninstall package: " + *package;
-	if (pkgsViewWG->findItems(*package, (Qt::MatchFlags)Qt::MatchExactly, 2).isEmpty())
+	qDebug() << "Uninstall package: " + package;
+	if (pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 2).isEmpty())
 	{
-		qDebug() << "Can't find package: " + *package;
+		qDebug() << "Can't find package: " + package;
 		return;
 	}
-	QTreeWidgetItem *item = pkgsViewWG->findItems(*package, (Qt::MatchFlags)Qt::MatchExactly, 2).first();
+	QTreeWidgetItem *item = pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 2).first();
 
 	qDebug() << item->text(1);
 	if (item->text(0) == tr("Not Installed") || item->text(1) == tr("Remove"))
@@ -663,12 +649,10 @@ void MainWindow::removePackage(QString *package)
 		item->setIcon(1, QIcon(":/Icons/icons/list-remove.png"));
 	}
 	qDebug() << item->text(5);
-	
-	QString tmp(item->text(5));
 
-	foreach (QString dep, aHandle->getDependenciesOnPackage(package, &tmp))
+	foreach (QString dep, aHandle->getDependenciesOnPackage(package, item->text(5)))
 	{
-		removePackage(&dep);
+		removePackage(dep);
 	}
 }
 
@@ -689,53 +673,44 @@ void MainWindow::completeRemovePackage()
 
 	//Now we remove the on-package-dependencies and the dependencies...
 	
-	QString tmp(item->text(2));
-	QString tmp2(item->text(5));
-	
-	foreach (QString onDep, aHandle->getDependenciesOnPackage(&tmp, &tmp2))
+	foreach (QString onDep, aHandle->getDependenciesOnPackage(item->text(2), item->text(5)))
 	{
-		removePackage(&onDep);
+		removePackage(onDep);
 	}
-	foreach (QString dep, aHandle->getPackageDependencies(&tmp, &tmp2))
+	foreach (QString dep, aHandle->getPackageDependencies(item->text(2), item->text(5)))
 	{
-		removePackage(&dep);
+		removePackage(dep);
 	}
 }
 
 void MainWindow::cancelAction()
 {
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
-	{
-		QString tmp(item->text(2));
-		cancelAction(&tmp);
-	}
+		cancelAction(item->text(2));
 }
 
-void MainWindow::cancelAction(QString *package)
+void MainWindow::cancelAction(const QString &package)
 {
-	qDebug() << "cancel action for: " + *package;
-	if (pkgsViewWG->findItems(*package, (Qt::MatchFlags)Qt::MatchExactly, 2).isEmpty())
+	qDebug() << "cancel action for: " + package;
+	if (pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 2).isEmpty())
 	{
-		qDebug() << "Can't find package: " + *package;
+		qDebug() << "Can't find package: " + package;
 		return;
 	}
-	QTreeWidgetItem *item = pkgsViewWG->findItems(*package, (Qt::MatchFlags)Qt::MatchExactly, 2).first();
+	QTreeWidgetItem *item = pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 2).first();
 	if (item->text(1).isEmpty())
 		return;
 
 	item->setText(1, QString());
 	item->setIcon(1, QIcon());
 	
-	QString tmp(item->text(2));
-	QString tmp2(item->text(5));
-	
-	foreach (QString onDep, aHandle->getDependenciesOnPackage(&tmp, &tmp2))
+	foreach (QString onDep, aHandle->getDependenciesOnPackage(item->text(2), item->text(5)))
 	{
-		cancelAction(&onDep);
+		cancelAction(onDep);
 	}
-	foreach (QString dep, aHandle->getPackageDependencies(&tmp, &tmp2))
+	foreach (QString dep, aHandle->getPackageDependencies(item->text(2), item->text(5)))
 	{
-		cancelAction(&dep);
+		cancelAction(dep);
 	}
 
 }

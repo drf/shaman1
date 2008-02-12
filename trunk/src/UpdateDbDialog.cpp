@@ -38,7 +38,7 @@ UpdateDbDialog::UpdateDbDialog(AlpmHandler *hnd, QWidget *parent)
 	
 	connect(aHandle, SIGNAL(streamDbUpdatingStatus(char*,int)),
 				SLOT(updateLabel(char*, int)));
-	connect(aHandle, SIGNAL(dbQty(QStringList*)), SLOT(createWidgets(QStringList*)));
+	connect(aHandle, SIGNAL(dbQty(const QStringList&)), SLOT(createWidgets(const QStringList&)));
 	connect(aHandle, SIGNAL(dbUpdated()), SLOT(setUpdated()));
 	connect(aHandle, SIGNAL(dbUpdatePerformed()), SLOT(updateTotalProg()));
 	connect(&CbackReference, SIGNAL(streamTransDlProg(char*,int,int,int,int,int,int)), 
@@ -48,7 +48,7 @@ UpdateDbDialog::UpdateDbDialog(AlpmHandler *hnd, QWidget *parent)
 UpdateDbDialog::~UpdateDbDialog()
 {
 	disconnect(aHandle, SIGNAL(streamDbUpdatingStatus(char*,int)), 0, 0);
-	disconnect(aHandle, SIGNAL(dbQty(QStringList*)), 0, 0);
+	disconnect(aHandle, SIGNAL(dbQty(const QStringList&)), 0, 0);
 	disconnect(aHandle, SIGNAL(dbUpdated()), 0, 0);
 	disconnect(&CbackReference, SIGNAL(streamTransDlProg(char*,int,int,int,int,int,int)), 0, 0);
 }
@@ -130,14 +130,14 @@ void UpDbThread::run()
 	aHandle->updateDatabase();
 }
 
-void UpdateDbDialog::createWidgets(QStringList *list)
+void UpdateDbDialog::createWidgets(const QStringList &list)
 {
-	for (int i = 0; i < list->size(); ++i)
+	for (int i = 0; i < list.size(); ++i)
 	{
 		QLabel *labelDb = new QLabel(this);
 		QLabel *labelStatus = new QLabel(this);
 		
-		labelDb->setText(QString(tr("<b>%1</b>")).arg(list->at(i)));
+		labelDb->setText(QString(tr("<b>%1</b>")).arg(list.at(i)));
 		labelStatus->setText(QString(tr("<i>Waiting...</i>")));
 		
 		gridLayout->addWidget(labelDb, i+1, 0);

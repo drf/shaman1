@@ -68,10 +68,10 @@ public:
 	bool editPacmanKey(const QString &key, const QString &value, int action);
 	
 protected:
-	alpm_list_t *setrepeatingoption(QString *ptr);
+	alpm_list_t *setrepeatingoption(const QString &ptr);
 	
 private:
-	void parsePacmanConfig(QString *file, QString *givendb);
+	void parsePacmanConfig(const QString &file, const QString &givendb);
 	void parsePaKmodConf();
 	
 private:

@@ -63,7 +63,7 @@ AlpmHandler::~AlpmHandler()
 	alpm_release();
 }
 
-pmpkg_t *AlpmHandler::getPackageFromName(QString *name, QString *repo)
+pmpkg_t *AlpmHandler::getPackageFromName(const QString &name, const QString &repo)
 {
 	alpm_list_t *dbsync = alpm_list_first(sync_databases);
 	
@@ -71,10 +71,10 @@ pmpkg_t *AlpmHandler::getPackageFromName(QString *name, QString *repo)
 	{
 		pmdb_t *dbcrnt = (pmdb_t *)alpm_list_getdata(dbsync);
 
-		if(!repo->compare(QString((char *)alpm_db_get_name(dbcrnt))))
+		if(!repo.compare(QString((char *)alpm_db_get_name(dbcrnt))))
 		{
 			dbsync = alpm_list_first(dbsync);
-			return alpm_db_get_pkg(dbcrnt, name->toAscii().data());
+			return alpm_db_get_pkg(dbcrnt, name.toAscii().data());
 		}
 
 		dbsync = alpm_list_next(dbsync);
@@ -176,7 +176,7 @@ bool AlpmHandler::updateDatabase()
 		syncdbs = alpm_list_next(syncdbs);
 	}
 	
-	emit dbQty(&list);
+	emit dbQty(list);
 	
 	syncdbs = alpm_list_first(sync_databases);
 
@@ -304,10 +304,7 @@ alpm_list_t *AlpmHandler::searchPackages(char *keywords, char *repo, bool local)
 	syncdbs = alpm_list_first(sync_databases);
 
 	if(keywords != NULL)
-	{
-		QString tmp(keywords);
-		searchs = setrepeatingoption(&tmp);
-	}
+		searchs = setrepeatingoption(keywords);
 
 	if(local)
 	{
@@ -433,7 +430,7 @@ QStringList AlpmHandler::getPackageDependencies(pmpkg_t *package)
 	return retlist;
 }
 
-QStringList AlpmHandler::getPackageDependencies(QString *name, QString *repo)
+QStringList AlpmHandler::getPackageDependencies(const QString &name, const QString &repo)
 {
 	alpm_list_t *deps;
 	QStringList retlist;
@@ -465,7 +462,7 @@ QStringList AlpmHandler::getDependenciesOnPackage(pmpkg_t *package)
 	return retlist;
 }
 
-QStringList AlpmHandler::getDependenciesOnPackage(QString *name, QString *repo)
+QStringList AlpmHandler::getDependenciesOnPackage(const QString &name, const QString &repo)
 {
 	alpm_list_t *deps;
 	QStringList retlist;
@@ -506,12 +503,12 @@ QStringList AlpmHandler::getPackageFiles(pmpkg_t *package)
 	return retlist;
 }
 
-QStringList AlpmHandler::getPackageFiles(QString *name)
+QStringList AlpmHandler::getPackageFiles(const QString &name)
 {
 	alpm_list_t *files;
 	QStringList retlist;
 	
-	files = alpm_pkg_get_files(alpm_db_get_pkg(db_local, name->toAscii().data()));
+	files = alpm_pkg_get_files(alpm_db_get_pkg(db_local, name.toAscii().data()));
 	
 	while(files != NULL)
 	{
@@ -534,12 +531,12 @@ void AlpmHandler::initQueue(bool rem, bool syncd)
 		toRemove.clear();
 }
 
-void AlpmHandler::addSyncToQueue(QString toAdd)
+void AlpmHandler::addSyncToQueue(const QString &toAdd)
 {
 	toSync.append(toAdd);
 }
 
-void AlpmHandler::addRemoveToQueue(QString toRm)
+void AlpmHandler::addRemoveToQueue(const QString &toRm)
 {
 	toRemove.append(toRm);
 }
@@ -801,7 +798,7 @@ int AlpmHandler::makepath(const char *path)
 	return(0);
 }
 
-QStringList AlpmHandler::getProviders(QString *name, QString *repo)
+QStringList AlpmHandler::getProviders(const QString &name, const QString &repo)
 {
 	alpm_list_t *provides;
 	QStringList retlist;

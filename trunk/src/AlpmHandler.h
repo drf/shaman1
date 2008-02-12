@@ -66,19 +66,19 @@ public:
 	alpm_list_t *getUpgradeablePackages();
 
 	QStringList getPackageDependencies(pmpkg_t *package);
-	QStringList getPackageDependencies(QString *name, QString *repo);
+	QStringList getPackageDependencies(const QString &name, const QString &repo);
 
 	QStringList getDependenciesOnPackage(pmpkg_t *package);
-	QStringList getDependenciesOnPackage(QString *name, QString *repo);
+	QStringList getDependenciesOnPackage(const QString &name, const QString &repo);
 	
 	QStringList getPackageFiles(pmpkg_t *package);
-	QStringList getPackageFiles(QString *name);
+	QStringList getPackageFiles(const QString &name);
 	
-	QStringList getProviders(QString *name, QString *repo);
+	QStringList getProviders(const QString &name, const QString &repo);
 	
 	void initQueue(bool rem, bool syncd);
-	void addSyncToQueue(QString toAdd);
-	void addRemoveToQueue(QString toRm);
+	void addSyncToQueue(const QString &toAdd);
+	void addRemoveToQueue(const QString &toRm);
 	void processQueue();
 	int getNumberOfTargets(int action);
 	
@@ -87,8 +87,7 @@ public:
 	
 	int rmrf(const char *path);
 	int makepath(const char *path);
-
-	bool isPerformable(string pkgname, int action);
+	
 	bool isInstalled(pmpkg_t *pkg);
 
 	bool updateDatabase();
@@ -104,12 +103,12 @@ private:
 	bool initTransaction(pmtranstype_t type, pmtransflag_t flags);
 	bool releaseTransaction();
 	bool setUpAlpmSettings();
-	pmpkg_t *getPackageFromName(QString *name, QString *repo);
+	pmpkg_t *getPackageFromName(const QString &name, const QString &repo);
 
 signals:
 	void streamDbUpdatingStatus(char *repo, int action);
 	void dbUpdated();
-	void dbQty(QStringList *db);
+	void dbQty(const QStringList &db);
 	void dbUpdatePerformed();
 
 private:
