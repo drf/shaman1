@@ -35,6 +35,7 @@ upDb(false)
 {
 	setupUi(this);
 	setupGeneral();
+	setupPacman();
 	setupRepos();
 	connect(listWidget, SIGNAL(currentRowChanged(int)), this, SLOT(changeWidget(int)));
 	connect(this, SIGNAL(accepted()), SLOT(saveConfiguration()));
@@ -141,6 +142,12 @@ void ConfigDialog::setupRepos()
 	connect(addThirdPartyButton, SIGNAL(clicked()), SLOT(openAddDialog()));
 	connect(editThirdPartyButton, SIGNAL(clicked()), SLOT(openEditDialog()));
 	connect(removeThirdPartyButton, SIGNAL(clicked()), SLOT(removeThirdParty()));
+}
+
+
+void ConfigDialog::setupPacman()
+{
+	listWidget->insertItem(0, new QListWidgetItem(QIcon(":/Icons/icons/network-server-database.png"), tr("Pacman")));//FIXME: Replace icon
 }
 
 void ConfigDialog::openAddDialog()

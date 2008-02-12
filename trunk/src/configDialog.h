@@ -69,6 +69,7 @@ private slots:
 private:
 	void setupRepos();
 	void setupGeneral();
+	void setupPacman();
 	QStringList getMirrorList();
 
 private:
