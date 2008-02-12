@@ -115,6 +115,7 @@ signals:
 private:
 	pmdb_t *db_local;
 	alpm_list_t *sync_databases;
+	alpm_list_t *registered_db;
 	pmdb_t *dbs_sync;
 	bool onTransaction;
 	bool removeAct;

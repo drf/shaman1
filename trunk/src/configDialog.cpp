@@ -23,15 +23,19 @@
 #include "AlpmHandler.h"
 
 #include <QLineEdit>
+#include <QSettings>
+#include <QMessageBox>
 
 ConfigDialog::ConfigDialog(AlpmHandler *handler, QWidget *parent)
   : QDialog(parent),
-    m_handler(handler)
+    m_handler(handler),
+    upDb(false)
 {
     setupUi(this);
     setupGeneral();
     setupRepos();
     connect(listWidget, SIGNAL(currentRowChanged(int)), this, SLOT(changeWidget(int)));
+    connect(this, SIGNAL(accepted()), SLOT(saveConfiguration()));
 }
 
 ConfigDialog::~ConfigDialog()
@@ -48,15 +52,19 @@ void ConfigDialog::setupGeneral()
 
 void ConfigDialog::setupRepos()
 {
-        listWidget->addItem(new QListWidgetItem(QIcon(":/Icons/icons/network-server-database.png"), tr("Repositories")));
+    listWidget->addItem(new QListWidgetItem(QIcon(":/Icons/icons/network-server-database.png"), tr("Repositories")));
 	alpm_list_t *repos = alpm_list_first(m_handler->getAvailableRepos());
+	QString whichMirror;
 
 	while(repos != NULL)
 	{
 		pmdb_t *curdb = (pmdb_t *)alpm_list_getdata(repos);
 
 		if(!strcmp(alpm_db_get_name(curdb), "core"))
+		{
+			whichMirror = alpm_db_get_url(curdb);
 			coreBox->setChecked(true);
+		}
 		else if(!strcmp(alpm_db_get_name(curdb), "extra"))
 			extraBox->setChecked(true);
 		else if(!strcmp(alpm_db_get_name(curdb), "community"))
@@ -78,6 +86,17 @@ void ConfigDialog::setupRepos()
 		
 		repos = alpm_list_next(repos);
 	}
+	
+	QStringList tmplst = whichMirror.split(QString("core"), 
+			QString::SkipEmptyParts, Qt::CaseInsensitive);
+
+	QString dserv(tmplst.at(0));
+
+	dserv.append("$repo");
+	dserv.append(tmplst.at(1));
+	
+	if(mirrorBox->findText(dserv) != -1)
+		mirrorBox->setCurrentIndex(mirrorBox->findText(dserv));
 	
 	connect(addThirdPartyButton, SIGNAL(clicked()), SLOT(openAddDialog()));
 	connect(editThirdPartyButton, SIGNAL(clicked()), SLOT(openEditDialog()));
@@ -267,6 +286,230 @@ void ConfigDialog::showSuccess(int act)
 	cleanDbButton->setEnabled(true);
 	cleanCacheButton->setEnabled(true);
 	emptyCacheButton->setEnabled(true);
+}
+
+void ConfigDialog::saveConfiguration()
+{
+	bool dbChanged = false;
+	QString mirror(mirrorBox->currentText());
+	ConfigurationParser parser;
+	
+	if(coreBox->checkState() == Qt::Checked)
+	{
+		QString tmp("core/Server");
+		QString tmp2("core/Include");
+		if(!parser.editPacmanKey(&tmp, &mirror, 0))
+		{
+			if(parser.editPacmanKey(&tmp, &mirror, 1))
+				dbChanged = true;
+		}
+		else
+		{
+			dbChanged = true;
+			parser.editPacmanKey(&tmp2, NULL, 2);
+		}
+	}
+	else
+	{
+		QString tmp("core");
+		if(parser.editPacmanKey(&tmp, NULL, 2))
+			dbChanged = true;
+	}
+	
+	if(extraBox->checkState() == Qt::Checked)
+	{
+		QString tmp("extra/Server");
+		QString tmp2("extra/Include");
+		if(!parser.editPacmanKey(&tmp, &mirror, 0))
+		{
+			if(parser.editPacmanKey(&tmp, &mirror, 1))
+				dbChanged = true;
+		}
+		else
+		{
+			dbChanged = true;
+			parser.editPacmanKey(&tmp2, NULL, 2);
+		}
+	}
+	else
+	{
+		QString tmp("extra");
+		if(parser.editPacmanKey(&tmp, NULL, 2))
+			dbChanged = true;
+	}
+	
+	if(communityBox->checkState() == Qt::Checked)
+	{
+		QString tmp("community/Server");
+		QString tmp2("community/Include");
+		if(!parser.editPacmanKey(&tmp, &mirror, 0))
+		{
+			if(parser.editPacmanKey(&tmp, &mirror, 1))
+				dbChanged = true;
+		}
+		else
+		{
+			dbChanged = true;
+			parser.editPacmanKey(&tmp2, NULL, 2);
+		}
+	}
+	else
+	{
+		QString tmp("community");
+		if(parser.editPacmanKey(&tmp, NULL, 2))
+			dbChanged = true;
+	}
+
+	if(testingBox->checkState() == Qt::Checked)
+	{
+		QString tmp("testing/Server");
+		QString tmp2("testing/Include");
+		if(!parser.editPacmanKey(&tmp, &mirror, 0))
+		{
+			if(parser.editPacmanKey(&tmp, &mirror, 1))
+				dbChanged = true;
+		}
+		else
+		{
+			dbChanged = true;
+			parser.editPacmanKey(&tmp2, NULL, 2);
+		}
+	}
+	else
+	{
+		QString tmp("testing/Server");
+		if(parser.editPacmanKey(&tmp, NULL, 2))
+			dbChanged = true;
+		QString tmp2("testing/Include");
+		if(parser.editPacmanKey(&tmp2, NULL, 2))
+			dbChanged = true;
+	}
+
+	if(unstableBox->checkState() == Qt::Checked)
+	{
+		QString tmp("unstable/Server");
+		QString tmp2("unstable/Include");
+		if(!parser.editPacmanKey(&tmp, &mirror, 0))
+		{
+			if(parser.editPacmanKey(&tmp, &mirror, 1))
+				dbChanged = true;
+		}
+		else
+		{
+			dbChanged = true;
+			parser.editPacmanKey(&tmp2, NULL, 2);
+		}
+	}
+	else
+	{
+		QString tmp("unstable");
+		if(parser.editPacmanKey(&tmp, NULL, 2))
+			dbChanged = true;
+	}
+
+	if(KDEMod3Box->checkState() == Qt::Checked)
+	{
+		QString tmp("kdemod/Server");
+		mirror = "http://kdemod.ath.cx/repo/current/i686";
+		if(!parser.editPacmanKey(&tmp, &mirror, 0))
+		{
+			if(parser.editPacmanKey(&tmp, &mirror, 1))
+				dbChanged = true;
+		}
+		else
+			dbChanged = true;
+	}
+	else
+	{
+		QString tmp("kdemod");
+		if(parser.editPacmanKey(&tmp, NULL, 2))
+			dbChanged = true;
+	}
+	
+	if(KDEMod4Box->checkState() == Qt::Checked)
+	{
+		QString tmp("kdemod-testing/Server");
+		mirror = "http://kdemod.ath.cx/repo/testing/i686";
+		if(!parser.editPacmanKey(&tmp, &mirror, 0))
+		{
+			if(parser.editPacmanKey(&tmp, &mirror, 1))
+				dbChanged = true;
+		}
+		else
+			dbChanged = true;
+	}
+	else
+	{
+		QString tmp("kdemod-testing");
+		if(parser.editPacmanKey(&tmp, NULL, 2))
+			dbChanged = true;
+	}
+	
+	/* Whew, now with the third party elements. We also take the
+	 * chance to free them, for the sake of memory.
+	 */
+	
+	QTreeWidgetItem *itm;
+	
+	while((itm = thirdPartyWidget->takeTopLevelItem(0)) != NULL)
+	{
+		QString tName(itm->text(0));
+		QString tServer(itm->text(1));
+
+		tName.append("/Server");
+		
+		if(!parser.editPacmanKey(&tName, &tServer, 0))
+		{
+			if(parser.editPacmanKey(&tName, &tServer, 1))
+				dbChanged = true;
+		}
+		else
+			dbChanged = true;
+
+		delete(itm);
+	}
+	
+	
+	/* Ok, saving finished, commit changes to Alpm now */
+	m_handler->reloadPacmanConfiguration();
+	
+	/* Did we change anything in the repos? Better update our
+	 * local DB then.
+	 */
+	
+	if(dbChanged)
+	{
+		QMessageBox *msgBox = new QMessageBox(this);
+
+		msgBox->setIcon(QMessageBox::Question);
+		msgBox->setWindowTitle(QString("Settings Changed"));
+
+		msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+
+		msgBox->setWindowModality(Qt::ApplicationModal);
+
+		msgBox->setText("Your repositories have changed.\nDo you want to Update Your Database?");
+
+		switch (msgBox->exec()) {
+		case QMessageBox::Yes:
+			upDb = true;
+			break;
+		case QMessageBox::No:
+			upDb = false;
+			break;
+		default:
+			// should never be reached
+			break;
+		}
+
+		msgBox->deleteLater();
+	}
+
+}
+
+bool ConfigDialog::doDbUpdate()
+{
+	return upDb;
 }
 
 void ConfigDialog::cleanThread()

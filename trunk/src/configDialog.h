@@ -25,6 +25,7 @@
 #include <QThread>
 
 class AlpmHandler;
+class ConfigurationParser;
 
 class CleanThread : public QThread
 {
@@ -50,6 +51,7 @@ class ConfigDialog : public QDialog, public Ui::ConfigDialog
 public:
 	ConfigDialog(AlpmHandler *handler, QWidget *parent = 0);
 	~ConfigDialog();
+	bool doDbUpdate();
 
 private slots:
 	void changeWidget(int position);
@@ -62,6 +64,7 @@ private slots:
 	void showSuccess(int act);
 	void showFailure(int act);
 	void cleanThread();
+	void saveConfiguration();
 
 private:
 	void setupRepos();
@@ -71,6 +74,7 @@ private:
 	AlpmHandler *m_handler;
 	QDialog *addDialog;
 	CleanThread *cTh;
+	bool upDb;
 };
 
 #endif

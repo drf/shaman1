@@ -230,6 +230,12 @@ bool AlpmHandler::reloadPacmanConfiguration()
 	 * otherwise users would have to reboot qtPacman. You know, we're not
 	 * Windows, right?
 	 */
+	
+	while(registered_db != NULL)
+	{	
+		alpm_db_unregister((pmdb_t *)alpm_list_getdata(registered_db));
+		registered_db = alpm_list_next(registered_db);
+	}
 
 	setUpAlpmSettings();
 
@@ -269,6 +275,8 @@ bool AlpmHandler::setUpAlpmSettings()
 		if(alpm_db_setserver(dbs_sync, pdata.serverAssoc.at(i).toAscii().data()) == 0)
 			printf("%s --> %s\n", pdata.syncdbs.at(i).toAscii().data(),
 					pdata.serverAssoc.at(i).toAscii().data());
+		
+		registered_db = alpm_list_add(registered_db, dbs_sync);
 		
 		count++;
 	}

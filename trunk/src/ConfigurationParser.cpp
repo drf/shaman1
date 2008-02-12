@@ -172,6 +172,74 @@ void ConfigurationParser::parsePacmanConfig(QString *file, QString *givendb)
 		}
 		serverparsed = 1;
 	}
+	settings->deleteLater();
+}
+
+bool ConfigurationParser::editPacmanKey(QString *key, QString *value, int action)
+{
+	QSettings settings("/etc/pacman.conf", QSettings::NativeFormat);
+	QString realVal;
+	QString realKey = *key;
+	
+	if(value != NULL)
+	{
+		if(value->contains('$'))
+		{
+			QStringList tmplst = value->split(QString("$repo"), 
+					QString::SkipEmptyParts, Qt::CaseInsensitive);
+			QStringList tmp2lst = key->split(QString("/"), 
+					QString::SkipEmptyParts, Qt::CaseInsensitive);
+
+			QString dserv(tmplst.at(0));
+
+			dserv.append(tmp2lst.at(0));
+			dserv.append(tmplst.at(1));
+			realVal = dserv;
+		}
+		else
+			realVal = *value;
+	}
+	
+	switch(action)
+	{
+	case 0:
+		// Add
+		if(settings.contains(realKey))
+			return false;
+		
+		settings.setValue(realKey, realVal);
+		return true;
+
+		break;
+		
+	case 1:
+		// Edit
+		if(!settings.contains(realKey))
+			return false;
+		if(settings.value(realKey) == realVal)
+			return false;
+		
+		settings.setValue(realKey, realVal);
+		return true;
+		
+		break;
+		
+	case 2:
+		// Remove
+		if(!settings.contains(realKey))
+			return false;
+		
+		settings.remove(realKey);
+		return true;
+		
+		break;
+		
+	default:
+		return false;
+		break;
+	}
+	
+	return false;
 }
 
 void ConfigurationParser::parsePaKmodConf()

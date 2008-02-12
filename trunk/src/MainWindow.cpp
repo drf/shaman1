@@ -925,6 +925,10 @@ void MainWindow::showSettings()
 {
 	configDialog = new ConfigDialog(aHandle, this);
 	configDialog->exec();
+	if(configDialog->doDbUpdate())
+		doDbUpdate();
+	
+	configDialog->deleteLater();
 }
 
 void MainWindow::systrayActivated(QSystemTrayIcon::ActivationReason reason)

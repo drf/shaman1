@@ -65,6 +65,8 @@ public:
 	PacmanConf getPacmanConf(bool forcereload);
 	PaKmodConf getPaKmodConf(bool forcereload);
 	
+	bool editPacmanKey(QString *key, QString *value, int action);
+	
 protected:
 	alpm_list_t *setrepeatingoption(QString *ptr);
 	
