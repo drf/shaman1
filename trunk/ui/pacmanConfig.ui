@@ -1,0 +1,150 @@
+<ui version="4.0" >
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>607</width>
+    <height>391</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Dialog</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox" >
+   <property name="geometry" >
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>591</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="title" >
+    <string>Checkable Options</string>
+   </property>
+   <widget class="QCheckBox" name="useDeltaBox" >
+    <property name="geometry" >
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>341</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text" >
+     <string>Use Deltas (needs xdelta to be installed)</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="noPassiveFtpBox" >
+    <property name="geometry" >
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>171</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text" >
+     <string>Use Active FTP</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2" >
+   <property name="geometry" >
+    <rect>
+     <x>9</x>
+     <y>109</y>
+     <width>591</width>
+     <height>271</height>
+    </rect>
+   </property>
+   <property name="title" >
+    <string>Advanced Options</string>
+   </property>
+   <widget class="QWidget" name="" >
+    <property name="geometry" >
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>551</width>
+      <height>222</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" >
+     <item>
+      <layout class="QGridLayout" >
+       <item row="0" column="0" >
+        <widget class="QLabel" name="label" >
+         <property name="text" >
+          <string>HoldPkgs:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1" >
+        <widget class="QLineEdit" name="holdPkgLine" />
+       </item>
+       <item row="1" column="0" >
+        <widget class="QLabel" name="label_2" >
+         <property name="text" >
+          <string>IgnorePkgs:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1" >
+        <widget class="QLineEdit" name="ignorePkgLine" />
+       </item>
+       <item row="2" column="0" >
+        <widget class="QLabel" name="label_3" >
+         <property name="text" >
+          <string>IgnoreGroups</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1" >
+        <widget class="QLineEdit" name="ignoreGrpsLine" />
+       </item>
+       <item row="3" column="0" >
+        <widget class="QLabel" name="label_4" >
+         <property name="text" >
+          <string>NoUpgrade</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1" >
+        <widget class="QLineEdit" name="noUpgradeLine" />
+       </item>
+       <item row="4" column="0" >
+        <widget class="QLabel" name="label_5" >
+         <property name="text" >
+          <string>NoExtract</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1" >
+        <widget class="QLineEdit" name="noExtractLine" />
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" >
+       <item>
+        <widget class="QLabel" name="label_6" >
+         <property name="text" >
+          <string>XFerCommand (example: /path/to/command %u) Blank for Default</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="xFerCommandLine" />
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
