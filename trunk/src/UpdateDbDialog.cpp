@@ -103,7 +103,7 @@ void UpdateDbDialog::updateDlBar(char *c, int bytedone, int bytetotal, int speed
 	Q_UNUSED(speed);
 	QLabel *toInsert = labelList.at(actionDone);
 
-	toInsert->setText(QString(tr("<i>Downloading... (%1 KB of %2 KB)")).arg(bytedone/1024).arg(bytetotal/1024));
+	toInsert->setText(QString(tr("<i>Downloading... (%1 KB of %2 KB)</i>")).arg(bytedone/1024).arg(bytetotal/1024));
 }
 
 void UpdateDbDialog::doAction()
@@ -140,7 +140,7 @@ void UpdateDbDialog::createWidgets(const QStringList &list)
 		QLabel *labelDb = new QLabel(this);
 		QLabel *labelStatus = new QLabel(this);
 		
-		labelDb->setText(QString(tr("<b>%1</b>")).arg(list.at(i)));
+		labelDb->setText(QString("<b>%1</b>").arg(list.at(i)));
 		labelStatus->setText(QString(tr("<i>Waiting...</i>")));
 		
 		gridLayout->addWidget(labelDb, i+1, 0);

@@ -33,6 +33,7 @@
 #include <limits.h>
 #include <QDir>
 #include <QDebug>
+#include <QMessageBox>
 
 #include "callbacks.h"
 
@@ -182,7 +183,7 @@ bool AlpmHandler::updateDatabase()
 	int r;
 	bool updated = false;
 	alpm_list_t *syncdbs;
-
+	
 	syncdbs = alpm_list_first(sync_databases);
 	
 	QStringList list;
@@ -215,7 +216,12 @@ bool AlpmHandler::updateDatabase()
 		if(r == 1)
 			emit streamDbUpdatingStatus((char *)alpm_db_get_name(dbcrnt), 3);
 		else if(r < 0)
-			printf("Fallito Miseramente : %s", alpm_strerrorlast());
+		{
+			/*QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Error"), 
+					QString(tr("Couldn't update %1. Error reported was:\n%2")).arg((char *)alpm_db_get_name(dbcrnt)).arg(
+					alpm_strerrorlast()), QMessageBox::Ok);
+			message->exec();*/
+		}
 		else
 		{
 			printf("updated");
@@ -608,7 +614,7 @@ void AlpmHandler::processQueue()
 	if(removeAct)
 	{
 		/* Well, we need to remove packages first. Let's do this. */
-		initTransaction(PM_TRANS_TYPE_REMOVE, PM_TRANS_FLAG_ALLDEPS);
+		initTransaction(PM_TRANS_TYPE_REMOVE, PM_TRANS_FLAG_ALLDEPS /*/PM_TRANS_FLAG_NOSCRIPTLET*/);
 		
 		for (int i = 0; i < toRemove.size(); ++i)
 		{
@@ -622,7 +628,7 @@ void AlpmHandler::processQueue()
 	if(syncAct)
 	{
 		/* Time to install and upgrade packages, right? */
-		initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_ALLDEPS);
+		initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_ALLDEPS /*/PM_TRANS_FLAG_NOSCRIPTLET*/);
 		
 		for (int i = 0; i < toSync.size(); ++i)
 		{

@@ -173,7 +173,7 @@
            </column>
            <column>
             <property name="text" >
-             <string>Repo</string>
+             <string>Repository</string>
             </property>
            </column>
            <column>
@@ -281,7 +281,7 @@
                 <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
 p, li { white-space: pre-wrap; }
 &lt;/style>&lt;/head>&lt;body style=" font-family:'Liberation Sans'; font-size:10pt; font-weight:400; font-style:normal;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif';">&lt;span style=" font-size:12pt; font-weight:600;">Welcome in qtPacman&lt;/span>&lt;/p>&lt;/body>&lt;/html></string>
+&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif';">&lt;/p>&lt;/body>&lt;/html></string>
                </property>
                <property name="acceptRichText" >
                 <bool>false</bool>
@@ -414,67 +414,12 @@ p, li { white-space: pre-wrap; }
     <string>Settings...</string>
    </property>
   </action>
-  <action name="actionPyKMan_Preferences" >
-   <property name="text" >
-    <string>PyKMan Preferences</string>
-   </property>
-  </action>
-  <action name="actionABS_Preferences" >
-   <property name="text" >
-    <string>ABS Preferences</string>
-   </property>
-  </action>
-  <action name="actionUpdate_Pacman" >
-   <property name="text" >
-    <string>Update Pacman</string>
-   </property>
-  </action>
-  <action name="actionClean_Cache" >
-   <property name="text" >
-    <string>Clean Cache</string>
-   </property>
-  </action>
-  <action name="actionEmpty_Cache" >
-   <property name="text" >
-    <string>Empty Cache</string>
-   </property>
-  </action>
-  <action name="actionUpdate_ABS_Tree" >
-   <property name="text" >
-    <string>Update ABS Tree</string>
-   </property>
-  </action>
-  <action name="actionBuild_and_Install_Selected" >
-   <property name="text" >
-    <string>Build and Install Selected</string>
-   </property>
-  </action>
-  <action name="actionInstall_Selected" >
-   <property name="text" >
-    <string>Install Selected</string>
-   </property>
-  </action>
-  <action name="actionBuild_Package" >
-   <property name="text" >
-    <string>Build Package From File</string>
-   </property>
-  </action>
-  <action name="actionBuild_and_Install_Package_From_File" >
-   <property name="text" >
-    <string>Build and Install Package From File</string>
-   </property>
-  </action>
   <action name="actionAbout" >
    <property name="icon" >
     <iconset resource="qtpacman.qrc" >:/Icons/icons/help-about.png</iconset>
    </property>
    <property name="text" >
     <string>About...</string>
-   </property>
-  </action>
-  <action name="actionKhg" >
-   <property name="text" >
-    <string>khg</string>
    </property>
   </action>
   <action name="actionUpdate_Database" >
@@ -504,16 +449,6 @@ p, li { white-space: pre-wrap; }
     <enum>QAction::TextHeuristicRole</enum>
    </property>
   </action>
-  <action name="actionClean_Cache_2" >
-   <property name="text" >
-    <string>Clean Cache</string>
-   </property>
-  </action>
-  <action name="actionEmpty_Cache_2" >
-   <property name="text" >
-    <string>Database Manteinance</string>
-   </property>
-  </action>
   <action name="actionUpdate_ABS_Tree_2" >
    <property name="text" >
     <string>Update ABS Tree</string>
@@ -522,26 +457,6 @@ p, li { white-space: pre-wrap; }
   <action name="actionInstall_and_Build_Selected" >
    <property name="text" >
     <string>Install and Build Selected</string>
-   </property>
-  </action>
-  <action name="actionBuild_Package_From_File" >
-   <property name="text" >
-    <string>Build Package From File</string>
-   </property>
-  </action>
-  <action name="actionBuild_and_Install_Package_From_File_2" >
-   <property name="text" >
-    <string>Build and Install Package From File</string>
-   </property>
-  </action>
-  <action name="actionClean_Build_Environment_For_Selected" >
-   <property name="text" >
-    <string>Clean Build Environment For Selected</string>
-   </property>
-  </action>
-  <action name="actionClean_all_Build_Environments" >
-   <property name="text" >
-    <string>Clean all Build Environments</string>
    </property>
   </action>
   <action name="actionQuit" >

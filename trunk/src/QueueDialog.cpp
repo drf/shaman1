@@ -103,7 +103,7 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 		actionDetail->setText(QString(tr("Installing %1...")).arg(alpm_pkg_get_name((pmpkg_t *)data1)));
 		break;
 	case PM_TRANS_EVT_ADD_DONE:
-		actionDetail->setText(QString(tr("installed %1 (%2)")).arg(
+		actionDetail->setText(QString(tr("%1 (%2) installed successfully!")).arg(
 				alpm_pkg_get_name((pmpkg_t *)data1)).arg(alpm_pkg_get_version((pmpkg_t *)data1)));
 		//alpm_logaction(str);
 		break;
@@ -116,7 +116,7 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 		actionDetail->setText(QString(tr("Removing %1...")).arg(alpm_pkg_get_name((pmpkg_t *)data1)));
 		break;
 	case PM_TRANS_EVT_REMOVE_DONE:
-		actionDetail->setText(QString(tr("Removed %1 (%2)")).
+		actionDetail->setText(QString(tr("%1 (%2) removed successfully!")).
 				arg(alpm_pkg_get_name((pmpkg_t *)data1)).arg(alpm_pkg_get_version((pmpkg_t *)data1)));
 		//alpm_logaction(str);
 		break;
@@ -129,9 +129,9 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 		actionDetail->setText(QString(tr("Upgrading %1...")).arg(alpm_pkg_get_name((pmpkg_t *)data1)));
 		break;
 	case PM_TRANS_EVT_UPGRADE_DONE:
-		actionDetail->setText(QString(tr("Upgraded %1 (%2 -> %3)")).arg(
-				(char *)alpm_pkg_get_name((pmpkg_t *)data1)).arg((char *)alpm_pkg_get_version((pmpkg_t *)data2)).
-				arg((char *)alpm_pkg_get_version((pmpkg_t *)data1)));
+		actionDetail->setText(QString(tr("Upgraded %1 successfully (%2 -> %3)")).arg(
+				(char *)alpm_pkg_get_name((pmpkg_t *)data1)).arg((char *)alpm_pkg_get_version((pmpkg_t *)data1)).
+				arg((char *)alpm_pkg_get_version((pmpkg_t *)data2)));
 		//alpm_logaction(str);
 		break;
 	case PM_TRANS_EVT_INTEGRITY_START:

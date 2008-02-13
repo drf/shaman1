@@ -637,13 +637,13 @@ void ConfigDialog::saveConfiguration()
 		QMessageBox *msgBox = new QMessageBox(this);
 
 		msgBox->setIcon(QMessageBox::Question);
-		msgBox->setWindowTitle(QString("Settings Changed"));
+		msgBox->setWindowTitle(QString(tr("Settings Changed")));
 
 		msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
 
 		msgBox->setWindowModality(Qt::ApplicationModal);
 
-		msgBox->setText("Your repositories have changed.\nDo you want to Update Your Database?");
+		msgBox->setText(QString(tr("Your repositories have changed.\nDo you want to Update Your Database?")));
 
 		switch (msgBox->exec()) {
 		case QMessageBox::Yes:
@@ -673,7 +673,8 @@ void ConfigDialog::addMirror()
 			!mirror.startsWith(QString("ftp://"))) || mirror.contains(QString(" ")) || !QUrl(mirror).isValid())
 	{
 		QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Add Mirror"),
-				tr("Mirror Format is incorrect. Your mirror should look like this:\nhttp://mirror.org/$repo/os/i686"), QMessageBox::Ok);
+				tr("Mirror Format is incorrect. Your mirror should look like this:\nhttp://mirror.org/$repo/os/i686",
+						"Obviously keep the example as it is ;)"), QMessageBox::Ok);
 		message->exec();
 		return;
 	}
@@ -693,7 +694,9 @@ void ConfigDialog::addMirror()
 	mirrorBox->addItem(mirror);
 
 	QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Add Mirror"),
-			tr("Your Mirror was successfully added!\nIt is now available in mirrorlist."), QMessageBox::Ok);
+			tr("Your Mirror was successfully added!\nIt is now available in mirrorlist.",
+					"mirrorlist here means /etc/pacman.d/mirrorlist, so it should not "
+					"be translated."), QMessageBox::Ok);
 	message->exec();
 	
 	addMirrorLine->clear();

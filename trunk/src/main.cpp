@@ -63,11 +63,17 @@ int main(int argc, char **argv)
 {
 	uid_t myuid = geteuid();
 
-	QApplication app(argc, argv);
+	QApplication app(argc, argv, QApplication::GuiClient);
 
 	if(myuid > 0)
 	{
-		QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("qtPacman"), QObject::tr("You have to be root to run qtPacman.\nPlease restart it with root privileges."), QMessageBox::Ok);
+		QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("qtPacman", "Hey! "
+				"If you're reading this, first of all thanks for helping us in making qtPacman better. "
+				"There are not many comments unless where needed, since all the strings are pretty self-explanatory. "
+				"However, if you have any doubts, or if you just want to drop us a line, there goes our email addresses:\n"
+				"Dario: drf54321@gmail.com\nLukas: l.appelhans@gmx.de\n"
+				"Thanks again, and enjoy your translation!"), 
+				QObject::tr("You have to be root to run qtPacman.\nPlease restart it with root privileges."), QMessageBox::Ok);
 
 		message->show();
 
@@ -82,7 +88,7 @@ int main(int argc, char **argv)
 		 * ability to clean up pacman cache?
 		 */
 
-		QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("qtPacman"), QObject::tr("There was a problem while testing libalpm.\n Maybe another application has a lock on it."), QMessageBox::Ok);
+		QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("qtPacman"), QObject::tr("There was a problem while testing libalpm.\nMaybe another application has a lock on it."), QMessageBox::Ok);
 
 		message->show();
 
@@ -130,6 +136,7 @@ int main(int argc, char **argv)
 
 	mainwin.populatePackagesView();
 	QObject::connect(&mainwin, SIGNAL(aboutToQuit()), &app, SLOT(quit()));
+	app.syncX();
 	return app.exec();
 
 }

@@ -44,12 +44,16 @@ aHandle(hnd)
 		setWindowModality(Qt::ApplicationModal);
 
 		data = aHandle->getUpgradeablePackages();
+		
+		int n = data.size();
 
-		upgradeMessage->setText(QString(tr("There are <b>%1 upgradeable "
-				"packages</b>. You can either<br> upgrade "
-				"immediately or add them to the current Queue"
-				"<br> and process them later.")).arg(
-						data.size()));
+		upgradeMessage->setText(QString(n == 1 ? tr("There is <b>%1 upgradeable "
+				"package</b>. You can either<br> upgrade "
+				"immediately or add it to the current Queue"
+				"<br> and process it later.") : tr("There are <b>%1 upgradeable "
+						"packages</b>. You can either<br> upgrade "
+						"immediately or add them to the current Queue"
+						"<br> and process them later.")).arg(n));
 
 		connect(abortButton, SIGNAL(clicked()), SLOT(abort()));
 		connect(addToQueue, SIGNAL(clicked()), SLOT(addPkg()));

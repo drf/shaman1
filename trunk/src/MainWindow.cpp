@@ -734,7 +734,7 @@ void MainWindow::startUpgrading()
 	if(aHandle->getUpgradeablePackages().isEmpty())
 	{
 		/* Display a simple popup saying the system is up-to-date. */
-		QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("System-Update"), tr("Your system is up to date!"), QMessageBox::Ok, this);
+		QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("System Upgrade"), tr("Your system is up to date!"), QMessageBox::Ok, this);
 		message->show();
 		qDebug() << "System is up to date";
 	}
@@ -774,7 +774,7 @@ void MainWindow::addUpgradeableToQueue()
 	foreach (QString package, aHandle->getUpgradeablePackages())
 	{
 		QTreeWidgetItem *item = pkgsViewWG->findItems(package, Qt::MatchExactly, 2).first();
-		item->setText(0, tr("Upgradable"));
+		item->setText(0, tr("Upgradeable"));
 		item->setText(1, tr("Upgrade"));
 	}
 
@@ -907,10 +907,15 @@ void MainWindow::widgetQueueToAlpmQueue()
 	connect(qUi.processButton, SIGNAL(clicked()), SLOT(processQueue()));
 	connect(qUi.cancelButton, SIGNAL(clicked()), SLOT(destroyReviewQueue()));
 	
-	qUi.queueInfo->setText(QString(tr("Your Queue is about to be processed. "
-			"You are going to:<br />Remove <b>%1 packages</b><br />Install/Upgrade"
-			" <b>%2 packages</b><br />Do you wish to continue?")).arg(aHandle->getNumberOfTargets(1)).
-			arg(aHandle->getNumberOfTargets(0)));
+	QString toShow(tr("Your Queue is about to be processed. "
+			"You are going to:<br />"));
+	int n = aHandle->getNumberOfTargets(1);
+	toShow.append(QString(n == 1 ? tr("Remove <b>%1 package</b><br />") : tr("Remove <b>%1 packages</b><br />")).arg(n));
+	int k = aHandle->getNumberOfTargets(0);
+	toShow.append(QString(k == 1 ? tr("Install/Upgrade <b>%1 package</b><br />") : tr("Install/Upgrade <b>%1 packages</b><br />")).arg(k));
+	toShow.append(tr("Do you wish to continue?"));
+	
+	qUi.queueInfo->setText(toShow);
 
 }
 
