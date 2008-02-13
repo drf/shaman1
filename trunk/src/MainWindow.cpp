@@ -186,6 +186,13 @@ bool MainWindow::populatePackagesView()
 
 	databases = alpm_list_first(databases);
 
+	foreach (QString pac, aHandle->getUpgradeablePackages())
+	{
+		QTreeWidgetItem *item = pkgsViewWG->findItems(pac, Qt::MatchExactly, 2).first();
+		if (item)
+			item->setText(1, tr("Upgrade"));
+	}
+
 	pkgsViewWG->sortItems(2, Qt::AscendingOrder);
 	pkgsViewWG->setSortingEnabled(true);//Enable sorting *after* inserting :D
 
@@ -317,8 +324,8 @@ void MainWindow::refinePkgView()
 		{
 			foreach (QTreeWidgetItem *item, list)
 			{
-				//qDebug() << "Checking for installed packages" + item->text(2);
-				if (!item->text(0).compare(tr("Upgradeable")))
+				//qDebug() << "Checking for upgradeable packages" + item->text(2);
+				if (item->text(0) != tr("Upgradeable"))
 					list.removeAt(list.indexOf(item));
 			}
 		}
@@ -485,7 +492,6 @@ void MainWindow::finishDbUpdate()
 	}
 
 	dbdialog->deleteLater();
-
 }
 
 void MainWindow::showPkgsViewContextMenu()
@@ -865,12 +871,14 @@ void MainWindow::widgetQueueToAlpmQueue()
 
 	if(pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 1).isEmpty() &&
 			pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 1).isEmpty() &&
-			pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 1).isEmpty())
+			pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 1).isEmpty() &&
+			pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 1).isEmpty())
 		return;
 	else if(pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 1).isEmpty() &&
 			pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 1).isEmpty())
 		aHandle->initQueue(false, true, false);
-	else if(pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 1).isEmpty())
+	else if(pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 1).isEmpty() || 
+					pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 1).isEmpty())
 		aHandle->initQueue(true, false, false);
 	else
 		aHandle->initQueue(true, true, false);
@@ -878,12 +886,14 @@ void MainWindow::widgetQueueToAlpmQueue()
 	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 1))
 		aHandle->addSyncToQueue(itm->text(2));
 
+	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 1))
+		aHandle->addSyncToQueue(itm->text(2));
+
 	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 1))
 		aHandle->addRemoveToQueue(itm->text(2));
 
 	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 1))
 		aHandle->addRemoveToQueue(itm->text(2));
-	//TODO: Dario: add upgradableToQueue too :P
 	
 	revActive = true;
 	
