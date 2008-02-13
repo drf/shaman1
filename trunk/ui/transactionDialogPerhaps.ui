@@ -93,7 +93,7 @@
         <string/>
        </property>
        <property name="pixmap" >
-        <pixmap resource="qtpacman.qrc" >:/Icons/icons/edit-delete.png</pixmap>
+        <pixmap resource="qtpacman.qrc" >:/Icons/icons/view-history.png</pixmap>
        </property>
        <property name="scaledContents" >
         <bool>true</bool>
@@ -112,7 +112,7 @@
         <string/>
        </property>
        <property name="pixmap" >
-        <pixmap resource="qtpacman.qrc" >:/Icons/icons/edit-delete.png</pixmap>
+        <pixmap resource="qtpacman.qrc" >:/Icons/icons/view-history.png</pixmap>
        </property>
        <property name="scaledContents" >
         <bool>true</bool>
