@@ -350,7 +350,7 @@ Please note that packages from Unstable and Testing may break your system.</stri
            <item row="2" column="0" >
             <widget class="QGroupBox" name="groupBox_4" >
              <property name="title" >
-              <string>GroupBox</string>
+              <string>Server</string>
              </property>
              <layout class="QGridLayout" >
               <item row="0" column="0" >

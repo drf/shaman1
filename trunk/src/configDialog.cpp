@@ -27,6 +27,7 @@
 #include <QMessageBox>
 #include <QFile>
 #include <QTextStream>
+#include <QUrl>
 
 ConfigDialog::ConfigDialog(AlpmHandler *handler, QWidget *parent)
 : QDialog(parent),
@@ -39,7 +40,6 @@ upDb(false)
 	setupRepos();
 	connect(listWidget, SIGNAL(currentRowChanged(int)), this, SLOT(changeWidget(int)));
 	connect(this, SIGNAL(accepted()), SLOT(saveConfiguration()));
-	connect(addMirrorButton, SIGNAL(clicked()), SLOT(addMirror()));
 }
 
 ConfigDialog::~ConfigDialog()
@@ -140,6 +140,7 @@ void ConfigDialog::setupRepos()
 	if(mirrorBox->findText(dserv) != -1)
 		mirrorBox->setCurrentIndex(mirrorBox->findText(dserv));
 
+	connect(addMirrorButton, SIGNAL(clicked()), SLOT(addMirror()));
 	connect(addThirdPartyButton, SIGNAL(clicked()), SLOT(openAddDialog()));
 	connect(editThirdPartyButton, SIGNAL(clicked()), SLOT(openEditDialog()));
 	connect(removeThirdPartyButton, SIGNAL(clicked()), SLOT(removeThirdParty()));
@@ -669,7 +670,7 @@ void ConfigDialog::addMirror()
 	QString mirror(addMirrorLine->text());
 
 	if(!mirror.contains(QString("$repo")) || (!mirror.startsWith(QString("http://")) &&
-			!mirror.startsWith(QString("ftp://"))) || mirror.contains(QString(" ")))
+			!mirror.startsWith(QString("ftp://"))) || mirror.contains(QString(" ")) || !QUrl(mirror).isValid())
 	{
 		QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Add Mirror"),
 				tr("Mirror Format is incorrect. Your mirror should look like this:\nhttp://mirror.org/$repo/os/i686"), QMessageBox::Ok);
