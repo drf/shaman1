@@ -62,16 +62,16 @@ void UpdateDbDialog::updateLabel(char *repo, int action)
 	switch(action)
 	{
 	case 0:
-		toInsert->setText(tr("<i>Checking...</i>"));
+		toInsert->setPixmap(QPixmap(":/Icons/icons/edit-redo.png"));
 		break;
 	case 1:
-		toInsert->setText(tr("<i>Downloading...</i>"));
+		toInsert->setPixmap(QPixmap(":/Icons/icons/view-refresh.png"));
 		break;
 	case 2:
-		toInsert->setText(tr("<i>Installing...</i>"));
+		toInsert->setPixmap(QPixmap(":/Icons/icons/edit-redo.png"));
 		break;
 	case 3:
-		toInsert->setText(tr("<i>Up to Date</i>"));
+		toInsert->setPixmap(QPixmap(":/Icons/icons/dialog-ok-apply.png"));
 		break;
 	default:
 		break;
@@ -101,9 +101,12 @@ void UpdateDbDialog::updateDlBar(char *c, int bytedone, int bytetotal, int speed
 	Q_UNUSED(j)
 	Q_UNUSED(k)
 	Q_UNUSED(speed);
+	Q_UNUSED(bytedone);
+	Q_UNUSED(bytetotal);
+	
 	QLabel *toInsert = labelList.at(actionDone);
 
-	toInsert->setText(QString(tr("<i>Downloading... (%1 KB of %2 KB)</i>")).arg(bytedone/1024).arg(bytetotal/1024));
+	toInsert->setPixmap(QPixmap(":/Icons/icons/view-refresh.png"));
 }
 
 void UpdateDbDialog::doAction()
@@ -141,7 +144,7 @@ void UpdateDbDialog::createWidgets(const QStringList &list)
 		QLabel *labelStatus = new QLabel(this);
 		
 		labelDb->setText(QString("<b>%1</b>").arg(list.at(i)));
-		labelStatus->setText(QString(tr("<i>Waiting...</i>")));
+		labelStatus->setPixmap(QPixmap(":/Icons/icons/view-history.png"));
 		
 		gridLayout->addWidget(labelDb, i+1, 0);
 		gridLayout->addWidget(labelStatus, i+1, 1);
