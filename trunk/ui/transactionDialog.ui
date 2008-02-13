@@ -44,7 +44,7 @@
       </widget>
      </item>
      <item row="1" column="4" >
-      <widget class="QLabel" name="label" >
+      <widget class="QLabel" name="transLabel" >
        <property name="sizePolicy" >
         <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
          <horstretch>0</horstretch>
@@ -55,7 +55,7 @@
         <string/>
        </property>
        <property name="pixmap" >
-        <pixmap resource="qtpacman.qrc" >:/Icons/icons/dialog-ok-apply.png</pixmap>
+        <pixmap resource="qtpacman.qrc" >:/Icons/icons/view-history.png</pixmap>
        </property>
        <property name="scaledContents" >
         <bool>true</bool>
@@ -63,7 +63,7 @@
       </widget>
      </item>
      <item row="3" column="4" >
-      <widget class="QLabel" name="label_3" >
+      <widget class="QLabel" name="processLabel" >
        <property name="sizePolicy" >
         <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
          <horstretch>0</horstretch>
@@ -82,7 +82,7 @@
       </widget>
      </item>
      <item row="4" column="4" >
-      <widget class="QLabel" name="label_4" >
+      <widget class="QLabel" name="cleanUpLabel" >
        <property name="sizePolicy" >
         <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
          <horstretch>0</horstretch>
@@ -101,12 +101,12 @@
       </widget>
      </item>
      <item row="2" column="4" >
-      <widget class="QLabel" name="label_2" >
+      <widget class="QLabel" name="dlLabel" >
        <property name="text" >
         <string/>
        </property>
        <property name="pixmap" >
-        <pixmap resource="qtpacman.qrc" >:/Icons/icons/edit-redo.png</pixmap>
+        <pixmap resource="qtpacman.qrc" >:/Icons/icons/view-history.png</pixmap>
        </property>
       </widget>
      </item>

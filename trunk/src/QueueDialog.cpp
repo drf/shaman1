@@ -44,7 +44,7 @@ QueueDialog::QueueDialog(AlpmHandler *hnd, QWidget *parent)
 	connect(&CbackReference, SIGNAL(streamTransEvent(pmtransevt_t, void*, void*)),
 			SLOT(changeStatus(pmtransevt_t, void*, void*)));
 	
-	checkTransaction->setText(tr("<b>Check transaction validity</b>"));
+	transLabel->setPixmap(QIcon(":/Icons/icons/edit-redo.png").pixmap(22));
 	
 	progressBar->setRange(0, 1);
 	progressBar->setValue(0);
@@ -229,8 +229,8 @@ void QueueDialog::updateProgressBar(pmtransprog_t event, char *pkgname, int perc
 
 void QueueDialog::startDownload()
 {
-	checkTransaction->setText(tr("Check transaction validity"));
-	downloadPackages->setText(tr("<b>Download Packages</b>"));
+	transLabel->setPixmap(QIcon(":/Icons/icons/dialog-ok-apply.png").pixmap(22));
+	dlLabel->setPixmap(QIcon(":/Icons/icons/edit-redo.png").pixmap(22));
 
 	connect(&CbackReference, SIGNAL(streamTransDlProg(char*,int,int,int,int,int,int)), 
 			SLOT(updateProgressBar(char*,int,int,int,int,int,int)));
@@ -241,9 +241,9 @@ void QueueDialog::startDownload()
 
 void QueueDialog::startProcess()
 {
-	checkTransaction->setText(tr("Check transaction validity"));
-	downloadPackages->setText(tr("Download Packages"));
-	processingQueue->setText(tr("<b>Process queue</b>"));
+	transLabel->setPixmap(QIcon(":/Icons/icons/dialog-ok-apply.png").pixmap(22));
+	dlLabel->setPixmap(QIcon(":/Icons/icons/dialog-ok-apply.png").pixmap(22));
+	processLabel->setPixmap(QIcon(":/Icons/icons/edit-redo.png").pixmap(22));
 	
 	disconnect(&CbackReference, SIGNAL(streamTransDlProg(char*,int,int,int,int,int,int)), 0, 0);
 	//qRegisterMetaType<pmtransprog_t>("pmtransprog_t");
@@ -256,8 +256,8 @@ void QueueDialog::cleanup()
 {
 	QMutexLocker lock(&mutex);
 	disconnect(&CbackReference, SIGNAL(streamTransProgress(pmtransprog_t,char*,int,int,int)), 0, 0);
-	processingQueue->setText(tr("Process queue"));
-	cleaningUp->setText(tr("<b>Cleanup</b>"));
+	processLabel->setPixmap(QIcon(":/Icons/icons/dialog-ok-apply.png").pixmap(22));
+	cleanUpLabel->setPixmap(QIcon(":/Icons/icons/edit-redo.png").pixmap(22));
 	
 	emit terminated(false);
 }
