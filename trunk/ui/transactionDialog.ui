@@ -166,7 +166,7 @@
       </sizepolicy>
      </property>
      <property name="text" >
-      <string>blablablalalalalalalalalalal</string>
+      <string>Please Wait...</string>
      </property>
      <property name="alignment" >
       <set>Qt::AlignCenter</set>

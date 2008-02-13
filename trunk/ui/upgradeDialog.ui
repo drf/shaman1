@@ -20,9 +20,7 @@
        <item>
         <widget class="QLabel" name="upgradeMessage" >
          <property name="text" >
-          <string>Your System can be Upgraded. There are %d
-upgradeable packages. You can either upgrade immediately
-or add them to the current Queue and process them later.</string>
+          <string/>
          </property>
          <property name="scaledContents" >
           <bool>true</bool>
