@@ -62,16 +62,16 @@ void UpdateDbDialog::updateLabel(char *repo, int action)
 	switch(action)
 	{
 	case 0:
-		toInsert->setPixmap(QPixmap(":/Icons/icons/edit-redo.png"));
+		toInsert->setPixmap(QIcon(":/Icons/icons/edit-redo.png").pixmap(22));
 		break;
 	case 1:
-		toInsert->setPixmap(QPixmap(":/Icons/icons/view-refresh.png"));
+		toInsert->setPixmap(QIcon(":/Icons/icons/view-refresh.png").pixmap(22));
 		break;
 	case 2:
-		toInsert->setPixmap(QPixmap(":/Icons/icons/edit-redo.png"));
+		toInsert->setPixmap(QIcon(":/Icons/icons/edit-redo.png").pixmap(22));
 		break;
 	case 3:
-		toInsert->setPixmap(QPixmap(":/Icons/icons/dialog-ok-apply.png"));
+		toInsert->setPixmap(QIcon(":/Icons/icons/dialog-ok-apply.png").pixmap(22));
 		break;
 	default:
 		break;
@@ -106,7 +106,7 @@ void UpdateDbDialog::updateDlBar(char *c, int bytedone, int bytetotal, int speed
 	
 	QLabel *toInsert = labelList.at(actionDone);
 
-	toInsert->setPixmap(QPixmap(":/Icons/icons/view-refresh.png"));
+	toInsert->setPixmap(QIcon(":/Icons/icons/view-refresh.png").pixmap(22));
 }
 
 void UpdateDbDialog::doAction()
@@ -142,9 +142,9 @@ void UpdateDbDialog::createWidgets(const QStringList &list)
 	{
 		QLabel *labelDb = new QLabel(this);
 		QLabel *labelStatus = new QLabel(this);
-		
+		labelStatus->setSizePolicy(QSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed));
 		labelDb->setText(QString("<b>%1</b>").arg(list.at(i)));
-		labelStatus->setPixmap(QPixmap(":/Icons/icons/view-history.png"));
+		labelStatus->setPixmap(QIcon(":/Icons/icons/view-history.png").pixmap(22));
 		
 		gridLayout->addWidget(labelDb, i+1, 0);
 		gridLayout->addWidget(labelStatus, i+1, 1);
