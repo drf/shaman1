@@ -259,5 +259,9 @@ void QueueDialog::cleanup()
 	processLabel->setPixmap(QIcon(":/Icons/icons/dialog-ok-apply.png").pixmap(22));
 	cleanUpLabel->setPixmap(QIcon(":/Icons/icons/edit-redo.png").pixmap(22));
 	
+	actionDetail->setText(QString(tr("Queue processed, please wait...")));
+	
+	qApp->processEvents();
+	
 	emit terminated(false);
 }
