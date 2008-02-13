@@ -221,6 +221,7 @@ bool AlpmHandler::updateDatabase()
 					QString(tr("Couldn't update %1. Error reported was:\n%2")).arg((char *)alpm_db_get_name(dbcrnt)).arg(
 					alpm_strerrorlast()), QMessageBox::Ok);
 			message->exec();*/
+			emit streamDbUpdatingStatus((char *)alpm_db_get_name(dbcrnt), 4);
 		}
 		else
 		{

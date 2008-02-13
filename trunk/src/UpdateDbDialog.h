@@ -48,6 +48,7 @@ public:
 	~UpdateDbDialog();
 	
 	bool dbHasBeenUpdated();
+	bool anyErrors();
 
 public slots:
 	void doAction();
@@ -71,6 +72,7 @@ private:
 	int actionDone;
 	bool updated;
 	AlpmHandler *aHandle;
+	bool errorsOccourred;
 	UpDbThread *dbth;
 	QList<QLabel *> labelList;
 	

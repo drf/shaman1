@@ -31,7 +31,8 @@ UpdateDbDialog::UpdateDbDialog(AlpmHandler *hnd, QWidget *parent)
  : QDialog(parent),
    actionDone(0),
    updated(false),
-   aHandle(hnd)
+   aHandle(hnd),
+   errorsOccourred(false)
 {	
 	setupUi(this);
         setWindowModality(Qt::ApplicationModal);
@@ -73,6 +74,9 @@ void UpdateDbDialog::updateLabel(char *repo, int action)
 	case 3:
 		toInsert->setPixmap(QIcon(":/Icons/icons/dialog-ok-apply.png").pixmap(22));
 		break;
+	case 4:
+		toInsert->setPixmap(QPixmap(":/Icons/icons/edit-delete.png"));
+		errorsOccourred = true;
 	default:
 		break;
 	}
@@ -86,6 +90,11 @@ void UpdateDbDialog::setUpdated()
 bool UpdateDbDialog::dbHasBeenUpdated()
 {
 	return updated;
+}
+
+bool UpdateDbDialog::anyErrors()
+{
+	return errorsOccourred;
 }
 
 void UpdateDbDialog::updateTotalProg()

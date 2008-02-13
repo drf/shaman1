@@ -484,6 +484,17 @@ void MainWindow::doDbUpdate()
 void MainWindow::finishDbUpdate()
 {
 	disconnect(dbdialog, 0,0,0);
+	
+	if(dbdialog->anyErrors())
+	{
+		QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), 
+				QString(tr("One or more Databases could not be updated.\nLast error reported was:\n%1")).arg(alpm_strerrorlast()),
+				QMessageBox::Ok);
+		
+		message->exec();
+		
+		message->deleteLater();
+	}
 
 	if(dbdialog->dbHasBeenUpdated())
 	{
