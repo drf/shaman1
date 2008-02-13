@@ -75,7 +75,7 @@ void UpdateDbDialog::updateLabel(char *repo, int action)
 		toInsert->setPixmap(QIcon(":/Icons/icons/dialog-ok-apply.png").pixmap(22));
 		break;
 	case 4:
-		toInsert->setPixmap(QPixmap(":/Icons/icons/edit-delete.png"));
+		toInsert->setPixmap(QIcon(":/Icons/icons/edit-delete.png").pixmap(22));
 		errorsOccourred = true;
 	default:
 		break;
