@@ -152,11 +152,12 @@ QStringList AlpmHandler::getUpgradeablePackages()
 	retlist.clear();
 
 	syncdbs = alpm_list_first(sync_databases);
-	qDebug() << "First";
 
 	if(alpm_sync_sysupgrade(db_local, syncdbs, &syncpkgs) == -1) 
 		return retlist;
-	qDebug() << "Second";
+	
+	syncpkgs = alpm_list_first(syncpkgs);
+	
 	if(!syncpkgs)
 		return retlist;
 	else
@@ -164,7 +165,11 @@ QStringList AlpmHandler::getUpgradeablePackages()
 		qDebug() << "Third";
 		while(syncpkgs != NULL)
 		{
-			retlist.append(alpm_pkg_get_name((pmpkg_t *) alpm_list_getdata(syncpkgs)));
+			/* To Alpm Devs : LOL. Call three functions to get a fucking
+			 * name of a package? Please.
+			 */
+			QString tmp(alpm_pkg_get_name(alpm_sync_get_pkg((pmsyncpkg_t *) alpm_list_getdata(syncpkgs))));
+			retlist.append(tmp);
 			syncpkgs = alpm_list_next(syncpkgs);
 		}
 		return retlist;
@@ -235,8 +240,6 @@ bool AlpmHandler::reloadPacmanConfiguration()
 {
 	PacmanConf pdata;
 
-	
-
 	/* After reloading configuration, we immediately commit changes to Alpm,
 	 * otherwise users would have to reboot qtPacman. You know, we're not
 	 * Windows, right?
@@ -304,6 +307,7 @@ bool AlpmHandler::setUpAlpmSettings()
 {
 	PacmanConf pdata;
 	int count = 0;
+	registered_db = alpm_list_new();
 
 	/* Let's prepare Alpm for the big showdown. First of all, let's set up
 	 * some root paths, we will use pacman's default for now
@@ -377,59 +381,11 @@ bool AlpmHandler::setUpAlpmSettings()
 	return true;
 }
 
-alpm_list_t *AlpmHandler::searchPackages(char *keywords, char *repo, bool local)
+QStringList AlpmHandler::getPackageGroups()
 {
-	alpm_list_t *syncdbs, *searchs = NULL, *returnlist = NULL, *tmplist;
-
-	syncdbs = alpm_list_first(sync_databases);
-
-	if(keywords != NULL)
-		searchs = setrepeatingoption(keywords);
-
-	if(local)
-	{
-		if(searchs)
-			returnlist = alpm_db_search(db_local, searchs);
-		else
-			returnlist = alpm_db_getpkgcache(db_local);
-	}
-	else
-	{
-		while(syncdbs != NULL)
-		{
-			pmdb_t *dbcrnt = (pmdb_t *)alpm_list_getdata(syncdbs);
-
-			if(repo != NULL)
-				if(strcmp(repo, alpm_db_get_name( dbcrnt )))
-				{
-					syncdbs = alpm_list_next(syncdbs);
-					continue;
-				}
-
-			if(searchs)
-				tmplist = alpm_db_search(dbcrnt, searchs);
-			else
-				tmplist = alpm_db_getpkgcache(dbcrnt);
-
-			if(returnlist == NULL)
-				returnlist = tmplist;
-			else if(tmplist != NULL)
-				returnlist = alpm_list_join(returnlist, tmplist);
-
-			syncdbs = alpm_list_next(syncdbs);
-
-		}
-	}
-
-	if(searchs)
-		alpm_list_free(searchs);
-
-	return returnlist;
-}
-
-alpm_list_t *AlpmHandler::getPackageGroups()
-{
-	alpm_list_t *grps = NULL, *retlist = alpm_list_new(), *syncdbs;
+	alpm_list_t *grps = NULL, *syncdbs;
+	QStringList retlist;
+	retlist.clear();
 
 	syncdbs = alpm_list_first(sync_databases);
 
@@ -440,7 +396,7 @@ alpm_list_t *AlpmHandler::getPackageGroups()
 
 		while(grps != NULL)
 		{
-			retlist = alpm_list_add(retlist, alpm_list_getdata(grps));
+			retlist.append((char *)alpm_list_getdata(grps));
 			grps = alpm_list_next(grps);
 		}
 
@@ -608,16 +564,19 @@ QStringList AlpmHandler::getPackageFiles(const QString &name)
 	return retlist;
 }
 
-void AlpmHandler::initQueue(bool rem, bool syncd)
+void AlpmHandler::initQueue(bool rem, bool syncd, bool ff)
 {	
 	removeAct = rem;
 	syncAct = syncd;
 	upgradeAct = false;
+	fromFileAct = ff;
 
 	if(!toSync.isEmpty())
 		toSync.clear();
 	if(!toRemove.isEmpty())
 		toRemove.clear();
+	if(!toFromFile.isEmpty())
+		toFromFile.clear();
 }
 
 void AlpmHandler::addSyncToQueue(const QString &toAdd)
@@ -628,6 +587,11 @@ void AlpmHandler::addSyncToQueue(const QString &toAdd)
 void AlpmHandler::addRemoveToQueue(const QString &toRm)
 {
 	toRemove.append(toRm);
+}
+
+void AlpmHandler::addFFToQueue(const QString &toFF)
+{
+	toFromFile.append(toFF);
 }
 
 int AlpmHandler::getNumberOfTargets(int action)
@@ -674,6 +638,18 @@ void AlpmHandler::processQueue()
 	{
 		/* We just have to start the transaction. */
 		initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_ALLDEPS);
+
+		performCurrentTransaction();
+	}
+	if(fromFileAct)
+	{
+		initTransaction(PM_TRANS_TYPE_UPGRADE, PM_TRANS_FLAG_ALLDEPS);
+
+		for (int i = 0; i < toFromFile.size(); ++i)
+		{
+			if(alpm_trans_addtarget(toFromFile.at(i).toAscii().data()) == -1)
+				printf("Argh!\n");
+		}
 
 		performCurrentTransaction();
 	}

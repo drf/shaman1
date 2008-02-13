@@ -65,6 +65,7 @@ public slots:
 	void queueProcessingEnded(bool errors);
 	void widgetQueueToAlpmQueue();
 	void destroyReviewQueue();
+	void getPackageFromFile();
 
 private slots:
 	void quitApp();

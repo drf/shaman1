@@ -115,6 +115,9 @@ void UpdateDbDialog::doAction()
 
 void UpdateDbDialog::scopeEnded()
 {
+	for(int i = 0; i < labelList.size(); ++i)
+		delete(labelList.at(i));
+	
 	delete(dbth);
 	
 	emit killMe();

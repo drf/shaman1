@@ -365,7 +365,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionUpgrade_System" />
     <addaction name="separator" />
     <addaction name="actionProcess_Queue" />
-    <addaction name="actionInstall_Package_From_File_2" />
+    <addaction name="actionInstall_Package_From_File" />
     <addaction name="separator" />
     <addaction name="menuInstall_and_Build_from_Source" />
     <addaction name="separator" />
@@ -439,11 +439,6 @@ p, li { white-space: pre-wrap; }
     <string>Empty Cache</string>
    </property>
   </action>
-  <action name="actionInstall_Package_From_File" >
-   <property name="text" >
-    <string>Install Package From File</string>
-   </property>
-  </action>
   <action name="actionUpdate_ABS_Tree" >
    <property name="text" >
     <string>Update ABS Tree</string>
@@ -498,12 +493,15 @@ p, li { white-space: pre-wrap; }
     <string>Upgrade System</string>
    </property>
   </action>
-  <action name="actionInstall_Package_From_File_2" >
+  <action name="actionInstall_Package_From_File" >
    <property name="icon" >
     <iconset resource="qtpacman.qrc" >:/Icons/icons/document-open.png</iconset>
    </property>
    <property name="text" >
     <string>Install Package From File</string>
+   </property>
+   <property name="menuRole" >
+    <enum>QAction::TextHeuristicRole</enum>
    </property>
   </action>
   <action name="actionClean_Cache_2" >

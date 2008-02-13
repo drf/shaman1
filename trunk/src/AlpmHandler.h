@@ -45,6 +45,10 @@ class AlpmHandler : public QObject, private ConfigurationParser
 	 * this class is moved to a different thread. It's extremely important to
 	 * keep this class libalpm related-only, otherwise we would risk
 	 * thread-unsafe operations, and this is something we don't want, right?
+	 * Also, we definitely want to avoid alpm_lists and their fucking odd
+	 * voids*, better use a QStringList. We only use alpm_list_t* where
+	 * we can't do otherwise or it's a good solution for the sake of not implementing
+	 * a useless type (something libalpm devs should learn too).
 	 * 
 	 * By inheriting ConfigurationParser we have all our configuration
 	 * files at a glance, without the need of re-parsing it every time, as
@@ -61,8 +65,7 @@ public:
 	bool testLibrary();
 
 	alpm_list_t *getAvailableRepos();
-	alpm_list_t *getPackageGroups();
-	alpm_list_t *searchPackages(char *keywords, char *repo, bool local);
+	QStringList getPackageGroups();
 	QStringList getUpgradeablePackages();
 
 	QStringList getPackageDependencies(pmpkg_t *package);
@@ -77,9 +80,10 @@ public:
 	QStringList getProviders(const QString &name, const QString &repo);
 	bool isProviderInstalled(const QString &provider);
 	
-	void initQueue(bool rem, bool syncd);
+	void initQueue(bool rem, bool syncd, bool ff);
 	void addSyncToQueue(const QString &toAdd);
 	void addRemoveToQueue(const QString &toRm);
+	void addFFToQueue(const QString &toFF);
 	void processQueue();
 	int getNumberOfTargets(int action);
 	
@@ -94,8 +98,6 @@ public:
 
 	bool updateDatabase();
 	bool fullSystemUpgrade();
-
-	bool isPackage(char *packagename);
 
 	bool performCurrentTransaction();
 
@@ -122,10 +124,11 @@ private:
 	bool removeAct;
 	bool syncAct;
 	bool upgradeAct;
+	bool fromFileAct;
 	
 	QStringList toRemove;
 	QStringList toSync;
-
+	QStringList toFromFile;
 
 };
 

@@ -35,6 +35,7 @@
 #include <QDebug>
 #include <QMessageBox>
 #include <QHeaderView>
+#include <QFileDialog>
 #include <alpm.h>
 
 extern CallBacks CbackReference;
@@ -70,6 +71,7 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	connect(systray, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), SLOT(systrayActivated(QSystemTrayIcon::ActivationReason)));
 	connect(actionQuit, SIGNAL(triggered()), SLOT(quitApp()));
 	connect(actionAbout, SIGNAL(triggered()), SLOT(showAboutDialog()));
+	connect(actionInstall_Package_From_File, SIGNAL(triggered()), SLOT(getPackageFromFile()));
 
 	return;
 }
@@ -223,17 +225,15 @@ void MainWindow::populateRepoColumn()
 
 void MainWindow::populateGrpsColumn()
 {
-	alpm_list_t *grps = alpm_list_first(aHandle->getPackageGroups());
+	QStringList grps = aHandle->getPackageGroups();
 
 	removeRepoColumn();
 
-	while(grps != NULL)
+	for(int i = 0; i < grps.size(); ++i)
 	{
 		QListWidgetItem *item = new QListWidgetItem(repoList);
 
-		item->setText((char *)alpm_list_getdata(grps));
-
-		grps = alpm_list_next(grps);
+		item->setText(grps.at(i));
 	}
 
 	repoList->sortItems(Qt::AscendingOrder);
@@ -243,8 +243,6 @@ void MainWindow::populateGrpsColumn()
 	item->setText(tr("All Groups"));
 	item->setSelected(true);
 	repoList->insertItem(0, item);
-
-	alpm_list_free(grps);
 
 	connect(repoList, SIGNAL(itemPressed(QListWidgetItem*)), this, 
 			SLOT(refinePkgView()));
@@ -871,11 +869,11 @@ void MainWindow::widgetQueueToAlpmQueue()
 		return;
 	else if(pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 1).isEmpty() &&
 			pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 1).isEmpty())
-		aHandle->initQueue(false, true);
+		aHandle->initQueue(false, true, false);
 	else if(pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 1).isEmpty())
-		aHandle->initQueue(true, false);
+		aHandle->initQueue(true, false, false);
 	else
-		aHandle->initQueue(true, true);
+		aHandle->initQueue(true, true, false);
 
 	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 1))
 		aHandle->addSyncToQueue(itm->text(2));
@@ -931,6 +929,30 @@ void MainWindow::systrayActivated(QSystemTrayIcon::ActivationReason reason)
 		else
 			hide();
 	}
+}
+
+void MainWindow::getPackageFromFile()
+{
+	QString fileName = QFileDialog::getOpenFileName(this,
+	     tr("Install a Package"), getenv("HOME"), tr("Arch Linux Packages (*.pkg.tar.gz)"));
+	pmpkg_t *pkg;
+	
+	if(fileName == NULL)
+		return;
+	
+	if(alpm_pkg_load(fileName.toAscii().data(), 1, &pkg) == -1)
+		return;
+	
+	printf("Selected %s\n", alpm_pkg_get_name(pkg));
+	
+	alpm_pkg_free(pkg);
+	
+	aHandle->initQueue(false, false, true);
+	
+	aHandle->addFFToQueue(fileName);
+	
+	processQueue();
+	
 }
 
 void MainWindow::showAboutDialog()
