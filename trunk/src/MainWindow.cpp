@@ -620,8 +620,10 @@ void MainWindow::installAllPackages()
 	if (repoList->selectedItems().isEmpty())
 		return;
 
-	QListWidgetItem *item = repoList->selectedItems().first();
-	foreach (QTreeWidgetItem *item, pkgsViewWG->findItems(item->text(), Qt::MatchExactly, 5))
+	QString tmp = repoList->selectedItems().first()->text();
+	tmp.append(" ");
+	tmp.prepend(" ");
+	foreach (QTreeWidgetItem *item, pkgsViewWG->findItems(tmp, (Qt::MatchFlags)Qt::MatchContains, 6))
 	{
 		installPackage(item->text(2));
 	}
@@ -632,8 +634,10 @@ void MainWindow::removeAllPackages()
 	if (repoList->selectedItems().isEmpty())
 		return;
 
-	QListWidgetItem *item = repoList->selectedItems().first();
-	foreach (QTreeWidgetItem *item, pkgsViewWG->findItems(item->text(), Qt::MatchExactly, 5))
+	QString tmp = repoList->selectedItems().first()->text();
+	tmp.append(" ");
+	tmp.prepend(" ");
+	foreach (QTreeWidgetItem *item, pkgsViewWG->findItems(tmp, (Qt::MatchFlags)Qt::MatchContains, 6))
 	{
 		removePackage(item->text(2));
 	}
@@ -644,8 +648,10 @@ void MainWindow::cancelAllActions()
 	if (repoList->selectedItems().isEmpty())
 		return;
 
-	QListWidgetItem *item = repoList->selectedItems().first();
-	foreach (QTreeWidgetItem *item, pkgsViewWG->findItems(item->text(), Qt::MatchExactly, 5))
+	QString tmp = repoList->selectedItems().first()->text();
+	tmp.append(" ");
+	tmp.prepend(" ");
+	foreach (QTreeWidgetItem *item, pkgsViewWG->findItems(tmp, (Qt::MatchFlags)Qt::MatchContains, 6))
 	{
 		cancelAction(item->text(2));
 	}
