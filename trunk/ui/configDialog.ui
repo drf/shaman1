@@ -78,7 +78,7 @@
       </sizepolicy>
      </property>
      <property name="currentIndex" >
-      <number>2</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="Seite" >
       <layout class="QGridLayout" >
@@ -300,35 +300,35 @@ Please note that packages from Unstable and Testing may break your system.</stri
              <item>
               <widget class="QCheckBox" name="coreBox" >
                <property name="text" >
-                <string>Core</string>
+                <string comment="Don't translate" >Core</string>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QCheckBox" name="extraBox" >
                <property name="text" >
-                <string>Extra</string>
+                <string comment="Don't translate" >Extra</string>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QCheckBox" name="communityBox" >
                <property name="text" >
-                <string>Community</string>
+                <string comment="Don't translate" >Community</string>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QCheckBox" name="testingBox" >
                <property name="text" >
-                <string>Testing</string>
+                <string comment="Don't translate" >Testing</string>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QCheckBox" name="unstableBox" >
                <property name="text" >
-                <string>Unstable</string>
+                <string comment="Don't translate" >Unstable</string>
                </property>
               </widget>
              </item>

@@ -277,12 +277,6 @@
                <property name="readOnly" >
                 <bool>true</bool>
                </property>
-               <property name="html" >
-                <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
-p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Liberation Sans'; font-size:10pt; font-weight:400; font-style:normal;">
-&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif';">&lt;/p>&lt;/body>&lt;/html></string>
-               </property>
                <property name="acceptRichText" >
                 <bool>false</bool>
                </property>
@@ -299,13 +293,7 @@ p, li { white-space: pre-wrap; }
             </attribute>
             <layout class="QGridLayout" >
              <item row="0" column="0" >
-              <widget class="QTreeWidget" name="filesWidget" >
-               <column>
-                <property name="text" >
-                 <string>1</string>
-                </property>
-               </column>
-              </widget>
+              <widget class="QTreeWidget" name="filesWidget" />
              </item>
             </layout>
            </widget>
@@ -380,7 +368,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="windowTitle" >
-    <string>toolBar</string>
+    <string>Quick Actions</string>
    </property>
    <property name="movable" >
     <bool>false</bool>

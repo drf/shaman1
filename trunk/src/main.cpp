@@ -29,6 +29,8 @@
 #include <QString>
 #include <QSettings>
 #include <QMessageBox>
+#include <QFile>
+#include <QDate>
 #include <signal.h>
 
 static void cleanup(int signum)
@@ -70,7 +72,10 @@ int main(int argc, char **argv)
 		QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("qtPacman", "Hey! "
 				"If you're reading this, first of all thanks for helping us in making qtPacman better. "
 				"There are not many comments unless where needed, since all the strings are pretty self-explanatory. "
-				"However, if you have any doubts, or if you just want to drop us a line, there goes our email addresses:\n"
+				"You'll see a lot of HTML in some cases: don't let that scare you, but please edit text only. Editing "
+				"HTML tags too may break our layout, so be careful. A good practice could be copying the whole string, "
+				"and then translating just what's outside the tags, usually just a few words. "
+				"If you have any doubts, or if you just want to drop us a line, there goes our email addresses:\n"
 				"Dario: drf54321@gmail.com\nLukas: l.appelhans@gmx.de\n"
 				"Thanks again, and enjoy your translation!"), 
 				QObject::tr("You have to be root to run qtPacman.\nPlease restart it with root privileges."), QMessageBox::Ok);
@@ -108,8 +113,13 @@ int main(int argc, char **argv)
 	{
 		/* Whoa! This probably means that this is either the first time we
 		 * start qtPacman, or the config file has gone. In both cases,
-		 * let's create some reasonable defaults.
+		 * let's create some reasonable defaults. And let's backup
+		 * pacman.conf too, our parser simply destroys all commented
+		 * lines.
 		 */
+		
+		QFile::copy("/etc/pacman.conf", QString("/etc/pacman.conf.bak.").append(QDate::currentDate().toString("ddMMyyyy")));
+		
 		settings->setValue("gui/startupmode", "window");
 	}
 	
@@ -126,7 +136,7 @@ int main(int argc, char **argv)
 	}
 	else
 	{
-		/* TODO: case 2: we don't want to show Main Window,
+		/* case 2: we don't want to show Main Window,
 		 * we want the program to start up in the systray
 		 * only.
 		 */
