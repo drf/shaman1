@@ -53,6 +53,7 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	addDockWidget(Qt::BottomDockWidgetArea, dockWidget);
 	pkgsViewWG->setContextMenuPolicy(Qt::CustomContextMenu);
         repoList->setContextMenuPolicy(Qt::CustomContextMenu);
+	pkgsViewWG->hideColumn(4);
 
 	setupSystray();
 	
