@@ -15,311 +15,345 @@
   <property name="toolButtonStyle" >
    <enum>Qt::ToolButtonTextUnderIcon</enum>
   </property>
+  <property name="dockNestingEnabled" >
+   <bool>true</bool>
+  </property>
+  <property name="dockOptions" >
+   <set>QMainWindow::AllowNestedDocks|QMainWindow::AllowTabbedDocks|QMainWindow::AnimatedDocks|QMainWindow::ForceTabbedDocks|QMainWindow::VerticalTabs</set>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac" >
+   <bool>false</bool>
+  </property>
   <widget class="QWidget" name="centralwidget" >
    <layout class="QGridLayout" >
-    <item row="0" column="0" >
-     <widget class="QSplitter" name="splitter_2" >
-      <property name="orientation" >
-       <enum>Qt::Horizontal</enum>
+    <item row="0" column="1" >
+     <layout class="QVBoxLayout" >
+      <item>
+       <layout class="QHBoxLayout" >
+        <item>
+         <widget class="QComboBox" name="packageSwitchCombo" >
+          <property name="sizePolicy" >
+           <sizepolicy vsizetype="Fixed" hsizetype="Maximum" >
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <item>
+           <property name="text" >
+            <string>All packages</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Installed packages</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Not installed packages</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Upgradeable packages</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Packages in Queue</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="searchLine" >
+          <property name="sizePolicy" >
+           <sizepolicy vsizetype="Fixed" hsizetype="MinimumExpanding" >
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="inputMask" >
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="nameDescBox" />
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTreeWidget" name="pkgsViewWG" >
+        <property name="sizePolicy" >
+         <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="indentation" >
+         <number>0</number>
+        </property>
+        <property name="rootIsDecorated" >
+         <bool>false</bool>
+        </property>
+        <property name="itemsExpandable" >
+         <bool>false</bool>
+        </property>
+        <property name="sortingEnabled" >
+         <bool>false</bool>
+        </property>
+        <column>
+         <property name="text" >
+          <string>Status</string>
+         </property>
+        </column>
+        <column>
+         <property name="text" >
+          <string>Action</string>
+         </property>
+        </column>
+        <column>
+         <property name="text" >
+          <string>Name</string>
+         </property>
+        </column>
+        <column>
+         <property name="text" >
+          <string>Version</string>
+         </property>
+        </column>
+        <column>
+         <property name="text" >
+          <string>Description</string>
+         </property>
+        </column>
+        <column>
+         <property name="text" >
+          <string>Repository</string>
+         </property>
+        </column>
+        <column>
+         <property name="text" >
+          <string>Groups</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item rowspan="2" row="0" column="0" >
+     <widget class="QDockWidget" name="dockWidget_2" >
+      <property name="floating" >
+       <bool>false</bool>
       </property>
-      <widget class="QWidget" name="verticalLayout" >
-       <layout class="QVBoxLayout" >
-        <item>
-         <widget class="QListWidget" name="repoList" >
-          <property name="sizePolicy" >
-           <sizepolicy vsizetype="Minimum" hsizetype="Preferred" >
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="switchToRepo" >
-          <property name="sizePolicy" >
-           <sizepolicy vsizetype="Maximum" hsizetype="Preferred" >
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="text" >
-           <string>Repositories</string>
-          </property>
-          <property name="icon" >
-           <iconset resource="qtpacman.qrc" >:/Icons/icons/network-server-database.png</iconset>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="switchToGrps" >
-          <property name="sizePolicy" >
-           <sizepolicy vsizetype="Maximum" hsizetype="Preferred" >
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="text" >
-           <string>Package Groups</string>
-          </property>
-          <property name="icon" >
-           <iconset resource="qtpacman.qrc" >:/Icons/icons/bookmark-new-list.png</iconset>
-          </property>
-         </widget>
+      <property name="features" >
+       <set>QDockWidget::AllDockWidgetFeatures</set>
+      </property>
+      <property name="allowedAreas" >
+       <set>Qt::AllDockWidgetAreas</set>
+      </property>
+      <property name="windowTitle" >
+       <string>Repositories</string>
+      </property>
+      <widget class="QWidget" name="dockWidgetContents_2" >
+       <layout class="QGridLayout" >
+        <item row="0" column="0" >
+         <layout class="QVBoxLayout" >
+          <item>
+           <widget class="QListWidget" name="repoList" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Minimum" hsizetype="Preferred" >
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="switchToRepo" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Maximum" hsizetype="Preferred" >
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text" >
+             <string>Repositories</string>
+            </property>
+            <property name="icon" >
+             <iconset resource="qtpacman.qrc" >:/Icons/icons/network-server-database.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="switchToGrps" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Maximum" hsizetype="Preferred" >
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text" >
+             <string>Package Groups</string>
+            </property>
+            <property name="icon" >
+             <iconset resource="qtpacman.qrc" >:/Icons/icons/bookmark-new-list.png</iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </item>
        </layout>
       </widget>
-      <widget class="QSplitter" name="splitter" >
-       <property name="orientation" >
-        <enum>Qt::Vertical</enum>
-       </property>
-       <widget class="QWidget" name="verticalLayout_3" >
-        <layout class="QVBoxLayout" >
-         <item>
-          <layout class="QHBoxLayout" >
-           <item>
-            <widget class="QComboBox" name="packageSwitchCombo" >
-             <property name="sizePolicy" >
-              <sizepolicy vsizetype="Fixed" hsizetype="Maximum" >
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <item>
-              <property name="text" >
-               <string>All packages</string>
+     </widget>
+    </item>
+    <item row="1" column="1" >
+     <widget class="QDockWidget" name="dockWidget" >
+      <property name="floating" >
+       <bool>false</bool>
+      </property>
+      <property name="features" >
+       <set>QDockWidget::AllDockWidgetFeatures</set>
+      </property>
+      <property name="windowTitle" >
+       <string>Package Information</string>
+      </property>
+      <widget class="QWidget" name="dockWidgetContents" >
+       <layout class="QGridLayout" >
+        <item row="0" column="0" >
+         <layout class="QVBoxLayout" >
+          <item>
+           <layout class="QHBoxLayout" >
+            <item>
+             <spacer>
+              <property name="orientation" >
+               <enum>Qt::Horizontal</enum>
               </property>
-             </item>
-             <item>
-              <property name="text" >
-               <string>Installed packages</string>
+              <property name="sizeHint" >
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
               </property>
-             </item>
-             <item>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="installButton" >
               <property name="text" >
-               <string>Not installed packages</string>
+               <string>Mark for Installation</string>
               </property>
-             </item>
-             <item>
+              <property name="icon" >
+               <iconset resource="qtpacman.qrc" >:/Icons/icons/list-add.png</iconset>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="removeButton" >
               <property name="text" >
-               <string>Upgradeable packages</string>
+               <string>Mark for Removal</string>
               </property>
-             </item>
-             <item>
+              <property name="icon" >
+               <iconset resource="qtpacman.qrc" >:/Icons/icons/list-remove.png</iconset>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="completeRemoveButton" >
               <property name="text" >
-               <string>Packages in Queue</string>
+               <string>Mark for complete removal (pacman -Rcs)</string>
               </property>
-             </item>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="searchLine" >
-             <property name="sizePolicy" >
-              <sizepolicy vsizetype="Fixed" hsizetype="MinimumExpanding" >
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="inputMask" >
-              <string/>
-             </property>
-            </widget>
-           </item>
-	   <item>
-	    <widget class="QComboBox" name="nameDescBox" />
-	   </item>
-          </layout>
-         </item>
-         <item>
-          <widget class="QTreeWidget" name="pkgsViewWG" >
-           <property name="sizePolicy" >
-            <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="indentation" >
-            <number>0</number>
-           </property>
-           <property name="rootIsDecorated" >
-            <bool>false</bool>
-           </property>
-           <property name="itemsExpandable" >
-            <bool>false</bool>
-           </property>
-           <property name="sortingEnabled" >
-            <bool>false</bool>
-           </property>
-           <column>
-            <property name="text" >
-             <string>Status</string>
+              <property name="icon" >
+               <iconset resource="qtpacman.qrc" >:/Icons/icons/edit-delete.png</iconset>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="cancelButton" >
+              <property name="text" >
+               <string>Cancel action</string>
+              </property>
+              <property name="icon" >
+               <iconset resource="qtpacman.qrc" >:/Icons/icons/dialog-cancel.png</iconset>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QTabWidget" name="PkgInfos" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Preferred" hsizetype="Minimum" >
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
             </property>
-           </column>
-           <column>
-            <property name="text" >
-             <string>Action</string>
+            <property name="currentIndex" >
+             <number>0</number>
             </property>
-           </column>
-           <column>
-            <property name="text" >
-             <string>Name</string>
-            </property>
-           </column>
-           <column>
-            <property name="text" >
-             <string>Version</string>
-            </property>
-           </column>
-           <column>
-            <property name="text" >
-             <string>Description</string>
-            </property>
-           </column>
-           <column>
-            <property name="text" >
-             <string>Repository</string>
-            </property>
-           </column>
-           <column>
-            <property name="text" >
-             <string>Groups</string>
-            </property>
-           </column>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QWidget" name="verticalLayout_2" >
-        <layout class="QVBoxLayout" >
-         <item>
-          <layout class="QHBoxLayout" >
-           <item>
-            <spacer>
-             <property name="orientation" >
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" >
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item>
-            <widget class="QPushButton" name="installButton" >
-             <property name="text" >
-              <string>Mark for Installation</string>
-             </property>
-             <property name="icon" >
-              <iconset resource="qtpacman.qrc" >:/Icons/icons/list-add.png</iconset>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="removeButton" >
-             <property name="text" >
-              <string>Mark for Removal</string>
-             </property>
-             <property name="icon" >
-              <iconset resource="qtpacman.qrc" >:/Icons/icons/list-remove.png</iconset>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="completeRemoveButton" >
-             <property name="text" >
-              <string>Mark for complete removal (pacman -Rcs)</string>
-             </property>
-             <property name="icon" >
-              <iconset resource="qtpacman.qrc" >:/Icons/icons/edit-delete.png</iconset>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="cancelButton" >
-             <property name="text" >
-              <string>Cancel action</string>
-             </property>
-             <property name="icon" >
-              <iconset resource="qtpacman.qrc" >:/Icons/icons/dialog-cancel.png</iconset>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <widget class="QTabWidget" name="PkgInfos" >
-           <property name="sizePolicy" >
-            <sizepolicy vsizetype="Preferred" hsizetype="Minimum" >
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="currentIndex" >
-            <number>0</number>
-           </property>
-           <widget class="QWidget" name="tab" >
-            <attribute name="title" >
-             <string>Package Information</string>
-            </attribute>
-            <attribute name="icon" >
-             <iconset resource="qtpacman.qrc" >:/Icons/icons/help-about.png</iconset>
-            </attribute>
-            <layout class="QGridLayout" >
-             <item row="0" column="0" >
-              <widget class="QTextEdit" name="pkgInfo" >
-               <property name="enabled" >
-                <bool>true</bool>
-               </property>
-               <property name="acceptDrops" >
-                <bool>false</bool>
-               </property>
-               <property name="undoRedoEnabled" >
-                <bool>false</bool>
-               </property>
-               <property name="readOnly" >
-                <bool>true</bool>
-               </property>
-               <property name="acceptRichText" >
-                <bool>false</bool>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-           <widget class="QWidget" name="tab_2" >
-            <attribute name="title" >
-             <string>Files</string>
-            </attribute>
-            <attribute name="icon" >
-             <iconset resource="qtpacman.qrc" >:/Icons/icons/document-open-folder.png</iconset>
-            </attribute>
-            <layout class="QGridLayout" >
-             <item row="0" column="0" >
-              <widget class="QTreeWidget" name="filesWidget" >
-               <column>
-                <property name="text" >
-                 <string>1</string>
+            <widget class="QWidget" name="tab" >
+             <attribute name="title" >
+              <string>Package Information</string>
+             </attribute>
+             <attribute name="icon" >
+              <iconset resource="qtpacman.qrc" >:/Icons/icons/help-about.png</iconset>
+             </attribute>
+             <layout class="QGridLayout" >
+              <item row="0" column="0" >
+               <widget class="QTextEdit" name="pkgInfo" >
+                <property name="enabled" >
+                 <bool>true</bool>
                 </property>
-               </column>
-              </widget>
-             </item>
-            </layout>
+                <property name="acceptDrops" >
+                 <bool>false</bool>
+                </property>
+                <property name="undoRedoEnabled" >
+                 <bool>false</bool>
+                </property>
+                <property name="readOnly" >
+                 <bool>true</bool>
+                </property>
+                <property name="acceptRichText" >
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="tab_2" >
+             <attribute name="title" >
+              <string>Files</string>
+             </attribute>
+             <attribute name="icon" >
+              <iconset resource="qtpacman.qrc" >:/Icons/icons/document-open-folder.png</iconset>
+             </attribute>
+             <layout class="QGridLayout" >
+              <item row="0" column="0" >
+               <widget class="QTreeWidget" name="filesWidget" >
+                <column>
+                 <property name="text" >
+                  <string>1</string>
+                 </property>
+                </column>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="dependenciesTab" >
+             <attribute name="title" >
+              <string>Dependencies</string>
+             </attribute>
+             <layout class="QGridLayout" >
+              <item row="0" column="0" >
+               <widget class="QListWidget" name="dependenciesWidget" />
+              </item>
+             </layout>
+            </widget>
            </widget>
-           <widget class="QWidget" name="dependenciesTab" >
-            <attribute name="title" >
-             <string>Dependencies</string>
-            </attribute>
-            <layout class="QGridLayout" >
-             <item row="0" column="0" >
-              <widget class="QListWidget" name="dependenciesWidget" />
-             </item>
-            </layout>
-           </widget>
-          </widget>
-         </item>
-        </layout>
-       </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>
@@ -331,7 +365,7 @@
      <x>0</x>
      <y>0</y>
      <width>1195</width>
-     <height>25</height>
+     <height>27</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile" >

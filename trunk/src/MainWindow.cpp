@@ -49,6 +49,8 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
   revActive(false)
 {
 	setupUi(this);
+	addDockWidget(Qt::LeftDockWidgetArea, dockWidget_2);
+	addDockWidget(Qt::BottomDockWidgetArea, dockWidget);
 	pkgsViewWG->setContextMenuPolicy(Qt::CustomContextMenu);
         repoList->setContextMenuPolicy(Qt::CustomContextMenu);
 
