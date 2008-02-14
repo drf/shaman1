@@ -67,6 +67,7 @@ public:
 	alpm_list_t *getAvailableRepos();
 	QStringList getPackageGroups();
 	QStringList getUpgradeablePackages();
+	alpm_list_t *getInstalledPackages();
 
 	QStringList getPackageDependencies(pmpkg_t *package);
 	QStringList getPackageDependencies(const QString &name, const QString &repo);
@@ -102,12 +103,13 @@ public:
 	bool performCurrentTransaction();
 
 	bool reloadPacmanConfiguration(); // In case the user modifies it.
+	
+	pmpkg_t *getPackageFromName(const QString &name, const QString &repo);
 
 private:
 	bool initTransaction(pmtranstype_t type, pmtransflag_t flags);
 	bool releaseTransaction();
 	bool setUpAlpmSettings();
-	pmpkg_t *getPackageFromName(const QString &name, const QString &repo);
 
 signals:
 	void streamDbUpdatingStatus(char *repo, int action);

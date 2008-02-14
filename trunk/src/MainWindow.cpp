@@ -189,6 +189,23 @@ bool MainWindow::populatePackagesView()
 	}
 
 	databases = alpm_list_first(databases);
+	
+	alpm_list_t *locPkg = aHandle->getInstalledPackages();
+	
+	while(locPkg != NULL)
+	{
+		pmpkg_t *pkg = (pmpkg_t *)alpm_list_getdata(locPkg);
+		if (pkgsViewWG->findItems(alpm_pkg_get_name(pkg), Qt::MatchExactly, 2).isEmpty())
+		{
+			QTreeWidgetItem *item = new QTreeWidgetItem(pkgsViewWG);
+			item->setText(0, tr("Installed"));
+			item->setText(2, alpm_pkg_get_name(pkg));
+			item->setText(3, alpm_pkg_get_version(pkg));
+			item->setText(4, alpm_pkg_get_desc(pkg));
+			item->setText(5, "local");
+		}
+		locPkg = alpm_list_next(locPkg);
+	}
 
 	foreach (QString pac, aHandle->getUpgradeablePackages())
 	{
@@ -229,6 +246,10 @@ void MainWindow::populateRepoColumn()
 	}
 
 	list = alpm_list_first(list);
+	
+	QListWidgetItem *itm = new QListWidgetItem(repoList);
+
+	itm->setText(tr("Local Packages"));
 
 	connect(repoList, SIGNAL(itemPressed(QListWidgetItem*)), this, 
 			SLOT(refinePkgView()));
@@ -280,8 +301,12 @@ void MainWindow::refinePkgView()
 		if(!repoList->findItems(QString(tr("All Repositories")),
 				(Qt::MatchFlags)Qt::MatchExactly).isEmpty())
 			// First time, so don't check anything.
-			list = pkgsViewWG->findItems(repoList->selectedItems().at(0)->text(), 
-					(Qt::MatchFlags)Qt::MatchExactly, 5);
+			if(repoList->selectedItems().at(0)->text().compare(tr("Local Packages")))
+				list = pkgsViewWG->findItems(repoList->selectedItems().at(0)->text(), 
+						(Qt::MatchFlags)Qt::MatchExactly, 5);
+			else
+				list = pkgsViewWG->findItems("local", 
+						(Qt::MatchFlags)Qt::MatchExactly, 5);
 		else
 		{
 			list = pkgsViewWG->findItems(repoList->selectedItems().at(0)->text(), 
@@ -421,6 +446,11 @@ void MainWindow::showPkgInfo()
 	}
 
 	pkg = alpm_db_get_pkg(curdb, pkgsViewWG->currentItem()->text(2).toAscii().data());
+	
+	if(!pkg)
+		/* Well, if pkg is NULL we're probably searching for something coming
+		 * from the local database. */
+		pkg = aHandle->getPackageFromName(pkgsViewWG->currentItem()->text(2).toAscii().data(), "local");
 
 	databases = alpm_list_first(databases);
 

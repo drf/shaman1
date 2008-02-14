@@ -145,6 +145,11 @@ alpm_list_t *AlpmHandler::getAvailableRepos()
 	return sync_databases;
 }
 
+alpm_list_t *AlpmHandler::getInstalledPackages()
+{
+	return alpm_db_getpkgcache(db_local);
+}
+
 QStringList AlpmHandler::getUpgradeablePackages()
 {
 	alpm_list_t *syncpkgs = NULL;
