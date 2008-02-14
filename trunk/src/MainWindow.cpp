@@ -53,10 +53,13 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
         repoList->setContextMenuPolicy(Qt::CustomContextMenu);
 
 	setupSystray();
+	
+	nameDescBox->addItem(tr("Name"));
+	nameDescBox->addItem(tr("Description"));
 
 	connect(actionUpdate_Database, SIGNAL(triggered()), SLOT(doDbUpdate()));
 	connect(pkgsViewWG, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showPkgsViewContextMenu()));
-        connect(repoList, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showRepoViewContextMenu()));
+    connect(repoList, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showRepoViewContextMenu()));
 	connect(actionProcess_Queue, SIGNAL(triggered()), SLOT(widgetQueueToAlpmQueue()));
 	connect(switchToRepo, SIGNAL(clicked()), SLOT(populateRepoColumn()));
 	connect(switchToGrps, SIGNAL(clicked()), SLOT(populateGrpsColumn()));
@@ -66,6 +69,7 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	connect(cancelButton, SIGNAL(clicked()), SLOT(cancelAction()));
 	connect(actionUpgrade_System, SIGNAL(triggered()), SLOT(fullSysUpgrade()));
 	connect(packageSwitchCombo, SIGNAL(currentIndexChanged(int)), SLOT(refinePkgView()));
+	connect(nameDescBox, SIGNAL(currentIndexChanged(int)), SLOT(refinePkgView()));
 	connect(searchLine, SIGNAL(textChanged(const QString&)), SLOT(refinePkgView()));
 	connect(actionPacman_Preferences, SIGNAL(triggered()), SLOT(showSettings()));
 	connect(systray, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), SLOT(systrayActivated(QSystemTrayIcon::ActivationReason)));
@@ -346,9 +350,19 @@ void MainWindow::refinePkgView()
 	{
 		foreach (QTreeWidgetItem *item, list)
 		{
-			if (!item->text(2).contains(searchLine->text(), Qt::CaseInsensitive))
+			if(nameDescBox->currentText() == tr("Name"))
 			{
-				list.removeAt(list.indexOf(item));
+				if (!item->text(2).contains(searchLine->text(), Qt::CaseInsensitive))
+				{
+					list.removeAt(list.indexOf(item));
+				}
+			}
+			else if(nameDescBox->currentText() == tr("Description"))
+			{
+				if (!item->text(4).contains(searchLine->text(), Qt::CaseInsensitive))
+				{
+					list.removeAt(list.indexOf(item));
+				}
 			}
 		}
 	}
