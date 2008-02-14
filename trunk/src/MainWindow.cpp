@@ -162,9 +162,15 @@ bool MainWindow::populatePackagesView()
 
 			/* TODO: show icons instead of text here *///Comment: IMO we should show text and icon here (more usable) (boom1992)
 			if(aHandle->isInstalled(pkg))
+			{
 				item->setText(0, tr("Installed"));
+				item->setIcon(0, QIcon(":/Icons/icons/dialog-ok-apply.png"));
+			}
 			else
+			{
 				item->setText(0, tr("Not Installed"));
+				item->setIcon(0, QIcon(":/Icons/icons/dialog-cancel.png"));
+			}
 
 			item->setText(2, alpm_pkg_get_name(pkg));
 			item->setText(3, alpm_pkg_get_version(pkg));
