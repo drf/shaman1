@@ -160,7 +160,6 @@ bool MainWindow::populatePackagesView()
 			alpm_list_t *grps = (alpm_list_t *)alpm_pkg_get_groups(pkg);
 			QString grStr("");
 
-			/* TODO: show icons instead of text here *///Comment: IMO we should show text and icon here (more usable) (boom1992)
 			if(aHandle->isInstalled(pkg))
 			{
 				item->setText(0, tr("Installed"));
@@ -623,15 +622,29 @@ void MainWindow::showRepoViewContextMenu()
 
 void MainWindow::installAllPackages()
 {
+	qDebug() << "InstallAllPackages";
 	if (repoList->selectedItems().isEmpty())
 		return;
+	qDebug() << "InstallAllPackages1";
 
-	QString tmp = repoList->selectedItems().first()->text();
-	tmp.append(" ");
-	tmp.prepend(" ");
-	foreach (QTreeWidgetItem *item, pkgsViewWG->findItems(tmp, (Qt::MatchFlags)Qt::MatchContains, 6))
+	if (!repoList->findItems(tr("All Groups"), Qt::MatchExactly).isEmpty())
 	{
-		installPackage(item->text(2));
+		QString tmp = repoList->selectedItems().first()->text();
+		tmp.append(" ");
+		tmp.prepend(" ");
+		qDebug() << "Hehe";
+		foreach (QTreeWidgetItem *item, pkgsViewWG->findItems(tmp, (Qt::MatchFlags)Qt::MatchContains, 6))
+		{
+			installPackage(item->text(2));
+		}
+	}
+	else
+	{
+		qDebug() << "Hehe2";
+		foreach (QTreeWidgetItem *item, pkgsViewWG->findItems(repoList->selectedItems().first()->text(), Qt::MatchExactly, 5))
+		{
+			installPackage(item->text(2));
+		}
 	}
 }
 
@@ -640,12 +653,22 @@ void MainWindow::removeAllPackages()
 	if (repoList->selectedItems().isEmpty())
 		return;
 
-	QString tmp = repoList->selectedItems().first()->text();
-	tmp.append(" ");
-	tmp.prepend(" ");
-	foreach (QTreeWidgetItem *item, pkgsViewWG->findItems(tmp, (Qt::MatchFlags)Qt::MatchContains, 6))
+	if (!repoList->findItems(tr("All Groups"), Qt::MatchExactly).isEmpty())
 	{
-		removePackage(item->text(2));
+		QString tmp = repoList->selectedItems().first()->text();
+		tmp.append(" ");
+		tmp.prepend(" ");
+		foreach (QTreeWidgetItem *item, pkgsViewWG->findItems(tmp, (Qt::MatchFlags)Qt::MatchContains, 6))
+		{
+			removePackage(item->text(2));
+		}
+	}
+	else
+	{
+		foreach (QTreeWidgetItem *item, pkgsViewWG->findItems(repoList->selectedItems().first()->text(), (Qt::MatchFlags)Qt::MatchExactly, 5))
+		{
+			removePackage(item->text(2));
+		}
 	}
 }
 
@@ -654,12 +677,22 @@ void MainWindow::cancelAllActions()
 	if (repoList->selectedItems().isEmpty())
 		return;
 
-	QString tmp = repoList->selectedItems().first()->text();
-	tmp.append(" ");
-	tmp.prepend(" ");
-	foreach (QTreeWidgetItem *item, pkgsViewWG->findItems(tmp, (Qt::MatchFlags)Qt::MatchContains, 6))
+	if (!repoList->findItems(tr("All Groups"), Qt::MatchExactly).isEmpty())
 	{
-		cancelAction(item->text(2));
+		QString tmp = repoList->selectedItems().first()->text();
+		tmp.append(" ");
+		tmp.prepend(" ");
+		foreach (QTreeWidgetItem *item, pkgsViewWG->findItems(tmp, (Qt::MatchFlags)Qt::MatchContains, 6))
+		{
+			cancelAction(item->text(2));
+		}
+	}
+	else
+	{
+		foreach (QTreeWidgetItem *item, pkgsViewWG->findItems(repoList->selectedItems().first()->text(), (Qt::MatchFlags)Qt::MatchContains, 5))
+		{
+			cancelAction(item->text(2));
+		}
 	}
 }
 
