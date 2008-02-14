@@ -54,6 +54,7 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	pkgsViewWG->setContextMenuPolicy(Qt::CustomContextMenu);
         repoList->setContextMenuPolicy(Qt::CustomContextMenu);
 	pkgsViewWG->hideColumn(4);
+	resize(500, size().height());
 
 	setupSystray();
 	
