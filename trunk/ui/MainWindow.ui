@@ -163,7 +163,7 @@
           <item>
            <widget class="QListWidget" name="repoList" >
             <property name="sizePolicy" >
-             <sizepolicy vsizetype="Minimum" hsizetype="Preferred" >
+             <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
@@ -303,6 +303,12 @@
                <widget class="QTextEdit" name="pkgInfo" >
                 <property name="enabled" >
                  <bool>true</bool>
+                </property>
+                <property name="sizePolicy" >
+                 <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
                 </property>
                 <property name="acceptDrops" >
                  <bool>false</bool>

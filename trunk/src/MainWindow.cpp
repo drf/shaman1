@@ -62,7 +62,7 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 
 	connect(actionUpdate_Database, SIGNAL(triggered()), SLOT(doDbUpdate()));
 	connect(pkgsViewWG, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showPkgsViewContextMenu()));
-    connect(repoList, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showRepoViewContextMenu()));
+	connect(repoList, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showRepoViewContextMenu()));
 	connect(actionProcess_Queue, SIGNAL(triggered()), SLOT(widgetQueueToAlpmQueue()));
 	connect(switchToRepo, SIGNAL(clicked()), SLOT(populateRepoColumn()));
 	connect(switchToGrps, SIGNAL(clicked()), SLOT(populateGrpsColumn()));
