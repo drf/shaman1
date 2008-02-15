@@ -277,7 +277,7 @@
             <item>
              <widget class="QPushButton" name="completeRemoveButton" >
               <property name="text" >
-               <string>Mark for complete removal (pacman -Rcs)</string>
+               <string>Mark for complete removal</string>
               </property>
               <property name="icon" >
                <iconset resource="qtpacman.qrc" >:/Icons/icons/edit-delete.png</iconset>
