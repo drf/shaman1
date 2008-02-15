@@ -175,12 +175,12 @@ bool MainWindow::populatePackagesView()
 
 			if(aHandle->isInstalled(pkg))
 			{
-				item->setText(0, tr("Installed"));
+				//item->setText(0, tr("Installed"));
 				item->setIcon(0, QIcon(":/Icons/icons/dialog-ok-apply.png"));
 			}
 			else
 			{
-				item->setText(0, tr("Not Installed"));
+				//item->setText(0, tr("Not Installed"));
 				item->setIcon(0, QIcon(":/Icons/icons/dialog-cancel.png"));
 			}
 
@@ -218,7 +218,7 @@ bool MainWindow::populatePackagesView()
 		if (pkgsViewWG->findItems(alpm_pkg_get_name(pkg), Qt::MatchExactly, 1).isEmpty())
 		{
 			QTreeWidgetItem *item = new QTreeWidgetItem(pkgsViewWG);
-			item->setText(0, tr("Installed"));
+			item->setText(0, tr("Installed"));//FIXME: Icon
 			item->setText(1, alpm_pkg_get_name(pkg));
 			item->setText(3, alpm_pkg_get_version(pkg));
 			item->setText(6, alpm_pkg_get_desc(pkg));
@@ -356,7 +356,7 @@ void MainWindow::refinePkgView()
 			foreach (QTreeWidgetItem *item, list)
 			{
 				//qDebug() << "Checking for installed packages" + item->text(2);
-				if (!item->text(0).compare(tr("Not Installed")))
+				if (!aHandle->isInstalled(item->text(1)))
 					list.removeAt(list.indexOf(item));
 			}
 		}
@@ -365,16 +365,17 @@ void MainWindow::refinePkgView()
 			foreach (QTreeWidgetItem *item, list)
 			{
 				//qDebug() << "Checking for installed packages" + item->text(2);
-				if (!item->text(0).compare(tr("Installed")))
+				if (aHandle->isInstalled(item->text(1)))
 					list.removeAt(list.indexOf(item));
 			}
 		}
 		if (packageSwitchCombo->currentText() == tr("Upgradeable packages"))
 		{
+			QStringList stringList = aHandle->getUpgradeablePackages();
 			foreach (QTreeWidgetItem *item, list)
 			{
 				//qDebug() << "Checking for upgradeable packages" + item->text(2);
-				if (item->text(0) != tr("Upgradeable"))
+				if (!aHandle->isInstalled(item->text(1)) || !stringList.contains(item->text(1)))
 					list.removeAt(list.indexOf(item));
 			}
 		}
@@ -427,19 +428,30 @@ void MainWindow::refinePkgView()
 
 void MainWindow::itemChanged()
 {
-	if (pkgsViewWG->selectedItems().first()->text(0) == tr("Installed"))
+	cancelButton->setDisabled(true);
+	if (aHandle->isInstalled(pkgsViewWG->selectedItems().first()->text(1)))
 	{
 		removeButton->setEnabled(true);
 		installButton->setDisabled(true);
 		completeRemoveButton->setEnabled(true);
 	}
-	if (pkgsViewWG->selectedItems().first()->text(0) == tr("Not Installed"))
+	if (!aHandle->isInstalled(pkgsViewWG->selectedItems().first()->text(1)))
 	{
 		removeButton->setDisabled(true);
 		installButton->setEnabled(true);
 		completeRemoveButton->setDisabled(true);
 	}
 	//if (pkgsViewWG->selectedItems().first()->text(1) == tr("Upgradeable"))
+
+	if (pkgsViewWG->selectedItems().first()->text(2) == tr("Install"))
+		installButton->setDisabled(true);
+	if (pkgsViewWG->selectedItems().first()->text(2) == tr("Uninstall"))
+		removeButton->setDisabled(true);
+	if (pkgsViewWG->selectedItems().first()->text(2) == tr("Complete Uninstall"))
+		completeRemoveButton->setDisabled(true);
+	if (!pkgsViewWG->selectedItems().first()->text(2).isEmpty())
+		cancelButton->setEnabled(true);
+
 	showPkgInfo();
 }
 
@@ -587,26 +599,25 @@ void MainWindow::showPkgsViewContextMenu()
 	QAction *cancelAction = menu->addAction(QIcon(":/Icons/icons/edit-delete.png"), tr("Cancel Action"));
 	connect(cancelAction, SIGNAL(triggered()), SLOT(cancelAction()));
 
-	if (item->text(0) == tr("Installed"))
+	if (aHandle->isInstalled(item->text(1)) && aHandle->getUpgradeablePackages().contains(item->text(1)))
 	{
 		installAction->setDisabled(true);
-		upgradeAction->setDisabled(true);
+		removeAction->setDisabled(true);
 	}
-	else if (item->text(0) == tr("Not Installed"))
+	else if (!aHandle->isInstalled(item->text(1)))
 	{
 		removeAction->setDisabled(true);
 		upgradeAction->setDisabled(true);
 	}
-	else//Package is marked as upgradeable
+	else//Package is marked as installed
 	{
 		installAction->setDisabled(true);
-		removeAction->setDisabled(true);
+		upgradeAction->setDisabled(true);
 	}//FIXME: Add completeRemove-action
 
 	if (item->text(2).isEmpty())
 		cancelAction->setDisabled(true);
-
-	if (item->text(2) == tr("Install"))
+	else if (item->text(2) == tr("Install"))
 		installAction->setDisabled(true);
 	else if (item->text(2) == tr("Uninstall"))
 		removeAction->setDisabled(true);
@@ -715,6 +726,8 @@ void MainWindow::installPackage()
 	qDebug() << "Install Package";
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
 		installPackage(item->text(1));
+
+	itemChanged();
 }
 
 void MainWindow::installPackage(const QString &package)
@@ -734,7 +747,7 @@ void MainWindow::installPackage(const QString &package)
 	if(aHandle->isProviderInstalled(package))
 		return;
 	
-	if (item->text(0) == tr("Installed") || item->text(2) == tr("Install"))
+	if (aHandle->isInstalled(item->text(1)) || item->text(2) == tr("Install"))
 		return;
 	else
 	{
@@ -754,6 +767,8 @@ void MainWindow::removePackage()
 	qDebug() << "Remove Package";
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
 		removePackage(item->text(1));
+
+	itemChanged();
 }
 
 void MainWindow::removePackage(const QString &package)
@@ -767,7 +782,7 @@ void MainWindow::removePackage(const QString &package)
 	QTreeWidgetItem *item = pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 1).first();
 
 	qDebug() << item->text(1);
-	if (item->text(0) == tr("Not Installed") || item->text(2) == tr("Remove"))
+	if (!aHandle->isInstalled(item->text(1)) || item->text(2) == tr("Remove"))
 		return;
 	else
 	{
@@ -788,7 +803,7 @@ void MainWindow::completeRemovePackage()
 	QTreeWidgetItem *item = pkgsViewWG->selectedItems().first();
 
 	qDebug() << item->text(1);
-	if (item->text(0) == tr("Not Installed"))
+	if (aHandle->isInstalled(item->text(1)))
 		return;
 	else
 	{
@@ -807,12 +822,16 @@ void MainWindow::completeRemovePackage()
 	{
 		removePackage(dep);
 	}
+
+	itemChanged();
 }
 
 void MainWindow::cancelAction()
 {
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
 		cancelAction(item->text(1));
+
+	itemChanged();
 }
 
 void MainWindow::cancelAction(const QString &package)
