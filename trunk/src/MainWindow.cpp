@@ -486,6 +486,7 @@ void MainWindow::showPkgInfo()
 
 	databases = alpm_list_first(databases);
 
+	QTreeWidgetItem *item = pkgsViewWG->selectedItems().first();
 	description.append("<b>");
 	description.append(alpm_pkg_get_name(pkg));
 	description.append(" (");
@@ -493,11 +494,17 @@ void MainWindow::showPkgInfo()
 	description.append(")</b><br><br>");
 	description.append(alpm_pkg_get_desc(pkg));
 	description.append("<br><br>");
-	description.append("<b>" + tr("Status:") + "</b> ");
-	if (aHandle->isInstalled(pkgsViewWG->selectedItems().first()->text(1)))
+	description.append("<b>" + tr("Status: ") + "</b> ");
+	if (aHandle->isInstalled(item->text(1)))
 		description.append(tr("Installed")); //FIXME: Icon!!!!
 	else
 		description.append(tr("Not installed"));
+
+	if (!item->text(2).isEmpty())
+	{
+		description.append("<br><b>" + tr("Action: ") + "</b>");
+		description.append(item->text(2));//FIXME: Icon!!!
+	}
 
 	pkgInfo->setHtml(description);
 
