@@ -206,10 +206,7 @@ bool AlpmHandler::updateDatabase()
 	syncdbs = alpm_list_first(sync_databases);
 
 	if(!initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_ALLDEPS))
-	{
-		printf("La madonna!! %s\n", alpm_strerrorlast());
 		return false;
-	}
 
 	while(syncdbs != NULL)
 	{

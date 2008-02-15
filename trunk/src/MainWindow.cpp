@@ -36,6 +36,7 @@
 #include <QMessageBox>
 #include <QHeaderView>
 #include <QFileDialog>
+#include <QTimer>
 #include <alpm.h>
 
 extern CallBacks CbackReference;
@@ -109,6 +110,14 @@ void MainWindow::setupSystray()
 	connect(closeAction, SIGNAL(triggered()), SLOT(quitApp()));
 	//Add actions here ;)
 	systray->setContextMenu(systrayMenu);
+	
+	/* TODO: We should actually read if we need the
+	 * timer and which interval it needs to be set
+	 * from the config file
+	 */
+	
+	trayUpDb = new QTimer(this); /* Oh yeah :) */
+	trayUpDb->setInterval(600000);
 }
 
 void MainWindow::quitApp()
@@ -958,7 +967,9 @@ void MainWindow::queueProcessingEnded(bool errors)
 	
 	QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Queue Processed"), tr("Your Queue was successfully processed!"), QMessageBox::Ok);
 
-	message->show();
+	message->exec();
+	
+	message->deleteLater();
 }
 
 void MainWindow::widgetQueueToAlpmQueue()
@@ -1044,9 +1055,19 @@ void MainWindow::systrayActivated(QSystemTrayIcon::ActivationReason reason)
 	if (reason == QSystemTrayIcon::Trigger)
 	{
 		if (isHidden())
+		{
+			/* Uh, we have to stop the Timer! */
+			trayUpDb->stop();
+			//disconnect(blah)
 			show();
+		}
 		else
+		{
+			/* Start Your timer, baby! */
+			//connect(blah)
+			trayUpDb->start();
 			hide();
+		}
 	}
 }
 
@@ -1059,8 +1080,17 @@ void MainWindow::getPackageFromFile()
 	if(fileName == NULL)
 		return;
 	
+	// Sanity check
 	if(alpm_pkg_load(fileName.toAscii().data(), 1, &pkg) == -1)
+	{
+		QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), QString(tr("%1 does not seem\na valid package")).
+				arg(fileName), QMessageBox::Ok);
+
+		message->exec();
+
+		message->deleteLater();
 		return;
+	}
 	
 	printf("Selected %s\n", alpm_pkg_get_name(pkg));
 	

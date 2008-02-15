@@ -103,6 +103,7 @@ private:
 
 	QSystemTrayIcon *systray;
 	QDialog *reviewQueue;
+	QTimer *trayUpDb;
 	
 	bool upActive;
 	bool revActive;
