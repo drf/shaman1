@@ -118,6 +118,8 @@ void MainWindow::setupSystray()
 	
 	trayUpDb = new QTimer(this); /* Oh yeah :) */
 	trayUpDb->setInterval(600000);
+	
+	connect(trayUpDb, SIGNAL(timeout()), SLOT(dbUpdateTray()));
 }
 
 void MainWindow::quitApp()
@@ -1050,6 +1052,55 @@ void MainWindow::showSettings()
 	configDialog->deleteLater();
 }
 
+void MainWindow::dbUpdateTray()
+{
+	/* Ok, let's silently perform a Db Update.
+	 */
+	// TODO: App Icon, where are you?
+	systray->setIcon(QIcon(":/Icons/icons/edit-redo.png"));
+	
+	upDbTh = new UpDbThread(aHandle);
+	connect(upDbTh, SIGNAL(finished()), SLOT(dbUpdateTrayFinished()));
+	upDbTh->start();
+}
+
+void MainWindow::dbUpdateTrayFinished()
+{	
+	
+	if(upDbTh->getResult())
+	{
+		/* Hey, it looks like the Db was actually updated.
+		 * So, we have to do a pair of things. First of all,
+		 * let's reload our TreeView of packages. Secondly,
+		 * let's check if Upgrades are available
+		 */
+
+		pkgsViewWG->setSortingEnabled(false);
+		populatePackagesView();
+		
+		QStringList list(aHandle->getUpgradeablePackages());
+		if(!list.isEmpty())
+		{
+			/* We actually have something to upgrade! We'd 
+			 * better let the user know by changing icon, 
+			 * and showing a baloon.
+			 */
+			systray->setIcon(QIcon(":/Icons/icons/view-refresh.png"));
+			systray->showMessage(QString(tr("System Upgrade")), QString(list.size() == 1 ? tr("There is %1 upgradeable package.\n"
+					"Click here to upgrade your System.") :	tr("There are %1 upgradeable packages.\nClick here to upgrade your System.")).
+					arg(list.size()));
+			connect(systray, SIGNAL(messageClicked()), SLOT(fullSysUpgrade()));
+		}
+		else
+			systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
+	}
+	else
+		systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
+	
+	delete(upDbTh);
+	
+}
+
 void MainWindow::systrayActivated(QSystemTrayIcon::ActivationReason reason)
 {
 	if (reason == QSystemTrayIcon::Trigger)
@@ -1058,15 +1109,14 @@ void MainWindow::systrayActivated(QSystemTrayIcon::ActivationReason reason)
 		{
 			/* Uh, we have to stop the Timer! */
 			trayUpDb->stop();
-			//disconnect(blah)
 			show();
 		}
 		else
 		{
 			/* Start Your timer, baby! */
-			//connect(blah)
-			trayUpDb->start();
 			hide();
+			trayUpDb->start();
+			
 		}
 	}
 }
@@ -1117,3 +1167,5 @@ void MainWindow::showAboutDialog()
 	
 	about->deleteLater();
 }
+
+

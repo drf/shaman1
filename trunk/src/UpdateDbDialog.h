@@ -35,8 +35,10 @@ class UpDbThread : public QThread
 public:
 	UpDbThread(AlpmHandler *aH);
 	void run();
+	bool getResult();
 private:
 	AlpmHandler *aHandle;
+	bool result;
 };
 
 class UpdateDbDialog : public QDialog, private Ui::dbUpdateDialog

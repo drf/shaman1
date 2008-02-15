@@ -142,7 +142,12 @@ UpDbThread::UpDbThread(AlpmHandler *aH)
 
 void UpDbThread::run()
 {
-	aHandle->updateDatabase();
+	result = aHandle->updateDatabase();
+}
+
+bool UpDbThread::getResult()
+{
+	return result;
 }
 
 void UpdateDbDialog::createWidgets(const QStringList &list)

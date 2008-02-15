@@ -29,12 +29,14 @@
 #include "AlpmHandler.h"
 
 #include <QSystemTrayIcon>
+#include <QThread>
 
 class UpdateDbDialog;
 class SysUpgradeDialog;
 class QueueDialog;
 class ConfigDialog;
 class ManteinanceDialog;
+class UpDbThread;
 
 class MainWindow : public QMainWindow, private Ui::MainWindow, private StringUtils
 {
@@ -66,6 +68,8 @@ public slots:
 	void widgetQueueToAlpmQueue();
 	void destroyReviewQueue();
 	void getPackageFromFile();
+	void dbUpdateTray();
+	void dbUpdateTrayFinished();
 
 private slots:
 	void quitApp();
@@ -104,6 +108,7 @@ private:
 	QSystemTrayIcon *systray;
 	QDialog *reviewQueue;
 	QTimer *trayUpDb;
+	UpDbThread *upDbTh;
 	
 	bool upActive;
 	bool revActive;
