@@ -492,6 +492,12 @@ void MainWindow::showPkgInfo()
 	description.append(alpm_pkg_get_version(pkg));
 	description.append(")</b><br><br>");
 	description.append(alpm_pkg_get_desc(pkg));
+	description.append("<br><br>");
+	description.append("<b>" + tr("Status:") + "</b> ");
+	if (aHandle->isInstalled(pkgsViewWG->selectedItems().first()->text(1)))
+		description.append(tr("Installed")); //FIXME: Icon!!!!
+	else
+		description.append(tr("Not installed"));
 
 	pkgInfo->setHtml(description);
 
