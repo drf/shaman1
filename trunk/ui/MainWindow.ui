@@ -126,22 +126,17 @@
         </column>
         <column>
          <property name="text" >
-          <string>Action</string>
-         </property>
-        </column>
-        <column>
-         <property name="text" >
           <string>Name</string>
          </property>
         </column>
         <column>
          <property name="text" >
-          <string>Version</string>
+          <string>Action</string>
          </property>
         </column>
         <column>
          <property name="text" >
-          <string>Description</string>
+          <string>Version</string>
          </property>
         </column>
         <column>
@@ -152,6 +147,11 @@
         <column>
          <property name="text" >
           <string>Groups</string>
+         </property>
+        </column>
+        <column>
+         <property name="text" >
+          <string>Description</string>
          </property>
         </column>
        </widget>
