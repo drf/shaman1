@@ -246,6 +246,9 @@
               <property name="orientation" >
                <enum>Qt::Horizontal</enum>
               </property>
+              <property name="sizeType" >
+               <enum>QSizePolicy::MinimumExpanding</enum>
+              </property>
               <property name="sizeHint" >
                <size>
                 <width>40</width>
@@ -256,6 +259,15 @@
             </item>
             <item>
              <widget class="QPushButton" name="installButton" >
+              <property name="sizePolicy" >
+               <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="toolTip" >
+               <string>Install selected package</string>
+              </property>
               <property name="text" >
                <string>Mark for Installation</string>
               </property>
@@ -266,6 +278,15 @@
             </item>
             <item>
              <widget class="QPushButton" name="removeButton" >
+              <property name="sizePolicy" >
+               <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="toolTip" >
+               <string>Remove selected package</string>
+              </property>
               <property name="text" >
                <string>Mark for Removal</string>
               </property>
@@ -276,6 +297,15 @@
             </item>
             <item>
              <widget class="QPushButton" name="completeRemoveButton" >
+              <property name="sizePolicy" >
+               <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="toolTip" >
+               <string>Complete Remove selected package (pacman -Rcs)</string>
+              </property>
               <property name="text" >
                <string>Mark for complete removal</string>
               </property>
@@ -286,6 +316,15 @@
             </item>
             <item>
              <widget class="QPushButton" name="cancelButton" >
+              <property name="sizePolicy" >
+               <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="toolTip" >
+               <string>Cancel action for selected package</string>
+              </property>
               <property name="text" >
                <string>Cancel action</string>
               </property>
