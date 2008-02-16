@@ -108,29 +108,13 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 			section.operator=(line);
 			while(section.contains(' '))
 				section.remove(section.indexOf(' '), 1);
-			/*ptr = line;
-			ptr++;
-			if(section)
-				free(section);
-
-			section = strdup(ptr);
-			section[strlen(section)-1] = '\0';
-			if(!strlen(section))
-			{
-				pacData.loaded = false;
-				return;
-			}*/
-
-			/* if we are not looking at the options section, register a db and also
-			 * ensure we have set all of our library paths as the library is too stupid
-			 * at the moment to do lazy opening of the databases */
-
+			
 			if(section.operator!=("options"))
 			{
 				QString toAdd(section);
 				pacData.syncdbs.append(toAdd);
 				serverparsed = 0;
-
+				
 				db.operator=(line);
 			}
 		}
@@ -447,8 +431,8 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 
 					fp.close();
 					changed = true;
+					break;
 				}
-				break;
 			}
 			
 			if(removeroot == 1)
