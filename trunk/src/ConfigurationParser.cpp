@@ -278,7 +278,39 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 			toFind.append(key1);
 			toFind.append("]");
 			if(!fileContent.filter(toFind).isEmpty())
-				return false;
+			{
+				for(int i=0; i < fileContent.size(); ++i)
+				{
+					if(!fileContent.at(i).startsWith(toFind))
+						continue;
+
+					for(int j=i+1; j < fileContent.size(); ++j)
+					{
+						if(fileContent.at(j).startsWith("["))
+							break;
+
+						if(fileContent.at(j).startsWith(key2))
+							return false;
+					}
+					QString toAdd2(key2);
+					toAdd2.append("=");
+					toAdd2.append(realVal);
+					fileContent.insert(i+1, toAdd2);
+
+					QFile::remove("/etc/pacman.conf");
+					if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
+						return false;
+
+					QTextStream str(&fp);
+
+					for(int i=0; i < fileContent.size(); ++i)
+						str << fileContent.at(i) << endl;
+
+					fp.close();
+					return true;
+
+				}
+			}
 			
 			QString toAdd("[");
 			toAdd.append(key1);
