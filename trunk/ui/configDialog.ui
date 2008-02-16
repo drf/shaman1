@@ -212,7 +212,7 @@
               <item row="2" column="0" >
                <widget class="QLabel" name="label_3" >
                 <property name="text" >
-                 <string>IgnoreGroups</string>
+                 <string>IgnoreGroups:</string>
                 </property>
                </widget>
               </item>
@@ -222,7 +222,7 @@
               <item row="3" column="0" >
                <widget class="QLabel" name="label_4" >
                 <property name="text" >
-                 <string>NoUpgrade</string>
+                 <string>NoUpgrade:</string>
                 </property>
                </widget>
               </item>
@@ -232,7 +232,7 @@
               <item row="4" column="0" >
                <widget class="QLabel" name="label_5" >
                 <property name="text" >
-                 <string>NoExtract</string>
+                 <string>NoExtract:</string>
                 </property>
                </widget>
               </item>
@@ -246,7 +246,7 @@
               <item>
                <widget class="QLabel" name="label_6" >
                 <property name="text" >
-                 <string>XFerCommand (example: /path/to/command %u) Blank for Default</string>
+                 <string>XFerCommand: (example: /path/to/command %u) Blank for Default</string>
                 </property>
                </widget>
               </item>
