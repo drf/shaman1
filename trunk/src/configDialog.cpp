@@ -619,7 +619,7 @@ void ConfigDialog::saveConfiguration()
 	if(xFerCommandLine->isModified())
 	{
 		if(xFerCommandLine->text().isEmpty())
-			parser.editPacmanKey("options/XferCommand", NULL, 2);
+			parser.editPacmanKey("options/XferCommand", QString(), 2);
 		else
 			if(!parser.editPacmanKey("options/XferCommand", xFerCommandLine->text().remove(' '), 0))
 				parser.editPacmanKey("options/XferCommand", xFerCommandLine->text(), 1);
