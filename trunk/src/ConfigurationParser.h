@@ -48,12 +48,7 @@ struct PcCnf {
 	bool loaded;
 };
 
-struct PkCnf {
-	string somefield;
-};
-
 typedef struct PcCnf PacmanConf;
-typedef struct PkCnf PaKmodConf;
 
 class ConfigurationParser : private StringUtils
 {
@@ -63,7 +58,6 @@ public:
 	virtual ~ConfigurationParser();
 	
 	PacmanConf getPacmanConf(bool forcereload);
-	PaKmodConf getPaKmodConf(bool forcereload);
 	
 	bool editPacmanKey(const QString &key, const QString &value, int action);
 	
@@ -71,12 +65,11 @@ protected:
 	alpm_list_t *setrepeatingoption(const QString &ptr);
 	
 private:
-	void parsePacmanConfig(const QString &file, const QString &givendb);
-	void parsePaKmodConf();
+	void parsePacmanConfig(const QString &file, const QString &givensection,
+			const QString &givendb);
 	
 private:
 	PacmanConf pacData;
-	PaKmodConf paKData;
 };
 
 #endif /*CONFIGURATIONPARSER_H_*/

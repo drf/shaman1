@@ -1,6 +1,8 @@
 /***************************************************************************
  *   Copyright (C) 2008 by Lukas Appelhans                                 *
- *   l.appelhans@gmx.de                                                    *
+ *   l.appelhans@gmx.de               									   *
+ *   Copyright (C) 2008 by Dario Freddi                                    *
+ *   drf54321@yahoo.it                                                     *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -576,7 +578,7 @@ void ConfigDialog::saveConfiguration()
 		if(holdPkgLine->text().isEmpty())
 			parser.editPacmanKey("options/HoldPkg", NULL, 2);
 		else
-			if(!parser.editPacmanKey("options/HoldPkg", holdPkgLine->text().remove(' '), 0))
+			if(!parser.editPacmanKey("options/HoldPkg", holdPkgLine->text(), 0))
 				parser.editPacmanKey("options/HoldPkg", holdPkgLine->text(), 1);
 	}
 
@@ -585,7 +587,7 @@ void ConfigDialog::saveConfiguration()
 		if(ignorePkgLine->text().isEmpty())
 			parser.editPacmanKey("options/IgnorePkg", NULL, 2);
 		else
-			if(!parser.editPacmanKey("options/IgnorePkg", ignorePkgLine->text().remove(' '), 0))
+			if(!parser.editPacmanKey("options/IgnorePkg", ignorePkgLine->text(), 0))
 				parser.editPacmanKey("options/IgnorePkg", ignorePkgLine->text(), 1);
 	}
 
@@ -594,7 +596,7 @@ void ConfigDialog::saveConfiguration()
 		if(ignoreGrpsLine->text().isEmpty())
 			parser.editPacmanKey("options/IgnoreGroup", NULL, 2);
 		else
-			if(!parser.editPacmanKey("options/IgnoreGroup", ignoreGrpsLine->text().remove(' '), 0))
+			if(!parser.editPacmanKey("options/IgnoreGroup", ignoreGrpsLine->text(), 0))
 				parser.editPacmanKey("options/IgnoreGroup", ignoreGrpsLine->text(), 1);
 	}
 
@@ -603,7 +605,7 @@ void ConfigDialog::saveConfiguration()
 		if(noUpgradeLine->text().isEmpty())
 			parser.editPacmanKey("options/NoUpgrade", NULL, 2);
 		else
-			if(!parser.editPacmanKey("options/NoUpgrade", noUpgradeLine->text().remove(' '), 0))
+			if(!parser.editPacmanKey("options/NoUpgrade", noUpgradeLine->text(), 0))
 				parser.editPacmanKey("options/NoUpgrade", noUpgradeLine->text(), 1);
 	}
 
@@ -612,7 +614,7 @@ void ConfigDialog::saveConfiguration()
 		if(noExtractLine->text().isEmpty())
 			parser.editPacmanKey("options/NoExtract", NULL, 2);
 		else
-			if(!parser.editPacmanKey("options/NoExtract", noExtractLine->text().remove(' '), 0))
+			if(!parser.editPacmanKey("options/NoExtract", noExtractLine->text(), 0))
 				parser.editPacmanKey("options/NoExtract", noExtractLine->text(), 1);
 	}
 
@@ -621,7 +623,7 @@ void ConfigDialog::saveConfiguration()
 		if(xFerCommandLine->text().isEmpty())
 			parser.editPacmanKey("options/XferCommand", QString(), 2);
 		else
-			if(!parser.editPacmanKey("options/XferCommand", xFerCommandLine->text().remove(' '), 0))
+			if(!parser.editPacmanKey("options/XferCommand", xFerCommandLine->text(), 0))
 				parser.editPacmanKey("options/XferCommand", xFerCommandLine->text(), 1);
 	}
 

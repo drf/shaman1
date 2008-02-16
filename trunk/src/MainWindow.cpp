@@ -1,8 +1,8 @@
 /***************************************************************************
  *   Copyright (C) 2008 by Dario Freddi                                    *
  *   drf54321@yahoo.it                                                     *
- *   Copyright (C) 2008 by Lukas Appelhans				   *
- *   l.appelhans@gmx.de							   *
+ *   Copyright (C) 2008 by Lukas Appelhans				   				   *
+ *   l.appelhans@gmx.de							   						   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -274,7 +274,7 @@ bool MainWindow::populatePackagesView()
 
 	foreach (QString pac, aHandle->getUpgradeablePackages())
 	{
-		QTreeWidgetItem *item = pkgsViewWG->findItems(pac, Qt::MatchExactly, 2).first();
+		QTreeWidgetItem *item = pkgsViewWG->findItems(pac, Qt::MatchExactly, 1).first();
 		if (item)
 			item->setText(2, tr("Upgrade"));
 	}

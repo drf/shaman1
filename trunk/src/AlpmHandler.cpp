@@ -175,7 +175,9 @@ QStringList AlpmHandler::getUpgradeablePackages()
 			 * name of a package? Please.
 			 */
 			QString tmp(alpm_pkg_get_name(alpm_sync_get_pkg((pmsyncpkg_t *) alpm_list_getdata(syncpkgs))));
+			printf("%s\n", tmp.toAscii().data());
 			retlist.append(tmp);
+			printf("%d\n", retlist.count());
 			syncpkgs = alpm_list_next(syncpkgs);
 		}
 		return retlist;
@@ -292,7 +294,6 @@ bool AlpmHandler::reloadPacmanConfiguration()
 	{
 		alpm_option_remove_noextract((char *)alpm_list_getdata(pdata.NoExtract));
 		pdata.NoExtract = alpm_list_next(pdata.NoExtract);
-		printf("figa\n");
 	}
 	while(pdata.NoUpgrade != NULL)
 	{
