@@ -70,6 +70,9 @@ public slots:
 	void getPackageFromFile();
 	void dbUpdateTray();
 	void dbUpdateTrayFinished();
+	
+protected:
+	void closeEvent(QCloseEvent *evt);
 
 private slots:
 	void quitApp();

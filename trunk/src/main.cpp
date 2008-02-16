@@ -67,6 +67,10 @@ int main(int argc, char **argv)
 
 	QApplication app(argc, argv, QApplication::GuiClient);
 
+	QCoreApplication::setOrganizationName("qtPacman");
+	QCoreApplication::setOrganizationDomain("qtpacman.iskremblien.org");
+	QCoreApplication::setApplicationName("qtPacman");
+
 	if(myuid > 0)
 	{
 		QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("qtPacman", "Hey! "
@@ -107,7 +111,7 @@ int main(int argc, char **argv)
 	signal(SIGTERM, cleanup);
 	signal(SIGSEGV, cleanup);
 	
-	QSettings *settings = new QSettings(QSettings::SystemScope, "qtPacman", "qtPacman");
+	QSettings *settings = new QSettings();
 	
 	if(settings->value("gui/startupmode").toString() == 0)
 	{
@@ -121,6 +125,9 @@ int main(int argc, char **argv)
 		QFile::copy("/etc/pacman.conf", QString("/etc/pacman.conf.bak.").append(QDate::currentDate().toString("ddMMyyyy")));
 		
 		settings->setValue("gui/startupmode", "window");
+		settings->setValue("scheduledUpdate/enabled", true);
+		settings->setValue("scheduledUpdate/interval", 10);
+		settings->setValue("scheduledUpdate/notifyUpgrades", true);
 	}
 	
 	settings->deleteLater();

@@ -30,7 +30,7 @@ SysUpgradeDialog::SysUpgradeDialog(AlpmHandler *hnd, QWidget *parent)
 : QDialog(parent),
 aHandle(hnd)
 {
-	QSettings *settings = new QSettings(QSettings::SystemScope, "qtPacman", "qtPacman");
+	QSettings *settings = new QSettings();
 
 	if(settings->value("gui/actionupgrade").toString() == "add")
 		addPkg();
@@ -59,6 +59,8 @@ aHandle(hnd)
 		connect(addToQueue, SIGNAL(clicked()), SLOT(addPkg()));
 		connect(goUpgrading, SIGNAL(clicked()), SLOT(initSysUpgrade()));
 	}
+	
+	settings->deleteLater();
 }
 
 SysUpgradeDialog::~SysUpgradeDialog()
@@ -75,22 +77,26 @@ void SysUpgradeDialog::abort()
 
 void SysUpgradeDialog::addPkg()
 {
-	QSettings *settings = new QSettings(QSettings::SystemScope, "qtPacman", "qtPacman");
+	QSettings *settings = new QSettings();
 	
 	if(checkBox->isChecked())
 		settings->setValue("gui/actionupgrade", "add");
+	
+	settings->deleteLater();
 	
 	emit addToPkgQueue();
 }
 
 void SysUpgradeDialog::initSysUpgrade()
 {
-	QSettings *settings = new QSettings(QSettings::SystemScope, "qtPacman", "qtPacman");
+	QSettings *settings = new QSettings();
 		
 	if(checkBox->isChecked())
 		settings->setValue("gui/actionupgrade", "upgrade");
 	
 	aHandle->fullSystemUpgrade();
+	
+	settings->deleteLater();
 	
 	emit upgradeNow();
 }

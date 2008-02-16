@@ -37,6 +37,8 @@
 #include <QHeaderView>
 #include <QFileDialog>
 #include <QTimer>
+#include <QCloseEvent>
+#include <QSettings>
 #include <alpm.h>
 
 extern CallBacks CbackReference;
@@ -110,21 +112,64 @@ void MainWindow::setupSystray()
 	connect(closeAction, SIGNAL(triggered()), SLOT(quitApp()));
 	//Add actions here ;)
 	systray->setContextMenu(systrayMenu);
+	systray->setToolTip(QString(tr("qtPacman - Idle")));
+		
+	QSettings *settings = new QSettings();
+		
+	if(settings->value("scheduledUpdate/enabled").toBool())
+	{
+		trayUpDb = new QTimer(this); /* Oh yeah :) */
+		trayUpDb->setInterval(settings->value("scheduledUpdate/interval", 10).toInt() * 60000);
+
+		connect(trayUpDb, SIGNAL(timeout()), SLOT(dbUpdateTray()));
+	}
 	
-	/* TODO: We should actually read if we need the
-	 * timer and which interval it needs to be set
-	 * from the config file
-	 */
-	
-	trayUpDb = new QTimer(this); /* Oh yeah :) */
-	trayUpDb->setInterval(600000);
-	
-	connect(trayUpDb, SIGNAL(timeout()), SLOT(dbUpdateTray()));
+	settings->deleteLater();
 }
 
 void MainWindow::quitApp()
 {
 	emit aboutToQuit();
+}
+
+void MainWindow::closeEvent(QCloseEvent *evt)
+{
+	QSettings *settings = new QSettings();
+	
+	if(settings->value("scheduledUpdate/enabled").toBool() == true)
+		trayUpDb->start();
+	
+	if(!settings->value("gui/confirmquit").toBool())
+	{
+		QDialog *dlog = new QDialog(this);
+		QLabel *lbl = new QLabel(dlog);
+		QCheckBox *cbx = new QCheckBox(dlog);
+		QDialogButtonBox *but = new QDialogButtonBox(dlog);
+		QVBoxLayout *lay = new QVBoxLayout();
+		
+		lbl->setText(QString(tr("qtPacman will keep running in the system tray.\nTo close it, click Quit in the file menu "
+				"or\nin the tray icon context menu.\nWhile in the System Tray, qtPacman will update your\nDatabases at a regular "
+				"interval and\nnotify you about available upgrades.\nYou can change this behaviour in Settings.")));
+		cbx->setText(QString(tr("Don't show this Again")));
+		cbx->setChecked(false);
+		but->addButton(QDialogButtonBox::Ok);
+		lay->addWidget(lbl);
+		lay->addWidget(cbx);
+		lay->addWidget(but);
+		dlog->setLayout(lay);
+		dlog->setWindowTitle(QString(tr("qtPacman")));
+		dlog->setWindowModality(Qt::ApplicationModal);
+		connect(but, SIGNAL(accepted()), dlog, SLOT(accept()));
+		
+		dlog->exec();
+		
+		if(cbx->isChecked())
+			settings->setValue("gui/confirmquit", true);
+	}
+	
+	settings->deleteLater();
+
+	evt->accept();
 }
 
 void MainWindow::removePackagesView()
@@ -646,7 +691,7 @@ void MainWindow::showRepoViewContextMenu()
 	if (repoList->selectedItems().isEmpty())
 		return;
 
-	QListWidgetItem *item = repoList->selectedItems().first();
+	//QListWidgetItem *item = repoList->selectedItems().first();
 	QMenu *menu = new QMenu(this);
 	QAction *installAction = menu->addAction(QIcon(":/Icons/icons/list-add.png"), tr("Mark all for installation"));
 	connect(installAction, SIGNAL(triggered()), SLOT(installAllPackages()));
@@ -1091,6 +1136,7 @@ void MainWindow::dbUpdateTray()
 	 */
 	// TODO: App Icon, where are you?
 	systray->setIcon(QIcon(":/Icons/icons/edit-redo.png"));
+	systray->setToolTip(QString(tr("qtPacman - Processing")));
 	
 	upDbTh = new UpDbThread(aHandle);
 	connect(upDbTh, SIGNAL(finished()), SLOT(dbUpdateTrayFinished()));
@@ -1118,18 +1164,25 @@ void MainWindow::dbUpdateTrayFinished()
 			 * better let the user know by changing icon, 
 			 * and showing a baloon.
 			 */
+			QSettings *settings = new QSettings();
+
 			systray->setIcon(QIcon(":/Icons/icons/view-refresh.png"));
-			systray->showMessage(QString(tr("System Upgrade")), QString(list.size() == 1 ? tr("There is %1 upgradeable package.\n"
-					"Click here to upgrade your System.") :	tr("There are %1 upgradeable packages.\nClick here to upgrade your System.")).
-					arg(list.size()));
+			systray->setToolTip(QString(tr("qtPacman - Idle (Upgrades Available)")));
+			if(settings->value("scheduledUpdate/notifyUpgrades").toBool())
+				systray->showMessage(QString(tr("System Upgrade")), QString(list.size() == 1 ? tr("There is %1 upgradeable package.\n"
+						"Click here to upgrade your System.") :	tr("There are %1 upgradeable packages.\nClick here to upgrade your System.")).
+						arg(list.size()));
 			connect(systray, SIGNAL(messageClicked()), SLOT(fullSysUpgrade()));
 		}
 		else
 			systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
 	}
 	else
+	{
 		systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
-	
+		systray->setToolTip(QString(tr("qtPacman - Idle")));
+	}
+
 	delete(upDbTh);
 	
 }
@@ -1138,19 +1191,25 @@ void MainWindow::systrayActivated(QSystemTrayIcon::ActivationReason reason)
 {
 	if (reason == QSystemTrayIcon::Trigger)
 	{
+		QSettings *settings = new QSettings();
+		
 		if (isHidden())
 		{
 			/* Uh, we have to stop the Timer! */
-			trayUpDb->stop();
+			if(settings->value("scheduledUpdate/enabled").toBool())
+				trayUpDb->stop();
 			show();
 		}
 		else
 		{
 			/* Start Your timer, baby! */
 			hide();
-			trayUpDb->start();
+			if(settings->value("scheduledUpdate/enabled").toBool())
+				trayUpDb->start();
 			
 		}
+		
+		settings->deleteLater();
 	}
 }
 
