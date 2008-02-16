@@ -404,6 +404,7 @@ void ConfigDialog::saveConfiguration()
 {
 	bool dbChanged = false;
 	QString mirror(mirrorBox->currentText());
+	mirror = mirror.remove(' ');
 	ConfigurationParser parser;
 
 	if(coreBox->checkState() == Qt::Checked)
@@ -575,7 +576,7 @@ void ConfigDialog::saveConfiguration()
 		if(holdPkgLine->text().isEmpty())
 			parser.editPacmanKey("options/HoldPkg", NULL, 2);
 		else
-			if(!parser.editPacmanKey("options/HoldPkg", holdPkgLine->text(), 0))
+			if(!parser.editPacmanKey("options/HoldPkg", holdPkgLine->text().remove(' '), 0))
 				parser.editPacmanKey("options/HoldPkg", holdPkgLine->text(), 1);
 	}
 
@@ -584,7 +585,7 @@ void ConfigDialog::saveConfiguration()
 		if(ignorePkgLine->text().isEmpty())
 			parser.editPacmanKey("options/IgnorePkg", NULL, 2);
 		else
-			if(!parser.editPacmanKey("options/IgnorePkg", ignorePkgLine->text(), 0))
+			if(!parser.editPacmanKey("options/IgnorePkg", ignorePkgLine->text().remove(' '), 0))
 				parser.editPacmanKey("options/IgnorePkg", ignorePkgLine->text(), 1);
 	}
 
@@ -593,7 +594,7 @@ void ConfigDialog::saveConfiguration()
 		if(ignoreGrpsLine->text().isEmpty())
 			parser.editPacmanKey("options/IgnoreGroup", NULL, 2);
 		else
-			if(!parser.editPacmanKey("options/IgnoreGroup", ignoreGrpsLine->text(), 0))
+			if(!parser.editPacmanKey("options/IgnoreGroup", ignoreGrpsLine->text().remove(' '), 0))
 				parser.editPacmanKey("options/IgnoreGroup", ignoreGrpsLine->text(), 1);
 	}
 
@@ -602,7 +603,7 @@ void ConfigDialog::saveConfiguration()
 		if(noUpgradeLine->text().isEmpty())
 			parser.editPacmanKey("options/NoUpgrade", NULL, 2);
 		else
-			if(!parser.editPacmanKey("options/NoUpgrade", noUpgradeLine->text(), 0))
+			if(!parser.editPacmanKey("options/NoUpgrade", noUpgradeLine->text().remove(' '), 0))
 				parser.editPacmanKey("options/NoUpgrade", noUpgradeLine->text(), 1);
 	}
 
@@ -611,7 +612,7 @@ void ConfigDialog::saveConfiguration()
 		if(noExtractLine->text().isEmpty())
 			parser.editPacmanKey("options/NoExtract", NULL, 2);
 		else
-			if(!parser.editPacmanKey("options/NoExtract", noExtractLine->text(), 0))
+			if(!parser.editPacmanKey("options/NoExtract", noExtractLine->text().remove(' '), 0))
 				parser.editPacmanKey("options/NoExtract", noExtractLine->text(), 1);
 	}
 
@@ -620,7 +621,7 @@ void ConfigDialog::saveConfiguration()
 		if(xFerCommandLine->text().isEmpty())
 			parser.editPacmanKey("options/XferCommand", NULL, 2);
 		else
-			if(!parser.editPacmanKey("options/XferCommand", xFerCommandLine->text(), 0))
+			if(!parser.editPacmanKey("options/XferCommand", xFerCommandLine->text().remove(' '), 0))
 				parser.editPacmanKey("options/XferCommand", xFerCommandLine->text(), 1);
 	}
 
