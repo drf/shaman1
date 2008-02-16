@@ -272,11 +272,22 @@ bool MainWindow::populatePackagesView()
 		locPkg = alpm_list_next(locPkg);
 	}
 
-	foreach (QString pac, aHandle->getUpgradeablePackages())
+	QStringList upgrds = aHandle->getUpgradeablePackages();
+	foreach (QString pac, upgrds)
 	{
 		QTreeWidgetItem *item = pkgsViewWG->findItems(pac, Qt::MatchExactly, 1).first();
 		if (item)
 			item->setText(2, tr("Upgrade"));
+	}
+
+	if(!upgrds.isEmpty())
+	{
+		systray->setIcon(QIcon(":/Icons/icons/view-refresh.png"));
+		systray->setToolTip(QString(tr("qtPacman - Idle (Upgrades Available)")));
+		systray->showMessage(QString(tr("System Upgrade")), QString(upgrds.size() == 1 ? tr("There is %1 upgradeable package.\n"
+				"Click here to upgrade your System.") :	tr("There are %1 upgradeable packages.\nClick here to upgrade your System.")).
+				arg(upgrds.size()));
+		connect(systray, SIGNAL(messageClicked()), SLOT(fullSysUpgrade()));
 	}
 
 	pkgsViewWG->sortItems(1, Qt::AscendingOrder);
