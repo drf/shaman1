@@ -921,7 +921,7 @@ void MainWindow::addUpgradeableToQueue()
 
 	foreach (QString package, aHandle->getUpgradeablePackages())
 	{
-		QTreeWidgetItem *item = pkgsViewWG->findItems(package, Qt::MatchExactly, 2).first();
+		QTreeWidgetItem *item = pkgsViewWG->findItems(package, Qt::MatchExactly, 1).first();
 		item->setText(0, tr("Upgradeable"));
 		item->setText(2, tr("Upgrade"));
 	}
