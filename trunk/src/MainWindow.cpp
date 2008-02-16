@@ -263,7 +263,7 @@ bool MainWindow::populatePackagesView()
 		if (pkgsViewWG->findItems(alpm_pkg_get_name(pkg), Qt::MatchExactly, 1).isEmpty())
 		{
 			QTreeWidgetItem *item = new QTreeWidgetItem(pkgsViewWG);
-			item->setText(0, tr("Installed"));//FIXME: Icon
+			item->setIcon(0, QIcon(":/Icons/icons/dialog-ok-apply.png"));
 			item->setText(1, alpm_pkg_get_name(pkg));
 			item->setText(3, alpm_pkg_get_version(pkg));
 			item->setText(6, alpm_pkg_get_desc(pkg));
