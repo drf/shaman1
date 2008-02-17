@@ -97,7 +97,7 @@ void BuildingDialog::processCurrentQueueItem()
 	
 	if(!setUpBuildingEnvironment(buildQueue.at(currentItem)))
 		finishedBuildingAction(1, QProcess::CrashExit);
-
+	
 	QSettings *settings = new QSettings();
 
 	QString path(settings->value("absbuilding/buildpath").toString());
@@ -106,6 +106,15 @@ void BuildingDialog::processCurrentQueueItem()
 
 	if(!path.endsWith("/"))
 		path.append("/");
+
+	path.append(buildQueue.at(currentItem));
+	
+	ABSProc->setWorkingDirectory(path);
+
+	connect(ABSProc, SIGNAL(readyReadStandardOutput()), SLOT(writeLineProgress()));
+	connect(ABSProc, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(finishedBuildingAction(int,QProcess::ExitStatus)));
+		
+	ABSProc->start("makepkg");
 
 }
 
