@@ -37,6 +37,7 @@ class QueueDialog;
 class ConfigDialog;
 class ManteinanceDialog;
 class UpDbThread;
+class BuildingDialog;
 
 class MainWindow : public QMainWindow, private Ui::MainWindow, private StringUtils
 {
@@ -70,6 +71,7 @@ public slots:
 	void getPackageFromFile();
 	void dbUpdateTray();
 	void dbUpdateTrayFinished();
+	void updateABSTree();
 	
 protected:
 	void closeEvent(QCloseEvent *evt);
@@ -107,6 +109,7 @@ private:
 	SysUpgradeDialog *upDl;
 	QueueDialog *queueDl;
 	ConfigDialog *configDialog;
+	BuildingDialog *buildDialog;
 
 	QSystemTrayIcon *systray;
 	QDialog *reviewQueue;

@@ -426,7 +426,7 @@
      <x>0</x>
      <y>0</y>
      <width>1195</width>
-     <height>27</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile" >
@@ -447,9 +447,9 @@
     </property>
     <widget class="QMenu" name="menuInstall_and_Build_from_Source" >
      <property name="title" >
-      <string>Install and Build from Source</string>
+      <string>Build and Install from Source</string>
      </property>
-     <addaction name="actionUpdate_ABS_Tree_2" />
+     <addaction name="actionUpdate_ABS_Tree" />
      <addaction name="separator" />
      <addaction name="actionInstall_and_Build_Selected" />
     </widget>
@@ -541,14 +541,14 @@
     <enum>QAction::TextHeuristicRole</enum>
    </property>
   </action>
-  <action name="actionUpdate_ABS_Tree_2" >
+  <action name="actionUpdate_ABS_Tree" >
    <property name="text" >
     <string>Update ABS Tree</string>
    </property>
   </action>
   <action name="actionInstall_and_Build_Selected" >
    <property name="text" >
-    <string>Install and Build Selected</string>
+    <string>Build and Install Queue</string>
    </property>
   </action>
   <action name="actionQuit" >

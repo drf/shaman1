@@ -25,6 +25,7 @@
 #include "SysUpgradeDialog.h"
 #include "QueueDialog.h"
 #include "configDialog.h"
+#include "BuildingDialog.h"
 #include "../ui_reviewQueueDialog.h"
 #include "../ui_aboutDialog.h"
 
@@ -83,6 +84,7 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	connect(actionQuit, SIGNAL(triggered()), SLOT(quitApp()));
 	connect(actionAbout, SIGNAL(triggered()), SLOT(showAboutDialog()));
 	connect(actionInstall_Package_From_File, SIGNAL(triggered()), SLOT(getPackageFromFile()));
+	connect(actionUpdate_ABS_Tree, SIGNAL(triggered()), SLOT(updateABSTree()));
 
 	return;
 }
@@ -1271,4 +1273,11 @@ void MainWindow::showAboutDialog()
 	about->deleteLater();
 }
 
-
+void MainWindow::updateABSTree()
+{
+	buildDialog = new BuildingDialog(this);
+	
+	buildDialog->show();
+	
+	buildDialog->updateABSTree();
+}
