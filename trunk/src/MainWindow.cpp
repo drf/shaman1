@@ -59,6 +59,7 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	pkgsViewWG->setContextMenuPolicy(Qt::CustomContextMenu);
         repoList->setContextMenuPolicy(Qt::CustomContextMenu);
 	pkgsViewWG->hideColumn(6);
+	pkgsViewWG->hideColumn(7);
 	resize(500, size().height());
 
 	setupSystray();
@@ -281,7 +282,7 @@ bool MainWindow::populatePackagesView()
 	{
 		QTreeWidgetItem *item = pkgsViewWG->findItems(pac, Qt::MatchExactly, 1).first();
 		if (item)
-			item->setText(2, tr("Upgrade"));
+			item->setText(7, tr("Upgrade"));
 	}
 
 	if(!upgrds.isEmpty())
@@ -444,7 +445,7 @@ void MainWindow::refinePkgView()
 			foreach (QTreeWidgetItem *item, list)
 			{
 				//qDebug() << "Checking for installed packages" + item->text(2);
-				if (item->text(2).isEmpty())
+				if (item->text(7).isEmpty())
 					list.removeAt(list.indexOf(item));
 			}
 		}
@@ -503,13 +504,13 @@ void MainWindow::itemChanged()
 	}
 	//if (pkgsViewWG->selectedItems().first()->text(1) == tr("Upgradeable"))
 
-	if (pkgsViewWG->selectedItems().first()->text(2) == tr("Install"))
+	if (pkgsViewWG->selectedItems().first()->text(7) == tr("Install"))
 		installButton->setDisabled(true);
-	if (pkgsViewWG->selectedItems().first()->text(2) == tr("Uninstall"))
+	if (pkgsViewWG->selectedItems().first()->text(7) == tr("Uninstall"))
 		removeButton->setDisabled(true);
-	if (pkgsViewWG->selectedItems().first()->text(2) == tr("Complete Uninstall"))
+	if (pkgsViewWG->selectedItems().first()->text(7) == tr("Complete Uninstall"))
 		completeRemoveButton->setDisabled(true);
-	if (!pkgsViewWG->selectedItems().first()->text(2).isEmpty())
+	if (!pkgsViewWG->selectedItems().first()->text(7).isEmpty())
 		cancelButton->setEnabled(true);
 
 	showPkgInfo();
@@ -560,10 +561,10 @@ void MainWindow::showPkgInfo()
 	else
 		description.append(tr("Not installed"));
 
-	if (!item->text(2).isEmpty())
+	if (!item->text(7).isEmpty())
 	{
 		description.append("<br><b>" + tr("Action: ") + "</b>");
-		description.append(item->text(2));//FIXME: Icon!!!
+		description.append(item->text(7));//FIXME: Icon!!!
 	}
 
 	pkgInfo->setHtml(description);
@@ -688,11 +689,11 @@ void MainWindow::showPkgsViewContextMenu()
 		upgradeAction->setDisabled(true);
 	}//FIXME: Add completeRemove-action
 
-	if (item->text(2).isEmpty())
+	if (item->text(7).isEmpty())
 		cancelAction->setDisabled(true);
-	else if (item->text(2) == tr("Install"))
+	else if (item->text(7) == tr("Install"))
 		installAction->setDisabled(true);
-	else if (item->text(2) == tr("Uninstall"))
+	else if (item->text(7) == tr("Uninstall"))
 		removeAction->setDisabled(true);
 	else //Upgrade
 		upgradeAction->setDisabled(true);
@@ -738,7 +739,6 @@ void MainWindow::installAllPackages()
 	}
 	else
 	{
-		qDebug() << "Hehe2";
 		foreach (QTreeWidgetItem *item, pkgsViewWG->findItems(repoList->selectedItems().first()->text(), Qt::MatchExactly, 4))
 		{
 			installPackage(item->text(1));
@@ -820,11 +820,11 @@ void MainWindow::installPackage(const QString &package)
 	if(aHandle->isProviderInstalled(package))
 		return;
 	
-	if (aHandle->isInstalled(item->text(1)) || item->text(2) == tr("Install"))
+	if (aHandle->isInstalled(item->text(1)) || item->text(7) == tr("Install"))
 		return;
 	else
 	{
-		item->setText(2, tr("Install"));
+		item->setText(7, tr("Install"));
 		item->setIcon(2, QIcon(":/Icons/icons/list-add.png"));
 	}
 	qDebug() << item->text(5);
@@ -855,11 +855,11 @@ void MainWindow::removePackage(const QString &package)
 	QTreeWidgetItem *item = pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 1).first();
 
 	qDebug() << item->text(1);
-	if (!aHandle->isInstalled(item->text(1)) || item->text(2) == tr("Remove"))
+	if (!aHandle->isInstalled(item->text(1)) || item->text(7) == tr("Remove"))
 		return;
 	else
 	{
-		item->setText(2, tr("Uninstall"));
+		item->setText(7, tr("Uninstall"));
 		item->setIcon(2, QIcon(":/Icons/icons/list-remove.png"));
 	}
 	qDebug() << item->text(5);
@@ -880,7 +880,7 @@ void MainWindow::completeRemovePackage()
 		return;
 	else
 	{
-		item->setText(2, tr("Complete Uninstall"));
+		item->setText(7, tr("Complete Uninstall"));
 		item->setIcon(2, QIcon(":/Icons/icons/edit-delete.png"));
 	}
 	qDebug() << item->text(5);
@@ -916,10 +916,10 @@ void MainWindow::cancelAction(const QString &package)
 		return;
 	}
 	QTreeWidgetItem *item = pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 1).first();
-	if (item->text(2).isEmpty())
+	if (item->text(7).isEmpty())
 		return;
 
-	item->setText(2, QString());
+	item->setText(7, QString());
 	item->setIcon(2, QIcon());
 	
 	foreach (QString onDep, aHandle->getDependenciesOnPackage(item->text(1), item->text(4)))
@@ -983,7 +983,7 @@ void MainWindow::addUpgradeableToQueue()
 	{
 		QTreeWidgetItem *item = pkgsViewWG->findItems(package, Qt::MatchExactly, 1).first();
 		item->setText(0, tr("Upgradeable"));
-		item->setText(2, tr("Upgrade"));
+		item->setText(7, tr("Upgrade"));
 	}
 
 	upDl->deleteLater();
@@ -1007,7 +1007,7 @@ void MainWindow::upgradePackage()
 	qDebug() << "Upgrade Package";
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
 	{
-		item->setText(2, tr("Upgrade"));//Look if there are dependencies for the upgrade
+		item->setText(7, tr("Upgrade"));//Look if there are dependencies for the upgrade
 	}
 }
 
@@ -1079,30 +1079,30 @@ void MainWindow::widgetQueueToAlpmQueue()
 	 * need.
 	 */
 
-	if(pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 2).isEmpty() &&
-			pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 2).isEmpty() &&
-			pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 2).isEmpty() &&
-			pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 2).isEmpty())
+	if(pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 7).isEmpty() &&
+			pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 7).isEmpty() &&
+			pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 7).isEmpty() &&
+			pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 7).isEmpty())
 		return;
-	else if(pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 2).isEmpty() &&
-			pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 2).isEmpty())
+	else if(pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 7).isEmpty() &&
+			pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 7).isEmpty())
 		aHandle->initQueue(false, true, false);
 	else if(pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 1).isEmpty() || 
-					pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 2).isEmpty())
+					pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 7).isEmpty())
 		aHandle->initQueue(true, false, false);
 	else
 		aHandle->initQueue(true, true, false);
 
-	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 2))
+	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 7))
 		aHandle->addSyncToQueue(itm->text(1));
 
-	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 2))
+	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 7))
 		aHandle->addSyncToQueue(itm->text(1));
 
-	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 2))
+	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 7))
 		aHandle->addRemoveToQueue(itm->text(1));
 
-	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 2))
+	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 7))
 		aHandle->addRemoveToQueue(itm->text(1));
 	
 	revActive = true;
@@ -1286,13 +1286,13 @@ void MainWindow::updateABSTree()
 
 void MainWindow::validateSourceQueue()
 {
-	if(pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 2).isEmpty() &&
-			pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 2).isEmpty() &&
-			pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 2).isEmpty() &&
-			pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 2).isEmpty())
+	if(pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 7).isEmpty() &&
+			pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 7).isEmpty() &&
+			pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 7).isEmpty() &&
+			pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 7).isEmpty())
 		return;
-	else if(!pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 2).isEmpty() ||
-			!pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 2).isEmpty())
+	else if(!pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 7).isEmpty() ||
+			!pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 7).isEmpty())
 	{
 		QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), QString(tr("You can not remove packages when processing\n"
 				"your queue from Source")), QMessageBox::Ok);
@@ -1303,7 +1303,7 @@ void MainWindow::validateSourceQueue()
 		return;
 	}
 
-	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 2))
+	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 7))
 	{
 		if(itm->text(4).compare("core") && itm->text(4).compare("extra") && itm->text(4).compare("coomunity")
 				&& itm->text(4).compare("unstable") && itm->text(4).compare("testing"))
@@ -1318,7 +1318,7 @@ void MainWindow::validateSourceQueue()
 		}
 	}
 
-	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 2))
+	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 7))
 	{
 		if(itm->text(4).compare("core") && itm->text(4).compare("extra") && itm->text(4).compare("coomunity")
 				&& itm->text(4).compare("unstable") && itm->text(4).compare("testing"))
