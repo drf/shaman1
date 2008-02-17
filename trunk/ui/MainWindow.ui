@@ -451,7 +451,7 @@
      </property>
      <addaction name="actionUpdate_ABS_Tree" />
      <addaction name="separator" />
-     <addaction name="actionInstall_and_Build_Selected" />
+     <addaction name="actionBuild_and_Install_Selected" />
     </widget>
     <addaction name="actionUpdate_Database" />
     <addaction name="actionUpgrade_System" />
@@ -546,7 +546,7 @@
     <string>Update ABS Tree</string>
    </property>
   </action>
-  <action name="actionInstall_and_Build_Selected" >
+  <action name="actionBuild_and_Install_Selected" >
    <property name="text" >
     <string>Build and Install Queue</string>
    </property>

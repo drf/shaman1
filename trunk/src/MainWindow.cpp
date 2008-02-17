@@ -28,6 +28,7 @@
 #include "BuildingDialog.h"
 #include "../ui_reviewQueueDialog.h"
 #include "../ui_aboutDialog.h"
+#include "../ui_reviewBuildingDialog.h"
 
 #include <iostream>
 #include <QMenu>
@@ -85,6 +86,7 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	connect(actionAbout, SIGNAL(triggered()), SLOT(showAboutDialog()));
 	connect(actionInstall_Package_From_File, SIGNAL(triggered()), SLOT(getPackageFromFile()));
 	connect(actionUpdate_ABS_Tree, SIGNAL(triggered()), SLOT(updateABSTree()));
+	connect(actionBuild_and_Install_Selected, SIGNAL(triggered()), SLOT(validateSourceQueue()));
 
 	return;
 }
@@ -1280,4 +1282,64 @@ void MainWindow::updateABSTree()
 	buildDialog->show();
 	
 	buildDialog->updateABSTree();
+}
+
+void MainWindow::validateSourceQueue()
+{
+	if(pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 2).isEmpty() &&
+			pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 2).isEmpty() &&
+			pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 2).isEmpty() &&
+			pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 2).isEmpty())
+		return;
+	else if(!pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 2).isEmpty() ||
+			!pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 2).isEmpty())
+	{
+		QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), QString(tr("You can not remove packages when processing\n"
+				"your queue from Source")), QMessageBox::Ok);
+
+		message->exec();
+
+		message->deleteLater();
+		return;
+	}
+
+	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 2))
+	{
+		if(itm->text(4).compare("core") && itm->text(4).compare("extra") && itm->text(4).compare("coomunity")
+				&& itm->text(4).compare("unstable") && itm->text(4).compare("testing"))
+		{
+			QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), QString(tr("Some of your packages do not belong to Arch\n"
+					"Linux's official repository. qtPacman is able to\nbuild packages from official sources only.")), QMessageBox::Ok);
+
+			message->exec();
+
+			message->deleteLater();
+			return;
+		}
+	}
+
+	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 2))
+	{
+		if(itm->text(4).compare("core") && itm->text(4).compare("extra") && itm->text(4).compare("coomunity")
+				&& itm->text(4).compare("unstable") && itm->text(4).compare("testing"))
+		{
+			QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), QString(tr("Some of your packages do not belong to Arch\n"
+					"Linux's official repository. qtPacman is able to\nbuild packages from official sources only.")), QMessageBox::Ok);
+
+			message->exec();
+
+			message->deleteLater();
+			return;
+		}
+
+	}
+	
+	QDialog *review = new QDialog(this);
+	Ui::reviewBuildingDialog ui;
+	
+	ui.setupUi(review);
+	
+	review->setWindowModality(Qt::ApplicationModal);
+	
+	review->exec();
 }

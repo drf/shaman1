@@ -72,6 +72,7 @@ public slots:
 	void dbUpdateTray();
 	void dbUpdateTrayFinished();
 	void updateABSTree();
+	void validateSourceQueue();
 	
 protected:
 	void closeEvent(QCloseEvent *evt);
