@@ -27,7 +27,7 @@
 
 #include <QProcess>
 
-class BuildingDialog : public QDialog, private Ui::buildingDialog
+class BuildingDialog : public QDialog, public Ui::buildingDialog
 {
 	Q_OBJECT
 	
@@ -54,11 +54,12 @@ private:
 	void processCurrentQueueItem();
 	
 signals:
-	void finishedBuilding(int failurelevel);
+	void finishedBuilding(int failurelevel, QStringList bp);
 	
 private:
 	QProcess *ABSProc;
 	QStringList buildQueue;
+	QStringList builtPaths;
 	int currentItem;
 	bool failed;
 	bool allFailed;

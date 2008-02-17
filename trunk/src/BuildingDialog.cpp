@@ -23,6 +23,7 @@
 #include <QString>
 #include <QSettings>
 #include <QDir>
+#include <QDebug>
 #include "../ui_buildingDialog.h"
 
 #include "BuildingDialog.h"
@@ -65,20 +66,53 @@ void BuildingDialog::finishedBuildingAction(int ecode, QProcess::ExitStatus esta
 	Q_UNUSED(estat);
 	
 	if(ecode != 0)
+	{
 		failed = true;
+		progressEdit->append(QString(tr("<b>Building %1 failed!!</b><br><br>")).arg(buildQueue.at(currentItem)));
+	}
 	else
+	{
+		progressEdit->append(QString(tr("<b>%1 was built successfully!!</b><br><br>")).arg(buildQueue.at(currentItem)));
 		allFailed = false;
+
+		QSettings *settings = new QSettings();
+
+		QString path(settings->value("absbuilding/buildpath").toString());
+
+		settings->deleteLater();
+
+		if(!path.endsWith("/"))
+			path.append("/");
+
+		path.append(buildQueue.at(currentItem));
+		
+		QDir dir(path);
+
+		dir.setFilter(QDir::Files | QDir::NoDotAndDotDot | QDir::NoSymLinks);
+
+		QFileInfoList list = dir.entryInfoList();
+		
+		for (int i = 0; i < list.size(); ++i) 
+		{
+			if(list.at(i).absoluteFilePath().endsWith("pkg.tar.gz"))
+			{
+				builtPaths.append(list.at(i).absoluteFilePath());
+				qDebug() << "In queue: " << list.at(i).absoluteFilePath();
+			}
+		}
+		
+	}
 	
 	currentItem++;
 	
-	if(!(currentItem < buildQueue.size()))
+	if(currentItem == buildQueue.size())
 	{
 		if(allFailed)
-			emit finishedBuilding(2);
+			emit finishedBuilding(2, builtPaths);
 		else if(failed)
-			emit finishedBuilding(1);
+			emit finishedBuilding(1, builtPaths);
 		else
-			emit finishedBuilding(0);
+			emit finishedBuilding(0, builtPaths);
 		
 		return;
 	}
@@ -89,15 +123,15 @@ void BuildingDialog::finishedBuildingAction(int ecode, QProcess::ExitStatus esta
 
 void BuildingDialog::processCurrentQueueItem()
 {
-	delete(ABSProc);
-
+	ABSProc->deleteLater();
+	
 	ABSProc = new QProcess();
 
 	/* Let's build the path we need */
 	
 	if(!setUpBuildingEnvironment(buildQueue.at(currentItem)))
 		finishedBuildingAction(1, QProcess::CrashExit);
-	
+		
 	QSettings *settings = new QSettings();
 
 	QString path(settings->value("absbuilding/buildpath").toString());
@@ -113,8 +147,10 @@ void BuildingDialog::processCurrentQueueItem()
 
 	connect(ABSProc, SIGNAL(readyReadStandardOutput()), SLOT(writeLineProgress()));
 	connect(ABSProc, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(finishedBuildingAction(int,QProcess::ExitStatus)));
+	
+	progressEdit->append(QString(tr("<b>Building %1...</b><br><br>")).arg(buildQueue.at(currentItem)));
 		
-	ABSProc->start("makepkg");
+	ABSProc->start("makepkg", QStringList("--asroot"));
 
 }
 
@@ -148,16 +184,25 @@ bool BuildingDialog::setUpBuildingEnvironment(const QString &package)
 	
 	for (int i = 0; i < list.size(); ++i) 
 	{
+		qDebug() << list.at(i).absoluteFilePath();
 		QDir subAbsDir(list.at(i).absoluteFilePath());
 		subAbsDir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot | QDir::NoSymLinks);
 		QFileInfoList subList = subAbsDir.entryInfoList();
-		for (int j = 0; j < list.size(); ++j) 
+		for (int k = 0; k < subList.size(); ++k) 
 		{
-			if(subList.at(j).baseName().compare(package))
+			qDebug() << subList.at(k).absoluteFilePath();
+			QDir subUbAbsDir(subList.at(k).absoluteFilePath());
+			subUbAbsDir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot | QDir::NoSymLinks);
+			QFileInfoList subUbList = subUbAbsDir.entryInfoList();
+			for (int j = 0; j < subUbList.size(); ++j) 
 			{
-				found = 1;
-				absSource = subList.at(j).absoluteFilePath();
-				break;
+				qDebug() << subUbList.at(j).baseName();
+				if(!subUbList.at(j).baseName().compare(package))
+				{
+					found = 1;
+					absSource = subUbList.at(j).absoluteFilePath();
+					break;
+				}
 			}
 		}
 		if(found == 1)
@@ -166,6 +211,8 @@ bool BuildingDialog::setUpBuildingEnvironment(const QString &package)
 	
 	if(!found)
 		return false;
+	
+	qDebug() << "ABS Dir is " << absSource;
 	
 	QDir absPDir(absSource);
 	absPDir.setFilter(QDir::Files | QDir::Hidden | QDir::NoDotAndDotDot | QDir::NoSymLinks);
@@ -179,8 +226,12 @@ bool BuildingDialog::setUpBuildingEnvironment(const QString &package)
 			dest.append("/");
 		dest.append(Plist.at(i).fileName());
 		
+		qDebug() << "Copying " << Plist.at(i).absoluteFilePath() << " to " << dest;
+		
 		if(!QFile::copy(Plist.at(i).absoluteFilePath(), dest))
+		{
 			return false;
+		}
 	}
 	
 	return true;
@@ -222,7 +273,7 @@ void BuildingDialog::processBuildingQueue()
 	if(buildQueue.isEmpty())
 		return;
 	
-	
+	progressEdit->append(QString(tr("<b>Building operation has started.</b><br><br>")));
 	
 	processCurrentQueueItem();
 }

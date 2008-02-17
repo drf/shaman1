@@ -109,29 +109,29 @@ void CallBacks::cb_trans_conv(pmtransconv_t event, void *data1, void *data2,
 	case PM_TRANS_CONV_INSTALL_IGNOREPKG:
 		if(data2) 
 			/* TODO we take this route based on data2 being not null? WTF (you suck)*/
-			msgBox->setText(QString("%1 requires installing %2 from IgnorePkg/IgnoreGroup.\n Install anyway?").arg(alpm_pkg_get_name((pmpkg_t *)data1)).
+			msgBox->setText(QString(tr("%1 requires installing %2 from IgnorePkg/IgnoreGroup.\n Install anyway?")).arg(alpm_pkg_get_name((pmpkg_t *)data1)).
 					arg(alpm_pkg_get_name((pmpkg_t *)data2)));
 		else
-			msgBox->setText(QString("%1 is in IgnorePkg/IgnoreGroup.\n Install anyway?").arg(alpm_pkg_get_name((pmpkg_t *)data1)));
+			msgBox->setText(QString(tr("%1 is in IgnorePkg/IgnoreGroup.\n Install anyway?")).arg(alpm_pkg_get_name((pmpkg_t *)data1)));
 
 		break;
 	case PM_TRANS_CONV_REMOVE_HOLDPKG:
-		msgBox->setText(QString("%1 is designated as a HoldPkg.\n Remove anyway?").arg(alpm_pkg_get_name((pmpkg_t *)data1)));
+		msgBox->setText(QString(tr("%1 is designated as a HoldPkg.\n Remove anyway?")).arg(alpm_pkg_get_name((pmpkg_t *)data1)));
 		break;
 	case PM_TRANS_CONV_REPLACE_PKG:
-		msgBox->setText(QString("Replace %1 with %2/%3?").arg(alpm_pkg_get_name((pmpkg_t *)data1)).
+		msgBox->setText(QString(tr("Replace %1 with %2/%3?")).arg(alpm_pkg_get_name((pmpkg_t *)data1)).
 				arg((char *)data3).arg(alpm_pkg_get_name((pmpkg_t *)data2)));
 		break;
 	case PM_TRANS_CONV_CONFLICT_PKG:
-		msgBox->setText(QString("%1 conflicts with %2.\nRemove %3?").arg((char *)data1).
+		msgBox->setText(QString(tr("%1 conflicts with %2.\nRemove %3?")).arg((char *)data1).
 				arg((char *)data2).arg((char *)data2));
 		break;
 	case PM_TRANS_CONV_LOCAL_NEWER:
-		msgBox->setText(QString("%1-%2: local version is newer.\nUpgrade anyway?").arg(alpm_pkg_get_name((pmpkg_t *)data1)).
+		msgBox->setText(QString(tr("%1-%2: local version is newer.\nUpgrade anyway?")).arg(alpm_pkg_get_name((pmpkg_t *)data1)).
 				arg(alpm_pkg_get_version((pmpkg_t *)data1)));
 		break;
 	case PM_TRANS_CONV_CORRUPTED_PKG:
-		msgBox->setText(QString("File %s is corrupted.\nDo you want to delete it?").arg((char *)data1));
+		msgBox->setText(QString(tr("File %s is corrupted.\nDo you want to delete it?")).arg((char *)data1));
 		break;
 	}
 	

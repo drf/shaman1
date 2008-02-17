@@ -73,6 +73,8 @@ public slots:
 	void dbUpdateTrayFinished();
 	void updateABSTree();
 	void validateSourceQueue();
+	void startSourceProcessing();
+	void finishedBuilding(int failure, QStringList targets);
 	
 protected:
 	void closeEvent(QCloseEvent *evt);

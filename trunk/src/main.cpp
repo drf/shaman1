@@ -129,6 +129,9 @@ int main(int argc, char **argv)
 		settings->setValue("scheduledUpdate/interval", 10);
 		settings->setValue("scheduledUpdate/notifyUpgrades", true);
 	}
+	if(settings->value("absbuilding/buildpath").toString() == 0 || !settings->contains("absbuilding/buildpath"))
+		// This can be dangerous, so set it properly
+		settings->setValue("absbuilding/buildpath", "/var/qtpacman/builds");
 	
 	settings->deleteLater();
 

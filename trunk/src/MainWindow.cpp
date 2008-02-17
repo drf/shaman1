@@ -1092,7 +1092,7 @@ void MainWindow::widgetQueueToAlpmQueue()
 	else if(pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 7).isEmpty() &&
 			pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 7).isEmpty())
 		aHandle->initQueue(false, true, false);
-	else if(pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 1).isEmpty() || 
+	else if(pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 1).isEmpty() && 
 					pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 7).isEmpty())
 		aHandle->initQueue(true, false, false);
 	else
@@ -1310,7 +1310,7 @@ void MainWindow::validateSourceQueue()
 
 	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 7))
 	{
-		if(itm->text(4).compare("core") && itm->text(4).compare("extra") && itm->text(4).compare("coomunity")
+		if(itm->text(4).compare("core") && itm->text(4).compare("extra") && itm->text(4).compare("community")
 				&& itm->text(4).compare("unstable") && itm->text(4).compare("testing"))
 		{
 			QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), QString(tr("Some of your packages do not belong to Arch\n"
@@ -1325,7 +1325,7 @@ void MainWindow::validateSourceQueue()
 
 	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 7))
 	{
-		if(itm->text(4).compare("core") && itm->text(4).compare("extra") && itm->text(4).compare("coomunity")
+		if(itm->text(4).compare("core") && itm->text(4).compare("extra") && itm->text(4).compare("community")
 				&& itm->text(4).compare("unstable") && itm->text(4).compare("testing"))
 		{
 			QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), QString(tr("Some of your packages do not belong to Arch\n"
@@ -1345,6 +1345,90 @@ void MainWindow::validateSourceQueue()
 	ui.setupUi(review);
 	
 	review->setWindowModality(Qt::ApplicationModal);
+	review->setAttribute(Qt::WA_DeleteOnClose, true);
 	
-	review->exec();
+	connect(ui.binaryButton, SIGNAL(clicked()), review, SLOT(close()));
+	connect(ui.binaryButton, SIGNAL(clicked()), SLOT(widgetQueueToAlpmQueue()));
+	connect(ui.abortButton, SIGNAL(clicked()), review, SLOT(close()));
+	connect(ui.sourceButton, SIGNAL(clicked()), review, SLOT(close()));
+	connect(ui.sourceButton, SIGNAL(clicked()), SLOT(startSourceProcessing()));
+	
+	review->show();
+}
+
+void MainWindow::startSourceProcessing()
+{
+	buildDialog = new BuildingDialog(aHandle, this);
+	buildDialog->initBuildingQueue();
+	
+	buildDialog->setWindowModality(Qt::ApplicationModal);
+	buildDialog->setAttribute(Qt::WA_DeleteOnClose, true);
+	
+	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 7))
+		buildDialog->addBuildingQueueItem(itm->text(1));
+	
+	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 7))
+		buildDialog->addBuildingQueueItem(itm->text(1));
+	
+	buildDialog->show();
+	
+	connect(buildDialog, SIGNAL(finishedBuilding(int,QStringList)), SLOT(finishedBuilding(int,QStringList)));
+		
+	buildDialog->processBuildingQueue();
+}
+
+void MainWindow::finishedBuilding(int failure, QStringList targets)
+{
+	if(failure == 2)
+	{
+		QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), QString(tr("Your packages Failed to Build.\n"
+				"Look at the output for more details.")), QMessageBox::Ok);
+
+		message->exec();
+
+		message->deleteLater();
+		
+		buildDialog->abortButton->setText("Close");
+		return;	
+	}
+	else if(failure == 1)
+	{
+		QMessageBox *msgBox = new QMessageBox();
+
+		msgBox->setIcon(QMessageBox::Question);
+		msgBox->setWindowTitle(QString("Error"));
+
+		msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+
+		msgBox->setWindowModality(Qt::ApplicationModal);
+		
+		msgBox->setText(QString(tr("Some packages failed to build.\nDo you want to proceed anyway?")));
+
+		switch (msgBox->exec()) {
+		case QMessageBox::Yes:
+			failure = 0;
+			break;
+		case QMessageBox::No:
+			buildDialog->abortButton->setText("Close");
+			break;
+		default:
+			// should never be reached
+			break;
+		}
+
+		msgBox->deleteLater();
+	}
+	
+	if(failure == 0)
+	{
+		buildDialog->deleteLater();
+		
+		aHandle->initQueue(false, false, true);
+		
+		foreach(QString pac, targets)
+			aHandle->addFFToQueue(pac);
+		
+		processQueue();
+	}
+		
 }
