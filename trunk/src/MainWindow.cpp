@@ -282,7 +282,10 @@ bool MainWindow::populatePackagesView()
 	{
 		QTreeWidgetItem *item = pkgsViewWG->findItems(pac, Qt::MatchExactly, 1).first();
 		if (item)
+		{
 			item->setText(7, tr("Upgrade"));
+			item->setIcon(2, QIcon(":/Icons/icons/list-add.png"));
+		}
 	}
 
 	if(!upgrds.isEmpty())
@@ -984,6 +987,7 @@ void MainWindow::addUpgradeableToQueue()
 		QTreeWidgetItem *item = pkgsViewWG->findItems(package, Qt::MatchExactly, 1).first();
 		item->setText(0, tr("Upgradeable"));
 		item->setText(7, tr("Upgrade"));
+		item->setIcon(2, QIcon(":/Icons/icons/list-add.png"));
 	}
 
 	upDl->deleteLater();
@@ -1008,6 +1012,7 @@ void MainWindow::upgradePackage()
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
 	{
 		item->setText(7, tr("Upgrade"));//Look if there are dependencies for the upgrade
+		item->setIcon(2, QIcon(":/Icons/icons/list-add.png"));
 	}
 }
 
