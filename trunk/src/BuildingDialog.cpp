@@ -45,7 +45,10 @@ void BuildingDialog::updateABSTree()
 	ABSProc = new QProcess(this);
 	connect(ABSProc, SIGNAL(readyReadStandardOutput()), SLOT(writeLineProgress()));
 	connect(ABSProc, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(finishedUpdateABSTree()));
-	
+
+	processingLabel->setText(QString(tr("Updating ABS Tree...")));
+	buildingLabel->setText(QString());
+
 	progressEdit->append(QString(tr("<b>Starting ABS Tree Update...</b><br><br>")));
 	ABSProc->start("abs");
 }
@@ -126,6 +129,9 @@ void BuildingDialog::processCurrentQueueItem()
 	ABSProc->deleteLater();
 	
 	ABSProc = new QProcess();
+	
+	processingLabel->setText(QString(tr("Processing Package %1 of %2...")).arg(currentItem + 1).arg(buildQueue.size()));
+	buildingLabel->setText(QString(tr("Building %1...")).arg(buildQueue.at(currentItem)));
 
 	/* Let's build the path we need */
 	
