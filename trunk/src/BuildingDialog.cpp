@@ -203,3 +203,26 @@ bool BuildingDialog::cleanBuildingEnvironment(const QString &package)
 	
 	return true;
 }
+
+void BuildingDialog::initBuildingQueue()
+{
+	currentItem = 0;
+	buildQueue.clear();
+	failed = false;
+	allFailed = false;
+}
+
+void BuildingDialog::addBuildingQueueItem(const QString &item)
+{
+	buildQueue.append(item);
+}
+
+void BuildingDialog::processBuildingQueue()
+{
+	if(buildQueue.isEmpty())
+		return;
+	
+	
+	
+	processCurrentQueueItem();
+}
