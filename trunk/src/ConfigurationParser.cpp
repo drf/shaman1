@@ -385,21 +385,23 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 				continue;
 			
 			found = 1;
-			printf("here\n");
+			
 			if(fileContent.at(i).startsWith(toFindE))
 				continue;
 			
 			if(fileContent.at(i).startsWith("["))
 				return false;
 			
-			printf("done\n");
-			
 			if(fileContent.at(i).startsWith(key2))
 			{
 				QString toAdd(key2);
 				toAdd.append("=");
 				toAdd.append(realVal);
-				if(fileContent.at(i).contains(realVal))
+				QString check1(toAdd);
+				QString check2(fileContent.at(i));
+				check1.remove(' ');
+				check2.remove(' ');
+				if(!check1.compare(check2))
 					return false;
 				fileContent.replace(i, toAdd);
 
@@ -463,7 +465,6 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 
 					fp.close();
 					changed = true;
-					break;
 				}
 			}
 			
