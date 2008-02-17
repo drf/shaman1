@@ -1275,7 +1275,7 @@ void MainWindow::showAboutDialog()
 
 void MainWindow::updateABSTree()
 {
-	buildDialog = new BuildingDialog(this);
+	buildDialog = new BuildingDialog(aHandle, this);
 	
 	buildDialog->show();
 	

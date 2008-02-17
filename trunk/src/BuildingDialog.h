@@ -22,6 +22,7 @@
 #define BUILDINGDIALOG_H_
 
 #include <iostream>
+#include <AlpmHandler.h>
 #include "../ui_buildingDialog.h"
 
 #include <QProcess>
@@ -31,7 +32,7 @@ class BuildingDialog : public QDialog, private Ui::buildingDialog
 	Q_OBJECT
 	
 public:
-	explicit BuildingDialog(QWidget *parent = 0);
+	explicit BuildingDialog(AlpmHandler *hnd, QWidget *parent = 0);
 	virtual ~BuildingDialog();
 	
 	void initBuildingQueue();
@@ -61,6 +62,7 @@ private:
 	int currentItem;
 	bool failed;
 	bool allFailed;
+	AlpmHandler *aHandle;
 	
 };
 

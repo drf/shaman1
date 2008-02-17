@@ -22,12 +22,14 @@
 #include <QProcess>
 #include <QString>
 #include <QSettings>
+#include <QDir>
 #include "../ui_buildingDialog.h"
 
 #include "BuildingDialog.h"
 
-BuildingDialog::BuildingDialog(QWidget *parent)
-: QDialog(parent)
+BuildingDialog::BuildingDialog(AlpmHandler *hnd, QWidget *parent)
+: QDialog(parent),
+aHandle(hnd)
 {
 	setupUi(this);
 	setWindowModality(Qt::ApplicationModal);
@@ -109,5 +111,86 @@ void BuildingDialog::processCurrentQueueItem()
 
 bool BuildingDialog::setUpBuildingEnvironment(const QString &package)
 {
+	QSettings *settings = new QSettings();
+
+	QString path(settings->value("absbuilding/buildpath").toString());
+
+	settings->deleteLater();
+
+	if(!path.endsWith("/"))
+		path.append("/");
 	
+	path.append(package);
+	
+	QDir pathDir(path);
+	if(pathDir.exists())
+		cleanBuildingEnvironment(package);
+	
+	if(!pathDir.mkpath(path))
+		return false;
+	
+	QDir absDir("/var/abs");
+	absDir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot | QDir::NoSymLinks);
+	
+	int found = 0;
+	QString absSource;
+	
+	QFileInfoList list = absDir.entryInfoList();
+	
+	for (int i = 0; i < list.size(); ++i) 
+	{
+		QDir subAbsDir(list.at(i).absoluteFilePath());
+		subAbsDir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot | QDir::NoSymLinks);
+		QFileInfoList subList = subAbsDir.entryInfoList();
+		for (int j = 0; j < list.size(); ++j) 
+		{
+			if(subList.at(j).baseName().compare(package))
+			{
+				found = 1;
+				absSource = subList.at(j).absoluteFilePath();
+				break;
+			}
+		}
+		if(found == 1)
+			break;
+	}
+	
+	if(!found)
+		return false;
+	
+	QDir absPDir(absSource);
+	absPDir.setFilter(QDir::Files | QDir::Hidden | QDir::NoDotAndDotDot | QDir::NoSymLinks);
+	
+	QFileInfoList Plist = absPDir.entryInfoList();
+
+	for (int i = 0; i < Plist.size(); ++i) 
+	{
+		QString dest(path);
+		if(!dest.endsWith("/"))
+			dest.append("/");
+		dest.append(Plist.at(i).fileName());
+		
+		if(!QFile::copy(Plist.at(i).absoluteFilePath(), dest))
+			return false;
+	}
+	
+	return true;
+}
+
+bool BuildingDialog::cleanBuildingEnvironment(const QString &package)
+{
+	QSettings *settings = new QSettings();
+
+	QString path(settings->value("absbuilding/buildpath").toString());
+
+	settings->deleteLater();
+
+	if(!path.endsWith("/"))
+		path.append("/");
+
+	path.append(package);
+	
+	aHandle->rmrf(path.toAscii().data());
+	
+	return true;
 }
