@@ -62,6 +62,8 @@ void BuildingDialog::finishedUpdateABSTree()
 {
 	ABSProc->deleteLater();
 	progressEdit->append(QString(tr("<br><br><b>ABS Tree Was Successfully Updated</b>")));
+	
+	this->close();
 }
 
 void BuildingDialog::finishedBuildingAction(int ecode, QProcess::ExitStatus estat)
@@ -72,6 +74,7 @@ void BuildingDialog::finishedBuildingAction(int ecode, QProcess::ExitStatus esta
 	{
 		failed = true;
 		progressEdit->append(QString(tr("<b>Building %1 failed!!</b><br><br>")).arg(buildQueue.at(currentItem)));
+		progressEdit->append(ABSProc->readAllStandardError());
 	}
 	else
 	{
@@ -266,7 +269,7 @@ void BuildingDialog::initBuildingQueue()
 	currentItem = 0;
 	buildQueue.clear();
 	failed = false;
-	allFailed = false;
+	allFailed = true;
 }
 
 void BuildingDialog::addBuildingQueueItem(const QString &item)

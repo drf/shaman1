@@ -153,8 +153,8 @@ void MainWindow::closeEvent(QCloseEvent *evt)
 		QVBoxLayout *lay = new QVBoxLayout();
 		
 		lbl->setText(QString(tr("qtPacman will keep running in the system tray.\nTo close it, click Quit in the file menu "
-				"or\nin the tray icon context menu.\nWhile in the System Tray, qtPacman will update your\nDatabases at a regular "
-				"interval and\nnotify you about available upgrades.\nYou can change this behaviour in Settings.")));
+				"or in the tray icon context menu.\nWhile in the System Tray, qtPacman will update your Databases\nat a regular"
+				" interval and notify you about available upgrades.\nYou can change this behaviour in Settings.")));
 		cbx->setText(QString(tr("Don't show this Again")));
 		cbx->setChecked(false);
 		but->addButton(QDialogButtonBox::Ok);
@@ -633,6 +633,9 @@ void MainWindow::doDbUpdate()
 	connect(dbdialog, SIGNAL(killMe()), this, SLOT(finishDbUpdate()));
 
 	dbdialog->doAction();
+
+	systray->setIcon(QIcon(":/Icons/icons/edit-redo.png"));
+	systray->setToolTip(QString(tr("qtPacman - Processing")));
 }
 
 void MainWindow::finishDbUpdate()
@@ -657,6 +660,9 @@ void MainWindow::finishDbUpdate()
 	}
 
 	dbdialog->deleteLater();
+
+	systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
+	systray->setToolTip(QString(tr("qtPacman - Idle")));
 }
 
 void MainWindow::showPkgsViewContextMenu()
@@ -942,6 +948,9 @@ void MainWindow::startUpgrading()
 
 	dbdialog->deleteLater();
 
+	systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
+	systray->setToolTip(QString(tr("qtPacman - Idle")));
+
 	if(aHandle->getUpgradeablePackages().isEmpty())
 	{
 		/* Display a simple popup saying the system is up-to-date. */
@@ -974,6 +983,8 @@ void MainWindow::upgradeAborted()
 {
 	upDl->deleteLater();
 	upActive = false;
+	systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
+	systray->setToolTip(QString(tr("qtPacman - Idle")));
 }
 
 void MainWindow::addUpgradeableToQueue()
@@ -1004,6 +1015,9 @@ void MainWindow::fullSysUpgrade()
 	connect(dbdialog, SIGNAL(killMe()), this, SLOT(startUpgrading()));
 
 	dbdialog->doAction();
+
+	systray->setIcon(QIcon(":/Icons/icons/edit-redo.png"));
+	systray->setToolTip(QString(tr("qtPacman - Processing")));
 }
 
 void MainWindow::upgradePackage()
@@ -1047,6 +1061,9 @@ void MainWindow::processQueue()
 
 	queueDl->startProcessing();
 
+	systray->setIcon(QIcon(":/Icons/icons/edit-redo.png"));
+	systray->setToolTip(QString(tr("qtPacman - Processing")));
+
 }
 
 void MainWindow::queueProcessingEnded(bool errors)
@@ -1070,6 +1087,9 @@ void MainWindow::queueProcessingEnded(bool errors)
 	message->exec();
 	
 	message->deleteLater();
+
+	systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
+	systray->setToolTip(QString(tr("qtPacman - Idle")));
 }
 
 void MainWindow::widgetQueueToAlpmQueue()
@@ -1389,6 +1409,9 @@ void MainWindow::finishedBuilding(int failure, QStringList targets)
 		message->deleteLater();
 		
 		buildDialog->abortButton->setText("Close");
+
+		systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
+		systray->setToolTip(QString(tr("qtPacman - Idle")));
 		return;	
 	}
 	else if(failure == 1)
@@ -1401,7 +1424,7 @@ void MainWindow::finishedBuilding(int failure, QStringList targets)
 		msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
 
 		msgBox->setWindowModality(Qt::ApplicationModal);
-		
+
 		msgBox->setText(QString(tr("Some packages failed to build.\nDo you want to proceed anyway?")));
 
 		switch (msgBox->exec()) {
@@ -1410,6 +1433,8 @@ void MainWindow::finishedBuilding(int failure, QStringList targets)
 			break;
 		case QMessageBox::No:
 			buildDialog->abortButton->setText("Close");
+			systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
+			systray->setToolTip(QString(tr("qtPacman - Idle")));
 			break;
 		default:
 			// should never be reached
