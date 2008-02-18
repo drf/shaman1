@@ -65,11 +65,27 @@ p, li { white-space: pre-wrap; }
      <item>
       <widget class="QLabel" name="infoLabel" >
        <property name="text" >
-        <string>You are about to install %1 packages from source. Building from source
-can give some advantages, however is very slow.
-If you are not sure about that, you would probably prefer to process
-your queue from binary files. Before you continue, you are advised to
-review your configuration to improve your building performance.</string>
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="noProcessBox" >
+       <property name="toolTip" >
+        <string>This is useful if you want to review compiler's output</string>
+       </property>
+       <property name="text" >
+        <string>Don't install immediately when building is finished</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="turnOffBox" >
+       <property name="toolTip" >
+        <string/>
+       </property>
+       <property name="text" >
+        <string>Turn off PC when Queue is done</string>
        </property>
       </widget>
      </item>

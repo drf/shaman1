@@ -28,7 +28,6 @@
 #include "BuildingDialog.h"
 #include "../ui_reviewQueueDialog.h"
 #include "../ui_aboutDialog.h"
-#include "../ui_reviewBuildingDialog.h"
 
 #include <iostream>
 #include <QMenu>
@@ -1302,6 +1301,36 @@ void MainWindow::showAboutDialog()
 
 void MainWindow::updateABSTree()
 {
+	if(!aHandle->isInstalled("abs"))
+	{
+		QMessageBox *msgBox = new QMessageBox();
+
+		msgBox->setIcon(QMessageBox::Question);
+		msgBox->setWindowTitle(QString("Error"));
+
+		msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+
+		msgBox->setWindowModality(Qt::ApplicationModal);
+
+		msgBox->setText(QString(tr("You need to have ABS installed to use qtPacman's\nbuilding feature. Do you want to install it now?")));
+
+		switch (msgBox->exec()) {
+		case QMessageBox::Yes:
+			installPackage("abs");
+			widgetQueueToAlpmQueue();
+			break;
+		case QMessageBox::No:
+			break;
+		default:
+			// should never be reached
+			break;
+		}
+
+		msgBox->deleteLater();
+		
+		return;
+	}
+	
 	buildDialog = new BuildingDialog(aHandle, this);
 	
 	buildDialog->show();
@@ -1311,6 +1340,36 @@ void MainWindow::updateABSTree()
 
 void MainWindow::validateSourceQueue()
 {
+	if(!aHandle->isInstalled("abs"))
+	{
+		QMessageBox *msgBox = new QMessageBox();
+
+		msgBox->setIcon(QMessageBox::Question);
+		msgBox->setWindowTitle(QString("Error"));
+
+		msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+
+		msgBox->setWindowModality(Qt::ApplicationModal);
+
+		msgBox->setText(QString(tr("You need to have ABS installed to use qtPacman's\nbuilding feature. Do you want to install it now?")));
+
+		switch (msgBox->exec()) {
+		case QMessageBox::Yes:
+			installPackage("abs");
+			widgetQueueToAlpmQueue();
+			break;
+		case QMessageBox::No:
+			break;
+		default:
+			// should never be reached
+			break;
+		}
+
+		msgBox->deleteLater();
+
+		return;
+	}
+	
 	if(pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 7).isEmpty() &&
 			pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 7).isEmpty() &&
 			pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 7).isEmpty() &&
@@ -1360,18 +1419,33 @@ void MainWindow::validateSourceQueue()
 	}
 	
 	QDialog *review = new QDialog(this);
-	Ui::reviewBuildingDialog ui;
 	
-	ui.setupUi(review);
+	revBuildUi = new Ui::reviewBuildingDialog();
+	
+	revBuildUi->setupUi(review);
 	
 	review->setWindowModality(Qt::ApplicationModal);
 	review->setAttribute(Qt::WA_DeleteOnClose, true);
-	
-	connect(ui.binaryButton, SIGNAL(clicked()), review, SLOT(close()));
-	connect(ui.binaryButton, SIGNAL(clicked()), SLOT(widgetQueueToAlpmQueue()));
-	connect(ui.abortButton, SIGNAL(clicked()), review, SLOT(close()));
-	connect(ui.sourceButton, SIGNAL(clicked()), review, SLOT(close()));
-	connect(ui.sourceButton, SIGNAL(clicked()), SLOT(startSourceProcessing()));
+
+	revBuildUi->infoLabel->setText((pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 7).size() + 
+			pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 7).size()) == 1 ? QString(tr("You are about to install <b>%1"
+					" package</b> from source. Building from source<br>can give some advantages, however is very slow.<br>If "
+					"you are not sure about that, you would probably prefer to process<br>your queue from binary files. "
+					"Before you continue, you are advised to<br>review your configuration to improve your building performance.")).arg(
+							pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 7).size() + 
+							pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 7).size()) : 
+								QString(tr("You are about to install <b>%1"
+										" packages</b> from source. Building from source<br>can give some advantages, however is very slow.<br>If "
+										"you are not sure about that, you would probably prefer to process<br>your queue from binary files. "
+										"Before you continue, you are advised to<br>review your configuration to improve your building performance.")).arg(
+												pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 7).size() + 
+												pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 7).size()));
+
+	connect(revBuildUi->binaryButton, SIGNAL(clicked()), review, SLOT(close()));
+	connect(revBuildUi->binaryButton, SIGNAL(clicked()), SLOT(widgetQueueToAlpmQueue()));
+	connect(revBuildUi->abortButton, SIGNAL(clicked()), review, SLOT(close()));
+	connect(revBuildUi->sourceButton, SIGNAL(clicked()), review, SLOT(close()));
+	connect(revBuildUi->sourceButton, SIGNAL(clicked()), SLOT(startSourceProcessing()));
 	
 	review->show();
 }
@@ -1390,6 +1464,11 @@ void MainWindow::startSourceProcessing()
 	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 7))
 		buildDialog->addBuildingQueueItem(itm->text(1));
 	
+	if(revBuildUi->noProcessBox->isChecked())
+		buildDialog->waitBeforeProcess(true);
+	
+	delete(revBuildUi);
+	
 	buildDialog->show();
 	
 	connect(buildDialog, SIGNAL(finishedBuilding(int,QStringList)), SLOT(finishedBuilding(int,QStringList)));
@@ -1399,6 +1478,8 @@ void MainWindow::startSourceProcessing()
 
 void MainWindow::finishedBuilding(int failure, QStringList targets)
 {
+	buildTargets.clear();
+	
 	if(failure == 2)
 	{
 		QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), QString(tr("Your packages Failed to Build.\n"
@@ -1408,18 +1489,18 @@ void MainWindow::finishedBuilding(int failure, QStringList targets)
 
 		message->deleteLater();
 		
-		buildDialog->abortButton->setText("Close");
+		buildDialog->abortButton->setText(QString(tr("Close")));
 
 		systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
 		systray->setToolTip(QString(tr("qtPacman - Idle")));
 		return;	
 	}
 	else if(failure == 1)
-	{
+	{		
 		QMessageBox *msgBox = new QMessageBox();
 
 		msgBox->setIcon(QMessageBox::Question);
-		msgBox->setWindowTitle(QString("Error"));
+		msgBox->setWindowTitle(QString(tr("Error")));
 
 		msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
 
@@ -1432,7 +1513,7 @@ void MainWindow::finishedBuilding(int failure, QStringList targets)
 			failure = 0;
 			break;
 		case QMessageBox::No:
-			buildDialog->abortButton->setText("Close");
+			buildDialog->abortButton->setText(QString(tr("Close")));
 			systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
 			systray->setToolTip(QString(tr("qtPacman - Idle")));
 			break;
@@ -1446,14 +1527,28 @@ void MainWindow::finishedBuilding(int failure, QStringList targets)
 	
 	if(failure == 0)
 	{
-		buildDialog->deleteLater();
+		buildTargets = targets;
 		
-		aHandle->initQueue(false, false, true);
-		
-		foreach(QString pac, targets)
-			aHandle->addFFToQueue(pac);
-		
-		processQueue();
+		if(buildDialog->reviewOutputFirst())
+		{
+			buildDialog->reduceButton->setText(QString(tr("Install Built Packages")));
+			disconnect(buildDialog->reduceButton, SIGNAL(clicked()));
+			connect(buildDialog->reduceButton, SIGNAL(clicked()), SLOT(processBuiltPackages()));
+		}
+		else
+			processBuiltPackages();
 	}
 		
+}
+
+void MainWindow::processBuiltPackages()
+{
+	buildDialog->deleteLater();
+
+	aHandle->initQueue(false, false, true);
+
+	foreach(QString pac, buildTargets)
+	aHandle->addFFToQueue(pac);
+
+	processQueue();
 }

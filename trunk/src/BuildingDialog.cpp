@@ -24,6 +24,7 @@
 #include <QSettings>
 #include <QDir>
 #include <QDebug>
+#include <QMessageBox>
 #include "../ui_buildingDialog.h"
 
 #include "BuildingDialog.h"
@@ -61,8 +62,16 @@ void BuildingDialog::writeLineProgress()
 void BuildingDialog::finishedUpdateABSTree()
 {
 	ABSProc->deleteLater();
-	progressEdit->append(QString(tr("<br><br><b>ABS Tree Was Successfully Updated</b>")));
-	
+	progressEdit->append(QString(tr("<br><br><b>ABS Tree Was Successfully Updated!</b>")));
+
+	QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("ABS Update"), QString(tr("Your ABS Tree was updated!")),
+			QMessageBox::Ok);
+
+	message->exec();
+
+	message->deleteLater();
+	return;
+
 	this->close();
 }
 
@@ -270,6 +279,7 @@ void BuildingDialog::initBuildingQueue()
 	buildQueue.clear();
 	failed = false;
 	allFailed = true;
+	waitProcessing = false;
 }
 
 void BuildingDialog::addBuildingQueueItem(const QString &item)
@@ -285,4 +295,14 @@ void BuildingDialog::processBuildingQueue()
 	progressEdit->append(QString(tr("<b>Building operation has started.</b><br><br>")));
 	
 	processCurrentQueueItem();
+}
+
+void BuildingDialog::waitBeforeProcess(bool yn)
+{
+	waitProcessing = yn;
+}
+
+bool BuildingDialog::reviewOutputFirst()
+{
+	return waitProcessing;
 }

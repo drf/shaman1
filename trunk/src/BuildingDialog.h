@@ -37,9 +37,9 @@ public:
 	
 	void initBuildingQueue();
 	void addBuildingQueueItem(const QString &item);
-	void removeBuildingQueueItem(const QString &item);
 	void processBuildingQueue();
-	bool checkBuildingQueue();
+	void waitBeforeProcess(bool yn);
+	bool reviewOutputFirst();
 	
 public slots:
 	void updateABSTree();
@@ -63,6 +63,7 @@ private:
 	int currentItem;
 	bool failed;
 	bool allFailed;
+	bool waitProcessing;
 	AlpmHandler *aHandle;
 	
 };

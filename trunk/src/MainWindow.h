@@ -26,6 +26,7 @@
 #include <alpm.h>
 #include <alpm_list.h>
 #include "../ui_MainWindow.h"
+#include "../ui_reviewBuildingDialog.h"
 #include "AlpmHandler.h"
 
 #include <QSystemTrayIcon>
@@ -75,6 +76,7 @@ public slots:
 	void validateSourceQueue();
 	void startSourceProcessing();
 	void finishedBuilding(int failure, QStringList targets);
+	void processBuiltPackages();
 	
 protected:
 	void closeEvent(QCloseEvent *evt);
@@ -113,11 +115,13 @@ private:
 	QueueDialog *queueDl;
 	ConfigDialog *configDialog;
 	BuildingDialog *buildDialog;
+	Ui::reviewBuildingDialog *revBuildUi;
 
 	QSystemTrayIcon *systray;
 	QDialog *reviewQueue;
 	QTimer *trayUpDb;
 	UpDbThread *upDbTh;
+	QStringList buildTargets;
 	
 	bool upActive;
 	bool revActive;
