@@ -70,7 +70,6 @@ void BuildingDialog::finishedUpdateABSTree()
 	message->exec();
 
 	message->deleteLater();
-	return;
 
 	this->close();
 }
