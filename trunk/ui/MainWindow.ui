@@ -205,6 +205,12 @@
             <property name="icon" >
              <iconset resource="qtpacman.qrc" >:/Icons/icons/network-server-database.png</iconset>
             </property>
+            <property name="checkable" >
+             <bool>true</bool>
+            </property>
+            <property name="checked" >
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item>
@@ -220,6 +226,9 @@
             </property>
             <property name="icon" >
              <iconset resource="qtpacman.qrc" >:/Icons/icons/bookmark-new-list.png</iconset>
+            </property>
+            <property name="checkable" >
+             <bool>true</bool>
             </property>
            </widget>
           </item>

@@ -308,6 +308,8 @@ bool MainWindow::populatePackagesView()
 
 void MainWindow::populateRepoColumn()
 {
+        switchToGrps->setChecked(false);
+        dockWidget_2->setWindowTitle(tr("Repositories"));
 	alpm_list_t *list = aHandle->getAvailableRepos();
 
 	removeRepoColumn();
@@ -340,6 +342,8 @@ void MainWindow::populateRepoColumn()
 
 void MainWindow::populateGrpsColumn()
 {
+        switchToRepo->setChecked(false);
+        dockWidget_2->setWindowTitle(tr("Package Groups"));
 	QStringList grps = aHandle->getPackageGroups();
 
 	removeRepoColumn();
