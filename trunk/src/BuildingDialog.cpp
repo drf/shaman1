@@ -35,10 +35,43 @@ aHandle(hnd)
 {
 	setupUi(this);
 	setWindowModality(Qt::ApplicationModal);
+	connect(abortButton, SIGNAL(clicked()), SLOT(abortProcess()));
 }
 
 BuildingDialog::~BuildingDialog()
 {
+}
+
+void BuildingDialog::abortProcess()
+{
+	QMessageBox *msgBox = new QMessageBox(this);
+
+	msgBox->setIcon(QMessageBox::Question);
+	msgBox->setWindowTitle(QString(tr("Error")));
+
+	msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+
+	msgBox->setWindowModality(Qt::ApplicationModal);
+
+	msgBox->setText(QString(tr("Would you like to abort building?.\nAll Process will be lost.")));
+
+	switch (msgBox->exec()) {
+	case QMessageBox::Yes:
+		disconnect(ABSProc, SIGNAL(readyReadStandardOutput()), this, SLOT(writeLineProgress()));
+		disconnect(ABSProc, SIGNAL(readyReadStandardError()), this, SLOT(writeLineProgressErr()));
+		disconnect(ABSProc, SIGNAL(finished(int,QProcess::ExitStatus)), this, SLOT(finishedBuildingAction(int,QProcess::ExitStatus)));
+		ABSProc->kill();
+		progressEdit->append(QString(tr("<br><br><b>Building Process Aborted by the User. Building Failed.</b>")));
+		emit finishedBuilding(2, builtPaths);
+		break;
+	case QMessageBox::No:
+		break;
+	default:
+		// should never be reached
+		break;
+	}
+
+	msgBox->deleteLater();
 }
 
 void BuildingDialog::updateABSTree()
@@ -56,6 +89,13 @@ void BuildingDialog::updateABSTree()
 
 void BuildingDialog::writeLineProgress()
 {
+	ABSProc->setReadChannel(QProcess::StandardOutput);
+	progressEdit->append(ABSProc->readLine(1024));
+}
+
+void BuildingDialog::writeLineProgressErr()
+{
+	ABSProc->setReadChannel(QProcess::StandardError);
 	progressEdit->append(ABSProc->readLine(1024));
 }
 
@@ -65,7 +105,7 @@ void BuildingDialog::finishedUpdateABSTree()
 	progressEdit->append(QString(tr("<br><br><b>ABS Tree Was Successfully Updated!</b>")));
 
 	QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("ABS Update"), QString(tr("Your ABS Tree was updated!")),
-			QMessageBox::Ok);
+			QMessageBox::Ok, this);
 
 	message->exec();
 
@@ -163,6 +203,7 @@ void BuildingDialog::processCurrentQueueItem()
 	ABSProc->setWorkingDirectory(path);
 
 	connect(ABSProc, SIGNAL(readyReadStandardOutput()), SLOT(writeLineProgress()));
+	connect(ABSProc, SIGNAL(readyReadStandardError()), SLOT(writeLineProgressErr()));
 	connect(ABSProc, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(finishedBuildingAction(int,QProcess::ExitStatus)));
 	
 	progressEdit->append(QString(tr("<b>Building %1...</b><br><br>")).arg(buildQueue.at(currentItem)));
@@ -207,13 +248,11 @@ bool BuildingDialog::setUpBuildingEnvironment(const QString &package)
 		QFileInfoList subList = subAbsDir.entryInfoList();
 		for (int k = 0; k < subList.size(); ++k) 
 		{
-			qDebug() << subList.at(k).absoluteFilePath();
 			QDir subUbAbsDir(subList.at(k).absoluteFilePath());
 			subUbAbsDir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot | QDir::NoSymLinks);
 			QFileInfoList subUbList = subUbAbsDir.entryInfoList();
 			for (int j = 0; j < subUbList.size(); ++j) 
 			{
-				qDebug() << subUbList.at(j).baseName();
 				if(!subUbList.at(j).baseName().compare(package))
 				{
 					found = 1;
@@ -270,6 +309,15 @@ bool BuildingDialog::cleanBuildingEnvironment(const QString &package)
 	aHandle->rmrf(path.toAscii().data());
 	
 	return true;
+}
+
+void BuildingDialog::cleanAllBuildingEnvironments()
+{
+	QSettings *settings = new QSettings();
+	
+	aHandle->rmrf(settings->value("absbuilding/buildpath").toString().toAscii().data());
+	
+	settings->deleteLater();
 }
 
 void BuildingDialog::initBuildingQueue()

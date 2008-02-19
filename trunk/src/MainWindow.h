@@ -39,6 +39,7 @@ class ConfigDialog;
 class ManteinanceDialog;
 class UpDbThread;
 class BuildingDialog;
+class EditPBuild;
 
 class MainWindow : public QMainWindow, private Ui::MainWindow, private StringUtils
 {
@@ -77,6 +78,7 @@ public slots:
 	void startSourceProcessing();
 	void finishedBuilding(int failure, QStringList targets);
 	void processBuiltPackages();
+	void openPBuildDialog();
 	
 protected:
 	void closeEvent(QCloseEvent *evt);
@@ -116,6 +118,8 @@ private:
 	ConfigDialog *configDialog;
 	BuildingDialog *buildDialog;
 	Ui::reviewBuildingDialog *revBuildUi;
+	EditPBuild *pBuildEditor;
+	QDialog *reviewBQueue;
 
 	QSystemTrayIcon *systray;
 	QDialog *reviewQueue;

@@ -26,6 +26,7 @@
 #include "QueueDialog.h"
 #include "configDialog.h"
 #include "BuildingDialog.h"
+#include "EditPBuild.h"
 #include "../ui_reviewQueueDialog.h"
 #include "../ui_aboutDialog.h"
 
@@ -264,7 +265,8 @@ bool MainWindow::populatePackagesView()
 	while(locPkg != NULL)
 	{
 		pmpkg_t *pkg = (pmpkg_t *)alpm_list_getdata(locPkg);
-		if (pkgsViewWG->findItems(alpm_pkg_get_name(pkg), Qt::MatchExactly, 1).isEmpty())
+		QList<QTreeWidgetItem*> list = pkgsViewWG->findItems(alpm_pkg_get_name(pkg), Qt::MatchExactly, 1);
+		if (list.isEmpty())
 		{
 			QTreeWidgetItem *item = new QTreeWidgetItem(pkgsViewWG);
 			item->setIcon(0, QIcon(":/Icons/icons/dialog-ok-apply.png"));
@@ -273,6 +275,9 @@ bool MainWindow::populatePackagesView()
 			item->setText(6, alpm_pkg_get_desc(pkg));
 			item->setText(4, "local");
 		}
+		else
+			list.first()->setText(3, alpm_pkg_get_version(aHandle->getPackageFromName(list.first()->text(1), "local")));
+			
 		locPkg = alpm_list_next(locPkg);
 	}
 
@@ -649,7 +654,7 @@ void MainWindow::finishDbUpdate()
 	{
 		QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), 
 				QString(tr("One or more Databases could not be updated.\nLast error reported was:\n%1")).arg(alpm_strerrorlast()),
-				QMessageBox::Ok);
+				QMessageBox::Ok, dbdialog);
 		
 		message->exec();
 		
@@ -957,7 +962,8 @@ void MainWindow::startUpgrading()
 	if(aHandle->getUpgradeablePackages().isEmpty())
 	{
 		/* Display a simple popup saying the system is up-to-date. */
-		QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("System Upgrade"), tr("Your system is up to date!"), QMessageBox::Ok, this);
+		QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("System Upgrade"), 
+				tr("Your system is up to date!"), QMessageBox::Ok, this);
 		message->show();
 		qDebug() << "System is up to date";
 	}
@@ -1077,19 +1083,19 @@ void MainWindow::queueProcessingEnded(bool errors)
 		qDebug() << "Errors Occourred";
 	}
 
-	queueDl->deleteLater();
-
 	qDebug() << "Transaction Completed Successfully";
 
 	pkgsViewWG->setSortingEnabled(false);
 	populatePackagesView();
 	refinePkgView();
 	
-	QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Queue Processed"), tr("Your Queue was successfully processed!"), QMessageBox::Ok);
+	QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Queue Processed"), 
+			tr("Your Queue was successfully processed!"), QMessageBox::Ok, queueDl);
 
 	message->exec();
 	
 	message->deleteLater();
+	queueDl->deleteLater();
 
 	systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
 	systray->setToolTip(QString(tr("qtPacman - Idle")));
@@ -1269,7 +1275,7 @@ void MainWindow::getPackageFromFile()
 	if(alpm_pkg_load(fileName.toAscii().data(), 1, &pkg) == -1)
 	{
 		QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), QString(tr("%1 does not seem\na valid package")).
-				arg(fileName), QMessageBox::Ok);
+				arg(fileName), QMessageBox::Ok, this);
 
 		message->exec();
 
@@ -1307,7 +1313,7 @@ void MainWindow::updateABSTree()
 {
 	if(!aHandle->isInstalled("abs"))
 	{
-		QMessageBox *msgBox = new QMessageBox();
+		QMessageBox *msgBox = new QMessageBox(this);
 
 		msgBox->setIcon(QMessageBox::Question);
 		msgBox->setWindowTitle(QString("Error"));
@@ -1346,7 +1352,7 @@ void MainWindow::validateSourceQueue()
 {
 	if(!aHandle->isInstalled("abs"))
 	{
-		QMessageBox *msgBox = new QMessageBox();
+		QMessageBox *msgBox = new QMessageBox(this);
 
 		msgBox->setIcon(QMessageBox::Question);
 		msgBox->setWindowTitle(QString("Error"));
@@ -1383,7 +1389,7 @@ void MainWindow::validateSourceQueue()
 			!pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 7).isEmpty())
 	{
 		QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), QString(tr("You can not remove packages when processing\n"
-				"your queue from Source")), QMessageBox::Ok);
+				"your queue from Source")), QMessageBox::Ok, this);
 
 		message->exec();
 
@@ -1397,7 +1403,7 @@ void MainWindow::validateSourceQueue()
 				&& itm->text(4).compare("unstable") && itm->text(4).compare("testing"))
 		{
 			QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), QString(tr("Some of your packages do not belong to Arch\n"
-					"Linux's official repository. qtPacman is able to\nbuild packages from official sources only.")), QMessageBox::Ok);
+					"Linux's official repository. qtPacman is able to\nbuild packages from official sources only.")), QMessageBox::Ok, this);
 
 			message->exec();
 
@@ -1412,7 +1418,7 @@ void MainWindow::validateSourceQueue()
 				&& itm->text(4).compare("unstable") && itm->text(4).compare("testing"))
 		{
 			QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), QString(tr("Some of your packages do not belong to Arch\n"
-					"Linux's official repository. qtPacman is able to\nbuild packages from official sources only.")), QMessageBox::Ok);
+					"Linux's official repository. qtPacman is able to\nbuild packages from official sources only.")), QMessageBox::Ok, this);
 
 			message->exec();
 
@@ -1422,14 +1428,14 @@ void MainWindow::validateSourceQueue()
 
 	}
 	
-	QDialog *review = new QDialog(this);
+	reviewBQueue = new QDialog(this);
 	
 	revBuildUi = new Ui::reviewBuildingDialog();
 	
-	revBuildUi->setupUi(review);
+	revBuildUi->setupUi(reviewBQueue);
 	
-	review->setWindowModality(Qt::ApplicationModal);
-	review->setAttribute(Qt::WA_DeleteOnClose, true);
+	reviewBQueue->setWindowModality(Qt::ApplicationModal);
+	reviewBQueue->setAttribute(Qt::WA_DeleteOnClose, true);
 
 	revBuildUi->infoLabel->setText((pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 7).size() + 
 			pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 7).size()) == 1 ? QString(tr("You are about to install <b>%1"
@@ -1445,13 +1451,31 @@ void MainWindow::validateSourceQueue()
 												pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 7).size() + 
 												pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 7).size()));
 
-	connect(revBuildUi->binaryButton, SIGNAL(clicked()), review, SLOT(close()));
+	connect(revBuildUi->binaryButton, SIGNAL(clicked()), reviewBQueue, SLOT(close()));
 	connect(revBuildUi->binaryButton, SIGNAL(clicked()), SLOT(widgetQueueToAlpmQueue()));
-	connect(revBuildUi->abortButton, SIGNAL(clicked()), review, SLOT(close()));
-	connect(revBuildUi->sourceButton, SIGNAL(clicked()), review, SLOT(close()));
+	connect(revBuildUi->abortButton, SIGNAL(clicked()), reviewBQueue, SLOT(close()));
+	connect(revBuildUi->sourceButton, SIGNAL(clicked()), reviewBQueue, SLOT(close()));
 	connect(revBuildUi->sourceButton, SIGNAL(clicked()), SLOT(startSourceProcessing()));
+	connect(revBuildUi->pBuildButton, SIGNAL(clicked()), SLOT(openPBuildDialog()));
 	
-	review->show();
+	reviewBQueue->show();
+}
+
+void MainWindow::openPBuildDialog()
+{
+	QStringList targets;
+
+	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 7))
+		targets.append(itm->text(1));
+
+	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 7))
+		targets.append(itm->text(1));
+	
+	pBuildEditor = new EditPBuild(targets, reviewBQueue);
+	
+	pBuildEditor->exec();
+	
+	pBuildEditor->deleteLater();
 }
 
 void MainWindow::startSourceProcessing()
@@ -1487,13 +1511,17 @@ void MainWindow::finishedBuilding(int failure, QStringList targets)
 	if(failure == 2)
 	{
 		QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), QString(tr("Your packages Failed to Build.\n"
-				"Look at the output for more details.")), QMessageBox::Ok);
+				"Look at the output for more details.")), QMessageBox::Ok, buildDialog);
 
 		message->exec();
 
 		message->deleteLater();
 		
 		buildDialog->abortButton->setText(QString(tr("Close")));
+		disconnect(buildDialog->abortButton, SIGNAL(clicked()), buildDialog, SLOT(abortProcess()));
+		connect(buildDialog->abortButton, SIGNAL(clicked()), buildDialog, SLOT(deleteLater()));
+		buildDialog->processingLabel->setText(QString(tr("Building Packages Failed!!")));
+		buildDialog->buildingLabel->setText(QString());
 
 		systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
 		systray->setToolTip(QString(tr("qtPacman - Idle")));
@@ -1501,7 +1529,7 @@ void MainWindow::finishedBuilding(int failure, QStringList targets)
 	}
 	else if(failure == 1)
 	{		
-		QMessageBox *msgBox = new QMessageBox();
+		QMessageBox *msgBox = new QMessageBox(buildDialog);
 
 		msgBox->setIcon(QMessageBox::Question);
 		msgBox->setWindowTitle(QString(tr("Error")));
@@ -1509,6 +1537,9 @@ void MainWindow::finishedBuilding(int failure, QStringList targets)
 		msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
 
 		msgBox->setWindowModality(Qt::ApplicationModal);
+
+		buildDialog->processingLabel->setText(QString(tr("Building Packages Failed!!")));
+		buildDialog->buildingLabel->setText(QString());
 
 		msgBox->setText(QString(tr("Some packages failed to build.\nDo you want to proceed anyway?")));
 
@@ -1518,6 +1549,8 @@ void MainWindow::finishedBuilding(int failure, QStringList targets)
 			break;
 		case QMessageBox::No:
 			buildDialog->abortButton->setText(QString(tr("Close")));
+			disconnect(buildDialog->abortButton, SIGNAL(clicked()), buildDialog, SLOT(abortProcess()));
+			connect(buildDialog->abortButton, SIGNAL(clicked()), buildDialog, SLOT(deleteLater()));
 			systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
 			systray->setToolTip(QString(tr("qtPacman - Idle")));
 			break;
@@ -1536,6 +1569,11 @@ void MainWindow::finishedBuilding(int failure, QStringList targets)
 		if(buildDialog->reviewOutputFirst())
 		{
 			buildDialog->reduceButton->setText(QString(tr("Install Built Packages")));
+			buildDialog->abortButton->setText(QString(tr("Close Without Installing")));
+			buildDialog->processingLabel->setText(QString(tr("Packages Built Successfully!")));
+			buildDialog->buildingLabel->setText(QString());
+			disconnect(buildDialog->abortButton, SIGNAL(clicked()), buildDialog, SLOT(abortProcess()));
+			connect(buildDialog->abortButton, SIGNAL(clicked()), buildDialog, SLOT(deleteLater()));
 			disconnect(buildDialog->reduceButton, SIGNAL(clicked()));
 			connect(buildDialog->reduceButton, SIGNAL(clicked()), SLOT(processBuiltPackages()));
 		}

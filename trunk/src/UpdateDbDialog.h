@@ -54,7 +54,7 @@ public:
 
 public slots:
 	void doAction();
-	
+		
 private slots:
 	void updateLabel(char *repo, int action);
 	//void updateDlProg(float bytetotal, float bytedled, float speed);

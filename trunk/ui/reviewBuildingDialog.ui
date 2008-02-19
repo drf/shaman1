@@ -5,7 +5,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>474</width>
+    <width>622</width>
     <height>250</height>
    </rect>
   </property>
@@ -117,6 +117,13 @@ p, li { white-space: pre-wrap; }
           </size>
          </property>
         </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pBuildButton" >
+         <property name="text" >
+          <string>Review PKGBUILDs</string>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QPushButton" name="sourceButton" >

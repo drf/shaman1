@@ -129,6 +129,7 @@ int main(int argc, char **argv)
 		settings->setValue("scheduledUpdate/interval", 10);
 		settings->setValue("scheduledUpdate/notifyUpgrades", true);
 	}
+	
 	if(settings->value("absbuilding/buildpath").toString() == 0 || !settings->contains("absbuilding/buildpath"))
 		// This can be dangerous, so set it properly
 		settings->setValue("absbuilding/buildpath", "/var/qtpacman/builds");
@@ -156,7 +157,6 @@ int main(int argc, char **argv)
 
 	mainwin.populatePackagesView();
 	QObject::connect(&mainwin, SIGNAL(aboutToQuit()), &app, SLOT(quit()));
-	app.syncX();
 	return app.exec();
 
 }

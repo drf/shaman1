@@ -44,13 +44,15 @@ public:
 public slots:
 	void updateABSTree();
 	void writeLineProgress();
+	void writeLineProgressErr();
 	void finishedUpdateABSTree();
 	void finishedBuildingAction(int ecode, QProcess::ExitStatus estat);
+	void abortProcess();
 	
 private:
 	bool setUpBuildingEnvironment(const QString &package);
 	bool cleanBuildingEnvironment(const QString &package);
-	bool cleanAllBuildingEnvironments();
+	void cleanAllBuildingEnvironments();
 	void processCurrentQueueItem();
 	
 signals:
