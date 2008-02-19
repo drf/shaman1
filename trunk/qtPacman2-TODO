@@ -1,8 +1,27 @@
 TODO for qtPacman2:
-Model/View:
-    *Reimplement a QAbstractItemModel and use a QList<Package*> in it..
-    *Reimplement QSortFilterProxyModel and reimplement filterAcceptsRow(...) for advanced-searching (f.e. only core-packages and search for kdegraphics)
-    *Use a QTreeView for the Graphical-stuff
+GUI:
+	Model/View:
+		*Reimplement a QAbstractItemModel and use a QList<Package*> in it..
+		*Reimplement QSortFilterProxyModel and reimplement filterAcceptsRow(...) for advanced-searching (f.e. only core-packages and search for kdegraphics)
+		*Use a QTreeView for the Graphical-stuff
 
-Misc GUI:
-    *Move the QDockWidgets to separate classes, with a Package as parameter
+	Misc:
+		*Move the QDockWidgets to separate classes, with a Package as parameter
+
+Core:
+	Package-class:
+		*enum Status {Installed, NotInstalled, Upgradeable}
+		*enum Action {Install, Remove, Upgrade, NoAction}
+		*void rebuild() (rebuild package from source)
+		*void remove()
+		*void install()
+		*void upgrade()
+		*string name()
+		*float version()
+		*string description()
+		*Status status()
+		*string statusText()
+		*Action action()
+		*string actionText()
+		*string repository()
+		*stringlist groups()
