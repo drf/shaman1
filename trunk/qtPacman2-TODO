@@ -13,9 +13,8 @@ Core:
 		*enum Status {Installed, NotInstalled, Upgradeable}
 		*enum Action {Install, Remove, Upgrade, NoAction}
 		*void rebuild() (rebuild package from source)
-		*void remove()
-		*void install()
-		*void upgrade()
+		*void setAction(Action action);
+		*void process();
 		*string name()
 		*float version()
 		*string description()
