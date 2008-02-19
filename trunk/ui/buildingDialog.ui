@@ -419,7 +419,7 @@ p, li { white-space: pre-wrap; }
            <enum>Qt::AutoText</enum>
           </property>
           <property name="pixmap" >
-           <pixmap>icons/network-server-database.png</pixmap>
+           <pixmap resource="qtpacman.qrc" >:/Icons/icons/network-server-database.png</pixmap>
           </property>
           <property name="scaledContents" >
            <bool>true</bool>
@@ -463,6 +463,9 @@ p, li { white-space: pre-wrap; }
          <property name="text" >
           <string>Abort</string>
          </property>
+         <property name="icon" >
+          <iconset resource="qtpacman.qrc" >:/Icons/icons/dialog-cancel.png</iconset>
+         </property>
         </widget>
        </item>
        <item>
@@ -491,6 +494,8 @@ p, li { white-space: pre-wrap; }
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="qtpacman.qrc" />
+ </resources>
  <connections/>
 </ui>

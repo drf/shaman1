@@ -144,6 +144,8 @@ p, li { white-space: pre-wrap; }
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="qtpacman.qrc" />
+ </resources>
  <connections/>
 </ui>
