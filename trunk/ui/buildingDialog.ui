@@ -6,7 +6,7 @@
     <x>0</x>
     <y>0</y>
     <width>528</width>
-    <height>415</height>
+    <height>434</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -18,7 +18,7 @@
      <item>
       <widget class="QFrame" name="frame" >
        <property name="sizePolicy" >
-        <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
+        <sizepolicy vsizetype="Maximum" hsizetype="Minimum" >
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>

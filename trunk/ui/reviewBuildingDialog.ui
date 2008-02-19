@@ -6,7 +6,7 @@
     <x>0</x>
     <y>0</y>
     <width>622</width>
-    <height>250</height>
+    <height>198</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -17,6 +17,12 @@
     <layout class="QVBoxLayout" >
      <item>
       <widget class="QFrame" name="frame" >
+       <property name="sizePolicy" >
+        <sizepolicy vsizetype="Maximum" hsizetype="Minimum" >
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="frameShape" >
         <enum>QFrame::StyledPanel</enum>
        </property>
