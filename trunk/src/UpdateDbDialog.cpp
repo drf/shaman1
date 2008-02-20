@@ -58,23 +58,37 @@ void UpdateDbDialog::updateLabel(char *repo, int action)
 {
 	Q_UNUSED(repo);
 	
+	/* Ok, you need to read createWidget first.
+	 * When we are here, first of all we obtain the current label,
+	 * that is at the index pointed by actionDone.
+	 */
+	
 	QLabel *toInsert = labelList.at(actionDone);
+	
+	/* This function is triggered by a slot from AlpmHandler. action
+	 * holds the action that the library is processing. Let's see.
+	 */
 	
 	switch(action)
 	{
 	case 0:
+		// The Database is being processed
 		toInsert->setPixmap(QIcon(":/Icons/icons/edit-redo.png").pixmap(22));
 		break;
 	case 1:
+		// The Database is being downloaded (Outdated, see updateDlBar instead)
 		toInsert->setPixmap(QIcon(":/Icons/icons/view-refresh.png").pixmap(22));
 		break;
 	case 2:
+		// The Database is being installed (this action is usually so quick that this icon is not even shown)
 		toInsert->setPixmap(QIcon(":/Icons/icons/edit-redo.png").pixmap(22));
 		break;
 	case 3:
+		// The Database has been processed successfully
 		toInsert->setPixmap(QIcon(":/Icons/icons/dialog-ok-apply.png").pixmap(22));
 		break;
 	case 4:
+		// There was an error updating the database
 		toInsert->setPixmap(QIcon(":/Icons/icons/edit-delete.png").pixmap(22));
 		errorsOccourred = true;
 	default:
@@ -115,6 +129,7 @@ void UpdateDbDialog::updateDlBar(char *c, int bytedone, int bytetotal, int speed
 	
 	QLabel *toInsert = labelList.at(actionDone);
 
+	// The database is being downloaded.
 	toInsert->setPixmap(QIcon(":/Icons/icons/view-refresh.png").pixmap(22));
 }
 
@@ -152,8 +167,20 @@ bool UpDbThread::getResult()
 
 void UpdateDbDialog::createWidgets(const QStringList &list)
 {
+	/* This is (cronologically) the first function called, and it is triggered
+	 * from a signal coming from AlpmHandler, that gives us the list of the
+	 * Databases that we are going to sync, already ordered.
+	 */
+	
 	for (int i = 0; i < list.size(); ++i)
 	{
+		/* Each cycle dynamically creates a pair of labels, the first one contains
+		 * the name of the Database, so we simply show it. The second holds the icon.
+		 * Since we'll need to edit the icons during the operation, we will store the 
+		 * pointers to the label in a QList, labelList. You'll see how this thing works in
+		 * the next funtion called, updateLabel
+		 */
+		
 		QLabel *labelDb = new QLabel(this);
 		QLabel *labelStatus = new QLabel(this);
 		labelStatus->setSizePolicy(QSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed));
