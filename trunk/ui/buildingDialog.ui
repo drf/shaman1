@@ -432,7 +432,7 @@ p, li { white-space: pre-wrap; }
      <item>
       <widget class="QLabel" name="processingLabel" >
        <property name="text" >
-        <string>Processing package x of x</string>
+        <string/>
        </property>
        <property name="alignment" >
         <set>Qt::AlignCenter</set>
@@ -442,7 +442,7 @@ p, li { white-space: pre-wrap; }
      <item>
       <widget class="QLabel" name="buildingLabel" >
        <property name="text" >
-        <string>Building blah...</string>
+        <string/>
        </property>
        <property name="alignment" >
         <set>Qt::AlignCenter</set>
