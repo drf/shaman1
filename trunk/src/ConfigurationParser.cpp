@@ -199,13 +199,31 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 							pacData.NoExtract = alpm_list_join(temp, setrepeatingoption(line));
 						}
 						else
-							pacData.NoUpgrade = setrepeatingoption(line);
+							pacData.NoExtract = setrepeatingoption(line);
 					else if(key.compare("IgnorePkg", Qt::CaseInsensitive) == 0)
-						pacData.IgnorePkg = setrepeatingoption(line);
+						if(pacData.IgnorePkg != NULL)
+						{
+							alpm_list_t *temp = pacData.IgnorePkg;
+							pacData.IgnorePkg = alpm_list_join(temp, setrepeatingoption(line));
+						}
+						else
+							pacData.IgnorePkg = setrepeatingoption(line);
 					else if(key.compare("IgnoreGroup", Qt::CaseInsensitive) == 0)
-						pacData.IgnoreGrp = setrepeatingoption(line);
+						if(pacData.IgnoreGrp != NULL)
+						{
+							alpm_list_t *temp = pacData.IgnoreGrp;
+							pacData.IgnoreGrp = alpm_list_join(temp, setrepeatingoption(line));
+						}
+						else
+							pacData.IgnoreGrp = setrepeatingoption(line);
 					else if(key.compare("HoldPkg", Qt::CaseInsensitive) == 0)
-						pacData.HoldPkg = setrepeatingoption(line);
+						if(pacData.HoldPkg != NULL)
+						{
+							alpm_list_t *temp = pacData.HoldPkg;
+							pacData.HoldPkg = alpm_list_join(temp, setrepeatingoption(line));
+						}
+						else
+							pacData.HoldPkg = setrepeatingoption(line);
 					else if (key.compare("XferCommand", Qt::CaseInsensitive) == 0)
 					{
 						pacData.xferCommand = line.toAscii().data();	
@@ -555,6 +573,7 @@ PacmanConf ConfigurationParser::getPacmanConf(bool forcereload = false)
 	pacData.IgnorePkg = NULL;
 	pacData.NoExtract = NULL;
 	pacData.NoUpgrade = NULL;
+	pacData.HoldPkg = NULL;
 	pacData.loaded = false;
 	
 	parsePacmanConfig("/etc/pacman.conf", NULL, NULL);
