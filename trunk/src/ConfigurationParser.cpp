@@ -33,6 +33,7 @@
 #include <QSettings>
 #include <QFile>
 #include <QTextStream>
+#include <QDebug>
 
 using namespace std;
 
@@ -116,6 +117,8 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 				serverparsed = 0;
 				
 				db.operator=(line);
+				
+				qDebug() << "Parsing " << toAdd;
 			}
 		}
 		else 
@@ -165,21 +168,30 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 				/* directives with settings */
 				if(key.compare("Include", Qt::CaseInsensitive) == 0)
 				{
-					while(line.contains(' '))
-						line.remove(line.indexOf(' '), 1);
-					parsePacmanConfig(line, section, db);
-					if(!pacData.loaded)
+					if(section == "options" || serverparsed != 1)
 					{
-						pacData.loaded = false;
+						while(line.contains(' '))
+							line.remove(line.indexOf(' '), 1);
+						parsePacmanConfig(line, section, db);
+						if(!pacData.loaded)
+						{
+							pacData.loaded = false;
 
-						return;
+							return;
+						}
 					}
 				}
 				/* Ignore include failures... assume non-critical */
 				else if(section.compare("options", Qt::CaseInsensitive) == 0)
 				{
 					if(key.compare("NoUpgrade", Qt::CaseInsensitive) == 0)
-						pacData.NoUpgrade = setrepeatingoption(line);
+						if(pacData.NoUpgrade != NULL)
+						{
+							alpm_list_t *temp = pacData.NoUpgrade;
+							pacData.NoUpgrade = alpm_list_join(temp, setrepeatingoption(line));
+						}
+						else
+							pacData.NoUpgrade = setrepeatingoption(line);
 					else if(key.compare("NoExtract", Qt::CaseInsensitive) == 0)
 						pacData.NoExtract = setrepeatingoption(line);
 					else if(key.compare("IgnorePkg", Qt::CaseInsensitive) == 0)
@@ -203,6 +215,8 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 					/* let's attempt a replacement for the current repo */
 					while(line.contains(' '))
 						line.remove(line.indexOf(' '), 1);
+					
+					qDebug() << "Adding a server";
 
 
 					if(line.contains('$'))
@@ -230,6 +244,8 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 		}
 	}
 	fp.close();
+	
+	qDebug() << "Parser exited";
 }
 
 bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value, int action)
