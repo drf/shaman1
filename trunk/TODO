@@ -2,12 +2,12 @@ TODO-List for qtPacman
 
 
 ***********Core***************
-Basic-functionality (installing, removing packages) *almost done* *prio*
-Dbus-Engine (later)
-Plasma-Data-Engine *not really needed, we can use DBus only*
+Basic-functionality (installing, removing packages) *almost done* *prio* --> done?
+Dbus-Engine (later) *prio*
+Plasma-Data-Engine *not really needed, we can use DBus only* *prio*
 Implement Error Handling *prio in critical cases such as Queue Processing*
 #Implement Interface Configuration (XML?) QSettings, done :)
-Implement Queue *prio*
+Implement Queue *prio* ---> done!
 #Implement Question Handling  ---> done? done :)
 Throw all relevant packages informations into the QTreeWidgetItem (missing now: installed and dependencies)--->Depencies are not soo good I think, they're 
 													      shown in PkgInfos, which is much better IMO
@@ -16,17 +16,17 @@ Throw all relevant packages informations into the QTreeWidgetItem (missing now: 
 
 ***********GUI**************
 More icons
-Splitter-positioning is a bit bad at the moment
-Same with QTreeWidgetItem-columns ;)
+Splitter-positioning is a bit bad at the moment ---> done, we switched to QDockWidgets
+Same with QTreeWidgetItem-columns ;) *prio*
 Add a clear button in the searchbar, something like kickoff's one, if possible :)
-Complete PkgDetails *prio*
-All action-button-actions in context-menu
-Connect all buttons to actions
+Complete PkgDetails *prio* ---> Needed: size
+All action-button-actions in context-menu *prio*
+Connect all buttons to actions --> done!
 Configuration-dialog *prio*
 System-Tray-Icon *prio* --->Mostly done, only a few missing things (change icon, if there are upgradeable packages)
-Implement ComboBox (depends on Queue implementation and added info to pkgs)
-Plasmoid (later, and as a separate application?)
-Improve Package Information Dialog
-Add dynamic Icons to packages (icon for action, icon for upgradeable, installed, not installed)
+Implement ComboBox (depends on Queue implementation and added info to pkgs) --> done!
+Plasmoid (later, and as a separate application?) *prio*
+Improve Package Information Dialog ---> done!
+Add dynamic Icons to packages (icon for action, icon for upgradeable, installed, not installed) 
 Add dynamic Icons to QueueDialog (f.e.: add a green "v" for completed operation, a red "x" if errors occourred)
 
