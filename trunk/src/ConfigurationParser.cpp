@@ -193,7 +193,13 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 						else
 							pacData.NoUpgrade = setrepeatingoption(line);
 					else if(key.compare("NoExtract", Qt::CaseInsensitive) == 0)
-						pacData.NoExtract = setrepeatingoption(line);
+						if(pacData.NoExtract != NULL)
+						{
+							alpm_list_t *temp = pacData.NoExtract;
+							pacData.NoExtract = alpm_list_join(temp, setrepeatingoption(line));
+						}
+						else
+							pacData.NoUpgrade = setrepeatingoption(line);
 					else if(key.compare("IgnorePkg", Qt::CaseInsensitive) == 0)
 						pacData.IgnorePkg = setrepeatingoption(line);
 					else if(key.compare("IgnoreGroup", Qt::CaseInsensitive) == 0)
