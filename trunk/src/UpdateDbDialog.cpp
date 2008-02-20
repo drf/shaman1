@@ -20,7 +20,6 @@
 
 #include "UpdateDbDialog.h"
 #include <AlpmHandler.h>
-#include <sstream>
 #include "callbacks.h"
 
 extern CallBacks CbackReference;
@@ -35,7 +34,7 @@ UpdateDbDialog::UpdateDbDialog(AlpmHandler *hnd, QWidget *parent)
    errorsOccourred(false)
 {	
 	setupUi(this);
-        setWindowModality(Qt::ApplicationModal);
+    setWindowModality(Qt::ApplicationModal);
 	
 	connect(aHandle, SIGNAL(streamDbUpdatingStatus(char*,int)),
 				SLOT(updateLabel(char*, int)));
@@ -72,7 +71,7 @@ void UpdateDbDialog::updateLabel(char *repo, int action)
 	switch(action)
 	{
 	case 0:
-		// The Database is being processed
+		// The Database is being checked
 		toInsert->setPixmap(QIcon(":/Icons/icons/edit-redo.png").pixmap(22));
 		break;
 	case 1:
