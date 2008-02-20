@@ -23,7 +23,7 @@
 #include "../ui_transactionDialog.h"
 #include <alpm.h>
 #include "callbacks.h"
-#include <AlpmHandler.h>
+#include "AlpmHandler.h"
 #include <QMutex>
 #include <QMutexLocker>
 
@@ -79,7 +79,7 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 {
 	QMutexLocker lock(&mutex);
 	printf("LockedQ\n");
-	
+
 	switch(event) 
 	{
 	case PM_TRANS_EVT_CHECKDEPS_START:

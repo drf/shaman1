@@ -24,7 +24,7 @@
 #include <alpm.h>
 #include "callbacks.h"
 #include <QSettings>
-#include <AlpmHandler.h>
+#include "AlpmHandler.h"
 
 SysUpgradeDialog::SysUpgradeDialog(AlpmHandler *hnd, QWidget *parent)
 : QDialog(parent),

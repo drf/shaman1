@@ -22,7 +22,7 @@
 #define BUILDINGDIALOG_H_
 
 #include <iostream>
-#include <AlpmHandler.h>
+#include "AlpmHandler.h"
 #include "../ui_buildingDialog.h"
 
 #include <QProcess>

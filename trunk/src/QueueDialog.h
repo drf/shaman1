@@ -25,7 +25,7 @@
 #include "../ui_transactionDialog.h"
 #include <alpm.h>
 #include "callbacks.h"
-#include <AlpmHandler.h>
+#include "AlpmHandler.h"
 
 #include <QThread>
 

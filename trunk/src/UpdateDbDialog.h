@@ -25,7 +25,7 @@
 #include "../ui_dbUpdateDialog.h"
 #include <alpm.h>
 #include "callbacks.h"
-#include <AlpmHandler.h>
+#include "AlpmHandler.h"
 
 #include <QThread>
 #include <QDialog>

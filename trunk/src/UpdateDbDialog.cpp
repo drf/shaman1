@@ -19,7 +19,6 @@
  ***************************************************************************/
 
 #include "UpdateDbDialog.h"
-#include <AlpmHandler.h>
 #include "callbacks.h"
 
 extern CallBacks CbackReference;
