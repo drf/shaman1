@@ -345,10 +345,14 @@ bool AlpmHandler::setUpAlpmSettings()
 		dbs_sync = alpm_db_register_sync(pdata.syncdbs.at(i).toAscii().data());
 
 		if(alpm_db_setserver(dbs_sync, pdata.serverAssoc.at(i).toAscii().data()) == 0)
+		{
 			printf("%s --> %s\n", pdata.syncdbs.at(i).toAscii().data(),
 					pdata.serverAssoc.at(i).toAscii().data());
-		
-		registered_db = alpm_list_add(registered_db, dbs_sync);
+
+			registered_db = alpm_list_add(registered_db, dbs_sync);
+		}
+		else
+			printf("Failed to add %s!!", pdata.syncdbs.at(i).toAscii().data());
 		
 		count++;
 	}

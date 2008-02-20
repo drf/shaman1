@@ -40,7 +40,7 @@ using namespace std;
 alpm_list_t *ConfigurationParser::setrepeatingoption(const QString &ptr)
 {
 	QStringList strlist;
-	alpm_list_t *list = NULL;
+	alpm_list_t *list = alpm_list_new();
 
 	strlist = ptr.split(" ", QString::SkipEmptyParts);
 	
@@ -49,7 +49,9 @@ alpm_list_t *ConfigurationParser::setrepeatingoption(const QString &ptr)
 		char *dest = (char *)malloc(strlist.at(i).length()*sizeof(char));
 		strcpy(dest, strlist.at(i).toAscii().data());
 		
-		list = alpm_list_add(list, dest);
+		printf("%s\n", dest);
+		
+		alpm_list_add(list, dest);
 	}
 
 	return list;
@@ -59,7 +61,7 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 		const QString &givendb)
 {
 	QFile fp(file);
-	QString line, db(NULL), section(NULL);
+	QString db(NULL), section(NULL);
 	int linenum = 0, serverparsed = 0;
 
 	if(!pacData.loaded)
@@ -88,7 +90,7 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 
 	while(!in.atEnd()) 
 	{
-		line = in.readLine();
+		QString line = in.readLine();
 		linenum++;
 		//strtrim(line);
 		while(line.contains('\n'))
@@ -189,6 +191,7 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 						{
 							alpm_list_t *temp = pacData.NoUpgrade;
 							pacData.NoUpgrade = alpm_list_join(temp, setrepeatingoption(line));
+							qDebug() << "Joined";
 						}
 						else
 							pacData.NoUpgrade = setrepeatingoption(line);
@@ -240,8 +243,6 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 					while(line.contains(' '))
 						line.remove(line.indexOf(' '), 1);
 					
-					qDebug() << "Adding a server";
-
 
 					if(line.contains('$'))
 					{
