@@ -6,7 +6,7 @@
     <x>0</x>
     <y>0</y>
     <width>429</width>
-    <height>226</height>
+    <height>323</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -34,6 +34,42 @@
        <property name="text" >
         <string>Process in Tray</string>
        </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" >
+       <item>
+        <widget class="QPushButton" name="showPackages" >
+         <property name="text" >
+          <string>Show packages...</string>
+         </property>
+         <property name="checkable" >
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer>
+         <property name="orientation" >
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" >
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QTreeWidget" name="treeWidget" >
+       <column>
+        <property name="text" >
+         <string>1</string>
+        </property>
+       </column>
       </widget>
      </item>
      <item>
@@ -133,5 +169,22 @@ p, li { white-space: pre-wrap; }
  <resources>
   <include location="qtpacman.qrc" />
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>showPackages</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>treeWidget</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>82</x>
+     <y>115</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>214</x>
+     <y>208</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

@@ -1146,6 +1146,7 @@ void MainWindow::widgetQueueToAlpmQueue()
 	qUi.setupUi(reviewQueue);
 	
 	reviewQueue->setWindowModality(Qt::ApplicationModal);
+	qUi.treeWidget->hide();
 	reviewQueue->show();
 	
 	connect(qUi.processButton, SIGNAL(clicked()), SLOT(processQueue()));
