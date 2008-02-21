@@ -1118,32 +1118,69 @@ void MainWindow::widgetQueueToAlpmQueue()
 			pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 7).isEmpty() &&
 			pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 7).isEmpty())
 		return;
+	
 	else if(pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 7).isEmpty() &&
 			pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 7).isEmpty())
 		aHandle->initQueue(false, true, false);
-	else if(pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 1).isEmpty() && 
+	
+	else if(pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 7).isEmpty() && 
 					pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 7).isEmpty())
 		aHandle->initQueue(true, false, false);
+	
 	else
 		aHandle->initQueue(true, true, false);
 
-	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 7))
-		aHandle->addSyncToQueue(itm->text(1));
-
-	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 7))
-		aHandle->addSyncToQueue(itm->text(1));
-
-	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 7))
-		aHandle->addRemoveToQueue(itm->text(1));
-
-	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 7))
-		aHandle->addRemoveToQueue(itm->text(1));
-	
-	revActive = true;
-	
 	reviewQueue = new QDialog(this);
 	Ui::QueueReadyDialog qUi;
 	qUi.setupUi(reviewQueue);
+
+	
+	if(!pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 7).isEmpty())
+	{
+		QTreeWidgetItem *itm = new QTreeWidgetItem(qUi.treeWidget, QStringList(tr("To be Installed")));
+		qUi.treeWidget->addTopLevelItem(itm);
+	}
+	if(!pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 7).isEmpty())
+	{
+		QTreeWidgetItem *itm = new QTreeWidgetItem(qUi.treeWidget, QStringList(tr("To be Upgraded")));
+		qUi.treeWidget->addTopLevelItem(itm);
+	}
+	if(!pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 7).isEmpty())
+	{
+		QTreeWidgetItem *itm = new QTreeWidgetItem(qUi.treeWidget, QStringList(tr("To be Removed")));
+		qUi.treeWidget->addTopLevelItem(itm);
+	}
+
+
+	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 7))
+	{
+		aHandle->addSyncToQueue(itm->text(1));
+		QTreeWidgetItem *itmL = qUi.treeWidget->findItems(tr("To be Installed"), Qt::MatchExactly, 0).first();
+		QTreeWidgetItem *childitm = new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
+	}
+
+	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 7))
+	{
+		aHandle->addSyncToQueue(itm->text(1));
+		QTreeWidgetItem *itmL = qUi.treeWidget->findItems(tr("To be Upgraded"), Qt::MatchExactly, 0).first();
+		QTreeWidgetItem *childitm = new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
+	}
+
+	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 7))
+	{
+		aHandle->addRemoveToQueue(itm->text(1));
+		QTreeWidgetItem *itmL = qUi.treeWidget->findItems(tr("To be Removed"), Qt::MatchExactly, 0).first();
+		QTreeWidgetItem *childitm = new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
+	}
+
+	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 7))
+	{
+		aHandle->addRemoveToQueue(itm->text(1));
+		QTreeWidgetItem *itmL = qUi.treeWidget->findItems(tr("To be Removed"), Qt::MatchExactly, 0).first();
+		QTreeWidgetItem *childitm = new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
+	}
+	
+	revActive = true;
 	
 	reviewQueue->setWindowModality(Qt::ApplicationModal);
 	qUi.treeWidget->hide();

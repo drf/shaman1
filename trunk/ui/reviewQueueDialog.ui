@@ -67,7 +67,7 @@
       <widget class="QTreeWidget" name="treeWidget" >
        <column>
         <property name="text" >
-         <string>1</string>
+         <string>Packages In Queue</string>
         </property>
        </column>
       </widget>
