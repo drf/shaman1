@@ -1434,6 +1434,7 @@ void MainWindow::validateSourceQueue()
 	revBuildUi = new Ui::reviewBuildingDialog();
 	
 	revBuildUi->setupUi(reviewBQueue);
+	revBuildUi->treeWidget->hide();
 	
 	reviewBQueue->setWindowModality(Qt::ApplicationModal);
 	reviewBQueue->setAttribute(Qt::WA_DeleteOnClose, true);
