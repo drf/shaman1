@@ -50,7 +50,7 @@ SET(qtPacman_RESOUCES
 # verbose - on
 # SET(CMAKE_VERBOSE_MAKEFILE ON)
 
-# requires minimal Qt 4.1
+# requires minimal Qt 4.3
 SET(QT_MIN_VERSION "4.3.0")
 
 FIND_PACKAGE(Qt4 REQUIRED)

@@ -24,3 +24,12 @@ Core:
 		*string actionText()
 		*string repository()
 		*stringlist groups()
+
+	Transaction-class:
+		*enum Action {containsPackagesToInstall, containsPackagesToRemove, containsPackagesToUpgrade}
+		*typedef Actions list<Action>
+		*Actions* actions();
+		*void processQueue();
+
+	Database-class:
+		*list<Package*> getAllPackages();
