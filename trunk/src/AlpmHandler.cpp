@@ -65,6 +65,21 @@ AlpmHandler::~AlpmHandler()
 	alpm_release();
 }
 
+QStringList AlpmHandler::alpmListToStringList(alpm_list_t *list)
+{
+	QStringList retlist;
+	
+	list = alpm_list_first(list);
+	
+	while(list != NULL)
+	{
+		retlist.append((char *) alpm_list_getdata(list));
+		list = alpm_list_next(list);
+	}
+	
+	return retlist;
+}
+
 pmpkg_t *AlpmHandler::getPackageFromName(const QString &name, const QString &repo)
 {	
 	if(!repo.compare("local"))
@@ -264,42 +279,31 @@ bool AlpmHandler::reloadPacmanConfiguration()
 	
 	alpm_db_unregister(db_local);
 
-	if(pdata.HoldPkg != NULL)
-		pdata.HoldPkg = alpm_option_get_holdpkgs();
-	if(pdata.IgnorePkg != NULL)
-		pdata.IgnorePkg = alpm_option_get_ignorepkgs();
-	if(pdata.IgnoreGrp != NULL)
-		pdata.IgnoreGrp = alpm_option_get_ignoregrps();
-	if(pdata.NoExtract != NULL)
-		pdata.NoExtract = alpm_option_get_noextracts();
-	if(pdata.NoUpgrade != NULL)
-		pdata.NoUpgrade = alpm_option_get_noupgrades();
 
-	while(pdata.HoldPkg != NULL)
-	{
-		alpm_option_remove_holdpkg((char *)alpm_list_getdata(pdata.HoldPkg));
-		pdata.HoldPkg = alpm_list_next(pdata.HoldPkg);
-	}
-	while(pdata.IgnorePkg != NULL)
-	{
-		alpm_option_remove_ignorepkg((char *)alpm_list_getdata(pdata.IgnorePkg));
-		pdata.IgnorePkg = alpm_list_next(pdata.IgnorePkg);
-	}
-	while(pdata.IgnoreGrp != NULL)
-	{
-		alpm_option_remove_ignoregrp((char *)alpm_list_getdata(pdata.IgnoreGrp));
-		pdata.IgnoreGrp = alpm_list_next(pdata.IgnoreGrp);
-	}
-	while(pdata.NoExtract != NULL)
-	{
-		alpm_option_remove_noextract((char *)alpm_list_getdata(pdata.NoExtract));
-		pdata.NoExtract = alpm_list_next(pdata.NoExtract);
-	}
-	while(pdata.NoUpgrade != NULL)
-	{
-		alpm_option_remove_noupgrade((char *)alpm_list_getdata(pdata.NoUpgrade));
-		pdata.NoUpgrade = alpm_list_next(pdata.NoUpgrade);
-	}
+	pdata.HoldPkg = alpmListToStringList(alpm_option_get_holdpkgs());
+
+	pdata.IgnorePkg = alpmListToStringList(alpm_option_get_ignorepkgs());
+
+	pdata.IgnoreGrp = alpmListToStringList(alpm_option_get_ignoregrps());
+
+	pdata.NoExtract = alpmListToStringList(alpm_option_get_noextracts());
+
+	pdata.NoUpgrade = alpmListToStringList(alpm_option_get_noupgrades());
+
+	foreach(QString str, pdata.HoldPkg)
+		alpm_option_remove_holdpkg(str.toAscii().data());
+
+	foreach(QString str, pdata.IgnorePkg)
+		alpm_option_remove_ignorepkg(str.toAscii().data());
+
+	foreach(QString str, pdata.IgnoreGrp)
+		alpm_option_remove_ignoregrp(str.toAscii().data());
+
+	foreach(QString str, pdata.NoExtract)
+		alpm_option_remove_noextract(str.toAscii().data());
+
+	foreach(QString str, pdata.NoUpgrade)
+		alpm_option_remove_noupgrade(str.toAscii().data());
 	
 	alpm_option_remove_cachedir("/var/cache/pacman/pkg");
 	
@@ -362,31 +366,22 @@ bool AlpmHandler::setUpAlpmSettings()
 	
 	alpm_option_set_dlcb(cb_dl_progress);
 	alpm_option_set_nopassiveftp(pdata.noPassiveFTP);
-	while(pdata.HoldPkg != NULL)
-	{
-		alpm_option_add_holdpkg((char *)alpm_list_getdata(pdata.HoldPkg));
-		pdata.HoldPkg = alpm_list_next(pdata.HoldPkg);
-	}
-	while(pdata.IgnorePkg != NULL)
-	{
-		alpm_option_add_ignorepkg((char *)alpm_list_getdata(pdata.IgnorePkg));
-		pdata.IgnorePkg = alpm_list_next(pdata.IgnorePkg);
-	}
-	while(pdata.IgnoreGrp != NULL)
-	{
-		alpm_option_add_ignoregrp((char *)alpm_list_getdata(pdata.IgnoreGrp));
-		pdata.IgnoreGrp = alpm_list_next(pdata.IgnoreGrp);
-	}
-	while(pdata.NoExtract != NULL)
-	{
-		alpm_option_add_noextract((char *)alpm_list_getdata(pdata.NoExtract));
-		pdata.NoExtract = alpm_list_next(pdata.NoExtract);
-	}
-	while(pdata.NoUpgrade != NULL)
-	{
-		alpm_option_add_noupgrade((char *)alpm_list_getdata(pdata.NoUpgrade));
-		pdata.NoUpgrade = alpm_list_next(pdata.NoUpgrade);
-	}
+	
+	foreach(QString str, pdata.HoldPkg)
+		alpm_option_add_holdpkg(str.toAscii().data());
+	
+	foreach(QString str, pdata.IgnorePkg)
+		alpm_option_add_ignorepkg(str.toAscii().data());
+		
+	foreach(QString str, pdata.IgnoreGrp)
+		alpm_option_add_ignoregrp(str.toAscii().data());
+
+	foreach(QString str, pdata.NoExtract)
+		alpm_option_add_noextract(str.toAscii().data());
+
+	foreach(QString str, pdata.NoUpgrade)
+		alpm_option_add_noupgrade(str.toAscii().data());
+
 	//alpm_option_set_usedelta(pdata.useDelta); Until a proper implementation is there
 	alpm_option_set_usesyslog(pdata.useSysLog);
 

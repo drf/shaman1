@@ -35,11 +35,11 @@ using namespace std;
 
 struct PcCnf {
 	QStringList syncdbs;
-	alpm_list_t *NoUpgrade;
-	alpm_list_t *NoExtract;
-	alpm_list_t *IgnorePkg;
-	alpm_list_t *IgnoreGrp;
-	alpm_list_t *HoldPkg;
+	QStringList NoUpgrade;
+	QStringList NoExtract;
+	QStringList IgnorePkg;
+	QStringList IgnoreGrp;
+	QStringList HoldPkg;
 	int noPassiveFTP;
 	int useDelta;
 	int useSysLog;
@@ -62,7 +62,7 @@ public:
 	bool editPacmanKey(const QString &key, const QString &value, int action);
 	
 protected:
-	alpm_list_t *setrepeatingoption(const QString &ptr);
+	QStringList setrepeatingoption(const QString &ptr);
 	
 private:
 	void parsePacmanConfig(const QString &file, const QString &givensection,

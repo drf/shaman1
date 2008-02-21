@@ -105,6 +105,8 @@ public:
 	bool reloadPacmanConfiguration(); // In case the user modifies it.
 	
 	pmpkg_t *getPackageFromName(const QString &name, const QString &repo);
+	
+	QStringList alpmListToStringList(alpm_list_t *list);
 
 private:
 	bool initTransaction(pmtranstype_t type, pmtransflag_t flags);

@@ -37,21 +37,18 @@
 
 using namespace std;
 
-alpm_list_t *ConfigurationParser::setrepeatingoption(const QString &ptr)
+QStringList ConfigurationParser::setrepeatingoption(const QString &ptr)
 {
 	QStringList strlist;
-	alpm_list_t *list = alpm_list_new();
+	QStringList list;
 
 	strlist = ptr.split(" ", QString::SkipEmptyParts);
 	
 	for (int i = 0; i < strlist.size(); ++i)
 	{
-		char *dest = (char *)malloc(strlist.at(i).length()*sizeof(char));
-		strcpy(dest, strlist.at(i).toAscii().data());
+		QString dest(strlist.at(i));
 		
-		printf("%s\n", dest);
-		
-		alpm_list_add(list, dest);
+		list.append(dest);
 	}
 
 	return list;
@@ -187,46 +184,35 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 				else if(section.compare("options", Qt::CaseInsensitive) == 0)
 				{
 					if(key.compare("NoUpgrade", Qt::CaseInsensitive) == 0)
-						if(pacData.NoUpgrade != NULL)
-						{
-							alpm_list_t *temp = pacData.NoUpgrade;
-							pacData.NoUpgrade = alpm_list_join(temp, setrepeatingoption(line));
-							qDebug() << "Joined";
-						}
+						if(!pacData.NoUpgrade.isEmpty())
+							pacData.NoUpgrade = pacData.NoUpgrade + setrepeatingoption(line);
 						else
 							pacData.NoUpgrade = setrepeatingoption(line);
+
 					else if(key.compare("NoExtract", Qt::CaseInsensitive) == 0)
-						if(pacData.NoExtract != NULL)
-						{
-							alpm_list_t *temp = pacData.NoExtract;
-							pacData.NoExtract = alpm_list_join(temp, setrepeatingoption(line));
-						}
+						if(!pacData.NoExtract.isEmpty())
+							pacData.NoExtract = pacData.NoExtract + setrepeatingoption(line);
 						else
 							pacData.NoExtract = setrepeatingoption(line);
+
 					else if(key.compare("IgnorePkg", Qt::CaseInsensitive) == 0)
-						if(pacData.IgnorePkg != NULL)
-						{
-							alpm_list_t *temp = pacData.IgnorePkg;
-							pacData.IgnorePkg = alpm_list_join(temp, setrepeatingoption(line));
-						}
+						if(!pacData.IgnorePkg.isEmpty())
+							pacData.IgnorePkg = pacData.IgnorePkg + setrepeatingoption(line);
 						else
 							pacData.IgnorePkg = setrepeatingoption(line);
+
 					else if(key.compare("IgnoreGroup", Qt::CaseInsensitive) == 0)
-						if(pacData.IgnoreGrp != NULL)
-						{
-							alpm_list_t *temp = pacData.IgnoreGrp;
-							pacData.IgnoreGrp = alpm_list_join(temp, setrepeatingoption(line));
-						}
+						if(!pacData.IgnoreGrp.isEmpty())
+							pacData.IgnoreGrp = pacData.IgnoreGrp + setrepeatingoption(line);
 						else
 							pacData.IgnoreGrp = setrepeatingoption(line);
+					
 					else if(key.compare("HoldPkg", Qt::CaseInsensitive) == 0)
-						if(pacData.HoldPkg != NULL)
-						{
-							alpm_list_t *temp = pacData.HoldPkg;
-							pacData.HoldPkg = alpm_list_join(temp, setrepeatingoption(line));
-						}
+						if(!pacData.HoldPkg.isEmpty())
+							pacData.HoldPkg = pacData.HoldPkg + setrepeatingoption(line);
 						else
 							pacData.HoldPkg = setrepeatingoption(line);
+
 					else if (key.compare("XferCommand", Qt::CaseInsensitive) == 0)
 					{
 						pacData.xferCommand = line.toAscii().data();	
@@ -546,10 +532,11 @@ ConfigurationParser::ConfigurationParser()
 	pacData.useSysLog = 0;
 	pacData.noPassiveFTP = 0;
     pacData.xferCommand = NULL;
-    pacData.IgnoreGrp = NULL;
-    pacData.IgnorePkg = NULL;
-    pacData.NoExtract = NULL;
-    pacData.NoUpgrade = NULL;
+    pacData.IgnoreGrp.clear();
+    pacData.IgnorePkg.clear();
+    pacData.NoExtract.clear();
+    pacData.NoUpgrade.clear();
+    pacData.HoldPkg.clear();
 	pacData.loaded = false;
 }
 
@@ -570,11 +557,11 @@ PacmanConf ConfigurationParser::getPacmanConf(bool forcereload = false)
 	pacData.useSysLog = 0;
 	pacData.noPassiveFTP = 0;
 	pacData.xferCommand = NULL;
-	pacData.IgnoreGrp = NULL;
-	pacData.IgnorePkg = NULL;
-	pacData.NoExtract = NULL;
-	pacData.NoUpgrade = NULL;
-	pacData.HoldPkg = NULL;
+	pacData.IgnoreGrp.clear();
+	pacData.IgnorePkg.clear();
+	pacData.NoExtract.clear();
+	pacData.NoUpgrade.clear();
+	pacData.HoldPkg.clear();
 	pacData.loaded = false;
 	
 	parsePacmanConfig("/etc/pacman.conf", NULL, NULL);
