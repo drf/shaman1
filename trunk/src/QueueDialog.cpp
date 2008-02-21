@@ -37,6 +37,7 @@ QueueDialog::QueueDialog(AlpmHandler *hnd, QWidget *parent)
   aHandle(hnd)
 {
 	setupUi(this);
+	textEdit->hide();
 	setWindowModality(Qt::ApplicationModal);
 	
 	qRegisterMetaType<pmtransevt_t>("pmtransevt_t");
