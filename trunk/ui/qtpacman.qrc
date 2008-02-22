@@ -14,6 +14,9 @@
         <file>icons/list-remove.png</file>
         <file>icons/network-server-database.png</file>
         <file>icons/preferences-system.png</file>
+        <file>icons/user-invisible.png</file>
+        <file>icons/user-offline.png</file>
+        <file>icons/user-online.png</file>
         <file>icons/view-history.png</file>
         <file>icons/view-refresh.png</file>
     </qresource>
