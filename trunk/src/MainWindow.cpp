@@ -511,13 +511,15 @@ void MainWindow::itemChanged()
 	if (aHandle->isInstalled(pkgsViewWG->selectedItems().first()->text(1)))
 	{
 		removeButton->setEnabled(true);
-		installButton->setDisabled(true);
+		installButton->setEnabled(true);
+		installButton->setText(tr("Reinstall package"));
 		completeRemoveButton->setEnabled(true);
 	}
 	if (!aHandle->isInstalled(pkgsViewWG->selectedItems().first()->text(1)))
 	{
 		removeButton->setDisabled(true);
 		installButton->setEnabled(true);
+		installButton->setText(tr("Install package"));
 		completeRemoveButton->setDisabled(true);
 	}
 	//if (pkgsViewWG->selectedItems().first()->text(1) == tr("Upgradeable"))
@@ -844,9 +846,6 @@ void MainWindow::installPackage(const QString &package)
 	if (pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 1).isEmpty())
 	{
 		qDebug() << "Can't find package: " + package;
-		//QStringList providers = aHandle->getProviders(package, item->text(5));
-		//if (!providers.isEmpty())
-		//	installPackage(providers.first());
 		return;
 	}
 	QTreeWidgetItem *item = pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 1).first();
@@ -855,7 +854,7 @@ void MainWindow::installPackage(const QString &package)
 	if(aHandle->isProviderInstalled(package))
 		return;
 	
-	if (aHandle->isInstalled(item->text(1)) || item->text(7) == tr("Install"))
+	if (item->text(7) == tr("Install"))
 		return;
 	else
 	{
@@ -864,9 +863,12 @@ void MainWindow::installPackage(const QString &package)
 	}
 	qDebug() << item->text(5);
 
-	foreach (QString dep, aHandle->getPackageDependencies(package, item->text(4)))
+	if (!aHandle->isInstalled(item->text(1)))
 	{
-		installPackage(dep);
+		foreach (QString dep, aHandle->getPackageDependencies(package, item->text(4)))
+		{
+			installPackage(dep);
+		}
 	}
 }
 
