@@ -19,5 +19,6 @@
         <file>icons/user-online.png</file>
         <file>icons/view-history.png</file>
         <file>icons/view-refresh.png</file>
+	<file>icons/applications-development.png</file>
     </qresource>
 </RCC>

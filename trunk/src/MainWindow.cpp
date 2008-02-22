@@ -63,7 +63,10 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	resize(500, size().height());
 	pkgsViewWG->headerItem()->setIcon(0, QIcon(":/Icons/icons/user-invisible.png"));
 	pkgsViewWG->headerItem()->setText(0, QString()); //Set text to ""
-	//pkgsViewWG->headerItem()->setIcon(2, QIcon(
+	pkgsViewWG->setColumnWidth(0, 30);//TODO: Remember column-width
+	pkgsViewWG->headerItem()->setIcon(2, QIcon(":/Icons/icons/applications-development.png"));
+	pkgsViewWG->headerItem()->setText(2, QString());
+	pkgsViewWG->setColumnWidth(2, 30);
 
 	setupSystray();
 	
