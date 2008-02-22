@@ -229,7 +229,8 @@ void QueueDialog::updateProgressBar(char *c, int bytedone, int bytetotal, int sp
 	eta_m = eta_s / 60;
 	eta_s -= eta_m * 60;
 
-	progressBar->setFormat(QString(tr("%p% (%1 KB/s, %4:%5:%6 remaining)")).
+	progressBar->setFormat(QString(tr("%p% (%1 KB/s, %4:%5:%6 remaining)", "You just have to "
+			"translate 'remaining' here. Leave everything else as it is.")).
 			arg(speed).arg((int)eta_h,2,10,QChar('0')).arg((int)eta_m,2,10,QChar('0')).
 			arg((int)eta_s,2,10,QChar('0')));
 	progressBar->setRange(0, listtotal);
@@ -250,6 +251,11 @@ void QueueDialog::updateProgressBar(pmtransprog_t event, char *pkgname, int perc
 	Q_UNUSED(pkgname);
 	Q_UNUSED(event);
 	Q_UNUSED(percent);
+	
+	progressBar->setFormat("%p%");
+	progressBar->setRange(0, remain);
+	progressBar->setValue(howmany);
+	
 	return;
 }
 
@@ -272,10 +278,9 @@ void QueueDialog::startProcess()
 	processLabel->setPixmap(QIcon(":/Icons/icons/edit-redo.png").pixmap(22));
 	
 	disconnect(&CbackReference, SIGNAL(streamTransDlProg(char*,int,int,int,int,int,int)), 0, 0);
-	//qRegisterMetaType<pmtransprog_t>("pmtransprog_t");
-	/*connect(&CbackReference, SIGNAL(streamTransProgress(pmtransprog_t,char*,int,int,int)),
-			SLOT(updateProgressBar(pmtransprog_t,char*,int,int,int)));*/
-	//progressBar->hide();
+	qRegisterMetaType<pmtransprog_t>("pmtransprog_t");
+	connect(&CbackReference, SIGNAL(streamTransProgress(pmtransprog_t,char*,int,int,int)),
+			SLOT(updateProgressBar(pmtransprog_t,char*,int,int,int)));
 }
 
 void QueueDialog::cleanup()

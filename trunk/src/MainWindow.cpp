@@ -1496,6 +1496,32 @@ void MainWindow::validateSourceQueue()
 												pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 7).size() + 
 												pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 7).size()));
 
+	if(!pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 7).isEmpty())
+	{
+		QTreeWidgetItem *itm = new QTreeWidgetItem(revBuildUi->treeWidget, QStringList(tr("To be Installed")));
+		revBuildUi->treeWidget->addTopLevelItem(itm);
+	}
+	if(!pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 7).isEmpty())
+	{
+		QTreeWidgetItem *itm = new QTreeWidgetItem(revBuildUi->treeWidget, QStringList(tr("To be Upgraded")));
+		revBuildUi->treeWidget->addTopLevelItem(itm);
+	}
+	
+
+	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 7))
+	{
+		aHandle->addSyncToQueue(itm->text(1));
+		QTreeWidgetItem *itmL = revBuildUi->treeWidget->findItems(tr("To be Installed"), Qt::MatchExactly, 0).first();
+		QTreeWidgetItem *childitm = new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
+	}
+
+	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 7))
+	{
+		aHandle->addSyncToQueue(itm->text(1));
+		QTreeWidgetItem *itmL = revBuildUi->treeWidget->findItems(tr("To be Upgraded"), Qt::MatchExactly, 0).first();
+		QTreeWidgetItem *childitm = new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
+	}
+	
 	connect(revBuildUi->binaryButton, SIGNAL(clicked()), reviewBQueue, SLOT(close()));
 	connect(revBuildUi->binaryButton, SIGNAL(clicked()), SLOT(widgetQueueToAlpmQueue()));
 	connect(revBuildUi->abortButton, SIGNAL(clicked()), reviewBQueue, SLOT(close()));
