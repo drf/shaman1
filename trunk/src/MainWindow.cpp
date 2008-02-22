@@ -94,6 +94,7 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	connect(actionInstall_Package_From_File, SIGNAL(triggered()), SLOT(getPackageFromFile()));
 	connect(actionUpdate_ABS_Tree, SIGNAL(triggered()), SLOT(updateABSTree()));
 	connect(actionBuild_and_Install_Selected, SIGNAL(triggered()), SLOT(validateSourceQueue()));
+	connect(actionCancel_all_actions, SIGNAL(triggered()), SLOT(cancelAllActions()));
 
 	return;
 }
@@ -733,21 +734,32 @@ void MainWindow::showRepoViewContextMenu()
 	//QListWidgetItem *item = repoList->selectedItems().first();
 	QMenu *menu = new QMenu(this);
 	QAction *installAction = menu->addAction(QIcon(":/Icons/icons/list-add.png"), tr("Mark all for installation"));
-	connect(installAction, SIGNAL(triggered()), SLOT(installAllPackages()));
+	connect(installAction, SIGNAL(triggered()), SLOT(installAllRepoPackages()));
 	QAction *removeAction = menu->addAction(QIcon(":/Icons/icons/list-remove.png"), tr("Mark all for removal"));
-	connect(removeAction, SIGNAL(triggered()), SLOT(removeAllPackages()));
+	connect(removeAction, SIGNAL(triggered()), SLOT(removeAllRepoPackages()));
 	QAction *cancelAction = menu->addAction(QIcon(":/Icons/icons/edit-delete.png"), tr("Cancel all actions"));
-	connect(cancelAction, SIGNAL(triggered()), SLOT(cancelAllActions()));
+	connect(cancelAction, SIGNAL(triggered()), SLOT(cancelAllRepoActions()));
 
 	menu->popup(QCursor::pos());
 }
 
-void MainWindow::installAllPackages()
+void MainWindow::cancelAllActions()
 {
-	qDebug() << "InstallAllPackages";
+	qDebug() << "Hehe let's remove all actions";
+	foreach(QTreeWidgetItem *item, pkgsViewWG->findItems(QString(), Qt::MatchRegExp | Qt::MatchWildcard))
+	{
+		if (!item->text(7).isEmpty())
+			item->setText(7, QString());
+		item->setIcon(2, QIcon());
+	}
+}
+
+void MainWindow::installAllRepoPackages()
+{
+	qDebug() << "InstallAllRepoPackages";
 	if (repoList->selectedItems().isEmpty())
 		return;
-	qDebug() << "InstallAllPackages1";
+	qDebug() << "InstallAllRepoPackages1";
 
 	if (!repoList->findItems(tr("All Groups"), Qt::MatchExactly).isEmpty())
 	{
@@ -769,7 +781,7 @@ void MainWindow::installAllPackages()
 	}
 }
 
-void MainWindow::removeAllPackages()
+void MainWindow::removeAllRepoPackages()
 {
 	if (repoList->selectedItems().isEmpty())
 		return;
@@ -793,7 +805,7 @@ void MainWindow::removeAllPackages()
 	}
 }
 
-void MainWindow::cancelAllActions()
+void MainWindow::cancelAllRepoActions()
 {
 	if (repoList->selectedItems().isEmpty())
 		return;

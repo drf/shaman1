@@ -501,6 +501,8 @@
    <addaction name="actionUpgrade_System" />
    <addaction name="actionProcess_Queue" />
    <addaction name="separator" />
+   <addaction name="actionCancel_all_actions" />
+   <addaction name="separator" />
    <addaction name="actionPacman_Preferences" />
   </widget>
   <widget class="QStatusBar" name="statusBar" />
@@ -579,6 +581,14 @@
    </property>
    <property name="text" >
     <string>Process Queue</string>
+   </property>
+  </action>
+  <action name="actionCancel_all_actions" >
+   <property name="icon" >
+    <iconset resource="qtpacman.qrc" >:/Icons/icons/dialog-cancel.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Cancel all actions</string>
    </property>
   </action>
  </widget>

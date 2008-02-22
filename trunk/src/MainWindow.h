@@ -98,8 +98,9 @@ private slots:
 	void showSettings();
 	void showAboutDialog();
 	void systrayActivated(QSystemTrayIcon::ActivationReason reason);
-	void installAllPackages();
-	void removeAllPackages();
+	void installAllRepoPackages();
+	void removeAllRepoPackages();
+	void cancelAllRepoActions();
 	void cancelAllActions();
 	
 private:
