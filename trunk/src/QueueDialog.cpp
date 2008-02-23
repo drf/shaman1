@@ -146,11 +146,11 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 		break;
 	case PM_TRANS_EVT_UPGRADE_DONE:
 		actionDetail->setText(QString(tr("Upgraded %1 successfully (%2 -> %3)")).arg(
-				(char *)alpm_pkg_get_name((pmpkg_t *)data1)).arg((char *)alpm_pkg_get_version((pmpkg_t *)data2)).
-				arg((char *)alpm_pkg_get_version((pmpkg_t *)data1)));
+				(char *)alpm_pkg_get_name((pmpkg_t *)data1)).arg((char *)alpm_pkg_get_version((pmpkg_t *)data1)).
+				arg((char *)alpm_pkg_get_version((pmpkg_t *)data2)));
 		textEdit->append(QString(tr("Upgraded %1 successfully (%2 -> %3)")).arg(
-				(char *)alpm_pkg_get_name((pmpkg_t *)data1)).arg((char *)alpm_pkg_get_version((pmpkg_t *)data2)).
-				arg((char *)alpm_pkg_get_version((pmpkg_t *)data1)));
+				(char *)alpm_pkg_get_name((pmpkg_t *)data1)).arg((char *)alpm_pkg_get_version((pmpkg_t *)data1)).
+				arg((char *)alpm_pkg_get_version((pmpkg_t *)data2)));
 		//alpm_logaction(str);
 		break;
 	case PM_TRANS_EVT_INTEGRITY_START:
