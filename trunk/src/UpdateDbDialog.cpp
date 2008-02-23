@@ -33,7 +33,7 @@ UpdateDbDialog::UpdateDbDialog(AlpmHandler *hnd, QWidget *parent)
    errorsOccourred(false)
 {	
 	setupUi(this);
-    setWindowModality(Qt::ApplicationModal);
+    setWindowModality(Qt::WindowModal);
 	
 	connect(aHandle, SIGNAL(streamDbUpdatingStatus(char*,int)),
 				SLOT(updateLabel(char*, int)));

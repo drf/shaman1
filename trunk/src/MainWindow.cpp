@@ -52,7 +52,8 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
   currentpkgs(0),
   aHandle(handler),
   upActive(false),
-  revActive(false)
+  revActive(false),
+  dbdialog(NULL)
 {
 	setupUi(this);
 	addDockWidget(Qt::LeftDockWidgetArea, dockWidget_2);
@@ -107,10 +108,10 @@ MainWindow::~MainWindow()
 
 void MainWindow::setupSystray()
 {
-	systray = new QSystemTrayIcon(this);
+	systray = new QSystemTrayIcon();
 	systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
 	systray->show();
-	QMenu *systrayMenu = new QMenu(this);
+	QMenu *systrayMenu = new QMenu();
 	QAction *updateDBAction = systrayMenu->addAction(QIcon(":/Icons/icons/view-refresh.png"), tr("Update Database"));
 	connect(updateDBAction, SIGNAL(triggered()), SLOT(doDbUpdate()));
 	QAction *upgradeAction = systrayMenu->addAction(QIcon(":/Icons/icons/edit-redo.png"), tr("Upgrade System"));
@@ -662,14 +663,23 @@ void MainWindow::finishDbUpdate()
 	
 	if(dbdialog->anyErrors())
 	{
-		QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), 
-				QString(tr("One or more Databases could not be updated.\nLast error reported was:\n%1")).arg(alpm_strerrorlast()),
-				QMessageBox::Ok, dbdialog);
-		
-		message->exec();
-		
-		message->deleteLater();
+		if(dbdialog->isVisible())
+		{
+			QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), 
+					QString(tr("One or more Databases could not be updated.\nLast error reported was:\n%1")).arg(alpm_strerrorlast()),
+					QMessageBox::Ok, dbdialog);
+
+			message->exec();
+
+			message->deleteLater();
+		}
+		else
+			systray->showMessage(QString(tr("Database Update")), QString(tr("One or more Databases could "
+					"not be updated.\nLast error reported was:\n%1")).arg(alpm_strerrorlast()));
 	}
+	else
+		if(dbdialog->isHidden())
+			systray->showMessage(QString(tr("Database Update")), QString(tr("Databases Updated Successfully")));
 
 	if(dbdialog->dbHasBeenUpdated())
 	{
@@ -681,6 +691,8 @@ void MainWindow::finishDbUpdate()
 
 	systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
 	systray->setToolTip(QString(tr("qtPacman - Idle")));
+	
+	dbdialog = NULL;
 }
 
 void MainWindow::showPkgsViewContextMenu()
@@ -1307,6 +1319,8 @@ void MainWindow::systrayActivated(QSystemTrayIcon::ActivationReason reason)
 			if(settings->value("scheduledUpdate/enabled").toBool())
 				trayUpDb->stop();
 			show();
+			if(dbdialog != NULL)
+				dbdialog->show();
 		}
 		else
 		{
@@ -1314,6 +1328,8 @@ void MainWindow::systrayActivated(QSystemTrayIcon::ActivationReason reason)
 			hide();
 			if(settings->value("scheduledUpdate/enabled").toBool())
 				trayUpDb->start();
+			if(dbdialog != NULL)
+				dbdialog->hide();
 			
 		}
 		
