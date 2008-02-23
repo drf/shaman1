@@ -14,6 +14,7 @@ SET(qtPacman_SRCS
     src/StringUtils.cpp
     src/SysUpgradeDialog.cpp
     src/UpdateDbDialog.cpp
+    src/ABSHandler.cpp
 )
 
 SET(qtPacman_MOC_HDRS
@@ -28,6 +29,7 @@ SET(qtPacman_MOC_HDRS
     src/StringUtils.h
     src/SysUpgradeDialog.h
     src/UpdateDbDialog.h
+    src/ABSHandler.h
 )
 
 SET(qtPacman_UIS

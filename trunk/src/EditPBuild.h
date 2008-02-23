@@ -22,8 +22,9 @@
 #define EDITPBUILD_H_
 
 #include "../ui_editPBDialog.h"
+#include "ABSHandler.h"
 
-class EditPBuild : public QDialog, private Ui::editPBDialog 
+class EditPBuild : public QDialog, private Ui::editPBDialog, private ABSHandler 
 {
 	Q_OBJECT
 	

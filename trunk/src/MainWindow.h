@@ -79,6 +79,7 @@ public slots:
 	void finishedBuilding(int failure, QStringList targets);
 	void processBuiltPackages();
 	void openPBuildDialog();
+	void processBuildWizard();
 	
 protected:
 	void closeEvent(QCloseEvent *evt);

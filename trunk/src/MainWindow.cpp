@@ -27,6 +27,7 @@
 #include "configDialog.h"
 #include "BuildingDialog.h"
 #include "EditPBuild.h"
+#include "ABSHandler.h"
 #include "../ui_reviewQueueDialog.h"
 #include "../ui_aboutDialog.h"
 
@@ -1565,6 +1566,12 @@ void MainWindow::openPBuildDialog()
 
 void MainWindow::startSourceProcessing()
 {
+	if(revBuildUi->depsWizardBox->isChecked())
+	{
+		processBuildWizard();
+		return;
+	}
+	
 	buildDialog = new BuildingDialog(aHandle, this);
 	buildDialog->initBuildingQueue();
 	
@@ -1678,4 +1685,32 @@ void MainWindow::processBuiltPackages()
 	aHandle->addFFToQueue(pac);
 
 	processQueue();
+}
+
+void MainWindow::processBuildWizard()
+{
+	/* We need to install the queue from binary first, then process
+	 * their makedepends (from binary too). So we have to call a processQueue()
+	 * and connect it to a slot that actually sends us to the real package
+	 * building. Nothing so hard after all :)
+	 */
+	
+	QStringList pkgList;
+	
+	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 7))
+		pkgList.append(itm->text(1));
+
+	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 7))
+		pkgList.append(itm->text(1));
+	
+	foreach(QString pkg, pkgList)
+	{
+		foreach(QString mkdp, ABSHandler::getMakeDepends(pkg))
+		{
+			if(!aHandle->isInstalled(mkdp))
+				//Add to binary queue
+			{ }
+		}
+	}
+	
 }

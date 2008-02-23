@@ -18,56 +18,39 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 
-#ifndef BUILDINGDIALOG_H_
-#define BUILDINGDIALOG_H_
+#ifndef ABSHANDLER_H_
+#define ABSHANDLER_H_
 
-#include <iostream>
-#include "AlpmHandler.h"
-#include "ABSHandler.h"
-#include "../ui_buildingDialog.h"
+#include <QString>
 
-#include <QProcess>
-
-class ABSHandler;
-
-class BuildingDialog : public QDialog, public Ui::buildingDialog, private ABSHandler
+class ABSHandler
 {
-	Q_OBJECT
+	
+	/* This class is an abstraction to the Arch Build System.
+	 * There are not so many methods, anyway it can search for
+	 * a package in the ABS path, and set up and clean up
+	 * local building environments. It can also get some useful
+	 * informations about PKGBUILDs. It is a stripped parsed, just
+	 * to suit our needs.
+	 * 
+	 * Some of its functions are static, it is ridiculous to inherit a 
+	 * class or create an object just to pick a path, so getMakeDepends
+	 * and getABSPath are static.
+	 */
 	
 public:
-	explicit BuildingDialog(AlpmHandler *hnd, QWidget *parent = 0);
-	virtual ~BuildingDialog();
-	
-	void initBuildingQueue();
-	void addBuildingQueueItem(const QString &item);
-	void processBuildingQueue();
-	void waitBeforeProcess(bool yn);
-	bool reviewOutputFirst();
-	
-public slots:
-	void updateABSTree();
-	void writeLineProgress();
-	void writeLineProgressErr();
-	void finishedUpdateABSTree();
-	void finishedBuildingAction(int ecode, QProcess::ExitStatus estat);
-	void abortProcess();
+	ABSHandler();
+	virtual ~ABSHandler();
+
+	static QString getABSPath(const QString &package);
+	bool setUpBuildingEnvironment(const QString &package);
+	bool cleanBuildingEnvironment(const QString &package);
+	void cleanAllBuildingEnvironments();
+	static QStringList getMakeDepends(const QString &package);
 	
 private:
-	void processCurrentQueueItem();
-	
-signals:
-	void finishedBuilding(int failurelevel, QStringList bp);
-	
-private:
-	QProcess *ABSProc;
-	QStringList buildQueue;
-	QStringList builtPaths;
-	int currentItem;
-	bool failed;
-	bool allFailed;
-	bool waitProcessing;
-	AlpmHandler *aHandle;
-	
+	int rmrf(const char *path);
+
 };
 
-#endif /*BUILDINGDIALOG_H_*/
+#endif /*ABSHANDLER_H_*/

@@ -25,6 +25,7 @@
 #include <QDir>
 #include <QDebug>
 #include <QMessageBox>
+#include "ABSHandler.h"
 #include "../ui_buildingDialog.h"
 
 #include "BuildingDialog.h"
@@ -210,114 +211,6 @@ void BuildingDialog::processCurrentQueueItem()
 		
 	ABSProc->start("makepkg", QStringList("--asroot"));
 
-}
-
-bool BuildingDialog::setUpBuildingEnvironment(const QString &package)
-{
-	QSettings *settings = new QSettings();
-
-	QString path(settings->value("absbuilding/buildpath").toString());
-
-	settings->deleteLater();
-
-	if(!path.endsWith("/"))
-		path.append("/");
-	
-	path.append(package);
-	
-	QDir pathDir(path);
-	if(pathDir.exists())
-		cleanBuildingEnvironment(package);
-	
-	if(!pathDir.mkpath(path))
-		return false;
-	
-	QDir absDir("/var/abs");
-	absDir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot | QDir::NoSymLinks);
-	
-	int found = 0;
-	QString absSource;
-	
-	QFileInfoList list = absDir.entryInfoList();
-	
-	for (int i = 0; i < list.size(); ++i) 
-	{
-		qDebug() << list.at(i).absoluteFilePath();
-		QDir subAbsDir(list.at(i).absoluteFilePath());
-		subAbsDir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot | QDir::NoSymLinks);
-		QFileInfoList subList = subAbsDir.entryInfoList();
-		for (int k = 0; k < subList.size(); ++k) 
-		{
-			QDir subUbAbsDir(subList.at(k).absoluteFilePath());
-			subUbAbsDir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot | QDir::NoSymLinks);
-			QFileInfoList subUbList = subUbAbsDir.entryInfoList();
-			for (int j = 0; j < subUbList.size(); ++j) 
-			{
-				if(!subUbList.at(j).baseName().compare(package))
-				{
-					found = 1;
-					absSource = subUbList.at(j).absoluteFilePath();
-					break;
-				}
-			}
-		}
-		if(found == 1)
-			break;
-	}
-	
-	if(!found)
-		return false;
-	
-	qDebug() << "ABS Dir is " << absSource;
-	
-	QDir absPDir(absSource);
-	absPDir.setFilter(QDir::Files | QDir::Hidden | QDir::NoDotAndDotDot | QDir::NoSymLinks);
-	
-	QFileInfoList Plist = absPDir.entryInfoList();
-
-	for (int i = 0; i < Plist.size(); ++i) 
-	{
-		QString dest(path);
-		if(!dest.endsWith("/"))
-			dest.append("/");
-		dest.append(Plist.at(i).fileName());
-		
-		qDebug() << "Copying " << Plist.at(i).absoluteFilePath() << " to " << dest;
-		
-		if(!QFile::copy(Plist.at(i).absoluteFilePath(), dest))
-		{
-			return false;
-		}
-	}
-	
-	return true;
-}
-
-bool BuildingDialog::cleanBuildingEnvironment(const QString &package)
-{
-	QSettings *settings = new QSettings();
-
-	QString path(settings->value("absbuilding/buildpath").toString());
-
-	settings->deleteLater();
-
-	if(!path.endsWith("/"))
-		path.append("/");
-
-	path.append(package);
-	
-	aHandle->rmrf(path.toAscii().data());
-	
-	return true;
-}
-
-void BuildingDialog::cleanAllBuildingEnvironments()
-{
-	QSettings *settings = new QSettings();
-	
-	aHandle->rmrf(settings->value("absbuilding/buildpath").toString().toAscii().data());
-	
-	settings->deleteLater();
 }
 
 void BuildingDialog::initBuildingQueue()

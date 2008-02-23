@@ -81,42 +81,12 @@ bool EditPBuild::loadFile(const QString &name)
 	}
 	
 	lastItem = packagesBox->currentText();
-	
-	QDir absDir("/var/abs");
-	absDir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot | QDir::NoSymLinks);
 
-	int found = 0;
-	QString absSource;
+	QString absSource(getABSPath(name));
 
-	QFileInfoList list = absDir.entryInfoList();
-
-	for (int i = 0; i < list.size(); ++i) 
-	{
-		QDir subAbsDir(list.at(i).absoluteFilePath());
-		subAbsDir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot | QDir::NoSymLinks);
-		QFileInfoList subList = subAbsDir.entryInfoList();
-		for (int k = 0; k < subList.size(); ++k) 
-		{
-			QDir subUbAbsDir(subList.at(k).absoluteFilePath());
-			subUbAbsDir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot | QDir::NoSymLinks);
-			QFileInfoList subUbList = subUbAbsDir.entryInfoList();
-			for (int j = 0; j < subUbList.size(); ++j) 
-			{
-				if(!subUbList.at(j).baseName().compare(name))
-				{
-					found = 1;
-					absSource = subUbList.at(j).absoluteFilePath();
-					break;
-				}
-			}
-		}
-		if(found == 1)
-			break;
-	}
-
-	if(!found)
+	if(absSource == QString())
 		return false;
-	
+
 	if(!absSource.endsWith("/"))
 		absSource.append("/");
 	
@@ -141,36 +111,9 @@ bool EditPBuild::saveFile(const QString &name)
 	QDir absDir("/var/abs");
 	absDir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot | QDir::NoSymLinks);
 
-	int found = 0;
-	QString absSource;
-
-	QFileInfoList list = absDir.entryInfoList();
-
-	for (int i = 0; i < list.size(); ++i) 
-	{
-		QDir subAbsDir(list.at(i).absoluteFilePath());
-		subAbsDir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot | QDir::NoSymLinks);
-		QFileInfoList subList = subAbsDir.entryInfoList();
-		for (int k = 0; k < subList.size(); ++k) 
-		{
-			QDir subUbAbsDir(subList.at(k).absoluteFilePath());
-			subUbAbsDir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot | QDir::NoSymLinks);
-			QFileInfoList subUbList = subUbAbsDir.entryInfoList();
-			for (int j = 0; j < subUbList.size(); ++j) 
-			{
-				if(!subUbList.at(j).baseName().compare(name))
-				{
-					found = 1;
-					absSource = subUbList.at(j).absoluteFilePath();
-					break;
-				}
-			}
-		}
-		if(found == 1)
-			break;
-	}
-
-	if(!found)
+	QString absSource(getABSPath(name));
+	
+	if(absSource == QString())
 		return false;
 	
 	if(!absSource.endsWith("/"))
