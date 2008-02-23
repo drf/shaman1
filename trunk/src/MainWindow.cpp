@@ -913,7 +913,7 @@ void MainWindow::completeRemovePackage()
 	QTreeWidgetItem *item = pkgsViewWG->selectedItems().first();
 
 	qDebug() << item->text(1);
-	if (aHandle->isInstalled(item->text(1)))
+	if (!aHandle->isInstalled(item->text(1)))
 		return;
 	else
 	{
