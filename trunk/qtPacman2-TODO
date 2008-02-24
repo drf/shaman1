@@ -33,3 +33,4 @@ Core:
 
 	Database-class:
 		*list<Package*> getAllPackages();
+		*list<Package*> getAllPackagesWithActions(); (<--better name would be nicer :P)
