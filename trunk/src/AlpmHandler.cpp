@@ -918,3 +918,13 @@ bool AlpmHandler::isProviderInstalled(const QString &provider)
 	
 	return false;
 }
+
+unsigned long AlpmHandler::getPackageSize(pmpkg_t *package)
+{
+	return alpm_pkg_get_size(package);
+}
+
+unsigned long AlpmHandler::getPackageSize(const QString &name, const QString &repo)
+{
+	return getPackageSize(getPackageFromName(name, repo));
+}
