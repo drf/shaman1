@@ -1608,10 +1608,10 @@ void MainWindow::startSourceProcessing()
 	buildDialog->setWindowModality(Qt::ApplicationModal);
 	buildDialog->setAttribute(Qt::WA_DeleteOnClose, true);
 	
-	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 7))
+	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 8))
 		buildDialog->addBuildingQueueItem(itm->text(1));
 	
-	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 7))
+	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 8))
 		buildDialog->addBuildingQueueItem(itm->text(1));
 	
 	if(revBuildUi->noProcessBox->isChecked())
