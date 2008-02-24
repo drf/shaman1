@@ -1008,10 +1008,16 @@ void MainWindow::startUpgrading()
 
 	if(aHandle->getUpgradeablePackages().isEmpty())
 	{
-		/* Display a simple popup saying the system is up-to-date. */
-		QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("System Upgrade"), 
-				tr("Your system is up to date!"), QMessageBox::Ok, this);
-		message->show();
+		if(dbdialog->isVisible())
+		{
+			/* Display a simple popup saying the system is up-to-date. */
+			QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("System Upgrade"), 
+					tr("Your system is up to date!"), QMessageBox::Ok, this);
+			message->show();
+		}
+		else
+			systray->showMessage(QString(tr("System Upgrade")), QString(tr("Your system is up to date!")));
+		
 		qDebug() << "System is up to date";
 	}
 	else
@@ -1032,6 +1038,8 @@ void MainWindow::startUpgrading()
 		connect(upDl, SIGNAL(upgradeNow()), SLOT(processQueue()));
 		connect(upDl, SIGNAL(addToPkgQueue()), SLOT(addUpgradeableToQueue()));
 	}
+	
+	dbdialog = NULL;
 
 }
 
@@ -1266,6 +1274,13 @@ void MainWindow::showSettings()
 
 void MainWindow::dbUpdateTray()
 {
+	/* Are there some transactions in progress? If so, we simply skip
+	 * this cycle, and see you next time.
+	 */
+	
+	if(aHandle->isTransaction())
+		return;
+	
 	/* Ok, let's silently perform a Db Update.
 	 */
 	// TODO: App Icon, where are you?
@@ -1605,7 +1620,7 @@ void MainWindow::startSourceProcessing()
 	buildDialog = new BuildingDialog(aHandle, this);
 	buildDialog->initBuildingQueue();
 	
-	buildDialog->setWindowModality(Qt::ApplicationModal);
+	buildDialog->setWindowModality(Qt::WindowModal);
 	buildDialog->setAttribute(Qt::WA_DeleteOnClose, true);
 	
 	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 8))
@@ -1621,7 +1636,7 @@ void MainWindow::startSourceProcessing()
 	
 	buildDialog->show();
 	
-	connect(buildDialog, SIGNAL(finishedBuilding(int,QStringList)), SLOT(finishedBuilding(int,QStringList)));
+	connect(buildDialog, SIGNAL(finishedBuilding(int,QStringList)), this, SLOT(finishedBuilding(int,QStringList)));
 		
 	buildDialog->processBuildingQueue();
 }

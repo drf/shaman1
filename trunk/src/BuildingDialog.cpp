@@ -36,7 +36,7 @@ aHandle(hnd)
 {
 	setupUi(this);
 	setWindowModality(Qt::ApplicationModal);
-	connect(abortButton, SIGNAL(clicked()), SLOT(abortProcess()));
+	connect(abortButton, SIGNAL(clicked()), this, SLOT(abortProcess()));
 }
 
 BuildingDialog::~BuildingDialog()
