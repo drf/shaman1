@@ -90,6 +90,7 @@ private slots:
 	void showPkgsViewContextMenu();
 	void showRepoViewContextMenu();
 	void installPackage();
+	void reinstallPackage();
 	void removePackage();
 	void completeRemovePackage();
 	void cancelAction();

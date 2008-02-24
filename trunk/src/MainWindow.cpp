@@ -81,7 +81,6 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	connect(actionProcess_Queue, SIGNAL(triggered()), SLOT(widgetQueueToAlpmQueue()));
 	connect(switchToRepo, SIGNAL(clicked()), SLOT(populateRepoColumn()));
 	connect(switchToGrps, SIGNAL(clicked()), SLOT(populateGrpsColumn()));
-	connect(installButton, SIGNAL(clicked()), SLOT(installPackage()));
 	connect(removeButton, SIGNAL(clicked()), SLOT(removePackage()));
 	connect(completeRemoveButton, SIGNAL(clicked()), SLOT(completeRemovePackage()));
 	connect(cancelButton, SIGNAL(clicked()), SLOT(cancelAction()));
@@ -518,6 +517,8 @@ void MainWindow::itemChanged()
 		installButton->setEnabled(true);
 		installButton->setText(tr("Mark for Reinstallation"));
 		completeRemoveButton->setEnabled(true);
+		disconnect(installButton, SIGNAL(clicked()), this, SLOT(installPackage()));
+		connect(installButton, SIGNAL(clicked()), SLOT(reinstallPackage()));
 	}
 	if (!aHandle->isInstalled(pkgsViewWG->selectedItems().first()->text(1)))
 	{
@@ -525,6 +526,8 @@ void MainWindow::itemChanged()
 		installButton->setEnabled(true);
 		installButton->setText(tr("Mark for Installation"));
 		completeRemoveButton->setDisabled(true);
+		disconnect(installButton, SIGNAL(clicked()), this, SLOT(reinstallPackage()));
+		connect(installButton, SIGNAL(clicked()), SLOT(installPackage()));
 	}
 	//if (pkgsViewWG->selectedItems().first()->text(1) == tr("Upgradeable"))
 
@@ -855,6 +858,18 @@ void MainWindow::installPackage()
 	itemChanged();
 }
 
+void MainWindow::reinstallPackage()
+{
+	qDebug() << "Install Package";
+	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
+	{
+		item->setText(8, tr("Install"));
+		item->setIcon(2, QIcon(":/Icons/icons/list-add.png"));
+	}
+
+	itemChanged();
+}
+
 void MainWindow::installPackage(const QString &package)
 {
 	qDebug() << "Install package: " + package;
@@ -869,7 +884,7 @@ void MainWindow::installPackage(const QString &package)
 	if(aHandle->isProviderInstalled(package))
 		return;
 	
-	if (item->text(8) == tr("Install"))
+	if (item->text(8) == tr("Install") || aHandle->isInstalled(item->text(1)))
 		return;
 	else
 	{
@@ -878,12 +893,10 @@ void MainWindow::installPackage(const QString &package)
 	}
 	qDebug() << item->text(5);
 
-	if (!aHandle->isInstalled(item->text(1)))
+
+	foreach (QString dep, aHandle->getPackageDependencies(package, item->text(5)))
 	{
-		foreach (QString dep, aHandle->getPackageDependencies(package, item->text(5)))
-		{
-			installPackage(dep);
-		}
+		installPackage(dep);
 	}
 }
 
