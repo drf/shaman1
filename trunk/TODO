@@ -31,3 +31,9 @@ Plasmoid *prio*
 Add dynamic Icons to packages (icon for action, icon for upgradeable, installed, not installed) done, but needs better icons
 #Add dynamic Icons to QueueDialog (f.e.: add a green "v" for completed operation, a red "x" if errors occourred) done :)
 
+
+********Things to check before the alpha************
+-Look if all strings are correct
+-remove unused strings
+-do some basic operations and check if everything works correct
+-pull up the revision in aboutDialog
