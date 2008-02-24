@@ -141,6 +141,11 @@
         </column>
         <column>
          <property name="text" >
+          <string>Size</string>
+         </property>
+        </column>
+        <column>
+         <property name="text" >
           <string>Repository</string>
          </property>
         </column>

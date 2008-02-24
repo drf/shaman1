@@ -110,6 +110,7 @@ private:
 	void loadDbUpdateDialog();
 	void removeDbUpdateDialog();
 	void setupSystray();
+	QString formatSize(unsigned long size);
 	
 private:
 	alpm_list_t *currentpkgs;
