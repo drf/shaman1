@@ -514,14 +514,14 @@ void MainWindow::itemChanged()
 	{
 		removeButton->setEnabled(true);
 		installButton->setEnabled(true);
-		installButton->setText(tr("Reinstall package"));
+		installButton->setText(tr("Mark for Reinstallation"));
 		completeRemoveButton->setEnabled(true);
 	}
 	if (!aHandle->isInstalled(pkgsViewWG->selectedItems().first()->text(1)))
 	{
 		removeButton->setDisabled(true);
 		installButton->setEnabled(true);
-		installButton->setText(tr("Install package"));
+		installButton->setText(tr("Mark for Installation"));
 		completeRemoveButton->setDisabled(true);
 	}
 	//if (pkgsViewWG->selectedItems().first()->text(1) == tr("Upgradeable"))
@@ -1038,7 +1038,7 @@ void MainWindow::addUpgradeableToQueue()
 	foreach (QString package, aHandle->getUpgradeablePackages())
 	{
 		QTreeWidgetItem *item = pkgsViewWG->findItems(package, Qt::MatchExactly, 1).first();
-		item->setText(0, tr("Upgradeable"));
+		item->setIcon(0, QIcon(":/Icons/icons/user-invisible.png"));
 		item->setText(7, tr("Upgrade"));
 		item->setIcon(2, QIcon(":/Icons/icons/list-add.png"));
 	}
