@@ -28,12 +28,18 @@
    <layout class="QGridLayout" >
     <item row="0" column="1" >
      <layout class="QVBoxLayout" >
+      <property name="topMargin" >
+       <number>0</number>
+      </property>
       <item>
        <layout class="QHBoxLayout" >
+        <property name="spacing" >
+         <number>4</number>
+        </property>
         <item>
          <widget class="QComboBox" name="packageSwitchCombo" >
           <property name="sizePolicy" >
-           <sizepolicy vsizetype="Maximum" hsizetype="Maximum" >
+           <sizepolicy vsizetype="Ignored" hsizetype="Maximum" >
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -73,7 +79,7 @@
           <property name="sizeHint" >
            <size>
             <width>40</width>
-            <height>20</height>
+            <height>31</height>
            </size>
           </property>
          </spacer>
@@ -81,7 +87,7 @@
         <item>
          <widget class="QLineEdit" name="searchLine" >
           <property name="sizePolicy" >
-           <sizepolicy vsizetype="Maximum" hsizetype="MinimumExpanding" >
+           <sizepolicy vsizetype="Ignored" hsizetype="MinimumExpanding" >
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -97,7 +103,7 @@
         <item>
          <widget class="QComboBox" name="nameDescBox" >
           <property name="sizePolicy" >
-           <sizepolicy vsizetype="Maximum" hsizetype="Preferred" >
+           <sizepolicy vsizetype="Ignored" hsizetype="Preferred" >
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -109,7 +115,7 @@
       <item>
        <widget class="QTreeWidget" name="pkgsViewWG" >
         <property name="sizePolicy" >
-         <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
+         <sizepolicy vsizetype="MinimumExpanding" hsizetype="MinimumExpanding" >
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
