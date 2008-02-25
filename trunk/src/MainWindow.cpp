@@ -986,11 +986,11 @@ void MainWindow::cancelAction(const QString &package)
 	item->setText(8, QString());
 	item->setIcon(2, QIcon());
 	
-	foreach (QString onDep, aHandle->getDependenciesOnPackage(item->text(1), item->text(4)))
+	foreach (QString onDep, aHandle->getDependenciesOnPackage(item->text(1), item->text(5)))
 	{
 		cancelAction(onDep);
 	}
-	foreach (QString dep, aHandle->getPackageDependencies(item->text(1), item->text(4)))
+	foreach (QString dep, aHandle->getPackageDependencies(item->text(1), item->text(5)))
 	{
 		cancelAction(dep);
 	}
