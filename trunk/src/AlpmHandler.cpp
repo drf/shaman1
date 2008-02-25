@@ -137,9 +137,10 @@ bool AlpmHandler::initTransaction(pmtranstype_t type, pmtransflag_t flags)
 		return false;
 
 	onTransaction = true;
+	
+	emit transactionStarted();
+	
 	return onTransaction;
-
-
 }
 
 bool AlpmHandler::releaseTransaction()
@@ -152,6 +153,8 @@ bool AlpmHandler::releaseTransaction()
 			return false;
 
 	onTransaction = false;
+	emit transactionReleased();
+	
 	return true;
 }
 
@@ -230,18 +233,15 @@ bool AlpmHandler::updateDatabase()
 		pmdb_t *dbcrnt = (pmdb_t *)alpm_list_getdata(syncdbs);
 
 		emit streamDbUpdatingStatus((char *)alpm_db_get_name(dbcrnt), 0);
-		fflush(stdout);
+		
 		r = alpm_db_update(0, dbcrnt);
+		
 		if(r == 1)
 			emit streamDbUpdatingStatus((char *)alpm_db_get_name(dbcrnt), 3);
+		
 		else if(r < 0)
-		{
-			/*QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Error"), 
-					QString(tr("Couldn't update %1. Error reported was:\n%2")).arg((char *)alpm_db_get_name(dbcrnt)).arg(
-					alpm_strerrorlast()), QMessageBox::Ok);
-			message->exec();*/
 			emit streamDbUpdatingStatus((char *)alpm_db_get_name(dbcrnt), 4);
-		}
+		
 		else
 		{
 			printf("updated");
@@ -257,7 +257,6 @@ bool AlpmHandler::updateDatabase()
 	if(!releaseTransaction())
 		printf("azzo");
 
-	printf("Fatto, bitches \n\n");
 	return updated;
 
 }

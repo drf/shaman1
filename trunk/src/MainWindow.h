@@ -27,6 +27,7 @@
 #include <alpm_list.h>
 #include "../ui_MainWindow.h"
 #include "../ui_reviewBuildingDialog.h"
+#include "../ui_reviewQueueDialog.h"
 #include "AlpmHandler.h"
 
 #include <QSystemTrayIcon>
@@ -80,6 +81,10 @@ public slots:
 	void processBuiltPackages();
 	void openPBuildDialog();
 	void processBuildWizard();
+	void enableTrayActions();
+	void disableTrayActions();
+	void reduceBuildingInTray();
+	void nullifyBDialog() { buildDialog = NULL; }
 	
 protected:
 	void closeEvent(QCloseEvent *evt);
@@ -122,6 +127,7 @@ private:
 	ConfigDialog *configDialog;
 	BuildingDialog *buildDialog;
 	Ui::reviewBuildingDialog *revBuildUi;
+	Ui::QueueReadyDialog *qUi;
 	EditPBuild *pBuildEditor;
 	QDialog *reviewBQueue;
 
@@ -130,6 +136,7 @@ private:
 	QTimer *trayUpDb;
 	UpDbThread *upDbTh;
 	QStringList buildTargets;
+	QList<QAction *> systrayAct;
 	
 	bool upActive;
 	bool revActive;

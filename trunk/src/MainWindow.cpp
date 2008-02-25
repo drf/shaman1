@@ -28,7 +28,6 @@
 #include "BuildingDialog.h"
 #include "EditPBuild.h"
 #include "ABSHandler.h"
-#include "../ui_reviewQueueDialog.h"
 #include "../ui_aboutDialog.h"
 
 #include <iostream>
@@ -53,7 +52,10 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
   aHandle(handler),
   upActive(false),
   revActive(false),
-  dbdialog(NULL)
+  dbdialog(NULL),
+  queueDl(NULL),
+  qUi(NULL),
+  buildDialog(NULL)
 {
 	setupUi(this);
 	addDockWidget(Qt::LeftDockWidgetArea, dockWidget_2);
@@ -110,22 +112,41 @@ void MainWindow::setupSystray()
 	systray = new QSystemTrayIcon();
 	systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
 	systray->show();
+	
+	systrayAct.clear();
+	
 	QMenu *systrayMenu = new QMenu();
+	
 	QAction *updateDBAction = systrayMenu->addAction(QIcon(":/Icons/icons/view-refresh.png"), tr("Update Database"));
 	connect(updateDBAction, SIGNAL(triggered()), SLOT(doDbUpdate()));
+	systrayAct.append(updateDBAction);
+	
 	QAction *upgradeAction = systrayMenu->addAction(QIcon(":/Icons/icons/edit-redo.png"), tr("Upgrade System"));
 	connect(upgradeAction, SIGNAL(triggered()), SLOT(fullSysUpgrade()));
+	systrayAct.append(upgradeAction);
+	
 	QAction *queueAction = systrayMenu->addAction(QIcon(":/Icons/icons/dialog-ok-apply.png"), tr("Process Queue"));
 	connect(queueAction, SIGNAL(triggered()), SLOT(widgetQueueToAlpmQueue()));
+	systrayAct.append(queueAction);
 	systrayMenu->addSeparator();
+	
 	QAction *settingsAction = systrayMenu->addAction(QIcon(":/Icons/icons/preferences-system.png"), tr("Settings"));
 	connect(settingsAction, SIGNAL(triggered()), SLOT(showSettings()));
+	systrayAct.append(settingsAction);
 	systrayMenu->addSeparator();
+	
 	QAction *closeAction = systrayMenu->addAction(QIcon(":/Icons/icons/application-exit.png"), tr("Quit"));
 	connect(closeAction, SIGNAL(triggered()), SLOT(quitApp()));
+	systrayAct.append(closeAction);
+	
 	//Add actions here ;)
 	systray->setContextMenu(systrayMenu);
 	systray->setToolTip(QString(tr("qtPacman - Idle")));
+	
+	connect(aHandle, SIGNAL(transactionStarted()), SLOT(disableTrayActions()));
+	connect(aHandle, SIGNAL(transactionReleased()), SLOT(enableTrayActions()));
+	
+	disableTrayActions();
 		
 	QSettings *settings = new QSettings();
 		
@@ -652,7 +673,8 @@ void MainWindow::doDbUpdate()
 {
 	dbdialog = new UpdateDbDialog(aHandle, this);
 
-	dbdialog->show();
+	if(isVisible())
+		dbdialog->show();
 
 	connect(dbdialog, SIGNAL(killMe()), this, SLOT(finishDbUpdate()));
 
@@ -665,6 +687,8 @@ void MainWindow::doDbUpdate()
 void MainWindow::finishDbUpdate()
 {
 	disconnect(dbdialog, 0,0,0);
+	
+	qDebug() << "DB Update Finished";
 	
 	if(dbdialog->anyErrors())
 	{
@@ -1104,14 +1128,7 @@ void MainWindow::processQueue()
 	 * to a function that reads the queue and prepares libalpm's
 	 * transaction. 
 	 */
-
-	if(upActive)
-		upDl->deleteLater();
-	if(revActive)
-		reviewQueue->deleteLater();
 	
-	upActive = false;
-	revActive = false;
 
 	/* Now, everything will be done inside our Queue Dialog.
 	 * So, just create it and let him handle the job.
@@ -1119,14 +1136,30 @@ void MainWindow::processQueue()
 
 	queueDl = new QueueDialog(aHandle, this);
 
-	queueDl->show();
-
 	connect(queueDl, SIGNAL(terminated(bool)), SLOT(queueProcessingEnded(bool)));
 
 	queueDl->startProcessing();
 
+	if(revActive)
+		if(qUi->trayBox->isChecked())
+		{
+			systray->showMessage(QString(tr("Queue Processing")), QString(tr("Your Queue is being processed.\nPlease wait.")));
+			hide();
+			queueDl->hide();
+		}
+		else
+			queueDl->show();
+
 	systray->setIcon(QIcon(":/Icons/icons/edit-redo.png"));
 	systray->setToolTip(QString(tr("qtPacman - Processing")));
+
+	if(upActive)
+		upDl->deleteLater();
+	if(revActive)
+		reviewQueue->deleteLater();
+
+	upActive = false;
+	revActive = false;
 
 }
 
@@ -1143,14 +1176,22 @@ void MainWindow::queueProcessingEnded(bool errors)
 	pkgsViewWG->setSortingEnabled(false);
 	populatePackagesView();
 	refinePkgView();
-	
-	QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Queue Processed"), 
-			tr("Your Queue was successfully processed!"), QMessageBox::Ok, queueDl);
 
-	message->exec();
-	
-	message->deleteLater();
+	if(queueDl->isVisible())
+	{
+		QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Queue Processed"), 
+				tr("Your Queue was successfully processed!"), QMessageBox::Ok, queueDl);
+
+		message->exec();
+
+		message->deleteLater();
+	}
+	else
+		systray->showMessage(QString(tr("Queue Processed")), QString(tr("Your Queue was successfully processed!!")));;
+		
 	queueDl->deleteLater();
+	
+	queueDl = NULL;
 
 	systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
 	systray->setToolTip(QString(tr("qtPacman - Idle")));
@@ -1186,63 +1227,65 @@ void MainWindow::widgetQueueToAlpmQueue()
 		aHandle->initQueue(true, true, false);
 
 	reviewQueue = new QDialog(this);
-	Ui::QueueReadyDialog qUi;
-	qUi.setupUi(reviewQueue);
+	
+	qUi = new Ui::QueueReadyDialog();
+	
+	qUi->setupUi(reviewQueue);
 
 	
 	if(!pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 8).isEmpty())
 	{
-		QTreeWidgetItem *itm = new QTreeWidgetItem(qUi.treeWidget, QStringList(tr("To be Installed")));
-		qUi.treeWidget->addTopLevelItem(itm);
+		QTreeWidgetItem *itm = new QTreeWidgetItem(qUi->treeWidget, QStringList(tr("To be Installed")));
+		qUi->treeWidget->addTopLevelItem(itm);
 	}
 	if(!pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 8).isEmpty())
 	{
-		QTreeWidgetItem *itm = new QTreeWidgetItem(qUi.treeWidget, QStringList(tr("To be Upgraded")));
-		qUi.treeWidget->addTopLevelItem(itm);
+		QTreeWidgetItem *itm = new QTreeWidgetItem(qUi->treeWidget, QStringList(tr("To be Upgraded")));
+		qUi->treeWidget->addTopLevelItem(itm);
 	}
 	if(!pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 8).isEmpty())
 	{
-		QTreeWidgetItem *itm = new QTreeWidgetItem(qUi.treeWidget, QStringList(tr("To be Removed")));
-		qUi.treeWidget->addTopLevelItem(itm);
+		QTreeWidgetItem *itm = new QTreeWidgetItem(qUi->treeWidget, QStringList(tr("To be Removed")));
+		qUi->treeWidget->addTopLevelItem(itm);
 	}
 
 
 	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 8))
 	{
 		aHandle->addSyncToQueue(itm->text(1));
-		QTreeWidgetItem *itmL = qUi.treeWidget->findItems(tr("To be Installed"), Qt::MatchExactly, 0).first();
+		QTreeWidgetItem *itmL = qUi->treeWidget->findItems(tr("To be Installed"), Qt::MatchExactly, 0).first();
 		QTreeWidgetItem *childitm = new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
 	}
 
 	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 8))
 	{
 		aHandle->addSyncToQueue(itm->text(1));
-		QTreeWidgetItem *itmL = qUi.treeWidget->findItems(tr("To be Upgraded"), Qt::MatchExactly, 0).first();
+		QTreeWidgetItem *itmL = qUi->treeWidget->findItems(tr("To be Upgraded"), Qt::MatchExactly, 0).first();
 		QTreeWidgetItem *childitm = new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
 	}
 
 	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 8))
 	{
 		aHandle->addRemoveToQueue(itm->text(1));
-		QTreeWidgetItem *itmL = qUi.treeWidget->findItems(tr("To be Removed"), Qt::MatchExactly, 0).first();
+		QTreeWidgetItem *itmL = qUi->treeWidget->findItems(tr("To be Removed"), Qt::MatchExactly, 0).first();
 		QTreeWidgetItem *childitm = new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
 	}
 
 	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 8))
 	{
 		aHandle->addRemoveToQueue(itm->text(1));
-		QTreeWidgetItem *itmL = qUi.treeWidget->findItems(tr("To be Removed"), Qt::MatchExactly, 0).first();
+		QTreeWidgetItem *itmL = qUi->treeWidget->findItems(tr("To be Removed"), Qt::MatchExactly, 0).first();
 		QTreeWidgetItem *childitm = new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
 	}
 	
 	revActive = true;
 	
 	reviewQueue->setWindowModality(Qt::ApplicationModal);
-	qUi.treeWidget->hide();
+	qUi->treeWidget->hide();
 	reviewQueue->show();
 	
-	connect(qUi.processButton, SIGNAL(clicked()), SLOT(processQueue()));
-	connect(qUi.cancelButton, SIGNAL(clicked()), SLOT(destroyReviewQueue()));
+	connect(qUi->processButton, SIGNAL(clicked()), SLOT(processQueue()));
+	connect(qUi->cancelButton, SIGNAL(clicked()), SLOT(destroyReviewQueue()));
 	
 	QString toShow(tr("Your Queue is about to be processed. "
 			"You are going to:<br />"));
@@ -1252,7 +1295,7 @@ void MainWindow::widgetQueueToAlpmQueue()
 	toShow.append(QString(k == 1 ? tr("Install/Upgrade <b>%1 package</b><br />") : tr("Install/Upgrade <b>%1 packages</b><br />")).arg(k));
 	toShow.append(tr("Do you wish to continue?"));
 	
-	qUi.queueInfo->setText(toShow);
+	qUi->queueInfo->setText(toShow);
 
 }
 
@@ -1350,6 +1393,10 @@ void MainWindow::systrayActivated(QSystemTrayIcon::ActivationReason reason)
 			show();
 			if(dbdialog != NULL)
 				dbdialog->show();
+			if(queueDl != NULL)
+				queueDl->show();
+			if(buildDialog != NULL)
+				buildDialog->show();
 		}
 		else
 		{
@@ -1359,6 +1406,10 @@ void MainWindow::systrayActivated(QSystemTrayIcon::ActivationReason reason)
 				trayUpDb->start();
 			if(dbdialog != NULL)
 				dbdialog->hide();
+			if(queueDl != NULL)
+				queueDl->hide();
+			if(buildDialog != NULL)
+				buildDialog->hide();
 			
 		}
 		
@@ -1446,6 +1497,7 @@ void MainWindow::updateABSTree()
 	}
 	
 	buildDialog = new BuildingDialog(aHandle, this);
+	connect(buildDialog, SIGNAL(nullifyPointer()), SLOT(nullifyBDialog()));
 	
 	buildDialog->show();
 	
@@ -1618,6 +1670,8 @@ void MainWindow::startSourceProcessing()
 	}
 	
 	buildDialog = new BuildingDialog(aHandle, this);
+	connect(buildDialog, SIGNAL(nullifyPointer()), SLOT(nullifyBDialog()));
+	
 	buildDialog->initBuildingQueue();
 	
 	buildDialog->setWindowModality(Qt::WindowModal);
@@ -1636,6 +1690,8 @@ void MainWindow::startSourceProcessing()
 	
 	buildDialog->show();
 	
+	connect(buildDialog->reduceButton, SIGNAL(clicked()), SLOT(reduceBuildingInTray()));
+	
 	connect(buildDialog, SIGNAL(finishedBuilding(int,QStringList)), this, SLOT(finishedBuilding(int,QStringList)));
 		
 	buildDialog->processBuildingQueue();
@@ -1647,12 +1703,17 @@ void MainWindow::finishedBuilding(int failure, QStringList targets)
 	
 	if(failure == 2)
 	{
-		QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), QString(tr("Your packages Failed to Build.\n"
-				"Look at the output for more details.")), QMessageBox::Ok, buildDialog);
+		if(buildDialog->isHidden())
+			systray->showMessage(QString(tr("Package Building")), QString(tr("Your Packages failed to build!")));
+		else
+		{
+			QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), QString(tr("Your packages Failed to Build.\n"
+					"Look at the output for more details.")), QMessageBox::Ok, buildDialog);
 
-		message->exec();
+			message->exec();
 
-		message->deleteLater();
+			message->deleteLater();
+		}
 		
 		buildDialog->abortButton->setText(QString(tr("Close")));
 		disconnect(buildDialog->abortButton, SIGNAL(clicked()), buildDialog, SLOT(abortProcess()));
@@ -1709,9 +1770,14 @@ void MainWindow::finishedBuilding(int failure, QStringList targets)
 			buildDialog->abortButton->setText(QString(tr("Close Without Installing")));
 			buildDialog->processingLabel->setText(QString(tr("Packages Built Successfully!")));
 			buildDialog->buildingLabel->setText(QString());
+			if(buildDialog->isHidden())
+				systray->showMessage(QString(tr("Package Building")), QString(tr("Your Packages have been built successfully, "
+						"and are ready to be installed")));
+						
+						
 			disconnect(buildDialog->abortButton, SIGNAL(clicked()), buildDialog, SLOT(abortProcess()));
 			connect(buildDialog->abortButton, SIGNAL(clicked()), buildDialog, SLOT(deleteLater()));
-			disconnect(buildDialog->reduceButton, SIGNAL(clicked()));
+			disconnect(buildDialog->reduceButton, SIGNAL(clicked()), 0, 0);
 			connect(buildDialog->reduceButton, SIGNAL(clicked()), SLOT(processBuiltPackages()));
 		}
 		else
@@ -1741,6 +1807,11 @@ void MainWindow::processBuildWizard()
 	 */
 	
 	QStringList pkgList;
+	QStringList binaryList;
+	QStringList depsList;
+	
+	binaryList.clear();
+	depsList.clear();
 	
 	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 8))
 		pkgList.append(itm->text(1));
@@ -1754,8 +1825,28 @@ void MainWindow::processBuildWizard()
 		{
 			if(!aHandle->isInstalled(mkdp))
 				//Add to binary queue
-			{ }
+			{ 
+				qDebug() << "Makedepend is missing: " << mkdp;
+				depsList.append(mkdp);
+			}
 		}
+
+		if(!aHandle->isInstalled(pkg))
+			//Add to binary queue
+		{ 
+			qDebug() << "Package is not installed: " << pkg << ", installing it from binary first.";
+			binaryList.append(pkg);
+		}
+	}
+	
+	if(binaryList.isEmpty() && depsList.isEmpty())
+	{
+		/* Ok, we're probably reinstalling some packages and their makedepends
+		 * are satisfied, we just have to trigger the compilation
+		 */
+		
+		revBuildUi->depsWizardBox->setChecked(false);
+		startSourceProcessing();
 	}
 	
 }
@@ -1773,4 +1864,22 @@ QString MainWindow::formatSize(unsigned long size)
 		s = tr("%n Bytes", "Size is in Bytes", size);
 	
 	return s;
+}
+
+void MainWindow::enableTrayActions()
+{
+	foreach(QAction *act, systrayAct)
+		act->setEnabled(true);
+}
+
+void MainWindow::disableTrayActions()
+{
+	foreach(QAction *act, systrayAct)
+		act->setEnabled(false);
+}
+
+void MainWindow::reduceBuildingInTray()
+{
+	buildDialog->hide();
+	hide();
 }

@@ -52,11 +52,15 @@ public slots:
 	void finishedBuildingAction(int ecode, QProcess::ExitStatus estat);
 	void abortProcess();
 	
+protected:
+	void closeEvent(QCloseEvent *evt);
+	
 private:
 	void processCurrentQueueItem();
 	
 signals:
 	void finishedBuilding(int failurelevel, QStringList bp);
+	void nullifyPointer();
 	
 private:
 	QProcess *ABSProc;

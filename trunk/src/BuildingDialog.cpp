@@ -25,6 +25,7 @@
 #include <QDir>
 #include <QDebug>
 #include <QMessageBox>
+#include <QCloseEvent>
 #include "ABSHandler.h"
 #include "../ui_buildingDialog.h"
 
@@ -245,4 +246,10 @@ void BuildingDialog::waitBeforeProcess(bool yn)
 bool BuildingDialog::reviewOutputFirst()
 {
 	return waitProcessing;
+}
+
+void BuildingDialog::closeEvent(QCloseEvent *evt)
+{
+	emit nullifyPointer();
+	evt->accept();
 }

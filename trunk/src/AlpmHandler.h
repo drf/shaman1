@@ -121,6 +121,8 @@ signals:
 	void dbUpdated();
 	void dbQty(const QStringList &db);
 	void dbUpdatePerformed();
+	void transactionStarted();
+	void transactionReleased();
 
 private:
 	pmdb_t *db_local;
