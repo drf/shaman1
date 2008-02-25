@@ -1,7 +1,7 @@
-PROJECT(qtPacman)
+PROJECT(shaman)
 CMAKE_MINIMUM_REQUIRED(VERSION 2.4.0)
 
-SET(qtPacman_SRCS
+SET(shaman_SRCS
     src/main.cpp
     src/MainWindow.cpp
     src/AlpmHandler.cpp
@@ -17,7 +17,7 @@ SET(qtPacman_SRCS
     src/ABSHandler.cpp
 )
 
-SET(qtPacman_MOC_HDRS
+SET(shaman_MOC_HDRS
     src/MainWindow.h
     src/AlpmHandler.h
     src/BuildingDialog.h
@@ -32,7 +32,7 @@ SET(qtPacman_MOC_HDRS
     src/ABSHandler.h
 )
 
-SET(qtPacman_UIS
+SET(shaman_UIS
     ui/MainWindow.ui
     ui/aboutDialog.ui
     ui/buildingDialog.ui
@@ -45,7 +45,7 @@ SET(qtPacman_UIS
     ui/upgradeDialog.ui
 )
 
-SET(qtPacman_RESOUCES
+SET(shaman_RESOUCES
     ui/qtpacman.qrc
 )
 
@@ -104,10 +104,10 @@ ENDIF(NOT QT_LRELEASE_EXECUTABLE)
 
 SET(QT_USE_QTXML)
 
-QT4_WRAP_CPP(qtPacman_MOC_SRCS ${qtPacman_MOC_HDRS})
-QT4_ADD_RESOURCES (qtsourceview_RC_SRCS  ${qtPacman_RESOUCES})
-QT4_WRAP_UI(qtPacman_UIS_H ${qtPacman_UIS})
-QT4_AUTOMOC(${qtPacman_SRCS})
+QT4_WRAP_CPP(shaman_MOC_SRCS ${shaman_MOC_HDRS})
+QT4_ADD_RESOURCES (qtsourceview_RC_SRCS  ${shaman_RESOUCES})
+QT4_WRAP_UI(shaman_UIS_H ${shaman_UIS})
+QT4_AUTOMOC(${shaman_SRCS})
 
 #ADD_DEFINITIONS(
 #    -lalpm
@@ -119,14 +119,14 @@ INCLUDE_DIRECTORIES(
     ${CMAKE_BINARY_DIR}
 )
 
-ADD_EXECUTABLE(qtPacman
-    ${qtPacman_SRCS}
-    ${qtPacman_UIS_H}
-    ${qtPacman_MOC_SRCS}
+ADD_EXECUTABLE(shaman
+    ${shaman_SRCS}
+    ${shaman_UIS_H}
+    ${shaman_MOC_SRCS}
     ${qtsourceview_RC_SRCS}
 )
 
-TARGET_LINK_LIBRARIES(qtPacman
+TARGET_LINK_LIBRARIES(shaman
     ${QT_QTCORE_LIBRARY}
     ${QT_QTGUI_LIBRARY}
     ${QT_QTXML_LIBRARY}
@@ -143,7 +143,7 @@ TARGET_LINK_LIBRARIES(qtPacman
 
 #INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/help/de/main.htm DESTINATION share/qtemu/help/de)
 
-INSTALL(TARGETS qtPacman DESTINATION bin)
+INSTALL(TARGETS shaman DESTINATION bin)
 
 #IF(UNIX)
 #    INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/misc/qtemu.desktop DESTINATION share/applications)
