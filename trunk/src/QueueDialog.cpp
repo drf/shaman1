@@ -367,7 +367,9 @@ bool QueueDialog::runScriptlet(int action, pmpkg_t *package, pmpkg_t *pkg2)
 	pkgpath.append(alpm_pkg_get_name(package));
 	pkgpath.append("-");
 	pkgpath.append(alpm_pkg_get_version(package));
-	pkgpath.append("-i686.pkg.tar.gz");
+	pkgpath.append("-");
+	pkgpath.append(alpm_pkg_get_arch(package));
+	pkgpath.append(".pkg.tar.gz");
 
 	qDebug() << "Extracting:" << pkgpath;
 
