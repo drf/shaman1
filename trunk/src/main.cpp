@@ -68,7 +68,7 @@ int main(int argc, char **argv)
 	QApplication app(argc, argv, QApplication::GuiClient);
 
 	QCoreApplication::setOrganizationName("shaman");
-	QCoreApplication::setOrganizationDomain("qtpacman.iskremblien.org");
+	QCoreApplication::setOrganizationDomain("shaman.iskremblien.org");
 	QCoreApplication::setApplicationName("shaman");
 
 	if(myuid > 0)
