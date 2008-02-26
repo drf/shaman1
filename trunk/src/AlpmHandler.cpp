@@ -225,7 +225,7 @@ bool AlpmHandler::updateDatabase()
 	
 	syncdbs = alpm_list_first(sync_databases);
 
-	if(!initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_ALLDEPS))
+	if(!initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_NOSCRIPTLET))
 		return false;
 
 	while(syncdbs != NULL)
@@ -441,7 +441,7 @@ bool AlpmHandler::performCurrentTransaction()
 bool AlpmHandler::fullSystemUpgrade()
 {
 
-	if(!initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_ALLDEPS))
+	if(!initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_NOSCRIPTLET))
 		return false;
 
 	if(alpm_trans_sysupgrade() == -1)
@@ -616,7 +616,7 @@ void AlpmHandler::processQueue()
 	if(removeAct)
 	{
 		/* Well, we need to remove packages first. Let's do this. */
-		initTransaction(PM_TRANS_TYPE_REMOVE, PM_TRANS_FLAG_ALLDEPS /*/PM_TRANS_FLAG_NOSCRIPTLET*/);
+		initTransaction(PM_TRANS_TYPE_REMOVE, PM_TRANS_FLAG_NOSCRIPTLET /*/PM_TRANS_FLAG_NOSCRIPTLET*/);
 		
 		for (int i = 0; i < toRemove.size(); ++i)
 		{
@@ -630,7 +630,7 @@ void AlpmHandler::processQueue()
 	if(syncAct)
 	{
 		/* Time to install and upgrade packages, right? */
-		initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_ALLDEPS /*/PM_TRANS_FLAG_NOSCRIPTLET*/);
+		initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_NOSCRIPTLET);
 		
 		for (int i = 0; i < toSync.size(); ++i)
 		{
@@ -645,13 +645,13 @@ void AlpmHandler::processQueue()
 	if(upgradeAct)
 	{
 		/* We just have to start the transaction. */
-		initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_ALLDEPS);
+		initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_NOSCRIPTLET);
 
 		performCurrentTransaction();
 	}
 	if(fromFileAct)
 	{
-		initTransaction(PM_TRANS_TYPE_UPGRADE, PM_TRANS_FLAG_ALLDEPS);
+		initTransaction(PM_TRANS_TYPE_UPGRADE, PM_TRANS_FLAG_NOSCRIPTLET);
 
 		for (int i = 0; i < toFromFile.size(); ++i)
 		{

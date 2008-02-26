@@ -28,6 +28,7 @@
 #include "AlpmHandler.h"
 
 #include <QThread>
+#include <QProcess>
 
 class TrCommitThread : public QThread
 {
@@ -57,6 +58,12 @@ public slots:
 	void startDownload();
 	void startProcess();
 	void cleanup();
+	bool runScriptlet(int action, pmpkg_t *package);
+	void handleScriptletEnding(int eC, QProcess::ExitStatus estat);
+	void writeLineProgress();
+	
+private:
+	bool unpackPkg(const QString &pathToPkg, const QString &pathToEx, const QString &file);
 	
 signals:
 	void terminated(bool errors);
@@ -64,6 +71,7 @@ signals:
 private:
 	AlpmHandler *aHandle;
 	TrCommitThread *cTh;
+	QProcess *proc;
 	int status;
 };
 

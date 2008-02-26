@@ -26,6 +26,14 @@
 #include "AlpmHandler.h"
 #include <QMutex>
 #include <QMutexLocker>
+#include <QDebug>
+#include <QProcess>
+#include <alpm.h>
+#include <fcntl.h>
+
+/* libarchive */
+#include <archive.h>
+#include <archive_entry.h>
 
 extern CallBacks CbackReference;
 extern QMutex mutex;
@@ -81,6 +89,8 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 {
 	QMutexLocker lock(&mutex);
 	printf("LockedQ\n");
+	
+	pmpkg_t *package;
 
 	switch(event) 
 	{
@@ -109,6 +119,8 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 		}
 		actionDetail->setText(QString(tr("Installing %1...")).arg(alpm_pkg_get_name((pmpkg_t *)data1)));
 		textEdit->append(QString(tr("Installing %1...")).arg(alpm_pkg_get_name((pmpkg_t *)data1)));
+		package = (pmpkg_t *)data1;
+		runScriptlet(0, package);
 		break;
 	case PM_TRANS_EVT_ADD_DONE:
 		actionDetail->setText(QString(tr("%1 (%2) installed successfully!")).arg(
@@ -126,6 +138,7 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 		}
 		actionDetail->setText(QString(tr("Removing %1...")).arg(alpm_pkg_get_name((pmpkg_t *)data1)));
 		textEdit->append(QString(tr("Removing %1...")).arg(alpm_pkg_get_name((pmpkg_t *)data1)));
+		runScriptlet(2, (pmpkg_t *)data1);
 		break;
 	case PM_TRANS_EVT_REMOVE_DONE:
 		actionDetail->setText(QString(tr("%1 (%2) removed successfully!")).
@@ -143,6 +156,7 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 		}
 		actionDetail->setText(QString(tr("Upgrading %1...")).arg(alpm_pkg_get_name((pmpkg_t *)data1)));
 		textEdit->append(QString(tr("Upgrading %1...")).arg(alpm_pkg_get_name((pmpkg_t *)data1)));
+		runScriptlet(1, (pmpkg_t *)data1);
 		break;
 	case PM_TRANS_EVT_UPGRADE_DONE:
 		actionDetail->setText(QString(tr("Upgraded %1 successfully (%2 -> %3)")).arg(
@@ -295,4 +309,248 @@ void QueueDialog::cleanup()
 	qApp->processEvents();
 	
 	emit terminated(false);
+}
+
+bool QueueDialog::runScriptlet(int action, pmpkg_t *package)
+{
+	if(!alpm_pkg_has_scriptlet(package))
+	{
+		/* Ok then, nothing to do. */
+		qDebug() << "No scriptlet for package " << alpm_pkg_get_name(package);
+		return true;
+	}
+	
+	if(action == 0)
+	{
+		qDebug() << "Executing install scriptlet for package " << alpm_pkg_get_name(package);
+
+		/* Ok, libalpm docet here. */
+		
+		struct stat buf;
+		int clean_tmpdir = 0;
+		int retval = 0;
+
+		QString tmpdir("/tmp/alpm_XXXXXX");
+
+		if(mkdtemp(tmpdir.toAscii().data()) == NULL) 
+			return false;
+		else 
+			clean_tmpdir = 1;
+
+		QString scriptfn(tmpdir);
+		scriptfn.append("/.INSTALL");
+		
+		QString pkgpath("/var/cache/pacman/pkg/");
+		pkgpath.append(alpm_pkg_get_name(package));
+		pkgpath.append("-");
+		pkgpath.append(alpm_pkg_get_version(package));
+		pkgpath.append("-i686.pkg.tar.gz");
+		
+		qDebug() << "Extracting:" << pkgpath;
+
+		if(!unpackPkg(pkgpath, tmpdir, QString(".INSTALL")))
+		{
+			/* Ok then, nothing to do. */
+			qDebug() << "Couldn't extract package! Executing Scriptlet failed.";
+			return false;
+		}
+		
+		qDebug() << "Ok, running the scriptlet...";
+		
+		QString cmdline(QString(". %1; %2 %3").arg(scriptfn).arg("pre_install").arg(alpm_pkg_get_version(package)));
+		
+		proc = new QProcess(this);
+		connect(proc, SIGNAL(readyReadStandardOutput()), SLOT(writeLineProgress()));
+		connect(proc, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(handleScriptletEnding(int,QProcess::ExitStatus)));
+		
+		proc->setWorkingDirectory(tmpdir);
+		
+		qDebug() << "Scriptlet commandline is:" << cmdline;
+		
+		if(proc->execute(cmdline) == 0)
+			qDebug() << "Scriptlet Run successfully!!";
+		else
+			qDebug() << "Scriptlet Error or Scriptlet not found!!";
+			
+		aHandle->rmrf("/tmp/alpm_XXXXXX");
+	}
+
+	else if(action == 1)
+	{
+		qDebug() << "Executing install scriptlet for package " << alpm_pkg_get_name(package);
+
+		/* Ok, libalpm docet here. */
+
+		struct stat buf;
+		int clean_tmpdir = 0;
+		int retval = 0;
+
+		QString tmpdir("/tmp/alpm_XXXXXX");
+
+		if(mkdtemp(tmpdir.toAscii().data()) == NULL) 
+			return false;
+		else 
+			clean_tmpdir = 1;
+
+		QString scriptfn(tmpdir);
+		scriptfn.append("/.INSTALL");
+
+		QString pkgpath("/var/cache/pacman/pkg/");
+		pkgpath.append(alpm_pkg_get_name(package));
+		pkgpath.append("-");
+		pkgpath.append(alpm_pkg_get_version(package));
+		pkgpath.append("-i686.pkg.tar.gz");
+
+		qDebug() << "Extracting:" << pkgpath;
+
+		if(!unpackPkg(pkgpath, tmpdir, QString(".INSTALL")))
+		{
+			/* Ok then, nothing to do. */
+			qDebug() << "Couldn't extract package! Executing Scriptlet failed.";
+			return false;
+		}
+
+		qDebug() << "Ok, running the scriptlet...";
+
+		QString cmdline(QString(". %1; %2 %3").arg(scriptfn).arg("pre_upgrade").arg(alpm_pkg_get_version(package)));
+
+		proc = new QProcess(this);
+		connect(proc, SIGNAL(readyReadStandardOutput()), SLOT(writeLineProgress()));
+		connect(proc, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(handleScriptletEnding(int,QProcess::ExitStatus)));
+
+		proc->setWorkingDirectory(tmpdir);
+
+		qDebug() << "Scriptlet commandline is:" << cmdline;
+
+		if(proc->execute(cmdline) == 0)
+			qDebug() << "Scriptlet Run successfully!!";
+		else
+			qDebug() << "Scriptlet Error or Scriptlet not found!!";
+
+		aHandle->rmrf("/tmp/alpm_XXXXXX");
+	}
+}
+
+bool QueueDialog::unpackPkg(const QString &pathToPkg, const QString &pathToEx, const QString &file)
+{
+	/* This is a copy-paste from util.c */
+	
+	int ret = 1;
+	mode_t oldmask;
+	struct archive *_archive;
+	struct archive_entry *entry;
+	char expath[4096];
+	
+	char *ptPkg = (char *)malloc(strlen(pathToPkg.toAscii().data()) * sizeof(char));
+	strcpy(ptPkg, pathToPkg.toAscii().data());
+	char *ptEx = (char *)malloc(strlen(pathToEx.toAscii().data()) * sizeof(char)); 
+	strcpy(ptEx, pathToEx.toAscii().data());
+	char *fn = (char *)malloc(strlen(file.toAscii().data()) * sizeof(char));
+	strcpy(fn, file.toAscii().data());
+
+	if((_archive = archive_read_new()) == NULL)
+	{
+		free(ptPkg);
+		free(ptEx);
+		free(fn);
+		return false;
+	}
+
+	archive_read_support_compression_all(_archive);
+	archive_read_support_format_all(_archive);
+
+	if(archive_read_open_filename(_archive, ptPkg, ARCHIVE_DEFAULT_BYTES_PER_BLOCK) != ARCHIVE_OK)
+	{
+		free(ptPkg);
+		free(ptEx);
+		free(fn);
+		return false;
+	}
+
+	oldmask = umask(0022);
+	
+	while(archive_read_next_header(_archive, &entry) == ARCHIVE_OK) 
+	{
+		const struct stat *st;
+		const char *entryname; /* the name of the file in the archive */
+
+		st = archive_entry_stat(entry);
+		entryname = archive_entry_pathname(entry);
+
+		if(S_ISREG(st->st_mode))
+			archive_entry_set_mode(entry, 0644);
+		else if(S_ISDIR(st->st_mode))
+			archive_entry_set_mode(entry, 0755);
+
+		if(fn && strcmp(fn, entryname)) 
+		{
+			if (archive_read_data_skip(_archive) != ARCHIVE_OK) 
+			{
+				umask(oldmask);
+				archive_read_finish(_archive);
+				qDebug() << "Skipping Data Failed";
+				free(ptPkg);
+				free(ptEx);
+				free(fn);
+				return false;
+			}
+			
+			continue;
+		}
+		
+		snprintf(expath, PATH_MAX, "%s/%s", ptEx, entryname);
+		archive_entry_set_pathname(entry, expath);
+
+		int readret = archive_read_extract(_archive, entry, 0);
+		if(readret == ARCHIVE_WARN) 
+		{
+			/* operation succeeded but a non-critical error was encountered */
+			qDebug() << "Warning extracting " << entryname << " (" << archive_error_string(_archive) << ")";
+		} 
+		else if(readret != ARCHIVE_OK) 
+		{
+			qDebug() << "Could not extract " << entryname << " (" << archive_error_string(_archive) << ")";
+			umask(oldmask);
+			archive_read_finish(_archive);
+			free(ptPkg);
+			free(ptEx);
+			free(fn);
+			return false;
+		}
+
+		if(fn)
+			break;
+	}
+
+	umask(oldmask);
+	archive_read_finish(_archive);
+	free(ptPkg);
+	free(ptEx);
+	free(fn);
+	return true;
+}
+
+void QueueDialog::handleScriptletEnding(int eC, QProcess::ExitStatus estat)
+{
+	if(eC == 0)
+	{
+		qDebug() << "Scriptlet Run successfully!!";
+		textEdit->append(QString(tr("Scriptlet run successfully!!")));
+	}
+	else
+	{
+		qDebug() << "Error running scriptlet!!";
+		textEdit->append(QString(tr("Error running scriptlet!!")));
+	}
+	
+	aHandle->rmrf("/tmp/alpm_XXXXXX");
+	proc->deleteLater();
+}
+
+void QueueDialog::writeLineProgress()
+{
+	proc->setReadChannel(QProcess::StandardOutput);
+	textEdit->append(proc->readLine(1024));
+	
+	
 }

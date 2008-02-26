@@ -151,6 +151,7 @@ TARGET_LINK_LIBRARIES(shaman
     ${QT_QTGUI_LIBRARY}
     ${QT_QTXML_LIBRARY}
     -lalpm
+    -larchive
 )
 
 #FILE(GLOB helpfiles "${CMAKE_CURRENT_SOURCE_DIR}/help/*.png")
