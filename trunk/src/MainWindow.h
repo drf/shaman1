@@ -84,7 +84,7 @@ public slots:
 	void enableTrayActions();
 	void disableTrayActions();
 	void reduceBuildingInTray();
-	void nullifyBDialog() { buildDialog = NULL; }
+	void nullifyBDialog();
 	
 protected:
 	void closeEvent(QCloseEvent *evt);
@@ -137,6 +137,7 @@ private:
 	UpDbThread *upDbTh;
 	QStringList buildTargets;
 	QList<QAction *> systrayAct;
+	QStringList installedMakeDepends;
 	
 	bool upActive;
 	bool revActive;

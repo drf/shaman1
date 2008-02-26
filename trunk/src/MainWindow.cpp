@@ -141,13 +141,11 @@ void MainWindow::setupSystray()
 	
 	//Add actions here ;)
 	systray->setContextMenu(systrayMenu);
-	systray->setToolTip(QString(tr("qtPacman - Idle")));
+	systray->setToolTip(QString(tr("Shaman - Idle")));
 	
 	connect(aHandle, SIGNAL(transactionStarted()), SLOT(disableTrayActions()));
 	connect(aHandle, SIGNAL(transactionReleased()), SLOT(enableTrayActions()));
-	
-	disableTrayActions();
-		
+			
 	QSettings *settings = new QSettings();
 		
 	if(settings->value("scheduledUpdate/enabled").toBool())
@@ -181,8 +179,8 @@ void MainWindow::closeEvent(QCloseEvent *evt)
 		QDialogButtonBox *but = new QDialogButtonBox(dlog);
 		QVBoxLayout *lay = new QVBoxLayout();
 		
-		lbl->setText(QString(tr("qtPacman will keep running in the system tray.\nTo close it, click Quit in the file menu "
-				"or in the tray icon context menu.\nWhile in the System Tray, qtPacman will update your Databases\nat a regular"
+		lbl->setText(QString(tr("Shaman will keep running in the system tray.\nTo close it, click Quit in the file menu "
+				"or in the tray icon context menu.\nWhile in the System Tray, Shaman will update your Databases\nat a regular"
 				" interval and notify you about available upgrades.\nYou can change this behaviour in Settings.")));
 		cbx->setText(QString(tr("Don't show this Again")));
 		cbx->setChecked(false);
@@ -191,7 +189,7 @@ void MainWindow::closeEvent(QCloseEvent *evt)
 		lay->addWidget(cbx);
 		lay->addWidget(but);
 		dlog->setLayout(lay);
-		dlog->setWindowTitle(QString(tr("qtPacman")));
+		dlog->setWindowTitle(QString(tr("Shaman - Reducing To Tray")));
 		dlog->setWindowModality(Qt::ApplicationModal);
 		connect(but, SIGNAL(accepted()), dlog, SLOT(accept()));
 		
@@ -326,7 +324,7 @@ bool MainWindow::populatePackagesView()
 	if(!upgrds.isEmpty())
 	{
 		systray->setIcon(QIcon(":/Icons/icons/view-refresh.png"));
-		systray->setToolTip(QString(tr("qtPacman - Idle (Upgrades Available)")));
+		systray->setToolTip(QString(tr("Shaman - Idle (Upgrades Available)")));
 		systray->showMessage(QString(tr("System Upgrade")), QString(upgrds.size() == 1 ? tr("There is %1 upgradeable package.\n"
 				"Click here to upgrade your System.") :	tr("There are %1 upgradeable packages.\nClick here to upgrade your System.")).
 				arg(upgrds.size()));
@@ -681,7 +679,7 @@ void MainWindow::doDbUpdate()
 	dbdialog->doAction();
 
 	systray->setIcon(QIcon(":/Icons/icons/edit-redo.png"));
-	systray->setToolTip(QString(tr("qtPacman - Processing")));
+	systray->setToolTip(QString(tr("Shaman - Processing")));
 }
 
 void MainWindow::finishDbUpdate()
@@ -719,7 +717,7 @@ void MainWindow::finishDbUpdate()
 	dbdialog->deleteLater();
 
 	systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
-	systray->setToolTip(QString(tr("qtPacman - Idle")));
+	systray->setToolTip(QString(tr("Shaman - Idle")));
 	
 	dbdialog = NULL;
 }
@@ -1028,7 +1026,7 @@ void MainWindow::startUpgrading()
 	dbdialog->deleteLater();
 
 	systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
-	systray->setToolTip(QString(tr("qtPacman - Idle")));
+	systray->setToolTip(QString(tr("Shaman - Idle")));
 
 	if(aHandle->getUpgradeablePackages().isEmpty())
 	{
@@ -1072,7 +1070,7 @@ void MainWindow::upgradeAborted()
 	upDl->deleteLater();
 	upActive = false;
 	systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
-	systray->setToolTip(QString(tr("qtPacman - Idle")));
+	systray->setToolTip(QString(tr("Shaman - Idle")));
 }
 
 void MainWindow::addUpgradeableToQueue()
@@ -1105,7 +1103,7 @@ void MainWindow::fullSysUpgrade()
 	dbdialog->doAction();
 
 	systray->setIcon(QIcon(":/Icons/icons/edit-redo.png"));
-	systray->setToolTip(QString(tr("qtPacman - Processing")));
+	systray->setToolTip(QString(tr("Shaman - Processing")));
 }
 
 void MainWindow::upgradePackage()
@@ -1139,6 +1137,8 @@ void MainWindow::processQueue()
 	connect(queueDl, SIGNAL(terminated(bool)), SLOT(queueProcessingEnded(bool)));
 
 	queueDl->startProcessing();
+	
+	queueDl->show();
 
 	if(revActive)
 		if(qUi->trayBox->isChecked())
@@ -1147,11 +1147,9 @@ void MainWindow::processQueue()
 			hide();
 			queueDl->hide();
 		}
-		else
-			queueDl->show();
 
 	systray->setIcon(QIcon(":/Icons/icons/edit-redo.png"));
-	systray->setToolTip(QString(tr("qtPacman - Processing")));
+	systray->setToolTip(QString(tr("Shaman - Processing")));
 
 	if(upActive)
 		upDl->deleteLater();
@@ -1194,7 +1192,7 @@ void MainWindow::queueProcessingEnded(bool errors)
 	queueDl = NULL;
 
 	systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
-	systray->setToolTip(QString(tr("qtPacman - Idle")));
+	systray->setToolTip(QString(tr("Shaman - Idle")));
 }
 
 void MainWindow::widgetQueueToAlpmQueue()
@@ -1328,7 +1326,7 @@ void MainWindow::dbUpdateTray()
 	 */
 	// TODO: App Icon, where are you?
 	systray->setIcon(QIcon(":/Icons/icons/edit-redo.png"));
-	systray->setToolTip(QString(tr("qtPacman - Processing")));
+	systray->setToolTip(QString(tr("Shaman - Processing")));
 	
 	upDbTh = new UpDbThread(aHandle);
 	connect(upDbTh, SIGNAL(finished()), SLOT(dbUpdateTrayFinished()));
@@ -1359,7 +1357,7 @@ void MainWindow::dbUpdateTrayFinished()
 			QSettings *settings = new QSettings();
 
 			systray->setIcon(QIcon(":/Icons/icons/view-refresh.png"));
-			systray->setToolTip(QString(tr("qtPacman - Idle (Upgrades Available)")));
+			systray->setToolTip(QString(tr("Shaman - Idle (Upgrades Available)")));
 			if(settings->value("scheduledUpdate/notifyUpgrades").toBool())
 				systray->showMessage(QString(tr("System Upgrade")), QString(list.size() == 1 ? tr("There is %1 upgradeable package.\n"
 						"Click here to upgrade your System.") :	tr("There are %1 upgradeable packages.\nClick here to upgrade your System.")).
@@ -1372,7 +1370,7 @@ void MainWindow::dbUpdateTrayFinished()
 	else
 	{
 		systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
-		systray->setToolTip(QString(tr("qtPacman - Idle")));
+		systray->setToolTip(QString(tr("Shaman - Idle")));
 	}
 
 	delete(upDbTh);
@@ -1477,7 +1475,7 @@ void MainWindow::updateABSTree()
 
 		msgBox->setWindowModality(Qt::ApplicationModal);
 
-		msgBox->setText(QString(tr("You need to have ABS installed to use qtPacman's\nbuilding feature. Do you want to install it now?")));
+		msgBox->setText(QString(tr("You need to have ABS installed to use Shaman's\nbuilding feature. Do you want to install it now?")));
 
 		switch (msgBox->exec()) {
 		case QMessageBox::Yes:
@@ -1517,7 +1515,7 @@ void MainWindow::validateSourceQueue()
 
 		msgBox->setWindowModality(Qt::ApplicationModal);
 
-		msgBox->setText(QString(tr("You need to have ABS installed to use qtPacman's\nbuilding feature. Do you want to install it now?")));
+		msgBox->setText(QString(tr("You need to have ABS installed to use Shaman's\nbuilding feature. Do you want to install it now?")));
 
 		switch (msgBox->exec()) {
 		case QMessageBox::Yes:
@@ -1559,7 +1557,7 @@ void MainWindow::validateSourceQueue()
 				&& itm->text(5).compare("unstable") && itm->text(5).compare("testing"))
 		{
 			QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), QString(tr("Some of your packages do not belong to Arch\n"
-					"Linux's official repository. qtPacman is able to\nbuild packages from official sources only.")), QMessageBox::Ok, this);
+					"Linux's official repository. Shaman is able to\nbuild packages from official sources only.")), QMessageBox::Ok, this);
 
 			message->exec();
 
@@ -1574,7 +1572,7 @@ void MainWindow::validateSourceQueue()
 				&& itm->text(5).compare("unstable") && itm->text(5).compare("testing"))
 		{
 			QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), QString(tr("Some of your packages do not belong to Arch\n"
-					"Linux's official repository. qtPacman is able to\nbuild packages from official sources only.")), QMessageBox::Ok, this);
+					"Linux's official repository. Shaman is able to\nbuild packages from official sources only.")), QMessageBox::Ok, this);
 
 			message->exec();
 
@@ -1669,6 +1667,12 @@ void MainWindow::startSourceProcessing()
 		return;
 	}
 	
+	if(queueDl != NULL)
+	{
+		queueDl->deleteLater();
+		queueDl = NULL;
+	}
+	
 	buildDialog = new BuildingDialog(aHandle, this);
 	connect(buildDialog, SIGNAL(nullifyPointer()), SLOT(nullifyBDialog()));
 	
@@ -1722,7 +1726,7 @@ void MainWindow::finishedBuilding(int failure, QStringList targets)
 		buildDialog->buildingLabel->setText(QString());
 
 		systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
-		systray->setToolTip(QString(tr("qtPacman - Idle")));
+		systray->setToolTip(QString(tr("Shaman - Idle")));
 		return;	
 	}
 	else if(failure == 1)
@@ -1750,7 +1754,7 @@ void MainWindow::finishedBuilding(int failure, QStringList targets)
 			disconnect(buildDialog->abortButton, SIGNAL(clicked()), buildDialog, SLOT(abortProcess()));
 			connect(buildDialog->abortButton, SIGNAL(clicked()), buildDialog, SLOT(deleteLater()));
 			systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
-			systray->setToolTip(QString(tr("qtPacman - Idle")));
+			systray->setToolTip(QString(tr("Shaman - Idle")));
 			break;
 		default:
 			// should never be reached
@@ -1789,11 +1793,35 @@ void MainWindow::finishedBuilding(int failure, QStringList targets)
 void MainWindow::processBuiltPackages()
 {
 	buildDialog->deleteLater();
+	
+	if(!installedMakeDepends.isEmpty())
+	{
+		/* Huh, we installed something just to compile the package. Let's 
+		 * see if the user wants installed makedepends to be immediately
+		 * removed, otherwise we just skip this part.
+		 */
 
-	aHandle->initQueue(false, false, true);
+		QSettings *settings = new QSettings();
+
+		if(settings->value("absbuilding/clearmakedepends").toBool())
+		{
+			/* Ok, let's cleanup then. We just need a special queue, so we
+			 * can remove just the stuff that is requesting our list.
+			 */
+
+			aHandle->initQueue(true, false, true);
+
+			foreach(QString rmv, installedMakeDepends)
+				aHandle->addRemoveToQueue(rmv);
+		}
+	}
+	else
+		aHandle->initQueue(false, false, true);
 
 	foreach(QString pac, buildTargets)
-	aHandle->addFFToQueue(pac);
+		aHandle->addFFToQueue(pac);
+	
+	installedMakeDepends.clear();
 
 	processQueue();
 }
@@ -1823,7 +1851,7 @@ void MainWindow::processBuildWizard()
 	{
 		foreach(QString mkdp, ABSHandler::getMakeDepends(pkg))
 		{
-			if(!aHandle->isInstalled(mkdp))
+			if(!aHandle->isInstalled(mkdp) && !pkgList.contains(mkdp, Qt::CaseInsensitive))
 				//Add to binary queue
 			{ 
 				qDebug() << "Makedepend is missing: " << mkdp;
@@ -1847,6 +1875,36 @@ void MainWindow::processBuildWizard()
 		
 		revBuildUi->depsWizardBox->setChecked(false);
 		startSourceProcessing();
+	}
+	else
+	{
+		/* So, it turns out that we need to install some packages first.
+		 * We'll start a special Queue, and when it ends, compilation will
+		 * be immediately triggered. We also need to set up a cleanup
+		 * Queue, to remove makedepends installed.
+		 */
+
+		aHandle->initQueue(false, true, false);
+		
+		installedMakeDepends = depsList;
+
+		foreach(QString syn, binaryList)
+			aHandle->addSyncToQueue(syn);
+
+		foreach(QString syn, depsList)
+			aHandle->addSyncToQueue(syn);
+
+		queueDl = new QueueDialog(aHandle, this);
+
+		connect(queueDl, SIGNAL(terminated(bool)), SLOT(startSourceProcessing()));
+
+		queueDl->startProcessing();
+
+		queueDl->show();
+
+		systray->setIcon(QIcon(":/Icons/icons/edit-redo.png"));
+		systray->setToolTip(QString(tr("Shaman - Processing")));
+
 	}
 	
 }
@@ -1882,4 +1940,9 @@ void MainWindow::reduceBuildingInTray()
 {
 	buildDialog->hide();
 	hide();
+}
+
+void MainWindow::nullifyBDialog()
+{
+	buildDialog = NULL;
 }

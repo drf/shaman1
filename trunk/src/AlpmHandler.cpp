@@ -266,7 +266,7 @@ bool AlpmHandler::reloadPacmanConfiguration()
 	PacmanConf pdata;
 
 	/* After reloading configuration, we immediately commit changes to Alpm,
-	 * otherwise users would have to reboot qtPacman. You know, we're not
+	 * otherwise users would have to reboot Shaman. You know, we're not
 	 * Windows, right?
 	 */
 	

@@ -44,7 +44,7 @@ static void cleanup(int signum)
 	else if((signum == SIGINT)) 
 	{
 		if(alpm_trans_interrupt() == 0)
-			/* a transaction is being interrupted, don't exit qtPacman yet. */
+			/* a transaction is being interrupted, don't exit Shaman yet. */
 			return;
 
 		/* no committing transaction, we can release it now and then exit pacman */
@@ -67,14 +67,14 @@ int main(int argc, char **argv)
 
 	QApplication app(argc, argv, QApplication::GuiClient);
 
-	QCoreApplication::setOrganizationName("qtPacman");
+	QCoreApplication::setOrganizationName("shaman");
 	QCoreApplication::setOrganizationDomain("qtpacman.iskremblien.org");
-	QCoreApplication::setApplicationName("qtPacman");
+	QCoreApplication::setApplicationName("shaman");
 
 	if(myuid > 0)
 	{
-		QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("qtPacman", "Hey! "
-				"If you're reading this, first of all thanks for helping us in making qtPacman better. "
+		QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("Shaman", "Hey! "
+				"If you're reading this, first of all thanks for helping us in making Shaman better. "
 				"There are not many comments unless where needed, since all the strings are pretty self-explanatory. "
 				"You'll see a lot of HTML in some cases: don't let that scare you, but please edit text only. Editing "
 				"HTML tags too may break our layout, so be careful. A good practice could be copying the whole string, "
@@ -82,7 +82,7 @@ int main(int argc, char **argv)
 				"If you have any doubts, or if you just want to drop us a line, there goes our email addresses:\n"
 				"Dario: drf54321@gmail.com\nLukas: l.appelhans@gmx.de\n"
 				"Thanks again, and enjoy your translation!"), 
-				QObject::tr("You have to be root to run qtPacman.\nPlease restart it with root privileges."), QMessageBox::Ok);
+				QObject::tr("You have to be root to run Shaman.\nPlease restart it with root privileges."), QMessageBox::Ok);
 
 		message->show();
 
@@ -93,11 +93,8 @@ int main(int argc, char **argv)
 
 	if(!aHandler->testLibrary())
 	{
-		/* TODO: Give the dialog the 
-		 * ability to clean up pacman cache?
-		 */
-
-		QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("qtPacman"), QObject::tr("There was a problem while testing libalpm.\nMaybe another application has a lock on it."), QMessageBox::Ok);
+		QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("Shaman"), QObject::tr("There was a problem"
+				" while testing libalpm.\nMaybe another application has a lock on it."), QMessageBox::Ok);
 
 		message->show();
 
@@ -116,7 +113,7 @@ int main(int argc, char **argv)
 	if(settings->value("gui/startupmode").toString() == 0)
 	{
 		/* Whoa! This probably means that this is either the first time we
-		 * start qtPacman, or the config file has gone. In both cases,
+		 * start Shaman, or the config file has gone. In both cases,
 		 * let's create some reasonable defaults. And let's backup
 		 * pacman.conf too, our parser simply destroys all commented
 		 * lines.
@@ -128,11 +125,12 @@ int main(int argc, char **argv)
 		settings->setValue("scheduledUpdate/enabled", true);
 		settings->setValue("scheduledUpdate/interval", 10);
 		settings->setValue("scheduledUpdate/notifyUpgrades", true);
+		settings->setValue("absbuilding/clearmakedepends", true);
 	}
 	
 	if(settings->value("absbuilding/buildpath").toString() == 0 || !settings->contains("absbuilding/buildpath"))
 		// This can be dangerous, so set it properly
-		settings->setValue("absbuilding/buildpath", "/var/qtpacman/builds");
+		settings->setValue("absbuilding/buildpath", "/var/shaman/builds");
 	
 	settings->deleteLater();
 

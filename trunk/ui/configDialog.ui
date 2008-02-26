@@ -10,7 +10,7 @@
    </rect>
   </property>
   <property name="windowTitle" >
-   <string>qtPacman - Configuration</string>
+   <string>Shaman - Configuration</string>
   </property>
   <property name="windowIcon" >
    <iconset/>
@@ -280,7 +280,7 @@
        <item row="1" column="0" >
         <widget class="QTabWidget" name="repoTab" >
          <property name="currentIndex" >
-          <number>0</number>
+          <number>2</number>
          </property>
          <widget class="QWidget" name="officialTab" >
           <attribute name="title" >
@@ -441,7 +441,7 @@ of KDE with the simplicity and the power of Arch.</string>
               <widget class="QLabel" name="thirdPartyLabel" >
                <property name="text" >
                 <string>You can extend your packages choice by adding other repositories. Third-Party 
-Repositories act just as normal ones, and will be accessible through both qtPacman
+Repositories act just as normal ones, and will be accessible through both Shaman
 and Pacman.</string>
                </property>
               </widget>
