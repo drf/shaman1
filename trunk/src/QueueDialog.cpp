@@ -270,8 +270,8 @@ void QueueDialog::updateProgressBar(pmtransprog_t event, char *pkgname, int perc
 	if(progressBar->value() != remain)
 	{
 		progressBar->setFormat("%p%");
-		progressBar->setRange(0,howmany);
-		progressBar->setValue(remain);
+		progressBar->setRange(0,100);
+		progressBar->setValue((remain / howmany) * 100);
 	}
 }
 
