@@ -5,6 +5,11 @@ GUI:
 		*Reimplement QSortFilterProxyModel and reimplement filterAcceptsRow(...) for advanced-searching (f.e. only core-packages and search for kdegraphics)
 		*Use a QTreeView for the Graphical-stuff
 
+	MainWindow:
+		*Manage graphical things
+		*Manage model
+		*handle search request and drop it to the sortfilterproxymodel
+
 	Misc:
 		*Move the QDockWidgets to separate classes, with a Package as parameter
 
@@ -34,3 +39,14 @@ Core:
 	Database-class:
 		*list<Package*> getAllPackages();
 		*list<Package*> getAllPackagesWithActions(); (<--better name would be nicer :P)
+
+
+All classes:
+	*MainWindow (QMainWindow)
+	*PackageModel (QAbstractItemModel)
+	*PackageView (QTreeView)
+	*PackageSortFilterProxyModel (QSortFilterProxyModel)
+	*PackageInformation (QDockWidget)
+	*RepoDock (QDockWidget)
+	*Package
+	*Database
