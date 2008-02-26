@@ -154,8 +154,6 @@ void CallBacks::cb_trans_conv(pmtransconv_t event, void *data1, void *data2,
 void CallBacks::cb_trans_progress(pmtransprog_t event, const char *pkgname, int percent,
 		int howmany, int remain)
 {
-	mutex.lock();
-	printf("LockedTP\n");
 	float timediff = 0.0;
 
 	if(percent == 0) 
@@ -175,9 +173,6 @@ void CallBacks::cb_trans_progress(pmtransprog_t event, const char *pkgname, int 
 		return;
 
 	emit streamTransProgress(event, (char *)pkgname, percent, howmany, remain);
-	
-	mutex.unlock();
-	printf("UnLockedTP\n");
 }
 
 void CallBacks::cb_dl_progress(const char *filename, int file_xfered, int file_total,
@@ -249,7 +244,7 @@ void cb_dl_progress(const char *filename, int file_xfered, int file_total,
 void cb_trans_progress(pmtransprog_t event, const char *pkgname, int percent,
 		int howmany, int remain)
 {
-	//CbackReference.cb_trans_progress(event,pkgname,percent,howmany,remain);
+	CbackReference.cb_trans_progress(event,pkgname,percent,howmany,remain);
 }
 
 void cb_trans_conv(pmtransconv_t event, void *data1, void *data2,

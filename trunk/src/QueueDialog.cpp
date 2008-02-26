@@ -265,12 +265,13 @@ void QueueDialog::updateProgressBar(pmtransprog_t event, char *pkgname, int perc
 	Q_UNUSED(pkgname);
 	Q_UNUSED(event);
 	Q_UNUSED(percent);
-	
-	progressBar->setFormat("%p%");
-	progressBar->setRange(0, remain);
-	progressBar->setValue(howmany);
-	
-	return;
+	 
+	if(progressBar->value() != remain)
+	{
+		progressBar->setFormat("%p%");
+		progressBar->setRange(0,howmany);
+		progressBar->setValue(remain);
+	}
 }
 
 void QueueDialog::startDownload()
