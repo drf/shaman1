@@ -1913,13 +1913,13 @@ QString MainWindow::formatSize(unsigned long size)
 {
 	QString s;
 	if (size > 1024 * 1024 * 1024)
-		s = tr("%n GiB", "Size is in Gib", size / (1024 *1024 * 1024));
+		s = tr("%1 GiB", "Size is in Gib").arg((double) size / (1024 *1024 * 1024), 0, 'f', 2);
 	else if (size > 1024 * 1024)
-		s = tr("%n MiB", "Size is in MiB", size / (1024 * 1024));
+		s = tr("%1 MiB", "Size is in MiB").arg((double) size / (1024 * 1024), 0, 'f', 2);
 	else if (size > 1024)
-		s = tr("%n KiB", "Size is in KiB", size / 1024);
+		s = tr("%1 KiB", "Size is in KiB").arg(size / 1024);
 	else
-		s = tr("%n Bytes", "Size is in Bytes", size);
+		s = tr("%1 Bytes", "Size is in Bytes").arg(size);
 	
 	return s;
 }
