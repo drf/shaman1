@@ -777,6 +777,8 @@ void MainWindow::showRepoViewContextMenu()
 	QMenu *menu = new QMenu(this);
 	QAction *installAction = menu->addAction(QIcon(":/Icons/icons/list-add.png"), tr("Mark all for installation"));
 	connect(installAction, SIGNAL(triggered()), SLOT(installAllRepoPackages()));
+	QAction *reinstallAction = menu->addAction(QIcon(":/Icons/icons/list-add.png"), tr("Mark all for reinstallation"));
+	connect(reinstallAction, SIGNAL(triggered()), SLOT(reinstallAllRepoPackages()));
 	QAction *removeAction = menu->addAction(QIcon(":/Icons/icons/list-remove.png"), tr("Mark all for removal"));
 	connect(removeAction, SIGNAL(triggered()), SLOT(removeAllRepoPackages()));
 	QAction *cancelAction = menu->addAction(QIcon(":/Icons/icons/edit-delete.png"), tr("Cancel all actions"));
@@ -819,6 +821,35 @@ void MainWindow::installAllRepoPackages()
 		foreach (QTreeWidgetItem *item, pkgsViewWG->findItems(repoList->selectedItems().first()->text(), Qt::MatchExactly, 5))
 		{
 			installPackage(item->text(1));
+		}
+	}
+}
+
+void MainWindow::reinstallAllRepoPackages()
+{
+	qDebug() << "InstallAllRepoPackages";
+	if (repoList->selectedItems().isEmpty())
+		return;
+	qDebug() << "InstallAllRepoPackages1";
+
+	if (!repoList->findItems(tr("All Groups"), Qt::MatchExactly).isEmpty())
+	{
+		QString tmp = repoList->selectedItems().first()->text();
+		tmp.append(" ");
+		tmp.prepend(" ");
+		qDebug() << "Hehe";
+		foreach (QTreeWidgetItem *item, pkgsViewWG->findItems(tmp, (Qt::MatchFlags)Qt::MatchContains, 6))
+		{
+			if (aHandle->isInstalled(item->text(1)))
+				reinstallPackage(item->text(1));
+		}
+	}
+	else
+	{
+		foreach (QTreeWidgetItem *item, pkgsViewWG->findItems(repoList->selectedItems().first()->text(), Qt::MatchExactly, 5))
+		{
+			if (aHandle->isInstalled(item->text(1)))
+				reinstallPackage(item->text(1));
 		}
 	}
 }
@@ -885,11 +916,32 @@ void MainWindow::reinstallPackage()
 	qDebug() << "Install Package";
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
 	{
-		item->setText(8, tr("Install"));
-		item->setIcon(2, QIcon(":/Icons/icons/list-add.png"));
+		reinstallPackage(item->text(1));
 	}
 
 	itemChanged();
+}
+
+void MainWindow::reinstallPackage(const QString &package)
+{
+	if (pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 1).isEmpty())
+	{
+		qDebug() << "Can't find package: " + package;
+		return;
+	}
+	QTreeWidgetItem *item = pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 1).first();
+
+	qDebug() << item->text(1);
+	if (aHandle->isProviderInstalled(package))
+		return;
+	
+	if (item->text(8) == tr("Install"))
+		return;
+	else
+	{
+		item->setText(8, tr("Install"));
+		item->setIcon(2, QIcon(":/Icons/icons/list-add.png"));
+	}
 }
 
 void MainWindow::installPackage(const QString &package)

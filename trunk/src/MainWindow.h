@@ -106,12 +106,14 @@ private slots:
 	void showAboutDialog();
 	void systrayActivated(QSystemTrayIcon::ActivationReason reason);
 	void installAllRepoPackages();
+	void reinstallAllRepoPackages();
 	void removeAllRepoPackages();
 	void cancelAllRepoActions();
 	void cancelAllActions();
 	
 private:
 	void installPackage(const QString &package);
+	void reinstallPackage(const QString &package);
 	void removePackage(const QString &package);
 	void loadDbUpdateDialog();
 	void removeDbUpdateDialog();
