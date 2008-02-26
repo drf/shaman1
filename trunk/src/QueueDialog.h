@@ -58,9 +58,10 @@ public slots:
 	void startDownload();
 	void startProcess();
 	void cleanup();
-	bool runScriptlet(int action, pmpkg_t *package);
+	bool runScriptlet(int action, pmpkg_t *package, pmpkg_t *pkg2);
 	void handleScriptletEnding(int eC, QProcess::ExitStatus estat);
 	void writeLineProgress();
+	void writeLineProgressErr();
 	
 private:
 	bool unpackPkg(const QString &pathToPkg, const QString &pathToEx, const QString &file);
