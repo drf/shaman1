@@ -1,5 +1,25 @@
 PROJECT(shaman)
 CMAKE_MINIMUM_REQUIRED(VERSION 2.4.0)
+set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules")
+
+MACRO (MACRO_OPTIONAL_FIND_PACKAGE _name )
+   OPTION(WITH_${_name} "Search for ${_name} package" ON)
+   if (WITH_${_name})
+      FIND_PACKAGE(${_name} ${ARGN})
+   else (WITH_${_name})
+      set(${_name}_FOUND)
+      set(${_name}_INCLUDE_DIR)
+      set(${_name}_INCLUDES)
+      set(${_name}_LIBRARY)
+      set(${_name}_LIBRARIES)
+   endif (WITH_${_name})
+ENDMACRO (MACRO_OPTIONAL_FIND_PACKAGE)
+
+macro_optional_find_package(Plasma)
+
+if (PLASMA_FOUND)
+    add_subdirectory(plasma)
+endif(PLASMA_FOUND)
 
 SET(shaman_SRCS
     src/main.cpp
