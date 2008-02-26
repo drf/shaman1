@@ -28,6 +28,7 @@
 #include <QMutexLocker>
 #include <QDebug>
 #include <QProcess>
+#include <QFile>
 #include <alpm.h>
 #include <fcntl.h>
 
@@ -368,7 +369,19 @@ bool QueueDialog::runScriptlet(int action, pmpkg_t *package, pmpkg_t *pkg2)
 	pkgpath.append("-");
 	pkgpath.append(alpm_pkg_get_version(package));
 	pkgpath.append("-");
-	pkgpath.append(alpm_pkg_get_arch(package));
+	
+	if(alpm_pkg_get_arch(package) == NULL)
+	{
+		QString strtmp = pkgpath;
+		strtmp.append("i686.pkg.tar.gz");
+		if(QFile::exists(strtmp))
+			pkgpath.append("i686");
+		else
+			pkgpath.append("x86_64");
+	}
+	else
+		pkgpath.append(alpm_pkg_get_arch(package));
+	
 	pkgpath.append(".pkg.tar.gz");
 
 	qDebug() << "Extracting:" << pkgpath;
