@@ -23,7 +23,8 @@ find_library(PLASMA_LIBS NAMES plasma
         PATHS
         ${LIB_INSTALL_DIR}
 )
-
+message(STATUS "Plasma Lib Dir:"  ${PLASMA_INCLUDE_DIR})
+message(STATUS "Plasma Include Dir:" ${PLASMA_LIBS})
 include(FindPackageHandleStandardArgs)
 FIND_PACKAGE_HANDLE_STANDARD_ARGS(Plasma DEFAULT_MSG PLASMA_LIBS PLASMA_INCLUDE_DIR )
 
