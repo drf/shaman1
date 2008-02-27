@@ -244,7 +244,6 @@ bool AlpmHandler::updateDatabase()
 		
 		else
 		{
-			printf("updated");
 			emit dbUpdated();
 			emit streamDbUpdatingStatus((char *)alpm_db_get_name(dbcrnt), 3);
 		}
@@ -255,7 +254,9 @@ bool AlpmHandler::updateDatabase()
 	}
 
 	if(!releaseTransaction())
-		printf("azzo");
+		qDebug() << "Failed to release transaction!!";
+	
+	qDebug() << "Database Update Performed";
 
 	return updated;
 
