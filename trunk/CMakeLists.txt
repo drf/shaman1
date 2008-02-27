@@ -129,11 +129,6 @@ QT4_ADD_RESOURCES (qtsourceview_RC_SRCS  ${shaman_RESOUCES})
 QT4_WRAP_UI(shaman_UIS_H ${shaman_UIS})
 QT4_AUTOMOC(${shaman_SRCS})
 
-#ADD_DEFINITIONS(
-#    -lalpm
-#    ${QT_DEFINITIONS}
-#)
-
 INCLUDE_DIRECTORIES(
     ${QT_INCLUDES}
     ${CMAKE_BINARY_DIR}
