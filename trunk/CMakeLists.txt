@@ -148,6 +148,7 @@ TARGET_LINK_LIBRARIES(shaman
     -lalpm
     -larchive
 )
+
 #FILE(GLOB helpfiles "${CMAKE_CURRENT_SOURCE_DIR}/help/*.png")
 #INSTALL(FILES ${helpfiles} DESTINATION share/shaman/help)
 
