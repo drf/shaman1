@@ -1713,16 +1713,15 @@ void MainWindow::openPBuildDialog()
 
 void MainWindow::startSourceProcessing()
 {
-	if(revBuildUi->depsWizardBox->isChecked())
-	{
-		processBuildWizard();
-		return;
-	}
-	
 	if(queueDl != NULL)
 	{
 		queueDl->deleteLater();
 		queueDl = NULL;
+	}
+	else if(revBuildUi->depsWizardBox->isChecked())
+	{
+		processBuildWizard();
+		return;
 	}
 	
 	buildDialog = new BuildingDialog(aHandle, this);
