@@ -593,31 +593,17 @@ bool QueueDialog::unpackPkg(const QString &pathToPkg, const QString &pathToEx, c
 	struct archive *_archive;
 	struct archive_entry *entry;
 	char expath[4096];
-	
-	/* Ops */
-	char *ptPkg = (char *)malloc(strlen(pathToPkg.toAscii().data()) * sizeof(char));
-	strcpy(ptPkg, pathToPkg.toAscii().data());
-	char *ptEx = (char *)malloc(strlen(pathToEx.toAscii().data()) * sizeof(char)); 
-	strcpy(ptEx, pathToEx.toAscii().data());
-	char *fn = (char *)malloc(strlen(file.toAscii().data()) * sizeof(char));
-	strcpy(fn, file.toAscii().data());
 
 	if((_archive = archive_read_new()) == NULL)
 	{
-		free(ptPkg);
-		free(ptEx);
-		free(fn);
 		return false;
 	}
 
 	archive_read_support_compression_all(_archive);
 	archive_read_support_format_all(_archive);
 
-	if(archive_read_open_filename(_archive, ptPkg, ARCHIVE_DEFAULT_BYTES_PER_BLOCK) != ARCHIVE_OK)
+	if(archive_read_open_filename(_archive, pathToPkg.toAscii().data(), ARCHIVE_DEFAULT_BYTES_PER_BLOCK) != ARCHIVE_OK)
 	{
-		free(ptPkg);
-		free(ptEx);
-		free(fn);
 		return false;
 	}
 
@@ -636,23 +622,20 @@ bool QueueDialog::unpackPkg(const QString &pathToPkg, const QString &pathToEx, c
 		else if(S_ISDIR(st->st_mode))
 			archive_entry_set_mode(entry, 0755);
 
-		if(fn && strcmp(fn, entryname)) 
+		if(file.toAscii().data() && strcmp(file.toAscii().data(), entryname)) 
 		{
 			if (archive_read_data_skip(_archive) != ARCHIVE_OK) 
 			{
 				umask(oldmask);
 				archive_read_finish(_archive);
 				qDebug() << "Skipping Data Failed";
-				free(ptPkg);
-				free(ptEx);
-				free(fn);
 				return false;
 			}
 			
 			continue;
 		}
 		
-		snprintf(expath, PATH_MAX, "%s/%s", ptEx, entryname);
+		snprintf(expath, PATH_MAX, "%s/%s", pathToEx.toAscii().data(), entryname);
 		archive_entry_set_pathname(entry, expath);
 
 		int readret = archive_read_extract(_archive, entry, 0);
@@ -666,21 +649,15 @@ bool QueueDialog::unpackPkg(const QString &pathToPkg, const QString &pathToEx, c
 			qDebug() << "Could not extract " << entryname << " (" << archive_error_string(_archive) << ")";
 			umask(oldmask);
 			archive_read_finish(_archive);
-			free(ptPkg);
-			free(ptEx);
-			free(fn);
 			return false;
 		}
 
-		if(fn)
+		if(file.toAscii().data())
 			break;
 	}
 
 	umask(oldmask);
 	archive_read_finish(_archive);
-	free(ptPkg);
-	free(ptEx);
-	free(fn);
 	return true;
 }
 
