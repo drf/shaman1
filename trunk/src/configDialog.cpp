@@ -42,6 +42,7 @@ upDb(false)
 	setupGeneral();
 	setupPacman();
 	setupRepos();
+        setupABS();
 	connect(listWidget, SIGNAL(currentRowChanged(int)), this, SLOT(changeWidget(int)));
 	connect(this, SIGNAL(accepted()), SLOT(saveConfiguration()));
 }
@@ -219,6 +220,11 @@ void ConfigDialog::setupPacman()
 	xFerCommandLine->setText((char *)alpm_option_get_xfercommand());
 	tmpStr = "";
 
+}
+
+void ConfigDialog::setupABS()
+{
+	listWidget->insertItem(3, new QListWidgetItem(QIcon(":/Icons/icons/network-server-database.png"), tr("ABS")));//FIXME: Replace icon
 }
 
 void ConfigDialog::openAddDialog()

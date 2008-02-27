@@ -72,6 +72,7 @@ private:
 	void setupRepos();
 	void setupGeneral();
 	void setupPacman();
+	void setupABS();
 	QStringList getMirrorList();
 
 private:
