@@ -594,6 +594,7 @@ bool QueueDialog::unpackPkg(const QString &pathToPkg, const QString &pathToEx, c
 	struct archive_entry *entry;
 	char expath[4096];
 	
+	/* Ops */
 	char *ptPkg = (char *)malloc(strlen(pathToPkg.toAscii().data()) * sizeof(char));
 	strcpy(ptPkg, pathToPkg.toAscii().data());
 	char *ptEx = (char *)malloc(strlen(pathToEx.toAscii().data()) * sizeof(char)); 
