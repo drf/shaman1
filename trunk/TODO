@@ -2,34 +2,20 @@ TODO-List for qtPacman
 
 
 ***********Core***************
-#Basic-functionality (installing, removing packages) *almost done* *prio* --> done? yeah :)
 Dbus-Engine *prio*
 Plasma-Data-Engine *prio*
 Implement Error Handling *prio in critical cases such as Queue Processing*
-#Implement Interface Configuration (XML?) QSettings, done :)
-#Implement Queue *prio* ---> done!
-#Implement Question Handling  ---> done? done :)
-#Throw all relevant packages informations into the QTreeWidgetItem (missing now: installed and dependencies)--->Depencies are not soo good I think, they're 
-													      shown in PkgInfos, which is much better IMO
-													      done :)
-
 
 
 ***********GUI**************
 More icons
-#Splitter-positioning is a bit bad at the moment ---> done, we switched to QDockWidgets
 Same with QTreeWidgetItem-columns ;) *prio*
 Add a clear button in the searchbar, something like kickoff's one, if possible :)
 Complete PkgDetails *prio* ---> Needed: size
 All action-button-actions in context-menu *prio*
-#Connect all buttons to actions --> done!
 Configuration-dialog *prio*
 System-Tray-Icon *prio* --->Mostly done, only a few missing things (change icon, if there are upgradeable packages) We need to redesign it...
-#Implement ComboBox (depends on Queue implementation and added info to pkgs) --> done!
 Plasmoid *prio*
-#Improve Package Information Dialog ---> done!
-Add dynamic Icons to packages (icon for action, icon for upgradeable, installed, not installed) done, but needs better icons
-#Add dynamic Icons to QueueDialog (f.e.: add a green "v" for completed operation, a red "x" if errors occourred) done :)
 
 
 ********Things to check before the alpha************
