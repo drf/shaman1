@@ -5,8 +5,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>754</width>
-    <height>528</height>
+    <width>825</width>
+    <height>607</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -78,73 +78,210 @@
       </sizepolicy>
      </property>
      <property name="currentIndex" >
-      <number>0</number>
+      <number>3</number>
      </property>
      <widget class="QWidget" name="Seite" >
-      <widget class="QGroupBox" name="groupBox" >
-       <property name="geometry" >
-        <rect>
-         <x>4</x>
-         <y>4</y>
-         <width>614</width>
-         <height>321</height>
-        </rect>
-       </property>
-       <property name="title" >
-        <string>Maintenance</string>
-       </property>
-       <widget class="QWidget" name="" >
-        <property name="geometry" >
-         <rect>
-          <x>107</x>
-          <y>40</y>
-          <width>381</width>
-          <height>251</height>
-         </rect>
-        </property>
-        <layout class="QVBoxLayout" >
-         <item>
-          <layout class="QHBoxLayout" >
-           <item>
-            <widget class="QComboBox" name="mantActionBox" />
-           </item>
-           <item>
-            <widget class="QPushButton" name="mantProcessButton" >
-             <property name="text" >
-              <string>Process  Selected</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" >
-           <item>
-            <widget class="QLabel" name="statusLabel" >
-             <property name="text" >
-              <string>Waiting</string>
-             </property>
-             <property name="alignment" >
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <widget class="QTextEdit" name="mantDetails" >
-           <property name="html" >
-            <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+      <layout class="QGridLayout" >
+       <item row="0" column="0" >
+        <widget class="QGroupBox" name="groupBox_5" >
+         <property name="title" >
+          <string>Favourite Actions</string>
+         </property>
+         <property name="alignment" >
+          <set>Qt::AlignLeading</set>
+         </property>
+         <layout class="QGridLayout" >
+          <item row="0" column="0" >
+           <widget class="QLabel" name="label_7" >
+            <property name="text" >
+             <string>When Upgrading System:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" >
+           <layout class="QHBoxLayout" >
+            <item>
+             <widget class="QRadioButton" name="radioButton" >
+              <property name="text" >
+               <string>Upgrade Immediately</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="radioButton_2" >
+              <property name="text" >
+               <string>Add Upgradeable Packages To Queue</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="radioButton_3" >
+              <property name="text" >
+               <string>Ask</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="2" column="0" >
+           <widget class="Line" name="line" >
+            <property name="orientation" >
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0" >
+           <widget class="QLabel" name="label_8" >
+            <property name="text" >
+             <string>When Processing Queue</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0" >
+           <widget class="QCheckBox" name="checkBox" >
+            <property name="text" >
+             <string>Keep application running in System Tray only</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0" >
+        <widget class="QGroupBox" name="groupBox_6" >
+         <property name="title" >
+          <string>GUI Startup</string>
+         </property>
+         <layout class="QGridLayout" >
+          <item row="0" column="0" >
+           <widget class="QCheckBox" name="checkBox_2" >
+            <property name="text" >
+             <string>Start in the System Tray</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="2" column="0" >
+        <widget class="QGroupBox" name="groupBox_11" >
+         <property name="title" >
+          <string>When Application is in System Tray only</string>
+         </property>
+         <layout class="QGridLayout" >
+          <item row="0" column="0" colspan="2" >
+           <widget class="QCheckBox" name="checkBox_3" >
+            <property name="text" >
+             <string>Update Database every</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2" colspan="2" >
+           <widget class="QSpinBox" name="spinBox" />
+          </item>
+          <item row="0" column="4" >
+           <widget class="QLabel" name="label_16" >
+            <property name="text" >
+             <string>minutes</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" >
+           <widget class="QLabel" name="label_17" >
+            <property name="text" >
+             <string>If upgrades are available:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1" colspan="2" >
+           <widget class="QRadioButton" name="radioButton_4" >
+            <property name="text" >
+             <string>Just Notify</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3" colspan="2" >
+           <widget class="QRadioButton" name="radioButton_6" >
+            <property name="text" >
+             <string>Notify and add them to Queue</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="3" column="0" >
+        <widget class="QGroupBox" name="groupBox" >
+         <property name="title" >
+          <string>Maintenance</string>
+         </property>
+         <layout class="QGridLayout" >
+          <item row="0" column="0" >
+           <layout class="QVBoxLayout" >
+            <item>
+             <layout class="QHBoxLayout" >
+              <item>
+               <widget class="QComboBox" name="mantActionBox" />
+              </item>
+              <item>
+               <widget class="QPushButton" name="mantProcessButton" >
+                <property name="text" >
+                 <string>Process  Selected</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer>
+                <property name="orientation" >
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" >
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" >
+              <item>
+               <widget class="QLabel" name="statusLabel" >
+                <property name="text" >
+                 <string>Waiting</string>
+                </property>
+                <property name="alignment" >
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QTextEdit" name="mantDetails" >
+              <property name="sizePolicy" >
+               <sizepolicy vsizetype="Maximum" hsizetype="Preferred" >
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="html" >
+               <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
 p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Liberation Sans'; font-size:9pt; font-weight:400; font-style:normal;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Shaman Manteinance.&lt;/p>
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Please choose an action from the Drop-Down Menu.&lt;/p>&lt;/body>&lt;/html></string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </widget>
+&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Liberation Sans'; font-size:9pt;">Shaman Manteinance.&lt;/p>
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Liberation Sans'; font-size:9pt;">Please choose an action from the Drop-Down Menu.&lt;/p>&lt;/body>&lt;/html></string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
      </widget>
      <widget class="QWidget" name="Seite_2" >
       <layout class="QGridLayout" >
@@ -278,7 +415,7 @@ p, li { white-space: pre-wrap; }
        <item row="1" column="0" >
         <widget class="QTabWidget" name="repoTab" >
          <property name="currentIndex" >
-          <number>2</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="officialTab" >
           <attribute name="title" >
@@ -506,6 +643,159 @@ and Pacman.</string>
            </item>
           </layout>
          </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="Seite_3" >
+      <layout class="QGridLayout" >
+       <item row="0" column="0" >
+        <widget class="QGroupBox" name="groupBox_9" >
+         <property name="title" >
+          <string>Preferences</string>
+         </property>
+         <layout class="QGridLayout" >
+          <item row="0" column="0" >
+           <widget class="QCheckBox" name="checkBox_5" >
+            <property name="text" >
+             <string>Process all dependencies and queue from source first (recommended)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" >
+           <widget class="QCheckBox" name="checkBox_6" >
+            <property name="text" >
+             <string>Review Building output before installing</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0" >
+        <widget class="QGroupBox" name="groupBox_7" >
+         <property name="title" >
+          <string>ABS Configuration</string>
+         </property>
+         <layout class="QGridLayout" >
+          <item row="0" column="0" >
+           <widget class="QRadioButton" name="radioButton_5" >
+            <property name="text" >
+             <string>Use supfiles that match your current repositories</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" >
+           <layout class="QHBoxLayout" >
+            <item>
+             <widget class="QRadioButton" name="radioButton_7" >
+              <property name="text" >
+               <string>Define supfiles manually</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit" />
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="2" column="0" >
+        <widget class="QGroupBox" name="groupBox_8" >
+         <property name="title" >
+          <string>Makepkg Configuration</string>
+         </property>
+         <layout class="QGridLayout" >
+          <item row="0" column="0" >
+           <widget class="QLabel" name="label_9" >
+            <property name="text" >
+             <string>CFlags</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1" >
+           <widget class="QLineEdit" name="lineEdit_2" />
+          </item>
+          <item row="1" column="0" >
+           <widget class="QLabel" name="label_10" >
+            <property name="text" >
+             <string>CXXFlags</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1" >
+           <widget class="QLineEdit" name="lineEdit_3" />
+          </item>
+          <item row="2" column="0" >
+           <widget class="QLabel" name="label_11" >
+            <property name="text" >
+             <string>BuildEnv</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1" >
+           <widget class="QLineEdit" name="lineEdit_4" />
+          </item>
+          <item row="3" column="0" >
+           <widget class="QLabel" name="label_12" >
+            <property name="text" >
+             <string>Options</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1" >
+           <widget class="QLineEdit" name="lineEdit_5" />
+          </item>
+          <item row="4" column="0" >
+           <widget class="QLabel" name="label_13" >
+            <property name="text" >
+             <string>Doc_Dirs</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1" >
+           <widget class="QLineEdit" name="lineEdit_6" />
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="3" column="0" >
+        <widget class="QGroupBox" name="groupBox_10" >
+         <property name="title" >
+          <string>Build Environment</string>
+         </property>
+         <layout class="QGridLayout" >
+          <item row="0" column="0" >
+           <layout class="QHBoxLayout" >
+            <item>
+             <widget class="QLabel" name="label_14" >
+              <property name="text" >
+               <string>Building Path</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_7" />
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="0" >
+           <widget class="QCheckBox" name="checkBox_4" >
+            <property name="text" >
+             <string>Remove installed makedepends after build</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" >
+           <widget class="QCheckBox" name="checkBox_7" >
+            <property name="text" >
+             <string>Clean Build Environment after installation</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
       </layout>
