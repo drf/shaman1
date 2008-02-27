@@ -1,11 +1,9 @@
 TODO-List for qtPacman 
 
-
 ***********Core***************
 Dbus-Engine *prio*
 Plasma-Data-Engine *prio*
 Implement Error Handling *prio in critical cases such as Queue Processing*
-
 
 ***********GUI**************
 More icons
@@ -16,7 +14,6 @@ All action-button-actions in context-menu *prio*
 Configuration-dialog *prio*
 System-Tray-Icon *prio* --->Mostly done, in some cases needs better handling
 Plasmoid *prio*
-
 
 ********Things to check before the alpha************
 -Look if all strings are correct
