@@ -326,24 +326,31 @@ bool QueueDialog::runScriptlet(int action, pmpkg_t *package, pmpkg_t *pkg2)
 	{
 	case 0:
 		qDebug() << "Executing pre-install scriptlet for package " << alpm_pkg_get_name(package);
+		textEdit->append(QString(tr("Executing pre_install scriptlet...")));
 		break;
 	case 1:
 		qDebug() << "Executing pre-upgrade scriptlet for package " << alpm_pkg_get_name(package);
+		textEdit->append(QString(tr("Executing pre_upgrade scriptlet...")));
 		break;
 	case 2:
 		qDebug() << "Executing pre-remove scriptlet for package " << alpm_pkg_get_name(package);
+		textEdit->append(QString(tr("Executing pre_remove scriptlet...")));
 		break;
 	case 3:
 		qDebug() << "Executing post-install scriptlet for package " << alpm_pkg_get_name(package);
+		textEdit->append(QString(tr("Executing post_install scriptlet...")));
 		break;
 	case 4:
 		qDebug() << "Executing post-upgrade scriptlet for package " << alpm_pkg_get_name(package);
+		textEdit->append(QString(tr("Executing post_upgrade scriptlet...")));
 		break;
 	case 5:
 		qDebug() << "Executing post-remove scriptlet for package " << alpm_pkg_get_name(package);
+		textEdit->append(QString(tr("Executing post_remove scriptlet...")));
 		break;
 	default:
 		qDebug() << "Action invalid!!! What the hell??";
+		textEdit->append(QString(tr("Unexpected Error. Shaman might be corrupted.")));
 		return false;
 		break;
 	}
@@ -390,6 +397,7 @@ bool QueueDialog::runScriptlet(int action, pmpkg_t *package, pmpkg_t *pkg2)
 	{
 		/* Ok then, nothing to do. */
 		qDebug() << "Couldn't extract package! Executing Scriptlet failed.";
+		textEdit->append(QString(tr("Extracting Scriptlet from package failed!!")));
 		return false;
 	}
 
@@ -420,6 +428,7 @@ bool QueueDialog::runScriptlet(int action, pmpkg_t *package, pmpkg_t *pkg2)
 		break;
 	default:
 		qDebug() << "Action invalid!!! What the hell??";
+		textEdit->append(QString(tr("Unexpected Error. Shaman might be corrupted.")));
 		return false;
 		break;
 	}
@@ -431,20 +440,28 @@ bool QueueDialog::runScriptlet(int action, pmpkg_t *package, pmpkg_t *pkg2)
 	
 	proc = new QProcess(this);
 	connect(proc, SIGNAL(readyReadStandardOutput()), SLOT(writeLineProgress()));
-	connect(proc, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(handleScriptletEnding(int,QProcess::ExitStatus)));
-
+	connect(proc, SIGNAL(readyReadStandardError()), SLOT(writeLineProgressErr()));
+	
 	proc->setWorkingDirectory("/");
 
 	qDebug() << "Scriptlet commandline is:" << cmdline;
 
 	if(proc->execute("sh", QStringList() << "-c" << cmdline) == 0)
+	{
 		qDebug() << "Scriptlet Run successfully!!";
+		textEdit->append(QString(tr("Scriptlet processed successfully!")));
+	}
 	else
+	{
 		qDebug() << "Scriptlet Error or Scriptlet not found!!";
+		textEdit->append(QString(tr("Scriptlet not found in this stage, or error processing it!")));
+	}
 	
 	chdir(cwd);
+	
+	proc->deleteLater();
 
-	//aHandle->rmrf("/tmp/alpm_XXXXXX");
+	aHandle->rmrf("/tmp/alpm_XXXXXX");
 }
 
 bool QueueDialog::unpackPkg(const QString &pathToPkg, const QString &pathToEx, const QString &file)
@@ -546,6 +563,7 @@ bool QueueDialog::unpackPkg(const QString &pathToPkg, const QString &pathToEx, c
 	return true;
 }
 
+/*
 void QueueDialog::handleScriptletEnding(int eC, QProcess::ExitStatus estat)
 {
 	if(eC == 0)
@@ -562,6 +580,7 @@ void QueueDialog::handleScriptletEnding(int eC, QProcess::ExitStatus estat)
 	aHandle->rmrf("/tmp/alpm_XXXXXX");
 	proc->deleteLater();
 }
+*/
 
 void QueueDialog::writeLineProgress()
 {

@@ -21,8 +21,9 @@
 #ifndef CONFIGDIALOG_H
 #define CONFIGDIALOG_H
 
-#include "ui_configDialog.h"
+#include "../ui_configDialog.h"
 #include <QThread>
+#include <QProcess>
 
 class AlpmHandler;
 class ConfigurationParser;
@@ -58,9 +59,9 @@ private slots:
 	void openAddDialog();
 	void openEditDialog();
 	void removeThirdParty();
-	void cleanUnused();
-	void cleanCache();
-	void clearCache();
+	void performManteinanceAction();
+	void cleanProc(int eC, QProcess::ExitStatus eS);
+	void mantProgress();
 	void showSuccess(int act);
 	void showFailure(int act);
 	void cleanThread();
@@ -77,6 +78,7 @@ private:
 	AlpmHandler *m_handler;
 	QDialog *addDialog;
 	CleanThread *cTh;
+	QProcess *mantProc;
 	bool upDb;
 };
 

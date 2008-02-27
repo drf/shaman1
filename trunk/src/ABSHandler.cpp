@@ -137,13 +137,20 @@ bool ABSHandler::setUpBuildingEnvironment(const QString &package)
 	return true;
 }
 
-void ABSHandler::cleanAllBuildingEnvironments()
+bool ABSHandler::cleanAllBuildingEnvironments()
 {
 	QSettings *settings = new QSettings();
 
-	rmrf(settings->value("absbuilding/buildpath").toString().toAscii().data());
+	int ret;
+	
+	ret = rmrf(settings->value("absbuilding/buildpath").toString().toAscii().data());
 
 	settings->deleteLater();
+	
+	if(ret == 0)
+		return true;
+	else
+		return false;
 }
 
 QStringList ABSHandler::getMakeDepends(const QString &package)

@@ -59,7 +59,7 @@ public slots:
 	void startProcess();
 	void cleanup();
 	bool runScriptlet(int action, pmpkg_t *package, pmpkg_t *pkg2);
-	void handleScriptletEnding(int eC, QProcess::ExitStatus estat);
+	//void handleScriptletEnding(int eC, QProcess::ExitStatus estat);
 	void writeLineProgress();
 	void writeLineProgressErr();
 	

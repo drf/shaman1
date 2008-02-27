@@ -45,7 +45,7 @@ public:
 	static QString getABSPath(const QString &package);
 	bool setUpBuildingEnvironment(const QString &package);
 	bool cleanBuildingEnvironment(const QString &package);
-	void cleanAllBuildingEnvironments();
+	bool cleanAllBuildingEnvironments();
 	static QStringList getMakeDepends(const QString &package);
 	
 private:
