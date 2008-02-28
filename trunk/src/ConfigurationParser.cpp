@@ -112,8 +112,11 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 			if(section.operator!=("options"))
 			{
 				QString toAdd(section);
-				pacData.syncdbs.append(toAdd);
-				serverparsed = 0;
+				if(serverparsed == 1 || pacData.syncdbs.isEmpty())
+				{
+					pacData.syncdbs.append(toAdd);
+					serverparsed = 0;
+				}
 				
 				db.operator=(line);
 				
