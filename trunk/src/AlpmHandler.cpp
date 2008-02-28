@@ -346,14 +346,17 @@ bool AlpmHandler::setUpAlpmSettings()
 
 	for(int i = 0; i < pdata.syncdbs.size(); ++i)
 	{
+		if(pdata.serverAssoc.size() <= i)
+		{
+			qDebug() << "Could not find a matching repo for" << pdata.syncdbs.at(i);
+			continue;
+		}
+			
 		dbs_sync = alpm_db_register_sync(pdata.syncdbs.at(i).toAscii().data());
 
 		if(alpm_db_setserver(dbs_sync, pdata.serverAssoc.at(i).toAscii().data()) == 0)
 		{
-			if(pdata.serverAssoc.size() > i)
-				qDebug() << pdata.syncdbs.at(i) << "--->" << pdata.serverAssoc.at(i);
-			else
-				qDebug() << "Could not find a matching repo for" << pdata.syncdbs.at(i);
+			qDebug() << pdata.syncdbs.at(i) << "--->" << pdata.serverAssoc.at(i);
 
 			registered_db = alpm_list_add(registered_db, dbs_sync);
 		}
