@@ -206,8 +206,22 @@ Do you want to delete it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../ui/configDialog.ui" line="229"/>
+        <source>Process Selected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../ui/configDialog.ui" line="253"/>
         <source>Waiting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/configDialog.ui" line="271"/>
+        <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Shaman Manteinance.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -633,20 +647,6 @@ It is now available in mirrorlist.</source>
         <location filename="../src/configDialog.cpp" line="973"/>
         <source>Sync could not be executed!!</source>
         <comment>Sync is always the command</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/configDialog.ui" line="229"/>
-        <source>Process Selected</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/configDialog.ui" line="271"/>
-        <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Shaman Manteinance.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1568,6 +1568,11 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>buildingDialog</name>
     <message>
+        <location filename="../ui/buildingDialog.ui" line="13"/>
+        <source>Shaman - Building Packages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../ui/buildingDialog.ui" line="400"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -1583,11 +1588,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/buildingDialog.ui" line="487"/>
         <source>Reduce To Tray</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/buildingDialog.ui" line="13"/>
-        <source>Shaman - Building Packages</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

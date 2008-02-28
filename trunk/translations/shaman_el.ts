@@ -312,7 +312,7 @@ Please note that packages from Unstable and Testing may break your system.</sour
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="736"/>
+        <location filename="../src/configDialog.cpp" line="919"/>
         <source>Add Mirror</source>
         <translation type="unfinished"></translation>
     </message>
@@ -457,180 +457,180 @@ and Pacman.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="327"/>
+        <location filename="../src/configDialog.cpp" line="393"/>
         <source>Clean Unused Databases</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="339"/>
+        <location filename="../src/configDialog.cpp" line="405"/>
         <source>Clean Cache</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="351"/>
+        <location filename="../src/configDialog.cpp" line="417"/>
         <source>Empty Cache</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="363"/>
+        <location filename="../src/configDialog.cpp" line="429"/>
         <source>Optimize Pacman Database</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="372"/>
+        <location filename="../src/configDialog.cpp" line="438"/>
         <source>Clean All Building Environments</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="98"/>
+        <location filename="../src/configDialog.cpp" line="133"/>
         <source>Repositories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="159"/>
+        <location filename="../src/configDialog.cpp" line="194"/>
         <source>Pacman</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="227"/>
+        <location filename="../src/configDialog.cpp" line="262"/>
         <source>ABS</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="275"/>
+        <location filename="../src/configDialog.cpp" line="341"/>
         <source>Enter Here the Repository&apos;s Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="277"/>
+        <location filename="../src/configDialog.cpp" line="343"/>
         <source>Enter Here the Repository&apos;s Server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="332"/>
+        <location filename="../src/configDialog.cpp" line="398"/>
         <source>Cleaning up unused Databases...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="344"/>
+        <location filename="../src/configDialog.cpp" line="410"/>
         <source>Cleaning up Cache...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="356"/>
+        <location filename="../src/configDialog.cpp" line="422"/>
         <source>Deleting Cache...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="377"/>
+        <location filename="../src/configDialog.cpp" line="443"/>
         <source>Cleaning up building Environments...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="392"/>
+        <location filename="../src/configDialog.cpp" line="458"/>
         <source>Cleaning up Unused Databases Failed!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="397"/>
+        <location filename="../src/configDialog.cpp" line="463"/>
         <source>Cleaning up Cache Failed!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="402"/>
+        <location filename="../src/configDialog.cpp" line="468"/>
         <source>Deleting Cache Failed!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="407"/>
+        <location filename="../src/configDialog.cpp" line="473"/>
         <source>Could not clean Build Environments!!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="420"/>
+        <location filename="../src/configDialog.cpp" line="486"/>
         <source>Unused Databases Cleaned up successfully!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="425"/>
+        <location filename="../src/configDialog.cpp" line="491"/>
         <source>Cache Cleaned Up Successfully!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="430"/>
+        <location filename="../src/configDialog.cpp" line="496"/>
         <source>Cache Successfully Deleted!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="434"/>
+        <location filename="../src/configDialog.cpp" line="500"/>
         <source>Build Environments Successfully Cleaned!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="435"/>
+        <location filename="../src/configDialog.cpp" line="501"/>
         <source>Build Environments Successfully Cleaned!!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="680"/>
+        <location filename="../src/configDialog.cpp" line="863"/>
         <source>Settings Changed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="686"/>
+        <location filename="../src/configDialog.cpp" line="869"/>
         <source>Your repositories have changed.
 Do you want to Update Your Database?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="717"/>
+        <location filename="../src/configDialog.cpp" line="900"/>
         <source>Mirror Format is incorrect. Your mirror should look like this:
 http://mirror.org/$repo/os/i686</source>
         <comment>Obviously keep the example as it is ;)</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="739"/>
+        <location filename="../src/configDialog.cpp" line="922"/>
         <source>Your Mirror was successfully added!
 It is now available in mirrorlist.</source>
         <comment>mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="766"/>
+        <location filename="../src/configDialog.cpp" line="949"/>
         <source>Pacman Database Optimized Successfully!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="771"/>
+        <location filename="../src/configDialog.cpp" line="954"/>
         <source>Could not Optimize Pacman Database!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="777"/>
+        <location filename="../src/configDialog.cpp" line="960"/>
         <source>Running sync...</source>
         <comment>sync is a command, so it shouldn&apos;t be translated</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="785"/>
+        <location filename="../src/configDialog.cpp" line="968"/>
         <source>Operation Completed Successfully!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="784"/>
+        <location filename="../src/configDialog.cpp" line="967"/>
         <source>Sync was successfully executed!!</source>
         <comment>Sync is always the command</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="789"/>
+        <location filename="../src/configDialog.cpp" line="972"/>
         <source>Sync could not be executed!</source>
         <comment>Sync is always the command</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="790"/>
+        <location filename="../src/configDialog.cpp" line="973"/>
         <source>Sync could not be executed!!</source>
         <comment>Sync is always the command</comment>
         <translation type="unfinished"></translation>
@@ -897,7 +897,7 @@ Do you want to save it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1808"/>
+        <location filename="../src/MainWindow.cpp" line="1822"/>
         <source>Shaman - Idle</source>
         <translation type="unfinished"></translation>
     </message>
@@ -921,7 +921,7 @@ You can change this behaviour in Settings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1898"/>
+        <location filename="../src/MainWindow.cpp" line="1912"/>
         <source>Upgrade</source>
         <translation type="unfinished"></translation>
     </message>
@@ -931,18 +931,18 @@ You can change this behaviour in Settings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1414"/>
+        <location filename="../src/MainWindow.cpp" line="1413"/>
         <source>System Upgrade</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1415"/>
+        <location filename="../src/MainWindow.cpp" line="1414"/>
         <source>There is %1 upgradeable package.
 Click here to upgrade your System.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1415"/>
+        <location filename="../src/MainWindow.cpp" line="1414"/>
         <source>There are %1 upgradeable packages.
 Click here to upgrade your System.</source>
         <translation type="unfinished"></translation>
@@ -968,17 +968,17 @@ Click here to upgrade your System.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1895"/>
+        <location filename="../src/MainWindow.cpp" line="1909"/>
         <source>Install</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1594"/>
+        <location filename="../src/MainWindow.cpp" line="1598"/>
         <source>Uninstall</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1595"/>
+        <location filename="../src/MainWindow.cpp" line="1599"/>
         <source>Complete Uninstall</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1003,12 +1003,12 @@ Click here to upgrade your System.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1957"/>
+        <location filename="../src/MainWindow.cpp" line="1971"/>
         <source>Shaman - Processing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1788"/>
+        <location filename="../src/MainWindow.cpp" line="1802"/>
         <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1086,12 +1086,12 @@ Please wait.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1676"/>
+        <location filename="../src/MainWindow.cpp" line="1690"/>
         <source>To be Installed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1683"/>
+        <location filename="../src/MainWindow.cpp" line="1697"/>
         <source>To be Upgraded</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1131,122 +1131,122 @@ Please wait.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1473"/>
+        <location filename="../src/MainWindow.cpp" line="1477"/>
         <source>Install a Package</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1473"/>
+        <location filename="../src/MainWindow.cpp" line="1477"/>
         <source>Arch Linux Packages (*.pkg.tar.gz)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1482"/>
+        <location filename="../src/MainWindow.cpp" line="1486"/>
         <source>%1 does not seem
 a valid package</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1570"/>
+        <location filename="../src/MainWindow.cpp" line="1574"/>
         <source>You need to have ABS installed to use Shaman&apos;s
 building feature. Do you want to install it now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1598"/>
+        <location filename="../src/MainWindow.cpp" line="1602"/>
         <source>You can not remove packages when processing
 your queue from Source</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1627"/>
+        <location filename="../src/MainWindow.cpp" line="1631"/>
         <source>Some of your packages do not belong to Arch
 Linux&apos;s official repository. Shaman is able to
 build packages from official sources only.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1651"/>
+        <location filename="../src/MainWindow.cpp" line="1665"/>
         <source>You are about to install &lt;b&gt;%1 package&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1657"/>
+        <location filename="../src/MainWindow.cpp" line="1671"/>
         <source>You are about to install &lt;b&gt;%1 packages&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1829"/>
+        <location filename="../src/MainWindow.cpp" line="1843"/>
         <source>Package Building</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1762"/>
+        <location filename="../src/MainWindow.cpp" line="1776"/>
         <source>Your Packages failed to build!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1766"/>
+        <location filename="../src/MainWindow.cpp" line="1780"/>
         <source>Your packages Failed to Build.
 Look at the output for more details.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1804"/>
+        <location filename="../src/MainWindow.cpp" line="1818"/>
         <source>Close</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1794"/>
+        <location filename="../src/MainWindow.cpp" line="1808"/>
         <source>Building Packages Failed!!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1797"/>
+        <location filename="../src/MainWindow.cpp" line="1811"/>
         <source>Some packages failed to build.
 Do you want to proceed anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1824"/>
+        <location filename="../src/MainWindow.cpp" line="1838"/>
         <source>Install Built Packages</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1825"/>
+        <location filename="../src/MainWindow.cpp" line="1839"/>
         <source>Close Without Installing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1826"/>
+        <location filename="../src/MainWindow.cpp" line="1840"/>
         <source>Packages Built Successfully!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1830"/>
+        <location filename="../src/MainWindow.cpp" line="1844"/>
         <source>Your Packages have been built successfully, and are ready to be installed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1967"/>
+        <location filename="../src/MainWindow.cpp" line="1981"/>
         <source>%1 GiB</source>
         <comment>Size is in Gib</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1969"/>
+        <location filename="../src/MainWindow.cpp" line="1983"/>
         <source>%1 MiB</source>
         <comment>Size is in MiB</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1971"/>
+        <location filename="../src/MainWindow.cpp" line="1985"/>
         <source>%1 KiB</source>
         <comment>Size is in KiB</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1973"/>
+        <location filename="../src/MainWindow.cpp" line="1987"/>
         <source>%1 Bytes</source>
         <comment>Size is in Bytes</comment>
         <translation type="unfinished"></translation>
