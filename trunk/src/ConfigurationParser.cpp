@@ -293,7 +293,62 @@ void ConfigurationParser::parseABSConfig()
 
 void ConfigurationParser::parseMakepkgConfig()
 {
+	QFile fp("/etc/makepkg.conf");
+
+	makepkgData.loaded = true;
+
+	if(!fp.open(QIODevice::ReadOnly | QIODevice::Text))
+	{
+		makepkgData.loaded = false;
+		return;
+	}
+
+	QTextStream in(&fp);
+
+	while(!in.atEnd()) 
+	{
+		QString line = in.readLine();
+
+		if(line.startsWith("CFLAGS"))
+		{
+			line = line.remove(0, line.indexOf(QChar('"')) + 1);
+			line.truncate(line.indexOf(QChar('"')));
+
+			makepkgData.cflags = line;
+		}
+		else if(line.startsWith("CXXFLAGS"))
+		{
+			line = line.remove(0, line.indexOf(QChar('"')) + 1);
+			line.truncate(line.indexOf(QChar('"')));
+
+			makepkgData.cxxflags = line;
+		}
+		else if(line.startsWith("BUILDENV"))
+		{
+			line.truncate(line.indexOf(QChar(')')));
+			line = line.remove(0, line.indexOf(QChar('(')) + 1);
+
+			makepkgData.buildenv = line;
+		}
+		else if(line.startsWith("OPTIONS"))
+		{
+			line.truncate(line.indexOf(QChar(')')));
+			line = line.remove(0, line.indexOf(QChar('(')) + 1);
+
+			makepkgData.options = line;
+		}
+		else if(line.startsWith("DOC_DIRS"))
+		{
+			line.truncate(line.indexOf(QChar(')')));
+			line = line.remove(0, line.indexOf(QChar('(')) + 1);
+
+			makepkgData.docdirs = line;
+		}
+		else
+			continue;
+	}
 	
+	fp.close();
 }
 
 bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value, int action)
@@ -637,6 +692,210 @@ bool ConfigurationParser::editABSSection(const QString &section, const QString &
 	}
 	
 	return false;
+}
+
+bool ConfigurationParser::editMakepkgSection(const QString &section, const QString &value)
+{
+	QFile fp("/etc/makepkg.conf");
+	QStringList fileContent;
+
+	if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
+		return false;
+
+	QTextStream in(&fp);
+
+	/* Get the file contents */
+
+	while(!in.atEnd()) 
+	{
+		QString line(in.readLine());
+		fileContent.append(line);
+	}
+
+	fp.close();
+	
+	if(section == "cflags")
+	{
+		QString val("CFLAGS=\"");
+		val.append(value);
+		val.append('"');
+
+		if(!fileContent.filter("CFLAGS").isEmpty())
+		{
+			for(int i = 0; i < fileContent.size(); ++i)
+			{
+				if(!fileContent.at(i).startsWith("CFLAGS"))
+					continue;
+
+				if(fileContent.at(i) == val)
+					// No need to edit
+					return true;
+
+				fileContent.replace(i, val);
+
+				QFile::remove("/etc/makepkg.conf");
+				if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
+					return false;
+
+				QTextStream str(&fp);
+
+				for(int k=0; k < fileContent.size(); ++k)
+					str << fileContent.at(k) << endl;
+
+				fp.close();
+				return true;
+			}
+			return false;
+		}
+		else
+			return false;
+	}
+	else if(section == "cxxflags")
+	{
+		QString val("CXXFLAGS=\"");
+		val.append(value);
+		val.append('"');
+
+		if(!fileContent.filter("CXXFLAGS").isEmpty())
+		{
+			for(int i = 0; i < fileContent.size(); ++i)
+			{
+				if(!fileContent.at(i).startsWith("CXXFLAGS"))
+					continue;
+
+				if(fileContent.at(i) == val)
+					// No need to edit
+					return true;
+
+				fileContent.replace(i, val);
+
+				QFile::remove("/etc/makepkg.conf");
+				if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
+					return false;
+
+				QTextStream str(&fp);
+
+				for(int k=0; k < fileContent.size(); ++k)
+					str << fileContent.at(k) << endl;
+
+				fp.close();
+				return true;
+			}
+			return false;
+		}
+		else
+			return false;
+	}
+	else if(section == "buildenv")
+	{
+		QString val("BUILDENV=(");
+		val.append(value);
+		val.append(")");
+
+		if(!fileContent.filter("BUILDENV").isEmpty())
+		{
+			for(int i = 0; i < fileContent.size(); ++i)
+			{
+				if(!fileContent.at(i).startsWith("BUILDENV"))
+					continue;
+
+				if(fileContent.at(i) == val)
+					// No need to edit
+					return true;
+
+				fileContent.replace(i, val);
+
+				QFile::remove("/etc/makepkg.conf");
+				if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
+					return false;
+
+				QTextStream str(&fp);
+
+				for(int k=0; k < fileContent.size(); ++k)
+					str << fileContent.at(k) << endl;
+
+				fp.close();
+				return true;
+			}
+			return false;
+		}
+		else
+			return false;
+	}
+	else if(section == "options")
+	{
+		QString val("OPTIONS=(");
+		val.append(value);
+		val.append(")");
+
+		if(!fileContent.filter("OPTIONS").isEmpty())
+		{
+			for(int i = 0; i < fileContent.size(); ++i)
+			{
+				if(!fileContent.at(i).startsWith("OPTIONS"))
+					continue;
+
+				if(fileContent.at(i) == val)
+					// No need to edit
+					return true;
+
+				fileContent.replace(i, val);
+
+				QFile::remove("/etc/makepkg.conf");
+				if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
+					return false;
+
+				QTextStream str(&fp);
+
+				for(int k=0; k < fileContent.size(); ++k)
+					str << fileContent.at(k) << endl;
+
+				fp.close();
+				return true;
+			}
+			return false;
+		}
+		else
+			return false;
+	}
+	else if(section == "docdirs")
+	{
+		QString val("DOC_DIRS=(");
+		val.append(value);
+		val.append(")");
+
+		if(!fileContent.filter("DOC_DIRS").isEmpty())
+		{
+			for(int i = 0; i < fileContent.size(); ++i)
+			{
+				if(!fileContent.at(i).startsWith("DOC_DIRS"))
+					continue;
+
+				if(fileContent.at(i) == val)
+					// No need to edit
+					return true;
+
+				fileContent.replace(i, val);
+
+				QFile::remove("/etc/makepkg.conf");
+				if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
+					return false;
+
+				QTextStream str(&fp);
+
+				for(int k=0; k < fileContent.size(); ++k)
+					str << fileContent.at(k) << endl;
+
+				fp.close();
+				return true;
+			}
+			return false;
+		}
+		else
+			return false;
+	}
+	else
+		return false;
 }
 
 ConfigurationParser::ConfigurationParser()

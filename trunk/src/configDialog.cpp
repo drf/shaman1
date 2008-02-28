@@ -288,7 +288,15 @@ void ConfigDialog::setupABS()
 		useCustomSupRadio->setChecked(true);
 	
 	ABSConf abD = getABSConf();
-	supEdit->setText(abD.supfiles);	
+	supEdit->setText(abD.supfiles);
+	
+	MakePkgConf mkpD = getMakepkgConf();
+	
+	CFlagEdit->setText(mkpD.cflags);
+	CXXFlagEdit->setText(mkpD.cxxflags);
+	buildEnvEdit->setText(mkpD.buildenv);
+	optionsMkPkgEdit->setText(mkpD.options);
+	docDirsEdit->setText(mkpD.docdirs);
 	
 	settings->deleteLater();
 }
@@ -429,9 +437,12 @@ void ConfigDialog::performManteinanceAction()
 	else if(!mantActionBox->currentText().compare(QString(tr("Optimize Pacman Database"))))
 	{
 		mantProc = new QProcess();
-		
+
 		connect(mantProc, SIGNAL(readyReadStandardError()), SLOT(mantProgress()));
 		connect(mantProc, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(cleanProc(int,QProcess::ExitStatus)));
+
+		statusLabel->setText(QString(tr("Optimizing Pacman Database...")));
+		mantDetails->append(QString(tr("Optimizing Pacman Database...")));
 		
 		mantProc->start("pacman-optimize");
 	}
@@ -851,6 +862,24 @@ void ConfigDialog::saveConfiguration()
 
 	settings->deleteLater();
 
+	/* Last, but not least, commit changes to makepkg.conf */
+
+	if(CFlagEdit->isModified())
+		editMakepkgSection("cflags", CFlagEdit->text());
+
+	if(CXXFlagEdit->isModified())
+		editMakepkgSection("cxxflags", CXXFlagEdit->text());
+
+	if(buildEnvEdit->isModified())
+		editMakepkgSection("buildenv", buildEnvEdit->text());
+
+	if(optionsMkPkgEdit->isModified())
+		editMakepkgSection("options", optionsMkPkgEdit->text());
+
+	if(docDirsEdit->isModified())
+		editMakepkgSection("docdirs", docDirsEdit->text());
+	
+
 	/* Did we change anything in the repos? Better update our
 	 * local DB then.
 	 */
@@ -1021,4 +1050,3 @@ void CleanThread::run()
 
 	}
 }
-

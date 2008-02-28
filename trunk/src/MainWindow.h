@@ -50,6 +50,7 @@ public:
 	explicit MainWindow(AlpmHandler *handler, QMainWindow *parent = 0);
 	~MainWindow();
 	void doUpdView();
+	void startTimer();
 
 signals:
 	void aboutToQuit();
@@ -118,6 +119,7 @@ private:
 	void loadDbUpdateDialog();
 	void removeDbUpdateDialog();
 	void setupSystray();
+	void changeTimerInterval();
 	QString formatSize(unsigned long size);
 	
 private:

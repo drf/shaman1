@@ -149,6 +149,8 @@ int main(int argc, char **argv)
 		 * we want the program to start up in the systray
 		 * only.
 		 */
+		
+		mainwin.startTimer();
 	}
 
 	mainwin.populateRepoColumn();

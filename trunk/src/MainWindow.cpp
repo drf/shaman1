@@ -155,6 +155,8 @@ void MainWindow::setupSystray()
 
 		connect(trayUpDb, SIGNAL(timeout()), SLOT(dbUpdateTray()));
 	}
+	else
+		trayUpDb = NULL;
 	
 	settings->deleteLater();
 }
@@ -1358,9 +1360,13 @@ void MainWindow::destroyReviewQueue()
 void MainWindow::showSettings()
 {
 	configDialog = new ConfigDialog(aHandle, this);
+	
 	configDialog->exec();
+	
 	if(configDialog->doDbUpdate())
 		doDbUpdate();
+	
+	changeTimerInterval();
 	
 	configDialog->deleteLater();
 }
@@ -2010,4 +2016,41 @@ void MainWindow::reduceBuildingInTray()
 void MainWindow::nullifyBDialog()
 {
 	buildDialog = NULL;
+}
+
+void MainWindow::startTimer()
+{
+	QSettings *settings = new QSettings();
+	
+	if(settings->value("scheduledUpdate/enabled").toBool() == true)
+		trayUpDb->start();
+	
+	settings->deleteLater();
+}
+
+void MainWindow::changeTimerInterval()
+{
+	QSettings *settings = new QSettings();
+
+	if(settings->value("scheduledUpdate/enabled").toBool())
+	{
+		if(trayUpDb == NULL)
+			trayUpDb = new QTimer(this);
+		else
+			disconnect(trayUpDb, 0, 0, 0);
+		
+		trayUpDb->setInterval(settings->value("scheduledUpdate/interval", 10).toInt() * 60000);
+
+		connect(trayUpDb, SIGNAL(timeout()), SLOT(dbUpdateTray()));
+	}
+	else
+	{
+		if(trayUpDb != NULL)
+		{
+			trayUpDb->deleteLater();
+			trayUpDb = NULL;
+		}
+	}
+	
+	settings->deleteLater();
 }
