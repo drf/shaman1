@@ -660,25 +660,6 @@ bool QueueDialog::unpackPkg(const QString &pathToPkg, const QString &pathToEx, c
 	return true;
 }
 
-/*
-void QueueDialog::handleScriptletEnding(int eC, QProcess::ExitStatus estat)
-{
-	if(eC == 0)
-	{
-		qDebug() << "Scriptlet Run successfully!!";
-		textEdit->append(QString(tr("Scriptlet run successfully!!")));
-	}
-	else
-	{
-		qDebug() << "Error running scriptlet!!";
-		textEdit->append(QString(tr("Error running scriptlet!!")));
-	}
-	
-	aHandle->rmrf("/tmp/alpm_XXXXXX");
-	proc->deleteLater();
-}
-*/
-
 void QueueDialog::writeLineProgress()
 {
 	proc->setReadChannel(QProcess::StandardOutput);
