@@ -22,11 +22,11 @@
 #define CONFIGDIALOG_H
 
 #include "../ui_configDialog.h"
+#include "ConfigurationParser.h"
 #include <QThread>
 #include <QProcess>
 
 class AlpmHandler;
-class ConfigurationParser;
 
 class CleanThread : public QThread
 {
@@ -46,9 +46,11 @@ private:
 };
 
 
-class ConfigDialog : public QDialog, public Ui::ConfigDialog
+class ConfigDialog : public QDialog, public Ui::ConfigDialog, private ConfigurationParser
 {
+	
 	Q_OBJECT
+	
 public:
 	explicit ConfigDialog(AlpmHandler *handler, QWidget *parent = 0);
 	~ConfigDialog();

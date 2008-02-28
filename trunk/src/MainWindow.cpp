@@ -1644,6 +1644,16 @@ void MainWindow::validateSourceQueue()
 	
 	revBuildUi->setupUi(reviewBQueue);
 	revBuildUi->treeWidget->hide();
+
+	QSettings *settings = new QSettings();
+
+	if(settings->value("absbuilding/wizardbuild").toBool())
+		revBuildUi->depsWizardBox->setChecked(true);
+
+	if(settings->value("absbuilding/reviewoutput").toBool())
+		revBuildUi->noProcessBox->setChecked(true);
+	
+	settings->deleteLater();
 	
 	reviewBQueue->setWindowModality(Qt::ApplicationModal);
 	reviewBQueue->setAttribute(Qt::WA_DeleteOnClose, true);

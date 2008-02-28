@@ -259,6 +259,43 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 	qDebug() << "Parser exited";
 }
 
+void ConfigurationParser::parseABSConfig()
+{
+	QFile fp("/etc/abs/abs.conf");
+
+	absData.loaded = true;
+
+	if(!fp.open(QIODevice::ReadOnly | QIODevice::Text))
+	{
+		absData.loaded = false;
+		return;
+	}
+
+	QTextStream in(&fp);
+
+	while(!in.atEnd()) 
+	{
+		QString line = in.readLine();
+		
+		if(!line.startsWith("SUPFILES"))
+			continue;
+		
+		line.truncate(line.indexOf(QChar(')')));
+		line = line.remove(0, line.indexOf(QChar('(')) + 1);
+		
+		absData.supfiles = line;
+		
+		break;
+	}
+	
+	fp.close();
+}
+
+void ConfigurationParser::parseMakepkgConfig()
+{
+	
+}
+
 bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value, int action)
 {
 	QFile fp("/etc/pacman.conf");
@@ -538,6 +575,8 @@ ConfigurationParser::ConfigurationParser()
     pacData.NoUpgrade.clear();
     pacData.HoldPkg.clear();
 	pacData.loaded = false;
+	absData.loaded = false;
+	makepkgData.loaded = false;
 }
 
 ConfigurationParser::~ConfigurationParser()
@@ -545,7 +584,7 @@ ConfigurationParser::~ConfigurationParser()
 	
 }
 
-PacmanConf ConfigurationParser::getPacmanConf(bool forcereload = false)
+PacmanConf ConfigurationParser::getPacmanConf(bool forcereload)
 {
 	if(pacData.loaded && !forcereload)
 		return pacData;
@@ -567,4 +606,24 @@ PacmanConf ConfigurationParser::getPacmanConf(bool forcereload = false)
 	parsePacmanConfig("/etc/pacman.conf", NULL, NULL);
 	
 	return pacData;
+}
+
+ABSConf ConfigurationParser::getABSConf(bool forcereload)
+{
+	if(absData.loaded && !forcereload)
+		return absData;
+	
+	parseABSConfig();
+	
+	return absData;
+}
+
+MakePkgConf ConfigurationParser::getMakepkgConf(bool forcereload)
+{
+	if(makepkgData.loaded && !forcereload)
+		return makepkgData;
+	
+	parseMakepkgConfig();
+	
+	return makepkgData;
 }

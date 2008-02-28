@@ -260,6 +260,42 @@ void ConfigDialog::setupPacman()
 void ConfigDialog::setupABS()
 {
 	listWidget->insertItem(3, new QListWidgetItem(QIcon(":/Icons/icons/network-server-database.png"), tr("ABS")));//FIXME: Replace icon
+	
+	/* Read options related to our Config file first */
+	
+	QSettings *settings = new QSettings();
+	
+	if(settings->value("absbuilding/wizardbuild").toBool())
+		makeDepsSourceBox->setChecked(true);
+	
+	if(settings->value("absbuilding/reviewoutput").toBool())
+		reviewBuildOutBox->setChecked(true);
+	
+	buildPathEdit->setText(settings->value("absbuilding/buildpath").toString());
+	
+	if(settings->value("absbuilding/clearmakedepends").toBool())
+		cleanMakeDepsBox->setChecked(true);
+
+	if(settings->value("absbuilding/cleanbuildenv").toBool())
+		cleanBuildEnvBox->setChecked(true);
+	
+	if(useMatchSupRadio->isChecked())
+	{
+		settings->setValue("absbuilding/syncsupfiles", true);
+		
+		/* We need to generate a SUPFILES containing our current repos 
+		 * then.
+		 */
+	}
+	else
+	{
+		settings->setValue("absbuilding/syncsupfiles", false);
+		
+		/* Ok, we just have to put the supfiles into abs.conf
+		 */
+	}
+	
+	settings->deleteLater();
 }
 
 void ConfigDialog::openAddDialog()
@@ -479,141 +515,140 @@ void ConfigDialog::saveConfiguration()
 	bool dbChanged = false;
 	QString mirror(mirrorBox->currentText());
 	mirror = mirror.remove(' ');
-	ConfigurationParser parser;
 
 	if(coreBox->checkState() == Qt::Checked)
 	{
-		if(!parser.editPacmanKey("core/Server", mirror, 0))
+		if(!editPacmanKey("core/Server", mirror, 0))
 		{
-			if(parser.editPacmanKey("core/Server", mirror, 1))
+			if(editPacmanKey("core/Server", mirror, 1))
 				dbChanged = true;
 		}
 		else
 		{
 			dbChanged = true;
-			parser.editPacmanKey("core/Include", NULL, 2);
+			editPacmanKey("core/Include", NULL, 2);
 		}
 	}
 	else
 	{
-		if(parser.editPacmanKey("core/Server", NULL, 2))
+		if(editPacmanKey("core/Server", NULL, 2))
 			dbChanged = true;
-		if(parser.editPacmanKey("core/Include", NULL, 2))
+		if(editPacmanKey("core/Include", NULL, 2))
 			dbChanged = true;
 	}
 
 	if(extraBox->checkState() == Qt::Checked)
 	{
-		if(!parser.editPacmanKey("extra/Server", mirror, 0))
+		if(!editPacmanKey("extra/Server", mirror, 0))
 		{
-			if(parser.editPacmanKey("extra/Server", mirror, 1))
+			if(editPacmanKey("extra/Server", mirror, 1))
 				dbChanged = true;
 		}
 		else
 		{
 			dbChanged = true;
-			parser.editPacmanKey("extra/Include", NULL, 2);
+			editPacmanKey("extra/Include", NULL, 2);
 		}
 	}
 	else
 	{
-		if(parser.editPacmanKey("extra/Server", NULL, 2))
+		if(editPacmanKey("extra/Server", NULL, 2))
 			dbChanged = true;
-		if(parser.editPacmanKey("extra/Include", NULL, 2))
+		if(editPacmanKey("extra/Include", NULL, 2))
 			dbChanged = true;
 	}
 
 	if(communityBox->checkState() == Qt::Checked)
 	{
-		if(!parser.editPacmanKey("community/Server", mirror, 0))
+		if(!editPacmanKey("community/Server", mirror, 0))
 		{
-			if(parser.editPacmanKey("community/Server", mirror, 1))
+			if(editPacmanKey("community/Server", mirror, 1))
 				dbChanged = true;
 		}
 		else
 		{
 			dbChanged = true;
-			parser.editPacmanKey("community/Include", NULL, 2);
+			editPacmanKey("community/Include", NULL, 2);
 		}
 	}
 	else
 	{
-		if(parser.editPacmanKey("community/Server", NULL, 2))
+		if(editPacmanKey("community/Server", NULL, 2))
 			dbChanged = true;
-		if(parser.editPacmanKey("community/Include", NULL, 2))
+		if(editPacmanKey("community/Include", NULL, 2))
 			dbChanged = true;
 	}
 
 	if(testingBox->checkState() == Qt::Checked)
 	{
-		if(!parser.editPacmanKey("testing/Server", mirror, 0))
+		if(!editPacmanKey("testing/Server", mirror, 0))
 		{
-			if(parser.editPacmanKey("testing/Server", mirror, 1))
+			if(editPacmanKey("testing/Server", mirror, 1))
 				dbChanged = true;
 		}
 		else
 		{
 			dbChanged = true;
-			parser.editPacmanKey("testing/Include", NULL, 2);
+			editPacmanKey("testing/Include", NULL, 2);
 		}
 	}
 	else
 	{
-		if(parser.editPacmanKey("testing/Server", NULL, 2))
+		if(editPacmanKey("testing/Server", NULL, 2))
 			dbChanged = true;
-		if(parser.editPacmanKey("testing/Include", NULL, 2))
+		if(editPacmanKey("testing/Include", NULL, 2))
 			dbChanged = true;
 	}
 
 	if(unstableBox->checkState() == Qt::Checked)
 	{
-		if(!parser.editPacmanKey("unstable/Server", mirror, 0))
+		if(!editPacmanKey("unstable/Server", mirror, 0))
 		{
-			if(parser.editPacmanKey("unstable/Server", mirror, 1))
+			if(editPacmanKey("unstable/Server", mirror, 1))
 				dbChanged = true;
 		}
 		else
 		{
 			dbChanged = true;
-			parser.editPacmanKey("unstable/Include", NULL, 2);
+			editPacmanKey("unstable/Include", NULL, 2);
 		}
 	}
 	else
 	{
-		if(parser.editPacmanKey("unstable/Server", NULL, 2))
+		if(editPacmanKey("unstable/Server", NULL, 2))
 			dbChanged = true;
-		if(parser.editPacmanKey("unstable/Include", NULL, 2))
+		if(editPacmanKey("unstable/Include", NULL, 2))
 			dbChanged = true;
 	}
 
 	if(KDEMod3Box->checkState() == Qt::Checked)
 	{
 		mirror = "http://kdemod.ath.cx/repo/current/i686";
-		if(!parser.editPacmanKey("kdemod/Server", mirror, 0))
+		if(!editPacmanKey("kdemod/Server", mirror, 0))
 		{
-			if(parser.editPacmanKey("kdemod/Server", mirror, 1))
+			if(editPacmanKey("kdemod/Server", mirror, 1))
 				dbChanged = true;
 		}
 		else
 			dbChanged = true;
 	}
 	else
-		if(parser.editPacmanKey("kdemod/Server", NULL, 2))
+		if(editPacmanKey("kdemod/Server", NULL, 2))
 			dbChanged = true;
 
 	if(KDEMod4Box->checkState() == Qt::Checked)
 	{
 		mirror = "http://kdemod.ath.cx/repo/testing/i686";
-		if(!parser.editPacmanKey("kdemod-testing/Server", mirror, 0))
+		if(!editPacmanKey("kdemod-testing/Server", mirror, 0))
 		{
-			if(parser.editPacmanKey("kdemod-testing/Server", mirror, 1))
+			if(editPacmanKey("kdemod-testing/Server", mirror, 1))
 				dbChanged = true;
 		}
 		else
 			dbChanged = true;
 	}
 	else
-		if(parser.editPacmanKey("kdemod-testing/Server", NULL, 2))
+		if(editPacmanKey("kdemod-testing/Server", NULL, 2))
 			dbChanged = true;
 
 	/* Whew, now with the third party elements. We also take the
@@ -628,9 +663,9 @@ void ConfigDialog::saveConfiguration()
 
 		tName.append("/Server");
 
-		if(!parser.editPacmanKey(tName, itm->text(1), 0))
+		if(!editPacmanKey(tName, itm->text(1), 0))
 		{
-			if(parser.editPacmanKey(tName, itm->text(1), 1))
+			if(editPacmanKey(tName, itm->text(1), 1))
 				dbChanged = true;
 		}
 		else
@@ -641,62 +676,62 @@ void ConfigDialog::saveConfiguration()
 	
 	/* Well done, let's start committing changes to pacman's options */
 	if(noPassiveFtpBox->checkState() == Qt::Checked)
-		parser.editPacmanKey("options/NoPassiveFtp", "", 0);
+		editPacmanKey("options/NoPassiveFtp", "", 0);
 	else
-		parser.editPacmanKey("options/NoPassiveFtp", NULL, 2);
+		editPacmanKey("options/NoPassiveFtp", NULL, 2);
 
 	if(holdPkgLine->isModified())
 	{
 		if(holdPkgLine->text().isEmpty())
-			parser.editPacmanKey("options/HoldPkg", NULL, 2);
+			editPacmanKey("options/HoldPkg", NULL, 2);
 		else
-			if(!parser.editPacmanKey("options/HoldPkg", holdPkgLine->text(), 0))
-				parser.editPacmanKey("options/HoldPkg", holdPkgLine->text(), 1);
+			if(!editPacmanKey("options/HoldPkg", holdPkgLine->text(), 0))
+				editPacmanKey("options/HoldPkg", holdPkgLine->text(), 1);
 	}
 
 	if(ignorePkgLine->isModified())
 	{
 		if(ignorePkgLine->text().isEmpty())
-			parser.editPacmanKey("options/IgnorePkg", NULL, 2);
+			editPacmanKey("options/IgnorePkg", NULL, 2);
 		else
-			if(!parser.editPacmanKey("options/IgnorePkg", ignorePkgLine->text(), 0))
-				parser.editPacmanKey("options/IgnorePkg", ignorePkgLine->text(), 1);
+			if(!editPacmanKey("options/IgnorePkg", ignorePkgLine->text(), 0))
+				editPacmanKey("options/IgnorePkg", ignorePkgLine->text(), 1);
 	}
 
 	if(ignoreGrpsLine->isModified())
 	{
 		if(ignoreGrpsLine->text().isEmpty())
-			parser.editPacmanKey("options/IgnoreGroup", NULL, 2);
+			editPacmanKey("options/IgnoreGroup", NULL, 2);
 		else
-			if(!parser.editPacmanKey("options/IgnoreGroup", ignoreGrpsLine->text(), 0))
-				parser.editPacmanKey("options/IgnoreGroup", ignoreGrpsLine->text(), 1);
+			if(!editPacmanKey("options/IgnoreGroup", ignoreGrpsLine->text(), 0))
+				editPacmanKey("options/IgnoreGroup", ignoreGrpsLine->text(), 1);
 	}
 
 	if(noUpgradeLine->isModified())
 	{
 		if(noUpgradeLine->text().isEmpty())
-			parser.editPacmanKey("options/NoUpgrade", NULL, 2);
+			editPacmanKey("options/NoUpgrade", NULL, 2);
 		else
-			if(!parser.editPacmanKey("options/NoUpgrade", noUpgradeLine->text(), 0))
-				parser.editPacmanKey("options/NoUpgrade", noUpgradeLine->text(), 1);
+			if(!editPacmanKey("options/NoUpgrade", noUpgradeLine->text(), 0))
+				editPacmanKey("options/NoUpgrade", noUpgradeLine->text(), 1);
 	}
 
 	if(noExtractLine->isModified())
 	{
 		if(noExtractLine->text().isEmpty())
-			parser.editPacmanKey("options/NoExtract", NULL, 2);
+			editPacmanKey("options/NoExtract", NULL, 2);
 		else
-			if(!parser.editPacmanKey("options/NoExtract", noExtractLine->text(), 0))
-				parser.editPacmanKey("options/NoExtract", noExtractLine->text(), 1);
+			if(!editPacmanKey("options/NoExtract", noExtractLine->text(), 0))
+				editPacmanKey("options/NoExtract", noExtractLine->text(), 1);
 	}
 
 	if(xFerCommandLine->isModified())
 	{
 		if(xFerCommandLine->text().isEmpty())
-			parser.editPacmanKey("options/XferCommand", QString(), 2);
+			editPacmanKey("options/XferCommand", QString(), 2);
 		else
-			if(!parser.editPacmanKey("options/XferCommand", xFerCommandLine->text(), 0))
-				parser.editPacmanKey("options/XferCommand", xFerCommandLine->text(), 1);
+			if(!editPacmanKey("options/XferCommand", xFerCommandLine->text(), 0))
+				editPacmanKey("options/XferCommand", xFerCommandLine->text(), 1);
 	}
 
 
@@ -735,6 +770,33 @@ void ConfigDialog::saveConfiguration()
 		settings->setValue("scheduledUpdate/addupgradestoqueue", true);
 	else
 		settings->setValue("scheduledUpdate/addupgradestoqueue", false);
+
+	if(makeDepsSourceBox->isChecked())
+		settings->setValue("absbuilding/wizardbuild", true);
+	else
+		settings->setValue("absbuilding/wizardbuild", false);
+
+	if(reviewBuildOutBox->isChecked())
+		settings->setValue("absbuilding/reviewoutput", true);
+	else
+		settings->setValue("absbuilding/reviewoutput", false);
+
+	/* Additional checks here. Since this thing could be rm -rf'ed,
+	 * better being sure that is set properly. */
+	if(buildPathEdit->text() != "/" && !buildPathEdit->text().isEmpty() && buildPathEdit->text().startsWith("/"))
+		settings->setValue("absbuilding/buildpath", buildPathEdit->text());
+	else
+		settings->setValue("absbuilding/buildpath", "/var/shaman/builds");
+
+	if(cleanMakeDepsBox->isChecked())
+		settings->setValue("absbuilding/clearmakedepends", true);
+	else
+		settings->setValue("absbuilding/clearmakedepends", false);
+
+	if(cleanBuildEnvBox->isChecked())
+		settings->setValue("absbuilding/cleanbuildenv", true);
+	else
+		settings->setValue("absbuilding/cleanbuildenv", false);
 
 	settings->deleteLater();
 

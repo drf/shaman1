@@ -81,7 +81,7 @@ p, li { white-space: pre-wrap; }
         <string>Process All Dependencies from Binary First (advised)</string>
        </property>
        <property name="checked" >
-        <bool>true</bool>
+        <bool>false</bool>
        </property>
       </widget>
      </item>

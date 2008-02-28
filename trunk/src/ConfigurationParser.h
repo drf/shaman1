@@ -48,16 +48,40 @@ struct PcCnf {
 	bool loaded;
 };
 
+struct absCnf {
+	QString supfiles;
+	bool loaded;
+};
+
+struct mkpkCnf {
+	QString cflags;
+	QString cxxflags;
+	QString buildenv;
+	QString options;
+	QString docdirs;
+	bool loaded;
+};
+
 typedef struct PcCnf PacmanConf;
+typedef struct absCnf ABSConf;
+typedef struct mkpkCnf MakePkgConf;
 
 class ConfigurationParser : private StringUtils
 {
+	/* This parser will play bad tricks with your guts. It can parse
+	 * and write on pacman.conf, abs.conf and makepkg.conf. It is tha
+	 * tool to edit alpm configuration in any way you like. Can be used
+	 * with inheritance (best, since it tries to avoid parsing the same
+	 * file multiple times), or just by using it as an object.
+	 */
 	
 public:
 	ConfigurationParser();
 	virtual ~ConfigurationParser();
 	
-	PacmanConf getPacmanConf(bool forcereload);
+	PacmanConf getPacmanConf(bool forcereload = false);
+	ABSConf getABSConf(bool forcereload = false);
+	MakePkgConf getMakepkgConf(bool forcereload = false);
 	
 	bool editPacmanKey(const QString &key, const QString &value, int action);
 	
@@ -67,9 +91,13 @@ protected:
 private:
 	void parsePacmanConfig(const QString &file, const QString &givensection,
 			const QString &givendb);
+	void parseABSConfig();
+	void parseMakepkgConfig();
 	
 private:
 	PacmanConf pacData;
+	ABSConf absData;
+	MakePkgConf makepkgData;
 };
 
 #endif /*CONFIGURATIONPARSER_H_*/

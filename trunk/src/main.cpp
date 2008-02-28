@@ -125,6 +125,7 @@ int main(int argc, char **argv)
 		settings->setValue("scheduledUpdate/interval", 10);
 		settings->setValue("scheduledUpdate/addupgradestoqueue", true);
 		settings->setValue("absbuilding/clearmakedepends", true);
+		settings->setValue("absbuilding/syncsupfiles", false);
 	}
 	
 	if(settings->value("absbuilding/buildpath").toString() == 0 || !settings->contains("absbuilding/buildpath"))
