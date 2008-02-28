@@ -118,6 +118,8 @@ void ConfigDialog::setupGeneral()
 		upNotifyAddRadio->setEnabled(false);
 	}
 	
+	connect(updateDbTrayBox, SIGNAL(toggled(bool)), SLOT(obfuscateDBUpdate(bool)));
+	
 	minutesSpin->setValue(settings->value("scheduledUpdate/interval", 10).toInt());
 	
 	if(settings->value("scheduledUpdate/addupgradestoqueue").toBool())
@@ -286,6 +288,8 @@ void ConfigDialog::setupABS()
 	}
 	else
 		useCustomSupRadio->setChecked(true);
+	
+	connect(useCustomSupRadio, SIGNAL(toggled(bool)), SLOT(obfuscateSupfiles(bool)));
 	
 	ABSConf abD = getABSConf();
 	supEdit->setText(abD.supfiles);
@@ -1049,4 +1053,28 @@ void CleanThread::run()
 		break;
 
 	}
+}
+
+void ConfigDialog::obfuscateDBUpdate(bool state)
+{
+	if(state)
+	{
+		minutesSpin->setEnabled(true);
+		upNotifyRadio->setEnabled(true);
+		upNotifyAddRadio->setEnabled(true);
+	}
+	else
+	{
+		minutesSpin->setEnabled(false);
+		upNotifyRadio->setEnabled(false);
+		upNotifyAddRadio->setEnabled(false);
+	}
+}
+
+void ConfigDialog::obfuscateSupfiles(bool state)
+{
+	if(state)
+		supEdit->setEnabled(true);
+	else
+		supEdit->setEnabled(false);
 }

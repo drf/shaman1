@@ -69,6 +69,8 @@ private slots:
 	void cleanThread();
 	void saveConfiguration();
 	void addMirror();
+	void obfuscateSupfiles(bool state);
+	void obfuscateDBUpdate(bool state);
 
 private:
 	void setupRepos();
