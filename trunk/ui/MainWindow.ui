@@ -606,7 +606,7 @@
     <iconset resource="qtpacman.qrc" >:/Icons/icons/application-exit.png</iconset>
    </property>
    <property name="text" >
-    <string>Quit</string>
+    <string comment="Quit the application" >Quit</string>
    </property>
   </action>
   <action name="actionProcess_Queue" >

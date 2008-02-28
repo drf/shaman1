@@ -29,7 +29,6 @@
 #include <QDebug>
 #include <QProcess>
 #include <QFile>
-#include <alpm.h>
 #include <fcntl.h>
 
 /* libarchive */

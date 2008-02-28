@@ -17,6 +17,7 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
+#include "BuildingDialog.h"
 
 #include <iostream>
 #include <QProcess>
@@ -28,8 +29,6 @@
 #include <QCloseEvent>
 #include "ABSHandler.h"
 #include "../ui_buildingDialog.h"
-
-#include "BuildingDialog.h"
 
 BuildingDialog::BuildingDialog(AlpmHandler *hnd, QWidget *parent)
 : QDialog(parent),

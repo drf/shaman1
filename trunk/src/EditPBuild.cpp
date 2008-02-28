@@ -17,13 +17,12 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
+#include "EditPBuild.h"
 
 #include <QDir>
 #include <QDebug>
 #include <QMessageBox>
 #include <QCloseEvent>
-
-#include "EditPBuild.h"
 
 EditPBuild::EditPBuild(QStringList tg, QWidget *parent)
 : QDialog(parent),
