@@ -42,7 +42,7 @@ upDb(false)
 	setupGeneral();
 	setupPacman();
 	setupRepos();
-        setupABS();
+	setupABS();
 	connect(listWidget, SIGNAL(currentRowChanged(int)), this, SLOT(changeWidget(int)));
 	connect(this, SIGNAL(accepted()), SLOT(saveConfiguration()));
 }
@@ -91,6 +91,41 @@ void ConfigDialog::setupGeneral()
 			QString(tr("Empty Cache")) << QString(tr("Optimize Pacman Database")) << QString(tr("Clean All Building Environments")));
 	
 	connect(mantProcessButton, SIGNAL(clicked()), SLOT(performManteinanceAction()));
+	
+	/* Load values from our settings file, so easy this time. */
+	
+	QSettings *settings = new QSettings();
+	
+	if(settings->value("gui/actionupgrade").toString() == "add")
+		addUpRadio->setChecked(true);
+	else if(settings->value("gui/actionupgrade").toString() == "upgrade")
+		upNowRadio->setChecked(true);
+	else
+		askUpRadio->setChecked(true);
+	
+	if(settings->value("gui/processintray").toBool())
+		keepQueueTrayBox->setChecked(true);
+	
+	if(settings->value("gui/startupmode").toString() == "tray")
+		startTrayBox->setChecked(true);
+	
+	if(settings->value("scheduledUpdate/enabled").toBool())
+		updateDbTrayBox->setChecked(true);
+	else
+	{
+		minutesSpin->setEnabled(false);
+		upNotifyRadio->setEnabled(false);
+		upNotifyAddRadio->setEnabled(false);
+	}
+	
+	minutesSpin->setValue(settings->value("scheduledUpdate/interval", 10).toInt());
+	
+	if(settings->value("scheduledUpdate/addupgradestoqueue").toBool())
+		upNotifyAddRadio->setChecked(true);
+	else
+		upNotifyRadio->setChecked(true);
+	
+	settings->deleteLater();
 }
 
 void ConfigDialog::setupRepos()
@@ -667,6 +702,41 @@ void ConfigDialog::saveConfiguration()
 
 	/* Ok, saving finished, commit changes to Alpm now */
 	m_handler->reloadPacmanConfiguration();
+	
+	/* Now, off to the Preferences in the settings file */
+
+	QSettings *settings = new QSettings();
+
+	if(addUpRadio->isChecked())
+		settings->setValue("gui/actionupgrade", "add");
+	else if(upNowRadio->isChecked())
+		settings->setValue("gui/actionupgrade", "upgrade");
+	else
+		settings->setValue("gui/actionupgrade", "ask");
+
+	if(keepQueueTrayBox->isChecked())
+		settings->setValue("gui/processintray", true);
+	else
+		settings->setValue("gui/processintray", false);
+
+	if(startTrayBox->isChecked())
+		settings->setValue("gui/startupmode", "tray");
+	else
+		settings->setValue("gui/startupmode", "window");
+
+	if(updateDbTrayBox->isChecked())
+		settings->setValue("scheduledUpdate/enabled", true);
+	else
+		settings->setValue("scheduledUpdate/enabled", false);
+
+	settings->setValue("scheduledUpdate/interval", minutesSpin->value());
+
+	if(upNotifyAddRadio->isChecked())
+		settings->setValue("scheduledUpdate/addupgradestoqueue", true);
+	else
+		settings->setValue("scheduledUpdate/addupgradestoqueue", false);
+
+	settings->deleteLater();
 
 	/* Did we change anything in the repos? Better update our
 	 * local DB then.

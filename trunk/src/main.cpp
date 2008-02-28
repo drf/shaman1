@@ -123,7 +123,7 @@ int main(int argc, char **argv)
 		settings->setValue("gui/startupmode", "window");
 		settings->setValue("scheduledUpdate/enabled", true);
 		settings->setValue("scheduledUpdate/interval", 10);
-		settings->setValue("scheduledUpdate/notifyUpgrades", true);
+		settings->setValue("scheduledUpdate/addupgradestoqueue", true);
 		settings->setValue("absbuilding/clearmakedepends", true);
 	}
 	

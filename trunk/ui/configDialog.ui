@@ -101,21 +101,21 @@
           <item row="1" column="0" >
            <layout class="QHBoxLayout" >
             <item>
-             <widget class="QRadioButton" name="radioButton" >
+             <widget class="QRadioButton" name="upNowRadio" >
               <property name="text" >
                <string>Upgrade Immediately</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QRadioButton" name="radioButton_2" >
+             <widget class="QRadioButton" name="addUpRadio" >
               <property name="text" >
                <string>Add Upgradeable Packages To Queue</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QRadioButton" name="radioButton_3" >
+             <widget class="QRadioButton" name="askUpRadio" >
               <property name="text" >
                <string>Ask</string>
               </property>
@@ -138,7 +138,7 @@
            </widget>
           </item>
           <item row="4" column="0" >
-           <widget class="QCheckBox" name="checkBox" >
+           <widget class="QCheckBox" name="keepQueueTrayBox" >
             <property name="text" >
              <string>Keep application running in System Tray only</string>
             </property>
@@ -154,7 +154,7 @@
          </property>
          <layout class="QGridLayout" >
           <item row="0" column="0" >
-           <widget class="QCheckBox" name="checkBox_2" >
+           <widget class="QCheckBox" name="startTrayBox" >
             <property name="text" >
              <string>Start in the System Tray</string>
             </property>
@@ -170,14 +170,14 @@
          </property>
          <layout class="QGridLayout" >
           <item row="0" column="0" colspan="2" >
-           <widget class="QCheckBox" name="checkBox_3" >
+           <widget class="QCheckBox" name="updateDbTrayBox" >
             <property name="text" >
              <string>Update Database every</string>
             </property>
            </widget>
           </item>
           <item row="0" column="2" colspan="2" >
-           <widget class="QSpinBox" name="spinBox" />
+           <widget class="QSpinBox" name="minutesSpin" />
           </item>
           <item row="0" column="4" >
            <widget class="QLabel" name="label_16" >
@@ -194,14 +194,14 @@
            </widget>
           </item>
           <item row="1" column="1" colspan="2" >
-           <widget class="QRadioButton" name="radioButton_4" >
+           <widget class="QRadioButton" name="upNotifyRadio" >
             <property name="text" >
              <string>Just Notify</string>
             </property>
            </widget>
           </item>
           <item row="1" column="3" colspan="2" >
-           <widget class="QRadioButton" name="radioButton_6" >
+           <widget class="QRadioButton" name="upNotifyAddRadio" >
             <property name="text" >
              <string>Notify and add them to Queue</string>
             </property>
@@ -226,7 +226,7 @@
               <item>
                <widget class="QPushButton" name="mantProcessButton" >
                 <property name="text" >
-                 <string>Process  Selected</string>
+                 <string>Process Selected</string>
                 </property>
                </widget>
               </item>
@@ -270,9 +270,9 @@
               <property name="html" >
                <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
 p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Liberation Sans'; font-size:9pt;">Shaman Manteinance.&lt;/p>
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Liberation Sans'; font-size:9pt;">Please choose an action from the Drop-Down Menu.&lt;/p>&lt;/body>&lt;/html></string>
+&lt;/style>&lt;/head>&lt;body style=" font-family:'Liberation Sans'; font-size:9pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Shaman Manteinance.&lt;/p>
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Please choose an action from the Drop-Down Menu.&lt;/p>&lt;/body>&lt;/html></string>
               </property>
              </widget>
             </item>
@@ -656,14 +656,14 @@ and Pacman.</string>
          </property>
          <layout class="QGridLayout" >
           <item row="0" column="0" >
-           <widget class="QCheckBox" name="checkBox_5" >
+           <widget class="QCheckBox" name="makeDepsSourceBox" >
             <property name="text" >
              <string>Process all dependencies and queue from source first (recommended)</string>
             </property>
            </widget>
           </item>
           <item row="1" column="0" >
-           <widget class="QCheckBox" name="checkBox_6" >
+           <widget class="QCheckBox" name="reviewBuildOutBox" >
             <property name="text" >
              <string>Review Building output before installing</string>
             </property>
@@ -679,7 +679,7 @@ and Pacman.</string>
          </property>
          <layout class="QGridLayout" >
           <item row="0" column="0" >
-           <widget class="QRadioButton" name="radioButton_5" >
+           <widget class="QRadioButton" name="useMatchSupRadio" >
             <property name="text" >
              <string>Use supfiles that match your current repositories</string>
             </property>
@@ -688,14 +688,14 @@ and Pacman.</string>
           <item row="1" column="0" >
            <layout class="QHBoxLayout" >
             <item>
-             <widget class="QRadioButton" name="radioButton_7" >
+             <widget class="QRadioButton" name="useCustomSupRadio" >
               <property name="text" >
                <string>Define supfiles manually</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit" />
+             <widget class="QLineEdit" name="supEdit" />
             </item>
            </layout>
           </item>
@@ -716,7 +716,7 @@ and Pacman.</string>
            </widget>
           </item>
           <item row="0" column="1" >
-           <widget class="QLineEdit" name="lineEdit_2" />
+           <widget class="QLineEdit" name="CFlagEdit" />
           </item>
           <item row="1" column="0" >
            <widget class="QLabel" name="label_10" >
@@ -726,7 +726,7 @@ and Pacman.</string>
            </widget>
           </item>
           <item row="1" column="1" >
-           <widget class="QLineEdit" name="lineEdit_3" />
+           <widget class="QLineEdit" name="CXXFlagEdit" />
           </item>
           <item row="2" column="0" >
            <widget class="QLabel" name="label_11" >
@@ -736,7 +736,7 @@ and Pacman.</string>
            </widget>
           </item>
           <item row="2" column="1" >
-           <widget class="QLineEdit" name="lineEdit_4" />
+           <widget class="QLineEdit" name="buildEnvEdit" />
           </item>
           <item row="3" column="0" >
            <widget class="QLabel" name="label_12" >
@@ -746,7 +746,7 @@ and Pacman.</string>
            </widget>
           </item>
           <item row="3" column="1" >
-           <widget class="QLineEdit" name="lineEdit_5" />
+           <widget class="QLineEdit" name="optionsMkPkgEdit" />
           </item>
           <item row="4" column="0" >
            <widget class="QLabel" name="label_13" >
@@ -756,7 +756,7 @@ and Pacman.</string>
            </widget>
           </item>
           <item row="4" column="1" >
-           <widget class="QLineEdit" name="lineEdit_6" />
+           <widget class="QLineEdit" name="docDirsEdit" />
           </item>
          </layout>
         </widget>
@@ -777,19 +777,19 @@ and Pacman.</string>
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit_7" />
+             <widget class="QLineEdit" name="buildPathEdit" />
             </item>
            </layout>
           </item>
           <item row="1" column="0" >
-           <widget class="QCheckBox" name="checkBox_4" >
+           <widget class="QCheckBox" name="cleanMakeDepsBox" >
             <property name="text" >
              <string>Remove installed makedepends after build</string>
             </property>
            </widget>
           </item>
           <item row="2" column="0" >
-           <widget class="QCheckBox" name="checkBox_7" >
+           <widget class="QCheckBox" name="cleanBuildEnvBox" >
             <property name="text" >
              <string>Clean Build Environment after installation</string>
             </property>

@@ -1410,11 +1410,15 @@ void MainWindow::dbUpdateTrayFinished()
 
 			systray->setIcon(QIcon(":/Icons/icons/view-refresh.png"));
 			systray->setToolTip(QString(tr("Shaman - Idle (Upgrades Available)")));
-			if(settings->value("scheduledUpdate/notifyUpgrades").toBool())
-				systray->showMessage(QString(tr("System Upgrade")), QString(list.size() == 1 ? tr("There is %1 upgradeable package.\n"
-						"Click here to upgrade your System.") :	tr("There are %1 upgradeable packages.\nClick here to upgrade your System.")).
-						arg(list.size()));
+			systray->showMessage(QString(tr("System Upgrade")), QString(list.size() == 1 ? tr("There is %1 upgradeable package.\n"
+					"Click here to upgrade your System.") :	tr("There are %1 upgradeable packages.\nClick here to upgrade your System.")).
+					arg(list.size()));
 			connect(systray, SIGNAL(messageClicked()), SLOT(fullSysUpgrade()));
+			
+			if(settings->value("scheduledUpdate/addupgradestoqueue").toBool())
+				addUpgradeableToQueue();
+			
+			settings->deleteLater();
 		}
 		else
 			systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
