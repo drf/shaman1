@@ -633,7 +633,11 @@ void ConfigDialog::saveConfiguration()
 
 	if(KDEMod3Box->isChecked())
 	{
-		mirror = "http://kdemod.ath.cx/repo/current/i686";
+		if(!strcmp(alpm_pkg_get_arch(m_handler->getPackageFromName("pacman", "local")), "i686"))
+			mirror = "http://kdemod.ath.cx/repo/current/i686";
+		else
+			mirror = "http://kdemod.ath.cx/repo/current/x86_64";
+		
 		if(!editPacmanKey("kdemod/Server", mirror, 0))
 		{
 			if(editPacmanKey("kdemod/Server", mirror, 1))
@@ -648,7 +652,11 @@ void ConfigDialog::saveConfiguration()
 
 	if(KDEMod4Box->isChecked())
 	{
-		mirror = "http://kdemod.ath.cx/repo/testing/i686";
+		if(!strcmp(alpm_pkg_get_arch(m_handler->getPackageFromName("pacman", "local")), "i686"))
+			mirror = "http://kdemod.ath.cx/repo/testing/i686";
+		else
+			mirror = "http://kdemod.ath.cx/repo/testing/x86_64";
+		
 		if(!editPacmanKey("kdemod-testing/Server", mirror, 0))
 		{
 			if(editPacmanKey("kdemod-testing/Server", mirror, 1))
