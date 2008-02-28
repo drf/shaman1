@@ -279,21 +279,16 @@ void ConfigDialog::setupABS()
 	if(settings->value("absbuilding/cleanbuildenv").toBool())
 		cleanBuildEnvBox->setChecked(true);
 	
-	if(useMatchSupRadio->isChecked())
+	if(settings->value("absbuilding/syncsupfiles").toBool())
 	{
-		settings->setValue("absbuilding/syncsupfiles", true);
-		
-		/* We need to generate a SUPFILES containing our current repos 
-		 * then.
-		 */
+		useMatchSupRadio->setChecked(true);
+		supEdit->setEnabled(false);
 	}
 	else
-	{
-		settings->setValue("absbuilding/syncsupfiles", false);
-		
-		/* Ok, we just have to put the supfiles into abs.conf
-		 */
-	}
+		useCustomSupRadio->setChecked(true);
+	
+	ABSConf abD = getABSConf();
+	supEdit->setText(abD.supfiles);	
 	
 	settings->deleteLater();
 }
@@ -516,7 +511,7 @@ void ConfigDialog::saveConfiguration()
 	QString mirror(mirrorBox->currentText());
 	mirror = mirror.remove(' ');
 
-	if(coreBox->checkState() == Qt::Checked)
+	if(coreBox->isChecked())
 	{
 		if(!editPacmanKey("core/Server", mirror, 0))
 		{
@@ -537,7 +532,7 @@ void ConfigDialog::saveConfiguration()
 			dbChanged = true;
 	}
 
-	if(extraBox->checkState() == Qt::Checked)
+	if(extraBox->isChecked())
 	{
 		if(!editPacmanKey("extra/Server", mirror, 0))
 		{
@@ -558,7 +553,7 @@ void ConfigDialog::saveConfiguration()
 			dbChanged = true;
 	}
 
-	if(communityBox->checkState() == Qt::Checked)
+	if(communityBox->isChecked())
 	{
 		if(!editPacmanKey("community/Server", mirror, 0))
 		{
@@ -579,7 +574,7 @@ void ConfigDialog::saveConfiguration()
 			dbChanged = true;
 	}
 
-	if(testingBox->checkState() == Qt::Checked)
+	if(testingBox->isChecked())
 	{
 		if(!editPacmanKey("testing/Server", mirror, 0))
 		{
@@ -600,7 +595,7 @@ void ConfigDialog::saveConfiguration()
 			dbChanged = true;
 	}
 
-	if(unstableBox->checkState() == Qt::Checked)
+	if(unstableBox->isChecked())
 	{
 		if(!editPacmanKey("unstable/Server", mirror, 0))
 		{
@@ -621,7 +616,7 @@ void ConfigDialog::saveConfiguration()
 			dbChanged = true;
 	}
 
-	if(KDEMod3Box->checkState() == Qt::Checked)
+	if(KDEMod3Box->isChecked())
 	{
 		mirror = "http://kdemod.ath.cx/repo/current/i686";
 		if(!editPacmanKey("kdemod/Server", mirror, 0))
@@ -636,7 +631,7 @@ void ConfigDialog::saveConfiguration()
 		if(editPacmanKey("kdemod/Server", NULL, 2))
 			dbChanged = true;
 
-	if(KDEMod4Box->checkState() == Qt::Checked)
+	if(KDEMod4Box->isChecked())
 	{
 		mirror = "http://kdemod.ath.cx/repo/testing/i686";
 		if(!editPacmanKey("kdemod-testing/Server", mirror, 0))
@@ -675,7 +670,7 @@ void ConfigDialog::saveConfiguration()
 	}
 	
 	/* Well done, let's start committing changes to pacman's options */
-	if(noPassiveFtpBox->checkState() == Qt::Checked)
+	if(noPassiveFtpBox->isChecked())
 		editPacmanKey("options/NoPassiveFtp", "", 0);
 	else
 		editPacmanKey("options/NoPassiveFtp", NULL, 2);
@@ -797,6 +792,62 @@ void ConfigDialog::saveConfiguration()
 		settings->setValue("absbuilding/cleanbuildenv", true);
 	else
 		settings->setValue("absbuilding/cleanbuildenv", false);
+
+	if(useMatchSupRadio->isChecked())
+	{
+		settings->setValue("absbuilding/syncsupfiles", true);
+
+		/* We need to generate a SUPFILES containing our current repos 
+		 * then.
+		 */
+
+		QString supfiles;
+
+		if(coreBox->isChecked())
+			supfiles.append("core");
+		else
+			supfiles.append("!core");
+		
+		supfiles.append(" ");
+
+		if(extraBox->isChecked())
+			supfiles.append("extra");
+		else
+			supfiles.append("!extra");
+		
+		supfiles.append(" ");
+
+		if(communityBox->isChecked())
+			supfiles.append("community");
+		else
+			supfiles.append("!community");
+		
+		supfiles.append(" ");
+
+		if(testingBox->isChecked())
+			supfiles.append("testing");
+		else
+			supfiles.append("!testing");
+		
+		supfiles.append(" ");
+
+		if(unstableBox->isChecked())
+			supfiles.append("unstable");
+		else
+			supfiles.append("!unstable");
+		
+		editABSSection("supfiles", supfiles);
+	}
+	else
+	{
+		settings->setValue("absbuilding/syncsupfiles", false);
+
+		/* Ok, we just have to put the supfiles into abs.conf
+		 */
+
+		if(supEdit->isModified())
+			editABSSection("supfiles", supEdit->text());
+	}
 
 	settings->deleteLater();
 

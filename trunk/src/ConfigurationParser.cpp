@@ -325,6 +325,7 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 		else
 			realVal = value;
 	}
+	
 	while(!in.atEnd()) 
 	{
 		QString line(in.readLine());
@@ -559,6 +560,81 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 	}
 	else
 		return false;
+	
+	return false;
+}
+
+bool ConfigurationParser::editABSSection(const QString &section, const QString &value)
+{
+	QFile fp("/etc/abs/abs.conf");
+	QStringList fileContent;
+
+	if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
+		return false;
+
+	QTextStream in(&fp);
+	
+	/* Get the file contents */
+
+	while(!in.atEnd()) 
+	{
+		QString line(in.readLine());
+		fileContent.append(line);
+	}
+
+	fp.close();
+	
+	if(section == "supfiles")
+	{
+		QString val("SUPFILES=(");
+		val.append(value);
+		val.append(")");
+
+		if(!fileContent.filter("SUPFILES").isEmpty())
+		{
+			for(int i = 0; i < fileContent.size(); ++i)
+			{
+				if(!fileContent.at(i).startsWith("SUPFILES"))
+					continue;
+
+				if(fileContent.at(i) == val)
+					// No need to edit
+					return true;
+
+				fileContent.replace(i, val);
+				
+				QFile::remove("/etc/abs/abs.conf");
+				if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
+					return false;
+
+				QTextStream str(&fp);
+
+				for(int k=0; k < fileContent.size(); ++k)
+					str << fileContent.at(k) << endl;
+
+				fp.close();
+				return true;
+			}
+			
+			return false;
+		}
+		else
+		{
+			fileContent.append(val);
+
+			QFile::remove("/etc/abs/abs.conf");
+			if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
+				return false;
+
+			QTextStream str(&fp);
+
+			for(int k=0; k < fileContent.size(); ++k)
+				str << fileContent.at(k) << endl;
+
+			fp.close();
+			return true;			
+		}
+	}
 	
 	return false;
 }

@@ -84,6 +84,8 @@ public:
 	MakePkgConf getMakepkgConf(bool forcereload = false);
 	
 	bool editPacmanKey(const QString &key, const QString &value, int action);
+	bool editABSSection(const QString &section, const QString &value);
+	bool editMakepkgSection(const QString &section, const QString &value);
 	
 protected:
 	QStringList setrepeatingoption(const QString &ptr);
