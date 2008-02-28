@@ -58,7 +58,8 @@ public slots:
 	void startDownload();
 	void startProcess();
 	void cleanup();
-	bool runScriptlet(int action, char *p1N, char *p1V, char *pA, char *p2V);
+	bool runScriptlet(int action, const QString &p1N, const QString &p1V, 
+			const QString &pA, const QString &p2V);
 	//void handleScriptletEnding(int eC, QProcess::ExitStatus estat);
 	void writeLineProgress();
 	void writeLineProgressErr();

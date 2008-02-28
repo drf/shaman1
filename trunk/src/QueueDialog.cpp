@@ -118,21 +118,16 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 		}
 		actionDetail->setText(QString(tr("Installing %1...")).arg(alpm_pkg_get_name((pmpkg_t *)data1)));
 		textEdit->append(QString(tr("Installing %1...")).arg(alpm_pkg_get_name((pmpkg_t *)data1)));
-		
+
 		if(!alpm_pkg_has_scriptlet((pmpkg_t *)data1))
 			qDebug() << "No scriptlet for package " << alpm_pkg_get_name((pmpkg_t *)data1);
 		else
 		{
+			QString p1Name(alpm_pkg_get_name((pmpkg_t *)data1));
+			QString p1Ver(alpm_pkg_get_version((pmpkg_t *)data1));
+			QString pArch(alpm_pkg_get_arch((pmpkg_t *)data1));
 
-			p1Name = (char *)malloc(strlen(alpm_pkg_get_name((pmpkg_t *)data1)) * sizeof(char));
-			p1Ver = (char *)malloc(strlen(alpm_pkg_get_version((pmpkg_t *)data1)) * sizeof(char));
-			pArch = (char *)malloc(strlen(alpm_pkg_get_arch((pmpkg_t *)data1)) * sizeof(char));
-
-			strcpy(p1Name, alpm_pkg_get_name((pmpkg_t *)data1));
-			strcpy(p1Ver, alpm_pkg_get_version((pmpkg_t *)data1));
-			strcpy(pArch, alpm_pkg_get_arch((pmpkg_t *)data1));
-
-			runScriptlet(0, p1Name, p1Ver, pArch, NULL);
+			runScriptlet(0, p1Name, p1Ver, pArch, "");
 		}
 		break;
 	case PM_TRANS_EVT_ADD_DONE:
@@ -146,15 +141,11 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 			qDebug() << "No scriptlet for package " << alpm_pkg_get_name((pmpkg_t *)data1);
 		else
 		{
-			p1Name = (char *)malloc(strlen(alpm_pkg_get_name((pmpkg_t *)data1)) * sizeof(char));
-			p1Ver = (char *)malloc(strlen(alpm_pkg_get_version((pmpkg_t *)data1)) * sizeof(char));
-			pArch = (char *)malloc(strlen(alpm_pkg_get_arch((pmpkg_t *)data1)) * sizeof(char));
+			QString p1Name(alpm_pkg_get_name((pmpkg_t *)data1));
+			QString p1Ver(alpm_pkg_get_version((pmpkg_t *)data1));
+			QString pArch(alpm_pkg_get_arch((pmpkg_t *)data1));
 
-			strcpy(p1Name, alpm_pkg_get_name((pmpkg_t *)data1));
-			strcpy(p1Ver, alpm_pkg_get_version((pmpkg_t *)data1));
-			strcpy(pArch, alpm_pkg_get_arch((pmpkg_t *)data1));
-
-			runScriptlet(3, p1Name, p1Ver, pArch, NULL);
+			runScriptlet(3, p1Name, p1Ver, pArch, "");
 		}
 		break;
 	case PM_TRANS_EVT_REMOVE_START:
@@ -171,15 +162,11 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 			qDebug() << "No scriptlet for package " << alpm_pkg_get_name((pmpkg_t *)data1);
 		else
 		{
-			p1Name = (char *)malloc(strlen(alpm_pkg_get_name((pmpkg_t *)data1)) * sizeof(char));
-			p1Ver = (char *)malloc(strlen(alpm_pkg_get_version((pmpkg_t *)data1)) * sizeof(char));
-			pArch = (char *)malloc(strlen(alpm_pkg_get_arch((pmpkg_t *)data1)) * sizeof(char));
+			QString p1Name(alpm_pkg_get_name((pmpkg_t *)data1));
+			QString p1Ver(alpm_pkg_get_version((pmpkg_t *)data1));
+			QString pArch(alpm_pkg_get_arch((pmpkg_t *)data1));
 
-			strcpy(p1Name, alpm_pkg_get_name((pmpkg_t *)data1));
-			strcpy(p1Ver, alpm_pkg_get_version((pmpkg_t *)data1));
-			strcpy(pArch, alpm_pkg_get_arch((pmpkg_t *)data1));
-
-			runScriptlet(2, p1Name, p1Ver, pArch, NULL);
+			runScriptlet(2, p1Name, p1Ver, pArch, "");
 		}
 		break;
 	case PM_TRANS_EVT_REMOVE_DONE:
@@ -192,15 +179,11 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 			qDebug() << "No scriptlet for package " << alpm_pkg_get_name((pmpkg_t *)data1);
 		else
 		{
-			p1Name = (char *)malloc(strlen(alpm_pkg_get_name((pmpkg_t *)data1)) * sizeof(char));
-			p1Ver = (char *)malloc(strlen(alpm_pkg_get_version((pmpkg_t *)data1)) * sizeof(char));
-			pArch = (char *)malloc(strlen(alpm_pkg_get_arch((pmpkg_t *)data1)) * sizeof(char));
+			QString p1Name(alpm_pkg_get_name((pmpkg_t *)data1));
+			QString p1Ver(alpm_pkg_get_version((pmpkg_t *)data1));
+			QString pArch(alpm_pkg_get_arch((pmpkg_t *)data1));
 
-			strcpy(p1Name, alpm_pkg_get_name((pmpkg_t *)data1));
-			strcpy(p1Ver, alpm_pkg_get_version((pmpkg_t *)data1));
-			strcpy(pArch, alpm_pkg_get_arch((pmpkg_t *)data1));
-
-			runScriptlet(5, p1Name, p1Ver, pArch, NULL);
+			runScriptlet(5, p1Name, p1Ver, pArch, "");
 		}
 		//alpm_logaction(str);
 		break;
@@ -219,15 +202,11 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 		else
 		{
 
-			p1Name = (char *)malloc(strlen(alpm_pkg_get_name((pmpkg_t *)data1)) * sizeof(char));
-			p1Ver = (char *)malloc(strlen(alpm_pkg_get_version((pmpkg_t *)data1)) * sizeof(char));
-			pArch = (char *)malloc(strlen(alpm_pkg_get_arch((pmpkg_t *)data1)) * sizeof(char));
+			QString p1Name(alpm_pkg_get_name((pmpkg_t *)data1));
+			QString p1Ver(alpm_pkg_get_version((pmpkg_t *)data1));
+			QString pArch(alpm_pkg_get_arch((pmpkg_t *)data1));
 
-			strcpy(p1Name, alpm_pkg_get_name((pmpkg_t *)data1));
-			strcpy(p1Ver, alpm_pkg_get_version((pmpkg_t *)data1));
-			strcpy(pArch, alpm_pkg_get_arch((pmpkg_t *)data1));
-
-			runScriptlet(1, p1Name, p1Ver, pArch, NULL);
+			runScriptlet(1, p1Name, p1Ver, pArch, "");
 		}
 		break;
 	case PM_TRANS_EVT_UPGRADE_DONE:
@@ -244,15 +223,10 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 		else
 		{
 
-			p1Name = (char *)malloc(strlen(alpm_pkg_get_name((pmpkg_t *)data1)) * sizeof(char));
-			p1Ver = (char *)malloc(strlen(alpm_pkg_get_version((pmpkg_t *)data1)) * sizeof(char));
-			pArch = (char *)malloc(strlen(alpm_pkg_get_arch((pmpkg_t *)data1)) * sizeof(char));
-			p2Ver = (char *)malloc(strlen(alpm_pkg_get_version((pmpkg_t *)data2)) * sizeof(char));
-
-			strcpy(p1Name, alpm_pkg_get_name((pmpkg_t *)data1));
-			strcpy(p1Ver, alpm_pkg_get_version((pmpkg_t *)data1));
-			strcpy(pArch, alpm_pkg_get_arch((pmpkg_t *)data1));
-			strcpy(p2Ver, alpm_pkg_get_version((pmpkg_t *)data2));
+			QString p1Name(alpm_pkg_get_name((pmpkg_t *)data1));
+			QString p1Ver(alpm_pkg_get_version((pmpkg_t *)data1));
+			QString pArch(alpm_pkg_get_arch((pmpkg_t *)data1));
+			QString p2Ver(alpm_pkg_get_version((pmpkg_t *)data2));
 
 			runScriptlet(4, p1Name, p1Ver, pArch, p2Ver);
 		}
@@ -402,7 +376,8 @@ void QueueDialog::cleanup()
 	emit terminated(false);
 }
 
-bool QueueDialog::runScriptlet(int action, char *p1N, char *p1V, char *pA, char *p2V)
+bool QueueDialog::runScriptlet(int action, const QString &p1N, const QString &p1V, 
+		const QString &pA, const QString &p2V)
 {
 	switch(action)
 	{
@@ -433,11 +408,6 @@ bool QueueDialog::runScriptlet(int action, char *p1N, char *p1V, char *pA, char 
 	default:
 		qDebug() << "Action invalid!!! What the hell??";
 		textEdit->append(QString(tr("Unexpected Error. Shaman might be corrupted.")));
-		free(p1V);
-		free(p1N);
-		free(pA);
-		if(p2V != NULL)
-			free(p2V);
 		return false;
 		break;
 	}
@@ -452,11 +422,6 @@ bool QueueDialog::runScriptlet(int action, char *p1N, char *p1V, char *pA, char 
 
 	if(mkdtemp(tmpdir.toAscii().data()) == NULL) 
 	{
-		free(p1V);
-		free(p1N);
-		free(pA);
-		if(p2V != NULL)
-			free(p2V);
 		return false;
 	}
 	else 
@@ -469,19 +434,31 @@ bool QueueDialog::runScriptlet(int action, char *p1N, char *p1V, char *pA, char 
 	pkgpath.append(p1N);
 	pkgpath.append("-");
 	pkgpath.append(p1V);
-	pkgpath.append("-");
 	
-	if(pA == NULL || (strcmp(pA, "i686") && strcmp(pA, "x86_64")))
+	if(pA.compare("i686") && pA.compare("x86_64"))
 	{
 		QString strtmp = pkgpath;
-		strtmp.append("i686.pkg.tar.gz");
+		QString strtmp64 = pkgpath;
+		strtmp.append("-i686.pkg.tar.gz");
+		strtmp64.append("-x86_64.pkg.tar.gz");
 		if(QFile::exists(strtmp))
-			pkgpath.append("i686");
-		else
-			pkgpath.append("x86_64");
+			pkgpath.append("-i686");
+		else if(QFile::exists(strtmp64))
+			pkgpath.append("-x86_64");
 	}
 	else
-		pkgpath.append(pA);
+	{
+		QString strtmp = pkgpath;
+		strtmp.append("-");
+		strtmp.append(pA);
+		strtmp.append(".pkg.tar.gz");
+		
+		if(QFile::exists(strtmp))
+		{
+			pkgpath.append("-");
+			pkgpath.append(pA);
+		}
+	}
 	
 	pkgpath.append(".pkg.tar.gz");
 
@@ -492,11 +469,6 @@ bool QueueDialog::runScriptlet(int action, char *p1N, char *p1V, char *pA, char 
 		/* Ok then, nothing to do. */
 		qDebug() << "Couldn't extract package! Executing Scriptlet failed.";
 		textEdit->append(QString(tr("Extracting Scriptlet from package failed!!")));
-		free(p1V);
-		free(p1N);
-		free(pA);
-		if(p2V != NULL)
-			free(p2V);
 		return false;
 	}
 
@@ -528,11 +500,6 @@ bool QueueDialog::runScriptlet(int action, char *p1N, char *p1V, char *pA, char 
 	default:
 		qDebug() << "Action invalid!!! What the hell??";
 		textEdit->append(QString(tr("Unexpected Error. Shaman might be corrupted.")));
-		free(p1V);
-		free(p1N);
-		free(pA);
-		if(p2V != NULL)
-			free(p2V);
 		return false;
 		break;
 	}
@@ -570,13 +537,7 @@ bool QueueDialog::runScriptlet(int action, char *p1N, char *p1V, char *pA, char 
 	proc->deleteLater();
 
 	aHandle->rmrf("/tmp/alpm_XXXXXX");
-	
-	free(p1V);
-	free(p1N);
-	free(pA);
-	if(p2V != NULL)
-		free(p2V);
-	
+		
 	if(pEx == 0)
 		return true;
 	else
