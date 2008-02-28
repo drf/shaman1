@@ -58,7 +58,7 @@ QueueDialog::QueueDialog(AlpmHandler *hnd, QWidget *parent)
 	
 	progressBar->setRange(0, 1);
 	progressBar->setValue(0);
-	
+	adjustSize();
 	status = 0;
 }
 
