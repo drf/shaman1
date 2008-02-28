@@ -78,7 +78,7 @@
       </sizepolicy>
      </property>
      <property name="currentIndex" >
-      <number>3</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="Seite" >
       <layout class="QGridLayout" >
@@ -177,7 +177,11 @@
            </widget>
           </item>
           <item row="0" column="2" colspan="2" >
-           <widget class="QSpinBox" name="minutesSpin" />
+           <widget class="QSpinBox" name="minutesSpin" >
+            <property name="enabled" >
+             <bool>true</bool>
+            </property>
+           </widget>
           </item>
           <item row="0" column="4" >
            <widget class="QLabel" name="label_16" >
