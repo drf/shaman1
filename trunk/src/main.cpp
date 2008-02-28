@@ -115,10 +115,12 @@ int main(int argc, char **argv)
 		/* Whoa! This probably means that this is either the first time we
 		 * start Shaman, or the config file has gone. In both cases,
 		 * let's create some reasonable defaults. And let's backup
-		 * pacman.conf too, our parser rocks, but one never knows, right?
+		 * conf files too, our parser rocks, but one never knows, right?
 		 */
 		
 		QFile::copy("/etc/pacman.conf", QString("/etc/pacman.conf.bak.").append(QDate::currentDate().toString("ddMMyyyy")));
+		QFile::copy("/etc/makepkg.conf", QString("/etc/makepkg.conf.bak.").append(QDate::currentDate().toString("ddMMyyyy")));
+		QFile::copy("/etc/abs/abs.conf", QString("/etc/abs/abs.conf.bak.").append(QDate::currentDate().toString("ddMMyyyy")));
 		
 		settings->setValue("gui/startupmode", "window");
 		settings->setValue("scheduledUpdate/enabled", true);
