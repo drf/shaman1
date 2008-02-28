@@ -350,13 +350,15 @@ bool AlpmHandler::setUpAlpmSettings()
 
 		if(alpm_db_setserver(dbs_sync, pdata.serverAssoc.at(i).toAscii().data()) == 0)
 		{
-			printf("%s --> %s\n", pdata.syncdbs.at(i).toAscii().data(),
-					pdata.serverAssoc.at(i).toAscii().data());
+			if(pdata.serverAssoc.size() > i)
+				qDebug() << pdata.syncdbs.at(i) << "--->" << pdata.serverAssoc.at(i);
+			else
+				qDebug() << "Could not find a matching repo for" << pdata.syncdbs.at(i);
 
 			registered_db = alpm_list_add(registered_db, dbs_sync);
 		}
 		else
-			printf("Failed to add %s!!", pdata.syncdbs.at(i).toAscii().data());
+			qDebug() << "Failed to add" << pdata.syncdbs.at(i) << "!!";
 		
 		count++;
 	}
