@@ -793,7 +793,7 @@ void ConfigDialog::saveConfiguration()
 
 	/* Additional checks here. Since this thing could be rm -rf'ed,
 	 * better being sure that is set properly. */
-	if(buildPathEdit->text() != "/" && !buildPathEdit->text().isEmpty() && buildPathEdit->text().startsWith("/"))
+	if(buildPathEdit->text() != "/" && !buildPathEdit->text().isEmpty() && buildPathEdit->text().startsWith(QChar('/')))
 		settings->setValue("absbuilding/buildpath", buildPathEdit->text());
 	else
 		settings->setValue("absbuilding/buildpath", "/var/shaman/builds");
@@ -989,8 +989,8 @@ void ConfigDialog::cleanProc(int eC, QProcess::ExitStatus eS)
 	
 	mantProc->deleteLater();
 
-	statusLabel->setText(QString(tr("Running sync...", "sync is a command, so it shouldn't be translated")));
-	mantDetails->append(QString(tr("Running sync...", "sync is a command, so it shouldn't be translated")));
+	statusLabel->setText(QString(tr("Running sync...", "sync is a command, so it should not be translated")));
+	mantDetails->append(QString(tr("Running sync...", "sync is a command, so it should not be translated")));
 	
 	mantProc = new QProcess();
 	

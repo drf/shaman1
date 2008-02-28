@@ -184,7 +184,7 @@ void MainWindow::closeEvent(QCloseEvent *evt)
 		lbl->setText(QString(tr("Shaman will keep running in the system tray.\nTo close it, click Quit in the file menu "
 				"or in the tray icon context menu.\nWhile in the System Tray, Shaman will update your Databases\nat a regular"
 				" interval and notify you about available upgrades.\nYou can change this behaviour in Settings.")));
-		cbx->setText(QString(tr("Don't show this Again")));
+		cbx->setText(QString(tr("Do not show this Again")));
 		cbx->setChecked(false);
 		but->addButton(QDialogButtonBox::Ok);
 		lay->addWidget(lbl);
@@ -1410,7 +1410,7 @@ void MainWindow::dbUpdateTrayFinished()
 		{
 			/* We actually have something to upgrade! We'd 
 			 * better let the user know by changing icon, 
-			 * and showing a baloon.
+			 * and showing a balloon.
 			 */
 			QSettings *settings = new QSettings();
 
@@ -1480,7 +1480,7 @@ void MainWindow::systrayActivated(QSystemTrayIcon::ActivationReason reason)
 void MainWindow::getPackageFromFile()
 {
 	QString fileName = QFileDialog::getOpenFileName(this,
-	     tr("Install a Package"), getenv("HOME"), tr("Arch Linux Packages (*.pkg.tar.gz)"));
+	     tr("Install a Package"), qgetenv("HOME"), tr("Arch Linux Packages (*.pkg.tar.gz)"));
 	pmpkg_t *pkg;
 	
 	if(fileName == NULL)
@@ -1767,12 +1767,12 @@ void MainWindow::startSourceProcessing()
 	
 	connect(buildDialog->reduceButton, SIGNAL(clicked()), SLOT(reduceBuildingInTray()));
 	
-	connect(buildDialog, SIGNAL(finishedBuilding(int,QStringList)), this, SLOT(finishedBuilding(int,QStringList)));
+	connect(buildDialog, SIGNAL(finishedBuilding(int,const QStringList&)), this, SLOT(finishedBuilding(int,const QStringList&)));
 		
 	buildDialog->processBuildingQueue();
 }
 
-void MainWindow::finishedBuilding(int failure, QStringList targets)
+void MainWindow::finishedBuilding(int failure, const QStringList &targets)
 {
 	buildTargets.clear();
 	

@@ -406,14 +406,14 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 
 					for(int j=i+1; j < fileContent.size(); ++j)
 					{
-						if(fileContent.at(j).startsWith("["))
+						if(fileContent.at(j).startsWith(QChar('[')))
 							break;
 
 						if(fileContent.at(j).startsWith(key2))
 							return false;
 					}
 					QString toAdd2(key2);
-					toAdd2.append("=");
+					toAdd2.append(QChar('='));
 					toAdd2.append(realVal);
 					fileContent.insert(i+1, toAdd2);
 
@@ -434,10 +434,10 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 			
 			QString toAdd("[");
 			toAdd.append(key1);
-			toAdd.append("]");
+			toAdd.append(QChar(']'));
 			fileContent.append(toAdd);
 			QString toAdd2(key2);
-			toAdd2.append("=");
+			toAdd2.append(QChar('='));
 			toAdd2.append(realVal);
 			fileContent.append(toAdd2);
 
@@ -493,7 +493,7 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 		//Edit
 		QString toFindE("[");
 		toFindE.append(key1);
-		toFindE.append("]");
+		toFindE.append(QChar(']'));
 		if(fileContent.filter(toFindE).isEmpty())
 			return false;
 		
@@ -509,13 +509,13 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 			if(fileContent.at(i).startsWith(toFindE))
 				continue;
 			
-			if(fileContent.at(i).startsWith("["))
+			if(fileContent.at(i).startsWith(QChar('[')))
 				return false;
 			
 			if(fileContent.at(i).startsWith(key2))
 			{
 				QString toAdd(key2);
-				toAdd.append("=");
+				toAdd.append(QChar('='));
 				toAdd.append(realVal);
 				QString check1(toAdd);
 				QString check2(fileContent.at(i));
@@ -546,7 +546,7 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 		//Remove
 		QString toFindE("[");
 		toFindE.append(key1);
-		toFindE.append("]");
+		toFindE.append(QChar(']'));
 		if(fileContent.filter(toFindE).isEmpty())
 			return false;
 
@@ -563,10 +563,10 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 			bool changed = false;
 			for(int j=i+1; j < fileContent.size(); ++j)
 			{
-				if(fileContent.at(j).startsWith("["))
+				if(fileContent.at(j).startsWith(QChar('[')))
 					break;
 				
-				if(!fileContent.at(j).startsWith(key2) && !fileContent.at(j).startsWith("#")
+				if(!fileContent.at(j).startsWith(key2) && !fileContent.at(j).startsWith(QChar('#'))
 						&& !fileContent.at(j).isEmpty())
 					removeroot = 0;
 

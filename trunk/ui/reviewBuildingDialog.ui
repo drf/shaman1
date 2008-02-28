@@ -91,7 +91,7 @@ p, li { white-space: pre-wrap; }
         <string>This is useful if you want to review compiler's output</string>
        </property>
        <property name="text" >
-        <string>Don't install immediately when building is finished</string>
+        <string>Do not install immediately when building is finished</string>
        </property>
       </widget>
      </item>

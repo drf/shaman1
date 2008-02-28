@@ -78,7 +78,7 @@ public slots:
 	void updateABSTree();
 	void validateSourceQueue();
 	void startSourceProcessing();
-	void finishedBuilding(int failure, QStringList targets);
+	void finishedBuilding(int failure, const QStringList &targets);
 	void processBuiltPackages();
 	void openPBuildDialog();
 	void processBuildWizard();

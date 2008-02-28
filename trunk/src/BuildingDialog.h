@@ -59,7 +59,7 @@ private:
 	void processCurrentQueueItem();
 	
 signals:
-	void finishedBuilding(int failurelevel, QStringList bp);
+	void finishedBuilding(int failurelevel, const QStringList &bp);
 	void nullifyPointer();
 	
 private:

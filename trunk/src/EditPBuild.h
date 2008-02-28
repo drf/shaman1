@@ -29,7 +29,7 @@ class EditPBuild : public QDialog, private Ui::editPBDialog, private ABSHandler
 	Q_OBJECT
 	
 public:
-	explicit EditPBuild(QStringList tg, QWidget *parent = 0);
+	explicit EditPBuild(const QStringList &tg, QWidget *parent = 0);
 	virtual ~EditPBuild();
 	
 public slots:

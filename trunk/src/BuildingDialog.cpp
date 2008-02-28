@@ -136,8 +136,8 @@ void BuildingDialog::finishedBuildingAction(int ecode, QProcess::ExitStatus esta
 
 		settings->deleteLater();
 
-		if(!path.endsWith("/"))
-			path.append("/");
+		if(!path.endsWith(QChar('/')))
+			path.append(QChar('/'));
 
 		path.append(buildQueue.at(currentItem));
 		
@@ -196,8 +196,8 @@ void BuildingDialog::processCurrentQueueItem()
 
 	settings->deleteLater();
 
-	if(!path.endsWith("/"))
-		path.append("/");
+	if(!path.endsWith(QChar('/')))
+		path.append(QChar('/'));
 
 	path.append(buildQueue.at(currentItem));
 	

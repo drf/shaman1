@@ -24,7 +24,7 @@
 #include <QMessageBox>
 #include <QCloseEvent>
 
-EditPBuild::EditPBuild(QStringList tg, QWidget *parent)
+EditPBuild::EditPBuild(const QStringList &tg, QWidget *parent)
 : QDialog(parent),
 targets(tg)
 {
@@ -86,8 +86,8 @@ bool EditPBuild::loadFile(const QString &name)
 	if(absSource == QString())
 		return false;
 
-	if(!absSource.endsWith("/"))
-		absSource.append("/");
+	if(!absSource.endsWith(QChar('/')))
+		absSource.append(QChar('/'));
 	
 	absSource.append("PKGBUILD");
 	
@@ -115,8 +115,8 @@ bool EditPBuild::saveFile(const QString &name)
 	if(absSource == QString())
 		return false;
 	
-	if(!absSource.endsWith("/"))
-		absSource.append("/");
+	if(!absSource.endsWith(QChar('/')))
+		absSource.append(QChar('/'));
 	
 	absSource.append("PKGBUILD");
 	

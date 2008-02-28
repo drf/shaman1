@@ -30,7 +30,7 @@ class ABSHandler
 	 * There are not so many methods, anyway it can search for
 	 * a package in the ABS path, and set up and clean up
 	 * local building environments. It can also get some useful
-	 * informations about PKGBUILDs. It is a stripped parsed, just
+	 * information about PKGBUILDs. It is a stripped parsed, just
 	 * to suit our needs.
 	 * 
 	 * Some of its functions are static, it is ridiculous to inherit a 

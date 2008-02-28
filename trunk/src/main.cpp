@@ -74,9 +74,9 @@ int main(int argc, char **argv)
 	if(myuid > 0)
 	{
 		QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("Shaman", "Hey! "
-				"If you're reading this, first of all thanks for helping us in making Shaman better. "
+				"If you are reading this, first of all thanks for helping us in making Shaman better. "
 				"There are not many comments unless where needed, since all the strings are pretty self-explanatory. "
-				"You'll see a lot of HTML in some cases: don't let that scare you, but please edit text only. Editing "
+				"You will see a lot of HTML in some cases: do not let that scare you, but please edit text only. Editing "
 				"HTML tags too may break our layout, so be careful. A good practice could be copying the whole string, "
 				"and then translating just what's outside the tags, usually just a few words. "
 				"If you have any doubts, or if you just want to drop us a line, there goes our email addresses:\n"

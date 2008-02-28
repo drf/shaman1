@@ -176,7 +176,7 @@ void UpdateDbDialog::createWidgets(const QStringList &list)
 		 * the name of the Database, so we simply show it. The second holds the icon.
 		 * Since we'll need to edit the icons during the operation, we will store the 
 		 * pointers to the label in a QList, labelList. You'll see how this thing works in
-		 * the next funtion called, updateLabel
+		 * the next function called, updateLabel
 		 */
 		
 		QLabel *labelDb = new QLabel(this);

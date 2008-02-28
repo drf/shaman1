@@ -101,7 +101,7 @@ void StringUtils::_strnadd(char **str, const char *append, unsigned int count)
 	strncat(*str, append, count);
 }
 
-/* Replace all occurances of 'needle' with 'replace' in 'str', returning
+/* Replace all occurrences of 'needle' with 'replace' in 'str', returning
  * a new string (must be free'd) */
 char *StringUtils::strreplace(const char *str, const char *needle, const char *replace)
 {
@@ -122,7 +122,7 @@ char *StringUtils::strreplace(const char *str, const char *needle, const char *r
 			break;
 		} else { /* found match */
 			if(q > p){
-				/* add chars between this occurance and last occurance, if any */
+				/* add chars between this occurrence and last occurrence, if any */
 				_strnadd(&newstr, p, q - p);
 			}
 			_strnadd(&newstr, replace, replacesz);

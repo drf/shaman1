@@ -84,8 +84,8 @@ bool ABSHandler::cleanBuildingEnvironment(const QString &package)
 
 	settings->deleteLater();
 
-	if(!path.endsWith("/"))
-		path.append("/");
+	if(!path.endsWith(QChar('/')))
+		path.append(QChar('/'));
 
 	path.append(package);
 	
@@ -102,8 +102,8 @@ bool ABSHandler::setUpBuildingEnvironment(const QString &package)
 
 	settings->deleteLater();
 
-	if(!path.endsWith("/"))
-		path.append("/");
+	if(!path.endsWith(QChar('/')))
+		path.append(QChar('/'));
 	
 	path.append(package);
 	
@@ -122,8 +122,8 @@ bool ABSHandler::setUpBuildingEnvironment(const QString &package)
 	for (int i = 0; i < Plist.size(); ++i) 
 	{
 		QString dest(path);
-		if(!dest.endsWith("/"))
-			dest.append("/");
+		if(!dest.endsWith(QChar('/')))
+			dest.append(QChar('/'));
 		dest.append(Plist.at(i).fileName());
 
 		qDebug() << "Copying " << Plist.at(i).absoluteFilePath() << " to " << dest;
@@ -168,8 +168,8 @@ QStringList ABSHandler::getMakeDepends(const QString &package)
 	if(absSource == QString())
 		return retList;
 
-	if(!absSource.endsWith("/"))
-		absSource.append("/");
+	if(!absSource.endsWith(QChar('/')))
+		absSource.append(QChar('/'));
 
 	absSource.append("PKGBUILD");
 
