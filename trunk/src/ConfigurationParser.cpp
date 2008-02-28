@@ -171,13 +171,19 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 					{
 						while(line.contains(' '))
 							line.remove(line.indexOf(' '), 1);
-						parsePacmanConfig(line, section, db);
-						if(!pacData.loaded)
-						{
-							pacData.loaded = false;
 
-							return;
+						if(QFile::exists(line))
+						{
+							parsePacmanConfig(line, section, db);
+							if(!pacData.loaded)
+							{
+								pacData.loaded = false;
+
+								return;
+							}
 						}
+						else if(serverparsed != 1)
+							pacData.syncdbs.removeLast();
 					}
 				}
 				/* Ignore include failures... assume non-critical */
