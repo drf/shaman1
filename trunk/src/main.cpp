@@ -34,6 +34,7 @@
 #include <QTranslator>
 #include <QDebug>
 #include <QFile>
+#include <QSplashScreen>
 #include <signal.h>
 
 static void cleanup(int signum)
@@ -118,7 +119,14 @@ int main(int argc, char **argv)
 	}
 	
 	app.setQuitOnLastWindowClosed(false);
+
+	QSplashScreen splscr(QPixmap(":/Images/images/splash.png"));
+	splscr.show();
+	app.processEvents();
 	
+	splscr.showMessage(QString(QObject::tr("Please Wait, loading packages...")), Qt::AlignBottom | Qt::AlignRight);
+	app.processEvents();
+
 	signal(SIGINT, cleanup);
 	signal(SIGTERM, cleanup);
 	signal(SIGSEGV, cleanup);
@@ -148,10 +156,15 @@ int main(int argc, char **argv)
 	if(settings->value("absbuilding/buildpath").toString() == 0 || !settings->contains("absbuilding/buildpath"))
 		// This can be dangerous, so set it properly
 		settings->setValue("absbuilding/buildpath", "/var/shaman/builds");
-	
+
 	settings->deleteLater();
 
 	MainWindow mainwin(aHandler);
+	splscr.finish(&mainwin);
+
+	mainwin.populateRepoColumn();
+
+	mainwin.populatePackagesView();
 
 	if(settings->value("gui/startupmode").toString() == "window")
 	{
@@ -170,9 +183,6 @@ int main(int argc, char **argv)
 		mainwin.startTimer();
 	}
 
-	mainwin.populateRepoColumn();
-
-	mainwin.populatePackagesView();
 	QObject::connect(&mainwin, SIGNAL(aboutToQuit()), &app, SLOT(quit()));
 	return app.exec();
 

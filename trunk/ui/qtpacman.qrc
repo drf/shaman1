@@ -1,6 +1,7 @@
 <RCC>
     <qresource prefix="/Icons" >
         <file>icons/application-exit.png</file>
+        <file>icons/applications-development.png</file>
         <file>icons/bookmark-new-list.png</file>
         <file>icons/dialog-cancel.png</file>
         <file>icons/dialog-ok-apply.png</file>
@@ -19,6 +20,8 @@
         <file>icons/user-online.png</file>
         <file>icons/view-history.png</file>
         <file>icons/view-refresh.png</file>
-	<file>icons/applications-development.png</file>
+    </qresource>
+    <qresource prefix="/Images" >
+        <file>images/splash.png</file>
     </qresource>
 </RCC>
