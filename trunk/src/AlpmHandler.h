@@ -110,6 +110,8 @@ public:
 	pmpkg_t *getPackageFromName(const QString &name, const QString &repo);
 	
 	QStringList alpmListToStringList(alpm_list_t *list);
+	
+	QString getAlpmVersion();
 
 private:
 	bool initTransaction(pmtranstype_t type, pmtransflag_t flags);

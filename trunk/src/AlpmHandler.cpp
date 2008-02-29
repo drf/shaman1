@@ -936,3 +936,8 @@ unsigned long AlpmHandler::getPackageSize(const QString &name, const QString &re
 {
 	return getPackageSize(getPackageFromName(name, repo));
 }
+
+QString AlpmHandler::getAlpmVersion()
+{
+	return "2.2.0";
+}

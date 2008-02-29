@@ -67,14 +67,14 @@ static void cleanup(int signum)
 	exit(signum);
 }
 
-static void setuseragent(void)
+static void setuseragent(const QString &version)
 {
 	char agent[101];
 	struct utsname un;
 
 	uname(&un);
-	snprintf(agent, 100, "shaman/" SHAMAN_VERSION " (%s %s) libalpm/2.2.0",
-			un.sysname, un.machine);
+	snprintf(agent, 100, "shaman/" SHAMAN_VERSION " (%s %s) libalpm/%s",
+			un.sysname, un.machine, version.toAscii().data());
 	setenv("HTTP_USER_AGENT", agent, 0);
 }
 
@@ -144,7 +144,9 @@ int main(int argc, char **argv)
 	signal(SIGTERM, cleanup);
 	signal(SIGSEGV, cleanup);
 	
-	setuseragent();
+	setuseragent(aHandler->getAlpmVersion());
+	
+	qDebug() << "User agent is:" << qgetenv("HTTP_USER_AGENT");
 	
 	QSettings *settings = new QSettings();
 	
