@@ -57,9 +57,12 @@ signals:
 			int howmany, int remain);
 	void streamTransDlProg(char *filename, int file_x, int file_t, int spd_f,
 			int list_x, int list_t, int spd_l);
+	void questionStreamed(const QString &msg);
 	
-private:
+public:
 	int answer;
+
+private:
 	float rate_last;
 	int xfered_last;
 	float rate_total;

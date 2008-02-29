@@ -627,7 +627,7 @@ void AlpmHandler::processQueue()
 		for (int i = 0; i < toRemove.size(); ++i)
 		{
 			if(alpm_trans_addtarget(toRemove.at(i).toAscii().data()) == -1)
-				printf("Argh!\n");
+				qDebug() << "Unable to add Target:" << toRemove.at(i);
 		}
 		
 		performCurrentTransaction();
@@ -641,7 +641,7 @@ void AlpmHandler::processQueue()
 		for (int i = 0; i < toSync.size(); ++i)
 		{
 			if(alpm_trans_addtarget(toSync.at(i).toAscii().data()) == -1)
-				printf("Argh!\n");
+				qDebug() << "Unable to add Target:" << toSync.at(i);
 		}
 		
 		performCurrentTransaction();
@@ -662,7 +662,7 @@ void AlpmHandler::processQueue()
 		for (int i = 0; i < toFromFile.size(); ++i)
 		{
 			if(alpm_trans_addtarget(toFromFile.at(i).toAscii().data()) == -1)
-				printf("Argh!\n");
+				qDebug() << "Unable to add Target:" << toFromFile.at(i);
 		}
 
 		performCurrentTransaction();

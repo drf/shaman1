@@ -30,6 +30,7 @@
 #include <QProcess>
 #include <QFile>
 #include <QWaitCondition>
+#include <QMessageBox>
 #include <fcntl.h>
 
 /* libarchive */
@@ -75,7 +76,7 @@ TrCommitThread::TrCommitThread(AlpmHandler *aH)
 }
 
 void QueueDialog::startProcessing()
-{
+{	
 	cTh = new TrCommitThread(aHandle);
 	
 	cTh->start();

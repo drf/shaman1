@@ -41,9 +41,12 @@
 #include <QTimer>
 #include <QCloseEvent>
 #include <QSettings>
+#include <QWaitCondition>
 #include <alpm.h>
 
 extern CallBacks CbackReference;
+extern QMutex mutex;
+extern QWaitCondition wCond;
 
 
 MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent) 
@@ -77,6 +80,7 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	nameDescBox->addItem(tr("Name"));
 	nameDescBox->addItem(tr("Description"));
 
+	connect(&CbackReference, SIGNAL(questionStreamed(const QString&)), this, SLOT(streamTransQuestion(const QString&)));
 	connect(actionUpdate_Database, SIGNAL(triggered()), SLOT(doDbUpdate()));
 	connect(pkgsViewWG, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showPkgsViewContextMenu()));
 	connect(repoList, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showRepoViewContextMenu()));
@@ -2174,4 +2178,34 @@ void MainWindow::changeTimerInterval()
 	}
 	
 	settings->deleteLater();
+}
+
+void MainWindow::streamTransQuestion(const QString &msg)
+{
+	QMessageBox *msgBox = new QMessageBox(this);
+
+	msgBox->setIcon(QMessageBox::Question);
+	msgBox->setWindowTitle(QString(tr("Library Question")));
+
+	msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+
+	msgBox->setWindowModality(Qt::ApplicationModal);
+
+	msgBox->setText(msg);
+
+	switch (msgBox->exec()) {
+	case QMessageBox::Yes:
+		CbackReference.answer = 1;
+		break;
+	case QMessageBox::No:
+		CbackReference.answer = 0;
+		break;
+	default:
+		// should never be reached
+		break;
+	}
+
+	msgBox->deleteLater();
+	
+	qDebug() << "Waking Alpm Thread";	
 }

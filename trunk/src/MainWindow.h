@@ -86,6 +86,7 @@ public slots:
 	void disableTrayActions();
 	void reduceBuildingInTray();
 	void nullifyBDialog();
+	void streamTransQuestion(const QString &msg);
 	
 protected:
 	void closeEvent(QCloseEvent *evt);
