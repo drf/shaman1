@@ -91,13 +91,33 @@ void BuildingDialog::updateABSTree()
 void BuildingDialog::writeLineProgress()
 {
 	ABSProc->setReadChannel(QProcess::StandardOutput);
-	progressEdit->append(ABSProc->readLine(1024));
+	
+	QString view(ABSProc->readLine(1024));
+	view.remove(QChar('\n'));
+
+	QString tmp(view);
+	tmp.remove(QChar('.'));
+
+	if(tmp.isEmpty())
+		return;
+
+	progressEdit->append(view);
 }
 
 void BuildingDialog::writeLineProgressErr()
 {
 	ABSProc->setReadChannel(QProcess::StandardError);
-	progressEdit->append(ABSProc->readLine(1024));
+	
+	QString view(ABSProc->readLine(1024));
+	view.remove(QChar('\n'));
+	
+	QString tmp(view);
+	tmp.remove(QChar('.'));
+	
+	if(tmp.isEmpty())
+		return;
+	
+	progressEdit->append("<b><i>" + view + "</i></b>");
 }
 
 void BuildingDialog::finishedUpdateABSTree()
