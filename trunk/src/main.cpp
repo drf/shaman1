@@ -33,7 +33,6 @@
 #include <QDate>
 #include <QTranslator>
 #include <QDebug>
-#include <QFile>
 #include <QSplashScreen>
 #include <signal.h>
 

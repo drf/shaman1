@@ -1330,26 +1330,26 @@ chiuderà, riavvialo per usare la nuova versione</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/main.cpp" line="102"/>
+        <location filename="../src/main.cpp" line="101"/>
         <source>You have to be root to run Shaman.
 Please restart it with root privileges.</source>
         <translation>Devi essere root per utilizzare Shaman.
 Per favore riavvialo da root.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="113"/>
+        <location filename="../src/main.cpp" line="112"/>
         <source>Shaman</source>
         <translation>Shaman</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="114"/>
+        <location filename="../src/main.cpp" line="113"/>
         <source>There was a problem while testing libalpm.
 Maybe another application has a lock on it.</source>
         <translation>C&apos;è stato un problema testando libalpm.
 Forse un&apos;altra applicazione tiene un lock su di essa.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="101"/>
+        <location filename="../src/main.cpp" line="100"/>
         <source>Shaman</source>
         <comment>Hey! If you are reading this, first of all thanks for helping us in making Shaman better. There are not many comments unless where needed, since all the strings are pretty self-explanatory. You will see a lot of HTML in some cases: do not let that scare you, but please edit text only. Editing HTML tags too may break our layout, so be careful. A good practice could be copying the whole string, and then translating just what&apos;s outside the tags, usually just a few words. If you have any doubts, or if you just want to drop us a line, there goes our email addresses:
 Dario: drf54321@gmail.com
@@ -1363,22 +1363,22 @@ Thanks again, and enjoy your translation!</comment>
         <translation type="obsolete">Attendere prego, caricamento dei pacchetti...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="127"/>
+        <location filename="../src/main.cpp" line="126"/>
         <source>Please Wait...</source>
         <translation>Attendere Prego...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="164"/>
+        <location filename="../src/main.cpp" line="163"/>
         <source>Loading Databases...</source>
         <translation>Caricamento dei Database...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="169"/>
+        <location filename="../src/main.cpp" line="168"/>
         <source>Loading Packages...</source>
         <translation>Caricamento dei Pacchetti...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="174"/>
+        <location filename="../src/main.cpp" line="173"/>
         <source>Starting up Shaman...</source>
         <translation>Avvio di Shaman...</translation>
     </message>
@@ -1813,7 +1813,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;KDEMod Community&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Help, Testing, Support, everything started from here.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;FenDanT&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Jacques Disner&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;French Translator&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;XanK&lt;/span&gt;&lt;/p&gt;
