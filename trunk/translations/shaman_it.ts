@@ -1,77 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="1.1">
+<!DOCTYPE TS><TS version="1.1" language="it">
 <context>
     <name>BuildingDialog</name>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="51"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore</translation>
     </message>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="57"/>
         <source>Would you like to abort building?.
 All Process will be lost.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vuoi davvero annullare la compilazione?
+Tutti i progressi andranno perduti.</translation>
     </message>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="65"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Building Process Aborted by the User. Building Failed.&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Compilazione annullata dall&apos;utente. Compilazione Fallita.&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="84"/>
         <source>Updating ABS Tree...</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiornamento dell&apos;albero ABS...</translation>
     </message>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="87"/>
         <source>&lt;b&gt;Starting ABS Tree Update...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Inizio Aggiornamento dell&apos;albero ABS...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="106"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;ABS Tree Was Successfully Updated!&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Albero ABS Aggiornato con successo!&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="108"/>
         <source>ABS Update</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiornamento ABS</translation>
     </message>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="108"/>
         <source>Your ABS Tree was updated!</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;albero ABS è stato aggiornato!</translation>
     </message>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="125"/>
         <source>&lt;b&gt;Building %1 failed!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Compilazione di %1 fallita!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="130"/>
         <source>&lt;b&gt;%1 was built successfully!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;%1 compilato con successo!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="185"/>
         <source>Processing Package %1 of %2...</source>
-        <translation type="unfinished"></translation>
+        <translation>Compilazione del pacchetto %1 di %2...</translation>
     </message>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="186"/>
         <source>Building %1...</source>
-        <translation type="unfinished"></translation>
+        <translation>Compilazione di %1...</translation>
     </message>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="210"/>
         <source>&lt;b&gt;Building %1...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Compilazione di %1...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="235"/>
         <source>&lt;b&gt;Building operation has started.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Compilazione dei pacchetti Iniziata.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
 </context>
 <context>
@@ -115,6 +116,11 @@ Upgrade anyway?</source>
         <location filename="../src/callbacks.cpp" line="134"/>
         <source>File %s is corrupted.
 Do you want to delete it?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/callbacks.cpp" line="101"/>
+        <source>Library Question</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -319,7 +325,7 @@ and Pacman.</source>
     <message>
         <location filename="../ui/configDialog.ui" line="598"/>
         <source>Repository</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Repository</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="626"/>
@@ -449,7 +455,7 @@ and Pacman.</source>
     <message>
         <location filename="../src/configDialog.cpp" line="135"/>
         <source>Repositories</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Repositori</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="196"/>
@@ -661,13 +667,14 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/EditPBuild.cpp" line="152"/>
         <source>Saving</source>
-        <translation type="unfinished"></translation>
+        <translation>Salvataggio</translation>
     </message>
     <message>
         <location filename="../src/EditPBuild.cpp" line="158"/>
         <source>You modified this PKGBUILD.
 Do you want to save it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Hai Modificato questo PKGBUILD.
+Vuoi salvarlo?</translation>
     </message>
 </context>
 <context>
@@ -675,237 +682,237 @@ Do you want to save it?</source>
     <message>
         <location filename="../ui/MainWindow.ui" line="13"/>
         <source>Shaman</source>
-        <translation type="unfinished"></translation>
+        <translation>Shaman</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="49"/>
         <source>All packages</source>
-        <translation type="unfinished"></translation>
+        <translation>Tutti i pacchetti</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="456"/>
         <source>Installed packages</source>
-        <translation type="unfinished"></translation>
+        <translation>Pacchetti Installati</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="466"/>
         <source>Not installed packages</source>
-        <translation type="unfinished"></translation>
+        <translation>Pacchetti Non Installati</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="475"/>
         <source>Upgradeable packages</source>
-        <translation type="unfinished"></translation>
+        <translation>Pacchetti Aggiornabili</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="485"/>
         <source>Packages in Queue</source>
-        <translation type="unfinished"></translation>
+        <translation>Pacchetti in Coda</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="137"/>
         <source>Status</source>
-        <translation type="unfinished"></translation>
+        <translation>Stato</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="502"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="147"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Azione</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="152"/>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Versione</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="157"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensione</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="162"/>
         <source>Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Repository</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="167"/>
         <source>Groups</source>
-        <translation type="unfinished"></translation>
+        <translation>Gruppi</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="509"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Descrizione</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="177"/>
         <source>Action-Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Action-Text</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="348"/>
         <source>Repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Repositori</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="382"/>
         <source>Package Groups</source>
-        <translation type="unfinished"></translation>
+        <translation>Gruppi di Pacchetti</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="399"/>
         <source>Package Information</source>
-        <translation type="unfinished"></translation>
+        <translation>Informazioni sul Pacchetto</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="301"/>
         <source>Install selected package</source>
-        <translation type="unfinished"></translation>
+        <translation>Installa il pacchetto selezionato</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="735"/>
+        <location filename="../src/MainWindow.cpp" line="808"/>
         <source>Mark for Installation</source>
-        <translation type="unfinished"></translation>
+        <translation>Segna per l&apos;Installazione</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="320"/>
         <source>Remove selected package</source>
-        <translation type="unfinished"></translation>
+        <translation>Rimuovi il pacchetto selezionato</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="737"/>
+        <location filename="../src/MainWindow.cpp" line="810"/>
         <source>Mark for Removal</source>
-        <translation type="unfinished"></translation>
+        <translation>Segna per la Rimozione</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="339"/>
         <source>Complete Remove selected package (pacman -Rcs)</source>
-        <translation type="unfinished"></translation>
+        <translation>Rimuovi completamente il pacchetto  (pacman -Rcs)</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="342"/>
         <source>Mark for complete removal</source>
-        <translation type="unfinished"></translation>
+        <translation>Segna per la rimozione completa</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="358"/>
         <source>Cancel action for selected package</source>
-        <translation type="unfinished"></translation>
+        <translation>Annulla azione per il pacchetto selezionato</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="361"/>
         <source>Cancel action</source>
-        <translation type="unfinished"></translation>
+        <translation>Annulla Azione</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="434"/>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Files</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="444"/>
         <source>1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="453"/>
         <source>Dependencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Dipendenze</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="482"/>
         <source>File</source>
-        <translation type="unfinished"></translation>
+        <translation>File</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="488"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Aiuto</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="494"/>
         <source>Actions</source>
-        <translation type="unfinished"></translation>
+        <translation>Azioni</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="498"/>
         <source>Build and Install from Source</source>
-        <translation type="unfinished"></translation>
+        <translation>Compila e Installa da Sorgente</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="523"/>
         <source>Quick Actions</source>
-        <translation type="unfinished"></translation>
+        <translation>Azioni Rapide</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="548"/>
         <source>Package Repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Repositori di Pacchetti</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="556"/>
         <source>Settings...</source>
-        <translation type="unfinished"></translation>
+        <translation>Impostazioni...</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="564"/>
         <source>About...</source>
-        <translation type="unfinished"></translation>
+        <translation>Informazioni...</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="120"/>
         <source>Update Database</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiorna Database</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="124"/>
         <source>Upgrade System</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiorna il Sistema</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="588"/>
         <source>Install Package From File</source>
-        <translation type="unfinished"></translation>
+        <translation>Installa Pacchetto da File</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="596"/>
         <source>Update ABS Tree</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiorna l&apos;albero ABS</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="601"/>
         <source>Build and Install Queue</source>
-        <translation type="unfinished"></translation>
+        <translation>Compila e Installa la Coda</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="138"/>
         <source>Quit</source>
-        <translation type="unfinished"></translation>
+        <translation>Esci</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="128"/>
         <source>Process Queue</source>
-        <translation type="unfinished"></translation>
+        <translation>Esegui la Coda</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="786"/>
+        <location filename="../src/MainWindow.cpp" line="859"/>
         <source>Cancel all actions</source>
-        <translation type="unfinished"></translation>
+        <translation>Annulla tutte le Azioni</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="133"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Impostazioni</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1829"/>
+        <location filename="../src/MainWindow.cpp" line="1937"/>
         <source>Shaman - Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>Shaman - In Attesa</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="186"/>
@@ -914,383 +921,441 @@ To close it, click Quit in the file menu or in the tray icon context menu.
 While in the System Tray, Shaman will update your Databases
 at a regular interval and notify you about available upgrades.
 You can change this behaviour in Settings.</source>
-        <translation type="unfinished"></translation>
+        <translation>Shaman verrà ridotto nel vassoio di sistema.
+Per Chiuderlo, clicca su Esci nel menù File o nel menù dell&apos;Icona nel vassoio.
+Mentre ridotto a Icona, Shaman aggiornerà i Database a intervalli regolari
+e ti notificherà di eventuali aggiornamenti. 
+Puoi cambiare questo comportamento nelle Impostazioni.</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="194"/>
         <source>Shaman - Reducing To Tray</source>
-        <translation type="unfinished"></translation>
+        <translation>Shaman - Riduzione a Icona</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1919"/>
+        <location filename="../src/MainWindow.cpp" line="2027"/>
         <source>Upgrade</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiorna</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1419"/>
+        <location filename="../src/MainWindow.cpp" line="1525"/>
         <source>Shaman - Idle (Upgrades Available)</source>
-        <translation type="unfinished"></translation>
+        <translation>Shaman - In Attesa (Aggiornamenti Disponibili)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1420"/>
+        <location filename="../src/MainWindow.cpp" line="1526"/>
         <source>System Upgrade</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiornamento del Sistema</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1421"/>
+        <location filename="../src/MainWindow.cpp" line="1527"/>
         <source>There is %1 upgradeable package.
 Click here to upgrade your System.</source>
-        <translation type="unfinished"></translation>
+        <translation>C&apos;è %1 pacchetto aggiornabile.
+Clicca qui per aggiornare il tuo Sistema.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1421"/>
+        <location filename="../src/MainWindow.cpp" line="1527"/>
         <source>There are %1 upgradeable packages.
 Click here to upgrade your System.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ci sono %1 pacchetti aggiornabili.
+Clicca qui per aggiornare il tuo Sistema.</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="424"/>
         <source>All Repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Tutti i Repositori</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="427"/>
         <source>Local Packages</source>
-        <translation type="unfinished"></translation>
+        <translation>Pacchetti Locali</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="888"/>
+        <location filename="../src/MainWindow.cpp" line="961"/>
         <source>All Groups</source>
-        <translation type="unfinished"></translation>
+        <translation>Tutti i Gruppi</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="539"/>
         <source>Mark for Reinstallation</source>
-        <translation type="unfinished"></translation>
+        <translation>Segna per la Reinstallazione</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1916"/>
+        <location filename="../src/MainWindow.cpp" line="2024"/>
         <source>Install</source>
-        <translation type="unfinished"></translation>
+        <translation>Installa</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1605"/>
+        <location filename="../src/MainWindow.cpp" line="1713"/>
         <source>Uninstall</source>
-        <translation type="unfinished"></translation>
+        <translation>Rimuovi</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1606"/>
+        <location filename="../src/MainWindow.cpp" line="1714"/>
         <source>Complete Uninstall</source>
-        <translation type="unfinished"></translation>
+        <translation>Rimuovi Completamente</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="606"/>
         <source>Status: </source>
-        <translation type="unfinished"></translation>
+        <translation>Stato: </translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="608"/>
         <source>Installed</source>
-        <translation type="unfinished"></translation>
+        <translation>Installato</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="610"/>
         <source>Not installed</source>
-        <translation type="unfinished"></translation>
+        <translation>Non Installato</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="614"/>
         <source>Action: </source>
-        <translation type="unfinished"></translation>
+        <translation>Azione: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1978"/>
+        <location filename="../src/MainWindow.cpp" line="2086"/>
         <source>Shaman - Processing</source>
-        <translation type="unfinished"></translation>
+        <translation>Shaman - Operazione in corso</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1809"/>
+        <location filename="../src/MainWindow.cpp" line="1917"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="707"/>
         <source>One or more Databases could not be updated.
 Last error reported was:
 %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Non è stato possibile aggiornare uno o più Database.
+L&apos;ultimo errore riportato è stato:
+%1</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="711"/>
         <source>Database Update</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiornamento Database</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="711"/>
         <source>Databases Updated Successfully</source>
-        <translation type="unfinished"></translation>
+        <translation>Database aggiornati con Successo</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="739"/>
+        <location filename="../src/MainWindow.cpp" line="812"/>
         <source>Mark for Upgrade</source>
-        <translation type="unfinished"></translation>
+        <translation>Segna per l&apos;Aggiornamento</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="741"/>
+        <location filename="../src/MainWindow.cpp" line="814"/>
         <source>Cancel Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Annulla Azione</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="780"/>
+        <location filename="../src/MainWindow.cpp" line="853"/>
         <source>Mark all for installation</source>
-        <translation type="unfinished"></translation>
+        <translation>Segna tutti per l&apos;Installazione</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="782"/>
+        <location filename="../src/MainWindow.cpp" line="855"/>
         <source>Mark all for reinstallation</source>
-        <translation type="unfinished"></translation>
+        <translation>Segna tutti per la Reinstallazione</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="784"/>
+        <location filename="../src/MainWindow.cpp" line="857"/>
         <source>Mark all for removal</source>
-        <translation type="unfinished"></translation>
+        <translation>Segna tutti per la Rimozione</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1095"/>
+        <location filename="../src/MainWindow.cpp" line="1187"/>
         <source>Your system is up to date!</source>
-        <translation type="unfinished"></translation>
+        <translation>Il tuo sistema è aggiornato!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1200"/>
+        <location filename="../src/MainWindow.cpp" line="1292"/>
         <source>Queue Processing</source>
-        <translation type="unfinished"></translation>
+        <translation>Esecuzione Coda</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1200"/>
+        <location filename="../src/MainWindow.cpp" line="1292"/>
         <source>Your Queue is being processed.
 Please wait.</source>
-        <translation type="unfinished"></translation>
+        <translation>La tua coda sta venendo eseguita.
+Attendi.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1242"/>
+        <location filename="../src/MainWindow.cpp" line="1348"/>
         <source>Queue Processed</source>
-        <translation type="unfinished"></translation>
+        <translation>Coda Eseguita</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1235"/>
+        <location filename="../src/MainWindow.cpp" line="1341"/>
         <source>Your Queue was successfully processed!</source>
-        <translation type="unfinished"></translation>
+        <translation>La Coda è stata eseguita con successo!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1242"/>
+        <location filename="../src/MainWindow.cpp" line="1348"/>
         <source>Your Queue was successfully processed!!</source>
-        <translation type="unfinished"></translation>
+        <translation>La Coda è stata eseguita con successo!!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1697"/>
+        <location filename="../src/MainWindow.cpp" line="1805"/>
         <source>To be Installed</source>
-        <translation type="unfinished"></translation>
+        <translation>Da Installare</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1704"/>
+        <location filename="../src/MainWindow.cpp" line="1812"/>
         <source>To be Upgraded</source>
-        <translation type="unfinished"></translation>
+        <translation>Da Aggiornare</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1329"/>
+        <location filename="../src/MainWindow.cpp" line="1435"/>
         <source>To be Removed</source>
-        <translation type="unfinished"></translation>
+        <translation>Da Rimuovere</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1344"/>
+        <location filename="../src/MainWindow.cpp" line="1450"/>
         <source>Your Queue is about to be processed. You are going to:&lt;br /&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>La tua coda sta per essere eseguita. Stai per:&lt;br /&gt;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1346"/>
+        <location filename="../src/MainWindow.cpp" line="1452"/>
         <source>Remove &lt;b&gt;%1 package&lt;/b&gt;&lt;br /&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Rimuovere &lt;b&gt;%1 pacchetto&lt;/b&gt;&lt;br /&gt;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1346"/>
+        <location filename="../src/MainWindow.cpp" line="1452"/>
         <source>Remove &lt;b&gt;%1 packages&lt;/b&gt;&lt;br /&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Rimuovere &lt;b&gt;%1 pacchetti&lt;/b&gt;&lt;br /&gt;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1348"/>
+        <location filename="../src/MainWindow.cpp" line="1454"/>
         <source>Install/Upgrade &lt;b&gt;%1 package&lt;/b&gt;&lt;br /&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Installare/Aggiornare &lt;b&gt;%1 pacchetto&lt;/b&gt;&lt;br /&gt;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1348"/>
+        <location filename="../src/MainWindow.cpp" line="1454"/>
         <source>Install/Upgrade &lt;b&gt;%1 packages&lt;/b&gt;&lt;br /&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Installare/Aggiornare &lt;b&gt;%1 pacchetti&lt;/b&gt;&lt;br /&gt;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1349"/>
+        <location filename="../src/MainWindow.cpp" line="1455"/>
         <source>Do you wish to continue?</source>
-        <translation type="unfinished"></translation>
+        <translation>Vuoi proseguire?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1484"/>
+        <location filename="../src/MainWindow.cpp" line="1590"/>
         <source>Install a Package</source>
-        <translation type="unfinished"></translation>
+        <translation>Installa un Pacchetto</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1484"/>
+        <location filename="../src/MainWindow.cpp" line="1590"/>
         <source>Arch Linux Packages (*.pkg.tar.gz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Pacchetti di Arch Linux (*.pkg.tar.gz)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1493"/>
+        <location filename="../src/MainWindow.cpp" line="1599"/>
         <source>%1 does not seem
 a valid package</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 non sembra
+essere un pacchetto valido</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1581"/>
+        <location filename="../src/MainWindow.cpp" line="1688"/>
         <source>You need to have ABS installed to use Shaman&apos;s
 building feature. Do you want to install it now?</source>
-        <translation type="unfinished"></translation>
+        <translation>Devi avere installato ABS per utilizzare le capacità
+di compilazione di Shaman. Vuoi installarlo ora?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1609"/>
+        <location filename="../src/MainWindow.cpp" line="1717"/>
         <source>You can not remove packages when processing
 your queue from Source</source>
-        <translation type="unfinished"></translation>
+        <translation>Non puoi rimuovere pacchetti se esegui la coda
+da sorgente</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1638"/>
+        <location filename="../src/MainWindow.cpp" line="1746"/>
         <source>Some of your packages do not belong to Arch
 Linux&apos;s official repository. Shaman is able to
 build packages from official sources only.</source>
-        <translation type="unfinished"></translation>
+        <translation>Alcuni dei pacchetti selezionati non appartengono
+ai repositori ufficiali di Arch Linux. Shaman è in grado
+di compilare pacchetti solo da sorgenti ufficiali.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1672"/>
+        <location filename="../src/MainWindow.cpp" line="1780"/>
         <source>You are about to install &lt;b&gt;%1 package&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
-        <translation type="unfinished"></translation>
+        <translation>Stai per installare &lt;b&gt;%1 pacchetto&lt;/b&gt; da sorgente. Compilare da sorgente&lt;br&gt;può dare diversi vantaggi, ma è comunque molto lento.&lt;br&gt;Se non ne sei sicuro, probabilmente preferiresti eseguire la tua coda da file&lt;br&gt;binari. Prima di continuare, è consigliabile rivedere la tua configurazione&lt;br&gt;per massimizzare le prestazioni della compilazione.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1678"/>
+        <location filename="../src/MainWindow.cpp" line="1786"/>
         <source>You are about to install &lt;b&gt;%1 packages&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
-        <translation type="unfinished"></translation>
+        <translation>Stai per installare &lt;b&gt;%1 pacchetti&lt;/b&gt; da sorgente. Compilare da sorgente&lt;br&gt;può dare diversi vantaggi, ma è comunque molto lento.&lt;br&gt;Se non ne sei sicuro, probabilmente preferiresti eseguire la tua coda da file&lt;br&gt;binari. Prima di continuare, è consigliabile rivedere la tua configurazione&lt;br&gt;per massimizzare le prestazioni della compilazione.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1850"/>
+        <location filename="../src/MainWindow.cpp" line="1958"/>
         <source>Package Building</source>
-        <translation type="unfinished"></translation>
+        <translation>Compilazione Pacchetti</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1783"/>
+        <location filename="../src/MainWindow.cpp" line="1891"/>
         <source>Your Packages failed to build!</source>
-        <translation type="unfinished"></translation>
+        <translation>Non è stato possibile compilare i pacchetti!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1787"/>
+        <location filename="../src/MainWindow.cpp" line="1895"/>
         <source>Your packages Failed to Build.
 Look at the output for more details.</source>
-        <translation type="unfinished"></translation>
+        <translation>Non è stato possibile compilare i pacchetti.
+Guarda l&apos;output per maggiori dettagli.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1825"/>
+        <location filename="../src/MainWindow.cpp" line="1933"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiudi</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1815"/>
+        <location filename="../src/MainWindow.cpp" line="1923"/>
         <source>Building Packages Failed!!</source>
-        <translation type="unfinished"></translation>
+        <translation>Compilazione dei Pacchetti Fallita!!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1818"/>
+        <location filename="../src/MainWindow.cpp" line="1926"/>
         <source>Some packages failed to build.
 Do you want to proceed anyway?</source>
-        <translation type="unfinished"></translation>
+        <translation>Alcuni pacchetti non sono stati compilati.
+Vuoi proseguire comunque?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1845"/>
+        <location filename="../src/MainWindow.cpp" line="1953"/>
         <source>Install Built Packages</source>
-        <translation type="unfinished"></translation>
+        <translation>Installa i Pacchetti Compilati</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1846"/>
+        <location filename="../src/MainWindow.cpp" line="1954"/>
         <source>Close Without Installing</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiudi Senza Installare</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1847"/>
+        <location filename="../src/MainWindow.cpp" line="1955"/>
         <source>Packages Built Successfully!</source>
-        <translation type="unfinished"></translation>
+        <translation>Pacchetti Compilati con Successo!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1851"/>
+        <location filename="../src/MainWindow.cpp" line="1959"/>
         <source>Your Packages have been built successfully, and are ready to be installed</source>
-        <translation type="unfinished"></translation>
+        <translation>I Pacchetti sono stati compilati con successo, e sono pronti per essere installati</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1988"/>
+        <location filename="../src/MainWindow.cpp" line="2096"/>
         <source>%1 GiB</source>
         <comment>Size is in Gib</comment>
-        <translation type="unfinished"></translation>
+        <translation>%1 GB</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1990"/>
+        <location filename="../src/MainWindow.cpp" line="2098"/>
         <source>%1 MiB</source>
         <comment>Size is in MiB</comment>
-        <translation type="unfinished"></translation>
+        <translation>%1 MB</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1992"/>
+        <location filename="../src/MainWindow.cpp" line="2100"/>
         <source>%1 KiB</source>
         <comment>Size is in KiB</comment>
-        <translation type="unfinished"></translation>
+        <translation>%1 KB</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1994"/>
+        <location filename="../src/MainWindow.cpp" line="2102"/>
         <source>%1 Bytes</source>
         <comment>Size is in Bytes</comment>
-        <translation type="unfinished"></translation>
+        <translation>%1 Bytes</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="609"/>
         <source>Quit</source>
         <comment>Quit the application</comment>
-        <translation type="unfinished"></translation>
+        <translation>Esci</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="187"/>
         <source>Do not show this Again</source>
-        <translation type="unfinished"></translation>
+        <translation>Non mostrare di nuovo</translation>
+    </message>
+    <message>
+        <location filename="../src/MainWindow.cpp" line="731"/>
+        <source>Pacman Update</source>
+        <translation>Aggiornamento di Pacman</translation>
+    </message>
+    <message>
+        <location filename="../src/MainWindow.cpp" line="738"/>
+        <source>Pacman can be upgraded. It is advised to process it alone
+to avoid version conflicts.
+Do you want to Upgrade Pacman now?</source>
+        <translation>Pacman può essere aggiornato. È consigliabile aggiornarlo
+da solo per evitare eventuali conflitti di versione.
+Vuoi aggiornare Pacman ora?</translation>
+    </message>
+    <message>
+        <location filename="../src/MainWindow.cpp" line="767"/>
+        <source>Shaman Update</source>
+        <translation>Aggiornamento di Shaman</translation>
+    </message>
+    <message>
+        <location filename="../src/MainWindow.cpp" line="774"/>
+        <source>Shaman can be upgraded. It is advised to process it alone
+to avoid version conflicts.
+Do you want to Upgrade Shaman now?</source>
+        <translation>Shaman può essere aggiornato. È consigliabile aggiornarlo
+da solo per evitare eventuali conflitti di versione.
+Vuoi aggiornare Shaman ora?</translation>
+    </message>
+    <message>
+        <location filename="../src/MainWindow.cpp" line="1323"/>
+        <source>Restart required</source>
+        <translation>Riavvio Richiesto</translation>
+    </message>
+    <message>
+        <location filename="../src/MainWindow.cpp" line="1325"/>
+        <source>Pacman or Shaman was updated. Shaman will now quit,
+please restart it to use the new version</source>
+        <translation>Pacman o Shaman sono stati aggiornati. Shaman ora si 
+chiuderà, riavvialo per usare la nuova versione</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/main.cpp" line="85"/>
+        <location filename="../src/main.cpp" line="101"/>
         <source>You have to be root to run Shaman.
 Please restart it with root privileges.</source>
-        <translation type="unfinished"></translation>
+        <translation>Devi essere root per utilizzare Shaman.
+Per favore riavvialo da root.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="96"/>
+        <location filename="../src/main.cpp" line="112"/>
         <source>Shaman</source>
-        <translation type="unfinished"></translation>
+        <translation>Shaman</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="97"/>
+        <location filename="../src/main.cpp" line="113"/>
         <source>There was a problem while testing libalpm.
 Maybe another application has a lock on it.</source>
-        <translation type="unfinished"></translation>
+        <translation>C&apos;è stato un problema testando libalpm.
+Forse un&apos;altra applicazione tiene un lock su di essa.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="84"/>
+        <location filename="../src/main.cpp" line="100"/>
         <source>Shaman</source>
         <comment>Hey! If you are reading this, first of all thanks for helping us in making Shaman better. There are not many comments unless where needed, since all the strings are pretty self-explanatory. You will see a lot of HTML in some cases: do not let that scare you, but please edit text only. Editing HTML tags too may break our layout, so be careful. A good practice could be copying the whole string, and then translating just what&apos;s outside the tags, usually just a few words. If you have any doubts, or if you just want to drop us a line, there goes our email addresses:
 Dario: drf54321@gmail.com
 Lukas: l.appelhans@gmx.de
 Thanks again, and enjoy your translation!</comment>
-        <translation type="unfinished"></translation>
+        <translation>Shaman</translation>
     </message>
 </context>
 <context>
@@ -1298,188 +1363,188 @@ Thanks again, and enjoy your translation!</comment>
     <message>
         <location filename="../src/QueueDialog.cpp" line="57"/>
         <source>&lt;br&gt;&lt;b&gt; * Validating Transaction&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;b&gt; * Convalidazione della Transazione&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="98"/>
         <source>Validating Dependencies...</source>
-        <translation type="unfinished"></translation>
+        <translation>Controllo delle Dipendenze...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="102"/>
         <source>Checking for Conflicts...</source>
-        <translation type="unfinished"></translation>
+        <translation>Controllo i Conflitti...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="106"/>
         <source>Resolving Dependencies...</source>
-        <translation type="unfinished"></translation>
+        <translation>Risoluzione Dipendenze...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="110"/>
         <source>Looking for Inter-Conflicts...</source>
-        <translation type="unfinished"></translation>
+        <translation>Controllo di Inter-Conflitti...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="116"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Installation Started&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;b&gt; * Installazione dei Pacchetti Iniziata&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="120"/>
         <source>Installing %1...</source>
-        <translation type="unfinished"></translation>
+        <translation>Installazione di %1...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="136"/>
         <source>%1 (%2) installed successfully!</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 (%2) installato con successo!</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="155"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Removal Started&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;b&gt; * Rimozione dei Pacchetti Iniziata&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="159"/>
         <source>Removing %1...</source>
-        <translation type="unfinished"></translation>
+        <translation>Rimozione di %1...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="175"/>
         <source>%1 (%2) removed successfully!</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 (%2) rimosso con successo!</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="194"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Upgrading Started&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;b&gt; * Aggiornamento dei Pacchetti Iniziato&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="198"/>
         <source>Upgrading %1...</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiornamento di %1...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="216"/>
         <source>Upgraded %1 successfully (%2 -&gt; %3)</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 aggiornato con successo (%2 -&gt; %3)</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="238"/>
         <source>&lt;br&gt;&lt;b&gt; * Queue Processing Started&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;b&gt; * Esecuzione della Coda Iniziata&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="242"/>
         <source>Checking package integrity...</source>
-        <translation type="unfinished"></translation>
+        <translation>Controllo l&apos;integrità dei pacchetti...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="246"/>
         <source>Checking delta integrity...</source>
-        <translation type="unfinished"></translation>
+        <translation>Controllo dell&apos;integrità dei delta...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="249"/>
         <source>Applying deltas...</source>
-        <translation type="unfinished"></translation>
+        <translation>Applicazione dei delta...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="252"/>
         <source>Generating %1 with %2... </source>
-        <translation type="unfinished"></translation>
+        <translation>Genero %1 con %2... </translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="256"/>
         <source>Success!</source>
-        <translation type="unfinished"></translation>
+        <translation>Eseguito!</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="259"/>
         <source>Failed!</source>
-        <translation type="unfinished"></translation>
+        <translation>Fallito!</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="273"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Downloading Started&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;b&gt; * Download dei pacchetti Iniziato&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="277"/>
         <source>Starting downloading packages from %1...</source>
-        <translation type="unfinished"></translation>
+        <translation>Inizio a scaricare i pacchetti da %1...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="311"/>
         <source>%p% (%1 KB/s, %4:%5:%6 remaining)</source>
         <comment>You just have to translate &apos;remaining&apos; here. Leave everything else as it is.</comment>
-        <translation type="unfinished"></translation>
+        <translation>%p% (%1 KB/s, %4:%5:%6 rimanente)</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="319"/>
         <source>Downloading %1... (%2 MB of %3 MB)</source>
-        <translation type="unfinished"></translation>
+        <translation>Scarico %1... (%2 MB di %3 MB)</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="322"/>
         <source>Downloading %1... (%2 KB of %3 KB)</source>
-        <translation type="unfinished"></translation>
+        <translation>Scarico %1... (%2 KB di %3 KB)</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="372"/>
         <source>Queue processed, please wait...</source>
-        <translation type="unfinished"></translation>
+        <translation>Coda eseguita, attendere prego...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="386"/>
         <source>Executing pre_install scriptlet...</source>
-        <translation type="unfinished"></translation>
+        <translation>Esecuzione della scriptlet pre_install...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="390"/>
         <source>Executing pre_upgrade scriptlet...</source>
-        <translation type="unfinished"></translation>
+        <translation>Esecuzione della scriptlet pre_upgrade...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="394"/>
         <source>Executing pre_remove scriptlet...</source>
-        <translation type="unfinished"></translation>
+        <translation>Esecuzione della scriptlet pre_remove...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="398"/>
         <source>Executing post_install scriptlet...</source>
-        <translation type="unfinished"></translation>
+        <translation>Esecuzione della scriptlet post_install...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="402"/>
         <source>Executing post_upgrade scriptlet...</source>
-        <translation type="unfinished"></translation>
+        <translation>Esecuzione della scriptlet post_upgrade...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="406"/>
         <source>Executing post_remove scriptlet...</source>
-        <translation type="unfinished"></translation>
+        <translation>Esecuzione della scriptlet post_remove...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="502"/>
         <source>Unexpected Error. Shaman might be corrupted.</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore Inaspettato. Shaman potrebbe essere corrotto.</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="471"/>
         <source>Extracting Scriptlet from package failed!!</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile estrarre la Scriptlet dal pacchetto!</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="527"/>
         <source>Scriptlet processed successfully!</source>
-        <translation type="unfinished"></translation>
+        <translation>Scriptlet Eseguita con Successo!</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="532"/>
         <source>Scriptlet not found in this stage, or error processing it!</source>
-        <translation type="unfinished"></translation>
+        <translation>Scriptlet non disponibile, o errore nell&apos;eseguirla!</translation>
     </message>
 </context>
 <context>
@@ -1487,37 +1552,37 @@ Thanks again, and enjoy your translation!</comment>
     <message>
         <location filename="../ui/reviewQueueDialog.ui" line="13"/>
         <source>Review Queue</source>
-        <translation type="unfinished"></translation>
+        <translation>Rivedi Coda</translation>
     </message>
     <message>
         <location filename="../ui/reviewQueueDialog.ui" line="28"/>
         <source>Turn off PC when Queue is done</source>
-        <translation type="unfinished"></translation>
+        <translation>Spegni il PC quando la coda è stata Eseguita</translation>
     </message>
     <message>
         <location filename="../ui/reviewQueueDialog.ui" line="35"/>
         <source>Process in Tray</source>
-        <translation type="unfinished"></translation>
+        <translation>Esegui nella Tray</translation>
     </message>
     <message>
         <location filename="../ui/reviewQueueDialog.ui" line="44"/>
         <source>Show packages...</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra pacchetti...</translation>
     </message>
     <message>
         <location filename="../ui/reviewQueueDialog.ui" line="70"/>
         <source>Packages In Queue</source>
-        <translation type="unfinished"></translation>
+        <translation>Pacchetti In Coda</translation>
     </message>
     <message>
         <location filename="../ui/reviewQueueDialog.ui" line="80"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Annulla</translation>
     </message>
     <message>
         <location filename="../ui/reviewQueueDialog.ui" line="103"/>
         <source>Process</source>
-        <translation type="unfinished"></translation>
+        <translation>Esegui</translation>
     </message>
     <message>
         <location filename="../ui/reviewQueueDialog.ui" line="132"/>
@@ -1525,7 +1590,7 @@ Thanks again, and enjoy your translation!</comment>
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Review Queue&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Rivedi Coda&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -1533,12 +1598,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/SysUpgradeDialog.cpp" line="53"/>
         <source>There is &lt;b&gt;%1 upgradeable package&lt;/b&gt;. You can either&lt;br&gt; upgrade immediately or add it to the current Queue&lt;br&gt; and process it later.</source>
-        <translation type="unfinished"></translation>
+        <translation>C&apos;è &lt;b&gt;%1 pacchetto aggiornabile&lt;/b&gt;. Puoi aggiornare&lt;br&gt;immediatamente o aggiungerlo alla coda ed&lt;br&gt;aggiornarlo più tardi.</translation>
     </message>
     <message>
         <location filename="../src/SysUpgradeDialog.cpp" line="56"/>
         <source>There are &lt;b&gt;%1 upgradeable packages&lt;/b&gt;. You can either&lt;br&gt; upgrade immediately or add them to the current Queue&lt;br&gt; and process them later.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ci sono &lt;b&gt;%1 pacchetti aggiornabili&lt;/b&gt;. Puoi aggiornare&lt;br&gt;immediatamente o aggiungerli alla coda ed&lt;br&gt;aggiornarli più tardi.</translation>
     </message>
 </context>
 <context>
@@ -1546,12 +1611,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/aboutDialog.ui" line="13"/>
         <source>About Shaman</source>
-        <translation type="unfinished"></translation>
+        <translation>Informazioni Su Shaman</translation>
     </message>
     <message>
         <location filename="../ui/aboutDialog.ui" line="70"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Informazioni</translation>
     </message>
     <message>
         <location filename="../ui/aboutDialog.ui" line="76"/>
@@ -1565,12 +1630,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf54321@yahoo.it&amp;gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;l.appelhans@gmx.de&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Un&apos;interfaccia a libalpm in Qt&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Licenza: GPLv2+&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf54321@yahoo.it&amp;gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;l.appelhans@gmx.de&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/aboutDialog.ui" line="93"/>
         <source>Authors</source>
-        <translation type="unfinished"></translation>
+        <translation>Autori</translation>
     </message>
     <message>
         <location filename="../ui/aboutDialog.ui" line="99"/>
@@ -1583,12 +1648,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Lukas Appelhans&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Developer&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dario Freddi&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Sviluppatore&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Lukas Appelhans&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Sviluppatore&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/aboutDialog.ui" line="115"/>
         <source>Thanks To</source>
-        <translation type="unfinished"></translation>
+        <translation>Ringraziamenti A</translation>
     </message>
     <message>
         <location filename="../ui/aboutDialog.ui" line="28"/>
@@ -1596,7 +1661,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Shaman 1.0 Alpha (revision 336)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Shaman 1.0 Alpha (revisione 336)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/aboutDialog.ui" line="121"/>
@@ -1631,7 +1696,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;augegr&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;Greek Translator&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;Shaman ha ricevuto aiuti da tantissime persone, ed è anche grazie a loro se ha visto la luce. Se per qualche motivo abbiamo dimenticato di inserirti qui, faccelo sapere.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:600;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:600;&quot;&gt;Jan Mette&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;Traduttore Tedesco e sviluppatore di KDEMod&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Johannes Schriewer&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Sviluppatore di KDEMod, ha anche aiutato con il codice.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:600;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;uzbirglones&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;Brazilian Translator, and gave the name Shaman&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Martin Sandsmark&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;Our hoster, and maintainer of Trac.&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;mutlu_inek&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Heavy tester, thanks!&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;KDEMod Community&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Help, Testing, Support, everything started from here.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;FenDanT&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;French Translator&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;XanK&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;Spanish Translator&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;augegr&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;Greek Translator&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -1642,22 +1707,22 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Building Packages...&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Compilazione dei Pacchetti...&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/buildingDialog.ui" line="464"/>
         <source>Abort</source>
-        <translation type="unfinished"></translation>
+        <translation>Annulla</translation>
     </message>
     <message>
         <location filename="../ui/buildingDialog.ui" line="487"/>
         <source>Reduce To Tray</source>
-        <translation type="unfinished"></translation>
+        <translation>Riduci a Icona</translation>
     </message>
     <message>
         <location filename="../ui/buildingDialog.ui" line="13"/>
         <source>Shaman - Building Packages</source>
-        <translation type="unfinished"></translation>
+        <translation>Shaman - Compilazione Pacchetti</translation>
     </message>
 </context>
 <context>
@@ -1665,12 +1730,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/dbUpdateDialog.ui" line="13"/>
         <source>Database Update</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiornamento Database</translation>
     </message>
     <message>
         <location filename="../ui/dbUpdateDialog.ui" line="398"/>
         <source>Update Database..</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiornamento dei Database..</translation>
     </message>
 </context>
 <context>
@@ -1678,32 +1743,32 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/editPBDialog.ui" line="13"/>
         <source>Editing PKGBUILD</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifica PKGBUILD</translation>
     </message>
     <message>
         <location filename="../ui/editPBDialog.ui" line="23"/>
         <source>Editing PKGBUILD of:</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifica PKGBUILD di:</translation>
     </message>
     <message>
         <location filename="../ui/editPBDialog.ui" line="37"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Salva</translation>
     </message>
     <message>
         <location filename="../ui/editPBDialog.ui" line="60"/>
         <source>Undo</source>
-        <translation type="unfinished"></translation>
+        <translation>Annulla</translation>
     </message>
     <message>
         <location filename="../ui/editPBDialog.ui" line="70"/>
         <source>Redo</source>
-        <translation type="unfinished"></translation>
+        <translation>Ripristina</translation>
     </message>
     <message>
         <location filename="../ui/editPBDialog.ui" line="107"/>
         <source>Ok</source>
-        <translation type="unfinished"></translation>
+        <translation>Ok</translation>
     </message>
     <message>
         <location filename="../ui/editPBDialog.ui" line="130"/>
@@ -1711,7 +1776,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Edit PKGBUILD&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Modifica PKGBUILD&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -1719,7 +1784,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="13"/>
         <source>Review Building Queue</source>
-        <translation type="unfinished"></translation>
+        <translation>Rivedi Compilazione della Coda</translation>
     </message>
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="36"/>
@@ -1727,57 +1792,57 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Build Queue From Source&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Compilazione Coda da Sorgente&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="81"/>
         <source>Process All Dependencies from Binary First (advised)</source>
-        <translation type="unfinished"></translation>
+        <translation>Esegui prima tutte le Dipendenze da Binario (consigliato)</translation>
     </message>
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="91"/>
         <source>This is useful if you want to review compiler&apos;s output</source>
-        <translation type="unfinished"></translation>
+        <translation>Utile se si vuole vedere l&apos;output del compilatore</translation>
     </message>
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="104"/>
         <source>Turn off PC when Queue is done</source>
-        <translation type="unfinished"></translation>
+        <translation>Spegni PC quando la coda è stata completata</translation>
     </message>
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="113"/>
         <source>Show packages...</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra Pacchetti...</translation>
     </message>
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="139"/>
         <source>Packages In Queue</source>
-        <translation type="unfinished"></translation>
+        <translation>Pacchetti In Coda</translation>
     </message>
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="149"/>
         <source>Abort</source>
-        <translation type="unfinished"></translation>
+        <translation>Annulla</translation>
     </message>
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="156"/>
         <source>Process From Binary</source>
-        <translation type="unfinished"></translation>
+        <translation>Esegui Da Binario</translation>
     </message>
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="176"/>
         <source>Review PKGBUILDs</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifica i PKGBUILD</translation>
     </message>
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="183"/>
         <source>Process From Source</source>
-        <translation type="unfinished"></translation>
+        <translation>Esegui da Sorgente</translation>
     </message>
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="94"/>
         <source>Do not install immediately when building is finished</source>
-        <translation type="unfinished"></translation>
+        <translation>Non installare subito quando la compilazione è terminata</translation>
     </message>
 </context>
 <context>
@@ -1785,42 +1850,42 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/transactionDialog.ui" line="13"/>
         <source>Processing Queue...</source>
-        <translation type="unfinished"></translation>
+        <translation>Esecuzione della Coda...</translation>
     </message>
     <message>
         <location filename="../ui/transactionDialog.ui" line="21"/>
         <source>Check transaction validity</source>
-        <translation type="unfinished"></translation>
+        <translation>Controllo Validità della Transazione</translation>
     </message>
     <message>
         <location filename="../ui/transactionDialog.ui" line="28"/>
         <source>Download Packages</source>
-        <translation type="unfinished"></translation>
+        <translation>Scaricamento dei Pacchetti</translation>
     </message>
     <message>
         <location filename="../ui/transactionDialog.ui" line="35"/>
         <source>Process queue</source>
-        <translation type="unfinished"></translation>
+        <translation>Esecuzione della Coda</translation>
     </message>
     <message>
         <location filename="../ui/transactionDialog.ui" line="42"/>
         <source>Cleanup</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulizia</translation>
     </message>
     <message>
         <location filename="../ui/transactionDialog.ui" line="134"/>
         <source>More Details...</source>
-        <translation type="unfinished"></translation>
+        <translation>Dettagli...</translation>
     </message>
     <message>
         <location filename="../ui/transactionDialog.ui" line="160"/>
         <source>Abort</source>
-        <translation type="unfinished"></translation>
+        <translation>Annulla</translation>
     </message>
     <message>
         <location filename="../ui/transactionDialog.ui" line="175"/>
         <source>Please Wait...</source>
-        <translation type="unfinished"></translation>
+        <translation>Attendere Prego...</translation>
     </message>
     <message>
         <location filename="../ui/transactionDialog.ui" line="200"/>
@@ -1828,7 +1893,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Process Queue&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Esecuzione della Coda&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -1836,27 +1901,27 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/upgradeDialog.ui" line="13"/>
         <source>System Upgrade</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiornamento del Sistema</translation>
     </message>
     <message>
         <location filename="../ui/upgradeDialog.ui" line="54"/>
         <source>Remember my choice</source>
-        <translation type="unfinished"></translation>
+        <translation>Ricorda la mia scelta</translation>
     </message>
     <message>
         <location filename="../ui/upgradeDialog.ui" line="65"/>
         <source>Abort</source>
-        <translation type="unfinished"></translation>
+        <translation>Annulla</translation>
     </message>
     <message>
         <location filename="../ui/upgradeDialog.ui" line="88"/>
         <source>Add to Queue</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiungi alla Coda</translation>
     </message>
     <message>
         <location filename="../ui/upgradeDialog.ui" line="98"/>
         <source>Upgrade Now</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiorna Ora</translation>
     </message>
     <message>
         <location filename="../ui/upgradeDialog.ui" line="119"/>
@@ -1864,7 +1929,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;System-Upgrade&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Aggiornamento del Sistema&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 </TS>

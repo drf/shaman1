@@ -715,13 +715,86 @@ void MainWindow::finishDbUpdate()
 		pkgsViewWG->setSortingEnabled(false);
 		populatePackagesView();
 	}
-
+	
 	dbdialog->deleteLater();
 
 	systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
 	systray->setToolTip(QString(tr("Shaman - Idle")));
 	
 	dbdialog = NULL;
+	
+	if(aHandle->getUpgradeablePackages().contains("pacman"))
+	{
+		QMessageBox *msgBox = new QMessageBox();
+
+		msgBox->setIcon(QMessageBox::Question);
+		msgBox->setWindowTitle(QString(tr("Pacman Update")));
+
+		msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+
+		msgBox->setWindowModality(Qt::ApplicationModal);
+		
+		msgBox->setText(QString(tr("Pacman can be upgraded. It is advised to process it alone\nto avoid version conflicts.\n"
+						"Do you want to Upgrade Pacman now?")));
+
+		switch (msgBox->exec()) 
+		{
+		case QMessageBox::Yes:
+			
+			msgBox->deleteLater();
+			/* Ok, let's set up a special queue for Pacman. */
+			
+			cancelAllActions();
+			installPackage("pacman");
+			widgetQueueToAlpmQueue();
+			
+			break;
+		case QMessageBox::No:
+			/* Well, just pass by */
+			msgBox->deleteLater();
+			break;
+		default:
+			// should never be reached
+			break;
+		}
+		
+	}
+	else if(aHandle->getUpgradeablePackages().contains("shaman"))
+	{
+		QMessageBox *msgBox = new QMessageBox();
+
+		msgBox->setIcon(QMessageBox::Question);
+		msgBox->setWindowTitle(QString(tr("Shaman Update")));
+
+		msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+
+		msgBox->setWindowModality(Qt::ApplicationModal);
+
+		msgBox->setText(QString(tr("Shaman can be upgraded. It is advised to process it alone\nto avoid version conflicts.\n"
+				"Do you want to Upgrade Shaman now?")));
+
+		switch (msgBox->exec()) 
+		{
+		case QMessageBox::Yes:
+
+			msgBox->deleteLater();
+			/* Ok, let's set up a special queue for Shaman. */
+
+			cancelAllActions();
+			installPackage("shaman");
+			widgetQueueToAlpmQueue();
+
+			break;
+		case QMessageBox::No:
+			/* Well, just pass by */
+			msgBox->deleteLater();
+			break;
+		default:
+			// should never be reached
+			break;
+		}
+
+	}
 }
 
 void MainWindow::showPkgsViewContextMenu()
@@ -907,6 +980,10 @@ void MainWindow::cancelAllRepoActions()
 void MainWindow::installPackage()
 {
 	qDebug() << "Install Package";
+
+	if(pkgsViewWG->selectedItems().isEmpty())
+		return;
+
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
 		installPackage(item->text(1));
 
@@ -916,6 +993,10 @@ void MainWindow::installPackage()
 void MainWindow::reinstallPackage()
 {
 	qDebug() << "Install Package";
+
+	if(pkgsViewWG->selectedItems().isEmpty())
+		return;
+
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
 	{
 		reinstallPackage(item->text(1));
@@ -979,6 +1060,10 @@ void MainWindow::installPackage(const QString &package)
 void MainWindow::removePackage()
 {
 	qDebug() << "Remove Package";
+	
+	if(pkgsViewWG->selectedItems().isEmpty())
+		return;
+	
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
 		removePackage(item->text(1));
 
@@ -1014,6 +1099,10 @@ void MainWindow::removePackage(const QString &package)
 void MainWindow::completeRemovePackage()
 {
 	qDebug() << "Complete Remove Package";
+
+	if(pkgsViewWG->selectedItems().isEmpty())
+		return;
+	
 	QTreeWidgetItem *item = pkgsViewWG->selectedItems().first();
 
 	qDebug() << item->text(1);
@@ -1041,6 +1130,9 @@ void MainWindow::completeRemovePackage()
 
 void MainWindow::cancelAction()
 {
+	if(pkgsViewWG->selectedItems().isEmpty())
+		return;
+	
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
 		cancelAction(item->text(1));
 
@@ -1225,6 +1317,20 @@ void MainWindow::queueProcessingEnded(bool errors)
 
 	qDebug() << "Transaction Completed Successfully";
 
+	if(!pkgsViewWG->findItems("pacman", Qt::MatchExactly, 1).first()->text(8).isEmpty() ||
+			!pkgsViewWG->findItems("shaman", Qt::MatchExactly, 1).first()->text(8).isEmpty())
+	{
+		QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Restart required"), 
+				tr("Pacman or Shaman was updated. Shaman will now quit,\nplease restart it "
+						"to use the new version"), QMessageBox::Ok, queueDl);
+
+		message->exec();
+
+		message->deleteLater();
+
+		qApp->exit(0);
+	}
+
 	pkgsViewWG->setSortingEnabled(false);
 	populatePackagesView();
 	refinePkgView();
@@ -1239,7 +1345,7 @@ void MainWindow::queueProcessingEnded(bool errors)
 		message->deleteLater();
 	}
 	else
-		systray->showMessage(QString(tr("Queue Processed")), QString(tr("Your Queue was successfully processed!!")));;
+		systray->showMessage(QString(tr("Queue Processed")), QString(tr("Your Queue was successfully processed!!")));
 		
 	queueDl->deleteLater();
 	
@@ -1542,6 +1648,7 @@ void MainWindow::updateABSTree()
 
 		switch (msgBox->exec()) {
 		case QMessageBox::Yes:
+			cancelAllActions();
 			installPackage("abs");
 			widgetQueueToAlpmQueue();
 			break;
@@ -1582,6 +1689,7 @@ void MainWindow::validateSourceQueue()
 
 		switch (msgBox->exec()) {
 		case QMessageBox::Yes:
+			cancelAllActions();
 			installPackage("abs");
 			widgetQueueToAlpmQueue();
 			break;

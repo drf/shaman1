@@ -31,6 +31,9 @@
 #include <QMessageBox>
 #include <QFile>
 #include <QDate>
+#include <QTranslator>
+#include <QDebug>
+#include <QFile>
 #include <signal.h>
 
 static void cleanup(int signum)
@@ -71,6 +74,19 @@ int main(int argc, char **argv)
 	QCoreApplication::setOrganizationDomain("shaman.iskremblien.org");
 	QCoreApplication::setApplicationName("shaman");
 
+	QString locale = QLocale::system().name();
+
+	QTranslator translator;
+	QString trpath(QString("shaman_") + locale);
+	
+	if(!translator.load(trpath))
+		if(!translator.load(trpath, "../share/shaman/translations/"))
+			if(!translator.load(trpath, "/usr/share/shaman/translations/"))
+				if(!translator.load(trpath, "/usr/local/share/shaman/translations/"))
+					qDebug() << "Could not find a translation for this locale.";
+	
+	app.installTranslator(&translator);
+
 	if(myuid > 0)
 	{
 		QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("Shaman", "Hey! "
@@ -103,7 +119,6 @@ int main(int argc, char **argv)
 	
 	app.setQuitOnLastWindowClosed(false);
 	
-	//TODO: Look if we should translate the program to another language and load it^^
 	signal(SIGINT, cleanup);
 	signal(SIGTERM, cleanup);
 	signal(SIGSEGV, cleanup);

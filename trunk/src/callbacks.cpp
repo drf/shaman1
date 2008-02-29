@@ -98,7 +98,7 @@ void CallBacks::cb_trans_conv(pmtransconv_t event, void *data1, void *data2,
 	QMessageBox *msgBox = new QMessageBox();
 	
 	msgBox->setIcon(QMessageBox::Question);
-	msgBox->setWindowTitle(QString("Library Question"));
+	msgBox->setWindowTitle(QString(tr("Library Question")));
 
 	msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
 
