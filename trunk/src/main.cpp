@@ -21,7 +21,6 @@
  ***************************************************************************/
 
 #include "AlpmHandler.h"
-#include "alpm_list.h"
 #include "MainWindow.h"
 
 #include <iostream>
@@ -35,6 +34,10 @@
 #include <QDebug>
 #include <QSplashScreen>
 #include <signal.h>
+#include <sys/utsname.h>
+#include <alpm.h>
+
+#define SHAMAN_VERSION "1.0Alpha2dev"
 
 static void cleanup(int signum)
 {
@@ -62,6 +65,17 @@ static void cleanup(int signum)
 	}
 
 	exit(signum);
+}
+
+static void setuseragent(void)
+{
+	char agent[101];
+	struct utsname un;
+
+	uname(&un);
+	snprintf(agent, 100, "shaman/" SHAMAN_VERSION " (%s %s) libalpm/2.2.0",
+			un.sysname, un.machine);
+	setenv("HTTP_USER_AGENT", agent, 0);
 }
 
 int main(int argc, char **argv)
@@ -129,6 +143,8 @@ int main(int argc, char **argv)
 	signal(SIGINT, cleanup);
 	signal(SIGTERM, cleanup);
 	signal(SIGSEGV, cleanup);
+	
+	setuseragent();
 	
 	QSettings *settings = new QSettings();
 	
