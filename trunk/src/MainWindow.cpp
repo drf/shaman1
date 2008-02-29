@@ -61,10 +61,11 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
   buildDialog(NULL)
 {
 	setupUi(this);
-	addDockWidget(Qt::LeftDockWidgetArea, dockWidget_2);
-	addDockWidget(Qt::BottomDockWidgetArea, dockWidget);
+	addDockWidget(Qt::LeftDockWidgetArea, repoDockWidget);
+	addDockWidget(Qt::BottomDockWidgetArea, pkgDockWidget);
+		
 	pkgsViewWG->setContextMenuPolicy(Qt::CustomContextMenu);
-        repoList->setContextMenuPolicy(Qt::CustomContextMenu);
+	repoList->setContextMenuPolicy(Qt::CustomContextMenu);
 	pkgsViewWG->hideColumn(7);
 	pkgsViewWG->hideColumn(8);
 	resize(500, size().height());
@@ -102,6 +103,20 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	connect(actionUpdate_ABS_Tree, SIGNAL(triggered()), SLOT(updateABSTree()));
 	connect(actionBuild_and_Install_Selected, SIGNAL(triggered()), SLOT(validateSourceQueue()));
 	connect(actionCancel_all_actions, SIGNAL(triggered()), SLOT(cancelAllActions()));
+
+	QSettings *settings = new QSettings();
+
+	if(settings->contains("repowg/size"))
+		repoDockWidget->resize(settings->value("repowg/size").toSize());
+	if(settings->contains("repowg/pos"))
+		repoDockWidget->move(settings->value("repowg/pos").toPoint());
+
+	if(settings->contains("pkgwg/size"))
+		pkgDockWidget->resize(settings->value("pkgwg/size").toSize());
+	if(settings->contains("pkgwg/pos"))
+		pkgDockWidget->move(settings->value("pkgwg/pos").toPoint());
+
+	settings->deleteLater();
 
 	return;
 }
@@ -168,9 +183,13 @@ void MainWindow::setupSystray()
 void MainWindow::quitApp()
 {
 	QSettings *settings = new QSettings();
-	
+
 	settings->setValue("gui/size", size());
 	settings->setValue("gui/pos", pos());
+	settings->setValue("repowg/size", repoDockWidget->size());
+	settings->setValue("repowg/pos", repoDockWidget->pos());
+	settings->setValue("pkgwg/size", pkgDockWidget->size());
+	settings->setValue("pkgwg/pos", pkgDockWidget->pos());
 	
 	settings->deleteLater();
 	
@@ -355,8 +374,8 @@ bool MainWindow::populatePackagesView()
 
 void MainWindow::populateRepoColumn()
 {
-        switchToGrps->setChecked(false);
-        dockWidget_2->setWindowTitle(tr("Repositories"));
+	switchToGrps->setChecked(false);
+	repoDockWidget->setWindowTitle(tr("Repositories"));
 	alpm_list_t *list = aHandle->getAvailableRepos();
 
 	removeRepoColumn();
@@ -389,8 +408,8 @@ void MainWindow::populateRepoColumn()
 
 void MainWindow::populateGrpsColumn()
 {
-        switchToRepo->setChecked(false);
-        dockWidget_2->setWindowTitle(tr("Package Groups"));
+	switchToRepo->setChecked(false);
+	repoDockWidget->setWindowTitle(tr("Package Groups"));
 	QStringList grps = aHandle->getPackageGroups();
 
 	removeRepoColumn();

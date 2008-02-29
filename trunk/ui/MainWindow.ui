@@ -182,7 +182,7 @@
      </layout>
     </item>
     <item rowspan="2" row="0" column="0" >
-     <widget class="QDockWidget" name="dockWidget_2" >
+     <widget class="QDockWidget" name="repoDockWidget" >
       <property name="floating" >
        <bool>false</bool>
       </property>
@@ -257,7 +257,7 @@
      </widget>
     </item>
     <item row="1" column="1" >
-     <widget class="QDockWidget" name="dockWidget" >
+     <widget class="QDockWidget" name="pkgDockWidget" >
       <property name="floating" >
        <bool>false</bool>
       </property>
@@ -474,7 +474,7 @@
      <x>0</x>
      <y>0</y>
      <width>1195</width>
-     <height>27</height>
+     <height>24</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile" >
