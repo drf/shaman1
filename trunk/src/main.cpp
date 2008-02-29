@@ -182,6 +182,11 @@ int main(int argc, char **argv)
 
 	MainWindow mainwin(aHandler);
 
+	if(settings->contains("gui/size"))
+		mainwin.resize(settings->value("gui/size").toSize());
+	if(settings->contains("gui/pos"))
+		mainwin.move(settings->value("gui/pos").toPoint());
+
 	if(settings->value("gui/showsplashscreen", true).toBool())
 	{
 		splscr.showMessage(QString(QObject::tr("Loading Databases...")), Qt::AlignBottom | Qt::AlignRight);

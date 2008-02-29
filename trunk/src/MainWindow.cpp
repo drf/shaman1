@@ -167,6 +167,13 @@ void MainWindow::setupSystray()
 
 void MainWindow::quitApp()
 {
+	QSettings *settings = new QSettings();
+	
+	settings->setValue("gui/size", size());
+	settings->setValue("gui/pos", pos());
+	
+	settings->deleteLater();
+	
 	emit aboutToQuit();
 }
 
