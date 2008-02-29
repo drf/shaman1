@@ -26,6 +26,8 @@
 #include <QMessageBox>
 #include <QMutex>
 #include <QMutexLocker>
+#include <QWaitCondition>
+#include <QDebug>
 
 #include "alpm.h"
 
@@ -33,6 +35,7 @@
 
 CallBacks CbackReference;
 QMutex mutex;
+QWaitCondition wCond;
 
 CallBacks::CallBacks()
 {
@@ -78,6 +81,9 @@ float CallBacks::get_update_timediff(int first_call)
 void CallBacks::cb_trans_evt(pmtransevt_t event, void *data1, void *data2)
 {
 	emit streamTransEvent(event, data1, data2);
+	qDebug() << "Alpm Thread Waiting.";
+	wCond.wait(&mutex);
+	qDebug() << "Alpm Thread awake.";
 }
 
 void CallBacks::cb_trans_conv(pmtransconv_t event, void *data1, void *data2,
@@ -256,7 +262,6 @@ void cb_trans_conv(pmtransconv_t event, void *data1, void *data2,
 void cb_trans_evt(pmtransevt_t event, void *data1, void *data2)
 {
 	QMutexLocker lock(&mutex);
-	printf("LockedEvt\n");
+	qDebug() << "Received Event Callback";
 	CbackReference.cb_trans_evt(event,data1,data2);
-	printf("UnLockedEvt\n");
 }

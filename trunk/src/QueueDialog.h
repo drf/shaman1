@@ -48,6 +48,7 @@ public:
 	explicit QueueDialog(AlpmHandler *hnd, QWidget *parent = 0);
 	~QueueDialog();
 	void startProcessing();
+	bool isScriptletRunning();
 	
 public slots:
 	void changeStatus(pmtransevt_t event, void *data1, void *data2);
@@ -63,6 +64,7 @@ public slots:
 	//void handleScriptletEnding(int eC, QProcess::ExitStatus estat);
 	void writeLineProgress();
 	void writeLineProgressErr();
+	void finishedScriptletRunning(int eC,QProcess::ExitStatus eS);
 	
 private:
 	bool unpackPkg(const QString &pathToPkg, const QString &pathToEx, const QString &file);
@@ -75,6 +77,8 @@ private:
 	TrCommitThread *cTh;
 	QProcess *proc;
 	int status;
+	char cwd[4096];
+	bool scrRun;
 };
 
 #endif /*QUEUEDIALOG_H_*/

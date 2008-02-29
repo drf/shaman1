@@ -77,48 +77,48 @@ All Process will be lost.</source>
 <context>
     <name>CallBacks</name>
     <message>
-        <location filename="../src/callbacks.cpp" line="112"/>
+        <location filename="../src/callbacks.cpp" line="118"/>
         <source>%1 requires installing %2 from IgnorePkg/IgnoreGroup.
  Install anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/callbacks.cpp" line="115"/>
+        <location filename="../src/callbacks.cpp" line="121"/>
         <source>%1 is in IgnorePkg/IgnoreGroup.
  Install anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/callbacks.cpp" line="119"/>
+        <location filename="../src/callbacks.cpp" line="125"/>
         <source>%1 is designated as a HoldPkg.
  Remove anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/callbacks.cpp" line="122"/>
+        <location filename="../src/callbacks.cpp" line="128"/>
         <source>Replace %1 with %2/%3?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/callbacks.cpp" line="126"/>
+        <location filename="../src/callbacks.cpp" line="132"/>
         <source>%1 conflicts with %2.
 Remove %3?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/callbacks.cpp" line="130"/>
+        <location filename="../src/callbacks.cpp" line="136"/>
         <source>%1-%2: local version is newer.
 Upgrade anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/callbacks.cpp" line="134"/>
+        <location filename="../src/callbacks.cpp" line="140"/>
         <source>File %s is corrupted.
 Do you want to delete it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/callbacks.cpp" line="101"/>
+        <location filename="../src/callbacks.cpp" line="107"/>
         <source>Library Question</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1334,196 +1334,211 @@ Thanks again, and enjoy your translation!</comment>
     </message>
     <message>
         <location filename="../src/main.cpp" line="127"/>
-        <source>Please Wait, loading packages...</source>
+        <source>Please Wait...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/main.cpp" line="164"/>
+        <source>Loading Databases...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/main.cpp" line="169"/>
+        <source>Loading Packages...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/main.cpp" line="174"/>
+        <source>Starting up Shaman...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>QueueDialog</name>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="57"/>
+        <location filename="../src/QueueDialog.cpp" line="60"/>
         <source>&lt;br&gt;&lt;b&gt; * Validating Transaction&lt;/b&gt;&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="98"/>
+        <location filename="../src/QueueDialog.cpp" line="102"/>
         <source>Validating Dependencies...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="102"/>
+        <location filename="../src/QueueDialog.cpp" line="106"/>
         <source>Checking for Conflicts...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="106"/>
+        <location filename="../src/QueueDialog.cpp" line="110"/>
         <source>Resolving Dependencies...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="110"/>
+        <location filename="../src/QueueDialog.cpp" line="114"/>
         <source>Looking for Inter-Conflicts...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="116"/>
+        <location filename="../src/QueueDialog.cpp" line="120"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Installation Started&lt;/b&gt;&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="120"/>
+        <location filename="../src/QueueDialog.cpp" line="124"/>
         <source>Installing %1...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="136"/>
+        <location filename="../src/QueueDialog.cpp" line="140"/>
         <source>%1 (%2) installed successfully!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="155"/>
+        <location filename="../src/QueueDialog.cpp" line="159"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Removal Started&lt;/b&gt;&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="159"/>
+        <location filename="../src/QueueDialog.cpp" line="163"/>
         <source>Removing %1...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="175"/>
+        <location filename="../src/QueueDialog.cpp" line="179"/>
         <source>%1 (%2) removed successfully!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="194"/>
+        <location filename="../src/QueueDialog.cpp" line="198"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Upgrading Started&lt;/b&gt;&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="198"/>
+        <location filename="../src/QueueDialog.cpp" line="202"/>
         <source>Upgrading %1...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="216"/>
+        <location filename="../src/QueueDialog.cpp" line="220"/>
         <source>Upgraded %1 successfully (%2 -&gt; %3)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="238"/>
+        <location filename="../src/QueueDialog.cpp" line="242"/>
         <source>&lt;br&gt;&lt;b&gt; * Queue Processing Started&lt;/b&gt;&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="242"/>
+        <location filename="../src/QueueDialog.cpp" line="246"/>
         <source>Checking package integrity...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="246"/>
+        <location filename="../src/QueueDialog.cpp" line="250"/>
         <source>Checking delta integrity...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="249"/>
+        <location filename="../src/QueueDialog.cpp" line="253"/>
         <source>Applying deltas...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="252"/>
+        <location filename="../src/QueueDialog.cpp" line="256"/>
         <source>Generating %1 with %2... </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="256"/>
+        <location filename="../src/QueueDialog.cpp" line="260"/>
         <source>Success!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="259"/>
+        <location filename="../src/QueueDialog.cpp" line="263"/>
         <source>Failed!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="273"/>
+        <location filename="../src/QueueDialog.cpp" line="277"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Downloading Started&lt;/b&gt;&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="277"/>
+        <location filename="../src/QueueDialog.cpp" line="281"/>
         <source>Starting downloading packages from %1...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="311"/>
+        <location filename="../src/QueueDialog.cpp" line="321"/>
         <source>%p% (%1 KB/s, %4:%5:%6 remaining)</source>
         <comment>You just have to translate &apos;remaining&apos; here. Leave everything else as it is.</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="319"/>
+        <location filename="../src/QueueDialog.cpp" line="329"/>
         <source>Downloading %1... (%2 MB of %3 MB)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="322"/>
+        <location filename="../src/QueueDialog.cpp" line="332"/>
         <source>Downloading %1... (%2 KB of %3 KB)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="372"/>
+        <location filename="../src/QueueDialog.cpp" line="382"/>
         <source>Queue processed, please wait...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="386"/>
-        <source>Executing pre_install scriptlet...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/QueueDialog.cpp" line="390"/>
-        <source>Executing pre_upgrade scriptlet...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/QueueDialog.cpp" line="394"/>
-        <source>Executing pre_remove scriptlet...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/QueueDialog.cpp" line="398"/>
-        <source>Executing post_install scriptlet...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/QueueDialog.cpp" line="402"/>
-        <source>Executing post_upgrade scriptlet...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/QueueDialog.cpp" line="406"/>
-        <source>Executing post_remove scriptlet...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/QueueDialog.cpp" line="502"/>
+        <location filename="../src/QueueDialog.cpp" line="520"/>
         <source>Unexpected Error. Shaman might be corrupted.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="471"/>
+        <location filename="../src/QueueDialog.cpp" line="489"/>
         <source>Extracting Scriptlet from package failed!!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="527"/>
+        <location filename="../src/QueueDialog.cpp" line="630"/>
         <source>Scriptlet processed successfully!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="532"/>
+        <location filename="../src/QueueDialog.cpp" line="636"/>
         <source>Scriptlet not found in this stage, or error processing it!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/QueueDialog.cpp" line="397"/>
+        <source>Executing pre_install scriptlet for %1...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/QueueDialog.cpp" line="402"/>
+        <source>Executing pre_upgrade scriptlet for %1...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/QueueDialog.cpp" line="407"/>
+        <source>Executing pre_remove scriptlet for %1...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/QueueDialog.cpp" line="412"/>
+        <source>Executing post_install scriptlet for %1...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/QueueDialog.cpp" line="417"/>
+        <source>Executing post_upgrade scriptlet for %1...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/QueueDialog.cpp" line="422"/>
+        <source>Executing post_remove scriptlet for %1...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

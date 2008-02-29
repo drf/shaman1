@@ -29,6 +29,7 @@
 #include <QDebug>
 #include <QProcess>
 #include <QFile>
+#include <QWaitCondition>
 #include <fcntl.h>
 
 /* libarchive */
@@ -37,12 +38,14 @@
 
 extern CallBacks CbackReference;
 extern QMutex mutex;
+extern QWaitCondition wCond;
 
 using namespace std;
 
 QueueDialog::QueueDialog(AlpmHandler *hnd, QWidget *parent)
 : QDialog(parent),
-  aHandle(hnd)
+  aHandle(hnd),
+  scrRun(false)
 {
 	setupUi(this);
 	textEdit->hide();
@@ -88,7 +91,8 @@ void TrCommitThread::run()
 void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 {
 	QMutexLocker lock(&mutex);
-	printf("LockedQ\n");
+	
+	qDebug() << "Entering Queue";
 
 	char *pArch, *p1Name, *p1Ver, *p2Ver;
 	switch(event) 
@@ -288,7 +292,13 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 		break;
 	}
 	
-	printf("UnlockQ\n");
+	if(!isScriptletRunning())
+	{
+		wCond.wakeAll();
+		qDebug() << "UnlockQ";
+	}
+	else
+		qDebug() << "Waiting for the scriptlet";
 }
 
 void QueueDialog::updateProgressBar(char *c, int bytedone, int bytetotal, int speed,
@@ -372,7 +382,7 @@ void QueueDialog::cleanup()
 	actionDetail->setText(QString(tr("Queue processed, please wait...")));
 	
 	qApp->processEvents();
-	
+
 	emit terminated(false);
 }
 
@@ -383,31 +393,38 @@ bool QueueDialog::runScriptlet(int action, const QString &p1N, const QString &p1
 	{
 	case 0:
 		qDebug() << "Executing pre-install scriptlet for package " << p1N;
-		textEdit->append(QString(tr("Executing pre_install scriptlet...")));
+		textEdit->append(QString(tr("Executing pre_install scriptlet for %1...")).arg(p1N));
+		actionDetail->setText(QString(tr("Executing pre_install scriptlet for %1...")).arg(p1N));
 		break;
 	case 1:
 		qDebug() << "Executing pre-upgrade scriptlet for package " << p1N;
-		textEdit->append(QString(tr("Executing pre_upgrade scriptlet...")));
+		textEdit->append(QString(tr("Executing pre_upgrade scriptlet for %1...")).arg(p1N));
+		actionDetail->setText(QString(tr("Executing pre_upgrade scriptlet for %1...")).arg(p1N));
 		break;
 	case 2:
 		qDebug() << "Executing pre-remove scriptlet for package " << p1N;
-		textEdit->append(QString(tr("Executing pre_remove scriptlet...")));
+		textEdit->append(QString(tr("Executing pre_remove scriptlet for %1...")).arg(p1N));
+		actionDetail->setText(QString(tr("Executing pre_remove scriptlet for %1...")).arg(p1N));
 		break;
 	case 3:
 		qDebug() << "Executing post-install scriptlet for package " << p1N;
-		textEdit->append(QString(tr("Executing post_install scriptlet...")));
+		textEdit->append(QString(tr("Executing post_install scriptlet for %1...")).arg(p1N));
+		actionDetail->setText(QString(tr("Executing post_install scriptlet for %1...")).arg(p1N));
 		break;
 	case 4:
 		qDebug() << "Executing post-upgrade scriptlet for package " << p1N;
-		textEdit->append(QString(tr("Executing post_upgrade scriptlet...")));
+		textEdit->append(QString(tr("Executing post_upgrade scriptlet for %1...")).arg(p1N));
+		actionDetail->setText(QString(tr("Executing post_upgrade scriptlet for %1...")).arg(p1N));
 		break;
 	case 5:
 		qDebug() << "Executing post-remove scriptlet for package " << p1N;
-		textEdit->append(QString(tr("Executing post_remove scriptlet...")));
+		textEdit->append(QString(tr("Executing post_remove scriptlet for %1...")).arg(p1N));
+		actionDetail->setText(QString(tr("Executing post_remove scriptlet for %1...")).arg(p1N));
 		break;
 	default:
 		qDebug() << "Action invalid!!! What the hell??";
 		textEdit->append(QString(tr("Unexpected Error. Shaman might be corrupted.")));
+		actionDetail->setText(QString(tr("Unexpected Error. Shaman might be corrupted.")));
 		return false;
 		break;
 	}
@@ -469,6 +486,7 @@ bool QueueDialog::runScriptlet(int action, const QString &p1N, const QString &p1
 		/* Ok then, nothing to do. */
 		qDebug() << "Couldn't extract package! Executing Scriptlet failed.";
 		textEdit->append(QString(tr("Extracting Scriptlet from package failed!!")));
+		actionDetail->setText(QString(tr("Extracting Scriptlet from package failed!!")));
 		return false;
 	}
 
@@ -504,7 +522,6 @@ bool QueueDialog::runScriptlet(int action, const QString &p1N, const QString &p1
 		break;
 	}
 
-	char cwd[4096];
 	getcwd(cwd, 4096);
 	
 	chdir("/");
@@ -512,36 +529,19 @@ bool QueueDialog::runScriptlet(int action, const QString &p1N, const QString &p1
 	proc = new QProcess(this);
 	connect(proc, SIGNAL(readyReadStandardOutput()), SLOT(writeLineProgress()));
 	connect(proc, SIGNAL(readyReadStandardError()), SLOT(writeLineProgressErr()));
+	connect(proc, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(finishedScriptletRunning(int,QProcess::ExitStatus)));
+	
+	qApp->processEvents();
 	
 	proc->setWorkingDirectory("/");
 
 	qDebug() << "Scriptlet commandline is:" << cmdline;
 	
-	int pEx;
-	
-	pEx = proc->execute("sh", QStringList() << "-c" << cmdline);
-
-	if(pEx == 0)
-	{
-		qDebug() << "Scriptlet Run successfully!!";
-		textEdit->append(QString(tr("Scriptlet processed successfully!")));
-	}
-	else
-	{
-		qDebug() << "Scriptlet Error or Scriptlet not found!!";
-		textEdit->append(QString(tr("Scriptlet not found in this stage, or error processing it!")));
-	}
-	
-	chdir(cwd);
-	
-	proc->deleteLater();
-
-	aHandle->rmrf("/tmp/alpm_XXXXXX");
+	scrRun = true;
 		
-	if(pEx == 0)
-		return true;
-	else
-		return false;
+	proc->start("sh", QStringList() << "-c" << cmdline);
+
+	return true;
 }
 
 bool QueueDialog::unpackPkg(const QString &pathToPkg, const QString &pathToEx, const QString &file)
@@ -621,16 +621,51 @@ bool QueueDialog::unpackPkg(const QString &pathToPkg, const QString &pathToEx, c
 	return true;
 }
 
+void QueueDialog::finishedScriptletRunning(int eC,QProcess::ExitStatus eS)
+{
+	if(eC == 0)
+	{
+		qDebug() << "Scriptlet Run successfully!!";
+		textEdit->append(QString(tr("Scriptlet processed successfully!")));
+		actionDetail->setText(QString(tr("Scriptlet processed successfully!")));
+	}
+	else
+	{
+		qDebug() << "Scriptlet Error or Scriptlet not found!!";
+		textEdit->append(QString(tr("Scriptlet not found in this stage, or error processing it!")));
+		actionDetail->setText(QString(tr("Scriptlet not found in this stage, or error processing it!")));
+	}
+
+	chdir(cwd);
+
+	proc->deleteLater();
+
+	aHandle->rmrf("/tmp/alpm_XXXXXX");
+	
+	scrRun = false;
+	
+	wCond.wakeAll();
+}
+
 void QueueDialog::writeLineProgress()
 {
+	QString readL(proc->readLine(1024));
+	readL.remove(QChar('\n'));
 	proc->setReadChannel(QProcess::StandardOutput);
-	textEdit->append(proc->readLine(1024));	
-	qDebug() << proc->readLine(1024);
+	textEdit->append(readL);	
+	qDebug() << readL;
 }
 
 void QueueDialog::writeLineProgressErr()
 {
+	QString readL(proc->readLine(1024));
+	readL.remove(QChar('\n'));
 	proc->setReadChannel(QProcess::StandardError);
-	textEdit->append(proc->readLine(1024));	
-	qDebug() << proc->readLine(1024);
+	textEdit->append(readL);	
+	qDebug() << readL;
+}
+
+bool QueueDialog::isScriptletRunning()
+{
+	return scrRun;
 }
