@@ -34,6 +34,7 @@
 #include <QDir>
 #include <QDebug>
 #include <QMessageBox>
+#include <QProcess>
 
 #include "callbacks.h"
 
@@ -939,5 +940,17 @@ unsigned long AlpmHandler::getPackageSize(const QString &name, const QString &re
 
 QString AlpmHandler::getAlpmVersion()
 {
-	return "2.2.0";
+	QProcess *proc = new QProcess();
+	proc->start("pacman --version");
+	
+	proc->waitForFinished();
+	
+	QByteArray btAr(proc->readAllStandardOutput());
+	btAr.remove(0, btAr.indexOf("libalpm"));
+	btAr.remove(0, 9);
+	btAr.remove(5, btAr.length());
+	
+	QString version(btAr);
+	
+	return version;
 }
