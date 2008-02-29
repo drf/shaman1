@@ -109,6 +109,9 @@ void ConfigDialog::setupGeneral()
 	if(settings->value("gui/startupmode").toString() == "tray")
 		startTrayBox->setChecked(true);
 	
+	if(settings->value("gui/showsplashscreen", true).toBool())
+		splashScreenBox->setChecked(true);
+	
 	if(settings->value("scheduledUpdate/enabled").toBool())
 		updateDbTrayBox->setChecked(true);
 	else
@@ -776,6 +779,11 @@ void ConfigDialog::saveConfiguration()
 		settings->setValue("gui/startupmode", "tray");
 	else
 		settings->setValue("gui/startupmode", "window");
+	
+	if(splashScreenBox->isChecked())
+		settings->setValue("gui/showsplashscreen", true);
+	else
+		settings->setValue("gui/showsplashscreen", false);
 
 	if(updateDbTrayBox->isChecked())
 		settings->setValue("scheduledUpdate/enabled", true);

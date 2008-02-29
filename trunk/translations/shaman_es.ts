@@ -29,47 +29,47 @@ All Process will be lost.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="126"/>
+        <location filename="../src/BuildingDialog.cpp" line="140"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;ABS Tree Was Successfully Updated!&lt;/b&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="128"/>
+        <location filename="../src/BuildingDialog.cpp" line="142"/>
         <source>ABS Update</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="128"/>
+        <location filename="../src/BuildingDialog.cpp" line="142"/>
         <source>Your ABS Tree was updated!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="145"/>
+        <location filename="../src/BuildingDialog.cpp" line="159"/>
         <source>&lt;b&gt;Building %1 failed!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="150"/>
+        <location filename="../src/BuildingDialog.cpp" line="164"/>
         <source>&lt;b&gt;%1 was built successfully!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="205"/>
+        <location filename="../src/BuildingDialog.cpp" line="219"/>
         <source>Processing Package %1 of %2...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="206"/>
+        <location filename="../src/BuildingDialog.cpp" line="220"/>
         <source>Building %1...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="230"/>
+        <location filename="../src/BuildingDialog.cpp" line="244"/>
         <source>&lt;b&gt;Building %1...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="255"/>
+        <location filename="../src/BuildingDialog.cpp" line="269"/>
         <source>&lt;b&gt;Building operation has started.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -171,128 +171,128 @@ Do you want to delete it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="169"/>
+        <location filename="../ui/configDialog.ui" line="176"/>
         <source>When Application is in System Tray only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="175"/>
+        <location filename="../ui/configDialog.ui" line="182"/>
         <source>Update Database every</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="189"/>
+        <location filename="../ui/configDialog.ui" line="196"/>
         <source>minutes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="196"/>
+        <location filename="../ui/configDialog.ui" line="203"/>
         <source>If upgrades are available:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="203"/>
+        <location filename="../ui/configDialog.ui" line="210"/>
         <source>Just Notify</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="210"/>
+        <location filename="../ui/configDialog.ui" line="217"/>
         <source>Notify and add them to Queue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="220"/>
+        <location filename="../ui/configDialog.ui" line="227"/>
         <source>Maintenance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="233"/>
+        <location filename="../ui/configDialog.ui" line="240"/>
         <source>Process Selected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="301"/>
+        <location filename="../ui/configDialog.ui" line="308"/>
         <source>Checkable Options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="307"/>
+        <location filename="../ui/configDialog.ui" line="314"/>
         <source>Use Active FTP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="314"/>
+        <location filename="../ui/configDialog.ui" line="321"/>
         <source>Use Deltas (needs xdelta to be installed)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="324"/>
+        <location filename="../ui/configDialog.ui" line="331"/>
         <source>Advanced Options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="334"/>
+        <location filename="../ui/configDialog.ui" line="341"/>
         <source>HoldPkgs:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="344"/>
+        <location filename="../ui/configDialog.ui" line="351"/>
         <source>IgnorePkgs:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="354"/>
+        <location filename="../ui/configDialog.ui" line="361"/>
         <source>IgnoreGroups:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="364"/>
+        <location filename="../ui/configDialog.ui" line="371"/>
         <source>NoUpgrade:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="374"/>
+        <location filename="../ui/configDialog.ui" line="381"/>
         <source>NoExtract:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="388"/>
+        <location filename="../ui/configDialog.ui" line="395"/>
         <source>XFerCommand: (example: /path/to/command %u) Blank for Default</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="426"/>
+        <location filename="../ui/configDialog.ui" line="433"/>
         <source>Arch Linux Official Repositories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="434"/>
+        <location filename="../ui/configDialog.ui" line="441"/>
         <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones.
 Please note that packages from Unstable and Testing may break your system.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="603"/>
+        <location filename="../ui/configDialog.ui" line="610"/>
         <source>Server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="498"/>
+        <location filename="../ui/configDialog.ui" line="505"/>
         <source>Mirror:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="960"/>
+        <location filename="../src/configDialog.cpp" line="968"/>
         <source>Add Mirror</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="526"/>
+        <location filename="../ui/configDialog.ui" line="533"/>
         <source>KDEMod Repositories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="534"/>
+        <location filename="../ui/configDialog.ui" line="541"/>
         <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an 
 improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme,
 and lots of addons, KDEMod is the best way to taste the ease and the power
@@ -300,124 +300,124 @@ of KDE with the simplicity and the power of Arch.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="544"/>
+        <location filename="../ui/configDialog.ui" line="551"/>
         <source>KDEMod 3 Repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="551"/>
+        <location filename="../ui/configDialog.ui" line="558"/>
         <source>KDEMod 4 Repository (Unstable, testers only)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="574"/>
+        <location filename="../ui/configDialog.ui" line="581"/>
         <source>Third-Party Repositories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="582"/>
+        <location filename="../ui/configDialog.ui" line="589"/>
         <source>You can extend your packages choice by adding other repositories. Third-Party 
 Repositories act just as normal ones, and will be accessible through both Shaman
 and Pacman.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="598"/>
+        <location filename="../ui/configDialog.ui" line="605"/>
         <source>Repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="626"/>
+        <location filename="../ui/configDialog.ui" line="633"/>
         <source>Add New Repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="633"/>
+        <location filename="../ui/configDialog.ui" line="640"/>
         <source>Edit Repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="640"/>
+        <location filename="../ui/configDialog.ui" line="647"/>
         <source>Remove Repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="659"/>
+        <location filename="../ui/configDialog.ui" line="666"/>
         <source>Preferences</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="665"/>
+        <location filename="../ui/configDialog.ui" line="672"/>
         <source>Process all dependencies and queue from source first (recommended)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="672"/>
+        <location filename="../ui/configDialog.ui" line="679"/>
         <source>Review Building output before installing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="682"/>
+        <location filename="../ui/configDialog.ui" line="689"/>
         <source>ABS Configuration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="688"/>
+        <location filename="../ui/configDialog.ui" line="695"/>
         <source>Use supfiles that match your current repositories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="697"/>
+        <location filename="../ui/configDialog.ui" line="704"/>
         <source>Define supfiles manually</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="712"/>
+        <location filename="../ui/configDialog.ui" line="719"/>
         <source>Makepkg Configuration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="718"/>
+        <location filename="../ui/configDialog.ui" line="725"/>
         <source>CFlags</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="728"/>
+        <location filename="../ui/configDialog.ui" line="735"/>
         <source>CXXFlags</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="738"/>
+        <location filename="../ui/configDialog.ui" line="745"/>
         <source>BuildEnv</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="748"/>
+        <location filename="../ui/configDialog.ui" line="755"/>
         <source>Options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="758"/>
+        <location filename="../ui/configDialog.ui" line="765"/>
         <source>Doc_Dirs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="771"/>
+        <location filename="../ui/configDialog.ui" line="778"/>
         <source>Build Environment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="779"/>
+        <location filename="../ui/configDialog.ui" line="786"/>
         <source>Building Path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="791"/>
+        <location filename="../ui/configDialog.ui" line="798"/>
         <source>Remove installed makedepends after build</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="798"/>
+        <location filename="../ui/configDialog.ui" line="805"/>
         <source>Clean Build Environment after installation</source>
         <translation type="unfinished"></translation>
     </message>
@@ -427,232 +427,237 @@ and Pacman.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="405"/>
+        <location filename="../src/configDialog.cpp" line="408"/>
         <source>Clean Unused Databases</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="417"/>
+        <location filename="../src/configDialog.cpp" line="420"/>
         <source>Clean Cache</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="429"/>
+        <location filename="../src/configDialog.cpp" line="432"/>
         <source>Empty Cache</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="441"/>
+        <location filename="../src/configDialog.cpp" line="444"/>
         <source>Optimize Pacman Database</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="453"/>
+        <location filename="../src/configDialog.cpp" line="456"/>
         <source>Clean All Building Environments</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="135"/>
+        <location filename="../src/configDialog.cpp" line="138"/>
         <source>Repositories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="196"/>
+        <location filename="../src/configDialog.cpp" line="199"/>
         <source>Pacman</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="264"/>
+        <location filename="../src/configDialog.cpp" line="267"/>
         <source>ABS</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="353"/>
+        <location filename="../src/configDialog.cpp" line="356"/>
         <source>Enter Here the Repository&apos;s Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="355"/>
+        <location filename="../src/configDialog.cpp" line="358"/>
         <source>Enter Here the Repository&apos;s Server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="410"/>
+        <location filename="../src/configDialog.cpp" line="413"/>
         <source>Cleaning up unused Databases...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="422"/>
+        <location filename="../src/configDialog.cpp" line="425"/>
         <source>Cleaning up Cache...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="434"/>
+        <location filename="../src/configDialog.cpp" line="437"/>
         <source>Deleting Cache...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="458"/>
+        <location filename="../src/configDialog.cpp" line="461"/>
         <source>Cleaning up building Environments...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="473"/>
+        <location filename="../src/configDialog.cpp" line="476"/>
         <source>Cleaning up Unused Databases Failed!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="478"/>
+        <location filename="../src/configDialog.cpp" line="481"/>
         <source>Cleaning up Cache Failed!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="483"/>
+        <location filename="../src/configDialog.cpp" line="486"/>
         <source>Deleting Cache Failed!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="488"/>
+        <location filename="../src/configDialog.cpp" line="491"/>
         <source>Could not clean Build Environments!!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="501"/>
+        <location filename="../src/configDialog.cpp" line="504"/>
         <source>Unused Databases Cleaned up successfully!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="506"/>
+        <location filename="../src/configDialog.cpp" line="509"/>
         <source>Cache Cleaned Up Successfully!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="511"/>
+        <location filename="../src/configDialog.cpp" line="514"/>
         <source>Cache Successfully Deleted!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="515"/>
+        <location filename="../src/configDialog.cpp" line="518"/>
         <source>Build Environments Successfully Cleaned!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="516"/>
+        <location filename="../src/configDialog.cpp" line="519"/>
         <source>Build Environments Successfully Cleaned!!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="904"/>
+        <location filename="../src/configDialog.cpp" line="912"/>
         <source>Settings Changed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="910"/>
+        <location filename="../src/configDialog.cpp" line="918"/>
         <source>Your repositories have changed.
 Do you want to Update Your Database?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="941"/>
+        <location filename="../src/configDialog.cpp" line="949"/>
         <source>Mirror Format is incorrect. Your mirror should look like this:
 http://mirror.org/$repo/os/i686</source>
         <comment>Obviously keep the example as it is ;)</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="963"/>
+        <location filename="../src/configDialog.cpp" line="971"/>
         <source>Your Mirror was successfully added!
 It is now available in mirrorlist.</source>
         <comment>mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="990"/>
+        <location filename="../src/configDialog.cpp" line="998"/>
         <source>Pacman Database Optimized Successfully!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="995"/>
+        <location filename="../src/configDialog.cpp" line="1003"/>
         <source>Could not Optimize Pacman Database!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1009"/>
+        <location filename="../src/configDialog.cpp" line="1017"/>
         <source>Operation Completed Successfully!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1008"/>
+        <location filename="../src/configDialog.cpp" line="1016"/>
         <source>Sync was successfully executed!!</source>
         <comment>Sync is always the command</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1013"/>
+        <location filename="../src/configDialog.cpp" line="1021"/>
         <source>Sync could not be executed!</source>
         <comment>Sync is always the command</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1014"/>
+        <location filename="../src/configDialog.cpp" line="1022"/>
         <source>Sync could not be executed!!</source>
         <comment>Sync is always the command</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="449"/>
+        <location filename="../src/configDialog.cpp" line="452"/>
         <source>Optimizing Pacman Database...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="257"/>
+        <location filename="../ui/configDialog.ui" line="264"/>
         <source>Waiting</source>
         <comment>Waiting for a user action</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="275"/>
-        <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/configDialog.ui" line="442"/>
+        <location filename="../ui/configDialog.ui" line="449"/>
         <source>Core</source>
         <comment>Do not translate</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="449"/>
+        <location filename="../ui/configDialog.ui" line="456"/>
         <source>Extra</source>
         <comment>Do not translate</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="456"/>
+        <location filename="../ui/configDialog.ui" line="463"/>
         <source>Community</source>
         <comment>Do not translate</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="463"/>
+        <location filename="../ui/configDialog.ui" line="470"/>
         <source>Testing</source>
         <comment>Do not translate</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="470"/>
+        <location filename="../ui/configDialog.ui" line="477"/>
         <source>Unstable</source>
         <comment>Do not translate</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1001"/>
+        <location filename="../src/configDialog.cpp" line="1009"/>
         <source>Running sync...</source>
         <comment>sync is a command, so it should not be translated</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/configDialog.ui" line="166"/>
+        <source>Show Splashscreen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/configDialog.ui" line="282"/>
+        <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Shaman Manteinance.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1347,22 +1352,22 @@ Thanks again, and enjoy your translation!</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="141"/>
+        <location filename="../src/main.cpp" line="146"/>
         <source>Please Wait...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="182"/>
+        <location filename="../src/main.cpp" line="187"/>
         <source>Loading Databases...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="187"/>
+        <location filename="../src/main.cpp" line="195"/>
         <source>Loading Packages...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="192"/>
+        <location filename="../src/main.cpp" line="203"/>
         <source>Starting up Shaman...</source>
         <translation type="unfinished"></translation>
     </message>

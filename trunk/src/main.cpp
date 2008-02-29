@@ -133,13 +133,19 @@ int main(int argc, char **argv)
 	}
 	
 	app.setQuitOnLastWindowClosed(false);
-
-	QSplashScreen splscr(QPixmap(":/Images/images/splash.png"));
-	splscr.show();
-	app.processEvents();
 	
-	splscr.showMessage(QString(QObject::tr("Please Wait...")), Qt::AlignBottom | Qt::AlignRight);
-	app.processEvents();
+	QSettings *settings = new QSettings();
+	
+	QSplashScreen splscr(QPixmap(":/Images/images/splash.png"));
+
+	if(settings->value("gui/showsplashscreen", true).toBool())
+	{
+		splscr.show();
+		app.processEvents();
+
+		splscr.showMessage(QString(QObject::tr("Please Wait...")), Qt::AlignBottom | Qt::AlignRight);
+		app.processEvents();
+	}
 
 	signal(SIGINT, cleanup);
 	signal(SIGTERM, cleanup);
@@ -148,8 +154,6 @@ int main(int argc, char **argv)
 	aHandler->setuseragent();
 	
 	qDebug() << "User agent is:" << qgetenv("HTTP_USER_AGENT");
-	
-	QSettings *settings = new QSettings();
 	
 	if(settings->value("gui/startupmode").toString() == 0)
 	{
@@ -169,28 +173,36 @@ int main(int argc, char **argv)
 		settings->setValue("scheduledUpdate/addupgradestoqueue", true);
 		settings->setValue("absbuilding/clearmakedepends", true);
 		settings->setValue("absbuilding/syncsupfiles", false);
+		settings->setValue("gui/showsplashscreen", true);
 	}
 
 	if(settings->value("absbuilding/buildpath").toString() == 0 || !settings->contains("absbuilding/buildpath"))
 		// This can be dangerous, so set it properly
 		settings->setValue("absbuilding/buildpath", "/var/shaman/builds");
 
-	settings->deleteLater();
-
 	MainWindow mainwin(aHandler);
 
-	splscr.showMessage(QString(QObject::tr("Loading Databases...")), Qt::AlignBottom | Qt::AlignRight);
-	app.processEvents();
+	if(settings->value("gui/showsplashscreen", true).toBool())
+	{
+		splscr.showMessage(QString(QObject::tr("Loading Databases...")), Qt::AlignBottom | Qt::AlignRight);
+		app.processEvents();
+	}
 
 	mainwin.populateRepoColumn();
 
-	splscr.showMessage(QString(QObject::tr("Loading Packages...")), Qt::AlignBottom | Qt::AlignRight);
-	app.processEvents();
+	if(settings->value("gui/showsplashscreen", true).toBool())
+	{
+		splscr.showMessage(QString(QObject::tr("Loading Packages...")), Qt::AlignBottom | Qt::AlignRight);
+		app.processEvents();
+	}
 
 	mainwin.populatePackagesView();
 
-	splscr.showMessage(QString(QObject::tr("Starting up Shaman...")), Qt::AlignBottom | Qt::AlignRight);
-	app.processEvents();
+	if(settings->value("gui/showsplashscreen", true).toBool())
+	{
+		splscr.showMessage(QString(QObject::tr("Starting up Shaman...")), Qt::AlignBottom | Qt::AlignRight);
+		app.processEvents();
+	}
 
 	if(settings->value("gui/startupmode").toString() == "window")
 	{
@@ -210,7 +222,12 @@ int main(int argc, char **argv)
 	}
 
 	QObject::connect(&mainwin, SIGNAL(aboutToQuit()), &app, SLOT(quit()));
-	splscr.close();
+	
+	if(settings->value("gui/showsplashscreen", true).toBool())
+		splscr.close();
+	
+	settings->deleteLater();
+	
 	return app.exec();
 
 }
