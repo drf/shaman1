@@ -34,7 +34,6 @@
 #include <QDebug>
 #include <QSplashScreen>
 #include <signal.h>
-#include <sys/utsname.h>
 #include <alpm.h>
 
 #define SHAMAN_VERSION "1.0Alpha2dev"
@@ -65,17 +64,6 @@ static void cleanup(int signum)
 	}
 
 	exit(signum);
-}
-
-static void setuseragent(const QString &version)
-{
-	char agent[101];
-	struct utsname un;
-
-	uname(&un);
-	snprintf(agent, 100, "shaman/" SHAMAN_VERSION " (%s %s) libalpm/%s",
-			un.sysname, un.machine, version.toAscii().data());
-	setenv("HTTP_USER_AGENT", agent, 0);
 }
 
 int main(int argc, char **argv)
@@ -157,7 +145,7 @@ int main(int argc, char **argv)
 	signal(SIGTERM, cleanup);
 	signal(SIGSEGV, cleanup);
 	
-	setuseragent(aHandler->getAlpmVersion());
+	aHandler->setuseragent();
 	
 	qDebug() << "User agent is:" << qgetenv("HTTP_USER_AGENT");
 	

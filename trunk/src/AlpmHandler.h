@@ -112,6 +112,8 @@ public:
 	QStringList alpmListToStringList(alpm_list_t *list);
 	
 	QString getAlpmVersion();
+	
+	void setuseragent();
 
 private:
 	bool initTransaction(pmtranstype_t type, pmtransflag_t flags);

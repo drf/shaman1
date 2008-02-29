@@ -31,12 +31,15 @@
 #include <stdlib.h>
 #include <string.h>
 #include <limits.h>
+#include <sys/utsname.h>
 #include <QDir>
 #include <QDebug>
 #include <QMessageBox>
 #include <QProcess>
 
 #include "callbacks.h"
+
+#define SHAMAN_VERSION "1.0Alpha2dev"
 
 AlpmHandler::AlpmHandler(bool init)
 : toRemove(NULL),
@@ -133,6 +136,8 @@ bool AlpmHandler::initTransaction(pmtranstype_t type, pmtransflag_t flags)
 	if(isTransaction())
 		return false;
 
+	setuseragent();
+	
 	if(alpm_trans_init(type, flags, cb_trans_evt, cb_trans_conv,
 			cb_trans_progress) == -1)
 		return false;
@@ -953,4 +958,15 @@ QString AlpmHandler::getAlpmVersion()
 	QString version(btAr);
 	
 	return version;
+}
+
+void AlpmHandler::setuseragent()
+{
+	char agent[101];
+	struct utsname un;
+
+	uname(&un);
+	snprintf(agent, 100, "shaman/" SHAMAN_VERSION " (%s %s) libalpm/%s",
+			un.sysname, un.machine, getAlpmVersion().toAscii().data());
+	setenv("HTTP_USER_AGENT", agent, 0);
 }
