@@ -248,6 +248,7 @@ void cb_trans_progress(pmtransprog_t event, const char *pkgname, int percent,
 void cb_trans_conv(pmtransconv_t event, void *data1, void *data2,
 		void *data3, int *response)
 {
+	qDebug() << "Question Event Triggered";
 	CbackReference.cb_trans_conv(event,data1,data2,data3,response);
 }
 

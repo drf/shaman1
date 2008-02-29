@@ -93,7 +93,7 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 {
 	QMutexLocker lock(&mutex);
 	
-	qDebug() << "Entering Queue";
+	qDebug() << "Entering Queue Lock";
 
 	char *pArch, *p1Name, *p1Ver, *p2Ver;
 	switch(event) 
@@ -296,7 +296,7 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 	if(!isScriptletRunning())
 	{
 		wCond.wakeAll();
-		qDebug() << "UnlockQ";
+		qDebug() << "Releasing Queue Lock";
 	}
 	else
 		qDebug() << "Waiting for the scriptlet";
