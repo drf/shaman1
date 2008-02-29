@@ -124,7 +124,7 @@ int main(int argc, char **argv)
 	splscr.show();
 	app.processEvents();
 	
-	splscr.showMessage(QString(QObject::tr("Please Wait, loading packages...")), Qt::AlignBottom | Qt::AlignRight);
+	splscr.showMessage(QString(QObject::tr("Please Wait...")), Qt::AlignBottom | Qt::AlignRight);
 	app.processEvents();
 
 	signal(SIGINT, cleanup);
@@ -152,7 +152,7 @@ int main(int argc, char **argv)
 		settings->setValue("absbuilding/clearmakedepends", true);
 		settings->setValue("absbuilding/syncsupfiles", false);
 	}
-	
+
 	if(settings->value("absbuilding/buildpath").toString() == 0 || !settings->contains("absbuilding/buildpath"))
 		// This can be dangerous, so set it properly
 		settings->setValue("absbuilding/buildpath", "/var/shaman/builds");
@@ -161,9 +161,18 @@ int main(int argc, char **argv)
 
 	MainWindow mainwin(aHandler);
 
+	splscr.showMessage(QString(QObject::tr("Loading Databases...")), Qt::AlignBottom | Qt::AlignRight);
+	app.processEvents();
+
 	mainwin.populateRepoColumn();
 
+	splscr.showMessage(QString(QObject::tr("Loading Packages...")), Qt::AlignBottom | Qt::AlignRight);
+	app.processEvents();
+
 	mainwin.populatePackagesView();
+
+	splscr.showMessage(QString(QObject::tr("Starting up Shaman...")), Qt::AlignBottom | Qt::AlignRight);
+	app.processEvents();
 
 	if(settings->value("gui/startupmode").toString() == "window")
 	{
