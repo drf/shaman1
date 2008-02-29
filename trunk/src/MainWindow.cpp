@@ -1317,8 +1317,7 @@ void MainWindow::queueProcessingEnded(bool errors)
 
 	qDebug() << "Transaction Completed Successfully";
 
-	if(!pkgsViewWG->findItems("pacman", Qt::MatchExactly, 1).first()->text(8).isEmpty() ||
-			!pkgsViewWG->findItems("shaman", Qt::MatchExactly, 1).first()->text(8).isEmpty())
+	if(!pkgsViewWG->findItems("pacman", Qt::MatchExactly, 1).first()->text(8).isEmpty())
 	{
 		QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Restart required"), 
 				tr("Pacman or Shaman was updated. Shaman will now quit,\nplease restart it "
@@ -1330,6 +1329,19 @@ void MainWindow::queueProcessingEnded(bool errors)
 
 		qApp->exit(0);
 	}
+	if(!pkgsViewWG->findItems("shaman", Qt::MatchExactly, 1).isEmpty())
+		if(!pkgsViewWG->findItems("shaman", Qt::MatchExactly, 1).first()->text(8).isEmpty())
+		{
+			QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Restart required"), 
+					tr("Pacman or Shaman was updated. Shaman will now quit,\nplease restart it "
+							"to use the new version"), QMessageBox::Ok, queueDl);
+
+			message->exec();
+
+			message->deleteLater();
+
+			qApp->exit(0);
+		}
 
 	pkgsViewWG->setSortingEnabled(false);
 	populatePackagesView();
