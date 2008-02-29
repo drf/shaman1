@@ -90,9 +90,16 @@ void BuildingDialog::updateABSTree()
 
 void BuildingDialog::writeLineProgress()
 {
+	if(ABSProc->readChannel() == QProcess::StandardError)
+		progressEdit->append(QString());
+	
 	ABSProc->setReadChannel(QProcess::StandardOutput);
 	
 	QString view(ABSProc->readLine(1024));
+	
+	if(!view.contains(QChar('\n')) && !view.contains(QChar('\n')))
+		return;
+		
 	view.remove(QChar('\n'));
 
 	QString tmp(view);
@@ -106,9 +113,16 @@ void BuildingDialog::writeLineProgress()
 
 void BuildingDialog::writeLineProgressErr()
 {
-	ABSProc->setReadChannel(QProcess::StandardError);
+	if(ABSProc->readChannel() == QProcess::StandardOutput)
+		progressEdit->append(QString());
 	
+	ABSProc->setReadChannel(QProcess::StandardError);
+
 	QString view(ABSProc->readLine(1024));
+
+	if(!view.contains(QChar('\n')) && !view.contains(QChar('\n')))
+		return;
+
 	view.remove(QChar('\n'));
 	
 	QString tmp(view);
