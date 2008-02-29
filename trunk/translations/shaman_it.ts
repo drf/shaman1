@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS><TS version="1.1" language="it">
+<defaultcodec></defaultcodec>
 <context>
     <name>BuildingDialog</name>
     <message>
@@ -1360,7 +1361,7 @@ Thanks again, and enjoy your translation!</comment>
     <message>
         <location filename="../src/main.cpp" line="127"/>
         <source>Please Wait, loading packages...</source>
-        <translation type="unfinished"></translation>
+        <translation>Attendere prego, caricamento dei pacchetti...</translation>
     </message>
 </context>
 <context>

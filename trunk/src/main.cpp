@@ -160,7 +160,6 @@ int main(int argc, char **argv)
 	settings->deleteLater();
 
 	MainWindow mainwin(aHandler);
-	splscr.finish(&mainwin);
 
 	mainwin.populateRepoColumn();
 
@@ -184,6 +183,7 @@ int main(int argc, char **argv)
 	}
 
 	QObject::connect(&mainwin, SIGNAL(aboutToQuit()), &app, SLOT(quit()));
+	splscr.close();
 	return app.exec();
 
 }
