@@ -1330,26 +1330,26 @@ chiuderà, riavvialo per usare la nuova versione</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/main.cpp" line="101"/>
+        <location filename="../src/main.cpp" line="115"/>
         <source>You have to be root to run Shaman.
 Please restart it with root privileges.</source>
         <translation>Devi essere root per utilizzare Shaman.
 Per favore riavvialo da root.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="112"/>
+        <location filename="../src/main.cpp" line="139"/>
         <source>Shaman</source>
         <translation>Shaman</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="113"/>
+        <location filename="../src/main.cpp" line="127"/>
         <source>There was a problem while testing libalpm.
 Maybe another application has a lock on it.</source>
         <translation>C&apos;è stato un problema testando libalpm.
 Forse un&apos;altra applicazione tiene un lock su di essa.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="100"/>
+        <location filename="../src/main.cpp" line="114"/>
         <source>Shaman</source>
         <comment>Hey! If you are reading this, first of all thanks for helping us in making Shaman better. There are not many comments unless where needed, since all the strings are pretty self-explanatory. You will see a lot of HTML in some cases: do not let that scare you, but please edit text only. Editing HTML tags too may break our layout, so be careful. A good practice could be copying the whole string, and then translating just what&apos;s outside the tags, usually just a few words. If you have any doubts, or if you just want to drop us a line, there goes our email addresses:
 Dario: drf54321@gmail.com
@@ -1363,24 +1363,31 @@ Thanks again, and enjoy your translation!</comment>
         <translation type="obsolete">Attendere prego, caricamento dei pacchetti...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="126"/>
+        <location filename="../src/main.cpp" line="153"/>
         <source>Please Wait...</source>
         <translation>Attendere Prego...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="163"/>
+        <location filename="../src/main.cpp" line="194"/>
         <source>Loading Databases...</source>
         <translation>Caricamento dei Database...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="168"/>
+        <location filename="../src/main.cpp" line="199"/>
         <source>Loading Packages...</source>
         <translation>Caricamento dei Pacchetti...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="173"/>
+        <location filename="../src/main.cpp" line="204"/>
         <source>Starting up Shaman...</source>
         <translation>Avvio di Shaman...</translation>
+    </message>
+    <message>
+        <location filename="../src/main.cpp" line="140"/>
+        <source>Your pacman is not updated.
+Shaman needs libalpm &gt;= 2.1.0 to run.
+Yours is %. Please update Pacman.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

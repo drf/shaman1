@@ -130,6 +130,19 @@ int main(int argc, char **argv)
 
 		return app.exec();
 	}
+
+	QString alversion(aHandler->getAlpmVersion());
+	alversion[1];
+	
+	if(alversion[0].digitValue() <= 2 && alversion[2].digitValue() < 1)
+	{
+		QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("Shaman"), QString(QObject::tr("Your pacman is not updated."
+				"\nShaman needs libalpm >= 2.1.0 to run.\nYours is %. Please update Pacman.")).arg(alversion), QMessageBox::Ok);
+
+		message->show();
+
+		return app.exec();
+	}
 	
 	app.setQuitOnLastWindowClosed(false);
 
