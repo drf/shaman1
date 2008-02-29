@@ -1640,6 +1640,19 @@ void MainWindow::showAboutDialog()
 	
 	ui.setupUi(about);
 	
+	ui.aboutInfoLabel->setText(QString(tr("<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, "
+			"li { white-space: pre-wrap; }\n</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-weight:400;"
+			" font-style:normal;\">\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
+			"text-indent:0px;\"><span style=\" font-weight:600;\">A libalpm frontend in Qt</span></p>\n<p style=\"-qt-paragraph-type:empty; "
+			"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\">"
+			"</p>\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">"
+			"License: GPLv2+</p>\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
+			"text-indent:0px;\">Libalpm Version: &lt;v.%1&gt;</p>\n<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px;"
+			" margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p>\n<p style=\" margin-top:0px; margin-bottom:0px;"
+			" margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Dario Freddi &lt;drf54321@yahoo.it&gt;</p>\n"
+			"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">"
+			"(C) 2008 Lukas Appelhans &lt;l.appelhans@gmx.de&gt;</p></body></html>")).arg(aHandle->getAlpmVersion()));
+	
 	about->setWindowModality(Qt::ApplicationModal);
 	
 	about->exec();
