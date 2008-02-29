@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS><TS version="1.1" language="it">
+<defaultcodec></defaultcodec>
 <context>
     <name>BuildingDialog</name>
     <message>
@@ -81,42 +82,46 @@ Tutti i progressi andranno perduti.</translation>
         <location filename="../src/callbacks.cpp" line="114"/>
         <source>%1 requires installing %2 from IgnorePkg/IgnoreGroup.
  Install anyway?</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 richiede l&apos;installazione di %2 da IgnorePkg/IgnoreGroup.
+Installare comunque?</translation>
     </message>
     <message>
         <location filename="../src/callbacks.cpp" line="117"/>
         <source>%1 is in IgnorePkg/IgnoreGroup.
  Install anyway?</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 è in IgnorePkg/IgnoreGroup.
+Installare comunque?</translation>
     </message>
     <message>
         <location filename="../src/callbacks.cpp" line="121"/>
         <source>%1 is designated as a HoldPkg.
  Remove anyway?</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 è contrassegnato come HoldPkg.
+Rimuovere comunque?</translation>
     </message>
     <message>
         <location filename="../src/callbacks.cpp" line="124"/>
         <source>Replace %1 with %2/%3?</source>
-        <translation type="unfinished"></translation>
+        <translation>Sostituire %1 con %2/%3?</translation>
     </message>
     <message>
         <location filename="../src/callbacks.cpp" line="128"/>
         <source>%1 conflicts with %2.
 Remove %3?</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 è in conflitto con %2.Rimuovere %3?</translation>
     </message>
     <message>
         <location filename="../src/callbacks.cpp" line="132"/>
         <source>%1-%2: local version is newer.
 Upgrade anyway?</source>
-        <translation type="unfinished"></translation>
+        <translation>%1-%2: la versione locale è più recente.Aggiornare comunque?</translation>
     </message>
     <message>
         <location filename="../src/callbacks.cpp" line="136"/>
-        <source>File %s is corrupted.
+        <source>File %1 is corrupted.
 Do you want to delete it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Il File %1 è corrotto.
+Vuoi cancellarlo?</translation>
     </message>
 </context>
 <context>
@@ -1324,7 +1329,7 @@ chiuderà, riavvialo per usare la nuova versione</translation>
     <message>
         <location filename="../src/MainWindow.cpp" line="2201"/>
         <source>Library Question</source>
-        <translation type="unfinished"></translation>
+        <translation>Domanda della Libreria</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1654"/>
@@ -1338,7 +1343,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf54321@yahoo.it&amp;gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;l.appelhans@gmx.de&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Un&apos;interfaccia a libalpm in Qt4&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Licenza: GPLv2+&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Versione di libalpm: v.%1&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf54321@yahoo.it&amp;gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;l.appelhans@gmx.de&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -1398,10 +1403,13 @@ Thanks again, and enjoy your translation!</comment>
     </message>
     <message>
         <location filename="../src/main.cpp" line="140"/>
-        <source>Your pacman is not updated.
+        <source>Pacman is not updated.
 Shaman needs libalpm &gt;= 2.1.0 to run.
-Yours is %. Please update Pacman.</source>
-        <translation type="unfinished"></translation>
+Yours is %1. Please update Pacman.</source>
+        <translation>Pacman non è aggiornato.
+Shaman ha bisogno di libalpm &gt;= 2.1.0.
+La versione corrente è %1.
+Per favore aggiorna Pacman.</translation>
     </message>
 </context>
 <context>
@@ -1595,32 +1603,32 @@ Yours is %. Please update Pacman.</source>
     <message>
         <location filename="../src/QueueDialog.cpp" line="398"/>
         <source>Executing pre_install scriptlet for %1...</source>
-        <translation type="unfinished"></translation>
+        <translation>Esecuzione della scriptlet pre_install per %1...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="403"/>
         <source>Executing pre_upgrade scriptlet for %1...</source>
-        <translation type="unfinished"></translation>
+        <translation>Esecuzione della scriptlet pre_upgrade per %1...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="408"/>
         <source>Executing pre_remove scriptlet for %1...</source>
-        <translation type="unfinished"></translation>
+        <translation>Esecuzione della scriptlet pre_remove per %1...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="413"/>
         <source>Executing post_install scriptlet for %1...</source>
-        <translation type="unfinished"></translation>
+        <translation>Esecuzione della scriptlet post_install per %1...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="418"/>
         <source>Executing post_upgrade scriptlet for %1...</source>
-        <translation type="unfinished"></translation>
+        <translation>Esecuzione della scriptlet post_upgrade per %1...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="423"/>
         <source>Executing post_remove scriptlet for %1...</source>
-        <translation type="unfinished"></translation>
+        <translation>Esecuzione della scriptlet post_remove per %1...</translation>
     </message>
 </context>
 <context>

@@ -136,8 +136,8 @@ int main(int argc, char **argv)
 	
 	if(alversion[0].digitValue() <= 2 && alversion[2].digitValue() < 1)
 	{
-		QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("Shaman"), QString(QObject::tr("Your pacman is not updated."
-				"\nShaman needs libalpm >= 2.1.0 to run.\nYours is %. Please update Pacman.")).arg(alversion), QMessageBox::Ok);
+		QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("Shaman"), QString(QObject::tr("Pacman is not updated."
+				"\nShaman needs libalpm >= 2.1.0 to run.\nYours is %1. Please update Pacman.")).arg(alversion), QMessageBox::Ok);
 
 		message->show();
 

@@ -133,7 +133,7 @@ void CallBacks::cb_trans_conv(pmtransconv_t event, void *data1, void *data2,
 				arg(alpm_pkg_get_version((pmpkg_t *)data1));
 		break;
 	case PM_TRANS_CONV_CORRUPTED_PKG:
-		message = QString(tr("File %s is corrupted.\nDo you want to delete it?")).arg((char *)data1);
+		message = QString(tr("File %1 is corrupted.\nDo you want to delete it?")).arg((char *)data1);
 		break;
 	}
 	

@@ -113,7 +113,7 @@ Upgrade anyway?</source>
     </message>
     <message>
         <location filename="../src/callbacks.cpp" line="136"/>
-        <source>File %s is corrupted.
+        <source>File %1 is corrupted.
 Do you want to delete it?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1368,9 +1368,9 @@ Thanks again, and enjoy your translation!</comment>
     </message>
     <message>
         <location filename="../src/main.cpp" line="140"/>
-        <source>Your pacman is not updated.
+        <source>Pacman is not updated.
 Shaman needs libalpm &gt;= 2.1.0 to run.
-Yours is %. Please update Pacman.</source>
+Yours is %1. Please update Pacman.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
