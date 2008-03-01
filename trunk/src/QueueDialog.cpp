@@ -630,20 +630,32 @@ void QueueDialog::finishedScriptletRunning(int eC,QProcess::ExitStatus eS)
 
 void QueueDialog::writeLineProgress()
 {
-	QString readL(proc->readLine(1024));
-	readL.remove(QChar('\n'));
-	proc->setReadChannel(QProcess::StandardOutput);
-	textEdit->append(readL);	
-	qDebug() << readL;
+	if(proc->readChannel() != QProcess::StandardOutput)
+		proc->setReadChannel(QProcess::StandardOutput);
+
+	while(!proc->atEnd())
+	{
+		qDebug() << proc->readLine(1024);
+
+		textEdit->insertHtml(proc->readLine(1024).replace(QChar('\n'), "<br>"));
+
+		textEdit->moveCursor(QTextCursor::End);
+	}
 }
 
 void QueueDialog::writeLineProgressErr()
 {
-	QString readL(proc->readLine(1024));
-	readL.remove(QChar('\n'));
-	proc->setReadChannel(QProcess::StandardError);
-	textEdit->append(readL);	
-	qDebug() << readL;
+	if(proc->readChannel() != QProcess::StandardError)
+		proc->setReadChannel(QProcess::StandardError);
+	
+	while(!proc->atEnd())
+	{
+		qDebug() << proc->readLine(1024);
+
+		textEdit->insertHtml(proc->readLine(1024).replace(QChar('\n'), "<br>"));
+
+		textEdit->moveCursor(QTextCursor::End);
+	}
 }
 
 bool QueueDialog::isScriptletRunning()
