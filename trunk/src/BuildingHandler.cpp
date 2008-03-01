@@ -18,6 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  **************************************************************************/
 
+#include "BuildingHandler.h"
+
 #include <QIcon>
 #include <QDebug>
 #include <QMessageBox>
@@ -30,7 +32,6 @@
 #include "BuildingDialog.h"
 #include "QueueDialog.h"
 #include "EditPBuild.h"
-#include "BuildingHandler.h"
 
 BuildingHandler::BuildingHandler(MainWindow *mW, AlpmHandler *aH)
 : mWin(mW),

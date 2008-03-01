@@ -68,6 +68,7 @@ public slots:
 	
 private:
 	bool unpackPkg(const QString &pathToPkg, const QString &pathToEx, const QString &file);
+	bool checkScriptlet(const QString &path, const QString &action);
 	
 signals:
 	void terminated(bool errors);

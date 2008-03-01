@@ -390,37 +390,27 @@ void QueueDialog::cleanup()
 bool QueueDialog::runScriptlet(int action, const QString &p1N, const QString &p1V, 
 		const QString &pA, const QString &p2V)
 {
+	QString realAct;
+	
 	switch(action)
 	{
 	case 0:
-		qDebug() << "Executing pre-install scriptlet for package " << p1N;
-		textEdit->append(QString(tr("Executing pre_install scriptlet for %1...")).arg(p1N));
-		actionDetail->setText(QString(tr("Executing pre_install scriptlet for %1...")).arg(p1N));
+		realAct = "pre_install";
 		break;
 	case 1:
-		qDebug() << "Executing pre-upgrade scriptlet for package " << p1N;
-		textEdit->append(QString(tr("Executing pre_upgrade scriptlet for %1...")).arg(p1N));
-		actionDetail->setText(QString(tr("Executing pre_upgrade scriptlet for %1...")).arg(p1N));
+		realAct = "pre_upgrade";
 		break;
 	case 2:
-		qDebug() << "Executing pre-remove scriptlet for package " << p1N;
-		textEdit->append(QString(tr("Executing pre_remove scriptlet for %1...")).arg(p1N));
-		actionDetail->setText(QString(tr("Executing pre_remove scriptlet for %1...")).arg(p1N));
+		realAct = "pre_remove";
 		break;
 	case 3:
-		qDebug() << "Executing post-install scriptlet for package " << p1N;
-		textEdit->append(QString(tr("Executing post_install scriptlet for %1...")).arg(p1N));
-		actionDetail->setText(QString(tr("Executing post_install scriptlet for %1...")).arg(p1N));
+		realAct = "post_install";
 		break;
 	case 4:
-		qDebug() << "Executing post-upgrade scriptlet for package " << p1N;
-		textEdit->append(QString(tr("Executing post_upgrade scriptlet for %1...")).arg(p1N));
-		actionDetail->setText(QString(tr("Executing post_upgrade scriptlet for %1...")).arg(p1N));
+		realAct = "post_upgrade";
 		break;
 	case 5:
-		qDebug() << "Executing post-remove scriptlet for package " << p1N;
-		textEdit->append(QString(tr("Executing post_remove scriptlet for %1...")).arg(p1N));
-		actionDetail->setText(QString(tr("Executing post_remove scriptlet for %1...")).arg(p1N));
+		realAct = "post_remove";
 		break;
 	default:
 		qDebug() << "Action invalid!!! What the hell??";
@@ -429,6 +419,10 @@ bool QueueDialog::runScriptlet(int action, const QString &p1N, const QString &p1
 		return false;
 		break;
 	}
+
+	qDebug() << "Executing" << realAct << "scriptlet for package " << p1N;
+	textEdit->append(QString(tr("Executing %1 scriptlet for %2...")).arg(realAct).arg(p1N));
+	actionDetail->setText(QString(tr("Executing %1 scriptlet for %2...")).arg(realAct).arg(p1N));
 
 	/* Ok, libalpm docet here. */
 
@@ -470,14 +464,14 @@ bool QueueDialog::runScriptlet(int action, const QString &p1N, const QString &p1
 		strtmp.append("-");
 		strtmp.append(pA);
 		strtmp.append(".pkg.tar.gz");
-		
+
 		if(QFile::exists(strtmp))
 		{
 			pkgpath.append("-");
 			pkgpath.append(pA);
 		}
 	}
-	
+
 	pkgpath.append(".pkg.tar.gz");
 
 	qDebug() << "Extracting:" << pkgpath;
@@ -493,35 +487,21 @@ bool QueueDialog::runScriptlet(int action, const QString &p1N, const QString &p1
 
 	qDebug() << "Ok, running the scriptlet...";
 
+	if(!checkScriptlet(scriptfn, realAct))
+	{
+		qDebug() << p1N << "doesn't have" << realAct << "scriptlet";
+		textEdit->append(QString(tr("Package %1 does not have %2 scriptlet")).arg(p1N).arg(realAct));
+		actionDetail->setText(QString(tr("Package %1 does not have %2 scriptlet")).arg(p1N).arg(realAct));
+		return true;
+	}
+
 	QString cmdline;
 	
-	switch(action)
-	{
-	case 0:
-		cmdline = QString(". %1; %2 %3").arg(scriptfn).arg("pre_install").arg(p1V);
-		break;
-	case 1:
-		cmdline = QString(". %1; %2 %3").arg(scriptfn).arg("pre_upgrade").arg(p1V);
-		break;
-	case 2:
-		cmdline = QString(". %1; %2 %3").arg(scriptfn).arg("pre_remove").arg(p1V);
-		break;
-	case 3:
-		cmdline = QString(". %1; %2 %3").arg(scriptfn).arg("post_install").arg(p1V);
-		break;
-	case 4:
-		cmdline = QString(". %1; %2 %3 %4").arg(scriptfn).arg("post_upgrade").arg(p1V).
+	if(action != 4)
+		cmdline = QString(". %1; %2 %3").arg(scriptfn).arg(realAct).arg(p1V);
+	else
+		cmdline = QString(". %1; %2 %3 %4").arg(scriptfn).arg(realAct).arg(p1V).
 				arg(p2V);
-		break;
-	case 5:
-		cmdline = QString(". %1; %2 %3").arg(scriptfn).arg("post_remove").arg(p1V);
-		break;
-	default:
-		qDebug() << "Action invalid!!! What the hell??";
-		textEdit->append(QString(tr("Unexpected Error. Shaman might be corrupted.")));
-		return false;
-		break;
-	}
 
 	getcwd(cwd, 4096);
 	
@@ -632,9 +612,9 @@ void QueueDialog::finishedScriptletRunning(int eC,QProcess::ExitStatus eS)
 	}
 	else
 	{
-		qDebug() << "Scriptlet Error or Scriptlet not found!!";
-		textEdit->append(QString(tr("Scriptlet not found in this stage, or error processing it!")));
-		actionDetail->setText(QString(tr("Scriptlet not found in this stage, or error processing it!")));
+		qDebug() << "Scriptlet Error!!";
+		textEdit->append(QString(tr("Error processing Scriptlet!!")));
+		actionDetail->setText(QString(tr("Error processing Scriptlet!!")));
 	}
 
 	chdir(cwd);
@@ -669,4 +649,25 @@ void QueueDialog::writeLineProgressErr()
 bool QueueDialog::isScriptletRunning()
 {
 	return scrRun;
+}
+
+bool QueueDialog::checkScriptlet(const QString &path, const QString &action)
+{
+	QFile fp(path);
+
+	if(!fp.open(QIODevice::ReadOnly | QIODevice::Text))
+		return false;
+
+	QTextStream in(&fp);
+
+	if(in.readAll().contains(action))
+	{
+		fp.close();
+		return true;
+	}
+	else
+	{
+		fp.close();
+		return false;
+	}
 }

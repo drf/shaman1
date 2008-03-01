@@ -78,116 +78,116 @@ Tutti i progressi andranno perduti.</translation>
 <context>
     <name>BuildingHandler</name>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="99"/>
+        <location filename="../src/BuildingHandler.cpp" line="100"/>
         <source>You need to have ABS installed to use Shaman&apos;s
 building feature. Do you want to install it now?</source>
-        <translation type="unfinished">Devi avere installato ABS per utilizzare le capacità
+        <translation>Devi avere installato ABS per utilizzare le capacità
 di compilazione di Shaman. Vuoi installarlo ora?</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="336"/>
+        <location filename="../src/BuildingHandler.cpp" line="337"/>
         <source>Error</source>
-        <translation type="unfinished">Errore</translation>
+        <translation>Errore</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="131"/>
+        <location filename="../src/BuildingHandler.cpp" line="132"/>
         <source>You can not remove packages when processing
 your queue from Source</source>
-        <translation type="unfinished">Non puoi rimuovere pacchetti se esegui la coda
+        <translation>Non puoi rimuovere pacchetti se esegui la coda
 da sorgente</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="162"/>
+        <location filename="../src/BuildingHandler.cpp" line="163"/>
         <source>Some of your packages do not belong to Arch
 Linux&apos;s official repository. Shaman is able to
 build packages from official sources only.</source>
-        <translation type="unfinished">Alcuni dei pacchetti selezionati non appartengono
+        <translation>Alcuni dei pacchetti selezionati non appartengono
 ai repositori ufficiali di Arch Linux. Shaman è in grado
 di compilare pacchetti solo da sorgenti ufficiali.</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="199"/>
+        <location filename="../src/BuildingHandler.cpp" line="200"/>
         <source>You are about to install &lt;b&gt;%1 package&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
-        <translation type="unfinished">Stai per installare &lt;b&gt;%1 pacchetto&lt;/b&gt; da sorgente. Compilare da sorgente&lt;br&gt;può dare diversi vantaggi, ma è comunque molto lento.&lt;br&gt;Se non ne sei sicuro, probabilmente preferiresti eseguire la tua coda da file&lt;br&gt;binari. Prima di continuare, è consigliabile rivedere la tua configurazione&lt;br&gt;per massimizzare le prestazioni della compilazione.</translation>
+        <translation>Stai per installare &lt;b&gt;%1 pacchetto&lt;/b&gt; da sorgente. Compilare da sorgente&lt;br&gt;può dare diversi vantaggi, ma è comunque molto lento.&lt;br&gt;Se non ne sei sicuro, probabilmente preferiresti eseguire la tua coda da file&lt;br&gt;binari. Prima di continuare, è consigliabile rivedere la tua configurazione&lt;br&gt;per massimizzare le prestazioni della compilazione.</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="205"/>
+        <location filename="../src/BuildingHandler.cpp" line="206"/>
         <source>You are about to install &lt;b&gt;%1 packages&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
-        <translation type="unfinished">Stai per installare &lt;b&gt;%1 pacchetti&lt;/b&gt; da sorgente. Compilare da sorgente&lt;br&gt;può dare diversi vantaggi, ma è comunque molto lento.&lt;br&gt;Se non ne sei sicuro, probabilmente preferiresti eseguire la tua coda da file&lt;br&gt;binari. Prima di continuare, è consigliabile rivedere la tua configurazione&lt;br&gt;per massimizzare le prestazioni della compilazione.</translation>
+        <translation>Stai per installare &lt;b&gt;%1 pacchetti&lt;/b&gt; da sorgente. Compilare da sorgente&lt;br&gt;può dare diversi vantaggi, ma è comunque molto lento.&lt;br&gt;Se non ne sei sicuro, probabilmente preferiresti eseguire la tua coda da file&lt;br&gt;binari. Prima di continuare, è consigliabile rivedere la tua configurazione&lt;br&gt;per massimizzare le prestazioni della compilazione.</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="224"/>
+        <location filename="../src/BuildingHandler.cpp" line="225"/>
         <source>To be Installed</source>
-        <translation type="unfinished">Da Installare</translation>
+        <translation>Da Installare</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="231"/>
+        <location filename="../src/BuildingHandler.cpp" line="232"/>
         <source>To be Upgraded</source>
-        <translation type="unfinished">Da Aggiornare</translation>
-    </message>
-    <message>
-        <location filename="../src/BuildingHandler.cpp" line="377"/>
-        <source>Package Building</source>
-        <translation type="unfinished">Compilazione Pacchetti</translation>
-    </message>
-    <message>
-        <location filename="../src/BuildingHandler.cpp" line="310"/>
-        <source>Your Packages failed to build!</source>
-        <translation type="unfinished">Non è stato possibile compilare i pacchetti!</translation>
-    </message>
-    <message>
-        <location filename="../src/BuildingHandler.cpp" line="314"/>
-        <source>Your packages Failed to Build.
-Look at the output for more details.</source>
-        <translation type="unfinished">Non è stato possibile compilare i pacchetti.
-Guarda l&apos;output per maggiori dettagli.</translation>
-    </message>
-    <message>
-        <location filename="../src/BuildingHandler.cpp" line="352"/>
-        <source>Close</source>
-        <translation type="unfinished">Chiudi</translation>
-    </message>
-    <message>
-        <location filename="../src/BuildingHandler.cpp" line="342"/>
-        <source>Building Packages Failed!!</source>
-        <translation type="unfinished">Compilazione dei Pacchetti Fallita!!</translation>
-    </message>
-    <message>
-        <location filename="../src/BuildingHandler.cpp" line="356"/>
-        <source>Shaman - Idle</source>
-        <translation type="unfinished">Shaman - In Attesa</translation>
-    </message>
-    <message>
-        <location filename="../src/BuildingHandler.cpp" line="345"/>
-        <source>Some packages failed to build.
-Do you want to proceed anyway?</source>
-        <translation type="unfinished">Alcuni pacchetti non sono stati compilati.
-Vuoi proseguire comunque?</translation>
-    </message>
-    <message>
-        <location filename="../src/BuildingHandler.cpp" line="372"/>
-        <source>Install Built Packages</source>
-        <translation type="unfinished">Installa i Pacchetti Compilati</translation>
-    </message>
-    <message>
-        <location filename="../src/BuildingHandler.cpp" line="373"/>
-        <source>Close Without Installing</source>
-        <translation type="unfinished">Chiudi Senza Installare</translation>
-    </message>
-    <message>
-        <location filename="../src/BuildingHandler.cpp" line="374"/>
-        <source>Packages Built Successfully!</source>
-        <translation type="unfinished">Pacchetti Compilati con Successo!</translation>
+        <translation>Da Aggiornare</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="378"/>
-        <source>Your Packages have been built successfully, and are ready to be installed</source>
-        <translation type="unfinished">I Pacchetti sono stati compilati con successo, e sono pronti per essere installati</translation>
+        <source>Package Building</source>
+        <translation>Compilazione Pacchetti</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="508"/>
+        <location filename="../src/BuildingHandler.cpp" line="311"/>
+        <source>Your Packages failed to build!</source>
+        <translation>Non è stato possibile compilare i pacchetti!</translation>
+    </message>
+    <message>
+        <location filename="../src/BuildingHandler.cpp" line="315"/>
+        <source>Your packages Failed to Build.
+Look at the output for more details.</source>
+        <translation>Non è stato possibile compilare i pacchetti.
+Guarda l&apos;output per maggiori dettagli.</translation>
+    </message>
+    <message>
+        <location filename="../src/BuildingHandler.cpp" line="353"/>
+        <source>Close</source>
+        <translation>Chiudi</translation>
+    </message>
+    <message>
+        <location filename="../src/BuildingHandler.cpp" line="343"/>
+        <source>Building Packages Failed!!</source>
+        <translation>Compilazione dei Pacchetti Fallita!!</translation>
+    </message>
+    <message>
+        <location filename="../src/BuildingHandler.cpp" line="357"/>
+        <source>Shaman - Idle</source>
+        <translation>Shaman - In Attesa</translation>
+    </message>
+    <message>
+        <location filename="../src/BuildingHandler.cpp" line="346"/>
+        <source>Some packages failed to build.
+Do you want to proceed anyway?</source>
+        <translation>Alcuni pacchetti non sono stati compilati.
+Vuoi proseguire comunque?</translation>
+    </message>
+    <message>
+        <location filename="../src/BuildingHandler.cpp" line="373"/>
+        <source>Install Built Packages</source>
+        <translation>Installa i Pacchetti Compilati</translation>
+    </message>
+    <message>
+        <location filename="../src/BuildingHandler.cpp" line="374"/>
+        <source>Close Without Installing</source>
+        <translation>Chiudi Senza Installare</translation>
+    </message>
+    <message>
+        <location filename="../src/BuildingHandler.cpp" line="375"/>
+        <source>Packages Built Successfully!</source>
+        <translation>Pacchetti Compilati con Successo!</translation>
+    </message>
+    <message>
+        <location filename="../src/BuildingHandler.cpp" line="379"/>
+        <source>Your Packages have been built successfully, and are ready to be installed</source>
+        <translation>I Pacchetti sono stati compilati con successo, e sono pronti per essere installati</translation>
+    </message>
+    <message>
+        <location filename="../src/BuildingHandler.cpp" line="509"/>
         <source>Shaman - Processing</source>
-        <translation type="unfinished">Shaman - Operazione in corso</translation>
+        <translation>Shaman - Operazione in corso</translation>
     </message>
 </context>
 <context>
@@ -1700,54 +1700,69 @@ Per favore aggiorna Pacman.</translation>
         <translation type="obsolete">Esecuzione della scriptlet post_remove...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="521"/>
+        <location filename="../src/QueueDialog.cpp" line="418"/>
         <source>Unexpected Error. Shaman might be corrupted.</source>
         <translation>Errore Inaspettato. Shaman potrebbe essere corrotto.</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="490"/>
+        <location filename="../src/QueueDialog.cpp" line="484"/>
         <source>Extracting Scriptlet from package failed!!</source>
         <translation>Impossibile estrarre la Scriptlet dal pacchetto!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="631"/>
+        <location filename="../src/QueueDialog.cpp" line="611"/>
         <source>Scriptlet processed successfully!</source>
         <translation>Scriptlet Eseguita con Successo!</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="637"/>
         <source>Scriptlet not found in this stage, or error processing it!</source>
-        <translation>Scriptlet non disponibile, o errore nell&apos;eseguirla!</translation>
+        <translation type="obsolete">Scriptlet non disponibile, o errore nell&apos;eseguirla!</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="398"/>
         <source>Executing pre_install scriptlet for %1...</source>
-        <translation>Esecuzione della scriptlet pre_install per %1...</translation>
+        <translation type="obsolete">Esecuzione della scriptlet pre_install per %1...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="403"/>
         <source>Executing pre_upgrade scriptlet for %1...</source>
-        <translation>Esecuzione della scriptlet pre_upgrade per %1...</translation>
+        <translation type="obsolete">Esecuzione della scriptlet pre_upgrade per %1...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="408"/>
         <source>Executing pre_remove scriptlet for %1...</source>
-        <translation>Esecuzione della scriptlet pre_remove per %1...</translation>
+        <translation type="obsolete">Esecuzione della scriptlet pre_remove per %1...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="413"/>
         <source>Executing post_install scriptlet for %1...</source>
-        <translation>Esecuzione della scriptlet post_install per %1...</translation>
+        <translation type="obsolete">Esecuzione della scriptlet post_install per %1...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="418"/>
         <source>Executing post_upgrade scriptlet for %1...</source>
-        <translation>Esecuzione della scriptlet post_upgrade per %1...</translation>
+        <translation type="obsolete">Esecuzione della scriptlet post_upgrade per %1...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="423"/>
         <source>Executing post_remove scriptlet for %1...</source>
-        <translation>Esecuzione della scriptlet post_remove per %1...</translation>
+        <translation type="obsolete">Esecuzione della scriptlet post_remove per %1...</translation>
+    </message>
+    <message>
+        <location filename="../src/QueueDialog.cpp" line="425"/>
+        <source>Executing %1 scriptlet for %2...</source>
+        <translation>Esecuzione della scriptlet %1 per %2...</translation>
+    </message>
+    <message>
+        <location filename="../src/QueueDialog.cpp" line="494"/>
+        <source>Package %1 does not have %2 scriptlet</source>
+        <translation>Il Pacchetto %1 non ha la scriptlet %2</translation>
+    </message>
+    <message>
+        <location filename="../src/QueueDialog.cpp" line="617"/>
+        <source>Error processing Scriptlet!!</source>
+        <translation>Errore nell&apos;esecuzione della scriptlet!!</translation>
     </message>
 </context>
 <context>
