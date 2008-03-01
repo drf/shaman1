@@ -192,16 +192,15 @@ QStringList AlpmHandler::getUpgradeablePackages()
 		return retlist;
 	else
 	{
-		qDebug() << "Third";
+		qDebug() << "Upgradeable packages:";
 		while(syncpkgs != NULL)
 		{
 			/* To Alpm Devs : LOL. Call three functions to get a fucking
 			 * name of a package? Please.
 			 */
 			QString tmp(alpm_pkg_get_name(alpm_sync_get_pkg((pmsyncpkg_t *) alpm_list_getdata(syncpkgs))));
-			printf("%s\n", tmp.toAscii().data());
+			qDebug() << tmp;
 			retlist.append(tmp);
-			printf("%d\n", retlist.count());
 			syncpkgs = alpm_list_next(syncpkgs);
 		}
 		return retlist;
@@ -348,7 +347,7 @@ bool AlpmHandler::setUpAlpmSettings()
 	/* Register our sync databases, kindly taken from pacdata */
 
 	if(!pdata.loaded)
-		printf("La madonna");
+		qDebug() << "Error Parsing Pacman Configuration!!";
 
 	for(int i = 0; i < pdata.syncdbs.size(); ++i)
 	{
@@ -801,7 +800,7 @@ bool AlpmHandler::cleanCache(bool empty)
 
 	if(!empty) 
 	{
-		printf("Incomplete\n");
+		qDebug() << "Incomplete Cleanup";
 		/* incomplete cleanup */
 		QDir dir(cachedir); 
 
@@ -921,8 +920,8 @@ bool AlpmHandler::isProviderInstalled(const QString &provider)
 			QStringList tmp(prv.at(i).split("="));
 			if(!tmp.at(0).compare(provider))
 			{
-				printf("Provider is installed and it is %s\n", alpm_pkg_get_name(
-				(pmpkg_t *)alpm_list_getdata(localpack)));
+				qDebug() << "Provider is installed and it is" << alpm_pkg_get_name(
+						(pmpkg_t *)alpm_list_getdata(localpack));
 				return true;
 			}
 		}

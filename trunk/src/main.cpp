@@ -68,10 +68,12 @@ static void cleanup(int signum)
 
 int main(int argc, char **argv)
 {
-	qDebug() << ">>> Shaman" << SHAMAN_VERSION;
+	qDebug() << "";
+	qDebug() << "	>>> Shaman" << SHAMAN_VERSION;
+	qDebug() << "";
 	qDebug() << "Shaman is still in testing phase, please be easy on it!!";
 	qDebug() << "";
-	qDebug() << "In most cases, terminal ouput is pretty relevant, please include it,";
+	qDebug() << "In most cases, terminal output is pretty relevant, please include it,";
 	qDebug() << "adding a backtrace, if you need to report a crash.";
 	qDebug() << "";
 	qDebug() << "Enjoy!";

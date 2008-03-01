@@ -28,6 +28,7 @@
 #include "BuildingDialog.h"
 #include "EditPBuild.h"
 #include "ABSHandler.h"
+#include "BuildingHandler.h"
 #include "../ui_aboutDialog.h"
 
 #include <iostream>
@@ -58,7 +59,7 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
   dbdialog(NULL),
   queueDl(NULL),
   qUi(NULL),
-  buildDialog(NULL)
+  bHandler(NULL)
 {
 	setupUi(this);
 	addDockWidget(Qt::LeftDockWidgetArea, repoDockWidget);
@@ -101,7 +102,7 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	connect(actionAbout, SIGNAL(triggered()), SLOT(showAboutDialog()));
 	connect(actionInstall_Package_From_File, SIGNAL(triggered()), SLOT(getPackageFromFile()));
 	connect(actionUpdate_ABS_Tree, SIGNAL(triggered()), SLOT(updateABSTree()));
-	connect(actionBuild_and_Install_Selected, SIGNAL(triggered()), SLOT(validateSourceQueue()));
+	connect(actionBuild_and_Install_Selected, SIGNAL(triggered()), SLOT(initSourceQueue()));
 	connect(actionCancel_all_actions, SIGNAL(triggered()), SLOT(cancelAllActions()));
 
 	QSettings *settings = new QSettings();
@@ -1604,8 +1605,6 @@ void MainWindow::systrayActivated(QSystemTrayIcon::ActivationReason reason)
 				dbdialog->show();
 			if(queueDl != NULL)
 				queueDl->show();
-			if(buildDialog != NULL)
-				buildDialog->show();
 		}
 		else
 		{
@@ -1617,9 +1616,6 @@ void MainWindow::systrayActivated(QSystemTrayIcon::ActivationReason reason)
 				dbdialog->hide();
 			if(queueDl != NULL)
 				queueDl->hide();
-			if(buildDialog != NULL)
-				buildDialog->hide();
-			
 		}
 		
 		settings->deleteLater();
@@ -1647,7 +1643,7 @@ void MainWindow::getPackageFromFile()
 		return;
 	}
 	
-	printf("Selected %s\n", alpm_pkg_get_name(pkg));
+	qDebug() << "Selected" << alpm_pkg_get_name(pkg);
 	
 	alpm_pkg_free(pkg);
 	
@@ -1686,464 +1682,6 @@ void MainWindow::showAboutDialog()
 	about->deleteLater();
 }
 
-void MainWindow::updateABSTree()
-{
-	if(!aHandle->isInstalled("abs"))
-	{
-		QMessageBox *msgBox = new QMessageBox(this);
-
-		msgBox->setIcon(QMessageBox::Question);
-		msgBox->setWindowTitle(QString("Error"));
-
-		msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
-
-		msgBox->setWindowModality(Qt::ApplicationModal);
-
-		msgBox->setText(QString(tr("You need to have ABS installed to use Shaman's\nbuilding feature. Do you want to install it now?")));
-
-		switch (msgBox->exec()) {
-		case QMessageBox::Yes:
-			cancelAllActions();
-			installPackage("abs");
-			widgetQueueToAlpmQueue();
-			break;
-		case QMessageBox::No:
-			break;
-		default:
-			// should never be reached
-			break;
-		}
-
-		msgBox->deleteLater();
-		
-		return;
-	}
-	
-	buildDialog = new BuildingDialog(aHandle, this);
-	connect(buildDialog, SIGNAL(nullifyPointer()), SLOT(nullifyBDialog()));
-	
-	buildDialog->show();
-	
-	buildDialog->updateABSTree();
-}
-
-void MainWindow::validateSourceQueue()
-{
-	if(!aHandle->isInstalled("abs"))
-	{
-		QMessageBox *msgBox = new QMessageBox(this);
-
-		msgBox->setIcon(QMessageBox::Question);
-		msgBox->setWindowTitle(QString("Error"));
-
-		msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
-
-		msgBox->setWindowModality(Qt::ApplicationModal);
-
-		msgBox->setText(QString(tr("You need to have ABS installed to use Shaman's\nbuilding feature. Do you want to install it now?")));
-
-		switch (msgBox->exec()) {
-		case QMessageBox::Yes:
-			cancelAllActions();
-			installPackage("abs");
-			widgetQueueToAlpmQueue();
-			break;
-		case QMessageBox::No:
-			break;
-		default:
-			// should never be reached
-			break;
-		}
-
-		msgBox->deleteLater();
-
-		return;
-	}
-	
-	if(pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 8).isEmpty() &&
-			pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 8).isEmpty() &&
-			pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 8).isEmpty() &&
-			pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 8).isEmpty())
-		return;
-	else if(!pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 8).isEmpty() ||
-			!pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 8).isEmpty())
-	{
-		QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), QString(tr("You can not remove packages when processing\n"
-				"your queue from Source")), QMessageBox::Ok, this);
-
-		message->exec();
-
-		message->deleteLater();
-		return;
-	}
-
-	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 7))
-	{
-		if(itm->text(5).compare("core") && itm->text(5).compare("extra") && itm->text(5).compare("community")
-				&& itm->text(5).compare("unstable") && itm->text(5).compare("testing"))
-		{
-			QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), QString(tr("Some of your packages do not belong to Arch\n"
-					"Linux's official repository. Shaman is able to\nbuild packages from official sources only.")), QMessageBox::Ok, this);
-
-			message->exec();
-
-			message->deleteLater();
-			return;
-		}
-	}
-
-	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 8))
-	{
-		if(itm->text(5).compare("core") && itm->text(5).compare("extra") && itm->text(5).compare("community")
-				&& itm->text(5).compare("unstable") && itm->text(5).compare("testing"))
-		{
-			QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), QString(tr("Some of your packages do not belong to Arch\n"
-					"Linux's official repository. Shaman is able to\nbuild packages from official sources only.")), QMessageBox::Ok, this);
-
-			message->exec();
-
-			message->deleteLater();
-			return;
-		}
-
-	}
-	
-	reviewBQueue = new QDialog(this);
-	
-	revBuildUi = new Ui::reviewBuildingDialog();
-	
-	revBuildUi->setupUi(reviewBQueue);
-	revBuildUi->treeWidget->hide();
-
-	QSettings *settings = new QSettings();
-
-	if(settings->value("absbuilding/wizardbuild").toBool())
-		revBuildUi->depsWizardBox->setChecked(true);
-
-	if(settings->value("absbuilding/reviewoutput").toBool())
-		revBuildUi->noProcessBox->setChecked(true);
-	
-	settings->deleteLater();
-	
-	reviewBQueue->setWindowModality(Qt::ApplicationModal);
-	reviewBQueue->setAttribute(Qt::WA_DeleteOnClose, true);
-
-	revBuildUi->infoLabel->setText((pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 8).size() + 
-			pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 8).size()) == 1 ? QString(tr("You are about to install <b>%1"
-					" package</b> from source. Building from source<br>can give some advantages, however is very slow.<br>If "
-					"you are not sure about that, you would probably prefer to process<br>your queue from binary files. "
-					"Before you continue, you are advised to<br>review your configuration to improve your building performance.")).arg(
-							pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 8).size() + 
-							pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 8).size()) : 
-								QString(tr("You are about to install <b>%1"
-										" packages</b> from source. Building from source<br>can give some advantages, however is very slow.<br>If "
-										"you are not sure about that, you would probably prefer to process<br>your queue from binary files. "
-										"Before you continue, you are advised to<br>review your configuration to improve your building performance.")).arg(
-												pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 8).size() + 
-												pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 8).size()));
-
-	if(!pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 8).isEmpty())
-	{
-		QTreeWidgetItem *itm = new QTreeWidgetItem(revBuildUi->treeWidget, QStringList(tr("To be Installed")));
-		revBuildUi->treeWidget->addTopLevelItem(itm);
-	}
-	if(!pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 8).isEmpty())
-	{
-		QTreeWidgetItem *itm = new QTreeWidgetItem(revBuildUi->treeWidget, QStringList(tr("To be Upgraded")));
-		revBuildUi->treeWidget->addTopLevelItem(itm);
-	}
-	
-
-	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 8))
-	{
-		aHandle->addSyncToQueue(itm->text(1));
-		QTreeWidgetItem *itmL = revBuildUi->treeWidget->findItems(tr("To be Installed"), Qt::MatchExactly, 0).first();
-		QTreeWidgetItem *childitm = new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
-	}
-
-	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 8))
-	{
-		aHandle->addSyncToQueue(itm->text(1));
-		QTreeWidgetItem *itmL = revBuildUi->treeWidget->findItems(tr("To be Upgraded"), Qt::MatchExactly, 0).first();
-		QTreeWidgetItem *childitm = new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
-	}
-	
-	connect(revBuildUi->binaryButton, SIGNAL(clicked()), reviewBQueue, SLOT(close()));
-	connect(revBuildUi->binaryButton, SIGNAL(clicked()), SLOT(widgetQueueToAlpmQueue()));
-	connect(revBuildUi->abortButton, SIGNAL(clicked()), reviewBQueue, SLOT(close()));
-	connect(revBuildUi->sourceButton, SIGNAL(clicked()), reviewBQueue, SLOT(close()));
-	connect(revBuildUi->sourceButton, SIGNAL(clicked()), SLOT(startSourceProcessing()));
-	connect(revBuildUi->pBuildButton, SIGNAL(clicked()), SLOT(openPBuildDialog()));
-	
-	reviewBQueue->show();
-}
-
-void MainWindow::openPBuildDialog()
-{
-	QStringList targets;
-
-	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 8))
-		targets.append(itm->text(1));
-
-	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 8))
-		targets.append(itm->text(1));
-	
-	pBuildEditor = new EditPBuild(targets, reviewBQueue);
-	
-	pBuildEditor->exec();
-	
-	pBuildEditor->deleteLater();
-}
-
-void MainWindow::startSourceProcessing()
-{
-	if(queueDl != NULL)
-	{
-		queueDl->deleteLater();
-		queueDl = NULL;
-	}
-	else if(revBuildUi->depsWizardBox->isChecked())
-	{
-		processBuildWizard();
-		return;
-	}
-	
-	buildDialog = new BuildingDialog(aHandle, this);
-	connect(buildDialog, SIGNAL(nullifyPointer()), SLOT(nullifyBDialog()));
-	
-	buildDialog->initBuildingQueue();
-	
-	buildDialog->setWindowModality(Qt::WindowModal);
-	buildDialog->setAttribute(Qt::WA_DeleteOnClose, true);
-	
-	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 8))
-		buildDialog->addBuildingQueueItem(itm->text(1));
-	
-	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 8))
-		buildDialog->addBuildingQueueItem(itm->text(1));
-	
-	if(revBuildUi->noProcessBox->isChecked())
-		buildDialog->waitBeforeProcess(true);
-	
-	delete(revBuildUi);
-	
-	buildDialog->show();
-	
-	connect(buildDialog->reduceButton, SIGNAL(clicked()), SLOT(reduceBuildingInTray()));
-	
-	connect(buildDialog, SIGNAL(finishedBuilding(int,const QStringList&)), this, SLOT(finishedBuilding(int,const QStringList&)));
-		
-	buildDialog->processBuildingQueue();
-}
-
-void MainWindow::finishedBuilding(int failure, const QStringList &targets)
-{
-	buildTargets.clear();
-	
-	if(failure == 2)
-	{
-		if(buildDialog->isHidden())
-			systray->showMessage(QString(tr("Package Building")), QString(tr("Your Packages failed to build!")));
-		else
-		{
-			QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), QString(tr("Your packages Failed to Build.\n"
-					"Look at the output for more details.")), QMessageBox::Ok, buildDialog);
-
-			message->exec();
-
-			message->deleteLater();
-		}
-		
-		buildDialog->abortButton->setText(QString(tr("Close")));
-		disconnect(buildDialog->abortButton, SIGNAL(clicked()), buildDialog, SLOT(abortProcess()));
-		connect(buildDialog->abortButton, SIGNAL(clicked()), buildDialog, SLOT(deleteLater()));
-		buildDialog->processingLabel->setText(QString(tr("Building Packages Failed!!")));
-		buildDialog->buildingLabel->setText(QString());
-
-		systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
-		systray->setToolTip(QString(tr("Shaman - Idle")));
-		return;	
-	}
-	else if(failure == 1)
-	{		
-		QMessageBox *msgBox = new QMessageBox(buildDialog);
-
-		msgBox->setIcon(QMessageBox::Question);
-		msgBox->setWindowTitle(QString(tr("Error")));
-
-		msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
-
-		msgBox->setWindowModality(Qt::ApplicationModal);
-
-		buildDialog->processingLabel->setText(QString(tr("Building Packages Failed!!")));
-		buildDialog->buildingLabel->setText(QString());
-
-		msgBox->setText(QString(tr("Some packages failed to build.\nDo you want to proceed anyway?")));
-
-		switch (msgBox->exec()) {
-		case QMessageBox::Yes:
-			failure = 0;
-			break;
-		case QMessageBox::No:
-			buildDialog->abortButton->setText(QString(tr("Close")));
-			disconnect(buildDialog->abortButton, SIGNAL(clicked()), buildDialog, SLOT(abortProcess()));
-			connect(buildDialog->abortButton, SIGNAL(clicked()), buildDialog, SLOT(deleteLater()));
-			systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
-			systray->setToolTip(QString(tr("Shaman - Idle")));
-			break;
-		default:
-			// should never be reached
-			break;
-		}
-
-		msgBox->deleteLater();
-	}
-	
-	if(failure == 0)
-	{
-		buildTargets = targets;
-		
-		if(buildDialog->reviewOutputFirst())
-		{
-			buildDialog->reduceButton->setText(QString(tr("Install Built Packages")));
-			buildDialog->abortButton->setText(QString(tr("Close Without Installing")));
-			buildDialog->processingLabel->setText(QString(tr("Packages Built Successfully!")));
-			buildDialog->buildingLabel->setText(QString());
-			if(buildDialog->isHidden())
-				systray->showMessage(QString(tr("Package Building")), QString(tr("Your Packages have been built successfully, "
-						"and are ready to be installed")));
-						
-						
-			disconnect(buildDialog->abortButton, SIGNAL(clicked()), buildDialog, SLOT(abortProcess()));
-			connect(buildDialog->abortButton, SIGNAL(clicked()), buildDialog, SLOT(deleteLater()));
-			disconnect(buildDialog->reduceButton, SIGNAL(clicked()), 0, 0);
-			connect(buildDialog->reduceButton, SIGNAL(clicked()), SLOT(processBuiltPackages()));
-		}
-		else
-			processBuiltPackages();
-	}
-		
-}
-
-void MainWindow::processBuiltPackages()
-{
-	buildDialog->deleteLater();
-	
-	if(!installedMakeDepends.isEmpty())
-	{
-		/* Huh, we installed something just to compile the package. Let's 
-		 * see if the user wants installed makedepends to be immediately
-		 * removed, otherwise we just skip this part.
-		 */
-
-		QSettings *settings = new QSettings();
-
-		if(settings->value("absbuilding/clearmakedepends").toBool())
-		{
-			/* Ok, let's cleanup then. We just need a special queue, so we
-			 * can remove just the stuff that is requesting our list.
-			 */
-
-			aHandle->initQueue(true, false, true);
-
-			foreach(QString rmv, installedMakeDepends)
-				aHandle->addRemoveToQueue(rmv);
-		}
-	}
-	else
-		aHandle->initQueue(false, false, true);
-
-	foreach(QString pac, buildTargets)
-		aHandle->addFFToQueue(pac);
-	
-	installedMakeDepends.clear();
-
-	processQueue();
-}
-
-void MainWindow::processBuildWizard()
-{
-	/* We need to install the queue from binary first, then process
-	 * their makedepends (from binary too). So we have to call a processQueue()
-	 * and connect it to a slot that actually sends us to the real package
-	 * building. Nothing so hard after all :)
-	 */
-	
-	QStringList pkgList;
-	QStringList binaryList;
-	QStringList depsList;
-	
-	binaryList.clear();
-	depsList.clear();
-	
-	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 8))
-		pkgList.append(itm->text(1));
-
-	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 8))
-		pkgList.append(itm->text(1));
-	
-	foreach(QString pkg, pkgList)
-	{
-		foreach(QString mkdp, ABSHandler::getMakeDepends(pkg))
-		{
-			if(!aHandle->isInstalled(mkdp) && !pkgList.contains(mkdp, Qt::CaseInsensitive))
-				//Add to binary queue
-			{ 
-				qDebug() << "Makedepend is missing: " << mkdp;
-				depsList.append(mkdp);
-			}
-		}
-
-		if(!aHandle->isInstalled(pkg))
-			//Add to binary queue
-		{ 
-			qDebug() << "Package is not installed: " << pkg << ", installing it from binary first.";
-			binaryList.append(pkg);
-		}
-	}
-	
-	if(binaryList.isEmpty() && depsList.isEmpty())
-	{
-		/* Ok, we're probably reinstalling some packages and their makedepends
-		 * are satisfied, we just have to trigger the compilation
-		 */
-		
-		revBuildUi->depsWizardBox->setChecked(false);
-		startSourceProcessing();
-	}
-	else
-	{
-		/* So, it turns out that we need to install some packages first.
-		 * We'll start a special Queue, and when it ends, compilation will
-		 * be immediately triggered. We also need to set up a cleanup
-		 * Queue, to remove makedepends installed.
-		 */
-
-		aHandle->initQueue(false, true, false);
-		
-		installedMakeDepends = depsList;
-
-		foreach(QString syn, binaryList)
-			aHandle->addSyncToQueue(syn);
-
-		foreach(QString syn, depsList)
-			aHandle->addSyncToQueue(syn);
-
-		queueDl = new QueueDialog(aHandle, this);
-
-		connect(queueDl, SIGNAL(terminated(bool)), SLOT(startSourceProcessing()));
-
-		queueDl->startProcessing();
-
-		queueDl->show();
-
-		systray->setIcon(QIcon(":/Icons/icons/edit-redo.png"));
-		systray->setToolTip(QString(tr("Shaman - Processing")));
-
-	}
-	
-}
-
 QString MainWindow::formatSize(unsigned long size)
 {
 	QString s;
@@ -2169,17 +1707,6 @@ void MainWindow::disableTrayActions()
 {
 	foreach(QAction *act, systrayAct)
 		act->setEnabled(false);
-}
-
-void MainWindow::reduceBuildingInTray()
-{
-	buildDialog->hide();
-	hide();
-}
-
-void MainWindow::nullifyBDialog()
-{
-	buildDialog = NULL;
 }
 
 void MainWindow::startTimer()
@@ -2247,4 +1774,46 @@ void MainWindow::streamTransQuestion(const QString &msg)
 	msgBox->deleteLater();
 	
 	qDebug() << "Waking Alpm Thread";	
+}
+
+void MainWindow::updateABSTree()
+{
+	bHandler = new BuildingHandler(this, aHandle);
+	
+	bHandler->updateABSTree();
+	
+	connect(bHandler, SIGNAL(outOfScope()), SLOT(terminatedBuildingHandling()));
+}
+
+void MainWindow::initSourceQueue()
+{
+	qDebug() << "Starting Building Handler";
+	
+	bHandler = new BuildingHandler(this, aHandle);
+
+	bHandler->validateSourceQueue();
+
+	connect(bHandler, SIGNAL(outOfScope()), SLOT(terminatedBuildingHandling()));
+}
+
+void MainWindow::terminatedBuildingHandling()
+{
+	bHandler->deleteLater();
+	
+	bHandler = NULL;
+}
+
+QList<QTreeWidgetItem *> MainWindow::getInstallPackagesInWidgetQueue()
+{
+	return pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 8);
+}
+
+QList<QTreeWidgetItem *> MainWindow::getUpgradePackagesInWidgetQueue()
+{
+	return pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 8);
+}
+
+QList<QTreeWidgetItem *> MainWindow::getRemovePackagesInWidgetQueue()
+{
+	return pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 8) + pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 8);
 }

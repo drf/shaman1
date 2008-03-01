@@ -26,7 +26,6 @@
 #include <alpm.h>
 #include <alpm_list.h>
 #include "../ui_MainWindow.h"
-#include "../ui_reviewBuildingDialog.h"
 #include "../ui_reviewQueueDialog.h"
 #include "AlpmHandler.h"
 
@@ -41,8 +40,9 @@ class ManteinanceDialog;
 class UpDbThread;
 class BuildingDialog;
 class EditPBuild;
+class BuildingHandler;
 
-class MainWindow : public QMainWindow, private Ui::MainWindow, private StringUtils
+class MainWindow : public QMainWindow, public Ui::MainWindow, private StringUtils
 {
 	Q_OBJECT
 	
@@ -51,6 +51,12 @@ public:
 	~MainWindow();
 	void doUpdView();
 	void startTimer();
+	void installPackage(const QString &package);
+	void reinstallPackage(const QString &package);
+	void removePackage(const QString &package);
+	QList<QTreeWidgetItem *> getInstallPackagesInWidgetQueue();
+	QList<QTreeWidgetItem *> getUpgradePackagesInWidgetQueue();
+	QList<QTreeWidgetItem *> getRemovePackagesInWidgetQueue();
 
 signals:
 	void aboutToQuit();
@@ -75,18 +81,14 @@ public slots:
 	void getPackageFromFile();
 	void dbUpdateTray();
 	void dbUpdateTrayFinished();
-	void updateABSTree();
-	void validateSourceQueue();
-	void startSourceProcessing();
-	void finishedBuilding(int failure, const QStringList &targets);
-	void processBuiltPackages();
-	void openPBuildDialog();
-	void processBuildWizard();
 	void enableTrayActions();
 	void disableTrayActions();
-	void reduceBuildingInTray();
-	void nullifyBDialog();
 	void streamTransQuestion(const QString &msg);
+	void cancelAllActions();
+	void processQueue();
+	void updateABSTree();
+	void initSourceQueue();
+	void terminatedBuildingHandling();
 	
 protected:
 	void closeEvent(QCloseEvent *evt);
@@ -103,7 +105,6 @@ private slots:
 	void cancelAction();
 	void cancelAction(const QString &package);
 	void upgradePackage();
-	void processQueue();
 	void showSettings();
 	void showAboutDialog();
 	void systrayActivated(QSystemTrayIcon::ActivationReason reason);
@@ -111,38 +112,31 @@ private slots:
 	void reinstallAllRepoPackages();
 	void removeAllRepoPackages();
 	void cancelAllRepoActions();
-	void cancelAllActions();
 	
 private:
-	void installPackage(const QString &package);
-	void reinstallPackage(const QString &package);
-	void removePackage(const QString &package);
 	void loadDbUpdateDialog();
 	void removeDbUpdateDialog();
 	void setupSystray();
 	void changeTimerInterval();
 	QString formatSize(unsigned long size);
 	
+public:
+	QSystemTrayIcon *systray;
+	QueueDialog *queueDl;
+
 private:
 	alpm_list_t *currentpkgs;
 	AlpmHandler *aHandle;
 	UpdateDbDialog *dbdialog;
 	SysUpgradeDialog *upDl;
-	QueueDialog *queueDl;
 	ConfigDialog *configDialog;
-	BuildingDialog *buildDialog;
-	Ui::reviewBuildingDialog *revBuildUi;
 	Ui::QueueReadyDialog *qUi;
-	EditPBuild *pBuildEditor;
-	QDialog *reviewBQueue;
+	BuildingHandler *bHandler;
 
-	QSystemTrayIcon *systray;
 	QDialog *reviewQueue;
 	QTimer *trayUpDb;
 	UpDbThread *upDbTh;
-	QStringList buildTargets;
 	QList<QAction *> systrayAct;
-	QStringList installedMakeDepends;
 	
 	bool upActive;
 	bool revActive;

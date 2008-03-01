@@ -35,6 +35,7 @@ SET(shaman_SRCS
     src/SysUpgradeDialog.cpp
     src/UpdateDbDialog.cpp
     src/ABSHandler.cpp
+    src/BuildingHandler.cpp
 )
 
 SET(shaman_MOC_HDRS
@@ -50,6 +51,7 @@ SET(shaman_MOC_HDRS
     src/SysUpgradeDialog.h
     src/UpdateDbDialog.h
     src/ABSHandler.h
+    src/BuildingHandler.h
 )
 
 SET(shaman_UIS

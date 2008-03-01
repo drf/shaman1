@@ -86,6 +86,8 @@ void BuildingDialog::updateABSTree()
 
 	progressEdit->append(QString(tr("<b>Starting ABS Tree Update...</b><br><br>")));
 	ABSProc->start("abs");
+	
+	progressEdit->moveCursor(QTextCursor::End);
 }
 
 void BuildingDialog::writeLineProgress()
@@ -97,10 +99,7 @@ void BuildingDialog::writeLineProgress()
 	
 	QString view(ABSProc->readLine(1024));
 	
-	if(!view.contains(QChar('\n')) && !view.contains(QChar('\n')))
-		return;
-		
-	view.remove(QChar('\n'));
+	view.replace(QChar('\n'), "<br>");
 
 	QString tmp(view);
 	tmp.remove(QChar('.'));
@@ -108,7 +107,9 @@ void BuildingDialog::writeLineProgress()
 	if(tmp.isEmpty())
 		return;
 
-	progressEdit->append(view);
+	progressEdit->insertHtml(view);
+	
+	progressEdit->moveCursor(QTextCursor::End);
 }
 
 void BuildingDialog::writeLineProgressErr()
@@ -120,10 +121,7 @@ void BuildingDialog::writeLineProgressErr()
 
 	QString view(ABSProc->readLine(1024));
 
-	if(!view.contains(QChar('\n')) && !view.contains(QChar('\n')))
-		return;
-
-	view.remove(QChar('\n'));
+	view.replace(QChar('\n'), "<br>");
 	
 	QString tmp(view);
 	tmp.remove(QChar('.'));
@@ -131,7 +129,9 @@ void BuildingDialog::writeLineProgressErr()
 	if(tmp.isEmpty())
 		return;
 	
-	progressEdit->append("<b><i>" + view + "</i></b>");
+	progressEdit->insertHtml("<b><i>" + view + "</i></b>");
+	
+	progressEdit->moveCursor(QTextCursor::End);
 }
 
 void BuildingDialog::finishedUpdateABSTree()
