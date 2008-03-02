@@ -27,7 +27,7 @@ if (PLASMA_FOUND)
     add_subdirectory(plasma)
 endif(PLASMA_FOUND)
 
-SET(shaman_SRCS
+SET(shaman_SRCS ${shaman_adaptor_SRCS}
     src/main.cpp
     src/MainWindow.cpp
     src/AlpmHandler.cpp
@@ -153,6 +153,7 @@ TARGET_LINK_LIBRARIES(shaman
     ${QT_QTCORE_LIBRARY}
     ${QT_QTGUI_LIBRARY}
     ${QT_QTXML_LIBRARY}
+    ${QT_QTDBUS_LIBRARY}
     -lalpm
     -larchive
 )
