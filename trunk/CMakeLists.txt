@@ -152,7 +152,6 @@ ADD_EXECUTABLE(shaman
 TARGET_LINK_LIBRARIES(shaman
     ${QT_QTCORE_LIBRARY}
     ${QT_QTGUI_LIBRARY}
-    ${QT_QTXML_LIBRARY}
     ${QT_QTDBUS_LIBRARY}
     -lalpm
     -larchive
