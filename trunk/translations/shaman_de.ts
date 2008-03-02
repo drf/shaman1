@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS><TS version="1.1" language="de">
+<defaultcodec></defaultcodec>
 <context>
     <name>BuildingDialog</name>
     <message>
@@ -1557,7 +1558,7 @@ Yours is %1. Please update Pacman.</source>
     <message>
         <location filename="../src/main.cpp" line="219"/>
         <source>Loading Packages...</source>
-        <translation>Lade Packete...</translation>
+        <translation type="unfinished">Lade Pakete...</translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="227"/>
