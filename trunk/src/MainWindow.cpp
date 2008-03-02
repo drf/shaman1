@@ -30,6 +30,7 @@
 #include "ABSHandler.h"
 #include "BuildingHandler.h"
 #include "../ui_aboutDialog.h"
+#include "../shamanadaptor.h"
 
 #include <iostream>
 #include <QMenu>
@@ -64,6 +65,12 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	setupUi(this);
 	addDockWidget(Qt::LeftDockWidgetArea, repoDockWidget);
 	addDockWidget(Qt::BottomDockWidgetArea, pkgDockWidget);
+
+	new ShamanAdaptor(this);
+
+	QDBusConnection dbus = QDBusConnection::sessionBus();
+
+	dbus.registerObject("/Shaman", this);
 		
 	pkgsViewWG->setContextMenuPolicy(Qt::CustomContextMenu);
 	repoList->setContextMenuPolicy(Qt::CustomContextMenu);
