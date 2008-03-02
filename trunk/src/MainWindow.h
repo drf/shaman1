@@ -57,10 +57,6 @@ public:
 	QList<QTreeWidgetItem *> getInstallPackagesInWidgetQueue();
 	QList<QTreeWidgetItem *> getUpgradePackagesInWidgetQueue();
 	QList<QTreeWidgetItem *> getRemovePackagesInWidgetQueue();
-	
-	// DBus Stuff
-	
-	virtual void updateDatabaseDBus();
 
 signals:
 	void aboutToQuit();

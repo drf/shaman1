@@ -9,9 +9,9 @@
 		<signal name="streamUpgradeablePackagesDBus">
 			<arg type="i" direction="out" />
 		</signal>
-		<signal name="streamDbUpdatedDBus">
+		<signal name="streamDbUpdatingStatus">
 			<arg type="s" direction="out" />
-			<arg type="b" direction="out" />
+			<arg type="i" direction="out" />
 		</signal>
 	</interface>
 </node>
