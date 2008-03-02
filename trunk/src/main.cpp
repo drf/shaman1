@@ -43,7 +43,7 @@ static void cleanup(int signum)
 	if(signum==SIGSEGV)
 	{
 		/* write a log message and write to stderr */
-		printf("Segmentation Fault! We are sorry. Please report a bug, so we can fix that\n");
+		qCritical() << "Segmentation Fault! We are sorry. Please report a bug, so we can fix that";
 		exit(signum);
 	} 
 	else if((signum == SIGINT)) 
@@ -55,12 +55,12 @@ static void cleanup(int signum)
 		/* no committing transaction, we can release it now and then exit pacman */
 		alpm_trans_release();
 		/* output a newline to be sure we clear any line we may be on */
-		printf("\n");
+		qCritical() << "";
 	}
 
 	/* free alpm library resources */
 	if(alpm_release() == -1) {
-		printf("%s", alpm_strerrorlast());
+		qCritical() << alpm_strerrorlast();
 	}
 
 	exit(signum);
@@ -68,16 +68,18 @@ static void cleanup(int signum)
 
 int main(int argc, char **argv)
 {
+	qDebug() << ">>";
+	qDebug() << ">>		Shaman" << SHAMAN_VERSION;
+	qDebug() << ">>";
+	qDebug() << ">>	Shaman is still in testing phase, please be easy on it!!";
+	qDebug() << ">>";
+	qDebug() << ">>	In most cases, terminal output is pretty relevant, please include it,";
+	qDebug() << ">>	adding a backtrace, if you need to report a crash.";
+	qDebug() << ">>	";
+	qDebug() << ">>	Enjoy!";
+	qDebug() << ">>";
+	qDebug() << ">>	Starting Up Shaman...";
 	qDebug() << "";
-	qDebug() << "	>>> Shaman" << SHAMAN_VERSION;
-	qDebug() << "";
-	qDebug() << "Shaman is still in testing phase, please be easy on it!!";
-	qDebug() << "";
-	qDebug() << "In most cases, terminal output is pretty relevant, please include it,";
-	qDebug() << "adding a backtrace, if you need to report a crash.";
-	qDebug() << "";
-	qDebug() << "Enjoy!";
-	qDebug() << "";	
 	
 	uid_t myuid = geteuid();
 
@@ -187,7 +189,8 @@ int main(int argc, char **argv)
 		settings->setValue("gui/showsplashscreen", true);
 	}
 
-	if(settings->value("absbuilding/buildpath").toString() == 0 || !settings->contains("absbuilding/buildpath"))
+	if(settings->value("absbuilding/buildpath").toString() == 0 || !settings->contains("absbuilding/buildpath") || 
+			settings->value("absbuilding/buildpath").toString() == "/")
 		// This can be dangerous, so set it properly
 		settings->setValue("absbuilding/buildpath", "/var/shaman/builds");
 
@@ -247,4 +250,3 @@ int main(int argc, char **argv)
 	return app.exec();
 
 }
-

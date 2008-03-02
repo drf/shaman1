@@ -669,7 +669,7 @@ and Pacman.</string>
           <item row="0" column="0" >
            <widget class="QCheckBox" name="makeDepsSourceBox" >
             <property name="text" >
-             <string>Process all dependencies and queue from source first (recommended)</string>
+             <string>Process all dependencies and queue from binary first (recommended)</string>
             </property>
            </widget>
           </item>

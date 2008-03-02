@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS><TS version="1.1" language="fr">
+<defaultcodec></defaultcodec>
 <context>
     <name>BuildingDialog</name>
     <message>
@@ -81,19 +82,19 @@ Toutes les données seront perdues.</translation>
         <location filename="../src/BuildingHandler.cpp" line="100"/>
         <source>You need to have ABS installed to use Shaman&apos;s
 building feature. Do you want to install it now?</source>
-        <translation type="unfinished">Vous devez avoir installé ABS pour utiliser les possibilités
+        <translation>Vous devez avoir installé ABS pour utiliser les possibilités
 de construction de Shaman. Voulez-vous l&apos;installer maintenant?</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="337"/>
         <source>Error</source>
-        <translation type="unfinished">Erreur</translation>
+        <translation>Erreur</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="132"/>
         <source>You can not remove packages when processing
 your queue from Source</source>
-        <translation type="unfinished">Vous ne pouvez pas supprimer les paquets en
+        <translation>Vous ne pouvez pas supprimer les paquets en
 effectuant votre liste depuis la source</translation>
     </message>
     <message>
@@ -101,93 +102,93 @@ effectuant votre liste depuis la source</translation>
         <source>Some of your packages do not belong to Arch
 Linux&apos;s official repository. Shaman is able to
 build packages from official sources only.</source>
-        <translation type="unfinished">Quelques uns de vos paquets n&apos;appartienent pas au
+        <translation>Quelques uns de vos paquets n&apos;appartienent pas au
 dépôt officiel d&apos;Arch Linux. Shaman ne peut construire les
 paquets que depuis les sources officielles.</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="200"/>
         <source>You are about to install &lt;b&gt;%1 package&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
-        <translation type="unfinished">Vous allez installer &lt;b&gt;%1 paquet&lt;/b&gt; depuis la source. Construire depuis la source&lt;br&gt;peut vous donner quelques avantages, même si cela est très lent.&lt;br&gt;Si vous n&apos;en êtes pas sûrs, vous préfèrerez certainement effectuer&lt;br&gt;votre liste depuis un fichier binaire. Avant de continuer, nous vous proposons de&lt;br&gt;revoir votre configuration pour améliorer les performances de la construction.</translation>
+        <translation>Vous allez installer &lt;b&gt;%1 paquet&lt;/b&gt; depuis la source. Construire depuis la source&lt;br&gt;peut vous donner quelques avantages, même si cela est très lent.&lt;br&gt;Si vous n&apos;en êtes pas sûrs, vous préfèrerez certainement effectuer&lt;br&gt;votre liste depuis un fichier binaire. Avant de continuer, nous vous proposons de&lt;br&gt;revoir votre configuration pour améliorer les performances de la construction.</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="206"/>
         <source>You are about to install &lt;b&gt;%1 packages&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
-        <translation type="unfinished">Vous allez installer &lt;b&gt;%1 paquets&lt;/b&gt; depuis la source. Construire depuis la source&lt;br&gt;peut vous donner quelques avantages, même si cela est très lent.&lt;br&gt;Si vous n&apos;en êtes pas sûrs, vous préfèrerez certainement effectuer&lt;br&gt;votre liste depuis un fichier binaire. Avant de continuer, nous vous proposons de&lt;br&gt;revoir votre configuration pour améliorer les performances de la construction.</translation>
+        <translation>Vous allez installer &lt;b&gt;%1 paquets&lt;/b&gt; depuis la source. Construire depuis la source&lt;br&gt;peut vous donner quelques avantages, même si cela est très lent.&lt;br&gt;Si vous n&apos;en êtes pas sûrs, vous préfèrerez certainement effectuer&lt;br&gt;votre liste depuis un fichier binaire. Avant de continuer, nous vous proposons de&lt;br&gt;revoir votre configuration pour améliorer les performances de la construction.</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="225"/>
         <source>To be Installed</source>
-        <translation type="unfinished">A installer</translation>
+        <translation>A installer</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="232"/>
         <source>To be Upgraded</source>
-        <translation type="unfinished">A mettre à jour</translation>
+        <translation>A mettre à jour</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="378"/>
         <source>Package Building</source>
-        <translation type="unfinished">Construction du paquet</translation>
+        <translation>Construction du paquet</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="311"/>
         <source>Your Packages failed to build!</source>
-        <translation type="unfinished">La construction de votre paquet a échoué!</translation>
+        <translation>La construction de votre paquet a échoué!</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="315"/>
         <source>Your packages Failed to Build.
 Look at the output for more details.</source>
-        <translation type="unfinished">La construction de votre paquet a échoué!
+        <translation>La construction de votre paquet a échoué!
 Regardez la description pour plus de détails.</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="353"/>
         <source>Close</source>
-        <translation type="unfinished">Fermer</translation>
+        <translation>Fermer</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="343"/>
         <source>Building Packages Failed!!</source>
-        <translation type="unfinished">La construction du paquet a échoué!</translation>
+        <translation>La construction du paquet a échoué!</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="357"/>
         <source>Shaman - Idle</source>
-        <translation type="unfinished">Shaman - Idle</translation>
+        <translation>Shaman - Idle</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="346"/>
         <source>Some packages failed to build.
 Do you want to proceed anyway?</source>
-        <translation type="unfinished">Echec de la construction de certains paquets
+        <translation>Echec de la construction de certains paquets
 Voulez-vous tout de même contineur?</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="373"/>
         <source>Install Built Packages</source>
-        <translation type="unfinished">Installer les paquets construits</translation>
+        <translation>Installer les paquets construits</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="374"/>
         <source>Close Without Installing</source>
-        <translation type="unfinished">Quitter sans installer</translation>
+        <translation>Quitter sans installer</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="375"/>
         <source>Packages Built Successfully!</source>
-        <translation type="unfinished">Paquets construits avec succès!</translation>
+        <translation>Paquets construits avec succès!</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="379"/>
         <source>Your Packages have been built successfully, and are ready to be installed</source>
-        <translation type="unfinished">Vos paquets on été construits avec succès et sont prêts à être installés</translation>
+        <translation>Vos paquets on été construits avec succès et sont prêts à être installés</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="509"/>
         <source>Shaman - Processing</source>
-        <translation type="unfinished">Shaman - Traitement</translation>
+        <translation>Shaman - Traitement</translation>
     </message>
 </context>
 <context>
@@ -243,7 +244,8 @@ Voulez-vous le supprimer?</translation>
         <location filename="../src/callbacks.cpp" line="136"/>
         <source>File %1 is corrupted.
 Do you want to delete it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Le fichier %1 est corrompu.
+Voulez-vous le supprimer?</translation>
     </message>
 </context>
 <context>
@@ -478,7 +480,7 @@ par Pacman.</translation>
     <message>
         <location filename="../ui/configDialog.ui" line="672"/>
         <source>Process all dependencies and queue from source first (recommended)</source>
-        <translation>Installer toutes les dépendances et la liste de la source en premier (recommandé)</translation>
+        <translation type="obsolete">Installer toutes les dépendances et la liste de la source en premier (recommandé)</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="679"/>
@@ -804,6 +806,11 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Shaman Manteinance.&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished">&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Maintenance de Shaman.&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;SVP, choisissez une action du menu déroulant.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../ui/configDialog.ui" line="672"/>
+        <source>Process all dependencies and queue from binary first (recommended)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1519,7 +1526,7 @@ Thanks again, and enjoy your translation!</comment>
     <message>
         <location filename="../src/main.cpp" line="157"/>
         <source>Please Wait...</source>
-        <translation type="unfinished">Attendez, SVP...</translation>
+        <translation>Attendez, SVP...</translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="203"/>

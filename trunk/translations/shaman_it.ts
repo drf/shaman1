@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS><TS version="1.1" language="it">
+<defaultcodec></defaultcodec>
 <context>
     <name>BuildingDialog</name>
     <message>
@@ -243,168 +244,169 @@ Vuoi cancellarlo?</translation>
     <message>
         <location filename="../ui/configDialog.ui" line="13"/>
         <source>Shaman - Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Shaman - Configurazione</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="88"/>
         <source>Favourite Actions</source>
-        <translation type="unfinished"></translation>
+        <translation>Azioni preferite</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="97"/>
         <source>When Upgrading System:</source>
-        <translation type="unfinished"></translation>
+        <translation>Quando si Aggiorna il Sistema:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="106"/>
         <source>Upgrade Immediately</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiorna Subito</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="113"/>
         <source>Add Upgradeable Packages To Queue</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiungi i Pacchetti Aggiornabili alla Coda</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="120"/>
         <source>Ask</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiedi</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="136"/>
         <source>When Processing Queue</source>
-        <translation type="unfinished"></translation>
+        <translation>Quando si Esegue la Coda</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="143"/>
         <source>Keep application running in System Tray only</source>
-        <translation type="unfinished"></translation>
+        <translation>Mantieni l&apos;applicazione solo nella Tray</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="153"/>
         <source>GUI Startup</source>
-        <translation type="unfinished"></translation>
+        <translation>Avvio della GUI</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="159"/>
         <source>Start in the System Tray</source>
-        <translation type="unfinished"></translation>
+        <translation>Avvia nella Tray</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="176"/>
         <source>When Application is in System Tray only</source>
-        <translation type="unfinished"></translation>
+        <translation>Quando l&apos;applicazione è solo nella Tray</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="182"/>
         <source>Update Database every</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiorna i database ogni</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="196"/>
         <source>minutes</source>
-        <translation type="unfinished"></translation>
+        <translation>minuti</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="203"/>
         <source>If upgrades are available:</source>
-        <translation type="unfinished"></translation>
+        <translation>Se sono disponibili aggiornamenti:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="210"/>
         <source>Just Notify</source>
-        <translation type="unfinished"></translation>
+        <translation>Notifica e basta</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="217"/>
         <source>Notify and add them to Queue</source>
-        <translation type="unfinished"></translation>
+        <translation>Notifica e aggiungili alla Coda</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="227"/>
         <source>Maintenance</source>
-        <translation type="unfinished"></translation>
+        <translation>Manutenzione</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="308"/>
         <source>Checkable Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Opzioni Selezionabili</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="314"/>
         <source>Use Active FTP</source>
-        <translation type="unfinished"></translation>
+        <translation>Usa FTP Attivo</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="321"/>
         <source>Use Deltas (needs xdelta to be installed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Usa Delta (xdelta deve essere installato)</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="331"/>
         <source>Advanced Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Opzioni Avanzate</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="341"/>
         <source>HoldPkgs:</source>
-        <translation type="unfinished"></translation>
+        <translation>HoldPkgs:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="351"/>
         <source>IgnorePkgs:</source>
-        <translation type="unfinished"></translation>
+        <translation>IgnorePkgs:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="361"/>
         <source>IgnoreGroups:</source>
-        <translation type="unfinished"></translation>
+        <translation>IgnoreGroups:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="371"/>
         <source>NoUpgrade:</source>
-        <translation type="unfinished"></translation>
+        <translation>NoUpgrade:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="381"/>
         <source>NoExtract:</source>
-        <translation type="unfinished"></translation>
+        <translation>NoExtract:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="395"/>
         <source>XFerCommand: (example: /path/to/command %u) Blank for Default</source>
-        <translation type="unfinished"></translation>
+        <translation>XFerCommand: (esempio: /path/to/command %u) Vuoto per predefinito</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="433"/>
         <source>Arch Linux Official Repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Repositori Ufficiali di Arch Linux</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="441"/>
         <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones.
 Please note that packages from Unstable and Testing may break your system.</source>
-        <translation type="unfinished"></translation>
+        <translation>Qui puoi scegliere quali repositori utilizzare tra quelli ufficiali di Arch Linux.
+Considera che i pacchetti da Unstable e Testing possono compromettere il tuo sistema.</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="610"/>
         <source>Server</source>
-        <translation type="unfinished"></translation>
+        <translation>Server</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="505"/>
         <source>Mirror:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mirror:</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="968"/>
         <source>Add Mirror</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiungi Mirror</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="533"/>
         <source>KDEMod Repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Repositori di KDEMod</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="541"/>
@@ -412,364 +414,367 @@ Please note that packages from Unstable and Testing may break your system.</sour
 improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme,
 and lots of addons, KDEMod is the best way to taste the ease and the power
 of KDE with the simplicity and the power of Arch.</source>
-        <translation type="unfinished"></translation>
+        <translation>KDEMod è una versione migliorata di KDE, un&apos;esclusiva di Arch Linux. Con una
+versione migliorata delle Qt, compatibile con quelle standard di Arch Linux, un tema
+migliorato, e moltissime aggiunte, KDEMod è il modo migliore per combinare la facilità
+e il potere di KDE con la semplicità e le performance di Arch Linux.</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="551"/>
         <source>KDEMod 3 Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Repository di KDEMod 3</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="558"/>
         <source>KDEMod 4 Repository (Unstable, testers only)</source>
-        <translation type="unfinished"></translation>
+        <translation>Repository di KDEMod 4 (Instabile, solo per tester)</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="581"/>
         <source>Third-Party Repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Repositori di Terze Parti</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="589"/>
         <source>You can extend your packages choice by adding other repositories. Third-Party 
 Repositories act just as normal ones, and will be accessible through both Shaman
 and Pacman.</source>
-        <translation type="unfinished"></translation>
+        <translation>Puoi estendere la scelta di pacchetti aggiungendo altri repositori. I repositori
+di terze parti sono esattamente come quelli standard, e saranno accessibili sia tramite
+Shaman che tramite Pacman.</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="605"/>
         <source>Repository</source>
-        <translation type="unfinished">Repository</translation>
+        <translation>Repository</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="633"/>
         <source>Add New Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiungi un Nuovo Repository</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="640"/>
         <source>Edit Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifica Repository</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="647"/>
         <source>Remove Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Rimuovi Repository</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="666"/>
         <source>Preferences</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/configDialog.ui" line="672"/>
-        <source>Process all dependencies and queue from source first (recommended)</source>
-        <translation type="unfinished"></translation>
+        <translation>Preferenze</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="679"/>
         <source>Review Building output before installing</source>
-        <translation type="unfinished"></translation>
+        <translation>Rivedi l&apos;output del compilatore prima di installare</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="689"/>
         <source>ABS Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Configurazione di ABS</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="695"/>
         <source>Use supfiles that match your current repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Usa i supfiles dei tuoi repositori attuali</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="704"/>
         <source>Define supfiles manually</source>
-        <translation type="unfinished"></translation>
+        <translation>Definisci i supfile manualmente</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="719"/>
         <source>Makepkg Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Configurazione di Makepkg</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="725"/>
         <source>CFlags</source>
-        <translation type="unfinished"></translation>
+        <translation>CFlags</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="735"/>
         <source>CXXFlags</source>
-        <translation type="unfinished"></translation>
+        <translation>CXXFlags</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="745"/>
         <source>BuildEnv</source>
-        <translation type="unfinished"></translation>
+        <translation>BuildEnv</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="755"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Opzioni</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="765"/>
         <source>Doc_Dirs</source>
-        <translation type="unfinished"></translation>
+        <translation>Doc_Dirs</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="778"/>
         <source>Build Environment</source>
-        <translation type="unfinished"></translation>
+        <translation>Ambiente di Compilazione</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="786"/>
         <source>Building Path</source>
-        <translation type="unfinished"></translation>
+        <translation>Percorso di Compilazione</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="798"/>
         <source>Remove installed makedepends after build</source>
-        <translation type="unfinished"></translation>
+        <translation>Rimuovi le dipendenze di compilazione installate dopo la compilazione</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="805"/>
         <source>Clean Build Environment after installation</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulisci l&apos;Ambiente di Compilazione dopo l&apos;installazione</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="88"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Generale</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="408"/>
         <source>Clean Unused Databases</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulisci i Database non utilizzati</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="420"/>
         <source>Clean Cache</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulisci la Cache</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="432"/>
         <source>Empty Cache</source>
-        <translation type="unfinished"></translation>
+        <translation>Svuota la cache</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="444"/>
         <source>Optimize Pacman Database</source>
-        <translation type="unfinished"></translation>
+        <translation>Ottimizza il Database di Pacman</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="456"/>
         <source>Clean All Building Environments</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulisci tutti gli Ambienti di Compilazione</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="138"/>
         <source>Repositories</source>
-        <translation type="unfinished">Repositori</translation>
+        <translation>Repositori</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="199"/>
         <source>Pacman</source>
-        <translation type="unfinished"></translation>
+        <translation>Pacman</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="267"/>
         <source>ABS</source>
-        <translation type="unfinished"></translation>
+        <translation>ABS</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="356"/>
         <source>Enter Here the Repository&apos;s Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Digita il nome del Repository</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="358"/>
         <source>Enter Here the Repository&apos;s Server</source>
-        <translation type="unfinished"></translation>
+        <translation>Digita il Server del Repository</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="413"/>
         <source>Cleaning up unused Databases...</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulizia dei Database Inutilizzati...</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="425"/>
         <source>Cleaning up Cache...</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulizia della Cache...</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="437"/>
         <source>Deleting Cache...</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminazione della Cache...</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="461"/>
         <source>Cleaning up building Environments...</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulizia degli ambienti di Compilazione...</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="476"/>
         <source>Cleaning up Unused Databases Failed!</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulizia dei Database Inutilizzati Fallita!</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="481"/>
         <source>Cleaning up Cache Failed!</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulizia della Cache Fallita!</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="486"/>
         <source>Deleting Cache Failed!</source>
-        <translation type="unfinished"></translation>
+        <translation>Non è stato possibile eliminare la Cache!</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="491"/>
         <source>Could not clean Build Environments!!</source>
-        <translation type="unfinished"></translation>
+        <translation>Non è stato possibile pulire gli Ambienti di Compilazione!</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="504"/>
         <source>Unused Databases Cleaned up successfully!</source>
-        <translation type="unfinished"></translation>
+        <translation>Database Inutilizzati puliti con successo!</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="509"/>
         <source>Cache Cleaned Up Successfully!</source>
-        <translation type="unfinished"></translation>
+        <translation>Cache Pulita con Successo!</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="514"/>
         <source>Cache Successfully Deleted!</source>
-        <translation type="unfinished"></translation>
+        <translation>Cache Cancellata con Successo!</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="518"/>
         <source>Build Environments Successfully Cleaned!</source>
-        <translation type="unfinished"></translation>
+        <translation>Ambienti di compilazione puliti con Successo!</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="519"/>
         <source>Build Environments Successfully Cleaned!!</source>
-        <translation type="unfinished"></translation>
+        <translation>Ambienti di compilazione puliti con Successo!!</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="912"/>
         <source>Settings Changed</source>
-        <translation type="unfinished"></translation>
+        <translation>Impostazioni Cambiate</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="918"/>
         <source>Your repositories have changed.
 Do you want to Update Your Database?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">I Repositori sono stati modificati.
+Vuoi aggiornare i Database?</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="949"/>
         <source>Mirror Format is incorrect. Your mirror should look like this:
 http://mirror.org/$repo/os/i686</source>
         <comment>Obviously keep the example as it is ;)</comment>
-        <translation type="unfinished"></translation>
+        <translation>Il formato del Mirror non è corretto. Una sintassi corretta è del tipo:
+http://mirror.org/$repo/os/i686</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="971"/>
         <source>Your Mirror was successfully added!
 It is now available in mirrorlist.</source>
         <comment>mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Il tuo mirror è stato aggiunto con successo!
+E&apos; ora disponibile in mirrorlist.</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="998"/>
         <source>Pacman Database Optimized Successfully!</source>
-        <translation type="unfinished"></translation>
+        <translation>Database di Pacman Ottimizzato con Successo!</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="1003"/>
         <source>Could not Optimize Pacman Database!</source>
-        <translation type="unfinished"></translation>
+        <translation>Non è stato possibile ottimizzare il Database di Pacman!</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="1017"/>
         <source>Operation Completed Successfully!</source>
-        <translation type="unfinished"></translation>
+        <translation>Operazione Completata con Successo!</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="1016"/>
         <source>Sync was successfully executed!!</source>
         <comment>Sync is always the command</comment>
-        <translation type="unfinished"></translation>
+        <translation>Sync è stato eseguito con successo!!</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="1021"/>
         <source>Sync could not be executed!</source>
         <comment>Sync is always the command</comment>
-        <translation type="unfinished"></translation>
+        <translation>Non è stato possibile eseguire sync!</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="1022"/>
         <source>Sync could not be executed!!</source>
         <comment>Sync is always the command</comment>
-        <translation type="unfinished"></translation>
+        <translation>Non è stato possibile eseguire sync!!</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="240"/>
         <source>Process Selected</source>
-        <translation type="unfinished"></translation>
+        <translation>Esegui l&apos;azione Selezionata</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="452"/>
         <source>Optimizing Pacman Database...</source>
-        <translation type="unfinished"></translation>
+        <translation>Ottimizzazione del Database di Pacman...</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="264"/>
         <source>Waiting</source>
         <comment>Waiting for a user action</comment>
-        <translation type="unfinished"></translation>
+        <translation>In Attesa</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="449"/>
         <source>Core</source>
         <comment>Do not translate</comment>
-        <translation type="unfinished"></translation>
+        <translation>Core</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="456"/>
         <source>Extra</source>
         <comment>Do not translate</comment>
-        <translation type="unfinished"></translation>
+        <translation>Extra</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="463"/>
         <source>Community</source>
         <comment>Do not translate</comment>
-        <translation type="unfinished"></translation>
+        <translation>Community</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="470"/>
         <source>Testing</source>
         <comment>Do not translate</comment>
-        <translation type="unfinished"></translation>
+        <translation>Testing</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="477"/>
         <source>Unstable</source>
         <comment>Do not translate</comment>
-        <translation type="unfinished"></translation>
+        <translation>Unstable</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="1009"/>
         <source>Running sync...</source>
         <comment>sync is a command, so it should not be translated</comment>
-        <translation type="unfinished"></translation>
+        <translation>Esecuzione di sync...</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="166"/>
         <source>Show Splashscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra Schermata d&apos;avvio</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="282"/>
@@ -778,7 +783,12 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Shaman Manteinance.&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Manutenzione di Shaman.&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Per favore scegli un&apos;azione dal menù a comparsa.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../ui/configDialog.ui" line="672"/>
+        <source>Process all dependencies and queue from binary first (recommended)</source>
+        <translation>Esegui prima tutte le dipendenze e la coda da binario (raccomandato)</translation>
     </message>
 </context>
 <context>
