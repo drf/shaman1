@@ -1825,7 +1825,11 @@ QList<QTreeWidgetItem *> MainWindow::getRemovePackagesInWidgetQueue()
 	return pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 8) + pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 8);
 }
 
-void MainWindow::installPackageFromDBus(const QString &pkg)
+/* Here comes DBus Slots */
+
+void MainWindow::updateDatabaseDBus()
 {
-	installPackage(pkg);
+	
 }
+
+/* Here Ends DBus Slots */

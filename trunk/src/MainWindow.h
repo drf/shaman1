@@ -60,7 +60,7 @@ public:
 	
 	// DBus Stuff
 	
-	virtual void installPackageFromDBus(const QString &pkg);
+	virtual void updateDatabaseDBus();
 
 signals:
 	void aboutToQuit();
