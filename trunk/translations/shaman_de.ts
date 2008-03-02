@@ -1552,17 +1552,17 @@ Yours is %1. Please update Pacman.</source>
     <message>
         <location filename="../src/main.cpp" line="211"/>
         <source>Loading Databases...</source>
-        <translation type="unfinished">Lade Datenbanken...</translation>
+        <translation>Lade Datenbanken...</translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="219"/>
         <source>Loading Packages...</source>
-        <translation type="unfinished">Lade Packete...</translation>
+        <translation>Lade Packete...</translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="227"/>
         <source>Starting up Shaman...</source>
-        <translation type="unfinished">Starte Shaman...</translation>
+        <translation>Starte Shaman...</translation>
     </message>
 </context>
 <context>
