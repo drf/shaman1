@@ -68,7 +68,7 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 
 	new ShamanAdaptor(this);
 
-	QDBusConnection dbus = QDBusConnection::sessionBus();
+	QDBusConnection dbus = QDBusConnection::systemBus();
 
 	dbus.registerObject("/Shaman", this);
 		
@@ -1823,4 +1823,9 @@ QList<QTreeWidgetItem *> MainWindow::getUpgradePackagesInWidgetQueue()
 QList<QTreeWidgetItem *> MainWindow::getRemovePackagesInWidgetQueue()
 {
 	return pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 8) + pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 8);
+}
+
+void MainWindow::installPackageFromDBus(const QString &pkg)
+{
+	installPackage(pkg);
 }

@@ -57,6 +57,10 @@ public:
 	QList<QTreeWidgetItem *> getInstallPackagesInWidgetQueue();
 	QList<QTreeWidgetItem *> getUpgradePackagesInWidgetQueue();
 	QList<QTreeWidgetItem *> getRemovePackagesInWidgetQueue();
+	
+	// DBus Stuff
+	
+	virtual void installPackageFromDBus(const QString &pkg);
 
 signals:
 	void aboutToQuit();
