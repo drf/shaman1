@@ -771,31 +771,31 @@ p, li { white-space: pre-wrap; }
         <location filename="../ui/configDialog.ui" line="449"/>
         <source>Core</source>
         <comment>Do not translate</comment>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="456"/>
         <source>Extra</source>
         <comment>Do not translate</comment>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="463"/>
         <source>Community</source>
         <comment>Do not translate</comment>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="470"/>
         <source>Testing</source>
         <comment>Do not translate</comment>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="477"/>
         <source>Unstable</source>
         <comment>Do not translate</comment>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="1009"/>
@@ -806,7 +806,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/configDialog.ui" line="166"/>
         <source>Show Splashscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Zeige Startbildschirm</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="282"/>
@@ -1553,17 +1553,17 @@ Yours is %1. Please update Pacman.</source>
     <message>
         <location filename="../src/main.cpp" line="211"/>
         <source>Loading Databases...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lade Datenbanken...</translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="219"/>
         <source>Loading Packages...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lade Packete...</translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="227"/>
         <source>Starting up Shaman...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Starte Shaman...</translation>
     </message>
 </context>
 <context>
@@ -1757,12 +1757,12 @@ Yours is %1. Please update Pacman.</source>
     <message>
         <location filename="../src/QueueDialog.cpp" line="425"/>
         <source>Executing %1 scriptlet for %2...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Starte %1-Skript für %2...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="494"/>
         <source>Package %1 does not have %2 scriptlet</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Paket %1 hat kein %2-Skript</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="617"/>
