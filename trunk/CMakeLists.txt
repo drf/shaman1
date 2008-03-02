@@ -2,6 +2,12 @@ PROJECT(shaman)
 CMAKE_MINIMUM_REQUIRED(VERSION 2.4.0)
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules")
 
+include(FindQt4)
+
+set(shaman_adaptor_SRCS)
+
+qt4_add_dbus_adaptor(shaman_adaptor_SRCS org.archlinux.shaman.xml src/MainWindow.h MainWindow)
+
 MACRO (MACRO_OPTIONAL_FIND_PACKAGE _name )
    OPTION(WITH_${_name} "Search for ${_name} package" ON)
    if (WITH_${_name})
