@@ -81,19 +81,19 @@ All Process will be lost.</source>
         <location filename="../src/BuildingHandler.cpp" line="100"/>
         <source>You need to have ABS installed to use Shaman&apos;s
 building feature. Do you want to install it now?</source>
-        <translation type="unfinished">Πρέπει να έχετε εγκατεστημένο το ABS για να μπορείτε
+        <translation>Πρέπει να έχετε εγκατεστημένο το ABS για να μπορείτε
 να χτίσετε πακέτα με το Shaman. Εγκατάσταση τώρα;</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="337"/>
         <source>Error</source>
-        <translation type="unfinished">Σφάλμα</translation>
+        <translation>Σφάλμα</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="132"/>
         <source>You can not remove packages when processing
 your queue from Source</source>
-        <translation type="unfinished">Δεν μπορείτε να αφαιρέσετε πακέτα όταν γίνεται
+        <translation>Δεν μπορείτε να αφαιρέσετε πακέτα όταν γίνεται
 επεξεργασία της ουράς από την Πηγή</translation>
     </message>
     <message>
@@ -101,93 +101,93 @@ your queue from Source</source>
         <source>Some of your packages do not belong to Arch
 Linux&apos;s official repository. Shaman is able to
 build packages from official sources only.</source>
-        <translation type="unfinished">Κάποια από τα πακέτα σας δεν ανήκουν στα επίσημα
+        <translation>Κάποια από τα πακέτα σας δεν ανήκουν στα επίσημα
 repositories του Arch Linux. Το Shaman μπορεί να χτίσει
 πακέτα μόνο από τις επίσημες πηγές.</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="200"/>
         <source>You are about to install &lt;b&gt;%1 package&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
-        <translation type="unfinished">Πρόκειται να εγκαταστήσετε &lt;b&gt;%1 πακέτο&lt;/b&gt; από την πηγή. Το χτίσιμο πακέτων από την πηγή&lt;br&gt;έχει κάποια πλεονεκτήματα, όμως είναι εξαιρετικά αργό.&lt;br&gt;Αν δεν είστε σίγουρος, θα ήταν καλύτερο να επεξεργαστείτε&lt;br&gt;την ουρά από έτοιμα πακέτα. Πριν συνεχίσετε, προτείνεται να&lt;br&gt;κοιτάξετε τις ρυθμίσεις σας ώστε να αυξήσετε την επίδοση του χτισίματος.</translation>
+        <translation>Πρόκειται να εγκαταστήσετε &lt;b&gt;%1 πακέτο&lt;/b&gt; από την πηγή. Το χτίσιμο πακέτων από την πηγή&lt;br&gt;έχει κάποια πλεονεκτήματα, όμως είναι εξαιρετικά αργό.&lt;br&gt;Αν δεν είστε σίγουρος, θα ήταν καλύτερο να επεξεργαστείτε&lt;br&gt;την ουρά από έτοιμα πακέτα. Πριν συνεχίσετε, προτείνεται να&lt;br&gt;κοιτάξετε τις ρυθμίσεις σας ώστε να αυξήσετε την επίδοση του χτισίματος.</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="206"/>
         <source>You are about to install &lt;b&gt;%1 packages&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
-        <translation type="unfinished">Πρόκειται να εγκαταστήσετε &lt;b&gt;%1 πακέτα&lt;/b&gt; από την πηγή. Το χτίσιμο πακέτων από την πηγή&lt;br&gt;έχει κάποια πλεονεκτήματα, όμως είναι εξαιρετικά αργό.&lt;br&gt;Αν δεν είστε σίγουρος, θα ήταν καλύτερο να επεξεργαστείτε&lt;br&gt;την ουρά από έτοιμα πακέτα. Πριν συνεχίσετε, προτείνεται να&lt;br&gt;κοιτάξετε τις ρυθμίσεις σας ώστε να αυξήσετε την επίδοση του χτισίματος.</translation>
+        <translation>Πρόκειται να εγκαταστήσετε &lt;b&gt;%1 πακέτα&lt;/b&gt; από την πηγή. Το χτίσιμο πακέτων από την πηγή&lt;br&gt;έχει κάποια πλεονεκτήματα, όμως είναι εξαιρετικά αργό.&lt;br&gt;Αν δεν είστε σίγουρος, θα ήταν καλύτερο να επεξεργαστείτε&lt;br&gt;την ουρά από έτοιμα πακέτα. Πριν συνεχίσετε, προτείνεται να&lt;br&gt;κοιτάξετε τις ρυθμίσεις σας ώστε να αυξήσετε την επίδοση του χτισίματος.</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="225"/>
         <source>To be Installed</source>
-        <translation type="unfinished">Προς Εγκατάσταση</translation>
+        <translation>Προς Εγκατάσταση</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="232"/>
         <source>To be Upgraded</source>
-        <translation type="unfinished">Προς Αναβάθμιση</translation>
+        <translation>Προς Αναβάθμιση</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="378"/>
         <source>Package Building</source>
-        <translation type="unfinished">Χτίσιμο Πακέτου</translation>
+        <translation>Χτίσιμο Πακέτου</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="311"/>
         <source>Your Packages failed to build!</source>
-        <translation type="unfinished">Το χτίσιμο των πακέτων σας απέτυχε!</translation>
+        <translation>Το χτίσιμο των πακέτων σας απέτυχε!</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="315"/>
         <source>Your packages Failed to Build.
 Look at the output for more details.</source>
-        <translation type="unfinished">Το χτίσιμο των πακέτων σας απέτυχε.
+        <translation>Το χτίσιμο των πακέτων σας απέτυχε.
 Κοιτάξτε τα μηνύματα εξόδου για λεπτομέρειες.</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="353"/>
         <source>Close</source>
-        <translation type="unfinished">Κλείσιμο</translation>
+        <translation>Κλείσιμο</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="343"/>
         <source>Building Packages Failed!!</source>
-        <translation type="unfinished">Το χτίσιμο των πακέτων σας απέτυχε!!</translation>
+        <translation>Το χτίσιμο των πακέτων σας απέτυχε!!</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="357"/>
         <source>Shaman - Idle</source>
-        <translation type="unfinished">Shaman - Αδράνεια</translation>
+        <translation>Shaman - Αδράνεια</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="346"/>
         <source>Some packages failed to build.
 Do you want to proceed anyway?</source>
-        <translation type="unfinished">Κάποια πακέτα απέτυχαν να χτιστούν.
+        <translation>Κάποια πακέτα απέτυχαν να χτιστούν.
 Θέλετε να συνεχίσετε;</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="373"/>
         <source>Install Built Packages</source>
-        <translation type="unfinished">Εγκατάσταση Χτισμένων Πακέτων</translation>
+        <translation>Εγκατάσταση Χτισμένων Πακέτων</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="374"/>
         <source>Close Without Installing</source>
-        <translation type="unfinished">Κλείσιμο χωρίς εγκατάσταση</translation>
+        <translation>Κλείσιμο χωρίς εγκατάσταση</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="375"/>
         <source>Packages Built Successfully!</source>
-        <translation type="unfinished">Τα πακέτα χτίστηκαν με επιτυχία!</translation>
+        <translation>Τα πακέτα χτίστηκαν με επιτυχία!</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="379"/>
         <source>Your Packages have been built successfully, and are ready to be installed</source>
-        <translation type="unfinished">Τα πακέτα σας χτίστηκαν με επιτυχία και είναι έτοιμα για εγκατάσταση</translation>
+        <translation>Τα πακέτα σας χτίστηκαν με επιτυχία και είναι έτοιμα για εγκατάσταση</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="509"/>
         <source>Shaman - Processing</source>
-        <translation type="unfinished">Shaman - Επεξεργασία</translation>
+        <translation>Shaman - Επεξεργασία</translation>
     </message>
 </context>
 <context>
@@ -243,7 +243,8 @@ Do you want to delete it?</source>
         <location filename="../src/callbacks.cpp" line="136"/>
         <source>File %1 is corrupted.
 Do you want to delete it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Το αρχείο %1 είναι κατεστραμένο.
+Θέλετε να το διαγράψετε?</translation>
     </message>
 </context>
 <context>
@@ -1535,7 +1536,7 @@ Yours is %1. Please update Pacman.</source>
     <message>
         <location filename="../src/main.cpp" line="160"/>
         <source>Please Wait...</source>
-        <translation type="unfinished">Παρακαλώ Περιμένετε...</translation>
+        <translation>Παρακαλώ Περιμένετε...</translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="211"/>
