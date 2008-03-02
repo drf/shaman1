@@ -715,7 +715,6 @@ void MainWindow::doDbUpdate()
 		dbdialog->show();
 
 	connect(dbdialog, SIGNAL(killMe()), this, SLOT(finishDbUpdate()));
-	connect(aHandle, SIGNAL(streamDbUpdatingStatus(const QString&,int)), SIGNAL(streamDbUpdatingStatus(const QString&,int)));
 
 	dbdialog->doAction();
 
