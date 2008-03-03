@@ -37,8 +37,8 @@ public:
 	~ShamanEngine();
 	
 protected:
-    bool sourceRequested(const QString &name);
-    bool updateSource(const QString &name);
+        bool sourceRequested(const QString &name);
+        bool updateSource(const QString &name);
     
 private slots:
 	void getShamanData(const QString &name);
