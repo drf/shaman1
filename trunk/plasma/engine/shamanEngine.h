@@ -42,11 +42,13 @@ protected:
     
 private slots:
 	void getShamanData(const QString &name);
+	void actionStatusChanged(const QString &action);
 
 private:
 	bool isDBusServiceRegistered();
 
 	QDBusConnection dbus;
+	QString currentAction;
 };
 
 K_EXPORT_PLASMA_DATAENGINE(shaman, ShamanEngine)

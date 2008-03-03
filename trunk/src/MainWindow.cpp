@@ -118,8 +118,6 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	connect(actionUpdate_ABS_Tree, SIGNAL(triggered()), SLOT(updateABSTree()));
 	connect(actionBuild_and_Install_Selected, SIGNAL(triggered()), SLOT(initSourceQueue()));
 	connect(actionCancel_all_actions, SIGNAL(triggered()), SLOT(cancelAllActions()));
-	connect(aHandle, SIGNAL(transactionStarted()), SIGNAL(transactionStarted()));
-	connect(aHandle, SIGNAL(transactionReleased()), SIGNAL(transactionReleased()));
 	connect(aHandle, SIGNAL(streamDbUpdatingStatus(const QString&,int)), SIGNAL(streamDbUpdatingStatus(const QString&,int)));
 
 	QSettings *settings = new QSettings();
@@ -723,7 +721,7 @@ void MainWindow::doDbUpdate()
 {
 	dbdialog = new UpdateDbDialog(aHandle, this);
 	
-	emit dbUpdateStarted();
+	emit actionStatusChanged("dbUpdateStarted");
 
 	if(isVisible())
 		dbdialog->show();
@@ -744,7 +742,7 @@ void MainWindow::finishDbUpdate()
 	
 	if(dbdialog->anyErrors())
 	{
-		emit dbUpdateFinished(false);
+		emit actionStatusChanged("dbUpdateFinished");
 		
 		if(dbdialog->isVisible())
 		{
@@ -762,7 +760,7 @@ void MainWindow::finishDbUpdate()
 	}
 	else
 	{
-		emit dbUpdateFinished(true);
+		emit actionStatusChanged("dbUpdateFinished");
 		if(dbdialog->isHidden())
 			systray->showMessage(QString(tr("Database Update")), QString(tr("Databases Updated Successfully")));
 	}
@@ -1347,7 +1345,7 @@ void MainWindow::processQueue()
 
 	queueDl->startProcessing();
 	
-	emit queueProcessingStarted();
+	emit actionStatusChanged("queueProcessingStarted");
 	
 	queueDl->show();
 
@@ -1374,7 +1372,7 @@ void MainWindow::processQueue()
 
 void MainWindow::queueProcessingEnded(bool errors)
 {
-	emit queueProcessingFinished(!errors);
+	emit actionStatusChanged("queueProcessingFinished");
 	
 	if(errors)
 	{

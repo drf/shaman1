@@ -63,12 +63,7 @@ signals:
 	void aboutToQuit();
 	void systemIsUpToDate();
 	void upgradesAvailable();
-	void transactionStarted();
-	void transactionReleased();
-	void dbUpdateStarted();
-	void dbUpdateFinished(bool success);
-	void queueProcessingStarted();
-	void queueProcessingFinished(bool success);
+	void actionStatusChanged(const QString &name);
 	void streamDbUpdatingStatus(const QString &repo, int action);
 	
 public slots:
