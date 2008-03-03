@@ -22,7 +22,7 @@
 #define UPDATEDBDIALOG_H_
 
 #include <iostream>
-#include "../ui_dbUpdateDialog.h"
+#include "ui_dbUpdateDialog.h"
 #include <alpm.h>
 #include "callbacks.h"
 #include "AlpmHandler.h"

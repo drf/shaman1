@@ -28,7 +28,6 @@
 #include <QMessageBox>
 #include <QCloseEvent>
 #include "ABSHandler.h"
-#include "../ui_buildingDialog.h"
 
 BuildingDialog::BuildingDialog(AlpmHandler *hnd, QWidget *parent)
 : QDialog(parent),

@@ -24,7 +24,7 @@
 #include <QStringList>
 #include <QDialog>
 
-#include "../ui_reviewBuildingDialog.h"
+#include "ui_reviewBuildingDialog.h"
 
 class MainWindow;
 class AlpmHandler;

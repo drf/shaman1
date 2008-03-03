@@ -22,7 +22,7 @@
 #define QUEUEDIALOG_H_
 
 #include <iostream>
-#include "../ui_transactionDialog.h"
+#include "ui_transactionDialog.h"
 #include <alpm.h>
 #include "callbacks.h"
 #include "AlpmHandler.h"

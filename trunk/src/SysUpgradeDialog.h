@@ -22,7 +22,7 @@
 #define SYSUPGRADEDIALOG_H_
 
 #include <iostream>
-#include "../ui_upgradeDialog.h"
+#include "ui_upgradeDialog.h"
 #include <alpm.h>
 #include "callbacks.h"
 #include "AlpmHandler.h"

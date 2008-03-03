@@ -29,8 +29,8 @@
 #include "EditPBuild.h"
 #include "ABSHandler.h"
 #include "BuildingHandler.h"
-#include "../ui_aboutDialog.h"
-#include "../shamanadaptor.h"
+#include "ui_aboutDialog.h"
+#include "shamanadaptor.h"
 
 #include <iostream>
 #include <QMenu>

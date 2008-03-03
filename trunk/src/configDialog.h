@@ -21,7 +21,7 @@
 #ifndef CONFIGDIALOG_H
 #define CONFIGDIALOG_H
 
-#include "../ui_configDialog.h"
+#include "ui_configDialog.h"
 #include "ConfigurationParser.h"
 #include <QThread>
 #include <QProcess>

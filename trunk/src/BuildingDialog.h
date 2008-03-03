@@ -24,7 +24,7 @@
 #include <iostream>
 #include "AlpmHandler.h"
 #include "ABSHandler.h"
-#include "../ui_buildingDialog.h"
+#include "ui_buildingDialog.h"
 
 #include <QProcess>
 

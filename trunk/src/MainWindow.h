@@ -25,8 +25,8 @@
 #include <QWidget>
 #include <alpm.h>
 #include <alpm_list.h>
-#include "../ui_MainWindow.h"
-#include "../ui_reviewQueueDialog.h"
+#include "ui_MainWindow.h"
+#include "ui_reviewQueueDialog.h"
 #include "AlpmHandler.h"
 
 #include <QSystemTrayIcon>
