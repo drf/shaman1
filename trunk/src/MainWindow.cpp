@@ -1230,11 +1230,12 @@ void MainWindow::startUpgrading()
 	{
 		emit systemIsUpToDate();
 		
+		systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
+		systray->setToolTip(QString(tr("Shaman - Idle")));
+		
 		if(dbdialog->isVisible())
 		{
 			/* Display a simple popup saying the system is up-to-date. */
-			systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
-			systray->setToolTip(QString(tr("Shaman - Idle")));
 			QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("System Upgrade"), 
 					tr("Your system is up to date!"), QMessageBox::Ok, this);
 			message->show();

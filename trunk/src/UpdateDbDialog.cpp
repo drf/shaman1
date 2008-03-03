@@ -46,7 +46,7 @@ UpdateDbDialog::UpdateDbDialog(AlpmHandler *hnd, QWidget *parent)
 
 UpdateDbDialog::~UpdateDbDialog()
 {
-	disconnect(aHandle, SIGNAL(streamDbUpdatingStatus(char*,int)), 0, 0);
+	disconnect(aHandle, SIGNAL(streamDbUpdatingStatus(const QString&,int)), 0, 0);
 	disconnect(aHandle, SIGNAL(dbQty(const QStringList&)), 0, 0);
 	disconnect(aHandle, SIGNAL(dbUpdated()), 0, 0);
 	disconnect(&CbackReference, SIGNAL(streamTransDlProg(char*,int,int,int,int,int,int)), 0, 0);
