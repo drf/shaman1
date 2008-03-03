@@ -637,7 +637,7 @@ void QueueDialog::writeLineProgress()
 	{
 		qDebug() << proc->readLine(1024);
 
-		textEdit->insertHtml(proc->readLine(1024).replace(QChar('\n'), "<br>"));
+		textEdit->append(QString(proc->readLine(1024)).remove(QChar('\n')));
 
 		textEdit->moveCursor(QTextCursor::End);
 	}
@@ -652,7 +652,7 @@ void QueueDialog::writeLineProgressErr()
 	{
 		qDebug() << proc->readLine(1024);
 
-		textEdit->insertHtml(proc->readLine(1024).replace(QChar('\n'), "<br>"));
+		textEdit->append(QString(proc->readLine(1024)).remove(QChar('\n')));
 
 		textEdit->moveCursor(QTextCursor::End);
 	}
