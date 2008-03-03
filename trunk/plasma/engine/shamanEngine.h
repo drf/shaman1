@@ -23,12 +23,30 @@
 
 #include <plasma/dataengine.h>
 
+#include <QtDBus/QDBusConnection>
+
+static const QString SHAMAN_DBUS_SERVICE = "org.archlinux.shaman";
+static const QString SHAMAN_DBUS_PATH = "/Shaman";
+static const QString SHAMAN_DBUS_INTERFACE = "org.archlinux.shaman";
+
 class ShamanEngine : public Plasma::DataEngine
 {
-    Q_OBJECT
-    public:
-        ShamanEngine(QObject* parent, const QVariantList& args);
-        ~ShamanEngine();
+	Q_OBJECT
+public:
+	ShamanEngine(QObject* parent, const QVariantList &args);
+	~ShamanEngine();
+	
+protected:
+    bool sourceRequested(const QString &name);
+    bool updateSource(const QString &name);
+    
+private slots:
+	void getShamanData(const QString &name);
+
+private:
+	bool isDBusServiceRegistered();
+
+	QDBusConnection dbus;
 };
 
 K_EXPORT_PLASMA_DATAENGINE(shaman, ShamanEngine)
