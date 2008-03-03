@@ -176,7 +176,7 @@ ADD_CUSTOM_TARGET(uninstall "${CMAKE_COMMAND}" -P "${CMAKE_CURRENT_BINARY_DIR}/c
 #INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/help/de/main.htm DESTINATION share/shaman/help/de)
 
 INSTALL(TARGETS shaman DESTINATION bin)
-INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/etc/shaman.conf DESTINATION ../../etc/dbus-1/system.d)
+INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/etc/shaman.conf DESTINATION /etc/dbus-1/system.d)
 
 #IF(UNIX)
 #    INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/misc/shaman.desktop DESTINATION share/applications)
