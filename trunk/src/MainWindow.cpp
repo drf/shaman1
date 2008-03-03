@@ -73,9 +73,11 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	dbus.registerObject("/Shaman", this);
 
 	qDebug() << "Shaman registered on the System Bus as" << dbus.baseService();
-
-	if(!dbus.registerService("org.xchat.service"))
-		qDebug() << "Failed to register alias Service on DBus";
+		
+	if(!dbus.registerService("org.archlinux.shaman"))
+		qWarning() << "Failed to register alias Service on DBus";
+	else
+		qDebug() << "Service org.archlinux.shaman successfully exported on the System Bus.";
 	
 	pkgsViewWG->setContextMenuPolicy(Qt::CustomContextMenu);
 	repoList->setContextMenuPolicy(Qt::CustomContextMenu);

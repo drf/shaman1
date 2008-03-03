@@ -252,6 +252,11 @@ int main(int argc, char **argv)
 	
 	settings->deleteLater();
 	
+	QDBusInterface tmpdbus(":1.16", "/Shaman", "org.archlinux.shaman", QDBusConnection::systemBus());
+	QDBusMessage dmsg(tmpdbus.call("doDbUpdate"));
+	if(dmsg.type() == QDBusMessage::ErrorMessage)	
+		qDebug() << "error message";
+	
 	return app.exec();
 
 }
