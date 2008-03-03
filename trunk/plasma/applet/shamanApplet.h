@@ -22,6 +22,12 @@
 #define SHAMANAPPLET_H
 
 #include <plasma/applet.h>
+#include <plasma/widgets/icon.h>
+
+namespace Plasma
+{
+    class VBoxLayout;
+}
 
 class ShamanApplet : public Plasma::Applet
 {
@@ -29,6 +35,11 @@ class ShamanApplet : public Plasma::Applet
     public:
         ShamanApplet(QObject *parent, const QVariantList &args);
         ~ShamanApplet();
+
+    private:
+        void init();
+
+        Plasma::VBoxLayout * m_layout;
 }; 
 
 K_EXPORT_PLASMA_APPLET(shaman, ShamanApplet)

@@ -19,6 +19,8 @@
  ***************************************************************************/
 #include "shamanApplet.h"
 
+#include <plasma/layouts/vboxlayout.h>
+
 ShamanApplet::ShamanApplet(QObject *parent, const QVariantList &args)
   : Plasma::Applet(parent, args)
 {
@@ -27,6 +29,13 @@ ShamanApplet::ShamanApplet(QObject *parent, const QVariantList &args)
 
 ShamanApplet::~ShamanApplet()
 {
+}
+
+void ShamanApplet::init()
+{
+    m_layout = new Plasma::VBoxLayout(this);
+    Plasma::Icon *icon = new Plasma::Icon(tr("Shaman man that rockx"), this);
+    m_layout->addItem(icon);
 }
 
 #include "shamanApplet.moc"
