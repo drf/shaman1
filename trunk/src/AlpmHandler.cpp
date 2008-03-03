@@ -236,21 +236,22 @@ bool AlpmHandler::updateDatabase()
 	while(syncdbs != NULL)
 	{
 		pmdb_t *dbcrnt = (pmdb_t *)alpm_list_getdata(syncdbs);
+		QString curdbname((char *)alpm_db_get_name(dbcrnt));
 
-		emit streamDbUpdatingStatus((char *)alpm_db_get_name(dbcrnt), 0);
+		emit streamDbUpdatingStatus(curdbname, 0);
 		
 		r = alpm_db_update(0, dbcrnt);
 		
 		if(r == 1)
-			emit streamDbUpdatingStatus((char *)alpm_db_get_name(dbcrnt), 3);
+			emit streamDbUpdatingStatus(curdbname, 3);
 		
 		else if(r < 0)
-			emit streamDbUpdatingStatus((char *)alpm_db_get_name(dbcrnt), 4);
+			emit streamDbUpdatingStatus(curdbname, 4);
 		
 		else
 		{
 			emit dbUpdated();
-			emit streamDbUpdatingStatus((char *)alpm_db_get_name(dbcrnt), 3);
+			emit streamDbUpdatingStatus(curdbname, 3);
 		}
 
 		emit dbUpdatePerformed();

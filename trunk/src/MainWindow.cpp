@@ -69,9 +69,14 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	new ShamanAdaptor(this);
 
 	QDBusConnection dbus = QDBusConnection::systemBus();
-
+	
 	dbus.registerObject("/Shaman", this);
-		
+
+	qDebug() << "Shaman registered on the System Bus as" << dbus.baseService();
+
+	if(!dbus.registerService("org.xchat.service"))
+		qDebug() << "Failed to register alias Service on DBus";
+	
 	pkgsViewWG->setContextMenuPolicy(Qt::CustomContextMenu);
 	repoList->setContextMenuPolicy(Qt::CustomContextMenu);
 	pkgsViewWG->hideColumn(7);
@@ -111,6 +116,9 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	connect(actionUpdate_ABS_Tree, SIGNAL(triggered()), SLOT(updateABSTree()));
 	connect(actionBuild_and_Install_Selected, SIGNAL(triggered()), SLOT(initSourceQueue()));
 	connect(actionCancel_all_actions, SIGNAL(triggered()), SLOT(cancelAllActions()));
+	connect(aHandle, SIGNAL(transactionStarted()), SIGNAL(transactionStarted()));
+	connect(aHandle, SIGNAL(transactionReleased()), SIGNAL(transactionReleased()));
+	connect(aHandle, SIGNAL(streamDbUpdatingStatus(const QString&,int)), SIGNAL(streamDbUpdatingStatus(const QString&,int)));
 
 	QSettings *settings = new QSettings();
 
@@ -125,6 +133,8 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 		pkgDockWidget->move(settings->value("pkgwg/pos").toPoint());
 
 	settings->deleteLater();
+	
+	emit shamanReady();
 
 	return;
 }
@@ -710,6 +720,8 @@ void MainWindow::showPkgInfo()
 void MainWindow::doDbUpdate()
 {
 	dbdialog = new UpdateDbDialog(aHandle, this);
+	
+	emit dbUpdateStarted();
 
 	if(isVisible())
 		dbdialog->show();
@@ -730,6 +742,8 @@ void MainWindow::finishDbUpdate()
 	
 	if(dbdialog->anyErrors())
 	{
+		emit dbUpdateFinished(false);
+		
 		if(dbdialog->isVisible())
 		{
 			QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), 
@@ -745,8 +759,11 @@ void MainWindow::finishDbUpdate()
 					"not be updated.\nLast error reported was:\n%1")).arg(alpm_strerrorlast()));
 	}
 	else
+	{
+		emit dbUpdateFinished(true);
 		if(dbdialog->isHidden())
 			systray->showMessage(QString(tr("Database Update")), QString(tr("Databases Updated Successfully")));
+	}
 
 	if(dbdialog->dbHasBeenUpdated())
 	{
@@ -1209,14 +1226,15 @@ void MainWindow::startUpgrading()
 
 	dbdialog->deleteLater();
 
-	systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
-	systray->setToolTip(QString(tr("Shaman - Idle")));
-
 	if(aHandle->getUpgradeablePackages().isEmpty())
 	{
+		emit systemIsUpToDate();
+		
 		if(dbdialog->isVisible())
 		{
 			/* Display a simple popup saying the system is up-to-date. */
+			systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
+			systray->setToolTip(QString(tr("Shaman - Idle")));
 			QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("System Upgrade"), 
 					tr("Your system is up to date!"), QMessageBox::Ok, this);
 			message->show();
@@ -1234,6 +1252,11 @@ void MainWindow::startUpgrading()
 		 * a reason for that :)
 		 */
 
+		emit upgradesAvailable();
+		
+		systray->setIcon(QIcon(":/Icons/icons/view-refresh.png"));
+		systray->setToolTip(QString(tr("Shaman - Idle (Upgrades Available)")));
+		
 		upDl = new SysUpgradeDialog(aHandle, this);
 
 		upDl->show();
@@ -1253,8 +1276,6 @@ void MainWindow::upgradeAborted()
 {
 	upDl->deleteLater();
 	upActive = false;
-	systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
-	systray->setToolTip(QString(tr("Shaman - Idle")));
 }
 
 void MainWindow::addUpgradeableToQueue()
@@ -1280,7 +1301,8 @@ void MainWindow::fullSysUpgrade()
 {
 	dbdialog = new UpdateDbDialog(aHandle, this);
 
-	dbdialog->show();
+	if(isVisible())
+		dbdialog->show();
 
 	connect(dbdialog, SIGNAL(killMe()), this, SLOT(startUpgrading()));
 
@@ -1322,6 +1344,8 @@ void MainWindow::processQueue()
 
 	queueDl->startProcessing();
 	
+	emit queueProcessingStarted();
+	
 	queueDl->show();
 
 	if(revActive)
@@ -1347,6 +1371,8 @@ void MainWindow::processQueue()
 
 void MainWindow::queueProcessingEnded(bool errors)
 {
+	emit queueProcessingFinished(!errors);
+	
 	if(errors)
 	{
 		// TODO: popup a message if there were errors
@@ -1825,6 +1851,10 @@ QList<QTreeWidgetItem *> MainWindow::getRemovePackagesInWidgetQueue()
 	return pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 8) + pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 8);
 }
 
-/* Here comes DBus Slots */
-
-/* Here Ends DBus Slots */
+bool MainWindow::packageExists(const QString &pkg)
+{
+	if(pkgsViewWG->findItems(pkg, Qt::MatchExactly | Qt::CaseInsensitive, 1).isEmpty())
+		return false;
+	else
+		return true;
+}

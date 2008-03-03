@@ -35,8 +35,8 @@ UpdateDbDialog::UpdateDbDialog(AlpmHandler *hnd, QWidget *parent)
 	setupUi(this);
     setWindowModality(Qt::WindowModal);
 	
-	connect(aHandle, SIGNAL(streamDbUpdatingStatus(char*,int)),
-				SLOT(updateLabel(char*, int)));
+	connect(aHandle, SIGNAL(streamDbUpdatingStatus(const QString&,int)),
+				SLOT(updateLabel(const QString&, int)));
 	connect(aHandle, SIGNAL(dbQty(const QStringList&)), SLOT(createWidgets(const QStringList&)));
 	connect(aHandle, SIGNAL(dbUpdated()), SLOT(setUpdated()));
 	connect(aHandle, SIGNAL(dbUpdatePerformed()), SLOT(updateTotalProg()));
@@ -52,7 +52,7 @@ UpdateDbDialog::~UpdateDbDialog()
 	disconnect(&CbackReference, SIGNAL(streamTransDlProg(char*,int,int,int,int,int,int)), 0, 0);
 }
 
-void UpdateDbDialog::updateLabel(char *repo, int action)
+void UpdateDbDialog::updateLabel(const QString &repo, int action)
 {
 	Q_UNUSED(repo);
 	

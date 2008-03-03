@@ -56,7 +56,7 @@ public slots:
 	void doAction();
 		
 private slots:
-	void updateLabel(char *repo, int action);
+	void updateLabel(const QString &repo, int action);
 	//void updateDlProg(float bytetotal, float bytedled, float speed);
 	void createWidgets(const QStringList &list);
 	void updateTotalProg();

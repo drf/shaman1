@@ -6,12 +6,38 @@
 		</method>
 		<method name="doDbUpdate">
 		</method>
-		<signal name="streamUpgradeablePackagesDBus">
-			<arg type="i" direction="out" />
+		<method name="widgetQueueToAlpmQueue">
+		</method>
+		<method name="fullSysUpgrade">
+		</method>
+		<method name="packageExists">
+			<arg type="s" direction="in" />
+			<arg type="b" direction="out" />
+		</method>
+		
+		<signal name="systemIsUpToDate">
+		</signal>
+		<signal name="upgradesAvailable">
+		</signal>
+		<signal name="transactionStarted">
+		</signal>
+		<signal name="transactionReleased">
+		</signal>
+		<signal name="dbUpdateStarted">
+		</signal>
+		<signal name="dbUpdateFinished">
+			<arg type="b" direction="out" />
+		</signal>
+		<signal name="queueProcessingStarted">
+		</signal>
+		<signal name="queueProcessingFinished">
+			<arg type="b" direction="out" />
 		</signal>
 		<signal name="streamDbUpdatingStatus">
 			<arg type="s" direction="out" />
 			<arg type="i" direction="out" />
+		</signal>
+		<signal name="shamanReady">
 		</signal>
 		<signal name="aboutToQuit">
 		</signal>

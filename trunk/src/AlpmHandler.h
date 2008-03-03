@@ -121,7 +121,7 @@ private:
 	bool setUpAlpmSettings();
 
 signals:
-	void streamDbUpdatingStatus(char *repo, int action);
+	void streamDbUpdatingStatus(const QString &repo, int action);
 	void dbUpdated();
 	void dbQty(const QStringList &db);
 	void dbUpdatePerformed();
