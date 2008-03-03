@@ -11,5 +11,5 @@ message(STATUS "PlasmaLibs: " ${PLASMA_LIBS})
 kde4_add_plugin(plasma_applet_shaman ${plasma_applet_shaman_SRCS})
 target_link_libraries(plasma_applet_shaman ${PLASMA_LIBS} ${KDE4_KDEUI_LIBS})
 
-install(TARGETS plasma_applet_shaman DESTINATION ${PLUGIN_INSTALL_DIR})
-install(FILES shaman-applet-default.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+install(TARGETS plasma_applet_shaman DESTINATION ${PLASMA_INCLUDE_DIR}/../lib/kde4)#Dirty hack for the correct dir, look for sth like PLASMA_PLUGIN_INSTALL_DIR
+install(FILES shaman-applet-default.desktop DESTINATION ${PLASMA_INCLUDE_DIR}/../../share/kde4/services/)#Haha the same
