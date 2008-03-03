@@ -43,6 +43,9 @@ protected:
 private slots:
 	void getShamanData(const QString &name);
 	void actionStatusChanged(const QString &action);
+	void updateShamanData();
+	void connectDBusSlots();
+	void serviceRegistered(const QString &srvname);
 
 private:
 	bool isDBusServiceRegistered();

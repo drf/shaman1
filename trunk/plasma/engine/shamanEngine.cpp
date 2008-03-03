@@ -23,6 +23,7 @@
 #include "shamanEngine.h"
 
 #include <QtDBus/QDBusConnectionInterface>
+#include <QTimer>
 #include <KDebug>
 
 #include "plasma/datacontainer.h"
@@ -32,14 +33,13 @@ ShamanEngine::ShamanEngine(QObject *parent, const QVariantList &args)
   dbus(QDBusConnection::systemBus()),
   currentAction("idle")
 {
-    Q_UNUSED(args)
+	Q_UNUSED(args)
 
-    if(isDBusServiceRegistered())
-    {
-    	if(!dbus.connect(SHAMAN_DBUS_SERVICE, SHAMAN_DBUS_PATH, SHAMAN_DBUS_INTERFACE, 
-    			SIGNAL(actionStatusChanged(const QString&)), this, SLOT(actionStatusChanged(const QString&))))
-    		kDebug() << "Couldn't connect a slot through DBus";
-    }
+	QTimer *timer = new QTimer(this);
+	connect(timer, SIGNAL(timeout()), this, SLOT(updateShamanData()));
+	timer->start(3000);
+	
+	connect(dbus.interface(), SIGNAL(serviceRegistered(const QString&)), SLOT(serviceRegistered(const QString&)));
     
 }
 
@@ -86,5 +86,24 @@ void ShamanEngine::actionStatusChanged(const QString &action)
 	currentAction = action;
 	updateSource("shaman");
 }
+
+void ShamanEngine::updateShamanData()
+{
+	getShamanData("shaman");
+}
+
+void ShamanEngine::connectDBusSlots()
+{
+	if(!dbus.connect(SHAMAN_DBUS_SERVICE, SHAMAN_DBUS_PATH, SHAMAN_DBUS_INTERFACE, 
+			SIGNAL(actionStatusChanged(const QString&)), this, SLOT(actionStatusChanged(const QString&))))
+		kDebug() << "Couldn't connect a slot through DBus";
+}
+
+void ShamanEngine::serviceRegistered(const QString &srvname)
+{
+	if(srvname == SHAMAN_DBUS_SERVICE)
+		connectDBusSlots();
+}
+
 
 #include "shamanEngine.moc"
