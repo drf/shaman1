@@ -65,13 +65,12 @@ void ShamanEngine::getShamanData(const QString &name)
 
 	if(isDBusServiceRegistered()) 
 	{
-		setData(I18N_NOOP(name), I18N_NOOP("error"), false);
+		setData(name, "error", false);
 	}
 	else 
 	{
-		setData(I18N_NOOP(name), I18N_NOOP("error"), true);
-		setData(I18N_NOOP(name), I18N_NOOP("errorMessage"),
-				I18N_NOOP("Is Shaman up and running?"));
+		setData(name, "error", true);
+		setData(name, "errorMessage", I18N_NOOP("Is Shaman up and running?"));
 	}
 }
 
