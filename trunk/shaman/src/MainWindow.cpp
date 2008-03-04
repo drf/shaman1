@@ -136,14 +136,6 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 
 	emit shamanReady();
 
-	QDBusConnection dbuskn(QDBusConnection::systemBus());
-
-	if(!dbuskn.connect("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", 
-			"actionStatusChanged", this, SLOT(doDbUpdate())))
-		qDebug() << "Connected Successfully";
-	else
-		qDebug() << "Fuck that shit";
-
 	return;
 }
 
