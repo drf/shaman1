@@ -1,0 +1,27 @@
+<RCC>
+    <qresource prefix="/Icons" >
+        <file>icons/application-exit.png</file>
+        <file>icons/applications-development.png</file>
+        <file>icons/bookmark-new-list.png</file>
+        <file>icons/dialog-cancel.png</file>
+        <file>icons/dialog-ok-apply.png</file>
+        <file>icons/document-open-folder.png</file>
+        <file>icons/document-open.png</file>
+        <file>icons/draw-text.png</file>
+        <file>icons/edit-delete.png</file>
+        <file>icons/edit-redo.png</file>
+        <file>icons/help-about.png</file>
+        <file>icons/list-add.png</file>
+        <file>icons/list-remove.png</file>
+        <file>icons/network-server-database.png</file>
+        <file>icons/preferences-system.png</file>
+        <file>icons/user-invisible.png</file>
+        <file>icons/user-offline.png</file>
+        <file>icons/user-online.png</file>
+        <file>icons/view-history.png</file>
+        <file>icons/view-refresh.png</file>
+    </qresource>
+    <qresource prefix="/Images" >
+        <file>images/splash.png</file>
+    </qresource>
+</RCC>
