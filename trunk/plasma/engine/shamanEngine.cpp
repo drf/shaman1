@@ -23,7 +23,6 @@
 #include "shamanEngine.h"
 
 #include <QtDBus/QDBusConnectionInterface>
-#include <QTimer>
 #include <KDebug>
 
 #include "plasma/datacontainer.h"
@@ -34,10 +33,6 @@ ShamanEngine::ShamanEngine(QObject *parent, const QVariantList &args)
   currentAction("idle")
 {
 	Q_UNUSED(args)
-
-	QTimer *timer = new QTimer(this);
-	connect(timer, SIGNAL(timeout()), this, SLOT(updateShamanData()));
-	timer->start(3000);
 	
 	connect(dbus.interface(), SIGNAL(serviceRegistered(const QString&)), SLOT(serviceRegistered(const QString&)));
     
@@ -45,6 +40,16 @@ ShamanEngine::ShamanEngine(QObject *parent, const QVariantList &args)
 
 ShamanEngine::~ShamanEngine()
 {
+}
+
+void ShamanEngine::setRefreshTime(uint time)
+{
+    setUpdateInterval(time);
+}
+
+uint ShamanEngine::refreshTime() const
+{
+    return 1000;
 }
 
 bool ShamanEngine::sourceRequested(const QString &name)

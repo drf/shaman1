@@ -32,14 +32,18 @@ static const QString SHAMAN_DBUS_INTERFACE = "org.archlinux.shaman";
 class ShamanEngine : public Plasma::DataEngine
 {
 	Q_OBJECT
+	Q_PROPERTY(uint refreshTime READ refreshTime WRITE setRefreshTime)
+	
 public:
 	ShamanEngine(QObject* parent, const QVariantList &args);
 	~ShamanEngine();
-	
+	void setRefreshTime(uint time);
+	uint refreshTime() const;
+
 protected:
-        bool sourceRequested(const QString &name);
-        bool updateSource(const QString &name);
-    
+	bool sourceRequested(const QString &name);
+	bool updateSource(const QString &name);
+
 private slots:
 	void getShamanData(const QString &name);
 	void actionStatusChanged(const QString &action);
