@@ -44,12 +44,12 @@ ShamanEngine::~ShamanEngine()
 
 void ShamanEngine::setRefreshTime(uint time)
 {
-    setUpdateInterval(time);
+        setUpdateInterval(time);
 }
 
 uint ShamanEngine::refreshTime() const
 {
-    return 1000;
+        return 1000;
 }
 
 bool ShamanEngine::sourceRequested(const QString &name)
