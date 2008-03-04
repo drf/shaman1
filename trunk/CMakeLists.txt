@@ -22,7 +22,8 @@ MACRO (MACRO_OPTIONAL_FIND_PACKAGE _name )
    endif (WITH_${_name})
 ENDMACRO (MACRO_OPTIONAL_FIND_PACKAGE)
 
-macro_optional_find_package(Plasma)
+FIND_PACKAGE(KDE4)
+FIND_PACKAGE(Plasma)
 
 if (PLASMA_FOUND)
     add_subdirectory(plasma)
