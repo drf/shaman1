@@ -29,6 +29,8 @@ SysUpgradeDialog::SysUpgradeDialog(AlpmHandler *hnd, QWidget *parent)
 : QDialog(parent),
 aHandle(hnd)
 {
+        treeWidget->hide();
+         adjustSize();
 	QSettings *settings = new QSettings();
 
 	if(settings->value("gui/actionupgrade").toString() == "add")
