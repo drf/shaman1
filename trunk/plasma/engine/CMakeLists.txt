@@ -9,6 +9,7 @@ set(shaman_engine_SRCS
     shamanEngine.cpp
 )
 message(STATUS ""  ${PLASMA_INCLUDE_DIR})
+
 kde4_add_plugin(plasma_engine_shaman ${shaman_engine_SRCS})
 target_link_libraries(plasma_engine_shaman ${KDE4_KDECORE_LIBS} ${PLASMA_LIBS})
 
