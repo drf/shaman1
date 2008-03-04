@@ -29,8 +29,6 @@ SysUpgradeDialog::SysUpgradeDialog(AlpmHandler *hnd, QWidget *parent)
 : QDialog(parent),
 aHandle(hnd)
 {
-        treeWidget->hide();
-         adjustSize();
 	QSettings *settings = new QSettings();
 
 	if(settings->value("gui/actionupgrade").toString() == "add")
@@ -63,13 +61,14 @@ aHandle(hnd)
 		{
 			QTreeWidgetItem *childitm = new QTreeWidgetItem(itm, QStringList() << QString(pkg + " (" + 
 					aHandle->getPackageVersion(pkg, "local") + "-->" + 
-					aHandle->getPackageVersion(pkg, aHandle->getPackageRepo(pkg, true))));
+					aHandle->getPackageVersion(pkg, aHandle->getPackageRepo(pkg, true)) + ")"));
 		}
 
 		connect(abortButton, SIGNAL(clicked()), SLOT(abort()));
 		connect(addToQueue, SIGNAL(clicked()), SLOT(addPkg()));
 		connect(goUpgrading, SIGNAL(clicked()), SLOT(initSysUpgrade()));
 		
+		treeWidget->hide();
 		adjustSize();
 	}
 	
