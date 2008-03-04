@@ -54,9 +54,21 @@ aHandle(hnd)
 						"immediately or add them to the current Queue"
 						"<br> and process them later.")).arg(n));
 
+		QTreeWidgetItem *itm = new QTreeWidgetItem(treeWidget, QStringList(tr("To be Upgraded")));
+		treeWidget->addTopLevelItem(itm);
+
+		foreach(QString pkg, aHandle->getUpgradeablePackages())
+		{
+			QTreeWidgetItem *childitm = new QTreeWidgetItem(itm, QStringList() << QString(pkg + " (" + 
+					aHandle->getPackageVersion(pkg, "local") + "-->" + 
+					aHandle->getPackageVersion(pkg, aHandle->getPackageRepo(pkg, true))));
+		}
+
 		connect(abortButton, SIGNAL(clicked()), SLOT(abort()));
 		connect(addToQueue, SIGNAL(clicked()), SLOT(addPkg()));
 		connect(goUpgrading, SIGNAL(clicked()), SLOT(initSysUpgrade()));
+		
+		adjustSize();
 	}
 	
 	settings->deleteLater();

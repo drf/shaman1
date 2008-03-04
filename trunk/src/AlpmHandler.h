@@ -87,6 +87,8 @@ public:
 	QString getPackageVersion(const QString &name, const QString &repo);
 	QString getPackageVersion(pmpkg_t *package);
 	
+	QString getPackageRepo(const QString &name, bool checkver = false);
+	
 	void initQueue(bool rem, bool syncd, bool ff);
 	void addSyncToQueue(const QString &toAdd);
 	void addRemoveToQueue(const QString &toRm);

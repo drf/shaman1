@@ -980,3 +980,23 @@ QString AlpmHandler::getPackageVersion(const QString &name, const QString &repo)
 {
 	return getPackageVersion(getPackageFromName(name, repo));
 }
+
+QString AlpmHandler::getPackageRepo(const QString &name, bool checkver)
+{
+	alpm_list_t *syncdbs = alpm_option_get_syncdbs();
+	for(alpm_list_t *i = syncdbs; i; i = alpm_list_next(i)) 
+	{
+		pmdb_t *db = (pmdb_t *)alpm_list_getdata(i);
+		pmpkg_t *pkg;
+		pkg = alpm_db_get_pkg(db, name.toAscii().data());
+		if(pkg == NULL)
+			continue;
+		
+		if(checkver && (alpm_pkg_get_version(pkg) == getPackageVersion(alpm_pkg_get_name(pkg), "local")))
+			continue;
+			
+		return alpm_db_get_name(db);
+	}
+	
+	return QString();
+}

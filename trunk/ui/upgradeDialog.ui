@@ -165,7 +165,7 @@ p, li { white-space: pre-wrap; }
     <widget class="QTreeWidget" name="treeWidget" >
      <column>
       <property name="text" >
-       <string>1</string>
+       <string>Packages to Upgrade</string>
       </property>
      </column>
     </widget>
