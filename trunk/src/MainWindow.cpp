@@ -304,15 +304,16 @@ bool MainWindow::populatePackagesView()
 			{
 				//item->setText(0, tr("Installed"));
 				item->setIcon(0, QIcon(":/Icons/icons/user-online.png"));
+				item->setText(3, aHandle->getPackageVersion(alpm_pkg_get_name(pkg), "local"));
 			}
 			else
 			{
 				//item->setText(0, tr("Not Installed"));
 				item->setIcon(0, QIcon(":/Icons/icons/user-offline.png"));
+				item->setText(3, alpm_pkg_get_version(pkg));
 			}
 
 			item->setText(1, alpm_pkg_get_name(pkg));
-			item->setText(3, alpm_pkg_get_version(pkg));
 			item->setText(5, alpm_db_get_name(dbcrnt));
 			item->setText(4, formatSize(aHandle->getPackageSize(item->text(1), item->text(5)))); 
 			item->setText(7, alpm_pkg_get_desc(pkg));
@@ -618,6 +619,7 @@ void MainWindow::showPkgInfo()
 	pmpkg_t *pkg;
 	alpm_list_t *databases;
 	pmdb_t *curdb = NULL;
+	bool isLocal = false;
 
 	databases = aHandle->getAvailableRepos();
 
@@ -637,9 +639,12 @@ void MainWindow::showPkgInfo()
 	pkg = alpm_db_get_pkg(curdb, pkgsViewWG->currentItem()->text(1).toAscii().data());
 	
 	if(!pkg)
+	{
 		/* Well, if pkg is NULL we're probably searching for something coming
 		 * from the local database. */
 		pkg = aHandle->getPackageFromName(pkgsViewWG->currentItem()->text(1).toAscii().data(), "local");
+		isLocal = true;
+	}
 
 	databases = alpm_list_first(databases);
 
@@ -656,6 +661,16 @@ void MainWindow::showPkgInfo()
 		description.append(tr("Installed")); //FIXME: Icon!!!!
 	else
 		description.append(tr("Not installed"));
+	if (aHandle->isInstalled(item->text(1)))
+	{
+		description.append("<br><b>" + tr("Local Version: ") + "</b> ");
+		description.append(aHandle->getPackageVersion(alpm_pkg_get_name(pkg), "local"));
+	}
+	if(!isLocal)
+	{
+		description.append("<br><b>" + tr("Version in the Repository: ") + "</b> ");
+		description.append(alpm_pkg_get_version(pkg));
+	}
 
 	if (!item->text(8).isEmpty())
 	{

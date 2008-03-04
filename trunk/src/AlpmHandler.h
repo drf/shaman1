@@ -84,6 +84,9 @@ public:
 	unsigned long getPackageSize(const QString &name, const QString &repo);
 	unsigned long getPackageSize(pmpkg_t *package);
 	
+	QString getPackageVersion(const QString &name, const QString &repo);
+	QString getPackageVersion(pmpkg_t *package);
+	
 	void initQueue(bool rem, bool syncd, bool ff);
 	void addSyncToQueue(const QString &toAdd);
 	void addRemoveToQueue(const QString &toRm);

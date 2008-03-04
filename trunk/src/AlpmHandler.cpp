@@ -970,3 +970,13 @@ void AlpmHandler::setuseragent()
 			un.sysname, un.machine, getAlpmVersion().toAscii().data());
 	setenv("HTTP_USER_AGENT", agent, 0);
 }
+
+QString AlpmHandler::getPackageVersion(pmpkg_t *package)
+{
+	return alpm_pkg_get_version(package);
+}
+
+QString AlpmHandler::getPackageVersion(const QString &name, const QString &repo)
+{
+	return getPackageVersion(getPackageFromName(name, repo));
+}
