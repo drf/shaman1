@@ -56,6 +56,7 @@ private:
 
 	QDBusConnection dbus;
 	QString currentAction;
+	bool dbusError;
 };
 
 K_EXPORT_PLASMA_DATAENGINE(shaman, ShamanEngine)

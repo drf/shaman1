@@ -73,6 +73,7 @@ void ShamanEngine::getShamanData(const QString &name)
 	{
 		setData(name, "error", false);
 		setData(name, "transactionStatus", currentAction);
+		setData(name, "DBusError", dbusError);
 	}
 	else 
 	{
@@ -100,8 +101,13 @@ void ShamanEngine::updateShamanData()
 void ShamanEngine::connectDBusSlots()
 {
 	if(!dbus.connect(SHAMAN_DBUS_SERVICE, SHAMAN_DBUS_PATH, SHAMAN_DBUS_INTERFACE, 
-			"actionStatusChanged", this, SLOT(actionStatusChanged(const QString&))))
+			SIGNAL(actionStatusChanged(const QString&)), this, SLOT(actionStatusChanged(const QString&))))
+	{
 		kDebug() << "Couldn't connect a slot through DBus";
+		dbusError = true;
+	}
+	else
+		dbusError = false;
 }
 
 void ShamanEngine::serviceRegistered(const QString &srvname)
