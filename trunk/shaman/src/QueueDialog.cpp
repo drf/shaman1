@@ -635,9 +635,11 @@ void QueueDialog::writeLineProgress()
 
 	while(!proc->atEnd())
 	{
-		qDebug() << proc->readLine(1024);
+		QString view(proc->readLine(1024));
+		
+		qDebug() << view;
 
-		textEdit->append(QString(proc->readLine(1024)).remove(QChar('\n')));
+		textEdit->append(view.remove(QChar('\n')));
 
 		textEdit->moveCursor(QTextCursor::End);
 	}
@@ -650,9 +652,11 @@ void QueueDialog::writeLineProgressErr()
 	
 	while(!proc->atEnd())
 	{
-		qDebug() << proc->readLine(1024);
+		QString view(proc->readLine(1024));
 
-		textEdit->append(QString(proc->readLine(1024)).remove(QChar('\n')));
+		qDebug() << view;
+
+		textEdit->append(view.remove(QChar('\n')));
 
 		textEdit->moveCursor(QTextCursor::End);
 	}
