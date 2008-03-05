@@ -388,10 +388,7 @@ void QueueDialog::cleanup()
 	
 	qApp->processEvents();
 
-	if(!errors)
-		emit terminated(false);
-	else
-		emit terminated(true);
+	emit terminated(errors);
 }
 
 bool QueueDialog::runScriptlet(int action, const QString &p1N, const QString &p1V, 

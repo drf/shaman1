@@ -1391,26 +1391,32 @@ void MainWindow::queueProcessingEnded(bool errors)
 	
 	if(errors)
 	{
-		// TODO: popup a message if there were errors
-		qDebug() << "Errors Occourred";
+		/* An error has occourred. Just notify the user, since we have already shown a
+		 * popup with error details.
+		 */
+		
+		qDebug() << "Errors Occourred, Transaction was not completed";
+
+		if(queueDl->isVisible())
+		{
+			QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Queue Processed"), 
+					tr("One or more errors occourred, your Queue\nwas not successfully processed"), QMessageBox::Ok, queueDl);
+
+			message->exec();
+
+			message->deleteLater();
+		}
+		else
+			systray->showMessage(QString(tr("Queue Processed")), QString(tr("One or more errors occourred, your Queue\nwas not successfully processed")));
 	}
-
-	qDebug() << "Transaction Completed Successfully";
-
-	if(!pkgsViewWG->findItems("pacman", Qt::MatchExactly, 1).first()->text(8).isEmpty())
+	else
 	{
-		QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Restart required"), 
-				tr("Pacman or Shaman was updated. Shaman will now quit,\nplease restart it "
-						"to use the new version"), QMessageBox::Ok, queueDl);
+		/* Everything went fine! Cool then, just notify the user and refine the packages view.
+		 */
+		
+		qDebug() << "Transaction Completed Successfully";
 
-		message->exec();
-
-		message->deleteLater();
-
-		qApp->exit(0);
-	}
-	if(!pkgsViewWG->findItems("shaman", Qt::MatchExactly, 1).isEmpty())
-		if(!pkgsViewWG->findItems("shaman", Qt::MatchExactly, 1).first()->text(8).isEmpty())
+		if(!pkgsViewWG->findItems("pacman", Qt::MatchExactly, 1).first()->text(8).isEmpty())
 		{
 			QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Restart required"), 
 					tr("Pacman or Shaman was updated. Shaman will now quit,\nplease restart it "
@@ -1422,22 +1428,36 @@ void MainWindow::queueProcessingEnded(bool errors)
 
 			qApp->exit(0);
 		}
+		if(!pkgsViewWG->findItems("shaman", Qt::MatchExactly, 1).isEmpty())
+			if(!pkgsViewWG->findItems("shaman", Qt::MatchExactly, 1).first()->text(8).isEmpty())
+			{
+				QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Restart required"), 
+						tr("Pacman or Shaman was updated. Shaman will now quit,\nplease restart it "
+								"to use the new version"), QMessageBox::Ok, queueDl);
 
-	pkgsViewWG->setSortingEnabled(false);
-	populatePackagesView();
-	refinePkgView();
+				message->exec();
 
-	if(queueDl->isVisible())
-	{
-		QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Queue Processed"), 
-				tr("Your Queue was successfully processed!"), QMessageBox::Ok, queueDl);
+				message->deleteLater();
 
-		message->exec();
+				qApp->exit(0);
+			}
 
-		message->deleteLater();
+		pkgsViewWG->setSortingEnabled(false);
+		populatePackagesView();
+		refinePkgView();
+
+		if(queueDl->isVisible())
+		{
+			QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Queue Processed"), 
+					tr("Your Queue was successfully processed!"), QMessageBox::Ok, queueDl);
+
+			message->exec();
+
+			message->deleteLater();
+		}
+		else
+			systray->showMessage(QString(tr("Queue Processed")), QString(tr("Your Queue was successfully processed!!")));
 	}
-	else
-		systray->showMessage(QString(tr("Queue Processed")), QString(tr("Your Queue was successfully processed!!")));
 		
 	queueDl->deleteLater();
 	
