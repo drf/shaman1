@@ -221,7 +221,11 @@ void BuildingDialog::processCurrentQueueItem()
 	/* Let's build the path we need */
 	
 	if(!setUpBuildingEnvironment(buildQueue.at(currentItem)))
+	{
+		progressEdit->append(QString(tr("<b>Could not set up the environment correctly for %1!!</b><br><br>")).arg(buildQueue.at(currentItem)));
 		finishedBuildingAction(1, QProcess::CrashExit);
+		return;
+	}
 		
 	QSettings *settings = new QSettings();
 
