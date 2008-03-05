@@ -30,12 +30,12 @@
 ShamanEngine::ShamanEngine(QObject *parent, const QVariantList &args)
   : Plasma::DataEngine(parent),
   dbus(QDBusConnection::systemBus()),
-  currentAction("idle")
+  currentAction("idle"),
+  dbusError(false),
+  slotsAreConnected(false)
 {
 	Q_UNUSED(args)
 	
-	connect(dbus.interface(), SIGNAL(serviceRegistered(const QString&)), SLOT(serviceRegistered(const QString&)));
-    
 }
 
 ShamanEngine::~ShamanEngine()
@@ -84,10 +84,26 @@ void ShamanEngine::getShamanData(const QString &name)
 
 bool ShamanEngine::isDBusServiceRegistered()
 {
-	return dbus.interface()->isServiceRegistered(SHAMAN_DBUS_SERVICE);
+	if(dbus.interface()->isServiceRegistered(SHAMAN_DBUS_SERVICE))
+	{
+		if(!slotsAreConnected)
+		{
+			connectDBusSlots();
+			slotsAreConnected = true;
+		}
+		return true;
+	}
+	else
+	{
+		if(slotsAreConnected)
+		{
+			slotsAreConnected = false;
+		}
+		return false;
+	}
 }
 
-void ShamanEngine::actionStatusChanged(const QString &action)
+void ShamanEngine::actionChanged(const QString &action)
 {
 	currentAction = action;
 	updateSource("shaman");
@@ -101,7 +117,7 @@ void ShamanEngine::updateShamanData()
 void ShamanEngine::connectDBusSlots()
 {
 	if(!dbus.connect("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", 
-			"actionStatusChanged", this, SLOT(actionStatusChanged(const QString&))))
+			"actionStatusChanged", this, SLOT(actionChanged(const QString&))))
 	{
 		kDebug() << "Couldn't connect a slot through DBus";
 		dbusError = true;
@@ -109,12 +125,5 @@ void ShamanEngine::connectDBusSlots()
 	else
 		dbusError = false;
 }
-
-void ShamanEngine::serviceRegistered(const QString &srvname)
-{
-	if(srvname == SHAMAN_DBUS_SERVICE)
-		connectDBusSlots();
-}
-
 
 #include "shamanEngine.moc"
