@@ -432,12 +432,14 @@ bool AlpmHandler::performCurrentTransaction()
 
 	if(alpm_trans_prepare(&data) == -1)
 	{
+		handleError(1, data);
 		releaseTransaction();
 		return false;
 	}
 
 	if(alpm_trans_commit(&data) == -1)
 	{
+		handleError(2, data);
 		releaseTransaction();
 		return false;
 	}
@@ -458,6 +460,7 @@ bool AlpmHandler::fullSystemUpgrade()
 
 	if(alpm_trans_sysupgrade() == -1)
 	{
+		handleError(0, NULL);
 		releaseTransaction();
 		return false;
 	}
@@ -999,4 +1002,89 @@ QString AlpmHandler::getPackageRepo(const QString &name, bool checkver)
 	}
 	
 	return QString();
+}
+
+void AlpmHandler::handleError(int action, alpm_list_t *data)
+{
+	QString errMsg;
+
+	switch(action) 
+	{
+	case 0:
+		// Error while init'ing a upgrade
+		emit preparingUpgradeError();
+		break;
+
+	case 1:
+		// Error while preparing a transaction
+		switch(pm_errno) 
+		{
+		alpm_list_t *i;
+		case PM_ERR_UNSATISFIED_DEPS:
+			for(i = data; i; i = alpm_list_next(i)) 
+			{
+				pmdepmissing_t *miss = (pmdepmissing_t *)alpm_list_getdata(i);
+				pmdepend_t *dep = alpm_miss_get_dep(miss);
+				char *depstring = alpm_dep_get_string(dep);
+				errMsg.append(QString(alpm_miss_get_target(miss) + tr(": requires ") + depstring));
+				free(depstring);
+			}
+			break;
+		case PM_ERR_CONFLICTING_DEPS:
+			for(i = data; i; i = alpm_list_next(i)) 
+			{
+				pmconflict_t *conflict = (pmconflict_t *)alpm_list_getdata(i);
+				errMsg.append(QString(alpm_conflict_get_package1(conflict) + tr(": conflicts with ") 
+						+ alpm_conflict_get_package2(conflict)));
+			}
+			break;
+		default:
+			break;
+		}
+		
+		emit preparingTransactionError(errMsg);
+		
+		break;
+
+	case 2:
+		// Error while committing a transaction
+		switch(pm_errno) 
+		{
+		alpm_list_t *i;
+		case PM_ERR_FILE_CONFLICTS:
+			for(i = data; i; i = alpm_list_next(i)) 
+			{
+				pmfileconflict_t *conflict = (pmfileconflict_t *)alpm_list_getdata(i);
+				switch(alpm_fileconflict_get_type(conflict)) 
+				{
+				case PM_FILECONFLICT_TARGET:
+					errMsg.append(QString(tr("%1 exists in both '%2' and '%3'")).
+							arg(alpm_fileconflict_get_file(conflict)).
+							arg(alpm_fileconflict_get_target(conflict)).
+							arg(alpm_fileconflict_get_ctarget(conflict)));
+					break;
+				case PM_FILECONFLICT_FILESYSTEM:
+					errMsg.append(QString(alpm_fileconflict_get_target(conflict) + 
+							tr(": %1 exists in filesystem")).arg(alpm_fileconflict_get_file(conflict)));
+					break;
+				}
+			}
+			break;
+		case PM_ERR_PKG_CORRUPTED:
+			for(i = data; i; i = alpm_list_next(i)) 
+			{
+				errMsg.append((char*)alpm_list_getdata(i));
+			}
+			break;
+		default:
+			break;
+		}
+		
+		emit committingTransactionError(errMsg);
+		
+		break;
+
+	default:
+		break;
+	}
 }

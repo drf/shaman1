@@ -66,6 +66,9 @@ public slots:
 	void writeLineProgressErr();
 	void finishedScriptletRunning(int eC,QProcess::ExitStatus eS);
 	
+	void handlePreparingError(const QString &msg);
+	void handleCommittingError(const QString &msg);
+	
 private:
 	bool unpackPkg(const QString &pathToPkg, const QString &pathToEx, const QString &file);
 	bool checkScriptlet(const QString &path, const QString &action);
@@ -80,6 +83,7 @@ private:
 	int status;
 	char cwd[4096];
 	bool scrRun;
+	bool errors;
 };
 
 #endif /*QUEUEDIALOG_H_*/

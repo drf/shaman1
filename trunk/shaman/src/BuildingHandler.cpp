@@ -223,14 +223,14 @@ void BuildingHandler::validateSourceQueue()
 	{
 		aHandle->addSyncToQueue(itm->text(1));
 		QTreeWidgetItem *itmL = revBuildUi->treeWidget->findItems(tr("To be Installed"), Qt::MatchExactly, 0).first();
-		QTreeWidgetItem *childitm = new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
+		new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
 	}
 
 	foreach(QTreeWidgetItem *itm, mWin->getUpgradePackagesInWidgetQueue())
 	{
 		aHandle->addSyncToQueue(itm->text(1));
 		QTreeWidgetItem *itmL = revBuildUi->treeWidget->findItems(tr("To be Upgraded"), Qt::MatchExactly, 0).first();
-		QTreeWidgetItem *childitm = new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
+		new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
 	}
 	
 	connect(revBuildUi->binaryButton, SIGNAL(clicked()), reviewBQueue, SLOT(close()));

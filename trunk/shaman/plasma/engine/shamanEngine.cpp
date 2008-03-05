@@ -100,8 +100,8 @@ void ShamanEngine::updateShamanData()
 
 void ShamanEngine::connectDBusSlots()
 {
-	if(!dbus.connect(SHAMAN_DBUS_SERVICE, SHAMAN_DBUS_PATH, SHAMAN_DBUS_INTERFACE, 
-			SIGNAL(actionStatusChanged(const QString&)), this, SLOT(actionStatusChanged(const QString&))))
+	if(!dbus.connect("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", 
+			"actionStatusChanged", this, SLOT(actionStatusChanged(const QString&))))
 	{
 		kDebug() << "Couldn't connect a slot through DBus";
 		dbusError = true;

@@ -992,6 +992,8 @@ void ConfigDialog::mantProgress()
 
 void ConfigDialog::cleanProc(int eC, QProcess::ExitStatus eS)
 {
+	Q_UNUSED(eS);
+	
 	if(eC == 0)
 	{
 		statusLabel->setText(QString(tr("Pacman Database Optimized Successfully!")));

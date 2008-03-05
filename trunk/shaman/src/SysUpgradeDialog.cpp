@@ -59,15 +59,15 @@ aHandle(hnd)
 
 		foreach(QString pkg, aHandle->getUpgradeablePackages())
 		{
-			QTreeWidgetItem *childitm = new QTreeWidgetItem(itm, QStringList() << QString(pkg + " (" + 
+			new QTreeWidgetItem(itm, QStringList() << QString(pkg + " (" + 
 					aHandle->getPackageVersion(pkg, "local") + "-->" + 
-					aHandle->getPackageVersion(pkg, aHandle->getPackageRepo(pkg, true)) + ")"));
+					aHandle->getPackageVersion(pkg, aHandle->getPackageRepo(pkg, true)) + QChar(')')));
 		}
 
 		connect(abortButton, SIGNAL(clicked()), SLOT(abort()));
 		connect(addToQueue, SIGNAL(clicked()), SLOT(addPkg()));
 		connect(goUpgrading, SIGNAL(clicked()), SLOT(initSysUpgrade()));
-		
+
 		treeWidget->hide();
 		adjustSize();
 	}

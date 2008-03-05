@@ -124,6 +124,7 @@ private:
 	bool initTransaction(pmtranstype_t type, pmtransflag_t flags);
 	bool releaseTransaction();
 	bool setUpAlpmSettings();
+	void handleError(int action, alpm_list_t *data);
 
 signals:
 	void streamDbUpdatingStatus(const QString &repo, int action);
@@ -132,6 +133,11 @@ signals:
 	void dbUpdatePerformed();
 	void transactionStarted();
 	void transactionReleased();
+	
+	// Error streaming
+	void preparingUpgradeError();
+	void preparingTransactionError(const QString &msg);
+	void committingTransactionError(const QString &msg);
 
 private:
 	pmdb_t *db_local;

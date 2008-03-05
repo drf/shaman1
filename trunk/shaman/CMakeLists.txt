@@ -52,13 +52,10 @@ SET(shaman_MOC_HDRS
     src/BuildingDialog.h
     src/callbacks.h
     src/configDialog.h
-    src/ConfigurationParser.h
     src/EditPBuild.h
     src/QueueDialog.h
-    src/StringUtils.h
     src/SysUpgradeDialog.h
     src/UpdateDbDialog.h
-    src/ABSHandler.h
     src/BuildingHandler.h
 )
 

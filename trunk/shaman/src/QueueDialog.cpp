@@ -46,7 +46,8 @@ using namespace std;
 QueueDialog::QueueDialog(AlpmHandler *hnd, QWidget *parent)
 : QDialog(parent),
   aHandle(hnd),
-  scrRun(false)
+  scrRun(false),
+  errors(false)
 {
 	setupUi(this);
 	textEdit->hide();
@@ -56,6 +57,10 @@ QueueDialog::QueueDialog(AlpmHandler *hnd, QWidget *parent)
 	
 	connect(&CbackReference, SIGNAL(streamTransEvent(pmtransevt_t, void*, void*)),
 			SLOT(changeStatus(pmtransevt_t, void*, void*)));
+	connect(aHandle, SIGNAL(preparingTransactionError(const QString&)), 
+			SLOT(handlePreparingError(const QString&)));
+	connect(aHandle, SIGNAL(committingTransactionError(const QString&)), 
+				SLOT(handleCommittingError(const QString&)));
 	
 	transLabel->setPixmap(QIcon(":/Icons/icons/edit-redo.png").pixmap(22));
 	textEdit->append(QString(tr("<br><b> * Validating Transaction</b><br>")));
@@ -95,7 +100,6 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 	
 	qDebug() << "Entering Queue Lock";
 
-	char *pArch, *p1Name, *p1Ver, *p2Ver;
 	switch(event) 
 	{
 	case PM_TRANS_EVT_CHECKDEPS_START:
@@ -384,7 +388,10 @@ void QueueDialog::cleanup()
 	
 	qApp->processEvents();
 
-	emit terminated(false);
+	if(!errors)
+		emit terminated(false);
+	else
+		emit terminated(true);
 }
 
 bool QueueDialog::runScriptlet(int action, const QString &p1N, const QString &p1V, 
@@ -426,9 +433,7 @@ bool QueueDialog::runScriptlet(int action, const QString &p1N, const QString &p1
 
 	/* Ok, libalpm docet here. */
 
-	struct stat buf;
 	int clean_tmpdir = 0;
-	int retval = 0;
 
 	QString tmpdir("/tmp/alpm_XXXXXX");
 
@@ -529,7 +534,6 @@ bool QueueDialog::unpackPkg(const QString &pathToPkg, const QString &pathToEx, c
 {
 	/* This is a copy-paste from util.c */
 	
-	int ret = 1;
 	mode_t oldmask;
 	struct archive *_archive;
 	struct archive_entry *entry;
@@ -604,6 +608,8 @@ bool QueueDialog::unpackPkg(const QString &pathToPkg, const QString &pathToEx, c
 
 void QueueDialog::finishedScriptletRunning(int eC,QProcess::ExitStatus eS)
 {
+	Q_UNUSED(eS);
+	
 	if(eC == 0)
 	{
 		qDebug() << "Scriptlet Run successfully!!";
@@ -686,4 +692,34 @@ bool QueueDialog::checkScriptlet(const QString &path, const QString &action)
 		fp.close();
 		return false;
 	}
+}
+
+void QueueDialog::handlePreparingError(const QString &msg)
+{
+	QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Queue Processing"), QString(tr("There has been an error"
+			" while preparing the transaction.\n") + alpm_strerrorlast()), QMessageBox::Ok);
+	
+	QTextEdit *txtEd = new QTextEdit(msg, message);
+	txtEd->setReadOnly(true);
+
+	message->exec();
+
+	message->deleteLater();
+
+	errors = true;
+}
+
+void QueueDialog::handleCommittingError(const QString &msg)
+{
+	QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Queue Processing"), QString(tr("There has been an error"
+			" while committing the transaction.\n") + alpm_strerrorlast()), QMessageBox::Ok);
+
+	QTextEdit *txtEd = new QTextEdit(msg, message);
+	txtEd->setReadOnly(true);
+
+	message->exec();
+
+	message->deleteLater();
+
+	errors = true;
 }

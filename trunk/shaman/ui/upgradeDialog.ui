@@ -85,7 +85,7 @@
      <item>
       <widget class="QPushButton" name="showPackages" >
        <property name="text" >
-        <string>Show packages..</string>
+        <string>Show packages...</string>
        </property>
        <property name="checkable" >
         <bool>true</bool>

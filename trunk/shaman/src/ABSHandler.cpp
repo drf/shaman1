@@ -162,7 +162,6 @@ QStringList ABSHandler::getMakeDepends(const QString &package)
 	QDir absDir("/var/abs");
 	absDir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot | QDir::NoSymLinks);
 
-	int found = 0;
 	QString absSource(ABSHandler::getABSPath(package));
 
 	if(absSource == QString())
