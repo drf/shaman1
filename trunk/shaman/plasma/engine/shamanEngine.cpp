@@ -34,7 +34,11 @@ ShamanEngine::ShamanEngine(QObject *parent, const QVariantList &args)
   dbusError(false),
   slotsAreConnected(false),
   curitm(QString()),
-  curitmAct(0)
+  curitmAct(0),
+  singleDlPercent(0),
+  singleDlSpd(0),
+  totalDlPercent(0),
+  totalDlSpd(0)
 {
 	Q_UNUSED(args)
 	
@@ -78,6 +82,10 @@ void ShamanEngine::getShamanData(const QString &name)
 		setData(name, "DBusError", dbusError);
 		setData(name, "CurrentItemProcessed", curitm);
 		setData(name, "CurrentItemStatus", curitmAct);
+		setData(name, "CurrentItemDlSpeed", singleDlSpd);
+		setData(name, "CurrentItemDlPercent", singleDlPercent);
+		setData(name, "TotalDlSpeed", totalDlSpd);
+		setData(name, "TotalDlPercent", totalDlPercent);
 	}
 	else 
 	{
@@ -131,12 +139,28 @@ void ShamanEngine::connectDBusSlots()
 		dbusError = true;
 	else
 		dbusError = false;
+
+	if(!dbus.connect("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", 
+			"streamTransDlProg", this, SLOT(dlProg(const QString&,int,int,int,int))))
+		dbusError = true;
+	else
+		dbusError = false;
 }
 
 void ShamanEngine::dbUpdate(const QString &repo, int action)
 {
 	curitm = repo;
 	curitmAct = action;
+}
+
+void ShamanEngine::dlProg(const QString &filename, int singlePercent, int singleSpeed,
+		int totalPercent, int totalSpeed)
+{
+	curitm = filename;
+	singleDlPercent = singlePercent;
+	singleDlSpd = singleSpeed;
+	totalDlPercent = totalPercent;
+	totalDlSpd = totalSpeed;
 }
 
 #include "shamanEngine.moc"

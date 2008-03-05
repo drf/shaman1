@@ -58,6 +58,8 @@ signals:
 	void streamTransDlProg(char *filename, int file_x, int file_t, int spd_f,
 			int list_x, int list_t, int spd_l);
 	void questionStreamed(const QString &msg);
+	void streamTransDlProg(const QString &filename, int singlePercent, int singleSpeed,
+				int totalPercent, int totalSpeed);
 	
 public:
 	int answer;

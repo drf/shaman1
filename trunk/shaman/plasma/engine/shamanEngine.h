@@ -50,6 +50,8 @@ private slots:
 	void connectDBusSlots();
 	void dbUpdate(const QString &repo, int action);
 	void actionChanged(const QString &action);
+	void dlProg(const QString &filename, int singlePercent, int singleSpeed,
+			int totalPercent, int totalSpeed);
 	
 private:
 	bool isDBusServiceRegistered();
@@ -61,6 +63,11 @@ private:
 	
 	QString curitm;
 	int curitmAct;
+	
+	int singleDlPercent;
+	int singleDlSpd;
+	int totalDlPercent;
+	int totalDlSpd;
 };
 
 K_EXPORT_PLASMA_DATAENGINE(shaman, ShamanEngine)

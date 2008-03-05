@@ -24,6 +24,13 @@
 			<arg type="s" direction="out" />
 			<arg type="i" direction="out" />
 		</signal>
+		<signal name="streamTransDlProg">
+			<arg type="s" direction="out" />
+			<arg type="i" direction="out" />
+			<arg type="i" direction="out" />
+			<arg type="i" direction="out" />
+			<arg type="i" direction="out" />
+		</signal>
 		<signal name="shamanReady">
 		</signal>
 		<signal name="aboutToQuit">

@@ -119,6 +119,8 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	connect(actionBuild_and_Install_Selected, SIGNAL(triggered()), SLOT(initSourceQueue()));
 	connect(actionCancel_all_actions, SIGNAL(triggered()), SLOT(cancelAllActions()));
 	connect(aHandle, SIGNAL(streamDbUpdatingStatus(const QString&,int)), SIGNAL(streamDbUpdatingStatus(const QString&,int)));
+	connect(&CbackReference, SIGNAL(streamTransDlProg(const QString&,int,int,int,int)), 
+			SIGNAL(streamTransDlProg(const QString&,int,int,int,int)));
 
 	QSettings *settings = new QSettings();
 

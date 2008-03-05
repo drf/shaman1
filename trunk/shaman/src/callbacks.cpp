@@ -218,9 +218,16 @@ void CallBacks::cb_dl_progress(const char *filename, int file_xfered, int file_t
 		rate_total = rate_l;
 		xfered_total = list_xfered;
 	}
+	
+	int filePercent = (float)((float)file_xfered/(float)file_total) * 100;
+	int listPercent = (float)((float)list_xfered/(float)list_total) * 100;
+	
+	qDebug() << filePercent << listPercent;
 
 	emit streamTransDlProg((char *)filename, file_xfered, file_total, (int)rate_f,
 			list_xfered, list_total, (int)rate_l);
+	emit streamTransDlProg(QString((char *)filename), filePercent, 
+			rate_f, listPercent, rate_l);
 }
 
 void CallBacks::cb_log(pmloglevel_t level, char *fmt, va_list args)

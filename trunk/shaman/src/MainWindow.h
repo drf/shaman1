@@ -65,6 +65,8 @@ signals:
 	void upgradesAvailable();
 	void actionStatusChanged(const QString &name);
 	void streamDbUpdatingStatus(const QString &repo, int action);
+	void streamTransDlProg(const QString &filename, int singlePercent, int singleSpeed,
+					int totalPercent, int totalSpeed);
 	
 public slots:
 	bool populatePackagesView();
