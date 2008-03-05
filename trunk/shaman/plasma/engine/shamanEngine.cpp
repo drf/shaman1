@@ -32,7 +32,9 @@ ShamanEngine::ShamanEngine(QObject *parent, const QVariantList &args)
   dbus(QDBusConnection::systemBus()),
   currentAction("idle"),
   dbusError(false),
-  slotsAreConnected(false)
+  slotsAreConnected(false),
+  curitm(QString()),
+  curitmAct(0)
 {
 	Q_UNUSED(args)
 	
@@ -74,6 +76,8 @@ void ShamanEngine::getShamanData(const QString &name)
 		setData(name, "error", false);
 		setData(name, "transactionStatus", currentAction);
 		setData(name, "DBusError", dbusError);
+		setData(name, "CurrentItemProcessed", curitm);
+		setData(name, "CurrentItemStatus", curitmAct);
 	}
 	else 
 	{
@@ -118,12 +122,21 @@ void ShamanEngine::connectDBusSlots()
 {
 	if(!dbus.connect("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", 
 			"actionStatusChanged", this, SLOT(actionChanged(const QString&))))
-	{
-		kDebug() << "Couldn't connect a slot through DBus";
 		dbusError = true;
-	}
 	else
 		dbusError = false;
+
+	if(!dbus.connect("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", 
+			"streamDbUpdatingStatus", this, SLOT(dbUpdate(const QString&,int))))
+		dbusError = true;
+	else
+		dbusError = false;
+}
+
+void ShamanEngine::dbUpdate(const QString &repo, int action)
+{
+	curitm = repo;
+	curitmAct = action;
 }
 
 #include "shamanEngine.moc"

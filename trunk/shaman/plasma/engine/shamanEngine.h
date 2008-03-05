@@ -44,14 +44,12 @@ protected:
 	bool sourceRequested(const QString &name);
 	bool updateSource(const QString &name);
 
-public slots:
-	void actionChanged(const QString &action);
-
-
 private slots:
 	void getShamanData(const QString &name);
 	void updateShamanData();
 	void connectDBusSlots();
+	void dbUpdate(const QString &repo, int action);
+	void actionChanged(const QString &action);
 	
 private:
 	bool isDBusServiceRegistered();
@@ -60,6 +58,9 @@ private:
 	QString currentAction;
 	bool dbusError;
 	bool slotsAreConnected;
+	
+	QString curitm;
+	int curitmAct;
 };
 
 K_EXPORT_PLASMA_DATAENGINE(shaman, ShamanEngine)
