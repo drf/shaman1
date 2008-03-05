@@ -113,8 +113,16 @@ bool ABSHandler::setUpBuildingEnvironment(const QString &package)
 
 	if(!pathDir.mkpath(path))
 		return false;
+	
+	QString abspath(getABSPath(package));
+	
+	if(abspath == QString())
+	{
+		qDebug() << "Couldn't find a matching ABS Dir!!";
+		return false;
+	}
 
-	QDir absPDir(getABSPath(package));
+	QDir absPDir(abspath);
 	absPDir.setFilter(QDir::Files | QDir::Hidden | QDir::NoDotAndDotDot | QDir::NoSymLinks);
 
 	QFileInfoList Plist = absPDir.entryInfoList();
