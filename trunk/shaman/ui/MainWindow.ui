@@ -595,6 +595,9 @@
    </property>
   </action>
   <action name="actionUpdate_ABS_Tree" >
+   <property name="icon" >
+    <iconset resource="qtpacman.qrc" >:/Icons/icons/document-open-remote.png</iconset>
+   </property>
    <property name="text" >
     <string>Update ABS Tree</string>
    </property>
