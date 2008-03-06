@@ -2,7 +2,7 @@
 Name=Shaman
 GenericName=Package Manager
 Exec=shaman
-Icon=shaman
+Icon=shaman-32
 Type=Application
 Terminal=false
 Comment=A Package Manager for ArchLinux
