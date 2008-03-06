@@ -85,7 +85,7 @@ QStringList ConfigDialog::getMirrorList()
 
 void ConfigDialog::setupGeneral()
 {
-	listWidget->insertItem(0, new QListWidgetItem(QIcon(":/Icons/icons/network-server-database.png"), tr("General")));//FIXME: Replace icon
+	listWidget->insertItem(0, new QListWidgetItem(QIcon(":/Icons/icons/shaman/shaman-22.png"), tr("General")));//FIXME: Replace icon
 	
 	mantActionBox->addItems(QStringList() << QString(tr("Clean Unused Databases")) << QString(tr("Clean Cache")) << 
 			QString(tr("Empty Cache")) << QString(tr("Optimize Pacman Database")) << QString(tr("Clean All Building Environments")));
@@ -196,7 +196,7 @@ void ConfigDialog::setupRepos()
 
 void ConfigDialog::setupPacman()
 {
-	listWidget->addItem(new QListWidgetItem(QIcon(":/Icons/icons/network-server-database.png"), tr("Pacman")));//FIXME: Replace icon
+	listWidget->addItem(new QListWidgetItem(QIcon(":/Icons/icons/shaman/animation_source/anim06.png"), tr("Pacman")));//FIXME: Replace icon
 	
 	/* Let's read alpm configuration! */
 	if(alpm_option_get_nopassiveftp())
