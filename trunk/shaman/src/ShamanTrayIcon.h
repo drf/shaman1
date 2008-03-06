@@ -16,58 +16,56 @@
  *   along with this program; if not, write to the                         *
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
- **************************************************************************/
+ ***************************************************************************/
 
-#ifndef BUILDINGHANDLER_H_
-#define BUILDINGHANDLER_H_
+#ifndef SHAMANTRAYICON_H_
+#define SHAMANTRAYICON_H_
 
-#include <QStringList>
-#include <QDialog>
+#include "kanimatedsystemtrayicon.h"
+#include "MainWindow.h"
+#include "AlpmHandler.h"
 
-#include "ui_reviewBuildingDialog.h"
+namespace ShamanIcon {
 
-class MainWindow;
-class AlpmHandler;
-class BuildingDialog;
-class EditPBuild;
-class QueueDialog;
+	enum IconStatus {
+		IdleIcon,
+		UpgradesAvailableIcon,
+		ProcessingIcon
+	};
 
-class BuildingHandler : public QObject
+}  // namespace ShamanIcon
+
+
+class ShamanTrayIcon : public KAnimatedSystemTrayIcon
 {
 	Q_OBJECT
 	
 public:
-	explicit BuildingHandler(MainWindow *mW, AlpmHandler *aH);
-	virtual ~BuildingHandler();
-
+	explicit ShamanTrayIcon(MainWindow *mW, AlpmHandler *aH);
+	virtual ~ShamanTrayIcon();
+	
 public slots:
-	void updateABSTree();
-	void validateSourceQueue();
-	void startSourceProcessing();
-	void finishedBuilding(int failure, const QStringList &targets);
-	void processBuiltPackages();
-	void openPBuildDialog();
-	void processBuildWizard();
-	void reduceBuildingInTray();
-	void ABSUpdateEnded();
-	void nullifyBDialog();
+	void changeIconStatus(ShamanIcon::IconStatus status);
+	void dbUpdateTray();
+	void startTimer();
+	void stopTimer();
+	void changeTimerInterval();
+	
+private slots:
+	void transactionStarted();
+	void transactionReleased();
+	void enableTrayActions();
+	void disableTrayActions();
 	
 signals:
-	void outOfScope();
-	void buildingStarted();
-	void buildingFinished();
-
+	void startDbUpdate();
+	
 private:
-	BuildingDialog *buildDialog;
-	Ui::reviewBuildingDialog *revBuildUi;
-	EditPBuild *pBuildEditor;
-	QDialog *reviewBQueue;
-	MainWindow *mWin;
+	MainWindow *mainWin;
 	AlpmHandler *aHandle;
-
-	QStringList installedMakeDepends;
-	QStringList installedBinaryPkgs;
-	QStringList buildTargets;
+	QTimer *trayUpDb;
+	QList<QAction *> systrayAct;
+	
 };
 
-#endif /*BUILDINGHANDLER_H_*/
+#endif /*SHAMANTRAYICON_H_*/

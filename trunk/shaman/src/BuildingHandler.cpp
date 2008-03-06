@@ -32,6 +32,7 @@
 #include "BuildingDialog.h"
 #include "QueueDialog.h"
 #include "EditPBuild.h"
+#include "ShamanTrayIcon.h"
 
 BuildingHandler::BuildingHandler(MainWindow *mW, AlpmHandler *aH)
 : mWin(mW),
@@ -262,6 +263,8 @@ void BuildingHandler::openPBuildDialog()
 
 void BuildingHandler::startSourceProcessing()
 {
+	emit buildingStarted();
+	
 	if(mWin->queueDl != NULL)
 	{
 		mWin->queueDl->deleteLater();
@@ -305,10 +308,12 @@ void BuildingHandler::finishedBuilding(int failure, const QStringList &targets)
 {
 	buildTargets.clear();
 	
+	emit buildingFinished();
+	
 	if(failure == 2)
 	{
 		if(buildDialog->isHidden())
-			mWin->systray->showMessage(QString(tr("Package Building")), QString(tr("Your Packages failed to build!")));
+			mWin->getTrayIcon()->showMessage(QString(tr("Package Building")), QString(tr("Your Packages failed to build!")));
 		else
 		{
 			QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), QString(tr("Your packages Failed to Build.\n"
@@ -325,8 +330,6 @@ void BuildingHandler::finishedBuilding(int failure, const QStringList &targets)
 		buildDialog->processingLabel->setText(QString(tr("Building Packages Failed!!")));
 		buildDialog->buildingLabel->setText(QString());
 
-		mWin->systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
-		mWin->systray->setToolTip(QString(tr("Shaman - Idle")));
 		return;	
 	}
 	else if(failure == 1)
@@ -353,8 +356,6 @@ void BuildingHandler::finishedBuilding(int failure, const QStringList &targets)
 			buildDialog->abortButton->setText(QString(tr("Close")));
 			disconnect(buildDialog->abortButton, SIGNAL(clicked()), buildDialog, SLOT(abortProcess()));
 			connect(buildDialog->abortButton, SIGNAL(clicked()), buildDialog, SLOT(deleteLater()));
-			mWin->systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
-			mWin->systray->setToolTip(QString(tr("Shaman - Idle")));
 			break;
 		default:
 			// should never be reached
@@ -375,7 +376,7 @@ void BuildingHandler::finishedBuilding(int failure, const QStringList &targets)
 			buildDialog->processingLabel->setText(QString(tr("Packages Built Successfully!")));
 			buildDialog->buildingLabel->setText(QString());
 			if(buildDialog->isHidden())
-				mWin->systray->showMessage(QString(tr("Package Building")), QString(tr("Your Packages have been built successfully, "
+				mWin->getTrayIcon()->showMessage(QString(tr("Package Building")), QString(tr("Your Packages have been built successfully, "
 						"and are ready to be installed")));
 						
 						
@@ -504,10 +505,6 @@ void BuildingHandler::processBuildWizard()
 		mWin->queueDl->startProcessing();
 
 		mWin->queueDl->show();
-
-		mWin->systray->setIcon(QIcon(":/Icons/icons/edit-redo.png"));
-		mWin->systray->setToolTip(QString(tr("Shaman - Processing")));
-
 	}
 	
 }

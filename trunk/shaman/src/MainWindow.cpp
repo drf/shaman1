@@ -29,6 +29,7 @@
 #include "EditPBuild.h"
 #include "ABSHandler.h"
 #include "BuildingHandler.h"
+#include "ShamanTrayIcon.h"
 #include "ui_aboutDialog.h"
 #include "shamanadaptor.h"
 
@@ -72,6 +73,8 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	QDBusConnection dbus = QDBusConnection::systemBus();
 	
 	dbus.registerObject("/Shaman", this);
+	
+	trayicon = new ShamanTrayIcon(this, aHandle);
 
 	qDebug() << "Shaman registered on the System Bus as" << dbus.baseService();
 		
@@ -91,8 +94,6 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	pkgsViewWG->headerItem()->setIcon(2, QIcon(":/Icons/icons/applications-development.png"));
 	pkgsViewWG->headerItem()->setText(2, QString());
 	pkgsViewWG->setColumnWidth(2, 30);
-
-	setupSystray();
 	
 	nameDescBox->addItem(tr("Name"));
 	nameDescBox->addItem(tr("Description"));
@@ -112,7 +113,10 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	connect(nameDescBox, SIGNAL(currentIndexChanged(int)), SLOT(refinePkgView()));
 	connect(searchLine, SIGNAL(textChanged(const QString&)), SLOT(refinePkgView()));
 	connect(actionPacman_Preferences, SIGNAL(triggered()), SLOT(showSettings()));
-	connect(systray, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), SLOT(systrayActivated(QSystemTrayIcon::ActivationReason)));
+	connect(trayicon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), SLOT(systrayActivated(QSystemTrayIcon::ActivationReason)));
+	connect(trayicon, SIGNAL(startDbUpdate()), SLOT(doDbUpdate()));
+	connect(this, SIGNAL(startTimer()), trayicon, SLOT(startTimer()));
+	connect(this, SIGNAL(stopTimer()), trayicon, SLOT(stopTimer()));
 	connect(actionQuit, SIGNAL(triggered()), SLOT(quitApp()));
 	connect(actionAbout, SIGNAL(triggered()), SLOT(showAboutDialog()));
 	connect(actionInstall_Package_From_File, SIGNAL(triggered()), SLOT(getPackageFromFile()));
@@ -143,61 +147,6 @@ MainWindow::~MainWindow()
 	return;
 }
 
-void MainWindow::setupSystray()
-{
-	systray = new KAnimatedSystemTrayIcon();
-	systray->stopMovie();
-	systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
-	systray->show();
-	
-	systrayAct.clear();
-	
-	QMenu *systrayMenu = new QMenu();
-	
-	QAction *updateDBAction = systrayMenu->addAction(QIcon(":/Icons/icons/view-refresh.png"), tr("Update Database"));
-	connect(updateDBAction, SIGNAL(triggered()), SLOT(doDbUpdate()));
-	systrayAct.append(updateDBAction);
-	
-	QAction *upgradeAction = systrayMenu->addAction(QIcon(":/Icons/icons/edit-redo.png"), tr("Upgrade System"));
-	connect(upgradeAction, SIGNAL(triggered()), SLOT(fullSysUpgrade()));
-	systrayAct.append(upgradeAction);
-	
-	QAction *queueAction = systrayMenu->addAction(QIcon(":/Icons/icons/dialog-ok-apply.png"), tr("Process Queue"));
-	connect(queueAction, SIGNAL(triggered()), SLOT(widgetQueueToAlpmQueue()));
-	systrayAct.append(queueAction);
-	systrayMenu->addSeparator();
-	
-	QAction *settingsAction = systrayMenu->addAction(QIcon(":/Icons/icons/preferences-system.png"), tr("Settings"));
-	connect(settingsAction, SIGNAL(triggered()), SLOT(showSettings()));
-	systrayAct.append(settingsAction);
-	systrayMenu->addSeparator();
-	
-	QAction *closeAction = systrayMenu->addAction(QIcon(":/Icons/icons/application-exit.png"), tr("Quit"));
-	connect(closeAction, SIGNAL(triggered()), SLOT(quitApp()));
-	systrayAct.append(closeAction);
-	
-	//Add actions here ;)
-	systray->setContextMenu(systrayMenu);
-	systray->setToolTip(QString(tr("Shaman - Idle")));
-	
-	connect(aHandle, SIGNAL(transactionStarted()), SLOT(disableTrayActions()));
-	connect(aHandle, SIGNAL(transactionReleased()), SLOT(enableTrayActions()));
-			
-	QSettings *settings = new QSettings();
-		
-	if(settings->value("scheduledUpdate/enabled").toBool())
-	{
-		trayUpDb = new QTimer(this); /* Oh yeah :) */
-		trayUpDb->setInterval(settings->value("scheduledUpdate/interval", 10).toInt() * 60000);
-
-		connect(trayUpDb, SIGNAL(timeout()), SLOT(dbUpdateTray()));
-	}
-	else
-		trayUpDb = NULL;
-	
-	settings->deleteLater();
-}
-
 void MainWindow::quitApp()
 {
 	QSettings *settings = new QSettings();
@@ -213,10 +162,9 @@ void MainWindow::quitApp()
 
 void MainWindow::closeEvent(QCloseEvent *evt)
 {
-	QSettings *settings = new QSettings();
+	emit startTimer();
 	
-	if(settings->value("scheduledUpdate/enabled").toBool() == true)
-		trayUpDb->start();
+	QSettings *settings = new QSettings();
 	
 	if(!settings->value("gui/confirmquit").toBool())
 	{
@@ -369,17 +317,6 @@ bool MainWindow::populatePackagesView()
 			item->setText(8, tr("Upgrade"));
 			item->setIcon(2, QIcon(":/Icons/icons/list-add.png"));
 		}
-	}
-
-	if(!upgrds.isEmpty())
-	{
-		systray->stopMovie();
-		systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-updates-available-32.png"));
-		systray->setToolTip(QString(tr("Shaman - Idle (Upgrades Available)")));
-		systray->showMessage(QString(tr("System Upgrade")), QString(upgrds.size() == 1 ? tr("There is %1 upgradeable package.\n"
-				"Click here to upgrade your System.") :	tr("There are %1 upgradeable packages.\nClick here to upgrade your System.")).
-				arg(upgrds.size()));
-		connect(systray, SIGNAL(messageClicked()), SLOT(fullSysUpgrade()));
 	}
 
 	pkgsViewWG->sortItems(1, Qt::AscendingOrder);
@@ -739,10 +676,6 @@ void MainWindow::doDbUpdate()
 	connect(dbdialog, SIGNAL(killMe()), this, SLOT(finishDbUpdate()));
 
 	dbdialog->doAction();
-
-	systray->setMovie(new QMovie(":/Icons/icons/shaman/shaman-animation.mng"));
-        systray->startMovie();
-	systray->setToolTip(QString(tr("Shaman - Processing")));
 }
 
 void MainWindow::finishDbUpdate()
@@ -766,24 +699,20 @@ void MainWindow::finishDbUpdate()
 			message->deleteLater();
 		}
 		else
-			systray->showMessage(QString(tr("Database Update")), QString(tr("One or more Databases could "
+			trayicon->showMessage(QString(tr("Database Update")), QString(tr("One or more Databases could "
 					"not be updated.\nLast error reported was:\n%1")).arg(alpm_strerrorlast()));
 	}
 	else
 	{
 		emit actionStatusChanged("dbUpdateFinished");
 		if(dbdialog->isHidden())
-			systray->showMessage(QString(tr("Database Update")), QString(tr("Databases Updated Successfully")));
+			trayicon->showMessage(QString(tr("Database Update")), QString(tr("Databases Updated Successfully")));
 	}
 
 	if(dbdialog->dbHasBeenUpdated())
 		populatePackagesView();
 	
 	dbdialog->deleteLater();
-
-	systray->stopMovie();
-	systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
-	systray->setToolTip(QString(tr("Shaman - Idle")));
 	
 	dbdialog = NULL;
 	
@@ -866,19 +795,8 @@ void MainWindow::finishDbUpdate()
 	}
 	else if(!list.isEmpty())
 	{
-		/* We actually have something to upgrade! We'd 
-		 * better let the user know by changing icon, 
-		 * and showing a balloon.
-		 */
-		QSettings *settings = new QSettings();
-
-		systray->setIcon(QIcon(":/Icons/icons/view-refresh.png"));
-		systray->setToolTip(QString(tr("Shaman - Idle (Upgrades Available)")));
-		systray->showMessage(QString(tr("System Upgrade")), QString(list.size() == 1 ? tr("There is %1 upgradeable package.\n"
-				"Click here to upgrade your System.") :	tr("There are %1 upgradeable packages.\nClick here to upgrade your System.")).
-				arg(list.size()));
-		connect(systray, SIGNAL(messageClicked()), SLOT(fullSysUpgrade()));
-
+		QSettings *settings = new QSettings(); 
+		
 		if(settings->value("scheduledUpdate/addupgradestoqueue").toBool())
 			addUpgradeableToQueue();
 
@@ -1264,10 +1182,6 @@ void MainWindow::startUpgrading()
 	{
 		emit systemIsUpToDate();
 		
-		systray->stopMovie();
-		systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
-		systray->setToolTip(QString(tr("Shaman - Idle")));
-		
 		if(dbdialog->isVisible())
 		{
 			/* Display a simple popup saying the system is up-to-date. */
@@ -1276,7 +1190,7 @@ void MainWindow::startUpgrading()
 			message->show();
 		}
 		else
-			systray->showMessage(QString(tr("System Upgrade")), QString(tr("Your system is up to date!")));
+			trayicon->showMessage(QString(tr("System Upgrade")), QString(tr("Your system is up to date!")));
 		
 		qDebug() << "System is up to date";
 	}
@@ -1289,10 +1203,6 @@ void MainWindow::startUpgrading()
 		 */
 
 		emit upgradesAvailable();
-		
-		systray->stopMovie();
-		systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-updates-available-32.png"));
-		systray->setToolTip(QString(tr("Shaman - Idle (Upgrades Available)")));
 		
 		upDl = new SysUpgradeDialog(aHandle, this);
 
@@ -1344,10 +1254,6 @@ void MainWindow::fullSysUpgrade()
 	connect(dbdialog, SIGNAL(killMe()), this, SLOT(startUpgrading()));
 
 	dbdialog->doAction();
-
-	systray->setMovie(new QMovie(":/Icons/icons/shaman/shaman-animation.mng"));
-        systray->startMovie();
-	systray->setToolTip(QString(tr("Shaman - Processing")));
 }
 
 void MainWindow::upgradePackage()
@@ -1389,14 +1295,10 @@ void MainWindow::processQueue()
 	if(revActive)
 		if(qUi->trayBox->isChecked())
 		{
-			systray->showMessage(QString(tr("Queue Processing")), QString(tr("Your Queue is being processed.\nPlease wait.")));
+			trayicon->showMessage(QString(tr("Queue Processing")), QString(tr("Your Queue is being processed.\nPlease wait.")));
 			hide();
 			queueDl->hide();
 		}
-
-	systray->setMovie(new QMovie(":/Icons/icons/shaman/shaman-animation.mng"));
-        systray->startMovie();
-	systray->setToolTip(QString(tr("Shaman - Processing")));
 
 	if(upActive)
 		upDl->deleteLater();
@@ -1430,7 +1332,7 @@ void MainWindow::queueProcessingEnded(bool errors)
 			message->deleteLater();
 		}
 		else
-			systray->showMessage(QString(tr("Queue Processed")), QString(tr("One or more errors occourred, your Queue\nwas not successfully processed")));
+			trayicon->showMessage(QString(tr("Queue Processed")), QString(tr("One or more errors occourred, your Queue\nwas not successfully processed")));
 	}
 	else
 	{
@@ -1480,16 +1382,12 @@ void MainWindow::queueProcessingEnded(bool errors)
 			message->deleteLater();
 		}
 		else
-			systray->showMessage(QString(tr("Queue Processed")), QString(tr("Your Queue was successfully processed!!")));
+			trayicon->showMessage(QString(tr("Queue Processed")), QString(tr("Your Queue was successfully processed!!")));
 	}
 		
 	queueDl->deleteLater();
 	
 	queueDl = NULL;
-
-        systray->stopMovie();
-	systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
-	systray->setToolTip(QString(tr("Shaman - Idle")));
 }
 
 void MainWindow::widgetQueueToAlpmQueue()
@@ -1610,28 +1508,9 @@ void MainWindow::showSettings()
 	if(configDialog->doDbUpdate())
 		doDbUpdate();
 	
-	changeTimerInterval();
+	trayicon->changeTimerInterval();
 	
 	configDialog->deleteLater();
-}
-
-void MainWindow::dbUpdateTray()
-{
-	/* Are there some transactions in progress? If so, we simply skip
-	 * this cycle, and see you next time.
-	 */
-	
-	if(aHandle->isTransaction())
-		return;
-	
-	/* Ok, let's silently perform a Db Update.
-	 */
-	
-	systray->setMovie(new QMovie(":/Icons/icons/shaman/shaman-animation.mng"));
-        systray->startMovie();
-	systray->setToolTip(QString(tr("Shaman - Processing")));
-	
-	doDbUpdate();
 }
 
 void MainWindow::systrayActivated(QSystemTrayIcon::ActivationReason reason)
@@ -1643,8 +1522,7 @@ void MainWindow::systrayActivated(QSystemTrayIcon::ActivationReason reason)
 		if (isHidden())
 		{
 			/* Uh, we have to stop the Timer! */
-			if(settings->value("scheduledUpdate/enabled").toBool())
-				trayUpDb->stop();
+			emit stopTimer();
 			show();
 			if(dbdialog != NULL)
 				dbdialog->show();
@@ -1653,10 +1531,8 @@ void MainWindow::systrayActivated(QSystemTrayIcon::ActivationReason reason)
 		}
 		else
 		{
-			/* Start Your timer, baby! */
+			emit startTimer();
 			hide();
-			if(settings->value("scheduledUpdate/enabled").toBool())
-				trayUpDb->start();
 			if(dbdialog != NULL)
 				dbdialog->hide();
 			if(queueDl != NULL)
@@ -1742,53 +1618,9 @@ QString MainWindow::formatSize(unsigned long size)
 	return s;
 }
 
-void MainWindow::enableTrayActions()
+void MainWindow::startTrayTimer()
 {
-	foreach(QAction *act, systrayAct)
-		act->setEnabled(true);
-}
-
-void MainWindow::disableTrayActions()
-{
-	foreach(QAction *act, systrayAct)
-		act->setEnabled(false);
-}
-
-void MainWindow::startTimer()
-{
-	QSettings *settings = new QSettings();
-	
-	if(settings->value("scheduledUpdate/enabled").toBool() == true)
-		trayUpDb->start();
-	
-	settings->deleteLater();
-}
-
-void MainWindow::changeTimerInterval()
-{
-	QSettings *settings = new QSettings();
-
-	if(settings->value("scheduledUpdate/enabled").toBool())
-	{
-		if(trayUpDb == NULL)
-			trayUpDb = new QTimer(this);
-		else
-			disconnect(trayUpDb, 0, 0, 0);
-		
-		trayUpDb->setInterval(settings->value("scheduledUpdate/interval", 10).toInt() * 60000);
-
-		connect(trayUpDb, SIGNAL(timeout()), SLOT(dbUpdateTray()));
-	}
-	else
-	{
-		if(trayUpDb != NULL)
-		{
-			trayUpDb->deleteLater();
-			trayUpDb = NULL;
-		}
-	}
-	
-	settings->deleteLater();
+	emit startTimer();
 }
 
 void MainWindow::streamTransQuestion(const QString &msg)
@@ -1839,6 +1671,8 @@ void MainWindow::initSourceQueue()
 	bHandler->validateSourceQueue();
 
 	connect(bHandler, SIGNAL(outOfScope()), SLOT(terminatedBuildingHandling()));
+	connect(bHandler, SIGNAL(buildingFinished()), SIGNAL(buildingFinished()));
+	connect(bHandler, SIGNAL(buildingStarted()), SIGNAL(buildingStarted()));
 }
 
 void MainWindow::terminatedBuildingHandling()
@@ -1870,4 +1704,9 @@ bool MainWindow::packageExists(const QString &pkg)
 		return false;
 	else
 		return true;
+}
+
+ShamanTrayIcon *MainWindow::getTrayIcon()
+{
+	return trayicon;
 }

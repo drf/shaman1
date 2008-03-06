@@ -41,6 +41,7 @@ class UpDbThread;
 class BuildingDialog;
 class EditPBuild;
 class BuildingHandler;
+class ShamanTrayIcon;
 
 class MainWindow : public QMainWindow, public Ui::MainWindow, private StringUtils
 {
@@ -50,13 +51,14 @@ public:
 	explicit MainWindow(AlpmHandler *handler, QMainWindow *parent = 0);
 	~MainWindow();
 	void doUpdView();
-	void startTimer();
+	void startTrayTimer();
 	void installPackage(const QString &package);
 	void reinstallPackage(const QString &package);
 	void removePackage(const QString &package);
 	QList<QTreeWidgetItem *> getInstallPackagesInWidgetQueue();
 	QList<QTreeWidgetItem *> getUpgradePackagesInWidgetQueue();
 	QList<QTreeWidgetItem *> getRemovePackagesInWidgetQueue();
+	ShamanTrayIcon *getTrayIcon();
 
 signals:
 	void shamanReady();
@@ -67,6 +69,11 @@ signals:
 	void streamDbUpdatingStatus(const QString &repo, int action);
 	void streamTransDlProg(const QString &filename, int singlePercent, int singleSpeed,
 					int totalPercent, int totalSpeed);
+	void buildingStarted();
+	void buildingFinished();
+	
+	void startTimer();
+	void stopTimer();
 	
 public slots:
 	bool populatePackagesView();
@@ -86,9 +93,6 @@ public slots:
 	void widgetQueueToAlpmQueue();
 	void destroyReviewQueue();
 	void getPackageFromFile();
-	void dbUpdateTray();
-	void enableTrayActions();
-	void disableTrayActions();
 	void streamTransQuestion(const QString &msg);
 	void cancelAllActions();
 	void processQueue();
@@ -123,12 +127,9 @@ private slots:
 private:
 	void loadDbUpdateDialog();
 	void removeDbUpdateDialog();
-	void setupSystray();
-	void changeTimerInterval();
 	QString formatSize(unsigned long size);
 	
 public:
-	KAnimatedSystemTrayIcon *systray;
 	QueueDialog *queueDl;
 
 private:
@@ -142,8 +143,7 @@ private:
 	QStatusBar *stBar;
 
 	QDialog *reviewQueue;
-	QTimer *trayUpDb;
-	QList<QAction *> systrayAct;
+	ShamanTrayIcon *trayicon;
 	
 	bool upActive;
 	bool revActive;

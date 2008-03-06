@@ -238,7 +238,7 @@ int main(int argc, char **argv)
 		 * only.
 		 */
 		
-		mainwin.startTimer();
+		mainwin.startTrayTimer();
 	}
 
 	QObject::connect(&mainwin, SIGNAL(aboutToQuit()), &app, SLOT(quit()));
