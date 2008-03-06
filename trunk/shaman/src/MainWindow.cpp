@@ -149,7 +149,7 @@ MainWindow::~MainWindow()
 void MainWindow::setupSystray()
 {
 	systray = new QSystemTrayIcon();
-	systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
+	systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
 	systray->show();
 	
 	systrayAct.clear();
@@ -376,7 +376,7 @@ bool MainWindow::populatePackagesView()
 
 	if(!upgrds.isEmpty())
 	{
-		systray->setIcon(QIcon(":/Icons/icons/view-refresh.png"));
+		systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-updates-available-32.png"));
 		systray->setToolTip(QString(tr("Shaman - Idle (Upgrades Available)")));
 		systray->showMessage(QString(tr("System Upgrade")), QString(upgrds.size() == 1 ? tr("There is %1 upgradeable package.\n"
 				"Click here to upgrade your System.") :	tr("There are %1 upgradeable packages.\nClick here to upgrade your System.")).
@@ -747,7 +747,7 @@ void MainWindow::doDbUpdate()
 
 	dbdialog->doAction();
 
-	systray->setIcon(QIcon(":/Icons/icons/edit-redo.png"));
+	systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-animation.mng"));
 	systray->setToolTip(QString(tr("Shaman - Processing")));
 }
 
@@ -790,7 +790,7 @@ void MainWindow::finishDbUpdate()
 	
 	dbdialog->deleteLater();
 
-	systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
+	systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
 	systray->setToolTip(QString(tr("Shaman - Idle")));
 	
 	dbdialog = NULL;
@@ -1247,7 +1247,7 @@ void MainWindow::startUpgrading()
 	{
 		emit systemIsUpToDate();
 		
-		systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
+		systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
 		systray->setToolTip(QString(tr("Shaman - Idle")));
 		
 		if(dbdialog->isVisible())
@@ -1272,7 +1272,7 @@ void MainWindow::startUpgrading()
 
 		emit upgradesAvailable();
 		
-		systray->setIcon(QIcon(":/Icons/icons/view-refresh.png"));
+		systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-updates-available-32.png"));
 		systray->setToolTip(QString(tr("Shaman - Idle (Upgrades Available)")));
 		
 		upDl = new SysUpgradeDialog(aHandle, this);
@@ -1326,7 +1326,7 @@ void MainWindow::fullSysUpgrade()
 
 	dbdialog->doAction();
 
-	systray->setIcon(QIcon(":/Icons/icons/edit-redo.png"));
+	systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-animation.mng"));
 	systray->setToolTip(QString(tr("Shaman - Processing")));
 }
 
@@ -1374,7 +1374,7 @@ void MainWindow::processQueue()
 			queueDl->hide();
 		}
 
-	systray->setIcon(QIcon(":/Icons/icons/edit-redo.png"));
+	systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-animation.mng"));
 	systray->setToolTip(QString(tr("Shaman - Processing")));
 
 	if(upActive)
@@ -1465,7 +1465,7 @@ void MainWindow::queueProcessingEnded(bool errors)
 	
 	queueDl = NULL;
 
-	systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
+	systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
 	systray->setToolTip(QString(tr("Shaman - Idle")));
 }
 
@@ -1604,7 +1604,7 @@ void MainWindow::dbUpdateTray()
 	/* Ok, let's silently perform a Db Update.
 	 */
 	// TODO: App Icon, where are you?
-	systray->setIcon(QIcon(":/Icons/icons/edit-redo.png"));
+	systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-animation.mng"));
 	systray->setToolTip(QString(tr("Shaman - Processing")));
 	
 	upDbTh = new UpDbThread(aHandle);
@@ -1635,7 +1635,7 @@ void MainWindow::dbUpdateTrayFinished()
 			 */
 			QSettings *settings = new QSettings();
 
-			systray->setIcon(QIcon(":/Icons/icons/view-refresh.png"));
+			systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-updates-available-32.png"));
 			systray->setToolTip(QString(tr("Shaman - Idle (Upgrades Available)")));
 			systray->showMessage(QString(tr("System Upgrade")), QString(list.size() == 1 ? tr("There is %1 upgradeable package.\n"
 					"Click here to upgrade your System.") :	tr("There are %1 upgradeable packages.\nClick here to upgrade your System.")).
@@ -1648,11 +1648,11 @@ void MainWindow::dbUpdateTrayFinished()
 			settings->deleteLater();
 		}
 		else
-			systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
+			systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
 	}
 	else
 	{
-		systray->setIcon(QIcon(":/Icons/icons/list-add.png"));
+		systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
 		systray->setToolTip(QString(tr("Shaman - Idle")));
 	}
 
