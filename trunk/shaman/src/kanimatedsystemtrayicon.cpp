@@ -44,6 +44,7 @@ class KAnimatedSystemTrayIcon::Private
 KAnimatedSystemTrayIcon::KAnimatedSystemTrayIcon(QWidget *parent)
 	: QSystemTrayIcon(0)
 {
+	Q_UNUSED(parent);
 	d = new Private(0);
 }
 
