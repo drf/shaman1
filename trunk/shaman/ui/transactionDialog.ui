@@ -13,7 +13,7 @@
    <string>Processing Queue...</string>
   </property>
   <property name="windowIcon" >
-   <iconset resource="qtpacman.qrc" >:/Icons/icons/shaman/shaman-animation.mng</iconset>
+   <iconset resource="qtpacman.qrc" >:/Icons/icons/shaman/animation_source/anim06.png</iconset>
   </property>
   <layout class="QGridLayout" >
    <item row="1" column="0" >
