@@ -169,6 +169,23 @@ alpm_list_t *AlpmHandler::getAvailableRepos()
 	return sync_databases;
 }
 
+QStringList AlpmHandler::getAvailableReposNames()
+{
+	alpm_list_t *dbs = sync_databases;
+	QStringList retlist;
+	
+	retlist.clear();
+	dbs = alpm_list_first(dbs);
+	
+	while(dbs != NULL)
+	{
+		retlist.append(alpm_db_get_name((pmdb_t *) alpm_list_getdata(dbs)));
+		dbs = alpm_list_next(dbs);
+	}
+	
+	return retlist;
+}
+
 alpm_list_t *AlpmHandler::getInstalledPackages()
 {
 	return alpm_db_getpkgcache(db_local);

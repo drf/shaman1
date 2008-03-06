@@ -65,7 +65,10 @@ public:
 	bool testLibrary();
 
 	alpm_list_t *getAvailableRepos();
+	QStringList getAvailableReposNames();
+	
 	QStringList getPackageGroups();
+	
 	QStringList getUpgradeablePackages();
 	alpm_list_t *getInstalledPackages();
 

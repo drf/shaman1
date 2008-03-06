@@ -674,7 +674,17 @@ void ConfigDialog::saveConfiguration()
 
 	/* Whew, now with the third party elements. We also take the
 	 * chance to free them, for the sake of memory.
+	 * But first, let's check if we need to remove something.
 	 */
+
+	foreach(QString dbs, m_handler->getAvailableReposNames())
+	{
+		if(dbs != "core" && dbs != "extra" && dbs != "community" && dbs != "testing"
+			&& dbs != "unstable" && dbs != "kdemod" && dbs != "kdemod-testing" &&
+			thirdPartyWidget->findItems(dbs, Qt::MatchExactly, 0).isEmpty())
+			if(editPacmanKey(QString(dbs + "/Server"), NULL, 2))
+				dbChanged = true;
+	}
 
 	QTreeWidgetItem *itm;
 

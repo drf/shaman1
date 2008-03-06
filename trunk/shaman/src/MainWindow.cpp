@@ -125,20 +125,16 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 
 	QSettings *settings = new QSettings();
 
-	if(settings->contains("repowg/size"))
-		repoDockWidget->resize(settings->value("repowg/size").toSize());
-	if(settings->contains("repowg/pos"))
-		repoDockWidget->move(settings->value("repowg/pos").toPoint());
-
-	if(settings->contains("pkgwg/size"))
-		pkgDockWidget->resize(settings->value("pkgwg/size").toSize());
-	if(settings->contains("pkgwg/pos"))
-		pkgDockWidget->move(settings->value("pkgwg/pos").toPoint());
+	if(settings->contains("gui/widgetstate"))
+		restoreState(settings->value("gui/widgetstate").toByteArray());
 
 	settings->deleteLater();
 
 	emit shamanReady();
-
+	
+	stBar = new QStatusBar(this);
+	setStatusBar(stBar);
+	
 	return;
 }
 
@@ -208,10 +204,7 @@ void MainWindow::quitApp()
 
 	settings->setValue("gui/size", size());
 	settings->setValue("gui/pos", pos());
-	settings->setValue("repowg/size", repoDockWidget->size());
-	settings->setValue("repowg/pos", repoDockWidget->pos());
-	settings->setValue("pkgwg/size", pkgDockWidget->size());
-	settings->setValue("pkgwg/pos", pkgDockWidget->pos());
+	settings->setValue("gui/widgetstate", saveState());
 	
 	settings->deleteLater();
 	
@@ -281,6 +274,8 @@ bool MainWindow::populatePackagesView()
 {
 	alpm_list_t *databases;
 	int count = 0;
+	
+	pkgsViewWG->setSortingEnabled(false);
 
 	disconnect(pkgsViewWG, SIGNAL(itemSelectionChanged()), 0, 0);
 
@@ -400,27 +395,22 @@ void MainWindow::populateRepoColumn()
 {
 	switchToGrps->setChecked(false);
 	repoDockWidget->setWindowTitle(tr("Repositories"));
-	alpm_list_t *list = aHandle->getAvailableRepos();
+	QStringList list = aHandle->getAvailableReposNames();
 
 	removeRepoColumn();
-
-	list = alpm_list_first(list);
 
 	QListWidgetItem *item = new QListWidgetItem(repoList);
 
 	item->setText(tr("All Repositories"));
 	item->setSelected(true);
 
-	while(list != NULL)
+	foreach(QString dbname, list)
 	{
 		QListWidgetItem *item = new QListWidgetItem(repoList);
 
-		item->setText(alpm_db_get_name((pmdb_t *)alpm_list_getdata(list)));
-
-		list = alpm_list_next(list);
+		item->setText(dbname);
 	}
 
-	list = alpm_list_first(list);
 	
 	QListWidgetItem *itm = new QListWidgetItem(repoList);
 
@@ -787,10 +777,7 @@ void MainWindow::finishDbUpdate()
 	}
 
 	if(dbdialog->dbHasBeenUpdated())
-	{
-		pkgsViewWG->setSortingEnabled(false);
 		populatePackagesView();
-	}
 	
 	dbdialog->deleteLater();
 
@@ -800,7 +787,12 @@ void MainWindow::finishDbUpdate()
 	
 	dbdialog = NULL;
 	
-	if(aHandle->getUpgradeablePackages().contains("pacman"))
+	QStringList list(aHandle->getUpgradeablePackages());
+	
+	if(list.isEmpty())
+		return;
+	
+	if(list.contains("pacman"))
 	{
 		QMessageBox *msgBox = new QMessageBox();
 
@@ -836,7 +828,7 @@ void MainWindow::finishDbUpdate()
 		}
 		
 	}
-	else if(aHandle->getUpgradeablePackages().contains("shaman"))
+	else if(list.contains("shaman"))
 	{
 		QMessageBox *msgBox = new QMessageBox();
 
@@ -871,6 +863,26 @@ void MainWindow::finishDbUpdate()
 			break;
 		}
 
+	}
+	else if(!list.isEmpty())
+	{
+		/* We actually have something to upgrade! We'd 
+		 * better let the user know by changing icon, 
+		 * and showing a balloon.
+		 */
+		QSettings *settings = new QSettings();
+
+		systray->setIcon(QIcon(":/Icons/icons/view-refresh.png"));
+		systray->setToolTip(QString(tr("Shaman - Idle (Upgrades Available)")));
+		systray->showMessage(QString(tr("System Upgrade")), QString(list.size() == 1 ? tr("There is %1 upgradeable package.\n"
+				"Click here to upgrade your System.") :	tr("There are %1 upgradeable packages.\nClick here to upgrade your System.")).
+				arg(list.size()));
+		connect(systray, SIGNAL(messageClicked()), SLOT(fullSysUpgrade()));
+
+		if(settings->value("scheduledUpdate/addupgradestoqueue").toBool())
+			addUpgradeableToQueue();
+
+		settings->deleteLater();
 	}
 }
 
@@ -1452,8 +1464,9 @@ void MainWindow::queueProcessingEnded(bool errors)
 
 				qApp->exit(0);
 			}
+		
+		qApp->processEvents();
 
-		pkgsViewWG->setSortingEnabled(false);
 		populatePackagesView();
 		refinePkgView();
 
@@ -1613,65 +1626,12 @@ void MainWindow::dbUpdateTray()
 	
 	/* Ok, let's silently perform a Db Update.
 	 */
-	// TODO: App Icon, where are you?
+	
 	systray->setMovie(new QMovie(":/Icons/icons/shaman/shaman-animation.mng"));
         systray->startMovie();
 	systray->setToolTip(QString(tr("Shaman - Processing")));
 	
-	upDbTh = new UpDbThread(aHandle);
-	connect(upDbTh, SIGNAL(finished()), SLOT(dbUpdateTrayFinished()));
-	upDbTh->start();
-}
-
-void MainWindow::dbUpdateTrayFinished()
-{	
-	
-	if(upDbTh->getResult())
-	{
-		/* Hey, it looks like the Db was actually updated.
-		 * So, we have to do a pair of things. First of all,
-		 * let's reload our TreeView of packages. Secondly,
-		 * let's check if Upgrades are available
-		 */
-
-		pkgsViewWG->setSortingEnabled(false);
-		populatePackagesView();
-		
-		QStringList list(aHandle->getUpgradeablePackages());
-		if(!list.isEmpty())
-		{
-			/* We actually have something to upgrade! We'd 
-			 * better let the user know by changing icon, 
-			 * and showing a balloon.
-			 */
-			QSettings *settings = new QSettings();
-
-			systray->stopMovie();
-			systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-updates-available-32.png"));
-			systray->setToolTip(QString(tr("Shaman - Idle (Upgrades Available)")));
-			systray->showMessage(QString(tr("System Upgrade")), QString(list.size() == 1 ? tr("There is %1 upgradeable package.\n"
-					"Click here to upgrade your System.") :	tr("There are %1 upgradeable packages.\nClick here to upgrade your System.")).
-					arg(list.size()));
-			connect(systray, SIGNAL(messageClicked()), SLOT(fullSysUpgrade()));
-			
-			if(settings->value("scheduledUpdate/addupgradestoqueue").toBool())
-				addUpgradeableToQueue();
-			
-			settings->deleteLater();
-		}
-		else
-			systray->stopMovie();
-			systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
-	}
-	else
-	{
-		systray->stopMovie();
-		systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
-		systray->setToolTip(QString(tr("Shaman - Idle")));
-	}
-
-	delete(upDbTh);
-	
+	doDbUpdate();
 }
 
 void MainWindow::systrayActivated(QSystemTrayIcon::ActivationReason reason)
@@ -1900,7 +1860,8 @@ QList<QTreeWidgetItem *> MainWindow::getUpgradePackagesInWidgetQueue()
 
 QList<QTreeWidgetItem *> MainWindow::getRemovePackagesInWidgetQueue()
 {
-	return pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 8) + pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 8);
+	return pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 8) + 
+		pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 8);
 }
 
 bool MainWindow::packageExists(const QString &pkg)

@@ -87,7 +87,6 @@ public slots:
 	void destroyReviewQueue();
 	void getPackageFromFile();
 	void dbUpdateTray();
-	void dbUpdateTrayFinished();
 	void enableTrayActions();
 	void disableTrayActions();
 	void streamTransQuestion(const QString &msg);
@@ -140,10 +139,10 @@ private:
 	ConfigDialog *configDialog;
 	Ui::QueueReadyDialog *qUi;
 	BuildingHandler *bHandler;
+	QStatusBar *stBar;
 
 	QDialog *reviewQueue;
 	QTimer *trayUpDb;
-	UpDbThread *upDbTh;
 	QList<QAction *> systrayAct;
 	
 	bool upActive;

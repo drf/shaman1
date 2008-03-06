@@ -30,7 +30,7 @@
 #include <QProcess>
 #include <QFile>
 #include <QWaitCondition>
-#include <QMessageBox>
+#include <QDialogButtonBox>
 #include <fcntl.h>
 
 /* libarchive */
@@ -693,30 +693,56 @@ bool QueueDialog::checkScriptlet(const QString &path, const QString &action)
 
 void QueueDialog::handlePreparingError(const QString &msg)
 {
-	QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Queue Processing"), QString(tr("There has been an error"
-			" while preparing the transaction.\n") + alpm_strerrorlast()), QMessageBox::Ok);
-	
-	QTextEdit *txtEd = new QTextEdit(msg, message);
+	QDialog *dlog = new QDialog(this);
+	QLabel *lbl = new QLabel(dlog);
+	QTextEdit *txtEd = new QTextEdit(msg, dlog);
+	QDialogButtonBox *but = new QDialogButtonBox(dlog);
+	QVBoxLayout *lay = new QVBoxLayout();
+
+	lbl->setText(QString(tr("There has been an error"
+			" while preparing the transaction.\n") + alpm_strerrorlast()));
+
 	txtEd->setReadOnly(true);
 
-	message->exec();
+	but->addButton(QDialogButtonBox::Ok);
+	but->setCenterButtons(true);
+	lay->addWidget(lbl);
+	lay->addWidget(txtEd);
+	lay->addWidget(but);
+	dlog->setLayout(lay);
+	dlog->setWindowTitle(QString(tr("Queue Processing")));
+	dlog->setWindowModality(Qt::ApplicationModal);
+	connect(but, SIGNAL(accepted()), dlog, SLOT(accept()));
 
-	message->deleteLater();
+	dlog->exec();
 
 	errors = true;
 }
 
 void QueueDialog::handleCommittingError(const QString &msg)
 {
-	QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Queue Processing"), QString(tr("There has been an error"
-			" while committing the transaction.\n") + alpm_strerrorlast()), QMessageBox::Ok);
+	QDialog *dlog = new QDialog(this);
+	QLabel *lbl = new QLabel(dlog);
+	QTextEdit *txtEd = new QTextEdit(msg, dlog);
+	QDialogButtonBox *but = new QDialogButtonBox(dlog);
+	QVBoxLayout *lay = new QVBoxLayout();
 
-	QTextEdit *txtEd = new QTextEdit(msg, message);
+	lbl->setText(QString(tr("There has been an error"
+			" while committing the transaction.\n") + alpm_strerrorlast()));
+
 	txtEd->setReadOnly(true);
 
-	message->exec();
+	but->addButton(QDialogButtonBox::Ok);
+	but->setCenterButtons(true);
+	lay->addWidget(lbl);
+	lay->addWidget(txtEd);
+	lay->addWidget(but);
+	dlog->setLayout(lay);
+	dlog->setWindowTitle(QString(tr("Queue Processing")));
+	dlog->setWindowModality(Qt::ApplicationModal);
+	connect(but, SIGNAL(accepted()), dlog, SLOT(accept()));
 
-	message->deleteLater();
+	dlog->exec();
 
 	errors = true;
 }

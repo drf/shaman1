@@ -196,10 +196,6 @@ int main(int argc, char **argv)
 		settings->setValue("absbuilding/buildpath", "/var/shaman/builds");
 
 	MainWindow mainwin(aHandler);
-	
-	/*new DBusInterface(&app, &mainwin, aHandler);
-	
-	QDBusConnection::sessionBus().registerObject(QString("/ShamanManager"), &app);*/
 
 	if(settings->contains("gui/size"))
 		mainwin.resize(settings->value("gui/size").toSize());
