@@ -44,6 +44,7 @@
 #include <QCloseEvent>
 #include <QSettings>
 #include <QWaitCondition>
+#include <QMovie>
 #include <alpm.h>
 
 extern CallBacks CbackReference;
@@ -148,7 +149,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::setupSystray()
 {
-	systray = new QSystemTrayIcon();
+	systray = new KAnimatedSystemTrayIcon();
+	systray->stopMovie();
 	systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
 	systray->show();
 	
@@ -376,6 +378,7 @@ bool MainWindow::populatePackagesView()
 
 	if(!upgrds.isEmpty())
 	{
+		systray->stopMovie();
 		systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-updates-available-32.png"));
 		systray->setToolTip(QString(tr("Shaman - Idle (Upgrades Available)")));
 		systray->showMessage(QString(tr("System Upgrade")), QString(upgrds.size() == 1 ? tr("There is %1 upgradeable package.\n"
@@ -747,7 +750,8 @@ void MainWindow::doDbUpdate()
 
 	dbdialog->doAction();
 
-	systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-animation.mng"));
+	systray->setMovie(new QMovie(":/Icons/icons/shaman/shaman-animation.mng"));
+        systray->startMovie();
 	systray->setToolTip(QString(tr("Shaman - Processing")));
 }
 
@@ -790,6 +794,7 @@ void MainWindow::finishDbUpdate()
 	
 	dbdialog->deleteLater();
 
+	systray->stopMovie();
 	systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
 	systray->setToolTip(QString(tr("Shaman - Idle")));
 	
@@ -1247,6 +1252,7 @@ void MainWindow::startUpgrading()
 	{
 		emit systemIsUpToDate();
 		
+		systray->stopMovie();
 		systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
 		systray->setToolTip(QString(tr("Shaman - Idle")));
 		
@@ -1272,6 +1278,7 @@ void MainWindow::startUpgrading()
 
 		emit upgradesAvailable();
 		
+		systray->stopMovie();
 		systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-updates-available-32.png"));
 		systray->setToolTip(QString(tr("Shaman - Idle (Upgrades Available)")));
 		
@@ -1326,7 +1333,8 @@ void MainWindow::fullSysUpgrade()
 
 	dbdialog->doAction();
 
-	systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-animation.mng"));
+	systray->setMovie(new QMovie(":/Icons/icons/shaman/shaman-animation.mng"));
+        systray->startMovie();
 	systray->setToolTip(QString(tr("Shaman - Processing")));
 }
 
@@ -1374,7 +1382,8 @@ void MainWindow::processQueue()
 			queueDl->hide();
 		}
 
-	systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-animation.mng"));
+	systray->setMovie(new QMovie(":/Icons/icons/shaman/shaman-animation.mng"));
+        systray->startMovie();
 	systray->setToolTip(QString(tr("Shaman - Processing")));
 
 	if(upActive)
@@ -1465,6 +1474,7 @@ void MainWindow::queueProcessingEnded(bool errors)
 	
 	queueDl = NULL;
 
+        systray->stopMovie();
 	systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
 	systray->setToolTip(QString(tr("Shaman - Idle")));
 }
@@ -1604,7 +1614,8 @@ void MainWindow::dbUpdateTray()
 	/* Ok, let's silently perform a Db Update.
 	 */
 	// TODO: App Icon, where are you?
-	systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-animation.mng"));
+	systray->setMovie(new QMovie(":/Icons/icons/shaman/shaman-animation.mng"));
+        systray->startMovie();
 	systray->setToolTip(QString(tr("Shaman - Processing")));
 	
 	upDbTh = new UpDbThread(aHandle);
@@ -1635,6 +1646,7 @@ void MainWindow::dbUpdateTrayFinished()
 			 */
 			QSettings *settings = new QSettings();
 
+			systray->stopMovie();
 			systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-updates-available-32.png"));
 			systray->setToolTip(QString(tr("Shaman - Idle (Upgrades Available)")));
 			systray->showMessage(QString(tr("System Upgrade")), QString(list.size() == 1 ? tr("There is %1 upgradeable package.\n"
@@ -1648,10 +1660,12 @@ void MainWindow::dbUpdateTrayFinished()
 			settings->deleteLater();
 		}
 		else
+			systray->stopMovie();
 			systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
 	}
 	else
 	{
+		systray->stopMovie();
 		systray->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
 		systray->setToolTip(QString(tr("Shaman - Idle")));
 	}

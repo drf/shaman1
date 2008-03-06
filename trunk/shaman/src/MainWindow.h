@@ -28,8 +28,8 @@
 #include "ui_MainWindow.h"
 #include "ui_reviewQueueDialog.h"
 #include "AlpmHandler.h"
+#include "kanimatedsystemtrayicon.h"
 
-#include <QSystemTrayIcon>
 #include <QThread>
 
 class UpdateDbDialog;
@@ -129,7 +129,7 @@ private:
 	QString formatSize(unsigned long size);
 	
 public:
-	QSystemTrayIcon *systray;
+	KAnimatedSystemTrayIcon *systray;
 	QueueDialog *queueDl;
 
 private:

@@ -44,6 +44,7 @@ SET(shaman_SRCS ${shaman_adaptor_SRCS}
     src/UpdateDbDialog.cpp
     src/ABSHandler.cpp
     src/BuildingHandler.cpp
+    src/kanimatedsystemtrayicon.cpp
 )
 
 SET(shaman_MOC_HDRS
@@ -57,6 +58,7 @@ SET(shaman_MOC_HDRS
     src/SysUpgradeDialog.h
     src/UpdateDbDialog.h
     src/BuildingHandler.h
+    src/kanimatedsystemtrayicon.h
 )
 
 SET(shaman_UIS
@@ -153,6 +155,7 @@ TARGET_LINK_LIBRARIES(shaman
     ${QT_QTCORE_LIBRARY}
     ${QT_QTGUI_LIBRARY}
     ${QT_QTDBUS_LIBRARY}
+    #${QTPLUGIN_QTMNG_LIBRARY}
     -lalpm
     -larchive
 )
