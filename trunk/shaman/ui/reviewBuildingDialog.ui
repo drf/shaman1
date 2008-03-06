@@ -6,11 +6,14 @@
     <x>0</x>
     <y>0</y>
     <width>622</width>
-    <height>257</height>
+    <height>264</height>
    </rect>
   </property>
   <property name="windowTitle" >
    <string>Review Building Queue</string>
+  </property>
+  <property name="windowIcon" >
+   <iconset resource="qtpacman.qrc" >:/Icons/icons/shaman/shaman-yellow-icon-32.png</iconset>
   </property>
   <layout class="QGridLayout" >
    <item row="0" column="0" >

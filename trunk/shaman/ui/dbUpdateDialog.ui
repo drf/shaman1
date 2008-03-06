@@ -12,6 +12,9 @@
   <property name="windowTitle" >
    <string>Database Update</string>
   </property>
+  <property name="windowIcon" >
+   <iconset resource="qtpacman.qrc" >:/Icons/icons/shaman/shaman-yellow-icon-32.png</iconset>
+  </property>
   <layout class="QGridLayout" >
    <item row="0" column="0" colspan="2" >
     <widget class="QFrame" name="frame" >

@@ -5,12 +5,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>596</width>
+    <width>600</width>
     <height>294</height>
    </rect>
   </property>
   <property name="windowTitle" >
    <string>System Upgrade</string>
+  </property>
+  <property name="windowIcon" >
+   <iconset resource="qtpacman.qrc" >:/Icons/icons/shaman/shaman-updates-available-32.png</iconset>
   </property>
   <layout class="QGridLayout" >
    <item row="1" column="1" >

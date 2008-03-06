@@ -12,6 +12,9 @@
   <property name="windowTitle" >
    <string>Shaman - Building Packages</string>
   </property>
+  <property name="windowIcon" >
+   <iconset resource="qtpacman.qrc" >:/Icons/icons/shaman/shaman-animation.mng</iconset>
+  </property>
   <layout class="QGridLayout" >
    <item row="0" column="0" >
     <layout class="QVBoxLayout" >
