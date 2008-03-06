@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Shaman
+GenericName=Package Manager
+Exec=shaman
+Icon=shaman
+Type=Application
+Terminal=false
+Comment=A Package Manager for ArchLinux
+Categories=Qt;System
