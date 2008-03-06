@@ -449,6 +449,7 @@ bool AlpmHandler::performCurrentTransaction()
 
 	if(alpm_trans_prepare(&data) == -1)
 	{
+		qDebug() << "Could not prepare transaction";
 		handleError(1, data);
 		releaseTransaction();
 		return false;
@@ -456,6 +457,7 @@ bool AlpmHandler::performCurrentTransaction()
 
 	if(alpm_trans_commit(&data) == -1)
 	{
+		qDebug() << "Could not commit transaction";
 		handleError(2, data);
 		releaseTransaction();
 		return false;
@@ -477,6 +479,7 @@ bool AlpmHandler::fullSystemUpgrade()
 
 	if(alpm_trans_sysupgrade() == -1)
 	{
+		qDebug() << "Creating a sysupgrade transaction failed!!";
 		handleError(0, NULL);
 		releaseTransaction();
 		return false;
@@ -1029,6 +1032,7 @@ void AlpmHandler::handleError(int action, alpm_list_t *data)
 	{
 	case 0:
 		// Error while init'ing a upgrade
+		qDebug() << "Streaming Upgrade Error";
 		emit preparingUpgradeError();
 		break;
 
@@ -1097,7 +1101,8 @@ void AlpmHandler::handleError(int action, alpm_list_t *data)
 			break;
 		}
 		
-		emit committingTransactionError(errMsg);
+		if(!errMsg.isEmpty())
+			emit committingTransactionError(errMsg);
 		
 		break;
 
