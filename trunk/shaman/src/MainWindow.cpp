@@ -684,6 +684,8 @@ void MainWindow::finishDbUpdate()
 	
 	qDebug() << "DB Update Finished";
 	
+	QStringList list(aHandle->getUpgradeablePackages());
+	
 	if(dbdialog->anyErrors())
 	{
 		emit actionStatusChanged("dbUpdateFinished");
@@ -705,7 +707,7 @@ void MainWindow::finishDbUpdate()
 	else
 	{
 		emit actionStatusChanged("dbUpdateFinished");
-		if(dbdialog->isHidden())
+		if(dbdialog->isHidden() && list.isEmpty())
 			trayicon->showMessage(QString(tr("Database Update")), QString(tr("Databases Updated Successfully")));
 	}
 
@@ -715,8 +717,6 @@ void MainWindow::finishDbUpdate()
 	dbdialog->deleteLater();
 	
 	dbdialog = NULL;
-	
-	QStringList list(aHandle->getUpgradeablePackages());
 	
 	if(list.isEmpty())
 		return;
