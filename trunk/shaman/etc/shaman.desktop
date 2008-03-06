@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Shaman
 GenericName=Package Manager
-Exec=shaman
+Exec=kdesu shaman
 Icon=shaman-32
 Type=Application
 Terminal=false
