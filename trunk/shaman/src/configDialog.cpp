@@ -264,7 +264,7 @@ void ConfigDialog::setupPacman()
 
 void ConfigDialog::setupABS()
 {
-	listWidget->insertItem(3, new QListWidgetItem(QIcon(":/Icons/icons/network-server-database.png"), tr("ABS")));//FIXME: Replace icon
+	listWidget->insertItem(3, new QListWidgetItem(QIcon(":/Icons/icons/network-server-database.png"), tr("    ABS    ")));//FIXME: Replace icon and don't do that dirty hacks xD
 	
 	/* Read options related to our Config file first */
 	
