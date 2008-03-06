@@ -180,6 +180,9 @@ ADD_CUSTOM_TARGET(uninstall "${CMAKE_COMMAND}" -P "${CMAKE_CURRENT_BINARY_DIR}/c
 
 INSTALL(TARGETS shaman DESTINATION bin)
 INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/etc/shaman.conf DESTINATION /etc/dbus-1/system.d)
+INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/ui/icons/shaman/shaman-32.png ${CMAKE_CURRENT_SOURCE_DIR}/ui/icons/shaman/shaman-64.png
+		${CMAKE_CURRENT_SOURCE_DIR}/ui/icons/shaman/shaman-128.png ${CMAKE_CURRENT_SOURCE_DIR}/ui/icons/shaman/shaman-48.png
+		DESTINATION /usr/share/pixmaps)
 
 #IF(UNIX)
 #    INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/misc/shaman.desktop DESTINATION share/applications)
