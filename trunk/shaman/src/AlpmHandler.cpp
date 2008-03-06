@@ -39,7 +39,7 @@
 
 #include "callbacks.h"
 
-#define SHAMAN_VERSION "1.0Alpha2dev"
+#define SHAMAN_VERSION "1.0Alpha2"
 
 AlpmHandler::AlpmHandler(bool init)
 : toRemove(NULL),

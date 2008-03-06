@@ -37,7 +37,7 @@
 #include <signal.h>
 #include <alpm.h>
 
-#define SHAMAN_VERSION "1.0Alpha2dev"
+#define SHAMAN_VERSION "1.0Alpha2"
 
 static void cleanup(int signum)
 {
