@@ -61,7 +61,7 @@ p, li { white-space: pre-wrap; }
            <string/>
           </property>
           <property name="pixmap" >
-           <pixmap resource="qtpacman.qrc" >:/Icons/icons/dialog-ok-apply.png</pixmap>
+           <pixmap resource="qtpacman.qrc" >:/Icons/icons/applications-development.png</pixmap>
           </property>
           <property name="scaledContents" >
            <bool>true</bool>

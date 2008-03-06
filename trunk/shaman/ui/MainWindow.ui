@@ -477,7 +477,7 @@
      <x>0</x>
      <y>0</y>
      <width>1195</width>
-     <height>27</height>
+     <height>24</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile" >
@@ -600,6 +600,9 @@
    </property>
   </action>
   <action name="actionBuild_and_Install_Selected" >
+   <property name="icon" >
+    <iconset resource="qtpacman.qrc" >:/Icons/icons/applications-development.png</iconset>
+   </property>
    <property name="text" >
     <string>Build and Install Queue</string>
    </property>
