@@ -23,6 +23,7 @@
 #include <alpm.h>
 #include "callbacks.h"
 #include <QSettings>
+#include <QDebug>
 #include "AlpmHandler.h"
 
 SysUpgradeDialog::SysUpgradeDialog(AlpmHandler *hnd, QWidget *parent)
@@ -107,6 +108,8 @@ void SysUpgradeDialog::initSysUpgrade()
 		settings->setValue("gui/actionupgrade", "upgrade");
 	
 	aHandle->fullSystemUpgrade();
+	
+	qDebug() << "Upgrade signal sent";
 	
 	settings->deleteLater();
 	

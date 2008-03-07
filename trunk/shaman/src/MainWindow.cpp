@@ -213,7 +213,7 @@ void MainWindow::removeRepoColumn()
 	QListWidgetItem *itm;
 
 	while((itm = repoList->takeItem(0)) != 0)
-		delete(itm);
+		delete itm;
 
 	disconnect(repoList, SIGNAL(itemPressed(QListWidgetItem*)), 0, 0);
 }
@@ -1282,6 +1282,8 @@ void MainWindow::processQueue()
 	 * So, just create it and let him handle the job.
 	 */
 
+	qDebug() << "Queue Dialog started";
+	
 	queueDl = new QueueDialog(aHandle, this);
 
 	connect(queueDl, SIGNAL(terminated(bool)), SLOT(queueProcessingEnded(bool)));
@@ -1369,7 +1371,7 @@ void MainWindow::queueProcessingEnded(bool errors)
 		
 		qApp->processEvents();
 
-		populatePackagesView();
+		populateQueuePackagesView();
 		refinePkgView();
 
 		if(queueDl->isVisible())
@@ -1709,4 +1711,114 @@ bool MainWindow::packageExists(const QString &pkg)
 ShamanTrayIcon *MainWindow::getTrayIcon()
 {
 	return trayicon;
+}
+
+bool MainWindow::populateQueuePackagesView()
+{
+	pkgsViewWG->setSortingEnabled(false);
+
+	disconnect(pkgsViewWG, SIGNAL(itemSelectionChanged()), this, 
+			SLOT(itemChanged()));
+	
+	/* Let's get Packages in the Queue first. */
+	
+	QList<QTreeWidgetItem *> list;
+	list.clear();
+
+	list = getInstallPackagesInWidgetQueue() + getRemovePackagesInWidgetQueue() + getUpgradePackagesInWidgetQueue();
+
+	foreach(QTreeWidgetItem *itm, list)
+	{
+		if(itm->text(5) != "local" || (itm->text(8) != tr("Uninstall") && itm->text(8) != tr("Complete Uninstall")))
+		{
+			pmpkg_t *pkg = aHandle->getPackageFromName(itm->text(1), itm->text(5));
+			QTreeWidgetItem *item = new QTreeWidgetItem(pkgsViewWG);
+			alpm_list_t *grps = (alpm_list_t *)alpm_pkg_get_groups(pkg);
+			QString grStr("");
+			if(aHandle->isInstalled(pkg))
+			{
+				//item->setText(0, tr("Installed"));
+				item->setIcon(0, QIcon(":/Icons/icons/user-online.png"));
+				item->setText(3, aHandle->getPackageVersion(alpm_pkg_get_name(pkg), "local"));
+			}
+			else
+			{
+				//item->setText(0, tr("Not Installed"));
+				item->setIcon(0, QIcon(":/Icons/icons/user-offline.png"));
+				item->setText(3, alpm_pkg_get_version(pkg));
+			}
+
+			item->setText(1, alpm_pkg_get_name(pkg));
+			item->setText(5, itm->text(5));
+			item->setText(4, formatSize(aHandle->getPackageSize(item->text(1), item->text(5)))); 
+			item->setText(7, alpm_pkg_get_desc(pkg));
+
+			while(grps != NULL)
+			{
+				grStr.append(" ");
+
+				grStr.append((char *)alpm_list_getdata(grps));
+				grps = alpm_list_next(grps);
+			}
+			grStr.append(" ");
+
+			item->setText(6, grStr);
+		}
+
+		removePackageFromView(itm);
+	}
+
+	alpm_list_t *locPkg = aHandle->getPackagesFromRepo("local");
+
+	while(locPkg != NULL)
+	{
+		pmpkg_t *pkg = (pmpkg_t *)alpm_list_getdata(locPkg);
+		QList<QTreeWidgetItem*> list = pkgsViewWG->findItems(alpm_pkg_get_name(pkg), Qt::MatchExactly, 1);
+		if (list.isEmpty())
+		{
+			QTreeWidgetItem *item = new QTreeWidgetItem(pkgsViewWG);
+			item->setIcon(0, QIcon(":/Icons/icons/user-online.png"));
+			item->setText(1, alpm_pkg_get_name(pkg));
+			item->setText(3, alpm_pkg_get_version(pkg));
+			item->setText(7, alpm_pkg_get_desc(pkg));
+			item->setText(5, "local");
+			item->setText(4, formatSize(aHandle->getPackageSize(item->text(1), item->text(5)))); 
+		}
+		
+		locPkg = alpm_list_next(locPkg);
+	}
+
+	QStringList upgrds = aHandle->getUpgradeablePackages();
+	foreach (QString pac, upgrds)
+	{
+		QTreeWidgetItem *item = pkgsViewWG->findItems(pac, Qt::MatchExactly, 1).first();
+		if (item)
+		{
+			item->setText(8, tr("Upgrade"));
+			item->setIcon(2, QIcon(":/Icons/icons/list-add.png"));
+		}
+	}
+
+	pkgsViewWG->sortItems(1, Qt::AscendingOrder);
+	pkgsViewWG->setSortingEnabled(true);//Enable sorting *after* inserting :D
+
+	connect(pkgsViewWG, SIGNAL(itemSelectionChanged()), this, 
+			SLOT(itemChanged()));
+	
+	return true;
+}
+
+void MainWindow::removePackageFromView(const QString &pkgname)
+{
+	int index = pkgsViewWG->indexOfTopLevelItem(pkgsViewWG->findItems(pkgname, Qt::MatchExactly 
+			| Qt::CaseInsensitive, 1).first());
+	
+	delete pkgsViewWG->takeTopLevelItem(index);	
+}
+
+void MainWindow::removePackageFromView(QTreeWidgetItem *item)
+{
+	int index = pkgsViewWG->indexOfTopLevelItem(item);
+	
+	delete pkgsViewWG->takeTopLevelItem(index);	
 }

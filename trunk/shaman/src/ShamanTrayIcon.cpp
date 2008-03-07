@@ -28,7 +28,10 @@ ShamanTrayIcon::ShamanTrayIcon(MainWindow *mW, AlpmHandler *aH)
  : mainWin(mW),
    aHandle(aH)
 {
-	changeIconStatus(ShamanIcon::IdleIcon);
+	if(aHandle->getUpgradeablePackages().isEmpty())
+		changeIconStatus(ShamanIcon::IdleIcon);
+	else
+		changeIconStatus(ShamanIcon::UpgradesAvailableIcon);
 	show();
 
 	systrayAct.clear();

@@ -36,10 +36,16 @@
 #include <QDebug>
 #include <QMessageBox>
 #include <QProcess>
+#include <QMutex>
+#include <QMutexLocker>
+#include <QWaitCondition>
 
 #include "callbacks.h"
 
-#define SHAMAN_VERSION "1.0Alpha2"
+#define SHAMAN_VERSION "1.0Alpha3dev"
+
+extern QMutex mutex;
+extern QWaitCondition wCond;
 
 AlpmHandler::AlpmHandler(bool init)
 : toRemove(NULL),
@@ -452,6 +458,7 @@ bool AlpmHandler::performCurrentTransaction()
 		qDebug() << "Could not prepare transaction";
 		handleError(1, data);
 		releaseTransaction();
+		qDebug() << "Transaction released, returning...";
 		return false;
 	}
 
@@ -460,6 +467,7 @@ bool AlpmHandler::performCurrentTransaction()
 		qDebug() << "Could not commit transaction";
 		handleError(2, data);
 		releaseTransaction();
+		qDebug() << "Transaction released, returning...";
 		return false;
 	}
 
@@ -484,6 +492,8 @@ bool AlpmHandler::fullSystemUpgrade()
 		releaseTransaction();
 		return false;
 	}
+	
+	qDebug() << "SysUpgrade done successfully";
 
 	removeAct = false;
 	syncAct = false;
@@ -1027,6 +1037,7 @@ QString AlpmHandler::getPackageRepo(const QString &name, bool checkver)
 void AlpmHandler::handleError(int action, alpm_list_t *data)
 {
 	QString errMsg;
+	QMutexLocker lock(&mutex);
 
 	switch(action) 
 	{
@@ -1047,24 +1058,29 @@ void AlpmHandler::handleError(int action, alpm_list_t *data)
 				pmdepmissing_t *miss = (pmdepmissing_t *)alpm_list_getdata(i);
 				pmdepend_t *dep = alpm_miss_get_dep(miss);
 				char *depstring = alpm_dep_get_string(dep);
-				errMsg.append(QString(alpm_miss_get_target(miss) + tr(": requires ") + depstring));
+				errMsg.append(QString(alpm_miss_get_target(miss) + tr(": requires ") + depstring  + ("\n")));
 				free(depstring);
 			}
 			break;
+			
 		case PM_ERR_CONFLICTING_DEPS:
 			for(i = data; i; i = alpm_list_next(i)) 
 			{
 				pmconflict_t *conflict = (pmconflict_t *)alpm_list_getdata(i);
 				errMsg.append(QString(alpm_conflict_get_package1(conflict) + tr(": conflicts with ") 
-						+ alpm_conflict_get_package2(conflict)));
+						+ alpm_conflict_get_package2(conflict) + ("\n")));
 			}
 			break;
+			
 		default:
 			break;
 		}
-		
+
+		if(errMsg.isEmpty())
+			errMsg = QString(tr("Alpm did not give further details."));
+
 		emit preparingTransactionError(errMsg);
-		
+
 		break;
 
 	case 2:
@@ -1079,34 +1095,73 @@ void AlpmHandler::handleError(int action, alpm_list_t *data)
 				switch(alpm_fileconflict_get_type(conflict)) 
 				{
 				case PM_FILECONFLICT_TARGET:
-					errMsg.append(QString(tr("%1 exists in both '%2' and '%3'")).
+					errMsg.append(QString(tr("%1 exists in both '%2' and '%3'")  + ("\n")).
 							arg(alpm_fileconflict_get_file(conflict)).
 							arg(alpm_fileconflict_get_target(conflict)).
 							arg(alpm_fileconflict_get_ctarget(conflict)));
 					break;
+					
 				case PM_FILECONFLICT_FILESYSTEM:
 					errMsg.append(QString(alpm_fileconflict_get_target(conflict) + 
-							tr(": %1 exists in filesystem")).arg(alpm_fileconflict_get_file(conflict)));
+							tr(": %1 exists in filesystem") + ("\n")).arg(alpm_fileconflict_get_file(conflict)));
 					break;
 				}
 			}
+			
 			break;
+			
 		case PM_ERR_PKG_CORRUPTED:
 			for(i = data; i; i = alpm_list_next(i)) 
 			{
 				errMsg.append((char*)alpm_list_getdata(i));
 			}
 			break;
+			
 		default:
 			break;
 		}
 		
-		if(!errMsg.isEmpty())
-			emit committingTransactionError(errMsg);
+		if(errMsg.isEmpty())
+			errMsg = QString(tr("Alpm did not give further details."));
+			
+		emit committingTransactionError(errMsg);
 		
 		break;
 
 	default:
 		break;
 	}
+
+	qDebug() << "Error Thread Waiting.";
+	wCond.wait(&mutex);
+	qDebug() << "Error Thread awake.";
+}
+
+alpm_list_t *AlpmHandler::getPackagesFromRepo(const QString &reponame)
+{
+	/* Since here local would be right the same of calling
+	 * getInstalledPackages(), here by local we mean packages that
+	 * don't belong to any other repo.
+	 */
+	
+	alpm_list_t *retlist;
+	
+	retlist = NULL;
+	
+	if(reponame == "local")
+	{
+		alpm_list_t *pkglist = alpm_db_getpkgcache(db_local);
+		
+		pkglist = alpm_list_first(pkglist);
+		
+		while(pkglist != NULL)
+		{
+			if(getPackageRepo(alpm_pkg_get_name((pmpkg_t *) alpm_list_getdata(pkglist))) == QString())
+				retlist = alpm_list_add(retlist, alpm_list_getdata(pkglist));
+			
+			pkglist = alpm_list_next(pkglist);
+		}
+	}
+	
+	return retlist;
 }

@@ -77,10 +77,13 @@ signals:
 	
 public slots:
 	bool populatePackagesView();
+	bool populateQueuePackagesView();
 	void refinePkgView();
 	void populateRepoColumn();
 	void populateGrpsColumn();
 	void removePackagesView();
+	void removePackageFromView(const QString &pkgname);
+	void removePackageFromView(QTreeWidgetItem *item);
 	void removeRepoColumn();
 	void showPkgInfo();
 	void doDbUpdate();

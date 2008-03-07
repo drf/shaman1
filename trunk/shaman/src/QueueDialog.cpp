@@ -62,6 +62,8 @@ QueueDialog::QueueDialog(AlpmHandler *hnd, QWidget *parent)
 	connect(aHandle, SIGNAL(committingTransactionError(const QString&)), 
 				SLOT(handleCommittingError(const QString&)));
 	
+	qDebug() << "Queue signals connected";
+	
 	transLabel->setPixmap(QIcon(":/Icons/icons/edit-redo.png").pixmap(22));
 	textEdit->append(QString(tr("<br><b> * Validating Transaction</b><br>")));
 	
@@ -693,6 +695,8 @@ bool QueueDialog::checkScriptlet(const QString &path, const QString &action)
 
 void QueueDialog::handlePreparingError(const QString &msg)
 {
+	qDebug() << "Creating Preparing Error";
+	
 	QDialog *dlog = new QDialog(this);
 	QLabel *lbl = new QLabel(dlog);
 	QTextEdit *txtEd = new QTextEdit(msg, dlog);
@@ -717,10 +721,15 @@ void QueueDialog::handlePreparingError(const QString &msg)
 	dlog->exec();
 
 	errors = true;
+
+	qDebug() << "Streaming Awakening to Error Thread";
+	wCond.wakeAll();
 }
 
 void QueueDialog::handleCommittingError(const QString &msg)
 {
+	qDebug() << "Creating Committing Error";
+	
 	QDialog *dlog = new QDialog(this);
 	QLabel *lbl = new QLabel(dlog);
 	QTextEdit *txtEd = new QTextEdit(msg, dlog);
@@ -745,4 +754,7 @@ void QueueDialog::handleCommittingError(const QString &msg)
 	dlog->exec();
 
 	errors = true;
+	
+	qDebug() << "Streaming Awakening to Error Thread";
+	wCond.wakeAll();
 }

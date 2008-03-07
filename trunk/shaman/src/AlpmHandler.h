@@ -69,6 +69,8 @@ public:
 	
 	QStringList getPackageGroups();
 	
+	alpm_list_t *getPackagesFromRepo(const QString &reponame);
+	
 	QStringList getUpgradeablePackages();
 	alpm_list_t *getInstalledPackages();
 
