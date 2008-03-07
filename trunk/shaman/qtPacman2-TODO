@@ -48,5 +48,8 @@ All classes:
 	*PackageSortFilterProxyModel (QSortFilterProxyModel)
 	*PackageInformation (QDockWidget)
 	*RepoDock (QDockWidget)
-	*Package
+	*Package (perhaps alpm's package class)
 	*Database
+	*if Package-class == alpm's package class
+		*a namespace with static functions like:
+			*QStringList getPackageFiles(__pmkg *pkg); that we don't have to handle with alpmlists in Model/View...
