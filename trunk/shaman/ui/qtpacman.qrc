@@ -2,6 +2,8 @@
     <qresource prefix="/Icons" >
         <file>icons/application-exit.png</file>
         <file>icons/applications-development.png</file>
+        <file>icons/archlinux-icon-crystal-32.svg</file>
+        <file>icons/archlinux-mods-kdemod.svg</file>
         <file>icons/bookmark-new-list.png</file>
         <file>icons/dialog-cancel.png</file>
         <file>icons/dialog-ok-apply.png</file>
