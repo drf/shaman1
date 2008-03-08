@@ -129,15 +129,23 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 			QString key;
 			QStringList templst;
 			/* strsep modifies the 'line' string: 'key \0 ptr' */
-			templst = line.split("=");
-			if(templst.size() != 2)
+			if(line.contains(QChar('=')))
 			{
-				pacData.loaded = false;
+				templst = line.split(QChar('='));
+				if(templst.size() != 2)
+				{
+					pacData.loaded = false;
 
-				return;
+					return;
+				}
+				key.operator=(templst.at(0));
+				line.operator=(templst.at(1));
 			}
-			key.operator=(templst.at(0));
-			line.operator=(templst.at(1));
+			else
+			{
+				key = line;
+				line = QString();
+			}
 
 			if(key == NULL)
 			{
@@ -154,7 +162,7 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 			while(key.contains(' '))
 				key.remove(key.indexOf(' '), 1);
 
-			if(line == NULL && section.compare("options", Qt::CaseInsensitive) == 0) 
+			if((line == NULL || line == QString()) && section.compare("options", Qt::CaseInsensitive) == 0) 
 			{
 				/* directives without settings, all in [options] */
 				if(key.compare("NoPassiveFTP", Qt::CaseInsensitive) == 0)
@@ -163,6 +171,9 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 					pacData.useSysLog = 1;
 				else if(key.compare("UseDelta", Qt::CaseInsensitive) == 0)
 					pacData.useDelta = 1; 
+				else if(key.compare("UseDelta", Qt::CaseInsensitive) == 0 || 
+						key.compare("ILoveCandy", Qt::CaseInsensitive) == 0)
+					continue;
 
 			}
 			else
