@@ -29,8 +29,10 @@
 #include <QDebug>
 #include <QProcess>
 #include <QFile>
+#include <QDir>
 #include <QWaitCondition>
 #include <QDialogButtonBox>
+#include <QMessageBox>
 #include <fcntl.h>
 
 /* libarchive */
@@ -61,6 +63,7 @@ QueueDialog::QueueDialog(AlpmHandler *hnd, QWidget *parent)
 			SLOT(handlePreparingError(const QString&)));
 	connect(aHandle, SIGNAL(committingTransactionError(const QString&)), 
 				SLOT(handleCommittingError(const QString&)));
+	connect(abortTr, SIGNAL(clicked()), SLOT(abortTransaction()));
 	
 	qDebug() << "Queue signals connected";
 	
@@ -507,7 +510,7 @@ bool QueueDialog::runScriptlet(int action, const QString &p1N, const QString &p1
 		cmdline = QString(". %1; %2 %3 %4").arg(scriptfn).arg(realAct).arg(p1V).
 				arg(p2V);
 
-	getcwd(cwd, 4096);
+	cwd = QDir::currentPath();
 	
 	chdir("/");
 	
@@ -622,7 +625,7 @@ void QueueDialog::finishedScriptletRunning(int eC,QProcess::ExitStatus eS)
 		actionDetail->setText(QString(tr("Error processing Scriptlet!!")));
 	}
 
-	chdir(cwd);
+	chdir(cwd.toAscii().data());
 
 	proc->deleteLater();
 
@@ -691,6 +694,42 @@ bool QueueDialog::checkScriptlet(const QString &path, const QString &action)
 		fp.close();
 		return false;
 	}
+}
+
+void QueueDialog::abortTransaction()
+{
+	QMessageBox *msgBox = new QMessageBox(this);
+
+	msgBox->setIcon(QMessageBox::Question);
+	msgBox->setWindowTitle(QString(tr("Queue Processing")));
+
+	msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+
+	msgBox->setWindowModality(Qt::ApplicationModal);
+
+	msgBox->setText(QString(tr("Would you like to abort Queue Processing?\nThis may damage your system.")));
+
+	switch (msgBox->exec()) {
+	case QMessageBox::Yes:
+		errors = true;
+		if(alpm_trans_release() == -1)
+		{
+			qDebug() << "Could not release, trying to interrupt...";
+			if(alpm_trans_interrupt() == -1)
+			{
+				qDebug() << "Could not interrupt, terminating the thread...";
+				cTh->terminate();
+			}
+		}
+		break;
+	case QMessageBox::No:
+		break;
+	default:
+		// should never be reached
+		break;
+	}
+
+	msgBox->deleteLater();
 }
 
 void QueueDialog::handlePreparingError(const QString &msg)

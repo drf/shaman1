@@ -422,7 +422,7 @@ p, li { white-space: pre-wrap; }
            <enum>Qt::AutoText</enum>
           </property>
           <property name="pixmap" >
-           <pixmap resource="qtpacman.qrc" >:/Icons/icons/network-server-database.png</pixmap>
+           <pixmap resource="qtpacman.qrc" >:/Icons/icons/applications-development.png</pixmap>
           </property>
           <property name="scaledContents" >
            <bool>true</bool>
@@ -488,6 +488,9 @@ p, li { white-space: pre-wrap; }
         <widget class="QPushButton" name="reduceButton" >
          <property name="text" >
           <string>Reduce To Tray</string>
+         </property>
+         <property name="icon" >
+          <iconset resource="qtpacman.qrc" >:/Icons/icons/user-invisible.png</iconset>
          </property>
         </widget>
        </item>

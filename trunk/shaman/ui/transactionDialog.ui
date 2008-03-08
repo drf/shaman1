@@ -136,6 +136,9 @@
        <property name="text" >
         <string>More Details...</string>
        </property>
+       <property name="icon" >
+        <iconset resource="qtpacman.qrc" >:/Icons/icons/help-about.png</iconset>
+       </property>
        <property name="checkable" >
         <bool>true</bool>
        </property>
@@ -161,6 +164,9 @@
       <widget class="QPushButton" name="abortTr" >
        <property name="text" >
         <string>Abort</string>
+       </property>
+       <property name="icon" >
+        <iconset resource="qtpacman.qrc" >:/Icons/icons/dialog-cancel.png</iconset>
        </property>
       </widget>
      </item>

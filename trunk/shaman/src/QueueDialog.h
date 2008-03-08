@@ -61,10 +61,10 @@ public slots:
 	void cleanup();
 	bool runScriptlet(int action, const QString &p1N, const QString &p1V, 
 			const QString &pA, const QString &p2V);
-	//void handleScriptletEnding(int eC, QProcess::ExitStatus estat);
 	void writeLineProgress();
 	void writeLineProgressErr();
 	void finishedScriptletRunning(int eC,QProcess::ExitStatus eS);
+	void abortTransaction();
 	
 	void handlePreparingError(const QString &msg);
 	void handleCommittingError(const QString &msg);
@@ -81,7 +81,7 @@ private:
 	TrCommitThread *cTh;
 	QProcess *proc;
 	int status;
-	char cwd[4096];
+	QString cwd;
 	bool scrRun;
 	bool errors;
 };

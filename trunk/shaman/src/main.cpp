@@ -151,13 +151,19 @@ int main(int argc, char **argv)
 	QSettings *settings = new QSettings();
 	
 	QSplashScreen splscr(QPixmap(":/Images/images/splash.png"));
+	
+	QString splhh("<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">p, "
+			"li { white-space: pre-wrap; }</style></head><body style=\" font-size:9pt; font-weight:400; font-style:normal;\">"
+			"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">"
+			"<span style=\" font-size:13pt; font-style:italic; color:#f5f5f5;\">");
+	QString splhf("</span></p></body></html>");
 
 	if(settings->value("gui/showsplashscreen", true).toBool())
 	{
 		splscr.show();
 		app.processEvents();
 
-		splscr.showMessage(QString(QObject::tr("Please Wait...")), Qt::AlignBottom | Qt::AlignRight);
+		splscr.showMessage(QString(splhh + QObject::tr("Please Wait...") + splhf), Qt::AlignBottom | Qt::AlignRight);
 		app.processEvents();
 	}
 
@@ -212,7 +218,7 @@ int main(int argc, char **argv)
 
 	if(settings->value("gui/showsplashscreen", true).toBool())
 	{
-		splscr.showMessage(QString(QObject::tr("Loading Packages...")), Qt::AlignBottom | Qt::AlignRight);
+		splscr.showMessage(QString(splhh + QObject::tr("Loading Packages...") + splhf), Qt::AlignBottom | Qt::AlignRight);
 		app.processEvents();
 	}
 
@@ -220,7 +226,7 @@ int main(int argc, char **argv)
 
 	if(settings->value("gui/showsplashscreen", true).toBool())
 	{
-		splscr.showMessage(QString(QObject::tr("Starting up Shaman...")), Qt::AlignBottom | Qt::AlignRight);
+		splscr.showMessage(QString(splhh + QObject::tr("Starting up Shaman...") + splhf), Qt::AlignBottom | Qt::AlignRight);
 		app.processEvents();
 	}
 

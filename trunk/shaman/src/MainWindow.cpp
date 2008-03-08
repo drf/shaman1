@@ -1176,8 +1176,6 @@ void MainWindow::startUpgrading()
 {
 	disconnect(dbdialog, 0,0,0);
 
-	dbdialog->deleteLater();
-
 	if(aHandle->getUpgradeablePackages().isEmpty())
 	{
 		emit systemIsUpToDate();
@@ -1215,6 +1213,7 @@ void MainWindow::startUpgrading()
 		connect(upDl, SIGNAL(addToPkgQueue()), SLOT(addUpgradeableToQueue()));
 	}
 	
+	dbdialog->deleteLater();
 	dbdialog = NULL;
 
 }
