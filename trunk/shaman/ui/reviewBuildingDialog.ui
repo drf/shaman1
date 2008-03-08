@@ -115,6 +115,9 @@ p, li { white-space: pre-wrap; }
          <property name="text" >
           <string>Show packages...</string>
          </property>
+         <property name="icon" >
+          <iconset resource="qtpacman.qrc" >:/Icons/icons/view-list-tree.png</iconset>
+         </property>
          <property name="checkable" >
           <bool>true</bool>
          </property>

@@ -47,7 +47,7 @@
           <string>Show packages...</string>
          </property>
          <property name="icon" >
-          <iconset resource="qtpacman.qrc" >:/Icons/icons/bookmark-new-list.png</iconset>
+          <iconset resource="qtpacman.qrc" >:/Icons/icons/view-list-tree.png</iconset>
          </property>
          <property name="checkable" >
           <bool>true</bool>

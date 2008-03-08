@@ -51,6 +51,7 @@
         <file>icons/user-offline.png</file>
         <file>icons/user-online.png</file>
         <file>icons/view-history.png</file>
+        <file>icons/view-list-tree.png</file>
         <file>icons/view-refresh.png</file>
     </qresource>
     <qresource prefix="/Images" >
