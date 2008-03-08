@@ -5,7 +5,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>600</width>
+    <width>622</width>
     <height>294</height>
    </rect>
   </property>
@@ -89,6 +89,9 @@
       <widget class="QPushButton" name="showPackages" >
        <property name="text" >
         <string>Show packages...</string>
+       </property>
+       <property name="icon" >
+        <iconset resource="qtpacman.qrc" >:/Icons/icons/view-list-tree.png</iconset>
        </property>
        <property name="checkable" >
         <bool>true</bool>
