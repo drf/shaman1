@@ -25,9 +25,11 @@
 
 #include <plasma/layouts/hboxlayout.h>
 #include <plasma/widgets/icon.h>
+#include <QtDBus/QDBusMessage>
 
 ShamanApplet::ShamanApplet(QObject *parent, const QVariantList &args)
-  : Plasma::Applet(parent, args)
+  : Plasma::Applet(parent, args),
+  dbus(QDBusConnection::systemBus())
 {
     setDrawStandardBackground(true);
 } 
@@ -57,10 +59,14 @@ void ShamanApplet::init()
 
 void ShamanApplet::updateDatabase()
 {
+	QDBusMessage msg = QDBusMessage::createMethodCall("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", "doDbUpdate");
+	dbus.call(msg);
 }
 
 void ShamanApplet::upgradeSystem()
 {
+	QDBusMessage msg = QDBusMessage::createMethodCall("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", "fullSysUpgrade");
+	dbus.call(msg);
 }
 
 void ShamanApplet::dataUpdated(const QString &name, const Plasma::DataEngine::Data &data)

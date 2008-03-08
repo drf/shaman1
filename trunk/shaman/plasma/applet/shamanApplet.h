@@ -23,6 +23,7 @@
 
 #include <plasma/applet.h>
 #include <plasma/dataengine.h>
+#include <QtDBus/QDBusConnection>
 
 namespace Plasma
 {
@@ -47,6 +48,7 @@ class ShamanApplet : public Plasma::Applet
     private:
         void init();
 
+        QDBusConnection dbus;
         Plasma::HBoxLayout * m_layout;
         Plasma::Icon *updateDatabaseIcon;
         Plasma::Icon *upgradeSystemIcon;

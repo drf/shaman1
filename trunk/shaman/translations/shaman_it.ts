@@ -25,7 +25,7 @@
     <message>
         <location filename="../src/AlpmHandler.cpp" line="1125"/>
         <source>Alpm did not give further details.</source>
-        <translation type="unfinished"></translation>
+        <translation>Alpm non ha dato ulteriori dettagli.</translation>
     </message>
 </context>
 <context>
@@ -414,60 +414,61 @@ Vuoi cancellarlo?</translation>
         <translation>Repositori Ufficiali di Arch Linux</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="441"/>
+        <location filename="../ui/configDialog.ui" line="465"/>
         <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones.
 Please note that packages from Unstable and Testing may break your system.</source>
         <translation>Qui puoi scegliere quali repositori utilizzare tra quelli ufficiali di Arch Linux.
-Considera che i pacchetti da Unstable e Testing possono compromettere il tuo sistema.</translation>
+Considera che i pacchetti da Unstable e Testing possono compromettere il 
+tuo sistema.</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="613"/>
+        <location filename="../ui/configDialog.ui" line="663"/>
         <source>Server</source>
         <translation>Server</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="505"/>
+        <location filename="../ui/configDialog.ui" line="531"/>
         <source>Mirror:</source>
         <translation>Mirror:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="520"/>
+        <location filename="../ui/configDialog.ui" line="546"/>
         <source>Add Mirror</source>
         <translation>Aggiungi Mirror</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="533"/>
+        <location filename="../ui/configDialog.ui" line="560"/>
         <source>KDEMod Repositories</source>
         <translation>Repositori di KDEMod</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="541"/>
+        <location filename="../ui/configDialog.ui" line="590"/>
         <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an 
 improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme,
 and lots of addons, KDEMod is the best way to taste the ease and the power
 of KDE with the simplicity and the power of Arch.</source>
-        <translation>KDEMod è una versione migliorata di KDE, un&apos;esclusiva di Arch Linux. Con una
+        <translation type="unfinished">KDEMod è una versione migliorata di KDE, un&apos;esclusiva di Arch Linux. Con una
 versione migliorata delle Qt, compatibile con quelle standard di Arch Linux, un tema
-migliorato, e moltissime aggiunte, KDEMod è il modo migliore per combinare la facilità
-e il potere di KDE con la semplicità e le performance di Arch Linux.</translation>
+migliorato, e moltissime aggiunte, KDEMod è il modo migliore per combinare 
+la facilità e il potere di KDE con la semplicità e le performance di Arch Linux.</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="551"/>
+        <location filename="../ui/configDialog.ui" line="602"/>
         <source>KDEMod 3 Repository</source>
         <translation>Repository di KDEMod 3</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="558"/>
+        <location filename="../ui/configDialog.ui" line="609"/>
         <source>KDEMod 4 Repository (Unstable, testers only)</source>
         <translation>Repository di KDEMod 4 (Instabile, solo per tester)</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="581"/>
+        <location filename="../ui/configDialog.ui" line="631"/>
         <source>Third-Party Repositories</source>
         <translation>Repositori di Terze Parti</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="592"/>
+        <location filename="../ui/configDialog.ui" line="642"/>
         <source>You can extend your packages choice by adding other repositories. Third-Party 
 Repositories act just as normal ones, and will be accessible through both Shaman
 and Pacman.</source>
@@ -476,97 +477,97 @@ di terze parti sono esattamente come quelli standard, e saranno accessibili sia 
 Shaman che tramite Pacman.</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="608"/>
+        <location filename="../ui/configDialog.ui" line="658"/>
         <source>Repository</source>
         <translation>Repository</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="636"/>
+        <location filename="../ui/configDialog.ui" line="686"/>
         <source>Add New Repository</source>
         <translation>Aggiungi un Nuovo Repository</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="643"/>
+        <location filename="../ui/configDialog.ui" line="693"/>
         <source>Edit Repository</source>
         <translation>Modifica Repository</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="650"/>
+        <location filename="../ui/configDialog.ui" line="700"/>
         <source>Remove Repository</source>
         <translation>Rimuovi Repository</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="669"/>
+        <location filename="../ui/configDialog.ui" line="719"/>
         <source>Preferences</source>
         <translation>Preferenze</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="682"/>
+        <location filename="../ui/configDialog.ui" line="732"/>
         <source>Review Building output before installing</source>
         <translation>Rivedi l&apos;output del compilatore prima di installare</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="692"/>
+        <location filename="../ui/configDialog.ui" line="742"/>
         <source>ABS Configuration</source>
         <translation>Configurazione di ABS</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="698"/>
+        <location filename="../ui/configDialog.ui" line="748"/>
         <source>Use supfiles that match your current repositories</source>
         <translation>Usa i supfiles dei tuoi repositori attuali</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="707"/>
+        <location filename="../ui/configDialog.ui" line="757"/>
         <source>Define supfiles manually</source>
         <translation>Definisci i supfile manualmente</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="722"/>
+        <location filename="../ui/configDialog.ui" line="772"/>
         <source>Makepkg Configuration</source>
         <translation>Configurazione di Makepkg</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="728"/>
+        <location filename="../ui/configDialog.ui" line="778"/>
         <source>CFlags</source>
         <translation>CFlags</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="738"/>
+        <location filename="../ui/configDialog.ui" line="788"/>
         <source>CXXFlags</source>
         <translation>CXXFlags</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="748"/>
+        <location filename="../ui/configDialog.ui" line="798"/>
         <source>BuildEnv</source>
         <translation>BuildEnv</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="758"/>
+        <location filename="../ui/configDialog.ui" line="808"/>
         <source>Options</source>
         <translation>Opzioni</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="768"/>
+        <location filename="../ui/configDialog.ui" line="818"/>
         <source>Doc_Dirs</source>
         <translation>Doc_Dirs</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="781"/>
+        <location filename="../ui/configDialog.ui" line="831"/>
         <source>Build Environment</source>
         <translation>Ambiente di Compilazione</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="789"/>
+        <location filename="../ui/configDialog.ui" line="839"/>
         <source>Building Path</source>
         <translation>Percorso di Compilazione</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="801"/>
+        <location filename="../ui/configDialog.ui" line="851"/>
         <source>Remove installed makedepends after build</source>
         <translation>Rimuovi le dipendenze di compilazione installate dopo la compilazione</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="808"/>
+        <location filename="../ui/configDialog.ui" line="858"/>
         <source>Clean Build Environment after installation</source>
         <translation>Pulisci l&apos;Ambiente di Compilazione dopo l&apos;installazione</translation>
     </message>
@@ -768,31 +769,31 @@ E&apos; ora disponibile in mirrorlist.</translation>
         <translation>In Attesa</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="449"/>
+        <location filename="../ui/configDialog.ui" line="475"/>
         <source>Core</source>
         <comment>Do not translate</comment>
         <translation>Core</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="456"/>
+        <location filename="../ui/configDialog.ui" line="482"/>
         <source>Extra</source>
         <comment>Do not translate</comment>
         <translation>Extra</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="463"/>
+        <location filename="../ui/configDialog.ui" line="489"/>
         <source>Community</source>
         <comment>Do not translate</comment>
         <translation>Community</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="470"/>
+        <location filename="../ui/configDialog.ui" line="496"/>
         <source>Testing</source>
         <comment>Do not translate</comment>
         <translation>Testing</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="477"/>
+        <location filename="../ui/configDialog.ui" line="503"/>
         <source>Unstable</source>
         <comment>Do not translate</comment>
         <translation>Unstable</translation>
@@ -815,10 +816,10 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Shaman Manteinance.&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Manutenzione di Shaman.&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Per favore scegli un&apos;azione dal menù a comparsa.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Manutenzione di Shaman.&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Per favore scegli un&apos;azione dal menù a comparsa.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="675"/>
+        <location filename="../ui/configDialog.ui" line="725"/>
         <source>Process all dependencies and queue from binary first (recommended)</source>
         <translation>Esegui prima tutte le dipendenze e la coda da binario (raccomandato)</translation>
     </message>
@@ -1855,7 +1856,8 @@ Per favore aggiorna Pacman.</translation>
         <location filename="../src/QueueDialog.cpp" line="710"/>
         <source>Would you like to abort Queue Processing?
 This may damage your system.</source>
-        <translation type="unfinished"></translation>
+        <translation>Desideri annullare l&apos;Esecuzione della Coda?
+Questo potrebbe danneggiare il tuo Sistema.</translation>
     </message>
 </context>
 <context>
