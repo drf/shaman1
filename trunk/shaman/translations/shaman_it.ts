@@ -2273,27 +2273,27 @@ p, li { white-space: pre-wrap; }
         <translation>Mostra Pacchetti...</translation>
     </message>
     <message>
-        <location filename="../ui/reviewBuildingDialog.ui" line="142"/>
+        <location filename="../ui/reviewBuildingDialog.ui" line="145"/>
         <source>Packages In Queue</source>
         <translation>Pacchetti In Coda</translation>
     </message>
     <message>
-        <location filename="../ui/reviewBuildingDialog.ui" line="152"/>
+        <location filename="../ui/reviewBuildingDialog.ui" line="155"/>
         <source>Abort</source>
         <translation>Annulla</translation>
     </message>
     <message>
-        <location filename="../ui/reviewBuildingDialog.ui" line="159"/>
+        <location filename="../ui/reviewBuildingDialog.ui" line="162"/>
         <source>Process From Binary</source>
         <translation>Esegui Da Binario</translation>
     </message>
     <message>
-        <location filename="../ui/reviewBuildingDialog.ui" line="179"/>
+        <location filename="../ui/reviewBuildingDialog.ui" line="182"/>
         <source>Review PKGBUILDs</source>
         <translation>Modifica i PKGBUILD</translation>
     </message>
     <message>
-        <location filename="../ui/reviewBuildingDialog.ui" line="186"/>
+        <location filename="../ui/reviewBuildingDialog.ui" line="189"/>
         <source>Process From Source</source>
         <translation>Esegui da Sorgente</translation>
     </message>

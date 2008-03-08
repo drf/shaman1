@@ -43,7 +43,7 @@ ShamanTrayIcon::ShamanTrayIcon(MainWindow *mW, AlpmHandler *aH)
 	connect(updateDBAction, SIGNAL(triggered()), mainWin, SLOT(doDbUpdate()));
 	systrayAct.append(updateDBAction);
 
-	QAction *upgradeAction = systrayMenu->addAction(QIcon(":/Icons/icons/edit-redo.png"), tr("Upgrade System"));
+	QAction *upgradeAction = systrayMenu->addAction(QIcon(":/Icons/icons/system-software-update.png"), tr("Upgrade System"));
 	connect(upgradeAction, SIGNAL(triggered()), mainWin, SLOT(fullSysUpgrade()));
 	systrayAct.append(upgradeAction);
 

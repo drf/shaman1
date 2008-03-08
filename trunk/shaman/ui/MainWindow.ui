@@ -577,7 +577,7 @@
   </action>
   <action name="actionUpgrade_System" >
    <property name="icon" >
-    <iconset resource="qtpacman.qrc" >:/Icons/icons/edit-redo.png</iconset>
+    <iconset resource="qtpacman.qrc" >:/Icons/icons/system-software-update.png</iconset>
    </property>
    <property name="text" >
     <string>Upgrade System</string>

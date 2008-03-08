@@ -5,22 +5,22 @@
     <message>
         <location filename="../src/AlpmHandler.cpp" line="1061"/>
         <source>: requires </source>
-        <translation type="unfinished"></translation>
+        <translation>: benötigt </translation>
     </message>
     <message>
         <location filename="../src/AlpmHandler.cpp" line="1071"/>
         <source>: conflicts with </source>
-        <translation type="unfinished"></translation>
+        <translation>: steht im Konflikt mit </translation>
     </message>
     <message>
         <location filename="../src/AlpmHandler.cpp" line="1098"/>
         <source>%1 exists in both &apos;%2&apos; and &apos;%3&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 existiert jeweils in &apos;%2&apos; und &apos;%3&apos;</translation>
     </message>
     <message>
         <location filename="../src/AlpmHandler.cpp" line="1106"/>
         <source>: %1 exists in filesystem</source>
-        <translation type="unfinished"></translation>
+        <translation>: %1 existiert bereits im Dateisystem</translation>
     </message>
     <message>
         <location filename="../src/AlpmHandler.cpp" line="1125"/>
@@ -106,7 +106,7 @@ rückgängig gemacht.</translation>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="225"/>
         <source>&lt;b&gt;Could not set up the environment correctly for %1!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Die Bau-Umgebung für %1 konnte nicht korrekt erstellt werden!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
 </context>
 <context>
@@ -485,7 +485,7 @@ Kombination aus der Einfachheit von KDE und der Power von Arch Linux.</translati
 Repositories act just as normal ones, and will be accessible through both Shaman
 and Pacman.</source>
         <translation>Die Paketauswahl kann durch das hinzufügen weiterer Paketquellen erweitert 
-werden. Diese Paketquellen verhalten sich wie alle anderen auch, und können
+werden. Diese Paketquellen verhalten sich wie alle anderen auch und können
 sowohl von Shaman als auch Pacman verwendet werden.</translation>
     </message>
     <message>
@@ -581,7 +581,7 @@ sowohl von Shaman als auch Pacman verwendet werden.</translation>
     <message>
         <location filename="../ui/configDialog.ui" line="851"/>
         <source>Remove installed makedepends after build</source>
-        <translation>Entferne installierte makedepens nach dem Bauvorgang</translation>
+        <translation>Entferne installierte makedepends nach dem Bauvorgang</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="858"/>
@@ -773,7 +773,7 @@ verfügbar.</translation>
     <message>
         <location filename="../ui/configDialog.ui" line="240"/>
         <source>Process Selected</source>
-        <translation>Verarbeite Auswahl</translation>
+        <translation>Vorgang starten</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="456"/>
@@ -843,7 +843,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/configDialog.ui" line="725"/>
         <source>Process all dependencies and queue from binary first (recommended)</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle Abhängigkeiten zuerst aus Binärpaketen verarbeiten (empfohlen)</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="282"/>
@@ -945,7 +945,7 @@ Soll er gespeichert werden?</translation>
     <message>
         <location filename="../ui/MainWindow.ui" line="180"/>
         <source>Action-Text</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="224"/>
@@ -1487,37 +1487,45 @@ fortsetzen?</translation>
     <message>
         <location filename="../src/MainWindow.cpp" line="729"/>
         <source>Pacman Update</source>
-        <translation type="unfinished"></translation>
+        <translation>Pacman-Aktualisierung</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="736"/>
         <source>Pacman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Pacman now?</source>
-        <translation type="unfinished"></translation>
+        <translation>Es ist eine Aktualisierung von Pacman verfügbar. Es ist
+empfohlen, diese zuerst auszuführen um Konflikte zu
+vermeiden.
+Soll Pacman nun aktualisiert werden?</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="765"/>
         <source>Shaman Update</source>
-        <translation type="unfinished"></translation>
+        <translation>Shaman-Aktualisierung</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="772"/>
         <source>Shaman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Shaman now?</source>
-        <translation type="unfinished"></translation>
+        <translation>Es ist eine Aktualisierung von Shaman verfügbar. Es ist
+empfohlen, diese zuerst auszuführen um Konflikte zu
+vermeiden.
+Soll Shaman nun aktualisiert werden?</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1360"/>
         <source>Restart required</source>
-        <translation type="unfinished"></translation>
+        <translation>Neustart nötig</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1362"/>
         <source>Pacman or Shaman was updated. Shaman will now quit,
 please restart it to use the new version</source>
-        <translation type="unfinished"></translation>
+        <translation>Pacman und/oder Shaman wurde aktualisiert.
+Shaman wird nun beendet. Nach einem erneuten Start
+kann die neue Version genutzt werden</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1598"/>
@@ -1531,28 +1539,39 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf54321@yahoo.it&amp;gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;l.appelhans@gmx.de&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ein libalpm Frontend in Qt&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Lizenz: GPLv2+&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Libalpm Version: v.%1&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf54321@yahoo.it&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;l.appelhans@gmx.de&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1632"/>
         <source>Library Question</source>
-        <translation type="unfinished"></translation>
+        <translation>Bibliotheks-Frage</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="598"/>
         <source>Local Version: </source>
-        <translation type="unfinished"></translation>
+        <translation>Lokale Version: </translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="603"/>
         <source>Version in the Repository: </source>
-        <translation type="unfinished"></translation>
+        <translation>Version in der Paketquelle: </translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1336"/>
         <source>One or more errors occourred, your Queue
 was not successfully processed</source>
-        <translation type="unfinished"></translation>
+        <translation>Einer oder mehrere Fehler sind aufgetreten.
+Die Warteschlange wurde nicht erfolgreich
+verarbeitet</translation>
     </message>
 </context>
 <context>
@@ -1591,7 +1610,10 @@ Thanks again, and enjoy your translation!</comment>
         <source>Pacman is not updated.
 Shaman needs libalpm &gt;= 2.1.0 to run.
 Yours is %1. Please update Pacman.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pacman ist nicht aktuell.
+Shaman benötigt libalpm &gt;= 2.1.0.
+Die installierte Version ist aber %1.
+Bitte Pacman aktualisieren.</translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="166"/>
@@ -1815,7 +1837,7 @@ Yours is %1. Please update Pacman.</source>
     <message>
         <location filename="../src/QueueDialog.cpp" line="625"/>
         <source>Error processing Scriptlet!!</source>
-        <translation type="unfinished"></translation>
+        <translation>Installationsskript konnte nicht verarbeitet werden!!</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="789"/>
@@ -1826,13 +1848,15 @@ Yours is %1. Please update Pacman.</source>
         <location filename="../src/QueueDialog.cpp" line="746"/>
         <source>There has been an error while preparing the transaction.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Beim vorbereiten der Warteschlange ist ein Fehler aufgetreten.
+</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="779"/>
         <source>There has been an error while committing the transaction.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Beim abschliessen der Warteschlange ist ein Fehler aufgetreten.
+</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="710"/>
@@ -1856,7 +1880,7 @@ This may damage your system.</source>
     <message>
         <location filename="../ui/reviewQueueDialog.ui" line="38"/>
         <source>Process in Tray</source>
-        <translation>Im Systemabschnitt verarbeiten</translation>
+        <translation>Warteschlange im Systemabschnitt verarbeiten</translation>
     </message>
     <message>
         <location filename="../ui/reviewQueueDialog.ui" line="47"/>
@@ -2156,7 +2180,37 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Giannis Antoniou&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;Greek Translator&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;Shaman ist durch die Hilfe vieler Menschen entstanden. Unser Dank an jene, durch die Shaman das Licht erblickt hat. Falls Du mitgeholfen hast und nicht in dieser Liste stehst, lass es uns wissen.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:600;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:600;&quot;&gt;Jan Mette&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;Deutsche Übersetzung und KDEmod-Entwickler&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Johannes Schriewer&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;KDEmod Entwickler und Hilfe bei der Programmierung&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:600;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Rodrigo Mazak&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;Brasilianische Übersetzung und Namensgeber von Shaman&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Martin Sandsmark&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;Unser Webhoster und Trac-Administrator&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Till Luge&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Viele Tests und noch mehr Feedback,  vielen Dank!&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Die KDEMod Community&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Hilfe, Tests, Unterstützung. Alles fand hier seinen Anfang.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Jacques Disner&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;Französische Übersetzung&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;XanK&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;Spanische Übersetzung&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Giannis Antoniou&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;Griechische Übersetzung&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -2283,27 +2337,27 @@ p, li { white-space: pre-wrap; }
         <translation>Pakete anzeigen...</translation>
     </message>
     <message>
-        <location filename="../ui/reviewBuildingDialog.ui" line="142"/>
+        <location filename="../ui/reviewBuildingDialog.ui" line="145"/>
         <source>Packages In Queue</source>
         <translation>Pakete in Warteschlange</translation>
     </message>
     <message>
-        <location filename="../ui/reviewBuildingDialog.ui" line="152"/>
+        <location filename="../ui/reviewBuildingDialog.ui" line="155"/>
         <source>Abort</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="../ui/reviewBuildingDialog.ui" line="159"/>
+        <location filename="../ui/reviewBuildingDialog.ui" line="162"/>
         <source>Process From Binary</source>
         <translation>Aus Binärpaketen verarbeiten</translation>
     </message>
     <message>
-        <location filename="../ui/reviewBuildingDialog.ui" line="179"/>
+        <location filename="../ui/reviewBuildingDialog.ui" line="182"/>
         <source>Review PKGBUILDs</source>
         <translation>PKGBUILDs überprüfen</translation>
     </message>
     <message>
-        <location filename="../ui/reviewBuildingDialog.ui" line="186"/>
+        <location filename="../ui/reviewBuildingDialog.ui" line="189"/>
         <source>Process From Source</source>
         <translation>Aus Source verarbeiten</translation>
     </message>
@@ -2338,7 +2392,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/transactionDialog.ui" line="45"/>
         <source>Cleanup</source>
-        <translation>Säubern</translation>
+        <translation>Transaktion abschliessen</translation>
     </message>
     <message>
         <location filename="../ui/transactionDialog.ui" line="137"/>
@@ -2408,7 +2462,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/upgradeDialog.ui" line="171"/>
         <source>Packages to Upgrade</source>
-        <translation type="unfinished"></translation>
+        <translation>Zu aktualisierende Pakete</translation>
     </message>
     <message>
         <location filename="../ui/upgradeDialog.ui" line="91"/>

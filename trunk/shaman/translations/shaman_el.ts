@@ -2276,27 +2276,27 @@ p, li { white-space: pre-wrap; }
         <translation>Εμφάνιση πακέτων...</translation>
     </message>
     <message>
-        <location filename="../ui/reviewBuildingDialog.ui" line="142"/>
+        <location filename="../ui/reviewBuildingDialog.ui" line="145"/>
         <source>Packages In Queue</source>
         <translation>Πακέτα στην Ουρά</translation>
     </message>
     <message>
-        <location filename="../ui/reviewBuildingDialog.ui" line="152"/>
+        <location filename="../ui/reviewBuildingDialog.ui" line="155"/>
         <source>Abort</source>
         <translation>Ακύρωση</translation>
     </message>
     <message>
-        <location filename="../ui/reviewBuildingDialog.ui" line="159"/>
+        <location filename="../ui/reviewBuildingDialog.ui" line="162"/>
         <source>Process From Binary</source>
         <translation>Επεξεργασία από Έτοιμα πακέτα</translation>
     </message>
     <message>
-        <location filename="../ui/reviewBuildingDialog.ui" line="179"/>
+        <location filename="../ui/reviewBuildingDialog.ui" line="182"/>
         <source>Review PKGBUILDs</source>
         <translation>Επισκόπιση των PKGBUILDs</translation>
     </message>
     <message>
-        <location filename="../ui/reviewBuildingDialog.ui" line="186"/>
+        <location filename="../ui/reviewBuildingDialog.ui" line="189"/>
         <source>Process From Source</source>
         <translation>Επεξεργασία από την Πηγή</translation>
     </message>
