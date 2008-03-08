@@ -19,7 +19,12 @@
  ***************************************************************************/
 #include "shamanApplet.h"
 
-#include <plasma/layouts/vboxlayout.h>
+#include <QAction>
+
+#include <KIcon>
+
+#include <plasma/layouts/hboxlayout.h>
+#include <plasma/widgets/icon.h>
 
 ShamanApplet::ShamanApplet(QObject *parent, const QVariantList &args)
   : Plasma::Applet(parent, args)
@@ -33,9 +38,11 @@ ShamanApplet::~ShamanApplet()
 
 void ShamanApplet::init()
 {
-    m_layout = new Plasma::VBoxLayout(this);
-    Plasma::Icon *icon = new Plasma::Icon(tr("Shaman man that rockx"), this);
-    m_layout->addItem(icon);
+    m_layout = new Plasma::HBoxLayout(this);
+    updateDB = new Plasma::Icon(KIcon("view-refresh"), tr("Update Database"), this);
+    m_layout->addItem(updateDB);
+    upgradeSystem = new Plasma::Icon(KIcon("edit-redo.png"), tr("Upgrade System"), this);
+    m_layout->addItem(upgradeSystem);
 }
 
 #include "shamanApplet.moc"

@@ -22,11 +22,11 @@
 #define SHAMANAPPLET_H
 
 #include <plasma/applet.h>
-#include <plasma/widgets/icon.h>
 
 namespace Plasma
 {
-    class VBoxLayout;
+    class HBoxLayout;
+    class Icon;
 }
 
 class ShamanApplet : public Plasma::Applet
@@ -39,7 +39,9 @@ class ShamanApplet : public Plasma::Applet
     private:
         void init();
 
-        Plasma::VBoxLayout * m_layout;
+        Plasma::HBoxLayout * m_layout;
+        Plasma::Icon *updateDB;
+        Plasma::Icon *upgradeSystem;
 }; 
 
 K_EXPORT_PLASMA_APPLET(shaman, ShamanApplet)
