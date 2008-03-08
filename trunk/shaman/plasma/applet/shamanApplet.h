@@ -22,6 +22,7 @@
 #define SHAMANAPPLET_H
 
 #include <plasma/applet.h>
+#include <plasma/dataengine.h>
 
 namespace Plasma
 {
@@ -36,12 +37,16 @@ class ShamanApplet : public Plasma::Applet
         ShamanApplet(QObject *parent, const QVariantList &args);
         ~ShamanApplet();
 
+    public slots:
+        void dataUpdated(const QString &name, const Plasma::DataEngine::Data &data);
+
     private:
         void init();
 
         Plasma::HBoxLayout * m_layout;
         Plasma::Icon *updateDB;
         Plasma::Icon *upgradeSystem;
+        Plasma::DataEngine *m_engine;
 }; 
 
 K_EXPORT_PLASMA_APPLET(shaman, ShamanApplet)

@@ -38,11 +38,24 @@ ShamanApplet::~ShamanApplet()
 
 void ShamanApplet::init()
 {
+    m_engine = dataEngine("shaman");
+    if (m_engine) {
+        m_engine->connectSource("Shaman", this);
+    }
+    else {
+        kDebug()<<"Shaman Engine could not be loaded";
+    }
+
     m_layout = new Plasma::HBoxLayout(this);
     updateDB = new Plasma::Icon(KIcon("view-refresh"), tr("Update Database"), this);
     m_layout->addItem(updateDB);
     upgradeSystem = new Plasma::Icon(KIcon("edit-redo.png"), tr("Upgrade System"), this);
     m_layout->addItem(upgradeSystem);
+}
+
+void ShamanApplet::dataUpdated(const QString &name, const Plasma::DataEngine::Data &data)
+{
+    //TODO: Do the Info-updates here...
 }
 
 #include "shamanApplet.moc"
