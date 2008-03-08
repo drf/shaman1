@@ -47,10 +47,20 @@ void ShamanApplet::init()
     }
 
     m_layout = new Plasma::HBoxLayout(this);
-    updateDB = new Plasma::Icon(KIcon("view-refresh"), tr("Update Database"), this);
-    m_layout->addItem(updateDB);
-    upgradeSystem = new Plasma::Icon(KIcon("edit-redo.png"), tr("Upgrade System"), this);
-    m_layout->addItem(upgradeSystem);
+    updateDatabaseIcon = new Plasma::Icon(KIcon("view-refresh"), tr("Update Database"), this);
+    m_layout->addItem(updateDatabaseIcon);
+    connect(updateDatabaseIcon, SIGNAL(clicked()), SLOT(updateDatabase()));
+    upgradeSystemIcon = new Plasma::Icon(KIcon("edit-redo.png"), tr("Upgrade System"), this);
+    m_layout->addItem(upgradeSystemIcon);
+    connect(upgradeSystemIcon, SIGNAL(clicked()), SLOT(upgradeSystem()));
+}
+
+void ShamanApplet::updateDatabase()
+{
+}
+
+void ShamanApplet::upgradeSystem()
+{
 }
 
 void ShamanApplet::dataUpdated(const QString &name, const Plasma::DataEngine::Data &data)

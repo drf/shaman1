@@ -40,12 +40,16 @@ class ShamanApplet : public Plasma::Applet
     public slots:
         void dataUpdated(const QString &name, const Plasma::DataEngine::Data &data);
 
+    private slots:
+        void updateDatabase();
+        void upgradeSystem();
+
     private:
         void init();
 
         Plasma::HBoxLayout * m_layout;
-        Plasma::Icon *updateDB;
-        Plasma::Icon *upgradeSystem;
+        Plasma::Icon *updateDatabaseIcon;
+        Plasma::Icon *upgradeSystemIcon;
         Plasma::DataEngine *m_engine;
 }; 
 
