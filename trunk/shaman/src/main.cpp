@@ -151,17 +151,13 @@ int main(int argc, char **argv)
 	QSettings *settings = new QSettings();
 	
 	QSplashScreen splscr(QPixmap(":/Images/images/splash.png"));
-	
-	QString splhh(""
-			"<span style=\" font-size:13pt; font-style:italic; color:#f5f5f5;\">");
-	QString splhf("</span>");
 
 	if(settings->value("gui/showsplashscreen", true).toBool())
 	{
 		splscr.show();
 		app.processEvents();
 
-		splscr.showMessage(QString(splhh + QObject::tr("Please Wait...") + splhf), Qt::AlignBottom | Qt::AlignRight);
+		splscr.showMessage(QString(QObject::tr("Please Wait...")), Qt::AlignBottom | Qt::AlignRight, Qt::white);
 		app.processEvents();
 	}
 
@@ -208,7 +204,7 @@ int main(int argc, char **argv)
 
 	if(settings->value("gui/showsplashscreen", true).toBool())
 	{
-		splscr.showMessage(QString(QObject::tr("Loading Databases...")), Qt::AlignBottom | Qt::AlignRight);
+		splscr.showMessage(QString(QObject::tr("Loading Databases...")), Qt::AlignBottom | Qt::AlignRight, Qt::white);
 		app.processEvents();
 	}
 
@@ -216,7 +212,7 @@ int main(int argc, char **argv)
 
 	if(settings->value("gui/showsplashscreen", true).toBool())
 	{
-		splscr.showMessage(QString(splhh + QObject::tr("Loading Packages...") + splhf), Qt::AlignBottom | Qt::AlignRight);
+		splscr.showMessage(QString(QObject::tr("Loading Packages...")), Qt::AlignBottom | Qt::AlignRight, Qt::white);
 		app.processEvents();
 	}
 
@@ -224,7 +220,7 @@ int main(int argc, char **argv)
 
 	if(settings->value("gui/showsplashscreen", true).toBool())
 	{
-		splscr.showMessage(QString(splhh + QObject::tr("Starting up Shaman...") + splhf), Qt::AlignBottom | Qt::AlignRight);
+		splscr.showMessage(QString(QObject::tr("Starting up Shaman...")), Qt::AlignBottom | Qt::AlignRight, Qt::white);
 		app.processEvents();
 	}
 
