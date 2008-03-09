@@ -3,11 +3,14 @@ Name=Shaman
 
 GenericName=Package Manager
 GenericName[it]=Gestore di Pacchetti
+GenericName[de]=Paketverwaltung
+
+Comment=A Graphical Package Manager for ArchLinux
+Comment[it]=Un gestore di Pacchetti grafico per ArchLinux
+Comment[de]=Eine grafische Paketverwaltung für Arch Linux
 
 Exec=kdesu shaman
 Icon=shaman-32
 Type=Application
 Terminal=false
-Comment=A Package Manager for ArchLinux
-Comment[it]=Un gestore di Pacchetti per ArchLinux
 Categories=Qt;System;

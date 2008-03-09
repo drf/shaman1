@@ -273,7 +273,7 @@ bool AlpmHandler::updateDatabase()
 		
 		else
 		{
-			emit dbUpdated();
+			emit dbUpdated(curdbname);
 			emit streamDbUpdatingStatus(curdbname, 3);
 		}
 
@@ -1161,6 +1161,25 @@ alpm_list_t *AlpmHandler::getPackagesFromRepo(const QString &reponame)
 			
 			pkglist = alpm_list_next(pkglist);
 		}
+	}
+	else
+	{
+		alpm_list_t *syncdbs = sync_databases;
+		
+		syncdbs = alpm_list_first(syncdbs);
+		
+		while(syncdbs != NULL)
+		{
+			if(!reponame.compare(alpm_db_get_name((pmdb_t *) alpm_list_getdata(syncdbs))))
+			{
+				retlist = alpm_db_getpkgcache((pmdb_t *) alpm_list_getdata(syncdbs));
+				break;
+			}
+			
+			syncdbs = alpm_list_next(syncdbs);
+		}
+		
+		syncdbs = alpm_list_first(syncdbs);
 	}
 	
 	return retlist;

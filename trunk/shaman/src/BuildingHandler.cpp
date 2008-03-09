@@ -263,8 +263,6 @@ void BuildingHandler::openPBuildDialog()
 
 void BuildingHandler::startSourceProcessing()
 {
-	emit buildingStarted();
-	
 	if(mWin->queueDl != NULL)
 	{
 		mWin->queueDl->deleteLater();
@@ -275,6 +273,8 @@ void BuildingHandler::startSourceProcessing()
 		processBuildWizard();
 		return;
 	}
+	
+	emit buildingStarted();
 	
 	buildDialog = new BuildingDialog(aHandle, mWin);
 	connect(buildDialog, SIGNAL(nullifyPointer()), SLOT(nullifyBDialog()));
@@ -395,7 +395,7 @@ void BuildingHandler::processBuiltPackages()
 {
 	buildDialog->deleteLater();
 	
-	if(!installedMakeDepends.isEmpty())
+	if(!installedMakeDepends.isEmpty() || installedBinaryPkgs.isEmpty())
 	{
 		/* Huh, we installed something just to compile the package. Let's 
 		 * see if the user wants installed makedepends to be immediately
@@ -403,18 +403,40 @@ void BuildingHandler::processBuiltPackages()
 		 */
 
 		QSettings *settings = new QSettings();
-
-		if(settings->value("absbuilding/clearmakedepends").toBool())
+		
+		aHandle->initQueue(true, false, true);
+		
+		if(settings->value("absbuilding/clearmakedepends").toBool() && !installedMakeDepends.isEmpty())
 		{
 			/* Ok, let's cleanup then. We just need a special queue, so we
 			 * can remove just the stuff that is requesting our list.
 			 */
 
-			aHandle->initQueue(true, false, true);
-
 			foreach(QString rmv, installedMakeDepends)
 				aHandle->addRemoveToQueue(rmv);
 		}
+		
+		/* If some packages failed to build and we installed them from binary
+		 * we'd better remove them.
+		 */
+		
+		if(!installedBinaryPkgs.isEmpty())
+		{
+			foreach(QString rmv, installedBinaryPkgs)
+			{
+				bool found = false;
+
+				foreach(QString match, buildTargets)
+				{
+					if(match.contains(rmv))
+						found = true;
+				}
+
+				if(!found)
+					aHandle->addRemoveToQueue(rmv);
+			}
+		}
+		
 	}
 	else
 		aHandle->initQueue(false, false, true);
@@ -491,6 +513,7 @@ void BuildingHandler::processBuildWizard()
 		aHandle->initQueue(false, true, false);
 		
 		installedMakeDepends = depsList;
+		installedBinaryPkgs = binaryList;
 
 		foreach(QString syn, binaryList)
 			aHandle->addSyncToQueue(syn);

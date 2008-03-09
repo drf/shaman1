@@ -38,7 +38,7 @@ UpdateDbDialog::UpdateDbDialog(AlpmHandler *hnd, QWidget *parent)
 	connect(aHandle, SIGNAL(streamDbUpdatingStatus(const QString&,int)),
 				SLOT(updateLabel(const QString&, int)));
 	connect(aHandle, SIGNAL(dbQty(const QStringList&)), SLOT(createWidgets(const QStringList&)));
-	connect(aHandle, SIGNAL(dbUpdated()), SLOT(setUpdated()));
+	connect(aHandle, SIGNAL(dbUpdated(const QString&)), SLOT(setUpdated(const QString&)));
 	connect(aHandle, SIGNAL(dbUpdatePerformed()), SLOT(updateTotalProg()));
 	connect(&CbackReference, SIGNAL(streamTransDlProg(char*,int,int,int,int,int,int)), 
 			SLOT(updateDlBar(char*,int,int,int,int,int,int)));
@@ -94,9 +94,10 @@ void UpdateDbDialog::updateLabel(const QString &repo, int action)
 	}
 }
 
-void UpdateDbDialog::setUpdated()
+void UpdateDbDialog::setUpdated(const QString &dbname)
 {
 	updated = true;
+	emit updateRepo(dbname);
 }
 
 bool UpdateDbDialog::dbHasBeenUpdated()
@@ -133,6 +134,7 @@ void UpdateDbDialog::updateDlBar(char *c, int bytedone, int bytetotal, int speed
 
 void UpdateDbDialog::doAction()
 {
+	updatedRepos.clear();
 	dbth = new UpDbThread(aHandle);
 	dbth->start();
 	connect(dbth, SIGNAL(finished()), this, SLOT(scopeEnded()));
@@ -141,9 +143,9 @@ void UpdateDbDialog::doAction()
 void UpdateDbDialog::scopeEnded()
 {
 	for(int i = 0; i < labelList.size(); ++i)
-		delete(labelList.at(i));
+		delete labelList.at(i);
 	
-	delete(dbth);
+	dbth->deleteLater();
 	
 	emit killMe();
 }
@@ -191,4 +193,9 @@ void UpdateDbDialog::createWidgets(const QStringList &list)
 		labelList.append(labelStatus);
 		
 	}
+}
+
+QStringList UpdateDbDialog::getUpdatedRepos()
+{
+	return updatedRepos;
 }

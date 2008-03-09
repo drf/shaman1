@@ -133,7 +133,7 @@ private:
 
 signals:
 	void streamDbUpdatingStatus(const QString &repo, int action);
-	void dbUpdated();
+	void dbUpdated(const QString &dbname);
 	void dbQty(const QStringList &db);
 	void dbUpdatePerformed();
 	void transactionStarted();

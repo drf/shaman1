@@ -54,19 +54,21 @@ public:
 
 public slots:
 	void doAction();
+	QStringList getUpdatedRepos();
 		
 private slots:
 	void updateLabel(const QString &repo, int action);
 	//void updateDlProg(float bytetotal, float bytedled, float speed);
 	void createWidgets(const QStringList &list);
 	void updateTotalProg();
-	void setUpdated();
+	void setUpdated(const QString &dbname);
 	void scopeEnded();
 	void updateDlBar(char *c, int bytedone, int bytetotal, int speed,
 			int i, int j, int k);
 	
 signals:
 	void killMe();
+	void updateRepo(const QString &dbname);
 	
 private:
 	int currentAction;
@@ -77,6 +79,7 @@ private:
 	bool errorsOccourred;
 	UpDbThread *dbth;
 	QList<QLabel *> labelList;
+	QStringList updatedRepos;
 	
 };
 

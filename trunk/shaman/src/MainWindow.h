@@ -78,6 +78,7 @@ signals:
 public slots:
 	bool populatePackagesView();
 	bool populateQueuePackagesView();
+	bool populatePackagesViewFromRepo(const QString &repo);
 	void refinePkgView();
 	void populateRepoColumn();
 	void populateGrpsColumn();
