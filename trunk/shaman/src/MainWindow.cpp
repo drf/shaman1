@@ -711,9 +711,6 @@ void MainWindow::finishDbUpdate()
 		if(dbdialog->isHidden() && list.isEmpty())
 			trayicon->showMessage(QString(tr("Database Update")), QString(tr("Databases Updated Successfully")));
 	}
-
-	if(dbdialog->dbHasBeenUpdated())
-		populatePackagesView();
 	
 	dbdialog->deleteLater();
 	
@@ -1176,8 +1173,10 @@ void MainWindow::cancelAction(const QString &package)
 void MainWindow::startUpgrading()
 {
 	disconnect(dbdialog, 0,0,0);
+	
+	QStringList list = aHandle->getUpgradeablePackages();
 
-	if(aHandle->getUpgradeablePackages().isEmpty())
+	if(list.isEmpty())
 	{
 		emit systemIsUpToDate();
 		
@@ -1193,6 +1192,78 @@ void MainWindow::startUpgrading()
 		
 		qDebug() << "System is up to date";
 	}
+	else if(list.contains("pacman"))
+	{
+		QMessageBox *msgBox = new QMessageBox();
+
+		msgBox->setIcon(QMessageBox::Question);
+		msgBox->setWindowTitle(QString(tr("Pacman Update")));
+
+		msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+
+		msgBox->setWindowModality(Qt::ApplicationModal);
+
+		msgBox->setText(QString(tr("Pacman can be upgraded. It is advised to process it alone\nto avoid version conflicts.\n"
+				"Do you want to Upgrade Pacman now?")));
+
+		switch (msgBox->exec()) 
+		{
+		case QMessageBox::Yes:
+
+			msgBox->deleteLater();
+			/* Ok, let's set up a special queue for Pacman. */
+
+			cancelAllActions();
+			installPackage("pacman");
+			widgetQueueToAlpmQueue();
+
+			break;
+		case QMessageBox::No:
+			/* Well, just pass by */
+			msgBox->deleteLater();
+			break;
+		default:
+			// should never be reached
+			break;
+		}
+
+	}
+	else if(list.contains("shaman"))
+	{
+		QMessageBox *msgBox = new QMessageBox();
+
+		msgBox->setIcon(QMessageBox::Question);
+		msgBox->setWindowTitle(QString(tr("Shaman Update")));
+
+		msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+
+		msgBox->setWindowModality(Qt::ApplicationModal);
+
+		msgBox->setText(QString(tr("Shaman can be upgraded. It is advised to process it alone\nto avoid version conflicts.\n"
+				"Do you want to Upgrade Shaman now?")));
+
+		switch (msgBox->exec()) 
+		{
+		case QMessageBox::Yes:
+
+			msgBox->deleteLater();
+			/* Ok, let's set up a special queue for Shaman. */
+
+			cancelAllActions();
+			installPackage("shaman");
+			widgetQueueToAlpmQueue();
+
+			break;
+		case QMessageBox::No:
+			/* Well, just pass by */
+			msgBox->deleteLater();
+			break;
+		default:
+			// should never be reached
+			break;
+		}
+
+	}
 	else
 	{
 		/* Something to upgrade! Cool! Let's show our user the
@@ -1202,18 +1273,18 @@ void MainWindow::startUpgrading()
 		 */
 
 		emit upgradesAvailable();
-		
+
 		upDl = new SysUpgradeDialog(aHandle, this);
 
 		upDl->show();
-		
+
 		upActive = true;
 
 		connect(upDl, SIGNAL(aborted()), SLOT(upgradeAborted()));
 		connect(upDl, SIGNAL(upgradeNow()), SLOT(processQueue()));
 		connect(upDl, SIGNAL(addToPkgQueue()), SLOT(addUpgradeableToQueue()));
 	}
-	
+
 	dbdialog->deleteLater();
 	dbdialog = NULL;
 
@@ -1252,6 +1323,7 @@ void MainWindow::fullSysUpgrade()
 		dbdialog->show();
 
 	connect(dbdialog, SIGNAL(killMe()), this, SLOT(startUpgrading()));
+	connect(dbdialog, SIGNAL(updateRepo(const QString&)), SLOT(populatePackagesViewFromRepo(const QString &)));
 
 	dbdialog->doAction();
 }
@@ -1371,6 +1443,16 @@ void MainWindow::queueProcessingEnded(bool errors)
 
 				qApp->exit(0);
 			}
+		}
+
+		if(!pkgsViewWG->findItems("kernel26", Qt::MatchExactly, 1).first()->text(8).isEmpty())
+		{
+			QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Restart required"), 
+					tr("Your Kernel has been updated.\nPlease restart your PC soon to load the new Kernel."), QMessageBox::Ok, queueDl);
+
+			message->exec();
+
+			message->deleteLater();
 		}
 		
 		qApp->processEvents();
