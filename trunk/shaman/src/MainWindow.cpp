@@ -1913,6 +1913,8 @@ bool MainWindow::populatePackagesViewFromRepo(const QString &repo)
 		QString grStr("");
 		
 		removePackageFromView(alpm_pkg_get_name(pkg));
+		
+		qApp->processEvents();
 
 		if(aHandle->isInstalled(pkg))
 		{
