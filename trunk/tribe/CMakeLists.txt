@@ -6,16 +6,20 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.4.0)
 include(FindQt4)
 
 SET(tribe_SRCS
+    src/main.cpp
+    src/MainWindow.cpp
 )
 
 SET(tribe_MOC_HDRS
+    src/MainWindow.h
 )
 
 SET(tribe_UIS
-  ui/tribeBase.ui
+    ui/tribeBase.ui
 )
 
 SET(tribe_RESOUCES
+    ui/tribe.qrc
 )
 
 # verbose - on
