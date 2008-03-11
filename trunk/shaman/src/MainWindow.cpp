@@ -620,7 +620,7 @@ void MainWindow::showPkgInfo()
 
 	else if(PkgInfos->currentIndex() == 2)
 	{
-		dependenciesWidget->clear(); //First clear the widget
+		dependenciesWidget->clear();
 		foreach (QString dep, aHandle->getPackageDependencies(alpm_pkg_get_name(pkg) , pkgsViewWG->currentItem()->text(5)))
 		{
 			if (!dep.isEmpty())
