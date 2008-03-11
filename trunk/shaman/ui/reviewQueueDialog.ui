@@ -40,6 +40,13 @@
       </widget>
      </item>
      <item>
+      <widget class="QCheckBox" name="keepOpenBox" >
+       <property name="text" >
+        <string>Keep Queue Dialog Open after the Queue is finished</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <layout class="QHBoxLayout" >
        <item>
         <widget class="QPushButton" name="showPackages" >

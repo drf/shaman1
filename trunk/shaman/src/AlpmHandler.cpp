@@ -170,6 +170,24 @@ bool AlpmHandler::releaseTransaction()
 	return true;
 }
 
+bool AlpmHandler::interruptTransaction()
+{
+	if(!isTransaction())
+		return false;
+
+	while(alpm_trans_interrupt() == 0)
+		sleep(0.4);
+
+	if(alpm_trans_release() == -1)
+		if(alpm_trans_interrupt() == -1)
+			return false;
+
+	onTransaction = false;
+	emit transactionReleased();
+	
+	return true;
+}
+
 alpm_list_t *AlpmHandler::getAvailableRepos()
 {
 	return sync_databases;

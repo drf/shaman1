@@ -3,27 +3,27 @@
 <context>
     <name>AlpmHandler</name>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1061"/>
+        <location filename="../src/AlpmHandler.cpp" line="1079"/>
         <source>: requires </source>
         <translation>: requiert </translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1071"/>
+        <location filename="../src/AlpmHandler.cpp" line="1089"/>
         <source>: conflicts with </source>
         <translation>: en conflit avec </translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1098"/>
+        <location filename="../src/AlpmHandler.cpp" line="1116"/>
         <source>%1 exists in both &apos;%2&apos; and &apos;%3&apos;</source>
         <translation>%1 existe dans &apos;%2&apos; et &apos;%3&apos;</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1106"/>
+        <location filename="../src/AlpmHandler.cpp" line="1124"/>
         <source>: %1 exists in filesystem</source>
         <translation>: %1 existe dans le système de fichier</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1125"/>
+        <location filename="../src/AlpmHandler.cpp" line="1143"/>
         <source>Alpm did not give further details.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1121,7 +1121,7 @@ Vous pouvez changer cela dans Configuration.</translation>
         <translation>Shaman - Réduire dans la barre système</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1955"/>
+        <location filename="../src/MainWindow.cpp" line="1980"/>
         <source>Upgrade</source>
         <translation>Mise à jour</translation>
     </message>
@@ -1170,17 +1170,17 @@ Clicker ici pour mettre à jour votre système.</translation>
         <translation>Marquer pour réinstallation</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1775"/>
+        <location filename="../src/MainWindow.cpp" line="1798"/>
         <source>Install</source>
         <translation>Installation</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1818"/>
+        <location filename="../src/MainWindow.cpp" line="1841"/>
         <source>Uninstall</source>
         <translation>Désinstallation</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1818"/>
+        <location filename="../src/MainWindow.cpp" line="1841"/>
         <source>Complete Uninstall</source>
         <translation>Désinstallation complète</translation>
     </message>
@@ -1210,7 +1210,7 @@ Clicker ici pour mettre à jour votre système.</translation>
         <translation type="obsolete">Shaman - Traitement</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1646"/>
+        <location filename="../src/MainWindow.cpp" line="1669"/>
         <source>Error</source>
         <translation>Erreur</translation>
     </message>
@@ -1264,89 +1264,89 @@ La dernière erreur reportée était:
         <translation>Votre système est à jour!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1372"/>
+        <location filename="../src/MainWindow.cpp" line="1373"/>
         <source>Queue Processing</source>
         <translation>Liste en cours</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1372"/>
+        <location filename="../src/MainWindow.cpp" line="1373"/>
         <source>Your Queue is being processed.
 Please wait.</source>
         <translation>Votre liste à été effectuée.
 Attendez, SVP.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1473"/>
+        <location filename="../src/MainWindow.cpp" line="1484"/>
         <source>Queue Processed</source>
         <translation>Liste effectuée</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1466"/>
+        <location filename="../src/MainWindow.cpp" line="1477"/>
         <source>Your Queue was successfully processed!</source>
         <translation>Votre liste à été effectuée avec succès!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1473"/>
+        <location filename="../src/MainWindow.cpp" line="1484"/>
         <source>Your Queue was successfully processed!!</source>
         <translation>Votre liste à été effectuée avec succès!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1537"/>
+        <location filename="../src/MainWindow.cpp" line="1553"/>
         <source>To be Installed</source>
         <translation>A installer</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1544"/>
+        <location filename="../src/MainWindow.cpp" line="1560"/>
         <source>To be Upgraded</source>
         <translation>A mettre à jour</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1558"/>
+        <location filename="../src/MainWindow.cpp" line="1574"/>
         <source>To be Removed</source>
         <translation>A supprimer</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1573"/>
+        <location filename="../src/MainWindow.cpp" line="1596"/>
         <source>Your Queue is about to be processed. You are going to:&lt;br /&gt;</source>
         <translation>Votre liste est prête à être effctuée. Vous aller:&lt;br /&gt;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1575"/>
+        <location filename="../src/MainWindow.cpp" line="1598"/>
         <source>Remove &lt;b&gt;%1 package&lt;/b&gt;&lt;br /&gt;</source>
         <translation>Supprimer &lt;b&gt;%1 paquet&lt;/b&gt;&lt;br /&gt;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1575"/>
+        <location filename="../src/MainWindow.cpp" line="1598"/>
         <source>Remove &lt;b&gt;%1 packages&lt;/b&gt;&lt;br /&gt;</source>
         <translation>Supprimer &lt;b&gt;%1 paquets&lt;/b&gt;&lt;br /&gt;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1577"/>
+        <location filename="../src/MainWindow.cpp" line="1600"/>
         <source>Install/Upgrade &lt;b&gt;%1 package&lt;/b&gt;&lt;br /&gt;</source>
         <translation>Installer/Mettre à jour &lt;b&gt;%1 paquet&lt;/b&gt;&lt;br /&gt;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1577"/>
+        <location filename="../src/MainWindow.cpp" line="1600"/>
         <source>Install/Upgrade &lt;b&gt;%1 packages&lt;/b&gt;&lt;br /&gt;</source>
         <translation>Installer/Mettre à jour &lt;b&gt;%1 paquets&lt;/b&gt;&lt;br /&gt;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1578"/>
+        <location filename="../src/MainWindow.cpp" line="1601"/>
         <source>Do you wish to continue?</source>
         <translation>Voulez-vous continuer?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1637"/>
+        <location filename="../src/MainWindow.cpp" line="1660"/>
         <source>Install a Package</source>
         <translation>Installer un paquet</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1637"/>
+        <location filename="../src/MainWindow.cpp" line="1660"/>
         <source>Arch Linux Packages (*.pkg.tar.gz)</source>
         <translation>Paquets Arch Linux (*.pkg.tar.gz)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1646"/>
+        <location filename="../src/MainWindow.cpp" line="1669"/>
         <source>%1 does not seem
 a valid package</source>
         <translation>%1 semble ne pas être
@@ -1440,25 +1440,25 @@ Voulez-vous tout de même contineur?</translation>
         <translation type="obsolete">Vos paquets on été construits avec succès et sont prêts à être installés</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1698"/>
+        <location filename="../src/MainWindow.cpp" line="1721"/>
         <source>%1 GiB</source>
         <comment>Size is in Gib</comment>
         <translation>%1 Gb</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1700"/>
+        <location filename="../src/MainWindow.cpp" line="1723"/>
         <source>%1 MiB</source>
         <comment>Size is in MiB</comment>
         <translation>%1 Mb</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1702"/>
+        <location filename="../src/MainWindow.cpp" line="1725"/>
         <source>%1 KiB</source>
         <comment>Size is in KiB</comment>
         <translation>%1 Kb</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1704"/>
+        <location filename="../src/MainWindow.cpp" line="1727"/>
         <source>%1 Bytes</source>
         <comment>Size is in Bytes</comment>
         <translation>%1 Bits</translation>
@@ -1503,24 +1503,24 @@ pour éviter des conflits de versions.
 Voulez-vous mettre à jour Shaman maintenant?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1450"/>
+        <location filename="../src/MainWindow.cpp" line="1461"/>
         <source>Restart required</source>
         <translation>Redémarrage nécessaire</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1438"/>
+        <location filename="../src/MainWindow.cpp" line="1449"/>
         <source>Pacman or Shaman was updated. Shaman will now quit,
 please restart it to use the new version</source>
         <translation>Pacman ou Shaman ont été mis à jour. Shaman va maintenant s&apos;arrêter,
 SVP, redémarrez pour utiliser la nouvelle version</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1719"/>
+        <location filename="../src/MainWindow.cpp" line="1742"/>
         <source>Library Question</source>
         <translation>A propos des librairies</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1685"/>
+        <location filename="../src/MainWindow.cpp" line="1708"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -1553,14 +1553,14 @@ p, li { white-space: pre-wrap; }
         <translation>Version dans le dépôt: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1410"/>
+        <location filename="../src/MainWindow.cpp" line="1421"/>
         <source>One or more errors occourred, your Queue
 was not successfully processed</source>
         <translation>Une ou pluieurs erreurs sont apparues, votre liste
 n&apos;a pas été effectuée avec succès</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1451"/>
+        <location filename="../src/MainWindow.cpp" line="1462"/>
         <source>Your Kernel has been updated.
 Please restart your PC soon to load the new Kernel.</source>
         <translation type="unfinished"></translation>
@@ -1629,138 +1629,138 @@ Votre version est %1. Mettez à jour Pacman, SVP.</translation>
 <context>
     <name>QueueDialog</name>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="71"/>
+        <location filename="../src/QueueDialog.cpp" line="72"/>
         <source>&lt;br&gt;&lt;b&gt; * Validating Transaction&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Valide la transaction&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="112"/>
+        <location filename="../src/QueueDialog.cpp" line="113"/>
         <source>Validating Dependencies...</source>
         <translation>Valide les dépendances...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="116"/>
+        <location filename="../src/QueueDialog.cpp" line="117"/>
         <source>Checking for Conflicts...</source>
         <translation>Recherche de conflits...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="120"/>
+        <location filename="../src/QueueDialog.cpp" line="121"/>
         <source>Resolving Dependencies...</source>
         <translation>Résolution des dépendances...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="124"/>
+        <location filename="../src/QueueDialog.cpp" line="125"/>
         <source>Looking for Inter-Conflicts...</source>
         <translation>Recherche des Inter-Conflits...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="130"/>
+        <location filename="../src/QueueDialog.cpp" line="131"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Installation Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * L&apos;installation des paquets a démarré&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="134"/>
+        <location filename="../src/QueueDialog.cpp" line="135"/>
         <source>Installing %1...</source>
         <translation>Installation %1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="150"/>
+        <location filename="../src/QueueDialog.cpp" line="151"/>
         <source>%1 (%2) installed successfully!</source>
         <translation>%1 (%2) installé avec succès!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="169"/>
+        <location filename="../src/QueueDialog.cpp" line="170"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Removal Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * La suppression des paquets a commencé&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="173"/>
+        <location filename="../src/QueueDialog.cpp" line="174"/>
         <source>Removing %1...</source>
         <translation>Suppression %1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="189"/>
+        <location filename="../src/QueueDialog.cpp" line="190"/>
         <source>%1 (%2) removed successfully!</source>
         <translation>%1 (%2) supprimé avec succès!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="208"/>
+        <location filename="../src/QueueDialog.cpp" line="209"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Upgrading Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * La mise à jour des paquets a commencé&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="212"/>
+        <location filename="../src/QueueDialog.cpp" line="213"/>
         <source>Upgrading %1...</source>
         <translation>Mise à jour %1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="230"/>
+        <location filename="../src/QueueDialog.cpp" line="231"/>
         <source>Upgraded %1 successfully (%2 -&gt; %3)</source>
         <translation>Mise à jour %1 avec succès (%2 -&gt; %3)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="252"/>
+        <location filename="../src/QueueDialog.cpp" line="253"/>
         <source>&lt;br&gt;&lt;b&gt; * Queue Processing Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Le traitement de la liste a commencé&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="256"/>
+        <location filename="../src/QueueDialog.cpp" line="257"/>
         <source>Checking package integrity...</source>
         <translation>Vérification de l&apos;intégrité des paquets...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="260"/>
+        <location filename="../src/QueueDialog.cpp" line="261"/>
         <source>Checking delta integrity...</source>
         <translation>Vérification de l&apos;intégrité des deltas...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="263"/>
+        <location filename="../src/QueueDialog.cpp" line="264"/>
         <source>Applying deltas...</source>
         <translation>Application des deltas...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="266"/>
+        <location filename="../src/QueueDialog.cpp" line="267"/>
         <source>Generating %1 with %2... </source>
         <translation>Génération %1 avec %2... </translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="270"/>
+        <location filename="../src/QueueDialog.cpp" line="271"/>
         <source>Success!</source>
         <translation>Succès!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="273"/>
+        <location filename="../src/QueueDialog.cpp" line="274"/>
         <source>Failed!</source>
         <translation>Echec!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="287"/>
+        <location filename="../src/QueueDialog.cpp" line="288"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Downloading Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Le téléchargement des paquets a commencé&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="291"/>
+        <location filename="../src/QueueDialog.cpp" line="292"/>
         <source>Starting downloading packages from %1...</source>
         <translation>Début du téléchargement des paquets depuis %1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="331"/>
+        <location filename="../src/QueueDialog.cpp" line="332"/>
         <source>%p% (%1 KB/s, %4:%5:%6 remaining)</source>
         <comment>You just have to translate &apos;remaining&apos; here. Leave everything else as it is.</comment>
         <translation>%p% (%1 KB/s, %4:%5:%6 restant)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="339"/>
+        <location filename="../src/QueueDialog.cpp" line="340"/>
         <source>Downloading %1... (%2 MB of %3 MB)</source>
         <translation>Téléchargement %1... (%2 MB of %3 MB)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="342"/>
+        <location filename="../src/QueueDialog.cpp" line="343"/>
         <source>Downloading %1... (%2 KB of %3 KB)</source>
         <translation>Téléchargement %1... (%2 KB of %3 KB)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="392"/>
+        <location filename="../src/QueueDialog.cpp" line="393"/>
         <source>Queue processed, please wait...</source>
         <translation>Liste effectuée, attendez SVP...</translation>
     </message>
@@ -1795,17 +1795,17 @@ Votre version est %1. Mettez à jour Pacman, SVP.</translation>
         <translation type="obsolete">Exécution du script post_remove...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="427"/>
+        <location filename="../src/QueueDialog.cpp" line="451"/>
         <source>Unexpected Error. Shaman might be corrupted.</source>
         <translation>Erreur inattendue. Shaman est peut-être corrompu.</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="491"/>
+        <location filename="../src/QueueDialog.cpp" line="515"/>
         <source>Extracting Scriptlet from package failed!!</source>
         <translation>L&apos;extraction du script du paquet a échoué!!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="619"/>
+        <location filename="../src/QueueDialog.cpp" line="643"/>
         <source>Scriptlet processed successfully!</source>
         <translation>Script effectué avec succès!</translation>
     </message>
@@ -1815,43 +1815,58 @@ Votre version est %1. Mettez à jour Pacman, SVP.</translation>
         <translation type="obsolete">Script non-trouvé à cette étape, ou il y a eu une erreur dans son exécution!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="434"/>
+        <location filename="../src/QueueDialog.cpp" line="458"/>
         <source>Executing %1 scriptlet for %2...</source>
         <translation>Exécution de %1 script pour %2...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="501"/>
+        <location filename="../src/QueueDialog.cpp" line="525"/>
         <source>Package %1 does not have %2 scriptlet</source>
         <translation>Le paquet %1 n&apos;a pas de %2 script</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="625"/>
+        <location filename="../src/QueueDialog.cpp" line="649"/>
         <source>Error processing Scriptlet!!</source>
         <translation>Erreur pendant l&apos;exécution de script!!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="789"/>
+        <location filename="../src/QueueDialog.cpp" line="815"/>
         <source>Queue Processing</source>
         <translation>Liste en cours</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="746"/>
+        <location filename="../src/QueueDialog.cpp" line="772"/>
         <source>There has been an error while preparing the transaction.
 </source>
         <translation>Il y a eu une erreur dans la préparation de la transaction.
 </translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="779"/>
+        <location filename="../src/QueueDialog.cpp" line="805"/>
         <source>There has been an error while committing the transaction.
 </source>
         <translation>Il y a eu une erreur pendant l&apos;exécution de la transaction.
 </translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="710"/>
+        <location filename="../src/QueueDialog.cpp" line="734"/>
         <source>Would you like to abort Queue Processing?
 This may damage your system.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/QueueDialog.cpp" line="415"/>
+        <source>Close</source>
+        <translation>Fermer</translation>
+    </message>
+    <message>
+        <location filename="../src/QueueDialog.cpp" line="402"/>
+        <source>Queue processing failed!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/QueueDialog.cpp" line="407"/>
+        <source>Queue processed successfully!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1873,27 +1888,27 @@ This may damage your system.</source>
         <translation>Avancement dans la barre système</translation>
     </message>
     <message>
-        <location filename="../ui/reviewQueueDialog.ui" line="47"/>
+        <location filename="../ui/reviewQueueDialog.ui" line="54"/>
         <source>Show packages...</source>
         <translation>Montrer les paquets...</translation>
     </message>
     <message>
-        <location filename="../ui/reviewQueueDialog.ui" line="76"/>
+        <location filename="../ui/reviewQueueDialog.ui" line="83"/>
         <source>Packages In Queue</source>
         <translation>Paquets dans la liste</translation>
     </message>
     <message>
-        <location filename="../ui/reviewQueueDialog.ui" line="86"/>
+        <location filename="../ui/reviewQueueDialog.ui" line="93"/>
         <source>Cancel</source>
         <translation>Annuler</translation>
     </message>
     <message>
-        <location filename="../ui/reviewQueueDialog.ui" line="109"/>
+        <location filename="../ui/reviewQueueDialog.ui" line="116"/>
         <source>Process</source>
         <translation>Procéder</translation>
     </message>
     <message>
-        <location filename="../ui/reviewQueueDialog.ui" line="138"/>
+        <location filename="../ui/reviewQueueDialog.ui" line="145"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -1902,6 +1917,11 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Revoir la liste&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../ui/reviewQueueDialog.ui" line="45"/>
+        <source>Keep Queue Dialog Open after the Queue is finished</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

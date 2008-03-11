@@ -1367,12 +1367,23 @@ void MainWindow::processQueue()
 	queueDl->show();
 
 	if(revActive)
+	{
 		if(qUi->trayBox->isChecked())
 		{
 			trayicon->showMessage(QString(tr("Queue Processing")), QString(tr("Your Queue is being processed.\nPlease wait.")));
 			hide();
 			queueDl->hide();
 		}
+		
+		QSettings *settings = new QSettings();
+		
+		if(qUi->keepOpenBox->isChecked())
+			settings->setValue("gui/keepqueuedialogopen", true);
+		else
+			settings->setValue("gui/keepqueuedialogopen", false);
+		
+		settings->deleteLater();
+	}
 
 	if(upActive)
 		upDl->deleteLater();
@@ -1387,6 +1398,8 @@ void MainWindow::processQueue()
 void MainWindow::queueProcessingEnded(bool errors)
 {
 	emit actionStatusChanged("queueProcessingFinished");
+	
+	QSettings *settings = new QSettings();
 	
 	if(errors)
 	{
@@ -1460,7 +1473,7 @@ void MainWindow::queueProcessingEnded(bool errors)
 		populateQueuePackagesView();
 		refinePkgView();
 
-		if(queueDl->isVisible())
+		if(queueDl->isVisible() && !settings->value("gui/keepqueuedialogopen", true).toBool())
 		{
 			QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Queue Processed"), 
 					tr("Your Queue was successfully processed!"), QMessageBox::Ok, queueDl);
@@ -1473,7 +1486,10 @@ void MainWindow::queueProcessingEnded(bool errors)
 			trayicon->showMessage(QString(tr("Queue Processed")), QString(tr("Your Queue was successfully processed!!")));
 	}
 		
-	queueDl->deleteLater();
+	if(!settings->value("gui/keepqueuedialogopen", true).toBool())
+		queueDl->deleteLater();
+	
+	settings->deleteLater();
 	
 	queueDl = NULL;
 }
@@ -1565,6 +1581,13 @@ void MainWindow::widgetQueueToAlpmQueue()
 	qUi->treeWidget->hide();
 	reviewQueue->adjustSize();
 	reviewQueue->show();
+	
+	QSettings *settings = new QSettings();
+	
+	if(settings->value("gui/keepqueuedialogopen", true).toBool())
+		qUi->keepOpenBox->setChecked(true);
+	
+	settings->deleteLater();
 	
 	connect(qUi->processButton, SIGNAL(clicked()), SLOT(processQueue()));
 	connect(qUi->cancelButton, SIGNAL(clicked()), SLOT(destroyReviewQueue()));

@@ -63,6 +63,7 @@ public:
 
 	bool isTransaction();
 	bool testLibrary();
+	bool interruptTransaction();
 
 	alpm_list_t *getAvailableRepos();
 	QStringList getAvailableReposNames();

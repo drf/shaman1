@@ -33,6 +33,7 @@
 #include <QWaitCondition>
 #include <QDialogButtonBox>
 #include <QMessageBox>
+#include <QSettings>
 #include <fcntl.h>
 
 /* libarchive */
@@ -392,8 +393,31 @@ void QueueDialog::cleanup()
 	actionDetail->setText(QString(tr("Queue processed, please wait...")));
 	
 	qApp->processEvents();
-
+	
 	emit terminated(errors);
+	
+	if(errors)
+	{
+		actionDetail->setText(QString(tr("Queue processing failed!")));
+		textEdit->append(QString("<br><b> * " + tr("Queue processing failed!") + "</b>"));
+	}
+	else
+	{
+		actionDetail->setText(QString(tr("Queue processed successfully!")));
+		textEdit->append(QString("<br><b> * " + tr("Queue processed successfully!") + "</b>"));
+	}
+	
+	QSettings *settings = new QSettings();
+	
+	if(settings->value("gui/keepqueuedialogopen", true).toBool())
+	{
+		disconnect(abortTr, SIGNAL(clicked()), 0, 0);
+		abortTr->setText(tr("Close"));
+		abortTr->setIcon(QIcon(":/Icons/icons/application-exit.png"));
+		connect(abortTr, SIGNAL(clicked()), SLOT(deleteLater()));
+	}
+	
+	settings->deleteLater();
 }
 
 bool QueueDialog::runScriptlet(int action, const QString &p1N, const QString &p1V, 
@@ -712,15 +736,17 @@ void QueueDialog::abortTransaction()
 	switch (msgBox->exec()) {
 	case QMessageBox::Yes:
 		errors = true;
-		if(alpm_trans_release() == -1)
-		{
-			qDebug() << "Could not release, trying to interrupt...";
-			if(alpm_trans_interrupt() == -1)
-			{
-				qDebug() << "Could not interrupt, terminating the thread...";
-				cTh->terminate();
-			}
-		}
+		
+		qDebug() << "Interrupting transaction...";
+		
+		aHandle->interruptTransaction();
+		
+		cTh->terminate();
+		
+		qDebug() << "Transaction interrupted";
+		
+		cleanup();
+		
 		break;
 	case QMessageBox::No:
 		break;
