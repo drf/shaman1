@@ -226,6 +226,7 @@ bool MainWindow::populatePackagesView()
 	pkgsViewWG->setSortingEnabled(false);
 
 	disconnect(pkgsViewWG, SIGNAL(itemSelectionChanged()), 0, 0);
+	disconnect(PkgInfos, SIGNAL(currentChanged(int)), 0, 0);
 
 	removePackagesView();
 
@@ -324,6 +325,8 @@ bool MainWindow::populatePackagesView()
 
 	connect(pkgsViewWG, SIGNAL(itemSelectionChanged()), this, 
 			SLOT(itemChanged()));
+	
+	connect(PkgInfos, SIGNAL(currentChanged(int)), SLOT(showPkgInfo()));
 
 	return true;
 }
@@ -548,116 +551,125 @@ void MainWindow::itemChanged()
 void MainWindow::showPkgInfo()
 {
 	QString description;
-	pmpkg_t *pkg;
+	pmpkg_t *pkg = NULL;
 	alpm_list_t *databases;
 	pmdb_t *curdb = NULL;
 	bool isLocal = false;
 
-	databases = aHandle->getAvailableRepos();
-
-	databases = alpm_list_first(databases);
-
-	while(databases != NULL)
+	if(PkgInfos->currentIndex() == 0)
 	{
-		if(!strcmp(pkgsViewWG->currentItem()->text(5).toAscii().data(),
-				alpm_db_get_name((pmdb_t *)alpm_list_getdata(databases))))
+		databases = aHandle->getAvailableRepos();
+
+		databases = alpm_list_first(databases);
+
+		while(databases != NULL)
 		{
-			curdb = (pmdb_t *)alpm_list_getdata(databases);
-			break;
-		}
-		databases = alpm_list_next(databases);
-	}
-
-	pkg = alpm_db_get_pkg(curdb, pkgsViewWG->currentItem()->text(1).toAscii().data());
-	
-	if(!pkg)
-	{
-		/* Well, if pkg is NULL we're probably searching for something coming
-		 * from the local database. */
-		pkg = aHandle->getPackageFromName(pkgsViewWG->currentItem()->text(1).toAscii().data(), "local");
-		isLocal = true;
-	}
-
-	databases = alpm_list_first(databases);
-
-	QTreeWidgetItem *item = pkgsViewWG->selectedItems().first();
-	description.append("<b>");
-	description.append(alpm_pkg_get_name(pkg));
-	description.append(" (");
-	description.append(alpm_pkg_get_version(pkg));
-	description.append(")</b><br><br>");
-	description.append(alpm_pkg_get_desc(pkg));
-	description.append("<br><br>");
-	description.append("<b>" + tr("Status: ") + "</b> ");
-	if (aHandle->isInstalled(item->text(1)))
-		description.append(tr("Installed")); //FIXME: Icon!!!!
-	else
-		description.append(tr("Not installed"));
-	if (aHandle->isInstalled(item->text(1)))
-	{
-		description.append("<br><b>" + tr("Local Version: ") + "</b> ");
-		description.append(aHandle->getPackageVersion(alpm_pkg_get_name(pkg), "local"));
-	}
-	if(!isLocal)
-	{
-		description.append("<br><b>" + tr("Version in the Repository: ") + "</b> ");
-		description.append(alpm_pkg_get_version(pkg));
-	}
-
-	if (!item->text(8).isEmpty())
-	{
-		description.append("<br><b>" + tr("Action: ") + "</b>");
-		description.append(item->text(8));//FIXME: Icon!!!
-	}
-
-	pkgInfo->setHtml(description);
-
-	dependenciesWidget->clear(); //First clear the widget
-	foreach (QString dep, aHandle->getPackageDependencies(alpm_pkg_get_name(pkg) , pkgsViewWG->currentItem()->text(5)))
-	{
-		if (!dep.isEmpty())
-			dependenciesWidget->addItem(dep);
-	}
-
-	filesWidget->clear();
-	filesWidget->header()->hide();
-	QStringList files = aHandle->getPackageFiles(pkgsViewWG->selectedItems().first()->text(1));
-	foreach (QString file, files)
-	{
-		QStringList splitted = file.split("/");
-		QTreeWidgetItem *parentItem = 0;
-		foreach (QString spl, splitted)
-		{
-			if (spl.isEmpty())
-				continue;
-			if (parentItem)
+			if(!strcmp(pkgsViewWG->currentItem()->text(5).toAscii().data(),
+					alpm_db_get_name((pmdb_t *)alpm_list_getdata(databases))))
 			{
-				qDebug() << "Yay, we have a parentItem";
-				bool there = false;
-				int j = parentItem->childCount();
-				for (int i = 0;i != j; i++)
-				{
-					if (parentItem->child(i)->text(0) == spl)
-					{
-						there = true;
-						parentItem = parentItem->child(i);
-						continue;
-					}
-				}
-				if (!there)
-					parentItem->addChild(new QTreeWidgetItem(parentItem, (QStringList) spl));
+				curdb = (pmdb_t *)alpm_list_getdata(databases);
+				break;
 			}
-			else
+			databases = alpm_list_next(databases);
+		}
+
+		pkg = alpm_db_get_pkg(curdb, pkgsViewWG->currentItem()->text(1).toAscii().data());
+
+		if(!pkg)
+		{
+			/* Well, if pkg is NULL we're probably searching for something coming
+			 * from the local database. */
+			pkg = aHandle->getPackageFromName(pkgsViewWG->currentItem()->text(1).toAscii().data(), "local");
+			isLocal = true;
+		}
+
+		databases = alpm_list_first(databases);
+
+		QTreeWidgetItem *item = pkgsViewWG->selectedItems().first();
+		description.append("<b>");
+		description.append(alpm_pkg_get_name(pkg));
+		description.append(" (");
+		description.append(alpm_pkg_get_version(pkg));
+		description.append(")</b><br><br>");
+		description.append(alpm_pkg_get_desc(pkg));
+		description.append("<br><br>");
+		description.append("<b>" + tr("Status: ") + "</b> ");
+		if (aHandle->isInstalled(item->text(1)))
+			description.append(tr("Installed")); //FIXME: Icon!!!!
+		else
+			description.append(tr("Not installed"));
+		if (aHandle->isInstalled(item->text(1)))
+		{
+			description.append("<br><b>" + tr("Local Version: ") + "</b> ");
+			description.append(aHandle->getPackageVersion(alpm_pkg_get_name(pkg), "local"));
+		}
+		if(!isLocal)
+		{
+			description.append("<br><b>" + tr("Version in the Repository: ") + "</b> ");
+			description.append(alpm_pkg_get_version(pkg));
+		}
+
+		if (!item->text(8).isEmpty())
+		{
+			description.append("<br><b>" + tr("Action: ") + "</b>");
+			description.append(item->text(8));//FIXME: Icon!!!
+		}
+
+		pkgInfo->setHtml(description);
+	}
+
+	else if(PkgInfos->currentIndex() == 2)
+	{
+		dependenciesWidget->clear(); //First clear the widget
+		foreach (QString dep, aHandle->getPackageDependencies(alpm_pkg_get_name(pkg) , pkgsViewWG->currentItem()->text(5)))
+		{
+			if (!dep.isEmpty())
+				dependenciesWidget->addItem(dep);
+		}
+	}
+
+	else if(PkgInfos->currentIndex() == 1)
+	{
+		filesWidget->clear();
+		filesWidget->header()->hide();
+		QStringList files = aHandle->getPackageFiles(pkgsViewWG->selectedItems().first()->text(1));
+		foreach (QString file, files)
+		{
+			QStringList splitted = file.split("/");
+			QTreeWidgetItem *parentItem = 0;
+			foreach (QString spl, splitted)
 			{
-				QList<QTreeWidgetItem*> list = filesWidget->findItems(spl, Qt::MatchExactly);
-				if (!list.isEmpty())
+				if (spl.isEmpty())
+					continue;
+				if (parentItem)
 				{
-					qDebug() << "Hehe we have the same item already found";
-					parentItem = list.first();
+					qDebug() << "Yay, we have a parentItem";
+					bool there = false;
+					int j = parentItem->childCount();
+					for (int i = 0;i != j; i++)
+					{
+						if (parentItem->child(i)->text(0) == spl)
+						{
+							there = true;
+							parentItem = parentItem->child(i);
+							continue;
+						}
+					}
+					if (!there)
+						parentItem->addChild(new QTreeWidgetItem(parentItem, (QStringList) spl));
 				}
 				else
 				{
-					filesWidget->insertTopLevelItem(0, new QTreeWidgetItem(filesWidget, (QStringList) spl));
+					QList<QTreeWidgetItem*> list = filesWidget->findItems(spl, Qt::MatchExactly);
+					if (!list.isEmpty())
+					{
+						qDebug() << "Hehe we have the same item already found";
+						parentItem = list.first();
+					}
+					else
+					{
+						filesWidget->insertTopLevelItem(0, new QTreeWidgetItem(filesWidget, (QStringList) spl));
+					}
 				}
 			}
 		}
