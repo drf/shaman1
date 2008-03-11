@@ -22,34 +22,16 @@
 
 #ifndef MAINWINDOW_H_
 #define MAINWINDOW_H_
+#include "ui_tribeBase.h"
 
 #include <QWidget>
-#include <QPixmap>
-#include <QGraphicsView>
 
-class MainWindow : public QGraphicsView
+class MainWindow : public QWidget, public Ui::TribeBase
 {
 	Q_OBJECT
-	
 public:
 	MainWindow(QWidget *parent = 0);
 	virtual ~MainWindow();
-	
-	void enableMask(bool enable);
-	void toggleFullscreen();
-	
-	QGraphicsScene *scene;
-	
-protected:
-	void drawBackground(QPainter *painter, const QRectF &rect);
-	void resizeEvent(QResizeEvent *event);
-	
-private:
-	void setupScene();
-	void setupWidget();
-	void drawBackgroundToPixmap();
-	
-	QPixmap background;
 };
 
 #endif /*MAINWINDOW_H_*/
