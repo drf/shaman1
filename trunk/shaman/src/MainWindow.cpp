@@ -556,25 +556,25 @@ void MainWindow::showPkgInfo()
 	pmdb_t *curdb = NULL;
 	bool isLocal = false;
 
+	databases = aHandle->getAvailableRepos();
+
+	databases = alpm_list_first(databases);
+
+	while(databases != NULL)
+	{
+		if(!strcmp(pkgsViewWG->currentItem()->text(5).toAscii().data(),
+				alpm_db_get_name((pmdb_t *)alpm_list_getdata(databases))))
+		{
+			curdb = (pmdb_t *)alpm_list_getdata(databases);
+			break;
+		}
+		databases = alpm_list_next(databases);
+	}
+
+	pkg = alpm_db_get_pkg(curdb, pkgsViewWG->currentItem()->text(1).toAscii().data());
+
 	if(PkgInfos->currentIndex() == 0)
 	{
-		databases = aHandle->getAvailableRepos();
-
-		databases = alpm_list_first(databases);
-
-		while(databases != NULL)
-		{
-			if(!strcmp(pkgsViewWG->currentItem()->text(5).toAscii().data(),
-					alpm_db_get_name((pmdb_t *)alpm_list_getdata(databases))))
-			{
-				curdb = (pmdb_t *)alpm_list_getdata(databases);
-				break;
-			}
-			databases = alpm_list_next(databases);
-		}
-
-		pkg = alpm_db_get_pkg(curdb, pkgsViewWG->currentItem()->text(1).toAscii().data());
-
 		if(!pkg)
 		{
 			/* Well, if pkg is NULL we're probably searching for something coming
