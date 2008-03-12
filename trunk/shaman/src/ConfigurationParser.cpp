@@ -235,7 +235,10 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 
 					else if (key.compare("XferCommand", Qt::CaseInsensitive) == 0)
 					{
-						pacData.xferCommand = line.toAscii().data();	
+						while(line.startsWith(QChar(' ')))
+							line.remove(0, 1);
+						
+						pacData.xferCommand = line;	
 					}
 
 				} 
@@ -923,7 +926,7 @@ ConfigurationParser::ConfigurationParser()
 	pacData.useDelta = 0;
 	pacData.useSysLog = 0;
 	pacData.noPassiveFTP = 0;
-    pacData.xferCommand = NULL;
+    pacData.xferCommand = QString();
     pacData.IgnoreGrp.clear();
     pacData.IgnorePkg.clear();
     pacData.NoExtract.clear();
@@ -950,7 +953,7 @@ PacmanConf ConfigurationParser::getPacmanConf(bool forcereload)
 	pacData.useDelta = 0;
 	pacData.useSysLog = 0;
 	pacData.noPassiveFTP = 0;
-	pacData.xferCommand = NULL;
+	pacData.xferCommand = QString();
 	pacData.IgnoreGrp.clear();
 	pacData.IgnorePkg.clear();
 	pacData.NoExtract.clear();

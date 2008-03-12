@@ -43,7 +43,7 @@ struct PcCnf {
 	int noPassiveFTP;
 	int useDelta;
 	int useSysLog;
-	char *xferCommand;
+	QString xferCommand;
 	QStringList serverAssoc;
 	bool loaded;
 };

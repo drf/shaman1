@@ -413,8 +413,11 @@ bool AlpmHandler::setUpAlpmSettings()
 		count++;
 	}
 
-	if(pdata.xferCommand != NULL)
-		alpm_option_set_xfercommand(pdata.xferCommand);
+	if(pdata.xferCommand != QString())
+	{
+		qDebug() << "XFerCommand is:" << pdata.xferCommand;
+		alpm_option_set_xfercommand(pdata.xferCommand.toAscii().data());
+	}
 	
 	alpm_option_set_dlcb(cb_dl_progress);
 	alpm_option_set_nopassiveftp(pdata.noPassiveFTP);

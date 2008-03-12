@@ -151,6 +151,7 @@ private:
 	
 	bool upActive;
 	bool revActive;
+	bool turnOffSys;
 
 };
 

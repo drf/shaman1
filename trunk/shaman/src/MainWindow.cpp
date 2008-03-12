@@ -47,6 +47,7 @@
 #include <QWaitCondition>
 #include <QMovie>
 #include <alpm.h>
+#include <sys/types.h>
 
 extern CallBacks CbackReference;
 extern QMutex mutex;
@@ -62,7 +63,8 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
   qUi(NULL),
   bHandler(NULL),
   upActive(false),
-  revActive(false)
+  revActive(false),
+  turnOffSys(false)
 {
 	setupUi(this);
 	addDockWidget(Qt::LeftDockWidgetArea, repoDockWidget);
@@ -390,13 +392,7 @@ void MainWindow::populateGrpsColumn()
 void MainWindow::refinePkgView()
 {
 	qDebug() << "refinePkgView";
-	//First we hide all items
-	for(int i = 0; i < pkgsViewWG->topLevelItemCount(); ++i)
-	{
-
-		pkgsViewWG->topLevelItem(i)->setHidden(true);
-	}
-
+	
 	QList<QTreeWidgetItem*> list = pkgsViewWG->findItems(QString(), Qt::MatchRegExp | Qt::MatchWildcard);
 
 	// Now first: What do we need to refine in the right column?
@@ -505,12 +501,15 @@ void MainWindow::refinePkgView()
 	 * by all of our three components. And then we set that list to be
 	 * visible. */
 
-
-	foreach (QTreeWidgetItem *item, list)
+	for(int i = 0; i < pkgsViewWG->topLevelItemCount(); ++i)
 	{
-		item->setHidden(false);
+		QTreeWidgetItem *tmpitm = pkgsViewWG->topLevelItem(i);
+		
+		if(list.contains(tmpitm))
+			tmpitm->setHidden(false);
+		else
+			tmpitm->setHidden(true);
 	}
-
 }
 
 void MainWindow::itemChanged()
@@ -550,6 +549,9 @@ void MainWindow::itemChanged()
 
 void MainWindow::showPkgInfo()
 {
+	if(pkgsViewWG->currentItem() == NULL)
+		return;
+	
 	QString description;
 	pmpkg_t *pkg = NULL;
 	alpm_list_t *databases;
@@ -828,12 +830,12 @@ void MainWindow::showPkgsViewContextMenu()
 	connect(removeAction, SIGNAL(triggered()), SLOT(removePackage()));
 	QAction *upgradeAction = menu->addAction(QIcon(":/Icons/icons/edit-redo.png"), tr("Mark for Upgrade"));
 	connect(upgradeAction, SIGNAL(triggered()), SLOT(upgradePackage()));
-	QAction *cancelAction = menu->addAction(QIcon(":/Icons/icons/edit-delete.png"), tr("Cancel Action"));
+	QAction *cancelAction = menu->addAction(QIcon(":/Icons/icons/dialog-cancel.png"), tr("Cancel Action"));
 	connect(cancelAction, SIGNAL(triggered()), SLOT(cancelAction()));
 
 	if (aHandle->isInstalled(item->text(1)) && aHandle->getUpgradeablePackages().contains(item->text(1)))
 	{
-		installAction->setDisabled(true);
+		installAction->setText(tr("Mark for Reinstallation"));
 		removeAction->setDisabled(true);
 	}
 	else if (!aHandle->isInstalled(item->text(1)))
@@ -843,7 +845,7 @@ void MainWindow::showPkgsViewContextMenu()
 	}
 	else//Package is marked as installed
 	{
-		installAction->setDisabled(true);
+		installAction->setText(tr("Mark for Reinstallation"));
 		upgradeAction->setDisabled(true);
 	}//FIXME: Add completeRemove-action
 
@@ -873,7 +875,7 @@ void MainWindow::showRepoViewContextMenu()
 	connect(reinstallAction, SIGNAL(triggered()), SLOT(reinstallAllRepoPackages()));
 	QAction *removeAction = menu->addAction(QIcon(":/Icons/icons/list-remove.png"), tr("Mark all for removal"));
 	connect(removeAction, SIGNAL(triggered()), SLOT(removeAllRepoPackages()));
-	QAction *cancelAction = menu->addAction(QIcon(":/Icons/icons/edit-delete.png"), tr("Cancel all actions"));
+	QAction *cancelAction = menu->addAction(QIcon(":/Icons/icons/dialog-cancel.png"), tr("Cancel all actions"));
 	connect(cancelAction, SIGNAL(triggered()), SLOT(cancelAllRepoActions()));
 
 	menu->popup(QCursor::pos());
@@ -1394,6 +1396,9 @@ void MainWindow::processQueue()
 		else
 			settings->setValue("gui/keepqueuedialogopen", false);
 		
+		if(qUi->turnoffBox->isChecked())
+			turnOffSys = true;
+		
 		settings->deleteLater();
 	}
 
@@ -1496,7 +1501,67 @@ void MainWindow::queueProcessingEnded(bool errors)
 		}
 		else
 			trayicon->showMessage(QString(tr("Queue Processed")), QString(tr("Your Queue was successfully processed!!")));
+		
+		/*if(turnOffSys)
+		{			
+			QProcess proc;
+			proc.start("pidof kded4");
+			proc.waitForFinished();
+			QString sprid = QString(proc.readAllStandardOutput()).remove(QChar('\n'));
+			int prid = sprid.toInt();
+			
+			qDebug() << "ID of the process:" << prid;
+			int usid = 0;
+			int grid = 0;
+			
+			QProcess proccat;
+			QString pline = QString(QString("cat /proc/") + sprid + "/status");
+			
+			qDebug() << "Running" << pline;
+
+			proccat.start(pline);
+			
+			proccat.waitForFinished();
+			
+			foreach(QString line, QString(proccat.readAllStandardOutput()).split(QChar('\n')))
+			{
+				if(line.startsWith("Uid:"))
+				{
+					QStringList list(line.split(QChar('\t'), QString::SkipEmptyParts));
+					usid = list.at(2).toInt();
+				}
+				if(line.startsWith("Gid:"))
+				{
+					QStringList list(line.split(QChar('\t'), QString::SkipEmptyParts));
+					grid = list.at(2).toInt();
+				}
+			}
+
+#if defined Q_OS_UNIX
+			qDebug() << "Dropping Privileges";
+			//::setgroups(0, 0);
+			::chdir("/");
+			::setgid(grid);
+			::setuid(usid);
+			//::umask(0);
+#endif
+						
+			QDBusConnection dbus(QDBusConnection::sessionBus());
+			
+			qDebug() << "ID of the user:" << getuid();
+			
+			::QProcess::execute("dbus-send --session --dest=org.kde.ksmserver --type=method_call"
+					" /KSMServer org.kde.KSMServerInterface.logout int32:0 int32:2 int32:0");
+			
+			::setgid(0);
+			::setuid(0);
+			
+			qDebug() << "ID of the user:" << getuid();
+			
+		}*/
 	}
+	
+	turnOffSys = false;
 		
 	if(!settings->value("gui/keepqueuedialogopen", true).toBool())
 		queueDl->deleteLater();
