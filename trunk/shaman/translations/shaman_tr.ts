@@ -548,6 +548,15 @@ It is now available in mirrorlist.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../ui/configDialog.ui" line="282"/>
+        <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../ui/configDialog.ui" line="308"/>
         <source>Checkable Options</source>
         <translation type="unfinished"></translation>
@@ -781,15 +790,6 @@ and Pacman.</source>
     <message>
         <location filename="../ui/configDialog.ui" line="852"/>
         <source>Clean Build Environment after installation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/configDialog.ui" line="282"/>
-        <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1065,6 +1065,12 @@ was not successfully processed</source>
         <location filename="../src/MainWindow.cpp" line="1468"/>
         <source>Pacman or Shaman was updated. Shaman will now quit,
 please restart it to use the new version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/MainWindow.cpp" line="1481"/>
+        <source>Your Kernel has been updated.
+Please restart your PC soon to load the new Kernel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1352,12 +1358,6 @@ p, li { white-space: pre-wrap; }
         <source>Process Queue</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <location filename="../src/MainWindow.cpp" line="1481"/>
-        <source>Your Kernel has been updated.
-Please restart your PC soon to load the new Kernel.</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>QObject</name>
@@ -1554,6 +1554,21 @@ Yours is %1. Please update Pacman.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../src/QueueDialog.cpp" line="402"/>
+        <source>Queue processing failed!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/QueueDialog.cpp" line="407"/>
+        <source>Queue processed successfully!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/QueueDialog.cpp" line="415"/>
+        <source>Close</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../src/QueueDialog.cpp" line="451"/>
         <source>Unexpected Error. Shaman might be corrupted.</source>
         <translation type="unfinished"></translation>
@@ -1606,21 +1621,6 @@ This may damage your system.</source>
 </source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <location filename="../src/QueueDialog.cpp" line="415"/>
-        <source>Close</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/QueueDialog.cpp" line="402"/>
-        <source>Queue processing failed!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/QueueDialog.cpp" line="407"/>
-        <source>Queue processed successfully!</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>QueueReadyDialog</name>
@@ -1637,6 +1637,11 @@ This may damage your system.</source>
     <message>
         <location filename="../ui/reviewQueueDialog.ui" line="38"/>
         <source>Process in Tray</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/reviewQueueDialog.ui" line="45"/>
+        <source>Keep Queue Dialog Open after the Queue is finished</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1665,11 +1670,6 @@ This may damage your system.</source>
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Review Queue&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/reviewQueueDialog.ui" line="45"/>
-        <source>Keep Queue Dialog Open after the Queue is finished</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1759,6 +1759,14 @@ Click here to upgrade your System.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../ui/aboutDialog.ui" line="62"/>
+        <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shaman 1.0 Alpha (revision 450)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../ui/aboutDialog.ui" line="85"/>
         <source>About</source>
         <translation type="unfinished"></translation>
@@ -1784,14 +1792,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/aboutDialog.ui" line="127"/>
         <source>Thanks To</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/aboutDialog.ui" line="62"/>
-        <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shaman 1.0 Alpha (revision 450)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
