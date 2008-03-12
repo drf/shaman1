@@ -25,7 +25,8 @@
 #include <QMovie>
 
 ShamanTrayIcon::ShamanTrayIcon(MainWindow *mW, AlpmHandler *aH)
- : mainWin(mW),
+ : KAnimatedSystemTrayIcon(mW),
+   mainWin(mW),
    aHandle(aH)
 {
 	if(aHandle->getUpgradeablePackages().isEmpty())
