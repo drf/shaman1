@@ -409,6 +409,8 @@ void ConfigDialog::performManteinanceAction()
 {
 	mantProcessButton->setEnabled(false);
 	
+	mantDetails->append(QString());
+	
 	if(!mantActionBox->currentText().compare(QString(tr("Clean Unused Databases"))))
 	{
 		cTh = new CleanThread(m_handler, 0);
@@ -1001,7 +1003,7 @@ void ConfigDialog::cleanThread()
 void ConfigDialog::mantProgress()
 {
 	mantProc->setReadChannel(QProcess::StandardError);
-	mantDetails->append(mantProc->readLine(1024));
+	mantDetails->append(QString("<b><i>" + mantProc->readLine(1024) + "</b></i>"));
 }
 
 void ConfigDialog::cleanProc(int eC, QProcess::ExitStatus eS)
