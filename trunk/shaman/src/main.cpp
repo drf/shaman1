@@ -67,6 +67,23 @@ static void cleanup(int signum)
 	exit(signum);
 }
 
+void noDebugOutput(QtMsgType type, const char *msg)
+{
+	switch (type) {
+	case QtDebugMsg:
+		break;
+	case QtWarningMsg:
+		fprintf(stderr, "Warning: %s\n", msg);
+		break;
+	case QtCriticalMsg:
+		fprintf(stderr, "Critical: %s\n", msg);
+		break;
+	case QtFatalMsg:
+		fprintf(stderr, "Fatal: %s\n", msg);
+		abort();
+	}
+}
+
 int main(int argc, char **argv)
 {
 	qDebug() << ">>";
@@ -81,7 +98,7 @@ int main(int argc, char **argv)
 	qDebug() << ">>";
 	qDebug() << ">>	Starting Up Shaman...";
 	qDebug() << "";
-	
+
 	uid_t myuid = geteuid();
 
 	QApplication app(argc, argv, QApplication::GuiClient);
@@ -90,18 +107,68 @@ int main(int argc, char **argv)
 	QCoreApplication::setOrganizationDomain("shaman.iskremblien.org");
 	QCoreApplication::setApplicationName("shaman");
 
-	QString locale = QLocale::system().name();
+	QSettings *settings = new QSettings();
 
+	QSplashScreen splscr(QPixmap(":/Images/images/splash.png"));
+
+	bool showSplash = true;
+
+	if(!settings->value("gui/showsplashscreen", true).toBool())
+		showSplash = false;
+
+	QStringList arguments = app.arguments();
+	
+	if(arguments.contains("--you-suck"))
+	{
+		printf("\n\nOh, really?\n");
+		exit(0);
+	}
+	if(arguments.contains("--ya-rly"))
+	{
+		printf("\n\nHonestly, you DO suck more than me\n");
+		exit(0);
+	}
+	if(arguments.contains("--well-actually-not"))
+	{
+		printf("\n\nNo, you're a sucker. Get away from here and go kill yourself. Bitch.\n");
+		exit(0);
+	}
+	if(arguments.contains("--clear-settings"))
+		settings->clear();
+	if(arguments.contains("--no-debugging-output"))
+		qInstallMsgHandler(noDebugOutput);
+
+	if(arguments.contains("--no-splashscreen"))
+		showSplash = false;
+
+	QString locale = QLocale::system().name();
+	
 	QTranslator translator;
-	QString trpath(QString("shaman_") + locale);
-	
-	if(!translator.load(trpath))
-		if(!translator.load(trpath, "../share/shaman/translations/"))
-			if(!translator.load(trpath, "/usr/share/shaman/translations/"))
-				if(!translator.load(trpath, "/usr/local/share/shaman/translations/"))
-					qDebug() << "Could not find a translation for this locale.";
-	
-	app.installTranslator(&translator);
+
+	if(!arguments.contains("--no-i18n"))
+	{
+		qDebug() << "Translations are enabled."; 
+		QString trpath(QString("shaman_") + locale);
+
+		if(!translator.load(trpath))
+			if(!translator.load(trpath, "../share/shaman/translations/"))
+				if(!translator.load(trpath, "/usr/share/shaman/translations/"))
+					if(!translator.load(trpath, "/usr/local/share/shaman/translations/"))
+						qDebug() << "Could not find a translation for this locale.";
+
+		app.installTranslator(&translator);
+	}
+	else
+		qDebug() << "Translations are Disabled on user request.";
+
+	if(showSplash)
+	{
+		splscr.show();
+		app.processEvents();
+
+		splscr.showMessage(QString(QObject::tr("Please Wait...")), Qt::AlignBottom | Qt::AlignRight, Qt::white);
+		app.processEvents();
+	}
 
 	if(myuid > 0)
 	{
@@ -147,19 +214,6 @@ int main(int argc, char **argv)
 	}
 	
 	app.setQuitOnLastWindowClosed(false);
-	
-	QSettings *settings = new QSettings();
-	
-	QSplashScreen splscr(QPixmap(":/Images/images/splash.png"));
-
-	if(settings->value("gui/showsplashscreen", true).toBool())
-	{
-		splscr.show();
-		app.processEvents();
-
-		splscr.showMessage(QString(QObject::tr("Please Wait...")), Qt::AlignBottom | Qt::AlignRight, Qt::white);
-		app.processEvents();
-	}
 
 	signal(SIGINT, cleanup);
 	signal(SIGTERM, cleanup);
@@ -202,7 +256,7 @@ int main(int argc, char **argv)
 	if(settings->contains("gui/pos"))
 		mainwin.move(settings->value("gui/pos").toPoint());
 
-	if(settings->value("gui/showsplashscreen", true).toBool())
+	if(showSplash)
 	{
 		splscr.showMessage(QString(QObject::tr("Loading Databases...")), Qt::AlignBottom | Qt::AlignRight, Qt::white);
 		app.processEvents();
@@ -210,7 +264,7 @@ int main(int argc, char **argv)
 
 	mainwin.populateRepoColumn();
 
-	if(settings->value("gui/showsplashscreen", true).toBool())
+	if(showSplash)
 	{
 		splscr.showMessage(QString(QObject::tr("Loading Packages...")), Qt::AlignBottom | Qt::AlignRight, Qt::white);
 		app.processEvents();
@@ -218,13 +272,14 @@ int main(int argc, char **argv)
 
 	mainwin.populatePackagesView();
 
-	if(settings->value("gui/showsplashscreen", true).toBool())
+	if(showSplash)
 	{
 		splscr.showMessage(QString(QObject::tr("Starting up Shaman...")), Qt::AlignBottom | Qt::AlignRight, Qt::white);
 		app.processEvents();
 	}
 
-	if(settings->value("gui/startupmode").toString() == "window")
+	if((settings->value("gui/startupmode").toString() == "window" || arguments.contains("--start-in-window")) &&
+			!arguments.contains("--start-in-tray"))
 	{
 		/* case 1: we want to show Main Window
 		 */
@@ -243,7 +298,7 @@ int main(int argc, char **argv)
 
 	QObject::connect(&mainwin, SIGNAL(aboutToQuit()), &app, SLOT(quit()));
 	
-	if(settings->value("gui/showsplashscreen", true).toBool())
+	if(showSplash)
 		splscr.close();
 	
 	settings->deleteLater();
