@@ -1324,8 +1324,11 @@ void MainWindow::addUpgradeableToQueue()
 		item->setIcon(2, QIcon(":/Icons/icons/list-add.png"));
 	}
 
-	upDl->deleteLater();
-	upActive = false;
+	if(upActive)
+	{
+		upDl->deleteLater();
+		upActive = false;
+	}
 	return;
 }
 
