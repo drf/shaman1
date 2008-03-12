@@ -30,6 +30,8 @@ SysUpgradeDialog::SysUpgradeDialog(AlpmHandler *hnd, QWidget *parent)
 : QDialog(parent),
 aHandle(hnd)
 {
+	setupUi(this);
+	
 	QSettings *settings = new QSettings();
 
 	if(settings->value("gui/actionupgrade").toString() == "add")
@@ -40,7 +42,6 @@ aHandle(hnd)
 	{
 		QStringList data;
 
-		setupUi(this);
 		setWindowModality(Qt::ApplicationModal);
 
 		data = aHandle->getUpgradeablePackages();
