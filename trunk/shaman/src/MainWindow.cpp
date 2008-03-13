@@ -335,6 +335,8 @@ bool MainWindow::populatePackagesView()
 
 void MainWindow::populateRepoColumn()
 {
+	qDebug() << "Populating Repo column";
+	
 	switchToGrps->setChecked(false);
 	repoDockWidget->setWindowTitle(tr("Repositories"));
 	QStringList list = aHandle->getAvailableReposNames();
@@ -688,7 +690,6 @@ void MainWindow::doDbUpdate()
 		dbdialog->show();
 
 	connect(dbdialog, SIGNAL(killMe()), this, SLOT(finishDbUpdate()));
-	connect(dbdialog, SIGNAL(updateRepo(const QString&)), SLOT(populatePackagesViewFromRepo(const QString &)));
 
 	dbdialog->doAction();
 }
@@ -696,9 +697,16 @@ void MainWindow::doDbUpdate()
 void MainWindow::finishDbUpdate()
 {
 	disconnect(dbdialog, 0,0,0);
-	
+
+	if(dbdialog->dbHasBeenUpdated())
+	{
+		populatePackagesView();
+		populateRepoColumn();
+		populateGrpsColumn();
+	}
+
 	qDebug() << "DB Update Finished";
-	
+
 	QStringList list(aHandle->getUpgradeablePackages());
 	
 	if(dbdialog->anyErrors())
@@ -1188,6 +1196,13 @@ void MainWindow::startUpgrading()
 {
 	disconnect(dbdialog, 0,0,0);
 	
+	if(dbdialog->dbHasBeenUpdated())
+	{
+		populatePackagesView();
+		populateRepoColumn();
+		populateGrpsColumn();
+	}
+	
 	QStringList list = aHandle->getUpgradeablePackages();
 
 	if(list.isEmpty())
@@ -1340,7 +1355,6 @@ void MainWindow::fullSysUpgrade()
 		dbdialog->show();
 
 	connect(dbdialog, SIGNAL(killMe()), this, SLOT(startUpgrading()));
-	connect(dbdialog, SIGNAL(updateRepo(const QString&)), SLOT(populatePackagesViewFromRepo(const QString &)));
 
 	dbdialog->doAction();
 }
@@ -1994,80 +2008,6 @@ bool MainWindow::populateQueuePackagesView()
 	connect(pkgsViewWG, SIGNAL(itemSelectionChanged()), this, 
 			SLOT(itemChanged()));
 
-	return true;
-}
-
-bool MainWindow::populatePackagesViewFromRepo(const QString &repo)
-{
-	pkgsViewWG->setSortingEnabled(false);
-
-	disconnect(pkgsViewWG, SIGNAL(itemSelectionChanged()), this, 
-			SLOT(itemChanged()));
-
-	/* Let's get Packages in the Queue first. */
-
-	alpm_list_t *currentpkgs = aHandle->getPackagesFromRepo(repo);
-	
-	while(currentpkgs != NULL)
-	{
-		pmpkg_t *pkg = (pmpkg_t *)alpm_list_getdata(currentpkgs);
-		QTreeWidgetItem *item = new QTreeWidgetItem(pkgsViewWG);
-		alpm_list_t *grps = (alpm_list_t *)alpm_pkg_get_groups(pkg);
-		QString grStr("");
-		
-		removePackageFromView(alpm_pkg_get_name(pkg));
-		
-		qApp->processEvents();
-
-		if(aHandle->isInstalled(pkg))
-		{
-			//item->setText(0, tr("Installed"));
-			item->setIcon(0, QIcon(":/Icons/icons/user-online.png"));
-			item->setText(3, aHandle->getPackageVersion(alpm_pkg_get_name(pkg), "local"));
-		}
-		else
-		{
-			//item->setText(0, tr("Not Installed"));
-			item->setIcon(0, QIcon(":/Icons/icons/user-offline.png"));
-			item->setText(3, alpm_pkg_get_version(pkg));
-		}
-
-		item->setText(1, alpm_pkg_get_name(pkg));
-		item->setText(5, repo);
-		item->setText(4, formatSize(aHandle->getPackageSize(item->text(1), repo))); 
-		item->setText(7, alpm_pkg_get_desc(pkg));
-
-		while(grps != NULL)
-		{
-			grStr.append(" ");
-
-			grStr.append((char *)alpm_list_getdata(grps));
-			grps = alpm_list_next(grps);
-		}
-		grStr.append(" ");
-
-		item->setText(6, grStr);
-
-		currentpkgs = alpm_list_next(currentpkgs);
-	}
-
-	QStringList upgrds = aHandle->getUpgradeablePackages();
-	foreach (QString pac, upgrds)
-	{
-		QTreeWidgetItem *item = pkgsViewWG->findItems(pac, Qt::MatchExactly, 1).first();
-		if (item)
-		{
-			item->setText(8, tr("Upgrade"));
-			item->setIcon(2, QIcon(":/Icons/icons/list-add.png"));
-		}
-	}
-
-	pkgsViewWG->sortItems(1, Qt::AscendingOrder);
-	pkgsViewWG->setSortingEnabled(true);//Enable sorting *after* inserting :D
-
-	connect(pkgsViewWG, SIGNAL(itemSelectionChanged()), this, 
-			SLOT(itemChanged()));
-	
 	return true;
 }
 
