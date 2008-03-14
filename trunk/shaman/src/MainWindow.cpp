@@ -117,6 +117,7 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	connect(actionPacman_Preferences, SIGNAL(triggered()), SLOT(showSettings()));
 	connect(trayicon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), SLOT(systrayActivated(QSystemTrayIcon::ActivationReason)));
 	connect(trayicon, SIGNAL(startDbUpdate()), SLOT(doDbUpdate()));
+	connect(trayicon, SIGNAL(upgradePkgs()), SLOT(startUpgrading()));
 	connect(this, SIGNAL(startTimer()), trayicon, SLOT(startTimer()));
 	connect(this, SIGNAL(stopTimer()), trayicon, SLOT(stopTimer()));
 	connect(actionQuit, SIGNAL(triggered()), SLOT(quitApp()));
@@ -1194,14 +1195,17 @@ void MainWindow::cancelAction(const QString &package)
 
 void MainWindow::startUpgrading()
 {
-	disconnect(dbdialog, 0,0,0);
-	
-	if(dbdialog->dbHasBeenUpdated())
+	if(dbdialog != NULL)
 	{
-		populatePackagesView();
-		populateRepoColumn();
-		populateGrpsColumn();
-	}
+		disconnect(dbdialog, 0,0,0);
+
+		if(dbdialog->dbHasBeenUpdated())
+		{
+			populatePackagesView();
+			populateRepoColumn();
+			populateGrpsColumn();
+		}
+	}	
 	
 	QStringList list = aHandle->getUpgradeablePackages();
 
@@ -1301,6 +1305,8 @@ void MainWindow::startUpgrading()
 		 * a reason for that :)
 		 */
 
+		qDebug() << "Streaming Upgrades";
+		
 		emit upgradesAvailable();
 
 		upDl = new SysUpgradeDialog(aHandle, this);
@@ -1314,8 +1320,11 @@ void MainWindow::startUpgrading()
 		connect(upDl, SIGNAL(addToPkgQueue()), SLOT(addUpgradeableToQueue()));
 	}
 
-	dbdialog->deleteLater();
-	dbdialog = NULL;
+	if(dbdialog != NULL)
+	{
+		dbdialog->deleteLater();
+		dbdialog = NULL;
+	}
 
 }
 

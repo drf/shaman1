@@ -59,6 +59,7 @@ private slots:
 	
 signals:
 	void startDbUpdate();
+	void upgradePkgs();
 	
 private:
 	MainWindow *mainWin;

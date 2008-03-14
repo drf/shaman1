@@ -128,7 +128,8 @@ void ShamanTrayIcon::changeIconStatus(ShamanIcon::IconStatus status)
 		showMessage(QString(tr("System Upgrade")), QString(upgrds.size() == 1 ? tr("There is %1 upgradeable package.\n"
 				"Click here to upgrade your System.") :	tr("There are %1 upgradeable packages.\nClick here to upgrade your System.")).
 				arg(upgrds.size()));
-		connect(this, SIGNAL(messageClicked()), mainWin, SLOT(fullSysUpgrade()));
+		disconnect(this, SIGNAL(messageClicked()), 0, 0);
+		connect(this, SIGNAL(messageClicked()), SIGNAL(upgradePkgs()));
 	}
 }
 
