@@ -399,6 +399,8 @@ void MainWindow::refinePkgView()
 	QList<QTreeWidgetItem*> list = pkgsViewWG->findItems(QString(), Qt::MatchRegExp | Qt::MatchWildcard);
 
 	// Now first: What do we need to refine in the right column?
+	if (list.isEmpty())
+		return;
 
 	if((repoList->selectedItems().at(0)->text().compare(tr("All Repositories")) &&
 			repoList->selectedItems().at(0)->text().compare(tr("All Groups"))) &&
@@ -426,11 +428,10 @@ void MainWindow::refinePkgView()
 	}
 	else
 	{
-		for(int i = 0; i < pkgsViewWG->topLevelItemCount(); ++i)
+		/**for(int i = 0; i < pkgsViewWG->topLevelItemCount(); ++i)
 		{
-
 			list += pkgsViewWG->topLevelItem(i);
-		}
+		}**/
 	}
 	qDebug() << "The left TextBox is over, let's do the ComboBox";
 	if(!packageSwitchCombo->currentIndex() == 0)
