@@ -399,7 +399,7 @@ void MainWindow::refinePkgView()
 	QList<QTreeWidgetItem*> list = pkgsViewWG->findItems(QString(), Qt::MatchRegExp | Qt::MatchWildcard);
 
 	// Now first: What do we need to refine in the right column?
-	if (list.isEmpty())
+	if (list.isEmpty() && list.count() >= 0)
 		return;
 
 	if((repoList->selectedItems().at(0)->text().compare(tr("All Repositories")) &&
@@ -518,6 +518,9 @@ void MainWindow::refinePkgView()
 
 void MainWindow::itemChanged()
 {
+	if (pkgsViewWG->selectedItems().isEmpty())
+		return;
+
 	cancelButton->setDisabled(true);
 	if (aHandle->isInstalled(pkgsViewWG->selectedItems().first()->text(1)))
 	{
@@ -553,7 +556,7 @@ void MainWindow::itemChanged()
 
 void MainWindow::showPkgInfo()
 {
-	if(pkgsViewWG->currentItem() == NULL)
+	if(pkgsViewWG->selectedItems().isEmpty() || pkgsViewWG->currentItem() == NULL)
 		return;
 	
 	QString description;
