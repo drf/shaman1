@@ -428,10 +428,10 @@ void MainWindow::refinePkgView()
 	}
 	else
 	{
-		/**for(int i = 0; i < pkgsViewWG->topLevelItemCount(); ++i)
+		for(int i = 0; i < pkgsViewWG->topLevelItemCount(); ++i)
 		{
 			list += pkgsViewWG->topLevelItem(i);
-		}**/
+		}
 	}
 	qDebug() << "The left TextBox is over, let's do the ComboBox";
 	if(!packageSwitchCombo->currentIndex() == 0)

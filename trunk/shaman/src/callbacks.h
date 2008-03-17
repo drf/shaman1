@@ -23,6 +23,7 @@
 
 #include <iostream>
 #include <alpm.h>
+#include <sys/time.h>
 
 #include <QObject>
 

@@ -21,7 +21,6 @@
 
 #include <iostream>
 #include <string>
-#include <sys/time.h>
 #include <unistd.h>
 #include <QMessageBox>
 #include <QMutex>
