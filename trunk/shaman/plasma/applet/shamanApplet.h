@@ -28,7 +28,9 @@
 namespace Plasma
 {
     class HBoxLayout;
+    class VBoxLayout;
     class Icon;
+    class LineEdit;
 }
 
 class ShamanApplet : public Plasma::Applet
@@ -49,9 +51,11 @@ class ShamanApplet : public Plasma::Applet
         void init();
 
         QDBusConnection dbus;
-        Plasma::HBoxLayout * m_layout;
-        Plasma::Icon *updateDatabaseIcon;
-        Plasma::Icon *upgradeSystemIcon;
+        Plasma::VBoxLayout * m_layout;
+        Plasma::HBoxLayout * m_actionLayout;
+        Plasma::Icon *m_updateDatabaseIcon;
+        Plasma::Icon *m_upgradeSystemIcon;
+        Plasma::LineEdit *m_packageLine;
         Plasma::DataEngine *m_engine;
 }; 
 

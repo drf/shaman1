@@ -23,8 +23,9 @@
 
 #include <KIcon>
 
-#include <plasma/layouts/hboxlayout.h>
+#include <plasma/layouts/boxlayout.h>
 #include <plasma/widgets/icon.h>
+#include <plasma/widgets/lineedit.h>
 #include <QtDBus/QDBusMessage>
 
 ShamanApplet::ShamanApplet(QObject *parent, const QVariantList &args)
@@ -48,13 +49,20 @@ void ShamanApplet::init()
         kDebug()<<"Shaman Engine could not be loaded";
     }
 
-    m_layout = new Plasma::HBoxLayout(this);
-    updateDatabaseIcon = new Plasma::Icon(KIcon("view-refresh"), tr("Update Database"), this);
-    m_layout->addItem(updateDatabaseIcon);
-    connect(updateDatabaseIcon, SIGNAL(clicked()), SLOT(updateDatabase()));
-    upgradeSystemIcon = new Plasma::Icon(KIcon("edit-redo.png"), tr("Upgrade System"), this);
-    m_layout->addItem(upgradeSystemIcon);
-    connect(upgradeSystemIcon, SIGNAL(clicked()), SLOT(upgradeSystem()));
+    m_actionLayout = new Plasma::HBoxLayout(this);
+    m_updateDatabaseIcon = new Plasma::Icon(KIcon("view-refresh"), tr("Update Database"), this);
+    m_actionLayout->addItem(m_updateDatabaseIcon);
+    connect(m_updateDatabaseIcon, SIGNAL(clicked()), SLOT(updateDatabase()));
+    m_upgradeSystemIcon = new Plasma::Icon(KIcon("edit-redo.png"), tr("Upgrade System"), this);
+    m_actionLayout->addItem(m_upgradeSystemIcon);
+    connect(m_upgradeSystemIcon, SIGNAL(clicked()), SLOT(upgradeSystem()));
+
+    m_layout = new Plasma::VBoxLayout(this);
+    m_layout->addItem(m_actionLayout);
+
+    m_packageLine = new Plasma::LineEdit(this);
+    
+    m_layout->addItem(m_packageLine);
 }
 
 void ShamanApplet::updateDatabase()
