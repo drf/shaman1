@@ -70,11 +70,14 @@ QStringList ConfigDialog::getMirrorList()
 			continue;
 		
 		QStringList list(line.split("=", QString::SkipEmptyParts));
-		QString serverN(list.at(1));
+		if (list.count() >= 1)
+		{
+			QString serverN(list.at(1));
 		
-		serverN.remove(QChar(' '), Qt::CaseInsensitive);
+			serverN.remove(QChar(' '), Qt::CaseInsensitive);
 		
-		retlist.append(serverN);
+			retlist.append(serverN);
+		}
 	}
 	
 	file.close();
@@ -179,13 +182,16 @@ void ConfigDialog::setupRepos()
 	QStringList tmplst = whichMirror.split(QString("core"), 
 			QString::SkipEmptyParts, Qt::CaseInsensitive);
 
-	QString dserv(tmplst.at(0));
+	if (tmplst.count() >= 1)
+	{
+		QString dserv(tmplst.at(0));
 
-	dserv.append("$repo");
-	dserv.append(tmplst.at(1));
+		dserv.append("$repo");
+		dserv.append(tmplst.at(1));
 
-	if(mirrorBox->findText(dserv) != -1)
-		mirrorBox->setCurrentIndex(mirrorBox->findText(dserv));
+		if(mirrorBox->findText(dserv) != -1)
+			mirrorBox->setCurrentIndex(mirrorBox->findText(dserv));
+	}
 
 	connect(addMirrorButton, SIGNAL(clicked()), SLOT(addMirror()));
 	connect(addThirdPartyButton, SIGNAL(clicked()), SLOT(openAddDialog()));
