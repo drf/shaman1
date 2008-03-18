@@ -402,37 +402,40 @@ void MainWindow::refinePkgView()
 	if (list.isEmpty() && list.count() >= 0)
 		return;
 
-	if((repoList->selectedItems().at(0)->text().compare(tr("All Repositories")) &&
-			repoList->selectedItems().at(0)->text().compare(tr("All Groups"))) &&
-			!repoList->selectedItems().isEmpty())
-	{
-		if(!repoList->findItems(QString(tr("All Repositories")),
-				(Qt::MatchFlags)Qt::MatchExactly).isEmpty())
-			// First time, so don't check anything.
-			if(repoList->selectedItems().at(0)->text().compare(tr("Local Packages")))
-				list = pkgsViewWG->findItems(repoList->selectedItems().at(0)->text(), 
-						(Qt::MatchFlags)Qt::MatchExactly, 5);
+        if (repoList->selectedItems().count() > 0)
+        {
+		if((repoList->selectedItems().at(0)->text().compare(tr("All Repositories")) &&
+				repoList->selectedItems().at(0)->text().compare(tr("All Groups"))) &&
+				!repoList->selectedItems().isEmpty())
+		{
+			if(!repoList->findItems(QString(tr("All Repositories")),
+					(Qt::MatchFlags)Qt::MatchExactly).isEmpty())
+				// First time, so don't check anything.
+				if(repoList->selectedItems().at(0)->text().compare(tr("Local Packages")))
+					list = pkgsViewWG->findItems(repoList->selectedItems().at(0)->text(), 
+							(Qt::MatchFlags)Qt::MatchExactly, 5);
+				else
+					list = pkgsViewWG->findItems("local", 
+							(Qt::MatchFlags)Qt::MatchExactly, 5);
 			else
-				list = pkgsViewWG->findItems("local", 
-						(Qt::MatchFlags)Qt::MatchExactly, 5);
+			{
+				list = pkgsViewWG->findItems(repoList->selectedItems().at(0)->text(), 
+						(Qt::MatchFlags)Qt::MatchExactly, 6);
+				QString tmp = repoList->selectedItems().at(0)->text();
+				tmp.append(" ");
+				tmp.prepend(" ");
+				list += pkgsViewWG->findItems(tmp, 
+						(Qt::MatchFlags)Qt::MatchContains, 6);
+			}
+		}
 		else
 		{
-			list = pkgsViewWG->findItems(repoList->selectedItems().at(0)->text(), 
-					(Qt::MatchFlags)Qt::MatchExactly, 6);
-			QString tmp = repoList->selectedItems().at(0)->text();
-			tmp.append(" ");
-			tmp.prepend(" ");
-			list += pkgsViewWG->findItems(tmp, 
-					(Qt::MatchFlags)Qt::MatchContains, 6);
+			for(int i = 0; i < pkgsViewWG->topLevelItemCount(); ++i)
+			{
+				list += pkgsViewWG->topLevelItem(i);
+			}
 		}
-	}
-	else
-	{
-		for(int i = 0; i < pkgsViewWG->topLevelItemCount(); ++i)
-		{
-			list += pkgsViewWG->topLevelItem(i);
-		}
-	}
+        }
 	qDebug() << "The left TextBox is over, let's do the ComboBox";
 	if(!packageSwitchCombo->currentIndex() == 0)
 	{
