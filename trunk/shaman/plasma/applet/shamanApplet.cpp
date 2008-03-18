@@ -30,7 +30,7 @@
 
 ShamanApplet::ShamanApplet(QObject *parent, const QVariantList &args)
   : Plasma::Applet(parent, args),
-  dbus(QDBusConnection::systemBus())
+    dbus(QDBusConnection::systemBus())
 {
     setDrawStandardBackground(true);
 } 
@@ -49,7 +49,9 @@ void ShamanApplet::init()
         kDebug()<<"Shaman Engine could not be loaded";
     }
 
-    m_actionLayout = new Plasma::HBoxLayout(this);
+    m_layout = new Plasma::VBoxLayout(this);
+    m_actionLayout = new Plasma::HBoxLayout(m_layout);
+    //Why are those things not shown?
     m_updateDatabaseIcon = new Plasma::Icon(KIcon("view-refresh"), tr("Update Database"), this);
     m_actionLayout->addItem(m_updateDatabaseIcon);
     connect(m_updateDatabaseIcon, SIGNAL(clicked()), SLOT(updateDatabase()));
@@ -57,7 +59,6 @@ void ShamanApplet::init()
     m_actionLayout->addItem(m_upgradeSystemIcon);
     connect(m_upgradeSystemIcon, SIGNAL(clicked()), SLOT(upgradeSystem()));
 
-    m_layout = new Plasma::VBoxLayout(this);
     m_layout->addItem(m_actionLayout);
 
     m_packageLine = new Plasma::LineEdit(this);
