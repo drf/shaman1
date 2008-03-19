@@ -1202,7 +1202,7 @@ void MainWindow::cancelAction(const QString &package)
 
 void MainWindow::startUpgrading()
 {
-	if(dbdialog != NULL)
+	if(dbdialog)
 	{
 		disconnect(dbdialog, 0,0,0);
 
@@ -1212,7 +1212,7 @@ void MainWindow::startUpgrading()
 			populateRepoColumn();
 			populateGrpsColumn();
 		}
-	}	
+	}
 	
 	QStringList list = aHandle->getUpgradeablePackages();
 
@@ -1220,7 +1220,7 @@ void MainWindow::startUpgrading()
 	{
 		emit systemIsUpToDate();
 		
-		if(dbdialog->isVisible())
+		if (dbdialog && dbdialog->isVisible())
 		{
 			/* Display a simple popup saying the system is up-to-date. */
 			QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("System Upgrade"), 
@@ -1232,7 +1232,19 @@ void MainWindow::startUpgrading()
 		
 		qDebug() << "System is up to date";
 	}
-	else if(list.contains("pacman"))
+	else
+		upgrade(list);
+
+	if(dbdialog)
+	{
+		dbdialog->deleteLater();
+		dbdialog = 0;
+	}
+}
+
+void MainWindow::upgrade(QStringList packages)
+{
+	if (packages.contains("pacman"))
 	{
 		QMessageBox *msgBox = new QMessageBox();
 
@@ -1268,7 +1280,7 @@ void MainWindow::startUpgrading()
 		}
 
 	}
-	else if(list.contains("shaman"))
+	else if (packages.contains("shaman"))
 	{
 		QMessageBox *msgBox = new QMessageBox();
 
@@ -1325,12 +1337,6 @@ void MainWindow::startUpgrading()
 		connect(upDl, SIGNAL(aborted()), SLOT(upgradeAborted()));
 		connect(upDl, SIGNAL(upgradeNow()), SLOT(processQueue()));
 		connect(upDl, SIGNAL(addToPkgQueue()), SLOT(addUpgradeableToQueue()));
-	}
-
-	if(dbdialog != NULL)
-	{
-		dbdialog->deleteLater();
-		dbdialog = NULL;
 	}
 
 }

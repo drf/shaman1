@@ -131,6 +131,7 @@ private:
 	void loadDbUpdateDialog();
 	void removeDbUpdateDialog();
 	QString formatSize(unsigned long size);
+	void upgrade(QStringList packages);
 	
 public:
 	QueueDialog *queueDl;
