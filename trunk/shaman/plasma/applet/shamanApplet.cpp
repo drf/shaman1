@@ -51,6 +51,9 @@ void ShamanApplet::init()
 
     m_layout = new Plasma::VBoxLayout(this);
     m_actionLayout = new Plasma::HBoxLayout(m_layout);
+    m_layout->addItem(m_actionLayout);
+    m_lineLayout = new Plasma::HBoxLayout(m_layout);
+    m_layout->addItem(m_lineLayout);
     //Why are those things not shown?
     m_updateDatabaseIcon = new Plasma::Icon(KIcon("view-refresh"), tr("Update Database"), this);
     m_actionLayout->addItem(m_updateDatabaseIcon);
@@ -59,11 +62,9 @@ void ShamanApplet::init()
     m_actionLayout->addItem(m_upgradeSystemIcon);
     connect(m_upgradeSystemIcon, SIGNAL(clicked()), SLOT(upgradeSystem()));
 
-    m_layout->addItem(m_actionLayout);
-
     m_packageLine = new Plasma::LineEdit(this);
     
-    m_layout->addItem(m_packageLine);
+    m_lineLayout->addItem(m_packageLine);
 }
 
 void ShamanApplet::updateDatabase()
