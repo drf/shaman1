@@ -149,6 +149,7 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	setStatusBar(stBar);
 
 	QShortcut *clearLineEdit = new QShortcut(tr("Esc"), searchLine, SLOT(clear()));
+	Q_UNUSED(clearLineEdit);
 	
 	return;
 }
@@ -760,8 +761,6 @@ void MainWindow::finishDbUpdate()
 
 	dbdialog->deleteLater();
 	dbActive = false;
-	
-	dbdialog = NULL;
 
 	if(list.isEmpty())
 		return;
@@ -1264,7 +1263,7 @@ void MainWindow::startUpgrading()
 	}
 }
 
-void MainWindow::upgrade(QStringList packages)
+void MainWindow::upgrade(const QStringList &packages)
 {
 	if (packages.contains("pacman"))
 	{
@@ -1618,7 +1617,6 @@ void MainWindow::queueProcessingEnded(bool errors)
 
 	settings->deleteLater();
 
-	queueDl = NULL;
 }
 
 void MainWindow::widgetQueueToAlpmQueue()
@@ -1841,8 +1839,6 @@ void MainWindow::initSourceQueue()
 void MainWindow::terminatedBuildingHandling()
 {
 	bHandler->deleteLater();
-
-	bHandler = NULL;
 }
 
 QList<QTreeWidgetItem *> MainWindow::getInstallPackagesInWidgetQueue()
@@ -1991,8 +1987,8 @@ void MainWindow::setProxy()
 
   if (settings->value("proxy/enabled").toBool() && settings->value("proxy/httpProxy").toBool())
   {
-    setenv("HTTP_PROXY", settings->value("proxy/proxyServer").toString().toLatin1() + ":" + settings->value("proxy/proxyPort").toString().toLatin1(), 1);
-    qDebug() << QString("HTTP_PROXY: ") + settings->value("proxy/proxyServer").toString() + ":" + settings->value("proxy/proxyPort").toString();
+    setenv("HTTP_PROXY", settings->value("proxy/proxyServer").toString().toLatin1() + ':' + settings->value("proxy/proxyPort").toString().toLatin1(), 1);
+    qDebug() << QString("HTTP_PROXY: ") + settings->value("proxy/proxyServer").toString() + ':' + settings->value("proxy/proxyPort").toString();
   }
   else {
     unsetenv("HTTP_PROXY");
@@ -2002,8 +1998,8 @@ void MainWindow::setProxy()
 
   if (settings->value("proxy/enabled").toBool() && settings->value("proxy/ftpProxy").toBool())
   {
-    setenv("FTP_PROXY", settings->value("proxy/proxyServer").toString().toLatin1() + ":" + settings->value("proxy/proxyPort").toString().toLatin1(), 1);
-    qDebug() << QString("FTP_PROXY: ") + settings->value("proxy/proxyServer").toString() + ":" + settings->value("proxy/proxyPort").toString();
+    setenv("FTP_PROXY", settings->value("proxy/proxyServer").toString().toLatin1() + ':' + settings->value("proxy/proxyPort").toString().toLatin1(), 1);
+    qDebug() << QString("FTP_PROXY: ") + settings->value("proxy/proxyServer").toString() + ':' + settings->value("proxy/proxyPort").toString();
   }
   else
   {

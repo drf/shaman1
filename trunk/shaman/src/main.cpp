@@ -130,7 +130,7 @@ int main(int argc, char **argv)
 	}
 	if(arguments.contains("--well-actually-not"))
 	{
-		printf("\n\nNo, you're a sucker. Get away from here and go kill yourself. Bitch.\n");
+		printf("\n\nNo, you are a sucker. Get away from here and go kill yourself. Bitch.\n");
 		exit(0);
 	}
 	if(arguments.contains("--clear-settings"))
