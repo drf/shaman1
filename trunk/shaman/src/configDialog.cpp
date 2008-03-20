@@ -43,6 +43,7 @@ upDb(false)
 	setupPacman();
 	setupRepos();
 	setupABS();
+	setupAdvanced();
 	connect(listWidget, SIGNAL(currentRowChanged(int)), this, SLOT(changeWidget(int)));
 	connect(this, SIGNAL(accepted()), SLOT(saveConfiguration()));
 }
@@ -89,50 +90,30 @@ QStringList ConfigDialog::getMirrorList()
 void ConfigDialog::setupGeneral()
 {
 	listWidget->insertItem(0, new QListWidgetItem(QIcon(":/Icons/icons/shaman/shaman-22.png"), tr("General")));//FIXME: Replace icon
-	
-	mantActionBox->addItems(QStringList() << QString(tr("Clean Unused Databases")) << QString(tr("Clean Cache")) << 
+
+	mantActionBox->addItems(QStringList() << QString(tr("Clean Unused Databases")) << QString(tr("Clean Cache")) <<
 			QString(tr("Empty Cache")) << QString(tr("Optimize Pacman Database")) << QString(tr("Clean All Building Environments")));
-	
+
 	connect(mantProcessButton, SIGNAL(clicked()), SLOT(performManteinanceAction()));
-	
+
 	/* Load values from our settings file, so easy this time. */
-	
+
 	QSettings *settings = new QSettings();
-	
+
 	if(settings->value("gui/actionupgrade").toString() == "add")
 		addUpRadio->setChecked(true);
 	else if(settings->value("gui/actionupgrade").toString() == "upgrade")
 		upNowRadio->setChecked(true);
 	else
 		askUpRadio->setChecked(true);
-	
-	if(settings->value("gui/processintray").toBool())
-		keepQueueTrayBox->setChecked(true);
-	
-	if(settings->value("gui/startupmode").toString() == "tray")
-		startTrayBox->setChecked(true);
-	
+
+  keepQueueTrayBox->setChecked(settings->value("gui/processintray").toBool());
+
+  startTrayBox->setChecked(settings->value("gui/startupmode").toString() == "tray" ? true : false);
+
 	if(settings->value("gui/showsplashscreen", true).toBool())
 		splashScreenBox->setChecked(true);
-	
-	if(settings->value("scheduledUpdate/enabled").toBool())
-		updateDbTrayBox->setChecked(true);
-	else
-	{
-		minutesSpin->setEnabled(false);
-		upNotifyRadio->setEnabled(false);
-		upNotifyAddRadio->setEnabled(false);
-	}
-	
-	connect(updateDbTrayBox, SIGNAL(toggled(bool)), SLOT(obfuscateDBUpdate(bool)));
-	
-	minutesSpin->setValue(settings->value("scheduledUpdate/interval", 10).toInt());
-	
-	if(settings->value("scheduledUpdate/addupgradestoqueue").toBool())
-		upNotifyAddRadio->setChecked(true);
-	else
-		upNotifyRadio->setChecked(true);
-	
+
 	settings->deleteLater();
 }
 
@@ -142,9 +123,9 @@ void ConfigDialog::setupRepos()
 	alpm_list_t *repos = alpm_list_first(m_handler->getAvailableRepos());
 	QString whichMirror;
 	QStringList mirrors;
-	
+
 	mirrors = getMirrorList();
-	
+
 	for(int i = 0; i < mirrors.size(); ++i)
 		mirrorBox->addItem(mirrors.at(i));
 
@@ -179,7 +160,7 @@ void ConfigDialog::setupRepos()
 		repos = alpm_list_next(repos);
 	}
 
-	QStringList tmplst = whichMirror.split(QString("core"), 
+	QStringList tmplst = whichMirror.split(QString("core"),
 			QString::SkipEmptyParts, Qt::CaseInsensitive);
 
 	if (tmplst.count() >= 1)
@@ -203,16 +184,16 @@ void ConfigDialog::setupRepos()
 void ConfigDialog::setupPacman()
 {
 	listWidget->addItem(new QListWidgetItem(QIcon(":/Icons/icons/shaman/animation_source/anim06.png"), tr("Pacman")));//FIXME: Replace icon
-	
+
 	/* Let's read alpm configuration! */
 	if(alpm_option_get_nopassiveftp())
 		noPassiveFtpBox->setChecked(true);
-	
+
 	useDeltaBox->setHidden(true);
-	
+
 	alpm_list_t *tmp;
 	QString tmpStr;
-	
+
 	tmp = alpm_option_get_holdpkgs();
 	while(tmp != NULL)
 	{
@@ -222,7 +203,7 @@ void ConfigDialog::setupPacman()
 	}
 	holdPkgLine->setText(tmpStr);
 	tmpStr = "";
-	
+
 	tmp = alpm_option_get_ignorepkgs();
 	while(tmp != NULL)
 	{
@@ -242,7 +223,7 @@ void ConfigDialog::setupPacman()
 	}
 	ignoreGrpsLine->setText(tmpStr);
 	tmpStr = "";
-	
+
 	tmp = alpm_option_get_noupgrades();
 	while(tmp != NULL)
 	{
@@ -275,25 +256,17 @@ void ConfigDialog::setupABS()
 	item->setSizeHint(QSize(90, 50));
 	listWidget->insertItem(3, item);
 
-	
-	/* Read options related to our Config file first */
-	
-	QSettings *settings = new QSettings();
-	
-	if(settings->value("absbuilding/wizardbuild").toBool())
-		makeDepsSourceBox->setChecked(true);
-	
-	if(settings->value("absbuilding/reviewoutput").toBool())
-		reviewBuildOutBox->setChecked(true);
-	
-	buildPathEdit->setText(settings->value("absbuilding/buildpath").toString());
-	
-	if(settings->value("absbuilding/clearmakedepends").toBool())
-		cleanMakeDepsBox->setChecked(true);
 
-	if(settings->value("absbuilding/cleanbuildenv").toBool())
-		cleanBuildEnvBox->setChecked(true);
-	
+	/* Read options related to our Config file first */
+
+	QSettings *settings = new QSettings();
+
+  makeDepsSourceBox->setChecked(settings->value("absbuilding/wizardbuild").toBool());
+  reviewBuildOutBox->setChecked(settings->value("absbuilding/reviewoutput").toBool());
+	buildPathEdit->setText(settings->value("absbuilding/buildpath").toString());
+  cleanMakeDepsBox->setChecked(settings->value("absbuilding/clearmakedepends").toBool());
+  cleanBuildEnvBox->setChecked(settings->value("absbuilding/cleanbuildenv").toBool());
+
 	if(settings->value("absbuilding/syncsupfiles").toBool())
 	{
 		useMatchSupRadio->setChecked(true);
@@ -301,20 +274,79 @@ void ConfigDialog::setupABS()
 	}
 	else
 		useCustomSupRadio->setChecked(true);
-	
+
 	connect(useCustomSupRadio, SIGNAL(toggled(bool)), SLOT(obfuscateSupfiles(bool)));
-	
+
 	ABSConf abD = getABSConf();
 	supEdit->setText(abD.supfiles);
-	
+
 	MakePkgConf mkpD = getMakepkgConf();
-	
+
 	CFlagEdit->setText(mkpD.cflags);
 	CXXFlagEdit->setText(mkpD.cxxflags);
 	buildEnvEdit->setText(mkpD.buildenv);
 	optionsMkPkgEdit->setText(mkpD.options);
 	docDirsEdit->setText(mkpD.docdirs);
+
+	settings->deleteLater();
+}
+
+void ConfigDialog::setupAdvanced()
+{
+	QListWidgetItem *item = new QListWidgetItem(QIcon(":/Icons/icons/document-open-remote.png"), tr("Advanced"), listWidget);
+	item->setTextAlignment(Qt::AlignHCenter);
+	item->setSizeHint(QSize(90, 50));
+	listWidget->insertItem(4, item);
 	
+	QSettings *settings = new QSettings();
+
+	if(settings->value("scheduledUpdate/enabled").toBool())
+		updateDbTrayBox->setChecked(true);
+	else
+	{
+		minutesSpin->setEnabled(false);
+		upNotifyRadio->setEnabled(false);
+		upNotifyAddRadio->setEnabled(false);
+	}
+
+	if (settings->value("scheduledUpdate/updateDbShowNotify").toBool())
+		updateDbShowNotify->setChecked(true);
+
+	connect(updateDbTrayBox, SIGNAL(toggled(bool)), SLOT(obfuscateDBUpdate(bool)));
+
+	minutesSpin->setValue(settings->value("scheduledUpdate/interval", 10).toInt());
+
+	if (settings->value("proxy/enabled").toBool())
+		enableProxyBox->setChecked(true);
+	else {
+		proxyServer->setEnabled(false);
+		proxyPort->setEnabled(false);
+		httpProxyBox->setEnabled(false);
+		ftpProxyBox->setEnabled(false);
+		setenv("HTTP_PROXY", "", 1);
+	}
+
+	if (settings->value("proxy/httpProxy").toBool())
+		httpProxyBox->setChecked(true);
+	else
+		httpProxyBox->setChecked(false);
+
+	if (settings->value("proxy/ftpProxy").toBool())
+		ftpProxyBox->setChecked(true);
+	else
+		ftpProxyBox->setChecked(false);
+
+	proxyServer->setText(settings->value("proxy/proxyServer").toString());
+	proxyPort->setText(settings->value("proxy/proxyPort").toString());
+
+	// GUI
+	connect(enableProxyBox, SIGNAL(toggled(bool)), SLOT(obfuscateProxy(bool)));
+
+	if(settings->value("scheduledUpdate/addupgradestoqueue").toBool())
+		upNotifyAddRadio->setChecked(true);
+	else
+		upNotifyRadio->setChecked(true);
+
 	settings->deleteLater();
 }
 
@@ -414,9 +446,9 @@ void ConfigDialog::changeWidget(int position)
 void ConfigDialog::performManteinanceAction()
 {
 	mantProcessButton->setEnabled(false);
-	
+
 	mantDetails->append(QString());
-	
+
 	if(!mantActionBox->currentText().compare(QString(tr("Clean Unused Databases"))))
 	{
 		cTh = new CleanThread(m_handler, 0);
@@ -462,7 +494,7 @@ void ConfigDialog::performManteinanceAction()
 
 		statusLabel->setText(QString(tr("Optimizing Pacman Database...")));
 		mantDetails->append(QString(tr("Optimizing Pacman Database...")));
-		
+
 		mantProc->start("pacman-optimize");
 	}
 	else if(!mantActionBox->currentText().compare(QString(tr("Clean All Building Environments"))))
@@ -497,7 +529,7 @@ void ConfigDialog::showFailure(int act)
 		statusLabel->setText(QString(tr("Deleting Cache Failed!")));
 		mantDetails->append(QString(tr("Deleting Cache Failed!")));
 		break;
-		
+
 	case 3:
 		statusLabel->setText(QString(tr("Could not clean Build Environments!!")));
 		mantDetails->append(QString(tr("Could not clean Build Environments!!")));
@@ -525,7 +557,7 @@ void ConfigDialog::showSuccess(int act)
 		statusLabel->setText(QString(tr("Cache Successfully Deleted!")));
 		mantDetails->append(QString(tr("Cache Successfully Deleted!")));
 		break;
-		
+
 	case 3:
 		statusLabel->setText(QString(tr("Build Environments Successfully Cleaned!")));
 		mantDetails->append(QString(tr("Build Environments Successfully Cleaned!!")));
@@ -652,7 +684,7 @@ void ConfigDialog::saveConfiguration()
 			mirror = "http://kdemod.ath.cx/repo/current/i686";
 		else
 			mirror = "http://kdemod.ath.cx/repo/current/x86_64";
-		
+
 		if(!editPacmanKey("kdemod/Server", mirror, 0))
 		{
 			if(editPacmanKey("kdemod/Server", mirror, 1))
@@ -671,7 +703,7 @@ void ConfigDialog::saveConfiguration()
 			mirror = "http://kdemod.ath.cx/repo/testing/i686";
 		else
 			mirror = "http://kdemod.ath.cx/repo/testing/x86_64";
-		
+
 		if(!editPacmanKey("kdemod-testing/Server", mirror, 0))
 		{
 			if(editPacmanKey("kdemod-testing/Server", mirror, 1))
@@ -716,7 +748,7 @@ void ConfigDialog::saveConfiguration()
 
 		delete(itm);
 	}
-	
+
 	/* Well done, let's start committing changes to pacman's options */
 	if(noPassiveFtpBox->isChecked())
 		editPacmanKey("options/NoPassiveFtp", "", 0);
@@ -780,7 +812,7 @@ void ConfigDialog::saveConfiguration()
 
 	/* Ok, saving finished, commit changes to Alpm now */
 	m_handler->reloadPacmanConfiguration();
-	
+
 	/* Now, off to the Preferences in the settings file */
 
 	QSettings *settings = new QSettings();
@@ -792,42 +824,21 @@ void ConfigDialog::saveConfiguration()
 	else
 		settings->setValue("gui/actionupgrade", "ask");
 
-	if(keepQueueTrayBox->isChecked())
-		settings->setValue("gui/processintray", true);
-	else
-		settings->setValue("gui/processintray", false);
+  settings->setValue("gui/processintray", keepQueueTrayBox->isChecked());
+  settings->setValue("gui/startupmode", startTrayBox->isChecked());
+  settings->setValue("gui/showsplashscreen", splashScreenBox->isChecked());
+  settings->setValue("scheduledUpdate/enabled", updateDbTrayBox->isChecked());
+  settings->setValue("scheduledUpdate/interval", minutesSpin->value());
+  settings->setValue("scheduledUpdate/updateDbShowNotify", updateDbShowNotify->isChecked());
+  settings->setValue("proxy/enabled", enableProxyBox->isChecked());
+  settings->setValue("proxy/proxyServer", proxyServer->text());
+  settings->setValue("proxy/proxyPort", proxyPort->text());
+  settings->setValue("proxy/httpProxy", httpProxyBox->isChecked());
+  settings->setValue("proxy/ftpProxy", ftpProxyBox->isChecked());
+  settings->setValue("scheduledUpdate/addupgradestoqueue", upNotifyRadio->isChecked());
+  settings->setValue("absbuilding/wizardbuild", makeDepsSourceBox->isChecked());
+  settings->setValue("absbuilding/reviewoutput", reviewBuildOutBox->isChecked());
 
-	if(startTrayBox->isChecked())
-		settings->setValue("gui/startupmode", "tray");
-	else
-		settings->setValue("gui/startupmode", "window");
-	
-	if(splashScreenBox->isChecked())
-		settings->setValue("gui/showsplashscreen", true);
-	else
-		settings->setValue("gui/showsplashscreen", false);
-
-	if(updateDbTrayBox->isChecked())
-		settings->setValue("scheduledUpdate/enabled", true);
-	else
-		settings->setValue("scheduledUpdate/enabled", false);
-
-	settings->setValue("scheduledUpdate/interval", minutesSpin->value());
-
-	if(upNotifyAddRadio->isChecked())
-		settings->setValue("scheduledUpdate/addupgradestoqueue", true);
-	else
-		settings->setValue("scheduledUpdate/addupgradestoqueue", false);
-
-	if(makeDepsSourceBox->isChecked())
-		settings->setValue("absbuilding/wizardbuild", true);
-	else
-		settings->setValue("absbuilding/wizardbuild", false);
-
-	if(reviewBuildOutBox->isChecked())
-		settings->setValue("absbuilding/reviewoutput", true);
-	else
-		settings->setValue("absbuilding/reviewoutput", false);
 
 	/* Additional checks here. Since this thing could be rm -rf'ed,
 	 * better being sure that is set properly. */
@@ -836,65 +847,38 @@ void ConfigDialog::saveConfiguration()
 	else
 		settings->setValue("absbuilding/buildpath", "/var/shaman/builds");
 
-	if(cleanMakeDepsBox->isChecked())
-		settings->setValue("absbuilding/clearmakedepends", true);
-	else
-		settings->setValue("absbuilding/clearmakedepends", false);
+  settings->setValue("absbuilding/clearmakedepends", cleanMakeDepsBox->isChecked());
 
-	if(cleanBuildEnvBox->isChecked())
-		settings->setValue("absbuilding/cleanbuildenv", true);
-	else
-		settings->setValue("absbuilding/cleanbuildenv", false);
+  settings->setValue("absbuilding/cleanbuildenv", cleanBuildEnvBox->isChecked());
 
+
+  settings->setValue("absbuilding/syncsupfiles", useMatchSupRadio->isChecked());
 	if(useMatchSupRadio->isChecked())
 	{
-		settings->setValue("absbuilding/syncsupfiles", true);
-
-		/* We need to generate a SUPFILES containing our current repos 
+		/* We need to generate a SUPFILES containing our current repos
 		 * then.
 		 */
 
 		QString supfiles;
 
-		if(coreBox->isChecked())
-			supfiles.append("core");
-		else
-			supfiles.append("!core");
-		
+    supfiles.append(coreBox->isChecked() ? "core" : "!core");
 		supfiles.append(" ");
 
-		if(extraBox->isChecked())
-			supfiles.append("extra");
-		else
-			supfiles.append("!extra");
-		
+    supfiles.append(extraBox->isChecked() ? "extra" : "!extra");
 		supfiles.append(" ");
 
-		if(communityBox->isChecked())
-			supfiles.append("community");
-		else
-			supfiles.append("!community");
-		
+    supfiles.append(communityBox->isChecked() ? "community" : "!community");
 		supfiles.append(" ");
 
-		if(testingBox->isChecked())
-			supfiles.append("testing");
-		else
-			supfiles.append("!testing");
-		
+    supfiles.append(testingBox->isChecked() ? "testing" : "!testing");
 		supfiles.append(" ");
 
-		if(unstableBox->isChecked())
-			supfiles.append("unstable");
-		else
-			supfiles.append("!unstable");
-		
+    supfiles.append(unstableBox->isChecked() ? "unstable" : "!unstable");
+
 		editABSSection("supfiles", supfiles);
 	}
 	else
 	{
-		settings->setValue("absbuilding/syncsupfiles", false);
-
 		/* Ok, we just have to put the supfiles into abs.conf
 		 */
 
@@ -920,11 +904,13 @@ void ConfigDialog::saveConfiguration()
 
 	if(docDirsEdit->isModified())
 		editMakepkgSection("docdirs", docDirsEdit->text());
-	
+
 
 	/* Did we change anything in the repos? Better update our
 	 * local DB then.
 	 */
+
+  emit setProxy();
 
 	if(dbChanged)
 	{
@@ -953,7 +939,6 @@ void ConfigDialog::saveConfiguration()
 
 		msgBox->deleteLater();
 	}
-
 }
 
 void ConfigDialog::addMirror()
@@ -984,7 +969,7 @@ void ConfigDialog::addMirror()
 	file.write("\n", 1);
 
 	file.close();
-	
+
 	mirrorBox->addItem(mirror);
 
 	QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Add Mirror"),
@@ -992,7 +977,7 @@ void ConfigDialog::addMirror()
 					"mirrorlist here means /etc/pacman.d/mirrorlist, so it should not "
 					"be translated."), QMessageBox::Ok);
 	message->exec();
-	
+
 	addMirrorLine->clear();
 }
 
@@ -1015,7 +1000,7 @@ void ConfigDialog::mantProgress()
 void ConfigDialog::cleanProc(int eC, QProcess::ExitStatus eS)
 {
 	Q_UNUSED(eS);
-	
+
 	if(eC == 0)
 	{
 		statusLabel->setText(QString(tr("Pacman Database Optimized Successfully!")));
@@ -1026,14 +1011,14 @@ void ConfigDialog::cleanProc(int eC, QProcess::ExitStatus eS)
 		statusLabel->setText(QString(tr("Could not Optimize Pacman Database!")));
 		mantDetails->append(QString(tr("Could not Optimize Pacman Database!")));
 	}
-	
+
 	mantProc->deleteLater();
 
 	statusLabel->setText(QString(tr("Running sync...", "sync is a command, so it should not be translated")));
 	mantDetails->append(QString(tr("Running sync...", "sync is a command, so it should not be translated")));
-	
+
 	mantProc = new QProcess();
-	
+
 	if(mantProc->execute("sync") == 0)
 	{
 		statusLabel->setText(QString(tr("Operation Completed Successfully!")));
@@ -1045,9 +1030,9 @@ void ConfigDialog::cleanProc(int eC, QProcess::ExitStatus eS)
 		statusLabel->setText(QString(tr("Sync could not be executed!", "Sync is always the command")));
 		mantDetails->append(QString(tr("Sync could not be executed!!", "Sync is always the command")));
 	}
-	
+
 	mantProc->deleteLater();
-	
+
 	mantProcessButton->setEnabled(true);
 }
 
@@ -1075,17 +1060,17 @@ void CleanThread::run()
 		else
 			emit failure(action);
 		break;
-		
+
 	case 2:
 		if(m_handler->cleanCache(true))
 			emit success(action);
 		else
 			emit failure(action);
 		break;
-		
+
 	case 3:
 		ABSHandler absH;
-		
+
 		if(absH.cleanAllBuildingEnvironments())
 			emit success(action);
 		else
@@ -1109,6 +1094,24 @@ void ConfigDialog::obfuscateDBUpdate(bool state)
 		upNotifyRadio->setEnabled(false);
 		upNotifyAddRadio->setEnabled(false);
 	}
+}
+
+void ConfigDialog::obfuscateProxy(bool state)
+{
+  if (state)
+  {
+    proxyServer->setEnabled(true);
+    proxyPort->setEnabled(true);
+    httpProxyBox->setEnabled(true);
+    ftpProxyBox->setEnabled(true);
+  }
+  else
+  {
+    proxyServer->setEnabled(false);
+    proxyPort->setEnabled(false);
+    httpProxyBox->setEnabled(false);
+    ftpProxyBox->setEnabled(false);
+  }
 }
 
 void ConfigDialog::obfuscateSupfiles(bool state)

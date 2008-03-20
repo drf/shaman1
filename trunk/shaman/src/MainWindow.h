@@ -46,7 +46,7 @@ class ShamanTrayIcon;
 class MainWindow : public QMainWindow, public Ui::MainWindow, private StringUtils
 {
 	Q_OBJECT
-	
+
 public:
 	explicit MainWindow(AlpmHandler *handler, QMainWindow *parent = 0);
 	~MainWindow();
@@ -71,10 +71,10 @@ signals:
 					int totalPercent, int totalSpeed);
 	void buildingStarted();
 	void buildingFinished();
-	
+
 	void startTimer();
 	void stopTimer();
-	
+
 public slots:
 	bool populatePackagesView();
 	bool populateQueuePackagesView();
@@ -103,7 +103,8 @@ public slots:
 	void initSourceQueue();
 	void terminatedBuildingHandling();
 	bool packageExists(const QString &pkg);
-	
+  void setProxy();
+
 protected:
 	void closeEvent(QCloseEvent *evt);
 
@@ -148,7 +149,7 @@ private:
 
 	QDialog *reviewQueue;
 	ShamanTrayIcon *trayicon;
-	
+
 	bool upActive;
 	bool revActive;
 	bool turnOffSys;

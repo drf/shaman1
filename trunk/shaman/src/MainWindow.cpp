@@ -55,7 +55,7 @@ extern QMutex mutex;
 extern QWaitCondition wCond;
 
 
-MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent) 
+MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 : QMainWindow(parent),
   queueDl(NULL),
   currentpkgs(0),
@@ -74,18 +74,18 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	new ShamanAdaptor(this);
 
 	QDBusConnection dbus = QDBusConnection::systemBus();
-	
+
 	dbus.registerObject("/Shaman", this);
-	
+
 	trayicon = new ShamanTrayIcon(this, aHandle);
 
 	qDebug() << "Shaman registered on the System Bus as" << dbus.baseService();
-		
+
 	if(!dbus.registerService("org.archlinux.shaman"))
 		qWarning() << "Failed to register alias Service on DBus";
 	else
 		qDebug() << "Service org.archlinux.shaman successfully exported on the System Bus.";
-	
+
 	pkgsViewWG->setContextMenuPolicy(Qt::CustomContextMenu);
 	repoList->setContextMenuPolicy(Qt::CustomContextMenu);
 	pkgsViewWG->hideColumn(7);
@@ -97,7 +97,7 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	pkgsViewWG->headerItem()->setIcon(2, QIcon(":/Icons/icons/applications-development.png"));
 	pkgsViewWG->headerItem()->setText(2, QString());
 	pkgsViewWG->setColumnWidth(2, 30);
-	
+
 	nameDescBox->addItem(tr("Name"));
 	nameDescBox->addItem(tr("Description"));
 
@@ -140,6 +140,8 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 
 	emit shamanReady();
 	
+	setProxy();
+	
 	stBar = new QStatusBar(this);
 	setStatusBar(stBar);
 
@@ -160,18 +162,18 @@ void MainWindow::quitApp()
 	settings->setValue("gui/size", size());
 	settings->setValue("gui/pos", pos());
 	settings->setValue("gui/widgetstate", saveState());
-	
+
 	settings->deleteLater();
-	
+
 	emit aboutToQuit();
 }
 
 void MainWindow::closeEvent(QCloseEvent *evt)
 {
 	emit startTimer();
-	
+
 	QSettings *settings = new QSettings();
-	
+
 	if(!settings->value("gui/confirmquit").toBool())
 	{
 		QDialog *dlog = new QDialog(this);
@@ -179,7 +181,7 @@ void MainWindow::closeEvent(QCloseEvent *evt)
 		QCheckBox *cbx = new QCheckBox(dlog);
 		QDialogButtonBox *but = new QDialogButtonBox(dlog);
 		QVBoxLayout *lay = new QVBoxLayout();
-		
+
 		lbl->setText(QString(tr("Shaman will keep running in the system tray.\nTo close it, click Quit in the file menu "
 				"or in the tray icon context menu.\nWhile in the System Tray, Shaman will update your Databases\nat a regular"
 				" interval and notify you about available upgrades.\nYou can change this behaviour in Settings.")));
@@ -193,13 +195,13 @@ void MainWindow::closeEvent(QCloseEvent *evt)
 		dlog->setWindowTitle(QString(tr("Shaman - Reducing To Tray")));
 		dlog->setWindowModality(Qt::ApplicationModal);
 		connect(but, SIGNAL(accepted()), dlog, SLOT(accept()));
-		
+
 		dlog->exec();
-		
+
 		if(cbx->isChecked())
 			settings->setValue("gui/confirmquit", true);
 	}
-	
+
 	settings->deleteLater();
 
 	evt->accept();
@@ -228,7 +230,7 @@ bool MainWindow::populatePackagesView()
 {
 	alpm_list_t *databases;
 	int count = 0;
-	
+
 	pkgsViewWG->setSortingEnabled(false);
 
 	disconnect(pkgsViewWG, SIGNAL(itemSelectionChanged()), 0, 0);
@@ -269,7 +271,7 @@ bool MainWindow::populatePackagesView()
 
 			item->setText(1, alpm_pkg_get_name(pkg));
 			item->setText(5, alpm_db_get_name(dbcrnt));
-			item->setText(4, formatSize(aHandle->getPackageSize(item->text(1), item->text(5)))); 
+			item->setText(4, formatSize(aHandle->getPackageSize(item->text(1), item->text(5))));
 			item->setText(7, alpm_pkg_get_desc(pkg));
 
 			while(grps != NULL)
@@ -292,9 +294,9 @@ bool MainWindow::populatePackagesView()
 	}
 
 	databases = alpm_list_first(databases);
-	
+
 	alpm_list_t *locPkg = aHandle->getInstalledPackages();
-	
+
 	while(locPkg != NULL)
 	{
 		pmpkg_t *pkg = (pmpkg_t *)alpm_list_getdata(locPkg);
@@ -307,11 +309,11 @@ bool MainWindow::populatePackagesView()
 			item->setText(3, alpm_pkg_get_version(pkg));
 			item->setText(7, alpm_pkg_get_desc(pkg));
 			item->setText(5, "local");
-			item->setText(4, formatSize(aHandle->getPackageSize(item->text(1), item->text(5)))); 
+			item->setText(4, formatSize(aHandle->getPackageSize(item->text(1), item->text(5))));
 		}
 		else
 			list.first()->setText(3, alpm_pkg_get_version(aHandle->getPackageFromName(list.first()->text(1), "local")));
-			
+
 		locPkg = alpm_list_next(locPkg);
 	}
 
@@ -329,9 +331,9 @@ bool MainWindow::populatePackagesView()
 	pkgsViewWG->sortItems(1, Qt::AscendingOrder);
 	pkgsViewWG->setSortingEnabled(true);//Enable sorting *after* inserting :D
 
-	connect(pkgsViewWG, SIGNAL(itemSelectionChanged()), this, 
+	connect(pkgsViewWG, SIGNAL(itemSelectionChanged()), this,
 			SLOT(itemChanged()));
-	
+
 	connect(PkgInfos, SIGNAL(currentChanged(int)), SLOT(showPkgInfo()));
 
 	return true;
@@ -340,7 +342,7 @@ bool MainWindow::populatePackagesView()
 void MainWindow::populateRepoColumn()
 {
 	qDebug() << "Populating Repo column";
-	
+
 	switchToGrps->setChecked(false);
 	repoDockWidget->setWindowTitle(tr("Repositories"));
 	QStringList list = aHandle->getAvailableReposNames();
@@ -359,12 +361,12 @@ void MainWindow::populateRepoColumn()
 		item->setText(dbname);
 	}
 
-	
+
 	QListWidgetItem *itm = new QListWidgetItem(repoList);
 
 	itm->setText(tr("Local Packages"));
 
-	connect(repoList, SIGNAL(itemPressed(QListWidgetItem*)), this, 
+	connect(repoList, SIGNAL(itemPressed(QListWidgetItem*)), this,
 			SLOT(refinePkgView()));
 }
 
@@ -391,14 +393,14 @@ void MainWindow::populateGrpsColumn()
 	item->setSelected(true);
 	repoList->insertItem(0, item);
 
-	connect(repoList, SIGNAL(itemPressed(QListWidgetItem*)), this, 
+	connect(repoList, SIGNAL(itemPressed(QListWidgetItem*)), this,
 			SLOT(refinePkgView()));
 }
 
 void MainWindow::refinePkgView()
 {
 	qDebug() << "refinePkgView";
-	
+
 	QList<QTreeWidgetItem*> list = pkgsViewWG->findItems(QString(), Qt::MatchRegExp | Qt::MatchWildcard);
 
 	// Now first: What do we need to refine in the right column?
@@ -514,7 +516,7 @@ void MainWindow::refinePkgView()
 	for(int i = 0; i < pkgsViewWG->topLevelItemCount(); ++i)
 	{
 		QTreeWidgetItem *tmpitm = pkgsViewWG->topLevelItem(i);
-		
+
 		if(list.contains(tmpitm))
 			tmpitm->setHidden(false);
 		else
@@ -564,7 +566,7 @@ void MainWindow::showPkgInfo()
 {
 	if(pkgsViewWG->selectedItems().isEmpty() || pkgsViewWG->currentItem() == NULL)
 		return;
-	
+
 	QString description;
 	pmpkg_t *pkg = NULL;
 	alpm_list_t *databases;
@@ -694,7 +696,7 @@ void MainWindow::showPkgInfo()
 void MainWindow::doDbUpdate()
 {
 	dbdialog = new UpdateDbDialog(aHandle, this);
-	
+
 	emit actionStatusChanged("dbUpdateStarted");
 
 	if(isVisible())
@@ -719,14 +721,14 @@ void MainWindow::finishDbUpdate()
 	qDebug() << "DB Update Finished";
 
 	QStringList list(aHandle->getUpgradeablePackages());
-	
+
 	if(dbdialog->anyErrors())
 	{
 		emit actionStatusChanged("dbUpdateFinished");
-		
+
 		if(dbdialog->isVisible())
 		{
-			QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), 
+			QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"),
 					QString(tr("One or more Databases could not be updated.\nLast error reported was:\n%1")).arg(alpm_strerrorlast()),
 					QMessageBox::Ok, dbdialog);
 
@@ -741,17 +743,18 @@ void MainWindow::finishDbUpdate()
 	else
 	{
 		emit actionStatusChanged("dbUpdateFinished");
-		if(dbdialog->isHidden() && list.isEmpty())
+    QSettings *settings = new QSettings();
+		if(dbdialog->isHidden() && list.isEmpty() && settings->value("scheduledUpdate/updateDbShowNotify").toBool())
 			trayicon->showMessage(QString(tr("Database Update")), QString(tr("Databases Updated Successfully")));
 	}
-	
+
 	dbdialog->deleteLater();
-	
+
 	dbdialog = NULL;
-	
+
 	if(list.isEmpty())
 		return;
-	
+
 	if(list.contains("pacman"))
 	{
 		QMessageBox *msgBox = new QMessageBox();
@@ -762,21 +765,21 @@ void MainWindow::finishDbUpdate()
 		msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
 
 		msgBox->setWindowModality(Qt::ApplicationModal);
-		
+
 		msgBox->setText(QString(tr("Pacman can be upgraded. It is advised to process it alone\nto avoid version conflicts.\n"
 						"Do you want to Upgrade Pacman now?")));
 
-		switch (msgBox->exec()) 
+		switch (msgBox->exec())
 		{
 		case QMessageBox::Yes:
-			
+
 			msgBox->deleteLater();
 			/* Ok, let's set up a special queue for Pacman. */
-			
+
 			cancelAllActions();
 			installPackage("pacman");
 			widgetQueueToAlpmQueue();
-			
+
 			break;
 		case QMessageBox::No:
 			/* Well, just pass by */
@@ -786,7 +789,7 @@ void MainWindow::finishDbUpdate()
 			// should never be reached
 			break;
 		}
-		
+
 	}
 	else if(list.contains("shaman"))
 	{
@@ -802,7 +805,7 @@ void MainWindow::finishDbUpdate()
 		msgBox->setText(QString(tr("Shaman can be upgraded. It is advised to process it alone\nto avoid version conflicts.\n"
 				"Do you want to Upgrade Shaman now?")));
 
-		switch (msgBox->exec()) 
+		switch (msgBox->exec())
 		{
 		case QMessageBox::Yes:
 
@@ -826,8 +829,8 @@ void MainWindow::finishDbUpdate()
 	}
 	else if(!list.isEmpty())
 	{
-		QSettings *settings = new QSettings(); 
-		
+		QSettings *settings = new QSettings();
+
 		if(settings->value("scheduledUpdate/addupgradestoqueue").toBool())
 			addUpgradeableToQueue();
 
@@ -839,7 +842,7 @@ void MainWindow::showPkgsViewContextMenu()
 {
 	if(pkgsViewWG->selectedItems().isEmpty())
 		return;
-	
+
 	qDebug() << "Let's show a context menu";
 	QTreeWidgetItem *item = pkgsViewWG->selectedItems().first();
 	QMenu *menu = new QMenu(this);
@@ -1055,7 +1058,7 @@ void MainWindow::reinstallPackage(const QString &package)
 	qDebug() << item->text(1);
 	if (aHandle->isProviderInstalled(package))
 		return;
-	
+
 	if (item->text(8) == tr("Install"))
 		return;
 	else
@@ -1078,7 +1081,7 @@ void MainWindow::installPackage(const QString &package)
 	qDebug() << item->text(1);
 	if(aHandle->isProviderInstalled(package))
 		return;
-	
+
 	if (item->text(8) == tr("Install") || aHandle->isInstalled(item->text(1)))
 		return;
 	else
@@ -1098,10 +1101,10 @@ void MainWindow::installPackage(const QString &package)
 void MainWindow::removePackage()
 {
 	qDebug() << "Remove Package";
-	
+
 	if(pkgsViewWG->selectedItems().isEmpty())
 		return;
-	
+
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
 		removePackage(item->text(1));
 
@@ -1140,7 +1143,7 @@ void MainWindow::completeRemovePackage()
 
 	if(pkgsViewWG->selectedItems().isEmpty())
 		return;
-	
+
 	QTreeWidgetItem *item = pkgsViewWG->selectedItems().first();
 
 	qDebug() << item->text(1);
@@ -1153,7 +1156,7 @@ void MainWindow::completeRemovePackage()
 	}
 
 	//Now we remove the on-package-dependencies and the dependencies...
-	
+
 	foreach (QString onDep, aHandle->getDependenciesOnPackage(item->text(1), item->text(5)))
 	{
 		removePackage(onDep);
@@ -1170,7 +1173,7 @@ void MainWindow::cancelAction()
 {
 	if(pkgsViewWG->selectedItems().isEmpty())
 		return;
-	
+
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
 		cancelAction(item->text(1));
 
@@ -1191,7 +1194,7 @@ void MainWindow::cancelAction(const QString &package)
 
 	item->setText(8, QString());
 	item->setIcon(2, QIcon());
-	
+
 	foreach (QString onDep, aHandle->getDependenciesOnPackage(item->text(1), item->text(5)))
 	{
 		cancelAction(onDep);
@@ -1261,7 +1264,7 @@ void MainWindow::upgrade(QStringList packages)
 		msgBox->setText(QString(tr("Pacman can be upgraded. It is advised to process it alone\nto avoid version conflicts.\n"
 				"Do you want to Upgrade Pacman now?")));
 
-		switch (msgBox->exec()) 
+		switch (msgBox->exec())
 		{
 		case QMessageBox::Yes:
 
@@ -1297,7 +1300,7 @@ void MainWindow::upgrade(QStringList packages)
 		msgBox->setText(QString(tr("Shaman can be upgraded. It is advised to process it alone\nto avoid version conflicts.\n"
 				"Do you want to Upgrade Shaman now?")));
 
-		switch (msgBox->exec()) 
+		switch (msgBox->exec())
 		{
 		case QMessageBox::Yes:
 
@@ -1402,24 +1405,24 @@ void MainWindow::processQueue()
 	 * keep things modular as possible due to libalpm's design.
 	 * So the "Process Queue" button does not point here, but
 	 * to a function that reads the queue and prepares libalpm's
-	 * transaction. 
+	 * transaction.
 	 */
-	
+
 
 	/* Now, everything will be done inside our Queue Dialog.
 	 * So, just create it and let him handle the job.
 	 */
 
 	qDebug() << "Queue Dialog started";
-	
+
 	queueDl = new QueueDialog(aHandle, this);
 
 	connect(queueDl, SIGNAL(terminated(bool)), SLOT(queueProcessingEnded(bool)));
 
 	queueDl->startProcessing();
-	
+
 	emit actionStatusChanged("queueProcessingStarted");
-	
+
 	queueDl->show();
 
 	if(revActive)
@@ -1430,17 +1433,17 @@ void MainWindow::processQueue()
 			hide();
 			queueDl->hide();
 		}
-		
+
 		QSettings *settings = new QSettings();
-		
+
 		if(qUi->keepOpenBox->isChecked())
 			settings->setValue("gui/keepqueuedialogopen", true);
 		else
 			settings->setValue("gui/keepqueuedialogopen", false);
-		
+
 		if(qUi->turnoffBox->isChecked())
 			turnOffSys = true;
-		
+
 		settings->deleteLater();
 	}
 
@@ -1457,20 +1460,20 @@ void MainWindow::processQueue()
 void MainWindow::queueProcessingEnded(bool errors)
 {
 	emit actionStatusChanged("queueProcessingFinished");
-	
+
 	QSettings *settings = new QSettings();
-	
+
 	if(errors)
 	{
 		/* An error has occourred. Just notify the user, since we have already shown a
 		 * popup with error details.
 		 */
-		
+
 		qDebug() << "Errors Occourred, Transaction was not completed";
 
 		if(queueDl->isVisible())
 		{
-			QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Queue Processed"), 
+			QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Queue Processed"),
 					tr("One or more errors occourred, your Queue\nwas not successfully processed"), QMessageBox::Ok, queueDl);
 
 			message->exec();
@@ -1485,12 +1488,12 @@ void MainWindow::queueProcessingEnded(bool errors)
 	{
 		/* Everything went fine! Cool then, just notify the user and refine the packages view.
 		 */
-		
+
 		qDebug() << "Transaction Completed Successfully";
 
 		if(!pkgsViewWG->findItems("pacman", Qt::MatchExactly, 1).first()->text(8).isEmpty())
 		{
-			QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Restart required"), 
+			QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Restart required"),
 					tr("Pacman or Shaman was updated. Shaman will now quit,\nplease restart it "
 							"to use the new version"), QMessageBox::Ok, queueDl);
 
@@ -1500,12 +1503,12 @@ void MainWindow::queueProcessingEnded(bool errors)
 
 			qApp->exit(0);
 		}
-		
+
 		if(!pkgsViewWG->findItems("shaman", Qt::MatchExactly, 1).isEmpty())
 		{
 			if(!pkgsViewWG->findItems("shaman", Qt::MatchExactly, 1).first()->text(8).isEmpty())
 			{
-				QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Restart required"), 
+				QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Restart required"),
 						tr("Pacman or Shaman was updated. Shaman will now quit,\nplease restart it "
 								"to use the new version"), QMessageBox::Ok, queueDl);
 
@@ -1519,14 +1522,14 @@ void MainWindow::queueProcessingEnded(bool errors)
 
 		if(!pkgsViewWG->findItems("kernel26", Qt::MatchExactly, 1).first()->text(8).isEmpty())
 		{
-			QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Restart required"), 
+			QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Restart required"),
 					tr("Your Kernel has been updated.\nPlease restart your PC soon to load the new Kernel."), QMessageBox::Ok, queueDl);
 
 			message->exec();
 
 			message->deleteLater();
 		}
-		
+
 		qApp->processEvents();
 
 		populateQueuePackagesView();
@@ -1534,7 +1537,7 @@ void MainWindow::queueProcessingEnded(bool errors)
 
 		if(queueDl->isVisible() && !settings->value("gui/keepqueuedialogopen", true).toBool())
 		{
-			QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Queue Processed"), 
+			QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Queue Processed"),
 					tr("Your Queue was successfully processed!"), QMessageBox::Ok, queueDl);
 
 			message->exec();
@@ -1543,28 +1546,28 @@ void MainWindow::queueProcessingEnded(bool errors)
 		}
 		else
 			trayicon->showMessage(QString(tr("Queue Processed")), QString(tr("Your Queue was successfully processed!!")));
-		
+
 		/*if(turnOffSys)
-		{			
+		{
 			QProcess proc;
 			proc.start("pidof kded4");
 			proc.waitForFinished();
 			QString sprid = QString(proc.readAllStandardOutput()).remove(QChar('\n'));
 			int prid = sprid.toInt();
-			
+
 			qDebug() << "ID of the process:" << prid;
 			int usid = 0;
 			int grid = 0;
-			
+
 			QProcess proccat;
 			QString pline = QString(QString("cat /proc/") + sprid + "/status");
-			
+
 			qDebug() << "Running" << pline;
 
 			proccat.start(pline);
-			
+
 			proccat.waitForFinished();
-			
+
 			foreach(QString line, QString(proccat.readAllStandardOutput()).split(QChar('\n')))
 			{
 				if(line.startsWith("Uid:"))
@@ -1587,29 +1590,29 @@ void MainWindow::queueProcessingEnded(bool errors)
 			::setuid(usid);
 			//::umask(0);
 #endif
-						
+
 			QDBusConnection dbus(QDBusConnection::sessionBus());
-			
+
 			qDebug() << "ID of the user:" << getuid();
-			
+
 			::QProcess::execute("dbus-send --session --dest=org.kde.ksmserver --type=method_call"
 					" /KSMServer org.kde.KSMServerInterface.logout int32:0 int32:2 int32:0");
-			
+
 			::setgid(0);
 			::setuid(0);
-			
+
 			qDebug() << "ID of the user:" << getuid();
-			
+
 		}*/
 	}
-	
+
 	turnOffSys = false;
-		
+
 	if(!settings->value("gui/keepqueuedialogopen", true).toBool())
 		queueDl->deleteLater();
-	
+
 	settings->deleteLater();
-	
+
 	queueDl = NULL;
 }
 
@@ -1617,10 +1620,10 @@ void MainWindow::widgetQueueToAlpmQueue()
 {
 	/* This function takes the queue the user defined in the
 	 * GUI and "translates" it to a libalpm transaction queue.
-	 * So THIS is the function that the "Process Queue" buttons 
+	 * So THIS is the function that the "Process Queue" buttons
 	 * should call. processQueue() processes a libalpm queue,
 	 * so you need to "translate" it first.
-	 * 
+	 *
 	 * First of all, we need to know what kind of actions we
 	 * need.
 	 */
@@ -1630,25 +1633,25 @@ void MainWindow::widgetQueueToAlpmQueue()
 			pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 8).isEmpty() &&
 			pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 8).isEmpty())
 		return;
-	
+
 	else if(pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 8).isEmpty() &&
 			pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 8).isEmpty())
 		aHandle->initQueue(false, true, false);
-	
-	else if(pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 8).isEmpty() && 
+
+	else if(pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 8).isEmpty() &&
 					pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 8).isEmpty())
 		aHandle->initQueue(true, false, false);
-	
+
 	else
 		aHandle->initQueue(true, true, false);
 
 	reviewQueue = new QDialog(this);
-	
+
 	qUi = new Ui::QueueReadyDialog();
-	
+
 	qUi->setupUi(reviewQueue);
 
-	
+
 	if(!pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 8).isEmpty())
 	{
 		QTreeWidgetItem *itm = new QTreeWidgetItem(qUi->treeWidget, QStringList(tr("To be Installed")));
@@ -1693,24 +1696,24 @@ void MainWindow::widgetQueueToAlpmQueue()
 		QTreeWidgetItem *itmL = qUi->treeWidget->findItems(tr("To be Removed"), Qt::MatchExactly, 0).first();
 		new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
 	}
-	
+
 	revActive = true;
-	
+
 	reviewQueue->setWindowModality(Qt::ApplicationModal);
 	qUi->treeWidget->hide();
 	reviewQueue->adjustSize();
 	reviewQueue->show();
-	
+
 	QSettings *settings = new QSettings();
-	
+
 	if(settings->value("gui/keepqueuedialogopen", true).toBool())
 		qUi->keepOpenBox->setChecked(true);
-	
+
 	settings->deleteLater();
-	
+
 	connect(qUi->processButton, SIGNAL(clicked()), SLOT(processQueue()));
 	connect(qUi->cancelButton, SIGNAL(clicked()), SLOT(destroyReviewQueue()));
-	
+
 	QString toShow(tr("Your Queue is about to be processed. "
 			"You are going to:<br />"));
 	int n = aHandle->getNumberOfTargets(1);
@@ -1718,7 +1721,7 @@ void MainWindow::widgetQueueToAlpmQueue()
 	int k = aHandle->getNumberOfTargets(0);
 	toShow.append(QString(k == 1 ? tr("Install/Upgrade <b>%1 package</b><br />") : tr("Install/Upgrade <b>%1 packages</b><br />")).arg(k));
 	toShow.append(tr("Do you wish to continue?"));
-	
+
 	qUi->queueInfo->setText(toShow);
 
 }
@@ -1732,14 +1735,16 @@ void MainWindow::destroyReviewQueue()
 void MainWindow::showSettings()
 {
 	configDialog = new ConfigDialog(aHandle, this);
-	
+
+  connect (configDialog, SIGNAL(setProxy()), this, SLOT(setProxy()));
+
 	configDialog->exec();
-	
+
 	if(configDialog->doDbUpdate())
 		doDbUpdate();
-	
+
 	trayicon->changeTimerInterval();
-	
+
 	configDialog->deleteLater();
 }
 
@@ -1748,7 +1753,7 @@ void MainWindow::systrayActivated(QSystemTrayIcon::ActivationReason reason)
 	if (reason == QSystemTrayIcon::Trigger)
 	{
 		QSettings *settings = new QSettings();
-		
+
 		if (isHidden())
 		{
 			/* Uh, we have to stop the Timer! */
@@ -1768,7 +1773,7 @@ void MainWindow::systrayActivated(QSystemTrayIcon::ActivationReason reason)
 			if(queueDl != NULL)
 				queueDl->hide();
 		}
-		
+
 		settings->deleteLater();
 	}
 }
@@ -1778,10 +1783,10 @@ void MainWindow::getPackageFromFile()
 	QString fileName = QFileDialog::getOpenFileName(this,
 	     tr("Install a Package"), qgetenv("HOME"), tr("Arch Linux Packages (*.pkg.tar.gz)"));
 	pmpkg_t *pkg;
-	
+
 	if(fileName == NULL)
 		return;
-	
+
 	// Sanity check
 	if(alpm_pkg_load(fileName.toAscii().data(), 1, &pkg) == -1)
 	{
@@ -1793,26 +1798,26 @@ void MainWindow::getPackageFromFile()
 		message->deleteLater();
 		return;
 	}
-	
+
 	qDebug() << "Selected" << alpm_pkg_get_name(pkg);
-	
+
 	alpm_pkg_free(pkg);
-	
+
 	aHandle->initQueue(false, false, true);
-	
+
 	aHandle->addFFToQueue(fileName);
-	
+
 	processQueue();
-	
+
 }
 
 void MainWindow::showAboutDialog()
 {
 	QDialog *about = new QDialog(this);
 	Ui::aboutDialog ui;
-	
+
 	ui.setupUi(about);
-	
+
 	ui.aboutInfoLabel->setText(QString(tr("<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, "
 			"li { white-space: pre-wrap; }\n</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-weight:400;"
 			" font-style:normal;\">\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
@@ -1825,11 +1830,11 @@ void MainWindow::showAboutDialog()
 			" margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Dario Freddi &lt;drf54321@yahoo.it&gt;</p>\n"
 			"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">"
 			"(C) 2008 Lukas Appelhans &lt;l.appelhans@gmx.de&gt;</p></body></html>")).arg(aHandle->getAlpmVersion()));
-	
+
 	about->setWindowModality(Qt::ApplicationModal);
-	
+
 	about->exec();
-	
+
 	about->deleteLater();
 }
 
@@ -1844,7 +1849,7 @@ QString MainWindow::formatSize(unsigned long size)
 		s = tr("%1 KiB", "Size is in KiB").arg(size / 1024);
 	else
 		s = tr("%1 Bytes", "Size is in Bytes").arg(size);
-	
+
 	return s;
 }
 
@@ -1879,23 +1884,23 @@ void MainWindow::streamTransQuestion(const QString &msg)
 	}
 
 	msgBox->deleteLater();
-	
-	qDebug() << "Waking Alpm Thread";	
+
+	qDebug() << "Waking Alpm Thread";
 }
 
 void MainWindow::updateABSTree()
 {
 	bHandler = new BuildingHandler(this, aHandle);
-	
+
 	bHandler->updateABSTree();
-	
+
 	connect(bHandler, SIGNAL(outOfScope()), SLOT(terminatedBuildingHandling()));
 }
 
 void MainWindow::initSourceQueue()
 {
 	qDebug() << "Starting Building Handler";
-	
+
 	bHandler = new BuildingHandler(this, aHandle);
 
 	bHandler->validateSourceQueue();
@@ -1908,7 +1913,7 @@ void MainWindow::initSourceQueue()
 void MainWindow::terminatedBuildingHandling()
 {
 	bHandler->deleteLater();
-	
+
 	bHandler = NULL;
 }
 
@@ -1924,7 +1929,7 @@ QList<QTreeWidgetItem *> MainWindow::getUpgradePackagesInWidgetQueue()
 
 QList<QTreeWidgetItem *> MainWindow::getRemovePackagesInWidgetQueue()
 {
-	return pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 8) + 
+	return pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 8) +
 		pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 8);
 }
 
@@ -1945,11 +1950,11 @@ bool MainWindow::populateQueuePackagesView()
 {
 	pkgsViewWG->setSortingEnabled(false);
 
-	disconnect(pkgsViewWG, SIGNAL(itemSelectionChanged()), this, 
+	disconnect(pkgsViewWG, SIGNAL(itemSelectionChanged()), this,
 			SLOT(itemChanged()));
-	
+
 	/* Let's get Packages in the Queue first. */
-	
+
 	QList<QTreeWidgetItem *> list;
 	list.clear();
 
@@ -1978,7 +1983,7 @@ bool MainWindow::populateQueuePackagesView()
 
 			item->setText(1, alpm_pkg_get_name(pkg));
 			item->setText(5, itm->text(5));
-			item->setText(4, formatSize(aHandle->getPackageSize(item->text(1), item->text(5)))); 
+			item->setText(4, formatSize(aHandle->getPackageSize(item->text(1), item->text(5))));
 			item->setText(7, alpm_pkg_get_desc(pkg));
 
 			while(grps != NULL)
@@ -2010,9 +2015,9 @@ bool MainWindow::populateQueuePackagesView()
 			item->setText(3, alpm_pkg_get_version(pkg));
 			item->setText(7, alpm_pkg_get_desc(pkg));
 			item->setText(5, "local");
-			item->setText(4, formatSize(aHandle->getPackageSize(item->text(1), item->text(5)))); 
+			item->setText(4, formatSize(aHandle->getPackageSize(item->text(1), item->text(5))));
 		}
-		
+
 		locPkg = alpm_list_next(locPkg);
 	}
 
@@ -2030,7 +2035,7 @@ bool MainWindow::populateQueuePackagesView()
 	pkgsViewWG->sortItems(1, Qt::AscendingOrder);
 	pkgsViewWG->setSortingEnabled(true);//Enable sorting *after* inserting :D
 
-	connect(pkgsViewWG, SIGNAL(itemSelectionChanged()), this, 
+	connect(pkgsViewWG, SIGNAL(itemSelectionChanged()), this,
 			SLOT(itemChanged()));
 
 	return true;
@@ -2038,15 +2043,43 @@ bool MainWindow::populateQueuePackagesView()
 
 void MainWindow::removePackageFromView(const QString &pkgname)
 {
-	int index = pkgsViewWG->indexOfTopLevelItem(pkgsViewWG->findItems(pkgname, Qt::MatchExactly 
+	int index = pkgsViewWG->indexOfTopLevelItem(pkgsViewWG->findItems(pkgname, Qt::MatchExactly
 			| Qt::CaseInsensitive, 1).first());
-	
-	delete pkgsViewWG->takeTopLevelItem(index);	
+
+	delete pkgsViewWG->takeTopLevelItem(index);
 }
 
 void MainWindow::removePackageFromView(QTreeWidgetItem *item)
 {
 	int index = pkgsViewWG->indexOfTopLevelItem(item);
-	
-	delete pkgsViewWG->takeTopLevelItem(index);	
+
+	delete pkgsViewWG->takeTopLevelItem(index);
+}
+
+void MainWindow::setProxy()
+{
+  QSettings *settings = new QSettings();
+
+
+  if (settings->value("proxy/enabled").toBool() && settings->value("proxy/httpProxy").toBool())
+  {
+    setenv("HTTP_PROXY", settings->value("proxy/proxyServer").toString().toLatin1() + ":" + settings->value("proxy/proxyPort").toString().toLatin1(), 1);
+    qDebug() << QString("HTTP_PROXY: ") + settings->value("proxy/proxyServer").toString() + ":" + settings->value("proxy/proxyPort").toString();
+  }
+  else {
+    unsetenv("HTTP_PROXY");
+    qDebug() << "--> UNSETENV HTTP_PROXY";
+  }
+
+
+  if (settings->value("proxy/enabled").toBool() && settings->value("proxy/ftpProxy").toBool())
+  {
+    setenv("FTP_PROXY", settings->value("proxy/proxyServer").toString().toLatin1() + ":" + settings->value("proxy/proxyPort").toString().toLatin1(), 1);
+    qDebug() << QString("FTP_PROXY: ") + settings->value("proxy/proxyServer").toString() + ":" + settings->value("proxy/proxyPort").toString();
+  }
+  else
+  {
+    unsetenv ("FTP_PROXY");
+    qDebug() << "--> UNSETENV FTP_PROXY";
+  }
 }

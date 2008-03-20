@@ -31,15 +31,15 @@ class AlpmHandler;
 class CleanThread : public QThread
 {
 	Q_OBJECT
-	
+
 public:
 	CleanThread(AlpmHandler *aH, int act);
 	void run();
-	
+
 signals:
 	void success(int act);
 	void failure(int act);
-	
+
 private:
 	AlpmHandler *m_handler;
 	int action;
@@ -48,13 +48,16 @@ private:
 
 class ConfigDialog : public QDialog, public Ui::ConfigDialog, private ConfigurationParser
 {
-	
+
 	Q_OBJECT
-	
+
 public:
 	explicit ConfigDialog(AlpmHandler *handler, QWidget *parent = 0);
 	~ConfigDialog();
 	bool doDbUpdate();
+
+signals:
+  void setProxy();
 
 private slots:
 	void changeWidget(int position);
@@ -71,12 +74,14 @@ private slots:
 	void addMirror();
 	void obfuscateSupfiles(bool state);
 	void obfuscateDBUpdate(bool state);
+ void obfuscateProxy(bool state);
 
 private:
 	void setupRepos();
 	void setupGeneral();
 	void setupPacman();
 	void setupABS();
+	void setupAdvanced();
 	QStringList getMirrorList();
 
 private:

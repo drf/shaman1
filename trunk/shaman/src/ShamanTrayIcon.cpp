@@ -33,7 +33,7 @@ ShamanTrayIcon::ShamanTrayIcon(MainWindow *mW, AlpmHandler *aH)
 		changeIconStatus(ShamanIcon::IdleIcon);
 	else
 		changeIconStatus(ShamanIcon::UpgradesAvailableIcon);
-	
+
 	show();
 
 	systrayAct.clear();
@@ -67,7 +67,7 @@ ShamanTrayIcon::ShamanTrayIcon(MainWindow *mW, AlpmHandler *aH)
 
 	connect(aHandle, SIGNAL(transactionStarted()), SLOT(transactionStarted()));
 	connect(aHandle, SIGNAL(transactionReleased()), SLOT(transactionReleased()));
-	
+
 	connect(mainWin, SIGNAL(buildingStarted()), SLOT(transactionStarted()));
 	connect(mainWin, SIGNAL(buildingFinished()), SLOT(transactionReleased()));
 
@@ -95,13 +95,13 @@ void ShamanTrayIcon::dbUpdateTray()
 	/* Are there some transactions in progress? If so, we simply skip
 	 * this cycle, and see you next time.
 	 */
-	
+
 	if(aHandle->isTransaction())
 		return;
-	
+
 	/* Ok, let's silently perform a Db Update.
 	 */
-	
+
 	emit startDbUpdate();
 }
 
@@ -125,25 +125,30 @@ void ShamanTrayIcon::changeIconStatus(ShamanIcon::IconStatus status)
 		stopMovie();
 		setIcon(QIcon(":/Icons/icons/shaman/shaman-updates-available-32.png"));
 		setToolTip(QString(tr("Shaman - Idle (Upgrades Available)")));
-		showMessage(QString(tr("System Upgrade")), QString(upgrds.size() == 1 ? tr("There is %1 upgradeable package.\n"
-				"Click here to upgrade your System.") :	tr("There are %1 upgradeable packages.\nClick here to upgrade your System.")).
-				arg(upgrds.size()));
+
+    QSettings *settings = new QSettings();
+    if (settings->value("scheduledUpdate/updateDbShowNotify").toBool())
+    {
+      showMessage(QString(tr("System Upgrade")), QString(upgrds.size() == 1 ? tr("There is %1 upgradeable package.\n"
+          "Click here to upgrade your System.") :	tr("There are %1 upgradeable packages.\nClick here to upgrade your System.")).
+          arg(upgrds.size()));
 		disconnect(this, SIGNAL(messageClicked()), 0, 0);
 		connect(this, SIGNAL(messageClicked()), SIGNAL(upgradePkgs()));
+    }
 	}
 }
 
 void ShamanTrayIcon::transactionStarted()
 {
 	disableTrayActions();
-	
+
 	changeIconStatus(ShamanIcon::ProcessingIcon);
 }
 
 void ShamanTrayIcon::transactionReleased()
 {
 	enableTrayActions();
-	
+
 	if(aHandle->getUpgradeablePackages().isEmpty())
 		changeIconStatus(ShamanIcon::IdleIcon);
 	else
@@ -165,20 +170,20 @@ void ShamanTrayIcon::disableTrayActions()
 void ShamanTrayIcon::startTimer()
 {
 	QSettings *settings = new QSettings();
-	
+
 	if(settings->value("scheduledUpdate/enabled").toBool() == true)
 		trayUpDb->start();
-	
+
 	settings->deleteLater();
 }
 
 void ShamanTrayIcon::stopTimer()
 {
 	QSettings *settings = new QSettings();
-	
+
 	if(settings->value("scheduledUpdate/enabled").toBool() == true)
 		trayUpDb->stop();
-	
+
 	settings->deleteLater();
 }
 
@@ -193,7 +198,7 @@ void ShamanTrayIcon::changeTimerInterval()
 			trayUpDb = new QTimer(this);
 		else
 			disconnect(trayUpDb, 0, 0, 0);
-		
+
 		trayUpDb->setInterval(settings->value("scheduledUpdate/interval", 10).toInt() * 60000);
 
 		connect(trayUpDb, SIGNAL(timeout()), SLOT(dbUpdateTray()));
@@ -206,6 +211,6 @@ void ShamanTrayIcon::changeTimerInterval()
 			trayUpDb = NULL;
 		}
 	}
-	
+
 	settings->deleteLater();
 }
