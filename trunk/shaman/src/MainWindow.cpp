@@ -46,6 +46,7 @@
 #include <QSettings>
 #include <QWaitCondition>
 #include <QMovie>
+#include <QShortcut>
 #include <alpm.h>
 #include <sys/types.h>
 
@@ -141,6 +142,8 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	
 	stBar = new QStatusBar(this);
 	setStatusBar(stBar);
+
+	QShortcut *clearLineEdit = new QShortcut(tr("Esc"), searchLine, SLOT(clear()));
 	
 	return;
 }
