@@ -32,6 +32,7 @@
 #include "ShamanTrayIcon.h"
 #include "ui_aboutDialog.h"
 #include "shamanadaptor.h"
+#include "ReviewQueueDialog.h"
 
 #include <iostream>
 #include <QMenu>
@@ -57,12 +58,12 @@ extern QWaitCondition wCond;
 
 MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 : QMainWindow(parent),
-  queueDl(NULL),
+  queueDl(),
   currentpkgs(0),
   aHandle(handler),
-  dbdialog(NULL),
-  qUi(NULL),
-  bHandler(NULL),
+  dbdialog(),
+  qUi(),
+  bHandler(),
   upActive(false),
   revActive(false),
   dbActive(false),
@@ -752,7 +753,7 @@ void MainWindow::finishDbUpdate()
 	else
 	{
 		emit actionStatusChanged("dbUpdateFinished");
-    QSettings *settings = new QSettings();
+		QSettings *settings = new QSettings();
 		if(dbdialog->isHidden() && list.isEmpty() && settings->value("scheduledUpdate/updateDbShowNotify").toBool())
 			trayicon->showMessage(QString(tr("Database Update")), QString(tr("Databases Updated Successfully")));
 	}
@@ -1441,32 +1442,20 @@ void MainWindow::processQueue()
 
 	queueDl->show();
 
-	if(revActive)
+	if(qUi)
 	{
-		if(qUi->trayBox->isChecked())
+		if(qUi->isInTray())
 		{
 			trayicon->showMessage(QString(tr("Queue Processing")), QString(tr("Your Queue is being processed.\nPlease wait.")));
 			hide();
 			queueDl->hide();
 		}
-
-		QSettings *settings = new QSettings();
-
-		if(qUi->keepOpenBox->isChecked())
-			settings->setValue("gui/keepqueuedialogopen", true);
-		else
-			settings->setValue("gui/keepqueuedialogopen", false);
-
-		if(qUi->turnoffBox->isChecked())
-			turnOffSys = true;
-
-		settings->deleteLater();
+		
+		qUi->deleteLater();
 	}
 
 	if(upActive)
 		upDl->deleteLater();
-	if(revActive)
-		reviewQueue->deleteLater();
 
 	upActive = false;
 	revActive = false;
@@ -1661,91 +1650,14 @@ void MainWindow::widgetQueueToAlpmQueue()
 	else
 		aHandle->initQueue(true, true, false);
 
-	reviewQueue = new QDialog(this);
-
-	qUi = new Ui::QueueReadyDialog();
-
-	qUi->setupUi(reviewQueue);
-
-
-	if(!pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 8).isEmpty())
-	{
-		QTreeWidgetItem *itm = new QTreeWidgetItem(qUi->treeWidget, QStringList(tr("To be Installed")));
-		qUi->treeWidget->addTopLevelItem(itm);
-	}
-	if(!pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 8).isEmpty())
-	{
-		QTreeWidgetItem *itm = new QTreeWidgetItem(qUi->treeWidget, QStringList(tr("To be Upgraded")));
-		qUi->treeWidget->addTopLevelItem(itm);
-	}
-	if(!pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 8).isEmpty())
-	{
-		QTreeWidgetItem *itm = new QTreeWidgetItem(qUi->treeWidget, QStringList(tr("To be Removed")));
-		qUi->treeWidget->addTopLevelItem(itm);
-	}
-
-
-	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 8))
-	{
-		aHandle->addSyncToQueue(itm->text(1));
-		QTreeWidgetItem *itmL = qUi->treeWidget->findItems(tr("To be Installed"), Qt::MatchExactly, 0).first();
-		new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
-	}
-
-	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 8))
-	{
-		aHandle->addSyncToQueue(itm->text(1));
-		QTreeWidgetItem *itmL = qUi->treeWidget->findItems(tr("To be Upgraded"), Qt::MatchExactly, 0).first();
-		new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
-	}
-
-	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 8))
-	{
-		aHandle->addRemoveToQueue(itm->text(1));
-		QTreeWidgetItem *itmL = qUi->treeWidget->findItems(tr("To be Removed"), Qt::MatchExactly, 0).first();
-		new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
-	}
-
-	foreach(QTreeWidgetItem *itm, pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 8))
-	{
-		aHandle->addRemoveToQueue(itm->text(1));
-		QTreeWidgetItem *itmL = qUi->treeWidget->findItems(tr("To be Removed"), Qt::MatchExactly, 0).first();
-		new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
-	}
+	qUi = new ReviewQueueDialog(aHandle, this);
 
 	revActive = true;
 
-	reviewQueue->setWindowModality(Qt::ApplicationModal);
-	qUi->treeWidget->hide();
-	reviewQueue->adjustSize();
-	reviewQueue->show();
+	qUi->show();
+	
+	connect(qUi, SIGNAL(goProcess()), SLOT(processQueue()));
 
-	QSettings *settings = new QSettings();
-
-	if(settings->value("gui/keepqueuedialogopen", true).toBool())
-		qUi->keepOpenBox->setChecked(true);
-
-	settings->deleteLater();
-
-	connect(qUi->processButton, SIGNAL(clicked()), SLOT(processQueue()));
-	connect(qUi->cancelButton, SIGNAL(clicked()), SLOT(destroyReviewQueue()));
-
-	QString toShow(tr("Your Queue is about to be processed. "
-			"You are going to:<br />"));
-	int n = aHandle->getNumberOfTargets(1);
-	toShow.append(QString(n == 1 ? tr("Remove <b>%1 package</b><br />") : tr("Remove <b>%1 packages</b><br />")).arg(n));
-	int k = aHandle->getNumberOfTargets(0);
-	toShow.append(QString(k == 1 ? tr("Install/Upgrade <b>%1 package</b><br />") : tr("Install/Upgrade <b>%1 packages</b><br />")).arg(k));
-	toShow.append(tr("Do you wish to continue?"));
-
-	qUi->queueInfo->setText(toShow);
-
-}
-
-void MainWindow::destroyReviewQueue()
-{
-	revActive = false;
-	reviewQueue->deleteLater();
 }
 
 void MainWindow::showSettings()
@@ -1775,18 +1687,18 @@ void MainWindow::systrayActivated(QSystemTrayIcon::ActivationReason reason)
 			/* Uh, we have to stop the Timer! */
 			emit stopTimer();
 			show();
-			if(dbActive)
+			if(dbdialog)
 				dbdialog->show();
-			if(quiActive)
+			if(queueDl)
 				queueDl->show();
 		}
 		else
 		{
 			emit startTimer();
 			hide();
-			if(dbActive)
+			if(dbdialog)
 				dbdialog->hide();
-			if(quiActive)
+			if(queueDl)
 				queueDl->hide();
 		}
 

@@ -46,6 +46,7 @@ SET(shaman_SRCS ${shaman_adaptor_SRCS}
     src/BuildingHandler.cpp
     src/kanimatedsystemtrayicon.cpp
     src/ShamanTrayIcon.cpp
+    src/ReviewQueueDialog.cpp
 )
 
 SET(shaman_MOC_HDRS
@@ -61,6 +62,7 @@ SET(shaman_MOC_HDRS
     src/BuildingHandler.h
     src/kanimatedsystemtrayicon.h
     src/ShamanTrayIcon.h
+    src/ReviewQueueDialog.h
 )
 
 SET(shaman_UIS

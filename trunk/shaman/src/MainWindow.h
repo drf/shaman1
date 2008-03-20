@@ -26,11 +26,11 @@
 #include <alpm.h>
 #include <alpm_list.h>
 #include "ui_MainWindow.h"
-#include "ui_reviewQueueDialog.h"
 #include "AlpmHandler.h"
 #include "kanimatedsystemtrayicon.h"
 
 #include <QThread>
+#include <QPointer>
 
 class UpdateDbDialog;
 class SysUpgradeDialog;
@@ -42,6 +42,7 @@ class BuildingDialog;
 class EditPBuild;
 class BuildingHandler;
 class ShamanTrayIcon;
+class ReviewQueueDialog;
 
 class MainWindow : public QMainWindow, public Ui::MainWindow, private StringUtils
 {
@@ -94,7 +95,6 @@ public slots:
 	void addUpgradeableToQueue();
 	void queueProcessingEnded(bool errors);
 	void widgetQueueToAlpmQueue();
-	void destroyReviewQueue();
 	void getPackageFromFile();
 	void streamTransQuestion(const QString &msg);
 	void cancelAllActions();
@@ -103,7 +103,7 @@ public slots:
 	void initSourceQueue();
 	void terminatedBuildingHandling();
 	bool packageExists(const QString &pkg);
-  void setProxy();
+	void setProxy();
 
 protected:
 	void closeEvent(QCloseEvent *evt);
@@ -140,14 +140,14 @@ public:
 private:
 	alpm_list_t *currentpkgs;
 	AlpmHandler *aHandle;
-	UpdateDbDialog *dbdialog;
-	SysUpgradeDialog *upDl;
-	ConfigDialog *configDialog;
-	Ui::QueueReadyDialog *qUi;
-	BuildingHandler *bHandler;
+	QPointer<UpdateDbDialog> dbdialog;
+	QPointer<SysUpgradeDialog> upDl;
+	QPointer<ConfigDialog>configDialog;
+	QPointer<ReviewQueueDialog> qUi;
+	QPointer<BuildingHandler> bHandler;
 	QStatusBar *stBar;
 
-	QDialog *reviewQueue;
+	QPointer<QDialog> reviewQueue;
 	ShamanTrayIcon *trayicon;
 
 	bool upActive;
