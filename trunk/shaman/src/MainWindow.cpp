@@ -65,6 +65,8 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
   bHandler(NULL),
   upActive(false),
   revActive(false),
+  dbActive(false),
+  quiActive(false),
   turnOffSys(false)
 {
 	setupUi(this);
@@ -696,6 +698,7 @@ void MainWindow::showPkgInfo()
 void MainWindow::doDbUpdate()
 {
 	dbdialog = new UpdateDbDialog(aHandle, this);
+	dbActive = true;
 
 	emit actionStatusChanged("dbUpdateStarted");
 
@@ -709,6 +712,12 @@ void MainWindow::doDbUpdate()
 
 void MainWindow::finishDbUpdate()
 {
+	if(!dbActive)
+	{
+		Q_ASSERT_X(1 == 2, "finishDbUpdate", "dbdialog seems not to be valid");
+		return;
+	}
+
 	disconnect(dbdialog, 0,0,0);
 
 	if(dbdialog->dbHasBeenUpdated())
@@ -749,7 +758,8 @@ void MainWindow::finishDbUpdate()
 	}
 
 	dbdialog->deleteLater();
-
+	dbActive = false;
+	
 	dbdialog = NULL;
 
 	if(list.isEmpty())
@@ -1208,7 +1218,7 @@ void MainWindow::cancelAction(const QString &package)
 
 void MainWindow::startUpgrading()
 {
-	if(dbdialog)
+	if(dbActive)
 	{
 		disconnect(dbdialog, 0,0,0);
 
@@ -1225,26 +1235,31 @@ void MainWindow::startUpgrading()
 	if(list.isEmpty())
 	{
 		emit systemIsUpToDate();
-		
-		if (dbdialog && dbdialog->isVisible())
+
+		if (dbActive)
 		{
-			/* Display a simple popup saying the system is up-to-date. */
-			QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("System Upgrade"), 
-					tr("Your system is up to date!"), QMessageBox::Ok, this);
-			message->show();
+			if(dbdialog->isVisible())
+			{
+				/* Display a simple popup saying the system is up-to-date. */
+				QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("System Upgrade"), 
+						tr("Your system is up to date!"), QMessageBox::Ok, this);
+				message->show();
+			}
+			else
+				trayicon->showMessage(QString(tr("System Upgrade")), QString(tr("Your system is up to date!")));
+
 		}
-		else
-			trayicon->showMessage(QString(tr("System Upgrade")), QString(tr("Your system is up to date!")));
-		
+
 		qDebug() << "System is up to date";
 	}
 	else
 		upgrade(list);
 
-	if(dbdialog)
+	if(dbActive)
 	{
 		dbdialog->deleteLater();
 		dbdialog = 0;
+		dbActive = false;
 	}
 }
 
@@ -1378,6 +1393,7 @@ void MainWindow::addUpgradeableToQueue()
 void MainWindow::fullSysUpgrade()
 {
 	dbdialog = new UpdateDbDialog(aHandle, this);
+	dbActive = true;
 
 	if(isVisible())
 		dbdialog->show();
@@ -1759,18 +1775,18 @@ void MainWindow::systrayActivated(QSystemTrayIcon::ActivationReason reason)
 			/* Uh, we have to stop the Timer! */
 			emit stopTimer();
 			show();
-			if(dbdialog != NULL)
+			if(dbActive)
 				dbdialog->show();
-			if(queueDl != NULL)
+			if(quiActive)
 				queueDl->show();
 		}
 		else
 		{
 			emit startTimer();
 			hide();
-			if(dbdialog != NULL)
+			if(dbActive)
 				dbdialog->hide();
-			if(queueDl != NULL)
+			if(quiActive)
 				queueDl->hide();
 		}
 

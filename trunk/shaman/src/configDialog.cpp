@@ -32,6 +32,7 @@
 #include <QTextStream>
 #include <QUrl>
 #include <QProcess>
+#include <QDebug>
 
 ConfigDialog::ConfigDialog(AlpmHandler *handler, QWidget *parent)
 : QDialog(parent),
@@ -107,9 +108,12 @@ void ConfigDialog::setupGeneral()
 	else
 		askUpRadio->setChecked(true);
 
-  keepQueueTrayBox->setChecked(settings->value("gui/processintray").toBool());
+	keepQueueTrayBox->setChecked(settings->value("gui/processintray").toBool());
 
-  startTrayBox->setChecked(settings->value("gui/startupmode").toString() == "tray" ? true : false);
+	if(settings->value("gui/startupmode").toString() == "tray")
+		startTrayBox->setChecked(true);
+	else
+		startTrayBox->setChecked(false);
 
 	if(settings->value("gui/showsplashscreen", true).toBool())
 		splashScreenBox->setChecked(true);
@@ -566,6 +570,8 @@ void ConfigDialog::showSuccess(int act)
 
 void ConfigDialog::saveConfiguration()
 {
+	qDebug() << "Saving Configuration...";
+	
 	bool dbChanged = false;
 	QString mirror(mirrorBox->currentText());
 	mirror = mirror.remove(' ');
@@ -821,8 +827,12 @@ void ConfigDialog::saveConfiguration()
 	else
 		settings->setValue("gui/actionupgrade", "ask");
 
-  settings->setValue("gui/processintray", keepQueueTrayBox->isChecked());
-  settings->setValue("gui/startupmode", startTrayBox->isChecked());
+	settings->setValue("gui/processintray", keepQueueTrayBox->isChecked());
+	if(startTrayBox->isChecked())
+		settings->setValue("gui/startupmode", "tray");
+	else
+		settings->setValue("gui/startupmode", "window");
+
   settings->setValue("gui/showsplashscreen", splashScreenBox->isChecked());
   settings->setValue("scheduledUpdate/enabled", updateDbTrayBox->isChecked());
   settings->setValue("scheduledUpdate/interval", minutesSpin->value());
@@ -832,7 +842,7 @@ void ConfigDialog::saveConfiguration()
   settings->setValue("proxy/proxyPort", proxyPort->text());
   settings->setValue("proxy/httpProxy", httpProxyBox->isChecked());
   settings->setValue("proxy/ftpProxy", ftpProxyBox->isChecked());
-  settings->setValue("scheduledUpdate/addupgradestoqueue", upNotifyRadio->isChecked());
+  settings->setValue("scheduledUpdate/addupgradestoqueue", upNotifyAddRadio->isChecked());
   settings->setValue("absbuilding/wizardbuild", makeDepsSourceBox->isChecked());
   settings->setValue("absbuilding/reviewoutput", reviewBuildOutBox->isChecked());
 

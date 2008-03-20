@@ -152,6 +152,8 @@ private:
 
 	bool upActive;
 	bool revActive;
+	bool dbActive;
+	bool quiActive;
 	bool turnOffSys;
 
 };
