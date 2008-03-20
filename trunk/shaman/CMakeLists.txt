@@ -47,6 +47,7 @@ SET(shaman_SRCS ${shaman_adaptor_SRCS}
     src/kanimatedsystemtrayicon.cpp
     src/ShamanTrayIcon.cpp
     src/ReviewQueueDialog.cpp
+    src/ArchLinuxNewsReader.cpp
 )
 
 SET(shaman_MOC_HDRS
@@ -63,6 +64,7 @@ SET(shaman_MOC_HDRS
     src/kanimatedsystemtrayicon.h
     src/ShamanTrayIcon.h
     src/ReviewQueueDialog.h
+    src/ArchLinuxNewsReader.h
 )
 
 SET(shaman_UIS
@@ -159,6 +161,7 @@ TARGET_LINK_LIBRARIES(shaman
     ${QT_QTCORE_LIBRARY}
     ${QT_QTGUI_LIBRARY}
     ${QT_QTDBUS_LIBRARY}
+    ${QT_QTNETWORK_LIBRARY}
     #${QTPLUGIN_QTMNG_LIBRARY}
     -lalpm
     -larchive

@@ -88,6 +88,8 @@ int main(int argc, char **argv)
 {
 	qDebug() << ">>";
 	qDebug() << ">>		Shaman" << SHAMAN_VERSION;
+	qDebug() << ">>		Compiled against Qt" << QT_VERSION_STR;
+	qDebug() << ">>		Running with Qt" << qVersion();
 	qDebug() << ">>";
 	qDebug() << ">>	Shaman is still in testing phase, please be easy on it!!";
 	qDebug() << ">>";
