@@ -317,12 +317,12 @@ void ConfigDialog::setupAdvanced()
 	minutesSpin->setValue(settings->value("scheduledUpdate/interval", 10).toInt());
 
 	if (settings->value("proxy/enabled").toBool())
-		enableProxyBox->setChecked(true);
+		proxyGroup->setChecked(true);
 	else {
-		proxyServer->setEnabled(false);
+		/*proxyServer->setEnabled(false);
 		proxyPort->setEnabled(false);
 		httpProxyBox->setEnabled(false);
-		ftpProxyBox->setEnabled(false);
+		ftpProxyBox->setEnabled(false);*/
 		setenv("HTTP_PROXY", "", 1);
 	}
 
@@ -338,9 +338,6 @@ void ConfigDialog::setupAdvanced()
 
 	proxyServer->setText(settings->value("proxy/proxyServer").toString());
 	proxyPort->setText(settings->value("proxy/proxyPort").toString());
-
-	// GUI
-	connect(enableProxyBox, SIGNAL(toggled(bool)), SLOT(obfuscateProxy(bool)));
 
 	if(settings->value("scheduledUpdate/addupgradestoqueue").toBool())
 		upNotifyAddRadio->setChecked(true);
@@ -830,7 +827,7 @@ void ConfigDialog::saveConfiguration()
   settings->setValue("scheduledUpdate/enabled", updateDbTrayBox->isChecked());
   settings->setValue("scheduledUpdate/interval", minutesSpin->value());
   settings->setValue("scheduledUpdate/updateDbShowNotify", updateDbShowNotify->isChecked());
-  settings->setValue("proxy/enabled", enableProxyBox->isChecked());
+  settings->setValue("proxy/enabled", proxyGroup->isChecked());
   settings->setValue("proxy/proxyServer", proxyServer->text());
   settings->setValue("proxy/proxyPort", proxyPort->text());
   settings->setValue("proxy/httpProxy", httpProxyBox->isChecked());
@@ -1094,24 +1091,6 @@ void ConfigDialog::obfuscateDBUpdate(bool state)
 		upNotifyRadio->setEnabled(false);
 		upNotifyAddRadio->setEnabled(false);
 	}
-}
-
-void ConfigDialog::obfuscateProxy(bool state)
-{
-  if (state)
-  {
-    proxyServer->setEnabled(true);
-    proxyPort->setEnabled(true);
-    httpProxyBox->setEnabled(true);
-    ftpProxyBox->setEnabled(true);
-  }
-  else
-  {
-    proxyServer->setEnabled(false);
-    proxyPort->setEnabled(false);
-    httpProxyBox->setEnabled(false);
-    ftpProxyBox->setEnabled(false);
-  }
 }
 
 void ConfigDialog::obfuscateSupfiles(bool state)

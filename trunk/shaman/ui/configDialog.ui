@@ -860,24 +860,17 @@ and Pacman.</string>
           </widget>
          </item>
          <item>
-          <widget class="QGroupBox" name="groupBox_12" >
+          <widget class="QGroupBox" name="proxyGroup" >
            <property name="title" >
-            <string>Proxy Settings</string>
+            <string>Use a proxy-server</string>
+           </property>
+           <property name="checkable" >
+            <bool>true</bool>
+           </property>
+           <property name="checked" >
+            <bool>false</bool>
            </property>
            <layout class="QGridLayout" >
-            <item row="0" column="0" colspan="2" >
-             <widget class="QCheckBox" name="enableProxyBox" >
-              <property name="sizePolicy" >
-               <sizepolicy vsizetype="Fixed" hsizetype="Minimum" >
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="text" >
-               <string>Enable Proxy</string>
-              </property>
-             </widget>
-            </item>
             <item row="1" column="1" >
              <widget class="QLabel" name="label_16" >
               <property name="text" >
@@ -956,22 +949,6 @@ and Pacman.</string>
                <string>FTP Proxy</string>
               </property>
              </widget>
-            </item>
-            <item row="1" column="0" >
-             <spacer>
-              <property name="orientation" >
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeType" >
-               <enum>QSizePolicy::Maximum</enum>
-              </property>
-              <property name="sizeHint" >
-               <size>
-                <width>50</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
             </item>
            </layout>
           </widget>

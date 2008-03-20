@@ -57,7 +57,7 @@ public:
 	bool doDbUpdate();
 
 signals:
-  void setProxy();
+	void setProxy();
 
 private slots:
 	void changeWidget(int position);
@@ -74,7 +74,6 @@ private slots:
 	void addMirror();
 	void obfuscateSupfiles(bool state);
 	void obfuscateDBUpdate(bool state);
- void obfuscateProxy(bool state);
 
 private:
 	void setupRepos();
