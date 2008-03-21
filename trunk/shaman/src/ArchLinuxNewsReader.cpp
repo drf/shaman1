@@ -252,3 +252,23 @@ QString ArchLinuxNewsReader::getHttpError()
 {
 	return http.errorString();
 }
+
+bool ArchLinuxNewsReader::checkUnreadNewsOnPkg(const QString &pkgname)
+{
+	QMap<QString, QVariant> oldEntries;
+
+	QSettings *settings = new QSettings();
+
+	oldEntries = settings->value("newsreader/oldnewsitem").toMap();
+
+	settings->deleteLater();
+
+	foreach(QString ent, oldEntries.keys())
+	{
+		if(ent.contains(pkgname))
+			if(oldEntries[ent] == false)
+				return true;
+	}
+
+	return false;
+}

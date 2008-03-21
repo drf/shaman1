@@ -1642,6 +1642,45 @@ void MainWindow::widgetQueueToAlpmQueue()
 	 * need.
 	 */
 
+	QSettings *settings = new QSettings();
+
+	if(settings->value("newsreader/userss", true).toBool() && settings->value("newsreader/queuenotifier", true).toBool())
+	{
+		foreach(QTreeWidgetItem *ent, getInstallPackagesInWidgetQueue() + getUpgradePackagesInWidgetQueue() +getInstallPackagesInWidgetQueue())
+		{
+			if(newsReader->checkUnreadNewsOnPkg(ent->text(1)))
+			{
+				QMessageBox *msgBox = new QMessageBox(this);
+
+				msgBox->setIcon(QMessageBox::Question);
+				msgBox->setWindowTitle(QString(tr("News Alert")));
+
+				msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+
+				msgBox->setWindowModality(Qt::ApplicationModal);
+
+				msgBox->setText(QString(tr("There is an unread news about %1.\nDo you want to read it?")).arg(ent->text(1)));
+
+				switch (msgBox->exec()) {
+				case QMessageBox::Yes:
+					openNewsDialog();
+					return;
+					break;
+				case QMessageBox::No:
+					break;
+				default:
+					// should never be reached
+					break;
+				}
+
+				msgBox->deleteLater();
+			}
+		}
+
+	}
+
+	settings->deleteLater();
+	
 	if(pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 8).isEmpty() &&
 			pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 8).isEmpty() &&
 			pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 8).isEmpty() &&
@@ -1658,7 +1697,7 @@ void MainWindow::widgetQueueToAlpmQueue()
 
 	else
 		aHandle->initQueue(true, true, false);
-
+	
 	qUi = new ReviewQueueDialog(aHandle, this);
 
 	revActive = true;
@@ -1673,7 +1712,7 @@ void MainWindow::showSettings()
 {
 	configDialog = new ConfigDialog(aHandle, this);
 
-  connect (configDialog, SIGNAL(setProxy()), this, SLOT(setProxy()));
+	connect (configDialog, SIGNAL(setProxy()), this, SLOT(setProxy()));
 
 	configDialog->exec();
 

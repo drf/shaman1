@@ -55,6 +55,8 @@ public:
 	bool isEntryRead(const QString &title);
 	
 	QString getHttpError();
+	
+	bool checkUnreadNewsOnPkg(const QString &pkgname);
 
 public slots:
 	void fetch();
