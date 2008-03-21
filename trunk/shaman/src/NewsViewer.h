@@ -30,7 +30,7 @@ class NewsViewer : public QDialog, private Ui::newsDialog
 	Q_OBJECT
 	
 public:
-	NewsViewer(ArchLinuxNewsReader *nR, QWidget *parent = 0);
+	explicit NewsViewer(ArchLinuxNewsReader *nR, QWidget *parent = 0);
 	virtual ~NewsViewer();
 	
 public slots:
