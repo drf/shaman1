@@ -71,6 +71,10 @@ signals:
 private:
 	void parseXml();
 
+	QString titleString;
+	QString linkString;
+	QString currentTag;
+
 	QXmlStreamReader xml;
 	QHttp http;
 	QTimer timer;

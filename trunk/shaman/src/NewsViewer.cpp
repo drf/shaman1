@@ -33,8 +33,11 @@ NewsViewer::NewsViewer(ArchLinuxNewsReader *nR, QWidget *parent)
 {
 	setupUi(this);
 	
+	treeWidget->hideColumn(4);
+	
 	connect(newsHandler, SIGNAL(fetchingStarted()), SLOT(fetching()));
 	connect(newsHandler, SIGNAL(fetchingFinished()), SLOT(fetching()));
+	connect(newsHandler, SIGNAL(fetchingFinished()), SLOT(populateView()));
 	connect(newsHandler, SIGNAL(fetchingFailed()), SLOT(fetching()));
 	connect(newsHandler, SIGNAL(fetchingFailed()), SLOT(fetchingError()));
 	
@@ -76,14 +79,22 @@ void NewsViewer::populateView()
 	
 	foreach(ArchLinuxNews::ArchNews ent, entries)
 	{
+		qDebug() << "Adding News item";
+		
 		itm = new QTreeWidgetItem(treeWidget);
 		
 		// TODO: Massive Replacement of Icons.
 		
 		if(ent.nRead)
+		{
 			itm->setIcon(0, QIcon(":/Icons/icons/user-offline.png"));
+			itm->setText(4, "read");
+		}
 		else
+		{
 			itm->setIcon(0, QIcon(":/Icons/icons/user-online.png"));
+			itm->setText(4, "unread");
+		}
 		
 		if(ent.nNew)
 			itm->setIcon(1, QIcon(":/Icons/icons/user-online.png"));
@@ -105,7 +116,7 @@ void NewsViewer::itemChanged()
 	asReadButton->setEnabled(true);
 	openButton->setEnabled(true);
 	
-	if(QVariant(treeWidget->selectedItems().first()->icon(0)) == QVariant(QIcon(":/Icons/icons/user-online.png")))
+	if(treeWidget->selectedItems().first()->text(4) == "unread")
 		asReadButton->setText(QString(tr("Mark as Read")));
 	else
 		asReadButton->setText(QString(tr("Mark as Unread")));
@@ -116,7 +127,7 @@ void NewsViewer::markAsRead()
 	if(treeWidget->selectedItems().isEmpty())
 		return;
 
-	if(QVariant(treeWidget->selectedItems().first()->icon(0)) == QVariant(QIcon(":/Icons/icons/user-online.png")))
+	if(treeWidget->selectedItems().first()->text(4) == "unread")
 		newsHandler->markAsRead(treeWidget->selectedItems().first()->text(2), true);
 	else
 		newsHandler->markAsRead(treeWidget->selectedItems().first()->text(2), false);
@@ -135,7 +146,6 @@ void NewsViewer::openInBrowser()
 void NewsViewer::refreshView()
 {
 	newsHandler->fetch();
-	populateView();
 }
 
 void NewsViewer::fetching()

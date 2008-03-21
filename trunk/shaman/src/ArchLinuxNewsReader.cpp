@@ -31,7 +31,7 @@ ArchLinuxNewsReader::ArchLinuxNewsReader()
 	
 	if(settings->value("proxy/enabled").toBool() && settings->value("proxy/httpProxy").toBool())
 		http.setProxy(settings->value("proxy/proxyServer").toString(), settings->value("proxy/proxyPort").toInt());
-	
+
 	settings->deleteLater();
 	
 	connect(&http, SIGNAL(readyRead(const QHttpResponseHeader &)),
@@ -69,6 +69,7 @@ void ArchLinuxNewsReader::fetch()
 	emit fetchingStarted();
 	
 	xml.clear();
+	entries.clear();
 
 	QUrl url("http://www.archlinux.org/feeds/news/");
 
@@ -103,17 +104,14 @@ void ArchLinuxNewsReader::readData(const QHttpResponseHeader &resp)
 
 void ArchLinuxNewsReader::parseXml()
 {
-	QString titleString;
-	QString linkString;
-	QString currentTag;
 	QMap<QString, QVariant> oldEntries;
 	bool newStuff = false;
+	
+	qDebug() << "XML Parsing Started";
 	
 	QSettings *settings = new QSettings();
 	
 	oldEntries = settings->value("newsreader/oldnewsitem").toMap();
-	
-	entries.clear();
 
 	while (!xml.atEnd()) 
 	{
@@ -132,8 +130,8 @@ void ArchLinuxNewsReader::parseXml()
 				if(!oldEntries.contains(titleString))
 				{
 					ArchLinuxNews::ArchNews tmp;
-					tmp.link = linkString;
-					tmp.title = titleString;
+					tmp.link = QString(linkString);
+					tmp.title = QString(titleString);
 					tmp.nNew = true;
 					tmp.nRead = false;
 					
@@ -148,8 +146,8 @@ void ArchLinuxNewsReader::parseXml()
 				else
 				{
 					ArchLinuxNews::ArchNews tmp;
-					tmp.link = linkString;
-					tmp.title = titleString;
+					tmp.link = QString(linkString);
+					tmp.title = QString(titleString);
 					tmp.nNew = false;
 					tmp.nRead = oldEntries[titleString].toBool();
 
