@@ -144,6 +144,8 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	connect(aHandle, SIGNAL(streamDbUpdatingStatus(const QString&,int)), SIGNAL(streamDbUpdatingStatus(const QString&,int)));
 	connect(&CbackReference, SIGNAL(streamTransDlProg(const QString&,int,int,int,int)), 
 			SIGNAL(streamTransDlProg(const QString&,int,int,int,int)));
+	connect(newsReader, SIGNAL(newItems()), trayicon, SLOT(newNewsAvailable()));
+	connect(newsReader, SIGNAL(fetchingFailed()), trayicon, SLOT(newsFetchingFailed()));
 
 	QSettings *settings = new QSettings();
 
@@ -1359,6 +1361,37 @@ void MainWindow::upgrade(const QStringList &packages)
 		qDebug() << "Streaming Upgrades";
 		
 		emit upgradesAvailable();
+
+		foreach(QString ent, packages)
+		{
+			if(newsReader->checkUnreadNewsOnPkg(ent))
+			{
+				QMessageBox *msgBox = new QMessageBox(this);
+
+				msgBox->setIcon(QMessageBox::Question);
+				msgBox->setWindowTitle(QString(tr("News Alert")));
+
+				msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+
+				msgBox->setWindowModality(Qt::ApplicationModal);
+
+				msgBox->setText(QString(tr("There is an unread news about %1.\nDo you want to read it?")).arg(ent));
+
+				switch (msgBox->exec()) {
+				case QMessageBox::Yes:
+					openNewsDialog();
+					return;
+					break;
+				case QMessageBox::No:
+					break;
+				default:
+					// should never be reached
+					break;
+				}
+
+				msgBox->deleteLater();
+			}
+		}
 
 		upDl = new SysUpgradeDialog(aHandle, this);
 

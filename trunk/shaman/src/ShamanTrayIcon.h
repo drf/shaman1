@@ -50,12 +50,15 @@ public slots:
 	void startTimer();
 	void stopTimer();
 	void changeTimerInterval();
+	void newNewsAvailable();
+	void newsFetchingFailed();
 	
 private slots:
 	void transactionStarted();
 	void transactionReleased();
 	void enableTrayActions();
 	void disableTrayActions();
+	void disconnectBaloon();
 	
 signals:
 	void startDbUpdate();

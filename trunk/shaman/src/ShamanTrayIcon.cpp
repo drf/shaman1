@@ -126,15 +126,16 @@ void ShamanTrayIcon::changeIconStatus(ShamanIcon::IconStatus status)
 		setIcon(QIcon(":/Icons/icons/shaman/shaman-updates-available-32.png"));
 		setToolTip(QString(tr("Shaman - Idle (Upgrades Available)")));
 
-    QSettings *settings = new QSettings();
-    if (settings->value("scheduledUpdate/updateDbShowNotify").toBool())
-    {
-      showMessage(QString(tr("System Upgrade")), QString(upgrds.size() == 1 ? tr("There is %1 upgradeable package.\n"
-          "Click here to upgrade your System.") :	tr("There are %1 upgradeable packages.\nClick here to upgrade your System.")).
-          arg(upgrds.size()));
-		disconnect(this, SIGNAL(messageClicked()), 0, 0);
-		connect(this, SIGNAL(messageClicked()), SIGNAL(upgradePkgs()));
-    }
+		QSettings *settings = new QSettings();
+		if (settings->value("scheduledUpdate/updateDbShowNotify").toBool())
+		{
+			showMessage(QString(tr("System Upgrade")), QString(upgrds.size() == 1 ? tr("There is %1 upgradeable package.\n"
+					"Click here to upgrade your System.") :	tr("There are %1 upgradeable packages.\nClick here to upgrade your System.")).
+					arg(upgrds.size()));
+			disconnect(this, SIGNAL(messageClicked()), 0, 0);
+			connect(this, SIGNAL(messageClicked()), SIGNAL(upgradePkgs()));
+			QTimer::singleShot(10000, this, SLOT(disconnectBaloon()));
+		}
 	}
 }
 
@@ -213,4 +214,43 @@ void ShamanTrayIcon::changeTimerInterval()
 	}
 
 	settings->deleteLater();
+}
+
+void ShamanTrayIcon::newNewsAvailable()
+{
+	QSettings *settings = new QSettings();
+	
+	if(!settings->value("newsreader/userss").toBool() || !settings->value("newsreader/notifynew").toBool())
+	{
+		settings->deleteLater();
+		return;
+	}
+	
+	showMessage(QString(tr("New News Available")), QString(tr("There are new news available.\n"
+			"Click here to review them.")));
+	disconnect(this, SIGNAL(messageClicked()), 0, 0);
+	connect(this, SIGNAL(messageClicked()), mainWin, SLOT(openNewsDialog()));
+	QTimer::singleShot(10000, this, SLOT(disconnectBaloon()));
+}
+
+void ShamanTrayIcon::newsFetchingFailed()
+{
+	QSettings *settings = new QSettings();
+
+	if(!settings->value("newsreader/userss").toBool())
+	{
+		settings->deleteLater();
+		return;
+	}
+
+	showMessage(QString(tr("Failed Fetching News")), QString(tr("An error occourred while fetching news!\n"
+			"Click here to open the News Dialog for more details.")));
+	disconnect(this, SIGNAL(messageClicked()), 0, 0);
+	connect(this, SIGNAL(messageClicked()), mainWin, SLOT(openNewsDialog()));
+	QTimer::singleShot(10000, this, SLOT(disconnectBaloon()));
+}
+
+void ShamanTrayIcon::disconnectBaloon()
+{
+	disconnect(this, SIGNAL(messageClicked()), 0, 0);
 }
