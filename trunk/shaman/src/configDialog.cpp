@@ -322,13 +322,6 @@ void ConfigDialog::setupAdvanced()
 
 	if (settings->value("proxy/enabled").toBool())
 		proxyGroup->setChecked(true);
-	else {
-		/*proxyServer->setEnabled(false);
-		proxyPort->setEnabled(false);
-		httpProxyBox->setEnabled(false);
-		ftpProxyBox->setEnabled(false);*/
-		setenv("HTTP_PROXY", "", 1);
-	}
 
 	if (settings->value("proxy/httpProxy").toBool())
 		httpProxyBox->setChecked(true);
@@ -347,6 +340,31 @@ void ConfigDialog::setupAdvanced()
 		upNotifyAddRadio->setChecked(true);
 	else
 		upNotifyRadio->setChecked(true);
+	
+	if(settings->value("newsreader/userss", true).toBool())
+		useRSSBox->setChecked(true);
+	
+	if(settings->value("newsreader/doupdate").toBool())
+		updateRSSBox->setChecked(true);
+	else
+	{
+		updateRSSBox->setChecked(false);
+		updateRSSSpin->setEnabled(false);
+	}
+
+	connect(updateRSSBox, SIGNAL(toggled(bool)), SLOT(obfuscateRSSUpdate(bool)));
+	
+	updateRSSSpin->setValue(settings->value("newsreader/updateinterval", 60).toInt());
+	
+	if(settings->value("newsreader/notifynew").toBool())
+		notifyRSSBox->setChecked(true);
+	else
+		notifyRSSBox->setChecked(false);
+	
+	if(settings->value("newsreader/queuenotifier", true).toBool())
+		notifyQueueRSSBox->setChecked(true);
+	else
+		notifyQueueRSSBox->setChecked(false);
 
 	settings->deleteLater();
 }
@@ -833,19 +851,24 @@ void ConfigDialog::saveConfiguration()
 	else
 		settings->setValue("gui/startupmode", "window");
 
-  settings->setValue("gui/showsplashscreen", splashScreenBox->isChecked());
-  settings->setValue("scheduledUpdate/enabled", updateDbTrayBox->isChecked());
-  settings->setValue("scheduledUpdate/interval", minutesSpin->value());
-  settings->setValue("scheduledUpdate/updateDbShowNotify", updateDbShowNotify->isChecked());
-  settings->setValue("proxy/enabled", proxyGroup->isChecked());
-  settings->setValue("proxy/proxyServer", proxyServer->text());
-  settings->setValue("proxy/proxyPort", proxyPort->text());
-  settings->setValue("proxy/httpProxy", httpProxyBox->isChecked());
-  settings->setValue("proxy/ftpProxy", ftpProxyBox->isChecked());
-  settings->setValue("scheduledUpdate/addupgradestoqueue", upNotifyAddRadio->isChecked());
-  settings->setValue("absbuilding/wizardbuild", makeDepsSourceBox->isChecked());
-  settings->setValue("absbuilding/reviewoutput", reviewBuildOutBox->isChecked());
-
+	settings->setValue("gui/showsplashscreen", splashScreenBox->isChecked());
+	settings->setValue("scheduledUpdate/enabled", updateDbTrayBox->isChecked());
+	settings->setValue("scheduledUpdate/interval", minutesSpin->value());
+	settings->setValue("scheduledUpdate/updateDbShowNotify", updateDbShowNotify->isChecked());
+	settings->setValue("proxy/enabled", proxyGroup->isChecked());
+	settings->setValue("proxy/proxyServer", proxyServer->text());
+	settings->setValue("proxy/proxyPort", proxyPort->text());
+	settings->setValue("proxy/httpProxy", httpProxyBox->isChecked());
+	settings->setValue("proxy/ftpProxy", ftpProxyBox->isChecked());
+	settings->setValue("scheduledUpdate/addupgradestoqueue", upNotifyAddRadio->isChecked());
+	settings->setValue("absbuilding/wizardbuild", makeDepsSourceBox->isChecked());
+	settings->setValue("absbuilding/reviewoutput", reviewBuildOutBox->isChecked());
+	settings->setValue("newsreader/userss", useRSSBox->isChecked());
+	settings->setValue("newsreader/doupdate", updateRSSBox->isChecked());
+	settings->setValue("newsreader/updateinterval", updateRSSSpin->value());
+	settings->setValue("newsreader/notifynew", notifyRSSBox->isChecked());
+	settings->setValue("newsreader/queuenotifier", notifyQueueRSSBox->isChecked());
+		
 
 	/* Additional checks here. Since this thing could be rm -rf'ed,
 	 * better being sure that is set properly. */
@@ -854,12 +877,12 @@ void ConfigDialog::saveConfiguration()
 	else
 		settings->setValue("absbuilding/buildpath", "/var/shaman/builds");
 
-  settings->setValue("absbuilding/clearmakedepends", cleanMakeDepsBox->isChecked());
+	settings->setValue("absbuilding/clearmakedepends", cleanMakeDepsBox->isChecked());
 
-  settings->setValue("absbuilding/cleanbuildenv", cleanBuildEnvBox->isChecked());
+	settings->setValue("absbuilding/cleanbuildenv", cleanBuildEnvBox->isChecked());
 
 
-  settings->setValue("absbuilding/syncsupfiles", useMatchSupRadio->isChecked());
+	settings->setValue("absbuilding/syncsupfiles", useMatchSupRadio->isChecked());
 	if(useMatchSupRadio->isChecked())
 	{
 		/* We need to generate a SUPFILES containing our current repos
@@ -868,19 +891,19 @@ void ConfigDialog::saveConfiguration()
 
 		QString supfiles;
 
-    supfiles.append(coreBox->isChecked() ? "core" : "!core");
+		supfiles.append(coreBox->isChecked() ? "core" : "!core");
 		supfiles.append(" ");
 
-    supfiles.append(extraBox->isChecked() ? "extra" : "!extra");
+		supfiles.append(extraBox->isChecked() ? "extra" : "!extra");
 		supfiles.append(" ");
 
-    supfiles.append(communityBox->isChecked() ? "community" : "!community");
+		supfiles.append(communityBox->isChecked() ? "community" : "!community");
 		supfiles.append(" ");
 
-    supfiles.append(testingBox->isChecked() ? "testing" : "!testing");
+		supfiles.append(testingBox->isChecked() ? "testing" : "!testing");
 		supfiles.append(" ");
 
-    supfiles.append(unstableBox->isChecked() ? "unstable" : "!unstable");
+		supfiles.append(unstableBox->isChecked() ? "unstable" : "!unstable");
 
 		editABSSection("supfiles", supfiles);
 	}
@@ -917,7 +940,7 @@ void ConfigDialog::saveConfiguration()
 	 * local DB then.
 	 */
 
-  emit setProxy();
+	emit setProxy();
 
 	if(dbChanged)
 	{
@@ -1109,4 +1132,12 @@ void ConfigDialog::obfuscateSupfiles(bool state)
 		supEdit->setEnabled(true);
 	else
 		supEdit->setEnabled(false);
+}
+
+void ConfigDialog::obfuscateRSSUpdate(bool state)
+{
+	if(state)
+		updateRSSSpin->setEnabled(true);
+	else
+		updateRSSSpin->setEnabled(false);
 }

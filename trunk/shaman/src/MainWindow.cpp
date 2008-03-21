@@ -1713,6 +1713,7 @@ void MainWindow::showSettings()
 	configDialog = new ConfigDialog(aHandle, this);
 
 	connect (configDialog, SIGNAL(setProxy()), this, SLOT(setProxy()));
+	connect (configDialog, SIGNAL(setProxy()), newsReader, SLOT(setProxy()));
 
 	configDialog->exec();
 
@@ -1720,6 +1721,8 @@ void MainWindow::showSettings()
 		doDbUpdate();
 
 	trayicon->changeTimerInterval();
+	
+	newsReader->setUpdateInterval();
 
 	configDialog->deleteLater();
 }

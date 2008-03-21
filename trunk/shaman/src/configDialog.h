@@ -74,6 +74,7 @@ private slots:
 	void addMirror();
 	void obfuscateSupfiles(bool state);
 	void obfuscateDBUpdate(bool state);
+	void obfuscateRSSUpdate(bool state);
 
 private:
 	void setupRepos();

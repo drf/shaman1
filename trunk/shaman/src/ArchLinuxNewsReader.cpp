@@ -27,12 +27,7 @@
 
 ArchLinuxNewsReader::ArchLinuxNewsReader()
 {
-	QSettings *settings = new QSettings();
-	
-	if(settings->value("proxy/enabled").toBool() && settings->value("proxy/httpProxy").toBool())
-		http.setProxy(settings->value("proxy/proxyServer").toString(), settings->value("proxy/proxyPort").toInt());
-
-	settings->deleteLater();
+	setProxy();
 	
 	connect(&http, SIGNAL(readyRead(const QHttpResponseHeader &)),
 			this, SLOT(readData(const QHttpResponseHeader &)));
@@ -57,7 +52,7 @@ void ArchLinuxNewsReader::setUpdateInterval()
 	if(!settings->value("newsreader/doupdate").toBool())
 		return;
 	
-	timer.setInterval(settings->value("newsreader/updateinterval").toInt() * 60000);
+	timer.setInterval(settings->value("newsreader/updateinterval", 60).toInt() * 60000);
 	
 	timer.start();
 }
@@ -271,4 +266,14 @@ bool ArchLinuxNewsReader::checkUnreadNewsOnPkg(const QString &pkgname)
 	}
 
 	return false;
+}
+
+void ArchLinuxNewsReader::setProxy()
+{
+	QSettings *settings = new QSettings();
+
+	if(settings->value("proxy/enabled").toBool() && settings->value("proxy/httpProxy").toBool())
+		http.setProxy(settings->value("proxy/proxyServer").toString(), settings->value("proxy/proxyPort").toInt());
+
+	settings->deleteLater();
 }

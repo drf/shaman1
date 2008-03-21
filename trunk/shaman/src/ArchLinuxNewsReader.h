@@ -63,6 +63,7 @@ public slots:
 	void finished(int id, bool error);
 	void readData(const QHttpResponseHeader &);
 	void markAsRead(const QString &name, bool status);
+	void setProxy();
 	
 signals:
 	void fetchingFailed();
