@@ -638,7 +638,7 @@
   </action>
   <action name="actionReadNews" >
    <property name="icon" >
-    <iconset resource="qtpacman.qrc" >:/Icons/icons/document-open-remote.png</iconset>
+    <iconset resource="qtpacman.qrc" >:/Icons/icons/news-subscribe.png</iconset>
    </property>
    <property name="text" >
     <string>Read News</string>

@@ -188,6 +188,9 @@
                 <property name="text" >
                  <string>Process Selected</string>
                 </property>
+                <property name="icon" >
+                 <iconset resource="qtpacman.qrc" >:/Icons/icons/dialog-ok-apply.png</iconset>
+                </property>
                </widget>
               </item>
               <item>
@@ -381,6 +384,9 @@ p, li { white-space: pre-wrap; }
           <attribute name="title" >
            <string>Arch Linux Official Repositories</string>
           </attribute>
+          <attribute name="icon" >
+           <iconset resource="qtpacman.qrc" >:/Icons/icons/archlinux-icon-crystal-32.svg</iconset>
+          </attribute>
           <layout class="QGridLayout" >
            <item row="0" column="0" >
             <layout class="QVBoxLayout" >
@@ -394,7 +400,7 @@ p, li { white-space: pre-wrap; }
                     <string/>
                    </property>
                    <property name="pixmap" >
-                    <pixmap/>
+                    <pixmap resource="qtpacman.qrc" >:/Icons/icons/archlinux-icon-crystal-32.svg</pixmap>
                    </property>
                   </widget>
                  </item>
@@ -484,6 +490,9 @@ Please note that packages from Unstable and Testing may break your system.</stri
                     <property name="text" >
                      <string>Add Mirror</string>
                     </property>
+                    <property name="icon" >
+                     <iconset resource="qtpacman.qrc" >:/Icons/icons/list-add.png</iconset>
+                    </property>
                    </widget>
                   </item>
                  </layout>
@@ -498,6 +507,9 @@ Please note that packages from Unstable and Testing may break your system.</stri
          <widget class="QWidget" name="KDEModTab" >
           <attribute name="title" >
            <string>KDEMod Repositories</string>
+          </attribute>
+          <attribute name="icon" >
+           <iconset resource="qtpacman.qrc" >:/Icons/icons/archlinux-mods-kdemod.svg</iconset>
           </attribute>
           <widget class="QWidget" name="layoutWidget" >
            <property name="geometry" >
@@ -517,7 +529,7 @@ Please note that packages from Unstable and Testing may break your system.</stri
                  <string/>
                 </property>
                 <property name="pixmap" >
-                 <pixmap/>
+                 <pixmap resource="qtpacman.qrc" >:/Icons/icons/archlinux-mods-kdemod.svg</pixmap>
                 </property>
                </widget>
               </item>
@@ -566,6 +578,9 @@ of KDE with the simplicity and the power of Arch.</string>
          <widget class="QWidget" name="thirdPartyTab" >
           <attribute name="title" >
            <string>Third-Party Repositories</string>
+          </attribute>
+          <attribute name="icon" >
+           <iconset resource="qtpacman.qrc" >:/Icons/icons/network-server-database.png</iconset>
           </attribute>
           <layout class="QGridLayout" >
            <item row="0" column="0" >
@@ -619,6 +634,9 @@ and Pacman.</string>
                  <property name="text" >
                   <string>Add New Repository</string>
                  </property>
+                 <property name="icon" >
+                  <iconset resource="qtpacman.qrc" >:/Icons/icons/list-add.png</iconset>
+                 </property>
                 </widget>
                </item>
                <item>
@@ -626,12 +644,18 @@ and Pacman.</string>
                  <property name="text" >
                   <string>Edit Repository</string>
                  </property>
+                 <property name="icon" >
+                  <iconset resource="qtpacman.qrc" >:/Icons/icons/draw-text.png</iconset>
+                 </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="removeThirdPartyButton" >
                  <property name="text" >
                   <string>Remove Repository</string>
+                 </property>
+                 <property name="icon" >
+                  <iconset resource="qtpacman.qrc" >:/Icons/icons/list-remove.png</iconset>
                  </property>
                 </widget>
                </item>

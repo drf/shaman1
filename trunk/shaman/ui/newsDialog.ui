@@ -31,20 +31,32 @@
        <property name="text" >
         <string/>
        </property>
+       <property name="icon" >
+        <iconset resource="qtpacman.qrc" >:/Icons/icons/mail-mark-unread-new.png</iconset>
+       </property>
       </column>
       <column>
        <property name="text" >
         <string/>
+       </property>
+       <property name="icon" >
+        <iconset resource="qtpacman.qrc" >:/Icons/icons/mail-message-new.png</iconset>
        </property>
       </column>
       <column>
        <property name="text" >
         <string>Title</string>
        </property>
+       <property name="icon" >
+        <iconset resource="qtpacman.qrc" >:/Icons/icons/draw-text.png</iconset>
+       </property>
       </column>
       <column>
        <property name="text" >
         <string>Link</string>
+       </property>
+       <property name="icon" >
+        <iconset resource="qtpacman.qrc" >:/Icons/icons/application-rss+xml.png</iconset>
        </property>
       </column>
       <column>
@@ -75,7 +87,7 @@
          <string>Mark as Read</string>
         </property>
         <property name="icon" >
-         <iconset resource="qtpacman.qrc" >:/Icons/icons/dialog-ok-apply.png</iconset>
+         <iconset resource="qtpacman.qrc" >:/Icons/icons/mail-mark-unread-new.png</iconset>
         </property>
        </widget>
       </item>
@@ -95,7 +107,7 @@
          <string>Refresh</string>
         </property>
         <property name="icon" >
-         <iconset resource="qtpacman.qrc" >:/Icons/icons/view-refresh.png</iconset>
+         <iconset resource="qtpacman.qrc" >:/Icons/icons/application-rss+xml.png</iconset>
         </property>
        </widget>
       </item>

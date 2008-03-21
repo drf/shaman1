@@ -1,6 +1,7 @@
 <RCC>
     <qresource prefix="/Icons" >
         <file>icons/application-exit.png</file>
+        <file>icons/application-rss+xml.png</file>
         <file>icons/applications-development.png</file>
         <file>icons/archlinux-icon-crystal-32.svg</file>
         <file>icons/archlinux-mods-kdemod.svg</file>
@@ -16,7 +17,12 @@
         <file>icons/help-about.png</file>
         <file>icons/list-add.png</file>
         <file>icons/list-remove.png</file>
+        <file>icons/mail-mark-read.png</file>
+        <file>icons/mail-mark-unread-new.png</file>
+        <file>icons/mail-message-new.png</file>
         <file>icons/network-server-database.png</file>
+        <file>icons/news-subscribe.png</file>
+        <file>icons/preferences-other.png</file>
         <file>icons/preferences-system.png</file>
         <file>icons/shaman/animation_source/anim06.png</file>
         <file>icons/shaman/shaman-128.png</file>
