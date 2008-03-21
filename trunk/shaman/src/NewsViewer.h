@@ -18,65 +18,33 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 
-#ifndef ARCHLINUXNEWSREADER_H_
-#define ARCHLINUXNEWSREADER_H_
+#ifndef NEWSVIEWER_H_
+#define NEWSVIEWER_H_
 
-#include <QHttp>
-#include <QWidget>
-#include <QBuffer>
-#include <QXmlStreamReader>
-#include <QTimer>
+#include "ui_newsDialog.h"
 
-namespace ArchLinuxNews {
+class ArchLinuxNewsReader;
 
-	struct arNws {
-		QString title;
-		QString link;
-		bool nRead;
-		bool nNew;
-	};
-	
-	typedef struct arNws ArchNews;
-
-}  // namespace ArchLinuxNews
-
-class ArchLinuxNewsReader : public QObject
+class NewsViewer : public QDialog, private Ui::newsDialog
 {
 	Q_OBJECT
 	
 public:
-	ArchLinuxNewsReader();
-	virtual ~ArchLinuxNewsReader();
+	NewsViewer(ArchLinuxNewsReader *nR, QWidget *parent = 0);
+	virtual ~NewsViewer();
 	
-	QList<ArchLinuxNews::ArchNews> getAllEntries();
-	void setUpdateInterval();
-	
-	QStringList getEntriesNames();
-	bool isEntryRead(const QString &title);
-	
-	QString getHttpError();
-
 public slots:
-	void fetch();
-	void finished(int id, bool error);
-	void readData(const QHttpResponseHeader &);
-	void markAsRead(const QString &name, bool status);
 	
-signals:
-	void fetchingFailed();
-	void newItems();
-	void fetchingStarted();
-	void fetchingFinished();
-
+	void populateView();
+	void markAsRead();
+	void openInBrowser();
+	void refreshView();
+	void itemChanged();
+	void fetching();
+	void fetchingError();
+	
 private:
-	void parseXml();
-
-	QXmlStreamReader xml;
-	QHttp http;
-	QTimer timer;
-	QList<ArchLinuxNews::ArchNews> entries;
-	
-	int connectionId;
+	ArchLinuxNewsReader *newsHandler;
 };
 
-#endif /*ARCHLINUXNEWSREADER_H_*/
+#endif /*NEWSVIEWER_H_*/

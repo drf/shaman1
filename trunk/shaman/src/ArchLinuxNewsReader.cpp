@@ -39,14 +39,35 @@ ArchLinuxNewsReader::ArchLinuxNewsReader()
 
 	connect(&http, SIGNAL(requestFinished(int, bool)),
 			this, SLOT(finished(int, bool)));
+	
+	connect(&timer, SIGNAL(timeout()), SLOT(fetch()));
 }
 
 ArchLinuxNewsReader::~ArchLinuxNewsReader()
 {
 }
 
+void ArchLinuxNewsReader::setUpdateInterval()
+{
+	if(timer.isActive())
+		timer.stop();
+	
+	QSettings *settings = new QSettings();
+	
+	if(!settings->value("newsreader/doupdate").toBool())
+		return;
+	
+	timer.setInterval(settings->value("newsreader/updateinterval").toInt() * 60000);
+	
+	timer.start();
+}
+
 void ArchLinuxNewsReader::fetch()
 {
+	qDebug() << "Fetching Started";
+	
+	emit fetchingStarted();
+	
 	xml.clear();
 
 	QUrl url("http://www.archlinux.org/feeds/news/");
@@ -59,11 +80,13 @@ void ArchLinuxNewsReader::finished(int id, bool error)
 {
 	if (error) 
 	{
-
+		qDebug() << "Unable to fetch the RSS feed!!";
+		emit fetchingFailed();
 	}
 	else if (id == connectionId) 
 	{
-
+		emit fetchingFinished();
+		qDebug() << "RSS feed fetched successfully!!";
 	}
 }
 
@@ -84,6 +107,7 @@ void ArchLinuxNewsReader::parseXml()
 	QString linkString;
 	QString currentTag;
 	QMap<QString, QVariant> oldEntries;
+	bool newStuff = false;
 	
 	QSettings *settings = new QSettings();
 	
@@ -105,7 +129,7 @@ void ArchLinuxNewsReader::parseXml()
 		{
 			if(xml.name() == "item")
 			{
-				if(!oldEntries.contains(linkString))
+				if(!oldEntries.contains(titleString))
 				{
 					ArchLinuxNews::ArchNews tmp;
 					tmp.link = linkString;
@@ -113,11 +137,13 @@ void ArchLinuxNewsReader::parseXml()
 					tmp.nNew = true;
 					tmp.nRead = false;
 					
-					oldEntries[linkString] = false;
+					oldEntries[titleString] = false;
 					
 					settings->setValue("newsreader/oldnewsitem", oldEntries);
 					
 					entries.append(tmp);
+					
+					newStuff = true;
 				}
 				else
 				{
@@ -125,7 +151,7 @@ void ArchLinuxNewsReader::parseXml()
 					tmp.link = linkString;
 					tmp.title = titleString;
 					tmp.nNew = false;
-					tmp.nRead = oldEntries[linkString].toBool();
+					tmp.nRead = oldEntries[titleString].toBool();
 
 					entries.append(tmp);
 				}
@@ -151,4 +177,64 @@ void ArchLinuxNewsReader::parseXml()
 	}
 	
 	settings->deleteLater();
+	
+	if(newStuff)
+		emit newItems();
+}
+
+QList<ArchLinuxNews::ArchNews> ArchLinuxNewsReader::getAllEntries()
+{
+	return entries;
+}
+
+void ArchLinuxNewsReader::markAsRead(const QString &name, bool status)
+{
+	QMap<QString, QVariant> oldEntries;
+
+	QSettings *settings = new QSettings();
+
+	oldEntries = settings->value("newsreader/oldnewsitem").toMap();
+	
+	if(!oldEntries.contains(name))
+		return;
+
+	oldEntries[name] = status;
+
+	settings->setValue("newsreader/oldnewsitem", oldEntries);
+	
+	settings->deleteLater();
+}
+
+QStringList ArchLinuxNewsReader::getEntriesNames()
+{
+	QMap<QString, QVariant> oldEntries;
+	
+	QSettings *settings = new QSettings();
+
+	oldEntries = settings->value("newsreader/oldnewsitem").toMap();
+	
+	settings->deleteLater();
+	
+	return oldEntries.keys();
+}
+
+bool ArchLinuxNewsReader::isEntryRead(const QString &title)
+{
+	QMap<QString, QVariant> oldEntries;
+
+	QSettings *settings = new QSettings();
+
+	oldEntries = settings->value("newsreader/oldnewsitem").toMap();
+
+	settings->deleteLater();
+
+	if(!oldEntries.contains(title))
+		return true;
+	
+	return oldEntries[title].toBool();
+}
+
+QString ArchLinuxNewsReader::getHttpError()
+{
+	return http.errorString();
 }

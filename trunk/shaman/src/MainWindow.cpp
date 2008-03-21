@@ -33,6 +33,8 @@
 #include "ui_aboutDialog.h"
 #include "shamanadaptor.h"
 #include "ReviewQueueDialog.h"
+#include "ArchLinuxNewsReader.h"
+#include "NewsViewer.h"
 
 #include <iostream>
 #include <QMenu>
@@ -62,8 +64,12 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
   currentpkgs(0),
   aHandle(handler),
   dbdialog(),
+  upDl(),
+  configDialog(),
   qUi(),
   bHandler(),
+  nView(),
+  reviewQueue(),
   upActive(false),
   revActive(false),
   dbActive(false),
@@ -81,6 +87,10 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	dbus.registerObject("/Shaman", this);
 
 	trayicon = new ShamanTrayIcon(this, aHandle);
+	
+	newsReader = new ArchLinuxNewsReader();
+	
+	newsReader->setUpdateInterval();
 
 	qDebug() << "Shaman registered on the System Bus as" << dbus.baseService();
 
@@ -130,6 +140,7 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	connect(actionUpdate_ABS_Tree, SIGNAL(triggered()), SLOT(updateABSTree()));
 	connect(actionBuild_and_Install_Selected, SIGNAL(triggered()), SLOT(initSourceQueue()));
 	connect(actionCancel_all_actions, SIGNAL(triggered()), SLOT(cancelAllActions()));
+	connect(actionReadNews, SIGNAL(triggered()), SLOT(openNewsDialog()));
 	connect(aHandle, SIGNAL(streamDbUpdatingStatus(const QString&,int)), SIGNAL(streamDbUpdatingStatus(const QString&,int)));
 	connect(&CbackReference, SIGNAL(streamTransDlProg(const QString&,int,int,int,int)), 
 			SIGNAL(streamTransDlProg(const QString&,int,int,int,int)));
@@ -1218,7 +1229,7 @@ void MainWindow::cancelAction(const QString &package)
 
 void MainWindow::startUpgrading()
 {
-	if(dbActive)
+	if(dbdialog)
 	{
 		disconnect(dbdialog, 0,0,0);
 
@@ -1236,7 +1247,7 @@ void MainWindow::startUpgrading()
 	{
 		emit systemIsUpToDate();
 
-		if (dbActive)
+		if (dbdialog)
 		{
 			if(dbdialog->isVisible())
 			{
@@ -1255,7 +1266,7 @@ void MainWindow::startUpgrading()
 	else
 		upgrade(list);
 
-	if(dbActive)
+	if(dbdialog)
 	{
 		dbdialog->deleteLater();
 		dbdialog = 0;
@@ -1382,7 +1393,7 @@ void MainWindow::addUpgradeableToQueue()
 		item->setIcon(2, QIcon(":/Icons/icons/list-add.png"));
 	}
 
-	if(upActive)
+	if(upDl)
 	{
 		upDl->deleteLater();
 		upActive = false;
@@ -1685,19 +1696,24 @@ void MainWindow::systrayActivated(QSystemTrayIcon::ActivationReason reason)
 			/* Uh, we have to stop the Timer! */
 			emit stopTimer();
 			show();
-			if(dbdialog)
-				dbdialog->show();
-			if(queueDl)
-				queueDl->show();
+			foreach(QObject *ent, children())
+			{	
+				QDialog *dlog = qobject_cast<QDialog *>(ent);
+				if(dlog != 0)
+					dlog->show();
+			}
+					
 		}
 		else
 		{
 			emit startTimer();
 			hide();
-			if(dbdialog)
-				dbdialog->hide();
-			if(queueDl)
-				queueDl->hide();
+			foreach(QObject *ent, children())
+			{	
+				QDialog *dlog = qobject_cast<QDialog *>(ent);
+				if(dlog != 0)
+					dlog->hide();
+			}
 		}
 
 		settings->deleteLater();
@@ -2006,4 +2022,14 @@ void MainWindow::setProxy()
     unsetenv ("FTP_PROXY");
     qDebug() << "--> UNSETENV FTP_PROXY";
   }
+}
+
+void MainWindow::openNewsDialog()
+{
+	if(!nView)
+	{
+		nView = new NewsViewer(newsReader, this);
+
+		nView->show();
+	}
 }

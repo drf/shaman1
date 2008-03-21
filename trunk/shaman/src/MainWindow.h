@@ -43,6 +43,8 @@ class EditPBuild;
 class BuildingHandler;
 class ShamanTrayIcon;
 class ReviewQueueDialog;
+class ArchLinuxNewsReader;
+class NewsViewer;
 
 class MainWindow : public QMainWindow, public Ui::MainWindow, private StringUtils
 {
@@ -104,6 +106,7 @@ public slots:
 	void terminatedBuildingHandling();
 	bool packageExists(const QString &pkg);
 	void setProxy();
+	void openNewsDialog();
 
 protected:
 	void closeEvent(QCloseEvent *evt);
@@ -142,13 +145,15 @@ private:
 	AlpmHandler *aHandle;
 	QPointer<UpdateDbDialog> dbdialog;
 	QPointer<SysUpgradeDialog> upDl;
-	QPointer<ConfigDialog>configDialog;
+	QPointer<ConfigDialog> configDialog;
 	QPointer<ReviewQueueDialog> qUi;
 	QPointer<BuildingHandler> bHandler;
+	QPointer<NewsViewer> nView;
 	QStatusBar *stBar;
 
 	QPointer<QDialog> reviewQueue;
 	ShamanTrayIcon *trayicon;
+	ArchLinuxNewsReader *newsReader;
 
 	bool upActive;
 	bool revActive;

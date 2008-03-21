@@ -48,6 +48,7 @@ SET(shaman_SRCS ${shaman_adaptor_SRCS}
     src/ShamanTrayIcon.cpp
     src/ReviewQueueDialog.cpp
     src/ArchLinuxNewsReader.cpp
+    src/NewsViewer.cpp
 )
 
 SET(shaman_MOC_HDRS
@@ -65,6 +66,7 @@ SET(shaman_MOC_HDRS
     src/ShamanTrayIcon.h
     src/ReviewQueueDialog.h
     src/ArchLinuxNewsReader.h
+    src/NewsViewer.h
 )
 
 SET(shaman_UIS
@@ -78,6 +80,7 @@ SET(shaman_UIS
     ui/reviewQueueDialog.ui
     ui/transactionDialog.ui
     ui/upgradeDialog.ui
+    ui/newsDialog.ui
 )
 
 SET(shaman_RESOUCES
