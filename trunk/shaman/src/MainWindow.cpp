@@ -2040,30 +2040,30 @@ void MainWindow::removePackageFromView(QTreeWidgetItem *item)
 
 void MainWindow::setProxy()
 {
-  QSettings *settings = new QSettings();
+	QSettings *settings = new QSettings();
 
 
-  if (settings->value("proxy/enabled").toBool() && settings->value("proxy/httpProxy").toBool())
-  {
-    setenv("HTTP_PROXY", settings->value("proxy/proxyServer").toString().toLatin1() + ':' + settings->value("proxy/proxyPort").toString().toLatin1(), 1);
-    qDebug() << QString("HTTP_PROXY: ") + settings->value("proxy/proxyServer").toString() + ':' + settings->value("proxy/proxyPort").toString();
-  }
-  else {
-    unsetenv("HTTP_PROXY");
-    qDebug() << "--> UNSETENV HTTP_PROXY";
-  }
+	if (settings->value("proxy/enabled").toBool() && settings->value("proxy/httpProxy").toBool())
+	{
+		setenv("HTTP_PROXY", settings->value("proxy/proxyServer").toString().toLatin1() + ':' + settings->value("proxy/proxyPort").toString().toLatin1(), 1);
+		qDebug() << QString("HTTP_PROXY: ") + settings->value("proxy/proxyServer").toString() + ':' + settings->value("proxy/proxyPort").toString();
+	}
+	else {
+		unsetenv("HTTP_PROXY");
+		qDebug() << "--> UNSETENV HTTP_PROXY";
+	}
 
 
-  if (settings->value("proxy/enabled").toBool() && settings->value("proxy/ftpProxy").toBool())
-  {
-    setenv("FTP_PROXY", settings->value("proxy/proxyServer").toString().toLatin1() + ':' + settings->value("proxy/proxyPort").toString().toLatin1(), 1);
-    qDebug() << QString("FTP_PROXY: ") + settings->value("proxy/proxyServer").toString() + ':' + settings->value("proxy/proxyPort").toString();
-  }
-  else
-  {
-    unsetenv ("FTP_PROXY");
-    qDebug() << "--> UNSETENV FTP_PROXY";
-  }
+	if (settings->value("proxy/enabled").toBool() && settings->value("proxy/ftpProxy").toBool())
+	{
+		setenv("FTP_PROXY", settings->value("proxy/proxyServer").toString().toLatin1() + ':' + settings->value("proxy/proxyPort").toString().toLatin1(), 1);
+		qDebug() << QString("FTP_PROXY: ") + settings->value("proxy/proxyServer").toString() + ':' + settings->value("proxy/proxyPort").toString();
+	}
+	else
+	{
+		unsetenv ("FTP_PROXY");
+		qDebug() << "--> UNSETENV FTP_PROXY";
+	}
 }
 
 void MainWindow::openNewsDialog()
