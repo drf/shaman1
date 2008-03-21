@@ -84,6 +84,9 @@
         <property name="text" >
          <string>Open in Browser</string>
         </property>
+        <property name="icon" >
+         <iconset resource="qtpacman.qrc" >:/Icons/icons/document-open.png</iconset>
+        </property>
        </widget>
       </item>
       <item>
