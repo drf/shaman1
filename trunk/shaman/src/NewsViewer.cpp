@@ -84,21 +84,19 @@ void NewsViewer::populateView()
 		
 		itm = new QTreeWidgetItem(treeWidget);
 		
-		// TODO: Massive Replacement of Icons.
-		
 		if(ent.nRead)
 		{
-			itm->setIcon(0, QIcon(":/Icons/icons/user-offline.png"));
+			itm->setIcon(0, QIcon(":/Icons/icons/mail-mark-read.png"));
 			itm->setText(4, "read");
 		}
 		else
 		{
-			itm->setIcon(0, QIcon(":/Icons/icons/user-online.png"));
+			itm->setIcon(0, QIcon(":/Icons/icons/mail-mark-unread-new.png"));
 			itm->setText(4, "unread");
 		}
 		
 		if(ent.nNew)
-			itm->setIcon(1, QIcon(":/Icons/icons/user-online.png"));
+			itm->setIcon(1, QIcon(":/Icons/icons/mail-message-new.png"));
 		
 		itm->setText(2, ent.title);
 		itm->setText(3, ent.link);

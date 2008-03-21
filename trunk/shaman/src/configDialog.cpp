@@ -265,11 +265,11 @@ void ConfigDialog::setupABS()
 
 	QSettings *settings = new QSettings();
 
-  makeDepsSourceBox->setChecked(settings->value("absbuilding/wizardbuild").toBool());
-  reviewBuildOutBox->setChecked(settings->value("absbuilding/reviewoutput").toBool());
+	makeDepsSourceBox->setChecked(settings->value("absbuilding/wizardbuild").toBool());
+	reviewBuildOutBox->setChecked(settings->value("absbuilding/reviewoutput").toBool());
 	buildPathEdit->setText(settings->value("absbuilding/buildpath").toString());
-  cleanMakeDepsBox->setChecked(settings->value("absbuilding/clearmakedepends").toBool());
-  cleanBuildEnvBox->setChecked(settings->value("absbuilding/cleanbuildenv").toBool());
+	cleanMakeDepsBox->setChecked(settings->value("absbuilding/clearmakedepends").toBool());
+	cleanBuildEnvBox->setChecked(settings->value("absbuilding/cleanbuildenv").toBool());
 
 	if(settings->value("absbuilding/syncsupfiles").toBool())
 	{
@@ -297,7 +297,7 @@ void ConfigDialog::setupABS()
 
 void ConfigDialog::setupAdvanced()
 {
-	QListWidgetItem *item = new QListWidgetItem(QIcon(":/Icons/icons/document-open-remote.png"), tr("Advanced"), listWidget);
+	QListWidgetItem *item = new QListWidgetItem(QIcon(":/Icons/icons/preferences-other.png"), tr("Advanced"), listWidget);
 	item->setTextAlignment(Qt::AlignHCenter);
 	item->setSizeHint(QSize(90, 50));
 	listWidget->insertItem(4, item);
