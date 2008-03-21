@@ -42,6 +42,7 @@ NewsViewer::NewsViewer(ArchLinuxNewsReader *nR, QWidget *parent)
 	connect(newsHandler, SIGNAL(fetchingFailed()), SLOT(fetchingError()));
 	
 	label->setHidden(true);
+	label->setText(QString(tr("Please wait, fetching items...")));
 	
 	asReadButton->setEnabled(false);
 	openButton->setEnabled(false);
@@ -131,6 +132,8 @@ void NewsViewer::markAsRead()
 		newsHandler->markAsRead(treeWidget->selectedItems().first()->text(2), true);
 	else
 		newsHandler->markAsRead(treeWidget->selectedItems().first()->text(2), false);
+	
+	populateView();
 }
 
 void NewsViewer::openInBrowser()

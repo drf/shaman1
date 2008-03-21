@@ -197,8 +197,24 @@ void ArchLinuxNewsReader::markAsRead(const QString &name, bool status)
 		return;
 
 	oldEntries[name] = status;
+	qDebug() << "Setting Read Entry";
 
 	settings->setValue("newsreader/oldnewsitem", oldEntries);
+	
+	QList<ArchLinuxNews::ArchNews> newEntries;
+	
+	foreach(ArchLinuxNews::ArchNews ent, entries)
+	{
+		if(ent.title == name)
+		{
+			ent.nRead = status;
+			qDebug() << "Setting Read Entry";
+		}
+		
+		newEntries.append(ent);
+	}
+	
+	entries = newEntries;
 	
 	settings->deleteLater();
 }
