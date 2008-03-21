@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS><TS version="1.1" language="pt_BR">
-<defaultcodec></defaultcodec>
 <context>
     <name>AlpmHandler</name>
     <message>
@@ -317,12 +316,12 @@ Deseja removê-lo?</translation>
         <translation>Iniciar no system tray</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="806"/>
+        <location filename="../ui/configDialog.ui" line="830"/>
         <source>When Application is in System Tray only</source>
         <translation>Quando o programa estiver no system tray</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="812"/>
+        <location filename="../ui/configDialog.ui" line="836"/>
         <source>Update Database every</source>
         <translation>Atualizar base de dados a cada</translation>
     </message>
@@ -332,17 +331,17 @@ Deseja removê-lo?</translation>
         <translation type="obsolete">minutos</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="839"/>
+        <location filename="../ui/configDialog.ui" line="863"/>
         <source>If upgrades are available:</source>
         <translation>Se atualizações estiverem disponíveis:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="846"/>
+        <location filename="../ui/configDialog.ui" line="870"/>
         <source>Just Notify</source>
         <translation>Apenas notificar</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="853"/>
+        <location filename="../ui/configDialog.ui" line="877"/>
         <source>Notify and add them to Queue</source>
         <translation>Notificar e colocá-los na fila</translation>
     </message>
@@ -357,89 +356,89 @@ Deseja removê-lo?</translation>
         <translation>Processar selecionado</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="257"/>
+        <location filename="../ui/configDialog.ui" line="260"/>
         <source>Checkable Options</source>
         <translation>Opções marcáveis</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="263"/>
+        <location filename="../ui/configDialog.ui" line="266"/>
         <source>Use Active FTP</source>
         <translation>Usar FTP ativo</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="270"/>
+        <location filename="../ui/configDialog.ui" line="273"/>
         <source>Use Deltas (needs xdelta to be installed)</source>
         <translation>Usar deltas (requer xdelta instalado)</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="280"/>
+        <location filename="../ui/configDialog.ui" line="283"/>
         <source>Advanced Options</source>
         <translation>Opções avançadas</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="290"/>
+        <location filename="../ui/configDialog.ui" line="293"/>
         <source>HoldPkgs:</source>
         <translation>HoldPkgs:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="300"/>
+        <location filename="../ui/configDialog.ui" line="303"/>
         <source>IgnorePkgs:</source>
         <translation>IgnorePkgs:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="310"/>
+        <location filename="../ui/configDialog.ui" line="313"/>
         <source>IgnoreGroups:</source>
         <translation>IgnoreGroups:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="320"/>
+        <location filename="../ui/configDialog.ui" line="323"/>
         <source>NoUpgrade:</source>
         <translation>NoUpgrade:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="330"/>
+        <location filename="../ui/configDialog.ui" line="333"/>
         <source>NoExtract:</source>
         <translation>NoExtract:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="344"/>
+        <location filename="../ui/configDialog.ui" line="347"/>
         <source>XFerCommand: (example: /path/to/command %u) Blank for Default</source>
         <translation>XFerCommand: (exemplo: /path/to/command %u) Padrão: em branco</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="382"/>
+        <location filename="../ui/configDialog.ui" line="385"/>
         <source>Arch Linux Official Repositories</source>
         <translation>Repositórios oficiais do Arch Linux</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="404"/>
+        <location filename="../ui/configDialog.ui" line="410"/>
         <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones.
 Please note that packages from Unstable and Testing may break your system.</source>
         <translation>Aqui você pode escolher quais repositórios oficiais do Arch Linux usar.
 Atenção: pacotes dos repositórios Unstable e Testing podem corromper o Sistema.</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="597"/>
+        <location filename="../ui/configDialog.ui" line="612"/>
         <source>Server</source>
         <translation>Servidor</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="470"/>
+        <location filename="../ui/configDialog.ui" line="476"/>
         <source>Mirror:</source>
         <translation>Mirror:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="485"/>
+        <location filename="../ui/configDialog.ui" line="491"/>
         <source>Add Mirror</source>
         <translation>Adicionar Mirror</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="500"/>
+        <location filename="../ui/configDialog.ui" line="509"/>
         <source>KDEMod Repositories</source>
         <translation>Repositórios do KDEMod</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="527"/>
+        <location filename="../ui/configDialog.ui" line="539"/>
         <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an 
 improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme,
 and lots of addons, KDEMod is the best way to taste the ease and the power
@@ -450,22 +449,22 @@ e vários adicionais, KDEMod é a melhor maneira de provar a facilidade e o pode
 do KDE com a simplicidade e o poder do Arch.</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="539"/>
+        <location filename="../ui/configDialog.ui" line="551"/>
         <source>KDEMod 3 Repository</source>
         <translation>KDEMod 3</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="546"/>
+        <location filename="../ui/configDialog.ui" line="558"/>
         <source>KDEMod 4 Repository (Unstable, testers only)</source>
         <translation>KDEMod 4 (instável, só para testers)</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="568"/>
+        <location filename="../ui/configDialog.ui" line="580"/>
         <source>Third-Party Repositories</source>
         <translation>Repositórios de terceiros</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="576"/>
+        <location filename="../ui/configDialog.ui" line="591"/>
         <source>You can extend your packages choice by adding other repositories. Third-Party 
 Repositories act just as normal ones, and will be accessible through both Shaman
 and Pacman.</source>
@@ -474,97 +473,97 @@ de terceiros agem como repositórios normaies, e serão acessíveis tanto pelo S
 quanto pelo Pacman.</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="592"/>
+        <location filename="../ui/configDialog.ui" line="607"/>
         <source>Repository</source>
         <translation>Repositório</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="620"/>
+        <location filename="../ui/configDialog.ui" line="635"/>
         <source>Add New Repository</source>
         <translation>Adicionar novo repositório</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="627"/>
+        <location filename="../ui/configDialog.ui" line="645"/>
         <source>Edit Repository</source>
         <translation>Editar repositório</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="634"/>
+        <location filename="../ui/configDialog.ui" line="655"/>
         <source>Remove Repository</source>
         <translation>Remover repositório</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="653"/>
+        <location filename="../ui/configDialog.ui" line="677"/>
         <source>Preferences</source>
         <translation>Preferências</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="666"/>
+        <location filename="../ui/configDialog.ui" line="690"/>
         <source>Review Building output before installing</source>
         <translation>Revisar construção antes de instalar</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="676"/>
+        <location filename="../ui/configDialog.ui" line="700"/>
         <source>ABS Configuration</source>
         <translation>Configuração do ABS</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="682"/>
+        <location filename="../ui/configDialog.ui" line="706"/>
         <source>Use supfiles that match your current repositories</source>
         <translation>Usar supfiles que batem com os repositórios atuais</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="691"/>
+        <location filename="../ui/configDialog.ui" line="715"/>
         <source>Define supfiles manually</source>
         <translation>Definir supfiles manualmente</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="706"/>
+        <location filename="../ui/configDialog.ui" line="730"/>
         <source>Makepkg Configuration</source>
         <translation>Configuração do Makepkg</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="712"/>
+        <location filename="../ui/configDialog.ui" line="736"/>
         <source>CFlags</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="722"/>
+        <location filename="../ui/configDialog.ui" line="746"/>
         <source>CXXFlags</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="732"/>
+        <location filename="../ui/configDialog.ui" line="756"/>
         <source>BuildEnv</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="742"/>
+        <location filename="../ui/configDialog.ui" line="766"/>
         <source>Options</source>
         <translation>Opções</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="752"/>
+        <location filename="../ui/configDialog.ui" line="776"/>
         <source>Doc_Dirs</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="765"/>
+        <location filename="../ui/configDialog.ui" line="789"/>
         <source>Build Environment</source>
         <translation>Construir ambiente</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="773"/>
+        <location filename="../ui/configDialog.ui" line="797"/>
         <source>Building Path</source>
         <translation>Construindo diretório</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="785"/>
+        <location filename="../ui/configDialog.ui" line="809"/>
         <source>Remove installed makedepends after build</source>
         <translation>Remover makedepends instaladas depois da construção</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="792"/>
+        <location filename="../ui/configDialog.ui" line="816"/>
         <source>Clean Build Environment after installation</source>
         <translation>Limpar ambiente de construção depois da instalação</translation>
     </message>
@@ -755,37 +754,37 @@ Ele está disponível no mirrorlist.</translation>
         <translation>Sync não pode ser executado!!</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="213"/>
+        <location filename="../ui/configDialog.ui" line="216"/>
         <source>Waiting</source>
         <comment>Waiting for a user action</comment>
         <translation>Aguardando</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="414"/>
+        <location filename="../ui/configDialog.ui" line="420"/>
         <source>Core</source>
         <comment>Do not translate</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="421"/>
+        <location filename="../ui/configDialog.ui" line="427"/>
         <source>Extra</source>
         <comment>Do not translate</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="428"/>
+        <location filename="../ui/configDialog.ui" line="434"/>
         <source>Community</source>
         <comment>Do not translate</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="435"/>
+        <location filename="../ui/configDialog.ui" line="441"/>
         <source>Testing</source>
         <comment>Do not translate</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="442"/>
+        <location filename="../ui/configDialog.ui" line="448"/>
         <source>Unstable</source>
         <comment>Do not translate</comment>
         <translation></translation>
@@ -802,7 +801,7 @@ Ele está disponível no mirrorlist.</translation>
         <translation>Mostrar splashscreen</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="659"/>
+        <location filename="../ui/configDialog.ui" line="683"/>
         <source>Process all dependencies and queue from binary first (recommended)</source>
         <translation>Processar todas as dependências e fila dos pacotes binários primeiro (recomendado)</translation>
     </message>
@@ -820,7 +819,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Por favor, escolha uma ação do menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="231"/>
+        <location filename="../ui/configDialog.ui" line="234"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -834,58 +833,58 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="976"/>
+        <location filename="../ui/configDialog.ui" line="1000"/>
         <source>min</source>
         <comment>As in &quot;minutes&quot;</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="829"/>
+        <location filename="../ui/configDialog.ui" line="853"/>
         <source>Show tray notification Windows</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="863"/>
+        <location filename="../ui/configDialog.ui" line="887"/>
         <source>Use a proxy-server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="875"/>
+        <location filename="../ui/configDialog.ui" line="899"/>
         <source>IP:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="898"/>
+        <location filename="../ui/configDialog.ui" line="922"/>
         <source>Port:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="940"/>
+        <location filename="../ui/configDialog.ui" line="964"/>
         <source>HTTP Proxy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="947"/>
+        <location filename="../ui/configDialog.ui" line="971"/>
         <source>FTP Proxy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="957"/>
+        <location filename="../ui/configDialog.ui" line="981"/>
         <source>Use Shaman RSS Capabilities</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="969"/>
+        <location filename="../ui/configDialog.ui" line="993"/>
         <source>Update RSS Feed Every</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="983"/>
+        <location filename="../ui/configDialog.ui" line="1007"/>
         <source>Notify upon new items</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="990"/>
+        <location filename="../ui/configDialog.ui" line="1014"/>
         <source>Check if there is an unread news about a package in Queue before processing it</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1128,7 +1127,7 @@ Deseja salvá-lo?</translation>
         <translation>Cancelar tudo</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="202"/>
+        <location filename="../src/MainWindow.cpp" line="204"/>
         <source>Shaman will keep running in the system tray.
 To close it, click Quit in the file menu or in the tray icon context menu.
 While in the System Tray, Shaman will update your Databases
@@ -1141,82 +1140,82 @@ cada período de tempo regular e o notificará sobre atualizações disponíveis
 Você pode mudar seu comportamento em Configurações.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="210"/>
+        <location filename="../src/MainWindow.cpp" line="212"/>
         <source>Shaman - Reducing To Tray</source>
         <translation>Shaman - minimizando para o tray</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2012"/>
+        <location filename="../src/MainWindow.cpp" line="2045"/>
         <source>Upgrade</source>
         <translation>Atualizar</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1260"/>
+        <location filename="../src/MainWindow.cpp" line="1262"/>
         <source>System Upgrade</source>
         <translation>Atualização do Sistema</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="431"/>
+        <location filename="../src/MainWindow.cpp" line="433"/>
         <source>All Repositories</source>
         <translation>Todos os repositórios</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="434"/>
+        <location filename="../src/MainWindow.cpp" line="436"/>
         <source>Local Packages</source>
         <translation>Pacotes locais</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1023"/>
+        <location filename="../src/MainWindow.cpp" line="1025"/>
         <source>All Groups</source>
         <translation>Todos os grupos</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="891"/>
+        <location filename="../src/MainWindow.cpp" line="893"/>
         <source>Mark for Reinstallation</source>
         <translation>Marcar para reinstalação</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1904"/>
+        <location filename="../src/MainWindow.cpp" line="1937"/>
         <source>Install</source>
         <translation>Instalar</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1947"/>
+        <location filename="../src/MainWindow.cpp" line="1980"/>
         <source>Uninstall</source>
         <translation>Desinstalar</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1947"/>
+        <location filename="../src/MainWindow.cpp" line="1980"/>
         <source>Complete Uninstall</source>
         <translation>Desinstalação completa</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="628"/>
+        <location filename="../src/MainWindow.cpp" line="630"/>
         <source>Status: </source>
         <translation>Estado: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="630"/>
+        <location filename="../src/MainWindow.cpp" line="632"/>
         <source>Installed</source>
         <translation>Instalado</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="632"/>
+        <location filename="../src/MainWindow.cpp" line="634"/>
         <source>Not installed</source>
         <translation>Não instalado</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="646"/>
+        <location filename="../src/MainWindow.cpp" line="648"/>
         <source>Action: </source>
         <translation>Ação: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1777"/>
+        <location filename="../src/MainWindow.cpp" line="1810"/>
         <source>Error</source>
         <translation>Erro</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="763"/>
+        <location filename="../src/MainWindow.cpp" line="765"/>
         <source>One or more Databases could not be updated.
 Last error reported was:
 %1</source>
@@ -1225,69 +1224,69 @@ O erro reportado foi:
 %1</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="770"/>
+        <location filename="../src/MainWindow.cpp" line="772"/>
         <source>Database Update</source>
         <translation>Atualização da base de dados</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="770"/>
+        <location filename="../src/MainWindow.cpp" line="772"/>
         <source>Databases Updated Successfully</source>
         <translation>Bases de dados atualizadas com sucesso</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="874"/>
+        <location filename="../src/MainWindow.cpp" line="876"/>
         <source>Mark for Upgrade</source>
         <translation>Marcar para atualização</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="876"/>
+        <location filename="../src/MainWindow.cpp" line="878"/>
         <source>Cancel Action</source>
         <translation>Cancelar ação</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="915"/>
+        <location filename="../src/MainWindow.cpp" line="917"/>
         <source>Mark all for installation</source>
         <translation>Marcar todos para instalação</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="917"/>
+        <location filename="../src/MainWindow.cpp" line="919"/>
         <source>Mark all for reinstallation</source>
         <translation>Marcar todos para reinstalação</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="919"/>
+        <location filename="../src/MainWindow.cpp" line="921"/>
         <source>Mark all for removal</source>
         <translation>Marcar todos para remoção</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1260"/>
+        <location filename="../src/MainWindow.cpp" line="1262"/>
         <source>Your system is up to date!</source>
         <translation>Seu sistema está atualizado!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1459"/>
+        <location filename="../src/MainWindow.cpp" line="1492"/>
         <source>Queue Processing</source>
         <translation>Processando fila</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1459"/>
+        <location filename="../src/MainWindow.cpp" line="1492"/>
         <source>Your Queue is being processed.
 Please wait.</source>
         <translation>Sua fila está sendo processada.
 Por favor, aguarde.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1563"/>
+        <location filename="../src/MainWindow.cpp" line="1596"/>
         <source>Queue Processed</source>
         <translation>Fila processada</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1556"/>
+        <location filename="../src/MainWindow.cpp" line="1589"/>
         <source>Your Queue was successfully processed!</source>
         <translation>Sua fila foi processada com sucesso!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1563"/>
+        <location filename="../src/MainWindow.cpp" line="1596"/>
         <source>Your Queue was successfully processed!!</source>
         <translation>Sua fila foi processada com sucesso!!</translation>
     </message>
@@ -1337,42 +1336,42 @@ Por favor, aguarde.</translation>
         <translation type="obsolete">Você deseja continuar?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1768"/>
+        <location filename="../src/MainWindow.cpp" line="1801"/>
         <source>Install a Package</source>
         <translation>Instala um pacote</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1768"/>
+        <location filename="../src/MainWindow.cpp" line="1801"/>
         <source>Arch Linux Packages (*.pkg.tar.gz)</source>
         <translation>Pacotes do Arch Linux (*.pkg.tar.gz)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1777"/>
+        <location filename="../src/MainWindow.cpp" line="1810"/>
         <source>%1 does not seem
 a valid package</source>
         <translation>%1 não parece um
 pacote válido</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1829"/>
+        <location filename="../src/MainWindow.cpp" line="1862"/>
         <source>%1 GiB</source>
         <comment>Size is in Gib</comment>
         <translation>%1 GiB</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1831"/>
+        <location filename="../src/MainWindow.cpp" line="1864"/>
         <source>%1 MiB</source>
         <comment>Size is in MiB</comment>
         <translation>%1 MiB</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1833"/>
+        <location filename="../src/MainWindow.cpp" line="1866"/>
         <source>%1 KiB</source>
         <comment>Size is in KiB</comment>
         <translation>%1 KiB</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1835"/>
+        <location filename="../src/MainWindow.cpp" line="1868"/>
         <source>%1 Bytes</source>
         <comment>Size is in Bytes</comment>
         <translation>%1 Bytes</translation>
@@ -1384,17 +1383,17 @@ pacote válido</translation>
         <translation>Sair</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="203"/>
+        <location filename="../src/MainWindow.cpp" line="205"/>
         <source>Do not show this Again</source>
         <translation>Não mostrar novamente</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1284"/>
+        <location filename="../src/MainWindow.cpp" line="1286"/>
         <source>Pacman Update</source>
         <translation>Atualização do Pacman</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1291"/>
+        <location filename="../src/MainWindow.cpp" line="1293"/>
         <source>Pacman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Pacman now?</source>
@@ -1403,12 +1402,12 @@ o Pacman, para evitar conflitos de versão.
 Deseja atualizar o Pacman agora?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1320"/>
+        <location filename="../src/MainWindow.cpp" line="1322"/>
         <source>Shaman Update</source>
         <translation>Atualização do Shaman</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1327"/>
+        <location filename="../src/MainWindow.cpp" line="1329"/>
         <source>Shaman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Shaman now?</source>
@@ -1417,24 +1416,24 @@ o Shaman, para evitar conflitos de versão.
 Deseja atualizar o Shaman agora?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1540"/>
+        <location filename="../src/MainWindow.cpp" line="1573"/>
         <source>Restart required</source>
         <translation>Necessário reiniciar</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1528"/>
+        <location filename="../src/MainWindow.cpp" line="1561"/>
         <source>Pacman or Shaman was updated. Shaman will now quit,
 please restart it to use the new version</source>
         <translation>Pacman ou Shaman foi atualizado. O Shaman será fechado.
 Por favor, reinicie-o para usar a nova versão</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1850"/>
+        <location filename="../src/MainWindow.cpp" line="1883"/>
         <source>Library Question</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1816"/>
+        <location filename="../src/MainWindow.cpp" line="1849"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -1457,40 +1456,40 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;l.appelhans@gmx.de&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="635"/>
+        <location filename="../src/MainWindow.cpp" line="637"/>
         <source>Local Version: </source>
         <translation>Versão local: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="640"/>
+        <location filename="../src/MainWindow.cpp" line="642"/>
         <source>Version in the Repository: </source>
         <translation>Versão do repositório: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1500"/>
+        <location filename="../src/MainWindow.cpp" line="1533"/>
         <source>One or more errors occourred, your Queue
 was not successfully processed</source>
         <translation>Um ou mais erros ocorreram, Sua fila
 não foi processada com sucesso</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1541"/>
+        <location filename="../src/MainWindow.cpp" line="1574"/>
         <source>Your Kernel has been updated.
 Please restart your PC soon to load the new Kernel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="162"/>
+        <location filename="../src/MainWindow.cpp" line="164"/>
         <source>Esc</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1656"/>
+        <location filename="../src/MainWindow.cpp" line="1689"/>
         <source>News Alert</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1662"/>
+        <location filename="../src/MainWindow.cpp" line="1695"/>
         <source>There is an unread news about %1.
 Do you want to read it?</source>
         <translation type="unfinished"></translation>
@@ -1509,22 +1508,22 @@ Do you want to read it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/NewsViewer.cpp" line="121"/>
+        <location filename="../src/NewsViewer.cpp" line="119"/>
         <source>Mark as Read</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/NewsViewer.cpp" line="123"/>
+        <location filename="../src/NewsViewer.cpp" line="121"/>
         <source>Mark as Unread</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/NewsViewer.cpp" line="178"/>
+        <location filename="../src/NewsViewer.cpp" line="176"/>
         <source>Error</source>
         <translation type="unfinished">Erro</translation>
     </message>
     <message>
-        <location filename="../src/NewsViewer.cpp" line="179"/>
+        <location filename="../src/NewsViewer.cpp" line="177"/>
         <source>Could not fetch the RSS feed! Error reported was:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1981,6 +1980,28 @@ Click here to upgrade your System.</source>
         <translation>Há %1 pacotes atualizáveis.
 Clique aqui para atualizar o Sistema.</translation>
     </message>
+    <message>
+        <location filename="../src/ShamanTrayIcon.cpp" line="229"/>
+        <source>New News Available</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/ShamanTrayIcon.cpp" line="230"/>
+        <source>There are new news available.
+Click here to review them.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/ShamanTrayIcon.cpp" line="246"/>
+        <source>Failed Fetching News</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/ShamanTrayIcon.cpp" line="247"/>
+        <source>An error occourred while fetching news!
+Click here to open the News Dialog for more details.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SysUpgradeDialog</name>
@@ -2260,37 +2281,37 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/newsDialog.ui" line="42"/>
+        <location filename="../ui/newsDialog.ui" line="48"/>
         <source>Title</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/newsDialog.ui" line="47"/>
+        <location filename="../ui/newsDialog.ui" line="56"/>
         <source>Link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/newsDialog.ui" line="52"/>
+        <location filename="../ui/newsDialog.ui" line="64"/>
         <source>status</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/newsDialog.ui" line="75"/>
+        <location filename="../ui/newsDialog.ui" line="87"/>
         <source>Mark as Read</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/newsDialog.ui" line="85"/>
+        <location filename="../ui/newsDialog.ui" line="97"/>
         <source>Open in Browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/newsDialog.ui" line="95"/>
+        <location filename="../ui/newsDialog.ui" line="107"/>
         <source>Refresh</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/newsDialog.ui" line="118"/>
+        <location filename="../ui/newsDialog.ui" line="130"/>
         <source>Close</source>
         <translation type="unfinished">Fechar</translation>
     </message>
