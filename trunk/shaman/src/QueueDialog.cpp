@@ -847,7 +847,7 @@ void QueueDialog::handleAlpmMessage(const QString &msg)
 	view.prepend(QString("<b><i>==> "));
 	view.append(QString("</i></b>"));
 
-	textEdit->append(msg);
+	textEdit->append(view);
 
 	textEdit->moveCursor(QTextCursor::End);
 }

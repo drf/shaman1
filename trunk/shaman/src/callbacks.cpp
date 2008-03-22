@@ -234,12 +234,16 @@ void CallBacks::cb_log(pmloglevel_t level, char *fmt, va_list args)
 	}
 
 	char *string = NULL;
-	pm_vasprintf(&string, level, fmt, args);
+	if(pm_vasprintf(&string, level, fmt, args) == -1)
+		return;
+	
 	if(string != NULL) 
 	{
 		QString msg(string);
 		emit logMsgStreamed(msg);
 	}
+	
+	qDebug() << "Received Message from Alpm, streaming...";
 
 }
 
@@ -274,7 +278,6 @@ void cb_trans_evt(pmtransevt_t event, void *data1, void *data2)
 
 void cb_log(pmloglevel_t level, char *fmt, va_list args)
 {
-	qDebug() << "Received Message from Alpm, streaming...";
 	CbackReference.cb_log(level, fmt, args);
 }
 
@@ -292,7 +295,7 @@ int pm_vasprintf(char **string, pmloglevel_t level, const char *format, va_list 
 	switch(level) 
 	{
 		case PM_LOG_DEBUG:
-			asprintf(string, "debug: %s", msg);
+			return -1;
 			break;
 		case PM_LOG_ERROR:
 			asprintf(string, "error: %s", msg);
@@ -301,7 +304,7 @@ int pm_vasprintf(char **string, pmloglevel_t level, const char *format, va_list 
 			asprintf(string, "warning: %s", msg);
 			break;
 		case PM_LOG_FUNCTION:
-			asprintf(string, "function: %s", msg);
+			return -1;
 			break;
 		default:
 			break;
