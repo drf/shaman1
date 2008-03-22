@@ -60,6 +60,8 @@ QueueDialog::QueueDialog(AlpmHandler *hnd, QWidget *parent)
 	
 	connect(&CbackReference, SIGNAL(streamTransEvent(pmtransevt_t, void*, void*)),
 			SLOT(changeStatus(pmtransevt_t, void*, void*)));
+	connect(&CbackReference, SIGNAL(logMsgStreamed(const QString&)), 
+			SLOT(handleAlpmMessage(const QString&)));
 	connect(aHandle, SIGNAL(preparingTransactionError(const QString&)), 
 			SLOT(handlePreparingError(const QString&)));
 	connect(aHandle, SIGNAL(committingTransactionError(const QString&)), 
@@ -672,7 +674,11 @@ void QueueDialog::writeLineProgress()
 		qDebug() << view;
 
 		textEdit->append(view.remove(QChar('\n')));
-		alpm_logaction(view.remove(QChar('\n')).toAscii().data());
+		
+		if(!view.endsWith(QChar('\n')))
+			view.append(QChar('\n'));
+		
+		alpm_logaction(view.toAscii().data());
 
 		textEdit->moveCursor(QTextCursor::End);
 	}
@@ -690,6 +696,11 @@ void QueueDialog::writeLineProgressErr()
 		qDebug() << view;
 
 		textEdit->append(view.remove(QChar('\n')));
+
+		if(!view.endsWith(QChar('\n')))
+			view.append(QChar('\n'));
+
+		alpm_logaction(view.toAscii().data());
 
 		textEdit->moveCursor(QTextCursor::End);
 	}
@@ -823,4 +834,20 @@ void QueueDialog::handleCommittingError(const QString &msg)
 	
 	qDebug() << "Streaming Awakening to Error Thread";
 	wCond.wakeAll();
+}
+
+void QueueDialog::handleAlpmMessage(const QString &msg)
+{
+	QString view(msg);
+	
+	qDebug() << view;
+
+	view.remove(QChar('\n'));
+
+	view.prepend(QString("<b><i>==> "));
+	view.append(QString("</i></b>"));
+
+	textEdit->append(msg);
+
+	textEdit->moveCursor(QTextCursor::End);
 }

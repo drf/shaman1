@@ -61,6 +61,7 @@ signals:
 	void questionStreamed(const QString &msg);
 	void streamTransDlProg(const QString &filename, int singlePercent, int singleSpeed,
 				int totalPercent, int totalSpeed);
+	void logMsgStreamed(const QString &msg);
 	
 public:
 	int answer;
@@ -82,6 +83,7 @@ void cb_trans_progress(pmtransprog_t event, const char *pkgname, int percent,
 void cb_dl_progress(const char *filename, int file_xfered, int file_total,
 		int list_xfered, int list_total);
 void cb_log(pmloglevel_t level, char *fmt, va_list args);
+int pm_vasprintf(char **string, pmloglevel_t level, const char *format, va_list args);
 
 
 #endif /*CALLBACKS_H_*/

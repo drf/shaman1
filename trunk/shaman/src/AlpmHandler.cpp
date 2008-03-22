@@ -377,6 +377,7 @@ bool AlpmHandler::setUpAlpmSettings()
 	alpm_option_set_root("/");
 	alpm_option_set_dbpath("/var/lib/pacman");
 	alpm_option_add_cachedir("/var/cache/pacman/pkg");
+	alpm_option_set_logcb(cb_log);
 	
 	if(pdata.logFile.isEmpty())
 		alpm_option_set_logfile("/var/log/pacman.log");

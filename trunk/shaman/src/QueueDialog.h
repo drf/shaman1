@@ -51,27 +51,31 @@ public:
 	bool isScriptletRunning();
 	
 public slots:
+	void abortTransaction();
+
+private:
+	bool unpackPkg(const QString &pathToPkg, const QString &pathToEx, const QString &file);
+	bool checkScriptlet(const QString &path, const QString &action);
+	void writeLineProgress();
+	void writeLineProgressErr();
+	bool runScriptlet(int action, const QString &p1N, const QString &p1V, 
+			const QString &pA, const QString &p2V);
+
 	void changeStatus(pmtransevt_t event, void *data1, void *data2);
 	void updateProgressBar(char *c, int bytedone, int bytetotal, int speed,
 			int listdone, int listtotal, int speedtotal);
 	void updateProgressBar(pmtransprog_t event, char *pkgname, int percent,
-	        int howmany, int remain);
+			int howmany, int remain);
 	void startDownload();
 	void startProcess();
 	void cleanup();
-	bool runScriptlet(int action, const QString &p1N, const QString &p1V, 
-			const QString &pA, const QString &p2V);
-	void writeLineProgress();
-	void writeLineProgressErr();
+
 	void finishedScriptletRunning(int eC,QProcess::ExitStatus eS);
-	void abortTransaction();
-	
+
 	void handlePreparingError(const QString &msg);
 	void handleCommittingError(const QString &msg);
-	
-private:
-	bool unpackPkg(const QString &pathToPkg, const QString &pathToEx, const QString &file);
-	bool checkScriptlet(const QString &path, const QString &action);
+
+	void handleAlpmMessage(const QString &msg);
 	
 signals:
 	void terminated(bool errors);

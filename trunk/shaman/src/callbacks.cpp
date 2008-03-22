@@ -229,9 +229,18 @@ void CallBacks::cb_dl_progress(const char *filename, int file_xfered, int file_t
 
 void CallBacks::cb_log(pmloglevel_t level, char *fmt, va_list args)
 {
-	Q_UNUSED(level);
-	Q_UNUSED(fmt);
-	Q_UNUSED(args);
+	if(!strlen(fmt)) {
+		return;
+	}
+
+	char *string = NULL;
+	pm_vasprintf(&string, level, fmt, args);
+	if(string != NULL) 
+	{
+		QString msg(string);
+		emit logMsgStreamed(msg);
+	}
+
 }
 
 /* Now the real suckness is coming... */
@@ -263,3 +272,42 @@ void cb_trans_evt(pmtransevt_t event, void *data1, void *data2)
 	CbackReference.cb_trans_evt(event,data1,data2);
 }
 
+void cb_log(pmloglevel_t level, char *fmt, va_list args)
+{
+	qDebug() << "Received Message from Alpm, streaming...";
+	CbackReference.cb_log(level, fmt, args);
+}
+
+int pm_vasprintf(char **string, pmloglevel_t level, const char *format, va_list args)
+{
+	int ret = 0;
+	char *msg = NULL;
+
+	/* if current logmask does not overlap with level, do not print msg */
+
+	/* print the message using va_arg list */
+	ret = vasprintf(&msg, format, args);
+
+	/* print a prefix to the message */
+	switch(level) 
+	{
+		case PM_LOG_DEBUG:
+			asprintf(string, "debug: %s", msg);
+			break;
+		case PM_LOG_ERROR:
+			asprintf(string, "error: %s", msg);
+			break;
+		case PM_LOG_WARNING:
+			asprintf(string, "warning: %s", msg);
+			break;
+		case PM_LOG_FUNCTION:
+			asprintf(string, "function: %s", msg);
+			break;
+		default:
+			break;
+	}
+	
+	free(msg);
+
+	return(ret);
+}
