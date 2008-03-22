@@ -107,6 +107,10 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 	QMutexLocker lock(&mutex);
 	
 	qDebug() << "Entering Queue Lock";
+	
+	QString upgTxt;
+	QString addTxt;
+	QString remTxt;
 
 	switch(event) 
 	{
@@ -148,12 +152,6 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 		}
 		break;
 	case PM_TRANS_EVT_ADD_DONE:
-		actionDetail->setText(QString(tr("%1 (%2) installed successfully!")).arg(
-				alpm_pkg_get_name((pmpkg_t *)data1)).arg(alpm_pkg_get_version((pmpkg_t *)data1)));
-		textEdit->append(QString(tr("%1 (%2) installed successfully!")).arg(
-				alpm_pkg_get_name((pmpkg_t *)data1)).arg(alpm_pkg_get_version((pmpkg_t *)data1)));
-		//alpm_logaction(str);
-
 		if(!alpm_pkg_has_scriptlet((pmpkg_t *)data1))
 			qDebug() << "No scriptlet for package " << alpm_pkg_get_name((pmpkg_t *)data1);
 		else
@@ -164,6 +162,13 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 
 			runScriptlet(3, p1Name, p1Ver, pArch, "");
 		}
+
+		addTxt = QString(tr("%1 (%2) installed successfully!")).arg(
+				alpm_pkg_get_name((pmpkg_t *)data1)).arg(alpm_pkg_get_version((pmpkg_t *)data1));
+		actionDetail->setText(addTxt);
+		textEdit->append(addTxt);
+		alpm_logaction(addTxt.toAscii().data());
+
 		break;
 	case PM_TRANS_EVT_REMOVE_START:
 		if(status != 2)
@@ -187,11 +192,6 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 		}
 		break;
 	case PM_TRANS_EVT_REMOVE_DONE:
-		actionDetail->setText(QString(tr("%1 (%2) removed successfully!")).
-				arg(alpm_pkg_get_name((pmpkg_t *)data1)).arg(alpm_pkg_get_version((pmpkg_t *)data1)));
-		textEdit->append(QString(tr("%1 (%2) removed successfully!")).
-				arg(alpm_pkg_get_name((pmpkg_t *)data1)).arg(alpm_pkg_get_version((pmpkg_t *)data1)));
-
 		if(!alpm_pkg_has_scriptlet((pmpkg_t *)data1))
 			qDebug() << "No scriptlet for package " << alpm_pkg_get_name((pmpkg_t *)data1);
 		else
@@ -202,7 +202,14 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 
 			runScriptlet(5, p1Name, p1Ver, pArch, "");
 		}
-		//alpm_logaction(str);
+
+		remTxt = QString(tr("%1 (%2) removed successfully!")).
+				arg(alpm_pkg_get_name((pmpkg_t *)data1)).arg(alpm_pkg_get_version((pmpkg_t *)data1));
+		
+		actionDetail->setText(remTxt);
+		textEdit->append(remTxt);
+
+		alpm_logaction(remTxt.toAscii().data());
 		break;
 	case PM_TRANS_EVT_UPGRADE_START:
 		if(status != 2)
@@ -227,14 +234,6 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 		}
 		break;
 	case PM_TRANS_EVT_UPGRADE_DONE:
-		actionDetail->setText(QString(tr("Upgraded %1 successfully (%2 -> %3)")).arg(
-				(char *)alpm_pkg_get_name((pmpkg_t *)data1)).arg((char *)alpm_pkg_get_version((pmpkg_t *)data2)).
-				arg((char *)alpm_pkg_get_version((pmpkg_t *)data1)));
-		textEdit->append(QString(tr("Upgraded %1 successfully (%2 -> %3)")).arg(
-				(char *)alpm_pkg_get_name((pmpkg_t *)data1)).arg((char *)alpm_pkg_get_version((pmpkg_t *)data2)).
-				arg((char *)alpm_pkg_get_version((pmpkg_t *)data1)));
-		//alpm_logaction(str);
-
 		if(!alpm_pkg_has_scriptlet((pmpkg_t *)data1))
 			qDebug() << "No scriptlet for package " << alpm_pkg_get_name((pmpkg_t *)data1);
 		else
@@ -247,6 +246,16 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 
 			runScriptlet(4, p1Name, p1Ver, pArch, p2Ver);
 		}
+		
+		upgTxt = QString(tr("Upgraded %1 successfully (%2 -> %3)")).arg(
+				(char *)alpm_pkg_get_name((pmpkg_t *)data1)).arg((char *)alpm_pkg_get_version((pmpkg_t *)data2)).
+				arg((char *)alpm_pkg_get_version((pmpkg_t *)data1));
+		
+		actionDetail->setText(upgTxt);
+		textEdit->append(upgTxt);
+		
+		alpm_logaction(upgTxt.toAscii().data());
+
 		break;
 	case PM_TRANS_EVT_INTEGRITY_START:
 		if(status != 2)
