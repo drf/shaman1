@@ -511,11 +511,19 @@
     <addaction name="actionInstall_Package_From_File" />
     <addaction name="separator" />
     <addaction name="menuInstall_and_Build_from_Source" />
+   </widget>
+   <widget class="QMenu" name="menuTools" >
+    <property name="title" >
+     <string>Tools</string>
+    </property>
+    <addaction name="actionReadNews" />
+    <addaction name="actionViewLog" />
     <addaction name="separator" />
     <addaction name="actionPacman_Preferences" />
    </widget>
    <addaction name="menuFile" />
    <addaction name="menuActions" />
+   <addaction name="menuTools" />
    <addaction name="menuHelp" />
   </widget>
   <widget class="QToolBar" name="toolBar" >
@@ -541,6 +549,7 @@
    <addaction name="actionCancel_all_actions" />
    <addaction name="separator" />
    <addaction name="actionReadNews" />
+   <addaction name="actionViewLog" />
    <addaction name="separator" />
    <addaction name="actionPacman_Preferences" />
   </widget>
@@ -642,6 +651,14 @@
    </property>
    <property name="text" >
     <string>Read News</string>
+   </property>
+  </action>
+  <action name="actionViewLog" >
+   <property name="icon" >
+    <iconset resource="qtpacman.qrc" >:/Icons/icons/bookmark-new-list.png</iconset>
+   </property>
+   <property name="text" >
+    <string>View Log</string>
    </property>
   </action>
  </widget>

@@ -45,6 +45,7 @@ class ShamanTrayIcon;
 class ReviewQueueDialog;
 class ArchLinuxNewsReader;
 class NewsViewer;
+class LogViewer;
 
 class MainWindow : public QMainWindow, public Ui::MainWindow, private StringUtils
 {
@@ -107,6 +108,7 @@ public slots:
 	bool packageExists(const QString &pkg);
 	void setProxy();
 	void openNewsDialog();
+	void openLogViewer();
 
 protected:
 	void closeEvent(QCloseEvent *evt);
@@ -149,6 +151,7 @@ private:
 	QPointer<ReviewQueueDialog> qUi;
 	QPointer<BuildingHandler> bHandler;
 	QPointer<NewsViewer> nView;
+	QPointer<LogViewer> lView;
 	QStatusBar *stBar;
 
 	QPointer<QDialog> reviewQueue;

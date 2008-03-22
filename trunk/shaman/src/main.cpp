@@ -86,21 +86,6 @@ void noDebugOutput(QtMsgType type, const char *msg)
 
 int main(int argc, char **argv)
 {
-	qDebug() << ">>";
-	qDebug() << ">>		Shaman" << SHAMAN_VERSION;
-	qDebug() << ">>		Compiled against Qt" << QT_VERSION_STR;
-	qDebug() << ">>		Running with Qt" << qVersion();
-	qDebug() << ">>";
-	qDebug() << ">>	Shaman is still in testing phase, please be easy on it!!";
-	qDebug() << ">>";
-	qDebug() << ">>	In most cases, terminal output is pretty relevant, please include it,";
-	qDebug() << ">>	adding a backtrace, if you need to report a crash.";
-	qDebug() << ">>	";
-	qDebug() << ">>	Enjoy!";
-	qDebug() << ">>";
-	qDebug() << ">>	Starting Up Shaman...";
-	qDebug() << "";
-
 	uid_t myuid = geteuid();
 
 	QApplication app(argc, argv, QApplication::GuiClient);
@@ -142,6 +127,57 @@ int main(int argc, char **argv)
 
 	if(arguments.contains("--no-splashscreen"))
 		showSplash = false;
+	
+	if(arguments.contains("--help") || arguments.contains("-h"))
+	{
+		printf("\n");
+		printf("Shaman: A libalpm frontend in Qt4\n");
+		printf("Command Line Options:\n\n");
+		printf("  -h, --help                   shows this help and exits\n\n");
+		printf("  -v, --version                shows Shaman version and exits\n");
+		printf("      --qt-version             shows version of the Qt toolkit installed on the system\n"
+				"                               and version of the Qt toolkit Shaman was compiled against and exits\n\n");
+		printf("      --no-i18n                disables translations\n");
+		printf("      --no-splashscreen        doesn't show the splashscreen\n\n");
+		printf("      --start-in-window        shows main window on startup\n");
+		printf("      --start-in-tray          starts Shaman in the system tray\n\n");
+		printf("      --clear-settings         clears all Shaman settings and starts Shaman\n");
+		printf("      --no-debugging-output    doesn't show debugging output in the terminal\n");
+		printf("\n");
+		return(EXIT_SUCCESS);
+	}
+	
+	if(arguments.contains("--version") || arguments.contains("-v"))
+	{
+		printf("\n");
+		printf("%s", SHAMAN_VERSION);
+		printf("\n");
+		return(EXIT_SUCCESS);
+	}
+	
+	if(arguments.contains("--qt-version"))
+	{
+		printf("\n");
+		printf("This System is running Qt Version %s\n", qVersion());
+		printf("Shaman was compiled against Qt Version %s\n", QT_VERSION_STR);		
+		printf("\n");
+		return(EXIT_SUCCESS);
+	}
+
+	qDebug() << ">>";
+	qDebug() << ">>		Shaman" << SHAMAN_VERSION;
+	qDebug() << ">>		Compiled against Qt" << QT_VERSION_STR;
+	qDebug() << ">>		Running with Qt" << qVersion();
+	qDebug() << ">>";
+	qDebug() << ">>	Shaman is still in testing phase, please be easy on it!!";
+	qDebug() << ">>";
+	qDebug() << ">>	In most cases, terminal output is pretty relevant, please include it,";
+	qDebug() << ">>	adding a backtrace, if you need to report a crash.";
+	qDebug() << ">>	";
+	qDebug() << ">>	Enjoy!";
+	qDebug() << ">>";
+	qDebug() << ">>	Starting Up Shaman...";
+	qDebug() << "";
 
 	QString locale = QLocale::system().name();
 	

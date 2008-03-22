@@ -35,6 +35,7 @@
 #include "ReviewQueueDialog.h"
 #include "ArchLinuxNewsReader.h"
 #include "NewsViewer.h"
+#include "LogViewer.h"
 
 #include <iostream>
 #include <QMenu>
@@ -69,6 +70,7 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
   qUi(),
   bHandler(),
   nView(),
+  lView(),
   reviewQueue(),
   upActive(false),
   revActive(false),
@@ -141,6 +143,7 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	connect(actionBuild_and_Install_Selected, SIGNAL(triggered()), SLOT(initSourceQueue()));
 	connect(actionCancel_all_actions, SIGNAL(triggered()), SLOT(cancelAllActions()));
 	connect(actionReadNews, SIGNAL(triggered()), SLOT(openNewsDialog()));
+	connect(actionViewLog, SIGNAL(triggered()), SLOT(openLogViewer()));
 	connect(aHandle, SIGNAL(streamDbUpdatingStatus(const QString&,int)), SIGNAL(streamDbUpdatingStatus(const QString&,int)));
 	connect(&CbackReference, SIGNAL(streamTransDlProg(const QString&,int,int,int,int)), 
 			SIGNAL(streamTransDlProg(const QString&,int,int,int,int)));
@@ -2107,4 +2110,18 @@ void MainWindow::openNewsDialog()
 
 		nView->show();
 	}
+	else
+		nView->show();
+}
+
+void MainWindow::openLogViewer()
+{
+	if(!lView)
+	{
+		lView = new LogViewer(this);
+
+		lView->show();
+	}
+	else
+		lView->show();
 }
