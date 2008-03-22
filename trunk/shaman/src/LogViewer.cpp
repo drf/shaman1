@@ -33,6 +33,7 @@ LogViewer::LogViewer(QWidget *parent)
 	refreshView();
 	
 	connect(refreshButton, SIGNAL(clicked()), SLOT(refreshView()));
+	connect(searchLine, SIGNAL(textChanged(QString)), SLOT(refreshView()));
 	
 	setAttribute(Qt::WA_DeleteOnClose);
 }
@@ -95,8 +96,8 @@ void LogViewer::refreshView()
 				continue;
 		}
 		
-		if(lineBox->isChecked())
-			if(!ent.contains(refineEdit->text()))
+		if(!searchLine->text().isEmpty())
+			if(!ent.contains(searchLine->text()))
 				continue;
 		
 		textEdit->append(ent);
