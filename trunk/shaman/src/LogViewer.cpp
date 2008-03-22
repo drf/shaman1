@@ -23,6 +23,7 @@
 #include <QFile>
 #include <QTextStream>
 #include <QDate>
+#include "alpm.h"
 
 LogViewer::LogViewer(QWidget *parent)
  : QDialog(parent)
@@ -44,7 +45,7 @@ LogViewer::~LogViewer()
 
 void LogViewer::loadLog()
 {
-	QFile fp("/var/log/pacman.log");
+	QFile fp(alpm_option_get_logfile());
 	
 	contents.clear();
 	

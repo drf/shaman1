@@ -193,6 +193,9 @@ void ConfigDialog::setupPacman()
 	if(alpm_option_get_nopassiveftp())
 		noPassiveFtpBox->setChecked(true);
 
+	if(alpm_option_get_usesyslog())
+		sysLogBox->setChecked(true);
+
 	useDeltaBox->setHidden(true);
 
 	alpm_list_t *tmp;
@@ -249,6 +252,7 @@ void ConfigDialog::setupPacman()
 	tmpStr = "";
 
 	xFerCommandLine->setText((char *)alpm_option_get_xfercommand());
+	logFileLine->setText((char *)alpm_option_get_logfile());
 	tmpStr = "";
 
 }
@@ -780,6 +784,11 @@ void ConfigDialog::saveConfiguration()
 	else
 		editPacmanKey("options/NoPassiveFtp", NULL, 2);
 
+	if(sysLogBox->isChecked())
+		editPacmanKey("options/UseSyslog", "", 0);
+	else
+		editPacmanKey("options/UseSyslog", NULL, 2);
+
 	if(holdPkgLine->isModified())
 	{
 		if(holdPkgLine->text().isEmpty())
@@ -832,6 +841,15 @@ void ConfigDialog::saveConfiguration()
 		else
 			if(!editPacmanKey("options/XferCommand", xFerCommandLine->text(), 0))
 				editPacmanKey("options/XferCommand", xFerCommandLine->text(), 1);
+	}
+
+	if(logFileLine->isModified())
+	{
+		if(logFileLine->text().isEmpty())
+			editPacmanKey("options/LogFile", QString(), 2);
+		else
+			if(!editPacmanKey("options/LogFile", logFileLine->text(), 0))
+				editPacmanKey("options/LogFile", logFileLine->text(), 1);
 	}
 
 

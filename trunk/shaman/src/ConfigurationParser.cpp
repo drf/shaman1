@@ -239,6 +239,8 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 							line.remove(0, 1);
 
 						pacData.logFile = line;	
+						
+						qDebug() << "Log File will be:" << line;
 					}
 
 					else if (key.compare("XferCommand", Qt::CaseInsensitive) == 0)

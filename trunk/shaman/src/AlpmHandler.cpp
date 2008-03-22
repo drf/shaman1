@@ -374,19 +374,19 @@ bool AlpmHandler::setUpAlpmSettings()
 	 * some root paths, we will use pacman's default for now
 	 */
 
+	pdata = getPacmanConf(false);
+	
 	alpm_option_set_root("/");
 	alpm_option_set_dbpath("/var/lib/pacman");
 	alpm_option_add_cachedir("/var/cache/pacman/pkg");
 	alpm_option_set_logcb(cb_log);
 	
+	qDebug() << "Log File should be:" << pdata.logFile;
+	
 	if(pdata.logFile.isEmpty())
 		alpm_option_set_logfile("/var/log/pacman.log");
 	else
 		alpm_option_set_logfile(pdata.logFile.toAscii().data());
-
-	/* I love classes interaction */
-
-	pdata = getPacmanConf(false);
 
 	/* Register local database */
 

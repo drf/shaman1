@@ -267,10 +267,17 @@ p, li { white-space: pre-wrap; }
             </property>
            </widget>
           </item>
-          <item row="1" column="0" >
+          <item row="2" column="0" >
            <widget class="QCheckBox" name="useDeltaBox" >
             <property name="text" >
              <string>Use Deltas (needs xdelta to be installed)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" >
+           <widget class="QCheckBox" name="sysLogBox" >
+            <property name="text" >
+             <string>Use SysLog</string>
             </property>
            </widget>
           </item>
@@ -336,6 +343,16 @@ p, li { white-space: pre-wrap; }
               </item>
               <item row="4" column="1" >
                <widget class="QLineEdit" name="noExtractLine" />
+              </item>
+              <item row="5" column="0" >
+               <widget class="QLabel" name="label_20" >
+                <property name="text" >
+                 <string>Log File:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="1" >
+               <widget class="QLineEdit" name="logFileLine" />
               </item>
              </layout>
             </item>
