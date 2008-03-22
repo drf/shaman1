@@ -71,6 +71,8 @@ void LogViewer::loadLog()
 
 void LogViewer::refreshView()
 {
+	QString toShow;
+	
 	refreshButton->setEnabled(false);
 	
 	qApp->processEvents();
@@ -101,8 +103,12 @@ void LogViewer::refreshView()
 			if(!ent.contains(searchLine->text()))
 				continue;
 		
-		textEdit->append(ent);
+		toShow.append(ent + QChar('\n'));
 	}
+	
+	textEdit->setText(toShow);
+	
+	textEdit->moveCursor(QTextCursor::End);
 	
 	refreshButton->setEnabled(true);
 }
