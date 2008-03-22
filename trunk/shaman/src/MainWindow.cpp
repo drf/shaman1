@@ -1260,7 +1260,8 @@ void MainWindow::startUpgrading()
 				/* Display a simple popup saying the system is up-to-date. */
 				QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("System Upgrade"), 
 						tr("Your system is up to date!"), QMessageBox::Ok, this);
-				message->show();
+				message->exec();
+				message->deleteLater();
 			}
 			else
 				trayicon->showMessage(QString(tr("System Upgrade")), QString(tr("Your system is up to date!")));
