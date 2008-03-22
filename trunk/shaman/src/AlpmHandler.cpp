@@ -377,6 +377,11 @@ bool AlpmHandler::setUpAlpmSettings()
 	alpm_option_set_root("/");
 	alpm_option_set_dbpath("/var/lib/pacman");
 	alpm_option_add_cachedir("/var/cache/pacman/pkg");
+	
+	if(pdata.logFile.isEmpty())
+		alpm_option_set_logfile("/var/log/pacman.log");
+	else
+		alpm_option_set_logfile(pdata.logFile.toAscii().data());
 
 	/* I love classes interaction */
 

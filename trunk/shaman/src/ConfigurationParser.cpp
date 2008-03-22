@@ -233,6 +233,14 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 						else
 							pacData.HoldPkg = setrepeatingoption(line);
 
+					else if (key.compare("LogFile", Qt::CaseInsensitive) == 0)
+					{
+						while(line.startsWith(QChar(' ')))
+							line.remove(0, 1);
+
+						pacData.logFile = line;	
+					}
+
 					else if (key.compare("XferCommand", Qt::CaseInsensitive) == 0)
 					{
 						while(line.startsWith(QChar(' ')))
@@ -927,6 +935,7 @@ ConfigurationParser::ConfigurationParser()
 	pacData.useSysLog = 0;
 	pacData.noPassiveFTP = 0;
     pacData.xferCommand = QString();
+    pacData.logFile = QString();
     pacData.IgnoreGrp.clear();
     pacData.IgnorePkg.clear();
     pacData.NoExtract.clear();
@@ -954,6 +963,7 @@ PacmanConf ConfigurationParser::getPacmanConf(bool forcereload)
 	pacData.useSysLog = 0;
 	pacData.noPassiveFTP = 0;
 	pacData.xferCommand = QString();
+	pacData.logFile = QString();
 	pacData.IgnoreGrp.clear();
 	pacData.IgnorePkg.clear();
 	pacData.NoExtract.clear();
@@ -962,6 +972,9 @@ PacmanConf ConfigurationParser::getPacmanConf(bool forcereload)
 	pacData.loaded = false;
 	
 	parsePacmanConfig("/etc/pacman.conf", NULL, NULL);
+	
+	if(forcereload)
+		alpm_logaction(QString(QObject::tr("Pacman configuration saved and reloaded\n")).toUtf8().data());
 	
 	return pacData;
 }

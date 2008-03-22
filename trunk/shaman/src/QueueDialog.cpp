@@ -672,6 +672,7 @@ void QueueDialog::writeLineProgress()
 		qDebug() << view;
 
 		textEdit->append(view.remove(QChar('\n')));
+		alpm_logaction(view.remove(QChar('\n')).toAscii().data());
 
 		textEdit->moveCursor(QTextCursor::End);
 	}

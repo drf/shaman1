@@ -27,6 +27,7 @@
 #include <alpm_list.h>
 #include <string.h>
 
+#include <QString>
 #include <QStringList>
 
 #include "StringUtils.h"
@@ -44,6 +45,7 @@ struct PcCnf {
 	int useDelta;
 	int useSysLog;
 	QString xferCommand;
+	QString logFile;
 	QStringList serverAssoc;
 	bool loaded;
 };

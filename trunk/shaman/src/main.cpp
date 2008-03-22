@@ -341,6 +341,10 @@ int main(int argc, char **argv)
 	
 	settings->deleteLater();
 	
+	qDebug() << "Log file is:" << alpm_option_get_logfile();
+	
+	alpm_logaction(QString(QObject::tr("Shaman started, alpm initialized successfully.\n")).toUtf8().data());
+	
 	return app.exec();
 
 }
