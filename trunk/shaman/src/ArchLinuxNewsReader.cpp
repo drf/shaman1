@@ -22,12 +22,13 @@
 
 #include <QHttp>
 #include <QUrl>
+#include <QNetworkProxy>
 #include <QSettings>
 #include <QDebug>
 
 ArchLinuxNewsReader::ArchLinuxNewsReader()
 {
-	setProxy();
+	http.setProxy(QNetworkProxy());
 	
 	connect(&http, SIGNAL(readyRead(const QHttpResponseHeader &)),
 			this, SLOT(readData(const QHttpResponseHeader &)));
@@ -266,14 +267,4 @@ bool ArchLinuxNewsReader::checkUnreadNewsOnPkg(const QString &pkgname)
 	}
 
 	return false;
-}
-
-void ArchLinuxNewsReader::setProxy()
-{
-	QSettings *settings = new QSettings();
-
-	if(settings->value("proxy/enabled").toBool() && settings->value("proxy/httpProxy").toBool())
-		http.setProxy(settings->value("proxy/proxyServer").toString(), settings->value("proxy/proxyPort").toInt());
-
-	settings->deleteLater();
 }

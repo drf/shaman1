@@ -51,6 +51,7 @@
 #include <QWaitCondition>
 #include <QMovie>
 #include <QShortcut>
+#include <QNetworkProxy>
 #include <alpm.h>
 #include <sys/types.h>
 
@@ -1749,7 +1750,6 @@ void MainWindow::showSettings()
 	configDialog = new ConfigDialog(aHandle, this);
 
 	connect (configDialog, SIGNAL(setProxy()), this, SLOT(setProxy()));
-	connect (configDialog, SIGNAL(setProxy()), newsReader, SLOT(setProxy()));
 
 	configDialog->exec();
 
@@ -2083,10 +2083,14 @@ void MainWindow::setProxy()
 	{
 		setenv("HTTP_PROXY", settings->value("proxy/proxyServer").toString().toLatin1() + ':' + settings->value("proxy/proxyPort").toString().toLatin1(), 1);
 		qDebug() << QString("HTTP_PROXY: ") + settings->value("proxy/proxyServer").toString() + ':' + settings->value("proxy/proxyPort").toString();
+		QNetworkProxy::setApplicationProxy(QNetworkProxy(QNetworkProxy::HttpProxy, settings->value("proxy/proxyServer").toString(),
+				settings->value("proxy/proxyPort").toInt()));
 	}
-	else {
+	else 
+	{
 		unsetenv("HTTP_PROXY");
 		qDebug() << "--> UNSETENV HTTP_PROXY";
+		QNetworkProxy::setApplicationProxy(QNetworkProxy(QNetworkProxy::NoProxy));
 	}
 
 
