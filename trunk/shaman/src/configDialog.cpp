@@ -565,21 +565,25 @@ void ConfigDialog::showSuccess(int act)
 	case 0:
 		statusLabel->setText(QString(tr("Unused Databases Cleaned up successfully!")));
 		mantDetails->append(QString(tr("Unused Databases Cleaned up successfully!")));
+		alpm_logaction(QString(tr("Unused Databases Cleaned up successfully!") + QChar('\n')).toUtf8().data());
 		break;
 
 	case 1:
 		statusLabel->setText(QString(tr("Cache Cleaned Up Successfully!")));
 		mantDetails->append(QString(tr("Cache Cleaned Up Successfully!")));
+		alpm_logaction(QString(tr("Cache Cleaned Up Successfully!") + QChar('\n')).toUtf8().data());
 		break;
 
 	case 2:
 		statusLabel->setText(QString(tr("Cache Successfully Deleted!")));
 		mantDetails->append(QString(tr("Cache Successfully Deleted!")));
+		alpm_logaction(QString(tr("Cache Successfully Deleted!") + QChar('\n')).toUtf8().data());
 		break;
 
 	case 3:
 		statusLabel->setText(QString(tr("Build Environments Successfully Cleaned!")));
-		mantDetails->append(QString(tr("Build Environments Successfully Cleaned!!")));
+		mantDetails->append(QString(tr("Build Environments Successfully Cleaned!")));
+		alpm_logaction(QString(tr("Build Environments Successfully Cleaned!") + QChar('\n')).toUtf8().data());
 		break;
 	}
 
@@ -1035,11 +1039,13 @@ void ConfigDialog::cleanProc(int eC, QProcess::ExitStatus eS)
 	{
 		statusLabel->setText(QString(tr("Pacman Database Optimized Successfully!")));
 		mantDetails->append(QString(tr("Pacman Database Optimized Successfully!")));
+		alpm_logaction(QString(tr("Pacman Database Optimized Successfully!") + QChar('\n')).toUtf8().data());
 	}
 	else
 	{
 		statusLabel->setText(QString(tr("Could not Optimize Pacman Database!")));
 		mantDetails->append(QString(tr("Could not Optimize Pacman Database!")));
+		alpm_logaction(QString(tr("Could not Optimize Pacman Database!") + QChar('\n')).toUtf8().data());
 	}
 
 	mantProc->deleteLater();
