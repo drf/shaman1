@@ -167,6 +167,7 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 				alpm_pkg_get_name((pmpkg_t *)data1)).arg(alpm_pkg_get_version((pmpkg_t *)data1));
 		actionDetail->setText(addTxt);
 		textEdit->append(addTxt);
+		addTxt.append(QChar('\n'));
 		alpm_logaction(addTxt.toAscii().data());
 
 		break;
@@ -208,7 +209,7 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 		
 		actionDetail->setText(remTxt);
 		textEdit->append(remTxt);
-
+		remTxt.append(QChar('\n'));
 		alpm_logaction(remTxt.toAscii().data());
 		break;
 	case PM_TRANS_EVT_UPGRADE_START:
@@ -253,7 +254,7 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 		
 		actionDetail->setText(upgTxt);
 		textEdit->append(upgTxt);
-		
+		upgTxt.append(QChar('\n'));
 		alpm_logaction(upgTxt.toAscii().data());
 
 		break;
