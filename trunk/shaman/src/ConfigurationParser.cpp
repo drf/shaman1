@@ -498,10 +498,14 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 				if(!fileContent.at(i).startsWith("[options]"))
 					continue;
 				QString toAdd(key2);
-				toAdd.append("=");
+				
+				if(!realVal.isEmpty() || (!key2.compare("UseSyslog", Qt::CaseInsensitive) && 
+						!key2.compare("NoPassiveFTP", Qt::CaseInsensitive)))
+					toAdd.append("=");
+
 				toAdd.append(realVal);
 				fileContent.insert(i+1, toAdd);
-				
+
 				QFile::remove("/etc/pacman.conf");
 				if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
 					return false;
@@ -974,9 +978,6 @@ PacmanConf ConfigurationParser::getPacmanConf(bool forcereload)
 	pacData.loaded = false;
 	
 	parsePacmanConfig("/etc/pacman.conf", NULL, NULL);
-	
-	if(forcereload)
-		alpm_logaction(QString(QObject::tr("Pacman configuration saved and reloaded\n")).toUtf8().data());
 	
 	return pacData;
 }
