@@ -838,16 +838,14 @@ void QueueDialog::handleCommittingError(const QString &msg)
 
 void QueueDialog::handleAlpmMessage(const QString &msg)
 {
-	QString view(msg);
+	textEdit->append(QString());
+	QString view(QString("<p><b><i> ==> ") + msg + QString("</b></i></p><br>"));
 	
-	qDebug() << view;
-
+	qDebug() << msg;
+	
 	view.remove(QChar('\n'));
 
-	view.prepend(QString("<b><i>==> "));
-	view.append(QString("</i></b>"));
-
-	textEdit->append(view);
+	textEdit->insertHtml(view);
 
 	textEdit->moveCursor(QTextCursor::End);
 }
