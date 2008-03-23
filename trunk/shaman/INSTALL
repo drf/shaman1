@@ -1,0 +1,37 @@
+---------------------------------------------------------
+
+Shaman Installation
+
+---------------------------------------------------------
+
+Shaman installation is fairly easy: you just need cmake,
+our building system, and a working copy of qt. You DON'T
+need to have kdelibs4 installed!!
+
+Obviously, Shaman needs a working copy of Pacman, something
+that all Arch Linux installations have.
+
+First of all, enter in the Directory you unpacked Shaman in
+and issue:
+
+cmake .
+
+Mind the ".", it's necessary. Cmake will now check your system
+for requirements, and if KDELibs4 are found, it will add to
+the MakeFile also the Plasmoid. Again, this is not a requirement,
+if you don't have KDELibs4 the Plasmoid will just be skipped.
+Then it's time for
+
+make
+
+This can take sometime. When it finishes, you need to issue
+as superuser
+
+make install
+
+To install Shaman Systemwide. This will also install a configuration
+file for DBus, to make Shaman able to connect to the System Bus,
+and a .desktop file for Shaman.
+
+That's it! You can now start Shaman from your menu, or from the
+terminal by issuing "shaman"
