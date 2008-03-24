@@ -52,6 +52,8 @@ AlpmHandler::AlpmHandler(bool init)
 toSync(NULL)
 {
 
+	real_uid = getuid();
+	
 	/* First, initialize Alpm. Then, make the whole class aware that no
 	 * transaction with libalpm is in progress */
 	if(!init)
@@ -141,6 +143,8 @@ bool AlpmHandler::initTransaction(pmtranstype_t type, pmtransflag_t flags)
 {
 	if(isTransaction())
 		return false;
+	
+	switchToRoot();
 
 	setuseragent();
 	
@@ -163,6 +167,8 @@ bool AlpmHandler::releaseTransaction()
 	if(alpm_trans_release() == -1)
 		if(alpm_trans_interrupt() == -1)
 			return false;
+
+	switchToStdUsr();
 
 	onTransaction = false;
 	emit transactionReleased();
@@ -742,6 +748,8 @@ void AlpmHandler::processQueue()
 
 bool AlpmHandler::cleanUnusedDb()
 {
+	switchToRoot();
+	
 	DIR *dir;
 	struct dirent *ent;
 
@@ -805,9 +813,13 @@ bool AlpmHandler::cleanUnusedDb()
 		 * Ask the user if he wants to remove it. */
 		if(!found) 
 			if(rmrf(path)) 
+			{
+				switchToStdUsr();
 				return false;
+			}
 	}
 	
+	switchToStdUsr();
 	return true;
 }
 
@@ -856,6 +868,8 @@ int AlpmHandler::rmrf(const char *path)
 
 bool AlpmHandler::cleanCache(bool empty)
 {
+	switchToRoot();
+	
 	alpm_list_t* cachedirs = alpm_option_get_cachedirs();
 	QString cachedir((char *)alpm_list_getdata(cachedirs));
 
@@ -866,7 +880,10 @@ bool AlpmHandler::cleanCache(bool empty)
 		QDir dir(cachedir); 
 
 		if(!dir.exists()) 
+		{
+			switchToStdUsr();
 			return false;
+		}
 
 		dir.setFilter(QDir::Files | QDir::Hidden | QDir::NoSymLinks);
 		QFileInfoList list = dir.entryInfoList();
@@ -902,13 +919,20 @@ bool AlpmHandler::cleanCache(bool empty)
 	{
 		/* full cleanup */
 
-		if(rmrf(cachedir.toAscii().data())) 
+		if(rmrf(cachedir.toAscii().data()))
+		{
+			switchToStdUsr();
 			return false;
+		}
 
 		if(makepath(cachedir.toAscii().data())) 
+		{
+			switchToStdUsr();
 			return false;
+		}
 	}
 
+	switchToStdUsr();
 	return true;
 }
 
@@ -1210,4 +1234,30 @@ alpm_list_t *AlpmHandler::getPackagesFromRepo(const QString &reponame)
 	}
 	
 	return retlist;
+}
+
+void AlpmHandler::switchToRoot()
+{
+	seteuid(0);
+
+	if(geteuid() != 0)
+	{
+		qDebug() << "Couldn't switch to root!!";
+		emit noRootPrivileges();
+	}
+	else
+		qDebug() << "Root Privileges granted.";
+}
+
+void AlpmHandler::switchToStdUsr()
+{
+	seteuid(real_uid);
+
+	if(geteuid() != real_uid)
+	{
+		qDebug() << "Couldn't switch back to the real id!!";
+		emit noSwitchBack();
+	}
+	else
+		qDebug() << "Root privileges retired.";
 }

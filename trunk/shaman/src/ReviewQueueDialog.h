@@ -35,6 +35,7 @@ public:
 	ReviewQueueDialog(AlpmHandler *hnd, MainWindow *parent);
 	virtual ~ReviewQueueDialog();
 	bool isInTray();
+	bool isTurnOff();
 	
 public slots:
 	void processQueue();

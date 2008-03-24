@@ -86,8 +86,6 @@ void noDebugOutput(QtMsgType type, const char *msg)
 
 int main(int argc, char **argv)
 {
-	uid_t myuid = geteuid();
-
 	QApplication app(argc, argv, QApplication::GuiClient);
 
 	QCoreApplication::setOrganizationName("shaman");
@@ -95,6 +93,8 @@ int main(int argc, char **argv)
 	QCoreApplication::setApplicationName("shaman");
 
 	QSettings *settings = new QSettings();
+	
+	qDebug() << settings->fileName();
 
 	QSplashScreen splscr(QPixmap(":/Images/images/splash.png"));
 
@@ -208,7 +208,7 @@ int main(int argc, char **argv)
 		app.processEvents();
 	}
 
-	if(myuid > 0)
+	/*if(myuid > 0)
 	{
 		QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("Shaman", "Hey! "
 				"If you are reading this, first of all thanks for helping us in making Shaman better. "
@@ -224,7 +224,7 @@ int main(int argc, char **argv)
 		message->show();
 
 		return app.exec();
-	}
+	}*/
 
 	AlpmHandler *aHandler = new AlpmHandler(true);
 

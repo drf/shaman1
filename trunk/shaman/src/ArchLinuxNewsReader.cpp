@@ -261,7 +261,7 @@ bool ArchLinuxNewsReader::checkUnreadNewsOnPkg(const QString &pkgname)
 
 	foreach(QString ent, oldEntries.keys())
 	{
-		if(ent.contains(pkgname))
+		if(ent.contains(pkgname, Qt::CaseInsensitive))
 			if(oldEntries[ent] == false)
 				return true;
 	}

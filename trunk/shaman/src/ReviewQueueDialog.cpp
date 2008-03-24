@@ -122,3 +122,8 @@ bool ReviewQueueDialog::isInTray()
 {
 	return trayBox->isChecked();
 }
+
+bool ReviewQueueDialog::isTurnOff()
+{
+	return turnoffBox->isChecked();
+}

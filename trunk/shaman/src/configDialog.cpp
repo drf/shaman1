@@ -598,6 +598,8 @@ void ConfigDialog::saveConfiguration()
 {
 	qDebug() << "Saving Configuration...";
 	
+	m_handler->switchToRoot();
+	
 	bool dbChanged = false;
 	QString mirror(mirrorBox->currentText());
 	mirror = mirror.remove(' ');
@@ -851,7 +853,7 @@ void ConfigDialog::saveConfiguration()
 			if(!editPacmanKey("options/LogFile", logFileLine->text(), 0))
 				editPacmanKey("options/LogFile", logFileLine->text(), 1);
 	}
-
+	m_handler->switchToStdUsr();
 
 	/* Ok, saving finished, commit changes to Alpm now */
 	m_handler->reloadPacmanConfiguration();
@@ -905,6 +907,11 @@ void ConfigDialog::saveConfiguration()
 
 
 	settings->setValue("absbuilding/syncsupfiles", useMatchSupRadio->isChecked());
+	
+	settings->deleteLater();
+	
+	m_handler->switchToRoot();
+	
 	if(useMatchSupRadio->isChecked())
 	{
 		/* We need to generate a SUPFILES containing our current repos
@@ -938,8 +945,6 @@ void ConfigDialog::saveConfiguration()
 			editABSSection("supfiles", supEdit->text());
 	}
 
-	settings->deleteLater();
-
 	/* Last, but not least, commit changes to makepkg.conf */
 
 	if(CFlagEdit->isModified())
@@ -956,6 +961,8 @@ void ConfigDialog::saveConfiguration()
 
 	if(docDirsEdit->isModified())
 		editMakepkgSection("docdirs", docDirsEdit->text());
+	
+	m_handler->switchToStdUsr();
 
 
 	/* Did we change anything in the repos? Better update our

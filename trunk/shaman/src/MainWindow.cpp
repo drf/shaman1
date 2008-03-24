@@ -1364,39 +1364,46 @@ void MainWindow::upgrade(const QStringList &packages)
 		 */
 
 		qDebug() << "Streaming Upgrades";
-		
+
 		emit upgradesAvailable();
+		
+		QSettings *settings = new QSettings();
 
-		foreach(QString ent, packages)
+		if(settings->value("newsreader/userss", true).toBool() && settings->value("newsreader/queuenotifier", true).toBool())
 		{
-			if(newsReader->checkUnreadNewsOnPkg(ent))
+			foreach(QString ent, packages)
 			{
-				QMessageBox *msgBox = new QMessageBox(this);
+				if(newsReader->checkUnreadNewsOnPkg(ent))
+				{
+					QMessageBox *msgBox = new QMessageBox(this);
 
-				msgBox->setIcon(QMessageBox::Question);
-				msgBox->setWindowTitle(QString(tr("News Alert")));
+					msgBox->setIcon(QMessageBox::Question);
+					msgBox->setWindowTitle(QString(tr("News Alert")));
 
-				msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+					msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
 
-				msgBox->setWindowModality(Qt::ApplicationModal);
+					msgBox->setWindowModality(Qt::ApplicationModal);
 
-				msgBox->setText(QString(tr("There is an unread news about %1.\nDo you want to read it?")).arg(ent));
+					msgBox->setText(QString(tr("There is an unread news about %1.\nDo you want to read it?")).arg(ent));
 
-				switch (msgBox->exec()) {
-				case QMessageBox::Yes:
-					openNewsDialog();
-					return;
-					break;
-				case QMessageBox::No:
-					break;
-				default:
-					// should never be reached
-					break;
+					switch (msgBox->exec()) {
+					case QMessageBox::Yes:
+						openNewsDialog();
+						return;
+						break;
+					case QMessageBox::No:
+						break;
+					default:
+						// should never be reached
+						break;
+					}
+
+					msgBox->deleteLater();
 				}
-
-				msgBox->deleteLater();
 			}
 		}
+		
+		settings->deleteLater();
 
 		upDl = new SysUpgradeDialog(aHandle, this);
 
@@ -1499,6 +1506,9 @@ void MainWindow::processQueue()
 			queueDl->hide();
 		}
 		
+		if(qUi->isTurnOff())
+			turnOffSys = true;
+		
 		qUi->deleteLater();
 	}
 
@@ -1600,63 +1610,19 @@ void MainWindow::queueProcessingEnded(bool errors)
 		else
 			trayicon->showMessage(QString(tr("Queue Processed")), QString(tr("Your Queue was successfully processed!!")));
 
-		/*if(turnOffSys)
+		if(turnOffSys)
 		{
-			QProcess proc;
-			proc.start("pidof kded4");
-			proc.waitForFinished();
-			QString sprid = QString(proc.readAllStandardOutput()).remove(QChar('\n'));
-			int prid = sprid.toInt();
+			/* Ok, let's go. We need to stream a message through DBus to turn off stuff.
+			 * KDE3 is not supported since it uses DCOP, sorry, GNOME will come soon.
+			 */
+			
+			qDebug() << "Turning the system off";
+			
+			QDBusInterface iface("org.kde.ksmserver", "/KSMServer", "org.kde.KSMServerInterface");
+			
+			iface.call("logout", 0, 2, 0);
 
-			qDebug() << "ID of the process:" << prid;
-			int usid = 0;
-			int grid = 0;
-
-			QProcess proccat;
-			QString pline = QString(QString("cat /proc/") + sprid + "/status");
-
-			qDebug() << "Running" << pline;
-
-			proccat.start(pline);
-
-			proccat.waitForFinished();
-
-			foreach(QString line, QString(proccat.readAllStandardOutput()).split(QChar('\n')))
-			{
-				if(line.startsWith("Uid:"))
-				{
-					QStringList list(line.split(QChar('\t'), QString::SkipEmptyParts));
-					usid = list.at(2).toInt();
-				}
-				if(line.startsWith("Gid:"))
-				{
-					QStringList list(line.split(QChar('\t'), QString::SkipEmptyParts));
-					grid = list.at(2).toInt();
-				}
-			}
-
-#if defined Q_OS_UNIX
-			qDebug() << "Dropping Privileges";
-			//::setgroups(0, 0);
-			::chdir("/");
-			::setgid(grid);
-			::setuid(usid);
-			//::umask(0);
-#endif
-
-			QDBusConnection dbus(QDBusConnection::sessionBus());
-
-			qDebug() << "ID of the user:" << getuid();
-
-			::QProcess::execute("dbus-send --session --dest=org.kde.ksmserver --type=method_call"
-					" /KSMServer org.kde.KSMServerInterface.logout int32:0 int32:2 int32:0");
-
-			::setgid(0);
-			::setuid(0);
-
-			qDebug() << "ID of the user:" << getuid();
-
-		}*/
+		}
 	}
 
 	turnOffSys = false;
