@@ -13,7 +13,7 @@ Comment[de]=Eine grafische Paketverwaltung für Arch Linux
 Comment[es]=Un administrador gráfico de paquetes para Arch Linux
 Comment[fr]=Un gestionnaire graphique de paquets pour Arch Linux
 
-Exec=kdesu shaman
+Exec=shaman
 Icon=shaman-32
 Type=Application
 Terminal=false
