@@ -39,6 +39,16 @@ private:
 	AlpmHandler *aHandle;
 };
 
+class ScriptletProcess : public QProcess
+{
+	Q_OBJECT
+	
+public:
+	explicit ScriptletProcess( QObject * parent = 0 );
+	~ScriptletProcess();
+	
+	void setupChildProcess();
+};
 
 class QueueDialog : public QDialog, private Ui::transactionDialog
 {
@@ -87,7 +97,7 @@ private:
 private:
 	AlpmHandler *aHandle;
 	TrCommitThread *cTh;
-	QProcess *proc;
+	ScriptletProcess *proc;
 	int status;
 	QString cwd;
 	bool scrRun;

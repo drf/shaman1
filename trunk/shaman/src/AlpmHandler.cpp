@@ -1239,6 +1239,7 @@ alpm_list_t *AlpmHandler::getPackagesFromRepo(const QString &reponame)
 void AlpmHandler::switchToRoot()
 {
 	seteuid(0);
+	//setuid(0);
 
 	if(geteuid() != 0)
 	{
@@ -1247,11 +1248,14 @@ void AlpmHandler::switchToRoot()
 	}
 	else
 		qDebug() << "Root Privileges granted.";
+	
+	qDebug() << "Uid is:" << getuid();
 }
 
 void AlpmHandler::switchToStdUsr()
 {
 	seteuid(real_uid);
+	//setuid(real_uid);
 
 	if(geteuid() != real_uid)
 	{

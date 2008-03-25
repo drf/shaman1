@@ -147,6 +147,8 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 			QString p1Name(alpm_pkg_get_name((pmpkg_t *)data1));
 			QString p1Ver(alpm_pkg_get_version((pmpkg_t *)data1));
 			QString pArch(alpm_pkg_get_arch((pmpkg_t *)data1));
+			
+			
 
 			runScriptlet(0, p1Name, p1Ver, pArch, "");
 		}
@@ -159,6 +161,8 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 			QString p1Name(alpm_pkg_get_name((pmpkg_t *)data1));
 			QString p1Ver(alpm_pkg_get_version((pmpkg_t *)data1));
 			QString pArch(alpm_pkg_get_arch((pmpkg_t *)data1));
+			
+			
 
 			runScriptlet(3, p1Name, p1Ver, pArch, "");
 		}
@@ -188,6 +192,8 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 			QString p1Name(alpm_pkg_get_name((pmpkg_t *)data1));
 			QString p1Ver(alpm_pkg_get_version((pmpkg_t *)data1));
 			QString pArch(alpm_pkg_get_arch((pmpkg_t *)data1));
+			
+			
 
 			runScriptlet(2, p1Name, p1Ver, pArch, "");
 		}
@@ -200,6 +206,8 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 			QString p1Name(alpm_pkg_get_name((pmpkg_t *)data1));
 			QString p1Ver(alpm_pkg_get_version((pmpkg_t *)data1));
 			QString pArch(alpm_pkg_get_arch((pmpkg_t *)data1));
+			
+			
 
 			runScriptlet(5, p1Name, p1Ver, pArch, "");
 		}
@@ -230,6 +238,8 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 			QString p1Name(alpm_pkg_get_name((pmpkg_t *)data1));
 			QString p1Ver(alpm_pkg_get_version((pmpkg_t *)data1));
 			QString pArch(alpm_pkg_get_arch((pmpkg_t *)data1));
+			
+			
 
 			runScriptlet(1, p1Name, p1Ver, pArch, "");
 		}
@@ -550,7 +560,8 @@ bool QueueDialog::runScriptlet(int action, const QString &p1N, const QString &p1
 	
 	chdir("/");
 	
-	proc = new QProcess(this);
+	proc = new ScriptletProcess(this);
+	proc->setupChildProcess();
 	connect(proc, SIGNAL(readyReadStandardOutput()), SLOT(writeLineProgress()));
 	connect(proc, SIGNAL(readyReadStandardError()), SLOT(writeLineProgressErr()));
 	connect(proc, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(finishedScriptletRunning(int,QProcess::ExitStatus)));
@@ -859,3 +870,25 @@ void QueueDialog::handleAlpmMessage(const QString &msg)
 
 	textEdit->moveCursor(QTextCursor::End);
 }
+
+
+ScriptletProcess::ScriptletProcess(QObject *parent)
+ : QProcess(parent)
+ {
+	
+ }
+
+ScriptletProcess::~ScriptletProcess()
+{
+	
+}
+
+void ScriptletProcess::setupChildProcess()
+{
+	// Drop all privileges in the child process, and enter
+	// a chroot jail.
+#if defined Q_OS_UNIX
+	::setuid(0);
+#endif
+}
+
