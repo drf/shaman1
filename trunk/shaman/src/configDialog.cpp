@@ -599,8 +599,6 @@ void ConfigDialog::saveConfiguration()
 {
 	qDebug() << "Saving Configuration...";
 	
-	ath.switchToRoot();
-	
 	bool dbChanged = false;
 	QString mirror(mirrorBox->currentText());
 	mirror = mirror.remove(' ');
@@ -854,8 +852,7 @@ void ConfigDialog::saveConfiguration()
 			if(!editPacmanKey("options/LogFile", logFileLine->text(), 0))
 				editPacmanKey("options/LogFile", logFileLine->text(), 1);
 	}
-	ath.switchToStdUsr();
-
+	
 	/* Ok, saving finished, commit changes to Alpm now */
 	m_handler->reloadPacmanConfiguration();
 
@@ -911,8 +908,6 @@ void ConfigDialog::saveConfiguration()
 	
 	settings->deleteLater();
 	
-	ath.switchToRoot();
-	
 	if(useMatchSupRadio->isChecked())
 	{
 		/* We need to generate a SUPFILES containing our current repos
@@ -963,9 +958,6 @@ void ConfigDialog::saveConfiguration()
 	if(docDirsEdit->isModified())
 		editMakepkgSection("docdirs", docDirsEdit->text());
 	
-	ath.switchToStdUsr();
-
-
 	/* Did we change anything in the repos? Better update our
 	 * local DB then.
 	 */

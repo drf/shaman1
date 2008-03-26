@@ -31,6 +31,7 @@
 #include <QStringList>
 
 #include "StringUtils.h"
+#include "Authenticator.h"
 
 using namespace std;
 
@@ -102,6 +103,7 @@ private:
 	PacmanConf pacData;
 	ABSConf absData;
 	MakePkgConf makepkgData;
+	Authenticator ath;
 };
 
 #endif /*CONFIGURATIONPARSER_H_*/
