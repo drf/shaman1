@@ -44,6 +44,7 @@ private:
 	pam_handle_t *pamh;
 	int retval;
 	bool onTransaction;
+	bool alreadyAuthed;
 };
 
 class Authenticator_Callback : public QObject

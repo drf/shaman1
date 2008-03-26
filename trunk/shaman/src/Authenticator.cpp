@@ -41,7 +41,8 @@ static struct pam_conv conv = {
 Authenticator::Authenticator()
  : pamh(NULL),
  retval(0),
- onTransaction(false)
+ onTransaction(false),
+ alreadyAuthed(false)
 {
 }
 
@@ -66,7 +67,7 @@ bool Authenticator::switchToRoot()
 	{
 		QSettings *settings = new QSettings();
 		
-		if(settings->value("auth/askforpwd", true).toBool())
+		if(settings->value("auth/askforpwd", true).toBool() && !alreadyAuthed)
 		{
 			if(!checkUser("root"))
 			{
@@ -121,6 +122,7 @@ bool Authenticator::checkUser(const QString &uname)
 	{
 		retval = pam_acct_mgmt(pamh, 0);       /* permitted access? */
 		qDebug() << "Authentication was successful!";
+		alreadyAuthed = true;
 	}
 	else
 		qDebug() << "Auth failed!";
@@ -183,10 +185,19 @@ int Authenticator_Callback::auth_cback(int num_msg, const struct pam_message **m
 	for (count=0; count < num_msg; ++count) 
 	{
 		qDebug() << "Processing message" << count;
+
+		pam_response tmp;
+		tmp.resp_retcode = 15;
+		
+		QString fakePwd("shaman_reserved_password_for_pam_trs");
+
+		tmp.resp = fakePwd.toAscii().data();
+		reply[count] = tmp;
 		
 		emit passwordRequired(count);
 		
-		wCond.wait(&mutex);
+		if(reply[count].resp == tmp.resp && reply[count].resp_retcode == tmp.resp_retcode)
+			wCond.wait(&mutex);
 
 		if(reply == NULL)
 		{
