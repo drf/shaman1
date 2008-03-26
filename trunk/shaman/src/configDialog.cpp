@@ -152,7 +152,7 @@ void ConfigDialog::setupRepos()
 			unstableBox->setChecked(true);
 		else if(!strcmp(alpm_db_get_name(curdb), "kdemod"))
 			KDEMod3Box->setChecked(true);
-		else if(!strcmp(alpm_db_get_name(curdb), "kdemod-testing"))
+		else if(!strcmp(alpm_db_get_name(curdb), "kdemod-unstable"))
 			KDEMod4Box->setChecked(true);
 		else
 		{
@@ -732,20 +732,20 @@ void ConfigDialog::saveConfiguration()
 	if(KDEMod4Box->isChecked())
 	{
 		if(!strcmp(alpm_pkg_get_arch(m_handler->getPackageFromName("pacman", "local")), "i686"))
-			mirror = "http://kdemod.ath.cx/repo/testing/i686";
+			mirror = "http://kdemod.ath.cx/repo/unstable/i686";
 		else
-			mirror = "http://kdemod.ath.cx/repo/testing/x86_64";
+			mirror = "http://kdemod.ath.cx/repo/unstable/x86_64";
 
-		if(!editPacmanKey("kdemod-testing/Server", mirror, 0))
+		if(!editPacmanKey("kdemod-unstable/Server", mirror, 0))
 		{
-			if(editPacmanKey("kdemod-testing/Server", mirror, 1))
+			if(editPacmanKey("kdemod-unstable/Server", mirror, 1))
 				dbChanged = true;
 		}
 		else
 			dbChanged = true;
 	}
 	else
-		if(editPacmanKey("kdemod-testing/Server", NULL, 2))
+		if(editPacmanKey("kdemod-unstable/Server", NULL, 2))
 			dbChanged = true;
 
 	/* Whew, now with the third party elements. We also take the
