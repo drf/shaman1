@@ -510,7 +510,8 @@ void ConfigDialog::performManteinanceAction()
 	}
 	else if(!mantActionBox->currentText().compare(QString(tr("Optimize Pacman Database"))))
 	{
-		mantProc = new QProcess();
+		mantProc = new RootProcess();
+		mantProc->setupChildProcess();
 
 		connect(mantProc, SIGNAL(readyReadStandardError()), SLOT(mantProgress()));
 		connect(mantProc, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(cleanProc(int,QProcess::ExitStatus)));
@@ -1078,7 +1079,8 @@ void ConfigDialog::cleanProc(int eC, QProcess::ExitStatus eS)
 	statusLabel->setText(QString(tr("Running sync...", "sync is a command, so it should not be translated")));
 	mantDetails->append(QString(tr("Running sync...", "sync is a command, so it should not be translated")));
 
-	mantProc = new QProcess();
+	mantProc = new RootProcess();
+	mantProc->setupChildProcess();
 
 	if(mantProc->execute("sync") == 0)
 	{

@@ -89,7 +89,7 @@ private:
 	AlpmHandler *m_handler;
 	QDialog *addDialog;
 	CleanThread *cTh;
-	QProcess *mantProc;
+	RootProcess *mantProc;
 	bool upDb;
 	Authenticator ath;
 };

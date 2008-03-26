@@ -560,7 +560,7 @@ bool QueueDialog::runScriptlet(int action, const QString &p1N, const QString &p1
 	
 	chdir("/");
 	
-	proc = new ScriptletProcess(this);
+	proc = new RootProcess(this);
 	proc->setupChildProcess();
 	connect(proc, SIGNAL(readyReadStandardOutput()), SLOT(writeLineProgress()));
 	connect(proc, SIGNAL(readyReadStandardError()), SLOT(writeLineProgressErr()));
@@ -870,25 +870,3 @@ void QueueDialog::handleAlpmMessage(const QString &msg)
 
 	textEdit->moveCursor(QTextCursor::End);
 }
-
-
-ScriptletProcess::ScriptletProcess(QObject *parent)
- : QProcess(parent)
- {
-	
- }
-
-ScriptletProcess::~ScriptletProcess()
-{
-	
-}
-
-void ScriptletProcess::setupChildProcess()
-{
-	// Drop all privileges in the child process, and enter
-	// a chroot jail.
-#if defined Q_OS_UNIX
-	::setuid(0);
-#endif
-}
-

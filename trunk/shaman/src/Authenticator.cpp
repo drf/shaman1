@@ -201,3 +201,22 @@ int Authenticator_Callback::auth_cback(int num_msg, const struct pam_message **m
 
 	return PAM_SUCCESS;
 }
+
+RootProcess::RootProcess(QObject *parent)
+ : QProcess(parent)
+ {
+	
+ }
+
+RootProcess::~RootProcess()
+{
+	
+}
+
+void RootProcess::setupChildProcess()
+{
+	// We need to set the **REAL** UID to 0
+#if defined Q_OS_UNIX
+	::setuid(0);
+#endif
+}

@@ -25,6 +25,7 @@
 
 #include <QObject>
 #include <QString>
+#include <QProcess>
 
 class Authenticator
 {
@@ -58,6 +59,17 @@ public:
 	
 signals:
 	void passwordRequired(int count);
+};
+
+class RootProcess : public QProcess
+{
+	Q_OBJECT
+	
+public:
+	explicit RootProcess( QObject * parent = 0 );
+	virtual ~RootProcess();
+	
+	void setupChildProcess();
 };
 
 int auth_cback(int num_msg, const struct pam_message **msg,
