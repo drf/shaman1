@@ -3,27 +3,27 @@
 <context>
     <name>AlpmHandler</name>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1088"/>
+        <location filename="../src/AlpmHandler.cpp" line="1110"/>
         <source>: requires </source>
         <translation>: απαιτεί</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1098"/>
+        <location filename="../src/AlpmHandler.cpp" line="1120"/>
         <source>: conflicts with </source>
         <translation>: είναι σε διένεξη με το</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1125"/>
+        <location filename="../src/AlpmHandler.cpp" line="1147"/>
         <source>%1 exists in both &apos;%2&apos; and &apos;%3&apos;</source>
         <translation>Το %1 υπάρχει τόσο στο &apos;%2&apos; όσο και στο &apos;%3&apos;</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1133"/>
+        <location filename="../src/AlpmHandler.cpp" line="1155"/>
         <source>: %1 exists in filesystem</source>
         <translation>: το %1 υπάρχει ήδη στον δίσκο</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1152"/>
+        <location filename="../src/AlpmHandler.cpp" line="1174"/>
         <source>Alpm did not give further details.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -610,7 +610,7 @@ Repositories τρίτων λειτουργούν όπως τα επίσημα κ
         <translation>Βελτιστοποίηση Βάσεως Δεδομένων του Pacman</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="523"/>
+        <location filename="../src/configDialog.cpp" line="524"/>
         <source>Clean All Building Environments</source>
         <translation>Καθαρισμός όλων των Περιβάλλοντων Χτισίματος</translation>
     </message>
@@ -655,48 +655,48 @@ Repositories τρίτων λειτουργούν όπως τα επίσημα κ
         <translation>Διαγραφή της Cache...</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="528"/>
+        <location filename="../src/configDialog.cpp" line="529"/>
         <source>Cleaning up building Environments...</source>
         <translation>Εκκαθάριση των περιβάλλοντων χτισίματος...</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="543"/>
+        <location filename="../src/configDialog.cpp" line="544"/>
         <source>Cleaning up Unused Databases Failed!</source>
         <translation>Ο καθαρισμός των Αχρησιμοποίητων Βάσεων Δεδομένων Απέτυχε!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="548"/>
+        <location filename="../src/configDialog.cpp" line="549"/>
         <source>Cleaning up Cache Failed!</source>
         <translation>Ο καθαρισμός της Cache Απέτυχε!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="553"/>
+        <location filename="../src/configDialog.cpp" line="554"/>
         <source>Deleting Cache Failed!</source>
         <translation>Η Διαγραφή της Cache Απέτυχε!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="558"/>
+        <location filename="../src/configDialog.cpp" line="559"/>
         <source>Could not clean Build Environments!!</source>
         <translation>Η εκκαθάριση του Περιβάλλοντος Χτισίματος απέτυχε!!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="572"/>
+        <location filename="../src/configDialog.cpp" line="573"/>
         <source>Unused Databases Cleaned up successfully!</source>
         <translation>Η εκκαθάριση των Αχρησιμοποίητων Βάσεων Δεδομένων
 έγινε με επιτυχία!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="578"/>
+        <location filename="../src/configDialog.cpp" line="579"/>
         <source>Cache Cleaned Up Successfully!</source>
         <translation>Η εκκαθάριση της Cache έγινε με επιτυχία!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="584"/>
+        <location filename="../src/configDialog.cpp" line="585"/>
         <source>Cache Successfully Deleted!</source>
         <translation>Η διαγραφή της Cache έγινε με επιτυχία!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="590"/>
+        <location filename="../src/configDialog.cpp" line="591"/>
         <source>Build Environments Successfully Cleaned!</source>
         <translation>Τα Περιβάλλοντα Χτισίματος καθαρίστικαν με επιτυχία!</translation>
     </message>
@@ -706,19 +706,19 @@ Repositories τρίτων λειτουργούν όπως τα επίσημα κ
         <translation type="obsolete">Τα Περιβάλλοντα Χτισίματος καθαρίστικαν με επιτυχία!!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="972"/>
+        <location filename="../src/configDialog.cpp" line="980"/>
         <source>Settings Changed</source>
         <translation>Οι ρυθμίσεις άλλαξαν</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="978"/>
+        <location filename="../src/configDialog.cpp" line="986"/>
         <source>Your repositories have changed.
 Do you want to Update Your Database?</source>
         <translation>Η λίστα των repositories άλλαξε.
 Θέλετε να ανανεώσετε τη Βάση Δεδομένων;</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1008"/>
+        <location filename="../src/configDialog.cpp" line="1016"/>
         <source>Mirror Format is incorrect. Your mirror should look like this:
 http://mirror.org/$repo/os/i686</source>
         <comment>Obviously keep the example as it is ;)</comment>
@@ -726,7 +726,7 @@ http://mirror.org/$repo/os/i686</source>
 http://mirror.org/$repo/os/i686</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1030"/>
+        <location filename="../src/configDialog.cpp" line="1038"/>
         <source>Your Mirror was successfully added!
 It is now available in mirrorlist.</source>
         <comment>mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.</comment>
@@ -734,36 +734,36 @@ It is now available in mirrorlist.</source>
 Βρίσκεται διαθέσιμο στο αρχείο /etc/pacman.d/mirrorlist.</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1060"/>
+        <location filename="../src/configDialog.cpp" line="1068"/>
         <source>Pacman Database Optimized Successfully!</source>
         <translation>Η βελτιστοποίηση της Βάσης Δεδομένων του
 Pacman πραγματοποιήθηκε με επιτυχία!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1066"/>
+        <location filename="../src/configDialog.cpp" line="1074"/>
         <source>Could not Optimize Pacman Database!</source>
         <translation>Η βελτιστοποίηση της Βάσης Δεδομένων
 του Pacman δεν ήταν δυνατή!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1080"/>
+        <location filename="../src/configDialog.cpp" line="1089"/>
         <source>Operation Completed Successfully!</source>
         <translation>Η διεργασία πραγματοποιήθηκε με επιτυχία!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1079"/>
+        <location filename="../src/configDialog.cpp" line="1088"/>
         <source>Sync was successfully executed!!</source>
         <comment>Sync is always the command</comment>
         <translation>Η εντολή Sync εκτελέστηκε με επιτυχία!!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1084"/>
+        <location filename="../src/configDialog.cpp" line="1093"/>
         <source>Sync could not be executed!</source>
         <comment>Sync is always the command</comment>
         <translation>Η εντολή Sync δεν μπόρεσε να εκτελεστεί!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1085"/>
+        <location filename="../src/configDialog.cpp" line="1094"/>
         <source>Sync could not be executed!!</source>
         <comment>Sync is always the command</comment>
         <translation>Η εντολή Sync δεν μπόρεσε να εκτελεστεί!!</translation>
@@ -774,7 +774,7 @@ Pacman πραγματοποιήθηκε με επιτυχία!</translation>
         <translation>Επιλέχθηκε η διεργασία</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="519"/>
+        <location filename="../src/configDialog.cpp" line="520"/>
         <source>Optimizing Pacman Database...</source>
         <translation>Βελτιστοποίηση της Βάσης Δεδομένων του Pacman...</translation>
     </message>
@@ -824,7 +824,7 @@ p, li { white-space: pre-wrap; }
         <translation>Unstable</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1072"/>
+        <location filename="../src/configDialog.cpp" line="1080"/>
         <source>Running sync...</source>
         <comment>sync is a command, so it should not be translated</comment>
         <translation>Εκτέλεση του sync...</translation>
@@ -1173,7 +1173,7 @@ Do you want to save it?</source>
         <translation type="obsolete">Shaman - Αδράνεια</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="208"/>
+        <location filename="../src/MainWindow.cpp" line="214"/>
         <source>Shaman will keep running in the system tray.
 To close it, click Quit in the file menu or in the tray icon context menu.
 While in the System Tray, Shaman will update your Databases
@@ -1186,12 +1186,12 @@ You can change this behaviour in Settings.</source>
 Μπορείτε να αλλάξετε αυτή τη συμπεριφορά στις Ρυθμίσεις.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="216"/>
+        <location filename="../src/MainWindow.cpp" line="222"/>
         <source>Shaman - Reducing To Tray</source>
         <translation>Shaman - Κλείσιμο στο Tray</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2049"/>
+        <location filename="../src/MainWindow.cpp" line="2041"/>
         <source>Upgrade</source>
         <translation>Αναβάθμιση</translation>
     </message>
@@ -1201,7 +1201,7 @@ You can change this behaviour in Settings.</source>
         <translation type="obsolete">Shaman - Αδράνεια (Διαθέσιμες Αναβαθμίσεις)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1267"/>
+        <location filename="../src/MainWindow.cpp" line="1273"/>
         <source>System Upgrade</source>
         <translation>Αναβάθμιση Συστήματος</translation>
     </message>
@@ -1220,57 +1220,57 @@ Click here to upgrade your System.</source>
 Κάντε click για να αναβαθμίσετε το Σύστημα.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="437"/>
+        <location filename="../src/MainWindow.cpp" line="443"/>
         <source>All Repositories</source>
         <translation>Όλα τα Repositories</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="440"/>
+        <location filename="../src/MainWindow.cpp" line="446"/>
         <source>Local Packages</source>
         <translation>Τοπικά πακέτα</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1029"/>
+        <location filename="../src/MainWindow.cpp" line="1035"/>
         <source>All Groups</source>
         <translation>Όλες οι Ομάδες</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="897"/>
+        <location filename="../src/MainWindow.cpp" line="903"/>
         <source>Mark for Reinstallation</source>
         <translation>Επιλογή για Επανεγκατάσταση</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1941"/>
+        <location filename="../src/MainWindow.cpp" line="1933"/>
         <source>Install</source>
         <translation>Εγκατάσταση</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1984"/>
+        <location filename="../src/MainWindow.cpp" line="1976"/>
         <source>Uninstall</source>
         <translation>Απεγκατάσταση</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1984"/>
+        <location filename="../src/MainWindow.cpp" line="1976"/>
         <source>Complete Uninstall</source>
         <translation>Ολική Απεγκατάσταση</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="634"/>
+        <location filename="../src/MainWindow.cpp" line="640"/>
         <source>Status: </source>
         <translation>Κατάσταση:</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="636"/>
+        <location filename="../src/MainWindow.cpp" line="642"/>
         <source>Installed</source>
         <translation>Εγκατεστημένα</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="638"/>
+        <location filename="../src/MainWindow.cpp" line="644"/>
         <source>Not installed</source>
         <translation>Μη Εγκατεστημένα</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="652"/>
+        <location filename="../src/MainWindow.cpp" line="658"/>
         <source>Action: </source>
         <translation>Ενέργεια:</translation>
     </message>
@@ -1280,12 +1280,12 @@ Click here to upgrade your System.</source>
         <translation type="obsolete">Shaman - Επεξεργασία</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1814"/>
+        <location filename="../src/MainWindow.cpp" line="1786"/>
         <source>Error</source>
         <translation>Σφάλμα</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="769"/>
+        <location filename="../src/MainWindow.cpp" line="775"/>
         <source>One or more Databases could not be updated.
 Last error reported was:
 %1</source>
@@ -1294,69 +1294,69 @@ Last error reported was:
 %1</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="776"/>
+        <location filename="../src/MainWindow.cpp" line="782"/>
         <source>Database Update</source>
         <translation>Ανανέωση Βάσης Δεδομένων</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="776"/>
+        <location filename="../src/MainWindow.cpp" line="782"/>
         <source>Databases Updated Successfully</source>
         <translation>Οι Βάσεις Δεδομένων ανανεώθηκαν με επιτυχία</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="880"/>
+        <location filename="../src/MainWindow.cpp" line="886"/>
         <source>Mark for Upgrade</source>
         <translation>Επιλογή για Αναβάθμιση</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="882"/>
+        <location filename="../src/MainWindow.cpp" line="888"/>
         <source>Cancel Action</source>
         <translation>Ακύρωση Ενέργειας</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="921"/>
+        <location filename="../src/MainWindow.cpp" line="927"/>
         <source>Mark all for installation</source>
         <translation>Επιλογή όλων για εγκατάσταση</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="923"/>
+        <location filename="../src/MainWindow.cpp" line="929"/>
         <source>Mark all for reinstallation</source>
         <translation>Επιλογή όλων για επανεγκατάσταση</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="925"/>
+        <location filename="../src/MainWindow.cpp" line="931"/>
         <source>Mark all for removal</source>
         <translation>Επιλογή όλων για αφαίρεση</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1267"/>
+        <location filename="../src/MainWindow.cpp" line="1273"/>
         <source>Your system is up to date!</source>
         <translation>Το σύστημα είναι ενημερωμένο!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1497"/>
+        <location filename="../src/MainWindow.cpp" line="1510"/>
         <source>Queue Processing</source>
         <translation>Επεξεργασία Ουράς</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1497"/>
+        <location filename="../src/MainWindow.cpp" line="1510"/>
         <source>Your Queue is being processed.
 Please wait.</source>
         <translation>Η ουρά επεξεργάζεται.
 Παρακαλώ περιμένετε.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1601"/>
+        <location filename="../src/MainWindow.cpp" line="1617"/>
         <source>Queue Processed</source>
         <translation>Η Ουρά επεξεργάστηκε</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1594"/>
+        <location filename="../src/MainWindow.cpp" line="1610"/>
         <source>Your Queue was successfully processed!</source>
         <translation>Η επεξεργασία της Ουράς έγινε με επιτυχία!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1601"/>
+        <location filename="../src/MainWindow.cpp" line="1617"/>
         <source>Your Queue was successfully processed!!</source>
         <translation>Η επεξεργασία της Ουράς έγινε με επιτυχία!!</translation>
     </message>
@@ -1406,17 +1406,17 @@ Please wait.</source>
         <translation type="obsolete">Θέλετε να συνεχίσετε;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1805"/>
+        <location filename="../src/MainWindow.cpp" line="1777"/>
         <source>Install a Package</source>
         <translation>Εγκατάσταση Πακέτου</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1805"/>
+        <location filename="../src/MainWindow.cpp" line="1777"/>
         <source>Arch Linux Packages (*.pkg.tar.gz)</source>
         <translation>Πακέτα του Arch Linux (*.pkg.tar.gz)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1814"/>
+        <location filename="../src/MainWindow.cpp" line="1786"/>
         <source>%1 does not seem
 a valid package</source>
         <translation>Το πακέτο %1 δεν
@@ -1510,26 +1510,26 @@ Do you want to proceed anyway?</source>
         <translation type="obsolete">Τα πακέτα σας χτίστηκαν με επιτυχία και είναι έτοιμα για εγκατάσταση</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1866"/>
+        <location filename="../src/MainWindow.cpp" line="1838"/>
         <source>%1 GiB</source>
         <comment>Size is in Gib</comment>
         <translation>%1 GiB
 </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1868"/>
+        <location filename="../src/MainWindow.cpp" line="1840"/>
         <source>%1 MiB</source>
         <comment>Size is in MiB</comment>
         <translation>%1 MiB</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1870"/>
+        <location filename="../src/MainWindow.cpp" line="1842"/>
         <source>%1 KiB</source>
         <comment>Size is in KiB</comment>
         <translation>%1 KiB</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1872"/>
+        <location filename="../src/MainWindow.cpp" line="1844"/>
         <source>%1 Bytes</source>
         <comment>Size is in Bytes</comment>
         <translation>%1 Bytes</translation>
@@ -1541,17 +1541,17 @@ Do you want to proceed anyway?</source>
         <translation>Έξοδος</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="209"/>
+        <location filename="../src/MainWindow.cpp" line="215"/>
         <source>Do not show this Again</source>
         <translation>Να μην εμφανιστεί ξανά</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1291"/>
+        <location filename="../src/MainWindow.cpp" line="1297"/>
         <source>Pacman Update</source>
         <translation>Ανανέωση του Pacman</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1298"/>
+        <location filename="../src/MainWindow.cpp" line="1304"/>
         <source>Pacman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Pacman now?</source>
@@ -1560,12 +1560,12 @@ Do you want to Upgrade Pacman now?</source>
 Θέλετε να αναβαθμίσετε το Pacman τώρα;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1327"/>
+        <location filename="../src/MainWindow.cpp" line="1333"/>
         <source>Shaman Update</source>
         <translation>Ανανέωση του Shaman</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1334"/>
+        <location filename="../src/MainWindow.cpp" line="1340"/>
         <source>Shaman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Shaman now?</source>
@@ -1574,19 +1574,19 @@ Do you want to Upgrade Shaman now?</source>
 Θέλετε να αναβαθμίσετε το Shaman τώρα;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1578"/>
+        <location filename="../src/MainWindow.cpp" line="1594"/>
         <source>Restart required</source>
         <translation>Απαιτείται επανεκκίνηση</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1566"/>
+        <location filename="../src/MainWindow.cpp" line="1582"/>
         <source>Pacman or Shaman was updated. Shaman will now quit,
 please restart it to use the new version</source>
         <translation>Το Pacman ή το Shaman αναβαθμίστηκε. Το Shaman θα κλείσει,
 παρακαλώ επανεκκινήστε το για να χρησιμοποιήσετε τη νέα έκδοση</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1853"/>
+        <location filename="../src/MainWindow.cpp" line="1825"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -1609,45 +1609,45 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;l.appelhans@gmx.de&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1887"/>
+        <location filename="../src/MainWindow.cpp" line="1859"/>
         <source>Library Question</source>
         <translation>Ερώτηση Βιβλιοθήκης</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="641"/>
+        <location filename="../src/MainWindow.cpp" line="647"/>
         <source>Local Version: </source>
         <translation>Τοπική Έκδοση:</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="646"/>
+        <location filename="../src/MainWindow.cpp" line="652"/>
         <source>Version in the Repository: </source>
         <translation>Έκδοση στο Repository:</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1538"/>
+        <location filename="../src/MainWindow.cpp" line="1554"/>
         <source>One or more errors occourred, your Queue
 was not successfully processed</source>
         <translation>Εμφανίστηκε ένα τουλάχιστον σφάλμα, η Ουρά
 δεν επεξεργάστηκε με επιτυχία</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="168"/>
+        <location filename="../src/MainWindow.cpp" line="174"/>
         <source>Esc</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1579"/>
+        <location filename="../src/MainWindow.cpp" line="1595"/>
         <source>Your Kernel has been updated.
 Please restart your PC soon to load the new Kernel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1694"/>
+        <location filename="../src/MainWindow.cpp" line="1666"/>
         <source>News Alert</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1700"/>
+        <location filename="../src/MainWindow.cpp" line="1672"/>
         <source>There is an unread news about %1.
 Do you want to read it?</source>
         <translation type="unfinished"></translation>
@@ -1702,23 +1702,23 @@ Do you want to read it?</source>
         <location filename="../src/main.cpp" line="222"/>
         <source>You have to be root to run Shaman.
 Please restart it with root privileges.</source>
-        <translation>Για να τρέξετε το Shaman πρέπει να είστε ο root.
+        <translation type="obsolete">Για να τρέξετε το Shaman πρέπει να είστε ο root.
 Παρκαλώ επανεκκινήστε το με δικαιώματα root.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="246"/>
+        <location filename="../src/main.cpp" line="257"/>
         <source>Shaman</source>
         <translation>Shaman</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="234"/>
+        <location filename="../src/main.cpp" line="245"/>
         <source>There was a problem while testing libalpm.
 Maybe another application has a lock on it.</source>
         <translation>Υπήρξε ένα πρόβλημα κατά την δοκιμή του libalpm.
 Ίσως κάποια άλλη εφαρμογή το χρησιμοποιεί.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="221"/>
+        <location filename="../src/main.cpp" line="107"/>
         <source>Shaman</source>
         <comment>Hey! If you are reading this, first of all thanks for helping us in making Shaman better. There are not many comments unless where needed, since all the strings are pretty self-explanatory. You will see a lot of HTML in some cases: do not let that scare you, but please edit text only. Editing HTML tags too may break our layout, so be careful. A good practice could be copying the whole string, and then translating just what&apos;s outside the tags, usually just a few words. If you have any doubts, or if you just want to drop us a line, there goes our email addresses:
 Dario: drf54321@gmail.com
@@ -1727,7 +1727,7 @@ Thanks again, and enjoy your translation!</comment>
         <translation>Shaman</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="247"/>
+        <location filename="../src/main.cpp" line="258"/>
         <source>Pacman is not updated.
 Shaman needs libalpm &gt;= 2.1.0 to run.
 Yours is %1. Please update Pacman.</source>
@@ -1736,24 +1736,37 @@ Yours is %1. Please update Pacman.</source>
 Η έκδοσή σας είναι η %1. Παρακαλώ αναβαθμίστε το Pacman.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="207"/>
+        <location filename="../src/main.cpp" line="225"/>
         <source>Please Wait...</source>
         <translation>Παρακαλώ Περιμένετε...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="299"/>
+        <location filename="../src/main.cpp" line="310"/>
         <source>Loading Databases...</source>
         <translation>Φόρτωση Βάσεων Δεδομένων...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="307"/>
+        <location filename="../src/main.cpp" line="318"/>
         <source>Loading Packages...</source>
         <translation>Φόρτωση Πακέτων...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="315"/>
+        <location filename="../src/main.cpp" line="326"/>
         <source>Starting up Shaman...</source>
         <translation>Εκκίνηση του Shaman...</translation>
+    </message>
+    <message>
+        <location filename="../src/main.cpp" line="108"/>
+        <source>Your settings file seems unwritable.
+Please check permissions on it.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/main.cpp" line="233"/>
+        <source>You have started Shaman as root.
+It is advised to start it as unprivileged user.
+Shaman will ask you for root password when needed.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1794,103 +1807,103 @@ Yours is %1. Please update Pacman.</source>
         <translation>Εγκατάσταση του %1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="166"/>
+        <location filename="../src/QueueDialog.cpp" line="170"/>
         <source>%1 (%2) installed successfully!</source>
         <translation>Το %1 (%2) εγκαταστάθηκε με επιτυχία!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="178"/>
+        <location filename="../src/QueueDialog.cpp" line="182"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Removal Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Η Αφαίρεση του Πακέτου ξεκίνησε&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="182"/>
+        <location filename="../src/QueueDialog.cpp" line="186"/>
         <source>Removing %1...</source>
         <translation>Αφαίρεση του %1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="207"/>
+        <location filename="../src/QueueDialog.cpp" line="215"/>
         <source>%1 (%2) removed successfully!</source>
         <translation>Το %1 (%2) αφαιρέθηκε με επιτυχία!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="219"/>
+        <location filename="../src/QueueDialog.cpp" line="227"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Upgrading Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Η Αναβάθμιση του Πακέτου ξεκίνησε&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="223"/>
+        <location filename="../src/QueueDialog.cpp" line="231"/>
         <source>Upgrading %1...</source>
         <translation>Αναβάθμιση του %1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="251"/>
+        <location filename="../src/QueueDialog.cpp" line="261"/>
         <source>Upgraded %1 successfully (%2 -&gt; %3)</source>
         <translation>Το πακέτο %1 αναβαθμίστηκε με επιτυχία (%2 -&gt; %3)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="265"/>
+        <location filename="../src/QueueDialog.cpp" line="275"/>
         <source>&lt;br&gt;&lt;b&gt; * Queue Processing Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Η Επεξεργασία της Ουράς ξεκίνησε&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="269"/>
+        <location filename="../src/QueueDialog.cpp" line="279"/>
         <source>Checking package integrity...</source>
         <translation>Έλεγχος ακεραιότητας πακέτου...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="273"/>
+        <location filename="../src/QueueDialog.cpp" line="283"/>
         <source>Checking delta integrity...</source>
         <translation>Έλεγχος ακεραιότητας delta...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="276"/>
+        <location filename="../src/QueueDialog.cpp" line="286"/>
         <source>Applying deltas...</source>
         <translation>Εφαρμογή των deltas...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="279"/>
+        <location filename="../src/QueueDialog.cpp" line="289"/>
         <source>Generating %1 with %2... </source>
         <translation>Παραγωγή %1 με %2...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="283"/>
+        <location filename="../src/QueueDialog.cpp" line="293"/>
         <source>Success!</source>
         <translation>Επιτυχία!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="286"/>
+        <location filename="../src/QueueDialog.cpp" line="296"/>
         <source>Failed!</source>
         <translation>Απέτυχε!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="300"/>
+        <location filename="../src/QueueDialog.cpp" line="310"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Downloading Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Το κατέβασμα πακέτων ξεκίνησε&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="304"/>
+        <location filename="../src/QueueDialog.cpp" line="314"/>
         <source>Starting downloading packages from %1...</source>
         <translation>Έναρξη κατεβάσματος πακέτων από %1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="344"/>
+        <location filename="../src/QueueDialog.cpp" line="354"/>
         <source>%p% (%1 KB/s, %4:%5:%6 remaining)</source>
         <comment>You just have to translate &apos;remaining&apos; here. Leave everything else as it is.</comment>
         <translation>%p% (%1 KB/s, %4:%5:%6 απομένουν)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="352"/>
+        <location filename="../src/QueueDialog.cpp" line="362"/>
         <source>Downloading %1... (%2 MB of %3 MB)</source>
         <translation>Κατέβασμα του %1... (%2 MB of %3 MB)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="355"/>
+        <location filename="../src/QueueDialog.cpp" line="365"/>
         <source>Downloading %1... (%2 KB of %3 KB)</source>
         <translation>Κατέβασμα του %1... (%2 KB of %3 KB)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="405"/>
+        <location filename="../src/QueueDialog.cpp" line="415"/>
         <source>Queue processed, please wait...</source>
         <translation>Η Ουρά επεξεργάστηκε, παρακαλώ περιμένετε...</translation>
     </message>
@@ -1925,17 +1938,17 @@ Yours is %1. Please update Pacman.</source>
         <translation type="obsolete">Εκτέλεση του post_remove scriptlet...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="463"/>
+        <location filename="../src/QueueDialog.cpp" line="473"/>
         <source>Unexpected Error. Shaman might be corrupted.</source>
         <translation>Μη αναμενώμενο σφάλμα. Το Shaman ίσως να είναι κατεστραμμένο.</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="527"/>
+        <location filename="../src/QueueDialog.cpp" line="537"/>
         <source>Extracting Scriptlet from package failed!!</source>
         <translation>Η εξαγωγή του Scriptlet από το πακέτο απέτυχε!!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="655"/>
+        <location filename="../src/QueueDialog.cpp" line="666"/>
         <source>Scriptlet processed successfully!</source>
         <translation>Το Scriptlet επεξεργάστηκε με επιτυχία!</translation>
     </message>
@@ -1946,54 +1959,54 @@ Yours is %1. Please update Pacman.</source>
 κατά την επεξεργασία του!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="470"/>
+        <location filename="../src/QueueDialog.cpp" line="480"/>
         <source>Executing %1 scriptlet for %2...</source>
         <translation>Εκτέλεση %1 scriptlet για %2...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="537"/>
+        <location filename="../src/QueueDialog.cpp" line="547"/>
         <source>Package %1 does not have %2 scriptlet</source>
         <translation>Το πακέτο %1 δεν έχει το %2 scriptlet</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="661"/>
+        <location filename="../src/QueueDialog.cpp" line="672"/>
         <source>Error processing Scriptlet!!</source>
         <translation>Σφάλμα κατά την επεξεργασία του Scriptlet!!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="837"/>
+        <location filename="../src/QueueDialog.cpp" line="848"/>
         <source>Queue Processing</source>
         <translation>Επεξεργασία Ουράς</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="794"/>
+        <location filename="../src/QueueDialog.cpp" line="805"/>
         <source>There has been an error while preparing the transaction.
 </source>
         <translation>Εμφανίστηκε ένα σφάλμα κατά την προετοιμασία της εργασίας.</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="827"/>
+        <location filename="../src/QueueDialog.cpp" line="838"/>
         <source>There has been an error while committing the transaction.
 </source>
         <translation>Εμφανίστηκε ένα σφάλμα κατά την εκτέλεση της εργασίας.</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="414"/>
+        <location filename="../src/QueueDialog.cpp" line="424"/>
         <source>Queue processing failed!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="419"/>
+        <location filename="../src/QueueDialog.cpp" line="429"/>
         <source>Queue processed successfully!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="427"/>
+        <location filename="../src/QueueDialog.cpp" line="437"/>
         <source>Close</source>
         <translation>Κλείσιμο</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="756"/>
+        <location filename="../src/QueueDialog.cpp" line="767"/>
         <source>Would you like to abort Queue Processing?
 This may damage your system.</source>
         <translation type="unfinished"></translation>
@@ -2490,6 +2503,35 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Johannes Schriewer&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;KDEMod Developer, and also some help on the code.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>authDialog</name>
+    <message>
+        <location filename="../ui/authDialog.ui" line="13"/>
+        <source>Root Password Required</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/authDialog.ui" line="33"/>
+        <source>Shaman needs root privileges to perform this action.
+Please enter in the field below the root password to continue.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/authDialog.ui" line="50"/>
+        <source>Never ask for this anymore</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/authDialog.ui" line="72"/>
+        <source>Cancel</source>
+        <translation type="unfinished">Ακύρωση</translation>
+    </message>
+    <message>
+        <location filename="../ui/authDialog.ui" line="82"/>
+        <source>Ok</source>
+        <translation type="unfinished">Ok</translation>
     </message>
 </context>
 <context>

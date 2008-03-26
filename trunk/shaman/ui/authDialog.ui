@@ -5,8 +5,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>421</width>
-    <height>154</height>
+    <width>472</width>
+    <height>232</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -23,7 +23,7 @@
           <string/>
          </property>
          <property name="pixmap" >
-          <pixmap resource="qtpacman.qrc" >:/Icons/icons/applications-development.png</pixmap>
+          <pixmap resource="qtpacman.qrc" >:/Icons/icons/document-encrypt.svg</pixmap>
          </property>
         </widget>
        </item>
