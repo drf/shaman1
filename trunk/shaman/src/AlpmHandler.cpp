@@ -31,6 +31,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <limits.h>
+#include <pwd.h>
 #include <sys/utsname.h>
 #include <QDir>
 #include <QDebug>
@@ -51,9 +52,6 @@ AlpmHandler::AlpmHandler(bool init)
 : toRemove(NULL),
 toSync(NULL)
 {
-
-	real_uid = getuid();
-	
 	/* First, initialize Alpm. Then, make the whole class aware that no
 	 * transaction with libalpm is in progress */
 	if(!init)
@@ -144,7 +142,7 @@ bool AlpmHandler::initTransaction(pmtranstype_t type, pmtransflag_t flags)
 	if(isTransaction())
 		return false;
 	
-	switchToRoot();
+	ath.switchToRoot();
 
 	setuseragent();
 	
@@ -168,7 +166,7 @@ bool AlpmHandler::releaseTransaction()
 		if(alpm_trans_interrupt() == -1)
 			return false;
 
-	switchToStdUsr();
+	ath.switchToStdUsr();
 
 	onTransaction = false;
 	emit transactionReleased();
@@ -748,7 +746,7 @@ void AlpmHandler::processQueue()
 
 bool AlpmHandler::cleanUnusedDb()
 {
-	switchToRoot();
+	ath.switchToRoot();
 	
 	DIR *dir;
 	struct dirent *ent;
@@ -814,12 +812,12 @@ bool AlpmHandler::cleanUnusedDb()
 		if(!found) 
 			if(rmrf(path)) 
 			{
-				switchToStdUsr();
+				ath.switchToStdUsr();
 				return false;
 			}
 	}
 	
-	switchToStdUsr();
+	ath.switchToStdUsr();
 	return true;
 }
 
@@ -868,7 +866,7 @@ int AlpmHandler::rmrf(const char *path)
 
 bool AlpmHandler::cleanCache(bool empty)
 {
-	switchToRoot();
+	ath.switchToRoot();
 	
 	alpm_list_t* cachedirs = alpm_option_get_cachedirs();
 	QString cachedir((char *)alpm_list_getdata(cachedirs));
@@ -881,7 +879,7 @@ bool AlpmHandler::cleanCache(bool empty)
 
 		if(!dir.exists()) 
 		{
-			switchToStdUsr();
+			ath.switchToStdUsr();
 			return false;
 		}
 
@@ -921,18 +919,18 @@ bool AlpmHandler::cleanCache(bool empty)
 
 		if(rmrf(cachedir.toAscii().data()))
 		{
-			switchToStdUsr();
+			ath.switchToStdUsr();
 			return false;
 		}
 
 		if(makepath(cachedir.toAscii().data())) 
 		{
-			switchToStdUsr();
+			ath.switchToStdUsr();
 			return false;
 		}
 	}
 
-	switchToStdUsr();
+	ath.switchToStdUsr();
 	return true;
 }
 
@@ -1234,34 +1232,4 @@ alpm_list_t *AlpmHandler::getPackagesFromRepo(const QString &reponame)
 	}
 	
 	return retlist;
-}
-
-void AlpmHandler::switchToRoot()
-{
-	seteuid(0);
-	//setuid(0);
-
-	if(geteuid() != 0)
-	{
-		qDebug() << "Couldn't switch to root!!";
-		emit noRootPrivileges();
-	}
-	else
-		qDebug() << "Root Privileges granted.";
-	
-	qDebug() << "Uid is:" << getuid();
-}
-
-void AlpmHandler::switchToStdUsr()
-{
-	seteuid(real_uid);
-	//setuid(real_uid);
-
-	if(geteuid() != real_uid)
-	{
-		qDebug() << "Couldn't switch back to the real id!!";
-		emit noSwitchBack();
-	}
-	else
-		qDebug() << "Root privileges retired.";
 }

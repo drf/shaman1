@@ -93,6 +93,24 @@ int main(int argc, char **argv)
 	QCoreApplication::setApplicationName("shaman");
 
 	QSettings *settings = new QSettings();
+
+	if(!settings->isWritable())
+	{
+		QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("Shaman", "Hey! "
+				"If you are reading this, first of all thanks for helping us in making Shaman better. "
+				"There are not many comments unless where needed, since all the strings are pretty self-explanatory. "
+				"You will see a lot of HTML in some cases: do not let that scare you, but please edit text only. Editing "
+				"HTML tags too may break our layout, so be careful. A good practice could be copying the whole string, "
+				"and then translating just what's outside the tags, usually just a few words. "
+				"If you have any doubts, or if you just want to drop us a line, there goes our email addresses:\n"
+				"Dario: drf54321@gmail.com\nLukas: l.appelhans@gmx.de\n"
+				"Thanks again, and enjoy your translation!"), 
+				QObject::tr("Your settings file seems unwritable.\nPlease check permissions on it."), QMessageBox::Ok);
+
+		message->show();
+
+		return app.exec();
+	}
 	
 	qDebug() << settings->fileName();
 
@@ -208,23 +226,16 @@ int main(int argc, char **argv)
 		app.processEvents();
 	}
 
-	/*if(myuid > 0)
+	if(getuid() == 0)
 	{
-		QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("Shaman", "Hey! "
-				"If you are reading this, first of all thanks for helping us in making Shaman better. "
-				"There are not many comments unless where needed, since all the strings are pretty self-explanatory. "
-				"You will see a lot of HTML in some cases: do not let that scare you, but please edit text only. Editing "
-				"HTML tags too may break our layout, so be careful. A good practice could be copying the whole string, "
-				"and then translating just what's outside the tags, usually just a few words. "
-				"If you have any doubts, or if you just want to drop us a line, there goes our email addresses:\n"
-				"Dario: drf54321@gmail.com\nLukas: l.appelhans@gmx.de\n"
-				"Thanks again, and enjoy your translation!"), 
-				QObject::tr("You have to be root to run Shaman.\nPlease restart it with root privileges."), QMessageBox::Ok);
+		QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("Shaman"), 
+				QObject::tr("You have started Shaman as root.\nIt is advised to start it as unprivileged user.\n"
+						"Shaman will ask you for root password when needed."), QMessageBox::Ok);
 
-		message->show();
+		message->exec();
 
-		return app.exec();
-	}*/
+		message->deleteLater();
+	}
 
 	AlpmHandler *aHandler = new AlpmHandler(true);
 

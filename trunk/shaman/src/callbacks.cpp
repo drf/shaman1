@@ -136,9 +136,11 @@ void CallBacks::cb_trans_conv(pmtransconv_t event, void *data1, void *data2,
 		break;
 	}
 	
+	emit questionStreamed(message);
+	
 	qDebug() << "Question Streamed, Alpm Thread waiting.";
 	
-	emit questionStreamed(message);
+	wCond.wait(&mutex);
 	
 	qDebug() << "Alpm Thread awake, committing answer.";
 	

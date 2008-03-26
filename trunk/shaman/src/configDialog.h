@@ -23,6 +23,7 @@
 
 #include "ui_configDialog.h"
 #include "ConfigurationParser.h"
+#include "Authenticator.h"
 #include <QThread>
 #include <QProcess>
 
@@ -90,6 +91,7 @@ private:
 	CleanThread *cTh;
 	QProcess *mantProc;
 	bool upDb;
+	Authenticator ath;
 };
 
 #endif

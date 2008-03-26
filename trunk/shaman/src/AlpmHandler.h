@@ -29,6 +29,7 @@
 #include <QStringList>
 
 #include "ConfigurationParser.h"
+#include "Authenticator.h"
 
 using namespace std;
 
@@ -125,9 +126,6 @@ public:
 	QString getAlpmVersion();
 	
 	void setuseragent();
-	
-	void switchToRoot();
-	void switchToStdUsr();
 
 private:
 	bool initTransaction(pmtranstype_t type, pmtransflag_t flags);
@@ -147,8 +145,6 @@ signals:
 	void preparingUpgradeError();
 	void preparingTransactionError(const QString &msg);
 	void committingTransactionError(const QString &msg);
-	void noRootPrivileges();
-	void noSwitchBack();
 
 private:
 	pmdb_t *db_local;
@@ -165,7 +161,7 @@ private:
 	QStringList toSync;
 	QStringList toFromFile;
 	
-	uid_t real_uid;
+	Authenticator ath;
 
 };
 

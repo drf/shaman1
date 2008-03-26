@@ -50,6 +50,7 @@ SET(shaman_SRCS ${shaman_adaptor_SRCS}
     src/ArchLinuxNewsReader.cpp
     src/NewsViewer.cpp
     src/LogViewer.cpp
+    src/Authenticator.cpp
 )
 
 SET(shaman_MOC_HDRS
@@ -69,6 +70,7 @@ SET(shaman_MOC_HDRS
     src/ArchLinuxNewsReader.h
     src/NewsViewer.h
     src/LogViewer.h
+    src/Authenticator.h
 )
 
 SET(shaman_UIS
@@ -84,6 +86,7 @@ SET(shaman_UIS
     ui/upgradeDialog.ui
     ui/newsDialog.ui
     ui/logViewer.ui
+    ui/authDialog.ui
 )
 
 SET(shaman_RESOUCES
@@ -171,6 +174,7 @@ TARGET_LINK_LIBRARIES(shaman
     #${QTPLUGIN_QTMNG_LIBRARY}
     -lalpm
     -larchive
+    -lpam
 )
 
 CONFIGURE_FILE(

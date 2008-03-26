@@ -132,6 +132,7 @@ private slots:
 	void reinstallAllRepoPackages();
 	void removeAllRepoPackages();
 	void cancelAllRepoActions();
+	void showAuthDialog(int count);
 	
 private:
 	void loadDbUpdateDialog();

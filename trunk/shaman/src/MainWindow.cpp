@@ -31,13 +31,18 @@
 #include "BuildingHandler.h"
 #include "ShamanTrayIcon.h"
 #include "ui_aboutDialog.h"
+#include "ui_authDialog.h"
 #include "shamanadaptor.h"
 #include "ReviewQueueDialog.h"
 #include "ArchLinuxNewsReader.h"
 #include "NewsViewer.h"
 #include "LogViewer.h"
+#include "Authenticator.h"
 
 #include <iostream>
+#include <alpm.h>
+#include <sys/types.h>
+
 #include <QMenu>
 #include <QString>
 #include <QListWidgetItem>
@@ -52,13 +57,13 @@
 #include <QMovie>
 #include <QShortcut>
 #include <QNetworkProxy>
-#include <alpm.h>
-#include <sys/types.h>
+#include <QMutex>
 
 extern CallBacks CbackReference;
 extern QMutex mutex;
 extern QWaitCondition wCond;
-
+extern Authenticator_Callback athCback;
+extern struct pam_response *reply;
 
 MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 : QMainWindow(parent),
@@ -150,6 +155,7 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 			SIGNAL(streamTransDlProg(const QString&,int,int,int,int)));
 	connect(newsReader, SIGNAL(newItems()), trayicon, SLOT(newNewsAvailable()));
 	connect(newsReader, SIGNAL(fetchingFailed()), trayicon, SLOT(newsFetchingFailed()));
+	connect(&athCback, SIGNAL(passwordRequired(int)), SLOT(showAuthDialog(int)));
 
 	QSettings *settings = new QSettings();
 
@@ -1858,6 +1864,15 @@ void MainWindow::streamTransQuestion(const QString &msg)
 
 	msgBox->setText(msg);
 
+	// Let's Hide out other dialogs
+
+	foreach(QObject *ent, children())
+	{	
+		QDialog *edl = qobject_cast<QDialog *>(ent);
+		if(edl != 0)
+			edl->hide();
+	}
+
 	switch (msgBox->exec()) {
 	case QMessageBox::Yes:
 		CbackReference.answer = 1;
@@ -1872,7 +1887,18 @@ void MainWindow::streamTransQuestion(const QString &msg)
 
 	msgBox->deleteLater();
 
+	// Let's show dialogs
+
+	foreach(QObject *ent, children())
+	{	
+		QDialog *edl = qobject_cast<QDialog *>(ent);
+		if(edl != 0)
+			edl->show();
+	}
+
 	qDebug() << "Waking Alpm Thread";
+	
+	wCond.wakeAll();
 }
 
 void MainWindow::updateABSTree()
@@ -2095,4 +2121,58 @@ void MainWindow::openLogViewer()
 	}
 	else
 		lView->show();
+}
+
+void MainWindow::showAuthDialog(int count)
+{
+	qDebug() << "Starting Auth Dialog";
+	
+	Ui::authDialog aUi;
+	QDialog *dlog = new QDialog(this);
+	
+	dlog->setModal(true);
+	
+	aUi.setupUi(dlog);
+	
+	// Let's Hide out other dialogs
+
+	foreach(QObject *ent, children())
+	{	
+		QDialog *edl = qobject_cast<QDialog *>(ent);
+		if(edl != 0)
+			edl->hide();
+	}
+	
+	if(dlog->exec() == QDialog::Accepted)
+	{
+		pam_response tmp;
+		tmp.resp_retcode = 0;
+		
+		char *str = (char *) malloc(strlen(aUi.lineEdit->text().toAscii().data()) * sizeof(char));
+		strcpy(str, aUi.lineEdit->text().toAscii().data());
+		
+		tmp.resp = str;
+
+		qDebug() << "Inserting Reply";
+		reply[count] = tmp;
+		qDebug() << "Reply inserted";
+	}
+	else
+	{
+		free(reply);
+		reply = NULL;
+	}
+	
+	dlog->deleteLater();
+	
+	// Ok, let's show back again hidden dialogs
+
+	foreach(QObject *ent, children())
+	{	
+		QDialog *dlog = qobject_cast<QDialog *>(ent);
+		if(dlog != 0)
+			dlog->show();
+	}
+	
+	wCond.wakeAll();
 }

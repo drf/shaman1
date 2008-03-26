@@ -598,7 +598,7 @@ void ConfigDialog::saveConfiguration()
 {
 	qDebug() << "Saving Configuration...";
 	
-	m_handler->switchToRoot();
+	ath.switchToRoot();
 	
 	bool dbChanged = false;
 	QString mirror(mirrorBox->currentText());
@@ -853,7 +853,7 @@ void ConfigDialog::saveConfiguration()
 			if(!editPacmanKey("options/LogFile", logFileLine->text(), 0))
 				editPacmanKey("options/LogFile", logFileLine->text(), 1);
 	}
-	m_handler->switchToStdUsr();
+	ath.switchToStdUsr();
 
 	/* Ok, saving finished, commit changes to Alpm now */
 	m_handler->reloadPacmanConfiguration();
@@ -910,7 +910,7 @@ void ConfigDialog::saveConfiguration()
 	
 	settings->deleteLater();
 	
-	m_handler->switchToRoot();
+	ath.switchToRoot();
 	
 	if(useMatchSupRadio->isChecked())
 	{
@@ -962,7 +962,7 @@ void ConfigDialog::saveConfiguration()
 	if(docDirsEdit->isModified())
 		editMakepkgSection("docdirs", docDirsEdit->text());
 	
-	m_handler->switchToStdUsr();
+	ath.switchToStdUsr();
 
 
 	/* Did we change anything in the repos? Better update our
