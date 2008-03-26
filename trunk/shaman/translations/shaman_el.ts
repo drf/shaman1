@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS><TS version="1.1" language="el">
+<defaultcodec></defaultcodec>
 <context>
     <name>AlpmHandler</name>
     <message>
@@ -455,10 +456,11 @@ Please note that packages from Unstable and Testing may break your system.</sour
 improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme,
 and lots of addons, KDEMod is the best way to taste the ease and the power
 of KDE with the simplicity and the power of Arch.</source>
-        <translation>Το KDEMod είναι μια βελτιωμένη έκδοση του KDE αποκλειστικά για το Arch Linux. Περιέχει μια
-βελτιωμένη έκδοση της Qt, συμβατή με τη στάνταρ έκδοση που δίνει το Arch Linux, βελτιωμένο θέμα
-εμφάνισης και πολλές άλλες προσθήκες. Το KDEMod είναι ο καλύτερος τρόπος για να γευτείτε την 
-ευκολία και τη δύναμη του KDE ακολουθώντας την απλότητα και τη δύναμη του Arch.</translation>
+        <translation>Το KDEMod είναι μια βελτιωμένη έκδοση του KDE αποκλειστικά για το Arch Linux. 
+Περιέχει μια βελτιωμένη έκδοση της Qt, συμβατή με τη στάνταρ έκδοση που δίνει το 
+Arch Linux, βελτιωμένο θέμα εμφάνισης και πολλές άλλες προσθήκες. Το KDEMod είναι
+ο καλύτερος τρόπος για να γευτείτε την ευκολία και τη δύναμη του KDE ακολουθώντας 
+την απλότητα και τη δύναμη του Arch.</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="568"/>
@@ -701,24 +703,24 @@ Repositories τρίτων λειτουργούν όπως τα επίσημα κ
         <translation>Τα Περιβάλλοντα Χτισίματος καθαρίστικαν με επιτυχία!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="582"/>
+        <location filename="../src/configDialog.cpp" line="523"/>
         <source>Build Environments Successfully Cleaned!!</source>
         <translation type="obsolete">Τα Περιβάλλοντα Χτισίματος καθαρίστικαν με επιτυχία!!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="980"/>
+        <location filename="../src/configDialog.cpp" line="972"/>
         <source>Settings Changed</source>
         <translation>Οι ρυθμίσεις άλλαξαν</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="986"/>
+        <location filename="../src/configDialog.cpp" line="978"/>
         <source>Your repositories have changed.
 Do you want to Update Your Database?</source>
         <translation>Η λίστα των repositories άλλαξε.
 Θέλετε να ανανεώσετε τη Βάση Δεδομένων;</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1016"/>
+        <location filename="../src/configDialog.cpp" line="1008"/>
         <source>Mirror Format is incorrect. Your mirror should look like this:
 http://mirror.org/$repo/os/i686</source>
         <comment>Obviously keep the example as it is ;)</comment>
@@ -726,7 +728,7 @@ http://mirror.org/$repo/os/i686</source>
 http://mirror.org/$repo/os/i686</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1038"/>
+        <location filename="../src/configDialog.cpp" line="1030"/>
         <source>Your Mirror was successfully added!
 It is now available in mirrorlist.</source>
         <comment>mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.</comment>
@@ -734,36 +736,36 @@ It is now available in mirrorlist.</source>
 Βρίσκεται διαθέσιμο στο αρχείο /etc/pacman.d/mirrorlist.</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1068"/>
+        <location filename="../src/configDialog.cpp" line="1060"/>
         <source>Pacman Database Optimized Successfully!</source>
         <translation>Η βελτιστοποίηση της Βάσης Δεδομένων του
 Pacman πραγματοποιήθηκε με επιτυχία!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1074"/>
+        <location filename="../src/configDialog.cpp" line="1066"/>
         <source>Could not Optimize Pacman Database!</source>
         <translation>Η βελτιστοποίηση της Βάσης Δεδομένων
 του Pacman δεν ήταν δυνατή!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1089"/>
+        <location filename="../src/configDialog.cpp" line="1081"/>
         <source>Operation Completed Successfully!</source>
         <translation>Η διεργασία πραγματοποιήθηκε με επιτυχία!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1088"/>
+        <location filename="../src/configDialog.cpp" line="1080"/>
         <source>Sync was successfully executed!!</source>
         <comment>Sync is always the command</comment>
         <translation>Η εντολή Sync εκτελέστηκε με επιτυχία!!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1093"/>
+        <location filename="../src/configDialog.cpp" line="1085"/>
         <source>Sync could not be executed!</source>
         <comment>Sync is always the command</comment>
         <translation>Η εντολή Sync δεν μπόρεσε να εκτελεστεί!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1094"/>
+        <location filename="../src/configDialog.cpp" line="1086"/>
         <source>Sync could not be executed!!</source>
         <comment>Sync is always the command</comment>
         <translation>Η εντολή Sync δεν μπόρεσε να εκτελεστεί!!</translation>
@@ -771,7 +773,7 @@ Pacman πραγματοποιήθηκε με επιτυχία!</translation>
     <message>
         <location filename="../ui/configDialog.ui" line="189"/>
         <source>Process Selected</source>
-        <translation>Επιλέχθηκε η διεργασία</translation>
+        <translation>Επεξεργασία Επιλογής</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="520"/>
@@ -824,7 +826,7 @@ p, li { white-space: pre-wrap; }
         <translation>Unstable</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1080"/>
+        <location filename="../src/configDialog.cpp" line="1072"/>
         <source>Running sync...</source>
         <comment>sync is a command, so it should not be translated</comment>
         <translation>Εκτέλεση του sync...</translation>
@@ -851,6 +853,16 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Shaman Manteinance.&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/configDialog.ui" line="280"/>
+        <source>Use SysLog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/configDialog.ui" line="350"/>
+        <source>Log File:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -907,16 +919,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/configDialog.ui" line="1031"/>
         <source>Check if there is an unread news about a package in Queue before processing it</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/configDialog.ui" line="280"/>
-        <source>Use SysLog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/configDialog.ui" line="350"/>
-        <source>Log File:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1145,7 +1147,7 @@ Do you want to save it?</source>
     <message>
         <location filename="../ui/MainWindow.ui" line="621"/>
         <source>Build and Install Queue</source>
-        <translation>Ουρά Χτισίματος και Εγκατάστασης</translation>
+        <translation>Χτίσιμο και Εγκατάσταση Ουράς</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="175"/>
@@ -1633,13 +1635,7 @@ was not successfully processed</source>
     <message>
         <location filename="../src/MainWindow.cpp" line="174"/>
         <source>Esc</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/MainWindow.cpp" line="1595"/>
-        <source>Your Kernel has been updated.
-Please restart your PC soon to load the new Kernel.</source>
-        <translation type="unfinished"></translation>
+        <translation>Esc</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1666"/>
@@ -1653,13 +1649,19 @@ Do you want to read it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="653"/>
-        <source>Read News</source>
+        <location filename="../src/MainWindow.cpp" line="1595"/>
+        <source>Your Kernel has been updated.
+Please restart your PC soon to load the new Kernel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="517"/>
         <source>Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/MainWindow.ui" line="653"/>
+        <source>Read News</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1688,7 +1690,7 @@ Do you want to read it?</source>
     <message>
         <location filename="../src/NewsViewer.cpp" line="176"/>
         <source>Error</source>
-        <translation type="unfinished">Σφάλμα</translation>
+        <translation>Σφάλμα</translation>
     </message>
     <message>
         <location filename="../src/NewsViewer.cpp" line="177"/>
@@ -1699,7 +1701,7 @@ Do you want to read it?</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/main.cpp" line="222"/>
+        <location filename="../src/main.cpp" line="117"/>
         <source>You have to be root to run Shaman.
 Please restart it with root privileges.</source>
         <translation type="obsolete">Για να τρέξετε το Shaman πρέπει να είστε ο root.
@@ -2526,12 +2528,12 @@ Please enter in the field below the root password to continue.</source>
     <message>
         <location filename="../ui/authDialog.ui" line="72"/>
         <source>Cancel</source>
-        <translation type="unfinished">Ακύρωση</translation>
+        <translation>Ακύρωση</translation>
     </message>
     <message>
         <location filename="../ui/authDialog.ui" line="82"/>
         <source>Ok</source>
-        <translation type="unfinished">Ok</translation>
+        <translation>Ok</translation>
     </message>
 </context>
 <context>
@@ -2639,16 +2641,6 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/logViewer.ui" line="186"/>
-        <source>Refresh View</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/logViewer.ui" line="202"/>
-        <source>Close</source>
-        <translation type="unfinished">Κλείσιμο</translation>
-    </message>
-    <message>
         <location filename="../ui/logViewer.ui" line="127"/>
         <source>Filter</source>
         <translation type="unfinished"></translation>
@@ -2660,6 +2652,16 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/logViewer.ui" line="186"/>
+        <source>Refresh View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/logViewer.ui" line="202"/>
+        <source>Close</source>
+        <translation>Κλείσιμο</translation>
     </message>
 </context>
 <context>

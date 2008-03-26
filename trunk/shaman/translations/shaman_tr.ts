@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS><TS version="1.1" language="tr_TR">
-<defaultcodec></defaultcodec>
 <context>
     <name>AlpmHandler</name>
     <message>
@@ -386,12 +385,12 @@ Silmek ister msiniz?</translation>
         <translation>Derleme Ortamları Başarıyla Temizlendi!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="980"/>
+        <location filename="../src/configDialog.cpp" line="972"/>
         <source>Settings Changed</source>
         <translation>Ayarlar Değişti</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="986"/>
+        <location filename="../src/configDialog.cpp" line="978"/>
         <source>Your repositories have changed.
 Do you want to Update Your Database?</source>
         <translation>Veritabanlarınız değişti.
@@ -403,7 +402,7 @@ Veritabanını güncellemek ister misiniz?</translation>
         <translation>Yansı Ekle</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1016"/>
+        <location filename="../src/configDialog.cpp" line="1008"/>
         <source>Mirror Format is incorrect. Your mirror should look like this:
 http://mirror.org/$repo/os/i686</source>
         <comment>Obviously keep the example as it is ;)</comment>
@@ -411,7 +410,7 @@ http://mirror.org/$repo/os/i686</source>
 http://mirror.org/$repo/os/i686</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1038"/>
+        <location filename="../src/configDialog.cpp" line="1030"/>
         <source>Your Mirror was successfully added!
 It is now available in mirrorlist.</source>
         <comment>mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.</comment>
@@ -419,40 +418,40 @@ It is now available in mirrorlist.</source>
 Artık mirrorlist için yerini aldı.</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1068"/>
+        <location filename="../src/configDialog.cpp" line="1060"/>
         <source>Pacman Database Optimized Successfully!</source>
         <translation>Pacman Veritabanı başarıyla İyileştirildi!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1074"/>
+        <location filename="../src/configDialog.cpp" line="1066"/>
         <source>Could not Optimize Pacman Database!</source>
         <translation>Pacman Veritabanı iyileştirilemiyor!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1080"/>
+        <location filename="../src/configDialog.cpp" line="1072"/>
         <source>Running sync...</source>
         <comment>sync is a command, so it should not be translated</comment>
         <translation>sync çalıştırılıyor...</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1089"/>
+        <location filename="../src/configDialog.cpp" line="1081"/>
         <source>Operation Completed Successfully!</source>
         <translation>İşlem Başarıyla Tamamlandı!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1088"/>
+        <location filename="../src/configDialog.cpp" line="1080"/>
         <source>Sync was successfully executed!!</source>
         <comment>Sync is always the command</comment>
         <translation>Sync başarıyla çalıştırıldı!!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1093"/>
+        <location filename="../src/configDialog.cpp" line="1085"/>
         <source>Sync could not be executed!</source>
         <comment>Sync is always the command</comment>
         <translation>Sync çalıştırılamıyor!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1094"/>
+        <location filename="../src/configDialog.cpp" line="1086"/>
         <source>Sync could not be executed!!</source>
         <comment>Sync is always the command</comment>
         <translation>Sync çalıştırılamıyor!</translation>
