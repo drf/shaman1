@@ -5,7 +5,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>622</width>
+    <width>656</width>
     <height>264</height>
    </rect>
   </property>
@@ -154,12 +154,18 @@ p, li { white-space: pre-wrap; }
          <property name="text" >
           <string>Abort</string>
          </property>
+         <property name="icon" >
+          <iconset resource="qtpacman.qrc" >:/Icons/icons/dialog-cancel.png</iconset>
+         </property>
         </widget>
        </item>
        <item>
         <widget class="QPushButton" name="binaryButton" >
          <property name="text" >
           <string>Process From Binary</string>
+         </property>
+         <property name="icon" >
+          <iconset resource="qtpacman.qrc" >:/Icons/icons/edit-redo.png</iconset>
          </property>
         </widget>
        </item>
@@ -181,12 +187,18 @@ p, li { white-space: pre-wrap; }
          <property name="text" >
           <string>Review PKGBUILDs</string>
          </property>
+         <property name="icon" >
+          <iconset resource="qtpacman.qrc" >:/Icons/icons/draw-text.png</iconset>
+         </property>
         </widget>
        </item>
        <item>
         <widget class="QPushButton" name="sourceButton" >
          <property name="text" >
           <string>Process From Source</string>
+         </property>
+         <property name="icon" >
+          <iconset resource="qtpacman.qrc" >:/Icons/icons/dialog-ok-apply.png</iconset>
          </property>
         </widget>
        </item>

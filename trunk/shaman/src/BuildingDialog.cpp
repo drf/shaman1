@@ -246,7 +246,7 @@ void BuildingDialog::processCurrentQueueItem()
 	
 	progressEdit->append(QString(tr("<b>Building %1...</b><br><br>")).arg(buildQueue.at(currentItem)));
 		
-	ABSProc->start("makepkg", QStringList("--asroot"));
+	ABSProc->start("makepkg");
 
 }
 
