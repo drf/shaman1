@@ -233,6 +233,8 @@ void MainWindow::closeEvent(QCloseEvent *evt)
 
 		if(cbx->isChecked())
 			settings->setValue("gui/confirmquit", true);
+		
+		dlog->deleteLater();
 	}
 
 	settings->deleteLater();
