@@ -529,8 +529,6 @@ void ConfigDialog::performManteinanceAction()
 	}
 	else if(!mantActionBox->currentText().compare(QString(tr("Optimize Pacman Database"))))
 	{
-		seteuid(0);
-		
 		mantProc = new RootProcess();
 
 		connect(mantProc, SIGNAL(readyReadStandardError()), SLOT(mantProgress()));
@@ -541,7 +539,9 @@ void ConfigDialog::performManteinanceAction()
 		
 		qDebug() << "Starting the process";
 		
+		seteuid(0);		
 		mantProc->start("pacman-optimize");
+		seteuid(getuid());
 	}
 	else if(!mantActionBox->currentText().compare(QString(tr("Clean All Building Environments"))))
 	{
@@ -1102,7 +1102,8 @@ void ConfigDialog::cleanProc(int eC, QProcess::ExitStatus eS)
 	mantDetails->append(QString(tr("Running sync...", "sync is a command, so it should not be translated")));
 
 	mantProc = new RootProcess();
-
+	
+	seteuid(0);
 	if(mantProc->execute("sync") == 0)
 	{
 		statusLabel->setText(QString(tr("Operation Completed Successfully!")));
@@ -1114,10 +1115,9 @@ void ConfigDialog::cleanProc(int eC, QProcess::ExitStatus eS)
 		statusLabel->setText(QString(tr("Sync could not be executed!", "Sync is always the command")));
 		mantDetails->append(QString(tr("Sync could not be executed!!", "Sync is always the command")));
 	}
+	seteuid(getuid());
 
 	mantProc->deleteLater();
-	
-	ath.switchToStdUsr();
 
 	mantProcessButton->setEnabled(true);
 }
