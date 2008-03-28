@@ -51,6 +51,7 @@ SET(shaman_SRCS ${shaman_adaptor_SRCS}
     src/NewsViewer.cpp
     src/LogViewer.cpp
     src/Authenticator.cpp
+    src/ShamanDialog.cpp
 )
 
 SET(shaman_MOC_HDRS
