@@ -64,7 +64,7 @@ void BuildingDialog::abortProcess()
 		{
 			disconnect(ABSProc, SIGNAL(readyReadStandardOutput()), this, SLOT(writeLineProgress()));
 			disconnect(ABSProc, SIGNAL(readyReadStandardError()), this, SLOT(writeLineProgressErr()));
-			disconnect(ABSProc, SIGNAL(finished(int,QProcess::ExitStatus)), this, SLOT(finishedBuildingAction(int,QProcess::ExitStatus)));
+			disconnect(ABSProc, 0, 0, 0);
 			ABSProc->kill();
 			ABSProc->deleteLater();
 			progressEdit->append(QString(tr("<br><br><b>Building Process Aborted by the User. Building Failed.</b>")));	
@@ -80,18 +80,21 @@ void BuildingDialog::abortProcess()
 }
 
 void BuildingDialog::updateABSTree()
-{
-	ath.switchToRoot();
-	
+{	
 	ABSProc = new RootProcess(this);
 	connect(ABSProc, SIGNAL(readyReadStandardOutput()), SLOT(writeLineProgress()));
-	connect(ABSProc, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(finishedUpdateABSTree()));
+	connect(ABSProc, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(finishedUpdateABSTree(int,QProcess::ExitStatus)));
 
 	processingLabel->setText(QString(tr("Updating ABS Tree...")));
 	buildingLabel->setText(QString());
 
 	progressEdit->append(QString(tr("<b>Starting ABS Tree Update...</b><br><br>")));
+	
+	ath.switchToRoot();
+	
 	ABSProc->start("abs");
+	
+	ath.switchToStdUsr();
 	
 	progressEdit->moveCursor(QTextCursor::End);
 }
@@ -184,14 +187,24 @@ void BuildingDialog::writeLineProgressErrMk()
 	progressEdit->moveCursor(QTextCursor::End);
 }
 
-void BuildingDialog::finishedUpdateABSTree()
+void BuildingDialog::finishedUpdateABSTree(int ecode, QProcess::ExitStatus estat)
 {
-	ABSProc->deleteLater();
-	progressEdit->append(QString(tr("<br><br><b>ABS Tree Was Successfully Updated!</b>")));
+	Q_UNUSED(estat);
 	
-	ath.switchToStdUsr();
+	ABSProc->deleteLater();
+	
+	if(ecode == 0)
+	{
+		progressEdit->append(QString(tr("<br><br><b>ABS Tree Was Successfully Updated!</b>")));
+	
+		ShamanDialog::popupDialog(tr("ABS Update"), QString(tr("Your ABS Tree was updated!")), this, ShamanProperties::SuccessDialog);
+	}
+	else
+	{
+		progressEdit->append(QString("<br><br><b>" + tr("Couldn't update the ABS Tree!") + "</b>"));
 
-	ShamanDialog::popupDialog(tr("ABS Update"), QString(tr("Your ABS Tree was updated!")), this);
+		ShamanDialog::popupDialog(tr("ABS Update"), QString(tr("Couldn't update the ABS Tree!")), this, ShamanProperties::ErrorDialog);
+	}
 
 	deleteLater();
 }

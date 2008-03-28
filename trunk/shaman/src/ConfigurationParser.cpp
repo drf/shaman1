@@ -99,6 +99,13 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 
 		if(line.indexOf("#") != -1) 
 			line.truncate(line.indexOf("#"));
+		
+		if(line.contains('[') && line.contains(']'))
+		{
+			while(line.contains(' '))
+				line.remove(' ');
+		}
+				
 
 		if(line.startsWith('[') && line.endsWith(']')) 
 		{
@@ -135,7 +142,7 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 				if(templst.size() != 2)
 				{
 					pacData.loaded = false;
-
+					qDebug() << "= error";
 					return;
 				}
 				key.operator=(templst.at(0));
@@ -150,12 +157,14 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 			if(key == NULL)
 			{
 				pacData.loaded = false;
+				qDebug() << "Key not found error";
 				return;
 			}
 
 			if(section == NULL) 
 			{
 				pacData.loaded = false;
+				qDebug() << "Section not found error";
 				return;
 			}
 
@@ -192,7 +201,7 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 							if(!pacData.loaded)
 							{
 								pacData.loaded = false;
-
+								qDebug() << "Include error";
 								return;
 							}
 						}
@@ -281,6 +290,7 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 				}
 				else 
 				{
+					qDebug() << "Unknown error:" << key << line;
 					pacData.loaded = false;
 					return;
 				}
