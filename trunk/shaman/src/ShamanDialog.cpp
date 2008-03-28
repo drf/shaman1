@@ -21,6 +21,8 @@
 #include "ShamanDialog.h"
 
 #include <QMessageBox>
+#include <QPushButton>
+#include <QIcon>
 
 ShamanDialog::ShamanDialog()
 {
@@ -43,9 +45,9 @@ void ShamanDialog::popupDialog(const QString &title, const QString &text, QWidge
 	QMessageBox *message;
 	
 	if(parent == NULL)
-		message = new QMessageBox(QMessageBox::Warning, title, text, QMessageBox::Ok);
+		message = new QMessageBox(QMessageBox::Warning, title, text, QMessageBox::NoButton);
 	else
-		message = new QMessageBox(QMessageBox::Warning, title, text, QMessageBox::Ok, parent);
+		message = new QMessageBox(QMessageBox::Warning, title, text, QMessageBox::NoButton, parent);
 	
 	switch(dtype)
 	{
@@ -67,6 +69,8 @@ void ShamanDialog::popupDialog(const QString &title, const QString &text, QWidge
 	default:
 		break;
 	}
+	
+	message->addButton(QObject::tr("Ok"), QMessageBox::AcceptRole)->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
 
 	message->exec();
 
@@ -117,8 +121,16 @@ int ShamanDialog::popupQuestionDialog(const QString &title, const QString &text,
 	
 	msgBox->setWindowTitle(title);
 
-	msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+	QPushButton *okb = msgBox->addButton(QMessageBox::Yes);
+	QPushButton *nob = msgBox->addButton(QMessageBox::No);
 
+	okb->setText(QObject::tr("Yes"));
+	okb->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
+	nob->setText(QObject::tr("No"));
+	nob->setIcon(QIcon(":/Icons/icons/dialog-cancel.png"));
+	
+	msgBox->setDefaultButton(okb);
+	
 	msgBox->setWindowModality(Qt::ApplicationModal);
 
 	msgBox->setText(text);
