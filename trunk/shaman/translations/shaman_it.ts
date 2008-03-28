@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS><TS version="1.1" language="it">
+<defaultcodec></defaultcodec>
 <context>
     <name>AlpmHandler</name>
     <message>
@@ -31,81 +32,86 @@
 <context>
     <name>BuildingDialog</name>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="48"/>
+        <location filename="../src/BuildingDialog.cpp" line="50"/>
         <source>Error</source>
         <translation>Errore</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="49"/>
+        <location filename="../src/BuildingDialog.cpp" line="51"/>
         <source>Would you like to abort building?.
 All Process will be lost.</source>
         <translation>Vuoi davvero annullare la compilazione?
 Tutti i progressi andranno perduti.</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="56"/>
+        <location filename="../src/BuildingDialog.cpp" line="70"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Building Process Aborted by the User. Building Failed.&lt;/b&gt;</source>
         <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Compilazione annullata dall&apos;utente. Compilazione Fallita.&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="75"/>
+        <location filename="../src/BuildingDialog.cpp" line="88"/>
         <source>Updating ABS Tree...</source>
         <translation>Aggiornamento dell&apos;albero ABS...</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="78"/>
+        <location filename="../src/BuildingDialog.cpp" line="91"/>
         <source>&lt;b&gt;Starting ABS Tree Update...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
         <translation>&lt;b&gt;Inizio Aggiornamento dell&apos;albero ABS...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="131"/>
+        <location filename="../src/BuildingDialog.cpp" line="198"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;ABS Tree Was Successfully Updated!&lt;/b&gt;</source>
         <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Albero ABS Aggiornato con successo!&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="135"/>
+        <location filename="../src/BuildingDialog.cpp" line="206"/>
         <source>ABS Update</source>
         <translation>Aggiornamento ABS</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="135"/>
+        <location filename="../src/BuildingDialog.cpp" line="200"/>
         <source>Your ABS Tree was updated!</source>
         <translation>L&apos;albero ABS è stato aggiornato!</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="147"/>
+        <location filename="../src/BuildingDialog.cpp" line="219"/>
         <source>&lt;b&gt;Building %1 failed!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
         <translation>&lt;b&gt;Compilazione di %1 fallita!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="152"/>
+        <location filename="../src/BuildingDialog.cpp" line="224"/>
         <source>&lt;b&gt;%1 was built successfully!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
         <translation>&lt;b&gt;%1 compilato con successo!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="207"/>
+        <location filename="../src/BuildingDialog.cpp" line="279"/>
         <source>Processing Package %1 of %2...</source>
         <translation>Compilazione pacchetto %1 di %2...</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="208"/>
+        <location filename="../src/BuildingDialog.cpp" line="280"/>
         <source>Building %1...</source>
         <translation>Compilazione di %1...</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="236"/>
+        <location filename="../src/BuildingDialog.cpp" line="308"/>
         <source>&lt;b&gt;Building %1...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
         <translation>&lt;b&gt;Compilazione di %1...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="261"/>
+        <location filename="../src/BuildingDialog.cpp" line="333"/>
         <source>&lt;b&gt;Building operation has started.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
         <translation>&lt;b&gt;Compilazione dei pacchetti Iniziata.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="214"/>
+        <location filename="../src/BuildingDialog.cpp" line="286"/>
         <source>&lt;b&gt;Could not set up the environment correctly for %1!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
         <translation>&lt;b&gt;Non è stato possibile configurare correttamente l&apos;ambiente per %1!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+    </message>
+    <message>
+        <location filename="../src/BuildingDialog.cpp" line="206"/>
+        <source>Could not update the ABS Tree!</source>
+        <translation>Non è stato possibile aggiornare l&apos;albero ABS!</translation>
     </message>
 </context>
 <context>
@@ -730,24 +736,24 @@ E&apos; ora disponibile in mirrorlist.</translation>
         <translation>Non è stato possibile ottimizzare il Database di Pacman!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1110"/>
+        <location filename="../src/configDialog.cpp" line="1111"/>
         <source>Operation Completed Successfully!</source>
         <translation>Operazione Completata con Successo!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1109"/>
+        <location filename="../src/configDialog.cpp" line="1110"/>
         <source>Sync was successfully executed!!</source>
         <comment>Sync is always the command</comment>
         <translation>Sync è stato eseguito con successo!!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1114"/>
+        <location filename="../src/configDialog.cpp" line="1115"/>
         <source>Sync could not be executed!</source>
         <comment>Sync is always the command</comment>
         <translation>Non è stato possibile eseguire sync!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1115"/>
+        <location filename="../src/configDialog.cpp" line="1116"/>
         <source>Sync could not be executed!!</source>
         <comment>Sync is always the command</comment>
         <translation>Non è stato possibile eseguire sync!!</translation>
@@ -758,7 +764,7 @@ E&apos; ora disponibile in mirrorlist.</translation>
         <translation>Esegui l&apos;azione Selezionata</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="540"/>
+        <location filename="../src/configDialog.cpp" line="538"/>
         <source>Optimizing Pacman Database...</source>
         <translation>Ottimizzazione del Database di Pacman...</translation>
     </message>
@@ -1698,19 +1704,19 @@ Please restart it with root privileges.</source>
 Per favore riavvialo da root.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="263"/>
+        <location filename="../src/main.cpp" line="277"/>
         <source>Shaman</source>
         <translation>Shaman</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="249"/>
+        <location filename="../src/main.cpp" line="263"/>
         <source>There was a problem while testing libalpm.
 Maybe another application has a lock on it.</source>
         <translation>C&apos;è stato un problema testando libalpm.
 Forse un&apos;altra applicazione tiene un lock su di essa.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="107"/>
+        <location filename="../src/main.cpp" line="121"/>
         <source>Shaman</source>
         <comment>Hey! If you are reading this, first of all thanks for helping us in making Shaman better. There are not many comments unless where needed, since all the strings are pretty self-explanatory. You will see a lot of HTML in some cases: do not let that scare you, but please edit text only. Editing HTML tags too may break our layout, so be careful. A good practice could be copying the whole string, and then translating just what&apos;s outside the tags, usually just a few words. If you have any doubts, or if you just want to drop us a line, there goes our email addresses:
 Dario: drf54321@gmail.com
@@ -1724,27 +1730,27 @@ Thanks again, and enjoy your translation!</comment>
         <translation type="obsolete">Attendere prego, caricamento dei pacchetti...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="227"/>
+        <location filename="../src/main.cpp" line="241"/>
         <source>Please Wait...</source>
         <translation>Attendere Prego...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="318"/>
+        <location filename="../src/main.cpp" line="332"/>
         <source>Loading Databases...</source>
         <translation>Caricamento dei Database...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="326"/>
+        <location filename="../src/main.cpp" line="340"/>
         <source>Loading Packages...</source>
         <translation>Caricamento dei Pacchetti...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="334"/>
+        <location filename="../src/main.cpp" line="348"/>
         <source>Starting up Shaman...</source>
         <translation>Avvio di Shaman...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="264"/>
+        <location filename="../src/main.cpp" line="278"/>
         <source>Pacman is not updated.
 Shaman needs libalpm &gt;= 2.1.0 to run.
 Yours is %1. Please update Pacman.</source>
@@ -1778,14 +1784,14 @@ Per favore aggiorna Pacman.</translation>
 </translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="108"/>
+        <location filename="../src/main.cpp" line="122"/>
         <source>Your settings file seems unwritable.
 Please check permissions on it.</source>
         <translation>Il tuo file delle impostazioni non sembra essere scrivibile.
 Per favore controllane i permessi.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="235"/>
+        <location filename="../src/main.cpp" line="249"/>
         <source>You have started Shaman as root.
 It is advised to start it as unprivileged user.
 Shaman will ask you for root password when needed.</source>
@@ -1807,6 +1813,13 @@ Shaman chiederà quindi la password di root quando necessario.</translation>
         <location filename="../src/ShamanDialog.cpp" line="132"/>
         <source>No</source>
         <translation>No</translation>
+    </message>
+    <message>
+        <location filename="../src/main.cpp" line="100"/>
+        <source>It looks like another copy of Shaman is running.
+You can only run one copy of Shaman at a time.</source>
+        <translation>Sembra che un&apos;altra copia di Shaman sia in esecuzione.
+Puoi eseguirne solo una copia alla volta.</translation>
     </message>
 </context>
 <context>
@@ -1943,7 +1956,7 @@ Shaman chiederà quindi la password di root quando necessario.</translation>
         <translation>Scarico %1... (%2 KB di %3 KB)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="418"/>
+        <location filename="../src/QueueDialog.cpp" line="419"/>
         <source>Queue processed, please wait...</source>
         <translation>Coda eseguita, attendere prego...</translation>
     </message>
@@ -1978,17 +1991,17 @@ Shaman chiederà quindi la password di root quando necessario.</translation>
         <translation type="obsolete">Esecuzione della scriptlet post_remove...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="476"/>
+        <location filename="../src/QueueDialog.cpp" line="477"/>
         <source>Unexpected Error. Shaman might be corrupted.</source>
         <translation>Errore Inaspettato. Shaman potrebbe essere corrotto.</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="540"/>
+        <location filename="../src/QueueDialog.cpp" line="541"/>
         <source>Extracting Scriptlet from package failed!!</source>
         <translation>Impossibile estrarre la Scriptlet dal pacchetto!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="668"/>
+        <location filename="../src/QueueDialog.cpp" line="669"/>
         <source>Scriptlet processed successfully!</source>
         <translation>Scriptlet Eseguita con Successo!</translation>
     </message>
@@ -2028,63 +2041,63 @@ Shaman chiederà quindi la password di root quando necessario.</translation>
         <translation type="obsolete">Esecuzione della scriptlet post_remove per %1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="483"/>
+        <location filename="../src/QueueDialog.cpp" line="484"/>
         <source>Executing %1 scriptlet for %2...</source>
         <translation>Esecuzione della scriptlet %1 per %2...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="550"/>
+        <location filename="../src/QueueDialog.cpp" line="551"/>
         <source>Package %1 does not have %2 scriptlet</source>
         <translation>Il Pacchetto %1 non ha la scriptlet %2</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="674"/>
+        <location filename="../src/QueueDialog.cpp" line="675"/>
         <source>Error processing Scriptlet!!</source>
         <translation>Errore nell&apos;esecuzione della scriptlet!!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="846"/>
+        <location filename="../src/QueueDialog.cpp" line="847"/>
         <source>Queue Processing</source>
         <translation>Esecuzione Coda</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="798"/>
+        <location filename="../src/QueueDialog.cpp" line="799"/>
         <source>There has been an error while preparing the transaction.
 </source>
         <translation>C&apos;è stato un errore durante la preparazione della transazione.
 </translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="834"/>
+        <location filename="../src/QueueDialog.cpp" line="835"/>
         <source>There has been an error while committing the transaction.
 </source>
         <translation>C&apos;è stato un errore durante l&apos;esecuzione della transazione.
 </translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="761"/>
+        <location filename="../src/QueueDialog.cpp" line="762"/>
         <source>Would you like to abort Queue Processing?
 This may damage your system.</source>
         <translation>Desideri annullare l&apos;Esecuzione della Coda?
 Questo potrebbe danneggiare il tuo Sistema.</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="440"/>
+        <location filename="../src/QueueDialog.cpp" line="441"/>
         <source>Close</source>
         <translation>Chiudi</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="427"/>
+        <location filename="../src/QueueDialog.cpp" line="428"/>
         <source>Queue processing failed!</source>
         <translation>Esecuzione della Coda Fallita!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="432"/>
+        <location filename="../src/QueueDialog.cpp" line="433"/>
         <source>Queue processed successfully!</source>
         <translation>Coda eseguita con successo!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="838"/>
+        <location filename="../src/QueueDialog.cpp" line="839"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>

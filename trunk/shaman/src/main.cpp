@@ -92,6 +92,28 @@ int main(int argc, char **argv)
 	QCoreApplication::setOrganizationDomain("shaman.iskremblien.org");
 	QCoreApplication::setApplicationName("shaman");
 	
+	QStringList arguments = app.arguments();
+
+	QString locale = QLocale::system().name();
+
+	QTranslator translator;
+
+	if(!arguments.contains("--no-i18n"))
+	{
+		qDebug() << "Translations are enabled."; 
+		QString trpath(QString("shaman_") + locale);
+
+		if(!translator.load(trpath))
+			if(!translator.load(trpath, "../share/shaman/translations/"))
+				if(!translator.load(trpath, "/usr/share/shaman/translations/"))
+					if(!translator.load(trpath, "/usr/local/share/shaman/translations/"))
+						qDebug() << "Could not find a translation for this locale.";
+
+		app.installTranslator(&translator);
+	}
+	else
+		qDebug() << "Translations are Disabled on user request.";
+
 	QDBusConnection testconn = QDBusConnection::systemBus();
 	if(testconn.interface()->isServiceRegistered("org.archlinux.shaman"))
 	{
@@ -136,8 +158,6 @@ int main(int argc, char **argv)
 
 	if(!settings->value("gui/showsplashscreen", true).toBool())
 		showSplash = false;
-
-	QStringList arguments = app.arguments();
 	
 	if(arguments.contains("--you-suck"))
 	{
@@ -212,26 +232,6 @@ int main(int argc, char **argv)
 	qDebug() << ">>";
 	qDebug() << ">>	Starting Up Shaman...";
 	qDebug() << "";
-
-	QString locale = QLocale::system().name();
-	
-	QTranslator translator;
-
-	if(!arguments.contains("--no-i18n"))
-	{
-		qDebug() << "Translations are enabled."; 
-		QString trpath(QString("shaman_") + locale);
-
-		if(!translator.load(trpath))
-			if(!translator.load(trpath, "../share/shaman/translations/"))
-				if(!translator.load(trpath, "/usr/share/shaman/translations/"))
-					if(!translator.load(trpath, "/usr/local/share/shaman/translations/"))
-						qDebug() << "Could not find a translation for this locale.";
-
-		app.installTranslator(&translator);
-	}
-	else
-		qDebug() << "Translations are Disabled on user request.";
 
 	if(showSplash)
 	{

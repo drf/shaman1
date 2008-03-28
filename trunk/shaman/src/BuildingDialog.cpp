@@ -201,9 +201,9 @@ void BuildingDialog::finishedUpdateABSTree(int ecode, QProcess::ExitStatus estat
 	}
 	else
 	{
-		progressEdit->append(QString("<br><br><b>" + tr("Couldn't update the ABS Tree!") + "</b>"));
+		progressEdit->append(QString("<br><br><b>" + tr("Could not update the ABS Tree!") + "</b>"));
 
-		ShamanDialog::popupDialog(tr("ABS Update"), QString(tr("Couldn't update the ABS Tree!")), this, ShamanProperties::ErrorDialog);
+		ShamanDialog::popupDialog(tr("ABS Update"), QString(tr("Could not update the ABS Tree!")), this, ShamanProperties::ErrorDialog);
 	}
 
 	deleteLater();
