@@ -31,44 +31,44 @@
 <context>
     <name>BuildingDialog</name>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="50"/>
+        <location filename="../src/BuildingDialog.cpp" line="51"/>
         <source>Error</source>
         <translation>Hata</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="56"/>
+        <location filename="../src/BuildingDialog.cpp" line="57"/>
         <source>Would you like to abort building?.
 All Process will be lost.</source>
         <translation>Derlemeyi iptal etmek ister msiniz?.
 Tüm işlem kaybedilecek.</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="64"/>
+        <location filename="../src/BuildingDialog.cpp" line="65"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Building Process Aborted by the User. Building Failed.&lt;/b&gt;</source>
         <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Derleme işlemi kullanıcı tarafından iptal edildi.Derleme başarısız.&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="83"/>
+        <location filename="../src/BuildingDialog.cpp" line="86"/>
         <source>Updating ABS Tree...</source>
         <translation>ABS Ağacı güncelleniyor...</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="86"/>
+        <location filename="../src/BuildingDialog.cpp" line="89"/>
         <source>&lt;b&gt;Starting ABS Tree Update...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;ABS Ağacı güncellemesi başlıyor...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="139"/>
+        <location filename="../src/BuildingDialog.cpp" line="142"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;ABS Tree Was Successfully Updated!&lt;/b&gt;</source>
         <translation>&lt;br&gt;&lt;br&gt;&lt;br&gt;ABS Ağacı Başarıyla Güncellendi!&lt;/br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="141"/>
+        <location filename="../src/BuildingDialog.cpp" line="146"/>
         <source>ABS Update</source>
         <translation>ABS Güncellemesi</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="141"/>
+        <location filename="../src/BuildingDialog.cpp" line="146"/>
         <source>Your ABS Tree was updated!</source>
         <translation>ABS Ağacınız Güncellendi!</translation>
     </message>
@@ -111,25 +111,25 @@ Tüm işlem kaybedilecek.</translation>
 <context>
     <name>BuildingHandler</name>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="101"/>
+        <location filename="../src/BuildingHandler.cpp" line="82"/>
         <source>You need to have ABS installed to use Shaman&apos;s
 building feature. Do you want to install it now?</source>
         <translation>Shaman&apos;ın derleme özelliğini kullanabilmek için
 sisteminizde ABS yüklü olmalı.Yüklensin mi?</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="340"/>
+        <location filename="../src/BuildingHandler.cpp" line="291"/>
         <source>Error</source>
         <translation>Hata</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="133"/>
+        <location filename="../src/BuildingHandler.cpp" line="112"/>
         <source>You can not remove packages when processing
 your queue from Source</source>
         <translation>Kaynak sıra işlenirken paket kaldıramazsınız</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="164"/>
+        <location filename="../src/BuildingHandler.cpp" line="124"/>
         <source>Some of your packages do not belong to Arch
 Linux&apos;s official repository. Shaman is able to
 build packages from official sources only.</source>
@@ -138,76 +138,76 @@ değil. Shaman sadece resmi kaynaktan gelen paketleri
 derleyebilir.</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="201"/>
+        <location filename="../src/BuildingHandler.cpp" line="158"/>
         <source>You are about to install &lt;b&gt;%1 package&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
         <translation>&lt;b&gt;%1 paketini&lt;/b&gt; kaynaktan yüklemek üzeresiniz. Kaynaktan&lt;b&gt;derlemek bazı artılar getirebilir, ancak çok yavaştır.&lt;b&gt;Bunun hakkında emin değilseniz, ikili dosyalardan işleminizi gerçekleştirmeniz&lt;b&gt;en iyisi olacaktır. Devam etmeden önce,&lt;b&gt; derleme verimliliğini arttırmak için yapılandırmanızı gözden geçirmeniz önerilir.</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="207"/>
+        <location filename="../src/BuildingHandler.cpp" line="164"/>
         <source>You are about to install &lt;b&gt;%1 packages&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
         <translation>&lt;b&gt;%1 paketlerini&lt;/b&gt; kaynaktan yüklemek üzeresiniz. Kaynaktan&lt;b&gt;derlemek bazı artılar getirebilir, ancak çok yavaştır.&lt;b&gt;Bunun hakkında emin değilseniz, ikili dosyalardan işleminizi gerçekleştirmeniz&lt;b&gt;en iyisi olacaktır. Devam etmeden önce,&lt;b&gt; derleme verimliliğini arttırmak için yapılandırmanızı gözden geçirmeniz önerilir.</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="226"/>
+        <location filename="../src/BuildingHandler.cpp" line="183"/>
         <source>To be Installed</source>
         <translation>Yüklenecek</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="233"/>
+        <location filename="../src/BuildingHandler.cpp" line="190"/>
         <source>To be Upgraded</source>
         <translation>Yükseltilecek</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="379"/>
+        <location filename="../src/BuildingHandler.cpp" line="319"/>
         <source>Package Building</source>
         <translation>Paket Derleme</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="316"/>
+        <location filename="../src/BuildingHandler.cpp" line="273"/>
         <source>Your Packages failed to build!</source>
         <translation>Paketinizin derlenmesi başarısız!</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="320"/>
+        <location filename="../src/BuildingHandler.cpp" line="276"/>
         <source>Your packages Failed to Build.
 Look at the output for more details.</source>
         <translation>Paketlerinizin derlenmesi başarısız oldu.
 Ayrıntılar için çıktılara göz atın.</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="356"/>
+        <location filename="../src/BuildingHandler.cpp" line="298"/>
         <source>Close</source>
         <translation>Kapat</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="346"/>
+        <location filename="../src/BuildingHandler.cpp" line="288"/>
         <source>Building Packages Failed!!</source>
         <translation>Paketlerin Derlenmesi Başarısız!!</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="349"/>
+        <location filename="../src/BuildingHandler.cpp" line="292"/>
         <source>Some packages failed to build.
 Do you want to proceed anyway?</source>
         <translation>Bazı paketlerin derlenmesi başarısız oldu.
 Yine de devam etmek istiyor musunuz?</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="374"/>
+        <location filename="../src/BuildingHandler.cpp" line="314"/>
         <source>Install Built Packages</source>
         <translation>Derlenmiş Paketleri Yükle</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="375"/>
+        <location filename="../src/BuildingHandler.cpp" line="315"/>
         <source>Close Without Installing</source>
         <translation>Yüklemeden Kapat</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="376"/>
+        <location filename="../src/BuildingHandler.cpp" line="316"/>
         <source>Packages Built Successfully!</source>
         <translation>Paketler Başarıyla Derlendi!</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="380"/>
+        <location filename="../src/BuildingHandler.cpp" line="320"/>
         <source>Your Packages have been built successfully, and are ready to be installed</source>
         <translation>Paketlerininz başarıyla derlendi ve yüklenmeye hazır</translation>
     </message>
@@ -265,144 +265,144 @@ Silmek ister msiniz?</translation>
 <context>
     <name>ConfigDialog</name>
     <message>
-        <location filename="../src/configDialog.cpp" line="93"/>
+        <location filename="../src/configDialog.cpp" line="94"/>
         <source>General</source>
         <translation>Genel</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="475"/>
+        <location filename="../src/configDialog.cpp" line="494"/>
         <source>Clean Unused Databases</source>
         <translation>Kullanılmayan Veritabanlarını Temizle</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="487"/>
+        <location filename="../src/configDialog.cpp" line="506"/>
         <source>Clean Cache</source>
         <translation>Cache&apos;yi Temizle</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="499"/>
+        <location filename="../src/configDialog.cpp" line="518"/>
         <source>Empty Cache</source>
         <translation>Cache&apos;yi Boşalt</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="511"/>
+        <location filename="../src/configDialog.cpp" line="530"/>
         <source>Optimize Pacman Database</source>
         <translation>Pacman Veritabanını İyileştir</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="524"/>
+        <location filename="../src/configDialog.cpp" line="546"/>
         <source>Clean All Building Environments</source>
         <translation>Tüm Derleme Ortamlarını Temizle</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="126"/>
+        <location filename="../src/configDialog.cpp" line="127"/>
         <source>Repositories</source>
         <translation>Depolar</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="190"/>
+        <location filename="../src/configDialog.cpp" line="193"/>
         <source>Pacman</source>
         <translation>Pacman</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="262"/>
+        <location filename="../src/configDialog.cpp" line="265"/>
         <source>ABS</source>
         <translation>ABS</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="421"/>
+        <location filename="../src/configDialog.cpp" line="432"/>
         <source>Enter Here the Repository&apos;s Name</source>
         <translation>Deponun Adını Buraya Yazın</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="423"/>
+        <location filename="../src/configDialog.cpp" line="434"/>
         <source>Enter Here the Repository&apos;s Server</source>
         <translation>Deponun Sunucusunu Buraya Yazın</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="480"/>
+        <location filename="../src/configDialog.cpp" line="499"/>
         <source>Cleaning up unused Databases...</source>
         <translation>Kullanılmayan Veritabanları temizleniyor...</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="492"/>
+        <location filename="../src/configDialog.cpp" line="511"/>
         <source>Cleaning up Cache...</source>
         <translation>Cache Temizleniyor...</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="504"/>
+        <location filename="../src/configDialog.cpp" line="523"/>
         <source>Deleting Cache...</source>
         <translation>Cache Siliniyor...</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="520"/>
+        <location filename="../src/configDialog.cpp" line="540"/>
         <source>Optimizing Pacman Database...</source>
         <translation>Pacman Veritabanı İyileştiriliyor...</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="529"/>
+        <location filename="../src/configDialog.cpp" line="551"/>
         <source>Cleaning up building Environments...</source>
         <translation>Derleme Ortamları temizleniyor...</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="544"/>
+        <location filename="../src/configDialog.cpp" line="566"/>
         <source>Cleaning up Unused Databases Failed!</source>
         <translation>Kullanılmayan Veritabanlarını Silme Başarısız!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="549"/>
+        <location filename="../src/configDialog.cpp" line="571"/>
         <source>Cleaning up Cache Failed!</source>
         <translation>Cache Temizleme Başarısız!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="554"/>
+        <location filename="../src/configDialog.cpp" line="576"/>
         <source>Deleting Cache Failed!</source>
         <translation>Cache Silme Başarısız!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="559"/>
+        <location filename="../src/configDialog.cpp" line="581"/>
         <source>Could not clean Build Environments!!</source>
         <translation>Derleme Ortamları Temizlenemiyor!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="573"/>
+        <location filename="../src/configDialog.cpp" line="595"/>
         <source>Unused Databases Cleaned up successfully!</source>
         <translation>Kullanılmayan Veritabanları başarıyla Temizlendi!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="579"/>
+        <location filename="../src/configDialog.cpp" line="601"/>
         <source>Cache Cleaned Up Successfully!</source>
         <translation>Cache Başarıyla Temizlendi!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="585"/>
+        <location filename="../src/configDialog.cpp" line="607"/>
         <source>Cache Successfully Deleted!</source>
         <translation>Cache Başarıyla Silindi!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="591"/>
+        <location filename="../src/configDialog.cpp" line="613"/>
         <source>Build Environments Successfully Cleaned!</source>
         <translation>Derleme Ortamları Başarıyla Temizlendi!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="972"/>
+        <location filename="../src/configDialog.cpp" line="1010"/>
         <source>Settings Changed</source>
         <translation>Ayarlar Değişti</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="978"/>
+        <location filename="../src/configDialog.cpp" line="1011"/>
         <source>Your repositories have changed.
 Do you want to Update Your Database?</source>
         <translation>Veritabanlarınız değişti.
 Veritabanını güncellemek ister misiniz?</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="508"/>
+        <location filename="../ui/configDialog.ui" line="498"/>
         <source>Add Mirror</source>
         <translation>Yansı Ekle</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1008"/>
+        <location filename="../src/configDialog.cpp" line="1038"/>
         <source>Mirror Format is incorrect. Your mirror should look like this:
 http://mirror.org/$repo/os/i686</source>
         <comment>Obviously keep the example as it is ;)</comment>
@@ -410,7 +410,7 @@ http://mirror.org/$repo/os/i686</source>
 http://mirror.org/$repo/os/i686</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1030"/>
+        <location filename="../src/configDialog.cpp" line="1059"/>
         <source>Your Mirror was successfully added!
 It is now available in mirrorlist.</source>
         <comment>mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.</comment>
@@ -418,40 +418,40 @@ It is now available in mirrorlist.</source>
 Artık mirrorlist için yerini aldı.</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1060"/>
+        <location filename="../src/configDialog.cpp" line="1090"/>
         <source>Pacman Database Optimized Successfully!</source>
         <translation>Pacman Veritabanı başarıyla İyileştirildi!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1066"/>
+        <location filename="../src/configDialog.cpp" line="1096"/>
         <source>Could not Optimize Pacman Database!</source>
         <translation>Pacman Veritabanı iyileştirilemiyor!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1072"/>
+        <location filename="../src/configDialog.cpp" line="1102"/>
         <source>Running sync...</source>
         <comment>sync is a command, so it should not be translated</comment>
         <translation>sync çalıştırılıyor...</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1081"/>
+        <location filename="../src/configDialog.cpp" line="1110"/>
         <source>Operation Completed Successfully!</source>
         <translation>İşlem Başarıyla Tamamlandı!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1080"/>
+        <location filename="../src/configDialog.cpp" line="1109"/>
         <source>Sync was successfully executed!!</source>
         <comment>Sync is always the command</comment>
         <translation>Sync başarıyla çalıştırıldı!!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1085"/>
+        <location filename="../src/configDialog.cpp" line="1114"/>
         <source>Sync could not be executed!</source>
         <comment>Sync is always the command</comment>
         <translation>Sync çalıştırılamıyor!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1086"/>
+        <location filename="../src/configDialog.cpp" line="1115"/>
         <source>Sync could not be executed!!</source>
         <comment>Sync is always the command</comment>
         <translation>Sync çalıştırılamıyor!</translation>
@@ -462,205 +462,205 @@ Artık mirrorlist için yerini aldı.</translation>
         <translation>Shaman - Yapılandırma</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="88"/>
+        <location filename="../ui/configDialog.ui" line="78"/>
         <source>Favourite Actions</source>
         <translation>Sık Kullanılan Eylemler</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="97"/>
+        <location filename="../ui/configDialog.ui" line="87"/>
         <source>When Upgrading System:</source>
         <translation>Sistem Yükseltilirken:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="106"/>
+        <location filename="../ui/configDialog.ui" line="96"/>
         <source>Upgrade Immediately</source>
         <translation>Derhal Yükselt</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="113"/>
+        <location filename="../ui/configDialog.ui" line="103"/>
         <source>Add Upgradeable Packages To Queue</source>
         <translation>Yükseltilebilir Paketleri Sıraya Ekle</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="120"/>
+        <location filename="../ui/configDialog.ui" line="110"/>
         <source>Ask</source>
         <translation>Sor</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="136"/>
+        <location filename="../ui/configDialog.ui" line="126"/>
         <source>When Processing Queue</source>
         <translation>Sıra İşlenirken</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="143"/>
+        <location filename="../ui/configDialog.ui" line="133"/>
         <source>Keep application running in System Tray only</source>
         <translation>Yazılımı sadece Sistem Çubuğunda çalıştır</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="153"/>
+        <location filename="../ui/configDialog.ui" line="143"/>
         <source>GUI Startup</source>
         <translation>ARAYÜZ Başlangıcı</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="159"/>
+        <location filename="../ui/configDialog.ui" line="149"/>
         <source>Start in the System Tray</source>
         <translation>Sistem Çubuğunda başlat</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="166"/>
+        <location filename="../ui/configDialog.ui" line="156"/>
         <source>Show Splashscreen</source>
         <translation>Karşılama Ekranı Göster</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="847"/>
+        <location filename="../ui/configDialog.ui" line="844"/>
         <source>When Application is in System Tray only</source>
         <translation>Yazılım Sadece Sistem Çubuğundayken</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="853"/>
+        <location filename="../ui/configDialog.ui" line="850"/>
         <source>Update Database every</source>
         <translation>Veritabanını şu kadar sürede bir güncelle</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="880"/>
+        <location filename="../ui/configDialog.ui" line="877"/>
         <source>If upgrades are available:</source>
         <translation>Yükseltmeler varsa:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="887"/>
+        <location filename="../ui/configDialog.ui" line="884"/>
         <source>Just Notify</source>
         <translation>Sadece Uyar</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="894"/>
+        <location filename="../ui/configDialog.ui" line="891"/>
         <source>Notify and add them to Queue</source>
         <translation>Uyar ve Sıraya ekle</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="176"/>
+        <location filename="../ui/configDialog.ui" line="166"/>
         <source>Maintenance</source>
         <translation>Bakım</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="189"/>
+        <location filename="../ui/configDialog.ui" line="179"/>
         <source>Process Selected</source>
         <translation>Seçilen İşlem</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="216"/>
+        <location filename="../ui/configDialog.ui" line="206"/>
         <source>Waiting</source>
         <comment>Waiting for a user action</comment>
         <translation>Kullanıcı Bekleniyor</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="260"/>
+        <location filename="../ui/configDialog.ui" line="250"/>
         <source>Checkable Options</source>
         <translation>Uygulanabilir Seçenekler</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="266"/>
+        <location filename="../ui/configDialog.ui" line="256"/>
         <source>Use Active FTP</source>
         <translation>Aktif FTP Kullan</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="273"/>
+        <location filename="../ui/configDialog.ui" line="263"/>
         <source>Use Deltas (needs xdelta to be installed)</source>
         <translation>Delta Kullan (xdelta&apos;nın yüklü olması gerekir)</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="290"/>
+        <location filename="../ui/configDialog.ui" line="280"/>
         <source>Advanced Options</source>
         <translation>Gelişmiş Seçenekler</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="300"/>
+        <location filename="../ui/configDialog.ui" line="290"/>
         <source>HoldPkgs:</source>
         <translation>HoldPkgs:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="310"/>
+        <location filename="../ui/configDialog.ui" line="300"/>
         <source>IgnorePkgs:</source>
         <translation>IgnorePkgs:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="320"/>
+        <location filename="../ui/configDialog.ui" line="310"/>
         <source>IgnoreGroups:</source>
         <translation>IgnoreGroups:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="330"/>
+        <location filename="../ui/configDialog.ui" line="320"/>
         <source>NoUpgrade:</source>
         <translation>NoUpgrade:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="340"/>
+        <location filename="../ui/configDialog.ui" line="330"/>
         <source>NoExtract:</source>
         <translation>NoExtract:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="364"/>
+        <location filename="../ui/configDialog.ui" line="354"/>
         <source>XFerCommand: (example: /path/to/command %u) Blank for Default</source>
         <translation>XFerCommand: (örnek: /path/to/command %u) Varsayılan için boş bırakın</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="402"/>
+        <location filename="../ui/configDialog.ui" line="392"/>
         <source>Arch Linux Official Repositories</source>
         <translation>Arch Linux Resmi Depoları</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="427"/>
+        <location filename="../ui/configDialog.ui" line="417"/>
         <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones.
 Please note that packages from Unstable and Testing may break your system.</source>
         <translation>Arch Linux&apos;un resmi depoları arasından hangilerini kullanacağınızı buradan seçebilirsiniz.
 Lütfen Unstable ve Testing depolarının sisteminize zarar verebileceğini unutmayın.</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="437"/>
+        <location filename="../ui/configDialog.ui" line="427"/>
         <source>Core</source>
         <comment>Do not translate</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="444"/>
+        <location filename="../ui/configDialog.ui" line="434"/>
         <source>Extra</source>
         <comment>Do not translate</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="451"/>
+        <location filename="../ui/configDialog.ui" line="441"/>
         <source>Community</source>
         <comment>Do not translate</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="458"/>
+        <location filename="../ui/configDialog.ui" line="448"/>
         <source>Testing</source>
         <comment>Do not translate</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="465"/>
+        <location filename="../ui/configDialog.ui" line="455"/>
         <source>Unstable</source>
         <comment>Do not translate</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="629"/>
+        <location filename="../ui/configDialog.ui" line="626"/>
         <source>Server</source>
         <translation>Sunucu</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="493"/>
+        <location filename="../ui/configDialog.ui" line="483"/>
         <source>Mirror:</source>
         <translation>Yansı:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="526"/>
+        <location filename="../ui/configDialog.ui" line="516"/>
         <source>KDEMod Repositories</source>
         <translation>KDEMod Depoları</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="556"/>
+        <location filename="../ui/configDialog.ui" line="546"/>
         <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an 
 improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme,
 and lots of addons, KDEMod is the best way to taste the ease and the power
@@ -671,22 +671,22 @@ ve bir çok ek özellk sunar. KdeMod, Arch&apos;ın gücü ve basitliği ile KDE
 birleştiren yeni bir ortam sunar.</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="568"/>
+        <location filename="../ui/configDialog.ui" line="558"/>
         <source>KDEMod 3 Repository</source>
         <translation>KDEMod 3 Deposu</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="575"/>
+        <location filename="../ui/configDialog.ui" line="572"/>
         <source>KDEMod 4 Repository (Unstable, testers only)</source>
         <translation>KDEMod 4 Deposu (Dengesiz, test için)</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="597"/>
+        <location filename="../ui/configDialog.ui" line="594"/>
         <source>Third-Party Repositories</source>
         <translation>Üçüncü Kısım Depolar</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="608"/>
+        <location filename="../ui/configDialog.ui" line="605"/>
         <source>You can extend your packages choice by adding other repositories. Third-Party 
 Repositories act just as normal ones, and will be accessible through both Shaman
 and Pacman.</source>
@@ -695,107 +695,107 @@ Kısım Depoları normal depolar gibi çalışır ve hem Shaman hem de Pacman
 tarafından kullanılır.</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="624"/>
+        <location filename="../ui/configDialog.ui" line="621"/>
         <source>Repository</source>
         <translation>Depo</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="652"/>
+        <location filename="../ui/configDialog.ui" line="649"/>
         <source>Add New Repository</source>
         <translation>Yeni Depo Ekle</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="662"/>
+        <location filename="../ui/configDialog.ui" line="659"/>
         <source>Edit Repository</source>
         <translation>Depoyu Düzenle</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="672"/>
+        <location filename="../ui/configDialog.ui" line="669"/>
         <source>Remove Repository</source>
         <translation>Depoyu Kaldır</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="694"/>
+        <location filename="../ui/configDialog.ui" line="691"/>
         <source>Preferences</source>
         <translation>Seçenekler</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="700"/>
+        <location filename="../ui/configDialog.ui" line="697"/>
         <source>Process all dependencies and queue from binary first (recommended)</source>
         <translation>Bütün bağımlılıkları ve sırayı öncelikle ikililerden işle (önerilen)</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="707"/>
+        <location filename="../ui/configDialog.ui" line="704"/>
         <source>Review Building output before installing</source>
         <translation>Yüklemeden önce Derleme çıktısını incele</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="717"/>
+        <location filename="../ui/configDialog.ui" line="714"/>
         <source>ABS Configuration</source>
         <translation>ABS Yapılandırması</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="723"/>
+        <location filename="../ui/configDialog.ui" line="720"/>
         <source>Use supfiles that match your current repositories</source>
         <translation>Geçerli depolarla eşleşen supdosyaları kullan</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="732"/>
+        <location filename="../ui/configDialog.ui" line="729"/>
         <source>Define supfiles manually</source>
         <translation>Supdosyalarını elle tanımla</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="747"/>
+        <location filename="../ui/configDialog.ui" line="744"/>
         <source>Makepkg Configuration</source>
         <translation>Makepkg Yapılandırması</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="753"/>
+        <location filename="../ui/configDialog.ui" line="750"/>
         <source>CFlags</source>
         <translation>CFlags</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="763"/>
+        <location filename="../ui/configDialog.ui" line="760"/>
         <source>CXXFlags</source>
         <translation>CXXFlags</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="773"/>
+        <location filename="../ui/configDialog.ui" line="770"/>
         <source>BuildEnv</source>
         <translation>BuildEnv</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="783"/>
+        <location filename="../ui/configDialog.ui" line="780"/>
         <source>Options</source>
         <translation>Seçenekler</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="793"/>
+        <location filename="../ui/configDialog.ui" line="790"/>
         <source>Doc_Dirs</source>
         <translation>Doc_Dirs</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="806"/>
+        <location filename="../ui/configDialog.ui" line="803"/>
         <source>Build Environment</source>
         <translation>Derleme Ortamı</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="814"/>
+        <location filename="../ui/configDialog.ui" line="811"/>
         <source>Building Path</source>
         <translation>Derleme Yolu</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="826"/>
+        <location filename="../ui/configDialog.ui" line="823"/>
         <source>Remove installed makedepends after build</source>
         <translation>Yüklenmiş derleme bağımlılıklarını derleme işleminden sonra kaldır</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="833"/>
+        <location filename="../ui/configDialog.ui" line="830"/>
         <source>Clean Build Environment after installation</source>
         <translation>Yüklemeden sonra derleme ortamını temizle</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="304"/>
+        <location filename="../src/configDialog.cpp" line="307"/>
         <source>Advanced</source>
         <translation>Gelişmiş</translation>
     </message>
@@ -806,73 +806,97 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Shaman Manteinance.&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Shaman Bakım.&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Lütfen Menüden bir Eylem Seçin.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="obsolete">&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Shaman Bakım.&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Lütfen Menüden bir Eylem Seçin.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1017"/>
+        <location filename="../ui/configDialog.ui" line="1014"/>
         <source>min</source>
         <comment>As in &quot;minutes&quot;</comment>
         <translation>dk</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="870"/>
+        <location filename="../ui/configDialog.ui" line="867"/>
         <source>Show tray notification Windows</source>
         <translation>Sistem Çubuğu Bilgi Pencereleri Göster</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="904"/>
+        <location filename="../ui/configDialog.ui" line="901"/>
         <source>Use a proxy-server</source>
         <translation>Bir proksi-sunucusu kullan</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="916"/>
+        <location filename="../ui/configDialog.ui" line="913"/>
         <source>IP:</source>
         <translation>IP:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="939"/>
+        <location filename="../ui/configDialog.ui" line="936"/>
         <source>Port:</source>
         <translation>Port:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="981"/>
+        <location filename="../ui/configDialog.ui" line="978"/>
         <source>HTTP Proxy</source>
         <translation>HTTP Proksi</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="988"/>
+        <location filename="../ui/configDialog.ui" line="985"/>
         <source>FTP Proxy</source>
         <translation>FTP Proksi</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="998"/>
+        <location filename="../ui/configDialog.ui" line="995"/>
         <source>Use Shaman RSS Capabilities</source>
         <translation>Shaman&apos;ın RSS Yeteneklerini Kullan</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1010"/>
+        <location filename="../ui/configDialog.ui" line="1007"/>
         <source>Update RSS Feed Every</source>
         <translation>RSS Beslemesini şu kadar sürede bi güncelle</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1024"/>
+        <location filename="../ui/configDialog.ui" line="1021"/>
         <source>Notify upon new items</source>
         <translation>Yeni haberlerde uyar</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1031"/>
+        <location filename="../ui/configDialog.ui" line="1028"/>
         <source>Check if there is an unread news about a package in Queue before processing it</source>
         <translation>Sıradaki bir paket hakkında, sıra işlenmeden önce, okunmamış bir haber olup olmadığını denetle</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="280"/>
+        <location filename="../ui/configDialog.ui" line="270"/>
         <source>Use SysLog</source>
         <translation>SysLog Kullan</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="350"/>
+        <location filename="../ui/configDialog.ui" line="340"/>
         <source>Log File:</source>
         <translation>Kayıt Dosyası:</translation>
+    </message>
+    <message>
+        <location filename="../ui/configDialog.ui" line="1093"/>
+        <source>Ok</source>
+        <translation type="unfinished">Tamam</translation>
+    </message>
+    <message>
+        <location filename="../ui/configDialog.ui" line="1083"/>
+        <source>Cancel</source>
+        <translation type="unfinished">İptal</translation>
+    </message>
+    <message>
+        <location filename="../ui/configDialog.ui" line="224"/>
+        <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/configDialog.ui" line="565"/>
+        <source>KDEMod 3 Testing Repository</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -903,7 +927,7 @@ Kaydetmek ister misiniz?</translation>
         <translation>Tanım</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="214"/>
+        <location filename="../src/MainWindow.cpp" line="217"/>
         <source>Shaman will keep running in the system tray.
 To close it, click Quit in the file menu or in the tray icon context menu.
 While in the System Tray, Shaman will update your Databases
@@ -916,17 +940,17 @@ Sistem çubuğundayken Shaman, düzenli aralıklarla Veritabanlarını güncelle
  ve sizi güncellemeler hakkında bilgilendirir.Bu davranışı ayarlardan değiştirebilirsiniz.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="215"/>
+        <location filename="../src/MainWindow.cpp" line="221"/>
         <source>Do not show this Again</source>
         <translation>Bunu Tekrar Gösterme</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="222"/>
+        <location filename="../src/MainWindow.cpp" line="228"/>
         <source>Shaman - Reducing To Tray</source>
         <translation>Shaman - Sistemçubuğuna yerleşiyor</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2041"/>
+        <location filename="../src/MainWindow.cpp" line="1905"/>
         <source>Upgrade</source>
         <translation>Yükselt</translation>
     </message>
@@ -936,12 +960,12 @@ Sistem çubuğundayken Shaman, düzenli aralıklarla Veritabanlarını güncelle
         <translation>Depolar</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="443"/>
+        <location filename="../src/MainWindow.cpp" line="449"/>
         <source>All Repositories</source>
         <translation>Bütün Depolar</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="446"/>
+        <location filename="../src/MainWindow.cpp" line="452"/>
         <source>Local Packages</source>
         <translation>Yerel Paketler</translation>
     </message>
@@ -951,7 +975,7 @@ Sistem çubuğundayken Shaman, düzenli aralıklarla Veritabanlarını güncelle
         <translation>Paket Grupları</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1035"/>
+        <location filename="../src/MainWindow.cpp" line="1011"/>
         <source>All Groups</source>
         <translation>Bütün Gruplar</translation>
     </message>
@@ -976,7 +1000,7 @@ Sistem çubuğundayken Shaman, düzenli aralıklarla Veritabanlarını güncelle
         <translation>Sıradaki Paketler</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="903"/>
+        <location filename="../src/MainWindow.cpp" line="879"/>
         <source>Mark for Reinstallation</source>
         <translation>Yeniden Yükleme için İşaretle</translation>
     </message>
@@ -986,57 +1010,57 @@ Sistem çubuğundayken Shaman, düzenli aralıklarla Veritabanlarını güncelle
         <translation>Yükleme için İşaretle</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1933"/>
+        <location filename="../src/MainWindow.cpp" line="1797"/>
         <source>Install</source>
         <translation>Yükle</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1976"/>
+        <location filename="../src/MainWindow.cpp" line="1840"/>
         <source>Uninstall</source>
         <translation>Kaldır</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1976"/>
+        <location filename="../src/MainWindow.cpp" line="1840"/>
         <source>Complete Uninstall</source>
         <translation>Tam Kaldırma</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="640"/>
+        <location filename="../src/MainWindow.cpp" line="646"/>
         <source>Status: </source>
         <translation>Durum: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="642"/>
+        <location filename="../src/MainWindow.cpp" line="648"/>
         <source>Installed</source>
         <translation>Yüklü</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="644"/>
+        <location filename="../src/MainWindow.cpp" line="650"/>
         <source>Not installed</source>
         <translation>Yüklenmemiş</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="647"/>
+        <location filename="../src/MainWindow.cpp" line="653"/>
         <source>Local Version: </source>
         <translation>Yerel Sürüm: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="652"/>
+        <location filename="../src/MainWindow.cpp" line="658"/>
         <source>Version in the Repository: </source>
         <translation>Depodaki Sürüm: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="658"/>
+        <location filename="../src/MainWindow.cpp" line="664"/>
         <source>Action: </source>
         <translation>Eylem: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1786"/>
+        <location filename="../src/MainWindow.cpp" line="1683"/>
         <source>Error</source>
         <translation>Hata</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="775"/>
+        <location filename="../src/MainWindow.cpp" line="774"/>
         <source>One or more Databases could not be updated.
 Last error reported was:
 %1</source>
@@ -1045,22 +1069,22 @@ Raporlanan son hata şuydu:
 %1</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="782"/>
+        <location filename="../src/MainWindow.cpp" line="781"/>
         <source>Database Update</source>
         <translation>Veritabanı Güncelleme</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="782"/>
+        <location filename="../src/MainWindow.cpp" line="781"/>
         <source>Databases Updated Successfully</source>
         <translation>Veritabanı Başarıyla Güncellendi</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1297"/>
+        <location filename="../src/MainWindow.cpp" line="1265"/>
         <source>Pacman Update</source>
         <translation>Pacman Güncelleme</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1304"/>
+        <location filename="../src/MainWindow.cpp" line="1267"/>
         <source>Pacman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Pacman now?</source>
@@ -1069,12 +1093,12 @@ için tek başına yapmanız önerilir.
 Şimdi Pacman&apos;ı Yükseltmek ister misiniz?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1333"/>
+        <location filename="../src/MainWindow.cpp" line="1290"/>
         <source>Shaman Update</source>
         <translation>Shaman Güncelleme</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1340"/>
+        <location filename="../src/MainWindow.cpp" line="1292"/>
         <source>Shaman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Shaman now?</source>
@@ -1088,27 +1112,27 @@ için tek başına yapmanız önerilir.
         <translation>Kaldırma için İşaretle</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="886"/>
+        <location filename="../src/MainWindow.cpp" line="862"/>
         <source>Mark for Upgrade</source>
         <translation>Yükseltme için İşaretle</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="888"/>
+        <location filename="../src/MainWindow.cpp" line="864"/>
         <source>Cancel Action</source>
         <translation>Eylemi İptal Et</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="927"/>
+        <location filename="../src/MainWindow.cpp" line="903"/>
         <source>Mark all for installation</source>
         <translation>Tümünü yükleme için İşaretle</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="929"/>
+        <location filename="../src/MainWindow.cpp" line="905"/>
         <source>Mark all for reinstallation</source>
         <translation>Tümünü yeniden yükleme için İşaretle</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="931"/>
+        <location filename="../src/MainWindow.cpp" line="907"/>
         <source>Mark all for removal</source>
         <translation>Tümünü Kaldırma için İşaretle</translation>
     </message>
@@ -1118,53 +1142,53 @@ için tek başına yapmanız önerilir.
         <translation>Tüm eylemleri iptal et</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1273"/>
+        <location filename="../src/MainWindow.cpp" line="1244"/>
         <source>System Upgrade</source>
         <translation>Sistem Yükseltme</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1273"/>
+        <location filename="../src/MainWindow.cpp" line="1244"/>
         <source>Your system is up to date!</source>
         <translation>Sisteminiz güncel!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1510"/>
+        <location filename="../src/MainWindow.cpp" line="1447"/>
         <source>Queue Processing</source>
         <translation>Sıra İşleniyor</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1510"/>
+        <location filename="../src/MainWindow.cpp" line="1447"/>
         <source>Your Queue is being processed.
 Please wait.</source>
         <translation>Sıra işleniyor.
 Lütfen bekleyin.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1617"/>
+        <location filename="../src/MainWindow.cpp" line="1525"/>
         <source>Queue Processed</source>
         <translation>Sıra işlendi</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1554"/>
+        <location filename="../src/MainWindow.cpp" line="1485"/>
         <source>One or more errors occourred, your Queue
 was not successfully processed</source>
         <translation>Bir vaya daha fazla hata oluştu;Sıra
 başarıyla işlenemedi</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1594"/>
+        <location filename="../src/MainWindow.cpp" line="1514"/>
         <source>Restart required</source>
         <translation>Yeniden Başlatma gerekiyor</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1582"/>
+        <location filename="../src/MainWindow.cpp" line="1507"/>
         <source>Pacman or Shaman was updated. Shaman will now quit,
 please restart it to use the new version</source>
         <translation>Pacman veya Shaman güncellendi.Shaman kapanacak.
 Yeni sürümü kullanmak için lütfen Shamanı yeniden başlatın</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1595"/>
+        <location filename="../src/MainWindow.cpp" line="1515"/>
         <source>Your Kernel has been updated.
 Please restart your PC soon to load the new Kernel.</source>
         <translation>Kernel güncellendi.
@@ -1172,34 +1196,34 @@ Yeni kerneli kullanmak için lütfen bilgisayarınızı
 yeniden başlatın.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1610"/>
+        <location filename="../src/MainWindow.cpp" line="1523"/>
         <source>Your Queue was successfully processed!</source>
         <translation>Sıra başarıyla işlendi!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1617"/>
+        <location filename="../src/MainWindow.cpp" line="1525"/>
         <source>Your Queue was successfully processed!!</source>
         <translation>Sıra başarıyla işlendi!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1777"/>
+        <location filename="../src/MainWindow.cpp" line="1674"/>
         <source>Install a Package</source>
         <translation>Bir Paket yükle</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1777"/>
+        <location filename="../src/MainWindow.cpp" line="1674"/>
         <source>Arch Linux Packages (*.pkg.tar.gz)</source>
         <translation>Arch Linux Paketleri (*.pkg.tar.gz)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1786"/>
+        <location filename="../src/MainWindow.cpp" line="1683"/>
         <source>%1 does not seem
 a valid package</source>
         <translation>%1 geçerli bir paket
 değil</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1825"/>
+        <location filename="../src/MainWindow.cpp" line="1719"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -1213,31 +1237,31 @@ p, li { white-space: pre-wrap; }
         <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;A libalpm frontend in Qt&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Lisans: GPLv2+&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Libalpm Sürümü: v.%1&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf54321@yahoo.it&amp;gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;l.appelhans@gmx.de&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1838"/>
+        <location filename="../src/MainWindow.cpp" line="1732"/>
         <source>%1 GiB</source>
         <comment>Size is in Gib</comment>
         <translation>%1 GB</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1840"/>
+        <location filename="../src/MainWindow.cpp" line="1734"/>
         <source>%1 MiB</source>
         <comment>Size is in MiB</comment>
         <translation>%1 MB</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1842"/>
+        <location filename="../src/MainWindow.cpp" line="1736"/>
         <source>%1 KiB</source>
         <comment>Size is in KiB</comment>
         <translation>%1 KB</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1844"/>
+        <location filename="../src/MainWindow.cpp" line="1738"/>
         <source>%1 Bytes</source>
         <comment>Size is in Bytes</comment>
         <translation>%1 Bayt</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1859"/>
+        <location filename="../src/MainWindow.cpp" line="1750"/>
         <source>Library Question</source>
         <translation>Kütüphane Sorusu</translation>
     </message>
@@ -1413,17 +1437,17 @@ p, li { white-space: pre-wrap; }
         <translation>Sırayı İşle</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="174"/>
+        <location filename="../src/MainWindow.cpp" line="175"/>
         <source>Esc</source>
         <translation>Esc</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1666"/>
+        <location filename="../src/MainWindow.cpp" line="1571"/>
         <source>News Alert</source>
         <translation>Haber Alarmı</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1672"/>
+        <location filename="../src/MainWindow.cpp" line="1572"/>
         <source>There is an unread news about %1.
 Do you want to read it?</source>
         <translation>%1 hakkında okunmamış haberler var.
@@ -1720,36 +1744,36 @@ Shaman will ask you for root password when needed.</source>
         <translation>%1 paketi %2 betiği içermiyor</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="666"/>
+        <location filename="../src/QueueDialog.cpp" line="665"/>
         <source>Scriptlet processed successfully!</source>
         <translation>Betik başarıyla işlendi!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="672"/>
+        <location filename="../src/QueueDialog.cpp" line="671"/>
         <source>Error processing Scriptlet!!</source>
         <translation>Betik işlemede hata!!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="848"/>
+        <location filename="../src/QueueDialog.cpp" line="847"/>
         <source>Queue Processing</source>
         <translation>Sıra İşleme</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="767"/>
+        <location filename="../src/QueueDialog.cpp" line="766"/>
         <source>Would you like to abort Queue Processing?
 This may damage your system.</source>
         <translation>Sıra İşlemeyi iptal etmek ister misiniz?
 Bu sisteminize zarar verebilir.</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="805"/>
+        <location filename="../src/QueueDialog.cpp" line="804"/>
         <source>There has been an error while preparing the transaction.
 </source>
         <translation>İşleme hazırlanılırken bir hata oluştu.
 </translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="838"/>
+        <location filename="../src/QueueDialog.cpp" line="837"/>
         <source>There has been an error while committing the transaction.
 </source>
         <translation>İşlem gerçekleştirilirken bir hata oluştu.
@@ -2139,9 +2163,19 @@ Please enter in the field below the root password to continue.</source>
         <translation>İptal</translation>
     </message>
     <message>
-        <location filename="../ui/authDialog.ui" line="82"/>
+        <location filename="../ui/authDialog.ui" line="85"/>
         <source>Ok</source>
         <translation>Tamam</translation>
+    </message>
+    <message>
+        <location filename="../ui/authDialog.ui" line="78"/>
+        <source>Backspace</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/authDialog.ui" line="91"/>
+        <source>Return</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2232,27 +2266,27 @@ p, li { white-space: pre-wrap; }
         <translation>Shaman - Kayıt Göstericisi</translation>
     </message>
     <message>
-        <location filename="../ui/logViewer.ui" line="19"/>
+        <location filename="../ui/logViewer.ui" line="22"/>
         <source>Show Only Logs From</source>
         <translation>Sadece Şu Kayıtları Göster</translation>
     </message>
     <message>
-        <location filename="../ui/logViewer.ui" line="76"/>
+        <location filename="../ui/logViewer.ui" line="79"/>
         <source>Show Only Logs Until</source>
         <translation>Sadece Şuna Kadar Olan Kayıtları Göster</translation>
     </message>
     <message>
-        <location filename="../ui/logViewer.ui" line="186"/>
+        <location filename="../ui/logViewer.ui" line="189"/>
         <source>Refresh View</source>
         <translation>Görünümü Tazele</translation>
     </message>
     <message>
-        <location filename="../ui/logViewer.ui" line="202"/>
+        <location filename="../ui/logViewer.ui" line="205"/>
         <source>Close</source>
         <translation>Kapat</translation>
     </message>
     <message>
-        <location filename="../ui/logViewer.ui" line="127"/>
+        <location filename="../ui/logViewer.ui" line="130"/>
         <source>Filter</source>
         <translation>Süzgeç</translation>
     </message>
@@ -2262,7 +2296,15 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="obsolete">&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../ui/logViewer.ui" line="160"/>
+        <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

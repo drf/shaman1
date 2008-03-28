@@ -30,7 +30,8 @@ ShamanDialog::~ShamanDialog()
 {
 }
 
-void ShamanDialog::popupDialog(const QString &title, const QString &text, QWidget *parent)
+void ShamanDialog::popupDialog(const QString &title, const QString &text, QWidget *parent,
+		ShamanProperties::DialogType dtype)
 {
 	foreach(QObject *ent, parent->children())
 	{	
@@ -40,6 +41,27 @@ void ShamanDialog::popupDialog(const QString &title, const QString &text, QWidge
 	}
 
 	QMessageBox *message = new QMessageBox(QMessageBox::Warning, title, text, QMessageBox::Ok, parent);
+	
+	switch(dtype)
+	{
+	case ShamanProperties::InformationDialog:
+		message->setIconPixmap(QPixmap(":/Icons/icons/help-about.png"));
+		break;
+	case ShamanProperties::SuccessDialog:
+		message->setIconPixmap(QPixmap(":/Icons/icons/dialog-ok-apply.png"));
+		break;
+	case ShamanProperties::ErrorDialog:
+		message->setIconPixmap(QPixmap(":/Icons/icons/dialog-error.png"));
+		break;
+	case ShamanProperties::WarningDialog:
+		message->setIconPixmap(QPixmap(":/Icons/icons/dialog-warning.png"));
+		break;
+	case ShamanProperties::OtherDialog:
+		message->setIconPixmap(QPixmap(":/Icons/icons/help-about.png"));
+		break;
+	default:
+		break;
+	}
 
 	message->exec();
 
@@ -53,7 +75,8 @@ void ShamanDialog::popupDialog(const QString &title, const QString &text, QWidge
 	}
 }
 
-int ShamanDialog::popupQuestionDialog(const QString &title, const QString &text, QWidget *parent)
+int ShamanDialog::popupQuestionDialog(const QString &title, const QString &text, QWidget *parent,
+		ShamanProperties::DialogType dtype)
 {
 	int retval = 0;
 
@@ -66,7 +89,27 @@ int ShamanDialog::popupQuestionDialog(const QString &title, const QString &text,
 
 	QMessageBox *msgBox = new QMessageBox(parent);
 
-	msgBox->setIcon(QMessageBox::Question);
+	switch(dtype)
+	{
+	case ShamanProperties::InformationDialog:
+		msgBox->setIconPixmap(QPixmap(":/Icons/icons/help-about.png"));
+		break;
+	case ShamanProperties::SuccessDialog:
+		msgBox->setIconPixmap(QPixmap(":/Icons/icons/dialog-ok-apply.png"));
+		break;
+	case ShamanProperties::ErrorDialog:
+		msgBox->setIconPixmap(QPixmap(":/Icons/icons/dialog-error.png"));
+		break;
+	case ShamanProperties::WarningDialog:
+		msgBox->setIconPixmap(QPixmap(":/Icons/icons/dialog-warning.png"));
+		break;
+	case ShamanProperties::OtherDialog:
+		msgBox->setIconPixmap(QPixmap(":/Icons/icons/help-about.png"));
+		break;
+	default:
+		break;
+	}
+	
 	msgBox->setWindowTitle(title);
 
 	msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);

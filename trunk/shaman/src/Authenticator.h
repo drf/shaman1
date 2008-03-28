@@ -70,7 +70,8 @@ public:
 	explicit RootProcess( QObject * parent = 0 );
 	virtual ~RootProcess();
 	
-	void setupChildProcess();
+protected:	
+	virtual void setupChildProcess();
 };
 
 int auth_cback(int num_msg, const struct pam_message **msg,

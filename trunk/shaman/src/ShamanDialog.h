@@ -24,14 +24,28 @@
 #include <QWidget>
 #include <QString>
 
+namespace ShamanProperties {
+
+	enum DialogType {
+		ErrorDialog,
+		WarningDialog,
+		InformationDialog,
+		SuccessDialog,
+		OtherDialog
+	};
+
+}  // namespace ShamanProperties
+
 class ShamanDialog
 {
 public:
 	ShamanDialog();
 	virtual ~ShamanDialog();
 
-	static void popupDialog(const QString &title, const QString &text, QWidget *parent);
-	static int popupQuestionDialog(const QString &title, const QString &text, QWidget *parent);
+	static void popupDialog(const QString &title, const QString &text, QWidget *parent,
+			ShamanProperties::DialogType dtype = ShamanProperties::InformationDialog);
+	static int popupQuestionDialog(const QString &title, const QString &text, QWidget *parent,
+			ShamanProperties::DialogType dtype = ShamanProperties::InformationDialog);
 };
 
 #endif /*SHAMANDIALOG_H_*/

@@ -385,20 +385,28 @@ void ConfigDialog::openAddDialog()
 	QLineEdit *name = new QLineEdit(addDialog);
 	QLabel *serverLabel = new QLabel(tr("Enter Here the Repository's Server"), addDialog);
 	QLineEdit *server = new QLineEdit(addDialog);
+	QPushButton *okb = new QPushButton(addDialog);
+	QPushButton *cancb = new QPushButton(addDialog);
 	QVBoxLayout *layout = new QVBoxLayout();
-	QDialogButtonBox *buttons = new QDialogButtonBox(addDialog);
+	QHBoxLayout *hlay = new QHBoxLayout();
 
-	buttons->addButton(QDialogButtonBox::Ok);
-	buttons->addButton(QDialogButtonBox::Cancel);
+	okb->setText(tr("Ok"));
+	okb->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
+	cancb->setText(tr("Cancel"));
+	cancb->setIcon(QIcon(":/Icons/icons/dialog-cancel.png"));
 
-	connect(buttons, SIGNAL(accepted()), addDialog, SLOT(accept()));
-	connect(buttons, SIGNAL(rejected()), addDialog, SLOT(reject()));
+	connect(okb, SIGNAL(clicked()), addDialog, SLOT(accept()));
+	connect(cancb, SIGNAL(clicked()), addDialog, SLOT(reject()));
+	
+	hlay->insertStretch(0);
+	hlay->addWidget(cancb);
+	hlay->addWidget(okb);
 
 	layout->addWidget(nameLabel);
 	layout->addWidget(name);
 	layout->addWidget(serverLabel);
 	layout->addWidget(server);
-	layout->addWidget(buttons);
+	layout->addLayout(hlay);
 
 	addDialog->setLayout(layout);
 
@@ -425,20 +433,28 @@ void ConfigDialog::openEditDialog()
 	QLineEdit *name = new QLineEdit(addDialog);
 	QLabel *serverLabel = new QLabel(tr("Enter Here the Repository's Server"), addDialog);
 	QLineEdit *server = new QLineEdit(addDialog);
+	QPushButton *okb = new QPushButton(addDialog);
+	QPushButton *cancb = new QPushButton(addDialog);
 	QVBoxLayout *layout = new QVBoxLayout();
-	QDialogButtonBox *buttons = new QDialogButtonBox(addDialog);
+	QHBoxLayout *hlay = new QHBoxLayout();
 
-	buttons->addButton(QDialogButtonBox::Ok);
-	buttons->addButton(QDialogButtonBox::Cancel);
+	okb->setText(tr("Ok"));
+	okb->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
+	cancb->setText(tr("Cancel"));
+	cancb->setIcon(QIcon(":/Icons/icons/dialog-cancel.png"));
 
-	connect(buttons, SIGNAL(accepted()), addDialog, SLOT(accept()));
-	connect(buttons, SIGNAL(rejected()), addDialog, SLOT(reject()));
+	connect(okb, SIGNAL(clicked()), addDialog, SLOT(accept()));
+	connect(cancb, SIGNAL(clicked()), addDialog, SLOT(reject()));
+
+	hlay->insertStretch(0);
+	hlay->addWidget(cancb);
+	hlay->addWidget(okb);
 
 	layout->addWidget(nameLabel);
 	layout->addWidget(name);
 	layout->addWidget(serverLabel);
 	layout->addWidget(server);
-	layout->addWidget(buttons);
+	layout->addLayout(hlay);
 
 	name->setText(thirdPartyWidget->currentItem()->text(0));
 	server->setText(thirdPartyWidget->currentItem()->text(1));
@@ -513,15 +529,18 @@ void ConfigDialog::performManteinanceAction()
 	}
 	else if(!mantActionBox->currentText().compare(QString(tr("Optimize Pacman Database"))))
 	{
+		seteuid(0);
+		
 		mantProc = new RootProcess();
-		mantProc->setupChildProcess();
 
 		connect(mantProc, SIGNAL(readyReadStandardError()), SLOT(mantProgress()));
 		connect(mantProc, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(cleanProc(int,QProcess::ExitStatus)));
 
 		statusLabel->setText(QString(tr("Optimizing Pacman Database...")));
 		mantDetails->append(QString(tr("Optimizing Pacman Database...")));
-
+		
+		qDebug() << "Starting the process";
+		
 		mantProc->start("pacman-optimize");
 	}
 	else if(!mantActionBox->currentText().compare(QString(tr("Clean All Building Environments"))))
@@ -1055,7 +1074,9 @@ void ConfigDialog::cleanThread()
 void ConfigDialog::mantProgress()
 {
 	mantProc->setReadChannel(QProcess::StandardError);
-	mantDetails->append(QString("<b><i>" + mantProc->readLine(1024) + "</b></i>"));
+	QString str(mantProc->readLine(1024));
+	mantDetails->append(QString("<b><i>" + str + "</b></i>"));
+	qDebug() << str;
 }
 
 void ConfigDialog::cleanProc(int eC, QProcess::ExitStatus eS)
@@ -1081,7 +1102,6 @@ void ConfigDialog::cleanProc(int eC, QProcess::ExitStatus eS)
 	mantDetails->append(QString(tr("Running sync...", "sync is a command, so it should not be translated")));
 
 	mantProc = new RootProcess();
-	mantProc->setupChildProcess();
 
 	if(mantProc->execute("sync") == 0)
 	{
@@ -1096,6 +1116,8 @@ void ConfigDialog::cleanProc(int eC, QProcess::ExitStatus eS)
 	}
 
 	mantProc->deleteLater();
+	
+	ath.switchToStdUsr();
 
 	mantProcessButton->setEnabled(true);
 }

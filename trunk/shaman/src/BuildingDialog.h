@@ -63,7 +63,8 @@ signals:
 	void nullifyPointer();
 	
 private:
-	QProcess *ABSProc;
+	RootProcess *ABSProc;
+	QProcess *MakePkgProc;
 	QStringList buildQueue;
 	QStringList builtPaths;
 	int currentItem;
@@ -71,6 +72,7 @@ private:
 	bool allFailed;
 	bool waitProcessing;
 	AlpmHandler *aHandle;
+	Authenticator ath;
 	
 };
 

@@ -33,6 +33,7 @@
 #include "QueueDialog.h"
 #include "EditPBuild.h"
 #include "ShamanTrayIcon.h"
+#include "ShamanDialog.h"
 
 BuildingHandler::BuildingHandler(MainWindow *mW, AlpmHandler *aH)
 : mWin(mW),
@@ -48,18 +49,8 @@ void BuildingHandler::updateABSTree()
 {
 	if(!aHandle->isInstalled("abs"))
 	{
-		QMessageBox *msgBox = new QMessageBox(mWin);
-
-		msgBox->setIcon(QMessageBox::Question);
-		msgBox->setWindowTitle(QString("Error"));
-
-		msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
-
-		msgBox->setWindowModality(Qt::ApplicationModal);
-
-		msgBox->setText(QString(tr("You need to have ABS installed to use Shaman's\nbuilding feature. Do you want to install it now?")));
-
-		switch (msgBox->exec()) {
+		switch (ShamanDialog::popupQuestionDialog(QString(tr("Error")), QString(tr("You need to have ABS "
+				"installed to use Shaman's\nbuilding feature. Do you want to install it now?")), mWin)) {
 		case QMessageBox::Yes:
 			mWin->cancelAllActions();
 			mWin->installPackage("abs");
@@ -71,8 +62,6 @@ void BuildingHandler::updateABSTree()
 			// should never be reached
 			break;
 		}
-
-		msgBox->deleteLater();
 		
 		return;
 	}
@@ -89,18 +78,9 @@ void BuildingHandler::validateSourceQueue()
 {
 	if(!aHandle->isInstalled("abs"))
 	{
-		QMessageBox *msgBox = new QMessageBox(mWin);
-
-		msgBox->setIcon(QMessageBox::Question);
-		msgBox->setWindowTitle(QString("Error"));
-
-		msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
-
-		msgBox->setWindowModality(Qt::ApplicationModal);
-
-		msgBox->setText(QString(tr("You need to have ABS installed to use Shaman's\nbuilding feature. Do you want to install it now?")));
-
-		switch (msgBox->exec()) {
+		switch (ShamanDialog::popupQuestionDialog(QString(tr("Error")), QString(tr("You need to have ABS "
+						"installed to use Shaman's\nbuilding feature. Do you want to install it now?")), mWin))
+		{
 		case QMessageBox::Yes:
 			mWin->cancelAllActions();
 			mWin->installPackage("abs");
@@ -113,7 +93,6 @@ void BuildingHandler::validateSourceQueue()
 			break;
 		}
 
-		msgBox->deleteLater();
 		emit outOfScope();
 
 		return;
@@ -129,47 +108,25 @@ void BuildingHandler::validateSourceQueue()
 	}
 	else if(!mWin->getRemovePackagesInWidgetQueue().isEmpty())
 	{
-		QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), QString(tr("You can not remove packages when processing\n"
-				"your queue from Source")), QMessageBox::Ok, mWin);
+		ShamanDialog::popupDialog(tr("Error"), QString(tr("You can not remove packages when processing\n"
+				"your queue from Source")), mWin, ShamanProperties::WarningDialog);
 
-		message->exec();
-
-		message->deleteLater();
 		emit outOfScope();
 		return;
 	}
 
-	foreach(QTreeWidgetItem *itm, mWin->getInstallPackagesInWidgetQueue())
+	foreach(QTreeWidgetItem *itm, mWin->getInstallPackagesInWidgetQueue() + mWin->getUpgradePackagesInWidgetQueue())
 	{
 		if(itm->text(5).compare("core") && itm->text(5).compare("extra") && itm->text(5).compare("community")
 				&& itm->text(5).compare("unstable") && itm->text(5).compare("testing"))
 		{
-			QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), QString(tr("Some of your packages do not belong to Arch\n"
-					"Linux's official repository. Shaman is able to\nbuild packages from official sources only.")), QMessageBox::Ok, mWin);
+			ShamanDialog::popupDialog(tr("Error"), QString(tr("Some of your packages do not belong to Arch\n"
+					"Linux's official repository. Shaman is able to\nbuild packages from official sources only.")), mWin,
+					ShamanProperties::WarningDialog);
 
-			message->exec();
-
-			message->deleteLater();
 			emit outOfScope();
 			return;
 		}
-	}
-
-	foreach(QTreeWidgetItem *itm, mWin->getUpgradePackagesInWidgetQueue())
-	{
-		if(itm->text(5).compare("core") && itm->text(5).compare("extra") && itm->text(5).compare("community")
-				&& itm->text(5).compare("unstable") && itm->text(5).compare("testing"))
-		{
-			QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), QString(tr("Some of your packages do not belong to Arch\n"
-					"Linux's official repository. Shaman is able to\nbuild packages from official sources only.")), QMessageBox::Ok, mWin);
-
-			message->exec();
-
-			message->deleteLater();
-			emit outOfScope();
-			return;
-		}
-
 	}
 	
 	reviewBQueue = new QDialog(mWin);
@@ -315,15 +272,9 @@ void BuildingHandler::finishedBuilding(int failure, const QStringList &targets)
 		if(buildDialog->isHidden())
 			mWin->getTrayIcon()->showMessage(QString(tr("Package Building")), QString(tr("Your Packages failed to build!")));
 		else
-		{
-			QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), QString(tr("Your packages Failed to Build.\n"
-					"Look at the output for more details.")), QMessageBox::Ok, buildDialog);
+			ShamanDialog::popupDialog(tr("Error"), QString(tr("Your packages Failed to Build.\n"
+					"Look at the output for more details.")), buildDialog);
 
-			message->exec();
-
-			message->deleteLater();
-		}
-		
 		buildDialog->abortButton->setText(QString(tr("Close")));
 		disconnect(buildDialog->abortButton, SIGNAL(clicked()), buildDialog, SLOT(abortProcess()));
 		connect(buildDialog->abortButton, SIGNAL(clicked()), buildDialog, SLOT(deleteLater()));
@@ -334,21 +285,12 @@ void BuildingHandler::finishedBuilding(int failure, const QStringList &targets)
 	}
 	else if(failure == 1)
 	{		
-		QMessageBox *msgBox = new QMessageBox(buildDialog);
-
-		msgBox->setIcon(QMessageBox::Question);
-		msgBox->setWindowTitle(QString(tr("Error")));
-
-		msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
-
-		msgBox->setWindowModality(Qt::ApplicationModal);
-
 		buildDialog->processingLabel->setText(QString(tr("Building Packages Failed!!")));
 		buildDialog->buildingLabel->setText(QString());
 
-		msgBox->setText(QString(tr("Some packages failed to build.\nDo you want to proceed anyway?")));
-
-		switch (msgBox->exec()) {
+		switch (ShamanDialog::popupQuestionDialog(QString(tr("Error")), 
+				QString(tr("Some packages failed to build.\nDo you want to proceed anyway?")), buildDialog, ShamanProperties::WarningDialog)) 
+		{
 		case QMessageBox::Yes:
 			failure = 0;
 			break;
@@ -361,8 +303,6 @@ void BuildingHandler::finishedBuilding(int failure, const QStringList &targets)
 			// should never be reached
 			break;
 		}
-
-		msgBox->deleteLater();
 	}
 	
 	if(failure == 0)
@@ -540,11 +480,9 @@ void BuildingHandler::reduceBuildingInTray()
 
 void BuildingHandler::ABSUpdateEnded()
 {
-	buildDialog = NULL;
 	emit outOfScope();
 }
 
 void BuildingHandler::nullifyBDialog()
 {
-	buildDialog = NULL;
 }

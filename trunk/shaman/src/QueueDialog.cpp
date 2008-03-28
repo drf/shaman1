@@ -561,7 +561,6 @@ bool QueueDialog::runScriptlet(int action, const QString &p1N, const QString &p1
 	chdir("/");
 	
 	proc = new RootProcess(this);
-	proc->setupChildProcess();
 	connect(proc, SIGNAL(readyReadStandardOutput()), SLOT(writeLineProgress()));
 	connect(proc, SIGNAL(readyReadStandardError()), SLOT(writeLineProgressErr()));
 	connect(proc, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(finishedScriptletRunning(int,QProcess::ExitStatus)));

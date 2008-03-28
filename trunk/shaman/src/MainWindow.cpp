@@ -768,7 +768,7 @@ void MainWindow::finishDbUpdate()
 
 		if(dbdialog->isVisible())
 			ShamanDialog::popupDialog(tr("Error"), QString(tr("One or more Databases could not be updated.\nLast error reported was:\n%1"))
-					.arg(alpm_strerrorlast()), this);
+					.arg(alpm_strerrorlast()), this, ShamanProperties::ErrorDialog);
 		else
 			trayicon->showMessage(QString(tr("Database Update")), QString(tr("One or more Databases could "
 					"not be updated.\nLast error reported was:\n%1")).arg(alpm_strerrorlast()));
@@ -1479,7 +1479,7 @@ void MainWindow::queueProcessingEnded(bool errors)
 
 		if(queueDl->isVisible())
 			ShamanDialog::popupDialog(tr("Queue Processed"), tr("One or more errors occourred, your Queue\nwas not successfully processed"),
-					this);
+					this, ShamanProperties::ErrorDialog);
 		else
 			trayicon->showMessage(QString(tr("Queue Processed")), QString(tr("One or more errors occourred, your Queue\n"
 					"was not successfully processed")));
@@ -1494,7 +1494,7 @@ void MainWindow::queueProcessingEnded(bool errors)
 		if(!pkgsViewWG->findItems("pacman", Qt::MatchExactly, 1).first()->text(8).isEmpty())
 		{
 			ShamanDialog::popupDialog(tr("Restart required"), tr("Pacman or Shaman was updated. Shaman will now quit,\nplease restart it "
-							"to use the new version"), this);
+							"to use the new version"), this, ShamanProperties::WarningDialog);
 
 			qApp->exit(0);
 		}
@@ -1504,7 +1504,7 @@ void MainWindow::queueProcessingEnded(bool errors)
 			if(!pkgsViewWG->findItems("shaman", Qt::MatchExactly, 1).first()->text(8).isEmpty())
 			{
 				ShamanDialog::popupDialog(tr("Restart required"), tr("Pacman or Shaman was updated. Shaman will now quit,\nplease restart it "
-								"to use the new version"), this);
+								"to use the new version"), this, ShamanProperties::WarningDialog);
 
 				qApp->exit(0);
 			}
@@ -1512,7 +1512,7 @@ void MainWindow::queueProcessingEnded(bool errors)
 
 		if(!pkgsViewWG->findItems("kernel26", Qt::MatchExactly, 1).first()->text(8).isEmpty())
 			ShamanDialog::popupDialog(tr("Restart required"), tr("Your Kernel has been updated.\nPlease restart "
-					"your PC soon to load the new Kernel."), this);
+					"your PC soon to load the new Kernel."), this, ShamanProperties::WarningDialog);
 
 		qApp->processEvents();
 
@@ -1681,7 +1681,7 @@ void MainWindow::getPackageFromFile()
 	if(alpm_pkg_load(fileName.toAscii().data(), 1, &pkg) == -1)
 	{
 		ShamanDialog::popupDialog(tr("Error"), QString(tr("%1 does not seem\na valid package")).
-				arg(fileName), this);
+				arg(fileName), this, ShamanProperties::ErrorDialog);
 
 		return;
 	}

@@ -23,6 +23,7 @@
 
 #include <QStringList>
 #include <QDialog>
+#include <QPointer>
 
 #include "ui_reviewBuildingDialog.h"
 
@@ -58,10 +59,10 @@ signals:
 	void buildingFinished();
 
 private:
-	BuildingDialog *buildDialog;
+	QPointer<BuildingDialog> buildDialog;
 	Ui::reviewBuildingDialog *revBuildUi;
-	EditPBuild *pBuildEditor;
-	QDialog *reviewBQueue;
+	QPointer<EditPBuild> pBuildEditor;
+	QPointer<QDialog> reviewBQueue;
 	MainWindow *mWin;
 	AlpmHandler *aHandle;
 

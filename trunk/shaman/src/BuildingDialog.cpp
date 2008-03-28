@@ -28,6 +28,7 @@
 #include <QMessageBox>
 #include <QCloseEvent>
 #include "ABSHandler.h"
+#include "ShamanDialog.h"
 
 BuildingDialog::BuildingDialog(AlpmHandler *hnd, QWidget *parent)
 : QDialog(parent),
@@ -76,7 +77,9 @@ void BuildingDialog::abortProcess()
 
 void BuildingDialog::updateABSTree()
 {
-	ABSProc = new QProcess(this);
+	ath.switchToRoot();
+	
+	ABSProc = new RootProcess(this);
 	connect(ABSProc, SIGNAL(readyReadStandardOutput()), SLOT(writeLineProgress()));
 	connect(ABSProc, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(finishedUpdateABSTree()));
 
@@ -137,15 +140,12 @@ void BuildingDialog::finishedUpdateABSTree()
 {
 	ABSProc->deleteLater();
 	progressEdit->append(QString(tr("<br><br><b>ABS Tree Was Successfully Updated!</b>")));
+	
+	ath.switchToStdUsr();
 
-	QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("ABS Update"), QString(tr("Your ABS Tree was updated!")),
-			QMessageBox::Ok, this);
+	ShamanDialog::popupDialog(tr("ABS Update"), QString(tr("Your ABS Tree was updated!")), this);
 
-	message->exec();
-
-	message->deleteLater();
-
-	this->close();
+	deleteLater();
 }
 
 void BuildingDialog::finishedBuildingAction(int ecode, QProcess::ExitStatus estat)
@@ -211,9 +211,9 @@ void BuildingDialog::finishedBuildingAction(int ecode, QProcess::ExitStatus esta
 
 void BuildingDialog::processCurrentQueueItem()
 {
-	ABSProc->deleteLater();
+	MakePkgProc->deleteLater();
 	
-	ABSProc = new QProcess();
+	MakePkgProc = new QProcess();
 	
 	processingLabel->setText(QString(tr("Processing Package %1 of %2...")).arg(currentItem + 1).arg(buildQueue.size()));
 	buildingLabel->setText(QString(tr("Building %1...")).arg(buildQueue.at(currentItem)));
@@ -238,15 +238,15 @@ void BuildingDialog::processCurrentQueueItem()
 
 	path.append(buildQueue.at(currentItem));
 	
-	ABSProc->setWorkingDirectory(path);
+	MakePkgProc->setWorkingDirectory(path);
 
-	connect(ABSProc, SIGNAL(readyReadStandardOutput()), SLOT(writeLineProgress()));
-	connect(ABSProc, SIGNAL(readyReadStandardError()), SLOT(writeLineProgressErr()));
-	connect(ABSProc, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(finishedBuildingAction(int,QProcess::ExitStatus)));
+	connect(MakePkgProc, SIGNAL(readyReadStandardOutput()), SLOT(writeLineProgress()));
+	connect(MakePkgProc, SIGNAL(readyReadStandardError()), SLOT(writeLineProgressErr()));
+	connect(MakePkgProc, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(finishedBuildingAction(int,QProcess::ExitStatus)));
 	
 	progressEdit->append(QString(tr("<b>Building %1...</b><br><br>")).arg(buildQueue.at(currentItem)));
 		
-	ABSProc->start("makepkg");
+	MakePkgProc->start("makepkg");
 
 }
 

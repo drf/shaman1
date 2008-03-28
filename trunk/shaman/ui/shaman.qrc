@@ -8,7 +8,9 @@
         <file>icons/archlinux-mods-kdemod.svg</file>
         <file>icons/bookmark-new-list.png</file>
         <file>icons/dialog-cancel.png</file>
+        <file>icons/dialog-error.png</file>
         <file>icons/dialog-ok-apply.png</file>
+        <file>icons/dialog-warning.png</file>
         <file>icons/document-encrypt.svg</file>
         <file>icons/document-open-folder.png</file>
         <file>icons/document-open-remote.png</file>
