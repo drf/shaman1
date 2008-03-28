@@ -33,5 +33,14 @@ To install Shaman Systemwide. This will also install a configuration
 file for DBus, to make Shaman able to connect to the System Bus,
 and a .desktop file for Shaman.
 
+Now, issue those two commands as root:
+
+chown root shaman
+chmod u+s shaman
+
+And change "shaman" with the path to your shaman executable, usually
+/usr/local/bin/shaman or /usr/bin/shaman. Doing that will let you
+start Shaman as normal user.
+
 That's it! You can now start Shaman from your menu, or from the
 terminal by issuing "shaman"
