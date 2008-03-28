@@ -950,7 +950,7 @@ Sistem çubuğundayken Shaman, düzenli aralıklarla Veritabanlarını güncelle
         <translation>Shaman - Sistemçubuğuna yerleşiyor</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1905"/>
+        <location filename="../src/MainWindow.cpp" line="1907"/>
         <source>Upgrade</source>
         <translation>Yükselt</translation>
     </message>
@@ -960,12 +960,12 @@ Sistem çubuğundayken Shaman, düzenli aralıklarla Veritabanlarını güncelle
         <translation>Depolar</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="449"/>
+        <location filename="../src/MainWindow.cpp" line="451"/>
         <source>All Repositories</source>
         <translation>Bütün Depolar</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="452"/>
+        <location filename="../src/MainWindow.cpp" line="454"/>
         <source>Local Packages</source>
         <translation>Yerel Paketler</translation>
     </message>
@@ -975,7 +975,7 @@ Sistem çubuğundayken Shaman, düzenli aralıklarla Veritabanlarını güncelle
         <translation>Paket Grupları</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1011"/>
+        <location filename="../src/MainWindow.cpp" line="1013"/>
         <source>All Groups</source>
         <translation>Bütün Gruplar</translation>
     </message>
@@ -1000,7 +1000,7 @@ Sistem çubuğundayken Shaman, düzenli aralıklarla Veritabanlarını güncelle
         <translation>Sıradaki Paketler</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="879"/>
+        <location filename="../src/MainWindow.cpp" line="881"/>
         <source>Mark for Reinstallation</source>
         <translation>Yeniden Yükleme için İşaretle</translation>
     </message>
@@ -1010,57 +1010,57 @@ Sistem çubuğundayken Shaman, düzenli aralıklarla Veritabanlarını güncelle
         <translation>Yükleme için İşaretle</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1797"/>
+        <location filename="../src/MainWindow.cpp" line="1799"/>
         <source>Install</source>
         <translation>Yükle</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1840"/>
+        <location filename="../src/MainWindow.cpp" line="1842"/>
         <source>Uninstall</source>
         <translation>Kaldır</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1840"/>
+        <location filename="../src/MainWindow.cpp" line="1842"/>
         <source>Complete Uninstall</source>
         <translation>Tam Kaldırma</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="646"/>
+        <location filename="../src/MainWindow.cpp" line="648"/>
         <source>Status: </source>
         <translation>Durum: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="648"/>
+        <location filename="../src/MainWindow.cpp" line="650"/>
         <source>Installed</source>
         <translation>Yüklü</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="650"/>
+        <location filename="../src/MainWindow.cpp" line="652"/>
         <source>Not installed</source>
         <translation>Yüklenmemiş</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="653"/>
+        <location filename="../src/MainWindow.cpp" line="655"/>
         <source>Local Version: </source>
         <translation>Yerel Sürüm: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="658"/>
+        <location filename="../src/MainWindow.cpp" line="660"/>
         <source>Version in the Repository: </source>
         <translation>Depodaki Sürüm: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="664"/>
+        <location filename="../src/MainWindow.cpp" line="666"/>
         <source>Action: </source>
         <translation>Eylem: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1683"/>
+        <location filename="../src/MainWindow.cpp" line="1685"/>
         <source>Error</source>
         <translation>Hata</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="774"/>
+        <location filename="../src/MainWindow.cpp" line="776"/>
         <source>One or more Databases could not be updated.
 Last error reported was:
 %1</source>
@@ -1069,22 +1069,22 @@ Raporlanan son hata şuydu:
 %1</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="781"/>
+        <location filename="../src/MainWindow.cpp" line="783"/>
         <source>Database Update</source>
         <translation>Veritabanı Güncelleme</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="781"/>
+        <location filename="../src/MainWindow.cpp" line="783"/>
         <source>Databases Updated Successfully</source>
         <translation>Veritabanı Başarıyla Güncellendi</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1265"/>
+        <location filename="../src/MainWindow.cpp" line="1267"/>
         <source>Pacman Update</source>
         <translation>Pacman Güncelleme</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1267"/>
+        <location filename="../src/MainWindow.cpp" line="1269"/>
         <source>Pacman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Pacman now?</source>
@@ -1093,12 +1093,12 @@ için tek başına yapmanız önerilir.
 Şimdi Pacman&apos;ı Yükseltmek ister misiniz?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1290"/>
+        <location filename="../src/MainWindow.cpp" line="1292"/>
         <source>Shaman Update</source>
         <translation>Shaman Güncelleme</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1292"/>
+        <location filename="../src/MainWindow.cpp" line="1294"/>
         <source>Shaman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Shaman now?</source>
@@ -1112,27 +1112,27 @@ için tek başına yapmanız önerilir.
         <translation>Kaldırma için İşaretle</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="862"/>
+        <location filename="../src/MainWindow.cpp" line="864"/>
         <source>Mark for Upgrade</source>
         <translation>Yükseltme için İşaretle</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="864"/>
+        <location filename="../src/MainWindow.cpp" line="866"/>
         <source>Cancel Action</source>
         <translation>Eylemi İptal Et</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="903"/>
+        <location filename="../src/MainWindow.cpp" line="905"/>
         <source>Mark all for installation</source>
         <translation>Tümünü yükleme için İşaretle</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="905"/>
+        <location filename="../src/MainWindow.cpp" line="907"/>
         <source>Mark all for reinstallation</source>
         <translation>Tümünü yeniden yükleme için İşaretle</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="907"/>
+        <location filename="../src/MainWindow.cpp" line="909"/>
         <source>Mark all for removal</source>
         <translation>Tümünü Kaldırma için İşaretle</translation>
     </message>
@@ -1142,53 +1142,53 @@ için tek başına yapmanız önerilir.
         <translation>Tüm eylemleri iptal et</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1244"/>
+        <location filename="../src/MainWindow.cpp" line="1246"/>
         <source>System Upgrade</source>
         <translation>Sistem Yükseltme</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1244"/>
+        <location filename="../src/MainWindow.cpp" line="1246"/>
         <source>Your system is up to date!</source>
         <translation>Sisteminiz güncel!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1447"/>
+        <location filename="../src/MainWindow.cpp" line="1449"/>
         <source>Queue Processing</source>
         <translation>Sıra İşleniyor</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1447"/>
+        <location filename="../src/MainWindow.cpp" line="1449"/>
         <source>Your Queue is being processed.
 Please wait.</source>
         <translation>Sıra işleniyor.
 Lütfen bekleyin.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1525"/>
+        <location filename="../src/MainWindow.cpp" line="1527"/>
         <source>Queue Processed</source>
         <translation>Sıra işlendi</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1485"/>
+        <location filename="../src/MainWindow.cpp" line="1487"/>
         <source>One or more errors occourred, your Queue
 was not successfully processed</source>
         <translation>Bir vaya daha fazla hata oluştu;Sıra
 başarıyla işlenemedi</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1514"/>
+        <location filename="../src/MainWindow.cpp" line="1516"/>
         <source>Restart required</source>
         <translation>Yeniden Başlatma gerekiyor</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1507"/>
+        <location filename="../src/MainWindow.cpp" line="1509"/>
         <source>Pacman or Shaman was updated. Shaman will now quit,
 please restart it to use the new version</source>
         <translation>Pacman veya Shaman güncellendi.Shaman kapanacak.
 Yeni sürümü kullanmak için lütfen Shamanı yeniden başlatın</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1515"/>
+        <location filename="../src/MainWindow.cpp" line="1517"/>
         <source>Your Kernel has been updated.
 Please restart your PC soon to load the new Kernel.</source>
         <translation>Kernel güncellendi.
@@ -1196,34 +1196,34 @@ Yeni kerneli kullanmak için lütfen bilgisayarınızı
 yeniden başlatın.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1523"/>
+        <location filename="../src/MainWindow.cpp" line="1525"/>
         <source>Your Queue was successfully processed!</source>
         <translation>Sıra başarıyla işlendi!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1525"/>
+        <location filename="../src/MainWindow.cpp" line="1527"/>
         <source>Your Queue was successfully processed!!</source>
         <translation>Sıra başarıyla işlendi!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1674"/>
+        <location filename="../src/MainWindow.cpp" line="1676"/>
         <source>Install a Package</source>
         <translation>Bir Paket yükle</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1674"/>
+        <location filename="../src/MainWindow.cpp" line="1676"/>
         <source>Arch Linux Packages (*.pkg.tar.gz)</source>
         <translation>Arch Linux Paketleri (*.pkg.tar.gz)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1683"/>
+        <location filename="../src/MainWindow.cpp" line="1685"/>
         <source>%1 does not seem
 a valid package</source>
         <translation>%1 geçerli bir paket
 değil</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1719"/>
+        <location filename="../src/MainWindow.cpp" line="1721"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -1237,31 +1237,31 @@ p, li { white-space: pre-wrap; }
         <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;A libalpm frontend in Qt&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Lisans: GPLv2+&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Libalpm Sürümü: v.%1&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf54321@yahoo.it&amp;gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;l.appelhans@gmx.de&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1732"/>
+        <location filename="../src/MainWindow.cpp" line="1734"/>
         <source>%1 GiB</source>
         <comment>Size is in Gib</comment>
         <translation>%1 GB</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1734"/>
+        <location filename="../src/MainWindow.cpp" line="1736"/>
         <source>%1 MiB</source>
         <comment>Size is in MiB</comment>
         <translation>%1 MB</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1736"/>
+        <location filename="../src/MainWindow.cpp" line="1738"/>
         <source>%1 KiB</source>
         <comment>Size is in KiB</comment>
         <translation>%1 KB</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1738"/>
+        <location filename="../src/MainWindow.cpp" line="1740"/>
         <source>%1 Bytes</source>
         <comment>Size is in Bytes</comment>
         <translation>%1 Bayt</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1750"/>
+        <location filename="../src/MainWindow.cpp" line="1752"/>
         <source>Library Question</source>
         <translation>Kütüphane Sorusu</translation>
     </message>
@@ -1442,12 +1442,12 @@ p, li { white-space: pre-wrap; }
         <translation>Esc</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1571"/>
+        <location filename="../src/MainWindow.cpp" line="1573"/>
         <source>News Alert</source>
         <translation>Haber Alarmı</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1572"/>
+        <location filename="../src/MainWindow.cpp" line="1574"/>
         <source>There is an unread news about %1.
 Do you want to read it?</source>
         <translation>%1 hakkında okunmamış haberler var.
