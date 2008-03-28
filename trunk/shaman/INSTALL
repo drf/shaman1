@@ -24,7 +24,7 @@ Then it's time for
 
 make
 
-This can take sometime. When it finishes, you need to issue
+This can take some time. When it finishes, you need to issue
 as superuser
 
 make install
