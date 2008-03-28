@@ -19,6 +19,8 @@
  ***************************************************************************/
 #include "EditPBuild.h"
 
+#include "ShamanDialog.h"
+
 #include <QDir>
 #include <QDebug>
 #include <QMessageBox>
@@ -54,18 +56,9 @@ bool EditPBuild::loadFile(const QString &name)
 {
 	if(needsSaving)
 	{
-		QMessageBox *msgBox = new QMessageBox(this);
-
-		msgBox->setIcon(QMessageBox::Question);
-		msgBox->setWindowTitle(QString(tr("Saving")));
-
-		msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
-
-		msgBox->setWindowModality(Qt::ApplicationModal);
-
-		msgBox->setText(QString(tr("You modified this PKGBUILD.\nDo you want to save it?")));
-
-		switch (msgBox->exec()) {
+		switch (ShamanDialog::popupQuestionDialog(QString(tr("Saving")), QString(tr("You modified this PKGBUILD.\n"
+				"Do you want to save it?")), this, ShamanProperties::WarningDialog)) 
+		{
 		case QMessageBox::Yes:
 			saveFile(lastItem);
 			break;
@@ -75,8 +68,6 @@ bool EditPBuild::loadFile(const QString &name)
 			// should never be reached
 			break;
 		}
-
-		msgBox->deleteLater();
 	}
 	
 	lastItem = packagesBox->currentText();
@@ -146,18 +137,9 @@ void EditPBuild::closeEvent(QCloseEvent *evt)
 {
 	if(needsSaving)
 	{
-		QMessageBox *msgBox = new QMessageBox(this);
-
-		msgBox->setIcon(QMessageBox::Question);
-		msgBox->setWindowTitle(QString(tr("Saving")));
-
-		msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
-
-		msgBox->setWindowModality(Qt::ApplicationModal);
-
-		msgBox->setText(QString(tr("You modified this PKGBUILD.\nDo you want to save it?")));
-
-		switch (msgBox->exec()) {
+		switch (ShamanDialog::popupQuestionDialog(QString(tr("Saving")), QString(tr("You modified this PKGBUILD.\n"
+				"Do you want to save it?")), this, ShamanProperties::WarningDialog)) 
+		{	
 		case QMessageBox::Yes:
 			saveFile(lastItem);
 			break;
@@ -167,8 +149,6 @@ void EditPBuild::closeEvent(QCloseEvent *evt)
 			// should never be reached
 			break;
 		}
-
-		msgBox->deleteLater();
 	}
 	
 	evt->accept();

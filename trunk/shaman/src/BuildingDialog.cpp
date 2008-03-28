@@ -45,18 +45,9 @@ BuildingDialog::~BuildingDialog()
 
 void BuildingDialog::abortProcess()
 {
-	QMessageBox *msgBox = new QMessageBox(this);
-
-	msgBox->setIcon(QMessageBox::Question);
-	msgBox->setWindowTitle(QString(tr("Error")));
-
-	msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
-
-	msgBox->setWindowModality(Qt::ApplicationModal);
-
-	msgBox->setText(QString(tr("Would you like to abort building?.\nAll Process will be lost.")));
-
-	switch (msgBox->exec()) {
+	switch (ShamanDialog::popupQuestionDialog(QString(tr("Error")), QString(tr("Would you like to abort building?."
+			"\nAll Process will be lost.")), this, ShamanProperties::WarningDialog)) 
+	{
 	case QMessageBox::Yes:
 		disconnect(ABSProc, SIGNAL(readyReadStandardOutput()), this, SLOT(writeLineProgress()));
 		disconnect(ABSProc, SIGNAL(readyReadStandardError()), this, SLOT(writeLineProgressErr()));
@@ -71,8 +62,6 @@ void BuildingDialog::abortProcess()
 		// should never be reached
 		break;
 	}
-
-	msgBox->deleteLater();
 }
 
 void BuildingDialog::updateABSTree()

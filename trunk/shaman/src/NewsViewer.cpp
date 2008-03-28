@@ -20,10 +20,11 @@
 
 #include "NewsViewer.h"
 
+#include "ShamanDialog.h"
+
 #include <QUrl>
 #include <QDesktopServices>
 #include <QDebug>
-#include <QMessageBox>
 
 #include "ArchLinuxNewsReader.h"
 
@@ -173,10 +174,6 @@ void NewsViewer::fetching()
 
 void NewsViewer::fetchingError()
 {
-	QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), QString(tr("Could not fetch the RSS feed! Error reported was:")
-			+ QChar('\n') + newsHandler->getHttpError()), QMessageBox::Ok, this);
-
-	message->exec();
-
-	message->deleteLater();
+	ShamanDialog::popupDialog(tr("Error"), QString(tr("Could not fetch the RSS feed! Error reported was:")
+			+ QChar('\n') + newsHandler->getHttpError()), this, ShamanProperties::ErrorDialog);
 }

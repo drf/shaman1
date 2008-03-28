@@ -39,8 +39,13 @@ void ShamanDialog::popupDialog(const QString &title, const QString &text, QWidge
 		if(dlog != 0)
 			dlog->hide();
 	}
-
-	QMessageBox *message = new QMessageBox(QMessageBox::Warning, title, text, QMessageBox::Ok, parent);
+	
+	QMessageBox *message;
+	
+	if(parent == NULL)
+		message = new QMessageBox(QMessageBox::Warning, title, text, QMessageBox::Ok);
+	else
+		message = new QMessageBox(QMessageBox::Warning, title, text, QMessageBox::Ok, parent);
 	
 	switch(dtype)
 	{

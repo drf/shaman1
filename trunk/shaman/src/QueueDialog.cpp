@@ -17,13 +17,16 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
+
 #include "QueueDialog.h"
 
-#include <iostream>
-#include "ui_transactionDialog.h"
-#include <alpm.h>
+#include "ShamanDialog.h"
 #include "callbacks.h"
 #include "AlpmHandler.h"
+#include "ui_transactionDialog.h"
+
+#include <iostream>
+#include <alpm.h>
 #include <QMutex>
 #include <QMutexLocker>
 #include <QDebug>
@@ -754,18 +757,10 @@ bool QueueDialog::checkScriptlet(const QString &path, const QString &action)
 
 void QueueDialog::abortTransaction()
 {
-	QMessageBox *msgBox = new QMessageBox(this);
-
-	msgBox->setIcon(QMessageBox::Question);
-	msgBox->setWindowTitle(QString(tr("Queue Processing")));
-
-	msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
-
-	msgBox->setWindowModality(Qt::ApplicationModal);
-
-	msgBox->setText(QString(tr("Would you like to abort Queue Processing?\nThis may damage your system.")));
-
-	switch (msgBox->exec()) {
+	switch (ShamanDialog::popupQuestionDialog(QString(tr("Queue Processing")), 
+			QString(tr("Would you like to abort Queue Processing?\nThis may damage your system.")), this,
+			ShamanProperties::WarningDialog)) 
+	{
 	case QMessageBox::Yes:
 		errors = true;
 		
@@ -786,8 +781,6 @@ void QueueDialog::abortTransaction()
 		// should never be reached
 		break;
 	}
-
-	msgBox->deleteLater();
 }
 
 void QueueDialog::handlePreparingError(const QString &msg)
@@ -797,7 +790,8 @@ void QueueDialog::handlePreparingError(const QString &msg)
 	QDialog *dlog = new QDialog(this);
 	QLabel *lbl = new QLabel(dlog);
 	QTextEdit *txtEd = new QTextEdit(msg, dlog);
-	QDialogButtonBox *but = new QDialogButtonBox(dlog);
+	QPushButton *but = new QPushButton(dlog);
+	QHBoxLayout *hlay = new QHBoxLayout();
 	QVBoxLayout *lay = new QVBoxLayout();
 
 	lbl->setText(QString(tr("There has been an error"
@@ -805,15 +799,17 @@ void QueueDialog::handlePreparingError(const QString &msg)
 
 	txtEd->setReadOnly(true);
 
-	but->addButton(QDialogButtonBox::Ok);
-	but->setCenterButtons(true);
+	but->setText(tr("Ok"));
+	but->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
+	hlay->insertStretch(0);
+	hlay->addWidget(but);
 	lay->addWidget(lbl);
 	lay->addWidget(txtEd);
-	lay->addWidget(but);
+	lay->addLayout(hlay);
 	dlog->setLayout(lay);
 	dlog->setWindowTitle(QString(tr("Queue Processing")));
 	dlog->setWindowModality(Qt::ApplicationModal);
-	connect(but, SIGNAL(accepted()), dlog, SLOT(accept()));
+	connect(but, SIGNAL(clicked()), dlog, SLOT(accept()));
 
 	dlog->exec();
 
@@ -830,7 +826,8 @@ void QueueDialog::handleCommittingError(const QString &msg)
 	QDialog *dlog = new QDialog(this);
 	QLabel *lbl = new QLabel(dlog);
 	QTextEdit *txtEd = new QTextEdit(msg, dlog);
-	QDialogButtonBox *but = new QDialogButtonBox(dlog);
+	QPushButton *but = new QPushButton(dlog);
+	QHBoxLayout *hlay = new QHBoxLayout();
 	QVBoxLayout *lay = new QVBoxLayout();
 
 	lbl->setText(QString(tr("There has been an error"
@@ -838,15 +835,17 @@ void QueueDialog::handleCommittingError(const QString &msg)
 
 	txtEd->setReadOnly(true);
 
-	but->addButton(QDialogButtonBox::Ok);
-	but->setCenterButtons(true);
+	but->setText(tr("Ok"));
+	but->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
+	hlay->insertStretch(0);
+	hlay->addWidget(but);
 	lay->addWidget(lbl);
 	lay->addWidget(txtEd);
-	lay->addWidget(but);
+	lay->addLayout(hlay);
 	dlog->setLayout(lay);
 	dlog->setWindowTitle(QString(tr("Queue Processing")));
 	dlog->setWindowModality(Qt::ApplicationModal);
-	connect(but, SIGNAL(accepted()), dlog, SLOT(accept()));
+	connect(but, SIGNAL(clicked()), dlog, SLOT(accept()));
 
 	dlog->exec();
 

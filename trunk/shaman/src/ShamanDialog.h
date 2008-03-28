@@ -38,6 +38,12 @@ namespace ShamanProperties {
 
 class ShamanDialog
 {
+	
+	/* This class handles popup dialogs streamed by Shaman. It takes care of giving
+	 * them a consistent look, handle creation and immediate deletion, and its
+	 * methods are static to allow a flexible usage.
+	 */
+	
 public:
 	ShamanDialog();
 	virtual ~ShamanDialog();

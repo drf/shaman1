@@ -106,6 +106,8 @@ int main(int argc, char **argv)
 				"Dario: drf54321@gmail.com\nLukas: l.appelhans@gmx.de\n"
 				"Thanks again, and enjoy your translation!"), 
 				QObject::tr("Your settings file seems unwritable.\nPlease check permissions on it."), QMessageBox::Ok);
+		
+		message->setIconPixmap(QPixmap(":/Icons/icons/dialog-error.png"));
 
 		message->show();
 
@@ -232,6 +234,8 @@ int main(int argc, char **argv)
 				QObject::tr("You have started Shaman as root.\nIt is advised to start it as unprivileged user.\n"
 						"Shaman will ask you for root password when needed."), QMessageBox::Ok);
 
+		message->setIconPixmap(QPixmap(":/Icons/icons/dialog-warning.png"));
+		
 		message->exec();
 
 		message->deleteLater();
@@ -243,6 +247,8 @@ int main(int argc, char **argv)
 	{
 		QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("Shaman"), QObject::tr("There was a problem"
 				" while testing libalpm.\nMaybe another application has a lock on it."), QMessageBox::Ok);
+		
+		message->setIconPixmap(QPixmap(":/Icons/icons/dialog-error.png"));
 
 		message->show();
 
@@ -256,6 +262,8 @@ int main(int argc, char **argv)
 	{
 		QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("Shaman"), QString(QObject::tr("Pacman is not updated."
 				"\nShaman needs libalpm >= 2.1.0 to run.\nYours is %1. Please update Pacman.")).arg(alversion), QMessageBox::Ok);
+		
+		message->setIconPixmap(QPixmap(":/Icons/icons/dialog-error.png"));
 
 		message->show();
 
