@@ -24,6 +24,7 @@
 
 #include "AlpmHandler.h"
 #include "ABSHandler.h"
+#include "ShamanDialog.h"
 
 #include <QLineEdit>
 #include <QSettings>
@@ -987,18 +988,9 @@ void ConfigDialog::saveConfiguration()
 
 	if(dbChanged)
 	{
-		QMessageBox *msgBox = new QMessageBox(this);
-
-		msgBox->setIcon(QMessageBox::Question);
-		msgBox->setWindowTitle(QString(tr("Settings Changed")));
-
-		msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
-
-		msgBox->setWindowModality(Qt::ApplicationModal);
-
-		msgBox->setText(QString(tr("Your repositories have changed.\nDo you want to Update Your Database?")));
-
-		switch (msgBox->exec()) {
+		switch (ShamanDialog::popupQuestionDialog(QString(tr("Settings Changed")), 
+				QString(tr("Your repositories have changed.\nDo you want to Update Your Database?")), this)) 
+		{
 		case QMessageBox::Yes:
 			upDb = true;
 			break;
@@ -1009,8 +1001,6 @@ void ConfigDialog::saveConfiguration()
 			// should never be reached
 			break;
 		}
-
-		msgBox->deleteLater();
 	}
 }
 
@@ -1024,10 +1014,9 @@ void ConfigDialog::addMirror()
 	if(!mirror.contains(QString("$repo")) || (!mirror.startsWith(QString("http://")) &&
 			!mirror.startsWith(QString("ftp://"))) || mirror.contains(QString(" ")) || !QUrl(mirror).isValid())
 	{
-		QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Add Mirror"),
-				tr("Mirror Format is incorrect. Your mirror should look like this:\nhttp://mirror.org/$repo/os/i686",
-						"Obviously keep the example as it is ;)"), QMessageBox::Ok);
-		message->exec();
+		ShamanDialog::popupDialog(tr("Add Mirror"), tr("Mirror Format is incorrect. "
+				"Your mirror should look like this:\nhttp://mirror.org/$repo/os/i686",
+						"Obviously keep the example as it is ;)"), this);
 		return;
 	}
 
@@ -1045,12 +1034,11 @@ void ConfigDialog::addMirror()
 
 	mirrorBox->addItem(mirror);
 
-	QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Add Mirror"),
+	ShamanDialog::popupDialog(tr("Add Mirror"),
 			tr("Your Mirror was successfully added!\nIt is now available in mirrorlist.",
 					"mirrorlist here means /etc/pacman.d/mirrorlist, so it should not "
-					"be translated."), QMessageBox::Ok);
-	message->exec();
-
+					"be translated."), this);
+	
 	addMirrorLine->clear();
 }
 
