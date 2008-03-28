@@ -761,15 +761,8 @@ void MainWindow::finishDbUpdate()
 		emit actionStatusChanged("dbUpdateFinished");
 
 		if(dbdialog->isVisible())
-		{
-			QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"),
-					QString(tr("One or more Databases could not be updated.\nLast error reported was:\n%1")).arg(alpm_strerrorlast()),
-					QMessageBox::Ok, dbdialog);
-
-			message->exec();
-
-			message->deleteLater();
-		}
+			popupDialog(tr("Error"), QString(tr("One or more Databases could not be updated.\nLast error reported was:\n%1"))
+					.arg(alpm_strerrorlast()));
 		else
 			trayicon->showMessage(QString(tr("Database Update")), QString(tr("One or more Databases could "
 					"not be updated.\nLast error reported was:\n%1")).arg(alpm_strerrorlast()));
@@ -788,76 +781,53 @@ void MainWindow::finishDbUpdate()
 	if(list.isEmpty())
 		return;
 
-	if(list.contains("pacman"))
+	if (list.contains("pacman"))
 	{
-		QMessageBox *msgBox = new QMessageBox();
+		switch (popupQuestionDialog(QString(tr("Pacman Update")), QString(tr("Pacman can be upgraded. "
+				"It is advised to process it alone\nto avoid version conflicts.\n"
+				"Do you want to Upgrade Pacman now?"))))
+				{
+				case QMessageBox::Yes:
 
-		msgBox->setIcon(QMessageBox::Question);
-		msgBox->setWindowTitle(QString(tr("Pacman Update")));
+					/* Ok, let's set up a special queue for Shaman. */
 
-		msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+					cancelAllActions();
+					installPackage("pacman");
+					widgetQueueToAlpmQueue();
 
-		msgBox->setWindowModality(Qt::ApplicationModal);
+					break;
+				case QMessageBox::No:
+					/* Well, just pass by */
+					break;
+				default:
+					// should never be reached
+					break;
+				}
 
-		msgBox->setText(QString(tr("Pacman can be upgraded. It is advised to process it alone\nto avoid version conflicts.\n"
-						"Do you want to Upgrade Pacman now?")));
-
-		switch (msgBox->exec())
-		{
-		case QMessageBox::Yes:
-
-			msgBox->deleteLater();
-			/* Ok, let's set up a special queue for Pacman. */
-
-			cancelAllActions();
-			installPackage("pacman");
-			widgetQueueToAlpmQueue();
-
-			break;
-		case QMessageBox::No:
-			/* Well, just pass by */
-			msgBox->deleteLater();
-			break;
-		default:
-			// should never be reached
-			break;
-		}
 
 	}
-	else if(list.contains("shaman"))
+	else if (list.contains("shaman"))
 	{
-		QMessageBox *msgBox = new QMessageBox();
+		switch (popupQuestionDialog(QString(tr("Shaman Update")), QString(tr("Shaman can be upgraded. "
+				"It is advised to process it alone\nto avoid version conflicts.\n"
+				"Do you want to Upgrade Shaman now?"))))
+				{
+				case QMessageBox::Yes:
 
-		msgBox->setIcon(QMessageBox::Question);
-		msgBox->setWindowTitle(QString(tr("Shaman Update")));
+					/* Ok, let's set up a special queue for Shaman. */
 
-		msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+					cancelAllActions();
+					installPackage("shaman");
+					widgetQueueToAlpmQueue();
 
-		msgBox->setWindowModality(Qt::ApplicationModal);
-
-		msgBox->setText(QString(tr("Shaman can be upgraded. It is advised to process it alone\nto avoid version conflicts.\n"
-				"Do you want to Upgrade Shaman now?")));
-
-		switch (msgBox->exec())
-		{
-		case QMessageBox::Yes:
-
-			msgBox->deleteLater();
-			/* Ok, let's set up a special queue for Shaman. */
-
-			cancelAllActions();
-			installPackage("shaman");
-			widgetQueueToAlpmQueue();
-
-			break;
-		case QMessageBox::No:
-			/* Well, just pass by */
-			msgBox->deleteLater();
-			break;
-		default:
-			// should never be reached
-			break;
-		}
+					break;
+				case QMessageBox::No:
+					/* Well, just pass by */
+					break;
+				default:
+					// should never be reached
+					break;
+				}
 
 	}
 	else if(!list.isEmpty())
@@ -1262,13 +1232,8 @@ void MainWindow::startUpgrading()
 		if (dbdialog)
 		{
 			if(dbdialog->isVisible())
-			{
 				/* Display a simple popup saying the system is up-to-date. */
-				QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("System Upgrade"), 
-						tr("Your system is up to date!"), QMessageBox::Ok, this);
-				message->exec();
-				message->deleteLater();
-			}
+				popupDialog(tr("System Upgrade"), tr("Your system is up to date!"));
 			else
 				trayicon->showMessage(QString(tr("System Upgrade")), QString(tr("Your system is up to date!")));
 
@@ -1291,74 +1256,51 @@ void MainWindow::upgrade(const QStringList &packages)
 {
 	if (packages.contains("pacman"))
 	{
-		QMessageBox *msgBox = new QMessageBox();
+		switch (popupQuestionDialog(QString(tr("Pacman Update")), QString(tr("Pacman can be upgraded. "
+				"It is advised to process it alone\nto avoid version conflicts.\n"
+				"Do you want to Upgrade Pacman now?"))))
+				{
+				case QMessageBox::Yes:
 
-		msgBox->setIcon(QMessageBox::Question);
-		msgBox->setWindowTitle(QString(tr("Pacman Update")));
+					/* Ok, let's set up a special queue for Shaman. */
 
-		msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+					cancelAllActions();
+					installPackage("pacman");
+					widgetQueueToAlpmQueue();
 
-		msgBox->setWindowModality(Qt::ApplicationModal);
+					break;
+				case QMessageBox::No:
+					/* Well, just pass by */
+					break;
+				default:
+					// should never be reached
+					break;
+				}
 
-		msgBox->setText(QString(tr("Pacman can be upgraded. It is advised to process it alone\nto avoid version conflicts.\n"
-				"Do you want to Upgrade Pacman now?")));
-
-		switch (msgBox->exec())
-		{
-		case QMessageBox::Yes:
-
-			msgBox->deleteLater();
-			/* Ok, let's set up a special queue for Pacman. */
-
-			cancelAllActions();
-			installPackage("pacman");
-			widgetQueueToAlpmQueue();
-
-			break;
-		case QMessageBox::No:
-			/* Well, just pass by */
-			msgBox->deleteLater();
-			break;
-		default:
-			// should never be reached
-			break;
-		}
 
 	}
 	else if (packages.contains("shaman"))
 	{
-		QMessageBox *msgBox = new QMessageBox();
+		switch (popupQuestionDialog(QString(tr("Shaman Update")), QString(tr("Shaman can be upgraded. "
+				"It is advised to process it alone\nto avoid version conflicts.\n"
+				"Do you want to Upgrade Shaman now?"))))
+				{
+				case QMessageBox::Yes:
 
-		msgBox->setIcon(QMessageBox::Question);
-		msgBox->setWindowTitle(QString(tr("Shaman Update")));
+					/* Ok, let's set up a special queue for Shaman. */
 
-		msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+					cancelAllActions();
+					installPackage("shaman");
+					widgetQueueToAlpmQueue();
 
-		msgBox->setWindowModality(Qt::ApplicationModal);
-
-		msgBox->setText(QString(tr("Shaman can be upgraded. It is advised to process it alone\nto avoid version conflicts.\n"
-				"Do you want to Upgrade Shaman now?")));
-
-		switch (msgBox->exec())
-		{
-		case QMessageBox::Yes:
-
-			msgBox->deleteLater();
-			/* Ok, let's set up a special queue for Shaman. */
-
-			cancelAllActions();
-			installPackage("shaman");
-			widgetQueueToAlpmQueue();
-
-			break;
-		case QMessageBox::No:
-			/* Well, just pass by */
-			msgBox->deleteLater();
-			break;
-		default:
-			// should never be reached
-			break;
-		}
+					break;
+				case QMessageBox::No:
+					/* Well, just pass by */
+					break;
+				default:
+					// should never be reached
+					break;
+				}
 
 	}
 	else
@@ -1381,30 +1323,19 @@ void MainWindow::upgrade(const QStringList &packages)
 			{
 				if(newsReader->checkUnreadNewsOnPkg(ent))
 				{
-					QMessageBox *msgBox = new QMessageBox(this);
-
-					msgBox->setIcon(QMessageBox::Question);
-					msgBox->setWindowTitle(QString(tr("News Alert")));
-
-					msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
-
-					msgBox->setWindowModality(Qt::ApplicationModal);
-
-					msgBox->setText(QString(tr("There is an unread news about %1.\nDo you want to read it?")).arg(ent));
-
-					switch (msgBox->exec()) {
-					case QMessageBox::Yes:
-						openNewsDialog();
-						return;
-						break;
-					case QMessageBox::No:
-						break;
-					default:
-						// should never be reached
-						break;
-					}
-
-					msgBox->deleteLater();
+					switch (popupQuestionDialog(QString(tr("News Alert")), 
+							QString(tr("There is an unread news about %1.\nDo you want to read it?")).arg(ent))) 
+							{
+							case QMessageBox::Yes:
+								openNewsDialog();
+								return;
+								break;
+							case QMessageBox::No:
+								break;
+							default:
+								// should never be reached
+								break;
+							}
 				}
 			}
 		}
@@ -1541,14 +1472,7 @@ void MainWindow::queueProcessingEnded(bool errors)
 		qDebug() << "Errors Occourred, Transaction was not completed";
 
 		if(queueDl->isVisible())
-		{
-			QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Queue Processed"),
-					tr("One or more errors occourred, your Queue\nwas not successfully processed"), QMessageBox::Ok, queueDl);
-
-			message->exec();
-
-			message->deleteLater();
-		}
+			popupDialog(tr("Queue Processed"), tr("One or more errors occourred, your Queue\nwas not successfully processed"));
 		else
 			trayicon->showMessage(QString(tr("Queue Processed")), QString(tr("One or more errors occourred, your Queue\n"
 					"was not successfully processed")));
@@ -1562,13 +1486,8 @@ void MainWindow::queueProcessingEnded(bool errors)
 
 		if(!pkgsViewWG->findItems("pacman", Qt::MatchExactly, 1).first()->text(8).isEmpty())
 		{
-			QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Restart required"),
-					tr("Pacman or Shaman was updated. Shaman will now quit,\nplease restart it "
-							"to use the new version"), QMessageBox::Ok, queueDl);
-
-			message->exec();
-
-			message->deleteLater();
+			popupDialog(tr("Restart required"),	tr("Pacman or Shaman was updated. Shaman will now quit,\nplease restart it "
+							"to use the new version"));
 
 			qApp->exit(0);
 		}
@@ -1577,27 +1496,15 @@ void MainWindow::queueProcessingEnded(bool errors)
 		{
 			if(!pkgsViewWG->findItems("shaman", Qt::MatchExactly, 1).first()->text(8).isEmpty())
 			{
-				QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Restart required"),
-						tr("Pacman or Shaman was updated. Shaman will now quit,\nplease restart it "
-								"to use the new version"), QMessageBox::Ok, queueDl);
-
-				message->exec();
-
-				message->deleteLater();
+				popupDialog(tr("Restart required"),	tr("Pacman or Shaman was updated. Shaman will now quit,\nplease restart it "
+								"to use the new version"));
 
 				qApp->exit(0);
 			}
 		}
 
 		if(!pkgsViewWG->findItems("kernel26", Qt::MatchExactly, 1).first()->text(8).isEmpty())
-		{
-			QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Restart required"),
-					tr("Your Kernel has been updated.\nPlease restart your PC soon to load the new Kernel."), QMessageBox::Ok, queueDl);
-
-			message->exec();
-
-			message->deleteLater();
-		}
+			popupDialog(tr("Restart required"), tr("Your Kernel has been updated.\nPlease restart your PC soon to load the new Kernel."));
 
 		qApp->processEvents();
 
@@ -1605,14 +1512,7 @@ void MainWindow::queueProcessingEnded(bool errors)
 		refinePkgView();
 
 		if(queueDl->isVisible() && !settings->value("gui/keepqueuedialogopen", true).toBool())
-		{
-			QMessageBox *message = new QMessageBox(QMessageBox::Information, tr("Queue Processed"),
-					tr("Your Queue was successfully processed!"), QMessageBox::Ok, queueDl);
-
-			message->exec();
-
-			message->deleteLater();
-		}
+			popupDialog(tr("Queue Processed"), tr("Your Queue was successfully processed!"));
 		else
 			trayicon->showMessage(QString(tr("Queue Processed")), QString(tr("Your Queue was successfully processed!!")));
 
@@ -1660,30 +1560,19 @@ void MainWindow::widgetQueueToAlpmQueue()
 		{
 			if(newsReader->checkUnreadNewsOnPkg(ent->text(1)))
 			{
-				QMessageBox *msgBox = new QMessageBox(this);
-
-				msgBox->setIcon(QMessageBox::Question);
-				msgBox->setWindowTitle(QString(tr("News Alert")));
-
-				msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
-
-				msgBox->setWindowModality(Qt::ApplicationModal);
-
-				msgBox->setText(QString(tr("There is an unread news about %1.\nDo you want to read it?")).arg(ent->text(1)));
-
-				switch (msgBox->exec()) {
-				case QMessageBox::Yes:
-					openNewsDialog();
-					return;
-					break;
-				case QMessageBox::No:
-					break;
-				default:
-					// should never be reached
-					break;
-				}
-
-				msgBox->deleteLater();
+				switch (popupQuestionDialog(QString(tr("News Alert")), 
+						QString(tr("There is an unread news about %1.\nDo you want to read it?")).arg(ent->text(1)))) 
+						{
+						case QMessageBox::Yes:
+							openNewsDialog();
+							return;
+							break;
+						case QMessageBox::No:
+							break;
+						default:
+							// should never be reached
+							break;
+						}
 			}
 		}
 
@@ -1783,12 +1672,9 @@ void MainWindow::getPackageFromFile()
 	// Sanity check
 	if(alpm_pkg_load(fileName.toAscii().data(), 1, &pkg) == -1)
 	{
-		QMessageBox *message = new QMessageBox(QMessageBox::Warning, tr("Error"), QString(tr("%1 does not seem\na valid package")).
-				arg(fileName), QMessageBox::Ok, this);
+		popupDialog(tr("Error"), QString(tr("%1 does not seem\na valid package")).
+				arg(fileName));
 
-		message->exec();
-
-		message->deleteLater();
 		return;
 	}
 
@@ -1853,27 +1739,8 @@ void MainWindow::startTrayTimer()
 
 void MainWindow::streamTransQuestion(const QString &msg)
 {
-	QMessageBox *msgBox = new QMessageBox(this);
-
-	msgBox->setIcon(QMessageBox::Question);
-	msgBox->setWindowTitle(QString(tr("Library Question")));
-
-	msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
-
-	msgBox->setWindowModality(Qt::ApplicationModal);
-
-	msgBox->setText(msg);
-
-	// Let's Hide out other dialogs
-
-	foreach(QObject *ent, children())
-	{	
-		QDialog *edl = qobject_cast<QDialog *>(ent);
-		if(edl != 0)
-			edl->hide();
-	}
-
-	switch (msgBox->exec()) {
+	switch (popupQuestionDialog(QString(tr("Library Question")), msg))
+	{
 	case QMessageBox::Yes:
 		CbackReference.answer = 1;
 		break;
@@ -1883,17 +1750,6 @@ void MainWindow::streamTransQuestion(const QString &msg)
 	default:
 		// should never be reached
 		break;
-	}
-
-	msgBox->deleteLater();
-
-	// Let's show dialogs
-
-	foreach(QObject *ent, children())
-	{	
-		QDialog *edl = qobject_cast<QDialog *>(ent);
-		if(edl != 0)
-			edl->show();
 	}
 
 	qDebug() << "Waking Alpm Thread";
@@ -2175,4 +2031,63 @@ void MainWindow::showAuthDialog(int count)
 	}
 	
 	wCond.wakeAll();
+}
+
+void MainWindow::popupDialog(const QString &title, const QString &text)
+{
+	foreach(QObject *ent, children())
+	{	
+		QDialog *dlog = qobject_cast<QDialog *>(ent);
+		if(dlog != 0)
+			dlog->hide();
+	}
+
+	QMessageBox *message = new QMessageBox(QMessageBox::Warning, title, text, QMessageBox::Ok, this);
+
+	message->exec();
+
+	message->deleteLater();
+
+	foreach(QObject *ent, children())
+	{	
+		QDialog *dlog = qobject_cast<QDialog *>(ent);
+		if(dlog != 0)
+			dlog->show();
+	}
+}
+
+int MainWindow::popupQuestionDialog(const QString &title, const QString &text)
+{
+	int retval = 0;
+
+	foreach(QObject *ent, children())
+	{	
+		QDialog *dlog = qobject_cast<QDialog *>(ent);
+		if(dlog != 0)
+			dlog->hide();
+	}
+
+	QMessageBox *msgBox = new QMessageBox();
+
+	msgBox->setIcon(QMessageBox::Question);
+	msgBox->setWindowTitle(title);
+
+	msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+
+	msgBox->setWindowModality(Qt::ApplicationModal);
+
+	msgBox->setText(text);
+
+	retval = msgBox->exec();
+
+	msgBox->deleteLater();
+
+	foreach(QObject *ent, children())
+	{	
+		QDialog *dlog = qobject_cast<QDialog *>(ent);
+		if(dlog != 0)
+			dlog->show();
+	}
+	
+	return retval;
 }

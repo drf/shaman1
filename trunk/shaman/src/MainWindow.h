@@ -109,6 +109,8 @@ public slots:
 	void setProxy();
 	void openNewsDialog();
 	void openLogViewer();
+	void popupDialog(const QString &title, const QString &text);
+	int popupQuestionDialog(const QString &title, const QString &text);
 
 protected:
 	void closeEvent(QCloseEvent *evt);
