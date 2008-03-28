@@ -13,7 +13,7 @@
    <string>Review Building Queue</string>
   </property>
   <property name="windowIcon" >
-   <iconset resource="qtpacman.qrc" >:/Icons/icons/shaman/shaman-yellow-icon-32.png</iconset>
+   <iconset resource="shaman.qrc" >:/Icons/icons/shaman/shaman-yellow-icon-32.png</iconset>
   </property>
   <layout class="QGridLayout" >
    <item row="0" column="0" >
@@ -61,7 +61,7 @@ p, li { white-space: pre-wrap; }
            <string/>
           </property>
           <property name="pixmap" >
-           <pixmap resource="qtpacman.qrc" >:/Icons/icons/applications-development.png</pixmap>
+           <pixmap resource="shaman.qrc" >:/Icons/icons/applications-development.png</pixmap>
           </property>
           <property name="scaledContents" >
            <bool>true</bool>
@@ -116,7 +116,7 @@ p, li { white-space: pre-wrap; }
           <string>Show packages...</string>
          </property>
          <property name="icon" >
-          <iconset resource="qtpacman.qrc" >:/Icons/icons/view-list-tree.png</iconset>
+          <iconset resource="shaman.qrc" >:/Icons/icons/view-list-tree.png</iconset>
          </property>
          <property name="checkable" >
           <bool>true</bool>
@@ -155,7 +155,7 @@ p, li { white-space: pre-wrap; }
           <string>Abort</string>
          </property>
          <property name="icon" >
-          <iconset resource="qtpacman.qrc" >:/Icons/icons/dialog-cancel.png</iconset>
+          <iconset resource="shaman.qrc" >:/Icons/icons/dialog-cancel.png</iconset>
          </property>
         </widget>
        </item>
@@ -165,7 +165,7 @@ p, li { white-space: pre-wrap; }
           <string>Process From Binary</string>
          </property>
          <property name="icon" >
-          <iconset resource="qtpacman.qrc" >:/Icons/icons/edit-redo.png</iconset>
+          <iconset resource="shaman.qrc" >:/Icons/icons/edit-redo.png</iconset>
          </property>
         </widget>
        </item>
@@ -188,7 +188,7 @@ p, li { white-space: pre-wrap; }
           <string>Review PKGBUILDs</string>
          </property>
          <property name="icon" >
-          <iconset resource="qtpacman.qrc" >:/Icons/icons/draw-text.png</iconset>
+          <iconset resource="shaman.qrc" >:/Icons/icons/draw-text.png</iconset>
          </property>
         </widget>
        </item>
@@ -198,7 +198,7 @@ p, li { white-space: pre-wrap; }
           <string>Process From Source</string>
          </property>
          <property name="icon" >
-          <iconset resource="qtpacman.qrc" >:/Icons/icons/dialog-ok-apply.png</iconset>
+          <iconset resource="shaman.qrc" >:/Icons/icons/dialog-ok-apply.png</iconset>
          </property>
         </widget>
        </item>
@@ -209,7 +209,7 @@ p, li { white-space: pre-wrap; }
   </layout>
  </widget>
  <resources>
-  <include location="qtpacman.qrc" />
+  <include location="shaman.qrc" />
  </resources>
  <connections>
   <connection>

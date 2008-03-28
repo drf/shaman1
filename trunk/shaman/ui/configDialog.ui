@@ -189,7 +189,7 @@
                  <string>Process Selected</string>
                 </property>
                 <property name="icon" >
-                 <iconset resource="qtpacman.qrc" >:/Icons/icons/dialog-ok-apply.png</iconset>
+                 <iconset resource="shaman.qrc" >:/Icons/icons/dialog-ok-apply.png</iconset>
                 </property>
                </widget>
               </item>
@@ -402,7 +402,7 @@ p, li { white-space: pre-wrap; }
            <string>Arch Linux Official Repositories</string>
           </attribute>
           <attribute name="icon" >
-           <iconset resource="qtpacman.qrc" >:/Icons/icons/archlinux-icon-crystal-32.svg</iconset>
+           <iconset resource="shaman.qrc" >:/Icons/icons/archlinux-icon-crystal-32.svg</iconset>
           </attribute>
           <layout class="QGridLayout" >
            <item row="0" column="0" >
@@ -417,7 +417,7 @@ p, li { white-space: pre-wrap; }
                     <string/>
                    </property>
                    <property name="pixmap" >
-                    <pixmap resource="qtpacman.qrc" >:/Icons/icons/archlinux-icon-crystal-32.svg</pixmap>
+                    <pixmap resource="shaman.qrc" >:/Icons/icons/archlinux-icon-crystal-32.svg</pixmap>
                    </property>
                   </widget>
                  </item>
@@ -508,7 +508,7 @@ Please note that packages from Unstable and Testing may break your system.</stri
                      <string>Add Mirror</string>
                     </property>
                     <property name="icon" >
-                     <iconset resource="qtpacman.qrc" >:/Icons/icons/list-add.png</iconset>
+                     <iconset resource="shaman.qrc" >:/Icons/icons/list-add.png</iconset>
                     </property>
                    </widget>
                   </item>
@@ -526,7 +526,7 @@ Please note that packages from Unstable and Testing may break your system.</stri
            <string>KDEMod Repositories</string>
           </attribute>
           <attribute name="icon" >
-           <iconset resource="qtpacman.qrc" >:/Icons/icons/archlinux-mods-kdemod.svg</iconset>
+           <iconset resource="shaman.qrc" >:/Icons/icons/archlinux-mods-kdemod.svg</iconset>
           </attribute>
           <widget class="QWidget" name="layoutWidget" >
            <property name="geometry" >
@@ -546,7 +546,7 @@ Please note that packages from Unstable and Testing may break your system.</stri
                  <string/>
                 </property>
                 <property name="pixmap" >
-                 <pixmap resource="qtpacman.qrc" >:/Icons/icons/archlinux-mods-kdemod.svg</pixmap>
+                 <pixmap resource="shaman.qrc" >:/Icons/icons/archlinux-mods-kdemod.svg</pixmap>
                 </property>
                </widget>
               </item>
@@ -597,7 +597,7 @@ of KDE with the simplicity and the power of Arch.</string>
            <string>Third-Party Repositories</string>
           </attribute>
           <attribute name="icon" >
-           <iconset resource="qtpacman.qrc" >:/Icons/icons/network-server-database.png</iconset>
+           <iconset resource="shaman.qrc" >:/Icons/icons/network-server-database.png</iconset>
           </attribute>
           <layout class="QGridLayout" >
            <item row="0" column="0" >
@@ -652,7 +652,7 @@ and Pacman.</string>
                   <string>Add New Repository</string>
                  </property>
                  <property name="icon" >
-                  <iconset resource="qtpacman.qrc" >:/Icons/icons/list-add.png</iconset>
+                  <iconset resource="shaman.qrc" >:/Icons/icons/list-add.png</iconset>
                  </property>
                 </widget>
                </item>
@@ -662,7 +662,7 @@ and Pacman.</string>
                   <string>Edit Repository</string>
                  </property>
                  <property name="icon" >
-                  <iconset resource="qtpacman.qrc" >:/Icons/icons/draw-text.png</iconset>
+                  <iconset resource="shaman.qrc" >:/Icons/icons/draw-text.png</iconset>
                  </property>
                 </widget>
                </item>
@@ -672,7 +672,7 @@ and Pacman.</string>
                   <string>Remove Repository</string>
                  </property>
                  <property name="icon" >
-                  <iconset resource="qtpacman.qrc" >:/Icons/icons/list-remove.png</iconset>
+                  <iconset resource="shaman.qrc" >:/Icons/icons/list-remove.png</iconset>
                  </property>
                 </widget>
                </item>
@@ -1068,7 +1068,7 @@ and Pacman.</string>
   </layout>
  </widget>
  <resources>
-  <include location="qtpacman.qrc" />
+  <include location="shaman.qrc" />
  </resources>
  <connections>
   <connection>

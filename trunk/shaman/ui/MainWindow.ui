@@ -13,7 +13,7 @@
    <string>Shaman</string>
   </property>
   <property name="windowIcon" >
-   <iconset resource="qtpacman.qrc" >:/Icons/icons/shaman/shaman-32.png</iconset>
+   <iconset resource="shaman.qrc" >:/Icons/icons/shaman/shaman-32.png</iconset>
   </property>
   <property name="toolButtonStyle" >
    <enum>Qt::ToolButtonTextUnderIcon</enum>
@@ -224,7 +224,7 @@
              <string>Repositories</string>
             </property>
             <property name="icon" >
-             <iconset resource="qtpacman.qrc" >:/Icons/icons/network-server-database.png</iconset>
+             <iconset resource="shaman.qrc" >:/Icons/icons/network-server-database.png</iconset>
             </property>
             <property name="checkable" >
              <bool>true</bool>
@@ -246,7 +246,7 @@
              <string>Package Groups</string>
             </property>
             <property name="icon" >
-             <iconset resource="qtpacman.qrc" >:/Icons/icons/bookmark-new-list.png</iconset>
+             <iconset resource="shaman.qrc" >:/Icons/icons/bookmark-new-list.png</iconset>
             </property>
             <property name="checkable" >
              <bool>true</bool>
@@ -307,7 +307,7 @@
                <string>Mark for Installation</string>
               </property>
               <property name="icon" >
-               <iconset resource="qtpacman.qrc" >:/Icons/icons/list-add.png</iconset>
+               <iconset resource="shaman.qrc" >:/Icons/icons/list-add.png</iconset>
               </property>
              </widget>
             </item>
@@ -326,7 +326,7 @@
                <string>Mark for Removal</string>
               </property>
               <property name="icon" >
-               <iconset resource="qtpacman.qrc" >:/Icons/icons/list-remove.png</iconset>
+               <iconset resource="shaman.qrc" >:/Icons/icons/list-remove.png</iconset>
               </property>
              </widget>
             </item>
@@ -345,7 +345,7 @@
                <string>Mark for complete removal</string>
               </property>
               <property name="icon" >
-               <iconset resource="qtpacman.qrc" >:/Icons/icons/edit-delete.png</iconset>
+               <iconset resource="shaman.qrc" >:/Icons/icons/edit-delete.png</iconset>
               </property>
              </widget>
             </item>
@@ -364,7 +364,7 @@
                <string>Cancel action</string>
               </property>
               <property name="icon" >
-               <iconset resource="qtpacman.qrc" >:/Icons/icons/dialog-cancel.png</iconset>
+               <iconset resource="shaman.qrc" >:/Icons/icons/dialog-cancel.png</iconset>
               </property>
              </widget>
             </item>
@@ -402,7 +402,7 @@
               <string>Package Information</string>
              </attribute>
              <attribute name="icon" >
-              <iconset resource="qtpacman.qrc" >:/Icons/icons/help-about.png</iconset>
+              <iconset resource="shaman.qrc" >:/Icons/icons/help-about.png</iconset>
              </attribute>
              <layout class="QGridLayout" >
               <item row="0" column="0" >
@@ -437,7 +437,7 @@
               <string>Files</string>
              </attribute>
              <attribute name="icon" >
-              <iconset resource="qtpacman.qrc" >:/Icons/icons/document-open-folder.png</iconset>
+              <iconset resource="shaman.qrc" >:/Icons/icons/document-open-folder.png</iconset>
              </attribute>
              <layout class="QGridLayout" >
               <item row="0" column="0" >
@@ -556,7 +556,7 @@
   <widget class="QStatusBar" name="statusBar" />
   <action name="actionPackage_Repositories" >
    <property name="icon" >
-    <iconset resource="qtpacman.qrc" >:/Icons/icons/network-server-database.png</iconset>
+    <iconset resource="shaman.qrc" >:/Icons/icons/network-server-database.png</iconset>
    </property>
    <property name="text" >
     <string>Package Repositories</string>
@@ -564,7 +564,7 @@
   </action>
   <action name="actionPacman_Preferences" >
    <property name="icon" >
-    <iconset resource="qtpacman.qrc" >:/Icons/icons/preferences-system.png</iconset>
+    <iconset resource="shaman.qrc" >:/Icons/icons/preferences-system.png</iconset>
    </property>
    <property name="text" >
     <string>Settings...</string>
@@ -572,7 +572,7 @@
   </action>
   <action name="actionAbout" >
    <property name="icon" >
-    <iconset resource="qtpacman.qrc" >:/Icons/icons/help-about.png</iconset>
+    <iconset resource="shaman.qrc" >:/Icons/icons/help-about.png</iconset>
    </property>
    <property name="text" >
     <string>About...</string>
@@ -580,7 +580,7 @@
   </action>
   <action name="actionUpdate_Database" >
    <property name="icon" >
-    <iconset resource="qtpacman.qrc" >:/Icons/icons/view-refresh.png</iconset>
+    <iconset resource="shaman.qrc" >:/Icons/icons/view-refresh.png</iconset>
    </property>
    <property name="text" >
     <string>Update Database</string>
@@ -588,7 +588,7 @@
   </action>
   <action name="actionUpgrade_System" >
    <property name="icon" >
-    <iconset resource="qtpacman.qrc" >:/Icons/icons/system-software-update.png</iconset>
+    <iconset resource="shaman.qrc" >:/Icons/icons/system-software-update.png</iconset>
    </property>
    <property name="text" >
     <string>Upgrade System</string>
@@ -596,7 +596,7 @@
   </action>
   <action name="actionInstall_Package_From_File" >
    <property name="icon" >
-    <iconset resource="qtpacman.qrc" >:/Icons/icons/document-open.png</iconset>
+    <iconset resource="shaman.qrc" >:/Icons/icons/document-open.png</iconset>
    </property>
    <property name="text" >
     <string>Install Package From File</string>
@@ -607,7 +607,7 @@
   </action>
   <action name="actionUpdate_ABS_Tree" >
    <property name="icon" >
-    <iconset resource="qtpacman.qrc" >:/Icons/icons/document-open-remote.png</iconset>
+    <iconset resource="shaman.qrc" >:/Icons/icons/document-open-remote.png</iconset>
    </property>
    <property name="text" >
     <string>Update ABS Tree</string>
@@ -615,7 +615,7 @@
   </action>
   <action name="actionBuild_and_Install_Selected" >
    <property name="icon" >
-    <iconset resource="qtpacman.qrc" >:/Icons/icons/applications-development.png</iconset>
+    <iconset resource="shaman.qrc" >:/Icons/icons/applications-development.png</iconset>
    </property>
    <property name="text" >
     <string>Build and Install Queue</string>
@@ -623,7 +623,7 @@
   </action>
   <action name="actionQuit" >
    <property name="icon" >
-    <iconset resource="qtpacman.qrc" >:/Icons/icons/application-exit.png</iconset>
+    <iconset resource="shaman.qrc" >:/Icons/icons/application-exit.png</iconset>
    </property>
    <property name="text" >
     <string comment="Quit the application" >Quit</string>
@@ -631,7 +631,7 @@
   </action>
   <action name="actionProcess_Queue" >
    <property name="icon" >
-    <iconset resource="qtpacman.qrc" >:/Icons/icons/dialog-ok-apply.png</iconset>
+    <iconset resource="shaman.qrc" >:/Icons/icons/dialog-ok-apply.png</iconset>
    </property>
    <property name="text" >
     <string>Process Queue</string>
@@ -639,7 +639,7 @@
   </action>
   <action name="actionCancel_all_actions" >
    <property name="icon" >
-    <iconset resource="qtpacman.qrc" >:/Icons/icons/dialog-cancel.png</iconset>
+    <iconset resource="shaman.qrc" >:/Icons/icons/dialog-cancel.png</iconset>
    </property>
    <property name="text" >
     <string>Cancel all actions</string>
@@ -647,7 +647,7 @@
   </action>
   <action name="actionReadNews" >
    <property name="icon" >
-    <iconset resource="qtpacman.qrc" >:/Icons/icons/news-subscribe.png</iconset>
+    <iconset resource="shaman.qrc" >:/Icons/icons/news-subscribe.png</iconset>
    </property>
    <property name="text" >
     <string>Read News</string>
@@ -655,7 +655,7 @@
   </action>
   <action name="actionViewLog" >
    <property name="icon" >
-    <iconset resource="qtpacman.qrc" >:/Icons/icons/bookmark-new-list.png</iconset>
+    <iconset resource="shaman.qrc" >:/Icons/icons/bookmark-new-list.png</iconset>
    </property>
    <property name="text" >
     <string>View Log</string>
@@ -664,7 +664,7 @@
  </widget>
  <layoutdefault spacing="0" margin="0" />
  <resources>
-  <include location="qtpacman.qrc" />
+  <include location="shaman.qrc" />
  </resources>
  <connections/>
 </ui>

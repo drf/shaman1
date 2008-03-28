@@ -13,7 +13,7 @@
    <string>Editing PKGBUILD</string>
   </property>
   <property name="windowIcon" >
-   <iconset resource="qtpacman.qrc" >:/Icons/icons/shaman/shaman-yellow-icon-32.png</iconset>
+   <iconset resource="shaman.qrc" >:/Icons/icons/shaman/shaman-yellow-icon-32.png</iconset>
   </property>
   <layout class="QGridLayout" >
    <item row="1" column="0" >
@@ -40,7 +40,7 @@
           <string>Save</string>
          </property>
          <property name="icon" >
-          <iconset resource="qtpacman.qrc" >:/Icons/icons/document-open.png</iconset>
+          <iconset resource="shaman.qrc" >:/Icons/icons/document-open.png</iconset>
          </property>
         </widget>
        </item>
@@ -63,7 +63,7 @@
           <string>Undo</string>
          </property>
          <property name="icon" >
-          <iconset resource="qtpacman.qrc" >:/Icons/icons/edit-delete.png</iconset>
+          <iconset resource="shaman.qrc" >:/Icons/icons/edit-delete.png</iconset>
          </property>
         </widget>
        </item>
@@ -73,7 +73,7 @@
           <string>Redo</string>
          </property>
          <property name="icon" >
-          <iconset resource="qtpacman.qrc" >:/Icons/icons/edit-redo.png</iconset>
+          <iconset resource="shaman.qrc" >:/Icons/icons/edit-redo.png</iconset>
          </property>
         </widget>
        </item>
@@ -110,7 +110,7 @@
           <string>Ok</string>
          </property>
          <property name="icon" >
-          <iconset resource="qtpacman.qrc" >:/Icons/icons/dialog-ok-apply.png</iconset>
+          <iconset resource="shaman.qrc" >:/Icons/icons/dialog-ok-apply.png</iconset>
          </property>
         </widget>
        </item>
@@ -149,7 +149,7 @@ p, li { white-space: pre-wrap; }
          <string/>
         </property>
         <property name="pixmap" >
-         <pixmap resource="qtpacman.qrc" >:/Icons/icons/draw-text.png</pixmap>
+         <pixmap resource="shaman.qrc" >:/Icons/icons/draw-text.png</pixmap>
         </property>
         <property name="scaledContents" >
          <bool>true</bool>
@@ -162,7 +162,7 @@ p, li { white-space: pre-wrap; }
   </layout>
  </widget>
  <resources>
-  <include location="qtpacman.qrc" />
+  <include location="shaman.qrc" />
  </resources>
  <connections>
   <connection>

@@ -90,7 +90,7 @@ SET(shaman_UIS
 )
 
 SET(shaman_RESOUCES
-    ui/qtpacman.qrc
+    ui/shaman.qrc
 )
 
 # verbose - on

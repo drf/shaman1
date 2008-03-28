@@ -13,7 +13,7 @@
    <string>Database Update</string>
   </property>
   <property name="windowIcon" >
-   <iconset resource="qtpacman.qrc" >:/Icons/icons/shaman/shaman-yellow-icon-32.png</iconset>
+   <iconset resource="shaman.qrc" >:/Icons/icons/shaman/shaman-yellow-icon-32.png</iconset>
   </property>
   <layout class="QGridLayout" >
    <item row="0" column="0" colspan="2" >
@@ -417,7 +417,7 @@
          <enum>Qt::AutoText</enum>
         </property>
         <property name="pixmap" >
-         <pixmap resource="qtpacman.qrc" >:/Icons/icons/view-refresh.png</pixmap>
+         <pixmap resource="shaman.qrc" >:/Icons/icons/view-refresh.png</pixmap>
         </property>
         <property name="scaledContents" >
          <bool>true</bool>
@@ -430,7 +430,7 @@
   </layout>
  </widget>
  <resources>
-  <include location="qtpacman.qrc" />
+  <include location="shaman.qrc" />
  </resources>
  <connections/>
 </ui>

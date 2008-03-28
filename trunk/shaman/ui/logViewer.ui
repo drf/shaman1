@@ -186,7 +186,7 @@ p, li { white-space: pre-wrap; }
       <string>Refresh View</string>
      </property>
      <property name="icon" >
-      <iconset resource="qtpacman.qrc" >:/Icons/icons/view-refresh.png</iconset>
+      <iconset resource="shaman.qrc" >:/Icons/icons/view-refresh.png</iconset>
      </property>
     </widget>
    </item>
@@ -202,14 +202,14 @@ p, li { white-space: pre-wrap; }
       <string>Close</string>
      </property>
      <property name="icon" >
-      <iconset resource="qtpacman.qrc" >:/Icons/icons/application-exit.png</iconset>
+      <iconset resource="shaman.qrc" >:/Icons/icons/application-exit.png</iconset>
      </property>
     </widget>
    </item>
   </layout>
  </widget>
  <resources>
-  <include location="qtpacman.qrc" />
+  <include location="shaman.qrc" />
  </resources>
  <connections>
   <connection>

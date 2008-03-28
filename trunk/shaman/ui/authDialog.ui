@@ -23,7 +23,7 @@
           <string/>
          </property>
          <property name="pixmap" >
-          <pixmap resource="qtpacman.qrc" >:/Icons/icons/document-encrypt.svg</pixmap>
+          <pixmap resource="shaman.qrc" >:/Icons/icons/document-encrypt.svg</pixmap>
          </property>
         </widget>
        </item>
@@ -72,7 +72,7 @@ Please enter in the field below the root password to continue.</string>
           <string>Cancel</string>
          </property>
          <property name="icon" >
-          <iconset resource="qtpacman.qrc" >:/Icons/icons/dialog-cancel.png</iconset>
+          <iconset resource="shaman.qrc" >:/Icons/icons/dialog-cancel.png</iconset>
          </property>
          <property name="shortcut" >
           <string>Backspace</string>
@@ -85,7 +85,7 @@ Please enter in the field below the root password to continue.</string>
           <string>Ok</string>
          </property>
          <property name="icon" >
-          <iconset resource="qtpacman.qrc" >:/Icons/icons/dialog-ok-apply.png</iconset>
+          <iconset resource="shaman.qrc" >:/Icons/icons/dialog-ok-apply.png</iconset>
          </property>
          <property name="shortcut" >
           <string>Return</string>
@@ -99,7 +99,7 @@ Please enter in the field below the root password to continue.</string>
   </layout>
  </widget>
  <resources>
-  <include location="qtpacman.qrc" />
+  <include location="shaman.qrc" />
  </resources>
  <connections>
   <connection>
