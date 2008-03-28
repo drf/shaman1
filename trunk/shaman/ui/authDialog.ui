@@ -5,8 +5,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>472</width>
-    <height>232</height>
+    <width>544</width>
+    <height>244</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -74,6 +74,9 @@ Please enter in the field below the root password to continue.</string>
          <property name="icon" >
           <iconset resource="qtpacman.qrc" >:/Icons/icons/dialog-cancel.png</iconset>
          </property>
+         <property name="shortcut" >
+          <string>Backspace</string>
+         </property>
         </widget>
        </item>
        <item>
@@ -83,6 +86,9 @@ Please enter in the field below the root password to continue.</string>
          </property>
          <property name="icon" >
           <iconset resource="qtpacman.qrc" >:/Icons/icons/dialog-ok-apply.png</iconset>
+         </property>
+         <property name="shortcut" >
+          <string>Return</string>
          </property>
         </widget>
        </item>
