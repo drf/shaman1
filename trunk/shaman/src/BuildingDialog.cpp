@@ -32,6 +32,8 @@
 
 BuildingDialog::BuildingDialog(AlpmHandler *hnd, QWidget *parent)
 : QDialog(parent),
+ABSProc(),
+MakePkgProc(),
 aHandle(hnd)
 {
 	setupUi(this);
@@ -49,12 +51,24 @@ void BuildingDialog::abortProcess()
 			"\nAll Process will be lost.")), this, ShamanProperties::WarningDialog)) 
 	{
 	case QMessageBox::Yes:
-		disconnect(MakePkgProc, SIGNAL(readyReadStandardOutput()), this, SLOT(writeLineProgress()));
-		disconnect(MakePkgProc, SIGNAL(readyReadStandardError()), this, SLOT(writeLineProgressErr()));
-		disconnect(MakePkgProc, SIGNAL(finished(int,QProcess::ExitStatus)), this, SLOT(finishedBuildingAction(int,QProcess::ExitStatus)));
-		MakePkgProc->kill();
-		MakePkgProc->deleteLater();
-		progressEdit->append(QString(tr("<br><br><b>Building Process Aborted by the User. Building Failed.</b>")));
+		if(MakePkgProc)
+		{
+			disconnect(MakePkgProc, SIGNAL(readyReadStandardOutput()), this, SLOT(writeLineProgress()));
+			disconnect(MakePkgProc, SIGNAL(readyReadStandardError()), this, SLOT(writeLineProgressErr()));
+			disconnect(MakePkgProc, SIGNAL(finished(int,QProcess::ExitStatus)), this, SLOT(finishedBuildingAction(int,QProcess::ExitStatus)));
+			MakePkgProc->kill();
+			MakePkgProc->deleteLater();
+			progressEdit->append(QString(tr("<br><br><b>Building Process Aborted by the User. Building Failed.</b>")));
+		}
+		if(ABSProc)
+		{
+			disconnect(ABSProc, SIGNAL(readyReadStandardOutput()), this, SLOT(writeLineProgress()));
+			disconnect(ABSProc, SIGNAL(readyReadStandardError()), this, SLOT(writeLineProgressErr()));
+			disconnect(ABSProc, SIGNAL(finished(int,QProcess::ExitStatus)), this, SLOT(finishedBuildingAction(int,QProcess::ExitStatus)));
+			ABSProc->kill();
+			ABSProc->deleteLater();
+			progressEdit->append(QString(tr("<br><br><b>Building Process Aborted by the User. Building Failed.</b>")));	
+		}
 		emit finishedBuilding(2, builtPaths);
 		break;
 	case QMessageBox::No:

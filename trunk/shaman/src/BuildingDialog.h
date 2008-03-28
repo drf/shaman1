@@ -27,6 +27,7 @@
 #include "ui_buildingDialog.h"
 
 #include <QProcess>
+#include <QPointer>
 
 class ABSHandler;
 
@@ -65,8 +66,8 @@ signals:
 	void nullifyPointer();
 	
 private:
-	RootProcess *ABSProc;
-	QProcess *MakePkgProc;
+	QPointer<RootProcess> ABSProc;
+	QPointer<QProcess> MakePkgProc;
 	QStringList buildQueue;
 	QStringList builtPaths;
 	int currentItem;
