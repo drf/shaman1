@@ -1794,17 +1794,17 @@ E&apos; consigliabile avviarlo da utente normale.
 Shaman chiederà quindi la password di root quando necessario.</translation>
     </message>
     <message>
-        <location filename="../src/ShamanDialog.cpp" line="73"/>
+        <location filename="../src/ShamanDialog.cpp" line="75"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
     <message>
-        <location filename="../src/ShamanDialog.cpp" line="127"/>
+        <location filename="../src/ShamanDialog.cpp" line="130"/>
         <source>Yes</source>
         <translation>Sì</translation>
     </message>
     <message>
-        <location filename="../src/ShamanDialog.cpp" line="129"/>
+        <location filename="../src/ShamanDialog.cpp" line="132"/>
         <source>No</source>
         <translation>No</translation>
     </message>

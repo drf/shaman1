@@ -69,8 +69,11 @@ void ShamanDialog::popupDialog(const QString &title, const QString &text, QWidge
 	default:
 		break;
 	}
-	
-	message->addButton(QObject::tr("Ok"), QMessageBox::AcceptRole)->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
+
+	QPushButton *okb = message->addButton(QMessageBox::Ok);
+
+	okb->setText(QObject::tr("Ok"));
+	okb->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
 
 	message->exec();
 

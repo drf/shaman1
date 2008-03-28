@@ -1791,17 +1791,17 @@ Shaman will ask you for root password when needed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ShamanDialog.cpp" line="73"/>
+        <location filename="../src/ShamanDialog.cpp" line="75"/>
         <source>Ok</source>
         <translation type="unfinished">Ok</translation>
     </message>
     <message>
-        <location filename="../src/ShamanDialog.cpp" line="127"/>
+        <location filename="../src/ShamanDialog.cpp" line="130"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ShamanDialog.cpp" line="129"/>
+        <location filename="../src/ShamanDialog.cpp" line="132"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>
