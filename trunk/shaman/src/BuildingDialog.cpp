@@ -49,10 +49,11 @@ void BuildingDialog::abortProcess()
 			"\nAll Process will be lost.")), this, ShamanProperties::WarningDialog)) 
 	{
 	case QMessageBox::Yes:
-		disconnect(ABSProc, SIGNAL(readyReadStandardOutput()), this, SLOT(writeLineProgress()));
-		disconnect(ABSProc, SIGNAL(readyReadStandardError()), this, SLOT(writeLineProgressErr()));
-		disconnect(ABSProc, SIGNAL(finished(int,QProcess::ExitStatus)), this, SLOT(finishedBuildingAction(int,QProcess::ExitStatus)));
-		ABSProc->kill();
+		disconnect(MakePkgProc, SIGNAL(readyReadStandardOutput()), this, SLOT(writeLineProgress()));
+		disconnect(MakePkgProc, SIGNAL(readyReadStandardError()), this, SLOT(writeLineProgressErr()));
+		disconnect(MakePkgProc, SIGNAL(finished(int,QProcess::ExitStatus)), this, SLOT(finishedBuildingAction(int,QProcess::ExitStatus)));
+		MakePkgProc->kill();
+		MakePkgProc->deleteLater();
 		progressEdit->append(QString(tr("<br><br><b>Building Process Aborted by the User. Building Failed.</b>")));
 		emit finishedBuilding(2, builtPaths);
 		break;
@@ -125,6 +126,50 @@ void BuildingDialog::writeLineProgressErr()
 	progressEdit->moveCursor(QTextCursor::End);
 }
 
+void BuildingDialog::writeLineProgressMk()
+{
+	if(MakePkgProc->readChannel() == QProcess::StandardError)
+		progressEdit->append(QString());
+	
+	MakePkgProc->setReadChannel(QProcess::StandardOutput);
+	
+	QString view(MakePkgProc->readLine(1024));
+	
+	view.replace(QChar('\n'), "<br>");
+
+	QString tmp(view);
+	tmp.remove(QChar('.'));
+
+	if(tmp.isEmpty())
+		return;
+
+	progressEdit->insertHtml(view);
+	
+	progressEdit->moveCursor(QTextCursor::End);
+}
+
+void BuildingDialog::writeLineProgressErrMk()
+{
+	if(MakePkgProc->readChannel() == QProcess::StandardOutput)
+		progressEdit->append(QString());
+	
+	MakePkgProc->setReadChannel(QProcess::StandardError);
+
+	QString view(MakePkgProc->readLine(1024));
+
+	view.replace(QChar('\n'), "<br>");
+	
+	QString tmp(view);
+	tmp.remove(QChar('.'));
+	
+	if(tmp.isEmpty())
+		return;
+	
+	progressEdit->insertHtml("<b><i>" + view + "</i></b>");
+	
+	progressEdit->moveCursor(QTextCursor::End);
+}
+
 void BuildingDialog::finishedUpdateABSTree()
 {
 	ABSProc->deleteLater();
@@ -145,7 +190,7 @@ void BuildingDialog::finishedBuildingAction(int ecode, QProcess::ExitStatus esta
 	{
 		failed = true;
 		progressEdit->append(QString(tr("<b>Building %1 failed!!</b><br><br>")).arg(buildQueue.at(currentItem)));
-		progressEdit->append(ABSProc->readAllStandardError());
+		progressEdit->append(MakePkgProc->readAllStandardError());
 	}
 	else
 	{
@@ -229,8 +274,8 @@ void BuildingDialog::processCurrentQueueItem()
 	
 	MakePkgProc->setWorkingDirectory(path);
 
-	connect(MakePkgProc, SIGNAL(readyReadStandardOutput()), SLOT(writeLineProgress()));
-	connect(MakePkgProc, SIGNAL(readyReadStandardError()), SLOT(writeLineProgressErr()));
+	connect(MakePkgProc, SIGNAL(readyReadStandardOutput()), SLOT(writeLineProgressMk()));
+	connect(MakePkgProc, SIGNAL(readyReadStandardError()), SLOT(writeLineProgressErrMk()));
 	connect(MakePkgProc, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(finishedBuildingAction(int,QProcess::ExitStatus)));
 	
 	progressEdit->append(QString(tr("<b>Building %1...</b><br><br>")).arg(buildQueue.at(currentItem)));

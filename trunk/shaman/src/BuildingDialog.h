@@ -48,6 +48,8 @@ public slots:
 	void updateABSTree();
 	void writeLineProgress();
 	void writeLineProgressErr();
+	void writeLineProgressMk();
+	void writeLineProgressErrMk();
 	void finishedUpdateABSTree();
 	void finishedBuildingAction(int ecode, QProcess::ExitStatus estat);
 	void abortProcess();
