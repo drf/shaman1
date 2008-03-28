@@ -152,6 +152,8 @@ void ConfigDialog::setupRepos()
 			unstableBox->setChecked(true);
 		else if(!strcmp(alpm_db_get_name(curdb), "kdemod"))
 			KDEMod3Box->setChecked(true);
+		else if(!strcmp(alpm_db_get_name(curdb), "kdemod-testing"))
+			KDEMod3TestBox->setChecked(true);
 		else if(!strcmp(alpm_db_get_name(curdb), "kdemod-unstable"))
 			KDEMod4Box->setChecked(true);
 		else
@@ -727,6 +729,25 @@ void ConfigDialog::saveConfiguration()
 		if(editPacmanKey("kdemod/Server", NULL, 2))
 			dbChanged = true;
 
+	if(KDEMod3TestBox->isChecked())
+	{
+		if(!strcmp(alpm_pkg_get_arch(m_handler->getPackageFromName("pacman", "local")), "i686"))
+			mirror = "http://kdemod.ath.cx/repo/testing/i686";
+		else
+			mirror = "http://kdemod.ath.cx/repo/testing/x86_64";
+
+		if(!editPacmanKey("kdemod-testing/Server", mirror, 0))
+		{
+			if(editPacmanKey("kdemod-testing/Server", mirror, 1))
+				dbChanged = true;
+		}
+		else
+			dbChanged = true;
+	}
+	else
+		if(editPacmanKey("kdemod-testing/Server", NULL, 2))
+			dbChanged = true;
+
 	if(KDEMod4Box->isChecked())
 	{
 		if(!strcmp(alpm_pkg_get_arch(m_handler->getPackageFromName("pacman", "local")), "i686"))
@@ -754,7 +775,7 @@ void ConfigDialog::saveConfiguration()
 	foreach(QString dbs, m_handler->getAvailableReposNames())
 	{
 		if(dbs != "core" && dbs != "extra" && dbs != "community" && dbs != "testing"
-			&& dbs != "unstable" && dbs != "kdemod" && dbs != "kdemod-unstable" &&
+			&& dbs != "unstable" && dbs != "kdemod" && dbs != "kdemod-unstable" && dbs != "kdemod-testing" &&
 			thirdPartyWidget->findItems(dbs, Qt::MatchExactly, 0).isEmpty())
 			if(editPacmanKey(QString(dbs + "/Server"), NULL, 2))
 				dbChanged = true;

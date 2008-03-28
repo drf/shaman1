@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/Icons" >
+        <file>icons/accessories-text-editor.png</file>
         <file>icons/application-exit.png</file>
         <file>icons/application-rss+xml.png</file>
         <file>icons/applications-development.png</file>

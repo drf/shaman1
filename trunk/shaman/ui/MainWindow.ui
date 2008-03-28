@@ -477,7 +477,7 @@
      <x>0</x>
      <y>0</y>
      <width>1195</width>
-     <height>24</height>
+     <height>27</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile" >
@@ -655,7 +655,7 @@
   </action>
   <action name="actionViewLog" >
    <property name="icon" >
-    <iconset resource="shaman.qrc" >:/Icons/icons/bookmark-new-list.png</iconset>
+    <iconset resource="shaman.qrc" >:/Icons/icons/accessories-text-editor.png</iconset>
    </property>
    <property name="text" >
     <string>View Log</string>
