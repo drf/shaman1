@@ -91,6 +91,20 @@ int main(int argc, char **argv)
 	QCoreApplication::setOrganizationName("shaman");
 	QCoreApplication::setOrganizationDomain("shaman.iskremblien.org");
 	QCoreApplication::setApplicationName("shaman");
+	
+	QDBusConnection testconn = QDBusConnection::systemBus();
+	if(testconn.interface()->isServiceRegistered("org.archlinux.shaman"))
+	{
+		QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("Shaman"), 
+				QObject::tr("It looks like another copy of Shaman is running.\nYou can only run "
+						"one copy of Shaman at a time."), QMessageBox::Ok);
+
+		message->setIconPixmap(QPixmap(":/Icons/icons/dialog-warning.png"));
+
+		message->show();
+		
+		return app.exec();
+	}
 
 	QSettings *settings = new QSettings();
 
