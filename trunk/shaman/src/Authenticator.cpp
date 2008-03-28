@@ -227,7 +227,5 @@ RootProcess::~RootProcess()
 void RootProcess::setupChildProcess()
 {
 	// We need to set the **REAL** UID to 0
-#if defined Q_OS_UNIX
 	::setuid(0);
-#endif
 }

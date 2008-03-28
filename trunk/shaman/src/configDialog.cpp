@@ -754,7 +754,7 @@ void ConfigDialog::saveConfiguration()
 	foreach(QString dbs, m_handler->getAvailableReposNames())
 	{
 		if(dbs != "core" && dbs != "extra" && dbs != "community" && dbs != "testing"
-			&& dbs != "unstable" && dbs != "kdemod" && dbs != "kdemod-testing" &&
+			&& dbs != "unstable" && dbs != "kdemod" && dbs != "kdemod-unstable" &&
 			thirdPartyWidget->findItems(dbs, Qt::MatchExactly, 0).isEmpty())
 			if(editPacmanKey(QString(dbs + "/Server"), NULL, 2))
 				dbChanged = true;

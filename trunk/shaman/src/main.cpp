@@ -37,7 +37,7 @@
 #include <signal.h>
 #include <alpm.h>
 
-#define SHAMAN_VERSION "1.0Alpha3dev"
+#define SHAMAN_VERSION "1.0Alpha3"
 
 static void cleanup(int signum)
 {
@@ -156,11 +156,11 @@ int main(int argc, char **argv)
 		printf("      --qt-version             shows version of the Qt toolkit installed on the system\n"
 				"                               and version of the Qt toolkit Shaman was compiled against and exits\n\n");
 		printf("      --no-i18n                disables translations\n");
-		printf("      --no-splashscreen        doesn't show the splashscreen\n\n");
+		printf("      --no-splashscreen        does not show the splashscreen\n\n");
 		printf("      --start-in-window        shows main window on startup\n");
 		printf("      --start-in-tray          starts Shaman in the system tray\n\n");
 		printf("      --clear-settings         clears all Shaman settings and starts Shaman\n");
-		printf("      --no-debugging-output    doesn't show debugging output in the terminal\n");
+		printf("      --no-debugging-output    does not show debugging output in the terminal\n");
 		printf("\n");
 		return(EXIT_SUCCESS);
 	}
