@@ -373,6 +373,10 @@ void ConfigDialog::setupAdvanced()
 	else
 		notifyQueueRSSBox->setChecked(false);
 
+	noRootBox->setChecked(settings->value("gui/noroot").toBool());
+		
+	autoStartBox->setChecked(settings->value("gui/autostart").toBool());
+	
 	settings->deleteLater();
 }
 
@@ -931,6 +935,20 @@ void ConfigDialog::saveConfiguration()
 	settings->setValue("newsreader/updateinterval", updateRSSSpin->value());
 	settings->setValue("newsreader/notifynew", notifyRSSBox->isChecked());
 	settings->setValue("newsreader/queuenotifier", notifyQueueRSSBox->isChecked());
+	settings->setValue("gui/noroot", noRootBox->isChecked());
+	settings->setValue("gui/autostart", autoStartBox->isChecked());
+
+	if(autoStartBox->isChecked())
+	{
+		seteuid(0);
+		if(QFile::exists("../etc/shaman.desktop"))
+			QFile::copy("../etc/shaman.desktop", "/etc/xdg/autostart/shaman.desktop");
+		else if(QFile::exists("../../etc/shaman.desktop"))
+			QFile::copy("../../etc/shaman.desktop", "/etc/xdg/autostart/shaman.desktop");
+		else if(QFile::exists("etc/shaman.desktop"))
+			QFile::copy("etc/shaman.desktop", "/etc/xdg/autostart/shaman.desktop");
+		seteuid(geteuid());
+	}
 		
 
 	/* Additional checks here. Since this thing could be rm -rf'ed,

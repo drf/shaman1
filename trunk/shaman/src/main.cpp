@@ -244,6 +244,20 @@ int main(int argc, char **argv)
 
 	if(getuid() == 0)
 	{
+		if(settings->value("gui/noroot").toBool())
+		{
+			QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("Shaman"), 
+					QObject::tr("Shaman can not be started as root.\nPlease restart it as "
+							"unprivileged user."), QMessageBox::Ok);
+
+			message->setIconPixmap(QPixmap(":/Icons/icons/dialog-error.png"));
+
+			message->exec();
+
+			exit(-1);
+		}
+
+
 		QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("Shaman"), 
 				QObject::tr("You have started Shaman as root.\nIt is advised to start it as unprivileged user.\n"
 						"Shaman will ask you for root password when needed."), QMessageBox::Ok);
