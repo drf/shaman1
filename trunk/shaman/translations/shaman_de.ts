@@ -599,27 +599,27 @@ sowohl von Shaman als auch Pacman verwendet werden.</translation>
         <translation>Allgemeines</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="494"/>
+        <location filename="../src/configDialog.cpp" line="498"/>
         <source>Clean Unused Databases</source>
         <translation>Unbenutzte Datenbanken säubern</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="506"/>
+        <location filename="../src/configDialog.cpp" line="510"/>
         <source>Clean Cache</source>
         <translation>Zwischenspeicher säubern</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="518"/>
+        <location filename="../src/configDialog.cpp" line="522"/>
         <source>Empty Cache</source>
         <translation>Zwischenspeicher leeren</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="530"/>
+        <location filename="../src/configDialog.cpp" line="534"/>
         <source>Optimize Pacman Database</source>
         <translation>Pacman Datenbank optimieren</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="546"/>
+        <location filename="../src/configDialog.cpp" line="550"/>
         <source>Clean All Building Environments</source>
         <translation>Säubere die Bau-Umgebung</translation>
     </message>
@@ -639,72 +639,72 @@ sowohl von Shaman als auch Pacman verwendet werden.</translation>
         <translation>ABS</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="432"/>
+        <location filename="../src/configDialog.cpp" line="436"/>
         <source>Enter Here the Repository&apos;s Name</source>
         <translation>Name der Paketquelle</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="434"/>
+        <location filename="../src/configDialog.cpp" line="438"/>
         <source>Enter Here the Repository&apos;s Server</source>
         <translation>Adresse der Paketquelle</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="499"/>
+        <location filename="../src/configDialog.cpp" line="503"/>
         <source>Cleaning up unused Databases...</source>
         <translation>Säubere unbenutzte Datenbanken...</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="511"/>
+        <location filename="../src/configDialog.cpp" line="515"/>
         <source>Cleaning up Cache...</source>
         <translation>Säubere Zwischenspeicher...</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="523"/>
+        <location filename="../src/configDialog.cpp" line="527"/>
         <source>Deleting Cache...</source>
         <translation>Lösche Zwischenspeicher...</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="551"/>
+        <location filename="../src/configDialog.cpp" line="555"/>
         <source>Cleaning up building Environments...</source>
         <translation>Säubere Bau-Umgebung(en)...</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="566"/>
+        <location filename="../src/configDialog.cpp" line="570"/>
         <source>Cleaning up Unused Databases Failed!</source>
         <translation>Säubern der unbenutzten Datenbanken fehlgeschlagen!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="571"/>
+        <location filename="../src/configDialog.cpp" line="575"/>
         <source>Cleaning up Cache Failed!</source>
         <translation>Säubern des Zwischenspeichers fehlgeschlagen!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="576"/>
+        <location filename="../src/configDialog.cpp" line="580"/>
         <source>Deleting Cache Failed!</source>
         <translation>Löschen des Zwischenspeichers fehlgeschlagen!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="581"/>
+        <location filename="../src/configDialog.cpp" line="585"/>
         <source>Could not clean Build Environments!!</source>
         <translation>Konnte Bau-Umgebung(en) nicht säubern!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="595"/>
+        <location filename="../src/configDialog.cpp" line="599"/>
         <source>Unused Databases Cleaned up successfully!</source>
         <translation>Unbenutzte Datenbanken erfolgreich gesäubert!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="601"/>
+        <location filename="../src/configDialog.cpp" line="605"/>
         <source>Cache Cleaned Up Successfully!</source>
         <translation>Zwischenspeicher erfolgreicht gesäubert!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="607"/>
+        <location filename="../src/configDialog.cpp" line="611"/>
         <source>Cache Successfully Deleted!</source>
         <translation>Zwischenspeicher erfolgreich gelöscht!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="613"/>
+        <location filename="../src/configDialog.cpp" line="617"/>
         <source>Build Environments Successfully Cleaned!</source>
         <translation>Bau-Umgebung(en) erfolgreich gesäubert!</translation>
     </message>
@@ -714,19 +714,19 @@ sowohl von Shaman als auch Pacman verwendet werden.</translation>
         <translation type="obsolete">Bau-Umgebung(en) erfolgreich gesäubert!!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1010"/>
+        <location filename="../src/configDialog.cpp" line="1028"/>
         <source>Settings Changed</source>
         <translation>Einstellungen geändert</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1011"/>
+        <location filename="../src/configDialog.cpp" line="1029"/>
         <source>Your repositories have changed.
 Do you want to Update Your Database?</source>
         <translation>Die Paketquellen haben sich geändert.
 Soll die Datenbank aktualisiert werden?</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1038"/>
+        <location filename="../src/configDialog.cpp" line="1056"/>
         <source>Mirror Format is incorrect. Your mirror should look like this:
 http://mirror.org/$repo/os/i686</source>
         <comment>Obviously keep the example as it is ;)</comment>
@@ -734,7 +734,7 @@ http://mirror.org/$repo/os/i686</source>
 wie folgt aussehen: http://mirror.org/$repo/os/i686</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1059"/>
+        <location filename="../src/configDialog.cpp" line="1077"/>
         <source>Your Mirror was successfully added!
 It is now available in mirrorlist.</source>
         <comment>mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.</comment>
@@ -743,34 +743,34 @@ erfolgreich! Er ist nun in der Liste
 verfügbar.</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1090"/>
+        <location filename="../src/configDialog.cpp" line="1108"/>
         <source>Pacman Database Optimized Successfully!</source>
         <translation>Die Pacman Datenbank wurde erfolgreich optimiert!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1096"/>
+        <location filename="../src/configDialog.cpp" line="1114"/>
         <source>Could not Optimize Pacman Database!</source>
         <translation>Konnte die Pacman Datenbank nicht optimieren!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1111"/>
+        <location filename="../src/configDialog.cpp" line="1129"/>
         <source>Operation Completed Successfully!</source>
         <translation>Vorgang erfolgreich abgeschlossen!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1110"/>
+        <location filename="../src/configDialog.cpp" line="1128"/>
         <source>Sync was successfully executed!!</source>
         <comment>Sync is always the command</comment>
         <translation>Sync wurde erfolgreich durchgeführt!!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1115"/>
+        <location filename="../src/configDialog.cpp" line="1133"/>
         <source>Sync could not be executed!</source>
         <comment>Sync is always the command</comment>
         <translation>Sync konnte nicht ausgeführt werden!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1116"/>
+        <location filename="../src/configDialog.cpp" line="1134"/>
         <source>Sync could not be executed!!</source>
         <comment>Sync is always the command</comment>
         <translation>Sync konnte nicht ausgeführt werden!!</translation>
@@ -781,7 +781,7 @@ verfügbar.</translation>
         <translation>Vorgang starten</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="538"/>
+        <location filename="../src/configDialog.cpp" line="542"/>
         <source>Optimizing Pacman Database...</source>
         <translation>Optimiere Pacman Datenbank...</translation>
     </message>
@@ -798,7 +798,7 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+        <translation type="obsolete">&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Shaman-Wartung.&lt;/p&gt;
@@ -835,7 +835,7 @@ p, li { white-space: pre-wrap; }
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1102"/>
+        <location filename="../src/configDialog.cpp" line="1120"/>
         <source>Running sync...</source>
         <comment>sync is a command, so it should not be translated</comment>
         <translation>Starte sync...</translation>
@@ -922,18 +922,42 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1093"/>
+        <location filename="../ui/configDialog.ui" line="1116"/>
         <source>Ok</source>
         <translation type="unfinished">Ok</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1083"/>
+        <location filename="../ui/configDialog.ui" line="1106"/>
         <source>Cancel</source>
         <translation type="unfinished">Abbrechen</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="565"/>
         <source>KDEMod 3 Testing Repository</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/configDialog.ui" line="224"/>
+        <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Shaman Manteinance.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/configDialog.ui" line="1064"/>
+        <source>Interface</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/configDialog.ui" line="1070"/>
+        <source>Start Shaman Automatically on X Startup</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/configDialog.ui" line="1077"/>
+        <source>Forbid starting Shaman as root</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1731,12 +1755,12 @@ Please restart it with root privileges.</source>
 ausgeführt werden.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="277"/>
+        <location filename="../src/main.cpp" line="291"/>
         <source>Shaman</source>
         <translation>Shaman</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="263"/>
+        <location filename="../src/main.cpp" line="277"/>
         <source>There was a problem while testing libalpm.
 Maybe another application has a lock on it.</source>
         <translation>Es ist ein Problem beim überprüfen von
@@ -1744,7 +1768,7 @@ libalpm aufgetreten. Vielleicht greift eine
 andere Applikation gerade darauf zu.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="121"/>
+        <location filename="../src/main.cpp" line="143"/>
         <source>Shaman</source>
         <comment>Hey! If you are reading this, first of all thanks for helping us in making Shaman better. There are not many comments unless where needed, since all the strings are pretty self-explanatory. You will see a lot of HTML in some cases: do not let that scare you, but please edit text only. Editing HTML tags too may break our layout, so be careful. A good practice could be copying the whole string, and then translating just what&apos;s outside the tags, usually just a few words. If you have any doubts, or if you just want to drop us a line, there goes our email addresses:
 Dario: drf54321@gmail.com
@@ -1753,7 +1777,7 @@ Thanks again, and enjoy your translation!</comment>
         <translation>Shaman</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="278"/>
+        <location filename="../src/main.cpp" line="292"/>
         <source>Pacman is not updated.
 Shaman needs libalpm &gt;= 2.1.0 to run.
 Yours is %1. Please update Pacman.</source>
@@ -1768,28 +1792,28 @@ Bitte Pacman aktualisieren.</translation>
         <translation>Bitte warten...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="332"/>
+        <location filename="../src/main.cpp" line="346"/>
         <source>Loading Databases...</source>
         <translation>Lade Datenbanken...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="340"/>
+        <location filename="../src/main.cpp" line="354"/>
         <source>Loading Packages...</source>
         <translation>Lade Pakete...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="348"/>
+        <location filename="../src/main.cpp" line="362"/>
         <source>Starting up Shaman...</source>
         <translation>Starte Shaman...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="122"/>
+        <location filename="../src/main.cpp" line="144"/>
         <source>Your settings file seems unwritable.
 Please check permissions on it.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="249"/>
+        <location filename="../src/main.cpp" line="263"/>
         <source>You have started Shaman as root.
 It is advised to start it as unprivileged user.
 Shaman will ask you for root password when needed.</source>
@@ -1811,9 +1835,15 @@ Shaman will ask you for root password when needed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="100"/>
+        <location filename="../src/main.cpp" line="122"/>
         <source>It looks like another copy of Shaman is running.
 You can only run one copy of Shaman at a time.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/main.cpp" line="251"/>
+        <source>Shaman can not be started as root.
+Please restart it as unprivileged user.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
