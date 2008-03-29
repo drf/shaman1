@@ -273,6 +273,22 @@ int main(int argc, char **argv)
 
 	if(!aHandler->testLibrary())
 	{
+		Authenticator ath;
+		
+		if(!ath.switchToRoot())
+		{
+			QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("Shaman"), QObject::tr("Shaman could not"
+							" switch to root.\nProbably you have not set the SUID bit to it.\nYou can do that by "
+							"issuing as root\nchown root shaman && chmod u+s shaman.\nNote that this is safe, please "
+							"read Shaman wiki\nfor more details."), QMessageBox::Ok);
+					
+					message->setIconPixmap(QPixmap(":/Icons/icons/dialog-error.png"));
+
+					message->show();
+
+					return app.exec();
+		}
+		
 		QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("Shaman"), QObject::tr("There was a problem"
 				" while testing libalpm.\nMaybe another application has a lock on it."), QMessageBox::Ok);
 		

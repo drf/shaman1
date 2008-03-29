@@ -1593,12 +1593,12 @@ Please restart it with root privileges.</source>
 Por favor, reinicie o programa com privilégios de root.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="291"/>
+        <location filename="../src/main.cpp" line="307"/>
         <source>Shaman</source>
         <translation>Shaman</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="277"/>
+        <location filename="../src/main.cpp" line="293"/>
         <source>There was a problem while testing libalpm.
 Maybe another application has a lock on it.</source>
         <translation>Houve um problema ao testar libalpm.
@@ -1619,22 +1619,22 @@ Thanks again, and enjoy your translation!</comment>
         <translation>Por favor aguarde...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="346"/>
+        <location filename="../src/main.cpp" line="362"/>
         <source>Loading Databases...</source>
         <translation>Carregando base de dados...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="354"/>
+        <location filename="../src/main.cpp" line="370"/>
         <source>Loading Packages...</source>
         <translation>Carregando pacotes...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="362"/>
+        <location filename="../src/main.cpp" line="378"/>
         <source>Starting up Shaman...</source>
         <translation>Inicializando o Shaman...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="292"/>
+        <location filename="../src/main.cpp" line="308"/>
         <source>Pacman is not updated.
 Shaman needs libalpm &gt;= 2.1.0 to run.
 Yours is %1. Please update Pacman.</source>
@@ -1680,6 +1680,16 @@ You can only run one copy of Shaman at a time.</source>
         <location filename="../src/main.cpp" line="251"/>
         <source>Shaman can not be started as root.
 Please restart it as unprivileged user.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/main.cpp" line="283"/>
+        <source>Shaman could not switch to root.
+Probably you have not set the SUID bit to it.
+You can do that by issuing as root
+chown root shaman &amp;&amp; chmod u+s shaman.
+Note that this is safe, please read Shaman wiki
+for more details.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
