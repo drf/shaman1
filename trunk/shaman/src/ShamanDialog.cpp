@@ -38,7 +38,7 @@ void ShamanDialog::popupDialog(const QString &title, const QString &text, QWidge
 	foreach(QObject *ent, parent->children())
 	{	
 		QDialog *dlog = qobject_cast<QDialog *>(ent);
-		if(dlog != 0)
+		if(dlog)
 			dlog->hide();
 	}
 	
@@ -95,7 +95,7 @@ int ShamanDialog::popupQuestionDialog(const QString &title, const QString &text,
 	foreach(QObject *ent, parent->children())
 	{	
 		QDialog *dlog = qobject_cast<QDialog *>(ent);
-		if(dlog != 0)
+		if(dlog)
 			dlog->hide();
 	}
 
@@ -145,7 +145,7 @@ int ShamanDialog::popupQuestionDialog(const QString &title, const QString &text,
 	foreach(QObject *ent, parent->children())
 	{	
 		QDialog *dlog = qobject_cast<QDialog *>(ent);
-		if(dlog != 0)
+		if(dlog)
 			dlog->show();
 	}
 	
