@@ -51,26 +51,26 @@ void BuildingHandler::updateABSTree()
 	{
 		switch (ShamanDialog::popupQuestionDialog(QString(tr("Error")), QString(tr("You need to have ABS "
 				"installed to use Shaman's\nbuilding feature. Do you want to install it now?")), mWin)) {
-		case QMessageBox::Yes:
-			mWin->cancelAllActions();
-			mWin->installPackage("abs");
-			mWin->widgetQueueToAlpmQueue();
-			break;
-		case QMessageBox::No:
-			break;
-		default:
-			// should never be reached
-			break;
+				case QMessageBox::Yes:
+					mWin->cancelAllActions();
+					mWin->installPackage("abs");
+					mWin->widgetQueueToAlpmQueue();
+					break;
+				case QMessageBox::No:
+					break;
+				default:
+					// should never be reached
+					break;
 		}
-		
+
 		return;
 	}
-	
+
 	buildDialog = new BuildingDialog(aHandle, mWin);
 	connect(buildDialog, SIGNAL(nullifyPointer()), SLOT(ABSUpdateEnded()));
-	
+
 	buildDialog->show();
-	
+
 	buildDialog->updateABSTree();
 }
 
@@ -79,19 +79,19 @@ void BuildingHandler::validateSourceQueue()
 	if(!aHandle->isInstalled("abs"))
 	{
 		switch (ShamanDialog::popupQuestionDialog(QString(tr("Error")), QString(tr("You need to have ABS "
-						"installed to use Shaman's\nbuilding feature. Do you want to install it now?")), mWin))
-		{
-		case QMessageBox::Yes:
-			mWin->cancelAllActions();
-			mWin->installPackage("abs");
-			mWin->widgetQueueToAlpmQueue();
-			break;
-		case QMessageBox::No:
-			break;
-		default:
-			// should never be reached
-			break;
-		}
+				"installed to use Shaman's\nbuilding feature. Do you want to install it now?")), mWin))
+				{
+				case QMessageBox::Yes:
+					mWin->cancelAllActions();
+					mWin->installPackage("abs");
+					mWin->widgetQueueToAlpmQueue();
+					break;
+				case QMessageBox::No:
+					break;
+				default:
+					// should never be reached
+					break;
+				}
 
 		emit outOfScope();
 
@@ -128,14 +128,14 @@ void BuildingHandler::validateSourceQueue()
 			return;
 		}
 	}
-	
+
 	reviewBQueue = new QDialog(mWin);
-	
+
 	revBuildUi = new Ui::reviewBuildingDialog();
-	
+
 	revBuildUi->setupUi(reviewBQueue);
 	revBuildUi->treeWidget->hide();
-	
+
 	reviewBQueue->adjustSize();
 
 	QSettings *settings = new QSettings();
@@ -145,9 +145,9 @@ void BuildingHandler::validateSourceQueue()
 
 	if(settings->value("absbuilding/reviewoutput").toBool())
 		revBuildUi->noProcessBox->setChecked(true);
-	
+
 	settings->deleteLater();
-	
+
 	reviewBQueue->setWindowModality(Qt::ApplicationModal);
 	reviewBQueue->setAttribute(Qt::WA_DeleteOnClose, true);
 
@@ -175,7 +175,7 @@ void BuildingHandler::validateSourceQueue()
 		QTreeWidgetItem *itm = new QTreeWidgetItem(revBuildUi->treeWidget, QStringList(tr("To be Upgraded")));
 		revBuildUi->treeWidget->addTopLevelItem(itm);
 	}
-	
+
 
 	foreach(QTreeWidgetItem *itm, mWin->getInstallPackagesInWidgetQueue())
 	{
@@ -190,14 +190,14 @@ void BuildingHandler::validateSourceQueue()
 		QTreeWidgetItem *itmL = revBuildUi->treeWidget->findItems(tr("To be Upgraded"), Qt::MatchExactly, 0).first();
 		new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
 	}
-	
+
 	connect(revBuildUi->binaryButton, SIGNAL(clicked()), reviewBQueue, SLOT(close()));
 	connect(revBuildUi->binaryButton, SIGNAL(clicked()), mWin, SLOT(widgetQueueToAlpmQueue()));
 	connect(revBuildUi->abortButton, SIGNAL(clicked()), reviewBQueue, SLOT(close()));
 	connect(revBuildUi->sourceButton, SIGNAL(clicked()), reviewBQueue, SLOT(close()));
 	connect(revBuildUi->sourceButton, SIGNAL(clicked()), SLOT(startSourceProcessing()));
 	connect(revBuildUi->pBuildButton, SIGNAL(clicked()), SLOT(openPBuildDialog()));
-	
+
 	reviewBQueue->show();
 }
 
@@ -210,11 +210,11 @@ void BuildingHandler::openPBuildDialog()
 
 	foreach(QTreeWidgetItem *itm, mWin->getInstallPackagesInWidgetQueue())
 		targets.append(itm->text(1));
-	
+
 	pBuildEditor = new EditPBuild(targets, reviewBQueue);
-	
+
 	pBuildEditor->exec();
-	
+
 	pBuildEditor->deleteLater();
 }
 
@@ -230,43 +230,43 @@ void BuildingHandler::startSourceProcessing()
 		processBuildWizard();
 		return;
 	}
-	
+
 	emit buildingStarted();
-	
+
 	buildDialog = new BuildingDialog(aHandle, mWin);
 	connect(buildDialog, SIGNAL(nullifyPointer()), SLOT(nullifyBDialog()));
-	
+
 	buildDialog->initBuildingQueue();
-	
+
 	buildDialog->setWindowModality(Qt::WindowModal);
 	buildDialog->setAttribute(Qt::WA_DeleteOnClose, true);
-	
+
 	foreach(QTreeWidgetItem *itm, mWin->getInstallPackagesInWidgetQueue())
 		buildDialog->addBuildingQueueItem(itm->text(1));
-	
+
 	foreach(QTreeWidgetItem *itm, mWin->getUpgradePackagesInWidgetQueue())
 		buildDialog->addBuildingQueueItem(itm->text(1));
-	
+
 	if(revBuildUi->noProcessBox->isChecked())
 		buildDialog->waitBeforeProcess(true);
-	
+
 	delete(revBuildUi);
-	
+
 	buildDialog->show();
-	
+
 	connect(buildDialog->reduceButton, SIGNAL(clicked()), SLOT(reduceBuildingInTray()));
-	
+
 	connect(buildDialog, SIGNAL(finishedBuilding(int,const QStringList&)), this, SLOT(finishedBuilding(int,const QStringList&)));
-		
+
 	buildDialog->processBuildingQueue();
 }
 
 void BuildingHandler::finishedBuilding(int failure, const QStringList &targets)
 {
 	buildTargets.clear();
-	
+
 	emit buildingFinished();
-	
+
 	if(failure == 2)
 	{
 		if(buildDialog->isHidden())
@@ -290,25 +290,25 @@ void BuildingHandler::finishedBuilding(int failure, const QStringList &targets)
 
 		switch (ShamanDialog::popupQuestionDialog(QString(tr("Error")), 
 				QString(tr("Some packages failed to build.\nDo you want to proceed anyway?")), buildDialog, ShamanProperties::WarningDialog)) 
-		{
-		case QMessageBox::Yes:
-			failure = 0;
-			break;
-		case QMessageBox::No:
-			buildDialog->abortButton->setText(QString(tr("Close")));
-			disconnect(buildDialog->abortButton, SIGNAL(clicked()), buildDialog, SLOT(abortProcess()));
-			connect(buildDialog->abortButton, SIGNAL(clicked()), buildDialog, SLOT(deleteLater()));
-			break;
-		default:
-			// should never be reached
-			break;
-		}
+				{
+				case QMessageBox::Yes:
+					failure = 0;
+					break;
+				case QMessageBox::No:
+					buildDialog->abortButton->setText(QString(tr("Close")));
+					disconnect(buildDialog->abortButton, SIGNAL(clicked()), buildDialog, SLOT(abortProcess()));
+					connect(buildDialog->abortButton, SIGNAL(clicked()), buildDialog, SLOT(deleteLater()));
+					break;
+				default:
+					// should never be reached
+					break;
+				}
 	}
-	
+
 	if(failure == 0)
 	{
 		buildTargets = targets;
-		
+
 		if(buildDialog->reviewOutputFirst())
 		{
 			buildDialog->reduceButton->setText(QString(tr("Install Built Packages")));
@@ -318,8 +318,8 @@ void BuildingHandler::finishedBuilding(int failure, const QStringList &targets)
 			if(buildDialog->isHidden())
 				mWin->getTrayIcon()->showMessage(QString(tr("Package Building")), QString(tr("Your Packages have been built successfully, "
 						"and are ready to be installed")));
-						
-						
+
+
 			disconnect(buildDialog->abortButton, SIGNAL(clicked()), buildDialog, SLOT(abortProcess()));
 			connect(buildDialog->abortButton, SIGNAL(clicked()), buildDialog, SLOT(deleteLater()));
 			disconnect(buildDialog->reduceButton, SIGNAL(clicked()), 0, 0);
@@ -328,13 +328,13 @@ void BuildingHandler::finishedBuilding(int failure, const QStringList &targets)
 		else
 			processBuiltPackages();
 	}
-		
+
 }
 
 void BuildingHandler::processBuiltPackages()
 {
 	buildDialog->deleteLater();
-	
+
 	if(!installedMakeDepends.isEmpty() || installedBinaryPkgs.isEmpty())
 	{
 		/* Huh, we installed something just to compile the package. Let's 
@@ -343,9 +343,9 @@ void BuildingHandler::processBuiltPackages()
 		 */
 
 		QSettings *settings = new QSettings();
-		
+
 		aHandle->initQueue(true, false, true);
-		
+
 		if(settings->value("absbuilding/clearmakedepends").toBool() && !installedMakeDepends.isEmpty())
 		{
 			/* Ok, let's cleanup then. We just need a special queue, so we
@@ -355,11 +355,11 @@ void BuildingHandler::processBuiltPackages()
 			foreach(QString rmv, installedMakeDepends)
 				aHandle->addRemoveToQueue(rmv);
 		}
-		
+
 		/* If some packages failed to build and we installed them from binary
 		 * we'd better remove them.
 		 */
-		
+
 		if(!installedBinaryPkgs.isEmpty())
 		{
 			foreach(QString rmv, installedBinaryPkgs)
@@ -376,19 +376,19 @@ void BuildingHandler::processBuiltPackages()
 					aHandle->addRemoveToQueue(rmv);
 			}
 		}
-		
+
 	}
 	else
 		aHandle->initQueue(false, false, true);
 
 	foreach(QString pac, buildTargets)
 		aHandle->addFFToQueue(pac);
-	
+
 	installedMakeDepends.clear();
 	installedBinaryPkgs.clear();
 
 	mWin->processQueue();
-	
+
 	emit outOfScope();
 }
 
@@ -399,20 +399,20 @@ void BuildingHandler::processBuildWizard()
 	 * and connect it to a slot that actually sends us to the real package
 	 * building. Nothing so hard after all :)
 	 */
-	
+
 	QStringList pkgList;
 	QStringList binaryList;
 	QStringList depsList;
-	
+
 	binaryList.clear();
 	depsList.clear();
-	
+
 	foreach(QTreeWidgetItem *itm, mWin->getInstallPackagesInWidgetQueue())
 		pkgList.append(itm->text(1));
 
 	foreach(QTreeWidgetItem *itm, mWin->getUpgradePackagesInWidgetQueue())
 		pkgList.append(itm->text(1));
-	
+
 	foreach(QString pkg, pkgList)
 	{
 		foreach(QString mkdp, ABSHandler::getMakeDepends(pkg))
@@ -432,13 +432,13 @@ void BuildingHandler::processBuildWizard()
 			binaryList.append(pkg);
 		}
 	}
-	
+
 	if(binaryList.isEmpty() && depsList.isEmpty())
 	{
 		/* Ok, we're probably reinstalling some packages and their makedepends
 		 * are satisfied, we just have to trigger the compilation
 		 */
-		
+
 		revBuildUi->depsWizardBox->setChecked(false);
 		startSourceProcessing();
 	}
@@ -451,7 +451,7 @@ void BuildingHandler::processBuildWizard()
 		 */
 
 		aHandle->initQueue(false, true, false);
-		
+
 		installedMakeDepends = depsList;
 		installedBinaryPkgs = binaryList;
 
@@ -469,7 +469,7 @@ void BuildingHandler::processBuildWizard()
 
 		mWin->queueDl->show();
 	}
-	
+
 }
 
 void BuildingHandler::reduceBuildingInTray()

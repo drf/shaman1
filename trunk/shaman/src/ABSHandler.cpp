@@ -70,9 +70,9 @@ QString ABSHandler::getABSPath(const QString &package)
 
 	if(!found)
 		return QString();
-	
+
 	qDebug() << "ABS Dir is " << absSource;
-	
+
 	return absSource;
 }
 
@@ -88,9 +88,9 @@ bool ABSHandler::cleanBuildingEnvironment(const QString &package)
 		path.append(QChar('/'));
 
 	path.append(package);
-	
+
 	rmrf(path.toAscii().data());
-	
+
 	return true;
 }
 
@@ -104,18 +104,18 @@ bool ABSHandler::setUpBuildingEnvironment(const QString &package)
 
 	if(!path.endsWith(QChar('/')))
 		path.append(QChar('/'));
-	
+
 	path.append(package);
-	
+
 	QDir pathDir(path);
 	if(pathDir.exists())
 		cleanBuildingEnvironment(package);
 
 	if(!pathDir.mkpath(path))
 		return false;
-	
+
 	QString abspath(getABSPath(package));
-	
+
 	if(abspath == QString())
 	{
 		qDebug() << "Couldn't find a matching ABS Dir!!";
@@ -150,11 +150,11 @@ bool ABSHandler::cleanAllBuildingEnvironments()
 	QSettings *settings = new QSettings();
 
 	int ret;
-	
+
 	ret = rmrf(settings->value("absbuilding/buildpath").toString().toAscii().data());
 
 	settings->deleteLater();
-	
+
 	if(ret == 0)
 		return true;
 	else

@@ -68,22 +68,22 @@ extern struct pam_response *reply;
 
 MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 : QMainWindow(parent),
-  queueDl(),
-  currentpkgs(0),
-  aHandle(handler),
-  dbdialog(),
-  upDl(),
-  configDialog(),
-  qUi(),
-  bHandler(),
-  nView(),
-  lView(),
-  reviewQueue(),
-  upActive(false),
-  revActive(false),
-  dbActive(false),
-  quiActive(false),
-  turnOffSys(false)
+queueDl(),
+currentpkgs(0),
+aHandle(handler),
+dbdialog(),
+upDl(),
+configDialog(),
+qUi(),
+bHandler(),
+nView(),
+lView(),
+reviewQueue(),
+upActive(false),
+revActive(false),
+dbActive(false),
+quiActive(false),
+turnOffSys(false)
 {
 	setupUi(this);
 	addDockWidget(Qt::LeftDockWidgetArea, repoDockWidget);
@@ -96,9 +96,9 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	dbus.registerObject("/Shaman", this);
 
 	trayicon = new ShamanTrayIcon(this, aHandle);
-	
+
 	newsReader = new ArchLinuxNewsReader();
-	
+
 	newsReader->setUpdateInterval();
 
 	qDebug() << "Shaman registered on the System Bus as" << dbus.baseService();
@@ -166,15 +166,15 @@ MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 	settings->deleteLater();
 
 	emit shamanReady();
-	
+
 	setProxy();
-	
+
 	stBar = new QStatusBar(this);
 	setStatusBar(stBar);
 
 	QShortcut *clearLineEdit = new QShortcut(tr("Esc"), searchLine, SLOT(clear()));
 	Q_UNUSED(clearLineEdit);
-	
+
 	return;
 }
 
@@ -233,7 +233,7 @@ void MainWindow::closeEvent(QCloseEvent *evt)
 
 		if(cbx->isChecked())
 			settings->setValue("gui/confirmquit", true);
-		
+
 		dlog->deleteLater();
 	}
 
@@ -442,8 +442,8 @@ void MainWindow::refinePkgView()
 	if (list.isEmpty() && list.count() >= 0)
 		return;
 
-        if (repoList->selectedItems().count() > 0)
-        {
+	if (repoList->selectedItems().count() > 0)
+	{
 		if((repoList->selectedItems().at(0)->text().compare(tr("All Repositories")) &&
 				repoList->selectedItems().at(0)->text().compare(tr("All Groups"))) &&
 				!repoList->selectedItems().isEmpty())
@@ -475,7 +475,7 @@ void MainWindow::refinePkgView()
 				list += pkgsViewWG->topLevelItem(i);
 			}
 		}
-        }
+	}
 	qDebug() << "The left TextBox is over, let's do the ComboBox";
 	if(!packageSwitchCombo->currentIndex() == 0)
 	{
@@ -1037,7 +1037,7 @@ void MainWindow::installPackage()
 		return;
 
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
-		installPackage(item->text(1));
+	installPackage(item->text(1));
 
 	itemChanged();
 }
@@ -1117,7 +1117,7 @@ void MainWindow::removePackage()
 		return;
 
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
-		removePackage(item->text(1));
+	removePackage(item->text(1));
 
 	itemChanged();
 }
@@ -1186,7 +1186,7 @@ void MainWindow::cancelAction()
 		return;
 
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
-		cancelAction(item->text(1));
+	cancelAction(item->text(1));
 
 	itemChanged();
 }
@@ -1230,7 +1230,7 @@ void MainWindow::startUpgrading()
 			populateGrpsColumn();
 		}
 	}
-	
+
 	QStringList list = aHandle->getUpgradeablePackages();
 
 	if(list.isEmpty())
@@ -1322,7 +1322,7 @@ void MainWindow::upgrade(const QStringList &packages)
 		qDebug() << "Streaming Upgrades";
 
 		emit upgradesAvailable();
-		
+
 		QSettings *settings = new QSettings();
 
 		if(settings->value("newsreader/userss", true).toBool() && settings->value("newsreader/queuenotifier", true).toBool())
@@ -1347,7 +1347,7 @@ void MainWindow::upgrade(const QStringList &packages)
 				}
 			}
 		}
-		
+
 		settings->deleteLater();
 
 		upDl = new SysUpgradeDialog(aHandle, this);
@@ -1450,10 +1450,10 @@ void MainWindow::processQueue()
 			hide();
 			queueDl->hide();
 		}
-		
+
 		if(qUi->isTurnOff())
 			turnOffSys = true;
-		
+
 		qUi->deleteLater();
 	}
 
@@ -1496,7 +1496,7 @@ void MainWindow::queueProcessingEnded(bool errors)
 		if(!pkgsViewWG->findItems("pacman", Qt::MatchExactly, 1).first()->text(8).isEmpty())
 		{
 			ShamanDialog::popupDialog(tr("Restart required"), tr("Pacman or Shaman was updated. Shaman will now quit,\nplease restart it "
-							"to use the new version"), this, ShamanProperties::WarningDialog);
+					"to use the new version"), this, ShamanProperties::WarningDialog);
 
 			qApp->exit(0);
 		}
@@ -1506,7 +1506,7 @@ void MainWindow::queueProcessingEnded(bool errors)
 			if(!pkgsViewWG->findItems("shaman", Qt::MatchExactly, 1).first()->text(8).isEmpty())
 			{
 				ShamanDialog::popupDialog(tr("Restart required"), tr("Pacman or Shaman was updated. Shaman will now quit,\nplease restart it "
-								"to use the new version"), this, ShamanProperties::WarningDialog);
+						"to use the new version"), this, ShamanProperties::WarningDialog);
 
 				qApp->exit(0);
 			}
@@ -1531,11 +1531,11 @@ void MainWindow::queueProcessingEnded(bool errors)
 			/* Ok, let's go. We need to stream a message through DBus to turn off stuff.
 			 * KDE3 is not supported since it uses DCOP, sorry, GNOME will come soon.
 			 */
-			
+
 			qDebug() << "Turning the system off";
-			
+
 			QDBusInterface iface("org.kde.ksmserver", "/KSMServer", "org.kde.KSMServerInterface");
-			
+
 			iface.call("logout", 0, 2, 0);
 
 		}
@@ -1589,7 +1589,7 @@ void MainWindow::widgetQueueToAlpmQueue()
 	}
 
 	settings->deleteLater();
-	
+
 	if(pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 8).isEmpty() &&
 			pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 8).isEmpty() &&
 			pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 8).isEmpty() &&
@@ -1601,18 +1601,18 @@ void MainWindow::widgetQueueToAlpmQueue()
 		aHandle->initQueue(false, true, false);
 
 	else if(pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 8).isEmpty() &&
-					pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 8).isEmpty())
+			pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 8).isEmpty())
 		aHandle->initQueue(true, false, false);
 
 	else
 		aHandle->initQueue(true, true, false);
-	
+
 	qUi = new ReviewQueueDialog(aHandle, this);
 
 	revActive = true;
 
 	qUi->show();
-	
+
 	connect(qUi, SIGNAL(goProcess()), SLOT(processQueue()));
 
 }
@@ -1629,7 +1629,7 @@ void MainWindow::showSettings()
 		doDbUpdate();
 
 	trayicon->changeTimerInterval();
-	
+
 	newsReader->setUpdateInterval();
 
 	configDialog->deleteLater();
@@ -1652,7 +1652,7 @@ void MainWindow::systrayActivated(QSystemTrayIcon::ActivationReason reason)
 				if(dlog != 0)
 					dlog->show();
 			}
-					
+
 		}
 		else
 		{
@@ -1673,7 +1673,7 @@ void MainWindow::systrayActivated(QSystemTrayIcon::ActivationReason reason)
 void MainWindow::getPackageFromFile()
 {
 	QString fileName = QFileDialog::getOpenFileName(this,
-	     tr("Install a Package"), qgetenv("HOME"), tr("Arch Linux Packages (*.pkg.tar.gz)"));
+			tr("Install a Package"), qgetenv("HOME"), tr("Arch Linux Packages (*.pkg.tar.gz)"));
 	pmpkg_t *pkg;
 
 	if(fileName == NULL)
@@ -1763,7 +1763,7 @@ void MainWindow::streamTransQuestion(const QString &msg)
 	}
 
 	qDebug() << "Waking Alpm Thread";
-	
+
 	wCond.wakeAll();
 }
 
@@ -1807,7 +1807,7 @@ QList<QTreeWidgetItem *> MainWindow::getUpgradePackagesInWidgetQueue()
 QList<QTreeWidgetItem *> MainWindow::getRemovePackagesInWidgetQueue()
 {
 	return pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 8) +
-		pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 8);
+	pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 8);
 }
 
 bool MainWindow::packageExists(const QString &pkg)
@@ -1992,14 +1992,14 @@ void MainWindow::openLogViewer()
 void MainWindow::showAuthDialog(int count)
 {
 	qDebug() << "Starting Auth Dialog";
-	
+
 	Ui::authDialog aUi;
 	QDialog *dlog = new QDialog(this);
-	
+
 	dlog->setModal(true);
-	
+
 	aUi.setupUi(dlog);
-	
+
 	// Let's Hide out other dialogs
 
 	foreach(QObject *ent, children())
@@ -2008,15 +2008,15 @@ void MainWindow::showAuthDialog(int count)
 		if(edl != 0)
 			edl->hide();
 	}
-	
+
 	if(dlog->exec() == QDialog::Accepted)
 	{
 		pam_response tmp;
 		tmp.resp_retcode = 0;
-		
+
 		char *str = (char *) malloc(strlen(aUi.lineEdit->text().toAscii().data()) * sizeof(char));
 		strcpy(str, aUi.lineEdit->text().toAscii().data());
-		
+
 		tmp.resp = str;
 
 		qDebug() << "Inserting Reply";
@@ -2028,9 +2028,9 @@ void MainWindow::showAuthDialog(int count)
 		free(reply);
 		reply = NULL;
 	}
-	
+
 	dlog->deleteLater();
-	
+
 	// Ok, let's show back again hidden dialogs
 
 	foreach(QObject *ent, children())
@@ -2039,6 +2039,6 @@ void MainWindow::showAuthDialog(int count)
 		if(dlog != 0)
 			dlog->show();
 	}
-	
+
 	wCond.wakeAll();
 }
