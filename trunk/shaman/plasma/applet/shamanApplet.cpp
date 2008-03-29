@@ -49,11 +49,11 @@ void ShamanApplet::init()
         kDebug()<<"Shaman Engine could not be loaded";
     }
 
-    m_layout = new Plasma::VBoxLayout(this);
-    m_actionLayout = new Plasma::HBoxLayout(m_layout);
-    m_layout->addItem(m_actionLayout);
-    m_lineLayout = new Plasma::HBoxLayout(m_layout);
-    m_layout->addItem(m_lineLayout);
+    setLayout(new Plasma::VBoxLayout(this));
+    m_actionLayout = new Plasma::HBoxLayout(this);
+    //m_layout->addItem(m_actionLayout);
+    m_lineLayout = new Plasma::HBoxLayout(this);
+    //m_layout->addItem(m_lineLayout);
     //Why are those things not shown?
     m_updateDatabaseIcon = new Plasma::Icon(KIcon("view-refresh"), tr("Update Database"), this);
     m_actionLayout->addItem(m_updateDatabaseIcon);
