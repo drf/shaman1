@@ -2026,6 +2026,7 @@ void MainWindow::showAuthDialog(int count)
 	else
 	{
 		free(reply);
+		qDebug() << "Reply freed, aborting...";
 		reply = NULL;
 	}
 

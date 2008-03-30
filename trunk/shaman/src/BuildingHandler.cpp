@@ -335,7 +335,7 @@ void BuildingHandler::processBuiltPackages()
 {
 	buildDialog->deleteLater();
 
-	if(!installedMakeDepends.isEmpty() || installedBinaryPkgs.isEmpty())
+	if(!installedMakeDepends.isEmpty() || !installedBinaryPkgs.isEmpty())
 	{
 		/* Huh, we installed something just to compile the package. Let's 
 		 * see if the user wants installed makedepends to be immediately
@@ -376,7 +376,9 @@ void BuildingHandler::processBuiltPackages()
 					aHandle->addRemoveToQueue(rmv);
 			}
 		}
-
+		
+		if(aHandle->getRemoveInQueue().isEmpty())
+			aHandle->initQueue(false, false, true);		
 	}
 	else
 		aHandle->initQueue(false, false, true);

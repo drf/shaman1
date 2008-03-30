@@ -512,23 +512,10 @@ bool AlpmHandler::performCurrentTransaction()
 
 bool AlpmHandler::fullSystemUpgrade()
 {
-
-	if(!initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_NOSCRIPTLET))
-		return false;
-
-	if(alpm_trans_sysupgrade() == -1)
-	{
-		qDebug() << "Creating a sysupgrade transaction failed!!";
-		handleError(0, NULL);
-		releaseTransaction();
-		return false;
-	}
-	
-	qDebug() << "SysUpgrade done successfully";
-
 	removeAct = false;
 	syncAct = false;
 	upgradeAct = true;
+	fromFileAct = false;
 
 	return true;
 
@@ -691,6 +678,8 @@ void AlpmHandler::processQueue()
 	
 	if(removeAct)
 	{
+		qDebug() << "Starting Package Removal";
+		
 		/* Well, we need to remove packages first. Let's do this. */
 		initTransaction(PM_TRANS_TYPE_REMOVE, PM_TRANS_FLAG_NOSCRIPTLET /*/PM_TRANS_FLAG_NOSCRIPTLET*/);
 		
@@ -706,6 +695,8 @@ void AlpmHandler::processQueue()
 	}
 	if(syncAct)
 	{
+		qDebug() << "Starting Package Syncing";
+		
 		/* Time to install and upgrade packages, right? */
 		initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_NOSCRIPTLET);
 		
@@ -718,17 +709,28 @@ void AlpmHandler::processQueue()
 		
 		performCurrentTransaction();
 		
-		
+
 	}
 	if(upgradeAct)
 	{
-		/* We just have to start the transaction. */
+		qDebug() << "Starting Package Upgrade";
+
+		/* We need some special handling. */
 		initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_NOSCRIPTLET);
+
+		if(alpm_trans_sysupgrade() == -1)
+		{
+			qDebug() << "Creating a sysupgrade transaction failed!!";
+			handleError(0, NULL);
+			releaseTransaction();
+		}
 
 		performCurrentTransaction();
 	}
 	if(fromFileAct)
 	{
+		qDebug() << "Starting Package From File installation";
+		
 		initTransaction(PM_TRANS_TYPE_UPGRADE, PM_TRANS_FLAG_NOSCRIPTLET);
 
 		for (int i = 0; i < toFromFile.size(); ++i)
@@ -1232,4 +1234,19 @@ alpm_list_t *AlpmHandler::getPackagesFromRepo(const QString &reponame)
 	}
 	
 	return retlist;
+}
+
+QStringList AlpmHandler::getRemoveInQueue()
+{
+	return toRemove;
+}
+
+QStringList AlpmHandler::getSyncInQueue()
+{
+	return toSync;
+}
+
+QStringList AlpmHandler::getFFInQueue()
+{
+	return toFromFile;
 }

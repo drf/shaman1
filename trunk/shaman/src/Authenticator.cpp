@@ -193,16 +193,16 @@ int Authenticator_Callback::auth_cback(int num_msg, const struct pam_message **m
 
 		tmp.resp = fakePwd.toAscii().data();
 		reply[count] = tmp;
-		
+
 		emit passwordRequired(count);
-		
-		if(reply[count].resp == tmp.resp && reply[count].resp_retcode == tmp.resp_retcode)
-			wCond.wait(&mutex);
 
 		if(reply == NULL)
 		{
 			return PAM_CONV_ERR;
 		}
+
+		if(reply[count].resp == tmp.resp && reply[count].resp_retcode == tmp.resp_retcode)
+			wCond.wait(&mutex);
 	}
 	
 	qDebug() << "Ok, streaming now the response";

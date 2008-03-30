@@ -97,9 +97,15 @@ public:
 	QString getPackageRepo(const QString &name, bool checkver = false);
 	
 	void initQueue(bool rem, bool syncd, bool ff);
+	
 	void addSyncToQueue(const QString &toAdd);
 	void addRemoveToQueue(const QString &toRm);
 	void addFFToQueue(const QString &toFF);
+	
+	QStringList getSyncInQueue();
+	QStringList getRemoveInQueue();
+	QStringList getFFInQueue();
+	
 	void processQueue();
 	int getNumberOfTargets(int action);
 	
