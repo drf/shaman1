@@ -1084,7 +1084,7 @@ PacmanConf ConfigurationParser::getPacmanConf(bool forcereload)
 	pacData.NoUpgrade.clear();
 	pacData.HoldPkg.clear();
 	pacData.loaded = false;
-	
+
 	parsePacmanConfig("/etc/pacman.conf", NULL, NULL);
 	
 	return pacData;

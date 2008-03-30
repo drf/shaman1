@@ -315,6 +315,8 @@ bool AlpmHandler::updateDatabase()
 
 bool AlpmHandler::reloadPacmanConfiguration()
 {
+	ath.switchToRoot();
+	
 	PacmanConf pdata;
 
 	/* After reloading configuration, we immediately commit changes to Alpm,
@@ -355,15 +357,17 @@ bool AlpmHandler::reloadPacmanConfiguration()
 
 	foreach(QString str, pdata.NoUpgrade)
 		alpm_option_remove_noupgrade(str.toAscii().data());
-	
+
 	alpm_option_remove_cachedir("/var/cache/pacman/pkg");
-	
+
 	pdata = getPacmanConf(true);
 
-		if(!pdata.loaded)
-			return false;
+	if(!pdata.loaded)
+		return false;
 
 	setUpAlpmSettings();
+	
+	ath.switchToStdUsr();
 
 	return true;
 }

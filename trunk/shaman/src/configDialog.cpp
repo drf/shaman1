@@ -947,9 +947,13 @@ void ConfigDialog::saveConfiguration()
 			QFile::copy("../../etc/shaman.desktop", "/etc/xdg/autostart/shaman.desktop");
 		else if(QFile::exists("etc/shaman.desktop"))
 			QFile::copy("etc/shaman.desktop", "/etc/xdg/autostart/shaman.desktop");
+		else if(QFile::exists("../share/applications/shaman.desktop"))
+			QFile::copy("../share/applications/shaman.desktop", "/etc/xdg/autostart/shaman.desktop");
+		else if(QFile::exists("/usr/share/applications/shaman.desktop"))
+			QFile::copy("/usr/share/applications/shaman.desktop", "/etc/xdg/autostart/shaman.desktop");
 		seteuid(geteuid());
 	}
-		
+
 
 	/* Additional checks here. Since this thing could be rm -rf'ed,
 	 * better being sure that is set properly. */
