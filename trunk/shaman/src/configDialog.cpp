@@ -951,7 +951,15 @@ void ConfigDialog::saveConfiguration()
 			QFile::copy("../share/applications/shaman.desktop", "/etc/xdg/autostart/shaman.desktop");
 		else if(QFile::exists("/usr/share/applications/shaman.desktop"))
 			QFile::copy("/usr/share/applications/shaman.desktop", "/etc/xdg/autostart/shaman.desktop");
-		seteuid(geteuid());
+		seteuid(getuid());
+	}
+	else
+	{
+		seteuid(0);
+		
+		QFile::remove("/etc/xdg/autostart/shaman.desktop");
+		
+		seteuid(getuid());
 	}
 
 
