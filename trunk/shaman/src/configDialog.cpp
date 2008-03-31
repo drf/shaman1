@@ -689,7 +689,35 @@ void ConfigDialog::saveConfiguration()
 	
 	bool dbChanged = false;
 	QString mirror(mirrorBox->currentText());
+	QString kdemodmirror(KDEModMirrorBox->currentText());
 	mirror = mirror.remove(' ');
+	kdemodmirror = kdemodmirror.remove(' ');
+
+	QString arch;
+
+	if(kdemodmirror.contains("$arch"))
+	{
+		if(!strcmp(alpm_pkg_get_arch(m_handler->getPackageFromName("pacman", "local")), "i686"))
+			arch = "i686";
+		else
+			arch = "x86_64";
+		
+		qDebug() << "Getting stuff...";
+
+		QStringList tmplst = kdemodmirror.split(QString("$arch"), 
+				QString::SkipEmptyParts, Qt::CaseInsensitive);
+
+		QString dserv(tmplst.at(0));
+
+		dserv.append(arch);
+		
+		if(tmplst.count() > 1)
+			dserv.append(tmplst.at(1));
+		
+		kdemodmirror = dserv;
+		
+		qDebug() << "Ok, arch is ready. Mirror is:" << kdemodmirror;
+	}
 
 	if(coreBox->isChecked())
 	{
@@ -798,14 +826,9 @@ void ConfigDialog::saveConfiguration()
 
 	if(KDEMod3Box->isChecked())
 	{
-		if(!strcmp(alpm_pkg_get_arch(m_handler->getPackageFromName("pacman", "local")), "i686"))
-			mirror = "http://kdemod.ath.cx/repo/current/i686";
-		else
-			mirror = "http://kdemod.ath.cx/repo/current/x86_64";
-
-		if(!editPacmanKey("kdemod/Server", mirror, 0))
+		if(!editPacmanKey("kdemod/Server", kdemodmirror, 0))
 		{
-			if(editPacmanKey("kdemod/Server", mirror, 1))
+			if(editPacmanKey("kdemod/Server", kdemodmirror, 1))
 				dbChanged = true;
 		}
 		else
@@ -817,14 +840,9 @@ void ConfigDialog::saveConfiguration()
 
 	if(KDEMod3TestBox->isChecked())
 	{
-		if(!strcmp(alpm_pkg_get_arch(m_handler->getPackageFromName("pacman", "local")), "i686"))
-			mirror = "http://kdemod.ath.cx/repo/testing/i686";
-		else
-			mirror = "http://kdemod.ath.cx/repo/testing/x86_64";
-
-		if(!editPacmanKey("kdemod-testing/Server", mirror, 0))
+		if(!editPacmanKey("kdemod-testing/Server", kdemodmirror, 0))
 		{
-			if(editPacmanKey("kdemod-testing/Server", mirror, 1))
+			if(editPacmanKey("kdemod-testing/Server", kdemodmirror, 1))
 				dbChanged = true;
 		}
 		else
@@ -836,14 +854,9 @@ void ConfigDialog::saveConfiguration()
 
 	if(KDEMod4Box->isChecked())
 	{
-		if(!strcmp(alpm_pkg_get_arch(m_handler->getPackageFromName("pacman", "local")), "i686"))
-			mirror = "http://kdemod.ath.cx/repo/unstable/i686";
-		else
-			mirror = "http://kdemod.ath.cx/repo/unstable/x86_64";
-
-		if(!editPacmanKey("kdemod-unstable/Server", mirror, 0))
+		if(!editPacmanKey("kdemod-unstable/Server", kdemodmirror, 0))
 		{
-			if(editPacmanKey("kdemod-unstable/Server", mirror, 1))
+			if(editPacmanKey("kdemod-unstable/Server", kdemodmirror, 1))
 				dbChanged = true;
 		}
 		else

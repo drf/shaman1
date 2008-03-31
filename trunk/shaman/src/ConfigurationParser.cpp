@@ -420,8 +420,18 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 					QString::SkipEmptyParts, Qt::CaseInsensitive);
 
 			QString dserv(tmplst.at(0));
-
-			dserv.append(tmp2lst.at(0));
+			
+			QString repo(tmp2lst.at(0));
+			
+			if(repo == "kdemod")
+				repo = "current";
+			if(repo == "kdemod-testing")
+				repo = "testing";
+			if(repo == "kdemod-unstable")
+				repo = "unstable";
+			
+			dserv.append(repo);
+			
 			dserv.append(tmplst.at(1));
 			realVal = dserv;
 		}
