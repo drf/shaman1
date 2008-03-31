@@ -27,6 +27,15 @@
 #include <QThread>
 #include <QProcess>
 
+namespace ShamanProperties {
+
+	enum MirrorType {
+		OfficialMirrors,
+		KDEModMirrors
+	};
+
+}  // namespace ShamanProperties
+
 class AlpmHandler;
 
 class CleanThread : public QThread
@@ -83,7 +92,7 @@ private:
 	void setupPacman();
 	void setupABS();
 	void setupAdvanced();
-	QStringList getMirrorList();
+	QStringList getMirrorList(ShamanProperties::MirrorType type = ShamanProperties::OfficialMirrors);
 
 private:
 	AlpmHandler *m_handler;

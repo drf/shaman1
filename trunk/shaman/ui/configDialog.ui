@@ -68,7 +68,7 @@
       </sizepolicy>
      </property>
      <property name="currentIndex" >
-      <number>2</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="Seite" >
       <layout class="QVBoxLayout" >
@@ -391,7 +391,7 @@ p, li { white-space: pre-wrap; }
        <item row="1" column="0" >
         <widget class="QTabWidget" name="repoTab" >
          <property name="currentIndex" >
-          <number>1</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="officialTab" >
           <attribute name="title" >
@@ -579,8 +579,8 @@ of KDE with the simplicity and the power of Arch.</string>
                </property>
                <property name="sizeHint" >
                 <size>
-                 <width>663</width>
-                 <height>351</height>
+                 <width>20</width>
+                 <height>40</height>
                 </size>
                </property>
               </spacer>

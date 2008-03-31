@@ -54,9 +54,26 @@ ConfigDialog::~ConfigDialog()
 {
 }
 
-QStringList ConfigDialog::getMirrorList()
+QStringList ConfigDialog::getMirrorList(ShamanProperties::MirrorType type)
 {
-	QFile file("/etc/pacman.d/mirrorlist");
+	QFile file;
+
+	if (type == ShamanProperties::OfficialMirrors)
+		file.setFileName("/etc/pacman.d/mirrorlist");
+	else if (type == ShamanProperties::KDEModMirrors)
+	{
+		if (QFile::exists("/etc/pacman.d/kdemodmirrorlist"))
+			file.setFileName("/etc/pacman.d/kdemodmirrorlist");
+		else if (QFile::exists("../etc/kdemodmirrorlist"))
+			file.setFileName("../etc/kdemodmirrorlist");
+		else if (QFile::exists("etc/kdemodmirrorlist"))
+			file.setFileName("etc/kdemodmirrorlist");
+		else if (QFile::exists("kdemodmirrorlist"))
+			file.setFileName("kdemodmirrorlist");
+		else
+			return QStringList();
+	}
+		
 	QStringList retlist;
 	
 	if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
@@ -127,12 +144,13 @@ void ConfigDialog::setupRepos()
 	listWidget->addItem(new QListWidgetItem(QIcon(":/Icons/icons/network-server-database.png"), tr("Repositories")));
 	alpm_list_t *repos = alpm_list_first(m_handler->getAvailableRepos());
 	QString whichMirror;
-	QStringList mirrors;
+	QString kdemodMirror;
+	QStringList kmod;
+	
+	kmod.clear();
 
-	mirrors = getMirrorList();
-
-	for(int i = 0; i < mirrors.size(); ++i)
-		mirrorBox->addItem(mirrors.at(i));
+	mirrorBox->addItems(getMirrorList());
+	KDEModMirrorBox->addItems(getMirrorList(ShamanProperties::KDEModMirrors));
 
 	while(repos != NULL)
 	{
@@ -152,11 +170,42 @@ void ConfigDialog::setupRepos()
 		else if(!strcmp(alpm_db_get_name(curdb), "unstable"))
 			unstableBox->setChecked(true);
 		else if(!strcmp(alpm_db_get_name(curdb), "kdemod"))
+		{
+			if(kmod.isEmpty())
+			{
+				kdemodMirror = alpm_db_get_url(curdb);
+				
+				kmod = kdemodMirror.split(QString("current"),
+							QString::SkipEmptyParts, Qt::CaseInsensitive);
+			}
 			KDEMod3Box->setChecked(true);
+		}
 		else if(!strcmp(alpm_db_get_name(curdb), "kdemod-testing"))
+		{
+			if(kmod.isEmpty())
+			{
+				kdemodMirror = alpm_db_get_url(curdb);
+
+				kmod = kdemodMirror.split(QString("testing"),
+						QString::SkipEmptyParts, Qt::CaseInsensitive);
+			}
+			
+			kdemodMirror = alpm_db_get_url(curdb);
 			KDEMod3TestBox->setChecked(true);
+		}
 		else if(!strcmp(alpm_db_get_name(curdb), "kdemod-unstable"))
+		{
+			if(kmod.isEmpty())
+			{
+				kdemodMirror = alpm_db_get_url(curdb);
+
+				kmod = kdemodMirror.split(QString("unstable"),
+						QString::SkipEmptyParts, Qt::CaseInsensitive);
+			}
+
+			kdemodMirror = alpm_db_get_url(curdb);
 			KDEMod4Box->setChecked(true);
+		}
 		else
 		{
 			QTreeWidgetItem *itm = new QTreeWidgetItem(thirdPartyWidget);
@@ -179,6 +228,18 @@ void ConfigDialog::setupRepos()
 
 		if(mirrorBox->findText(dserv) != -1)
 			mirrorBox->setCurrentIndex(mirrorBox->findText(dserv));
+	}
+
+	if (kmod.count() >= 1)
+	{
+		QString dserv(kmod.at(0));
+		
+		qDebug() << "Searching for" << dserv;
+		
+		if(KDEModMirrorBox->findText(dserv, Qt::MatchContains) != -1)
+			KDEModMirrorBox->setCurrentIndex(KDEModMirrorBox->findText(dserv, Qt::MatchContains));
+		else
+			qDebug() << "not found.";
 	}
 
 	connect(addMirrorButton, SIGNAL(clicked()), SLOT(addMirror()));
