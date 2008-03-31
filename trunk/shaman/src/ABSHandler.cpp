@@ -194,11 +194,42 @@ QStringList ABSHandler::getMakeDepends(const QString &package)
 		if(!line.startsWith("makedepends"))
 			continue;
 
-		foreach(QString dep, line.split("(").at(1).split("'", QString::SkipEmptyParts))
+		QString testline(line);
+		testline.remove(' ');
+
+		while(true)
 		{
-			if(!dep.contains(")") && !dep.contains(" "))
-				retList.append(dep);
+			if(line.contains('('))
+				line = line.split('(').at(1);
+			
+			foreach(QString dep, line.split("'", QString::SkipEmptyParts))
+			{
+				if(!dep.contains(')') && !dep.contains(' '))
+				{
+					if(dep.contains('>'))
+						dep.truncate(dep.indexOf('>'));
+
+					if(dep.contains('<'))
+						dep.truncate(dep.indexOf('<'));
+
+					if(dep.contains('='))
+						dep.truncate(dep.indexOf('='));
+
+					qDebug() << "Adding" << dep;
+
+					retList.append(dep);
+				}
+			}
+
+			if(testline.endsWith(')'))
+				break;
+
+			line = in.readLine();
+
+			testline = line;
+			testline.remove(' ');
 		}
+		
 		break;
 	}
 

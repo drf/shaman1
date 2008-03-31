@@ -23,6 +23,7 @@
 
 #include "ui_editPBDialog.h"
 #include "ABSHandler.h"
+#include "Authenticator.h"
 
 class EditPBuild : public QDialog, private Ui::editPBDialog, private ABSHandler 
 {
@@ -42,6 +43,7 @@ protected:
 	void closeEvent(QCloseEvent *evt);
 	
 private:
+	Authenticator ath;
 	QStringList targets;
 	bool needsSaving;
 	QString lastItem;

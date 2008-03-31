@@ -111,6 +111,8 @@ bool EditPBuild::saveFile(const QString &name)
 	
 	absSource.append("PKGBUILD");
 	
+	ath.switchToRoot();
+	
 	QFile file(absSource);
 	
 	file.remove();
@@ -122,6 +124,8 @@ bool EditPBuild::saveFile(const QString &name)
 		return false;
 	
 	file.close();
+	
+	ath.switchToStdUsr();
 	
 	needsSaving = false;
 	
