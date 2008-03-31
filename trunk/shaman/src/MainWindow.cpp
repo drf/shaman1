@@ -165,8 +165,6 @@ turnOffSys(false)
 
 	settings->deleteLater();
 
-	emit shamanReady();
-
 	setProxy();
 
 	stBar = new QStatusBar(this);
@@ -181,6 +179,11 @@ turnOffSys(false)
 MainWindow::~MainWindow()
 {
 	return;
+}
+
+void MainWindow::streamReadySignal()
+{
+	emit shamanReady();
 }
 
 void MainWindow::quitApp()

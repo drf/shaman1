@@ -63,6 +63,7 @@ public:
 	QList<QTreeWidgetItem *> getUpgradePackagesInWidgetQueue();
 	QList<QTreeWidgetItem *> getRemovePackagesInWidgetQueue();
 	ShamanTrayIcon *getTrayIcon();
+	void streamReadySignal();
 
 signals:
 	void shamanReady();

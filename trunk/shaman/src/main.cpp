@@ -406,6 +406,8 @@ int main(int argc, char **argv)
 	
 	qDebug() << "Log file is:" << alpm_option_get_logfile();
 	
+	mainwin.streamReadySignal();
+	
 	return app.exec();
 
 }
