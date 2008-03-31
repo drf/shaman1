@@ -35,7 +35,8 @@ ShamanRunner::ShamanRunner(QObject *parent, const QVariantList &args)
     Q_UNUSED(args)
 
     words << "install" << "remove" << "uninstall" << "upgrade-system" << "upgrade system" << "update database" 
-                            << "update db" << "update-db" << "update-database" << "us" << "ud" << "i" << "r" << "complete-remove" << "complete-uninstall";
+                            << "update db" << "update-db" << "update-database" << "us" << "ud" << "i" << "r" 
+                            << "complete-remove" << "complete-uninstall";
 }
 
 ShamanRunner::~ShamanRunner()
@@ -75,17 +76,38 @@ void ShamanRunner::exec(const Plasma::SearchContext *search, const Plasma::Searc
 
 void ShamanRunner::executeAction()
 {
-	if (execTerm.startsWith("install", Qt::CaseInsensitive))
+	if (execTerm.startsWith("install", Qt::CaseInsensitive) || 
+			execTerm.startsWith("i ", Qt::CaseInsensitive))
 	{
 		QDBusInterface iface("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman");
 
 		iface.call("installPackage", execTerm.split(' ').at(1));
+		
+		iface.call("widgetQueueToAlpmQueue");
 	}
-	else if (execTerm.startsWith("remove", Qt::CaseInsensitive) || execTerm.startsWith("uninstall", Qt::CaseInsensitive))
+	else if (execTerm.startsWith("remove", Qt::CaseInsensitive) || execTerm.startsWith("uninstall", Qt::CaseInsensitive) || 
+			execTerm.startsWith("r ", Qt::CaseInsensitive))
 	{
 		QDBusInterface iface("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman");
 
 		iface.call("removePackage", execTerm.split(' ').at(1));
+		
+		iface.call("widgetQueueToAlpmQueue");
+	}
+	else if (execTerm.startsWith("upgrade-system", Qt::CaseInsensitive) || execTerm.startsWith("upgrade system", Qt::CaseInsensitive) ||
+			execTerm == "us")
+	{
+		QDBusInterface iface("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman");
+
+		iface.call("fullSysUpgrade");
+	}
+	else if (execTerm.startsWith("update database", Qt::CaseInsensitive) || execTerm.startsWith("update-database", Qt::CaseInsensitive) || 
+			execTerm.startsWith("update db", Qt::CaseInsensitive) || execTerm.startsWith("update-db", Qt::CaseInsensitive) || 
+			execTerm == "ud")
+	{
+		QDBusInterface iface("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman");
+
+		iface.call("doDbUpdate");
 	}
 }
 
@@ -93,7 +115,7 @@ void ShamanRunner::startShaman()
 {
 	KRun::runCommand("shaman", "Shaman Package Manager", "shaman", 0);
 
-	if(!dbus.interface()->isServiceRegistered("org.archlinux.shaman"))
+	if (!dbus.interface()->isServiceRegistered("org.archlinux.shaman"))
 		sleep(0.2);
 	
 	dbus.connect("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", 
