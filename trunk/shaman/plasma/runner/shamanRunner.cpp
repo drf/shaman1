@@ -76,25 +76,28 @@ void ShamanRunner::exec(const Plasma::SearchContext *search, const Plasma::Searc
 
 void ShamanRunner::executeAction()
 {
-    if (execTerm.split(' ').count() <= 1)
-        return;
-
 	if (execTerm.startsWith("install", Qt::CaseInsensitive) || 
 			execTerm.startsWith("i ", Qt::CaseInsensitive))
 	{
+		if (execTerm.split(' ').count() <= 1)
+			return;
+
 		QDBusInterface iface("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman");
 
 		iface.call("installPackage", execTerm.split(' ').at(1));
-		
+
 		iface.call("widgetQueueToAlpmQueue");
 	}
 	else if (execTerm.startsWith("remove", Qt::CaseInsensitive) || execTerm.startsWith("uninstall", Qt::CaseInsensitive) || 
 			execTerm.startsWith("r ", Qt::CaseInsensitive))
 	{
+		if (execTerm.split(' ').count() <= 1)
+			return;
+
 		QDBusInterface iface("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman");
 
 		iface.call("removePackage", execTerm.split(' ').at(1));
-		
+
 		iface.call("widgetQueueToAlpmQueue");
 	}
 	else if (execTerm.startsWith("upgrade-system", Qt::CaseInsensitive) || execTerm.startsWith("upgrade system", Qt::CaseInsensitive) ||
