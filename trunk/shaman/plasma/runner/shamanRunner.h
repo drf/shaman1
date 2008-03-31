@@ -20,6 +20,7 @@
 #define SHAMANRUNNER_H
 
 #include <plasma/abstractrunner.h>
+#include <QDBusConnection>
 
 class ShamanRunner : public Plasma::AbstractRunner
 {
@@ -30,9 +31,17 @@ class ShamanRunner : public Plasma::AbstractRunner
 
         void match(Plasma::SearchContext *search);
         void exec(const Plasma::SearchContext *context, const Plasma::SearchMatch *action);
+        
+    private slots:
+    	void executeAction();
+    	
+    private:
+    	void startShaman();
 
     private:
         QStringList words;
+        QString execTerm;
+        QDBusConnection dbus;
 };
 
 K_EXPORT_PLASMA_RUNNER(shaman, ShamanRunner);

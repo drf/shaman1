@@ -21,9 +21,13 @@
 #include <KIcon>
 #include <KLocale>
 #include <KDebug>
+#include <KRun>
+#include <QDBusInterface>
+#include <QDBusConnectionInterface>
 
 ShamanRunner::ShamanRunner(QObject *parent, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, args)
+    : Plasma::AbstractRunner(parent, args),
+    dbus(QDBusConnection::systemBus())
 {
     Q_UNUSED(args)
 
@@ -53,11 +57,39 @@ void ShamanRunner::match(Plasma::SearchContext *search)
 
 void ShamanRunner::exec(const Plasma::SearchContext *search, const Plasma::SearchMatch *action)
 {
-    QString term = search->searchTerm();
-    if (term.startsWith("install", Qt::CaseInsensitive)) {}
-        //TODO:Install
-    else if (term.startsWith("remove", Qt::CaseInsensitive) || term.startsWith("uninstall", Qt::CaseInsensitive)) {}
-        //TODO: Uninstall
+    execTerm = search->searchTerm();
+    
+    /* First of all, let's check if Shaman has been already
+     * started.
+     */
+    
+    if(!dbus.interface()->isServiceRegistered("org.archlinux.shaman"))
+    	startShaman();
+    else
+    	executeAction();
+}
+
+void ShamanRunner::executeAction()
+{
+	if (execTerm.startsWith("install", Qt::CaseInsensitive))
+	{
+		QDBusInterface iface("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman");
+
+		iface.call("installPackage", execTerm.split(' ').at(1));
+	}
+	else if (execTerm.startsWith("remove", Qt::CaseInsensitive) || execTerm.startsWith("uninstall", Qt::CaseInsensitive)) {}
+	//TODO: Uninstall
+}
+
+void ShamanRunner::startShaman()
+{
+	KRun::runCommand("shaman", "Shaman Package Manager", "shaman", 0);
+
+	if(!dbus.interface()->isServiceRegistered("org.archlinux.shaman"))
+		sleep(0.2);
+	
+	dbus.connect("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", 
+				"shamanReady", this, SLOT(executeAction()));
 }
 
 #include "shamanRunner.moc"
