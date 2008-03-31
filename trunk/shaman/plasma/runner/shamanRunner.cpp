@@ -77,8 +77,12 @@ void ShamanRunner::executeAction()
 
 		iface.call("installPackage", execTerm.split(' ').at(1));
 	}
-	else if (execTerm.startsWith("remove", Qt::CaseInsensitive) || execTerm.startsWith("uninstall", Qt::CaseInsensitive)) {}
-	//TODO: Uninstall
+	else if (execTerm.startsWith("remove", Qt::CaseInsensitive) || execTerm.startsWith("uninstall", Qt::CaseInsensitive))
+	{
+		QDBusInterface iface("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman");
+
+		iface.call("removePackage", execTerm.split(' ').at(1));
+	}
 }
 
 void ShamanRunner::startShaman()
