@@ -30,6 +30,9 @@ class ShamanRunner : public Plasma::AbstractRunner
 
         void match(Plasma::SearchContext *search);
         void exec(const Plasma::SearchContext *context, const Plasma::SearchMatch *action);
+
+    private:
+        QStringList words;
 };
 
 K_EXPORT_PLASMA_RUNNER(shaman, ShamanRunner);

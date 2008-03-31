@@ -26,6 +26,8 @@ ShamanRunner::ShamanRunner(QObject *parent, const QVariantList &args)
     : Plasma::AbstractRunner(parent, args)
 {
     Q_UNUSED(args)
+
+    words << "install" << "remove" << "uninstall";
 }
 
 ShamanRunner::~ShamanRunner()
@@ -40,9 +42,6 @@ void ShamanRunner::match(Plasma::SearchContext *search)
     match->setType(Plasma::SearchMatch::ExactMatch);
     match->setIcon(KIcon("shaman"));
 
-    QStringList words;
-    words << "install" << "remove" << "uninstall";
-
     foreach(QString word, words)
     {
         if (term.startsWith(word, Qt::CaseInsensitive))
@@ -54,6 +53,11 @@ void ShamanRunner::match(Plasma::SearchContext *search)
 
 void ShamanRunner::exec(const Plasma::SearchContext *search, const Plasma::SearchMatch *action)
 {
+    QString term = search->searchTerm();
+    if (term.startsWith("install", Qt::CaseInsensitive)) {}
+        //TODO:Install
+    else if (term.startsWith("remove", Qt::CaseInsensitive) || term.startsWith("uninstall", Qt::CaseInsensitive)) {}
+        //TODO: Uninstall
 }
 
 #include "shamanRunner.moc"
