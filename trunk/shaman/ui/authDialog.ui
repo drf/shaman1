@@ -12,89 +12,81 @@
   <property name="windowTitle" >
    <string>Root Password Required</string>
   </property>
-  <layout class="QVBoxLayout" >
-   <item>
-    <layout class="QVBoxLayout" >
+  <layout class="QGridLayout" >
+   <item row="0" column="0" colspan="3" >
+    <layout class="QHBoxLayout" >
      <item>
-      <layout class="QHBoxLayout" >
-       <item>
-        <widget class="QLabel" name="label_2" >
-         <property name="text" >
-          <string/>
-         </property>
-         <property name="pixmap" >
-          <pixmap resource="shaman.qrc" >:/Icons/icons/document-encrypt.svg</pixmap>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label" >
-         <property name="text" >
-          <string>Shaman needs root privileges to perform this action.
-Please enter in the field below the root password to continue.</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="lineEdit" >
-       <property name="echoMode" >
-        <enum>QLineEdit::Password</enum>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="checkBox" >
+      <widget class="QLabel" name="label_2" >
        <property name="text" >
-        <string>Never ask for this anymore</string>
+        <string/>
+       </property>
+       <property name="pixmap" >
+        <pixmap resource="shaman.qrc" >:/Icons/icons/document-encrypt.svg</pixmap>
        </property>
       </widget>
      </item>
      <item>
-      <layout class="QHBoxLayout" >
-       <item>
-        <spacer>
-         <property name="orientation" >
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" >
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item>
-        <widget class="QPushButton" name="cancelButton" >
-         <property name="text" >
-          <string>Cancel</string>
-         </property>
-         <property name="icon" >
-          <iconset resource="shaman.qrc" >:/Icons/icons/dialog-cancel.png</iconset>
-         </property>
-         <property name="shortcut" >
-          <string>Backspace</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="okButton" >
-         <property name="text" >
-          <string>Ok</string>
-         </property>
-         <property name="icon" >
-          <iconset resource="shaman.qrc" >:/Icons/icons/dialog-ok-apply.png</iconset>
-         </property>
-         <property name="shortcut" >
-          <string>Return</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
+      <widget class="QLabel" name="label" >
+       <property name="text" >
+        <string>Shaman needs root privileges to perform this action.
+Please enter in the field below the root password to continue.</string>
+       </property>
+      </widget>
      </item>
     </layout>
+   </item>
+   <item row="1" column="0" colspan="3" >
+    <widget class="QLineEdit" name="lineEdit" >
+     <property name="echoMode" >
+      <enum>QLineEdit::Password</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="3" >
+    <widget class="QCheckBox" name="checkBox" >
+     <property name="text" >
+      <string>Never ask for this anymore</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" >
+    <spacer>
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" >
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="3" column="1" >
+    <widget class="QPushButton" name="okButton" >
+     <property name="text" >
+      <string>Ok</string>
+     </property>
+     <property name="icon" >
+      <iconset resource="shaman.qrc" >:/Icons/icons/dialog-ok-apply.png</iconset>
+     </property>
+     <property name="shortcut" >
+      <string>Return</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="2" >
+    <widget class="QPushButton" name="cancelButton" >
+     <property name="text" >
+      <string>Cancel</string>
+     </property>
+     <property name="icon" >
+      <iconset resource="shaman.qrc" >:/Icons/icons/dialog-cancel.png</iconset>
+     </property>
+     <property name="shortcut" >
+      <string>Backspace</string>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>

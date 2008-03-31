@@ -34,7 +34,8 @@ ShamanRunner::ShamanRunner(QObject *parent, const QVariantList &args)
 {
     Q_UNUSED(args)
 
-    words << "install" << "remove" << "uninstall";
+    words << "install" << "remove" << "uninstall" << "upgrade-system" << "upgrade system" << "update database" 
+                            << "update db" << "update-db" << "update-database" << "us" << "ud" << "i" << "r" << "complete-remove" << "complete-uninstall";
 }
 
 ShamanRunner::~ShamanRunner()
