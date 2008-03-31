@@ -1473,17 +1473,17 @@ void MainWindow::queueProcessingEnded(bool errors)
 
 	if(errors)
 	{
-		/* An error has occourred. Just notify the user, since we have already shown a
+		/* An error has occurred. Just notify the user, since we have already shown a
 		 * ShamanDialog::popup with error details.
 		 */
 
-		qDebug() << "Errors Occourred, Transaction was not completed";
+		qDebug() << "Errors occurred, Transaction was not completed";
 
 		if(queueDl->isVisible())
-			ShamanDialog::popupDialog(tr("Queue Processed"), tr("One or more errors occourred, your Queue\nwas not successfully processed"),
+			ShamanDialog::popupDialog(tr("Queue Processed"), tr("One or more errors occurred, your Queue\nwas not successfully processed"),
 					this, ShamanProperties::ErrorDialog);
 		else
-			trayicon->showMessage(QString(tr("Queue Processed")), QString(tr("One or more errors occourred, your Queue\n"
+			trayicon->showMessage(QString(tr("Queue Processed")), QString(tr("One or more errors occurred, your Queue\n"
 					"was not successfully processed")));
 	}
 	else
