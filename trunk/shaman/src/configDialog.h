@@ -82,6 +82,7 @@ private slots:
 	void cleanThread();
 	void saveConfiguration();
 	void addMirror();
+	void addKDEModMirror();
 	void obfuscateSupfiles(bool state);
 	void obfuscateDBUpdate(bool state);
 	void obfuscateRSSUpdate(bool state);

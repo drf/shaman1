@@ -1626,14 +1626,25 @@ void MainWindow::showSettings()
 
 	connect (configDialog, SIGNAL(setProxy()), this, SLOT(setProxy()));
 
-	configDialog->exec();
+	configDialog->show();
+	
+	connect(configDialog, SIGNAL(accepted()), SLOT(settingsClosed()));
+	connect(configDialog, SIGNAL(rejected()), SLOT(settingsClosed()));
+}
 
-	if(configDialog->doDbUpdate())
-		doDbUpdate();
+void MainWindow::settingsClosed()
+{
+	qDebug() << "Closing Settings";
+	
+	if(configDialog->result() == QDialog::Accepted)
+	{
+		if(configDialog->doDbUpdate())
+			doDbUpdate();
 
-	trayicon->changeTimerInterval();
+		trayicon->changeTimerInterval();
 
-	newsReader->setUpdateInterval();
+		newsReader->setUpdateInterval();
+	}
 
 	configDialog->deleteLater();
 }
