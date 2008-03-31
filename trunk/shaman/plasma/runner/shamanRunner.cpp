@@ -20,6 +20,7 @@
 
 #include <KIcon>
 #include <KLocale>
+#include <KDebug>
 
 ShamanRunner::ShamanRunner(QObject *parent, const QVariantList &args)
     : Plasma::AbstractRunner(parent, args)
@@ -33,15 +34,20 @@ ShamanRunner::~ShamanRunner()
 
 void ShamanRunner::match(Plasma::SearchContext *search)
 {
-    const QString term = search->searchTerm();
+    kDebug() << "Match search context?";
+    QString term = search->searchTerm();
     Plasma::SearchMatch* match = new Plasma::SearchMatch(this);
     match->setType(Plasma::SearchMatch::ExactMatch);
-    match->setIcon(KIcon("system-run"));
+    match->setIcon(KIcon("shaman"));
 
-    if (term.startsWith("install", Qt::CaseInsensitive))
-        match->setText(i18n("Install %1", term));
-    else if (term.startsWith("remove", Qt::CaseInsensitive)
-        match->setText(i18n("Remove %1", term));
+    QStringList words;
+    words << "install" << "remove" << "uninstall";
+
+    foreach(QString word, words)
+    {
+        if (term.startsWith(word, Qt::CaseInsensitive))
+            match->setText(i18n("Package Manager: %1", term));
+    }
     match->setRelevance(1);
     search->addMatch(term, match);
 }
