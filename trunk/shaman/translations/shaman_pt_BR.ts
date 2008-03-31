@@ -937,12 +937,12 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>EditPBuild</name>
     <message>
-        <location filename="../src/EditPBuild.cpp" line="140"/>
+        <location filename="../src/EditPBuild.cpp" line="144"/>
         <source>Saving</source>
         <translation>Salvando</translation>
     </message>
     <message>
-        <location filename="../src/EditPBuild.cpp" line="141"/>
+        <location filename="../src/EditPBuild.cpp" line="145"/>
         <source>You modified this PKGBUILD.
 Do you want to save it?</source>
         <translation>Você modificou este PKGBUILD.

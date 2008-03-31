@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS><TS version="1.1" language="tr_TR">
+<defaultcodec></defaultcodec>
 <context>
     <name>AlpmHandler</name>
     <message>
@@ -110,7 +111,7 @@ Tüm işlem kaybedilecek.</translation>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="206"/>
         <source>Could not update the ABS Tree!</source>
-        <translation type="unfinished"></translation>
+        <translation>ABS Ağacı güncellenemiyor!</translation>
     </message>
 </context>
 <context>
@@ -811,7 +812,7 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Shaman Manteinance.&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Shaman Bakım.&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Lütfen Menüden bir Eylem Seçin.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Shaman Bakım.&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Lütfen Menüden bir Eylem Seçin.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1014"/>
@@ -882,43 +883,43 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/configDialog.ui" line="1116"/>
         <source>Ok</source>
-        <translation type="unfinished">Tamam</translation>
+        <translation>Tamam</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1106"/>
         <source>Cancel</source>
-        <translation type="unfinished">İptal</translation>
+        <translation>İptal</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="565"/>
         <source>KDEMod 3 Testing Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>KDEMod 3 Testing Deposu</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1064"/>
         <source>Interface</source>
-        <translation type="unfinished"></translation>
+        <translation>Arayüz</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1070"/>
         <source>Start Shaman Automatically on X Startup</source>
-        <translation type="unfinished"></translation>
+        <translation>Shaman&apos;ı otomatik olarak X başlangıcında çaılştır</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1077"/>
         <source>Forbid starting Shaman as root</source>
-        <translation type="unfinished"></translation>
+        <translation>Shaman&apos;ın kök yetkileriyle çalışmasını yasakla</translation>
     </message>
 </context>
 <context>
     <name>EditPBuild</name>
     <message>
-        <location filename="../src/EditPBuild.cpp" line="140"/>
+        <location filename="../src/EditPBuild.cpp" line="144"/>
         <source>Saving</source>
         <translation>Kaydediliyor</translation>
     </message>
     <message>
-        <location filename="../src/EditPBuild.cpp" line="141"/>
+        <location filename="../src/EditPBuild.cpp" line="145"/>
         <source>You modified this PKGBUILD.
 Do you want to save it?</source>
         <translation>Bu PKGBUILD&apos;i değiştirdiniz.
@@ -1180,7 +1181,7 @@ Lütfen bekleyin.</translation>
         <translation>Sıra işlendi</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1487"/>
+        <location filename="../../ArchLinux/PKBUILDS/shaman-svn/src/shaman-build/src/MainWindow.cpp" line="1487"/>
         <source>One or more errors occourred, your Queue
 was not successfully processed</source>
         <translation type="obsolete">Bir vaya daha fazla hata oluştu;Sıra
@@ -1483,7 +1484,8 @@ Okumak ister misiniz?</translation>
         <location filename="../src/MainWindow.cpp" line="1487"/>
         <source>One or more errors occurred, your Queue
 was not successfully processed</source>
-        <translation type="unfinished"></translation>
+        <translation>Bir vaya daha fazla hata oluştu;Sıra
+başarıyla işlenemedi</translation>
     </message>
 </context>
 <context>
@@ -1526,7 +1528,7 @@ Thanks again, and enjoy your translation!</comment>
         <translation>Shaman</translation>
     </message>
     <message>
-        <location filename="Download/Programlar/ArchLinux/PKBUILDS/shaman-svn/src/shaman-build/src/main.cpp" line="222"/>
+        <location filename="../../ArchLinux/PKBUILDS/shaman-svn/src/shaman-build/translations/Download/Programlar/ArchLinux/PKBUILDS/shaman-svn/src/shaman-build/src/main.cpp" line="222"/>
         <source>You have to be root to run Shaman.
 Please restart it with root privileges.</source>
         <translation type="obsolete">Shaman&apos;ı çalıştırmak için root hakları gerekli
@@ -1577,41 +1579,46 @@ Sizinki %1. Lütfen Pacman&apos;ı güncelleyin.</translation>
         <location filename="../src/main.cpp" line="144"/>
         <source>Your settings file seems unwritable.
 Please check permissions on it.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ayarlarınız yazılamaz görünüyor.
+Lütfen izinlerini kontrol edin.</translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="263"/>
         <source>You have started Shaman as root.
 It is advised to start it as unprivileged user.
 Shaman will ask you for root password when needed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Shaman&apos;ı kök yetkileriyle başlattınız.
+Ytekisiz kullanıcı olarak çalıştırılması önerilir.
+Gerektiğinde Shaman kök parolanızı soracaktır.</translation>
     </message>
     <message>
         <location filename="../src/ShamanDialog.cpp" line="75"/>
         <source>Ok</source>
-        <translation type="unfinished">Tamam</translation>
+        <translation>Tamam</translation>
     </message>
     <message>
         <location filename="../src/ShamanDialog.cpp" line="130"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Evet</translation>
     </message>
     <message>
         <location filename="../src/ShamanDialog.cpp" line="132"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Hayır</translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="122"/>
         <source>It looks like another copy of Shaman is running.
 You can only run one copy of Shaman at a time.</source>
-        <translation type="unfinished"></translation>
+        <translation>Shaman&apos;ın diğer bir kopyası çalışıyor.
+Bir seferde sadece bir Shaman kopyası çalıştırabilirsiniz.</translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="251"/>
         <source>Shaman can not be started as root.
 Please restart it as unprivileged user.</source>
-        <translation type="unfinished"></translation>
+        <translation>Shaman kök yetkisiyle çalıştırılamaz.
+Lütfen yetkisiz kullanıcı olarak başlatın.</translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="283"/>
@@ -1621,7 +1628,12 @@ You can do that by issuing as root
 chown root shaman &amp;&amp; chmod u+s shaman.
 Note that this is safe, please read Shaman wiki
 for more details.</source>
-        <translation type="unfinished"></translation>
+        <translation>Shaman kök tekisine kilitlenemiyor.
+Muhtemelen SUID bit&apos;i ayarlamamışsınız.
+Bunu root yetkisiyle chown root shaman &amp;&amp;
+ chmod u+s shaman komutuyla gerçekleştirebilirsiniz.
+Bu, güvenlidir.Daha fazla bilgi için Shaman wiki sayfalarını
+okuyabilirsiniz.</translation>
     </message>
 </context>
 <context>
@@ -1836,7 +1848,7 @@ Bu sisteminize zarar verebilir.</translation>
     <message>
         <location filename="../src/QueueDialog.cpp" line="839"/>
         <source>Ok</source>
-        <translation type="unfinished">Tamam</translation>
+        <translation>Tamam</translation>
     </message>
 </context>
 <context>
@@ -2070,7 +2082,7 @@ Daha fazla bilgi için buraya tıklayarak Haberler Penceresini açın.</translat
         <translation>Shaman Hakkında</translation>
     </message>
     <message>
-        <location filename="../ui/aboutDialog.ui" line="62"/>
+        <location filename="../../ArchLinux/PKBUILDS/shaman-svn/src/shaman-build/ui/aboutDialog.ui" line="62"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -2106,7 +2118,7 @@ p, li { white-space: pre-wrap; }
         <translation>Teşekkür</translation>
     </message>
     <message>
-        <location filename="../ui/aboutDialog.ui" line="142"/>
+        <location filename="../../ArchLinux/PKBUILDS/shaman-svn/src/shaman-build/ui/aboutDialog.ui" line="142"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -2153,7 +2165,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shaman 1.0 Alpha (revision 552)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shaman 1.0 Alpha (revision 552)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/aboutDialog.ui" line="142"/>
@@ -2206,18 +2218,19 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/authDialog.ui" line="13"/>
         <source>Root Password Required</source>
-        <translation type="unfinished"></translation>
+        <translation>Kök Parolası Gerekli</translation>
     </message>
     <message>
         <location filename="../ui/authDialog.ui" line="33"/>
         <source>Shaman needs root privileges to perform this action.
 Please enter in the field below the root password to continue.</source>
-        <translation type="unfinished"></translation>
+        <translation>Shaman&apos;ın bu işlemi gerçekleştirebilmesi için kök yetkileri gerekli.
+Lütfen aşağıya kök parolanızı giriniz.</translation>
     </message>
     <message>
         <location filename="../ui/authDialog.ui" line="50"/>
         <source>Never ask for this anymore</source>
-        <translation type="unfinished"></translation>
+        <translation>Bunu bir daha sorma</translation>
     </message>
     <message>
         <location filename="../ui/authDialog.ui" line="72"/>
@@ -2232,12 +2245,12 @@ Please enter in the field below the root password to continue.</source>
     <message>
         <location filename="../ui/authDialog.ui" line="78"/>
         <source>Backspace</source>
-        <translation type="unfinished"></translation>
+        <translation>Geri</translation>
     </message>
     <message>
         <location filename="../ui/authDialog.ui" line="91"/>
         <source>Return</source>
-        <translation type="unfinished"></translation>
+        <translation>Dönüş</translation>
     </message>
 </context>
 <context>
@@ -2353,7 +2366,7 @@ p, li { white-space: pre-wrap; }
         <translation>Süzgeç</translation>
     </message>
     <message>
-        <location filename="../ui/logViewer.ui" line="157"/>
+        <location filename="../../ArchLinux/PKBUILDS/shaman-svn/src/shaman-build/ui/logViewer.ui" line="157"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -2366,7 +2379,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
