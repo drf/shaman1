@@ -76,6 +76,9 @@ void ShamanRunner::exec(const Plasma::SearchContext *search, const Plasma::Searc
 
 void ShamanRunner::executeAction()
 {
+    if (execTerm.split(' ').count() <= 1)
+        return;
+
 	if (execTerm.startsWith("install", Qt::CaseInsensitive) || 
 			execTerm.startsWith("i ", Qt::CaseInsensitive))
 	{
