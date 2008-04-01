@@ -7,7 +7,7 @@ set(krunner_shaman_SRCS
 )
 
 kde4_add_plugin(krunner_shaman ${krunner_shaman_SRCS})
-target_link_libraries(krunner_shaman ${PLASMA_LIBS} ${KDE4_KDEUI_LIBS})
+target_link_libraries(krunner_shaman ${PLASMA_LIBS} ${KDE4_KDEUI_LIBS} ${KDE4_KIO_LIBS})
 
 install(TARGETS krunner_shaman DESTINATION ${KDE4_LIB_DIR}/kde4/)
 
