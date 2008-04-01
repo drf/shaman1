@@ -784,7 +784,7 @@ void MainWindow::finishDbUpdate()
 
 
 	}
-	else if (list.contains("shaman"))
+	else if (list.contains("shaman") || list.contains("kdemod4-shaman-svn"))
 	{
 		switch (ShamanDialog::popupQuestionDialog(QString(tr("Shaman Update")), QString(tr("Shaman can be upgraded. "
 				"It is advised to process it alone\nto avoid version conflicts.\n"
@@ -795,7 +795,12 @@ void MainWindow::finishDbUpdate()
 					/* Ok, let's set up a special queue for Shaman. */
 
 					cancelAllActions();
-					installPackage("shaman");
+					
+					if(list.contains("kdemod4-shaman-svn"))
+						installPackage("kdemod4-shaman-svn");
+					else
+						installPackage("shaman");
+					
 					widgetQueueToAlpmQueue();
 
 					break;
@@ -1257,7 +1262,7 @@ void MainWindow::upgrade(const QStringList &packages)
 
 
 	}
-	else if (packages.contains("shaman"))
+	else if (packages.contains("shaman") || packages.contains("kdemod4-shaman-svn"))
 	{
 		switch (ShamanDialog::popupQuestionDialog(QString(tr("Shaman Update")), QString(tr("Shaman can be upgraded. "
 				"It is advised to process it alone\nto avoid version conflicts.\n"
@@ -1268,7 +1273,12 @@ void MainWindow::upgrade(const QStringList &packages)
 					/* Ok, let's set up a special queue for Shaman. */
 
 					cancelAllActions();
-					installPackage("shaman");
+					
+					if(packages.contains("kdemod4-shaman-svn"))
+						installPackage("kdemod4-shaman-svn");
+					else
+						installPackage("shaman");
+					
 					widgetQueueToAlpmQueue();
 
 					break;
@@ -1474,6 +1484,17 @@ void MainWindow::queueProcessingEnded(bool errors)
 		if(!pkgsViewWG->findItems("shaman", Qt::MatchExactly, 1).isEmpty())
 		{
 			if(!pkgsViewWG->findItems("shaman", Qt::MatchExactly, 1).first()->text(8).isEmpty())
+			{
+				ShamanDialog::popupDialog(tr("Restart required"), tr("Pacman or Shaman was updated. Shaman will now quit,\nplease restart it "
+						"to use the new version"), this, ShamanProperties::WarningDialog);
+
+				qApp->exit(0);
+			}
+		}
+
+		if(!pkgsViewWG->findItems("kdemod4-shaman-svn", Qt::MatchExactly, 1).isEmpty())
+		{
+			if(!pkgsViewWG->findItems("kdemod4-shaman-svn", Qt::MatchExactly, 1).first()->text(8).isEmpty())
 			{
 				ShamanDialog::popupDialog(tr("Restart required"), tr("Pacman or Shaman was updated. Shaman will now quit,\nplease restart it "
 						"to use the new version"), this, ShamanProperties::WarningDialog);
