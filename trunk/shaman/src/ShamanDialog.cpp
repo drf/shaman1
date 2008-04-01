@@ -23,6 +23,11 @@
 #include <QMessageBox>
 #include <QPushButton>
 #include <QIcon>
+#include <QSettings>
+#include <QDialogButtonBox>
+#include <QLabel>
+#include <QCheckBox>
+#include <QBoxLayout>
 
 ShamanDialog::ShamanDialog()
 {
@@ -150,4 +155,87 @@ int ShamanDialog::popupQuestionDialog(const QString &title, const QString &text,
 	}
 	
 	return retval;
+}
+
+void ShamanDialog::popupDialogDontShow(const QString &title, const QString &text, const QString &keyname,
+		QWidget *parent, ShamanProperties::DialogType dtype)
+{
+	QSettings *settings = new QSettings();
+
+	if(!settings->value(keyname, false).toBool())
+	{
+		foreach(QObject *ent, parent->children())
+		{	
+			QDialog *dlog = qobject_cast<QDialog *>(ent);
+			if(dlog)
+				dlog->hide();
+		}
+
+		QDialog *dlog = new QDialog(parent);
+		QLabel *lbl = new QLabel(dlog);
+		QLabel *icn = new QLabel(dlog);
+		QCheckBox *cbx = new QCheckBox(dlog);
+		QDialogButtonBox *but = new QDialogButtonBox(dlog);
+		QVBoxLayout *lay = new QVBoxLayout();
+		QHBoxLayout *hlay = new QHBoxLayout();
+
+		lbl->setText(text);
+
+		switch(dtype)
+		{
+		case ShamanProperties::InformationDialog:
+			icn->setPixmap(QPixmap(":/Icons/icons/help-about.png"));
+			break;
+		case ShamanProperties::SuccessDialog:
+			icn->setPixmap(QPixmap(":/Icons/icons/dialog-ok-apply.png"));
+			break;
+		case ShamanProperties::ErrorDialog:
+			icn->setPixmap(QPixmap(":/Icons/icons/dialog-error.png"));
+			break;
+		case ShamanProperties::WarningDialog:
+			icn->setPixmap(QPixmap(":/Icons/icons/dialog-warning.png"));
+			break;
+		case ShamanProperties::OtherDialog:
+			icn->setPixmap(QPixmap(":/Icons/icons/help-about.png"));
+			break;
+		default:
+			break;
+		}
+
+		hlay->addWidget(icn);
+		hlay->addWidget(lbl);
+		
+		cbx->setText(QString(QObject::tr("Do not show this Again")));
+		cbx->setChecked(false);
+		
+		QPushButton *okb = but->addButton(QDialogButtonBox::Ok);
+		okb->setText(QObject::tr("Ok"));
+		okb->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
+		
+		lay->addLayout(hlay);
+		lay->addWidget(cbx);
+		lay->addWidget(but);
+		
+		dlog->setLayout(lay);
+		dlog->setWindowTitle(title);
+		dlog->setWindowModality(Qt::ApplicationModal);
+		
+		QObject::connect(but, SIGNAL(accepted()), dlog, SLOT(accept()));
+
+		dlog->exec();
+
+		if(cbx->isChecked())
+			settings->setValue(keyname, true);
+
+		dlog->deleteLater();
+
+		foreach(QObject *ent, parent->children())
+		{	
+			QDialog *dlog = qobject_cast<QDialog *>(ent);
+			if(dlog)
+				dlog->show();
+		}
+	}
+
+	settings->deleteLater();
 }

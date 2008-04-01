@@ -791,8 +791,7 @@ void QueueDialog::handlePreparingError(const QString &msg)
 	QDialog *dlog = new QDialog(this);
 	QLabel *lbl = new QLabel(dlog);
 	QTextEdit *txtEd = new QTextEdit(msg, dlog);
-	QPushButton *but = new QPushButton(dlog);
-	QHBoxLayout *hlay = new QHBoxLayout();
+	QDialogButtonBox *but = new QDialogButtonBox(dlog);
 	QVBoxLayout *lay = new QVBoxLayout();
 
 	lbl->setText(QString(tr("There has been an error"
@@ -800,17 +799,19 @@ void QueueDialog::handlePreparingError(const QString &msg)
 
 	txtEd->setReadOnly(true);
 
-	but->setText(tr("Ok"));
-	but->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
-	hlay->insertStretch(0);
-	hlay->addWidget(but);
+	QPushButton *okb = but->addButton(QDialogButtonBox::Ok);
+	okb->setText(QObject::tr("Ok"));
+	okb->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
+
 	lay->addWidget(lbl);
 	lay->addWidget(txtEd);
-	lay->addLayout(hlay);
+	lay->addWidget(but);
+
 	dlog->setLayout(lay);
 	dlog->setWindowTitle(QString(tr("Queue Processing")));
 	dlog->setWindowModality(Qt::ApplicationModal);
-	connect(but, SIGNAL(clicked()), dlog, SLOT(accept()));
+
+	connect(but, SIGNAL(accepted()), dlog, SLOT(accept()));
 
 	dlog->exec();
 
@@ -827,8 +828,7 @@ void QueueDialog::handleCommittingError(const QString &msg)
 	QDialog *dlog = new QDialog(this);
 	QLabel *lbl = new QLabel(dlog);
 	QTextEdit *txtEd = new QTextEdit(msg, dlog);
-	QPushButton *but = new QPushButton(dlog);
-	QHBoxLayout *hlay = new QHBoxLayout();
+	QDialogButtonBox *but = new QDialogButtonBox(dlog);
 	QVBoxLayout *lay = new QVBoxLayout();
 
 	lbl->setText(QString(tr("There has been an error"
@@ -836,17 +836,19 @@ void QueueDialog::handleCommittingError(const QString &msg)
 
 	txtEd->setReadOnly(true);
 
-	but->setText(tr("Ok"));
-	but->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
-	hlay->insertStretch(0);
-	hlay->addWidget(but);
+	QPushButton *okb = but->addButton(QDialogButtonBox::Ok);
+	okb->setText(QObject::tr("Ok"));
+	okb->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
+
 	lay->addWidget(lbl);
 	lay->addWidget(txtEd);
-	lay->addLayout(hlay);
+	lay->addWidget(but);
+	
 	dlog->setLayout(lay);
 	dlog->setWindowTitle(QString(tr("Queue Processing")));
 	dlog->setWindowModality(Qt::ApplicationModal);
-	connect(but, SIGNAL(clicked()), dlog, SLOT(accept()));
+	
+	connect(but, SIGNAL(accepted()), dlog, SLOT(accept()));
 
 	dlog->exec();
 

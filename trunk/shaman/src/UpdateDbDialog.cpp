@@ -145,6 +145,9 @@ void UpdateDbDialog::scopeEnded()
 	for(int i = 0; i < labelList.size(); ++i)
 		delete labelList.at(i);
 	
+	if(!errorsOccourred && !dbth->getResult())
+		errorsOccourred = true;
+	
 	dbth->deleteLater();
 	
 	emit killMe();

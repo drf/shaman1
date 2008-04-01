@@ -52,6 +52,8 @@ public:
 			ShamanProperties::DialogType dtype = ShamanProperties::InformationDialog);
 	static int popupQuestionDialog(const QString &title, const QString &text, QWidget *parent,
 			ShamanProperties::DialogType dtype = ShamanProperties::InformationDialog);
+	static void popupDialogDontShow(const QString &title, const QString &text, const QString &keyname,
+			QWidget *parent, ShamanProperties::DialogType dtype = ShamanProperties::InformationDialog);
 };
 
 #endif /*SHAMANDIALOG_H_*/

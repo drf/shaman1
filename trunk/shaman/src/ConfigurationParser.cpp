@@ -396,7 +396,7 @@ void ConfigurationParser::parseMakepkgConfig()
 
 bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value, int action)
 {
-	ath.switchToRoot();
+	
 	
 	QFile fp("/etc/pacman.conf");
 	QStringList list(key.split("/")), fileContent;
@@ -404,7 +404,7 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 
 	if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
 	{
-		ath.switchToStdUsr();
+		
 		return false;
 	}
 
@@ -469,7 +469,7 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 
 						if(fileContent.at(j).startsWith(key2))
 						{
-							ath.switchToStdUsr();
+							
 							return false;
 						}
 					}
@@ -481,7 +481,7 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 					QFile::remove("/etc/pacman.conf");
 					if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
 					{
-						ath.switchToStdUsr();
+						
 						return false;
 					}
 
@@ -491,7 +491,7 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 						str << fileContent.at(i) << endl;
 
 					fp.close();
-					ath.switchToStdUsr();
+					
 					return true;
 
 				}
@@ -509,7 +509,7 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 			QFile::remove("/etc/pacman.conf");
 			if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
 			{
-				ath.switchToStdUsr();
+				
 				return false;
 			}
 			
@@ -520,7 +520,7 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 			
 			fp.close();
 			
-			ath.switchToStdUsr();
+			
 			
 			return true;
 		}
@@ -529,7 +529,7 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 			for(int i=0; i < fileContent.size(); ++i)
 				if(fileContent.at(i).startsWith(key2))
 				{
-					ath.switchToStdUsr();
+					
 					return false;
 				}
 			
@@ -549,7 +549,7 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 				QFile::remove("/etc/pacman.conf");
 				if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
 				{
-					ath.switchToStdUsr();
+					
 					return false;
 				}
 
@@ -559,15 +559,15 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 					str << fileContent.at(i) << endl;
 
 				fp.close();
-				ath.switchToStdUsr();
+				
 				return true;
 				
 			}
-			ath.switchToStdUsr();
+			
 			return false;
 		}
 		
-		ath.switchToStdUsr();
+		
 		return false;
 
 	}
@@ -579,7 +579,7 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 		toFindE.append(QChar(']'));
 		if(fileContent.filter(toFindE).isEmpty())
 		{
-			ath.switchToStdUsr();
+			
 			return false;
 		}
 		
@@ -597,7 +597,7 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 			
 			if(fileContent.at(i).startsWith(QChar('[')))
 			{
-				ath.switchToStdUsr();
+				
 				return false;
 			}
 			
@@ -612,7 +612,7 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 				check2.remove(' ');
 				if(!check1.compare(check2))
 				{
-					ath.switchToStdUsr();
+					
 					return false;
 				}
 				
@@ -621,7 +621,7 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 				QFile::remove("/etc/pacman.conf");
 				if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
 				{
-					ath.switchToStdUsr();
+					
 					return false;
 				}
 
@@ -632,13 +632,13 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 
 				fp.close();
 				
-				ath.switchToStdUsr();
+				
 				
 				return true;
 			}
 		}
 
-		ath.switchToStdUsr();
+		
 		return false;	
 	}
 	else if(action == 2)
@@ -649,7 +649,7 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 		toFindE.append(QChar(']'));
 		if(fileContent.filter(toFindE).isEmpty())
 		{
-			ath.switchToStdUsr();
+			
 			return false;
 		}
 
@@ -680,7 +680,7 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 					QFile::remove("/etc/pacman.conf");
 					if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
 					{
-						ath.switchToStdUsr();
+						
 						return false;
 					}
 
@@ -701,7 +701,7 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 				QFile::remove("/etc/pacman.conf");
 				if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
 				{
-					ath.switchToStdUsr();
+					
 					return false;
 				}
 
@@ -711,44 +711,44 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 					str << fileContent.at(k) << endl;
 
 				fp.close();
-				ath.switchToStdUsr();
+				
 				return true;
 			}
 			
 			if(changed == false)
 			{
-				ath.switchToStdUsr();
+				
 				return false;
 			}
 			
-			ath.switchToStdUsr();
+			
 			
 			return true;
 		}
 
-		ath.switchToStdUsr();
+		
 		return false;
 	}
 	else
 	{
-		ath.switchToStdUsr();
+		
 		return false;
 	}
 	
-	ath.switchToStdUsr();
+	
 	
 	return false;
 }
 
 bool ConfigurationParser::editABSSection(const QString &section, const QString &value)
 {
-	ath.switchToRoot();
+	
 	QFile fp("/etc/abs/abs.conf");
 	QStringList fileContent;
 
 	if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
 	{
-		ath.switchToStdUsr();
+		
 		return false;
 	}
 
@@ -780,7 +780,7 @@ bool ConfigurationParser::editABSSection(const QString &section, const QString &
 				if(fileContent.at(i) == val)
 					// No need to edit
 				{
-					ath.switchToStdUsr();
+					
 					return true;
 				}
 
@@ -789,7 +789,7 @@ bool ConfigurationParser::editABSSection(const QString &section, const QString &
 				QFile::remove("/etc/abs/abs.conf");
 				if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
 				{
-					ath.switchToStdUsr();
+					
 					return false;
 				}
 
@@ -799,11 +799,11 @@ bool ConfigurationParser::editABSSection(const QString &section, const QString &
 					str << fileContent.at(k) << endl;
 
 				fp.close();
-				ath.switchToStdUsr();
+				
 				return true;
 			}
 			
-			ath.switchToStdUsr();
+			
 			return false;
 		}
 		else
@@ -813,7 +813,7 @@ bool ConfigurationParser::editABSSection(const QString &section, const QString &
 			QFile::remove("/etc/abs/abs.conf");
 			if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
 			{
-				ath.switchToStdUsr();
+				
 				return false;
 			}
 
@@ -824,25 +824,24 @@ bool ConfigurationParser::editABSSection(const QString &section, const QString &
 
 			fp.close();
 			
-			ath.switchToStdUsr();
+			
 			return true;			
 		}
 	}
 	
-	ath.switchToStdUsr();
+	
 	
 	return false;
 }
 
 bool ConfigurationParser::editMakepkgSection(const QString &section, const QString &value)
 {
-	ath.switchToRoot();
 	QFile fp("/etc/makepkg.conf");
 	QStringList fileContent;
 
 	if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
 	{
-		ath.switchToStdUsr();
+		
 		return false;
 	}
 
@@ -874,7 +873,7 @@ bool ConfigurationParser::editMakepkgSection(const QString &section, const QStri
 				if(fileContent.at(i) == val)
 					// No need to edit
 				{
-					ath.switchToStdUsr();
+					
 					return true;
 				}
 
@@ -883,7 +882,7 @@ bool ConfigurationParser::editMakepkgSection(const QString &section, const QStri
 				QFile::remove("/etc/makepkg.conf");
 				if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
 				{
-					ath.switchToStdUsr();
+					
 					return false;
 				}
 
@@ -893,15 +892,15 @@ bool ConfigurationParser::editMakepkgSection(const QString &section, const QStri
 					str << fileContent.at(k) << endl;
 
 				fp.close();
-				ath.switchToStdUsr();
+				
 				return true;
 			}
-			ath.switchToStdUsr();
+			
 			return false;
 		}
 		else
 		{
-			ath.switchToStdUsr();
+			
 			return false;
 		}
 	}

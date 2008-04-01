@@ -49,7 +49,8 @@ extern QMutex mutex;
 extern QWaitCondition wCond;
 
 AlpmHandler::AlpmHandler(bool init)
-: toRemove(NULL),
+: logFileIsSet(false),
+toRemove(NULL),
 toSync(NULL)
 {
 	/* First, initialize Alpm. Then, make the whole class aware that no
@@ -142,7 +143,9 @@ bool AlpmHandler::initTransaction(pmtranstype_t type, pmtransflag_t flags)
 	if(isTransaction())
 		return false;
 	
-	ath.switchToRoot();
+	if (!ath.switchToRoot())
+		return false;
+		
 
 	setuseragent();
 	
@@ -315,7 +318,8 @@ bool AlpmHandler::updateDatabase()
 
 bool AlpmHandler::reloadPacmanConfiguration()
 {
-	ath.switchToRoot();
+	if(!ath.switchToRoot())
+		return false;
 	
 	PacmanConf pdata;
 
@@ -388,13 +392,20 @@ bool AlpmHandler::setUpAlpmSettings()
 	alpm_option_set_dbpath("/var/lib/pacman");
 	alpm_option_add_cachedir("/var/cache/pacman/pkg");
 	alpm_option_set_logcb(cb_log);
-	
+
 	qDebug() << "Log File should be:" << pdata.logFile;
-	
-	if(pdata.logFile.isEmpty())
-		alpm_option_set_logfile("/var/log/pacman.log");
+
+	if(!logFileIsSet)
+	{
+		if(pdata.logFile.isEmpty())
+			alpm_option_set_logfile("/var/log/pacman.log");
+		else
+			alpm_option_set_logfile(pdata.logFile.toAscii().data());
+		
+		logFileIsSet = true;
+	}
 	else
-		alpm_option_set_logfile(pdata.logFile.toAscii().data());
+		qDebug() << "Not reloading the logfile.";
 
 	/* Register local database */
 
@@ -752,7 +763,8 @@ void AlpmHandler::processQueue()
 
 bool AlpmHandler::cleanUnusedDb()
 {
-	ath.switchToRoot();
+	if(!ath.switchToRoot())
+		return false;
 	
 	DIR *dir;
 	struct dirent *ent;
@@ -872,7 +884,8 @@ int AlpmHandler::rmrf(const char *path)
 
 bool AlpmHandler::cleanCache(bool empty)
 {
-	ath.switchToRoot();
+	if (!ath.switchToRoot())
+		return false;
 	
 	alpm_list_t* cachedirs = alpm_option_get_cachedirs();
 	QString cachedir((char *)alpm_list_getdata(cachedirs));

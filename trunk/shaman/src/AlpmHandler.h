@@ -162,6 +162,7 @@ private:
 	bool syncAct;
 	bool upgradeAct;
 	bool fromFileAct;
+	bool logFileIsSet;
 	
 	QStringList toRemove;
 	QStringList toSync;

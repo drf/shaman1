@@ -48,6 +48,7 @@ upDb(false)
 	setupAdvanced();
 	connect(listWidget, SIGNAL(currentRowChanged(int)), this, SLOT(changeWidget(int)));
 	connect(this, SIGNAL(accepted()), SLOT(saveConfiguration()));
+	setModal(true);
 }
 
 ConfigDialog::~ConfigDialog()
@@ -605,9 +606,11 @@ void ConfigDialog::performManteinanceAction()
 		
 		qDebug() << "Starting the process";
 		
-		seteuid(0);		
+		ath.switchToRoot();
+		
 		mantProc->start("pacman-optimize");
-		seteuid(getuid());
+		
+		ath.switchToStdUsr();
 	}
 	else if(!mantActionBox->currentText().compare(QString(tr("Clean All Building Environments"))))
 	{
@@ -687,7 +690,7 @@ void ConfigDialog::saveConfiguration()
 {
 	qDebug() << "Saving Configuration...";
 	
-	bool dbChanged = false;
+	bool dbChanged = false, restartNeeded = false;
 	QString mirror(mirrorBox->currentText());
 	QString kdemodmirror(KDEModMirrorBox->currentText());
 	mirror = mirror.remove(' ');
@@ -702,8 +705,6 @@ void ConfigDialog::saveConfiguration()
 		else
 			arch = "x86_64";
 		
-		qDebug() << "Getting stuff...";
-
 		QStringList tmplst = kdemodmirror.split(QString("$arch"), 
 				QString::SkipEmptyParts, Qt::CaseInsensitive);
 
@@ -715,8 +716,18 @@ void ConfigDialog::saveConfiguration()
 			dserv.append(tmplst.at(1));
 		
 		kdemodmirror = dserv;
+	}
+	
+	saveSettings();
+
+	emit setProxy();
+	
+	if(!ath.switchToRoot())
+	{
+		ShamanDialog::popupDialog(tr("Saving Configuration"), tr("Unable to save Pacman configuration!"),
+				this, ShamanProperties::ErrorDialog);
 		
-		qDebug() << "Ok, arch is ready. Mirror is:" << kdemodmirror;
+		return;
 	}
 
 	if(coreBox->isChecked())
@@ -966,6 +977,8 @@ void ConfigDialog::saveConfiguration()
 
 	if(logFileLine->isModified())
 	{
+		restartNeeded = true;
+		
 		if(logFileLine->text().isEmpty())
 			editPacmanKey("options/LogFile", QString(), 2);
 		else
@@ -978,44 +991,8 @@ void ConfigDialog::saveConfiguration()
 
 	/* Now, off to the Preferences in the settings file */
 
-	QSettings *settings = new QSettings();
-
-	if(addUpRadio->isChecked())
-		settings->setValue("gui/actionupgrade", "add");
-	else if(upNowRadio->isChecked())
-		settings->setValue("gui/actionupgrade", "upgrade");
-	else
-		settings->setValue("gui/actionupgrade", "ask");
-
-	settings->setValue("gui/processintray", keepQueueTrayBox->isChecked());
-	if(startTrayBox->isChecked())
-		settings->setValue("gui/startupmode", "tray");
-	else
-		settings->setValue("gui/startupmode", "window");
-
-	settings->setValue("gui/showsplashscreen", splashScreenBox->isChecked());
-	settings->setValue("scheduledUpdate/enabled", updateDbTrayBox->isChecked());
-	settings->setValue("scheduledUpdate/interval", minutesSpin->value());
-	settings->setValue("scheduledUpdate/updateDbShowNotify", updateDbShowNotify->isChecked());
-	settings->setValue("proxy/enabled", proxyGroup->isChecked());
-	settings->setValue("proxy/proxyServer", proxyServer->text());
-	settings->setValue("proxy/proxyPort", proxyPort->text());
-	settings->setValue("proxy/httpProxy", httpProxyBox->isChecked());
-	settings->setValue("proxy/ftpProxy", ftpProxyBox->isChecked());
-	settings->setValue("scheduledUpdate/addupgradestoqueue", upNotifyAddRadio->isChecked());
-	settings->setValue("absbuilding/wizardbuild", makeDepsSourceBox->isChecked());
-	settings->setValue("absbuilding/reviewoutput", reviewBuildOutBox->isChecked());
-	settings->setValue("newsreader/userss", useRSSBox->isChecked());
-	settings->setValue("newsreader/doupdate", updateRSSBox->isChecked());
-	settings->setValue("newsreader/updateinterval", updateRSSSpin->value());
-	settings->setValue("newsreader/notifynew", notifyRSSBox->isChecked());
-	settings->setValue("newsreader/queuenotifier", notifyQueueRSSBox->isChecked());
-	settings->setValue("gui/noroot", noRootBox->isChecked());
-	settings->setValue("gui/autostart", autoStartBox->isChecked());
-
 	if(autoStartBox->isChecked())
 	{
-		seteuid(0);
 		if(QFile::exists("../etc/shaman.desktop"))
 			QFile::copy("../etc/shaman.desktop", "/etc/xdg/autostart/shaman.desktop");
 		else if(QFile::exists("../../etc/shaman.desktop"))
@@ -1026,34 +1003,12 @@ void ConfigDialog::saveConfiguration()
 			QFile::copy("../share/applications/shaman.desktop", "/etc/xdg/autostart/shaman.desktop");
 		else if(QFile::exists("/usr/share/applications/shaman.desktop"))
 			QFile::copy("/usr/share/applications/shaman.desktop", "/etc/xdg/autostart/shaman.desktop");
-		seteuid(getuid());
 	}
 	else
-	{
-		seteuid(0);
-		
+	{		
 		QFile::remove("/etc/xdg/autostart/shaman.desktop");
-		
-		seteuid(getuid());
 	}
 
-
-	/* Additional checks here. Since this thing could be rm -rf'ed,
-	 * better being sure that is set properly. */
-	if(buildPathEdit->text() != "/" && !buildPathEdit->text().isEmpty() && buildPathEdit->text().startsWith(QChar('/')))
-		settings->setValue("absbuilding/buildpath", buildPathEdit->text());
-	else
-		settings->setValue("absbuilding/buildpath", "/var/shaman/builds");
-
-	settings->setValue("absbuilding/clearmakedepends", cleanMakeDepsBox->isChecked());
-
-	settings->setValue("absbuilding/cleanbuildenv", cleanBuildEnvBox->isChecked());
-
-
-	settings->setValue("absbuilding/syncsupfiles", useMatchSupRadio->isChecked());
-	
-	settings->deleteLater();
-	
 	if(useMatchSupRadio->isChecked())
 	{
 		/* We need to generate a SUPFILES containing our current repos
@@ -1104,12 +1059,17 @@ void ConfigDialog::saveConfiguration()
 	if(docDirsEdit->isModified())
 		editMakepkgSection("docdirs", docDirsEdit->text());
 	
+	ath.switchToStdUsr();
+	
+	if(restartNeeded)
+		ShamanDialog::popupDialogDontShow(tr("Saving Configuration"), tr("Some of your changes haven't been applied,\n"
+				"since alpm needs to be released.\nYou need to restart Shaman to make them effective."), "gui/configwarning", this,
+				ShamanProperties::WarningDialog);
+
 	/* Did we change anything in the repos? Better update our
 	 * local DB then.
 	 */
-
-	emit setProxy();
-
+	
 	if(dbChanged)
 	{
 		switch (ShamanDialog::popupQuestionDialog(QString(tr("Settings Changed")), 
@@ -1126,6 +1086,60 @@ void ConfigDialog::saveConfiguration()
 			break;
 		}
 	}
+}
+
+void ConfigDialog::saveSettings()
+{
+	QSettings *settings = new QSettings();
+
+	if(addUpRadio->isChecked())
+		settings->setValue("gui/actionupgrade", "add");
+	else if(upNowRadio->isChecked())
+		settings->setValue("gui/actionupgrade", "upgrade");
+	else
+		settings->setValue("gui/actionupgrade", "ask");
+
+	settings->setValue("gui/processintray", keepQueueTrayBox->isChecked());
+	if(startTrayBox->isChecked())
+		settings->setValue("gui/startupmode", "tray");
+	else
+		settings->setValue("gui/startupmode", "window");
+
+	settings->setValue("gui/showsplashscreen", splashScreenBox->isChecked());
+	settings->setValue("scheduledUpdate/enabled", updateDbTrayBox->isChecked());
+	settings->setValue("scheduledUpdate/interval", minutesSpin->value());
+	settings->setValue("scheduledUpdate/updateDbShowNotify", updateDbShowNotify->isChecked());
+	settings->setValue("proxy/enabled", proxyGroup->isChecked());
+	settings->setValue("proxy/proxyServer", proxyServer->text());
+	settings->setValue("proxy/proxyPort", proxyPort->text());
+	settings->setValue("proxy/httpProxy", httpProxyBox->isChecked());
+	settings->setValue("proxy/ftpProxy", ftpProxyBox->isChecked());
+	settings->setValue("scheduledUpdate/addupgradestoqueue", upNotifyAddRadio->isChecked());
+	settings->setValue("absbuilding/wizardbuild", makeDepsSourceBox->isChecked());
+	settings->setValue("absbuilding/reviewoutput", reviewBuildOutBox->isChecked());
+	settings->setValue("newsreader/userss", useRSSBox->isChecked());
+	settings->setValue("newsreader/doupdate", updateRSSBox->isChecked());
+	settings->setValue("newsreader/updateinterval", updateRSSSpin->value());
+	settings->setValue("newsreader/notifynew", notifyRSSBox->isChecked());
+	settings->setValue("newsreader/queuenotifier", notifyQueueRSSBox->isChecked());
+	settings->setValue("gui/noroot", noRootBox->isChecked());
+	settings->setValue("gui/autostart", autoStartBox->isChecked());
+
+	/* Additional checks here. Since this thing could be rm -rf'ed,
+	 * better being sure that is set properly. */
+	if(buildPathEdit->text() != "/" && !buildPathEdit->text().isEmpty() && buildPathEdit->text().startsWith(QChar('/')))
+		settings->setValue("absbuilding/buildpath", buildPathEdit->text());
+	else
+		settings->setValue("absbuilding/buildpath", "/var/shaman/builds");
+
+	settings->setValue("absbuilding/clearmakedepends", cleanMakeDepsBox->isChecked());
+
+	settings->setValue("absbuilding/cleanbuildenv", cleanBuildEnvBox->isChecked());
+
+
+	settings->setValue("absbuilding/syncsupfiles", useMatchSupRadio->isChecked());
+
+	settings->deleteLater();
 }
 
 void ConfigDialog::addMirror()
@@ -1266,7 +1280,8 @@ void ConfigDialog::cleanProc(int eC, QProcess::ExitStatus eS)
 
 	mantProc = new RootProcess();
 	
-	seteuid(0);
+	ath.switchToRoot();
+	
 	if(mantProc->execute("sync") == 0)
 	{
 		statusLabel->setText(QString(tr("Operation Completed Successfully!")));
@@ -1278,7 +1293,8 @@ void ConfigDialog::cleanProc(int eC, QProcess::ExitStatus eS)
 		statusLabel->setText(QString(tr("Sync could not be executed!", "Sync is always the command")));
 		mantDetails->append(QString(tr("Sync could not be executed!!", "Sync is always the command")));
 	}
-	seteuid(getuid());
+	
+	ath.switchToStdUsr();
 
 	mantProc->deleteLater();
 

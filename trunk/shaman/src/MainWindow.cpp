@@ -201,46 +201,13 @@ void MainWindow::quitApp()
 
 void MainWindow::closeEvent(QCloseEvent *evt)
 {
+	ShamanDialog::popupDialogDontShow(QString(tr("Shaman - Reducing To Tray")), 
+			QString(tr("Shaman will keep running in the system tray.\nTo close it, click Quit in the file menu "
+					"or in the tray icon context menu.\nWhile in the System Tray, Shaman will update your Databases\nat a regular"
+					" interval and notify you about available upgrades.\nYou can change this behaviour in Settings.")), 
+					"gui/confirmquit", this, ShamanProperties::InformationDialog);
+	
 	emit startTimer();
-
-	QSettings *settings = new QSettings();
-
-	if(!settings->value("gui/confirmquit").toBool())
-	{
-		QDialog *dlog = new QDialog(this);
-		QLabel *lbl = new QLabel(dlog);
-		QLabel *icn = new QLabel(dlog);
-		QCheckBox *cbx = new QCheckBox(dlog);
-		QDialogButtonBox *but = new QDialogButtonBox(dlog);
-		QVBoxLayout *lay = new QVBoxLayout();
-		QHBoxLayout *hlay = new QHBoxLayout();
-
-		lbl->setText(QString(tr("Shaman will keep running in the system tray.\nTo close it, click Quit in the file menu "
-				"or in the tray icon context menu.\nWhile in the System Tray, Shaman will update your Databases\nat a regular"
-				" interval and notify you about available upgrades.\nYou can change this behaviour in Settings.")));
-		icn->setPixmap(QPixmap(":/Icons/icons/help-about.png"));
-		hlay->addWidget(icn);
-		hlay->addWidget(lbl);
-		cbx->setText(QString(tr("Do not show this Again")));
-		cbx->setChecked(false);
-		but->addButton(QDialogButtonBox::Ok);
-		lay->addLayout(hlay);
-		lay->addWidget(cbx);
-		lay->addWidget(but);
-		dlog->setLayout(lay);
-		dlog->setWindowTitle(QString(tr("Shaman - Reducing To Tray")));
-		dlog->setWindowModality(Qt::ApplicationModal);
-		connect(but, SIGNAL(accepted()), dlog, SLOT(accept()));
-
-		dlog->exec();
-
-		if(cbx->isChecked())
-			settings->setValue("gui/confirmquit", true);
-
-		dlog->deleteLater();
-	}
-
-	settings->deleteLater();
 
 	evt->accept();
 }

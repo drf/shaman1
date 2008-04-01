@@ -93,6 +93,7 @@ private:
 	void setupPacman();
 	void setupABS();
 	void setupAdvanced();
+	void saveSettings();
 	QStringList getMirrorList(ShamanProperties::MirrorType type = ShamanProperties::OfficialMirrors);
 
 private:
