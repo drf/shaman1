@@ -112,6 +112,7 @@ public slots:
 	void setProxy();
 	void openNewsDialog();
 	void openLogViewer();
+	void shiftItemAction();
 
 protected:
 	void closeEvent(QCloseEvent *evt);

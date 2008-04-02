@@ -352,8 +352,19 @@ bool MainWindow::populatePackagesView()
 			SLOT(itemChanged()));
 
 	connect(PkgInfos, SIGNAL(currentChanged(int)), SLOT(showPkgInfo()));
+	connect(pkgsViewWG, SIGNAL(itemDoubleClicked(QTreeWidgetItem*,int)), SLOT(shiftItemAction()));
 
 	return true;
+}
+
+void MainWindow::shiftItemAction()
+{
+	if(!pkgsViewWG->selectedItems().first()->text(8).isEmpty())
+		cancelAction();
+	else if(aHandle->isInstalled(pkgsViewWG->selectedItems().first()->text(1)))
+		removePackage();
+	else
+		installPackage();
 }
 
 void MainWindow::populateRepoColumn()
