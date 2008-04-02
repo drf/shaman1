@@ -40,6 +40,9 @@ void ShamanStatusBar::setUpStatusBar()
 	stBarText = new QLabel();
 	stBarProg = new QProgressBar();
 	
+	stBarProg->setRange(0,100);
+	stBarProg->setFormat("%p%");
+	
 	addWidget(stBarImage);
 	addWidget(stBarText);
 	addPermanentWidget(stBarProg);
