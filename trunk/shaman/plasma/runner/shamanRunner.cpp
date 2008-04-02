@@ -58,7 +58,7 @@ void ShamanRunner::match(Plasma::SearchContext *search)
     		/* Now throw some nice icons in here */
 
     		if (term.startsWith("install", Qt::CaseInsensitive) || 
-    				term.startsWith("i", Qt::CaseInsensitive))
+    				term.startsWith('i', Qt::CaseInsensitive))
     		{
     			if (term.split(' ').count() <= 1)
     			{
@@ -74,7 +74,7 @@ void ShamanRunner::match(Plasma::SearchContext *search)
 
     		else if (term.startsWith("remove", Qt::CaseInsensitive) || 
     				term.startsWith("uninstall", Qt::CaseInsensitive) || 
-    				term.startsWith("r", Qt::CaseInsensitive))
+    				term.startsWith('r', Qt::CaseInsensitive))
     		{
     			if (term.split(' ').count() <= 1)
     			{

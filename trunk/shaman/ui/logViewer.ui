@@ -13,7 +13,8 @@
    <string>Shaman - Log Viewer</string>
   </property>
   <property name="windowIcon" >
-   <iconset resource="shaman.qrc" >:/Icons/icons/accessories-text-editor.png</iconset>
+   <iconset resource="shaman.qrc" >
+    <normaloff>:/Icons/icons/accessories-text-editor.png</normaloff>:/Icons/icons/accessories-text-editor.png</iconset>
   </property>
   <layout class="QGridLayout" >
    <item row="0" column="0" >
@@ -157,7 +158,8 @@
       <bool>true</bool>
      </property>
      <property name="html" >
-      <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+      <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
 p, li { white-space: pre-wrap; }
 &lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;">
 &lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Liberation Sans'; font-size:9pt;">&lt;/p>&lt;/body>&lt;/html></string>
@@ -169,7 +171,7 @@ p, li { white-space: pre-wrap; }
      <property name="orientation" >
       <enum>Qt::Horizontal</enum>
      </property>
-     <property name="sizeHint" >
+     <property name="sizeHint" stdset="0" >
       <size>
        <width>481</width>
        <height>20</height>
@@ -189,7 +191,8 @@ p, li { white-space: pre-wrap; }
       <string>Refresh View</string>
      </property>
      <property name="icon" >
-      <iconset resource="shaman.qrc" >:/Icons/icons/view-refresh.png</iconset>
+      <iconset resource="shaman.qrc" >
+       <normaloff>:/Icons/icons/view-refresh.png</normaloff>:/Icons/icons/view-refresh.png</iconset>
      </property>
     </widget>
    </item>
@@ -202,10 +205,11 @@ p, li { white-space: pre-wrap; }
       </sizepolicy>
      </property>
      <property name="text" >
-      <string>Close</string>
+      <string comment="close the dialog" >Close</string>
      </property>
      <property name="icon" >
-      <iconset resource="shaman.qrc" >:/Icons/icons/application-exit.png</iconset>
+      <iconset resource="shaman.qrc" >
+       <normaloff>:/Icons/icons/application-exit.png</normaloff>:/Icons/icons/application-exit.png</iconset>
      </property>
     </widget>
    </item>

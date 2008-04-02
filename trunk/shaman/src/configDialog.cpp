@@ -1062,7 +1062,7 @@ void ConfigDialog::saveConfiguration()
 	ath.switchToStdUsr();
 	
 	if(restartNeeded)
-		ShamanDialog::popupDialogDontShow(tr("Saving Configuration"), tr("Some of your changes haven't been applied,\n"
+		ShamanDialog::popupDialogDontShow(tr("Saving Configuration"), tr("Some of your changes have not been applied,\n"
 				"since alpm needs to be released.\nYou need to restart Shaman to make them effective."), "gui/configwarning", this,
 				ShamanProperties::WarningDialog);
 
