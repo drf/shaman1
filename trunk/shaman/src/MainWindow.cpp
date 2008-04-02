@@ -249,13 +249,18 @@ bool MainWindow::populatePackagesView()
 	databases = aHandle->getAvailableRepos();
 
 	databases = alpm_list_first(databases);
+	
+	stBar->startProgressBar();
+	
+	int totalPkgs = aHandle->countPackages(Alpm::AllPackages);
+	
+	count = 0;
 
 	while(databases != NULL)
 	{
 		pmdb_t *dbcrnt = (pmdb_t *)alpm_list_getdata(databases);
 
 		currentpkgs = alpm_db_getpkgcache(dbcrnt);
-		count = 0;
 
 		while(currentpkgs != NULL)
 		{
@@ -296,6 +301,10 @@ bool MainWindow::populatePackagesView()
 			currentpkgs = alpm_list_next(currentpkgs);
 
 			count++;
+			
+			stBar->updateProgressBar( (int) (( (float)count / (float) totalPkgs) * (float)100) );
+			
+			qApp->processEvents();
 		}
 
 		databases = alpm_list_next(databases);
@@ -338,6 +347,8 @@ bool MainWindow::populatePackagesView()
 
 	pkgsViewWG->sortItems(1, Qt::AscendingOrder);
 	pkgsViewWG->setSortingEnabled(true);//Enable sorting *after* inserting :D
+	
+	stBar->stopProgressBar();
 
 	connect(pkgsViewWG, SIGNAL(itemSelectionChanged()), this,
 			SLOT(itemChanged()));
