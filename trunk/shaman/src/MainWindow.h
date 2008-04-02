@@ -137,6 +137,8 @@ private slots:
 	void cancelAllRepoActions();
 	void showAuthDialog(int count);
 	void settingsClosed();
+	void showStBarAction(const QString &text, const QPixmap &pixmap, int timeout = 10);
+	void clearStBarAction();
 	
 private:
 	void loadDbUpdateDialog();
@@ -160,6 +162,7 @@ private:
 	QPointer<LogViewer> lView;
 	QPointer<QStatusBar> stBar;
 	QPointer<QLabel> stBarImage;
+	QPointer<QLabel> stBarText;
 
 	QPointer<QDialog> reviewQueue;
 	ShamanTrayIcon *trayicon;

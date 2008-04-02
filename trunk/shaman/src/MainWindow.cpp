@@ -727,7 +727,6 @@ void MainWindow::finishDbUpdate()
 		populatePackagesView();
 		populateRepoColumn();
 		populateGrpsColumn();
-		updateStatusBar();
 	}
 
 	qDebug() << "DB Update Finished";
@@ -744,6 +743,8 @@ void MainWindow::finishDbUpdate()
 		else
 			trayicon->showMessage(QString(tr("Database Update")), QString(tr("One or more Databases could "
 					"not be updated.\nLast error reported was:\n%1")).arg(alpm_strerrorlast()));
+		
+		showStBarAction(QString(tr("One or more databases failed to update!")), QPixmap(":/Icons/icons/edit-delete.png"));
 	}
 	else
 	{
@@ -752,7 +753,7 @@ void MainWindow::finishDbUpdate()
 		if(dbdialog->isHidden() && list.isEmpty() && settings->value("scheduledUpdate/updateDbShowNotify").toBool())
 			trayicon->showMessage(QString(tr("Database Update")), QString(tr("Databases Updated Successfully")));
 		
-		stBar->showMessage(QString(tr("Databases Updated Successfully")), 10);
+		showStBarAction(QString(tr("Databases Updated Successfully")), QPixmap(":/Icons/icons/dialog-ok-apply.png"));
 	}
 
 	dbdialog->deleteLater();
@@ -1224,6 +1225,8 @@ void MainWindow::startUpgrading()
 				trayicon->showMessage(QString(tr("System Upgrade")), QString(tr("Your system is up to date!")));
 
 		}
+		
+		showStBarAction(QString(tr("Your system is up to date!")), QPixmap(":/Icons/icons/dialog-ok-apply.png"));
 
 		qDebug() << "System is up to date";
 	}
@@ -1468,6 +1471,8 @@ void MainWindow::queueProcessingEnded(bool errors)
 		else
 			trayicon->showMessage(QString(tr("Queue Processed")), QString(tr("One or more errors occurred, your Queue\n"
 					"was not successfully processed")));
+		
+		showStBarAction(QString(tr("Error Processing Queue!!")), QPixmap(":/Icons/icons/edit-delete.png"));
 	}
 	else
 	{
@@ -1521,7 +1526,7 @@ void MainWindow::queueProcessingEnded(bool errors)
 		else
 			trayicon->showMessage(QString(tr("Queue Processed")), QString(tr("Your Queue was successfully processed!!")));
 		
-		stBar->showMessage(QString(tr("Your Queue was successfully processed!!")), 10000);
+		showStBarAction(QString(tr("Your Queue was successfully processed!!")), QPixmap(":/Icons/icons/dialog-ok-apply.png"));
 
 		if(turnOffSys)
 		{
@@ -2058,7 +2063,7 @@ void MainWindow::updateStatusBar()
 			arg(aHandle->countPackages(Alpm::AllPackages)).arg(aHandle->countPackages(Alpm::InstalledPackages)).
 			arg(aHandle->getUpgradeablePackages().count()));
 	
-	stBarImage->setText(text);
+	stBarText->setText(text);
 }
 
 void MainWindow::setUpStatusBar()
@@ -2067,8 +2072,25 @@ void MainWindow::setUpStatusBar()
 	setStatusBar(stBar);
 	
 	stBarImage = new QLabel();
+	stBarText = new QLabel();
 	
-	stBar->addPermanentWidget(stBarImage);
+	stBar->addWidget(stBarImage);
+	stBar->addWidget(stBarText);
 	
+	updateStatusBar();
+}
+
+void MainWindow::showStBarAction(const QString &text, const QPixmap &pixmap, int timeout)
+{
+	stBarText->setText(text);
+	stBarImage->setPixmap(pixmap);
+	
+	QTimer::singleShot(timeout * 1000, this, SLOT(clearStBarAction()));
+}
+
+void MainWindow::clearStBarAction()
+{
+	stBarText->setText(QString());
+	stBarImage->setPixmap(QPixmap());
 	updateStatusBar();
 }
