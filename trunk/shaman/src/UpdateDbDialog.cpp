@@ -89,6 +89,7 @@ void UpdateDbDialog::updateLabel(const QString &repo, int action)
 		// There was an error updating the database
 		toInsert->setPixmap(QIcon(":/Icons/icons/edit-delete.png").pixmap(22));
 		errorsOccourred = true;
+		break;
 	default:
 		break;
 	}
@@ -144,9 +145,6 @@ void UpdateDbDialog::scopeEnded()
 {
 	for(int i = 0; i < labelList.size(); ++i)
 		delete labelList.at(i);
-	
-	if(!errorsOccourred && !dbth->getResult())
-		errorsOccourred = true;
 	
 	dbth->deleteLater();
 	
