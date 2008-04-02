@@ -45,7 +45,7 @@ void ShamanStatusBar::setUpStatusBar()
 	
 	addWidget(stBarImage);
 	addWidget(stBarText);
-	addPermanentWidget(stBarProg);
+	addPermanentWidget(stBarProg, 150);
 	
 	stBarProg->hide();
 	
@@ -74,4 +74,20 @@ void ShamanStatusBar::updateStatusBar()
 			arg(aHandle->getUpgradeablePackages().count()));
 	
 	stBarText->setText(text);
+}
+
+void ShamanStatusBar::startProgressBar()
+{
+	stBarProg->setValue(0);
+	stBarProg->show();
+}
+
+void ShamanStatusBar::stopProgressBar()
+{
+	stBarProg->hide();
+}
+
+void ShamanStatusBar::updateProgressBar(int percentage)
+{
+	stBarProg->setValue(percentage);
 }

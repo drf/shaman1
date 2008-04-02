@@ -69,11 +69,13 @@ private slots:
 signals:
 	void killMe();
 	void updateRepo(const QString &dbname);
+	void pBar(int val);
 	
 private:
 	int currentAction;
 	char *currentRepo;
 	int actionDone;
+	int totalAction;
 	bool updated;
 	AlpmHandler *aHandle;
 	bool errorsOccourred;

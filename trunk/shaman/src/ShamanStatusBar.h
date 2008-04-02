@@ -41,6 +41,9 @@ public Q_SLOTS:
 	void showStBarAction(const QString &text, const QPixmap &pixmap, int timeout = 10);
 	void clearStBarAction();
 	void updateStatusBar();
+	void startProgressBar();
+	void stopProgressBar();
+	void updateProgressBar(int percentage);
 	
 private:
 	void setUpStatusBar();

@@ -707,11 +707,14 @@ void MainWindow::doDbUpdate()
 	dbActive = true;
 
 	emit actionStatusChanged("dbUpdateStarted");
+	
+	stBar->startProgressBar();
 
 	if(isVisible())
 		dbdialog->show();
 
 	connect(dbdialog, SIGNAL(killMe()), this, SLOT(finishDbUpdate()));
+	connect(dbdialog, SIGNAL(pBar(int)), stBar, SLOT(updateProgressBar(int)));
 
 	dbdialog->doAction();
 }
@@ -734,6 +737,8 @@ void MainWindow::finishDbUpdate()
 	}
 
 	qDebug() << "DB Update Finished";
+	
+	stBar->stopProgressBar();
 
 	QStringList list(aHandle->getUpgradeablePackages());
 
@@ -1217,6 +1222,7 @@ void MainWindow::startUpgrading()
 	}
 
 	QStringList list = aHandle->getUpgradeablePackages();
+	stBar->stopProgressBar();
 
 	if(list.isEmpty())
 	{
@@ -1390,8 +1396,11 @@ void MainWindow::fullSysUpgrade()
 
 	if(isVisible())
 		dbdialog->show();
+	
+	stBar->startProgressBar();
 
 	connect(dbdialog, SIGNAL(killMe()), this, SLOT(startUpgrading()));
+	connect(dbdialog, SIGNAL(pBar(int)), stBar, SLOT(updateProgressBar(int)));
 
 	dbdialog->doAction();
 }
