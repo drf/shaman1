@@ -47,6 +47,7 @@ class ReviewQueueDialog;
 class ArchLinuxNewsReader;
 class NewsViewer;
 class LogViewer;
+class ShamanStatusBar;
 
 class MainWindow : public QMainWindow, public Ui::MainWindow, private StringUtils
 {
@@ -111,7 +112,6 @@ public slots:
 	void setProxy();
 	void openNewsDialog();
 	void openLogViewer();
-	void updateStatusBar();
 
 protected:
 	void closeEvent(QCloseEvent *evt);
@@ -137,15 +137,12 @@ private slots:
 	void cancelAllRepoActions();
 	void showAuthDialog(int count);
 	void settingsClosed();
-	void showStBarAction(const QString &text, const QPixmap &pixmap, int timeout = 10);
-	void clearStBarAction();
 	
 private:
 	void loadDbUpdateDialog();
 	void removeDbUpdateDialog();
 	QString formatSize(unsigned long size);
 	void upgrade(const QStringList &packages);
-	void setUpStatusBar();
 	
 public:
 	QueueDialog *queueDl;
@@ -160,9 +157,7 @@ private:
 	QPointer<BuildingHandler> bHandler;
 	QPointer<NewsViewer> nView;
 	QPointer<LogViewer> lView;
-	QPointer<QStatusBar> stBar;
-	QPointer<QLabel> stBarImage;
-	QPointer<QLabel> stBarText;
+	QPointer<ShamanStatusBar> stBar;
 
 	QPointer<QDialog> reviewQueue;
 	ShamanTrayIcon *trayicon;

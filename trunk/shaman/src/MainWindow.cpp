@@ -39,6 +39,7 @@
 #include "LogViewer.h"
 #include "Authenticator.h"
 #include "ShamanDialog.h"
+#include "ShamanStatusBar.h"
 
 #include <iostream>
 #include <alpm.h>
@@ -78,6 +79,7 @@ qUi(),
 bHandler(),
 nView(),
 lView(),
+stBar(),
 reviewQueue(),
 upActive(false),
 revActive(false),
@@ -170,7 +172,9 @@ turnOffSys(false)
 	QShortcut *clearLineEdit = new QShortcut(tr("Esc"), searchLine, SLOT(clear()));
 	Q_UNUSED(clearLineEdit);
 	
-	setUpStatusBar();
+	stBar = new ShamanStatusBar(aHandle, this);
+	
+	setStatusBar(stBar);
 
 	return;
 }
@@ -744,7 +748,7 @@ void MainWindow::finishDbUpdate()
 			trayicon->showMessage(QString(tr("Database Update")), QString(tr("One or more Databases could "
 					"not be updated.\nLast error reported was:\n%1")).arg(alpm_strerrorlast()));
 		
-		showStBarAction(QString(tr("One or more databases failed to update!")), QPixmap(":/Icons/icons/edit-delete.png"));
+		stBar->showStBarAction(QString(tr("One or more databases failed to update!")), QPixmap(":/Icons/icons/edit-delete.png"));
 	}
 	else
 	{
@@ -753,7 +757,7 @@ void MainWindow::finishDbUpdate()
 		if(dbdialog->isHidden() && list.isEmpty() && settings->value("scheduledUpdate/updateDbShowNotify").toBool())
 			trayicon->showMessage(QString(tr("Database Update")), QString(tr("Databases Updated Successfully")));
 		
-		showStBarAction(QString(tr("Databases Updated Successfully")), QPixmap(":/Icons/icons/dialog-ok-apply.png"));
+		stBar->showStBarAction(QString(tr("Databases Updated Successfully")), QPixmap(":/Icons/icons/dialog-ok-apply.png"));
 	}
 
 	dbdialog->deleteLater();
@@ -1206,7 +1210,7 @@ void MainWindow::startUpgrading()
 			populatePackagesView();
 			populateRepoColumn();
 			populateGrpsColumn();
-			updateStatusBar();
+			stBar->updateStatusBar();
 		}
 	}
 
@@ -1226,7 +1230,7 @@ void MainWindow::startUpgrading()
 
 		}
 		
-		showStBarAction(QString(tr("Your system is up to date!")), QPixmap(":/Icons/icons/dialog-ok-apply.png"));
+		stBar->showStBarAction(QString(tr("Your system is up to date!")), QPixmap(":/Icons/icons/dialog-ok-apply.png"));
 
 		qDebug() << "System is up to date";
 	}
@@ -1472,7 +1476,7 @@ void MainWindow::queueProcessingEnded(bool errors)
 			trayicon->showMessage(QString(tr("Queue Processed")), QString(tr("One or more errors occurred, your Queue\n"
 					"was not successfully processed")));
 		
-		showStBarAction(QString(tr("Error Processing Queue!!")), QPixmap(":/Icons/icons/edit-delete.png"));
+		stBar->showStBarAction(QString(tr("Error Processing Queue!!")), QPixmap(":/Icons/icons/edit-delete.png"));
 	}
 	else
 	{
@@ -1519,14 +1523,14 @@ void MainWindow::queueProcessingEnded(bool errors)
 
 		populateQueuePackagesView();
 		refinePkgView();
-		updateStatusBar();
+		stBar->updateStatusBar();
 
 		if(queueDl->isVisible() && !settings->value("gui/keepqueuedialogopen", true).toBool())
 			ShamanDialog::popupDialog(tr("Queue Processed"), tr("Your Queue was successfully processed!"), this);
 		else
 			trayicon->showMessage(QString(tr("Queue Processed")), QString(tr("Your Queue was successfully processed!!")));
 		
-		showStBarAction(QString(tr("Your Queue was successfully processed!!")), QPixmap(":/Icons/icons/dialog-ok-apply.png"));
+		stBar->showStBarAction(QString(tr("Your Queue was successfully processed!!")), QPixmap(":/Icons/icons/dialog-ok-apply.png"));
 
 		if(turnOffSys)
 		{
@@ -2055,42 +2059,4 @@ void MainWindow::showAuthDialog(int count)
 	}
 
 	wCond.wakeAll();
-}
-
-void MainWindow::updateStatusBar()
-{
-	QString text = QString(tr("%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages").
-			arg(aHandle->countPackages(Alpm::AllPackages)).arg(aHandle->countPackages(Alpm::InstalledPackages)).
-			arg(aHandle->getUpgradeablePackages().count()));
-	
-	stBarText->setText(text);
-}
-
-void MainWindow::setUpStatusBar()
-{
-	stBar = new QStatusBar(this);
-	setStatusBar(stBar);
-	
-	stBarImage = new QLabel();
-	stBarText = new QLabel();
-	
-	stBar->addWidget(stBarImage);
-	stBar->addWidget(stBarText);
-	
-	updateStatusBar();
-}
-
-void MainWindow::showStBarAction(const QString &text, const QPixmap &pixmap, int timeout)
-{
-	stBarText->setText(text);
-	stBarImage->setPixmap(pixmap);
-	
-	QTimer::singleShot(timeout * 1000, this, SLOT(clearStBarAction()));
-}
-
-void MainWindow::clearStBarAction()
-{
-	stBarText->setText(QString());
-	stBarImage->setPixmap(QPixmap());
-	updateStatusBar();
 }
