@@ -31,6 +31,7 @@
 
 #include <QThread>
 #include <QPointer>
+#include <QLabel>
 
 class UpdateDbDialog;
 class SysUpgradeDialog;
@@ -142,6 +143,7 @@ private:
 	void removeDbUpdateDialog();
 	QString formatSize(unsigned long size);
 	void upgrade(const QStringList &packages);
+	void setUpStatusBar();
 	
 public:
 	QueueDialog *queueDl;
@@ -156,7 +158,8 @@ private:
 	QPointer<BuildingHandler> bHandler;
 	QPointer<NewsViewer> nView;
 	QPointer<LogViewer> lView;
-	QStatusBar *stBar;
+	QPointer<QStatusBar> stBar;
+	QPointer<QLabel> stBarImage;
 
 	QPointer<QDialog> reviewQueue;
 	ShamanTrayIcon *trayicon;

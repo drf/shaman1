@@ -167,13 +167,10 @@ turnOffSys(false)
 
 	setProxy();
 
-	stBar = new QStatusBar(this);
-	setStatusBar(stBar);
-
 	QShortcut *clearLineEdit = new QShortcut(tr("Esc"), searchLine, SLOT(clear()));
 	Q_UNUSED(clearLineEdit);
 	
-	updateStatusBar();
+	setUpStatusBar();
 
 	return;
 }
@@ -754,6 +751,8 @@ void MainWindow::finishDbUpdate()
 		QSettings *settings = new QSettings();
 		if(dbdialog->isHidden() && list.isEmpty() && settings->value("scheduledUpdate/updateDbShowNotify").toBool())
 			trayicon->showMessage(QString(tr("Database Update")), QString(tr("Databases Updated Successfully")));
+		
+		stBar->showMessage(QString(tr("Databases Updated Successfully")), 10);
 	}
 
 	dbdialog->deleteLater();
@@ -1521,6 +1520,8 @@ void MainWindow::queueProcessingEnded(bool errors)
 			ShamanDialog::popupDialog(tr("Queue Processed"), tr("Your Queue was successfully processed!"), this);
 		else
 			trayicon->showMessage(QString(tr("Queue Processed")), QString(tr("Your Queue was successfully processed!!")));
+		
+		stBar->showMessage(QString(tr("Your Queue was successfully processed!!")), 10000);
 
 		if(turnOffSys)
 		{
@@ -2057,5 +2058,17 @@ void MainWindow::updateStatusBar()
 			arg(aHandle->countPackages(Alpm::AllPackages)).arg(aHandle->countPackages(Alpm::InstalledPackages)).
 			arg(aHandle->getUpgradeablePackages().count()));
 	
-	stBar->showMessage(text);
+	stBarImage->setText(text);
+}
+
+void MainWindow::setUpStatusBar()
+{
+	stBar = new QStatusBar(this);
+	setStatusBar(stBar);
+	
+	stBarImage = new QLabel();
+	
+	stBar->addPermanentWidget(stBarImage);
+	
+	updateStatusBar();
 }
