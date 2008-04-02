@@ -302,9 +302,7 @@ bool MainWindow::populatePackagesView()
 
 			count++;
 			
-			/*stBar->updateProgressBar( (int) (( (float)count / (float) totalPkgs) * (float)100) );
-			
-			qApp->processEvents();*/
+			stBar->updateProgressBar( (int) (( (float)count / (float) totalPkgs) * (float)100) );			
 		}
 
 		databases = alpm_list_next(databases);
