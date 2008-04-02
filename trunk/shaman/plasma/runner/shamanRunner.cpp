@@ -36,7 +36,7 @@ ShamanRunner::ShamanRunner(QObject *parent, const QVariantList &args)
 
     words << "install" << "remove" << "uninstall" << "upgrade-system" << "upgrade system" << "update database" 
                             << "update db" << "update-db" << "update-database" << "us" << "ud" << "i" << "r" 
-                            << "complete-remove" << "complete-uninstall";
+                            << "complete-remove" << "complete-uninstall" << "package manager";
 }
 
 ShamanRunner::~ShamanRunner()
@@ -47,25 +47,77 @@ void ShamanRunner::match(Plasma::SearchContext *search)
 {
     kDebug() << "Match search context?";
     QString term = search->searchTerm();
-    Plasma::SearchMatch* match = new Plasma::SearchMatch(this);
-    match->setType(Plasma::SearchMatch::ExactMatch);
-    match->setIcon(KIcon("shaman"));
 
     foreach(QString word, words)
-    {
-        if (term.startsWith(word, Qt::CaseInsensitive))
-            match->setText(i18n("Package Manager: %1", term));
+    {    	
+    	if (term.startsWith(word, Qt::CaseInsensitive))
+    	{
+    		Plasma::SearchMatch* match = new Plasma::SearchMatch(this);
+    		match->setType(Plasma::SearchMatch::ExactMatch);
+
+    		/* Now throw some nice icons in here */
+
+    		if (term.startsWith("install", Qt::CaseInsensitive) || 
+    				term.startsWith("i", Qt::CaseInsensitive))
+    		{
+    			if (term.split(' ').count() <= 1)
+    			{
+    				match->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
+    				match->setText(i18n("Package Manager: Install Package"));
+    			}
+    			else
+    			{    			
+    				match->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
+    				match->setText(i18n("Package Manager: Install %1", term.split(' ').at(1)));
+    			}
+    		}
+
+    		else if (term.startsWith("remove", Qt::CaseInsensitive) || 
+    				term.startsWith("uninstall", Qt::CaseInsensitive) || 
+    				term.startsWith("r", Qt::CaseInsensitive))
+    		{
+    			if (term.split(' ').count() <= 1)
+    			{
+    				match->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
+    				match->setText(i18n("Package Manager: Remove Package"));
+    			}
+    			else
+    			{
+    				match->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
+    				match->setText(i18n("Package Manager: Remove %1", term.split(' ').at(1)));
+    			}
+    		}
+    		
+    		else if (term.startsWith("upgrade-system", Qt::CaseInsensitive) || 
+    				term.startsWith("upgrade system", Qt::CaseInsensitive) ||
+    				term == "us")
+    		{
+    			match->setText(i18n("Package Manager: Upgrade System"));
+    			match->setIcon(QIcon(":/Icons/icons/shaman/shaman-updates-available-32.png"));
+    		}
+    		
+    		else if (term.startsWith("update database", Qt::CaseInsensitive) || 
+    				term.startsWith("update-database", Qt::CaseInsensitive) || 
+    				term.startsWith("update db", Qt::CaseInsensitive) || 
+    				term.startsWith("update-db", Qt::CaseInsensitive) || 
+    				term == "ud")
+    		{
+    			match->setText(i18n("Update Databases"));
+    			match->setIcon(QIcon(":/Icons/icons/shaman/shaman-yellow-icon-32.png"));
+    		}
+
+    		match->setSubtext(i18n("Shaman Package Manager"));
+    		match->setRelevance(1);
+    	}
     }
-    match->setRelevance(1);
-    search->addMatch(term, match);
 }
 
 void ShamanRunner::exec(const Plasma::SearchContext *search, const Plasma::SearchMatch *action)
 {
-    execTerm = search->searchTerm();
-    
-    /* First of all, let's check if Shaman has been already
-     * started.
+	execTerm = search->searchTerm();
+
+	/* First of all, let's check if Shaman has been already
+	 * started.
      */
     
     if(!dbus.interface()->isServiceRegistered("org.archlinux.shaman"))
@@ -82,7 +134,7 @@ void ShamanRunner::executeAction()
 		if (execTerm.split(' ').count() <= 1)
 			return;
 
-		QDBusInterface iface("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman");
+		QDBusInterface iface("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", QDBusConnection::systemBus());
 
 		iface.call("installPackage", execTerm.split(' ').at(1));
 
@@ -94,7 +146,7 @@ void ShamanRunner::executeAction()
 		if (execTerm.split(' ').count() <= 1)
 			return;
 
-		QDBusInterface iface("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman");
+		QDBusInterface iface("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", QDBusConnection::systemBus());
 
 		iface.call("removePackage", execTerm.split(' ').at(1));
 
@@ -103,7 +155,7 @@ void ShamanRunner::executeAction()
 	else if (execTerm.startsWith("upgrade-system", Qt::CaseInsensitive) || execTerm.startsWith("upgrade system", Qt::CaseInsensitive) ||
 			execTerm == "us")
 	{
-		QDBusInterface iface("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman");
+		QDBusInterface iface("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", QDBusConnection::systemBus());
 
 		iface.call("fullSysUpgrade");
 	}
@@ -111,7 +163,7 @@ void ShamanRunner::executeAction()
 			execTerm.startsWith("update db", Qt::CaseInsensitive) || execTerm.startsWith("update-db", Qt::CaseInsensitive) || 
 			execTerm == "ud")
 	{
-		QDBusInterface iface("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman");
+		QDBusInterface iface("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", QDBusConnection::systemBus());
 
 		iface.call("doDbUpdate");
 	}
