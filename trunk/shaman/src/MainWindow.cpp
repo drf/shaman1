@@ -777,7 +777,7 @@ void MainWindow::finishDbUpdate()
 					/* Ok, let's set up a special queue for Shaman. */
 
 					cancelAllActions();
-					installPackage("pacman");
+					reinstallPackage("pacman");
 					widgetQueueToAlpmQueue();
 
 					break;
@@ -800,13 +800,15 @@ void MainWindow::finishDbUpdate()
 				case QMessageBox::Yes:
 
 					/* Ok, let's set up a special queue for Shaman. */
+					
+					qDebug() << "Shaman Queue";
 
 					cancelAllActions();
 					
 					if(list.contains("kdemod4-shaman-svn"))
-						installPackage("kdemod4-shaman-svn");
+						reinstallPackage("kdemod4-shaman-svn");
 					else
-						installPackage("shaman");
+						reinstallPackage("shaman");
 					
 					widgetQueueToAlpmQueue();
 
@@ -1258,7 +1260,7 @@ void MainWindow::upgrade(const QStringList &packages)
 					/* Ok, let's set up a special queue for Shaman. */
 
 					cancelAllActions();
-					installPackage("pacman");
+					reinstallPackage("pacman");
 					widgetQueueToAlpmQueue();
 
 					break;
@@ -1285,9 +1287,9 @@ void MainWindow::upgrade(const QStringList &packages)
 					cancelAllActions();
 					
 					if(packages.contains("kdemod4-shaman-svn"))
-						installPackage("kdemod4-shaman-svn");
+						reinstallPackage("kdemod4-shaman-svn");
 					else
-						installPackage("shaman");
+						reinstallPackage("shaman");
 					
 					widgetQueueToAlpmQueue();
 
@@ -1600,7 +1602,10 @@ void MainWindow::widgetQueueToAlpmQueue()
 			pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 8).isEmpty() &&
 			pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 8).isEmpty() &&
 			pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 8).isEmpty())
+	{
+		qDebug() << "Nothing in Queue!";
 		return;
+	}
 
 	else if(pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 8).isEmpty() &&
 			pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 8).isEmpty())
