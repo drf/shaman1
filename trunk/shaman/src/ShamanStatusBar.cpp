@@ -45,9 +45,14 @@ void ShamanStatusBar::setUpStatusBar()
 	
 	addWidget(stBarImage);
 	addWidget(stBarText);
-	addPermanentWidget(stBarProg, 150);
+	
+	QWidget *tmpwg = new QWidget();
+	addPermanentWidget(tmpwg, 1024);
+	addPermanentWidget(stBarProg);
 	
 	stBarProg->hide();
+	
+	setSizeGripEnabled(false);
 	
 	updateStatusBar();
 }
