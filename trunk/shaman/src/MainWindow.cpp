@@ -172,6 +172,8 @@ turnOffSys(false)
 
 	QShortcut *clearLineEdit = new QShortcut(tr("Esc"), searchLine, SLOT(clear()));
 	Q_UNUSED(clearLineEdit);
+	
+	updateStatusBar();
 
 	return;
 }
@@ -728,6 +730,7 @@ void MainWindow::finishDbUpdate()
 		populatePackagesView();
 		populateRepoColumn();
 		populateGrpsColumn();
+		updateStatusBar();
 	}
 
 	qDebug() << "DB Update Finished";
@@ -1203,6 +1206,7 @@ void MainWindow::startUpgrading()
 			populatePackagesView();
 			populateRepoColumn();
 			populateGrpsColumn();
+			updateStatusBar();
 		}
 	}
 
@@ -1511,6 +1515,7 @@ void MainWindow::queueProcessingEnded(bool errors)
 
 		populateQueuePackagesView();
 		refinePkgView();
+		updateStatusBar();
 
 		if(queueDl->isVisible() && !settings->value("gui/keepqueuedialogopen", true).toBool())
 			ShamanDialog::popupDialog(tr("Queue Processed"), tr("Your Queue was successfully processed!"), this);
@@ -2044,4 +2049,13 @@ void MainWindow::showAuthDialog(int count)
 	}
 
 	wCond.wakeAll();
+}
+
+void MainWindow::updateStatusBar()
+{
+	QString text = QString(tr("%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages").
+			arg(aHandle->countPackages(Alpm::AllPackages)).arg(aHandle->countPackages(Alpm::InstalledPackages)).
+			arg(aHandle->getUpgradeablePackages().count()));
+	
+	stBar->showMessage(text);
 }

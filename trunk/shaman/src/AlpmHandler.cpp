@@ -1267,3 +1267,40 @@ QStringList AlpmHandler::getFFInQueue()
 {
 	return toFromFile;
 }
+
+int AlpmHandler::countPackages(Alpm::PackageStatus status)
+{
+	if (status == Alpm::AllPackages)
+	{
+		int retvalue = 0;
+		
+		alpm_list_t *databases = getAvailableRepos();
+
+		databases = alpm_list_first(databases);
+
+		while(databases != NULL)
+		{
+			pmdb_t *dbcrnt = (pmdb_t *)alpm_list_getdata(databases);
+
+			alpm_list_t *currentpkgs = alpm_db_getpkgcache(dbcrnt);
+			
+			retvalue += alpm_list_count(currentpkgs);
+			
+			databases = alpm_list_next(databases);
+		}
+		
+		return retvalue;
+	}
+	else if (status == Alpm::UpgradeablePackages)
+	{
+		return getUpgradeablePackages().count();
+	}
+	else if (status == Alpm::InstalledPackages)
+	{
+		alpm_list_t *currentpkgs = alpm_db_getpkgcache(db_local);
+		
+		return alpm_list_count(currentpkgs);
+	}
+	else
+		return 0;
+}

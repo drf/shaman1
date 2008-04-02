@@ -33,6 +33,16 @@
 
 using namespace std;
 
+namespace Alpm {
+
+	enum PackageStatus {
+		AllPackages,
+		InstalledPackages,
+		UpgradeablePackages
+	};
+
+}  // namespace Alpm
+
 class AlpmHandler : public QObject, private ConfigurationParser
 {
 	/* There goes our main class, that is aimed to... libalpm interaction.
@@ -84,6 +94,8 @@ public:
 	
 	QStringList getPackageFiles(pmpkg_t *package);
 	QStringList getPackageFiles(const QString &name);
+	
+	int countPackages(Alpm::PackageStatus status);
 	
 	QStringList getProviders(const QString &name, const QString &repo);
 	bool isProviderInstalled(const QString &provider);
