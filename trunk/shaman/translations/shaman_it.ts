@@ -2325,7 +2325,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/ShamanTrayIcon.cpp" line="51"/>
         <source>Process Queue</source>
-        <translation>Esegui la Coda</translation>
+        <translation>Rivedi la Coda</translation>
     </message>
     <message>
         <location filename="../src/ShamanTrayIcon.cpp" line="56"/>
