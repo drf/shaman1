@@ -38,10 +38,13 @@ void ShamanStatusBar::setUpStatusBar()
 {
 	stBarImage = new QLabel();
 	stBarText = new QLabel();
+	stBarProg = new QProgressBar();
 	
 	addWidget(stBarImage);
 	addWidget(stBarText);
 	addPermanentWidget(stBarProg);
+	
+	stBarProg->hide();
 	
 	updateStatusBar();
 }
