@@ -172,7 +172,7 @@ void PackageProperties::populateLogWidget()
 {
 	QFile fp(alpm_option_get_logfile());
 
-	QString contents;
+	QStringList contents;
 
 	if(!fp.open(QIODevice::ReadOnly | QIODevice::Text))
 		return;
@@ -189,14 +189,11 @@ void PackageProperties::populateLogWidget()
 
 	QString toShow;
 	QString pkgName(alpm_pkg_get_name(curPkg));
-	qDebug() << pkgName;
 
 	foreach(QString ent, contents)
 	{
 		if(!ent.contains(pkgName, Qt::CaseInsensitive))
 			continue;
-		
-		qDebug() << "found";
 		
 		toShow.append(ent + QChar('\n'));
 	}
