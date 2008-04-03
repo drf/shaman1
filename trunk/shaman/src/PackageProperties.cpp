@@ -20,6 +20,8 @@
 
 #include "PackageProperties.h"
 
+#include <sys/types.h>
+
 PackageProperties::PackageProperties(AlpmHandler *aH, QWidget *parent)
  : QDialog(parent),
  aHandle(aH)
@@ -29,4 +31,65 @@ PackageProperties::PackageProperties(AlpmHandler *aH, QWidget *parent)
 
 PackageProperties::~PackageProperties()
 {
+}
+
+QString PackageProperties::formatSize(unsigned long size)
+{
+	QString s;
+	if (size > 1024 * 1024 * 1024)
+		s = tr("%1 GiB", "Size is in Gib").arg((double) size / (1024 *1024 * 1024), 0, 'f', 2);
+	else if (size > 1024 * 1024)
+		s = tr("%1 MiB", "Size is in MiB").arg((double) size / (1024 * 1024), 0, 'f', 2);
+	else if (size > 1024)
+		s = tr("%1 KiB", "Size is in KiB").arg(size / 1024);
+	else
+		s = tr("%1 Bytes", "Size is in Bytes").arg(size);
+
+	return s;
+}
+
+void PackageProperties::setPackage(pmpkg_t *pkg)
+{
+	curPkg = pkg;
+}
+
+void PackageProperties::setPackage(const QString &pkgname)
+{
+	curPkg = aHandle->getPackageFromName(pkgname, aHandle->getPackageRepo(pkgname));
+}
+
+void PackageProperties::reloadPkgInfo()
+{
+	populateInfoWidget();
+}
+
+void PackageProperties::populateInfoWidget()
+{
+	char buf[80];
+	time_t now = alpm_pkg_get_builddate(curPkg);
+	struct tm *ts = gmtime(&now);
+	strftime(buf, sizeof(buf), "%Y-%m-%d %H:%M:%S", ts);
+	
+	if (aHandle->isInstalled(curPkg))
+		installedLabel->setPixmap(QPixmap(":/Icons/icons/dialog-ok-apply.png"));
+	else
+		installedLabel->setPixmap(QPixmap(":/Icons/icons/edit-delete.png"));
+
+	if (aHandle->getUpgradeablePackages().contains(alpm_pkg_get_name(curPkg)))
+		upgradeableLabel->setPixmap(QPixmap(":/Icons/icons/dialog-ok-apply.png"));
+	else
+		upgradeableLabel->setPixmap(QPixmap(":/Icons/icons/edit-delete.png"));
+
+	if (alpm_pkg_has_scriptlet(curPkg))
+		scriptletLabel->setPixmap(QPixmap(":/Icons/icons/dialog-ok-apply.png"));
+	else
+		scriptletLabel->setPixmap(QPixmap(":/Icons/icons/edit-delete.png"));
+	
+	descriptionLabel->setText(alpm_pkg_get_desc(curPkg));
+	versionLabel->setText(alpm_pkg_get_version(curPkg));
+	builddateLabel->setText(buf);
+	//installdateLabel->setText(alpm_pkg_get_installdate());
+	packagerLabel->setText(alpm_pkg_get_packager(curPkg));
+	sizeLabel->setText(formatSize(alpm_pkg_get_size(curPkg)));
+	providesWidget->addItems(aHandle->getProviders(curPkg));
 }

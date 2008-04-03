@@ -26,6 +26,8 @@
 
 class PackageProperties : public QDialog, private Ui::pkgProperties
 {
+	Q_OBJECT
+	
 public:
 	explicit PackageProperties(AlpmHandler *aH, QWidget *parent = 0);
 	virtual ~PackageProperties();
@@ -44,6 +46,7 @@ private:
 	void populateInfoWidget();
 	void populateLogWidget();
 	void populateChangelogWidget();
+	QString formatSize(unsigned long size);
 	
 private:
 	AlpmHandler *aHandle;

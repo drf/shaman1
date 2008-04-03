@@ -1003,6 +1003,22 @@ QStringList AlpmHandler::getProviders(const QString &name, const QString &repo)
 	return retlist;
 }
 
+QStringList AlpmHandler::getProviders(pmpkg_t *pkg)
+{
+	alpm_list_t *provides;
+	QStringList retlist;
+
+	provides = alpm_pkg_get_provides(pkg);
+
+	while(provides != NULL)
+	{
+		retlist.append(QString((char *)alpm_list_getdata(provides)));
+		provides = alpm_list_next(provides);
+	}
+
+	return retlist;
+}
+
 bool AlpmHandler::isProviderInstalled(const QString &provider)
 {
 	/* Here's what we need to do: iterate the installed

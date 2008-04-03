@@ -98,6 +98,7 @@ public:
 	int countPackages(Alpm::PackageStatus status);
 	
 	QStringList getProviders(const QString &name, const QString &repo);
+	QStringList getProviders(pmpkg_t *pkg);
 	bool isProviderInstalled(const QString &provider);
 	
 	unsigned long getPackageSize(const QString &name, const QString &repo);

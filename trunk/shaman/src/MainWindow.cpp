@@ -40,6 +40,7 @@
 #include "Authenticator.h"
 #include "ShamanDialog.h"
 #include "ShamanStatusBar.h"
+#include "PackageProperties.h"
 
 #include <iostream>
 #include <alpm.h>
@@ -883,6 +884,12 @@ void MainWindow::showPkgsViewContextMenu()
 	connect(upgradeAction, SIGNAL(triggered()), SLOT(upgradePackage()));
 	QAction *cancelAction = menu->addAction(QIcon(":/Icons/icons/dialog-cancel.png"), tr("Cancel Action"));
 	connect(cancelAction, SIGNAL(triggered()), SLOT(cancelAction()));
+	
+	menu->addSeparator();
+	
+	QAction *infoAction = menu->addAction(QIcon(":/Icons/icons/help-about.png"), tr("Package Information"));
+	connect(infoAction, SIGNAL(triggered()), SLOT(showInfoDialog()));
+	
 
 	if (aHandle->isInstalled(item->text(1)) && aHandle->getUpgradeablePackages().contains(item->text(1)))
 	{
@@ -2102,4 +2109,15 @@ void MainWindow::showAuthDialog(int count)
 	}
 
 	wCond.wakeAll();
+}
+
+void MainWindow::showInfoDialog()
+{
+	pkgProp = new PackageProperties(aHandle, this);
+	
+	pkgProp->setPackage(pkgsViewWG->selectedItems().first()->text(1));
+	
+	pkgProp->reloadPkgInfo();
+	
+	pkgProp->show();
 }
