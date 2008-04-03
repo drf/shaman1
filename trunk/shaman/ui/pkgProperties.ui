@@ -8,8 +8,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>561</width>
-    <height>405</height>
+    <width>571</width>
+    <height>412</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -92,8 +92,8 @@ p, li { white-space: pre-wrap; }
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>539</width>
-          <height>269</height>
+          <width>549</width>
+          <height>276</height>
          </rect>
         </property>
         <attribute name="title" >
@@ -264,8 +264,8 @@ p, li { white-space: pre-wrap; }
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>539</width>
-          <height>269</height>
+          <width>549</width>
+          <height>276</height>
          </rect>
         </property>
         <attribute name="title" >
@@ -292,8 +292,8 @@ p, li { white-space: pre-wrap; }
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>539</width>
-          <height>269</height>
+          <width>549</width>
+          <height>276</height>
          </rect>
         </property>
         <attribute name="title" >
@@ -316,8 +316,8 @@ p, li { white-space: pre-wrap; }
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>539</width>
-          <height>269</height>
+          <width>549</width>
+          <height>276</height>
          </rect>
         </property>
         <attribute name="title" >
@@ -351,8 +351,8 @@ p, li { white-space: pre-wrap; }
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>539</width>
-          <height>269</height>
+          <width>549</width>
+          <height>276</height>
          </rect>
         </property>
         <attribute name="title" >
@@ -407,7 +407,6 @@ p, li { white-space: pre-wrap; }
     </layout>
    </item>
   </layout>
-  <zorder>okButton</zorder>
  </widget>
  <resources>
   <include location="shaman.qrc" />
