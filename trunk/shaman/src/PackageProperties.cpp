@@ -20,13 +20,17 @@
 
 #include "PackageProperties.h"
 
-#include <sys/types.h>
+#include <QHeaderView>
+#include <QFile>
+#include <QTextStream>
+#include <QDebug>
 
 PackageProperties::PackageProperties(AlpmHandler *aH, QWidget *parent)
  : QDialog(parent),
  aHandle(aH)
 {
 	setupUi(this);
+	setAttribute(Qt::WA_DeleteOnClose);
 }
 
 PackageProperties::~PackageProperties()
@@ -61,6 +65,9 @@ void PackageProperties::setPackage(const QString &pkgname)
 void PackageProperties::reloadPkgInfo()
 {
 	populateInfoWidget();
+	populateFileWidget();
+	populateDepsWidget();
+	populateLogWidget();
 }
 
 void PackageProperties::populateInfoWidget()
@@ -84,7 +91,7 @@ void PackageProperties::populateInfoWidget()
 		scriptletLabel->setPixmap(QPixmap(":/Icons/icons/dialog-ok-apply.png"));
 	else
 		scriptletLabel->setPixmap(QPixmap(":/Icons/icons/edit-delete.png"));
-	
+
 	descriptionLabel->setText(alpm_pkg_get_desc(curPkg));
 	versionLabel->setText(alpm_pkg_get_version(curPkg));
 	builddateLabel->setText(buf);
@@ -92,4 +99,107 @@ void PackageProperties::populateInfoWidget()
 	packagerLabel->setText(alpm_pkg_get_packager(curPkg));
 	sizeLabel->setText(formatSize(alpm_pkg_get_size(curPkg)));
 	providesWidget->addItems(aHandle->getProviders(curPkg));
+}
+
+void PackageProperties::populateFileWidget()
+{
+	treeWidget->clear();
+	treeWidget->header()->hide();
+	QStringList files = aHandle->getPackageFiles(curPkg);
+	foreach (QString file, files)
+	{
+		QStringList splitted = file.split("/");
+		QTreeWidgetItem *parentItem = 0;
+		foreach (QString spl, splitted)
+		{
+			if (spl.isEmpty())
+				continue;
+			if (parentItem)
+			{
+				bool there = false;
+				int j = parentItem->childCount();
+				for (int i = 0;i != j; i++)
+				{
+					if (parentItem->child(i)->text(0) == spl)
+					{
+						there = true;
+						parentItem = parentItem->child(i);
+						continue;
+					}
+				}
+				if (!there)
+					parentItem->addChild(new QTreeWidgetItem(parentItem, (QStringList) spl));
+			}
+			else
+			{
+				QList<QTreeWidgetItem*> list = treeWidget->findItems(spl, Qt::MatchExactly);
+				if (!list.isEmpty())
+				{
+					parentItem = list.first();
+				}
+				else
+				{
+					treeWidget->insertTopLevelItem(0, new QTreeWidgetItem(treeWidget, (QStringList) spl));
+				}
+			}
+		}
+	}
+}
+
+void PackageProperties::populateDepsWidget()
+{
+	dependsWidget->clear();
+	foreach (QString dep, aHandle->getPackageDependencies(curPkg))
+	{
+		if (!dep.isEmpty())
+			dependsWidget->addItem(dep);
+	}
+
+	requiredWidget->clear();
+	foreach (QString dep, aHandle->getDependenciesOnPackage(curPkg))
+	{
+		if (!dep.isEmpty())
+			requiredWidget->addItem(dep);
+	}
+}
+
+void PackageProperties::populateChangelogWidget()
+{
+	
+}
+
+void PackageProperties::populateLogWidget()
+{
+	QFile fp(alpm_option_get_logfile());
+
+	QString contents;
+
+	if(!fp.open(QIODevice::ReadOnly | QIODevice::Text))
+		return;
+
+	QTextStream in(&fp);
+
+	while(!in.atEnd()) 
+	{
+		QString line = in.readLine();
+		contents.append(line);
+	}
+	
+	fp.close();
+
+	QString toShow;
+	QString pkgName(alpm_pkg_get_name(curPkg));
+	qDebug() << pkgName;
+
+	foreach(QString ent, contents)
+	{
+		if(!ent.contains(pkgName, Qt::CaseInsensitive))
+			continue;
+		
+		qDebug() << "found";
+		
+		toShow.append(ent + QChar('\n'));
+	}
+
+	logEdit->setText(toShow);
 }

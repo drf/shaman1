@@ -60,6 +60,8 @@ void LogViewer::loadLog()
 		contents.append(line);
 	}
 	
+	fp.close();
+	
 	yearFromSpin->setValue(contents.at(0).mid(1, 4).toInt());
 	monthFromSpin->setValue(contents.at(0).mid(6, 2).toInt());
 	dayFromSpin->setValue(contents.at(0).mid(9, 2).toInt());
