@@ -150,7 +150,7 @@ p, li { white-space: pre-wrap; }
          <item row="4" column="1" colspan="2" >
           <widget class="QLabel" name="builddateLabel" >
            <property name="text" >
-            <string>TextLabel</string>
+            <string/>
            </property>
            <property name="scaledContents" >
             <bool>true</bool>
@@ -201,7 +201,7 @@ p, li { white-space: pre-wrap; }
          <item row="5" column="1" >
           <widget class="QLabel" name="installdateLabel" >
            <property name="text" >
-            <string>TextLabel</string>
+            <string/>
            </property>
            <property name="scaledContents" >
             <bool>true</bool>
@@ -214,7 +214,7 @@ p, li { white-space: pre-wrap; }
          <item row="6" column="1" >
           <widget class="QLabel" name="packagerLabel" >
            <property name="text" >
-            <string>TextLabel</string>
+            <string/>
            </property>
            <property name="scaledContents" >
             <bool>true</bool>
@@ -227,7 +227,7 @@ p, li { white-space: pre-wrap; }
          <item row="7" column="1" >
           <widget class="QLabel" name="sizeLabel" >
            <property name="text" >
-            <string>TextLabel</string>
+            <string/>
            </property>
           </widget>
          </item>
@@ -264,7 +264,7 @@ p, li { white-space: pre-wrap; }
          <item row="2" column="1" >
           <widget class="QLabel" name="versionLabel" >
            <property name="text" >
-            <string>TextLabel</string>
+            <string/>
            </property>
           </widget>
          </item>
