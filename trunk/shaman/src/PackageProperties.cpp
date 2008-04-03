@@ -55,11 +55,12 @@ QString PackageProperties::formatSize(unsigned long size)
 void PackageProperties::setPackage(pmpkg_t *pkg)
 {
 	curPkg = pkg;
+	setWindowTitle(QString(tr("Shaman - %1 properties")).arg(alpm_pkg_get_name(curPkg)));
 }
 
 void PackageProperties::setPackage(const QString &pkgname)
 {
-	curPkg = aHandle->getPackageFromName(pkgname, aHandle->getPackageRepo(pkgname));
+	setPackage(aHandle->getPackageFromName(pkgname, aHandle->getPackageRepo(pkgname)));
 }
 
 void PackageProperties::reloadPkgInfo()
@@ -73,9 +74,7 @@ void PackageProperties::reloadPkgInfo()
 void PackageProperties::populateInfoWidget()
 {
 	char buf[80];
-	time_t now = alpm_pkg_get_builddate(curPkg);
-	struct tm *ts = gmtime(&now);
-	strftime(buf, sizeof(buf), "%Y-%m-%d %H:%M:%S", ts);
+	QString notAvailable(QString(tr("N/A", "Stands for: Not Available")));
 	
 	if (aHandle->isInstalled(curPkg))
 		installedLabel->setPixmap(QPixmap(":/Icons/icons/dialog-ok-apply.png"));
@@ -94,9 +93,32 @@ void PackageProperties::populateInfoWidget()
 
 	descriptionLabel->setText(alpm_pkg_get_desc(curPkg));
 	versionLabel->setText(alpm_pkg_get_version(curPkg));
-	builddateLabel->setText(buf);
-	//installdateLabel->setText(alpm_pkg_get_installdate());
-	packagerLabel->setText(alpm_pkg_get_packager(curPkg));
+
+	time_t now = alpm_pkg_get_builddate(curPkg);
+	struct tm *ts = gmtime(&now);
+	strftime(buf, sizeof(buf), "%Y-%m-%d %H:%M:%S", ts);
+	QString bDate(buf);
+	if(bDate.startsWith("1970"))
+		// LOL @ The Epoch
+		builddateLabel->setText(notAvailable);
+	else
+		builddateLabel->setText(buf);
+	
+	now = alpm_pkg_get_installdate(curPkg);
+	ts = gmtime(&now);
+	strftime(buf, sizeof(buf), "%Y-%m-%d %H:%M:%S", ts);
+	bDate = buf;
+	if(bDate.startsWith("1970"))
+		// LOL @ The Epoch
+		installdateLabel->setText(notAvailable);
+	else
+		installdateLabel->setText(buf);
+
+	if(!strlen(alpm_pkg_get_packager(curPkg)))
+		packagerLabel->setText(notAvailable);
+	else
+		packagerLabel->setText(alpm_pkg_get_packager(curPkg));
+
 	sizeLabel->setText(formatSize(alpm_pkg_get_size(curPkg)));
 	providesWidget->addItems(aHandle->getProviders(curPkg));
 }
