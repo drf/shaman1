@@ -36,7 +36,9 @@ ShamanRunner::ShamanRunner(QObject *parent, const QVariantList &args)
 
     words << "install" << "remove" << "uninstall" << "upgrade-system" << "upgrade system" << "update database" 
                             << "update db" << "update-db" << "update-database" << "us" << "ud" << "i" << "r" 
-                            << "complete-remove" << "complete-uninstall" << "package manager";
+                            << "complete-remove" << "complete-uninstall" << "pm" << "shaman" << "package manager";
+    
+    setObjectName(i18n("Shaman Package Manager"));
 }
 
 ShamanRunner::~ShamanRunner()
@@ -49,75 +51,95 @@ void ShamanRunner::match(Plasma::SearchContext *search)
     QString term = search->searchTerm();
 
     foreach(QString word, words)
-    {    	
+    {
     	if (term.startsWith(word, Qt::CaseInsensitive))
     	{
-    		Plasma::SearchMatch* match = new Plasma::SearchMatch(this);
-    		match->setType(Plasma::SearchMatch::ExactMatch);
-
-    		/* Now throw some nice icons in here */
-
-    		if (term.startsWith("install", Qt::CaseInsensitive) || 
-    				term.startsWith('i', Qt::CaseInsensitive))
+    		if (word == "update database" || word == "update db" || 
+    				word == "update-db" || word == "update-database" || 
+    				word == "ud")
     		{
-    			if (term.split(' ').count() <= 1)
-    			{
-    				match->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
-    				match->setText(i18n("Package Manager: Install Package"));
-    			}
-    			else
-    			{    			
-    				match->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
-    				match->setText(i18n("Package Manager: Install %1", term.split(' ').at(1)));
-    			}
-    		}
-
-    		else if (term.startsWith("remove", Qt::CaseInsensitive) || 
-    				term.startsWith("uninstall", Qt::CaseInsensitive) || 
-    				term.startsWith('r', Qt::CaseInsensitive))
-    		{
-    			if (term.split(' ').count() <= 1)
-    			{
-    				match->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
-    				match->setText(i18n("Package Manager: Remove Package"));
-    			}
-    			else
-    			{
-    				match->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
-    				match->setText(i18n("Package Manager: Remove %1", term.split(' ').at(1)));
-    			}
-    		}
-    		
-    		else if (term.startsWith("upgrade-system", Qt::CaseInsensitive) || 
-    				term.startsWith("upgrade system", Qt::CaseInsensitive) ||
-    				term == "us")
-    		{
-    			match->setText(i18n("Package Manager: Upgrade System"));
-    			match->setIcon(QIcon(":/Icons/icons/shaman/shaman-updates-available-32.png"));
-    		}
-    		
-    		else if (term.startsWith("update database", Qt::CaseInsensitive) || 
-    				term.startsWith("update-database", Qt::CaseInsensitive) || 
-    				term.startsWith("update db", Qt::CaseInsensitive) || 
-    				term.startsWith("update-db", Qt::CaseInsensitive) || 
-    				term == "ud")
-    		{
-    			match->setText(i18n("Update Databases"));
+    			Plasma::SearchMatch* match = new Plasma::SearchMatch(this);
+    			match->setType(Plasma::SearchMatch::ExactMatch);
+    			
     			match->setIcon(QIcon(":/Icons/icons/shaman/shaman-yellow-icon-32.png"));
+    			match->setText(i18n("Package Manager: Update Databases"));
+    			
+    			match->setRelevance(1);
+    			search->addMatch(term, match);
     		}
+    		else if (word == "upgrade-system" || word == "upgrade system" ||
+    				word == "us")
+    		{
+    			Plasma::SearchMatch* match = new Plasma::SearchMatch(this);
+    			match->setType(Plasma::SearchMatch::ExactMatch);
 
-    		match->setSubtext(i18n("Shaman Package Manager"));
-    		match->setRelevance(1);
+    			match->setIcon(QIcon(":/Icons/icons/shaman/shaman-system-is-up-to-date-32.png"));
+    			match->setText(i18n("Package Manager: Upgrade System"));
+
+    			match->setRelevance(1);
+    			search->addMatch(term, match);
+    		}
+    		else if (word == "install" || word == "i")
+    		{
+    			if(term.split(' ').count() != 2)
+    				return;
+    			
+    			Plasma::SearchMatch* match = new Plasma::SearchMatch(this);
+    			match->setType(Plasma::SearchMatch::ExactMatch);
+
+    			match->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
+    			match->setText(i18n("Package Manager: Install %1", term.split(' ').at(1)));
+
+    			match->setRelevance(1);
+    			search->addMatch(term, match);
+    		}
+    		else if (word == "remove" || word == "r")
+    		{
+    			if(term.split(' ').count() != 2)
+    				return;
+
+    			Plasma::SearchMatch* match = new Plasma::SearchMatch(this);
+    			match->setType(Plasma::SearchMatch::ExactMatch);
+
+    			match->setIcon(QIcon(":/Icons/icons/shaman/shaman-updates-available-32.png"));
+    			match->setText(i18n("Package Manager: Remove %1", term.split(' ').at(1)));
+
+    			match->setRelevance(1);
+    			search->addMatch(term, match);
+    		}
+    		else if (word == "pm" || word == "shaman" || 
+    				word == "package manager")
+    		{
+    			Plasma::SearchMatch* match = new Plasma::SearchMatch(this);
+    			match->setType(Plasma::SearchMatch::ExactMatch);
+
+    			match->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
+    			match->setText(i18n("Start Package Manager"));
+
+    			match->setRelevance(1);
+    			search->addMatch(term, match);
+    		}
+    		else
+    		{
+    			Plasma::SearchMatch* match = new Plasma::SearchMatch(this);
+    			match->setType(Plasma::SearchMatch::ExactMatch);
+    			
+    			match->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
+    			match->setText(i18n("Package Manager: %1", term));
+    			
+    			match->setRelevance(1);
+    			search->addMatch(term, match);
+    		}  		
     	}
     }
 }
 
 void ShamanRunner::exec(const Plasma::SearchContext *search, const Plasma::SearchMatch *action)
 {
-	execTerm = search->searchTerm();
-
-	/* First of all, let's check if Shaman has been already
-	 * started.
+    execTerm = search->searchTerm();
+    
+    /* First of all, let's check if Shaman has been already
+     * started.
      */
     
     if(!dbus.interface()->isServiceRegistered("org.archlinux.shaman"))

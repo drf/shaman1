@@ -1,0 +1,450 @@
+<ui version="4.0" >
+ <class>pkgProperties</class>
+ <widget class="QDialog" name="pkgProperties" >
+  <property name="windowModality" >
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>588</width>
+    <height>554</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string/>
+  </property>
+  <property name="windowIcon" >
+   <iconset resource="shaman.qrc" >
+    <normaloff>:/Icons/icons/shaman/shaman-system-is-up-to-date-22.png</normaloff>:/Icons/icons/shaman/shaman-system-is-up-to-date-22.png</iconset>
+  </property>
+  <property name="locale" >
+   <locale country="UnitedStates" language="English" />
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2" >
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout" >
+     <item>
+      <widget class="QFrame" name="frame" >
+       <property name="sizePolicy" >
+        <sizepolicy vsizetype="Maximum" hsizetype="Preferred" >
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="frameShape" >
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow" >
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <layout class="QGridLayout" >
+        <item row="0" column="0" >
+         <widget class="QLabel" name="label" >
+          <property name="text" >
+           <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'Bitstream Vera Sans'; font-size:10pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;span style=" font-weight:600;">Package Properties&lt;/span>&lt;/p>&lt;/body>&lt;/html></string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1" >
+         <widget class="QLabel" name="label_2" >
+          <property name="sizePolicy" >
+           <sizepolicy vsizetype="Maximum" hsizetype="Maximum" >
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize" >
+           <size>
+            <width>32</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string/>
+          </property>
+          <property name="pixmap" >
+           <pixmap resource="shaman.qrc" >:/Icons/icons/dialog-ok-apply.png</pixmap>
+          </property>
+          <property name="scaledContents" >
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTabWidget" name="filesWidget" >
+       <property name="locale" >
+        <locale country="UnitedStates" language="English" />
+       </property>
+       <property name="currentIndex" >
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="tab" >
+        <property name="geometry" >
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>566</width>
+          <height>418</height>
+         </rect>
+        </property>
+        <attribute name="title" >
+         <string>Package Information</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_3" >
+         <item>
+          <layout class="QGridLayout" name="gridLayout" >
+           <item row="0" column="0" >
+            <widget class="QLabel" name="label_3" >
+             <property name="text" >
+              <string>Installed</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1" >
+            <widget class="QLabel" name="installedLabel" >
+             <property name="text" >
+              <string/>
+             </property>
+             <property name="pixmap" >
+              <pixmap resource="shaman.qrc" >:/Icons/icons/dialog-ok-apply.png</pixmap>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" >
+            <widget class="QLabel" name="label_4" >
+             <property name="text" >
+              <string>Upgradeable</string>
+             </property>
+             <property name="scaledContents" >
+              <bool>true</bool>
+             </property>
+             <property name="wordWrap" >
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1" >
+            <widget class="QLabel" name="upgradeableLabel" >
+             <property name="text" >
+              <string/>
+             </property>
+             <property name="pixmap" >
+              <pixmap resource="shaman.qrc" >:/Icons/icons/dialog-ok-apply.png</pixmap>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0" >
+            <widget class="QLabel" name="label_7" >
+             <property name="text" >
+              <string>Description</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1" >
+            <widget class="QLabel" name="descriptionLabel" >
+             <property name="text" >
+              <string/>
+             </property>
+             <property name="scaledContents" >
+              <bool>true</bool>
+             </property>
+             <property name="wordWrap" >
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0" >
+            <widget class="QLabel" name="label_17" >
+             <property name="text" >
+              <string>Version</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1" >
+            <widget class="QLabel" name="versionLabel" >
+             <property name="text" >
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0" >
+            <widget class="QLabel" name="label_8" >
+             <property name="text" >
+              <string>Build Date</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1" >
+            <widget class="QLabel" name="buildLabel" >
+             <property name="text" >
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0" >
+            <widget class="QLabel" name="label_11" >
+             <property name="text" >
+              <string>Install Date</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1" >
+            <widget class="QLabel" name="dateLabel" >
+             <property name="text" >
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0" >
+            <widget class="QLabel" name="label_12" >
+             <property name="text" >
+              <string>Packager</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1" >
+            <widget class="QLabel" name="packagerLabel" >
+             <property name="text" >
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0" >
+            <widget class="QLabel" name="label_13" >
+             <property name="text" >
+              <string>Provides</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1" >
+            <widget class="QLabel" name="providesLabel" >
+             <property name="text" >
+              <string/>
+             </property>
+             <property name="scaledContents" >
+              <bool>true</bool>
+             </property>
+             <property name="wordWrap" >
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0" >
+            <widget class="QLabel" name="label_19" >
+             <property name="text" >
+              <string>Size</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1" >
+            <widget class="QLabel" name="sizeLabel" >
+             <property name="text" >
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0" >
+            <widget class="QLabel" name="label_21" >
+             <property name="text" >
+              <string>Has a Scriptlet</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="1" >
+            <widget class="QLabel" name="scriptletLabel" >
+             <property name="text" >
+              <string/>
+             </property>
+             <property name="pixmap" >
+              <pixmap resource="shaman.qrc" >:/Icons/icons/dialog-ok-apply.png</pixmap>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tab_2" >
+        <property name="geometry" >
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>566</width>
+          <height>418</height>
+         </rect>
+        </property>
+        <attribute name="title" >
+         <string>Changelog</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_4" >
+         <item>
+          <widget class="QTextEdit" name="changeLogEdit" >
+           <property name="undoRedoEnabled" >
+            <bool>false</bool>
+           </property>
+           <property name="readOnly" >
+            <bool>true</bool>
+           </property>
+           <property name="acceptRichText" >
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tab_3" >
+        <property name="geometry" >
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>566</width>
+          <height>418</height>
+         </rect>
+        </property>
+        <attribute name="title" >
+         <string>Files</string>
+        </attribute>
+        <layout class="QHBoxLayout" name="horizontalLayout_2" >
+         <item>
+          <widget class="QTreeWidget" name="treeWidget" >
+           <column>
+            <property name="text" >
+             <string>1</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tab_4" >
+        <property name="geometry" >
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>566</width>
+          <height>418</height>
+         </rect>
+        </property>
+        <attribute name="title" >
+         <string>Dependancies</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_6" >
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_5" >
+           <item>
+            <widget class="QLabel" name="label_23" >
+             <property name="text" >
+              <string>Depends on</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QListWidget" name="dependsWidget" />
+           </item>
+           <item>
+            <widget class="QLabel" name="label_24" >
+             <property name="text" >
+              <string>Is Required by</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QListWidget" name="requiredWidget" />
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tab_5" >
+        <property name="geometry" >
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>566</width>
+          <height>418</height>
+         </rect>
+        </property>
+        <attribute name="title" >
+         <string>Actions Performed</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_7" >
+         <item>
+          <widget class="QTextEdit" name="logEdit" >
+           <property name="undoRedoEnabled" >
+            <bool>false</bool>
+           </property>
+           <property name="readOnly" >
+            <bool>true</bool>
+           </property>
+           <property name="acceptRichText" >
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout" >
+       <item>
+        <spacer name="horizontalSpacer" >
+         <property name="orientation" >
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0" >
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="okButton" >
+         <property name="text" >
+          <string>Ok</string>
+         </property>
+         <property name="icon" >
+          <iconset resource="shaman.qrc" >
+           <normaloff>:/Icons/icons/dialog-ok-apply.png</normaloff>:/Icons/icons/dialog-ok-apply.png</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="shaman.qrc" />
+ </resources>
+ <connections>
+  <connection>
+   <sender>okButton</sender>
+   <signal>clicked()</signal>
+   <receiver>pkgProperties</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>541</x>
+     <y>532</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>293</x>
+     <y>276</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -53,6 +53,7 @@ SET(shaman_SRCS ${shaman_adaptor_SRCS}
     src/Authenticator.cpp
     src/ShamanDialog.cpp
     src/ShamanStatusBar.cpp
+    src/PackageProperties.cpp
 )
 
 SET(shaman_MOC_HDRS
@@ -74,6 +75,7 @@ SET(shaman_MOC_HDRS
     src/LogViewer.h
     src/Authenticator.h
     src/ShamanStatusBar.h
+    src/PackageProperties.h
 )
 
 SET(shaman_UIS
@@ -90,6 +92,7 @@ SET(shaman_UIS
     ui/newsDialog.ui
     ui/logViewer.ui
     ui/authDialog.ui
+    ui/pkgProperties.ui
 )
 
 SET(shaman_RESOUCES
