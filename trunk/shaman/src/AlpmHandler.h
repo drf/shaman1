@@ -126,7 +126,6 @@ public:
 	bool cleanCache(bool empty = false);
 	
 	int rmrf(const char *path);
-	int makepath(const char *path);
 	
 	bool isInstalled(pmpkg_t *pkg);
 	bool isInstalled(const QString &pkg);
