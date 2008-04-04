@@ -12,6 +12,9 @@
   <property name="windowTitle" >
    <string>Tribe</string>
   </property>
+  <property name="styleSheet" >
+   <string>background-image: url("./images/archtest.jpg");</string>
+  </property>
   <layout class="QGridLayout" >
    <item row="1" column="0" >
     <widget class="QListWidget" name="listWidget" >
