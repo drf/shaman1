@@ -2113,6 +2113,12 @@ void MainWindow::showAuthDialog(int count)
 
 void MainWindow::showInfoDialog()
 {
+	if(pkgProp != NULL)
+		pkgProp->deleteLater();
+	
+	if(pkgsViewWG->selectedItems().isEmpty())
+		return;
+	
 	pkgProp = new PackageProperties(aHandle, this);
 	
 	pkgProp->setPackage(pkgsViewWG->selectedItems().first()->text(1));

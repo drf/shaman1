@@ -6,14 +6,15 @@
     <x>0</x>
     <y>0</y>
     <width>811</width>
-    <height>606</height>
+    <height>612</height>
    </rect>
   </property>
   <property name="windowTitle" >
    <string>Shaman - Configuration</string>
   </property>
   <property name="windowIcon" >
-   <iconset/>
+   <iconset resource="shaman.qrc" >
+    <normaloff>:/Icons/icons/shaman/shaman-system-is-up-to-date-32.png</normaloff>:/Icons/icons/shaman/shaman-system-is-up-to-date-32.png</iconset>
   </property>
   <layout class="QGridLayout" >
    <item row="0" column="0" >
@@ -71,6 +72,14 @@
       <number>0</number>
      </property>
      <widget class="QWidget" name="Seite" >
+      <property name="geometry" >
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>679</width>
+        <height>570</height>
+       </rect>
+      </property>
       <layout class="QVBoxLayout" >
        <item>
         <widget class="QGroupBox" name="groupBox_5" >
@@ -185,7 +194,8 @@
                  <string>Process Selected</string>
                 </property>
                 <property name="icon" >
-                 <iconset resource="shaman.qrc" >:/Icons/icons/dialog-ok-apply.png</iconset>
+                 <iconset resource="shaman.qrc" >
+                  <normaloff>:/Icons/icons/dialog-ok-apply.png</normaloff>:/Icons/icons/dialog-ok-apply.png</iconset>
                 </property>
                </widget>
               </item>
@@ -194,7 +204,7 @@
                 <property name="orientation" >
                  <enum>Qt::Horizontal</enum>
                 </property>
-                <property name="sizeHint" >
+                <property name="sizeHint" stdset="0" >
                  <size>
                   <width>40</width>
                   <height>20</height>
@@ -227,11 +237,12 @@
                </sizepolicy>
               </property>
               <property name="html" >
-               <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+               <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
 p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Liberation Sans'; font-size:9pt; font-weight:400; font-style:normal;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Shaman Manteinance.&lt;/p>
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Please choose an action from the Drop-Down Menu.&lt;/p>&lt;/body>&lt;/html></string>
+&lt;/style>&lt;/head>&lt;body style=" font-family:'Bitstream Vera Sans'; font-size:10pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Liberation Sans'; font-size:9pt;">Shaman Manteinance.&lt;/p>
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Liberation Sans'; font-size:9pt;">Please choose an action from the Drop-Down Menu.&lt;/p>&lt;/body>&lt;/html></string>
               </property>
              </widget>
             </item>
@@ -243,6 +254,14 @@ p, li { white-space: pre-wrap; }
       </layout>
      </widget>
      <widget class="QWidget" name="Seite_2" >
+      <property name="geometry" >
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>100</width>
+        <height>30</height>
+       </rect>
+      </property>
       <layout class="QGridLayout" >
        <item row="0" column="0" >
         <widget class="QGroupBox" name="groupBox_2" >
@@ -376,7 +395,7 @@ p, li { white-space: pre-wrap; }
          <property name="orientation" >
           <enum>Qt::Vertical</enum>
          </property>
-         <property name="sizeHint" >
+         <property name="sizeHint" stdset="0" >
           <size>
            <width>20</width>
            <height>40</height>
@@ -387,6 +406,14 @@ p, li { white-space: pre-wrap; }
       </layout>
      </widget>
      <widget class="QWidget" name="page" >
+      <property name="geometry" >
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>100</width>
+        <height>30</height>
+       </rect>
+      </property>
       <layout class="QGridLayout" >
        <item row="1" column="0" >
         <widget class="QTabWidget" name="repoTab" >
@@ -394,11 +421,20 @@ p, li { white-space: pre-wrap; }
           <number>0</number>
          </property>
          <widget class="QWidget" name="officialTab" >
+          <property name="geometry" >
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>640</width>
+            <height>320</height>
+           </rect>
+          </property>
           <attribute name="title" >
            <string>Arch Linux Official Repositories</string>
           </attribute>
           <attribute name="icon" >
-           <iconset resource="shaman.qrc" >:/Icons/icons/archlinux-icon-crystal-32.svg</iconset>
+           <iconset resource="shaman.qrc" >
+            <normaloff>:/Icons/icons/archlinux-icon-crystal-32.svg</normaloff>:/Icons/icons/archlinux-icon-crystal-32.svg</iconset>
           </attribute>
           <layout class="QGridLayout" >
            <item row="0" column="0" >
@@ -467,7 +503,7 @@ Please note that packages from Unstable and Testing may break your system.</stri
                  <property name="orientation" >
                   <enum>Qt::Vertical</enum>
                  </property>
-                 <property name="sizeHint" >
+                 <property name="sizeHint" stdset="0" >
                   <size>
                    <width>20</width>
                    <height>40</height>
@@ -504,7 +540,8 @@ Please note that packages from Unstable and Testing may break your system.</stri
                      <string>Add Mirror</string>
                     </property>
                     <property name="icon" >
-                     <iconset resource="shaman.qrc" >:/Icons/icons/list-add.png</iconset>
+                     <iconset resource="shaman.qrc" >
+                      <normaloff>:/Icons/icons/list-add.png</normaloff>:/Icons/icons/list-add.png</iconset>
                     </property>
                    </widget>
                   </item>
@@ -518,11 +555,20 @@ Please note that packages from Unstable and Testing may break your system.</stri
           </layout>
          </widget>
          <widget class="QWidget" name="KDEModTab" >
+          <property name="geometry" >
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>640</width>
+            <height>320</height>
+           </rect>
+          </property>
           <attribute name="title" >
            <string>KDEMod Repositories</string>
           </attribute>
           <attribute name="icon" >
-           <iconset resource="shaman.qrc" >:/Icons/icons/archlinux-mods-kdemod.svg</iconset>
+           <iconset resource="shaman.qrc" >
+            <normaloff>:/Icons/icons/archlinux-mods-kdemod.svg</normaloff>:/Icons/icons/archlinux-mods-kdemod.svg</iconset>
           </attribute>
           <layout class="QVBoxLayout" >
            <item>
@@ -577,7 +623,7 @@ of KDE with the simplicity and the power of Arch.</string>
                <property name="orientation" >
                 <enum>Qt::Vertical</enum>
                </property>
-               <property name="sizeHint" >
+               <property name="sizeHint" stdset="0" >
                 <size>
                  <width>20</width>
                  <height>40</height>
@@ -612,7 +658,8 @@ of KDE with the simplicity and the power of Arch.</string>
                      <string>Add Mirror</string>
                     </property>
                     <property name="icon" >
-                     <iconset resource="shaman.qrc" >:/Icons/icons/list-add.png</iconset>
+                     <iconset resource="shaman.qrc" >
+                      <normaloff>:/Icons/icons/list-add.png</normaloff>:/Icons/icons/list-add.png</iconset>
                     </property>
                    </widget>
                   </item>
@@ -626,11 +673,20 @@ of KDE with the simplicity and the power of Arch.</string>
           </layout>
          </widget>
          <widget class="QWidget" name="thirdPartyTab" >
+          <property name="geometry" >
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>640</width>
+            <height>320</height>
+           </rect>
+          </property>
           <attribute name="title" >
            <string>Third-Party Repositories</string>
           </attribute>
           <attribute name="icon" >
-           <iconset resource="shaman.qrc" >:/Icons/icons/network-server-database.png</iconset>
+           <iconset resource="shaman.qrc" >
+            <normaloff>:/Icons/icons/network-server-database.png</normaloff>:/Icons/icons/network-server-database.png</iconset>
           </attribute>
           <layout class="QGridLayout" >
            <item row="0" column="0" >
@@ -671,7 +727,7 @@ and Pacman.</string>
                  <property name="orientation" >
                   <enum>Qt::Horizontal</enum>
                  </property>
-                 <property name="sizeHint" >
+                 <property name="sizeHint" stdset="0" >
                   <size>
                    <width>71</width>
                    <height>20</height>
@@ -685,7 +741,8 @@ and Pacman.</string>
                   <string>Add New Repository</string>
                  </property>
                  <property name="icon" >
-                  <iconset resource="shaman.qrc" >:/Icons/icons/list-add.png</iconset>
+                  <iconset resource="shaman.qrc" >
+                   <normaloff>:/Icons/icons/list-add.png</normaloff>:/Icons/icons/list-add.png</iconset>
                  </property>
                 </widget>
                </item>
@@ -695,7 +752,8 @@ and Pacman.</string>
                   <string>Edit Repository</string>
                  </property>
                  <property name="icon" >
-                  <iconset resource="shaman.qrc" >:/Icons/icons/draw-text.png</iconset>
+                  <iconset resource="shaman.qrc" >
+                   <normaloff>:/Icons/icons/draw-text.png</normaloff>:/Icons/icons/draw-text.png</iconset>
                  </property>
                 </widget>
                </item>
@@ -705,7 +763,8 @@ and Pacman.</string>
                   <string>Remove Repository</string>
                  </property>
                  <property name="icon" >
-                  <iconset resource="shaman.qrc" >:/Icons/icons/list-remove.png</iconset>
+                  <iconset resource="shaman.qrc" >
+                   <normaloff>:/Icons/icons/list-remove.png</normaloff>:/Icons/icons/list-remove.png</iconset>
                  </property>
                 </widget>
                </item>
@@ -720,6 +779,14 @@ and Pacman.</string>
       </layout>
      </widget>
      <widget class="QWidget" name="Seite_3" >
+      <property name="geometry" >
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>100</width>
+        <height>30</height>
+       </rect>
+      </property>
       <layout class="QGridLayout" >
        <item row="0" column="0" >
         <widget class="QGroupBox" name="groupBox_9" >
@@ -873,6 +940,14 @@ and Pacman.</string>
       </layout>
      </widget>
      <widget class="QWidget" name="page_2" >
+      <property name="geometry" >
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>100</width>
+        <height>30</height>
+       </rect>
+      </property>
       <layout class="QGridLayout" >
        <item row="0" column="0" >
         <widget class="QGroupBox" name="groupBox_11" >
@@ -1000,7 +1075,7 @@ and Pacman.</string>
             <property name="orientation" >
              <enum>Qt::Horizontal</enum>
             </property>
-            <property name="sizeHint" >
+            <property name="sizeHint" stdset="0" >
              <size>
               <width>191</width>
               <height>20</height>
@@ -1070,7 +1145,7 @@ and Pacman.</string>
             <property name="orientation" >
              <enum>Qt::Horizontal</enum>
             </property>
-            <property name="sizeHint" >
+            <property name="sizeHint" stdset="0" >
              <size>
               <width>40</width>
               <height>20</height>
@@ -1086,7 +1161,7 @@ and Pacman.</string>
          <property name="orientation" >
           <enum>Qt::Vertical</enum>
          </property>
-         <property name="sizeHint" >
+         <property name="sizeHint" stdset="0" >
           <size>
            <width>20</width>
            <height>40</height>
@@ -1126,7 +1201,7 @@ and Pacman.</string>
      <property name="orientation" >
       <enum>Qt::Horizontal</enum>
      </property>
-     <property name="sizeHint" >
+     <property name="sizeHint" stdset="0" >
       <size>
        <width>40</width>
        <height>20</height>
@@ -1146,7 +1221,8 @@ and Pacman.</string>
       <string>Ok</string>
      </property>
      <property name="icon" >
-      <iconset resource="shaman.qrc" >:/Icons/icons/dialog-ok-apply.png</iconset>
+      <iconset resource="shaman.qrc" >
+       <normaloff>:/Icons/icons/dialog-ok-apply.png</normaloff>:/Icons/icons/dialog-ok-apply.png</iconset>
      </property>
     </widget>
    </item>
@@ -1162,7 +1238,8 @@ and Pacman.</string>
       <string>Cancel</string>
      </property>
      <property name="icon" >
-      <iconset resource="shaman.qrc" >:/Icons/icons/dialog-cancel.png</iconset>
+      <iconset resource="shaman.qrc" >
+       <normaloff>:/Icons/icons/dialog-cancel.png</normaloff>:/Icons/icons/dialog-cancel.png</iconset>
      </property>
     </widget>
    </item>

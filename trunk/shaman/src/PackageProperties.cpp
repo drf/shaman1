@@ -25,6 +25,8 @@
 #include <QTextStream>
 #include <QDebug>
 
+#define CLBUF_SIZE 4096
+
 PackageProperties::PackageProperties(AlpmHandler *aH, QWidget *parent)
  : QDialog(parent),
  aHandle(aH)
@@ -55,11 +57,20 @@ QString PackageProperties::formatSize(unsigned long size)
 void PackageProperties::setPackage(pmpkg_t *pkg)
 {
 	curPkg = pkg;
-	setWindowTitle(QString(tr("Shaman - %1 properties")).arg(alpm_pkg_get_name(curPkg)));
+	
+	// We can throw a lot more info if the package is local, let's check.
+	if(aHandle->isInstalled(curPkg) || curPkg == NULL)
+	{
+		qDebug() << "Getting info from local database";
+		curPkg = aHandle->getPackageFromName(pName, "local");
+	}
+	
+	setWindowTitle(QString(tr("Shaman - %1 properties")).arg(pName));
 }
 
 void PackageProperties::setPackage(const QString &pkgname)
 {
+	pName = pkgname;
 	setPackage(aHandle->getPackageFromName(pkgname, aHandle->getPackageRepo(pkgname)));
 }
 
@@ -69,6 +80,7 @@ void PackageProperties::reloadPkgInfo()
 	populateFileWidget();
 	populateDepsWidget();
 	populateLogWidget();
+	populateChangelogWidget();
 }
 
 void PackageProperties::populateInfoWidget()
@@ -81,7 +93,7 @@ void PackageProperties::populateInfoWidget()
 	else
 		installedLabel->setPixmap(QPixmap(":/Icons/icons/edit-delete.png"));
 
-	if (aHandle->getUpgradeablePackages().contains(alpm_pkg_get_name(curPkg)))
+	if (aHandle->getUpgradeablePackages().contains(pName))
 		upgradeableLabel->setPixmap(QPixmap(":/Icons/icons/dialog-ok-apply.png"));
 	else
 		upgradeableLabel->setPixmap(QPixmap(":/Icons/icons/edit-delete.png"));
@@ -107,14 +119,16 @@ void PackageProperties::populateInfoWidget()
 	now = alpm_pkg_get_installdate(curPkg);
 	ts = gmtime(&now);
 	strftime(buf, sizeof(buf), "%Y-%m-%d %H:%M:%S", ts);
-	bDate = buf;
-	if(bDate.startsWith("1970"))
+	QString iDate(buf);
+	if (iDate.startsWith("1970"))
 		// LOL @ The Epoch
 		installdateLabel->setText(notAvailable);
 	else
 		installdateLabel->setText(buf);
+	
+	QString packager(alpm_pkg_get_packager(curPkg));
 
-	if(!strlen(alpm_pkg_get_packager(curPkg)))
+	if (packager.isEmpty())
 		packagerLabel->setText(notAvailable);
 	else
 		packagerLabel->setText(alpm_pkg_get_packager(curPkg));
@@ -187,7 +201,30 @@ void PackageProperties::populateDepsWidget()
 
 void PackageProperties::populateChangelogWidget()
 {
-	
+	void *fp = NULL;
+	QString text;
+
+	if ((fp = alpm_pkg_changelog_open(curPkg)) == NULL) 
+	{
+		changeLogEdit->setText(QString(tr("Changelog not available for this package")));
+	} 
+	else 
+	{
+		/* allocate a buffer to get the changelog back in chunks */
+		char buf[CLBUF_SIZE];
+		int ret = 0;
+		while ((ret = alpm_pkg_changelog_read(buf, CLBUF_SIZE, curPkg, fp)))
+		{
+			if (ret < CLBUF_SIZE)
+			{
+				/* if we hit the end of the file, we need to add a null terminator */
+				*(buf + ret) = '\0';
+			}
+			text.append(buf);
+		}
+		alpm_pkg_changelog_close(curPkg, fp);
+		changeLogEdit->setText(text);
+	}
 }
 
 void PackageProperties::populateLogWidget()
@@ -210,7 +247,7 @@ void PackageProperties::populateLogWidget()
 	fp.close();
 
 	QString toShow;
-	QString pkgName(alpm_pkg_get_name(curPkg));
+	QString pkgName(pName);
 
 	foreach(QString ent, contents)
 	{
@@ -222,3 +259,4 @@ void PackageProperties::populateLogWidget()
 
 	logEdit->setText(toShow);
 }
+

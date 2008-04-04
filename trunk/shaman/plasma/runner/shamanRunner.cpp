@@ -136,7 +136,9 @@ void ShamanRunner::match(Plasma::SearchContext *search)
 
 void ShamanRunner::exec(const Plasma::SearchContext *search, const Plasma::SearchMatch *action)
 {
-    execTerm = search->searchTerm();
+    Q_UNUSED(action);
+	
+	execTerm = search->searchTerm();
     
     /* First of all, let's check if Shaman has been already
      * started.

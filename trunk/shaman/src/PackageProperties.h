@@ -33,24 +33,25 @@ public:
 	virtual ~PackageProperties();
 	
 	void setPackage(const QString &pkgname);
-	void setPackage(pmpkg_t *pkg);
 	
 	void reloadPkgInfo();
 	
-	QString getChangeLog();
-	
 private:
+	void setPackage(pmpkg_t *pkg);
+	
 	void populateFileWidget();
 	void populateDepsWidget();
 	void populateRequiredWidget();
 	void populateInfoWidget();
 	void populateLogWidget();
 	void populateChangelogWidget();
+	
 	QString formatSize(unsigned long size);
 	
 private:
 	AlpmHandler *aHandle;
 	pmpkg_t *curPkg;
+	QString pName;
 };
 
 #endif /*PACKAGEPROPERTIES_H_*/

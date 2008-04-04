@@ -570,12 +570,15 @@ QStringList AlpmHandler::getPackageDependencies(const QString &name, const QStri
 
 QStringList AlpmHandler::getDependenciesOnPackage(pmpkg_t *package)
 {
+	if (package == NULL)
+		return QStringList();
+	
 	alpm_list_t *deps;
 	QStringList retlist;
 
 	deps = alpm_pkg_compute_requiredby(package);
 
-	while(deps != NULL)
+	while (deps != NULL)
 	{
 		retlist.append(QString((char *)alpm_list_getdata(deps)));
 		deps = alpm_list_next(deps);

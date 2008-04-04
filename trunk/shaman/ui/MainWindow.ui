@@ -13,7 +13,8 @@
    <string>Shaman</string>
   </property>
   <property name="windowIcon" >
-   <iconset resource="shaman.qrc" >:/Icons/icons/shaman/shaman-32.png</iconset>
+   <iconset resource="shaman.qrc" >
+    <normaloff>:/Icons/icons/shaman/shaman-32.png</normaloff>:/Icons/icons/shaman/shaman-32.png</iconset>
   </property>
   <property name="toolButtonStyle" >
    <enum>Qt::ToolButtonTextUnderIcon</enum>
@@ -28,6 +29,14 @@
    <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralwidget" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>71</y>
+     <width>1195</width>
+     <height>627</height>
+    </rect>
+   </property>
    <layout class="QGridLayout" >
     <item row="0" column="1" >
      <layout class="QVBoxLayout" >
@@ -79,7 +88,7 @@
           <property name="orientation" >
            <enum>Qt::Horizontal</enum>
           </property>
-          <property name="sizeHint" >
+          <property name="sizeHint" stdset="0" >
            <size>
             <width>40</width>
             <height>31</height>
@@ -142,7 +151,7 @@
         </column>
         <column>
          <property name="text" >
-          <string>Name</string>
+          <string comment="The name of the Package" >Name</string>
          </property>
         </column>
         <column>
@@ -199,6 +208,14 @@
        <string>Repositories</string>
       </property>
       <widget class="QWidget" name="dockWidgetContents_2" >
+       <property name="geometry" >
+        <rect>
+         <x>2</x>
+         <y>22</y>
+         <width>311</width>
+         <height>595</height>
+        </rect>
+       </property>
        <layout class="QGridLayout" >
         <item row="0" column="0" >
          <layout class="QVBoxLayout" >
@@ -224,7 +241,8 @@
              <string>Repositories</string>
             </property>
             <property name="icon" >
-             <iconset resource="shaman.qrc" >:/Icons/icons/network-server-database.png</iconset>
+             <iconset resource="shaman.qrc" >
+              <normaloff>:/Icons/icons/network-server-database.png</normaloff>:/Icons/icons/network-server-database.png</iconset>
             </property>
             <property name="checkable" >
              <bool>true</bool>
@@ -246,7 +264,8 @@
              <string>Package Groups</string>
             </property>
             <property name="icon" >
-             <iconset resource="shaman.qrc" >:/Icons/icons/bookmark-new-list.png</iconset>
+             <iconset resource="shaman.qrc" >
+              <normaloff>:/Icons/icons/bookmark-new-list.png</normaloff>:/Icons/icons/bookmark-new-list.png</iconset>
             </property>
             <property name="checkable" >
              <bool>true</bool>
@@ -271,6 +290,14 @@
        <string>Package Information</string>
       </property>
       <widget class="QWidget" name="dockWidgetContents" >
+       <property name="geometry" >
+        <rect>
+         <x>2</x>
+         <y>22</y>
+         <width>864</width>
+         <height>286</height>
+        </rect>
+       </property>
        <layout class="QGridLayout" >
         <item row="0" column="0" >
          <layout class="QVBoxLayout" >
@@ -284,7 +311,7 @@
               <property name="sizeType" >
                <enum>QSizePolicy::MinimumExpanding</enum>
               </property>
-              <property name="sizeHint" >
+              <property name="sizeHint" stdset="0" >
                <size>
                 <width>40</width>
                 <height>20</height>
@@ -307,7 +334,8 @@
                <string>Mark for Installation</string>
               </property>
               <property name="icon" >
-               <iconset resource="shaman.qrc" >:/Icons/icons/list-add.png</iconset>
+               <iconset resource="shaman.qrc" >
+                <normaloff>:/Icons/icons/list-add.png</normaloff>:/Icons/icons/list-add.png</iconset>
               </property>
              </widget>
             </item>
@@ -326,7 +354,8 @@
                <string>Mark for Removal</string>
               </property>
               <property name="icon" >
-               <iconset resource="shaman.qrc" >:/Icons/icons/list-remove.png</iconset>
+               <iconset resource="shaman.qrc" >
+                <normaloff>:/Icons/icons/list-remove.png</normaloff>:/Icons/icons/list-remove.png</iconset>
               </property>
              </widget>
             </item>
@@ -345,7 +374,8 @@
                <string>Mark for complete removal</string>
               </property>
               <property name="icon" >
-               <iconset resource="shaman.qrc" >:/Icons/icons/edit-delete.png</iconset>
+               <iconset resource="shaman.qrc" >
+                <normaloff>:/Icons/icons/edit-delete.png</normaloff>:/Icons/icons/edit-delete.png</iconset>
               </property>
              </widget>
             </item>
@@ -364,7 +394,8 @@
                <string>Cancel action</string>
               </property>
               <property name="icon" >
-               <iconset resource="shaman.qrc" >:/Icons/icons/dialog-cancel.png</iconset>
+               <iconset resource="shaman.qrc" >
+                <normaloff>:/Icons/icons/dialog-cancel.png</normaloff>:/Icons/icons/dialog-cancel.png</iconset>
               </property>
              </widget>
             </item>
@@ -376,7 +407,7 @@
               <property name="sizeType" >
                <enum>QSizePolicy::MinimumExpanding</enum>
               </property>
-              <property name="sizeHint" >
+              <property name="sizeHint" stdset="0" >
                <size>
                 <width>40</width>
                 <height>20</height>
@@ -398,11 +429,20 @@
              <number>0</number>
             </property>
             <widget class="QWidget" name="tab" >
+             <property name="geometry" >
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>842</width>
+               <height>199</height>
+              </rect>
+             </property>
              <attribute name="title" >
               <string>Package Information</string>
              </attribute>
              <attribute name="icon" >
-              <iconset resource="shaman.qrc" >:/Icons/icons/help-about.png</iconset>
+              <iconset resource="shaman.qrc" >
+               <normaloff>:/Icons/icons/help-about.png</normaloff>:/Icons/icons/help-about.png</iconset>
              </attribute>
              <layout class="QGridLayout" >
               <item row="0" column="0" >
@@ -433,11 +473,20 @@
              </layout>
             </widget>
             <widget class="QWidget" name="tab_2" >
+             <property name="geometry" >
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>842</width>
+               <height>199</height>
+              </rect>
+             </property>
              <attribute name="title" >
               <string>Files</string>
              </attribute>
              <attribute name="icon" >
-              <iconset resource="shaman.qrc" >:/Icons/icons/document-open-folder.png</iconset>
+              <iconset resource="shaman.qrc" >
+               <normaloff>:/Icons/icons/document-open-folder.png</normaloff>:/Icons/icons/document-open-folder.png</iconset>
              </attribute>
              <layout class="QGridLayout" >
               <item row="0" column="0" >
@@ -452,6 +501,14 @@
              </layout>
             </widget>
             <widget class="QWidget" name="dependenciesTab" >
+             <property name="geometry" >
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>842</width>
+               <height>199</height>
+              </rect>
+             </property>
              <attribute name="title" >
               <string>Dependencies</string>
              </attribute>
@@ -527,6 +584,14 @@
    <addaction name="menuHelp" />
   </widget>
   <widget class="QToolBar" name="toolBar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>27</y>
+     <width>1195</width>
+     <height>44</height>
+    </rect>
+   </property>
    <property name="acceptDrops" >
     <bool>true</bool>
    </property>
@@ -553,10 +618,20 @@
    <addaction name="separator" />
    <addaction name="actionPacman_Preferences" />
   </widget>
-  <widget class="QStatusBar" name="statusBar" />
+  <widget class="QStatusBar" name="statusBar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>698</y>
+     <width>1195</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
   <action name="actionPackage_Repositories" >
    <property name="icon" >
-    <iconset resource="shaman.qrc" >:/Icons/icons/network-server-database.png</iconset>
+    <iconset resource="shaman.qrc" >
+     <normaloff>:/Icons/icons/network-server-database.png</normaloff>:/Icons/icons/network-server-database.png</iconset>
    </property>
    <property name="text" >
     <string>Package Repositories</string>
@@ -564,7 +639,8 @@
   </action>
   <action name="actionPacman_Preferences" >
    <property name="icon" >
-    <iconset resource="shaman.qrc" >:/Icons/icons/preferences-system.png</iconset>
+    <iconset resource="shaman.qrc" >
+     <normaloff>:/Icons/icons/preferences-system.png</normaloff>:/Icons/icons/preferences-system.png</iconset>
    </property>
    <property name="text" >
     <string>Settings...</string>
@@ -572,7 +648,8 @@
   </action>
   <action name="actionAbout" >
    <property name="icon" >
-    <iconset resource="shaman.qrc" >:/Icons/icons/help-about.png</iconset>
+    <iconset resource="shaman.qrc" >
+     <normaloff>:/Icons/icons/help-about.png</normaloff>:/Icons/icons/help-about.png</iconset>
    </property>
    <property name="text" >
     <string>About...</string>
@@ -580,7 +657,8 @@
   </action>
   <action name="actionUpdate_Database" >
    <property name="icon" >
-    <iconset resource="shaman.qrc" >:/Icons/icons/view-refresh.png</iconset>
+    <iconset resource="shaman.qrc" >
+     <normaloff>:/Icons/icons/view-refresh.png</normaloff>:/Icons/icons/view-refresh.png</iconset>
    </property>
    <property name="text" >
     <string>Update Database</string>
@@ -588,7 +666,8 @@
   </action>
   <action name="actionUpgrade_System" >
    <property name="icon" >
-    <iconset resource="shaman.qrc" >:/Icons/icons/system-software-update.png</iconset>
+    <iconset resource="shaman.qrc" >
+     <normaloff>:/Icons/icons/system-software-update.png</normaloff>:/Icons/icons/system-software-update.png</iconset>
    </property>
    <property name="text" >
     <string>Upgrade System</string>
@@ -596,7 +675,8 @@
   </action>
   <action name="actionInstall_Package_From_File" >
    <property name="icon" >
-    <iconset resource="shaman.qrc" >:/Icons/icons/document-open.png</iconset>
+    <iconset resource="shaman.qrc" >
+     <normaloff>:/Icons/icons/document-open.png</normaloff>:/Icons/icons/document-open.png</iconset>
    </property>
    <property name="text" >
     <string>Install Package From File</string>
@@ -607,7 +687,8 @@
   </action>
   <action name="actionUpdate_ABS_Tree" >
    <property name="icon" >
-    <iconset resource="shaman.qrc" >:/Icons/icons/document-open-remote.png</iconset>
+    <iconset resource="shaman.qrc" >
+     <normaloff>:/Icons/icons/document-open-remote.png</normaloff>:/Icons/icons/document-open-remote.png</iconset>
    </property>
    <property name="text" >
     <string>Update ABS Tree</string>
@@ -615,7 +696,8 @@
   </action>
   <action name="actionBuild_and_Install_Selected" >
    <property name="icon" >
-    <iconset resource="shaman.qrc" >:/Icons/icons/applications-development.png</iconset>
+    <iconset resource="shaman.qrc" >
+     <normaloff>:/Icons/icons/applications-development.png</normaloff>:/Icons/icons/applications-development.png</iconset>
    </property>
    <property name="text" >
     <string>Build and Install Queue</string>
@@ -623,7 +705,8 @@
   </action>
   <action name="actionQuit" >
    <property name="icon" >
-    <iconset resource="shaman.qrc" >:/Icons/icons/application-exit.png</iconset>
+    <iconset resource="shaman.qrc" >
+     <normaloff>:/Icons/icons/application-exit.png</normaloff>:/Icons/icons/application-exit.png</iconset>
    </property>
    <property name="text" >
     <string comment="Quit the application" >Quit</string>
@@ -631,7 +714,8 @@
   </action>
   <action name="actionProcess_Queue" >
    <property name="icon" >
-    <iconset resource="shaman.qrc" >:/Icons/icons/dialog-ok-apply.png</iconset>
+    <iconset resource="shaman.qrc" >
+     <normaloff>:/Icons/icons/dialog-ok-apply.png</normaloff>:/Icons/icons/dialog-ok-apply.png</iconset>
    </property>
    <property name="text" >
     <string>Process Queue</string>
@@ -639,7 +723,8 @@
   </action>
   <action name="actionCancel_all_actions" >
    <property name="icon" >
-    <iconset resource="shaman.qrc" >:/Icons/icons/dialog-cancel.png</iconset>
+    <iconset resource="shaman.qrc" >
+     <normaloff>:/Icons/icons/dialog-cancel.png</normaloff>:/Icons/icons/dialog-cancel.png</iconset>
    </property>
    <property name="text" >
     <string>Cancel all actions</string>
@@ -647,7 +732,8 @@
   </action>
   <action name="actionReadNews" >
    <property name="icon" >
-    <iconset resource="shaman.qrc" >:/Icons/icons/news-subscribe.png</iconset>
+    <iconset resource="shaman.qrc" >
+     <normaloff>:/Icons/icons/news-subscribe.png</normaloff>:/Icons/icons/news-subscribe.png</iconset>
    </property>
    <property name="text" >
     <string>Read News</string>
@@ -655,7 +741,8 @@
   </action>
   <action name="actionViewLog" >
    <property name="icon" >
-    <iconset resource="shaman.qrc" >:/Icons/icons/accessories-text-editor.png</iconset>
+    <iconset resource="shaman.qrc" >
+     <normaloff>:/Icons/icons/accessories-text-editor.png</normaloff>:/Icons/icons/accessories-text-editor.png</iconset>
    </property>
    <property name="text" >
     <string>View Log</string>
