@@ -87,6 +87,7 @@ public slots:
 	bool populatePackagesView();
 	bool populateQueuePackagesView();
 	void refinePkgView();
+	void refineRepoView();
 	void populateRepoColumn();
 	void populateGrpsColumn();
 	void removePackagesView();

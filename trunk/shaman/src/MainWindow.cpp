@@ -140,6 +140,7 @@ turnOffSys(false)
 	connect(packageSwitchCombo, SIGNAL(currentIndexChanged(int)), SLOT(refinePkgView()));
 	connect(nameDescBox, SIGNAL(currentIndexChanged(int)), SLOT(refinePkgView()));
 	connect(searchLine, SIGNAL(textChanged(const QString&)), SLOT(refinePkgView()));
+	connect(refineRepoEdit, SIGNAL(textChanged(const QString&)), SLOT(refineRepoView()));
 	connect(actionPacman_Preferences, SIGNAL(triggered()), SLOT(showSettings()));
 	connect(trayicon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), SLOT(systrayActivated(QSystemTrayIcon::ActivationReason)));
 	connect(trayicon, SIGNAL(startDbUpdate()), SLOT(doDbUpdate()));
@@ -403,6 +404,8 @@ void MainWindow::populateRepoColumn()
 	QListWidgetItem *itm = new QListWidgetItem(repoList);
 
 	itm->setText(tr("Local Packages"));
+	
+	refineRepoView();
 
 	connect(repoList, SIGNAL(itemPressed(QListWidgetItem*)), this,
 			SLOT(refinePkgView()));
@@ -430,6 +433,8 @@ void MainWindow::populateGrpsColumn()
 	item->setText(tr("All Groups"));
 	item->setSelected(true);
 	repoList->insertItem(0, item);
+	
+	refineRepoView();
 
 	connect(repoList, SIGNAL(itemPressed(QListWidgetItem*)), this,
 			SLOT(refinePkgView()));
@@ -554,6 +559,46 @@ void MainWindow::refinePkgView()
 	for(int i = 0; i < pkgsViewWG->topLevelItemCount(); ++i)
 	{
 		QTreeWidgetItem *tmpitm = pkgsViewWG->topLevelItem(i);
+
+		if(list.contains(tmpitm))
+			tmpitm->setHidden(false);
+		else
+			tmpitm->setHidden(true);
+	}
+}
+
+void MainWindow::refineRepoView()
+{
+	QList<QListWidgetItem*> list;
+	for(int i = 0; i < repoList->count(); ++i)
+		list.append(repoList->item(i));
+
+	// Now first: What do we need to refine in the right column?
+	if (list.isEmpty() && list.count() >= 0)
+	{
+		qDebug() << "Nothing in the view";
+		return;
+	}
+
+	if (!refineRepoEdit->text().isEmpty())
+	{
+		foreach (QListWidgetItem *item, list)
+		{
+			if (!item->text().contains(refineRepoEdit->text(), Qt::CaseInsensitive))
+			{
+				list.removeAt(list.indexOf(item));
+			}
+		}
+	}
+
+
+	/* When we are here, we have a list that contains the packages refined
+	 * by all of our three components. And then we set that list to be
+	 * visible. */
+
+	for(int i = 0; i < repoList->count(); ++i)
+	{
+		QListWidgetItem *tmpitm = repoList->item(i);
 
 		if(list.contains(tmpitm))
 			tmpitm->setHidden(false);
