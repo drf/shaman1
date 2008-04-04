@@ -43,7 +43,7 @@
 
 #include "callbacks.h"
 
-#define SHAMAN_VERSION "1.0Beta1dev"
+#define SHAMAN_VERSION "1.0Beta1"
 
 extern QMutex mutex;
 extern QWaitCondition wCond;

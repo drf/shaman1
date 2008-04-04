@@ -37,7 +37,7 @@
 #include <signal.h>
 #include <alpm.h>
 
-#define SHAMAN_VERSION "1.0Beta1dev"
+#define SHAMAN_VERSION "1.0Beta1"
 
 static void cleanup(int signum)
 {
@@ -223,7 +223,8 @@ int main(int argc, char **argv)
 	qDebug() << ">>		Compiled against Qt" << QT_VERSION_STR;
 	qDebug() << ">>		Running with Qt" << qVersion();
 	qDebug() << ">>";
-	qDebug() << ">>	Shaman is still in testing phase, please be easy on it!!";
+	qDebug() << ">>	Shaman is in beta phase, please report bugs!!";
+	qDebug() << ">> Our tracker is @ http://shaman.iskremblien.com";
 	qDebug() << ">>";
 	qDebug() << ">>	In most cases, terminal output is pretty relevant, please include it,";
 	qDebug() << ">>	adding a backtrace, if you need to report a crash.";

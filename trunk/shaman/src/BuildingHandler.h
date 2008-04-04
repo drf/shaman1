@@ -63,6 +63,7 @@ private:
 	Ui::reviewBuildingDialog *revBuildUi;
 	QPointer<EditPBuild> pBuildEditor;
 	QPointer<QDialog> reviewBQueue;
+	QPointer<QueueDialog> queueDl;
 	MainWindow *mWin;
 	AlpmHandler *aHandle;
 

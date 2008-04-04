@@ -70,6 +70,8 @@ void BuildingHandler::updateABSTree()
 	connect(buildDialog, SIGNAL(nullifyPointer()), SLOT(ABSUpdateEnded()));
 
 	buildDialog->show();
+	
+	connect(buildDialog->reduceButton, SIGNAL(clicked()), SLOT(reduceBuildingInTray()));
 
 	buildDialog->updateABSTree();
 }
@@ -220,10 +222,10 @@ void BuildingHandler::openPBuildDialog()
 
 void BuildingHandler::startSourceProcessing()
 {
-	if(mWin->queueDl != NULL)
+	if(queueDl != NULL)
 	{
-		mWin->queueDl->deleteLater();
-		mWin->queueDl = NULL;
+		queueDl->deleteLater();
+		queueDl = NULL;
 	}
 	else if(revBuildUi->depsWizardBox->isChecked())
 	{
@@ -463,13 +465,13 @@ void BuildingHandler::processBuildWizard()
 		foreach(QString syn, depsList)
 			aHandle->addSyncToQueue(syn);
 
-		mWin->queueDl = new QueueDialog(aHandle, mWin);
+		queueDl = new QueueDialog(aHandle, mWin);
 
-		connect(mWin->queueDl, SIGNAL(terminated(bool)), SLOT(startSourceProcessing()));
+		connect(queueDl, SIGNAL(terminated(bool)), SLOT(startSourceProcessing()));
 
-		mWin->queueDl->startProcessing();
+		queueDl->startProcessing();
 
-		mWin->queueDl->show();
+		queueDl->show();
 	}
 
 }
