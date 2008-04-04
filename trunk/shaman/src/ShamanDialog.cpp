@@ -138,12 +138,17 @@ int ShamanDialog::popupQuestionDialog(const QString &title, const QString &text,
 	nob->setIcon(QIcon(":/Icons/icons/dialog-cancel.png"));
 	
 	msgBox->setDefaultButton(okb);
-	
+
 	msgBox->setWindowModality(Qt::ApplicationModal);
 
 	msgBox->setText(text);
 
 	retval = msgBox->exec();
+
+	if(msgBox->clickedButton() == okb)
+		retval = QMessageBox::Yes;
+	else
+		retval = QMessageBox::No;
 
 	msgBox->deleteLater();
 
