@@ -32,9 +32,9 @@
    <property name="geometry" >
     <rect>
      <x>0</x>
-     <y>71</y>
+     <y>68</y>
      <width>1195</width>
-     <height>627</height>
+     <height>630</height>
     </rect>
    </property>
    <layout class="QGridLayout" >
@@ -151,7 +151,7 @@
         </column>
         <column>
          <property name="text" >
-          <string comment="The name of the Package" >Name</string>
+          <string>Name</string>
          </property>
         </column>
         <column>
@@ -213,12 +213,15 @@
          <x>2</x>
          <y>22</y>
          <width>311</width>
-         <height>595</height>
+         <height>598</height>
         </rect>
        </property>
        <layout class="QGridLayout" >
         <item row="0" column="0" >
          <layout class="QVBoxLayout" >
+          <item>
+           <widget class="QLineEdit" name="refineRepoEdit" />
+          </item>
           <item>
            <widget class="QListWidget" name="repoList" >
             <property name="sizePolicy" >
@@ -589,7 +592,7 @@
      <x>0</x>
      <y>27</y>
      <width>1195</width>
-     <height>44</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="acceptDrops" >
