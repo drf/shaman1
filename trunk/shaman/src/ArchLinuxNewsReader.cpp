@@ -128,10 +128,12 @@ void ArchLinuxNewsReader::parseXml()
 					ArchLinuxNews::ArchNews tmp;
 					tmp.link = QString(linkString);
 					tmp.title = QString(titleString);
+					if(tmp.title.startsWith("Recent News Updates"))
+						tmp.title.remove(0, 19);
 					tmp.nNew = true;
 					tmp.nRead = false;
 					
-					oldEntries[titleString] = false;
+					oldEntries[tmp.title] = false;
 					
 					settings->setValue("newsreader/oldnewsitem", oldEntries);
 					
@@ -144,6 +146,8 @@ void ArchLinuxNewsReader::parseXml()
 					ArchLinuxNews::ArchNews tmp;
 					tmp.link = QString(linkString);
 					tmp.title = QString(titleString);
+					if(tmp.title.startsWith("Recent News Updates"))
+						tmp.title.remove(0, 19);
 					tmp.nNew = false;
 					tmp.nRead = oldEntries[titleString].toBool();
 
