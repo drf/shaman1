@@ -1,30 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS><TS version="1.1" language="it">
-<defaultcodec></defaultcodec>
 <context>
     <name>AlpmHandler</name>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1145"/>
+        <location filename="../src/AlpmHandler.cpp" line="1148"/>
         <source>: requires </source>
         <translation>: richiede </translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1155"/>
+        <location filename="../src/AlpmHandler.cpp" line="1158"/>
         <source>: conflicts with </source>
         <translation>: è in conflitto con </translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1182"/>
+        <location filename="../src/AlpmHandler.cpp" line="1185"/>
         <source>%1 exists in both &apos;%2&apos; and &apos;%3&apos;</source>
         <translation>%1 esiste sia in &apos;%2&apos; che in &apos;%3&apos;</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1190"/>
+        <location filename="../src/AlpmHandler.cpp" line="1193"/>
         <source>: %1 exists in filesystem</source>
         <translation>: %1 esiste nel filesystem</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1209"/>
+        <location filename="../src/AlpmHandler.cpp" line="1212"/>
         <source>Alpm did not give further details.</source>
         <translation>Alpm non ha dato ulteriori dettagli.</translation>
     </message>
@@ -1818,18 +1817,18 @@ possibile completare con successo la Coda</translation>
         <translation>%1 Bytes</translation>
     </message>
     <message>
-        <location filename="../src/PackageProperties.cpp" line="65"/>
+        <location filename="../src/PackageProperties.cpp" line="68"/>
         <source>Shaman - %1 properties</source>
         <translation>Shaman - Proprietà di %1</translation>
     </message>
     <message>
-        <location filename="../src/PackageProperties.cpp" line="85"/>
+        <location filename="../src/PackageProperties.cpp" line="89"/>
         <source>N/A</source>
         <comment>Stands for: Not Available</comment>
         <translation>N/D</translation>
     </message>
     <message>
-        <location filename="../src/PackageProperties.cpp" line="203"/>
+        <location filename="../src/PackageProperties.cpp" line="209"/>
         <source>Changelog not available for this package</source>
         <translation>Changelog non disponibile per questo pacchetto</translation>
     </message>

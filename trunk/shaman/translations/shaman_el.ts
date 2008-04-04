@@ -3,27 +3,27 @@
 <context>
     <name>AlpmHandler</name>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1145"/>
+        <location filename="../src/AlpmHandler.cpp" line="1148"/>
         <source>: requires </source>
         <translation>: απαιτεί</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1155"/>
+        <location filename="../src/AlpmHandler.cpp" line="1158"/>
         <source>: conflicts with </source>
         <translation>: είναι σε διένεξη με το</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1182"/>
+        <location filename="../src/AlpmHandler.cpp" line="1185"/>
         <source>%1 exists in both &apos;%2&apos; and &apos;%3&apos;</source>
         <translation>Το %1 υπάρχει τόσο στο &apos;%2&apos; όσο και στο &apos;%3&apos;</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1190"/>
+        <location filename="../src/AlpmHandler.cpp" line="1193"/>
         <source>: %1 exists in filesystem</source>
         <translation>: το %1 υπάρχει ήδη στον δίσκο</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1209"/>
+        <location filename="../src/AlpmHandler.cpp" line="1212"/>
         <source>Alpm did not give further details.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1814,18 +1814,18 @@ was not successfully processed</source>
         <translation type="unfinished">%1 Bytes</translation>
     </message>
     <message>
-        <location filename="../src/PackageProperties.cpp" line="65"/>
+        <location filename="../src/PackageProperties.cpp" line="68"/>
         <source>Shaman - %1 properties</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/PackageProperties.cpp" line="85"/>
+        <location filename="../src/PackageProperties.cpp" line="89"/>
         <source>N/A</source>
         <comment>Stands for: Not Available</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/PackageProperties.cpp" line="203"/>
+        <location filename="../src/PackageProperties.cpp" line="209"/>
         <source>Changelog not available for this package</source>
         <translation type="unfinished"></translation>
     </message>
