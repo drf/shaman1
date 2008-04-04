@@ -94,12 +94,12 @@ int main(int argc, char **argv)
 	
 	QStringList arguments = app.arguments();
 
-	QString locale = QLocale::system().name();
-
-	QTranslator translator;
-
 	if(!arguments.contains("--no-i18n"))
 	{
+		QString locale = QLocale::system().name();
+
+		QTranslator translator;
+
 		qDebug() << "Translations are enabled."; 
 		QString trpath(QString("shaman_") + locale);
 
