@@ -67,15 +67,18 @@ bool Authenticator::switchToRoot()
 	{
 		QSettings *settings = new QSettings();
 		
-		if(settings->value("auth/askforpwd", true).toBool() && !alreadyAuthed)
+		if(settings->value("auth/askforpwd", true).toBool())
 		{
-			if(!checkUser("root"))
+			if(!alreadyAuthed)
 			{
-				seteuid(getuid());
-				return false;
+				if(!checkUser("root"))
+				{
+					seteuid(getuid());
+					return false;
+				}
 			}
 		}
-		
+
 		settings->deleteLater();
 		
 		qDebug() << "Root Privileges granted.";
@@ -123,6 +126,15 @@ bool Authenticator::checkUser(const QString &uname)
 		retval = pam_acct_mgmt(pamh, 0);       /* permitted access? */
 		qDebug() << "Authentication was successful!";
 		alreadyAuthed = true;
+		QSettings *settings = new QSettings();
+		
+		if(settings->value("askedforkeeping", false).toBool())
+		{
+			settings->remove("askedforkeeping");
+			settings->setValue("auth/askforpwd", false);
+		}
+		
+		settings->deleteLater();
 	}
 	else
 		qDebug() << "Auth failed!";

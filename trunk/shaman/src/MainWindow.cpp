@@ -2096,6 +2096,13 @@ void MainWindow::showAuthDialog(int count)
 		qDebug() << "Reply freed, aborting...";
 		reply = NULL;
 	}
+	
+	QSettings *settings = new QSettings();
+	
+	if(aUi.checkBox->isChecked())
+		settings->setValue("askedforkeeping", true);
+	
+	settings->deleteLater();
 
 	dlog->deleteLater();
 
