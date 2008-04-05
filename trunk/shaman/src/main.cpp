@@ -127,6 +127,28 @@ int main(int argc, char **argv)
 		exit(1);
 	}
 
+	AlpmHandler *aHandler = new AlpmHandler(true);
+
+	if(!aHandler->testLibrary())
+	{
+		Authenticator ath;
+
+		if(!ath.switchToRoot())
+		{
+			ShamanDialog::popupDialog(QObject::tr("Shaman"), QObject::tr("Shaman could not"
+					" switch to root.\nProbably you have not set the SUID bit to it.\nYou can do that by "
+					"issuing as root\nchown root shaman && chmod u+s shaman.\nNote that this is safe, please "
+					"read Shaman wiki\nfor more details."), NULL, ShamanProperties::ErrorDialog);
+			exit(1);
+		}
+
+		ShamanDialog::popupDialog(QObject::tr("Shaman"), QObject::tr("There was a problem"
+				" while testing libalpm.\nMaybe another application has a lock on it."), NULL,
+				ShamanProperties::ErrorDialog);
+
+		exit(1);
+	}
+
 	QSettings *settings = new QSettings();
 
 	if(!settings->isWritable())
@@ -256,28 +278,6 @@ int main(int argc, char **argv)
 				QObject::tr("You have started Shaman as root.\nIt is advised to start it as unprivileged user.\n"
 						"Shaman will ask you for root password when needed."), "gui/rootwarning", NULL,
 						ShamanProperties::WarningDialog);
-	}
-
-	AlpmHandler *aHandler = new AlpmHandler(true);
-
-	if(!aHandler->testLibrary())
-	{
-		Authenticator ath;
-		
-		if(!ath.switchToRoot())
-		{
-			ShamanDialog::popupDialog(QObject::tr("Shaman"), QObject::tr("Shaman could not"
-							" switch to root.\nProbably you have not set the SUID bit to it.\nYou can do that by "
-							"issuing as root\nchown root shaman && chmod u+s shaman.\nNote that this is safe, please "
-							"read Shaman wiki\nfor more details."), NULL, ShamanProperties::ErrorDialog);
-			exit(1);
-		}
-		
-		ShamanDialog::popupDialog(QObject::tr("Shaman"), QObject::tr("There was a problem"
-				" while testing libalpm.\nMaybe another application has a lock on it."), NULL,
-				ShamanProperties::ErrorDialog);
-		
-		exit(1);
 	}
 
 	QString alversion(aHandler->getAlpmVersion());
