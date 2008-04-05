@@ -25,9 +25,13 @@ ENDMACRO (MACRO_OPTIONAL_FIND_PACKAGE)
 FIND_PACKAGE(KDE4)
 FIND_PACKAGE(Plasma)
 
-if (PLASMA_FOUND)
-    add_subdirectory(plasma)
-endif(PLASMA_FOUND)
+if(NOT NO_PLASMA)
+
+	if (PLASMA_FOUND)
+    		add_subdirectory(plasma)
+	endif(PLASMA_FOUND)
+	
+endif(NOT NO_PLASMA)
 
 SET(shaman_SRCS ${shaman_adaptor_SRCS}
     src/main.cpp
