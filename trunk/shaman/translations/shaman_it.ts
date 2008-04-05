@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS><TS version="1.1" language="it">
+<defaultcodec></defaultcodec>
 <context>
     <name>AlpmHandler</name>
     <message>
@@ -1765,7 +1766,8 @@ possibile completare con successo la Coda</translation>
         <location filename="../src/MainWindow.cpp" line="1179"/>
         <source>A package providing %1 is already installed.
 Do you want to install %1 anyway?</source>
-        <translation type="unfinished"></translation>
+        <translation>Un pacchetto che fornisce %1 è già installato.
+Desideri installare comunque %1?</translation>
     </message>
 </context>
 <context>
