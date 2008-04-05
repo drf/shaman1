@@ -1049,6 +1049,8 @@ void ConfigDialog::saveConfiguration()
 	}
 
 	/* Last, but not least, commit changes to makepkg.conf */
+	
+	ath.switchToRoot();
 
 	if(CFlagEdit->isModified())
 		editMakepkgSection("cflags", CFlagEdit->text());

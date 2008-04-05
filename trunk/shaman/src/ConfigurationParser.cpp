@@ -839,11 +839,13 @@ bool ConfigurationParser::editMakepkgSection(const QString &section, const QStri
 	QFile fp("/etc/makepkg.conf");
 	QStringList fileContent;
 
-	if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
+	if(!fp.open(QIODevice::ReadOnly | QIODevice::Text))
 	{
 		
 		return false;
 	}
+	
+	qDebug() << section << value;
 
 	QTextStream in(&fp);
 
@@ -862,6 +864,8 @@ bool ConfigurationParser::editMakepkgSection(const QString &section, const QStri
 		QString val("CFLAGS=\"");
 		val.append(value);
 		val.append('"');
+		
+		qDebug() << "In CFLAGS";
 
 		if(!fileContent.filter("CFLAGS").isEmpty())
 		{
@@ -873,16 +877,15 @@ bool ConfigurationParser::editMakepkgSection(const QString &section, const QStri
 				if(fileContent.at(i) == val)
 					// No need to edit
 				{
-					
 					return true;
 				}
 
 				fileContent.replace(i, val);
 
 				QFile::remove("/etc/makepkg.conf");
+				
 				if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
 				{
-					
 					return false;
 				}
 
