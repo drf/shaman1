@@ -986,11 +986,11 @@ void MainWindow::showRepoViewContextMenu()
 
 void MainWindow::cancelAllActions()
 {
-	qDebug() << "Hehe let's remove all actions";
 	foreach(QTreeWidgetItem *item, pkgsViewWG->findItems(QString(), Qt::MatchRegExp | Qt::MatchWildcard))
 	{
 		if (!item->text(8).isEmpty())
 			item->setText(8, QString());
+		
 		item->setIcon(2, QIcon());
 	}
 }
@@ -1007,7 +1007,6 @@ void MainWindow::installAllRepoPackages()
 		QString tmp = repoList->selectedItems().first()->text();
 		tmp.append(" ");
 		tmp.prepend(" ");
-		qDebug() << "Hehe";
 		foreach (QTreeWidgetItem *item, pkgsViewWG->findItems(tmp, (Qt::MatchFlags)Qt::MatchContains, 6))
 		{
 			installPackage(item->text(1));
@@ -1137,8 +1136,21 @@ void MainWindow::reinstallPackage(const QString &package)
 	QTreeWidgetItem *item = pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 1).first();
 
 	qDebug() << item->text(1);
+	
 	if (aHandle->isProviderInstalled(package))
-		return;
+	{
+		switch(ShamanDialog::popupQuestionDialog(tr("Shaman"), QString(tr("A package providing %1 is already installed.\n"
+				"Do you want to install %1 anyway?")).arg(package), this, ShamanProperties::WarningDialog))
+		{
+		case QMessageBox::Yes:
+			break;
+		case QMessageBox::No:
+			return;
+			break;
+		default:
+			break;
+		}
+	}
 
 	if (item->text(8) == tr("Install"))
 		return;
@@ -1160,8 +1172,21 @@ void MainWindow::installPackage(const QString &package)
 	QTreeWidgetItem *item = pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 1).first();
 
 	qDebug() << item->text(1);
-	if(aHandle->isProviderInstalled(package))
-		return;
+
+	if (aHandle->isProviderInstalled(package))
+	{
+		switch(ShamanDialog::popupQuestionDialog(tr("Shaman"), QString(tr("A package providing %1 is already installed.\n"
+				"Do you want to install %1 anyway?")).arg(package), this, ShamanProperties::WarningDialog))
+		{
+		case QMessageBox::Yes:
+			break;
+		case QMessageBox::No:
+			return;
+			break;
+		default:
+			break;
+		}
+	}
 
 	if (item->text(8) == tr("Install") || aHandle->isInstalled(item->text(1)))
 		return;
@@ -1183,7 +1208,7 @@ void MainWindow::removePackage()
 {
 	qDebug() << "Remove Package";
 
-	if(pkgsViewWG->selectedItems().isEmpty())
+	if (pkgsViewWG->selectedItems().isEmpty())
 		return;
 
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
@@ -1203,6 +1228,7 @@ void MainWindow::removePackage(const QString &package)
 	QTreeWidgetItem *item = pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 1).first();
 
 	qDebug() << item->text(1);
+	
 	if (!aHandle->isInstalled(item->text(1)) || item->text(8) == tr("Uninstall"))
 		return;
 	else
@@ -1222,12 +1248,13 @@ void MainWindow::completeRemovePackage()
 {
 	qDebug() << "Complete Remove Package";
 
-	if(pkgsViewWG->selectedItems().isEmpty())
+	if (pkgsViewWG->selectedItems().isEmpty())
 		return;
 
 	QTreeWidgetItem *item = pkgsViewWG->selectedItems().first();
 
 	qDebug() << item->text(1);
+	
 	if (!aHandle->isInstalled(item->text(1)))
 		return;
 	else
@@ -1252,11 +1279,11 @@ void MainWindow::completeRemovePackage()
 
 void MainWindow::cancelAction()
 {
-	if(pkgsViewWG->selectedItems().isEmpty())
+	if (pkgsViewWG->selectedItems().isEmpty())
 		return;
 
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
-	cancelAction(item->text(1));
+		cancelAction(item->text(1));
 
 	itemChanged();
 }
@@ -1289,11 +1316,11 @@ void MainWindow::cancelAction(const QString &package)
 
 void MainWindow::startUpgrading()
 {
-	if(dbdialog)
+	if (dbdialog)
 	{
 		disconnect(dbdialog, 0,0,0);
 
-		if(dbdialog->dbHasBeenUpdated())
+		if (dbdialog->dbHasBeenUpdated())
 		{
 			populatePackagesView();
 			populateRepoColumn();
@@ -1305,13 +1332,13 @@ void MainWindow::startUpgrading()
 	QStringList list = aHandle->getUpgradeablePackages();
 	stBar->stopProgressBar();
 
-	if(list.isEmpty())
+	if (list.isEmpty())
 	{
 		emit systemIsUpToDate();
 
 		if (dbdialog)
 		{
-			if(dbdialog->isVisible())
+			if (dbdialog->isVisible())
 				/* Display a simple ShamanDialog::popup saying the system is up-to-date. */
 				ShamanDialog::popupDialog(tr("System Upgrade"), tr("Your system is up to date!"), this);
 			else
@@ -1326,7 +1353,7 @@ void MainWindow::startUpgrading()
 	else
 		upgrade(list);
 
-	if(dbdialog)
+	if (dbdialog)
 	{
 		dbdialog->deleteLater();
 		dbdialog = 0;
@@ -1341,54 +1368,49 @@ void MainWindow::upgrade(const QStringList &packages)
 		switch (ShamanDialog::popupQuestionDialog(QString(tr("Pacman Update")), QString(tr("Pacman can be upgraded. "
 				"It is advised to process it alone\nto avoid version conflicts.\n"
 				"Do you want to Upgrade Pacman now?")), this))
-				{
-				case QMessageBox::Yes:
+		{
+		case QMessageBox::Yes:
+			/* Ok, let's set up a special queue for Shaman. */
 
-					/* Ok, let's set up a special queue for Shaman. */
+			cancelAllActions();
+			reinstallPackage("pacman");
+			widgetQueueToAlpmQueue();
 
-					cancelAllActions();
-					reinstallPackage("pacman");
-					widgetQueueToAlpmQueue();
-
-					break;
-				case QMessageBox::No:
-					/* Well, just pass by */
-					break;
-				default:
-					// should never be reached
-					break;
-				}
-
-
+			break;
+		case QMessageBox::No:
+			/* Well, just pass by */
+			break;
+		default:
+			// should never be reached
+			break;
+		}
 	}
 	else if (packages.contains("shaman") || packages.contains("kdemod4-shaman-svn"))
 	{
 		switch (ShamanDialog::popupQuestionDialog(QString(tr("Shaman Update")), QString(tr("Shaman can be upgraded. "
 				"It is advised to process it alone\nto avoid version conflicts.\n"
 				"Do you want to Upgrade Shaman now?")), this))
-				{
-				case QMessageBox::Yes:
+		{
+		case QMessageBox::Yes:
+			/* Ok, let's set up a special queue for Shaman. */
 
-					/* Ok, let's set up a special queue for Shaman. */
+			cancelAllActions();
+				
+			if(packages.contains("kdemod4-shaman-svn"))
+				reinstallPackage("kdemod4-shaman-svn");
+			else
+				reinstallPackage("shaman");
+				
+			widgetQueueToAlpmQueue();
 
-					cancelAllActions();
-					
-					if(packages.contains("kdemod4-shaman-svn"))
-						reinstallPackage("kdemod4-shaman-svn");
-					else
-						reinstallPackage("shaman");
-					
-					widgetQueueToAlpmQueue();
-
-					break;
-				case QMessageBox::No:
-					/* Well, just pass by */
-					break;
-				default:
-					// should never be reached
-					break;
-				}
-
+			break;
+		case QMessageBox::No:
+			/* Well, just pass by */
+			break;
+		default:
+			// should never be reached
+			break;
+		}
 	}
 	else
 	{
@@ -1412,17 +1434,17 @@ void MainWindow::upgrade(const QStringList &packages)
 				{
 					switch (ShamanDialog::popupQuestionDialog(QString(tr("News Alert")), 
 							QString(tr("There is an unread news about %1.\nDo you want to read it?")).arg(ent), this)) 
-							{
-							case QMessageBox::Yes:
-								openNewsDialog();
-								return;
-								break;
-							case QMessageBox::No:
-								break;
-							default:
-								// should never be reached
-								break;
-							}
+					{
+					case QMessageBox::Yes:
+						openNewsDialog();
+						return;
+						break;
+					case QMessageBox::No:
+						break;
+					default:
+						// should never be reached
+						break;
+					}
 				}
 			}
 		}
@@ -1670,17 +1692,17 @@ void MainWindow::widgetQueueToAlpmQueue()
 			{
 				switch (ShamanDialog::popupQuestionDialog(QString(tr("News Alert")), 
 						QString(tr("There is an unread news about %1.\nDo you want to read it?")).arg(ent->text(1)), this)) 
-						{
-						case QMessageBox::Yes:
-							openNewsDialog();
-							return;
-							break;
-						case QMessageBox::No:
-							break;
-						default:
-							// should never be reached
-							break;
-						}
+				{
+				case QMessageBox::Yes:
+					openNewsDialog();
+					return;
+					break;
+				case QMessageBox::No:
+					break;
+				default:
+					// should never be reached
+					break;
+				}
 			}
 		}
 
@@ -1831,6 +1853,11 @@ void MainWindow::showAboutDialog()
 			" margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Dario Freddi &lt;drf54321@yahoo.it&gt;</p>\n"
 			"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">"
 			"(C) 2008 Lukas Appelhans &lt;l.appelhans@gmx.de&gt;</p></body></html>")).arg(aHandle->getAlpmVersion()));
+	
+	QPushButton *okb = ui.buttonBox->button(QDialogButtonBox::Ok);
+	
+	okb->setText(QObject::tr("Ok"));
+	okb->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
 
 	about->setWindowModality(Qt::ApplicationModal);
 

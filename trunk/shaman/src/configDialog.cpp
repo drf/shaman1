@@ -624,6 +624,8 @@ void ConfigDialog::performManteinanceAction()
 		connect(cTh, SIGNAL(finished()), SLOT(cleanThread()));
 		cTh->start();
 	}
+	
+	mantDetails->moveCursor(QTextCursor::End);
 }
 
 void ConfigDialog::showFailure(int act)
@@ -651,6 +653,8 @@ void ConfigDialog::showFailure(int act)
 		break;
 	}
 
+	mantDetails->moveCursor(QTextCursor::End);
+	
 	mantProcessButton->setEnabled(true);
 }
 
@@ -682,6 +686,8 @@ void ConfigDialog::showSuccess(int act)
 		alpm_logaction(QString(tr("Build Environments Successfully Cleaned!") + QChar('\n')).toUtf8().data());
 		break;
 	}
+	
+	mantDetails->moveCursor(QTextCursor::End);
 
 	mantProcessButton->setEnabled(true);
 }
@@ -1254,6 +1260,7 @@ void ConfigDialog::mantProgress()
 	QString str(mantProc->readLine(1024));
 	mantDetails->append(QString("<b><i>" + str + "</b></i>"));
 	qDebug() << str;
+	mantDetails->moveCursor(QTextCursor::End);
 }
 
 void ConfigDialog::cleanProc(int eC, QProcess::ExitStatus eS)
@@ -1274,6 +1281,8 @@ void ConfigDialog::cleanProc(int eC, QProcess::ExitStatus eS)
 	}
 
 	mantProc->deleteLater();
+	
+	mantDetails->moveCursor(QTextCursor::End);
 
 	statusLabel->setText(QString(tr("Running sync...", "sync is a command, so it should not be translated")));
 	mantDetails->append(QString(tr("Running sync...", "sync is a command, so it should not be translated")));
@@ -1295,6 +1304,8 @@ void ConfigDialog::cleanProc(int eC, QProcess::ExitStatus eS)
 	}
 	
 	ath.switchToStdUsr();
+	
+	mantDetails->moveCursor(QTextCursor::End);
 
 	mantProc->deleteLater();
 
@@ -1310,11 +1321,20 @@ action(act)
 
 void CleanThread::run()
 {
+	const char *dbpath = alpm_option_get_dbpath();
+	char newdbpath[4096];
+
 	switch(action)
 	{
 	case 0:
-		if(m_handler->cleanUnusedDb())
-			emit success(action);
+		if(m_handler->cleanUnusedDb(dbpath))
+		{
+			sprintf(newdbpath, "%s%s", dbpath, "sync/");
+			if(m_handler->cleanUnusedDb(newdbpath))
+				emit success(action);
+			else
+				emit failure(action);
+		}
 		else
 			emit failure(action);
 		break;

@@ -122,7 +122,7 @@ public:
 	void processQueue();
 	int getNumberOfTargets(int action);
 	
-	bool cleanUnusedDb();
+	bool cleanUnusedDb(const char *dbpath);
 	bool cleanCache(bool empty = false);
 	
 	int rmrf(const char *path);

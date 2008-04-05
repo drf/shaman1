@@ -40,13 +40,16 @@ ShamanDialog::~ShamanDialog()
 void ShamanDialog::popupDialog(const QString &title, const QString &text, QWidget *parent,
 		ShamanProperties::DialogType dtype)
 {
-	foreach(QObject *ent, parent->children())
-	{	
-		QDialog *dlog = qobject_cast<QDialog *>(ent);
-		if(dlog)
-			dlog->hide();
+	if(parent != NULL)
+	{
+		foreach(QObject *ent, parent->children())
+		{	
+			QDialog *dlog = qobject_cast<QDialog *>(ent);
+			if(dlog)
+				dlog->hide();
+		}
 	}
-	
+
 	QMessageBox *message;
 	
 	if(parent == NULL)
@@ -84,11 +87,14 @@ void ShamanDialog::popupDialog(const QString &title, const QString &text, QWidge
 
 	message->deleteLater();
 
-	foreach(QObject *ent, parent->children())
-	{	
-		QDialog *dlog = qobject_cast<QDialog *>(ent);
-		if(dlog != 0)
-			dlog->show();
+	if(parent != NULL)
+	{
+		foreach(QObject *ent, parent->children())
+		{	
+			QDialog *dlog = qobject_cast<QDialog *>(ent);
+			if(dlog)
+				dlog->show();
+		}
 	}
 }
 
@@ -96,12 +102,15 @@ int ShamanDialog::popupQuestionDialog(const QString &title, const QString &text,
 		ShamanProperties::DialogType dtype)
 {
 	int retval = 0;
-
-	foreach(QObject *ent, parent->children())
-	{	
-		QDialog *dlog = qobject_cast<QDialog *>(ent);
-		if(dlog)
-			dlog->hide();
+	
+	if(parent != NULL)
+	{
+		foreach(QObject *ent, parent->children())
+		{	
+			QDialog *dlog = qobject_cast<QDialog *>(ent);
+			if(dlog)
+				dlog->hide();
+		}
 	}
 
 	QMessageBox *msgBox = new QMessageBox(parent);
@@ -152,11 +161,14 @@ int ShamanDialog::popupQuestionDialog(const QString &title, const QString &text,
 
 	msgBox->deleteLater();
 
-	foreach(QObject *ent, parent->children())
-	{	
-		QDialog *dlog = qobject_cast<QDialog *>(ent);
-		if(dlog)
-			dlog->show();
+	if(parent != NULL)
+	{
+		foreach(QObject *ent, parent->children())
+		{	
+			QDialog *dlog = qobject_cast<QDialog *>(ent);
+			if(dlog)
+				dlog->show();
+		}
 	}
 	
 	return retval;
@@ -169,11 +181,14 @@ void ShamanDialog::popupDialogDontShow(const QString &title, const QString &text
 
 	if(!settings->value(keyname, false).toBool())
 	{
-		foreach(QObject *ent, parent->children())
-		{	
-			QDialog *dlog = qobject_cast<QDialog *>(ent);
-			if(dlog)
-				dlog->hide();
+		if(parent != NULL)
+		{
+			foreach(QObject *ent, parent->children())
+			{	
+				QDialog *dlog = qobject_cast<QDialog *>(ent);
+				if(dlog)
+					dlog->hide();
+			}
 		}
 
 		QDialog *dlog = new QDialog(parent);
@@ -234,11 +249,14 @@ void ShamanDialog::popupDialogDontShow(const QString &title, const QString &text
 
 		dlog->deleteLater();
 
-		foreach(QObject *ent, parent->children())
-		{	
-			QDialog *dlog = qobject_cast<QDialog *>(ent);
-			if(dlog)
-				dlog->show();
+		if(parent != NULL)
+		{
+			foreach(QObject *ent, parent->children())
+			{	
+				QDialog *dlog = qobject_cast<QDialog *>(ent);
+				if(dlog)
+					dlog->show();
+			}
 		}
 	}
 

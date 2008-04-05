@@ -3,27 +3,27 @@
 <context>
     <name>AlpmHandler</name>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1116"/>
+        <location filename="../src/AlpmHandler.cpp" line="1099"/>
         <source>: requires </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1126"/>
+        <location filename="../src/AlpmHandler.cpp" line="1109"/>
         <source>: conflicts with </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1180"/>
+        <location filename="../src/AlpmHandler.cpp" line="1163"/>
         <source>Alpm did not give further details.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1153"/>
+        <location filename="../src/AlpmHandler.cpp" line="1136"/>
         <source>%1 exists in both &apos;%2&apos; and &apos;%3&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1161"/>
+        <location filename="../src/AlpmHandler.cpp" line="1144"/>
         <source>: %1 exists in filesystem</source>
         <translation type="unfinished"></translation>
     </message>
@@ -664,42 +664,42 @@ de Shaman y Pacman.</translation>
         <translation>Limpiando entornos de construcción...</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="635"/>
+        <location filename="../src/configDialog.cpp" line="637"/>
         <source>Cleaning up Unused Databases Failed!</source>
         <translation>¡La limpieza de bases de datos sin usar falló!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="640"/>
+        <location filename="../src/configDialog.cpp" line="642"/>
         <source>Cleaning up Cache Failed!</source>
         <translation>¡La limpieza del cache falló!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="645"/>
+        <location filename="../src/configDialog.cpp" line="647"/>
         <source>Deleting Cache Failed!</source>
         <translation>¡La eliminación del cache falló!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="650"/>
+        <location filename="../src/configDialog.cpp" line="652"/>
         <source>Could not clean Build Environments!!</source>
         <translation>¡No se pudo limpiar los entornos de construcción!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="664"/>
+        <location filename="../src/configDialog.cpp" line="668"/>
         <source>Unused Databases Cleaned up successfully!</source>
         <translation>¡Las bases de datos sin usar fueron limpiadas satisfactoriamente!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="670"/>
+        <location filename="../src/configDialog.cpp" line="674"/>
         <source>Cache Cleaned Up Successfully!</source>
         <translation>¡El Cache fue limpiado satisf&lt;ctoriamente!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="676"/>
+        <location filename="../src/configDialog.cpp" line="680"/>
         <source>Cache Successfully Deleted!</source>
         <translation>¡El cache se borró satisfactoriamente!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="682"/>
+        <location filename="../src/configDialog.cpp" line="686"/>
         <source>Build Environments Successfully Cleaned!</source>
         <translation>¡Los entornos de construcción se limpiaron satisfactoriamente!</translation>
     </message>
@@ -709,19 +709,19 @@ de Shaman y Pacman.</translation>
         <translation type="obsolete">¡Los entornos de construcción se limpiaron satisfactoriamente!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1075"/>
+        <location filename="../src/configDialog.cpp" line="1081"/>
         <source>Settings Changed</source>
         <translation>Opciones Modificadas</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1076"/>
+        <location filename="../src/configDialog.cpp" line="1082"/>
         <source>Your repositories have changed.
 Do you want to Update Your Database?</source>
         <translation>Sus repositorios han cambiado.
 ¿Quiere actualizar su base de datos?</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1157"/>
+        <location filename="../src/configDialog.cpp" line="1163"/>
         <source>Mirror Format is incorrect. Your mirror should look like this:
 http://mirror.org/$repo/os/i686</source>
         <comment>Obviously keep the example as it is ;)</comment>
@@ -729,7 +729,7 @@ http://mirror.org/$repo/os/i686</source>
 http://mirror.org/$repo/os/i686</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1182"/>
+        <location filename="../src/configDialog.cpp" line="1188"/>
         <source>Your Mirror was successfully added!
 It is now available in mirrorlist.</source>
         <comment>mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.</comment>
@@ -737,34 +737,34 @@ It is now available in mirrorlist.</source>
 Ahora está disponible en el mirrorlist.</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1267"/>
+        <location filename="../src/configDialog.cpp" line="1274"/>
         <source>Pacman Database Optimized Successfully!</source>
         <translation>¡La base de datos de Pacman fue actualizada satisfactoriamente!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1273"/>
+        <location filename="../src/configDialog.cpp" line="1280"/>
         <source>Could not Optimize Pacman Database!</source>
         <translation>¡No se pudo optimizar la base de datos de Pacman!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1289"/>
+        <location filename="../src/configDialog.cpp" line="1298"/>
         <source>Operation Completed Successfully!</source>
         <translation>¡La operación se completó satisfactoriamente!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1288"/>
+        <location filename="../src/configDialog.cpp" line="1297"/>
         <source>Sync was successfully executed!!</source>
         <comment>Sync is always the command</comment>
         <translation>¡Sync se ejecutó correctamente!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1293"/>
+        <location filename="../src/configDialog.cpp" line="1302"/>
         <source>Sync could not be executed!</source>
         <comment>Sync is always the command</comment>
         <translation>¡No se pudo ejecutar Sync!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1294"/>
+        <location filename="../src/configDialog.cpp" line="1303"/>
         <source>Sync could not be executed!!</source>
         <comment>Sync is always the command</comment>
         <translation>¡No se pudo ejecutar Sync!</translation>
@@ -824,7 +824,7 @@ p, li { white-space: pre-wrap; }
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1279"/>
+        <location filename="../src/configDialog.cpp" line="1288"/>
         <source>Running sync...</source>
         <comment>sync is a command, so it should not be translated</comment>
         <translation>Ejecutando sync...</translation>
@@ -941,31 +941,31 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1065"/>
+        <location filename="../src/configDialog.cpp" line="1071"/>
         <source>Saving Configuration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="727"/>
+        <location filename="../src/configDialog.cpp" line="733"/>
         <source>Unable to save Pacman configuration!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1199"/>
+        <location filename="../src/configDialog.cpp" line="1205"/>
         <source>Mirror Format is incorrect. Your mirror should look like this:
 http://mirror.org/$repo/$arch</source>
         <comment>Obviously keep the example as it is ;)</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1236"/>
+        <location filename="../src/configDialog.cpp" line="1242"/>
         <source>Your Mirror was successfully added!
 It is now available in kdemodmirrorlist.</source>
         <comment>mirrorlist here means /etc/pacman.d/kdemodmirrorlist, so it should not be translated.</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1066"/>
+        <location filename="../src/configDialog.cpp" line="1072"/>
         <source>Some of your changes have not been applied,
 since alpm needs to be released.
 You need to restart Shaman to make them effective.</source>
@@ -1254,7 +1254,7 @@ Puede cambiar este comportamiento en Opciones.</translation>
         <translation>Shaman - Minimizando a la Bandeja</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2019"/>
+        <location filename="../src/MainWindow.cpp" line="2024"/>
         <source>Upgrade</source>
         <translation>Actualizar</translation>
     </message>
@@ -1303,17 +1303,17 @@ Haga click aquí para actualizar su sistema.</translation>
         <translation>Marcar para reinstalarlo</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1911"/>
+        <location filename="../src/MainWindow.cpp" line="1916"/>
         <source>Install</source>
         <translation>Instalar</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1954"/>
+        <location filename="../src/MainWindow.cpp" line="1959"/>
         <source>Uninstall</source>
         <translation>Desinstalar</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1954"/>
+        <location filename="../src/MainWindow.cpp" line="1959"/>
         <source>Complete Uninstall</source>
         <translation>Desinstalación Completa</translation>
     </message>
@@ -1575,25 +1575,25 @@ falló. ¿Quiere seguir de todas formas?</translation>
         <translation type="obsolete">Sus paquetes fueron creados satisfactoriamente, y están listos para ser instalados</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1846"/>
+        <location filename="../src/MainWindow.cpp" line="1851"/>
         <source>%1 GiB</source>
         <comment>Size is in Gib</comment>
         <translation>%1 GiB</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1848"/>
+        <location filename="../src/MainWindow.cpp" line="1853"/>
         <source>%1 MiB</source>
         <comment>Size is in MiB</comment>
         <translation>%1 MiB</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1850"/>
+        <location filename="../src/MainWindow.cpp" line="1855"/>
         <source>%1 KiB</source>
         <comment>Size is in KiB</comment>
         <translation>%1 KiB</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1852"/>
+        <location filename="../src/MainWindow.cpp" line="1857"/>
         <source>%1 Bytes</source>
         <comment>Size is in Bytes</comment>
         <translation>%1 Bytes</translation>
@@ -1675,7 +1675,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1864"/>
+        <location filename="../src/MainWindow.cpp" line="1869"/>
         <source>Library Question</source>
         <translation type="unfinished"></translation>
     </message>

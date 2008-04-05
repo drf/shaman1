@@ -22,12 +22,12 @@
 
 #include "AlpmHandler.h"
 #include "MainWindow.h"
+#include "ShamanDialog.h"
 
 #include <iostream>
 #include <QApplication>
 #include <QString>
 #include <QSettings>
-#include <QMessageBox>
 #include <QFile>
 #include <QDate>
 #include <QTranslator>
@@ -81,6 +81,9 @@ void noDebugOutput(QtMsgType type, const char *msg)
 	case QtFatalMsg:
 		fprintf(stderr, "Fatal: %s\n", msg);
 		abort();
+		break;
+	default:
+		break;
 	}
 }
 
@@ -117,22 +120,18 @@ int main(int argc, char **argv)
 	QDBusConnection testconn = QDBusConnection::systemBus();
 	if(testconn.interface()->isServiceRegistered("org.archlinux.shaman"))
 	{
-		QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("Shaman"), 
+		ShamanDialog::popupDialog(QObject::tr("Shaman"), 
 				QObject::tr("It looks like another copy of Shaman is running.\nYou can only run "
-						"one copy of Shaman at a time."), QMessageBox::Ok);
+						"one copy of Shaman at a time."), NULL, ShamanProperties::ErrorDialog);
 
-		message->setIconPixmap(QPixmap(":/Icons/icons/dialog-warning.png"));
-
-		message->show();
-		
-		return app.exec();
+		exit(1);
 	}
 
 	QSettings *settings = new QSettings();
 
 	if(!settings->isWritable())
 	{
-		QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("Shaman", "Hey! "
+		ShamanDialog::popupDialog( QObject::tr("Shaman", "Hey! "
 				"If you are reading this, first of all thanks for helping us in making Shaman better. "
 				"There are not many comments unless where needed, since all the strings are pretty self-explanatory. "
 				"You will see a lot of HTML in some cases: do not let that scare you, but please edit text only. Editing "
@@ -141,13 +140,10 @@ int main(int argc, char **argv)
 				"If you have any doubts, or if you just want to drop us a line, there goes our email addresses:\n"
 				"Dario: drf54321@gmail.com\nLukas: l.appelhans@gmx.de\n"
 				"Thanks again, and enjoy your translation!"), 
-				QObject::tr("Your settings file seems unwritable.\nPlease check permissions on it."), QMessageBox::Ok);
+				QObject::tr("Your settings file seems unwritable.\nPlease check permissions on it."), NULL,
+				ShamanProperties::ErrorDialog);
 		
-		message->setIconPixmap(QPixmap(":/Icons/icons/dialog-error.png"));
-
-		message->show();
-
-		return app.exec();
+		exit(1);
 	}
 	
 	qDebug() << settings->fileName();
@@ -247,27 +243,19 @@ int main(int argc, char **argv)
 	{
 		if(settings->value("gui/noroot").toBool())
 		{
-			QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("Shaman"), 
+			ShamanDialog::popupDialog(QObject::tr("Shaman"), 
 					QObject::tr("Shaman can not be started as root.\nPlease restart it as "
-							"unprivileged user."), QMessageBox::Ok);
+							"unprivileged user."), NULL,
+							ShamanProperties::ErrorDialog);
 
-			message->setIconPixmap(QPixmap(":/Icons/icons/dialog-error.png"));
-
-			message->exec();
-
-			exit(-1);
+			exit(1);
 		}
 
 
-		QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("Shaman"), 
+		ShamanDialog::popupDialogDontShow(QObject::tr("Shaman"), 
 				QObject::tr("You have started Shaman as root.\nIt is advised to start it as unprivileged user.\n"
-						"Shaman will ask you for root password when needed."), QMessageBox::Ok);
-
-		message->setIconPixmap(QPixmap(":/Icons/icons/dialog-warning.png"));
-		
-		message->exec();
-
-		message->deleteLater();
+						"Shaman will ask you for root password when needed."), "gui/rootwarning", NULL,
+						ShamanProperties::WarningDialog);
 	}
 
 	AlpmHandler *aHandler = new AlpmHandler(true);
@@ -278,26 +266,18 @@ int main(int argc, char **argv)
 		
 		if(!ath.switchToRoot())
 		{
-			QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("Shaman"), QObject::tr("Shaman could not"
+			ShamanDialog::popupDialog(QObject::tr("Shaman"), QObject::tr("Shaman could not"
 							" switch to root.\nProbably you have not set the SUID bit to it.\nYou can do that by "
 							"issuing as root\nchown root shaman && chmod u+s shaman.\nNote that this is safe, please "
-							"read Shaman wiki\nfor more details."), QMessageBox::Ok);
-					
-					message->setIconPixmap(QPixmap(":/Icons/icons/dialog-error.png"));
-
-					message->show();
-
-					return app.exec();
+							"read Shaman wiki\nfor more details."), NULL, ShamanProperties::ErrorDialog);
+			exit(1);
 		}
 		
-		QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("Shaman"), QObject::tr("There was a problem"
-				" while testing libalpm.\nMaybe another application has a lock on it."), QMessageBox::Ok);
+		ShamanDialog::popupDialog(QObject::tr("Shaman"), QObject::tr("There was a problem"
+				" while testing libalpm.\nMaybe another application has a lock on it."), NULL,
+				ShamanProperties::ErrorDialog);
 		
-		message->setIconPixmap(QPixmap(":/Icons/icons/dialog-error.png"));
-
-		message->show();
-
-		return app.exec();
+		exit(1);
 	}
 
 	QString alversion(aHandler->getAlpmVersion());
@@ -305,14 +285,11 @@ int main(int argc, char **argv)
 	
 	if(alversion[0].digitValue() <= 2 && alversion[2].digitValue() < 1)
 	{
-		QMessageBox *message = new QMessageBox(QMessageBox::Information, QObject::tr("Shaman"), QString(QObject::tr("Pacman is not updated."
-				"\nShaman needs libalpm >= 2.1.0 to run.\nYours is %1. Please update Pacman.")).arg(alversion), QMessageBox::Ok);
+		ShamanDialog::popupDialog(QObject::tr("Shaman"), QString(QObject::tr("Pacman is not updated."
+				"\nShaman needs libalpm >= 2.1.0 to run.\nYours is %1. Please update Pacman.")).arg(alversion),
+				NULL, ShamanProperties::ErrorDialog);
 		
-		message->setIconPixmap(QPixmap(":/Icons/icons/dialog-error.png"));
-
-		message->show();
-
-		return app.exec();
+		exit(1);
 	}
 	
 	app.setQuitOnLastWindowClosed(false);

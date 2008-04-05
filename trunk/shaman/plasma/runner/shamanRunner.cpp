@@ -152,6 +152,9 @@ void ShamanRunner::exec(const Plasma::SearchContext *search, const Plasma::Searc
 
 void ShamanRunner::executeAction()
 {
+	dbus.disconnect("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", 
+			"shamanReady", this, SLOT(executeAction()));
+
 	if (execTerm.startsWith("install", Qt::CaseInsensitive) || 
 			execTerm.startsWith("i ", Qt::CaseInsensitive))
 	{

@@ -764,7 +764,7 @@ void AlpmHandler::processQueue()
 
 }
 
-bool AlpmHandler::cleanUnusedDb()
+bool AlpmHandler::cleanUnusedDb(const char *dbpath)
 {
 	if(!ath.switchToRoot())
 		return false;
@@ -772,41 +772,16 @@ bool AlpmHandler::cleanUnusedDb()
 	DIR *dir;
 	struct dirent *ent;
 
-	dir = opendir(alpm_option_get_dbpath());
+	dir = opendir(dbpath);
 	if(dir == NULL)
+	{
+		qDebug() << "Couldn't open db Dir";
+		ath.switchToStdUsr();
 		return false;
+	}
 
 	rewinddir(dir);
 	/* step through the directory one file at a time */
-	while((ent = readdir(dir)) != NULL) 
-	{
-		char path[4096];
-		int found = 0;
-		char *dname = ent->d_name;
-
-		if(!strcmp(dname, ".") || !strcmp(dname, ".."))
-			continue;
-
-		/* skip the local and sync directories */
-		if(!strcmp(dname, "sync") || !strcmp(dname, "local")) 
-			continue;
-
-		/* We have a directory that doesn't match any syncdb.
-		 * Ask the user if he wants to remove it. */
-		if(!found) 
-			if(rmrf(path)) 
-				return false;
-	}
-	
-	char newpath[4096];
-	
-	sprintf(newpath, "%s%s", alpm_option_get_dbpath(), "sync/");
-	
-	closedir(dir);
-	dir = opendir(newpath);
-	if(dir == NULL)
-		return false;
-	
 	while((ent = readdir(dir)) != NULL) 
 	{
 		char path[4096];
@@ -816,9 +791,11 @@ bool AlpmHandler::cleanUnusedDb()
 
 		if(!strcmp(dname, ".") || !strcmp(dname, ".."))
 			continue;
+		
+		qDebug() << dname;
 
 		/* skip the local and sync directories */
-		if(!strcmp(dname, "sync") || !strcmp(dname, "local")) 
+		if(!strcmp(dname, "sync") || !strcmp(dname, "local"))
 			continue;
 
 		syncdbs = alpm_option_get_syncdbs();
@@ -827,17 +804,23 @@ bool AlpmHandler::cleanUnusedDb()
 			pmdb_t *db = (pmdb_t *)alpm_list_getdata(i);
 			found = !strcmp(dname, alpm_db_get_name(db));
 		}
-		
+
 		/* We have a directory that doesn't match any syncdb.
 		 * Ask the user if he wants to remove it. */
 		if(!found) 
+		{
+			/* build the full path */
+			snprintf(path, 4096, "%s%s", dbpath, ent->d_name);
+
 			if(rmrf(path)) 
 			{
 				ath.switchToStdUsr();
 				return false;
 			}
+		}
+
 	}
-	
+
 	ath.switchToStdUsr();
 	return true;
 }
