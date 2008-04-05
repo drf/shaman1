@@ -1913,6 +1913,8 @@ void MainWindow::updateABSTree()
 	bHandler->updateABSTree();
 
 	connect(bHandler, SIGNAL(outOfScope()), SLOT(terminatedBuildingHandling()));
+	connect(bHandler, SIGNAL(buildingFinished()), SIGNAL(buildingFinished()));
+	connect(bHandler, SIGNAL(buildingStarted()), SIGNAL(buildingStarted()));
 }
 
 void MainWindow::initSourceQueue()

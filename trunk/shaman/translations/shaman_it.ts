@@ -116,26 +116,26 @@ Tutti i progressi andranno perduti.</translation>
 <context>
     <name>BuildingHandler</name>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="84"/>
+        <location filename="../src/BuildingHandler.cpp" line="87"/>
         <source>You need to have ABS installed to use Shaman&apos;s
 building feature. Do you want to install it now?</source>
         <translation>Devi avere installato ABS per utilizzare le capacità
 di compilazione di Shaman. Vuoi installarlo ora?</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="293"/>
+        <location filename="../src/BuildingHandler.cpp" line="296"/>
         <source>Error</source>
         <translation>Errore</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="114"/>
+        <location filename="../src/BuildingHandler.cpp" line="117"/>
         <source>You can not remove packages when processing
 your queue from Source</source>
         <translation>Non puoi rimuovere pacchetti se esegui la coda
 da sorgente</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="126"/>
+        <location filename="../src/BuildingHandler.cpp" line="129"/>
         <source>Some of your packages do not belong to Arch
 Linux&apos;s official repository. Shaman is able to
 build packages from official sources only.</source>
@@ -144,49 +144,49 @@ ai repositori ufficiali di Arch Linux. Shaman è in grado
 di compilare pacchetti solo da sorgenti ufficiali.</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="160"/>
+        <location filename="../src/BuildingHandler.cpp" line="163"/>
         <source>You are about to install &lt;b&gt;%1 package&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
         <translation>Stai per installare &lt;b&gt;%1 pacchetto&lt;/b&gt; da sorgente. Compilare da sorgente&lt;br&gt;può dare diversi vantaggi, ma è comunque molto lento.&lt;br&gt;Se non ne sei sicuro, probabilmente preferiresti eseguire la tua coda da file&lt;br&gt;binari. Prima di continuare, è consigliabile rivedere la tua configurazione&lt;br&gt;per massimizzare le prestazioni della compilazione.</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="166"/>
+        <location filename="../src/BuildingHandler.cpp" line="169"/>
         <source>You are about to install &lt;b&gt;%1 packages&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
         <translation>Stai per installare &lt;b&gt;%1 pacchetti&lt;/b&gt; da sorgente. Compilare da sorgente&lt;br&gt;può dare diversi vantaggi, ma è comunque molto lento.&lt;br&gt;Se non ne sei sicuro, probabilmente preferiresti eseguire la tua coda da file&lt;br&gt;binari. Prima di continuare, è consigliabile rivedere la tua configurazione&lt;br&gt;per massimizzare le prestazioni della compilazione.</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="185"/>
+        <location filename="../src/BuildingHandler.cpp" line="188"/>
         <source>To be Installed</source>
         <translation>Da Installare</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="192"/>
+        <location filename="../src/BuildingHandler.cpp" line="195"/>
         <source>To be Upgraded</source>
         <translation>Da Aggiornare</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="321"/>
+        <location filename="../src/BuildingHandler.cpp" line="324"/>
         <source>Package Building</source>
         <translation>Compilazione Pacchetti</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="275"/>
+        <location filename="../src/BuildingHandler.cpp" line="278"/>
         <source>Your Packages failed to build!</source>
         <translation>Non è stato possibile compilare i pacchetti!</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="278"/>
+        <location filename="../src/BuildingHandler.cpp" line="281"/>
         <source>Your packages Failed to Build.
 Look at the output for more details.</source>
         <translation>Non è stato possibile compilare i pacchetti.
 Guarda l&apos;output per maggiori dettagli.</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="300"/>
+        <location filename="../src/BuildingHandler.cpp" line="303"/>
         <source>Close</source>
         <translation>Chiudi</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="290"/>
+        <location filename="../src/BuildingHandler.cpp" line="293"/>
         <source>Building Packages Failed!!</source>
         <translation>Compilazione dei Pacchetti Fallita!!</translation>
     </message>
@@ -196,29 +196,29 @@ Guarda l&apos;output per maggiori dettagli.</translation>
         <translation type="obsolete">Shaman - In Attesa</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="294"/>
+        <location filename="../src/BuildingHandler.cpp" line="297"/>
         <source>Some packages failed to build.
 Do you want to proceed anyway?</source>
         <translation>Alcuni pacchetti non sono stati compilati.
 Vuoi proseguire comunque?</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="316"/>
+        <location filename="../src/BuildingHandler.cpp" line="319"/>
         <source>Install Built Packages</source>
         <translation>Installa i Pacchetti Compilati</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="317"/>
+        <location filename="../src/BuildingHandler.cpp" line="320"/>
         <source>Close Without Installing</source>
         <translation>Chiudi Senza Installare</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="318"/>
+        <location filename="../src/BuildingHandler.cpp" line="321"/>
         <source>Packages Built Successfully!</source>
         <translation>Pacchetti Compilati con Successo!</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="322"/>
+        <location filename="../src/BuildingHandler.cpp" line="325"/>
         <source>Your Packages have been built successfully, and are ready to be installed</source>
         <translation>I Pacchetti sono stati compilati con successo, e sono pronti per essere installati</translation>
     </message>
@@ -697,19 +697,19 @@ Shaman che tramite Pacman.</translation>
         <translation type="obsolete">Ambienti di compilazione puliti con Successo!!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1081"/>
+        <location filename="../src/configDialog.cpp" line="1083"/>
         <source>Settings Changed</source>
         <translation>Impostazioni Cambiate</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1082"/>
+        <location filename="../src/configDialog.cpp" line="1084"/>
         <source>Your repositories have changed.
 Do you want to Update Your Database?</source>
         <translation>I Repositori sono stati modificati.
 Vuoi aggiornare i Database?</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1163"/>
+        <location filename="../src/configDialog.cpp" line="1165"/>
         <source>Mirror Format is incorrect. Your mirror should look like this:
 http://mirror.org/$repo/os/i686</source>
         <comment>Obviously keep the example as it is ;)</comment>
@@ -717,7 +717,7 @@ http://mirror.org/$repo/os/i686</source>
 http://mirror.org/$repo/os/i686</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1188"/>
+        <location filename="../src/configDialog.cpp" line="1190"/>
         <source>Your Mirror was successfully added!
 It is now available in mirrorlist.</source>
         <comment>mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.</comment>
@@ -725,34 +725,34 @@ It is now available in mirrorlist.</source>
 E&apos; ora disponibile in mirrorlist.</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1274"/>
+        <location filename="../src/configDialog.cpp" line="1276"/>
         <source>Pacman Database Optimized Successfully!</source>
         <translation>Database di Pacman Ottimizzato con Successo!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1280"/>
+        <location filename="../src/configDialog.cpp" line="1282"/>
         <source>Could not Optimize Pacman Database!</source>
         <translation>Non è stato possibile ottimizzare il Database di Pacman!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1298"/>
+        <location filename="../src/configDialog.cpp" line="1300"/>
         <source>Operation Completed Successfully!</source>
         <translation>Operazione Completata con Successo!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1297"/>
+        <location filename="../src/configDialog.cpp" line="1299"/>
         <source>Sync was successfully executed!!</source>
         <comment>Sync is always the command</comment>
         <translation>Sync è stato eseguito con successo!!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1302"/>
+        <location filename="../src/configDialog.cpp" line="1304"/>
         <source>Sync could not be executed!</source>
         <comment>Sync is always the command</comment>
         <translation>Non è stato possibile eseguire sync!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1303"/>
+        <location filename="../src/configDialog.cpp" line="1305"/>
         <source>Sync could not be executed!!</source>
         <comment>Sync is always the command</comment>
         <translation>Non è stato possibile eseguire sync!!</translation>
@@ -804,7 +804,7 @@ E&apos; ora disponibile in mirrorlist.</translation>
         <translation>Unstable</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1288"/>
+        <location filename="../src/configDialog.cpp" line="1290"/>
         <source>Running sync...</source>
         <comment>sync is a command, so it should not be translated</comment>
         <translation>Esecuzione di sync...</translation>
@@ -939,7 +939,7 @@ p, li { white-space: pre-wrap; }
         <translation>Impedisci di avviare Shaman come Root</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1071"/>
+        <location filename="../src/configDialog.cpp" line="1073"/>
         <source>Saving Configuration</source>
         <translation>Salvataggio Configurazione</translation>
     </message>
@@ -949,7 +949,7 @@ p, li { white-space: pre-wrap; }
         <translation>Impossibile salvare la Configurazione di Pacman!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1205"/>
+        <location filename="../src/configDialog.cpp" line="1207"/>
         <source>Mirror Format is incorrect. Your mirror should look like this:
 http://mirror.org/$repo/$arch</source>
         <comment>Obviously keep the example as it is ;)</comment>
@@ -957,7 +957,7 @@ http://mirror.org/$repo/$arch</source>
 http://mirror.org/$repo/$arch</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1242"/>
+        <location filename="../src/configDialog.cpp" line="1244"/>
         <source>Your Mirror was successfully added!
 It is now available in kdemodmirrorlist.</source>
         <comment>mirrorlist here means /etc/pacman.d/kdemodmirrorlist, so it should not be translated.</comment>
@@ -974,7 +974,7 @@ siccome alpm deve essere rilasciata per poterlo fare.
 Devi riavviare Shaman per renderli effettivi.</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1072"/>
+        <location filename="../src/configDialog.cpp" line="1074"/>
         <source>Some of your changes have not been applied,
 since alpm needs to be released.
 You need to restart Shaman to make them effective.</source>
@@ -1264,7 +1264,7 @@ Puoi cambiare questo comportamento nelle Impostazioni.</translation>
         <translation>Shaman - Riduzione a Icona</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2024"/>
+        <location filename="../src/MainWindow.cpp" line="2048"/>
         <source>Upgrade</source>
         <translation>Aggiorna</translation>
     </message>
@@ -1274,7 +1274,7 @@ Puoi cambiare questo comportamento nelle Impostazioni.</translation>
         <translation type="obsolete">Shaman - In Attesa (Aggiornamenti Disponibili)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1318"/>
+        <location filename="../src/MainWindow.cpp" line="1345"/>
         <source>System Upgrade</source>
         <translation>Aggiornamento del Sistema</translation>
     </message>
@@ -1303,7 +1303,7 @@ Clicca qui per aggiornare il tuo Sistema.</translation>
         <translation>Pacchetti Locali</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1083"/>
+        <location filename="../src/MainWindow.cpp" line="1082"/>
         <source>All Groups</source>
         <translation>Tutti i Gruppi</translation>
     </message>
@@ -1313,17 +1313,17 @@ Clicca qui per aggiornare il tuo Sistema.</translation>
         <translation>Segna per la Reinstallazione</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1916"/>
+        <location filename="../src/MainWindow.cpp" line="1940"/>
         <source>Install</source>
         <translation>Installa</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1959"/>
+        <location filename="../src/MainWindow.cpp" line="1983"/>
         <source>Uninstall</source>
         <translation>Rimuovi</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1959"/>
+        <location filename="../src/MainWindow.cpp" line="1983"/>
         <source>Complete Uninstall</source>
         <translation>Rimuovi Completamente</translation>
     </message>
@@ -1353,7 +1353,7 @@ Clicca qui per aggiornare il tuo Sistema.</translation>
         <translation type="obsolete">Shaman - Operazione in corso</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1797"/>
+        <location filename="../src/MainWindow.cpp" line="1819"/>
         <source>Error</source>
         <translation>Errore</translation>
     </message>
@@ -1402,34 +1402,34 @@ L&apos;ultimo errore riportato è stato:
         <translation>Segna tutti per la Rimozione</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1322"/>
+        <location filename="../src/MainWindow.cpp" line="1349"/>
         <source>Your system is up to date!</source>
         <translation>Il tuo sistema è aggiornato!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1531"/>
+        <location filename="../src/MainWindow.cpp" line="1553"/>
         <source>Queue Processing</source>
         <translation>Esecuzione Coda</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1531"/>
+        <location filename="../src/MainWindow.cpp" line="1553"/>
         <source>Your Queue is being processed.
 Please wait.</source>
         <translation>La tua coda sta venendo eseguita.
 Attendi.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1623"/>
+        <location filename="../src/MainWindow.cpp" line="1645"/>
         <source>Queue Processed</source>
         <translation>Coda Eseguita</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1621"/>
+        <location filename="../src/MainWindow.cpp" line="1643"/>
         <source>Your Queue was successfully processed!</source>
         <translation>La Coda è stata eseguita con successo!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1625"/>
+        <location filename="../src/MainWindow.cpp" line="1647"/>
         <source>Your Queue was successfully processed!!</source>
         <translation>La Coda è stata eseguita con successo!!</translation>
     </message>
@@ -1479,17 +1479,17 @@ Attendi.</translation>
         <translation type="obsolete">Vuoi proseguire?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1788"/>
+        <location filename="../src/MainWindow.cpp" line="1810"/>
         <source>Install a Package</source>
         <translation>Installa un Pacchetto</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1788"/>
+        <location filename="../src/MainWindow.cpp" line="1810"/>
         <source>Arch Linux Packages (*.pkg.tar.gz)</source>
         <translation>Pacchetti di Arch Linux (*.pkg.tar.gz)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1797"/>
+        <location filename="../src/MainWindow.cpp" line="1819"/>
         <source>%1 does not seem
 a valid package</source>
         <translation>%1 non sembra
@@ -1583,25 +1583,25 @@ Vuoi proseguire comunque?</translation>
         <translation type="obsolete">I Pacchetti sono stati compilati con successo, e sono pronti per essere installati</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1851"/>
+        <location filename="../src/MainWindow.cpp" line="1873"/>
         <source>%1 GiB</source>
         <comment>Size is in Gib</comment>
         <translation>%1 GB</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1853"/>
+        <location filename="../src/MainWindow.cpp" line="1875"/>
         <source>%1 MiB</source>
         <comment>Size is in MiB</comment>
         <translation>%1 MB</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1855"/>
+        <location filename="../src/MainWindow.cpp" line="1877"/>
         <source>%1 KiB</source>
         <comment>Size is in KiB</comment>
         <translation>%1 KB</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1857"/>
+        <location filename="../src/MainWindow.cpp" line="1879"/>
         <source>%1 Bytes</source>
         <comment>Size is in Bytes</comment>
         <translation>%1 Bytes</translation>
@@ -1618,12 +1618,12 @@ Vuoi proseguire comunque?</translation>
         <translation type="obsolete">Non mostrare di nuovo</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1341"/>
+        <location filename="../src/MainWindow.cpp" line="1368"/>
         <source>Pacman Update</source>
         <translation>Aggiornamento di Pacman</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1343"/>
+        <location filename="../src/MainWindow.cpp" line="1370"/>
         <source>Pacman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Pacman now?</source>
@@ -1632,12 +1632,12 @@ da solo per evitare eventuali conflitti di versione.
 Vuoi aggiornare Pacman ora?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1366"/>
+        <location filename="../src/MainWindow.cpp" line="1390"/>
         <source>Shaman Update</source>
         <translation>Aggiornamento di Shaman</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1368"/>
+        <location filename="../src/MainWindow.cpp" line="1392"/>
         <source>Shaman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Shaman now?</source>
@@ -1646,24 +1646,24 @@ da solo per evitare eventuali conflitti di versione.
 Vuoi aggiornare Shaman ora?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1611"/>
+        <location filename="../src/MainWindow.cpp" line="1633"/>
         <source>Restart required</source>
         <translation>Riavvio Richiesto</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1604"/>
+        <location filename="../src/MainWindow.cpp" line="1626"/>
         <source>Pacman or Shaman was updated. Shaman will now quit,
 please restart it to use the new version</source>
         <translation>Pacman o Shaman sono stati aggiornati. Shaman ora si 
 chiuderà, riavvialo per usare la nuova versione</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1869"/>
+        <location filename="../src/MainWindow.cpp" line="1891"/>
         <source>Library Question</source>
         <translation>Domanda della Libreria</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1833"/>
+        <location filename="../src/MainWindow.cpp" line="1855"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -1694,7 +1694,7 @@ was not successfully processed</source>
 possibile completare con successo la Coda</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1612"/>
+        <location filename="../src/MainWindow.cpp" line="1634"/>
         <source>Your Kernel has been updated.
 Please restart your PC soon to load the new Kernel.</source>
         <translation>Il tuo Kernel è stato aggiornato.
@@ -1707,12 +1707,12 @@ per caricare il nuovo Kernel.</translation>
         <translation>Esc</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1671"/>
+        <location filename="../src/MainWindow.cpp" line="1693"/>
         <source>News Alert</source>
         <translation>Notizia</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1672"/>
+        <location filename="../src/MainWindow.cpp" line="1694"/>
         <source>There is an unread news about %1.
 Do you want to read it?</source>
         <translation>C&apos;è una notizia non letta riguardante %1.
@@ -1734,7 +1734,7 @@ Desideri leggerla?</translation>
         <translation>Visualizza Log</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1569"/>
+        <location filename="../src/MainWindow.cpp" line="1591"/>
         <source>One or more errors occurred, your Queue
 was not successfully processed</source>
         <translation>Si sono verificati degli errori, non è stato
@@ -1751,7 +1751,7 @@ possibile completare con successo la Coda</translation>
         <translation>Uno o più database non sono stati aggiornati!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1571"/>
+        <location filename="../src/MainWindow.cpp" line="1593"/>
         <source>Error Processing Queue!!</source>
         <translation>Errore nell&apos;eseguire la Coda!!</translation>
     </message>
@@ -1760,6 +1760,12 @@ possibile completare con successo la Coda</translation>
         <source>Name</source>
         <comment>The name of the Package</comment>
         <translation>Nome</translation>
+    </message>
+    <message>
+        <location filename="../src/MainWindow.cpp" line="1179"/>
+        <source>A package providing %1 is already installed.
+Do you want to install %1 anyway?</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1843,19 +1849,19 @@ Please restart it with root privileges.</source>
 Per favore riavvialo da root.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="308"/>
+        <location filename="../src/main.cpp" line="288"/>
         <source>Shaman</source>
         <translation>Shaman</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="294"/>
+        <location filename="../src/main.cpp" line="146"/>
         <source>There was a problem while testing libalpm.
 Maybe another application has a lock on it.</source>
         <translation>C&apos;è stato un problema testando libalpm.
 Forse un&apos;altra applicazione tiene un lock su di essa.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="143"/>
+        <location filename="../src/main.cpp" line="164"/>
         <source>Shaman</source>
         <comment>Hey! If you are reading this, first of all thanks for helping us in making Shaman better. There are not many comments unless where needed, since all the strings are pretty self-explanatory. You will see a lot of HTML in some cases: do not let that scare you, but please edit text only. Editing HTML tags too may break our layout, so be careful. A good practice could be copying the whole string, and then translating just what&apos;s outside the tags, usually just a few words. If you have any doubts, or if you just want to drop us a line, there goes our email addresses:
 Dario: drf54321@gmail.com
@@ -1869,27 +1875,27 @@ Thanks again, and enjoy your translation!</comment>
         <translation type="obsolete">Attendere prego, caricamento dei pacchetti...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="242"/>
+        <location filename="../src/main.cpp" line="260"/>
         <source>Please Wait...</source>
         <translation>Attendere Prego...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="363"/>
+        <location filename="../src/main.cpp" line="340"/>
         <source>Loading Databases...</source>
         <translation>Caricamento dei Database...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="371"/>
+        <location filename="../src/main.cpp" line="348"/>
         <source>Loading Packages...</source>
         <translation>Caricamento dei Pacchetti...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="379"/>
+        <location filename="../src/main.cpp" line="356"/>
         <source>Starting up Shaman...</source>
         <translation>Avvio di Shaman...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="309"/>
+        <location filename="../src/main.cpp" line="289"/>
         <source>Pacman is not updated.
 Shaman needs libalpm &gt;= 2.1.0 to run.
 Yours is %1. Please update Pacman.</source>
@@ -1923,14 +1929,14 @@ Per favore aggiorna Pacman.</translation>
 </translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="144"/>
+        <location filename="../src/main.cpp" line="165"/>
         <source>Your settings file seems unwritable.
 Please check permissions on it.</source>
         <translation>Il tuo file delle impostazioni non sembra essere scrivibile.
 Per favore controllane i permessi.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="264"/>
+        <location filename="../src/main.cpp" line="279"/>
         <source>You have started Shaman as root.
 It is advised to start it as unprivileged user.
 Shaman will ask you for root password when needed.</source>
@@ -1939,36 +1945,36 @@ E&apos; consigliabile avviarlo da utente normale.
 Shaman chiederà quindi la password di root quando necessario.</translation>
     </message>
     <message>
-        <location filename="../src/ShamanDialog.cpp" line="217"/>
+        <location filename="../src/ShamanDialog.cpp" line="232"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
     <message>
-        <location filename="../src/ShamanDialog.cpp" line="135"/>
+        <location filename="../src/ShamanDialog.cpp" line="144"/>
         <source>Yes</source>
         <translation>Sì</translation>
     </message>
     <message>
-        <location filename="../src/ShamanDialog.cpp" line="137"/>
+        <location filename="../src/ShamanDialog.cpp" line="146"/>
         <source>No</source>
         <translation>No</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="122"/>
+        <location filename="../src/main.cpp" line="125"/>
         <source>It looks like another copy of Shaman is running.
 You can only run one copy of Shaman at a time.</source>
         <translation>Sembra che un&apos;altra copia di Shaman sia in esecuzione.
 Puoi eseguirne solo una copia alla volta.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="252"/>
+        <location filename="../src/main.cpp" line="270"/>
         <source>Shaman can not be started as root.
 Please restart it as unprivileged user.</source>
         <translation>Shaman non può essere avviato da root.
 Per favore riavvialo come utente normale.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="284"/>
+        <location filename="../src/main.cpp" line="141"/>
         <source>Shaman could not switch to root.
 Probably you have not set the SUID bit to it.
 You can do that by issuing as root
@@ -1983,7 +1989,7 @@ Questa procedura è sicura, leggi il wiki di Shaman
 per avere ulteriori dettagli.</translation>
     </message>
     <message>
-        <location filename="../src/ShamanDialog.cpp" line="213"/>
+        <location filename="../src/ShamanDialog.cpp" line="228"/>
         <source>Do not show this Again</source>
         <translation>Non mostrare di nuovo</translation>
     </message>

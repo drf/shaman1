@@ -65,6 +65,9 @@ void BuildingHandler::updateABSTree()
 
 		return;
 	}
+	
+
+	emit buildingStarted();
 
 	buildDialog = new BuildingDialog(aHandle, mWin);
 	connect(buildDialog, SIGNAL(nullifyPointer()), SLOT(ABSUpdateEnded()));
@@ -484,6 +487,7 @@ void BuildingHandler::reduceBuildingInTray()
 
 void BuildingHandler::ABSUpdateEnded()
 {
+	emit buildingFinished();
 	emit outOfScope();
 }
 
