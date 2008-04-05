@@ -1,22 +1,16 @@
-TODO-List for qtPacman 
+TODO-List for Shaman
 
 ***********Core***************
-Dbus-Engine *prio*
-Plasma-Data-Engine *prio*
-Implement Error Handling *prio in critical cases such as Queue Processing*
+Plasma-Data-Engine (1.1, refine)
 
 ***********GUI**************
-More icons
-Same with QTreeWidgetItem-columns ;) *prio*
-Add a clear button in the searchbar, something like kickoff's one, if possible :)
-Complete PkgDetails *prio* ---> Needed: size
-All action-button-actions in context-menu *prio*
-Configuration-dialog *prio*
-System-Tray-Icon *prio* --->Mostly done, in some cases needs better handling
-Plasmoid *prio*
+Plasmoid (1.1)
 
-********Things to check before the alpha************
--Look if all strings are correct
--remove unused strings
--do some basic operations and check if everything works correct
--pull up the revision in aboutDialog
+********Things to check before final************
+-Refine strings, to get string freeze when entering RC
+-Stress-test Shaman to find out even the minimal bug.
+-Come up with a pretty codename for 1.0 :)
+
+********Future Plans************
+-Start discussing the new plugin-based architecture.
+-Is Shaman going to be an universal package manager? (eg.: use plugins also for the Package Manager frontend?)
