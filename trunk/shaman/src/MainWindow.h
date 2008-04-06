@@ -50,7 +50,7 @@ class LogViewer;
 class ShamanStatusBar;
 class PackageProperties;
 
-class MainWindow : public QMainWindow, public Ui::MainWindow, private StringUtils
+class MainWindow : public QMainWindow, public Ui::MainWindow
 {
 	Q_OBJECT
 
@@ -85,7 +85,6 @@ signals:
 
 public slots:
 	bool populatePackagesView();
-	bool populateQueuePackagesView();
 	void refinePkgView();
 	void refineRepoView();
 	void populateRepoColumn();

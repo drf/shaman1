@@ -69,7 +69,7 @@ typedef struct PcCnf PacmanConf;
 typedef struct absCnf ABSConf;
 typedef struct mkpkCnf MakePkgConf;
 
-class ConfigurationParser : private StringUtils
+class ConfigurationParser
 {
 	/* This parser will play bad tricks with your guts. It can parse
 	 * and write on pacman.conf, abs.conf and makepkg.conf. It is tha

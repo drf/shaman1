@@ -43,7 +43,6 @@ SET(shaman_SRCS ${shaman_adaptor_SRCS}
     src/ConfigurationParser.cpp
     src/EditPBuild.cpp
     src/QueueDialog.cpp
-    src/StringUtils.cpp
     src/SysUpgradeDialog.cpp
     src/UpdateDbDialog.cpp
     src/ABSHandler.cpp
