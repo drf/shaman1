@@ -343,17 +343,6 @@ bool MainWindow::populatePackagesView()
 
 	pkgsViewWG->addTopLevelItems(itmLst);
 
-	QStringList upgrds = aHandle->getUpgradeablePackages();
-	foreach (QString pac, upgrds)
-	{
-		QTreeWidgetItem *item = pkgsViewWG->findItems(pac, Qt::MatchExactly, 1).first();
-		if (item)
-		{
-			item->setText(8, tr("Upgrade"));
-			item->setIcon(2, QIcon(":/Icons/icons/list-add.png"));
-		}
-	}
-
 	pkgsViewWG->sortItems(1, Qt::AscendingOrder);
 	pkgsViewWG->setSortingEnabled(true);//Enable sorting *after* inserting :D
 	
@@ -2037,17 +2026,6 @@ bool MainWindow::populateQueuePackagesView()
 		}
 
 		locPkg = alpm_list_next(locPkg);
-	}
-
-	QStringList upgrds = aHandle->getUpgradeablePackages();
-	foreach (QString pac, upgrds)
-	{
-		QTreeWidgetItem *item = pkgsViewWG->findItems(pac, Qt::MatchExactly, 1).first();
-		if (item)
-		{
-			item->setText(8, tr("Upgrade"));
-			item->setIcon(2, QIcon(":/Icons/icons/list-add.png"));
-		}
 	}
 
 	pkgsViewWG->sortItems(1, Qt::AscendingOrder);
