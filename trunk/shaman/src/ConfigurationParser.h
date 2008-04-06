@@ -30,7 +30,6 @@
 #include <QString>
 #include <QStringList>
 
-#include "StringUtils.h"
 #include "Authenticator.h"
 
 using namespace std;
