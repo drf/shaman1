@@ -25,7 +25,7 @@
     <message>
         <location filename="../src/AlpmHandler.cpp" line="1163"/>
         <source>Alpm did not give further details.</source>
-        <translation type="unfinished"></translation>
+        <translation>Το Alpm δεν έδωσε περαιτέρω πληροφορίες.</translation>
     </message>
 </context>
 <context>
@@ -110,7 +110,7 @@ All Process will be lost.</source>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="206"/>
         <source>Could not update the ABS Tree!</source>
-        <translation type="unfinished"></translation>
+        <translation>Η ενημέρωση του ABS καταλόγου ήταν αδύνατη.</translation>
     </message>
 </context>
 <context>
@@ -848,134 +848,138 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/configDialog.cpp" line="370"/>
         <source>Advanced</source>
-        <translation type="unfinished"></translation>
+        <translation>Προχωρημένες</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="295"/>
         <source>Use SysLog</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρήση SysLog</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="365"/>
         <source>Log File:</source>
-        <translation type="unfinished"></translation>
+        <translation>Αρχείο Log:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1125"/>
         <source>min</source>
         <comment>As in &quot;minutes&quot;</comment>
-        <translation type="unfinished"></translation>
+        <translation>λεπτά</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="978"/>
         <source>Show tray notification Windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Εμφάνιση παραθύρων ειδοποίησης στο tray</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1012"/>
         <source>Use a proxy-server</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρήση proxy-server</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1024"/>
         <source>IP:</source>
-        <translation type="unfinished"></translation>
+        <translation>IP:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1047"/>
         <source>Port:</source>
-        <translation type="unfinished"></translation>
+        <translation>Port:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1089"/>
         <source>HTTP Proxy</source>
-        <translation type="unfinished"></translation>
+        <translation>HTTP Proxy</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1096"/>
         <source>FTP Proxy</source>
-        <translation type="unfinished"></translation>
+        <translation>FTP Proxy</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1106"/>
         <source>Use Shaman RSS Capabilities</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρήση λειτουργιών RSS του Shaman</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1118"/>
         <source>Update RSS Feed Every</source>
-        <translation type="unfinished"></translation>
+        <translation>Ανανέωση του RSS κάθε</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1132"/>
         <source>Notify upon new items</source>
-        <translation type="unfinished"></translation>
+        <translation>Ειδοποίηση για νέα αντικείμενα</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1139"/>
         <source>Check if there is an unread news about a package in Queue before processing it</source>
-        <translation type="unfinished"></translation>
+        <translation>Έλεγχος για αδιάβαστα νέα των πακέτων ουράς πριν αυτά επεξεργαστούν</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1221"/>
         <source>Ok</source>
-        <translation type="unfinished">Ok</translation>
+        <translation>Ok</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1238"/>
         <source>Cancel</source>
-        <translation type="unfinished">Ακύρωση</translation>
+        <translation>Ακύρωση</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="610"/>
         <source>KDEMod 3 Testing Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>KDEMod 3 Testing Repository</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1175"/>
         <source>Interface</source>
-        <translation type="unfinished"></translation>
+        <translation>Περιβάλλον</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1181"/>
         <source>Start Shaman Automatically on X Startup</source>
-        <translation type="unfinished"></translation>
+        <translation>Αυτόματη εκκίνηση του Shaman όταν ξεκινάει ο Χ</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1188"/>
         <source>Forbid starting Shaman as root</source>
-        <translation type="unfinished"></translation>
+        <translation>Απαγόρευση εκκίνησης του Shaman ως root</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="1073"/>
         <source>Saving Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Αποθήκευση ρυθμίσεων</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="733"/>
         <source>Unable to save Pacman configuration!</source>
-        <translation type="unfinished"></translation>
+        <translation>Η αποθήκευση ρυθμίσεων του Pacman ήταν αδύνατη!</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="1207"/>
         <source>Mirror Format is incorrect. Your mirror should look like this:
 http://mirror.org/$repo/$arch</source>
         <comment>Obviously keep the example as it is ;)</comment>
-        <translation type="unfinished"></translation>
+        <translation>Η σύνταξη του mirror είναι λανθασμένη. Η σωστή σύνταξη είναι:
+http://mirror.org/$repo/$arch</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="1244"/>
         <source>Your Mirror was successfully added!
 It is now available in kdemodmirrorlist.</source>
         <comment>mirrorlist here means /etc/pacman.d/kdemodmirrorlist, so it should not be translated.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Η προσθήκη του mirror έγινε με επιτυχία!
+Πλέον είναι διαθέσιμο στο kdemodmirrorlist.</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="1074"/>
         <source>Some of your changes have not been applied,
 since alpm needs to be released.
 You need to restart Shaman to make them effective.</source>
-        <translation type="unfinished"></translation>
+        <translation>Κάποιες αλλαγές δεν εφαρμόστηκαν, καθότι
+το alpm χρειάζεται να ελευθερωθεί.
+Πρέπει να επανεκκινήσετε το Shaman ώστε να εφαρμοστούν.</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="240"/>
@@ -985,7 +989,7 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Bitstream Vera Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Bitstream Vera Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Συντήρηση του Shaman.&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Παρακαλώ επιλέξτε μια ενέργεια από το μενού επιλογών.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -1706,56 +1710,60 @@ was not successfully processed</source>
     <message>
         <location filename="../src/MainWindow.cpp" line="1693"/>
         <source>News Alert</source>
-        <translation type="unfinished"></translation>
+        <translation>Ειδοποίηση Νέων</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1694"/>
         <source>There is an unread news about %1.
 Do you want to read it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Υπάρχει ένα αδιάβαστο μήνυμα για το %1.
+Θέλετε να το διαβάσετε;</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1634"/>
         <source>Your Kernel has been updated.
 Please restart your PC soon to load the new Kernel.</source>
-        <translation type="unfinished"></translation>
+        <translation>Έγινε αναβάθμιση του Kernel.
+Επανεκκινήστε τον Η/Υ ώστε να φορτωθεί ο νέος Kernel.</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="577"/>
         <source>Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Εργαλεία</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="742"/>
         <source>Read News</source>
-        <translation type="unfinished"></translation>
+        <translation>Ανάγνωση Νέων</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="751"/>
         <source>View Log</source>
-        <translation type="unfinished"></translation>
+        <translation>Εμφάνιση Log</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1591"/>
         <source>One or more errors occurred, your Queue
 was not successfully processed</source>
-        <translation type="unfinished"></translation>
+        <translation>Εμφανίστηκαν ένα ή περισσότερα σφάλματα,
+η Ουρά δεν επεξεργάστηκε με επιτυχία</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="831"/>
         <source>One or more databases failed to update!</source>
-        <translation type="unfinished"></translation>
+        <translation>Μία ή περισσότερες βάσεις δεδομένων
+απέτυχαν να ανανεωθούν!</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1593"/>
         <source>Error Processing Queue!!</source>
-        <translation type="unfinished"></translation>
+        <translation>Σφάλμα κατά την επεξεργασία της Ουράς!!!</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="154"/>
         <source>Name</source>
         <comment>The name of the Package</comment>
-        <translation type="unfinished">Όνομα</translation>
+        <translation>Όνομα</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1179"/>
@@ -1769,17 +1777,18 @@ Do you want to install %1 anyway?</source>
     <message>
         <location filename="../src/NewsViewer.cpp" line="46"/>
         <source>Please wait, fetching items...</source>
-        <translation type="unfinished"></translation>
+        <translation>Παρακαλώ περιμένετε, γίνεται 
+λήψη των αντικειμένων...</translation>
     </message>
     <message>
         <location filename="../src/NewsViewer.cpp" line="120"/>
         <source>Mark as Read</source>
-        <translation type="unfinished"></translation>
+        <translation>Μαρκάρισμα ως Διαβασμένο</translation>
     </message>
     <message>
         <location filename="../src/NewsViewer.cpp" line="122"/>
         <source>Mark as Unread</source>
-        <translation type="unfinished"></translation>
+        <translation>Μαρκάρισμα ως Αδιάβαστο</translation>
     </message>
     <message>
         <location filename="../src/NewsViewer.cpp" line="177"/>
@@ -1789,7 +1798,7 @@ Do you want to install %1 anyway?</source>
     <message>
         <location filename="../src/NewsViewer.cpp" line="178"/>
         <source>Could not fetch the RSS feed! Error reported was:</source>
-        <translation type="unfinished"></translation>
+        <translation>Αδύνατη η λήψη του RSS feed! Το σφάλμα ήταν:</translation>
     </message>
 </context>
 <context>
@@ -1798,42 +1807,41 @@ Do you want to install %1 anyway?</source>
         <location filename="../src/PackageProperties.cpp" line="46"/>
         <source>%1 GiB</source>
         <comment>Size is in Gib</comment>
-        <translation type="unfinished">%1 GiB
-</translation>
+        <translation>%1 GiB</translation>
     </message>
     <message>
         <location filename="../src/PackageProperties.cpp" line="48"/>
         <source>%1 MiB</source>
         <comment>Size is in MiB</comment>
-        <translation type="unfinished">%1 MiB</translation>
+        <translation>%1 MiB</translation>
     </message>
     <message>
         <location filename="../src/PackageProperties.cpp" line="50"/>
         <source>%1 KiB</source>
         <comment>Size is in KiB</comment>
-        <translation type="unfinished">%1 KiB</translation>
+        <translation>%1 KiB</translation>
     </message>
     <message>
         <location filename="../src/PackageProperties.cpp" line="52"/>
         <source>%1 Bytes</source>
         <comment>Size is in Bytes</comment>
-        <translation type="unfinished">%1 Bytes</translation>
+        <translation>%1 Bytes</translation>
     </message>
     <message>
         <location filename="../src/PackageProperties.cpp" line="68"/>
         <source>Shaman - %1 properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Shaman - %1 ιδιότητες</translation>
     </message>
     <message>
         <location filename="../src/PackageProperties.cpp" line="89"/>
         <source>N/A</source>
         <comment>Stands for: Not Available</comment>
-        <translation type="unfinished"></translation>
+        <translation>N/A</translation>
     </message>
     <message>
         <location filename="../src/PackageProperties.cpp" line="209"/>
         <source>Changelog not available for this package</source>
-        <translation type="unfinished"></translation>
+        <translation>Το changelog δεν είναι διαθέσιμο γι&apos;αυτό το πακέτο</translation>
     </message>
 </context>
 <context>
@@ -1899,41 +1907,46 @@ Yours is %1. Please update Pacman.</source>
         <location filename="../src/main.cpp" line="165"/>
         <source>Your settings file seems unwritable.
 Please check permissions on it.</source>
-        <translation type="unfinished"></translation>
+        <translation>Το αρχείο ρυθμίσεων είναι μη εγγράψιμο.
+Ελέγξτε τα δικαιώματα του.</translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="279"/>
         <source>You have started Shaman as root.
 It is advised to start it as unprivileged user.
 Shaman will ask you for root password when needed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Εκκινήσατε το Shaman ως root.
+Προτείνεται να το εκκινήσετε ως κανονικός χρήστης.
+Το Shaman θα σας ρωτήσει για τον κωδικό του root όταν χρειαστεί.</translation>
     </message>
     <message>
         <location filename="../src/ShamanDialog.cpp" line="232"/>
         <source>Ok</source>
-        <translation type="unfinished">Ok</translation>
+        <translation>Ok</translation>
     </message>
     <message>
         <location filename="../src/ShamanDialog.cpp" line="144"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Ναι</translation>
     </message>
     <message>
         <location filename="../src/ShamanDialog.cpp" line="146"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Όχι</translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="125"/>
         <source>It looks like another copy of Shaman is running.
 You can only run one copy of Shaman at a time.</source>
-        <translation type="unfinished"></translation>
+        <translation>Το Shaman φαίνεται να είναι ήδη ανοιχτό.
+Δεν μπορείτε να το ανοίξετε δεύτερη φορά.</translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="270"/>
         <source>Shaman can not be started as root.
 Please restart it as unprivileged user.</source>
-        <translation type="unfinished"></translation>
+        <translation>Το Shaman δεν μπορεί να ξεκινήσει ως root.
+Παρακαλώ επανεκκινήστε το ως απλός χρήστης.</translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="141"/>
@@ -1943,12 +1956,17 @@ You can do that by issuing as root
 chown root shaman &amp;&amp; chmod u+s shaman.
 Note that this is safe, please read Shaman wiki
 for more details.</source>
-        <translation type="unfinished"></translation>
+        <translation>Το Shaman δεν μπόρεσε να αλλάξει σε root.
+Πιθανότατα δεν του έχετε θέσει το SUID bit.
+Μπορείτε να το κάνετε, δίνοντας ως root τηνς εντολή
+chown root shaman &amp;&amp; chmod u+s shaman.
+Η ενέργεια αυτή είναι ασφαλής, παρακαλώ δείτε
+το Shaman Wiki για λεπτομέρειες.</translation>
     </message>
     <message>
         <location filename="../src/ShamanDialog.cpp" line="228"/>
         <source>Do not show this Again</source>
-        <translation type="unfinished">Να μην εμφανιστεί ξανά</translation>
+        <translation>Να μην εμφανιστεί ξανά</translation>
     </message>
 </context>
 <context>
@@ -2175,12 +2193,12 @@ for more details.</source>
     <message>
         <location filename="../src/QueueDialog.cpp" line="428"/>
         <source>Queue processing failed!</source>
-        <translation type="unfinished"></translation>
+        <translation>Η επεξεργασία της Ουράς απέτυχε!</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="433"/>
         <source>Queue processed successfully!</source>
-        <translation type="unfinished"></translation>
+        <translation>Η Ουρά επεξεργάστηκε με επιτυχία!</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="441"/>
@@ -2191,7 +2209,8 @@ for more details.</source>
         <location filename="../src/QueueDialog.cpp" line="762"/>
         <source>Would you like to abort Queue Processing?
 This may damage your system.</source>
-        <translation type="unfinished"></translation>
+        <translation>Θέλετε να ακυρώσετε την επεξεργασία της Ουράς;
+Αυτό μπορεί να καταστρέψει το σύστημά σας.</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="839"/>
@@ -2250,7 +2269,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/reviewQueueDialog.ui" line="45"/>
         <source>Keep Queue Dialog Open after the Queue is finished</source>
-        <translation type="unfinished"></translation>
+        <translation>Να μείνει το παράθυρο της Ουράς ανοιχτό μετά την επεξεργασία της</translation>
     </message>
 </context>
 <context>
@@ -2326,7 +2345,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/ShamanStatusBar.cpp" line="78"/>
         <source>%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Διαθέσιμα Πακέτα, %2 Εγκατεστημένα, %3 Αναβαθμίσιμα</translation>
     </message>
 </context>
 <context>
@@ -2393,24 +2412,26 @@ Click here to upgrade your System.</source>
     <message>
         <location filename="../src/ShamanTrayIcon.cpp" line="229"/>
         <source>New News Available</source>
-        <translation type="unfinished"></translation>
+        <translation>Νέα νέα διαθέσιμα</translation>
     </message>
     <message>
         <location filename="../src/ShamanTrayIcon.cpp" line="230"/>
         <source>There are new news available.
 Click here to review them.</source>
-        <translation type="unfinished"></translation>
+        <translation>Νέα νέα διαθέσιμα.
+Κάντε click εδώ για να τα δείτε.</translation>
     </message>
     <message>
         <location filename="../src/ShamanTrayIcon.cpp" line="246"/>
         <source>Failed Fetching News</source>
-        <translation type="unfinished"></translation>
+        <translation>Αποτυχία Λήψης Νέων</translation>
     </message>
     <message>
         <location filename="../src/ShamanTrayIcon.cpp" line="247"/>
         <source>An error occourred while fetching news!
 Click here to open the News Dialog for more details.</source>
-        <translation type="unfinished"></translation>
+        <translation>Παρουσιάστηκε σφάλμα κατά την λήψη των νέων!
+Κάντε click εδώ για να δείτε περισσότερες λεπτομέρειες.</translation>
     </message>
 </context>
 <context>
@@ -2656,7 +2677,11 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shaman 1.0 Beta (revision 651)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shaman 1.0 Beta (revision 651)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/aboutDialog.ui" line="171"/>
@@ -2702,7 +2727,48 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Johannes Schriewer&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;KDEMod Developer, and also some help on the code.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Το Shaman δέχτηκε μεγάλη βοήθεια από πολλούς ανθρώπους και είναι και χάρη σ&apos;αυτούς το ότι είδε το φως. Εάν ξεχάσαμε να σας προσθέσουμε εδώ, παρακαλώ ειδοποιήστε μας.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Τα ονόματα είναι με αλφαβητική σειρά, γιατί ακόμη και η μικρότερη συνεισφορά είναι σημαντική για εμάς.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;Η Κοινότητα του KDEMod&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Βοήθεια, δοκιμές, υποστήριξη, τα πάντα ξεκίνησαν εδώ. Εάν δεν υπήρχε το KDEMod, πιθανότατα&lt;/span&gt; &lt;span style=&quot; font-weight:400;&quot;&gt;δεν θα υπήρχε και το Shaman&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Giannis Antoniou&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Ελληνική Μετάφραση&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Carlos Berroteran&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Ισπανική Μετάφραση&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Jacques Disner&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Γαλλική Μετάφραση&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Georg Grabler&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Έγραψε το patch για το Proxy, βοήθεια με τον κώδικα και άλλα.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Michael Knights&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Δημιουργός γραφικών, η πρότασή του για το εικονίδιο βρίσκεται τώρα στο Arxin, αλλά η εικόνα εκκίνησης είναι εδώ ;)&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Till Luge&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Πολλές δοκιμές, ευχαριστώ!&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Rodrigo Mazak&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Βραζιλιάνικη Μετάφραση, επίσης έδωσε το όνομα Shaman&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;Jan Mette&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Γερμανική Μετάφραση,  προγραμματιστής του KDEMod και δημιουργός του εικονιδίου&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Atilla Ontas&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Τούρκικη Μετάφραση&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Martin Sandsmark&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Υπεύθυνος hosting και συντήρησης του  Trac.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Johannes Schriewer&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Προγραμματιστής του KDEMod και βοήθεια με τον κώδικα.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -2710,18 +2776,19 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/authDialog.ui" line="13"/>
         <source>Root Password Required</source>
-        <translation type="unfinished"></translation>
+        <translation>Απαιτείτε ο κωδικός του root</translation>
     </message>
     <message>
         <location filename="../ui/authDialog.ui" line="31"/>
         <source>Shaman needs root privileges to perform this action.
 Please enter in the field below the root password to continue.</source>
-        <translation type="unfinished"></translation>
+        <translation>Το Shaman χρειάζεται δικαιώματα root για να συνεχίσει.
+Παρακαλώ εισάγετε τον κωδικό του root για να συνεχίσετε.</translation>
     </message>
     <message>
         <location filename="../ui/authDialog.ui" line="48"/>
         <source>Never ask for this anymore</source>
-        <translation type="unfinished"></translation>
+        <translation>Να μην ξαναγίνει ερώτηση γι&apos;αυτό</translation>
     </message>
     <message>
         <location filename="../ui/authDialog.ui" line="81"/>
@@ -2736,12 +2803,12 @@ Please enter in the field below the root password to continue.</source>
     <message>
         <location filename="../ui/authDialog.ui" line="87"/>
         <source>Backspace</source>
-        <translation type="unfinished"></translation>
+        <translation>Backspace</translation>
     </message>
     <message>
         <location filename="../ui/authDialog.ui" line="74"/>
         <source>Return</source>
-        <translation type="unfinished"></translation>
+        <translation>Return</translation>
     </message>
 </context>
 <context>
@@ -2836,27 +2903,27 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/logViewer.ui" line="13"/>
         <source>Shaman - Log Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Shaman - Προβολή Log</translation>
     </message>
     <message>
         <location filename="../ui/logViewer.ui" line="23"/>
         <source>Show Only Logs From</source>
-        <translation type="unfinished"></translation>
+        <translation>Εμφάνιση Logs μόνο από</translation>
     </message>
     <message>
         <location filename="../ui/logViewer.ui" line="80"/>
         <source>Show Only Logs Until</source>
-        <translation type="unfinished"></translation>
+        <translation>Εμφάνιση Logs μόνο μέχρι</translation>
     </message>
     <message>
         <location filename="../ui/logViewer.ui" line="131"/>
         <source>Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Φίλτρο</translation>
     </message>
     <message>
         <location filename="../ui/logViewer.ui" line="191"/>
         <source>Refresh View</source>
-        <translation type="unfinished"></translation>
+        <translation>Ανανέωση Προβολής</translation>
     </message>
     <message>
         <location filename="../ui/logViewer.ui" line="205"/>
@@ -2870,13 +2937,17 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/logViewer.ui" line="208"/>
         <source>Close</source>
         <comment>close the dialog</comment>
-        <translation type="unfinished">Κλείσιμο</translation>
+        <translation>Κλείσιμο</translation>
     </message>
 </context>
 <context>
@@ -2884,32 +2955,32 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/newsDialog.ui" line="13"/>
         <source>Arch Linux News</source>
-        <translation type="unfinished"></translation>
+        <translation>Νέα του Arch Linux</translation>
     </message>
     <message>
         <location filename="../ui/newsDialog.ui" line="59"/>
         <source>Link</source>
-        <translation type="unfinished"></translation>
+        <translation>Σύνδεσμος</translation>
     </message>
     <message>
         <location filename="../ui/newsDialog.ui" line="68"/>
         <source>status</source>
-        <translation type="unfinished"></translation>
+        <translation>κατάσταση</translation>
     </message>
     <message>
         <location filename="../ui/newsDialog.ui" line="88"/>
         <source>Mark as Read</source>
-        <translation type="unfinished"></translation>
+        <translation>Μαρκάρισμα ως Διαβασμένο</translation>
     </message>
     <message>
         <location filename="../ui/newsDialog.ui" line="99"/>
         <source>Open in Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Άνοιγμα στον Browser</translation>
     </message>
     <message>
         <location filename="../ui/newsDialog.ui" line="110"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Ανανέωση</translation>
     </message>
     <message>
         <location filename="../ui/newsDialog.ui" line="130"/>
@@ -2919,13 +2990,13 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/newsDialog.ui" line="50"/>
         <source>News-Title</source>
-        <translation type="unfinished"></translation>
+        <translation>Νέα-Τίτλος</translation>
     </message>
     <message>
         <location filename="../ui/newsDialog.ui" line="134"/>
         <source>Close</source>
         <comment>close the dialog</comment>
-        <translation type="unfinished">Κλείσιμο</translation>
+        <translation>Κλείσιμο</translation>
     </message>
 </context>
 <context>
@@ -2937,102 +3008,106 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Bitstream Vera Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Package Information&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Bitstream Vera Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Πληροφορίες Πακέτου&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="100"/>
         <source>Package Information</source>
-        <translation type="unfinished">Πληροφορίες πακέτου</translation>
+        <translation>Πληροφορίες πακέτου</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="106"/>
         <source>Installed:</source>
-        <translation type="unfinished"></translation>
+        <translation>Εγκατεστημένα:</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="113"/>
         <source>Description:</source>
-        <translation type="unfinished"></translation>
+        <translation>Περιγραφή:</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="120"/>
         <source>Upgradeable</source>
-        <translation type="unfinished"></translation>
+        <translation>Αναβαθμίσιμα:</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="146"/>
         <source>Build Date:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ημ/νία χτισίματος:</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="166"/>
         <source>Provides:</source>
-        <translation type="unfinished"></translation>
+        <translation>Παρέχει:</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="173"/>
         <source>Install Date:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ημ/νία εγκατάστασης:</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="183"/>
         <source>Packager:</source>
-        <translation type="unfinished"></translation>
+        <translation>Υπεύθυνος:</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="190"/>
         <source>Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Μέγεθος:</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="197"/>
         <source>Has a Scriptlet</source>
-        <translation type="unfinished"></translation>
+        <translation>Έχει Scriptlet</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="274"/>
         <source>Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Έκδοση:</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="290"/>
         <source>Changelog</source>
-        <translation type="unfinished"></translation>
+        <translation>Changelog</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="318"/>
         <source>Files</source>
-        <translation type="unfinished">Αρχεία</translation>
+        <translation>Αρχεία</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="325"/>
         <source>1</source>
-        <translation type="unfinished">1</translation>
+        <translation>1</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="342"/>
         <source>Dependencies</source>
-        <translation type="unfinished">Εξαρτήσεις</translation>
+        <translation>Εξαρτήσεις</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="348"/>
         <source>Depends on</source>
-        <translation type="unfinished"></translation>
+        <translation>Εξαρτάται απ&apos;το</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="355"/>
         <source>Is Required by</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρειάζεται απ&apos;το</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="377"/>
         <source>Actions Performed</source>
-        <translation type="unfinished"></translation>
+        <translation>Ενέργειες που Εκτελέστηκαν</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="415"/>
         <source>Ok</source>
-        <translation type="unfinished">Ok</translation>
+        <translation>Ok</translation>
     </message>
 </context>
 <context>
