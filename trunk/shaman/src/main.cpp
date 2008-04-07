@@ -37,6 +37,8 @@
 #include <signal.h>
 #include <alpm.h>
 
+#include <config.h>
+
 #define SHAMAN_VERSION "1.0Beta2dev"
 
 static void cleanup(int signum)
@@ -94,8 +96,63 @@ int main(int argc, char **argv)
 	QCoreApplication::setOrganizationName("shaman");
 	QCoreApplication::setOrganizationDomain("shaman.iskremblien.org");
 	QCoreApplication::setApplicationName("shaman");
-	
+
 	QStringList arguments = app.arguments();
+
+	if(arguments.contains("--help") || arguments.contains("-h"))
+	{
+		printf("\n");
+		printf("Shaman: A libalpm frontend in Qt4\n");
+		printf("Command Line Options:\n\n");
+		printf("  -h, --help                   shows this help and exits\n\n");
+		printf("  -v, --version                shows Shaman version and exits\n");
+		printf("      --qt-version             shows version of the Qt toolkit installed on the system\n"
+				"                               and version of the Qt toolkit Shaman was compiled against and exits\n\n");
+		printf("      --no-i18n                disables translations\n");
+		printf("      --no-splashscreen        does not show the splashscreen\n\n");
+		printf("      --start-in-window        shows main window on startup\n");
+		printf("      --start-in-tray          starts Shaman in the system tray\n\n");
+		printf("      --clear-settings         clears all Shaman settings and starts Shaman\n");
+		printf("      --no-debugging-output    does not show debugging output in the terminal\n");
+		printf("\n");
+		return(EXIT_SUCCESS);
+	}
+
+	if(arguments.contains("--version") || arguments.contains("-v"))
+	{
+		printf("\n");
+		printf("%s", SHAMAN_VERSION);
+		printf("\n");
+		return(EXIT_SUCCESS);
+	}
+
+	if(arguments.contains("--qt-version"))
+	{
+		printf("\n");
+		printf("This System is running Qt Version %s\n", qVersion());
+		printf("Shaman was compiled against Qt Version %s\n", QT_VERSION_STR);		
+		printf("\n");
+		return(EXIT_SUCCESS);
+	}
+
+	if(arguments.contains("--you-suck"))
+	{
+		printf("\n\nOh, really?\n");
+		exit(0);
+	}
+	if(arguments.contains("--ya-rly"))
+	{
+		printf("\n\nHonestly, you DO suck more than me\n");
+		exit(0);
+	}
+	if(arguments.contains("--well-actually-not"))
+	{
+		printf("\n\nNo, you are a sucker. Get away from here and go kill yourself. Bitch.\n");
+		exit(0);
+	}
+
+	if(arguments.contains("--no-debugging-output"))
+		qInstallMsgHandler(noDebugOutput);
 	
 	QTranslator translator;
 
@@ -105,12 +162,21 @@ int main(int argc, char **argv)
 
 		qDebug() << "Translations are enabled."; 
 		QString trpath(QString("shaman_") + locale);
+		
+		QString filePath(INSTALL_PREFIX);
+		filePath.append("/share/shaman/translations/");
 
-		if(!translator.load(trpath))
-			if(!translator.load(trpath, "../share/shaman/translations/"))
-				if(!translator.load(trpath, "/usr/share/shaman/translations/"))
-					if(!translator.load(trpath, "/usr/local/share/shaman/translations/"))
-						qDebug() << "Could not find a translation for this locale.";
+		if(!translator.load(trpath, filePath))
+			// Try to fallback to other possible locations
+			if(!translator.load(trpath))
+				if(!translator.load(trpath, "translations/"))
+					qDebug() << "Could not find a translation for this locale.";
+				else 
+					qDebug() << "Loading translations from" << "translations/";
+			else
+				qDebug() << "Loading translations from" << ".";
+		else
+			qDebug() << "Loading translations from" << filePath;
 
 		app.installTranslator(&translator);
 	}
@@ -170,71 +236,18 @@ int main(int argc, char **argv)
 	
 	qDebug() << settings->fileName();
 
+	if(arguments.contains("--clear-settings"))
+	{
+		qWarning() << "All Settings will be cleared!";
+		settings->clear();
+	}
+
 	QSplashScreen splscr(QPixmap(":/Images/images/splash.png"));
 
-	bool showSplash = true;
-
-	if(!settings->value("gui/showsplashscreen", true).toBool())
-		showSplash = false;
-	
-	if(arguments.contains("--you-suck"))
-	{
-		printf("\n\nOh, really?\n");
-		exit(0);
-	}
-	if(arguments.contains("--ya-rly"))
-	{
-		printf("\n\nHonestly, you DO suck more than me\n");
-		exit(0);
-	}
-	if(arguments.contains("--well-actually-not"))
-	{
-		printf("\n\nNo, you are a sucker. Get away from here and go kill yourself. Bitch.\n");
-		exit(0);
-	}
-	if(arguments.contains("--clear-settings"))
-		settings->clear();
-	if(arguments.contains("--no-debugging-output"))
-		qInstallMsgHandler(noDebugOutput);
+	bool showSplash = settings->value("gui/showsplashscreen", true).toBool();
 
 	if(arguments.contains("--no-splashscreen"))
 		showSplash = false;
-	
-	if(arguments.contains("--help") || arguments.contains("-h"))
-	{
-		printf("\n");
-		printf("Shaman: A libalpm frontend in Qt4\n");
-		printf("Command Line Options:\n\n");
-		printf("  -h, --help                   shows this help and exits\n\n");
-		printf("  -v, --version                shows Shaman version and exits\n");
-		printf("      --qt-version             shows version of the Qt toolkit installed on the system\n"
-				"                               and version of the Qt toolkit Shaman was compiled against and exits\n\n");
-		printf("      --no-i18n                disables translations\n");
-		printf("      --no-splashscreen        does not show the splashscreen\n\n");
-		printf("      --start-in-window        shows main window on startup\n");
-		printf("      --start-in-tray          starts Shaman in the system tray\n\n");
-		printf("      --clear-settings         clears all Shaman settings and starts Shaman\n");
-		printf("      --no-debugging-output    does not show debugging output in the terminal\n");
-		printf("\n");
-		return(EXIT_SUCCESS);
-	}
-	
-	if(arguments.contains("--version") || arguments.contains("-v"))
-	{
-		printf("\n");
-		printf("%s", SHAMAN_VERSION);
-		printf("\n");
-		return(EXIT_SUCCESS);
-	}
-	
-	if(arguments.contains("--qt-version"))
-	{
-		printf("\n");
-		printf("This System is running Qt Version %s\n", qVersion());
-		printf("Shaman was compiled against Qt Version %s\n", QT_VERSION_STR);		
-		printf("\n");
-		return(EXIT_SUCCESS);
-	}
 
 	qDebug() << ">>";
 	qDebug() << ">>		Shaman" << SHAMAN_VERSION;

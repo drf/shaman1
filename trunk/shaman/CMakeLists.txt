@@ -5,6 +5,8 @@ set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules")
 
 include(FindQt4)
 
+configure_file(config.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config.h )
+
 set(shaman_adaptor_SRCS)
 
 qt4_add_dbus_adaptor(shaman_adaptor_SRCS dbus/org.archlinux.shaman.xml src/MainWindow.h MainWindow)
@@ -151,8 +153,9 @@ ADD_TRANSLATION_FILES(QM_FILES ${TS_FILES})
 ADD_CUSTOM_TARGET(translations ALL
                    DEPENDS ${QM_FILES})
 
+INSTALL(CODE "MESSAGE(\"Installing Shaman i18n files...\")")
 INSTALL (FILES ${QM_FILES}
-         DESTINATION share/shaman/translations)
+         DESTINATION ${CMAKE_INSTALL_PREFIX}/share/shaman/translations)
 # translation end
 
 SET(QT_USE_QTXML)
@@ -202,12 +205,17 @@ ADD_CUSTOM_TARGET(uninstall "${CMAKE_COMMAND}" -P "${CMAKE_CURRENT_BINARY_DIR}/c
 
 #INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/help/de/main.htm DESTINATION share/shaman/help/de)
 
+INSTALL(CODE "MESSAGE(\"Installing Shaman executable...\")")
 INSTALL(TARGETS shaman DESTINATION bin)
+INSTALL(CODE "MESSAGE(\"Installing Shaman DBus Configuration File...\")")
 INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/etc/shaman.conf DESTINATION /etc/dbus-1/system.d)
+INSTALL(CODE "MESSAGE(\"Installing Shaman Icons...\")")
 INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/ui/icons/shaman/shaman-32.png ${CMAKE_CURRENT_SOURCE_DIR}/ui/icons/shaman/shaman-64.png
 		${CMAKE_CURRENT_SOURCE_DIR}/ui/icons/shaman/shaman-128.png ${CMAKE_CURRENT_SOURCE_DIR}/ui/icons/shaman/shaman-48.png
-		DESTINATION /usr/share/pixmaps)
-INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/etc/shaman.desktop DESTINATION /usr/share/applications)
+		DESTINATION ${CMAKE_INSTALL_PREFIX}/share/pixmaps)
+INSTALL(CODE "MESSAGE(\"Installing Shaman Desktop File...\")")
+INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/etc/shaman.desktop DESTINATION ${CMAKE_INSTALL_PREFIX}/applications)
+INSTALL(CODE "MESSAGE(\"Installing Miscellaneous Shaman Files...\")")
 INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/etc/kdemodmirrorlist DESTINATION /etc/pacman.d)
 
 #IF(UNIX)
