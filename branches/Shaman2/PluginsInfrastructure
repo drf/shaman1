@@ -1,0 +1,22 @@
+Let's use this file to define plugins design.
+
+First of all, we'll need some different sets of plugins:
+
+ - Backend (for package management)
+ - GUI (for GUI-related stuff)
+ - Data (for handling processes, such as ABS, AUR or makepkg handling)
+ - Configuration Plugins (if really needed)
+
+Every plugin will have a set of dependancies on another plugin. So, this will be our base class structure.
+
+ShamanAbstractPlugin
+ |
+ |
+ ---> ShamanCorePlugin
+ |
+ ---> ShamanDataPlugin
+...
+
+So AbstractPlugin will take care of initialization: it will contain about data, such as name and blabla, plugin type, so Backend/Data/GUI... and Dependencies on other Plugins.
+
+Next we have all different plugins. So to load a plugin we cast it to a ShamanAbstractPlugin*, check its type and then finally cast it to the right plugin type. Seems pretty a clean approach to me.
