@@ -23,11 +23,11 @@
 
 #include "Authenticator.h"
 #include "ConfigurationParser.h"
-
+//TODO: Write documentation and change the functions to better names
 using namespace std;
 class Package;
 
-namespace Backend {
+namespace Backend {//Why that?
 
 	enum PackageStatus {
 		AllPackages,
@@ -83,11 +83,11 @@ public:
 	
 	void initQueue(bool rem, bool syncd, bool ff);
 	
-	void addSyncToQueue(const QString &toAdd);
-	void addRemoveToQueue(const QString &toRm);
-	void addFFToQueue(const QString &toFF);
+	void addSyncToQueue(const QString &toAdd);//Look down?
+	void addRemoveToQueue(const QString &toRm);//Look down
+	void addFFToQueue(const QString &toFF);//What's FF?
 	
-	QStringList getSyncInQueue();
+	QStringList getSyncInQueue();//See above
 	QStringList getRemoveInQueue();
 	QStringList getFFInQueue();
 	

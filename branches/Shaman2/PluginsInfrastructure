@@ -19,4 +19,11 @@ ShamanAbstractPlugin
 
 So AbstractPlugin will take care of initialization: it will contain about data, such as name and blabla, plugin type, so Backend/Data/GUI... and Dependencies on other Plugins.
 
-Next we have all different plugins. So to load a plugin we cast it to a ShamanAbstractPlugin*, check its type and then finally cast it to the right plugin type. Seems pretty a clean approach to me.
+Next we have all different plugins. So to load a plugin we cast it to a ShamanAbstractPlugin*, check its type and then finally cast it to the right plugin type. Seems pretty a clean approach to me. 
+
+Comment from Lukas: We probably shouldn't cast, just initialize them, for what do we need to load them?
+
+For ShamanGUIPlugin:
+We need a function to access each part of the GUI, for example:
+addDockWidget(QDockWidget *widget, orientation);
+addToolBarAction(QAction *action);
