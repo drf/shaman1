@@ -27,3 +27,10 @@ For ShamanGUIPlugin:
 We need a function to access each part of the GUI, for example:
 addDockWidget(QDockWidget *widget, orientation);
 addToolBarAction(QAction *action);
+
+POINT 1: "Should the PackageView be a plugin?"
+   -+1 from Lukas
+   -Dario?
+
+POINT 2: "We should only have one "Package-Manager"-Plugin loaded. How to handle that?"
+   -Lukas: no idea ;) Dependency and Conflict tree?
