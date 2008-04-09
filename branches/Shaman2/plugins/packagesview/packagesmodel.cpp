@@ -37,13 +37,15 @@ QVariant PackagesModel::data (const QModelIndex & index, int role = Qt::DisplayR
 
 QModelIndex PackagesModel::index(int row, int column, const QModelIndex & parent) const
 {
-    //TODO:
+    if(row < m_packages.size() && row >= 0)
+        return createIndex(row, column);
+
+    return QModelIndex();
 }
 
 QModelIndex PackagesModel::parent(const QModelIndex & index) const
 {
-    if (!index.isValid())
-        return QModelIndex();
+    return QModelIndex();//We have no parents cause we have a plain-list ;)
 }
 
 int PackagesModel::rowCount(const QModelIndex & parent) const
