@@ -132,6 +132,9 @@
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
+        <property name="selectionMode" >
+         <enum>QAbstractItemView::ExtendedSelection</enum>
+        </property>
         <property name="indentation" >
          <number>0</number>
         </property>
@@ -151,7 +154,7 @@
         </column>
         <column>
          <property name="text" >
-          <string comment="The name of the Package">Name</string>
+          <string>Name</string>
          </property>
         </column>
         <column>
