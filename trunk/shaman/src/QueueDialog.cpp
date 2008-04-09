@@ -422,6 +422,8 @@ void QueueDialog::cleanup()
 	
 	emit terminated(errors);
 	
+	cleanUpLabel->setPixmap(QIcon(":/Icons/icons/dialog-ok-apply.png").pixmap(22));
+	
 	if(errors)
 	{
 		actionDetail->setText(QString(tr("Queue processing failed!")));
