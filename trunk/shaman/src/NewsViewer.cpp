@@ -50,6 +50,7 @@ NewsViewer::NewsViewer(ArchLinuxNewsReader *nR, QWidget *parent)
 	
 	connect(asReadButton, SIGNAL(clicked()), SLOT(markAsRead()));
 	connect(openButton, SIGNAL(clicked()), SLOT(openInBrowser()));
+	connect(treeWidget, SIGNAL(itemDoubleClicked(QTreeWidgetItem *, int)), SLOT(openInBrowser()));
 	connect(refreshButton, SIGNAL(clicked()), SLOT(refreshView()));
 	
 	treeWidget->setColumnWidth(0, 30);
