@@ -214,7 +214,7 @@ INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/ui/icons/shaman/shaman-32.png ${CMAKE_
 		${CMAKE_CURRENT_SOURCE_DIR}/ui/icons/shaman/shaman-128.png ${CMAKE_CURRENT_SOURCE_DIR}/ui/icons/shaman/shaman-48.png
 		DESTINATION ${CMAKE_INSTALL_PREFIX}/share/pixmaps)
 INSTALL(CODE "MESSAGE(\"Installing Shaman Desktop File...\")")
-INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/etc/shaman.desktop DESTINATION ${CMAKE_INSTALL_PREFIX}/applications)
+INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/etc/shaman.desktop DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications)
 INSTALL(CODE "MESSAGE(\"Installing Miscellaneous Shaman Files...\")")
 INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/etc/kdemodmirrorlist DESTINATION /etc/pacman.d)
 
