@@ -28,13 +28,14 @@
 #include <QWidget>
 
 #include "AlpmHandler.h"
+#include "MainWindow.h"
 
 class ShamanStatusBar : public QStatusBar
 {
 	Q_OBJECT
 	
 public:
-	explicit ShamanStatusBar(AlpmHandler *aH, QWidget *parent = 0);
+	explicit ShamanStatusBar(AlpmHandler *aH, MainWindow *parent = 0);
 	virtual ~ShamanStatusBar();
 	
 public Q_SLOTS:
@@ -50,6 +51,7 @@ private:
 	
 private:
 	AlpmHandler *aHandle;
+	MainWindow *mWin;
 	
 	QPointer<QLabel> stBarImage;
 	QPointer<QLabel> stBarText;

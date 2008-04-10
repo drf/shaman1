@@ -36,6 +36,8 @@ public:
 	
 	void reloadPkgInfo();
 	
+	static QString formatSize(unsigned long size);
+	
 private:
 	void setPackage(pmpkg_t *pkg);
 	
@@ -45,8 +47,6 @@ private:
 	void populateInfoWidget();
 	void populateLogWidget();
 	void populateChangelogWidget();
-	
-	QString formatSize(unsigned long size);
 	
 private:
 	AlpmHandler *aHandle;

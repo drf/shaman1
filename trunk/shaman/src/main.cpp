@@ -163,20 +163,19 @@ int main(int argc, char **argv)
 		qDebug() << "Translations are enabled."; 
 		QString trpath(QString("shaman_") + locale);
 		
-		QString filePath(INSTALL_PREFIX);
+		QString filePath = INSTALL_PREFIX;
 		filePath.append("/share/shaman/translations/");
 
-		if(!translator.load(trpath, filePath))
-			// Try to fallback to other possible locations
-			if(!translator.load(trpath))
+		if(!translator.load(trpath))
+			if(!translator.load(trpath, filePath))
 				if(!translator.load(trpath, "translations/"))
 					qDebug() << "Could not find a translation for this locale.";
 				else 
 					qDebug() << "Loading translations from" << "translations/";
 			else
-				qDebug() << "Loading translations from" << ".";
+				qDebug() << "Loading translations from" << filePath;
 		else
-			qDebug() << "Loading translations from" << filePath;
+			qDebug() << "Loading translations from" << '.';
 
 		app.installTranslator(&translator);
 	}

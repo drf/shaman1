@@ -22,12 +22,18 @@
 
 #include "ReviewQueueDialog.h"
 
+#include "PackageProperties.h"
+
 #include <QSettings>
 
 ReviewQueueDialog::ReviewQueueDialog(AlpmHandler *hnd, MainWindow *parent)
 : QDialog(parent),
 aHandle(hnd)
 {
+	int totalSize = 0;
+	int removeSize = 0;
+	int addSize = 0;
+	
 	setupUi(this);
 
 	if(!parent->pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 8).isEmpty())
@@ -50,6 +56,7 @@ aHandle(hnd)
 	foreach(QTreeWidgetItem *itm, parent->pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 8))
 	{
 		aHandle->addSyncToQueue(itm->text(1));
+		addSize += aHandle->getPackageSize(itm->text(1), itm->text(5));
 		QTreeWidgetItem *itmL = treeWidget->findItems(tr("To be Installed"), Qt::MatchExactly, 0).first();
 		new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
 	}
@@ -57,6 +64,7 @@ aHandle(hnd)
 	foreach(QTreeWidgetItem *itm, parent->pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 8))
 	{
 		aHandle->addSyncToQueue(itm->text(1));
+		addSize += aHandle->getPackageSize(itm->text(1), itm->text(5));
 		QTreeWidgetItem *itmL = treeWidget->findItems(tr("To be Upgraded"), Qt::MatchExactly, 0).first();
 		new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
 	}
@@ -64,6 +72,7 @@ aHandle(hnd)
 	foreach(QTreeWidgetItem *itm, parent->pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 8))
 	{
 		aHandle->addRemoveToQueue(itm->text(1));
+		removeSize += aHandle->getPackageSize(itm->text(1), itm->text(5));
 		QTreeWidgetItem *itmL = treeWidget->findItems(tr("To be Removed"), Qt::MatchExactly, 0).first();
 		new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
 	}
@@ -71,16 +80,35 @@ aHandle(hnd)
 	foreach(QTreeWidgetItem *itm, parent->pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 8))
 	{
 		aHandle->addRemoveToQueue(itm->text(1));
+		removeSize += aHandle->getPackageSize(itm->text(1), itm->text(5));
 		QTreeWidgetItem *itmL = treeWidget->findItems(tr("To be Removed"), Qt::MatchExactly, 0).first();
 		new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
 	}
+	
+	bool spaceToDo;
+	
+	if(addSize > removeSize)
+	{
+		spaceToDo = true;
+		totalSize = addSize - removeSize;
+	}
+	else
+	{
+		spaceToDo = false;
+		totalSize = removeSize - addSize;
+	}
+	
+	QString sizeToShow(PackageProperties::formatSize(totalSize));
 
-	QString toShow(tr("Your Queue is about to be processed. "
-			"You are going to:<br />"));
+	QString toShow;
+	toShow.append(QString(tr("Your Queue is about to be processed. "
+			"You are going to:<br />")));
 	int n = aHandle->getNumberOfTargets(1);
 	toShow.append(QString(n == 1 ? tr("Remove <b>%1 package</b><br />") : tr("Remove <b>%1 packages</b><br />")).arg(n));
 	int k = aHandle->getNumberOfTargets(0);
 	toShow.append(QString(k == 1 ? tr("Install/Upgrade <b>%1 package</b><br />") : tr("Install/Upgrade <b>%1 packages</b><br />")).arg(k));
+	toShow.append(QString(spaceToDo == true ? tr("<b>%1</b> will be used").arg(sizeToShow)
+			: tr("<b>%1</b> will be freed").arg(sizeToShow)) + "<br />");
 	toShow.append(tr("Do you wish to continue?"));
 
 	queueInfo->setText(toShow);

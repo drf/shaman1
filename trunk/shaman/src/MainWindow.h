@@ -32,6 +32,8 @@
 #include <QThread>
 #include <QPointer>
 #include <QLabel>
+#include <QDialog>
+#include <QMainWindow>
 
 class UpdateDbDialog;
 class SysUpgradeDialog;
@@ -144,7 +146,6 @@ private slots:
 private:
 	void loadDbUpdateDialog();
 	void removeDbUpdateDialog();
-	QString formatSize(unsigned long size);
 	void upgrade(const QStringList &packages);
 	
 public:

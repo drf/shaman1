@@ -294,7 +294,7 @@ bool MainWindow::populatePackagesView()
 			item->setText(3, alpm_pkg_get_version(pkg));
 			item->setText(1, alpm_pkg_get_name(pkg));
 			item->setText(5, alpm_db_get_name(dbcrnt));
-			item->setText(4, formatSize(aHandle->getPackageSize(item->text(1), item->text(5))));
+			item->setText(4, PackageProperties::formatSize(aHandle->getPackageSize(item->text(1), item->text(5))));
 			item->setText(7, alpm_pkg_get_desc(pkg));
 
 			while(grps != NULL)
@@ -334,7 +334,7 @@ bool MainWindow::populatePackagesView()
 		item->setText(3, alpm_pkg_get_version(pkg));
 		item->setText(7, alpm_pkg_get_desc(pkg));
 		item->setText(5, "local");
-		item->setText(4, formatSize(aHandle->getPackageSize(item->text(1), item->text(5))));
+		item->setText(4, PackageProperties::formatSize(aHandle->getPackageSize(item->text(1), item->text(5))));
 
 		itmLst.append(item);
 
@@ -632,6 +632,7 @@ void MainWindow::itemChanged()
 		cancelButton->setEnabled(true);
 
 	showPkgInfo();
+	stBar->updateStatusBar();
 }
 
 void MainWindow::showPkgInfo()
@@ -982,6 +983,8 @@ void MainWindow::cancelAllActions()
 		
 		item->setIcon(2, QIcon());
 	}
+	
+	stBar->updateStatusBar();
 }
 
 void MainWindow::installAllRepoPackages()
@@ -1008,6 +1011,8 @@ void MainWindow::installAllRepoPackages()
 			installPackage(item->text(1));
 		}
 	}
+	
+	stBar->updateStatusBar();
 }
 
 void MainWindow::reinstallAllRepoPackages()
@@ -1037,6 +1042,8 @@ void MainWindow::reinstallAllRepoPackages()
 				reinstallPackage(item->text(1));
 		}
 	}
+	
+	stBar->updateStatusBar();
 }
 
 void MainWindow::removeAllRepoPackages()
@@ -1061,6 +1068,8 @@ void MainWindow::removeAllRepoPackages()
 			removePackage(item->text(1));
 		}
 	}
+	
+	stBar->updateStatusBar();
 }
 
 void MainWindow::cancelAllRepoActions()
@@ -1085,6 +1094,8 @@ void MainWindow::cancelAllRepoActions()
 			cancelAction(item->text(1));
 		}
 	}
+	
+	stBar->updateStatusBar();
 }
 
 void MainWindow::installPackage()
@@ -1201,7 +1212,7 @@ void MainWindow::removePackage()
 		return;
 
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
-	removePackage(item->text(1));
+		removePackage(item->text(1));
 
 	itemChanged();
 }
@@ -1675,7 +1686,7 @@ void MainWindow::widgetQueueToAlpmQueue()
 
 	if(settings->value("newsreader/userss", true).toBool() && settings->value("newsreader/queuenotifier", true).toBool())
 	{
-		foreach(QTreeWidgetItem *ent, getInstallPackagesInWidgetQueue() + getUpgradePackagesInWidgetQueue() +getInstallPackagesInWidgetQueue())
+		foreach(QTreeWidgetItem *ent, getInstallPackagesInWidgetQueue() + getUpgradePackagesInWidgetQueue() + getRemovePackagesInWidgetQueue())
 		{
 			if(newsReader->checkUnreadNewsOnPkg(ent->text(1)))
 			{
@@ -1853,21 +1864,6 @@ void MainWindow::showAboutDialog()
 	about->exec();
 
 	about->deleteLater();
-}
-
-QString MainWindow::formatSize(unsigned long size)
-{
-	QString s;
-	if (size > 1024 * 1024 * 1024)
-		s = tr("%1 GiB", "Size is in Gib").arg((double) size / (1024 *1024 * 1024), 0, 'f', 2);
-	else if (size > 1024 * 1024)
-		s = tr("%1 MiB", "Size is in MiB").arg((double) size / (1024 * 1024), 0, 'f', 2);
-	else if (size > 1024)
-		s = tr("%1 KiB", "Size is in KiB").arg(size / 1024);
-	else
-		s = tr("%1 Bytes", "Size is in Bytes").arg(size);
-
-	return s;
 }
 
 void MainWindow::startTrayTimer()

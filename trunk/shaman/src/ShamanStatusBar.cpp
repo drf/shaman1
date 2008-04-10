@@ -20,12 +20,15 @@
 
 #include "ShamanStatusBar.h"
 
+#include "PackageProperties.h"
+
 #include <QStatusBar>
 #include <QTimer>
 
-ShamanStatusBar::ShamanStatusBar(AlpmHandler *aH, QWidget *parent)
+ShamanStatusBar::ShamanStatusBar(AlpmHandler *aH, MainWindow *parent)
  : QStatusBar(parent),
- aHandle(aH)
+ aHandle(aH),
+ mWin(parent)
 {
 	setUpStatusBar();
 }
@@ -77,6 +80,44 @@ void ShamanStatusBar::updateStatusBar()
 	QString text = QString(tr("%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages").
 			arg(aHandle->countPackages(Alpm::AllPackages)).arg(aHandle->countPackages(Alpm::InstalledPackages)).
 			arg(aHandle->getUpgradeablePackages().count()));
+	
+	text.append(' ');
+	
+	// Now up to queue status
+	
+	int removeSize = 0;
+	int addSize = 0;
+	
+	QList<QTreeWidgetItem *> addList = mWin->getInstallPackagesInWidgetQueue() + mWin->getUpgradePackagesInWidgetQueue();
+	
+	foreach(QTreeWidgetItem *itm, addList)
+		addSize += aHandle->getPackageSize(itm->text(1), itm->text(5));
+	
+	QList<QTreeWidgetItem *> removeList = mWin->getRemovePackagesInWidgetQueue();
+		
+	foreach(QTreeWidgetItem *itm, removeList)
+		removeSize += aHandle->getPackageSize(itm->text(1), itm->text(5));
+
+	QString spaceToDo;
+
+	if(addSize == removeSize) { }
+	else if(addSize > removeSize)
+	{
+		QString sizeToShow(PackageProperties::formatSize(addSize - removeSize));
+		spaceToDo = tr("%1 will be used").arg(sizeToShow);
+		spaceToDo.append(']');
+		spaceToDo.prepend(" [");
+	}
+	else
+	{
+		QString sizeToShow(PackageProperties::formatSize(removeSize - addSize));
+		spaceToDo = tr("%1 will be freed").arg(sizeToShow);
+		spaceToDo.append(']');
+		spaceToDo.prepend(" [");
+	}
+	
+	text.append('(' + tr("%1 to be Installed, %2 to be Removed").arg(addList.count()).arg(removeList.count())
+			+ spaceToDo + ')');
 	
 	stBarText->setText(text);
 }
