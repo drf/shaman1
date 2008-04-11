@@ -47,13 +47,15 @@ bool PackagesSortFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelI
     if (!package)
         return false;
 
-    bool searchMatch = false;
-    if (m_search == Name)
-        searchMatch = m_searchText.isEmpty() ? true : package->name().contains(m_searchText);
-    else
-        searchMatch = m_searchText.isEmpty() ? true : package->description().contains(m_searchText);
-
-    return (m_group.isEmpty() || package->groups().contains(m_group)) && 
-           (m_repo.isEmpty() || package->repository() = m_repo) &&
-           searchMatch;
+    return (m_group.isEmpty() || package->groups().contains(m_group)) && //Look if it's in the group
+           (m_repo.isEmpty() || package->repository() = m_repo) && //Look if it's in the repository
+           searchMatch && //Now let's check the state
+           ((m_state == All) ||
+            (m_state == Installed && m_package->status() != Package::Installed) ||
+            (m_state == NotInstalled && m_package->status() != Package::NotInstalled) ||
+            (m_state == Upgradeable && m_package->status() != Package::Upgradeable) ||
+            (m_state == InQueue && m_package->action() != Package::NoAction)) && //Let's go for searching
+            (m_searchText.isEmpty() ||
+             (m_seach == Name && package->name().contains(m_searchText))
+             (m_search == Description && package->desciption().contains(m_searchText)));
 }
