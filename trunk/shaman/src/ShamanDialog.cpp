@@ -80,7 +80,7 @@ void ShamanDialog::popupDialog(const QString &title, const QString &text, QWidge
 
 	QPushButton *okb = message->addButton(QMessageBox::Ok);
 
-	okb->setText(QObject::tr("Ok"));
+	okb->setText(QObject::tr("O&k"));
 	okb->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
 
 	message->exec();
@@ -141,9 +141,9 @@ int ShamanDialog::popupQuestionDialog(const QString &title, const QString &text,
 	QPushButton *okb = msgBox->addButton(QMessageBox::Yes);
 	QPushButton *nob = msgBox->addButton(QMessageBox::No);
 
-	okb->setText(QObject::tr("Yes"));
+	okb->setText(QObject::tr("&Yes"));
 	okb->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
-	nob->setText(QObject::tr("No"));
+	nob->setText(QObject::tr("&No"));
 	nob->setIcon(QIcon(":/Icons/icons/dialog-cancel.png"));
 	
 	msgBox->setDefaultButton(okb);
@@ -225,11 +225,11 @@ void ShamanDialog::popupDialogDontShow(const QString &title, const QString &text
 		hlay->addWidget(icn);
 		hlay->addWidget(lbl);
 		
-		cbx->setText(QString(QObject::tr("Do not show this Again")));
+		cbx->setText(QString(QObject::tr("Do not &show this Again")));
 		cbx->setChecked(false);
 		
 		QPushButton *okb = but->addButton(QDialogButtonBox::Ok);
-		okb->setText(QObject::tr("Ok"));
+		okb->setText(QObject::tr("O&k"));
 		okb->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
 		
 		lay->addLayout(hlay);

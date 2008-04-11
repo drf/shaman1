@@ -215,7 +215,7 @@
         <rect>
          <x>2</x>
          <y>22</y>
-         <width>311</width>
+         <width>310</width>
          <height>598</height>
         </rect>
        </property>
@@ -244,7 +244,7 @@
              </sizepolicy>
             </property>
             <property name="text" >
-             <string>Repositories</string>
+             <string>Re&amp;positories</string>
             </property>
             <property name="icon" >
              <iconset resource="shaman.qrc" >
@@ -267,7 +267,7 @@
              </sizepolicy>
             </property>
             <property name="text" >
-             <string>Package Groups</string>
+             <string>Package &amp;Groups</string>
             </property>
             <property name="icon" >
              <iconset resource="shaman.qrc" >
@@ -300,7 +300,7 @@
         <rect>
          <x>2</x>
          <y>22</y>
-         <width>864</width>
+         <width>865</width>
          <height>286</height>
         </rect>
        </property>
@@ -337,7 +337,7 @@
                <string>Install selected package</string>
               </property>
               <property name="text" >
-               <string>Mark for Installation</string>
+               <string>Mark for &amp;Installation</string>
               </property>
               <property name="icon" >
                <iconset resource="shaman.qrc" >
@@ -357,7 +357,7 @@
                <string>Remove selected package</string>
               </property>
               <property name="text" >
-               <string>Mark for Removal</string>
+               <string>Mark for &amp;Removal</string>
               </property>
               <property name="icon" >
                <iconset resource="shaman.qrc" >
@@ -377,7 +377,7 @@
                <string>Complete Remove selected package (pacman -Rcs)</string>
               </property>
               <property name="text" >
-               <string>Mark for complete removal</string>
+               <string>Mark for complete re&amp;moval</string>
               </property>
               <property name="icon" >
                <iconset resource="shaman.qrc" >
@@ -397,7 +397,7 @@
                <string>Cancel action for selected package</string>
               </property>
               <property name="text" >
-               <string>Cancel action</string>
+               <string>&amp;Cancel Action</string>
               </property>
               <property name="icon" >
                <iconset resource="shaman.qrc" >
@@ -439,12 +439,12 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>842</width>
+               <width>843</width>
                <height>199</height>
               </rect>
              </property>
              <attribute name="title" >
-              <string>Package Information</string>
+              <string>Package I&amp;nformation</string>
              </attribute>
              <attribute name="icon" >
               <iconset resource="shaman.qrc" >
@@ -483,12 +483,12 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>842</width>
+               <width>843</width>
                <height>199</height>
               </rect>
              </property>
              <attribute name="title" >
-              <string>Files</string>
+              <string>File&amp;s</string>
              </attribute>
              <attribute name="icon" >
               <iconset resource="shaman.qrc" >
@@ -511,12 +511,16 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>842</width>
+               <width>843</width>
                <height>199</height>
               </rect>
              </property>
              <attribute name="title" >
-              <string>Dependencies</string>
+              <string>&amp;Dependencies</string>
+             </attribute>
+             <attribute name="icon" >
+              <iconset resource="shaman.qrc" >
+               <normaloff>:/Icons/icons/view-list-tree.png</normaloff>:/Icons/icons/view-list-tree.png</iconset>
              </attribute>
              <layout class="QGridLayout" >
               <item row="0" column="0" >
@@ -545,19 +549,19 @@
    </property>
    <widget class="QMenu" name="menuFile" >
     <property name="title" >
-     <string>File</string>
+     <string>&amp;File</string>
     </property>
     <addaction name="actionQuit" />
    </widget>
    <widget class="QMenu" name="menuHelp" >
     <property name="title" >
-     <string>Help</string>
+     <string>&amp;Help</string>
     </property>
     <addaction name="actionAbout" />
    </widget>
    <widget class="QMenu" name="menuActions" >
     <property name="title" >
-     <string>Actions</string>
+     <string>&amp;Actions</string>
     </property>
     <widget class="QMenu" name="menuInstall_and_Build_from_Source" >
      <property name="title" >
@@ -577,7 +581,7 @@
    </widget>
    <widget class="QMenu" name="menuTools" >
     <property name="title" >
-     <string>Tools</string>
+     <string>&amp;Tools</string>
     </property>
     <addaction name="actionReadNews" />
     <addaction name="actionViewLog" />
@@ -634,15 +638,6 @@
     </rect>
    </property>
   </widget>
-  <action name="actionPackage_Repositories" >
-   <property name="icon" >
-    <iconset resource="shaman.qrc" >
-     <normaloff>:/Icons/icons/network-server-database.png</normaloff>:/Icons/icons/network-server-database.png</iconset>
-   </property>
-   <property name="text" >
-    <string>Package Repositories</string>
-   </property>
-  </action>
   <action name="actionPacman_Preferences" >
    <property name="icon" >
     <iconset resource="shaman.qrc" >

@@ -606,7 +606,7 @@ void MainWindow::itemChanged()
 	{
 		removeButton->setEnabled(true);
 		installButton->setEnabled(true);
-		installButton->setText(tr("Mark for Reinstallation"));
+		installButton->setText(tr("Mark for Re&installation"));
 		completeRemoveButton->setEnabled(true);
 		disconnect(installButton, SIGNAL(clicked()), this, SLOT(installPackage()));
 		connect(installButton, SIGNAL(clicked()), SLOT(reinstallPackage()));
@@ -615,7 +615,7 @@ void MainWindow::itemChanged()
 	{
 		removeButton->setDisabled(true);
 		installButton->setEnabled(true);
-		installButton->setText(tr("Mark for Installation"));
+		installButton->setText(tr("Mark for &Installation"));
 		completeRemoveButton->setDisabled(true);
 		disconnect(installButton, SIGNAL(clicked()), this, SLOT(reinstallPackage()));
 		connect(installButton, SIGNAL(clicked()), SLOT(installPackage()));
@@ -911,13 +911,13 @@ void MainWindow::showPkgsViewContextMenu()
 	qDebug() << "Let's show a context menu";
 	QTreeWidgetItem *item = pkgsViewWG->selectedItems().first();
 	QMenu *menu = new QMenu(this);
-	QAction *installAction = menu->addAction(QIcon(":/Icons/icons/list-add.png"), tr("Mark for Installation"));
+	QAction *installAction = menu->addAction(QIcon(":/Icons/icons/list-add.png"), tr("Mark for &Installation"));
 	connect(installAction, SIGNAL(triggered()), SLOT(installPackage()));
-	QAction *removeAction = menu->addAction(QIcon(":/Icons/icons/list-remove.png"), tr("Mark for Removal"));
+	QAction *removeAction = menu->addAction(QIcon(":/Icons/icons/list-remove.png"), tr("Mark for &Removal"));
 	connect(removeAction, SIGNAL(triggered()), SLOT(removePackage()));
 	QAction *upgradeAction = menu->addAction(QIcon(":/Icons/icons/edit-redo.png"), tr("Mark for Upgrade"));
 	connect(upgradeAction, SIGNAL(triggered()), SLOT(upgradePackage()));
-	QAction *cancelAction = menu->addAction(QIcon(":/Icons/icons/dialog-cancel.png"), tr("Cancel Action"));
+	QAction *cancelAction = menu->addAction(QIcon(":/Icons/icons/dialog-cancel.png"), tr("&Cancel Action"));
 	connect(cancelAction, SIGNAL(triggered()), SLOT(cancelAction()));
 	
 	menu->addSeparator();
@@ -928,7 +928,7 @@ void MainWindow::showPkgsViewContextMenu()
 
 	if (aHandle->isInstalled(item->text(1)) && aHandle->getUpgradeablePackages().contains(item->text(1)))
 	{
-		installAction->setText(tr("Mark for Reinstallation"));
+		installAction->setText(tr("Mark for Re&installation"));
 		removeAction->setDisabled(true);
 	}
 	else if (!aHandle->isInstalled(item->text(1)))
@@ -938,7 +938,7 @@ void MainWindow::showPkgsViewContextMenu()
 	}
 	else//Package is marked as installed
 	{
-		installAction->setText(tr("Mark for Reinstallation"));
+		installAction->setText(tr("Mark for Re&installation"));
 		upgradeAction->setDisabled(true);
 	}//FIXME: Add completeRemove-action
 
@@ -1856,7 +1856,7 @@ void MainWindow::showAboutDialog()
 	
 	QPushButton *okb = ui.buttonBox->button(QDialogButtonBox::Ok);
 	
-	okb->setText(QObject::tr("Ok"));
+	okb->setText(QObject::tr("O&k"));
 	okb->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
 
 	about->setWindowModality(Qt::ApplicationModal);

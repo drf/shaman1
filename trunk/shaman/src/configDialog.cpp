@@ -49,6 +49,8 @@ upDb(false)
 	connect(listWidget, SIGNAL(currentRowChanged(int)), this, SLOT(changeWidget(int)));
 	connect(this, SIGNAL(accepted()), SLOT(saveConfiguration()));
 	setModal(true);
+	okButton->setText(QObject::tr("O&k"));
+	cancelButton->setText(QObject::tr("C&ancel"));
 }
 
 ConfigDialog::~ConfigDialog()
