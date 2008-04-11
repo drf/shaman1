@@ -38,7 +38,7 @@ QVariant PackagesModel::data (const QModelIndex & index, int role = Qt::DisplayR
 QModelIndex PackagesModel::index(int row, int column, const QModelIndex & parent) const
 {
     if(row < m_packages.size() && row >= 0)
-        return createIndex(row, column);
+        return createIndex(row, column, m_packages.at(row));
 
     return QModelIndex();
 }
