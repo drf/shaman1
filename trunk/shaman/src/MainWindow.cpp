@@ -929,6 +929,8 @@ void MainWindow::showPkgsViewContextMenu()
 	if (aHandle->isInstalled(item->text(1)) && aHandle->getUpgradeablePackages().contains(item->text(1)))
 	{
 		installAction->setText(tr("Mark for Re&installation"));
+		disconnect(installAction, 0, 0, 0);
+		connect(installAction, SIGNAL(triggered()), SLOT(reinstallPackage()));
 		removeAction->setDisabled(true);
 	}
 	else if (!aHandle->isInstalled(item->text(1)))
@@ -939,6 +941,8 @@ void MainWindow::showPkgsViewContextMenu()
 	else//Package is marked as installed
 	{
 		installAction->setText(tr("Mark for Re&installation"));
+		disconnect(installAction, 0, 0, 0);
+		connect(installAction, SIGNAL(triggered()), SLOT(reinstallPackage()));
 		upgradeAction->setDisabled(true);
 	}//FIXME: Add completeRemove-action
 
