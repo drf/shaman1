@@ -1265,7 +1265,7 @@ Dieses Verhalten kann jederzeit in den Einstellungen geändert werden.</translat
         <translation>Shaman - minimiere in den Systemabschnitt</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1930"/>
+        <location filename="../src/MainWindow.cpp" line="1934"/>
         <source>Upgrade</source>
         <translation>Aktualisierung</translation>
     </message>
@@ -1275,7 +1275,7 @@ Dieses Verhalten kann jederzeit in den Einstellungen geändert werden.</translat
         <translation type="obsolete">Shaman - untätig (Aktualisierungen verfügbar)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1345"/>
+        <location filename="../src/MainWindow.cpp" line="1349"/>
         <source>System Upgrade</source>
         <translation>System-Aktualisierung</translation>
     </message>
@@ -1306,7 +1306,7 @@ Aktualisierung zu starten.</translation>
         <translation>Lokale Pakete</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1080"/>
+        <location filename="../src/MainWindow.cpp" line="1084"/>
         <source>All Groups</source>
         <translation>Alle Gruppen</translation>
     </message>
@@ -1316,17 +1316,17 @@ Aktualisierung zu starten.</translation>
         <translation type="obsolete">Für Neuinstallation vormerken</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1925"/>
+        <location filename="../src/MainWindow.cpp" line="1929"/>
         <source>Install</source>
         <translation>Installieren</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1935"/>
+        <location filename="../src/MainWindow.cpp" line="1939"/>
         <source>Uninstall</source>
         <translation>Entfernen</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1936"/>
+        <location filename="../src/MainWindow.cpp" line="1940"/>
         <source>Complete Uninstall</source>
         <translation>Komplettes Entfernen</translation>
     </message>
@@ -1356,7 +1356,7 @@ Aktualisierung zu starten.</translation>
         <translation type="obsolete">Shaman - Arbeite</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1819"/>
+        <location filename="../src/MainWindow.cpp" line="1823"/>
         <source>Error</source>
         <translation>Fehler</translation>
     </message>
@@ -1390,49 +1390,49 @@ aktualisiert werden. Die letzte Ausgabe war:
         <translation type="obsolete">Aktion abbrechen</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="965"/>
+        <location filename="../src/MainWindow.cpp" line="969"/>
         <source>Mark all for installation</source>
         <translation>Alle für installation vormerken</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="967"/>
+        <location filename="../src/MainWindow.cpp" line="971"/>
         <source>Mark all for reinstallation</source>
         <translation>Alle für Neuinstallation vormerken</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="969"/>
+        <location filename="../src/MainWindow.cpp" line="973"/>
         <source>Mark all for removal</source>
         <translation>Alle zum entfernen vormerken</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1349"/>
+        <location filename="../src/MainWindow.cpp" line="1353"/>
         <source>Your system is up to date!</source>
         <translation>Das System ist aktuell!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1553"/>
+        <location filename="../src/MainWindow.cpp" line="1557"/>
         <source>Queue Processing</source>
         <translation>Verarbeite Warteschlange</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1553"/>
+        <location filename="../src/MainWindow.cpp" line="1557"/>
         <source>Your Queue is being processed.
 Please wait.</source>
         <translation>Die Warteschlange wird verarbeitet.
 Bitte warten.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1645"/>
+        <location filename="../src/MainWindow.cpp" line="1649"/>
         <source>Queue Processed</source>
         <translation>Warteschlange verarbeitet</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1643"/>
+        <location filename="../src/MainWindow.cpp" line="1647"/>
         <source>Your Queue was successfully processed!</source>
         <translation>Die Warteschlange wurde erfolgreich verarbeitet!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1647"/>
+        <location filename="../src/MainWindow.cpp" line="1651"/>
         <source>Your Queue was successfully processed!!</source>
         <translation>Die Warteschlange wurde erfolgreich verarbeitet!!</translation>
     </message>
@@ -1482,17 +1482,17 @@ Bitte warten.</translation>
         <translation type="obsolete">Soll der Vorgang fortgesetzt werden?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1810"/>
+        <location filename="../src/MainWindow.cpp" line="1814"/>
         <source>Install a Package</source>
         <translation>Paket installieren</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1810"/>
+        <location filename="../src/MainWindow.cpp" line="1814"/>
         <source>Arch Linux Packages (*.pkg.tar.gz)</source>
         <translation>Arch Linux Pakete (*.pkg.tar.gz)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1819"/>
+        <location filename="../src/MainWindow.cpp" line="1823"/>
         <source>%1 does not seem
 a valid package</source>
         <translation>%1 sieht nicht wie
@@ -1623,12 +1623,12 @@ fortsetzen?</translation>
         <translation type="obsolete">Nicht erneut anzeigen</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1368"/>
+        <location filename="../src/MainWindow.cpp" line="1372"/>
         <source>Pacman Update</source>
         <translation>Pacman-Aktualisierung</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1370"/>
+        <location filename="../src/MainWindow.cpp" line="1374"/>
         <source>Pacman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Pacman now?</source>
@@ -1638,12 +1638,12 @@ vermeiden.
 Soll Pacman nun aktualisiert werden?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1390"/>
+        <location filename="../src/MainWindow.cpp" line="1394"/>
         <source>Shaman Update</source>
         <translation>Shaman-Aktualisierung</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1392"/>
+        <location filename="../src/MainWindow.cpp" line="1396"/>
         <source>Shaman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Shaman now?</source>
@@ -1653,12 +1653,12 @@ vermeiden.
 Soll Shaman nun aktualisiert werden?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1633"/>
+        <location filename="../src/MainWindow.cpp" line="1637"/>
         <source>Restart required</source>
         <translation>Neustart nötig</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1626"/>
+        <location filename="../src/MainWindow.cpp" line="1630"/>
         <source>Pacman or Shaman was updated. Shaman will now quit,
 please restart it to use the new version</source>
         <translation>Pacman und/oder Shaman wurde aktualisiert.
@@ -1666,7 +1666,7 @@ Shaman wird nun beendet. Nach einem erneuten Start
 kann die neue Version genutzt werden</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1855"/>
+        <location filename="../src/MainWindow.cpp" line="1859"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -1689,7 +1689,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;l.appelhans@gmx.de&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1876"/>
+        <location filename="../src/MainWindow.cpp" line="1880"/>
         <source>Library Question</source>
         <translation>Bibliotheks-Frage</translation>
     </message>
@@ -1712,7 +1712,7 @@ Die Warteschlange wurde nicht erfolgreich
 verarbeitet</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1634"/>
+        <location filename="../src/MainWindow.cpp" line="1638"/>
         <source>Your Kernel has been updated.
 Please restart your PC soon to load the new Kernel.</source>
         <translation type="unfinished"></translation>
@@ -1723,12 +1723,12 @@ Please restart your PC soon to load the new Kernel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1693"/>
+        <location filename="../src/MainWindow.cpp" line="1697"/>
         <source>News Alert</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1694"/>
+        <location filename="../src/MainWindow.cpp" line="1698"/>
         <source>There is an unread news about %1.
 Do you want to read it?</source>
         <translation type="unfinished"></translation>
@@ -1744,7 +1744,7 @@ Do you want to read it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1591"/>
+        <location filename="../src/MainWindow.cpp" line="1595"/>
         <source>One or more errors occurred, your Queue
 was not successfully processed</source>
         <translation type="unfinished"></translation>
@@ -1755,7 +1755,7 @@ was not successfully processed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1593"/>
+        <location filename="../src/MainWindow.cpp" line="1597"/>
         <source>Error Processing Queue!!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1766,7 +1766,7 @@ was not successfully processed</source>
         <translation type="obsolete">Name</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1179"/>
+        <location filename="../src/MainWindow.cpp" line="1183"/>
         <source>A package providing %1 is already installed.
 Do you want to install %1 anyway?</source>
         <translation type="unfinished"></translation>
@@ -1832,7 +1832,7 @@ Do you want to install %1 anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="941"/>
+        <location filename="../src/MainWindow.cpp" line="943"/>
         <source>Mark for Re&amp;installation</source>
         <translation type="unfinished"></translation>
     </message>
