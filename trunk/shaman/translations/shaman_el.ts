@@ -338,12 +338,12 @@ Do you want to delete it?</source>
         <translation>Εκκίνηση στο System Tray</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="969"/>
+        <location filename="../ui/configDialog.ui" line="957"/>
         <source>When Application is in System Tray only</source>
         <translation>Όταν η εφαρμογή εμφανίζεται μόνο στο System Tray</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="975"/>
+        <location filename="../ui/configDialog.ui" line="963"/>
         <source>Update Database every</source>
         <translation>Ανανέωση της Βάσης Δεδομένων κάθε</translation>
     </message>
@@ -353,17 +353,17 @@ Do you want to delete it?</source>
         <translation type="obsolete">λεπτά</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1002"/>
+        <location filename="../ui/configDialog.ui" line="990"/>
         <source>If upgrades are available:</source>
         <translation>Εάν υπάρχουν αναβαθμίσεις:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1009"/>
+        <location filename="../ui/configDialog.ui" line="997"/>
         <source>Just Notify</source>
         <translation>Μόνο Ειδοποίηση</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1016"/>
+        <location filename="../ui/configDialog.ui" line="1004"/>
         <source>Notify and add them to Queue</source>
         <translation>Ειδοποίηση και προσθήκη στην Ουρά</translation>
     </message>
@@ -536,57 +536,57 @@ Repositories τρίτων λειτουργούν όπως τα επίσημα κ
         <translation>Χρήση supfiles που ταιριάζουν με τα repositories</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="832"/>
+        <location filename="../ui/configDialog.ui" line="830"/>
         <source>Define supfiles manually</source>
         <translation>Καθορισμός supfiles χειροκίνητα</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="861"/>
+        <location filename="../ui/configDialog.ui" line="853"/>
         <source>Makepkg Configuration</source>
         <translation>Ρύθμιση του  Makepkg</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="867"/>
+        <location filename="../ui/configDialog.ui" line="859"/>
         <source>CFlags</source>
         <translation>CFlags</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="877"/>
+        <location filename="../ui/configDialog.ui" line="869"/>
         <source>CXXFlags</source>
         <translation>CXXFlags</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="887"/>
+        <location filename="../ui/configDialog.ui" line="879"/>
         <source>BuildEnv</source>
         <translation>BuildEnv</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="897"/>
+        <location filename="../ui/configDialog.ui" line="889"/>
         <source>Options</source>
         <translation>Επιλογές</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="907"/>
+        <location filename="../ui/configDialog.ui" line="899"/>
         <source>Doc_Dirs</source>
         <translation>Doc_Dirs</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="920"/>
+        <location filename="../ui/configDialog.ui" line="912"/>
         <source>Build Environment</source>
         <translation>Περιβάλλον Χτισίματος</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="928"/>
+        <location filename="../ui/configDialog.ui" line="918"/>
         <source>Building Path</source>
         <translation>Διαδρομή Χτισίματος</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="940"/>
+        <location filename="../ui/configDialog.ui" line="928"/>
         <source>Remove installed makedepends after build</source>
         <translation>Αφαίρεση των εξαρτήσεων χτισίματος μετά το χτίσιμο</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="947"/>
+        <location filename="../ui/configDialog.ui" line="935"/>
         <source>Clean Build Environment after installation</source>
         <translation>Καθαρισμός του Περιβάλλοντος Χτισίματος μετά την εγκατάσταση</translation>
     </message>
@@ -861,68 +861,68 @@ p, li { white-space: pre-wrap; }
         <translation>Αρχείο Log:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1139"/>
+        <location filename="../ui/configDialog.ui" line="1127"/>
         <source>min</source>
         <comment>As in &quot;minutes&quot;</comment>
         <translation>λεπτά</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="992"/>
+        <location filename="../ui/configDialog.ui" line="980"/>
         <source>Show tray notification Windows</source>
         <translation>Εμφάνιση παραθύρων ειδοποίησης στο tray</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1026"/>
+        <location filename="../ui/configDialog.ui" line="1014"/>
         <source>Use a proxy-server</source>
         <translation>Χρήση proxy-server</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1038"/>
+        <location filename="../ui/configDialog.ui" line="1026"/>
         <source>IP:</source>
         <translation>IP:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1061"/>
+        <location filename="../ui/configDialog.ui" line="1049"/>
         <source>Port:</source>
         <translation>Port:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1103"/>
+        <location filename="../ui/configDialog.ui" line="1091"/>
         <source>HTTP Proxy</source>
         <translation>HTTP Proxy</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1110"/>
+        <location filename="../ui/configDialog.ui" line="1098"/>
         <source>FTP Proxy</source>
         <translation>FTP Proxy</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1120"/>
+        <location filename="../ui/configDialog.ui" line="1108"/>
         <source>Use Shaman RSS Capabilities</source>
         <translation>Χρήση λειτουργιών RSS του Shaman</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1132"/>
+        <location filename="../ui/configDialog.ui" line="1120"/>
         <source>Update RSS Feed Every</source>
         <translation>Ανανέωση του RSS κάθε</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1146"/>
+        <location filename="../ui/configDialog.ui" line="1134"/>
         <source>Notify upon new items</source>
         <translation>Ειδοποίηση για νέα αντικείμενα</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1153"/>
+        <location filename="../ui/configDialog.ui" line="1141"/>
         <source>Check if there is an unread news about a package in Queue before processing it</source>
         <translation>Έλεγχος για αδιάβαστα νέα των πακέτων ουράς πριν αυτά επεξεργαστούν</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1235"/>
+        <location filename="../ui/configDialog.ui" line="1223"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1252"/>
+        <location filename="../ui/configDialog.ui" line="1240"/>
         <source>Cancel</source>
         <translation>Ακύρωση</translation>
     </message>
@@ -932,17 +932,17 @@ p, li { white-space: pre-wrap; }
         <translation>KDEMod 3 Testing Repository</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1189"/>
+        <location filename="../ui/configDialog.ui" line="1177"/>
         <source>Interface</source>
         <translation>Περιβάλλον</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1195"/>
+        <location filename="../ui/configDialog.ui" line="1183"/>
         <source>Start Shaman Automatically on X Startup</source>
         <translation>Αυτόματη εκκίνηση του Shaman όταν ξεκινάει ο Χ</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1202"/>
+        <location filename="../ui/configDialog.ui" line="1190"/>
         <source>Forbid starting Shaman as root</source>
         <translation>Απαγόρευση εκκίνησης του Shaman ως root</translation>
     </message>
@@ -1002,7 +1002,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="846"/>
+        <location filename="../ui/configDialog.ui" line="840"/>
         <source>RSync Server:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1684,7 +1684,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf54321@yahoo.it&amp;gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;l.appelhans@gmx.de&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+        <translation type="obsolete">&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ένα frontend του libalpm γραμμένο σε Qt&lt;/span&gt;&lt;/p&gt;
@@ -1854,6 +1854,20 @@ Do you want to install %1 anyway?</source>
     <message>
         <location filename="../ui/MainWindow.ui" line="400"/>
         <source>&amp;Cancel Action</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/MainWindow.cpp" line="1858"/>
+        <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;A libalpm frontend in Qt&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;License: GPLv2+&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Libalpm Version: v.%1&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf@kdemod.ath.cx&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

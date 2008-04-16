@@ -1853,9 +1853,9 @@ void MainWindow::showAboutDialog()
 			"License: GPLv2+</p>\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
 			"text-indent:0px;\">Libalpm Version: v.%1</p>\n<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px;"
 			" margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p>\n<p style=\" margin-top:0px; margin-bottom:0px;"
-			" margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Dario Freddi &lt;drf54321@yahoo.it&gt;</p>\n"
+			" margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Dario Freddi &lt;drf@kdemod.ath.cx&gt;</p>\n"
 			"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">"
-			"(C) 2008 Lukas Appelhans &lt;l.appelhans@gmx.de&gt;</p></body></html>")).arg(aHandle->getAlpmVersion()));
+			"(C) 2008 Lukas Appelhans &lt;boom1992@kdemod.ath.cx&gt;</p></body></html>")).arg(aHandle->getAlpmVersion()));
 	
 	QPushButton *okb = ui.buttonBox->button(QDialogButtonBox::Ok);
 	
