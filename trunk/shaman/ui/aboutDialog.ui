@@ -231,7 +231,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="icon" >
           <iconset resource="shaman.qrc" >
-           <normaloff>:/Icons/icons/document-open-remote.png</normaloff>:/Icons/icons/document-open-remote.png</iconset>
+           <normaloff>:/Icons/icons/applications-internet.png</normaloff>:/Icons/icons/applications-internet.png</iconset>
          </property>
         </widget>
        </item>
