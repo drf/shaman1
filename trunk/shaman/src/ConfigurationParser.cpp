@@ -304,7 +304,7 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 
 void ConfigurationParser::parseABSConfig()
 {
-	QFile fp("/etc/abs/abs.conf");
+	QFile fp("/etc/abs.conf");
 
 	absData.loaded = true;
 
@@ -319,16 +319,22 @@ void ConfigurationParser::parseABSConfig()
 	while(!in.atEnd()) 
 	{
 		QString line = in.readLine();
-		
-		if(!line.startsWith("SUPFILES"))
-			continue;
-		
-		line.truncate(line.indexOf(QChar(')')));
-		line = line.remove(0, line.indexOf(QChar('(')) + 1);
-		
-		absData.supfiles = line;
-		
-		break;
+
+		if (line.startsWith("REPOS"))
+		{
+
+			line.truncate(line.indexOf(QChar(')')));
+			line = line.remove(0, line.indexOf(QChar('(')) + 1);
+
+			absData.supfiles = line;
+		}
+		else if (line.startsWith("SYNCSERVER"))
+		{
+			line = line.remove(0, line.indexOf(QChar('"')) + 1);
+			line.truncate(line.indexOf(QChar('"')));
+
+			absData.rsyncsrv = line;
+		}
 	}
 	
 	fp.close();
@@ -716,26 +722,14 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 			}
 			
 			if(changed == false)
-			{
-				
 				return false;
-			}
-			
-			
-			
+				
 			return true;
 		}
-
-		
 		return false;
 	}
 	else
-	{
-		
-		return false;
-	}
-	
-	
+		return false;	
 	
 	return false;
 }
@@ -743,7 +737,7 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 bool ConfigurationParser::editABSSection(const QString &section, const QString &value)
 {
 	
-	QFile fp("/etc/abs/abs.conf");
+	QFile fp("/etc/abs.conf");
 	QStringList fileContent;
 
 	if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
@@ -764,32 +758,32 @@ bool ConfigurationParser::editABSSection(const QString &section, const QString &
 
 	fp.close();
 	
-	if(section == "supfiles")
+	if(section == "repos")
 	{
-		QString val("SUPFILES=(");
+		QString val("REPOS=(");
 		val.append(value);
-		val.append(")");
+		val.append(')');
 
-		if(!fileContent.filter("SUPFILES").isEmpty())
+		if(!fileContent.filter("REPOS").isEmpty())
 		{
 			for(int i = 0; i < fileContent.size(); ++i)
 			{
-				if(!fileContent.at(i).startsWith("SUPFILES"))
+				if(!fileContent.at(i).startsWith("REPOS"))
 					continue;
 
 				if(fileContent.at(i) == val)
 					// No need to edit
 				{
-					
+
 					return true;
 				}
 
 				fileContent.replace(i, val);
-				
-				QFile::remove("/etc/abs/abs.conf");
+
+				QFile::remove("/etc/abs.conf");
 				if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
 				{
-					
+
 					return false;
 				}
 
@@ -799,21 +793,21 @@ bool ConfigurationParser::editABSSection(const QString &section, const QString &
 					str << fileContent.at(k) << endl;
 
 				fp.close();
-				
+
 				return true;
 			}
-			
-			
+
+
 			return false;
 		}
 		else
 		{
 			fileContent.append(val);
 
-			QFile::remove("/etc/abs/abs.conf");
+			QFile::remove("/etc/abs.conf");
 			if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
 			{
-				
+
 				return false;
 			}
 
@@ -823,14 +817,73 @@ bool ConfigurationParser::editABSSection(const QString &section, const QString &
 				str << fileContent.at(k) << endl;
 
 			fp.close();
-			
-			
+
 			return true;			
 		}
 	}
-	
-	
-	
+	if(section == "rsync")
+	{
+		QString val("SYNCSERVER=\"");
+		val.append(value);
+		val.append('"');
+
+		if(!fileContent.filter("SYNCSERVER").isEmpty())
+		{
+			for(int i = 0; i < fileContent.size(); ++i)
+			{
+				if(!fileContent.at(i).startsWith("SYNCSERVER"))
+					continue;
+
+				if(fileContent.at(i) == val)
+					// No need to edit
+				{
+
+					return true;
+				}
+
+				fileContent.replace(i, val);
+
+				QFile::remove("/etc/abs.conf");
+				if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
+				{
+
+					return false;
+				}
+
+				QTextStream str(&fp);
+
+				for(int k=0; k < fileContent.size(); ++k)
+					str << fileContent.at(k) << endl;
+
+				fp.close();
+
+				return true;
+			}
+
+			return false;
+		}
+		else
+		{
+			fileContent.append(val);
+
+			QFile::remove("/etc/abs.conf");
+			if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
+			{
+
+				return false;
+			}
+
+			QTextStream str(&fp);
+
+			for(int k=0; k < fileContent.size(); ++k)
+				str << fileContent.at(k) << endl;
+
+			fp.close();
+
+			return true;			
+		}
+	}
+
 	return false;
 }
 

@@ -52,6 +52,7 @@ struct PcCnf {
 
 struct absCnf {
 	QString supfiles;
+	QString rsyncsrv;
 	bool loaded;
 };
 

@@ -332,7 +332,6 @@ void ConfigDialog::setupABS()
 	item->setSizeHint(QSize(90, 50));
 	listWidget->insertItem(3, item);
 
-
 	/* Read options related to our Config file first */
 
 	QSettings *settings = new QSettings();
@@ -354,7 +353,9 @@ void ConfigDialog::setupABS()
 	connect(useCustomSupRadio, SIGNAL(toggled(bool)), SLOT(obfuscateSupfiles(bool)));
 
 	ABSConf abD = getABSConf();
+	
 	supEdit->setText(abD.supfiles);
+	rsyncServerEdit->setText(abD.rsyncsrv);
 
 	MakePkgConf mkpD = getMakepkgConf();
 
@@ -1017,6 +1018,8 @@ void ConfigDialog::saveConfiguration()
 		QFile::remove("/etc/xdg/autostart/shaman.desktop");
 	}
 
+	ath.switchToRoot();
+	
 	if(useMatchSupRadio->isChecked())
 	{
 		/* We need to generate a SUPFILES containing our current repos
@@ -1039,7 +1042,7 @@ void ConfigDialog::saveConfiguration()
 
 		supfiles.append(unstableBox->isChecked() ? "unstable" : "!unstable");
 
-		editABSSection("supfiles", supfiles);
+		editABSSection("repos", supfiles);
 	}
 	else
 	{
@@ -1047,8 +1050,11 @@ void ConfigDialog::saveConfiguration()
 		 */
 
 		if(supEdit->isModified())
-			editABSSection("supfiles", supEdit->text());
+			editABSSection("repos", supEdit->text());
 	}
+	
+	if(rsyncServerEdit->isModified())
+		editABSSection("rsync", rsyncServerEdit->text());
 
 	/* Last, but not least, commit changes to makepkg.conf */
 	
