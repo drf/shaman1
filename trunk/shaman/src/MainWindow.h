@@ -142,6 +142,7 @@ private slots:
 	void cancelAllRepoActions();
 	void showAuthDialog(int count);
 	void settingsClosed();
+	void openUrl();
 	
 private:
 	void loadDbUpdateDialog();

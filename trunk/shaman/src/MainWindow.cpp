@@ -61,6 +61,7 @@
 #include <QShortcut>
 #include <QNetworkProxy>
 #include <QMutex>
+#include <QDesktopServices>
 
 extern CallBacks CbackReference;
 extern QMutex mutex;
@@ -1860,12 +1861,19 @@ void MainWindow::showAboutDialog()
 	
 	okb->setText(QObject::tr("O&k"));
 	okb->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
+	
+	connect(ui.websiteButton, SIGNAL(clicked()), SLOT(openUrl()));
 
 	about->setWindowModality(Qt::ApplicationModal);
 
 	about->exec();
 
 	about->deleteLater();
+}
+
+void MainWindow::openUrl()
+{
+	QDesktopServices::openUrl(QUrl("http://shaman.iskrembilen.com/"));
 }
 
 void MainWindow::startTrayTimer()

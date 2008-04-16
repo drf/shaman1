@@ -16,119 +16,124 @@
    <iconset resource="shaman.qrc" >
     <normaloff>:/Icons/icons/shaman/shaman-32.png</normaloff>:/Icons/icons/shaman/shaman-32.png</iconset>
   </property>
-  <layout class="QGridLayout" >
-   <item row="0" column="0" colspan="2" >
-    <widget class="QFrame" name="frame" >
-     <property name="sizePolicy" >
-      <sizepolicy vsizetype="Fixed" hsizetype="Preferred" >
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="frameShape" >
-      <enum>QFrame::StyledPanel</enum>
-     </property>
-     <property name="frameShadow" >
-      <enum>QFrame::Sunken</enum>
-     </property>
-     <layout class="QGridLayout" >
-      <item row="0" column="1" >
-       <widget class="QLabel" name="label" >
-        <property name="minimumSize" >
-         <size>
-          <width>22</width>
-          <height>22</height>
-         </size>
-        </property>
-        <property name="maximumSize" >
-         <size>
-          <width>22</width>
-          <height>22</height>
-         </size>
-        </property>
-        <property name="text" >
-         <string/>
-        </property>
-        <property name="pixmap" >
-         <pixmap resource="shaman.qrc" >:/Icons/icons/help-about.png</pixmap>
-        </property>
-        <property name="scaledContents" >
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0" >
-       <widget class="QLabel" name="label_2" >
-        <property name="text" >
-         <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+  <property name="locale" >
+   <locale country="UnitedStates" language="English" />
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2" >
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout" >
+     <item>
+      <widget class="QFrame" name="frame" >
+       <property name="sizePolicy" >
+        <sizepolicy vsizetype="Fixed" hsizetype="Preferred" >
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="frameShape" >
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow" >
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <layout class="QGridLayout" >
+        <item row="0" column="1" >
+         <widget class="QLabel" name="label" >
+          <property name="minimumSize" >
+           <size>
+            <width>22</width>
+            <height>22</height>
+           </size>
+          </property>
+          <property name="maximumSize" >
+           <size>
+            <width>22</width>
+            <height>22</height>
+           </size>
+          </property>
+          <property name="text" >
+           <string/>
+          </property>
+          <property name="pixmap" >
+           <pixmap resource="shaman.qrc" >:/Icons/icons/help-about.png</pixmap>
+          </property>
+          <property name="scaledContents" >
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" >
+         <widget class="QLabel" name="label_2" >
+          <property name="text" >
+           <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
 &lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
 p, li { white-space: pre-wrap; }
 &lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;">
 &lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;span style=" font-weight:600;">Shaman 1.0 Beta (revision 651)&lt;/span>&lt;/p>&lt;/body>&lt;/html></string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTabWidget" name="tabWidget" >
+       <property name="sizePolicy" >
+        <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="currentIndex" >
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="tab" >
+        <property name="geometry" >
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>433</width>
+          <height>199</height>
+         </rect>
         </property>
+        <attribute name="title" >
+         <string>About</string>
+        </attribute>
+        <attribute name="icon" >
+         <iconset resource="shaman.qrc" >
+          <normaloff>:/Icons/icons/help-about.png</normaloff>:/Icons/icons/help-about.png</iconset>
+        </attribute>
+        <layout class="QGridLayout" >
+         <item row="0" column="0" >
+          <widget class="QLabel" name="aboutInfoLabel" >
+           <property name="text" >
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item row="1" column="0" colspan="2" >
-    <widget class="QTabWidget" name="tabWidget" >
-     <property name="sizePolicy" >
-      <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="currentIndex" >
-      <number>0</number>
-     </property>
-     <widget class="QWidget" name="tab" >
-      <property name="geometry" >
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>435</width>
-        <height>210</height>
-       </rect>
-      </property>
-      <attribute name="title" >
-       <string>About</string>
-      </attribute>
-      <attribute name="icon" >
-       <iconset resource="shaman.qrc" >
-        <normaloff>:/Icons/icons/help-about.png</normaloff>:/Icons/icons/help-about.png</iconset>
-      </attribute>
-      <layout class="QGridLayout" >
-       <item row="0" column="0" >
-        <widget class="QLabel" name="aboutInfoLabel" >
-         <property name="text" >
-          <string/>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="tab_2" >
-      <property name="geometry" >
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>640</width>
-        <height>320</height>
-       </rect>
-      </property>
-      <attribute name="title" >
-       <string>Authors</string>
-      </attribute>
-      <attribute name="icon" >
-       <iconset resource="shaman.qrc" >
-        <normaloff>:/Icons/icons/shaman/shaman-updates-available-32.png</normaloff>:/Icons/icons/shaman/shaman-updates-available-32.png</iconset>
-      </attribute>
-      <layout class="QGridLayout" >
-       <item row="0" column="0" >
-        <widget class="QLabel" name="label_4" >
-         <property name="text" >
-          <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+       <widget class="QWidget" name="tab_2" >
+        <property name="geometry" >
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>640</width>
+          <height>320</height>
+         </rect>
+        </property>
+        <attribute name="title" >
+         <string>Authors</string>
+        </attribute>
+        <attribute name="icon" >
+         <iconset resource="shaman.qrc" >
+          <normaloff>:/Icons/icons/shaman/shaman-updates-available-32.png</normaloff>:/Icons/icons/shaman/shaman-updates-available-32.png</iconset>
+        </attribute>
+        <layout class="QGridLayout" >
+         <item row="0" column="0" >
+          <widget class="QLabel" name="label_4" >
+           <property name="text" >
+            <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
 p, li { white-space: pre-wrap; }
 &lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;">
 &lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;span style=" font-weight:600;">Dario Freddi&lt;/span>&lt;/p>
@@ -137,38 +142,38 @@ p, li { white-space: pre-wrap; }
 &lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;span style=" font-weight:600;">Lukas Appelhans&lt;/span>&lt;/p>
 &lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;">&lt;span style=" font-weight:400;">Developer&lt;/span>&lt;/p>
 &lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;/p>&lt;/body>&lt;/html></string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="Seite" >
-      <property name="geometry" >
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>640</width>
-        <height>320</height>
-       </rect>
-      </property>
-      <attribute name="title" >
-       <string>Thanks To</string>
-      </attribute>
-      <attribute name="icon" >
-       <iconset resource="shaman.qrc" >
-        <normaloff>:/Icons/icons/shaman/animation_source/anim06.png</normaloff>:/Icons/icons/shaman/animation_source/anim06.png</iconset>
-      </attribute>
-      <layout class="QGridLayout" >
-       <item row="0" column="0" >
-        <widget class="QTextEdit" name="textEdit" >
-         <property name="undoRedoEnabled" >
-          <bool>false</bool>
-         </property>
-         <property name="readOnly" >
-          <bool>true</bool>
-         </property>
-         <property name="html" >
-          <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="Seite" >
+        <property name="geometry" >
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>640</width>
+          <height>320</height>
+         </rect>
+        </property>
+        <attribute name="title" >
+         <string>Thanks To</string>
+        </attribute>
+        <attribute name="icon" >
+         <iconset resource="shaman.qrc" >
+          <normaloff>:/Icons/icons/shaman/animation_source/anim06.png</normaloff>:/Icons/icons/shaman/animation_source/anim06.png</iconset>
+        </attribute>
+        <layout class="QGridLayout" >
+         <item row="0" column="0" >
+          <widget class="QTextEdit" name="textEdit" >
+           <property name="undoRedoEnabled" >
+            <bool>false</bool>
+           </property>
+           <property name="readOnly" >
+            <bool>true</bool>
+           </property>
+           <property name="html" >
+            <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
 &lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
 p, li { white-space: pre-wrap; }
 &lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;">
@@ -210,47 +215,64 @@ p, li { white-space: pre-wrap; }
 &lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;/p>
 &lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;span style=" font-weight:600;">Johannes Schriewer&lt;/span>&lt;/p>
 &lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;">&lt;span style=" font-weight:400;">KDEMod Developer, and also some help on the code.&lt;/span>&lt;/p>&lt;/body>&lt;/html></string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout" >
+       <item>
+        <widget class="QPushButton" name="websiteButton" >
+         <property name="text" >
+          <string>Visit &amp;Website...</string>
+         </property>
+         <property name="icon" >
+          <iconset resource="shaman.qrc" >
+           <normaloff>:/Icons/icons/document-open-remote.png</normaloff>:/Icons/icons/document-open-remote.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer>
+         <property name="orientation" >
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType" >
+          <enum>QSizePolicy::MinimumExpanding</enum>
+         </property>
+         <property name="sizeHint" stdset="0" >
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QDialogButtonBox" name="buttonBox" >
+         <property name="sizePolicy" >
+          <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="orientation" >
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="standardButtons" >
+          <set>QDialogButtonBox::Ok</set>
+         </property>
+         <property name="centerButtons" >
+          <bool>true</bool>
          </property>
         </widget>
        </item>
       </layout>
-     </widget>
-    </widget>
-   </item>
-   <item row="2" column="0" >
-    <spacer>
-     <property name="orientation" >
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeType" >
-      <enum>QSizePolicy::MinimumExpanding</enum>
-     </property>
-     <property name="sizeHint" stdset="0" >
-      <size>
-       <width>40</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="2" column="1" >
-    <widget class="QDialogButtonBox" name="buttonBox" >
-     <property name="sizePolicy" >
-      <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="orientation" >
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="standardButtons" >
-      <set>QDialogButtonBox::Ok</set>
-     </property>
-     <property name="centerButtons" >
-      <bool>true</bool>
-     </property>
-    </widget>
+     </item>
+    </layout>
    </item>
   </layout>
  </widget>
