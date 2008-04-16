@@ -1779,14 +1779,12 @@ void MainWindow::systrayActivated(QSystemTrayIcon::ActivationReason reason)
 {
 	if (reason == QSystemTrayIcon::Trigger)
 	{
-		QSettings *settings = new QSettings();
-
 		if (isHidden())
 		{
 			/* Uh, we have to stop the Timer! */
 			emit stopTimer();
 			show();
-			foreach(QObject *ent, children())
+			foreach (QObject *ent, children())
 			{	
 				QDialog *dlog = qobject_cast<QDialog *>(ent);
 				if(dlog != 0)
@@ -1798,15 +1796,13 @@ void MainWindow::systrayActivated(QSystemTrayIcon::ActivationReason reason)
 		{
 			emit startTimer();
 			hide();
-			foreach(QObject *ent, children())
+			foreach (QObject *ent, children())
 			{	
 				QDialog *dlog = qobject_cast<QDialog *>(ent);
 				if(dlog != 0)
 					dlog->hide();
 			}
 		}
-
-		settings->deleteLater();
 	}
 }
 

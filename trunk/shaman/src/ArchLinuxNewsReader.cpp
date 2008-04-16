@@ -28,8 +28,6 @@
 
 ArchLinuxNewsReader::ArchLinuxNewsReader()
 {
-	http.setProxy(QNetworkProxy());
-	
 	connect(&http, SIGNAL(readyRead(const QHttpResponseHeader &)),
 			this, SLOT(readData(const QHttpResponseHeader &)));
 
@@ -69,6 +67,7 @@ void ArchLinuxNewsReader::fetch()
 
 	QUrl url("http://www.archlinux.org/feeds/news/");
 
+	http.setProxy(QNetworkProxy());
 	http.setHost(url.host());
 	connectionId = http.get(url.path());
 }
@@ -123,13 +122,15 @@ void ArchLinuxNewsReader::parseXml()
 		{
 			if(xml.name() == "item")
 			{
-				if(!oldEntries.contains(titleString))
+				QString realTitle = QString(titleString);
+				if(realTitle.startsWith("Recent News Updates"))
+				realTitle.remove(0, 19);
+				
+				if(!oldEntries.contains(realTitle))
 				{
 					ArchLinuxNews::ArchNews tmp;
 					tmp.link = QString(linkString);
-					tmp.title = QString(titleString);
-					if(tmp.title.startsWith("Recent News Updates"))
-						tmp.title.remove(0, 19);
+					tmp.title = QString(realTitle);				
 					tmp.nNew = true;
 					tmp.nRead = false;
 					
@@ -145,11 +146,9 @@ void ArchLinuxNewsReader::parseXml()
 				{
 					ArchLinuxNews::ArchNews tmp;
 					tmp.link = QString(linkString);
-					tmp.title = QString(titleString);
-					if(tmp.title.startsWith("Recent News Updates"))
-						tmp.title.remove(0, 19);
+					tmp.title = QString(realTitle);
 					tmp.nNew = false;
-					tmp.nRead = oldEntries[titleString].toBool();
+					tmp.nRead = oldEntries[realTitle].toBool();
 
 					entries.append(tmp);
 				}

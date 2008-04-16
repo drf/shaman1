@@ -133,6 +133,8 @@ void NewsViewer::markAsRead()
 	else
 		newsHandler->markAsRead(treeWidget->selectedItems().first()->text(2), false);
 	
+	treeWidget->selectedItems().first()->setIcon(1, QIcon());
+	
 	populateView();
 }
 
@@ -141,6 +143,8 @@ void NewsViewer::openInBrowser()
 	if(treeWidget->selectedItems().isEmpty())
 		return;
 
+	//markAsRead();
+	
 	QTreeWidgetItem *item = treeWidget->selectedItems().first();
 
 	QDesktopServices::openUrl(QUrl(item->text(3)));
