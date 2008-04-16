@@ -8,7 +8,7 @@ _EOF
 
 cmake . -DCMAKE_INSTALL_PREFIX=/usr
 make
-chown root shaman
-chmod u+s shaman
+sudo chown root shaman
+sudo chmod u+s shaman
 
 #sudo make install
