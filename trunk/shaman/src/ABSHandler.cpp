@@ -49,21 +49,18 @@ QString ABSHandler::getABSPath(const QString &package)
 		QDir subAbsDir(list.at(i).absoluteFilePath());
 		subAbsDir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot | QDir::NoSymLinks);
 		QFileInfoList subList = subAbsDir.entryInfoList();
-		for (int k = 0; k < subList.size(); ++k) 
+
+		for (int j = 0; j < subList.size(); ++j) 
 		{
-			QDir subUbAbsDir(subList.at(k).absoluteFilePath());
-			subUbAbsDir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot | QDir::NoSymLinks);
-			QFileInfoList subUbList = subUbAbsDir.entryInfoList();
-			for (int j = 0; j < subUbList.size(); ++j) 
+			qDebug() << subList.at(j).absoluteFilePath();
+			if(!subList.at(j).baseName().compare(package))
 			{
-				if(!subUbList.at(j).baseName().compare(package))
-				{
-					found = 1;
-					absSource = subUbList.at(j).absoluteFilePath();
-					break;
-				}
+				found = 1;
+				absSource = subList.at(j).absoluteFilePath();
+				break;
 			}
 		}
+
 		if(found == 1)
 			break;
 	}
