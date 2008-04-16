@@ -1762,6 +1762,8 @@ void MainWindow::settingsClosed()
 	
 	if(configDialog->result() == QDialog::Accepted)
 	{
+		populateRepoColumn();
+		
 		if(configDialog->doDbUpdate())
 			doDbUpdate();
 
