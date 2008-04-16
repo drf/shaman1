@@ -66,12 +66,15 @@ aHandle(hnd)
 					aHandle->getPackageVersion(pkg, aHandle->getPackageRepo(pkg, true)) + QChar(')')));
 		}
 
+		itm->setExpanded(true);
+		
 		connect(abortButton, SIGNAL(clicked()), SLOT(abort()));
 		connect(addToQueue, SIGNAL(clicked()), SLOT(addPkg()));
 		connect(goUpgrading, SIGNAL(clicked()), SLOT(initSysUpgrade()));
+		connect(showPackages, SIGNAL(clicked()), SLOT(adjust()));
 
-		treeWidget->hide();
-		adjustSize();
+		//treeWidget->hide();
+		adjust();
 	}
 	
 	settings->deleteLater();
@@ -115,4 +118,9 @@ void SysUpgradeDialog::initSysUpgrade()
 	settings->deleteLater();
 	
 	emit upgradeNow();
+}
+
+void SysUpgradeDialog::adjust()
+{
+	adjustSize();
 }

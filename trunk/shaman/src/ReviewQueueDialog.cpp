@@ -59,7 +59,7 @@ aHandle(hnd)
 		addSize += aHandle->getPackageSize(itm->text(1), itm->text(5));
 		QTreeWidgetItem *itmL = treeWidget->findItems(tr("To be Installed"), Qt::MatchExactly, 0).first();
 		new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
-                itmL->setExpanded(true);
+		itmL->setExpanded(true);
 	}
 
 	foreach(QTreeWidgetItem *itm, parent->pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 8))
@@ -68,7 +68,7 @@ aHandle(hnd)
 		addSize += aHandle->getPackageSize(itm->text(1), itm->text(5));
 		QTreeWidgetItem *itmL = treeWidget->findItems(tr("To be Upgraded"), Qt::MatchExactly, 0).first();
 		new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
-                itmL->setExpanded(true);
+		itmL->setExpanded(true);
 	}
 
 	foreach(QTreeWidgetItem *itm, parent->pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 8))
@@ -77,7 +77,7 @@ aHandle(hnd)
 		removeSize += aHandle->getPackageSize(itm->text(1), itm->text(5));
 		QTreeWidgetItem *itmL = treeWidget->findItems(tr("To be Removed"), Qt::MatchExactly, 0).first();
 		new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
-                itmL->setExpanded(true);
+		itmL->setExpanded(true);
 	}
 
 	foreach(QTreeWidgetItem *itm, parent->pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 8))
@@ -86,7 +86,7 @@ aHandle(hnd)
 		removeSize += aHandle->getPackageSize(itm->text(1), itm->text(5));
 		QTreeWidgetItem *itmL = treeWidget->findItems(tr("To be Removed"), Qt::MatchExactly, 0).first();
 		new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
-                itmL->setExpanded(true);
+		itmL->setExpanded(true);
 	}
 	
 	bool spaceToDo;
@@ -119,7 +119,7 @@ aHandle(hnd)
 
 	setWindowModality(Qt::ApplicationModal);
 	treeWidget->hide();
-	adjustSize();
+	adjust();
 
 	QSettings *settings = new QSettings();
 
@@ -130,6 +130,7 @@ aHandle(hnd)
 
 	connect(processButton, SIGNAL(clicked()), SLOT(processQueue()));
 	connect(cancelButton, SIGNAL(clicked()), SLOT(deleteLater()));
+	connect(showPackages, SIGNAL(clicked()), SLOT(adjust()));
 }
 
 ReviewQueueDialog::~ReviewQueueDialog()
@@ -158,4 +159,9 @@ bool ReviewQueueDialog::isInTray()
 bool ReviewQueueDialog::isTurnOff()
 {
 	return turnoffBox->isChecked();
+}
+
+void ReviewQueueDialog::adjust()
+{
+	adjustSize();
 }

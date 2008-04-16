@@ -40,6 +40,9 @@ public:
 public slots:
 	void processQueue();
 	
+private slots:
+	void adjust();
+	
 signals:
 	void goProcess();
 	

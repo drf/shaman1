@@ -73,6 +73,8 @@ private slots:
 
 	void finishedScriptletRunning(int eC,QProcess::ExitStatus eS);
 	
+	void adjust();
+	
 signals:
 	void terminated(bool errors);
 
