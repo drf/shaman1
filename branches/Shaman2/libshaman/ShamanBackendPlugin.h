@@ -23,6 +23,8 @@
 
 #include "Authenticator.h"
 #include "ConfigurationParser.h"
+//URGENT TODO: FIXME: HACK: ALL: FIXME: TODO: Clean up that things here :P why do we have to know about transactions? ---> transaction Class??? And other things...
+//TODO: Remove all that QString repo things
 //TODO: Write documentation and change the functions to better names
 using namespace std;
 class Package;
