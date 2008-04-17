@@ -70,7 +70,7 @@ QueueDialog::QueueDialog(AlpmHandler *hnd, QWidget *parent)
 	connect(aHandle, SIGNAL(committingTransactionError(const QString&)), 
 				SLOT(handleCommittingError(const QString&)));
 	connect(abortTr, SIGNAL(clicked()), SLOT(abortTransaction()));
-	connect(showDetails, SIGNAL(clicked()), SLOT(adjust()));
+	connect(showDetails, SIGNAL(toggled(bool)), SLOT(adjust(bool)));
 	
 	qDebug() << "Queue signals connected";
 	
@@ -79,7 +79,7 @@ QueueDialog::QueueDialog(AlpmHandler *hnd, QWidget *parent)
 	
 	progressBar->setRange(0, 1);
 	progressBar->setValue(0);
-	adjust();
+	adjustSize();
 	status = 0;
 }
 
@@ -87,8 +87,16 @@ QueueDialog::~QueueDialog()
 {
 }
 
-void QueueDialog::adjust()
+void QueueDialog::adjust(bool tgld)
 {
+	if(tgld)
+		textEdit->show();
+	else
+	{
+		textEdit->hide();
+		resize(minimumSize());
+	}
+
 	adjustSize();
 }
 

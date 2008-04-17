@@ -244,9 +244,6 @@ void CallBacks::cb_log(pmloglevel_t level, char *fmt, va_list args)
 		QString msg(string);
 		emit logMsgStreamed(msg);
 	}
-	
-	qDebug() << "Received Message from Alpm, streaming...";
-
 }
 
 /* Now the real suckness is coming... */

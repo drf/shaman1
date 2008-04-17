@@ -142,6 +142,8 @@ void BuildingHandler::validateSourceQueue()
 	revBuildUi->treeWidget->hide();
 
 	reviewBQueue->adjustSize();
+	
+	connect(revBuildUi->showPackages, SIGNAL(toggled(bool)), SLOT(adjust(bool)));
 
 	QSettings *settings = new QSettings();
 
@@ -205,6 +207,20 @@ void BuildingHandler::validateSourceQueue()
 
 	reviewBQueue->show();
 }
+
+void BuildingHandler::adjust(bool tgld)
+{
+	if(tgld)
+		revBuildUi->treeWidget->show();
+	else
+	{
+		revBuildUi->treeWidget->hide();
+		reviewBQueue->resize(reviewBQueue->minimumSize());
+	}
+
+	reviewBQueue->adjustSize();
+}
+
 
 void BuildingHandler::openPBuildDialog()
 {

@@ -13,7 +13,8 @@
    <string>Processing Queue...</string>
   </property>
   <property name="windowIcon" >
-   <iconset resource="shaman.qrc" >:/Icons/icons/shaman/animation_source/anim06.png</iconset>
+   <iconset resource="shaman.qrc" >
+    <normaloff>:/Icons/icons/shaman/animation_source/anim06.png</normaloff>:/Icons/icons/shaman/animation_source/anim06.png</iconset>
   </property>
   <layout class="QGridLayout" >
    <item row="1" column="0" >
@@ -137,7 +138,8 @@
         <string>More Details...</string>
        </property>
        <property name="icon" >
-        <iconset resource="shaman.qrc" >:/Icons/icons/help-about.png</iconset>
+        <iconset resource="shaman.qrc" >
+         <normaloff>:/Icons/icons/help-about.png</normaloff>:/Icons/icons/help-about.png</iconset>
        </property>
        <property name="checkable" >
         <bool>true</bool>
@@ -152,7 +154,7 @@
        <property name="orientation" >
         <enum>Qt::Horizontal</enum>
        </property>
-       <property name="sizeHint" >
+       <property name="sizeHint" stdset="0" >
         <size>
          <width>71</width>
          <height>30</height>
@@ -166,7 +168,8 @@
         <string>Abort</string>
        </property>
        <property name="icon" >
-        <iconset resource="shaman.qrc" >:/Icons/icons/dialog-cancel.png</iconset>
+        <iconset resource="shaman.qrc" >
+         <normaloff>:/Icons/icons/dialog-cancel.png</normaloff>:/Icons/icons/dialog-cancel.png</iconset>
        </property>
       </widget>
      </item>
@@ -259,22 +262,5 @@ p, li { white-space: pre-wrap; }
  <resources>
   <include location="shaman.qrc" />
  </resources>
- <connections>
-  <connection>
-   <sender>showDetails</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>textEdit</receiver>
-   <slot>setVisible(bool)</slot>
-   <hints>
-    <hint type="sourcelabel" >
-     <x>71</x>
-     <y>227</y>
-    </hint>
-    <hint type="destinationlabel" >
-     <x>184</x>
-     <y>316</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

@@ -39,7 +39,7 @@ private slots:
 	void abort();
 	void initSysUpgrade();
 	void addPkg();
-	void adjust();
+	void adjust(bool tgld);
 	
 signals:
 	void aborted();

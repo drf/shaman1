@@ -189,22 +189,5 @@ p, li { white-space: pre-wrap; }
  <resources>
   <include location="shaman.qrc" />
  </resources>
- <connections>
-  <connection>
-   <sender>showPackages</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>treeWidget</receiver>
-   <slot>setShown(bool)</slot>
-   <hints>
-    <hint type="sourcelabel" >
-     <x>206</x>
-     <y>139</y>
-    </hint>
-    <hint type="destinationlabel" >
-     <x>307</x>
-     <y>224</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

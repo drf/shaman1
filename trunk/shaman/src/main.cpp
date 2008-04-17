@@ -254,7 +254,8 @@ int main(int argc, char **argv)
 	qDebug() << ">>		Running with Qt" << qVersion();
 	qDebug() << ">>";
 	qDebug() << ">>	Shaman is in beta phase, please report bugs!!";
-	qDebug() << ">>	Our tracker is @ http://shaman.iskremblien.com";
+	qDebug() << ">>	Our website is @ http://shaman.iskremblien.com/ , join in!!";
+	qDebug() << ">>	You can also find a bugtracker in the website, please use it.";
 	qDebug() << ">>";
 	qDebug() << ">>	In most cases, terminal output is pretty relevant, please include it,";
 	qDebug() << ">>	adding a backtrace, if you need to report a crash.";

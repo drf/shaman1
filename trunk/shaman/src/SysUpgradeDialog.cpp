@@ -71,10 +71,10 @@ aHandle(hnd)
 		connect(abortButton, SIGNAL(clicked()), SLOT(abort()));
 		connect(addToQueue, SIGNAL(clicked()), SLOT(addPkg()));
 		connect(goUpgrading, SIGNAL(clicked()), SLOT(initSysUpgrade()));
-		connect(showPackages, SIGNAL(clicked()), SLOT(adjust()));
+		connect(showPackages, SIGNAL(toggled(bool)), SLOT(adjust(bool)));
 
 		//treeWidget->hide();
-		adjust();
+		adjustSize();
 	}
 	
 	settings->deleteLater();
@@ -120,7 +120,15 @@ void SysUpgradeDialog::initSysUpgrade()
 	emit upgradeNow();
 }
 
-void SysUpgradeDialog::adjust()
+void SysUpgradeDialog::adjust(bool tgld)
 {
+	if(tgld)
+		treeWidget->show();
+	else
+	{
+		treeWidget->hide();
+		resize(minimumSize());
+	}
+	
 	adjustSize();
 }

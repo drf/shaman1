@@ -119,7 +119,7 @@ aHandle(hnd)
 
 	setWindowModality(Qt::ApplicationModal);
 	treeWidget->hide();
-	adjust();
+	adjustSize();
 
 	QSettings *settings = new QSettings();
 
@@ -130,7 +130,7 @@ aHandle(hnd)
 
 	connect(processButton, SIGNAL(clicked()), SLOT(processQueue()));
 	connect(cancelButton, SIGNAL(clicked()), SLOT(deleteLater()));
-	connect(showPackages, SIGNAL(clicked()), SLOT(adjust()));
+	connect(showPackages, SIGNAL(toggled(bool)), SLOT(adjust(bool)));
 }
 
 ReviewQueueDialog::~ReviewQueueDialog()
@@ -161,7 +161,15 @@ bool ReviewQueueDialog::isTurnOff()
 	return turnoffBox->isChecked();
 }
 
-void ReviewQueueDialog::adjust()
+void ReviewQueueDialog::adjust(bool tgld)
 {
+	if(tgld)
+		treeWidget->show();
+	else
+	{
+		treeWidget->hide();
+		resize(minimumSize());
+	}
+	
 	adjustSize();
 }

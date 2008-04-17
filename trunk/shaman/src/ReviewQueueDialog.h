@@ -41,7 +41,7 @@ public slots:
 	void processQueue();
 	
 private slots:
-	void adjust();
+	void adjust(bool tgld);
 	
 signals:
 	void goProcess();

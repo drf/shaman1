@@ -52,6 +52,7 @@ public slots:
 	void reduceBuildingInTray();
 	void ABSUpdateEnded();
 	void nullifyBDialog();
+	void adjust(bool tgld);
 	
 signals:
 	void outOfScope();

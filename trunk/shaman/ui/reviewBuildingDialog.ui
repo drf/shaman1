@@ -5,15 +5,16 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>656</width>
-    <height>264</height>
+    <width>703</width>
+    <height>294</height>
    </rect>
   </property>
   <property name="windowTitle" >
    <string>Review Building Queue</string>
   </property>
   <property name="windowIcon" >
-   <iconset resource="shaman.qrc" >:/Icons/icons/shaman/shaman-yellow-icon-32.png</iconset>
+   <iconset resource="shaman.qrc" >
+    <normaloff>:/Icons/icons/shaman/shaman-yellow-icon-32.png</normaloff>:/Icons/icons/shaman/shaman-yellow-icon-32.png</iconset>
   </property>
   <layout class="QGridLayout" >
    <item row="0" column="0" >
@@ -116,7 +117,8 @@ p, li { white-space: pre-wrap; }
           <string>Show packages...</string>
          </property>
          <property name="icon" >
-          <iconset resource="shaman.qrc" >:/Icons/icons/view-list-tree.png</iconset>
+          <iconset resource="shaman.qrc" >
+           <normaloff>:/Icons/icons/view-list-tree.png</normaloff>:/Icons/icons/view-list-tree.png</iconset>
          </property>
          <property name="checkable" >
           <bool>true</bool>
@@ -128,7 +130,7 @@ p, li { white-space: pre-wrap; }
          <property name="orientation" >
           <enum>Qt::Horizontal</enum>
          </property>
-         <property name="sizeHint" >
+         <property name="sizeHint" stdset="0" >
           <size>
            <width>40</width>
            <height>20</height>
@@ -155,7 +157,8 @@ p, li { white-space: pre-wrap; }
           <string>Abort</string>
          </property>
          <property name="icon" >
-          <iconset resource="shaman.qrc" >:/Icons/icons/dialog-cancel.png</iconset>
+          <iconset resource="shaman.qrc" >
+           <normaloff>:/Icons/icons/dialog-cancel.png</normaloff>:/Icons/icons/dialog-cancel.png</iconset>
          </property>
         </widget>
        </item>
@@ -165,7 +168,8 @@ p, li { white-space: pre-wrap; }
           <string>Process From Binary</string>
          </property>
          <property name="icon" >
-          <iconset resource="shaman.qrc" >:/Icons/icons/edit-redo.png</iconset>
+          <iconset resource="shaman.qrc" >
+           <normaloff>:/Icons/icons/edit-redo.png</normaloff>:/Icons/icons/edit-redo.png</iconset>
          </property>
         </widget>
        </item>
@@ -174,7 +178,7 @@ p, li { white-space: pre-wrap; }
          <property name="orientation" >
           <enum>Qt::Horizontal</enum>
          </property>
-         <property name="sizeHint" >
+         <property name="sizeHint" stdset="0" >
           <size>
            <width>40</width>
            <height>20</height>
@@ -188,7 +192,8 @@ p, li { white-space: pre-wrap; }
           <string>Review PKGBUILDs</string>
          </property>
          <property name="icon" >
-          <iconset resource="shaman.qrc" >:/Icons/icons/draw-text.png</iconset>
+          <iconset resource="shaman.qrc" >
+           <normaloff>:/Icons/icons/draw-text.png</normaloff>:/Icons/icons/draw-text.png</iconset>
          </property>
         </widget>
        </item>
@@ -198,7 +203,8 @@ p, li { white-space: pre-wrap; }
           <string>Process From Source</string>
          </property>
          <property name="icon" >
-          <iconset resource="shaman.qrc" >:/Icons/icons/dialog-ok-apply.png</iconset>
+          <iconset resource="shaman.qrc" >
+           <normaloff>:/Icons/icons/dialog-ok-apply.png</normaloff>:/Icons/icons/dialog-ok-apply.png</iconset>
          </property>
         </widget>
        </item>
@@ -211,22 +217,5 @@ p, li { white-space: pre-wrap; }
  <resources>
   <include location="shaman.qrc" />
  </resources>
- <connections>
-  <connection>
-   <sender>showPackages</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>treeWidget</receiver>
-   <slot>setVisible(bool)</slot>
-   <hints>
-    <hint type="sourcelabel" >
-     <x>82</x>
-     <y>115</y>
-    </hint>
-    <hint type="destinationlabel" >
-     <x>310</x>
-     <y>165</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>
