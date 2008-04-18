@@ -62,6 +62,7 @@
 #include <QNetworkProxy>
 #include <QMutex>
 #include <QDesktopServices>
+#include <QUrl>
 
 extern CallBacks CbackReference;
 extern QMutex mutex;
