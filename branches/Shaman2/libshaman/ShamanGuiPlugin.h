@@ -2,7 +2,7 @@
 class QWidget;
 class QDockWidget;
 class QAction;
-
+//TODO: namespace Shaman { ++ remove shaman from name
 class ShamanGuiPlugin : public ShamanAbstractPlugin
 {
     public:  
