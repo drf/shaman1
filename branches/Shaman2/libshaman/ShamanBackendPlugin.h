@@ -48,8 +48,8 @@ public:
 	virtual ~ShamanBackendPlugin();
 
 	bool isTransaction();
-	bool testLibrary();
-	bool interruptTransaction();
+	bool testLibrary();//Fuck all :P Wth is that?????
+	bool interruptTransaction();//Fuck all :P Wth is that?????
 
 	QStringList getAvailableRepos();
 	
@@ -83,31 +83,31 @@ public:
 	
 	QString getPackageRepo(const QString &name, bool checkver = false);
 	
-	void initQueue(bool rem, bool syncd, bool ff);
+	void initQueue(bool rem, bool syncd, bool ff);//Fuck all :P Wth is that?????
 	
 	void addSyncToQueue(const QString &toAdd);//Look down?
 	void addRemoveToQueue(const QString &toRm);//Look down
 	void addFFToQueue(const QString &toFF);//What's FF?
 	
 	QStringList getSyncInQueue();//See above
-	QStringList getRemoveInQueue();
-	QStringList getFFInQueue();
+	QStringList getRemoveInQueue();//Fuck all :P Wth is that?????
+	QStringList getFFInQueue();//Fuck all :P Wth is that?????
 	
 	void processQueue();
-	int getNumberOfTargets(int action);
+	int getNumberOfTargets(int action);//Fuck all :P Wth is that?????
 
 	bool updateDatabase();
 	bool fullSystemUpgrade();
 
-	bool performCurrentTransaction();
+	bool performCurrentTransaction();//Fuck all :P Wth is that?????   processQueue???
 
 	bool reloadBackendConfiguration(); // In case the user modifies it.
 	
 	Package getPackageFromName(const QString &name, const QString &repo);
 	
-	QString getBackendVersion();
+	QString getBackendVersion();//Use struct
 	
-	void setuseragent();
+	void setUserAgent();
 
 private:
 	bool initTransaction(pmtranstype_t type, pmtransflag_t flags);
@@ -116,15 +116,15 @@ private:
 	void handleError(int action, alpm_list_t *data);
 
 signals:
-	void streamDbUpdatingStatus(const QString &repo, int action);
-	void dbUpdated(const QString &dbname);
-	void dbQty(const QStringList &db);
-	void dbUpdatePerformed();
-	void transactionStarted();
-	void transactionReleased();
+	void streamDbUpdatingStatus(const QString &repo, int action);//Action ---> enum :P
+	void dbUpdated(const QString &dbname);//TODO: DataBase class?
+	void dbQty(const QStringList &db);//TODO: Ouh? naming?
+	void dbUpdatePerformed();//TODO: DataBaseClass as param, or better use QObject::sender() in slots?
+	void transactionStarted();//+1
+	void transactionReleased();//+1
 	
 	// Error streaming
-	void preparingUpgradeError();
+	void preparingUpgradeError();//TODO: Simplify
 	void preparingTransactionError(const QString &msg);
 	void committingTransactionError(const QString &msg);
 

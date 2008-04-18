@@ -17,7 +17,7 @@ namespace ShamanPlugin {
 	/**
 	* \struct data
 	* Defines all the informations needed about a plugin.
-	*/
+	*///TODO: Const???? Can we do that in structs?
 	struct data {
 		/** The name of the plugin */
 		QString name;
