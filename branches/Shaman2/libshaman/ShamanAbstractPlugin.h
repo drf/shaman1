@@ -52,7 +52,7 @@ namespace ShamanPlugin {
 	*/
 	typedef struct data moduleData;
 
-}  // namespace ShamanPlugin
+}  // namespace ShamanPlugin, move to abstract plugin and use Shaman namespace
 
 class ShamanAbstractPlugin
 {
@@ -60,11 +60,11 @@ class ShamanAbstractPlugin
   
   ShamanAbstractPlugin();
   
-  virtual ShamanPlugin::moduleData getPluginData() = 0;
-  virtual QStringList getDependencies() = 0;
+    virtual ShamanPlugin::moduleData getPluginData() = 0;
+    virtual QStringList getDependencies() = 0;
+    virtual QWidget* configurationWidget() {return 0;}
   
-  virtual ShamanPlugin::PluginType getPluginType() = 0;
-    
+    virtual ShamanPlugin::PluginType getPluginType() = 0;
 }
 
 Q_DECLARE_INTERFACE(ShamanAbstractPlugin, "org.shaman.Modules.ShamanAbstract/1.0");
