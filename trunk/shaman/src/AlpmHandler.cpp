@@ -17,7 +17,10 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  **************************************************************************/
+
 #include "AlpmHandler.h"
+
+#include <config.h>
 
 #include <iostream>
 #include <string>
@@ -42,8 +45,6 @@
 #include <QWaitCondition>
 
 #include "callbacks.h"
-
-#define SHAMAN_VERSION "1.0Beta2dev"
 
 extern QMutex mutex;
 extern QWaitCondition wCond;

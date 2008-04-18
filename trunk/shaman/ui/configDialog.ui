@@ -816,7 +816,7 @@ and Pacman.</string>
          <property name="title" >
           <string>ABS Configuration</string>
          </property>
-         <layout class="QGridLayout" name="gridLayout" >
+         <layout class="QGridLayout" >
           <item row="0" column="0" colspan="3" >
            <widget class="QRadioButton" name="useMatchSupRadio" >
             <property name="text" >
@@ -911,7 +911,7 @@ and Pacman.</string>
          <property name="title" >
           <string>Build Environment</string>
          </property>
-         <layout class="QGridLayout" name="gridLayout_2" >
+         <layout class="QGridLayout" >
           <item row="0" column="0" >
            <widget class="QLabel" name="label_14" >
             <property name="text" >

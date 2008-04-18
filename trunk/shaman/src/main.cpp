@@ -39,8 +39,6 @@
 
 #include <config.h>
 
-#define SHAMAN_VERSION "1.0Beta2dev"
-
 static void cleanup(int signum)
 {
 	if(signum==SIGSEGV)

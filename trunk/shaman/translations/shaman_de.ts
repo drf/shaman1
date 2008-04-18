@@ -3,27 +3,27 @@
 <context>
     <name>AlpmHandler</name>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1099"/>
+        <location filename="../src/AlpmHandler.cpp" line="1100"/>
         <source>: requires </source>
         <translation>: benötigt </translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1109"/>
+        <location filename="../src/AlpmHandler.cpp" line="1110"/>
         <source>: conflicts with </source>
         <translation>: steht im Konflikt mit </translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1136"/>
+        <location filename="../src/AlpmHandler.cpp" line="1137"/>
         <source>%1 exists in both &apos;%2&apos; and &apos;%3&apos;</source>
         <translation>%1 existiert jeweils in &apos;%2&apos; und &apos;%3&apos;</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1144"/>
+        <location filename="../src/AlpmHandler.cpp" line="1145"/>
         <source>: %1 exists in filesystem</source>
         <translation>: %1 existiert bereits im Dateisystem</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1163"/>
+        <location filename="../src/AlpmHandler.cpp" line="1164"/>
         <source>Alpm did not give further details.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -124,7 +124,7 @@ building feature. Do you want to install it now?</source>
 zu nutzen. Soll es nun installiert werden?</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="296"/>
+        <location filename="../src/BuildingHandler.cpp" line="312"/>
         <source>Error</source>
         <translation>Fehler</translation>
     </message>
@@ -145,37 +145,37 @@ offiziellen Paketquellen. Shaman kann nur
 Pakete aus offiziellen Quellen bauen.</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="163"/>
+        <location filename="../src/BuildingHandler.cpp" line="165"/>
         <source>You are about to install &lt;b&gt;%1 package&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
         <translation>Es wird &lt;b&gt;%1 Quellpaket&lt;/b&gt; gebaut. Das bauen von Quellpaketen&lt;br&gt;kann vorteilhaft sein, ist aber sehr langsam.&lt;br&gt;Falls Du Dir dessen nicht sicher bist, bevorzugst Du wahrscheinlich die Installation&lt;br&gt;binärer Pakete. Es wird empfohlen, die Konfiguration zu überprüfen&lt;br&gt; bevor der Vorgang fortgesetzt wird.</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="169"/>
+        <location filename="../src/BuildingHandler.cpp" line="171"/>
         <source>You are about to install &lt;b&gt;%1 packages&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
         <translation>Es werden &lt;b&gt;%1 Quellpakete&lt;/b&gt; gebaut. Das bauen von Quellpaketen&lt;br&gt;kann vorteilhaft sein, ist aber sehr langsam.&lt;br&gt;Falls Du Dir dessen nicht sicher bist, bevorzugst Du wahrscheinlich die Installation&lt;br&gt;binärer Pakete. Es wird empfohlen, die Konfiguration zu überprüfen&lt;br&gt; bevor der Vorgang fortgesetzt wird.</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="188"/>
+        <location filename="../src/BuildingHandler.cpp" line="190"/>
         <source>To be Installed</source>
         <translation>Wird installiert</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="195"/>
+        <location filename="../src/BuildingHandler.cpp" line="197"/>
         <source>To be Upgraded</source>
         <translation>Wird aktualisiert</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="324"/>
+        <location filename="../src/BuildingHandler.cpp" line="340"/>
         <source>Package Building</source>
         <translation>Pakete bauen</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="278"/>
+        <location filename="../src/BuildingHandler.cpp" line="294"/>
         <source>Your Packages failed to build!</source>
         <translation>Das bauen der Pakete ist fehlgeschlagen!</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="281"/>
+        <location filename="../src/BuildingHandler.cpp" line="297"/>
         <source>Your packages Failed to Build.
 Look at the output for more details.</source>
         <translation>Das bauen der Pakete ist 
@@ -183,12 +183,12 @@ fehlgeschlagen! Mehr Details in der
 Ausgabe.</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="303"/>
+        <location filename="../src/BuildingHandler.cpp" line="319"/>
         <source>Close</source>
         <translation>Schliessen</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="293"/>
+        <location filename="../src/BuildingHandler.cpp" line="309"/>
         <source>Building Packages Failed!!</source>
         <translation>Das Bauen der Pakete ist fehlgeschlagen!!</translation>
     </message>
@@ -198,7 +198,7 @@ Ausgabe.</translation>
         <translation type="obsolete">Shaman - untätig</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="297"/>
+        <location filename="../src/BuildingHandler.cpp" line="313"/>
         <source>Some packages failed to build.
 Do you want to proceed anyway?</source>
         <translation>Einige Pakete konnten nicht
@@ -206,22 +206,22 @@ gebaut werden. Trotzdem
 fortsetzen?</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="319"/>
+        <location filename="../src/BuildingHandler.cpp" line="335"/>
         <source>Install Built Packages</source>
         <translation>Gebaute Pakete installieren</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="320"/>
+        <location filename="../src/BuildingHandler.cpp" line="336"/>
         <source>Close Without Installing</source>
         <translation>Schliessen, ohne zu installieren</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="321"/>
+        <location filename="../src/BuildingHandler.cpp" line="337"/>
         <source>Packages Built Successfully!</source>
         <translation>Pakete wurden erfolgreicht gebaut!</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="325"/>
+        <location filename="../src/BuildingHandler.cpp" line="341"/>
         <source>Your Packages have been built successfully, and are ready to be installed</source>
         <translation>Die Pakete wurden erfolgreich gebaut und sind bereit zur installation</translation>
     </message>
@@ -1942,12 +1942,12 @@ Please restart it with root privileges.</source>
 ausgeführt werden.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="300"/>
+        <location filename="../src/main.cpp" line="299"/>
         <source>Shaman</source>
         <translation>Shaman</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="211"/>
+        <location filename="../src/main.cpp" line="209"/>
         <source>There was a problem while testing libalpm.
 Maybe another application has a lock on it.</source>
         <translation>Es ist ein Problem beim überprüfen von
@@ -1955,7 +1955,7 @@ libalpm aufgetreten. Vielleicht greift eine
 andere Applikation gerade darauf zu.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="229"/>
+        <location filename="../src/main.cpp" line="227"/>
         <source>Shaman</source>
         <comment>Hey! If you are reading this, first of all thanks for helping us in making Shaman better. There are not many comments unless where needed, since all the strings are pretty self-explanatory. You will see a lot of HTML in some cases: do not let that scare you, but please edit text only. Editing HTML tags too may break our layout, so be careful. A good practice could be copying the whole string, and then translating just what&apos;s outside the tags, usually just a few words. If you have any doubts, or if you just want to drop us a line, there goes our email addresses:
 Dario: drf54321@gmail.com
@@ -1964,7 +1964,7 @@ Thanks again, and enjoy your translation!</comment>
         <translation>Shaman</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="301"/>
+        <location filename="../src/main.cpp" line="300"/>
         <source>Pacman is not updated.
 Shaman needs libalpm &gt;= 2.1.0 to run.
 Yours is %1. Please update Pacman.</source>
@@ -1974,57 +1974,57 @@ Die installierte Version ist aber %1.
 Bitte Pacman aktualisieren.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="272"/>
+        <location filename="../src/main.cpp" line="271"/>
         <source>Please Wait...</source>
         <translation>Bitte warten...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="352"/>
+        <location filename="../src/main.cpp" line="351"/>
         <source>Loading Databases...</source>
         <translation>Lade Datenbanken...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="360"/>
+        <location filename="../src/main.cpp" line="359"/>
         <source>Loading Packages...</source>
         <translation>Lade Pakete...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="368"/>
+        <location filename="../src/main.cpp" line="367"/>
         <source>Starting up Shaman...</source>
         <translation>Starte Shaman...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="230"/>
+        <location filename="../src/main.cpp" line="228"/>
         <source>Your settings file seems unwritable.
 Please check permissions on it.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="291"/>
+        <location filename="../src/main.cpp" line="290"/>
         <source>You have started Shaman as root.
 It is advised to start it as unprivileged user.
 Shaman will ask you for root password when needed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="848"/>
+        <location filename="../src/QueueDialog.cpp" line="856"/>
         <source>Ok</source>
         <translation type="unfinished">Ok</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="190"/>
+        <location filename="../src/main.cpp" line="188"/>
         <source>It looks like another copy of Shaman is running.
 You can only run one copy of Shaman at a time.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="282"/>
+        <location filename="../src/main.cpp" line="281"/>
         <source>Shaman can not be started as root.
 Please restart it as unprivileged user.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="206"/>
+        <location filename="../src/main.cpp" line="204"/>
         <source>Shaman could not switch to root.
 Probably you have not set the SUID bit to it.
 You can do that by issuing as root
@@ -2072,133 +2072,133 @@ for more details.</source>
         <translation>&lt;br&gt;&lt;b&gt; * Überprüfe Transaktion&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="128"/>
+        <location filename="../src/QueueDialog.cpp" line="136"/>
         <source>Validating Dependencies...</source>
         <translation>Überprüfe Abhängigkeiten...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="132"/>
+        <location filename="../src/QueueDialog.cpp" line="140"/>
         <source>Checking for Conflicts...</source>
         <translation>Prüfe auf Konflikte...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="136"/>
+        <location filename="../src/QueueDialog.cpp" line="144"/>
         <source>Resolving Dependencies...</source>
         <translation>Löse Abhängigkeiten auf...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="140"/>
+        <location filename="../src/QueueDialog.cpp" line="148"/>
         <source>Looking for Inter-Conflicts...</source>
         <translation>Suche nach Zwischen-Konflikten...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="146"/>
+        <location filename="../src/QueueDialog.cpp" line="154"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Installation Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Installation der Pakete gestartet&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="150"/>
+        <location filename="../src/QueueDialog.cpp" line="158"/>
         <source>Installing %1...</source>
         <translation>Installiere %1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="179"/>
+        <location filename="../src/QueueDialog.cpp" line="187"/>
         <source>%1 (%2) installed successfully!</source>
         <translation>%1 (%2) erfolgreich installiert!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="191"/>
+        <location filename="../src/QueueDialog.cpp" line="199"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Removal Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Entfernen der Pakete gestartet&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="195"/>
+        <location filename="../src/QueueDialog.cpp" line="203"/>
         <source>Removing %1...</source>
         <translation>Entfernen %1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="224"/>
+        <location filename="../src/QueueDialog.cpp" line="232"/>
         <source>%1 (%2) removed successfully!</source>
         <translation>%1 (%2) erfolgreich entfernt!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="236"/>
+        <location filename="../src/QueueDialog.cpp" line="244"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Upgrading Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Paketaktualisierung gestartet&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="240"/>
+        <location filename="../src/QueueDialog.cpp" line="248"/>
         <source>Upgrading %1...</source>
         <translation>Aktualisiere %1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="270"/>
+        <location filename="../src/QueueDialog.cpp" line="278"/>
         <source>Upgraded %1 successfully (%2 -&gt; %3)</source>
         <translation>%1 erfolgreich aktualisiert (%2 -&gt; %3)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="284"/>
+        <location filename="../src/QueueDialog.cpp" line="292"/>
         <source>&lt;br&gt;&lt;b&gt; * Queue Processing Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Verarbeitung der Warteschlange gestartet&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="288"/>
+        <location filename="../src/QueueDialog.cpp" line="296"/>
         <source>Checking package integrity...</source>
         <translation>Überprüfe Paketintegrität...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="292"/>
+        <location filename="../src/QueueDialog.cpp" line="300"/>
         <source>Checking delta integrity...</source>
         <translation>Überprüfe Deltaintegrität...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="295"/>
+        <location filename="../src/QueueDialog.cpp" line="303"/>
         <source>Applying deltas...</source>
         <translation>Wende Deltas an...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="298"/>
+        <location filename="../src/QueueDialog.cpp" line="306"/>
         <source>Generating %1 with %2... </source>
         <translation>Generiere %1 mit %2... </translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="302"/>
+        <location filename="../src/QueueDialog.cpp" line="310"/>
         <source>Success!</source>
         <translation>Erfolg!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="305"/>
+        <location filename="../src/QueueDialog.cpp" line="313"/>
         <source>Failed!</source>
         <translation>Gescheitert!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="319"/>
+        <location filename="../src/QueueDialog.cpp" line="327"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Downloading Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Download der Pakete gestartet&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="323"/>
+        <location filename="../src/QueueDialog.cpp" line="331"/>
         <source>Starting downloading packages from %1...</source>
         <translation>Starte Download der Pakete von %1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="363"/>
+        <location filename="../src/QueueDialog.cpp" line="371"/>
         <source>%p% (%1 KB/s, %4:%5:%6 remaining)</source>
         <comment>You just have to translate &apos;remaining&apos; here. Leave everything else as it is.</comment>
         <translation>%p% (%1 KB/s, %4:%5:%6 übrig)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="371"/>
+        <location filename="../src/QueueDialog.cpp" line="379"/>
         <source>Downloading %1... (%2 MB of %3 MB)</source>
         <translation>Lade %1 herunter... (%2 MB of %3 MB)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="374"/>
+        <location filename="../src/QueueDialog.cpp" line="382"/>
         <source>Downloading %1... (%2 KB of %3 KB)</source>
         <translation>Lade %1 herunter... (%2 KB of %3 KB)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="425"/>
+        <location filename="../src/QueueDialog.cpp" line="433"/>
         <source>Queue processed, please wait...</source>
         <translation>Warteschlange verarbeitet. Bitte warten...</translation>
     </message>
@@ -2233,17 +2233,17 @@ for more details.</source>
         <translation type="obsolete">Führe post_remove Skript aus...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="485"/>
+        <location filename="../src/QueueDialog.cpp" line="493"/>
         <source>Unexpected Error. Shaman might be corrupted.</source>
         <translation>Unvorhergesehener Fehler. Shaman könnte beschädigt sein.</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="549"/>
+        <location filename="../src/QueueDialog.cpp" line="557"/>
         <source>Extracting Scriptlet from package failed!!</source>
         <translation>Entpacken des Installationsskripts fehlgeschlagen!!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="677"/>
+        <location filename="../src/QueueDialog.cpp" line="685"/>
         <source>Scriptlet processed successfully!</source>
         <translation>Instalationsskript erfolgreich verarbeitet!</translation>
     </message>
@@ -2253,57 +2253,57 @@ for more details.</source>
         <translation type="obsolete">Installationsskript nicht gefunden oder Fehler bei der Verarbeitung!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="492"/>
+        <location filename="../src/QueueDialog.cpp" line="500"/>
         <source>Executing %1 scriptlet for %2...</source>
         <translation>Starte %1-Skript für %2...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="559"/>
+        <location filename="../src/QueueDialog.cpp" line="567"/>
         <source>Package %1 does not have %2 scriptlet</source>
         <translation>Paket %1 hat kein %2-Skript</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="683"/>
+        <location filename="../src/QueueDialog.cpp" line="691"/>
         <source>Error processing Scriptlet!!</source>
         <translation>Installationsskript konnte nicht verarbeitet werden!!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="856"/>
+        <location filename="../src/QueueDialog.cpp" line="864"/>
         <source>Queue Processing</source>
         <translation>Verarbeite Warteschlange</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="806"/>
+        <location filename="../src/QueueDialog.cpp" line="814"/>
         <source>There has been an error while preparing the transaction.
 </source>
         <translation>Beim vorbereiten der Warteschlange ist ein Fehler aufgetreten.
 </translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="843"/>
+        <location filename="../src/QueueDialog.cpp" line="851"/>
         <source>There has been an error while committing the transaction.
 </source>
         <translation>Beim abschliessen der Warteschlange ist ein Fehler aufgetreten.
 </translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="770"/>
+        <location filename="../src/QueueDialog.cpp" line="778"/>
         <source>Would you like to abort Queue Processing?
 This may damage your system.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="449"/>
+        <location filename="../src/QueueDialog.cpp" line="457"/>
         <source>Close</source>
         <translation>Schliessen</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="436"/>
+        <location filename="../src/QueueDialog.cpp" line="444"/>
         <source>Queue processing failed!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="441"/>
+        <location filename="../src/QueueDialog.cpp" line="449"/>
         <source>Queue processed successfully!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2789,15 +2789,6 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;Griechische Übersetzung&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/aboutDialog.ui" line="68"/>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shaman 1.0 Beta (revision 651)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../ui/aboutDialog.ui" line="176"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -2846,6 +2837,15 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/aboutDialog.ui" line="230"/>
         <source>Visit &amp;Website...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/aboutDialog.ui" line="68"/>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shaman 1.0 Beta (revision 721)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3186,7 +3186,7 @@ p, li { white-space: pre-wrap; }
         <translation>Bau-Warteschlange überprüfen</translation>
     </message>
     <message>
-        <location filename="../ui/reviewBuildingDialog.ui" line="39"/>
+        <location filename="../ui/reviewBuildingDialog.ui" line="40"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -3196,52 +3196,52 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Build Queue From Source&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/reviewBuildingDialog.ui" line="84"/>
+        <location filename="../ui/reviewBuildingDialog.ui" line="85"/>
         <source>Process All Dependencies from Binary First (advised)</source>
         <translation>Alle Abhängigkeiten zuerst aus Binärpaketen verarbeiten (empfohlen)</translation>
     </message>
     <message>
-        <location filename="../ui/reviewBuildingDialog.ui" line="94"/>
+        <location filename="../ui/reviewBuildingDialog.ui" line="95"/>
         <source>This is useful if you want to review compiler&apos;s output</source>
         <translation>Nützlich, wenn die Ausgabe des Compilers eingesehen werden soll</translation>
     </message>
     <message>
-        <location filename="../ui/reviewBuildingDialog.ui" line="107"/>
+        <location filename="../ui/reviewBuildingDialog.ui" line="108"/>
         <source>Turn off PC when Queue is done</source>
         <translation>Den Rechner ausschalten wenn die Warteschlange verarbeitet wurde</translation>
     </message>
     <message>
-        <location filename="../ui/reviewBuildingDialog.ui" line="116"/>
+        <location filename="../ui/reviewBuildingDialog.ui" line="117"/>
         <source>Show packages...</source>
         <translation>Pakete anzeigen...</translation>
     </message>
     <message>
-        <location filename="../ui/reviewBuildingDialog.ui" line="145"/>
+        <location filename="../ui/reviewBuildingDialog.ui" line="147"/>
         <source>Packages In Queue</source>
         <translation>Pakete in Warteschlange</translation>
     </message>
     <message>
-        <location filename="../ui/reviewBuildingDialog.ui" line="155"/>
+        <location filename="../ui/reviewBuildingDialog.ui" line="157"/>
         <source>Abort</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="../ui/reviewBuildingDialog.ui" line="165"/>
+        <location filename="../ui/reviewBuildingDialog.ui" line="168"/>
         <source>Process From Binary</source>
         <translation>Aus Binärpaketen verarbeiten</translation>
     </message>
     <message>
-        <location filename="../ui/reviewBuildingDialog.ui" line="188"/>
+        <location filename="../ui/reviewBuildingDialog.ui" line="192"/>
         <source>Review PKGBUILDs</source>
         <translation>PKGBUILDs überprüfen</translation>
     </message>
     <message>
-        <location filename="../ui/reviewBuildingDialog.ui" line="198"/>
+        <location filename="../ui/reviewBuildingDialog.ui" line="203"/>
         <source>Process From Source</source>
         <translation>Aus Source verarbeiten</translation>
     </message>
     <message>
-        <location filename="../ui/reviewBuildingDialog.ui" line="97"/>
+        <location filename="../ui/reviewBuildingDialog.ui" line="98"/>
         <source>Do not install immediately when building is finished</source>
         <translation>Nicht sofort installieren wenn der Bauvorgang beendet wurde</translation>
     </message>
@@ -3254,42 +3254,42 @@ p, li { white-space: pre-wrap; }
         <translation>Verarbeite Wartschlange...</translation>
     </message>
     <message>
-        <location filename="../ui/transactionDialog.ui" line="24"/>
+        <location filename="../ui/transactionDialog.ui" line="25"/>
         <source>Check transaction validity</source>
         <translation>Überprüfe </translation>
     </message>
     <message>
-        <location filename="../ui/transactionDialog.ui" line="31"/>
+        <location filename="../ui/transactionDialog.ui" line="32"/>
         <source>Download Packages</source>
         <translation>Pakete herunterladen</translation>
     </message>
     <message>
-        <location filename="../ui/transactionDialog.ui" line="38"/>
+        <location filename="../ui/transactionDialog.ui" line="39"/>
         <source>Process queue</source>
         <translation>Warteschlange verarbeiten</translation>
     </message>
     <message>
-        <location filename="../ui/transactionDialog.ui" line="45"/>
+        <location filename="../ui/transactionDialog.ui" line="46"/>
         <source>Cleanup</source>
         <translation>Transaktion abschliessen</translation>
     </message>
     <message>
-        <location filename="../ui/transactionDialog.ui" line="137"/>
+        <location filename="../ui/transactionDialog.ui" line="138"/>
         <source>More Details...</source>
         <translation>Mehr Details...</translation>
     </message>
     <message>
-        <location filename="../ui/transactionDialog.ui" line="166"/>
+        <location filename="../ui/transactionDialog.ui" line="168"/>
         <source>Abort</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="../ui/transactionDialog.ui" line="184"/>
+        <location filename="../ui/transactionDialog.ui" line="187"/>
         <source>Please Wait...</source>
         <translation>Bitte warten...</translation>
     </message>
     <message>
-        <location filename="../ui/transactionDialog.ui" line="209"/>
+        <location filename="../ui/transactionDialog.ui" line="212"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
