@@ -44,7 +44,7 @@ namespace ShamanPlugin {
 	* \typedef version
 	* The type to use for using struct vrs
 	*/
-	typedef struct vrs version;
+	typedef struct vrs version;//TODO: Remove that and name the struct directly version, same for moduleData
 	
 	/**
 	* \typedef moduleData
