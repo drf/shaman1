@@ -62,7 +62,7 @@ void ShamanRunner::match(Plasma::SearchContext *search)
     			match->setType(Plasma::SearchMatch::ExactMatch);
     			
     			match->setIcon(QIcon(":/Icons/icons/shaman/shaman-yellow-icon-32.png"));
-    			match->setText(i18n("Package Manager: Update Databases"));
+    			match->setText(i18n("Update Databases"));
     			
     			match->setRelevance(1);
     			search->addMatch(term, match);
@@ -74,35 +74,57 @@ void ShamanRunner::match(Plasma::SearchContext *search)
     			match->setType(Plasma::SearchMatch::ExactMatch);
 
     			match->setIcon(QIcon(":/Icons/icons/shaman/shaman-system-is-up-to-date-32.png"));
-    			match->setText(i18n("Package Manager: Upgrade System"));
+    			match->setText(i18n("Upgrade System"));
 
     			match->setRelevance(1);
     			search->addMatch(term, match);
     		}
     		else if (word == "install" || word == "i")
     		{
-    			if(term.split(' ').count() != 2)
+    			if(term.split(' ').count() < 2)
     				return;
     			
     			Plasma::SearchMatch* match = new Plasma::SearchMatch(this);
     			match->setType(Plasma::SearchMatch::ExactMatch);
 
     			match->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
-    			match->setText(i18n("Package Manager: Install %1", term.split(' ').at(1)));
+    			
+    			if(term.split(' ').count() == 2)
+    				match->setText(i18n("Install %1", term.split(' ').at(1)));
+    			else
+    			{
+    				QString textA = i18n("Install Packages: %1", term.split(' ').at(1));
+    				
+    				for(int i = 2; i < term.split(' ').count(); i++)
+    					textA.append(QString(", %1").arg(term.split(' ').at(i)));
+    				
+    				match->setText(textA);
+    			}
 
     			match->setRelevance(1);
     			search->addMatch(term, match);
     		}
     		else if (word == "remove" || word == "r")
     		{
-    			if(term.split(' ').count() != 2)
+    			if(term.split(' ').count() < 2)
     				return;
 
     			Plasma::SearchMatch* match = new Plasma::SearchMatch(this);
     			match->setType(Plasma::SearchMatch::ExactMatch);
 
     			match->setIcon(QIcon(":/Icons/icons/shaman/shaman-updates-available-32.png"));
-    			match->setText(i18n("Package Manager: Remove %1", term.split(' ').at(1)));
+
+    			if(term.split(' ').count() == 2)
+    				match->setText(i18n("Remove %1", term.split(' ').at(1)));
+    			else
+    			{
+    				QString textA = i18n("Remove Packages: %1", term.split(' ').at(1));
+
+    				for(int i = 2; i < term.split(' ').count(); i++)
+    					textA.append(QString(", %1").arg(term.split(' ').at(i)));
+
+    				match->setText(textA);
+    			}
 
     			match->setRelevance(1);
     			search->addMatch(term, match);
@@ -163,7 +185,8 @@ void ShamanRunner::executeAction()
 
 		QDBusInterface iface("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", QDBusConnection::systemBus());
 
-		iface.call("installPackage", execTerm.split(' ').at(1));
+		for(int i = 1; i < execTerm.split(' ').size(); i++)
+			iface.call("installPackage", execTerm.split(' ').at(i));
 
 		iface.call("widgetQueueToAlpmQueue");
 	}
@@ -175,7 +198,8 @@ void ShamanRunner::executeAction()
 
 		QDBusInterface iface("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", QDBusConnection::systemBus());
 
-		iface.call("removePackage", execTerm.split(' ').at(1));
+		for(int i = 1; i < execTerm.split(' ').size(); i++)
+			iface.call("removePackage", execTerm.split(' ').at(i));
 
 		iface.call("widgetQueueToAlpmQueue");
 	}
