@@ -3,4 +3,4 @@
 
 /* Defines the Version */
 
-#define SHAMAN_VERSION "1.0Beta2"
+#define SHAMAN_VERSION "1.0Beta3dev"

@@ -24,6 +24,8 @@
 #include "MainWindow.h"
 #include "ShamanDialog.h"
 
+#include <config.h>
+
 #include <iostream>
 #include <QApplication>
 #include <QString>
