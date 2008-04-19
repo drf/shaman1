@@ -126,6 +126,7 @@ turnOffSys(false)
 	pkgsViewWG->headerItem()->setIcon(2, QIcon(":/Icons/icons/applications-development.png"));
 	pkgsViewWG->headerItem()->setText(2, QString());
 	pkgsViewWG->setColumnWidth(2, 30);
+	pkgsViewWG->setAllColumnsShowFocus(true);
 
 	nameDescBox->addItem(tr("Name"));
 	nameDescBox->addItem(tr("Description"));
