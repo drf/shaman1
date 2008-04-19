@@ -34,3 +34,4 @@ Core:
 GUI:
    - Removed version hardcoding in the About Dialog to allow String Freeze
    - Added a stupid message to the About Dialog
+   - Small GUI fixes (thanks to uwolfer)
