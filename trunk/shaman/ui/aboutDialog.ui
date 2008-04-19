@@ -63,13 +63,9 @@
          </widget>
         </item>
         <item row="0" column="0" >
-         <widget class="QLabel" name="label_2" >
+         <widget class="QLabel" name="headerLabel" >
           <property name="text" >
-           <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
-&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
-p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;span style=" font-weight:600;">Shaman 1.0 Beta (revision 721)&lt;/span>&lt;/p>&lt;/body>&lt;/html></string>
+           <string/>
           </property>
          </widget>
         </item>
@@ -118,8 +114,8 @@ p, li { white-space: pre-wrap; }
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>640</width>
-          <height>320</height>
+          <width>433</width>
+          <height>199</height>
          </rect>
         </property>
         <attribute name="title" >
@@ -152,8 +148,8 @@ p, li { white-space: pre-wrap; }
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>640</width>
-          <height>320</height>
+          <width>433</width>
+          <height>199</height>
          </rect>
         </property>
         <attribute name="title" >

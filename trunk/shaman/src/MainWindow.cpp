@@ -42,6 +42,8 @@
 #include "ShamanStatusBar.h"
 #include "PackageProperties.h"
 
+#include <config.h>
+
 #include <iostream>
 #include <alpm.h>
 #include <sys/types.h>
@@ -261,6 +263,8 @@ bool MainWindow::populatePackagesView()
 		
 	count = 0;
 	
+	QStringList conflPackages;
+	
 	while(databases != NULL)
 	{
 		pmdb_t *dbcrnt = (pmdb_t *)alpm_list_getdata(databases);
@@ -270,12 +274,19 @@ bool MainWindow::populatePackagesView()
 		while(currentpkgs != NULL)
 		{
 			pmpkg_t *pkg = (pmpkg_t *)alpm_list_getdata(currentpkgs);
-			bool installed = false;
+			bool installed = false;			
 			
-			if(aHandle->isInstalled(pkg))
+			if (aHandle->isInstalled(pkg))
 			{
-				pkg = aHandle->getPackageFromName(alpm_pkg_get_name(pkg), "local");
-				installed = true;
+				pmpkg_t *pkg1 = aHandle->getPackageFromName(alpm_pkg_get_name(pkg), "local");
+				
+				if (aHandle->getPackageVersion(pkg) != aHandle->getPackageVersion(pkg1))
+					conflPackages.append(alpm_pkg_get_name(pkg));
+				else
+				{
+					pkg = pkg1;
+					installed = true;
+				}
 			}
 			
 			QTreeWidgetItem *item = new QTreeWidgetItem();
@@ -344,6 +355,17 @@ bool MainWindow::populatePackagesView()
 	}
 
 	pkgsViewWG->addTopLevelItems(itmLst);
+
+	foreach(QString ent, conflPackages)
+	{
+		QList<QTreeWidgetItem*> list = pkgsViewWG->findItems(ent, Qt::MatchExactly, 1);
+
+		if(list.count() == 1)
+		{
+			list.at(0)->setIcon(0, QIcon(":/Icons/icons/user-online.png"));
+			list.at(0)->setText(3, aHandle->getPackageVersion(list.at(0)->text(1), "local"));
+		}
+	}
 
 	pkgsViewWG->sortItems(1, Qt::AscendingOrder);
 	pkgsViewWG->setSortingEnabled(true);//Enable sorting *after* inserting :D
@@ -1112,7 +1134,7 @@ void MainWindow::installPackage()
 		return;
 
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
-	installPackage(item->text(1));
+	installPackage(item->text(1), item->text(5));
 
 	itemChanged();
 }
@@ -1126,20 +1148,37 @@ void MainWindow::reinstallPackage()
 
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
 	{
-		reinstallPackage(item->text(1));
+		reinstallPackage(item->text(1), item->text(5));
 	}
 
 	itemChanged();
 }
 
-void MainWindow::reinstallPackage(const QString &package)
+void MainWindow::reinstallPackage(const QString &package, const QString &repo)
 {
 	if (pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 1).isEmpty())
 	{
 		qDebug() << "Can't find package: " + package;
 		return;
 	}
-	QTreeWidgetItem *item = pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 1).first();
+
+	QTreeWidgetItem *item;
+
+	if (repo.isEmpty())
+		item = pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 1).first();
+	else
+	{
+		item = NULL;
+
+		foreach(QTreeWidgetItem *ent, pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 1))
+		{
+			if(ent->text(5) == repo)
+				item = ent;
+		}
+
+		if(!item)
+			return;
+	}
 
 	qDebug() << item->text(1);
 	
@@ -1167,15 +1206,33 @@ void MainWindow::reinstallPackage(const QString &package)
 	}
 }
 
-void MainWindow::installPackage(const QString &package)
+void MainWindow::installPackage(const QString &package, const QString &repo)
 {
 	qDebug() << "Install package: " + package;
+	
 	if (pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 1).isEmpty())
 	{
 		qDebug() << "Can't find package: " + package;
 		return;
 	}
-	QTreeWidgetItem *item = pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 1).first();
+	
+	QTreeWidgetItem *item;
+	
+	if (repo.isEmpty())
+		item = pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 1).first();
+	else
+	{
+		item = NULL;
+		
+		foreach(QTreeWidgetItem *ent, pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 1))
+		{
+			if(ent->text(5) == repo)
+				item = ent;
+		}
+		
+		if(!item)
+			return;
+	}
 
 	qDebug() << item->text(1);
 
@@ -1218,12 +1275,12 @@ void MainWindow::removePackage()
 		return;
 
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
-		removePackage(item->text(1));
+		removePackage(item->text(1), item->text(5));
 
 	itemChanged();
 }
 
-void MainWindow::removePackage(const QString &package)
+void MainWindow::removePackage(const QString &package, const QString &repo)
 {
 	qDebug() << "Uninstall package: " + package;
 	if (pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 1).isEmpty())
@@ -1231,7 +1288,24 @@ void MainWindow::removePackage(const QString &package)
 		qDebug() << "Can't find package: " + package;
 		return;
 	}
-	QTreeWidgetItem *item = pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 1).first();
+
+	QTreeWidgetItem *item;
+
+	if (repo.isEmpty())
+		item = pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 1).first();
+	else
+	{
+		item = NULL;
+
+		foreach(QTreeWidgetItem *ent, pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 1))
+		{
+			if(ent->text(5) == repo)
+				item = ent;
+		}
+
+		if(!item)
+			return;
+	}
 
 	qDebug() << item->text(1);
 	
@@ -1289,12 +1363,12 @@ void MainWindow::cancelAction()
 		return;
 
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
-		cancelAction(item->text(1));
+		cancelAction(item->text(1), item->text(5));
 
 	itemChanged();
 }
 
-void MainWindow::cancelAction(const QString &package)
+void MainWindow::cancelAction(const QString &package, const QString &repo)
 {
 	qDebug() << "cancel action for: " + package;
 	if (pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 1).isEmpty())
@@ -1302,7 +1376,25 @@ void MainWindow::cancelAction(const QString &package)
 		qDebug() << "Can't find package: " + package;
 		return;
 	}
-	QTreeWidgetItem *item = pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 1).first();
+
+	QTreeWidgetItem *item;
+
+	if (repo.isEmpty())
+		item = pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 1).first();
+	else
+	{
+		item = NULL;
+
+		foreach(QTreeWidgetItem *ent, pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 1))
+		{
+			if(ent->text(5) == repo)
+				item = ent;
+		}
+
+		if(!item)
+			return;
+	}
+	
 	if (item->text(8).isEmpty())
 		return;
 
@@ -1858,9 +1950,18 @@ void MainWindow::showAboutDialog()
 			"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">"
 			"(C) 2008 Lukas Appelhans &lt;boom1992@kdemod.ath.cx&gt;</p></body></html>")).arg(aHandle->getAlpmVersion()));
 	
+	ui.headerLabel->setText(QString("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" "
+			"\"http://www.w3.org/TR/REC-html40/strict.dtd\"><html><head><meta name=\"qrichtext\""
+			" content=\"1\" /><style type=\"text/css\">p, li { white-space: pre-wrap; }</style>"
+			"</head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-weight:400; "
+			"font-style:normal;\"><p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px"
+			"; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">"
+			"Shaman ") + SHAMAN_VERSION + QString(" (r") + SHAMAN_REVISION + QString(")"
+			"</span></p></body></html>"));
+	
 	QPushButton *okb = ui.buttonBox->button(QDialogButtonBox::Ok);
 	
-	okb->setText(QObject::tr("O&k"));
+	okb->setText(QObject::tr("Whoa, that's co&ol!"));
 	okb->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
 	
 	connect(ui.websiteButton, SIGNAL(clicked()), SLOT(openUrl()));

@@ -61,9 +61,9 @@ public:
 	~MainWindow();
 	void doUpdView();
 	void startTrayTimer();
-	void installPackage(const QString &package);
-	void reinstallPackage(const QString &package);
-	void removePackage(const QString &package);
+	void installPackage(const QString &package, const QString &repo = QString());
+	void reinstallPackage(const QString &package, const QString &repo = QString());
+	void removePackage(const QString &package, const QString &repo = QString());
 	QList<QTreeWidgetItem *> getInstallPackagesInWidgetQueue();
 	QList<QTreeWidgetItem *> getUpgradePackagesInWidgetQueue();
 	QList<QTreeWidgetItem *> getRemovePackagesInWidgetQueue();
@@ -131,7 +131,7 @@ private slots:
 	void removePackage();
 	void completeRemovePackage();
 	void cancelAction();
-	void cancelAction(const QString &package);
+	void cancelAction(const QString &package, const QString &repo = QString());
 	void upgradePackage();
 	void showSettings();
 	void showAboutDialog();

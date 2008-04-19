@@ -25,3 +25,12 @@ KRunner:
 
 
 Beta 2  -->
+
+Core:
+
+   - Better version handling
+   - Correct Handling of packages with the same name belonging to different repos
+
+GUI:
+   - Removed version hardcoding in the About Dialog to allow String Freeze
+   - Added a stupid message to the About Dialog

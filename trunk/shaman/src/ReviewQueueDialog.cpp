@@ -55,7 +55,7 @@ aHandle(hnd)
 
 	foreach(QTreeWidgetItem *itm, parent->pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 8))
 	{
-		aHandle->addSyncToQueue(itm->text(1));
+		aHandle->addSyncToQueue(QString(itm->text(5) + '/' + itm->text(1)));
 		addSize += aHandle->getPackageSize(itm->text(1), itm->text(5));
 		QTreeWidgetItem *itmL = treeWidget->findItems(tr("To be Installed"), Qt::MatchExactly, 0).first();
 		new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
@@ -64,7 +64,7 @@ aHandle(hnd)
 
 	foreach(QTreeWidgetItem *itm, parent->pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 8))
 	{
-		aHandle->addSyncToQueue(itm->text(1));
+		aHandle->addSyncToQueue(QString(itm->text(5) + '/' + itm->text(1)));
 		addSize += aHandle->getPackageSize(itm->text(1), itm->text(5));
 		QTreeWidgetItem *itmL = treeWidget->findItems(tr("To be Upgraded"), Qt::MatchExactly, 0).first();
 		new QTreeWidgetItem(itmL, QStringList(itm->text(1)));

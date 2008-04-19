@@ -51,14 +51,20 @@ static void cleanup(int signum)
 	} 
 	else if((signum == SIGINT)) 
 	{
+		printf("\n");
+		
+		qCritical() << "Caught Interrupt Signal";
+		
 		if(alpm_trans_interrupt() == 0)
 			/* a transaction is being interrupted, don't exit Shaman yet. */
 			return;
 
 		/* no committing transaction, we can release it now and then exit pacman */
 		alpm_trans_release();
+		
+		qCritical("Shaman was terminated and all Alpm Transactions interrupted and released.");
 		/* output a newline to be sure we clear any line we may be on */
-		qCritical() << "";
+		printf("\n");
 	}
 
 	/* free alpm library resources */
@@ -69,19 +75,40 @@ static void cleanup(int signum)
 	exit(signum);
 }
 
+void stdDebugOutput(QtMsgType type, const char *msg)
+{
+	switch (type) {
+	case QtDebugMsg:
+		fprintf(stderr, "%s\n", msg);
+		break;
+	case QtWarningMsg:
+		fprintf(stderr, "Shaman/%s - Warning: %s\n", SHAMAN_VERSION, msg);
+		break;
+	case QtCriticalMsg:
+		fprintf(stderr, "Shaman/%s - Critical: %s\n", SHAMAN_VERSION, msg);
+		break;
+	case QtFatalMsg:
+		fprintf(stderr, "Shaman/%s - Fatal: %s\n", SHAMAN_VERSION, msg);
+		abort();
+		break;
+	default:
+		break;
+	}
+}
+
 void noDebugOutput(QtMsgType type, const char *msg)
 {
 	switch (type) {
 	case QtDebugMsg:
 		break;
 	case QtWarningMsg:
-		fprintf(stderr, "Warning: %s\n", msg);
+		fprintf(stderr, "Shaman/%s - Warning: %s\n", SHAMAN_VERSION, msg);
 		break;
 	case QtCriticalMsg:
-		fprintf(stderr, "Critical: %s\n", msg);
+		fprintf(stderr, "Shaman/%s - Critical: %s\n", SHAMAN_VERSION, msg);
 		break;
 	case QtFatalMsg:
-		fprintf(stderr, "Fatal: %s\n", msg);
+		fprintf(stderr, "Shaman/%s - Fatal: %s\n", SHAMAN_VERSION, msg);
 		abort();
 		break;
 	default:
@@ -94,7 +121,7 @@ int main(int argc, char **argv)
 	QApplication app(argc, argv, QApplication::GuiClient);
 
 	QCoreApplication::setOrganizationName("shaman");
-	QCoreApplication::setOrganizationDomain("shaman.iskremblien.org");
+	QCoreApplication::setOrganizationDomain("shaman.iskrembilen.com");
 	QCoreApplication::setApplicationName("shaman");
 
 	QStringList arguments = app.arguments();
@@ -121,7 +148,8 @@ int main(int argc, char **argv)
 	if(arguments.contains("--version") || arguments.contains("-v"))
 	{
 		printf("\n");
-		printf("%s", SHAMAN_VERSION);
+		printf("Shaman is version %s, built from revision %s", SHAMAN_VERSION, SHAMAN_REVISION);
+		printf("\n");
 		printf("\n");
 		return(EXIT_SUCCESS);
 	}
@@ -131,6 +159,7 @@ int main(int argc, char **argv)
 		printf("\n");
 		printf("This System is running Qt Version %s\n", qVersion());
 		printf("Shaman was compiled against Qt Version %s\n", QT_VERSION_STR);		
+		printf("\n");
 		printf("\n");
 		return(EXIT_SUCCESS);
 	}
@@ -153,6 +182,8 @@ int main(int argc, char **argv)
 
 	if(arguments.contains("--no-debugging-output"))
 		qInstallMsgHandler(noDebugOutput);
+	else
+		qInstallMsgHandler(stdDebugOutput);
 	
 	QTranslator translator;
 
@@ -180,7 +211,7 @@ int main(int argc, char **argv)
 		app.installTranslator(&translator);
 	}
 	else
-		qDebug() << "Translations are Disabled on user request.";
+		qWarning() << "Translations are Disabled on user request.";
 
 	QDBusConnection testconn = QDBusConnection::systemBus();
 	if(testconn.interface()->isServiceRegistered("org.archlinux.shaman"))
@@ -254,7 +285,7 @@ int main(int argc, char **argv)
 	qDebug() << ">>		Running with Qt" << qVersion();
 	qDebug() << ">>";
 	qDebug() << ">>	Shaman is in beta phase, please report bugs!!";
-	qDebug() << ">>	Our website is @ http://shaman.iskremblien.com/ , join in!!";
+	qDebug() << ">>	Our website is @ http://shaman.iskrembilen.com/ , join in!!";
 	qDebug() << ">>	You can also find a bugtracker in the website, please use it.";
 	qDebug() << ">>";
 	qDebug() << ">>	In most cases, terminal output is pretty relevant, please include it,";
@@ -325,7 +356,7 @@ int main(int argc, char **argv)
 		
 		QFile::copy("/etc/pacman.conf", QString("/etc/pacman.conf.bak.").append(QDate::currentDate().toString("ddMMyyyy")));
 		QFile::copy("/etc/makepkg.conf", QString("/etc/makepkg.conf.bak.").append(QDate::currentDate().toString("ddMMyyyy")));
-		QFile::copy("/etc/abs/abs.conf", QString("/etc/abs/abs.conf.bak.").append(QDate::currentDate().toString("ddMMyyyy")));
+		QFile::copy("/etc/abs.conf", QString("/etc/abs.conf.bak.").append(QDate::currentDate().toString("ddMMyyyy")));
 		
 		settings->setValue("gui/startupmode", "window");
 		settings->setValue("scheduledUpdate/enabled", true);
