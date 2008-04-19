@@ -85,6 +85,7 @@ private slots:
 	void addKDEModMirror();
 	void obfuscateSupfiles(bool state);
 	void obfuscateDBUpdate(bool state);
+	void obfuscateDBUpdateAt(bool state);
 	void obfuscateRSSUpdate(bool state);
 
 private:

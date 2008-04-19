@@ -34,6 +34,7 @@
 #include <QUrl>
 #include <QProcess>
 #include <QDebug>
+#include <QTime>
 
 ConfigDialog::ConfigDialog(AlpmHandler *handler, QWidget *parent)
 : QDialog(parent),
@@ -378,20 +379,29 @@ void ConfigDialog::setupAdvanced()
 	QSettings *settings = new QSettings();
 
 	if(settings->value("scheduledUpdate/enabled").toBool())
-		updateDbTrayBox->setChecked(true);
-	else
 	{
-		minutesSpin->setEnabled(false);
-		upNotifyRadio->setEnabled(false);
-		upNotifyAddRadio->setEnabled(false);
+		updateDbTrayBox->setChecked(true);
+		obfuscateDBUpdate(true);
 	}
+	else
+		obfuscateDBUpdate(false);
+
+	if(settings->value("scheduledUpdate/enabledat").toBool())
+	{
+		updateDbTrayAtBox->setChecked(true);
+		obfuscateDBUpdateAt(true);
+	}
+	else
+		obfuscateDBUpdateAt(false);
 
 	if (settings->value("scheduledUpdate/updateDbShowNotify").toBool())
 		updateDbShowNotify->setChecked(true);
 
 	connect(updateDbTrayBox, SIGNAL(toggled(bool)), SLOT(obfuscateDBUpdate(bool)));
+	connect(updateDbTrayAtBox, SIGNAL(toggled(bool)), SLOT(obfuscateDBUpdateAt(bool)));
 
 	minutesSpin->setValue(settings->value("scheduledUpdate/interval", 10).toInt());
+	schedTimeEdit->setTime(settings->value("scheduledUpdate/updatetime", QTime(0, 0)).toTime());
 
 	if (settings->value("proxy/enabled").toBool())
 		proxyGroup->setChecked(true);
@@ -1123,7 +1133,9 @@ void ConfigDialog::saveSettings()
 
 	settings->setValue("gui/showsplashscreen", splashScreenBox->isChecked());
 	settings->setValue("scheduledUpdate/enabled", updateDbTrayBox->isChecked());
+	settings->setValue("scheduledUpdate/enabledat", updateDbTrayAtBox->isChecked());
 	settings->setValue("scheduledUpdate/interval", minutesSpin->value());
+	settings->setValue("scheduledUpdate/updatetime", schedTimeEdit->time());
 	settings->setValue("scheduledUpdate/updateDbShowNotify", updateDbShowNotify->isChecked());
 	settings->setValue("proxy/enabled", proxyGroup->isChecked());
 	settings->setValue("proxy/proxyServer", proxyServer->text());
@@ -1389,6 +1401,14 @@ void ConfigDialog::obfuscateDBUpdate(bool state)
 		upNotifyRadio->setEnabled(false);
 		upNotifyAddRadio->setEnabled(false);
 	}
+}
+
+void ConfigDialog::obfuscateDBUpdateAt(bool state)
+{
+	if(state)
+		schedTimeEdit->setEnabled(true);
+	else
+		schedTimeEdit->setEnabled(false);
 }
 
 void ConfigDialog::obfuscateSupfiles(bool state)

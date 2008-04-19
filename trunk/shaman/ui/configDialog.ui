@@ -1013,18 +1013,7 @@ and Pacman.</string>
            </widget>
           </item>
           <item row="1" column="2" >
-           <widget class="QSpinBox" name="hourSchedSpin" >
-            <property name="maximum" >
-             <number>23</number>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="3" >
-           <widget class="QSpinBox" name="minuteSchedSpin" >
-            <property name="maximum" >
-             <number>59</number>
-            </property>
-           </widget>
+           <widget class="QTimeEdit" name="schedTimeEdit" />
           </item>
          </layout>
         </widget>

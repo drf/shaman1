@@ -591,118 +591,118 @@ Repositories τρίτων λειτουργούν όπως τα επίσημα κ
         <translation>Καθαρισμός του Περιβάλλοντος Χτισίματος μετά την εγκατάσταση</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="114"/>
+        <location filename="../src/configDialog.cpp" line="115"/>
         <source>General</source>
         <translation>Γενικά</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="564"/>
+        <location filename="../src/configDialog.cpp" line="574"/>
         <source>Clean Unused Databases</source>
         <translation>Καθαρισμός αχρησιμοποίητων Βάσεων Δεδομένων</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="576"/>
+        <location filename="../src/configDialog.cpp" line="586"/>
         <source>Clean Cache</source>
         <translation>Καθαρισμός της Cache</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="588"/>
+        <location filename="../src/configDialog.cpp" line="598"/>
         <source>Empty Cache</source>
         <translation>Άδειασμα της Cache</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="600"/>
+        <location filename="../src/configDialog.cpp" line="610"/>
         <source>Optimize Pacman Database</source>
         <translation>Βελτιστοποίηση Βάσεως Δεδομένων του Pacman</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="618"/>
+        <location filename="../src/configDialog.cpp" line="628"/>
         <source>Clean All Building Environments</source>
         <translation>Καθαρισμός όλων των Περιβάλλοντων Χτισίματος</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="147"/>
+        <location filename="../src/configDialog.cpp" line="148"/>
         <source>Repositories</source>
         <translation>Repositories</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="258"/>
+        <location filename="../src/configDialog.cpp" line="259"/>
         <source>Pacman</source>
         <translation>Pacman</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="330"/>
+        <location filename="../src/configDialog.cpp" line="331"/>
         <source>ABS</source>
         <translation>ABS</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="502"/>
+        <location filename="../src/configDialog.cpp" line="512"/>
         <source>Enter Here the Repository&apos;s Name</source>
         <translation>Εισάγετε το όνομα του Repository</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="504"/>
+        <location filename="../src/configDialog.cpp" line="514"/>
         <source>Enter Here the Repository&apos;s Server</source>
         <translation>Εισάγετε τη διεύθυνση του Repository</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="569"/>
+        <location filename="../src/configDialog.cpp" line="579"/>
         <source>Cleaning up unused Databases...</source>
         <translation>Καθαρισμός αχρησιμοποίητων Βάσεων Δεδομένων...</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="581"/>
+        <location filename="../src/configDialog.cpp" line="591"/>
         <source>Cleaning up Cache...</source>
         <translation>Καθαρισμός της Cache...</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="593"/>
+        <location filename="../src/configDialog.cpp" line="603"/>
         <source>Deleting Cache...</source>
         <translation>Διαγραφή της Cache...</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="623"/>
+        <location filename="../src/configDialog.cpp" line="633"/>
         <source>Cleaning up building Environments...</source>
         <translation>Εκκαθάριση των περιβάλλοντων χτισίματος...</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="640"/>
+        <location filename="../src/configDialog.cpp" line="650"/>
         <source>Cleaning up Unused Databases Failed!</source>
         <translation>Ο καθαρισμός των Αχρησιμοποίητων Βάσεων Δεδομένων Απέτυχε!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="645"/>
+        <location filename="../src/configDialog.cpp" line="655"/>
         <source>Cleaning up Cache Failed!</source>
         <translation>Ο καθαρισμός της Cache Απέτυχε!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="650"/>
+        <location filename="../src/configDialog.cpp" line="660"/>
         <source>Deleting Cache Failed!</source>
         <translation>Η Διαγραφή της Cache Απέτυχε!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="655"/>
+        <location filename="../src/configDialog.cpp" line="665"/>
         <source>Could not clean Build Environments!!</source>
         <translation>Η εκκαθάριση του Περιβάλλοντος Χτισίματος απέτυχε!!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="671"/>
+        <location filename="../src/configDialog.cpp" line="681"/>
         <source>Unused Databases Cleaned up successfully!</source>
         <translation>Η εκκαθάριση των Αχρησιμοποίητων Βάσεων Δεδομένων
 έγινε με επιτυχία!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="677"/>
+        <location filename="../src/configDialog.cpp" line="687"/>
         <source>Cache Cleaned Up Successfully!</source>
         <translation>Η εκκαθάριση της Cache έγινε με επιτυχία!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="683"/>
+        <location filename="../src/configDialog.cpp" line="693"/>
         <source>Cache Successfully Deleted!</source>
         <translation>Η διαγραφή της Cache έγινε με επιτυχία!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="689"/>
+        <location filename="../src/configDialog.cpp" line="699"/>
         <source>Build Environments Successfully Cleaned!</source>
         <translation>Τα Περιβάλλοντα Χτισίματος καθαρίστικαν με επιτυχία!</translation>
     </message>
@@ -712,19 +712,19 @@ Repositories τρίτων λειτουργούν όπως τα επίσημα κ
         <translation type="obsolete">Τα Περιβάλλοντα Χτισίματος καθαρίστικαν με επιτυχία!!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1091"/>
+        <location filename="../src/configDialog.cpp" line="1101"/>
         <source>Settings Changed</source>
         <translation>Οι ρυθμίσεις άλλαξαν</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1092"/>
+        <location filename="../src/configDialog.cpp" line="1102"/>
         <source>Your repositories have changed.
 Do you want to Update Your Database?</source>
         <translation>Η λίστα των repositories άλλαξε.
 Θέλετε να ανανεώσετε τη Βάση Δεδομένων;</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1173"/>
+        <location filename="../src/configDialog.cpp" line="1185"/>
         <source>Mirror Format is incorrect. Your mirror should look like this:
 http://mirror.org/$repo/os/i686</source>
         <comment>Obviously keep the example as it is ;)</comment>
@@ -732,7 +732,7 @@ http://mirror.org/$repo/os/i686</source>
 http://mirror.org/$repo/os/i686</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1198"/>
+        <location filename="../src/configDialog.cpp" line="1210"/>
         <source>Your Mirror was successfully added!
 It is now available in mirrorlist.</source>
         <comment>mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.</comment>
@@ -740,36 +740,36 @@ It is now available in mirrorlist.</source>
 Βρίσκεται διαθέσιμο στο αρχείο /etc/pacman.d/mirrorlist.</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1284"/>
+        <location filename="../src/configDialog.cpp" line="1296"/>
         <source>Pacman Database Optimized Successfully!</source>
         <translation>Η βελτιστοποίηση της Βάσης Δεδομένων του
 Pacman πραγματοποιήθηκε με επιτυχία!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1290"/>
+        <location filename="../src/configDialog.cpp" line="1302"/>
         <source>Could not Optimize Pacman Database!</source>
         <translation>Η βελτιστοποίηση της Βάσης Δεδομένων
 του Pacman δεν ήταν δυνατή!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1308"/>
+        <location filename="../src/configDialog.cpp" line="1320"/>
         <source>Operation Completed Successfully!</source>
         <translation>Η διεργασία πραγματοποιήθηκε με επιτυχία!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1307"/>
+        <location filename="../src/configDialog.cpp" line="1319"/>
         <source>Sync was successfully executed!!</source>
         <comment>Sync is always the command</comment>
         <translation>Η εντολή Sync εκτελέστηκε με επιτυχία!!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1312"/>
+        <location filename="../src/configDialog.cpp" line="1324"/>
         <source>Sync could not be executed!</source>
         <comment>Sync is always the command</comment>
         <translation>Η εντολή Sync δεν μπόρεσε να εκτελεστεί!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1313"/>
+        <location filename="../src/configDialog.cpp" line="1325"/>
         <source>Sync could not be executed!!</source>
         <comment>Sync is always the command</comment>
         <translation>Η εντολή Sync δεν μπόρεσε να εκτελεστεί!!</translation>
@@ -780,7 +780,7 @@ Pacman πραγματοποιήθηκε με επιτυχία!</translation>
         <translation>Επεξεργασία Επιλογής</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="608"/>
+        <location filename="../src/configDialog.cpp" line="618"/>
         <source>Optimizing Pacman Database...</source>
         <translation>Βελτιστοποίηση της Βάσης Δεδομένων του Pacman...</translation>
     </message>
@@ -830,7 +830,7 @@ p, li { white-space: pre-wrap; }
         <translation>Unstable</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1298"/>
+        <location filename="../src/configDialog.cpp" line="1310"/>
         <source>Running sync...</source>
         <comment>sync is a command, so it should not be translated</comment>
         <translation>Εκτέλεση του sync...</translation>
@@ -846,7 +846,7 @@ p, li { white-space: pre-wrap; }
         <translation>Επεξεργασία όλων των εξαρτήσεων και ουρών πρώτα από έτοιμα πακέτα (προτείνεται)</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="373"/>
+        <location filename="../src/configDialog.cpp" line="374"/>
         <source>Advanced</source>
         <translation>Προχωρημένες</translation>
     </message>
@@ -861,7 +861,7 @@ p, li { white-space: pre-wrap; }
         <translation>Αρχείο Log:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1148"/>
+        <location filename="../ui/configDialog.ui" line="1137"/>
         <source>min</source>
         <comment>As in &quot;minutes&quot;</comment>
         <translation>λεπτά</translation>
@@ -872,57 +872,57 @@ p, li { white-space: pre-wrap; }
         <translation>Εμφάνιση παραθύρων ειδοποίησης στο tray</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1035"/>
+        <location filename="../ui/configDialog.ui" line="1024"/>
         <source>Use a proxy-server</source>
         <translation>Χρήση proxy-server</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1047"/>
+        <location filename="../ui/configDialog.ui" line="1036"/>
         <source>IP:</source>
         <translation>IP:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1070"/>
+        <location filename="../ui/configDialog.ui" line="1059"/>
         <source>Port:</source>
         <translation>Port:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1112"/>
+        <location filename="../ui/configDialog.ui" line="1101"/>
         <source>HTTP Proxy</source>
         <translation>HTTP Proxy</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1119"/>
+        <location filename="../ui/configDialog.ui" line="1108"/>
         <source>FTP Proxy</source>
         <translation>FTP Proxy</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1129"/>
+        <location filename="../ui/configDialog.ui" line="1118"/>
         <source>Use Shaman RSS Capabilities</source>
         <translation>Χρήση λειτουργιών RSS του Shaman</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1141"/>
+        <location filename="../ui/configDialog.ui" line="1130"/>
         <source>Update RSS Feed Every</source>
         <translation>Ανανέωση του RSS κάθε</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1155"/>
+        <location filename="../ui/configDialog.ui" line="1144"/>
         <source>Notify upon new items</source>
         <translation>Ειδοποίηση για νέα αντικείμενα</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1162"/>
+        <location filename="../ui/configDialog.ui" line="1151"/>
         <source>Check if there is an unread news about a package in Queue before processing it</source>
         <translation>Έλεγχος για αδιάβαστα νέα των πακέτων ουράς πριν αυτά επεξεργαστούν</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1244"/>
+        <location filename="../ui/configDialog.ui" line="1233"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1261"/>
+        <location filename="../ui/configDialog.ui" line="1250"/>
         <source>Cancel</source>
         <translation>Ακύρωση</translation>
     </message>
@@ -932,32 +932,32 @@ p, li { white-space: pre-wrap; }
         <translation>KDEMod 3 Testing Repository</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1198"/>
+        <location filename="../ui/configDialog.ui" line="1187"/>
         <source>Interface</source>
         <translation>Περιβάλλον</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1204"/>
+        <location filename="../ui/configDialog.ui" line="1193"/>
         <source>Start Shaman Automatically on X Startup</source>
         <translation>Αυτόματη εκκίνηση του Shaman όταν ξεκινάει ο Χ</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1211"/>
+        <location filename="../ui/configDialog.ui" line="1200"/>
         <source>Forbid starting Shaman as root</source>
         <translation>Απαγόρευση εκκίνησης του Shaman ως root</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1081"/>
+        <location filename="../src/configDialog.cpp" line="1091"/>
         <source>Saving Configuration</source>
         <translation>Αποθήκευση ρυθμίσεων</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="736"/>
+        <location filename="../src/configDialog.cpp" line="746"/>
         <source>Unable to save Pacman configuration!</source>
         <translation>Η αποθήκευση ρυθμίσεων του Pacman ήταν αδύνατη!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1215"/>
+        <location filename="../src/configDialog.cpp" line="1227"/>
         <source>Mirror Format is incorrect. Your mirror should look like this:
 http://mirror.org/$repo/$arch</source>
         <comment>Obviously keep the example as it is ;)</comment>
@@ -965,7 +965,7 @@ http://mirror.org/$repo/$arch</source>
 http://mirror.org/$repo/$arch</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1252"/>
+        <location filename="../src/configDialog.cpp" line="1264"/>
         <source>Your Mirror was successfully added!
 It is now available in kdemodmirrorlist.</source>
         <comment>mirrorlist here means /etc/pacman.d/kdemodmirrorlist, so it should not be translated.</comment>
@@ -973,7 +973,7 @@ It is now available in kdemodmirrorlist.</source>
 Πλέον είναι διαθέσιμο στο kdemodmirrorlist.</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1082"/>
+        <location filename="../src/configDialog.cpp" line="1092"/>
         <source>Some of your changes have not been applied,
 since alpm needs to be released.
 You need to restart Shaman to make them effective.</source>
@@ -2073,7 +2073,7 @@ chown root shaman &amp;&amp; chmod u+s shaman.
         <translation type="obsolete">Να μην εμφανιστεί ξανά</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="52"/>
+        <location filename="../src/configDialog.cpp" line="53"/>
         <source>O&amp;k</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2093,7 +2093,7 @@ chown root shaman &amp;&amp; chmod u+s shaman.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="53"/>
+        <location filename="../src/configDialog.cpp" line="54"/>
         <source>C&amp;ancel</source>
         <translation type="unfinished"></translation>
     </message>
