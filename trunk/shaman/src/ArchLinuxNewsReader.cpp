@@ -124,7 +124,9 @@ void ArchLinuxNewsReader::parseXml()
 			{
 				QString realTitle = QString(titleString);
 				if(realTitle.startsWith("Recent News Updates"))
-				realTitle.remove(0, 19);
+					realTitle.remove(0, 19);
+				
+				realTitle = realTitle.trimmed();
 				
 				if(!oldEntries.contains(realTitle))
 				{
