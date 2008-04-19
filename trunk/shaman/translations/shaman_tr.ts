@@ -814,7 +814,7 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Shaman Bakım.&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Lütfen Menüden bir Eylem Seçin.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1127"/>
+        <location filename="../ui/configDialog.ui" line="1148"/>
         <source>min</source>
         <comment>As in &quot;minutes&quot;</comment>
         <translation>dk</translation>
@@ -825,47 +825,47 @@ p, li { white-space: pre-wrap; }
         <translation>Sistem Çubuğu Bilgi Pencereleri Göster</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1014"/>
+        <location filename="../ui/configDialog.ui" line="1035"/>
         <source>Use a proxy-server</source>
         <translation>Bir proksi-sunucusu kullan</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1026"/>
+        <location filename="../ui/configDialog.ui" line="1047"/>
         <source>IP:</source>
         <translation>IP:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1049"/>
+        <location filename="../ui/configDialog.ui" line="1070"/>
         <source>Port:</source>
         <translation>Port:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1091"/>
+        <location filename="../ui/configDialog.ui" line="1112"/>
         <source>HTTP Proxy</source>
         <translation>HTTP Proksi</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1098"/>
+        <location filename="../ui/configDialog.ui" line="1119"/>
         <source>FTP Proxy</source>
         <translation>FTP Proksi</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1108"/>
+        <location filename="../ui/configDialog.ui" line="1129"/>
         <source>Use Shaman RSS Capabilities</source>
         <translation>Shaman&apos;ın RSS Yeteneklerini Kullan</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1120"/>
+        <location filename="../ui/configDialog.ui" line="1141"/>
         <source>Update RSS Feed Every</source>
         <translation>RSS Beslemesini şu kadar sürede bi güncelle</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1134"/>
+        <location filename="../ui/configDialog.ui" line="1155"/>
         <source>Notify upon new items</source>
         <translation>Yeni haberlerde uyar</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1141"/>
+        <location filename="../ui/configDialog.ui" line="1162"/>
         <source>Check if there is an unread news about a package in Queue before processing it</source>
         <translation>Sıradaki bir paket hakkında, sıra işlenmeden önce, okunmamış bir haber olup olmadığını denetle</translation>
     </message>
@@ -880,12 +880,12 @@ p, li { white-space: pre-wrap; }
         <translation>Kayıt Dosyası:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1223"/>
+        <location filename="../ui/configDialog.ui" line="1244"/>
         <source>Ok</source>
         <translation>Tamam</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1240"/>
+        <location filename="../ui/configDialog.ui" line="1261"/>
         <source>Cancel</source>
         <translation>İptal</translation>
     </message>
@@ -895,17 +895,17 @@ p, li { white-space: pre-wrap; }
         <translation>KDEMod 3 Testing Deposu</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1177"/>
+        <location filename="../ui/configDialog.ui" line="1198"/>
         <source>Interface</source>
         <translation>Arayüz</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1183"/>
+        <location filename="../ui/configDialog.ui" line="1204"/>
         <source>Start Shaman Automatically on X Startup</source>
         <translation>Shaman&apos;ı otomatik olarak X başlangıcında çaılştır</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1190"/>
+        <location filename="../ui/configDialog.ui" line="1211"/>
         <source>Forbid starting Shaman as root</source>
         <translation>Shaman&apos;ın kök yetkileriyle çalışmasını yasakla</translation>
     </message>
@@ -967,6 +967,11 @@ p, li { white-space: pre-wrap; }
         <source>RSync Server:</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../ui/configDialog.ui" line="1011"/>
+        <source>Update Database at</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>EditPBuild</name>
@@ -996,7 +1001,7 @@ Kaydetmek ister misiniz?</translation>
         <translation>Tanım</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="216"/>
+        <location filename="../src/MainWindow.cpp" line="217"/>
         <source>Shaman will keep running in the system tray.
 To close it, click Quit in the file menu or in the tray icon context menu.
 While in the System Tray, Shaman will update your Databases
@@ -1014,7 +1019,7 @@ Sistem çubuğundayken Shaman, düzenli aralıklarla Veritabanlarını güncelle
         <translation type="obsolete">Bunu Tekrar Gösterme</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="213"/>
+        <location filename="../src/MainWindow.cpp" line="214"/>
         <source>Shaman - Reducing To Tray</source>
         <translation>Shaman - Sistemçubuğuna yerleşiyor</translation>
     </message>
@@ -1029,22 +1034,22 @@ Sistem çubuğundayken Shaman, düzenli aralıklarla Veritabanlarını güncelle
         <translation>Depolar</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="475"/>
+        <location filename="../src/MainWindow.cpp" line="473"/>
         <source>All Repositories</source>
         <translation>Bütün Depolar</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="478"/>
+        <location filename="../src/MainWindow.cpp" line="476"/>
         <source>Local Packages</source>
         <translation>Yerel Paketler</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="433"/>
+        <location filename="../src/MainWindow.cpp" line="431"/>
         <source>Package Groups</source>
         <translation>Paket Grupları</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1111"/>
+        <location filename="../src/MainWindow.cpp" line="1109"/>
         <source>All Groups</source>
         <translation>Bütün Gruplar</translation>
     </message>
@@ -1094,32 +1099,32 @@ Sistem çubuğundayken Shaman, düzenli aralıklarla Veritabanlarını güncelle
         <translation>Tam Kaldırma</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="713"/>
+        <location filename="../src/MainWindow.cpp" line="711"/>
         <source>Status: </source>
         <translation>Durum: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="715"/>
+        <location filename="../src/MainWindow.cpp" line="713"/>
         <source>Installed</source>
         <translation>Yüklü</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="717"/>
+        <location filename="../src/MainWindow.cpp" line="715"/>
         <source>Not installed</source>
         <translation>Yüklenmemiş</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="720"/>
+        <location filename="../src/MainWindow.cpp" line="718"/>
         <source>Local Version: </source>
         <translation>Yerel Sürüm: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="725"/>
+        <location filename="../src/MainWindow.cpp" line="723"/>
         <source>Version in the Repository: </source>
         <translation>Depodaki Sürüm: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="731"/>
+        <location filename="../src/MainWindow.cpp" line="729"/>
         <source>Action: </source>
         <translation>Eylem: </translation>
     </message>
@@ -1129,7 +1134,7 @@ Sistem çubuğundayken Shaman, düzenli aralıklarla Veritabanlarını güncelle
         <translation>Hata</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="846"/>
+        <location filename="../src/MainWindow.cpp" line="844"/>
         <source>One or more Databases could not be updated.
 Last error reported was:
 %1</source>
@@ -1138,12 +1143,12 @@ Raporlanan son hata şuydu:
 %1</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="855"/>
+        <location filename="../src/MainWindow.cpp" line="853"/>
         <source>Database Update</source>
         <translation>Veritabanı Güncelleme</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="857"/>
+        <location filename="../src/MainWindow.cpp" line="855"/>
         <source>Databases Updated Successfully</source>
         <translation>Veritabanı Başarıyla Güncellendi</translation>
     </message>
@@ -1181,7 +1186,7 @@ için tek başına yapmanız önerilir.
         <translation type="obsolete">Kaldırma için İşaretle</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="945"/>
+        <location filename="../src/MainWindow.cpp" line="943"/>
         <source>Mark for Upgrade</source>
         <translation>Yükseltme için İşaretle</translation>
     </message>
@@ -1191,17 +1196,17 @@ için tek başına yapmanız önerilir.
         <translation type="obsolete">Eylemi İptal Et</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="996"/>
+        <location filename="../src/MainWindow.cpp" line="994"/>
         <source>Mark all for installation</source>
         <translation>Tümünü yükleme için İşaretle</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="998"/>
+        <location filename="../src/MainWindow.cpp" line="996"/>
         <source>Mark all for reinstallation</source>
         <translation>Tümünü yeniden yükleme için İşaretle</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1000"/>
+        <location filename="../src/MainWindow.cpp" line="998"/>
         <source>Mark all for removal</source>
         <translation>Tümünü Kaldırma için İşaretle</translation>
     </message>
@@ -1506,7 +1511,7 @@ p, li { white-space: pre-wrap; }
         <translation>Sırayı İşle</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="178"/>
+        <location filename="../src/MainWindow.cpp" line="179"/>
         <source>Esc</source>
         <translation>Esc</translation>
     </message>
@@ -1545,7 +1550,7 @@ was not successfully processed</source>
 başarıyla işlenemedi</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="848"/>
+        <location filename="../src/MainWindow.cpp" line="846"/>
         <source>One or more databases failed to update!</source>
         <translation>Bir veya bir kaç veritabanının güncellenmesi başarısız!</translation>
     </message>
@@ -1628,7 +1633,7 @@ Do you want to install %1 anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="970"/>
+        <location filename="../src/MainWindow.cpp" line="968"/>
         <source>Mark for Re&amp;installation</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1726,7 +1731,7 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/main.cpp" line="229"/>
+        <location filename="../src/main.cpp" line="260"/>
         <source>Shaman</source>
         <comment>Hey! If you are reading this, first of all thanks for helping us in making Shaman better. There are not many comments unless where needed, since all the strings are pretty self-explanatory. You will see a lot of HTML in some cases: do not let that scare you, but please edit text only. Editing HTML tags too may break our layout, so be careful. A good practice could be copying the whole string, and then translating just what&apos;s outside the tags, usually just a few words. If you have any doubts, or if you just want to drop us a line, there goes our email addresses:
 Dario: drf54321@gmail.com
@@ -1742,19 +1747,19 @@ Please restart it with root privileges.</source>
 Lütfen root haklarıyla başlatın.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="301"/>
+        <location filename="../src/main.cpp" line="332"/>
         <source>Shaman</source>
         <translation>Shaman</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="211"/>
+        <location filename="../src/main.cpp" line="242"/>
         <source>There was a problem while testing libalpm.
 Maybe another application has a lock on it.</source>
         <translation>libalpm denenirken bir hata oluştu.
 Başka bir uygulama kilitlemiş olabilir.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="302"/>
+        <location filename="../src/main.cpp" line="333"/>
         <source>Pacman is not updated.
 Shaman needs libalpm &gt;= 2.1.0 to run.
 Yours is %1. Please update Pacman.</source>
@@ -1763,34 +1768,34 @@ Shaman libalpm &gt;= 2.1.0 gerektirir.
 Sizinki %1. Lütfen Pacman&apos;ı güncelleyin.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="273"/>
+        <location filename="../src/main.cpp" line="304"/>
         <source>Please Wait...</source>
         <translation>Lütfen Bekleyin...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="353"/>
+        <location filename="../src/main.cpp" line="384"/>
         <source>Loading Databases...</source>
         <translation>Veritabanı Yükleniyor...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="361"/>
+        <location filename="../src/main.cpp" line="392"/>
         <source>Loading Packages...</source>
         <translation>Paketler Yükleniyor...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="369"/>
+        <location filename="../src/main.cpp" line="400"/>
         <source>Starting up Shaman...</source>
         <translation>Shaman Başlatılıyor...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="230"/>
+        <location filename="../src/main.cpp" line="261"/>
         <source>Your settings file seems unwritable.
 Please check permissions on it.</source>
         <translation>Ayarlarınız yazılamaz görünüyor.
 Lütfen izinlerini kontrol edin.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="292"/>
+        <location filename="../src/main.cpp" line="323"/>
         <source>You have started Shaman as root.
 It is advised to start it as unprivileged user.
 Shaman will ask you for root password when needed.</source>
@@ -1814,21 +1819,21 @@ Gerektiğinde Shaman kök parolanızı soracaktır.</translation>
         <translation type="obsolete">Hayır</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="190"/>
+        <location filename="../src/main.cpp" line="221"/>
         <source>It looks like another copy of Shaman is running.
 You can only run one copy of Shaman at a time.</source>
         <translation>Shaman&apos;ın diğer bir kopyası çalışıyor.
 Bir seferde sadece bir Shaman kopyası çalıştırabilirsiniz.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="283"/>
+        <location filename="../src/main.cpp" line="314"/>
         <source>Shaman can not be started as root.
 Please restart it as unprivileged user.</source>
         <translation>Shaman kök yetkisiyle çalıştırılamaz.
 Lütfen yetkisiz kullanıcı olarak başlatın.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="206"/>
+        <location filename="../src/main.cpp" line="237"/>
         <source>Shaman could not switch to root.
 Probably you have not set the SUID bit to it.
 You can do that by issuing as root
@@ -2307,24 +2312,24 @@ Click here to upgrade your System.</source>
 Sisteminizi yükseltmek için buraya tıklayın.</translation>
     </message>
     <message>
-        <location filename="../src/ShamanTrayIcon.cpp" line="229"/>
+        <location filename="../src/ShamanTrayIcon.cpp" line="233"/>
         <source>New News Available</source>
         <translation>Yeni Haberler Var</translation>
     </message>
     <message>
-        <location filename="../src/ShamanTrayIcon.cpp" line="230"/>
+        <location filename="../src/ShamanTrayIcon.cpp" line="234"/>
         <source>There are new news available.
 Click here to review them.</source>
         <translation>Yeni haberler var.
 İncelemek için buraya tıklayın.</translation>
     </message>
     <message>
-        <location filename="../src/ShamanTrayIcon.cpp" line="246"/>
+        <location filename="../src/ShamanTrayIcon.cpp" line="250"/>
         <source>Failed Fetching News</source>
         <translation>Haberleri Alma Başarısız</translation>
     </message>
     <message>
-        <location filename="../src/ShamanTrayIcon.cpp" line="247"/>
+        <location filename="../src/ShamanTrayIcon.cpp" line="251"/>
         <source>An error occourred while fetching news!
 Click here to open the News Dialog for more details.</source>
         <translation>Haberler alınırken bir sorun oluştu!
@@ -2452,6 +2457,20 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shaman 1.0 Beta (revision 651)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
+        <location filename="../ui/aboutDialog.ui" line="229"/>
+        <source>Visit &amp;Website...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/aboutDialog.ui" line="68"/>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shaman 1.0 Beta (revision 721)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shaman 1.0 Beta (revision 651)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; {3C?} {4.0/?} {3.?} {40/?} {1&quot;?} {10p?} {400;?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {600;?} {1.0 ?} {721)?}</translation>
+    </message>
+    <message>
         <location filename="../ui/aboutDialog.ui" line="172"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -2460,8 +2479,8 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Shaman has received a lot of help from a lot of people, and it is also thanks to them if Shaman has seen the light. If we forgot to add you here, let us know.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Names are in alphabetical order, because even the smallest contribution has been important to us.&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;The KDEMod Community&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Help, Testing, Support, everything started from here. If there was no KDEMod, probably&lt;/span&gt; &lt;span style=&quot; font-weight:400;&quot;&gt;there would be no Shaman&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;The KDEmod Community&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Help, Testing, Support, everything started from here. If there was no KDEmod, probably&lt;/span&gt; &lt;span style=&quot; font-weight:400;&quot;&gt;there would be no Shaman&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Giannis Antoniou&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Greek Translator&lt;/p&gt;
@@ -2471,6 +2490,9 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Jacques Disner&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;French Translator&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Stefano Giro&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Testing and Suggestions&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Georg Grabler&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Author of the Proxy patch, some help on the code and more.&lt;/span&gt;&lt;/p&gt;
@@ -2485,7 +2507,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Brazilian Translator, and gave the name Shaman&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;Jan Mette&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;German Translation and KDEMod-Developer, also the creator of the Icon&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;German Translation and KDEmod Developer, also the creator of the Icon&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Atilla Ontas&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Turkish Translator&lt;/p&gt;
@@ -2494,22 +2516,8 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Our hoster, and maintainer of Trac.&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Johannes Schriewer&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;KDEMod Developer, and also some help on the code.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../ui/aboutDialog.ui" line="226"/>
-        <source>Visit &amp;Website...</source>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;KDEmod Developer, and also some help on the code.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/aboutDialog.ui" line="68"/>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shaman 1.0 Beta (revision 721)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shaman 1.0 Beta (revision 651)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; {3C?} {4.0/?} {3.?} {40/?} {1&quot;?} {10p?} {400;?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {600;?} {1.0 ?} {721)?}</translation>
     </message>
 </context>
 <context>

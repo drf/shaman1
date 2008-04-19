@@ -1135,7 +1135,24 @@ void MainWindow::installPackage()
 		return;
 
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
-	installPackage(item->text(1), item->text(5));
+	{
+		if (aHandle->isProviderInstalled(item->text(1)))
+		{
+			switch(ShamanDialog::popupQuestionDialog(tr("Shaman"), QString(tr("A package providing %1 is already installed.\n"
+					"Do you want to install %1 anyway?")).arg(item->text(1)), this, ShamanProperties::WarningDialog))
+					{
+					case QMessageBox::Yes:
+						break;
+					case QMessageBox::No:
+						return;
+						break;
+					default:
+						break;
+					}
+		}
+		
+		installPackage(item->text(1), item->text(5));
+	}
 
 	itemChanged();
 }
@@ -1182,21 +1199,6 @@ void MainWindow::reinstallPackage(const QString &package, const QString &repo)
 	}
 
 	qDebug() << item->text(1);
-	
-	if (aHandle->isProviderInstalled(package))
-	{
-		switch(ShamanDialog::popupQuestionDialog(tr("Shaman"), QString(tr("A package providing %1 is already installed.\n"
-				"Do you want to install %1 anyway?")).arg(package), this, ShamanProperties::WarningDialog))
-		{
-		case QMessageBox::Yes:
-			break;
-		case QMessageBox::No:
-			return;
-			break;
-		default:
-			break;
-		}
-	}
 
 	if (item->text(8) == tr("Install"))
 		return;

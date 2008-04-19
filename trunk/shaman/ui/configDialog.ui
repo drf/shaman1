@@ -6,7 +6,7 @@
     <x>0</x>
     <y>0</y>
     <width>811</width>
-    <height>649</height>
+    <height>659</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -77,7 +77,7 @@
         <x>0</x>
         <y>0</y>
         <width>679</width>
-        <height>607</height>
+        <height>617</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" >
@@ -425,8 +425,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>659</width>
-            <height>559</height>
+            <width>100</width>
+            <height>30</height>
            </rect>
           </property>
           <attribute name="title" >
@@ -947,7 +947,7 @@ and Pacman.</string>
         <x>0</x>
         <y>0</y>
         <width>679</width>
-        <height>607</height>
+        <height>617</height>
        </rect>
       </property>
       <layout class="QGridLayout" >
@@ -974,7 +974,7 @@ and Pacman.</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="0" colspan="3" >
+          <item row="2" column="0" colspan="3" >
            <widget class="QCheckBox" name="updateDbShowNotify" >
             <property name="text" >
              <string>Show tray notification Windows</string>
@@ -984,24 +984,45 @@ and Pacman.</string>
             </property>
            </widget>
           </item>
-          <item row="2" column="0" >
+          <item row="3" column="0" >
            <widget class="QLabel" name="label_17" >
             <property name="text" >
              <string>If upgrades are available:</string>
             </property>
            </widget>
           </item>
-          <item row="2" column="1" colspan="2" >
+          <item row="3" column="1" colspan="2" >
            <widget class="QRadioButton" name="upNotifyRadio" >
             <property name="text" >
              <string>Just Notify</string>
             </property>
            </widget>
           </item>
-          <item row="2" column="3" >
+          <item row="3" column="3" >
            <widget class="QRadioButton" name="upNotifyAddRadio" >
             <property name="text" >
              <string>Notify and add them to Queue</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" colspan="2" >
+           <widget class="QCheckBox" name="updateDbTrayAtBox" >
+            <property name="text" >
+             <string>Update Database at</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2" >
+           <widget class="QSpinBox" name="hourSchedSpin" >
+            <property name="maximum" >
+             <number>23</number>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3" >
+           <widget class="QSpinBox" name="minuteSchedSpin" >
+            <property name="maximum" >
+             <number>59</number>
             </property>
            </widget>
           </item>

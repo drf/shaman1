@@ -136,6 +136,10 @@ void ShamanTrayIcon::changeIconStatus(ShamanIcon::IconStatus status)
 			connect(this, SIGNAL(messageClicked()), SIGNAL(upgradePkgs()));
 			QTimer::singleShot(10000, this, SLOT(disconnectBaloon()));
 		}
+		if (settings->value("scheduledUpdate/addupgradestoqueue").toBool())
+			mainWin->addUpgradeableToQueue();
+		
+		settings->deleteLater();
 	}
 }
 
