@@ -24,6 +24,7 @@
 #include "kanimatedsystemtrayicon.h"
 #include "MainWindow.h"
 #include "AlpmHandler.h"
+#include <QPointer>
 
 namespace ShamanIcon {
 
@@ -52,6 +53,7 @@ public slots:
 	void changeTimerInterval();
 	void newNewsAvailable();
 	void newsFetchingFailed();
+	void resetTimerAt();
 	
 private slots:
 	void transactionStarted();
@@ -59,6 +61,9 @@ private slots:
 	void enableTrayActions();
 	void disableTrayActions();
 	void disconnectBaloon();
+	void timerAtElapsed();
+	void enableTimer();
+	void enableTimerAt();
 	
 signals:
 	void startDbUpdate();
@@ -67,7 +72,8 @@ signals:
 private:
 	MainWindow *mainWin;
 	AlpmHandler *aHandle;
-	QTimer *trayUpDb;
+	QPointer<QTimer> trayUpDb;
+	QPointer<QTimer> trayUpDbAt;
 	QList<QAction *> systrayAct;
 	
 };

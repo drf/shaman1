@@ -23,6 +23,8 @@
 #include <QTimer>
 #include <QSettings>
 #include <QMovie>
+#include <QTime>
+#include <QDebug>
 
 ShamanTrayIcon::ShamanTrayIcon(MainWindow *mW, AlpmHandler *aH)
  : KAnimatedSystemTrayIcon(mW),
@@ -73,15 +75,8 @@ ShamanTrayIcon::ShamanTrayIcon(MainWindow *mW, AlpmHandler *aH)
 
 	QSettings *settings = new QSettings();
 
-	if(settings->value("scheduledUpdate/enabled").toBool())
-	{
-		trayUpDb = new QTimer(this); /* Oh yeah :) */
-		trayUpDb->setInterval(settings->value("scheduledUpdate/interval", 10).toInt() * 60000);
-
-		connect(trayUpDb, SIGNAL(timeout()), SLOT(dbUpdateTray()));
-	}
-	else
-		trayUpDb = NULL;
+	enableTimer();
+	resetTimerAt();
 
 	settings->deleteLater();
 }
@@ -174,6 +169,11 @@ void ShamanTrayIcon::disableTrayActions()
 
 void ShamanTrayIcon::startTimer()
 {
+	enableTimer();
+
+	if(!trayUpDb)
+		return;
+
 	QSettings *settings = new QSettings();
 
 	if(settings->value("scheduledUpdate/enabled").toBool() == true)
@@ -184,6 +184,11 @@ void ShamanTrayIcon::startTimer()
 
 void ShamanTrayIcon::stopTimer()
 {
+	enableTimer();
+
+	if(!trayUpDb)
+		return;
+
 	QSettings *settings = new QSettings();
 
 	if(settings->value("scheduledUpdate/enabled").toBool() == true)
@@ -195,6 +200,11 @@ void ShamanTrayIcon::stopTimer()
 
 void ShamanTrayIcon::changeTimerInterval()
 {
+	enableTimer();
+
+	if(!trayUpDb)
+		return;
+
 	QSettings *settings = new QSettings();
 
 	if(settings->value("scheduledUpdate/enabled").toBool())
@@ -257,4 +267,101 @@ void ShamanTrayIcon::newsFetchingFailed()
 void ShamanTrayIcon::disconnectBaloon()
 {
 	disconnect(this, SIGNAL(messageClicked()), 0, 0);
+}
+
+void ShamanTrayIcon::enableTimer()
+{
+	QSettings *settings = new QSettings();
+	
+	if(settings->value("scheduledUpdate/enabled").toBool())
+	{
+		if(trayUpDb)
+			return;
+		
+		trayUpDb = new QTimer(this); /* Oh yeah :) */
+		trayUpDb->setInterval(settings->value("scheduledUpdate/interval", 10).toInt() * 60000);
+
+		connect(trayUpDb, SIGNAL(timeout()), SLOT(dbUpdateTray()));
+	}
+	else
+	{
+		if(trayUpDb)
+			trayUpDb->deleteLater();
+	}
+	
+	settings->deleteLater();
+}
+
+void ShamanTrayIcon::enableTimerAt()
+{
+	QSettings *settings = new QSettings();
+	
+	if(settings->value("scheduledUpdate/enabledat").toBool())
+	{
+		if(trayUpDbAt)
+			return;
+		
+		trayUpDbAt = new QTimer(this); /* Oh yeah :) */
+
+		connect(trayUpDb, SIGNAL(timeout()), SLOT(timerAtElapsed()));
+	}
+	else
+	{
+		if(trayUpDbAt)
+			trayUpDbAt->deleteLater();
+	}
+	
+	settings->deleteLater();
+}
+
+void ShamanTrayIcon::resetTimerAt()
+{
+	enableTimerAt();
+	
+	if(!trayUpDbAt)
+		return;
+	
+	trayUpDbAt->stop();
+	
+	QSettings *settings = new QSettings();
+	
+	QTime time = settings->value("scheduledUpdate/updatetime").toTime();
+	
+	int interval;
+	
+	if(QTime::currentTime().msecsTo(time) < 0)
+		interval = 86400000 + QTime::currentTime().msecsTo(time);
+	else
+		interval = QTime::currentTime().msecsTo(time);
+	
+	qDebug() << interval << "to elapse";
+	
+	trayUpDbAt->setInterval(interval);
+	
+	trayUpDbAt->start();
+	
+	settings->deleteLater();
+}
+
+void ShamanTrayIcon::timerAtElapsed()
+{
+	/* Are there some transactions in progress? If so, we simply skip
+	 * this cycle, and see you next time.
+	 */
+
+	if(aHandle->isTransaction())
+		return;
+
+	/* Set back the timer */
+
+	trayUpDbAt->stop();
+
+	trayUpDbAt->setInterval(86400000);
+
+	trayUpDbAt->start();
+
+	/* Ok, let's silently perform a Db Update.
+	 */
+
+	emit startDbUpdate();
 }

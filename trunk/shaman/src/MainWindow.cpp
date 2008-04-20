@@ -1865,6 +1865,7 @@ void MainWindow::settingsClosed()
 			doDbUpdate();
 
 		trayicon->changeTimerInterval();
+		trayicon->resetTimerAt();
 
 		newsReader->setUpdateInterval();
 	}
