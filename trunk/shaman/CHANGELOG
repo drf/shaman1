@@ -30,6 +30,7 @@ Core:
 
    - Better version handling
    - Correct Handling of packages with the same name belonging to different repos
+   - Added support for updating the database everyday at a certain hour
 
 GUI:
    - Removed version hardcoding in the About Dialog to allow String Freeze
