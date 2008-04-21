@@ -677,7 +677,7 @@ void MainWindow::showPkgInfo()
 
 	while(databases != NULL)
 	{
-		if(!strcmp(pkgsViewWG->currentItem()->text(5).toAscii().data(),
+		if(!strcmp(pkgsViewWG->currentItem()->text(5).toUtf8().data(),
 				alpm_db_get_name((pmdb_t *)alpm_list_getdata(databases))))
 		{
 			curdb = (pmdb_t *)alpm_list_getdata(databases);
@@ -686,7 +686,7 @@ void MainWindow::showPkgInfo()
 		databases = alpm_list_next(databases);
 	}
 
-	pkg = alpm_db_get_pkg(curdb, pkgsViewWG->currentItem()->text(1).toAscii().data());
+	pkg = alpm_db_get_pkg(curdb, pkgsViewWG->currentItem()->text(1).toUtf8().data());
 
 	if(PkgInfos->currentIndex() == 0)
 	{
@@ -694,7 +694,7 @@ void MainWindow::showPkgInfo()
 		{
 			/* Well, if pkg is NULL we're probably searching for something coming
 			 * from the local database. */
-			pkg = aHandle->getPackageFromName(pkgsViewWG->currentItem()->text(1).toAscii().data(), "local");
+			pkg = aHandle->getPackageFromName(pkgsViewWG->currentItem()->text(1).toUtf8().data(), "local");
 			isLocal = true;
 		}
 
@@ -1904,7 +1904,7 @@ void MainWindow::getPackageFromFile()
 		return;
 
 	// Sanity check
-	if(alpm_pkg_load(fileName.toAscii().data(), 1, &pkg) == -1)
+	if(alpm_pkg_load(fileName.toUtf8().data(), 1, &pkg) == -1)
 	{
 		ShamanDialog::popupDialog(tr("Error"), QString(tr("%1 does not seem\na valid package")).
 				arg(fileName), this, ShamanProperties::ErrorDialog);
@@ -2151,8 +2151,8 @@ void MainWindow::showAuthDialog(int count)
 		pam_response tmp;
 		tmp.resp_retcode = 0;
 
-		char *str = (char *) malloc(strlen(aUi.lineEdit->text().toAscii().data()) * sizeof(char));
-		strcpy(str, aUi.lineEdit->text().toAscii().data());
+		char *str = (char *) malloc(strlen(aUi.lineEdit->text().toUtf8().data()) * sizeof(char));
+		strcpy(str, aUi.lineEdit->text().toUtf8().data());
 
 		tmp.resp = str;
 

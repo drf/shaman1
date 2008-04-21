@@ -1195,7 +1195,7 @@ void ConfigDialog::addMirror()
 	QFile file("/etc/pacman.d/mirrorlist");
 	file.open(QIODevice::Append | QIODevice::Text);
 
-	file.write(toInsert.toAscii().data(), toInsert.length());
+	file.write(toInsert.toUtf8().data(), toInsert.length());
 	file.write("\n", 1);
 
 	file.close();
@@ -1249,7 +1249,7 @@ void ConfigDialog::addKDEModMirror()
 	
 	file.open(QIODevice::Append | QIODevice::Text);
 
-	file.write(toInsert.toAscii().data(), toInsert.length());
+	file.write(toInsert.toUtf8().data(), toInsert.length());
 	file.write("\n", 1);
 
 	file.close();
