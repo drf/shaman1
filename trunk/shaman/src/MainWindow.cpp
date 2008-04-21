@@ -328,7 +328,7 @@ bool MainWindow::populatePackagesView()
 
 			count++;
 			
-			stBar->updateProgressBar( (int) (( (float)count / (float) totalPkgs) * (float)100) );			
+			stBar->updateProgressBar( (int) ( count / totalPkgs) * 100 );			
 		}
 
 		databases = alpm_list_next(databases);
