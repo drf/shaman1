@@ -46,7 +46,9 @@ static void cleanup(int signum)
 	if(signum==SIGSEGV)
 	{
 		/* write a log message and write to stderr */
-		qCritical() << "Segmentation Fault! We are sorry. Please report a bug, so we can fix that";
+		qCritical() << "Segmentation Fault! We are sorry. You probably found a bug! And you can help us solving it!";
+		qCritical() << "Please report it to our bugtracker ( http://shaman.iskrembilen.com/trac ), including: when it crashed,";
+		qCritical() << "Terminal output, and possibly a backtrace (use gdb for that)";
 		exit(signum);
 	} 
 	else if((signum == SIGINT)) 
@@ -400,6 +402,8 @@ int main(int argc, char **argv)
 		splscr.showMessage(QString(QObject::tr("Starting up Shaman...")), Qt::AlignBottom | Qt::AlignRight, Qt::white);
 		app.processEvents();
 	}
+	
+	mainwin.setUpTrayIcon();
 
 	if((settings->value("gui/startupmode").toString() == "window" || arguments.contains("--start-in-window")) &&
 			!arguments.contains("--start-in-tray"))

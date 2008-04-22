@@ -31,8 +31,14 @@ Core:
    - Better version handling
    - Correct Handling of packages with the same name belonging to different repos
    - Added support for updating the database everyday at a certain hour
+   - Better Tray Icon Handling
+   - Support for "Add upgradeable to Queue"
+   - Solved a bug that caused freezing or loading failed
 
 GUI:
    - Removed version hardcoding in the About Dialog to allow String Freeze
    - Added a stupid message to the About Dialog
    - Small GUI fixes (thanks to uwolfer)
+   
+i18n:
+   - Added Chinese translation

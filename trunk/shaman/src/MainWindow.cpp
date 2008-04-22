@@ -102,8 +102,6 @@ turnOffSys(false)
 
 	dbus.registerObject("/Shaman", this);
 
-	trayicon = new ShamanTrayIcon(this, aHandle);
-
 	newsReader = new ArchLinuxNewsReader();
 
 	newsReader->setUpdateInterval();
@@ -147,11 +145,6 @@ turnOffSys(false)
 	connect(searchLine, SIGNAL(textChanged(const QString&)), SLOT(refinePkgView()));
 	connect(refineRepoEdit, SIGNAL(textChanged(const QString&)), SLOT(refineRepoView()));
 	connect(actionPacman_Preferences, SIGNAL(triggered()), SLOT(showSettings()));
-	connect(trayicon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), SLOT(systrayActivated(QSystemTrayIcon::ActivationReason)));
-	connect(trayicon, SIGNAL(startDbUpdate()), SLOT(doDbUpdate()));
-	connect(trayicon, SIGNAL(upgradePkgs()), SLOT(startUpgrading()));
-	connect(this, SIGNAL(startTimer()), trayicon, SLOT(startTimer()));
-	connect(this, SIGNAL(stopTimer()), trayicon, SLOT(stopTimer()));
 	connect(actionQuit, SIGNAL(triggered()), SLOT(quitApp()));
 	connect(actionAbout, SIGNAL(triggered()), SLOT(showAboutDialog()));
 	connect(actionInstall_Package_From_File, SIGNAL(triggered()), SLOT(getPackageFromFile()));
@@ -163,8 +156,6 @@ turnOffSys(false)
 	connect(aHandle, SIGNAL(streamDbUpdatingStatus(const QString&,int)), SIGNAL(streamDbUpdatingStatus(const QString&,int)));
 	connect(&CbackReference, SIGNAL(streamTransDlProg(const QString&,int,int,int,int)), 
 			SIGNAL(streamTransDlProg(const QString&,int,int,int,int)));
-	connect(newsReader, SIGNAL(newItems()), trayicon, SLOT(newNewsAvailable()));
-	connect(newsReader, SIGNAL(fetchingFailed()), trayicon, SLOT(newsFetchingFailed()));
 	connect(&athCback, SIGNAL(passwordRequired(int)), SLOT(showAuthDialog(int)));
 
 	QSettings *settings = new QSettings();
@@ -189,6 +180,19 @@ turnOffSys(false)
 MainWindow::~MainWindow()
 {
 	return;
+}
+
+void MainWindow::setUpTrayIcon()
+{
+	trayicon = new ShamanTrayIcon(this, aHandle);
+
+	connect(trayicon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), SLOT(systrayActivated(QSystemTrayIcon::ActivationReason)));
+	connect(trayicon, SIGNAL(startDbUpdate()), SLOT(doDbUpdate()));
+	connect(trayicon, SIGNAL(upgradePkgs()), SLOT(startUpgrading()));
+	connect(this, SIGNAL(startTimer()), trayicon, SLOT(startTimer()));
+	connect(this, SIGNAL(stopTimer()), trayicon, SLOT(stopTimer()));
+	connect(newsReader, SIGNAL(newItems()), trayicon, SLOT(newNewsAvailable()));
+	connect(newsReader, SIGNAL(fetchingFailed()), trayicon, SLOT(newsFetchingFailed()));
 }
 
 void MainWindow::streamReadySignal()
