@@ -34,6 +34,7 @@ UpdateDbDialog::UpdateDbDialog(AlpmHandler *hnd, QWidget *parent)
 {	
 	setupUi(this);
     setWindowModality(Qt::WindowModal);
+    setAttribute(Qt::WA_DeleteOnClose);
 	
 	connect(aHandle, SIGNAL(streamDbUpdatingStatus(const QString&,int)),
 				SLOT(updateLabel(const QString&, int)));
