@@ -5,7 +5,7 @@
     <message>
         <location filename="../src/AlpmHandler.cpp" line="1100"/>
         <source>: requires </source>
-        <translation>: requires </translation>
+        <translation>: 要求 </translation>
     </message>
     <message>
         <location filename="../src/AlpmHandler.cpp" line="1110"/>
@@ -45,7 +45,7 @@ All Process will be lost.</source>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="70"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Building Process Aborted by the User. Building Failed.&lt;/b&gt;</source>
-        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;用户放弃编译处理。 编译失败。&lt;/b&gt;</translation>
+        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;用户放弃处理编译，编译失败。&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="88"/>
@@ -65,7 +65,7 @@ All Process will be lost.</source>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="206"/>
         <source>ABS Update</source>
-        <translation>更新 ABS </translation>
+        <translation>更新 ABS</translation>
     </message>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="200"/>
@@ -75,12 +75,12 @@ All Process will be lost.</source>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="219"/>
         <source>&lt;b&gt;Building %1 failed!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;编译 %1 失败 !!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation>&lt;b&gt;编译%1 失败 !!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="224"/>
         <source>&lt;b&gt;%1 was built successfully!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;%1 编译成功 !!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation>&lt;b&gt;%1 编译成功  !!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="279"/>
@@ -100,7 +100,7 @@ All Process will be lost.</source>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="333"/>
         <source>&lt;b&gt;Building operation has started.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;编译操作已经开始。&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation>&lt;b&gt;L&apos;编译操作已经开始。&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="286"/>
@@ -176,7 +176,8 @@ Linux&apos;s官方仓库。 Shaman 仅仅只能
         <location filename="../src/BuildingHandler.cpp" line="297"/>
         <source>Your packages Failed to Build.
 Look at the output for more details.</source>
-        <translation>软件包编译失败 !请查看输出获得更多信息.</translation>
+        <translation>软件包编译失败， 
+请查看输出获得更多信息。</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="319"/>
@@ -207,7 +208,7 @@ Do you want to proceed anyway?</source>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="336"/>
         <source>Close Without Installing</source>
-        <translation>退出并不安装</translation>
+        <translation>关闭并不安装</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="337"/>
@@ -231,22 +232,22 @@ Do you want to proceed anyway?</source>
         <location filename="../src/callbacks.cpp" line="113"/>
         <source>%1 requires installing %2 from IgnorePkg/IgnoreGroup.
  Install anyway?</source>
-        <translation>%1 r需要安装<byte value="x9"/>%2 从ignorePkg/IgnoreGroup.
-   无论如何安装吗?</translation>
+        <translation>需要安装%1个 %2个 从 IgnorePkg/IgnoreGroup.
+       无论如何安装吗?</translation>
     </message>
     <message>
         <location filename="../src/callbacks.cpp" line="116"/>
         <source>%1 is in IgnorePkg/IgnoreGroup.
  Install anyway?</source>
-        <translation>%1 位于 IgnorePkg/IgnoreGroup，
- 无论如何安装吗?</translation>
+        <translation>%1 个位于 IgnorePkg/IgnoreGroup.
+       无论如何安装吗?</translation>
     </message>
     <message>
         <location filename="../src/callbacks.cpp" line="120"/>
         <source>%1 is designated as a HoldPkg.
  Remove anyway?</source>
-        <translation>%1 is designated as a HoldPkg.
- Remove anyway?</translation>
+        <translation>%1 个指定为 HoldPkg.
+     无论如何卸载吗 ?</translation>
     </message>
     <message>
         <location filename="../src/callbacks.cpp" line="123"/>
@@ -257,8 +258,8 @@ Do you want to proceed anyway?</source>
         <location filename="../src/callbacks.cpp" line="127"/>
         <source>%1 conflicts with %2.
 Remove %3?</source>
-        <translation>%1 冲突 %2.
-卸载%3 ?</translation>
+        <translation>%1和冲突 %2.
+卸载 %3 ?</translation>
     </message>
     <message>
         <location filename="../src/callbacks.cpp" line="131"/>
@@ -278,8 +279,8 @@ Do you want to delete it?</source>
         <location filename="../src/callbacks.cpp" line="135"/>
         <source>File %1 is corrupted.
 Do you want to delete it?</source>
-        <translation>文件 %1 损坏,
-您想删除它吗?</translation>
+        <translation>文件 %s 损坏，
+您想删除它吗？</translation>
     </message>
 </context>
 <context>
@@ -297,7 +298,7 @@ Do you want to delete it?</source>
     <message>
         <location filename="../ui/configDialog.ui" line="96"/>
         <source>When Upgrading System:</source>
-        <translation>何时升级系统 :</translation>
+        <translation>更新系统方式 :</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="105"/>
@@ -317,12 +318,12 @@ Do you want to delete it?</source>
     <message>
         <location filename="../ui/configDialog.ui" line="135"/>
         <source>When Processing Queue</source>
-        <translation>何时处理队列</translation>
+        <translation>处理队列方式</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="142"/>
         <source>Keep application running in System Tray only</source>
-        <translation>Keep application running in System Tray<byte value="x9"/>only</translation>
+        <translation>在系统托盘中运行应用程序</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="152"/>
@@ -337,7 +338,7 @@ Do you want to delete it?</source>
     <message>
         <location filename="../ui/configDialog.ui" line="957"/>
         <source>When Application is in System Tray only</source>
-        <translation>When Application is in System Tray only</translation>
+        <translation>系统托盘中运行应用程序方式</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="963"/>
@@ -372,12 +373,12 @@ Do you want to delete it?</source>
     <message>
         <location filename="../ui/configDialog.ui" line="275"/>
         <source>Checkable Options</source>
-        <translation>Checkable Options</translation>
+        <translation>选项</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="281"/>
         <source>Use Active FTP</source>
-        <translation>使用激活的FTP</translation>
+        <translation>使用激活的 FTP</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="288"/>
@@ -402,7 +403,7 @@ Do you want to delete it?</source>
     <message>
         <location filename="../ui/configDialog.ui" line="335"/>
         <source>IgnoreGroups:</source>
-        <translation>IgnoreGroups :</translation>
+        <translation>IgnoreGroups:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="345"/>
@@ -444,7 +445,7 @@ Please note that packages from Unstable and Testing may break your system.</sour
     <message>
         <location filename="../ui/configDialog.ui" line="658"/>
         <source>Add Mirror</source>
-        <translation>增加镜像</translation>
+        <translation>添加镜像</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="567"/>
@@ -457,20 +458,19 @@ Please note that packages from Unstable and Testing may break your system.</sour
 improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme,
 and lots of addons, KDEMod is the best way to taste the ease and the power
 of KDE with the simplicity and the power of Arch.</source>
-        <translation>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an 
-improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme,
-and lots of addons, KDEMod is the best way to taste the ease and the power
-of KDE with the simplicity and the power of Arch. </translation>
+        <translation>Kdemod是为Arch linux 定制的KDE的一个改进版本， 基于改善的QT，
+和Arch linux 标准的QT兼容，拥有改进的主题，和许多的附加特性。
+使用KDEMod，是感受强大的KDE魅力和简洁强大的Arch最好方式。</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="603"/>
         <source>KDEMod 3 Repository</source>
-        <translation>KDEMod 3<byte value="x9"/>仓库</translation>
+        <translation>KDEMod 3 仓库</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="617"/>
         <source>KDEMod 4 Repository (Unstable, testers only)</source>
-        <translation>KDEMod 4<byte value="x9"/>仓库 (不稳定，仅供测试者) </translation>
+        <translation>KDEMod 4 仓库 (不稳定，仅供测试者) </translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="685"/>
@@ -503,7 +503,7 @@ and Pacman.</source>
     <message>
         <location filename="../ui/configDialog.ui" line="763"/>
         <source>Remove Repository</source>
-        <translation>移除仓库</translation>
+        <translation>移处仓库</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="794"/>
@@ -523,7 +523,7 @@ and Pacman.</source>
     <message>
         <location filename="../ui/configDialog.ui" line="817"/>
         <source>ABS Configuration</source>
-        <translation>ABS配置</translation>
+        <translation>ABS 配置</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="823"/>
@@ -538,7 +538,7 @@ and Pacman.</source>
     <message>
         <location filename="../ui/configDialog.ui" line="853"/>
         <source>Makepkg Configuration</source>
-        <translation>Makepkg<byte value="x9"/>配置</translation>
+        <translation>Makepkg 配置</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="859"/>
@@ -578,12 +578,12 @@ and Pacman.</source>
     <message>
         <location filename="../ui/configDialog.ui" line="928"/>
         <source>Remove installed makedepends after build</source>
-        <translation>编译后移除依赖关系</translation>
+        <translation>编译后移除已安装依赖关系</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="935"/>
         <source>Clean Build Environment after installation</source>
-        <translation>安装后清除编译环境<byte value="x9"/></translation>
+        <translation>安装后清除编译环境</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="115"/>
@@ -593,7 +593,7 @@ and Pacman.</source>
     <message>
         <location filename="../src/configDialog.cpp" line="574"/>
         <source>Clean Unused Databases</source>
-        <translation>清理未使用的数据库<byte value="x9"/></translation>
+        <translation>清理未使用的数据库</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="586"/>
@@ -663,7 +663,7 @@ and Pacman.</source>
     <message>
         <location filename="../src/configDialog.cpp" line="650"/>
         <source>Cleaning up Unused Databases Failed!</source>
-        <translation>清理未使用的数据库<byte value="x9"/>失败!</translation>
+        <translation>清理未使用的数据库失败!</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="655"/>
@@ -708,20 +708,20 @@ and Pacman.</source>
     <message>
         <location filename="../src/configDialog.cpp" line="1101"/>
         <source>Settings Changed</source>
-        <translation>设置已更改<byte value="x9"/></translation>
+        <translation>设置已更改</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="1102"/>
         <source>Your repositories have changed.
 Do you want to Update Your Database?</source>
-        <translation>你的仓库已改变，你想更新你的数据库吗?</translation>
+        <translation>您的仓库已改变，您想更新您的数据库吗?</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="1185"/>
         <source>Mirror Format is incorrect. Your mirror should look like this:
 http://mirror.org/$repo/os/i686</source>
         <comment>Obviously keep the example as it is ;)</comment>
-        <translation>镜像格式不正确，你<byte value="x9"/>的镜像格式应该如下 :
+        <translation>镜像格式不正确，您的镜像格式应该如下 :
 http://mirror.org/$repo/os/i686</translation>
     </message>
     <message>
@@ -750,19 +750,19 @@ It is now available in mirrorlist.</source>
         <location filename="../src/configDialog.cpp" line="1319"/>
         <source>Sync was successfully executed!!</source>
         <comment>Sync is always the command</comment>
-        <translation>Sync was successfully executed!!</translation>
+        <translation>Sync 执行成功 !!</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="1324"/>
         <source>Sync could not be executed!</source>
         <comment>Sync is always the command</comment>
-        <translation>同步无法执行 !</translation>
+        <translation>Sync 无法执行 !</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="1325"/>
         <source>Sync could not be executed!!</source>
         <comment>Sync is always the command</comment>
-        <translation>同步无法执行 !!</translation>
+        <translation>Sync 无法执行 !!</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="194"/>
@@ -850,7 +850,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/configDialog.ui" line="800"/>
         <source>Process all dependencies and queue from binary first (recommended)</source>
-        <translation>从二进制文件优先处理所有依赖关系和队列 (recommended)</translation>
+        <translation>优先从二进制文件处理所有依赖关系和队列 (recommended)</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="374"/>
@@ -891,7 +891,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/configDialog.ui" line="980"/>
         <source>Show tray notification Windows</source>
-        <translation>Show tray notification Windows</translation>
+        <translation>显示托盘窗口消息</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1024"/>
@@ -921,7 +921,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/configDialog.ui" line="1118"/>
         <source>Use Shaman RSS Capabilities</source>
-        <translation>使用 Shaman RSS Capabilities</translation>
+        <translation>使用Shaman RSS 功能</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1130"/>
@@ -931,7 +931,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/configDialog.ui" line="1144"/>
         <source>Notify upon new items</source>
-        <translation>Notify upon new items</translation>
+        <translation>通知新的项目</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1151"/>
@@ -941,12 +941,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/configDialog.ui" line="1187"/>
         <source>Interface</source>
-        <translation>接口</translation>
+        <translation>Interface</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1193"/>
         <source>Start Shaman Automatically on X Startup</source>
-        <translation>启动X时自动启动Shaman</translation>
+        <translation>启动X时自动运行Shaman</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1200"/>
@@ -968,7 +968,7 @@ p, li { white-space: pre-wrap; }
         <source>Mirror Format is incorrect. Your mirror should look like this:
 http://mirror.org/$repo/$arch</source>
         <comment>Obviously keep the example as it is ;)</comment>
-        <translation>镜像格式不正确，你<byte value="x9"/>的镜像格式应该如下 : http://mirror.org/$repo/$arch</translation>
+        <translation>镜像格式不正确，您的镜像格式应该如下 :  http://mirror.org/$repo/$arch</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="1264"/>
@@ -998,7 +998,7 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Bitstream Vera Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Shaman 维护。&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Shaman 维护.&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;请从下拉菜单中选择一个操作。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
@@ -1019,7 +1019,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/configDialog.ui" line="840"/>
         <source>RSync Server:</source>
-        <translation>RSync 服务器:<byte value="x9"/></translation>
+        <translation>RSync 服务器:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1011"/>
@@ -1052,7 +1052,7 @@ Do you want to save it?</source>
     <message>
         <location filename="../ui/MainWindow.ui" line="61"/>
         <source>All packages</source>
-        <translation>所有软件包<byte value="x9"/></translation>
+        <translation>所有的软件包</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="66"/>
@@ -1137,7 +1137,7 @@ Do you want to save it?</source>
     <message>
         <location filename="../ui/MainWindow.ui" line="337"/>
         <source>Install selected package</source>
-        <translation>安装选择的软件包</translation>
+        <translation>安装已选择的软件包</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="914"/>
@@ -1157,7 +1157,7 @@ Do you want to save it?</source>
     <message>
         <location filename="../ui/MainWindow.ui" line="377"/>
         <source>Complete Remove selected package (pacman -Rcs)</source>
-        <translation>Complete Remove selected package (pacman -Rcs)</translation>
+        <translation>彻底卸载已选择的软件包 (pacman -Rcs)</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="380"/>
@@ -1167,7 +1167,7 @@ Do you want to save it?</source>
     <message>
         <location filename="../ui/MainWindow.ui" line="397"/>
         <source>Cancel action for selected package</source>
-        <translation>取消对选择软件包的操作</translation>
+        <translation>取消对已选择软件包的操作</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="400"/>
@@ -1197,12 +1197,12 @@ Do you want to save it?</source>
     <message>
         <location filename="../ui/MainWindow.ui" line="554"/>
         <source>Help</source>
-        <translation type="obsolete">帮助<byte value="x9"/></translation>
+        <translation type="obsolete">帮助</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="560"/>
         <source>Actions</source>
-        <translation type="obsolete">动作</translation>
+        <translation type="obsolete">操作</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="568"/>
@@ -1217,7 +1217,7 @@ Do you want to save it?</source>
     <message>
         <location filename="../ui/MainWindow.ui" line="643"/>
         <source>Package Repositories</source>
-        <translation type="obsolete">软件包<byte value="x9"/>仓库</translation>
+        <translation type="obsolete">软件包仓库</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="647"/>
@@ -1247,7 +1247,7 @@ Do you want to save it?</source>
     <message>
         <location filename="../ui/MainWindow.ui" line="695"/>
         <source>Update ABS Tree</source>
-        <translation>更新 ABS<byte value="x9"/>Tree</translation>
+        <translation>更新 ABS Tree</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="704"/>
@@ -1286,16 +1286,16 @@ To close it, click Quit in the file menu or in the tray icon context menu.
 While in the System Tray, Shaman will update your Databases
 at a regular interval and notify you about available upgrades.
 You can change this behaviour in Settings.</source>
-        <translation>Shaman will keep running in the system tray.
-To close it, click Quit in the file menu or in the tray icon context menu.
-While in the System Tray, Shaman will update your Databases
-at a regular interval and notify you about available upgrades.
-You can change this behaviour in Settings.</translation>
+        <translation>Shaman以在系统托盘的形式运行，
+要使它关闭, 在文件菜单栏或者托盘图标菜单中单击退出。
+以系统托盘形式运行时, Shaman会更新你的数据库
+以特定的间隔，然后通知您可用的更新。
+您可以在设置里面改变这种行为。</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="218"/>
         <source>Shaman - Reducing To Tray</source>
-        <translation>Shaman - Reducing To Tray</translation>
+        <translation>Shaman - 缩小到托盘</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="2040"/>
@@ -1305,7 +1305,7 @@ You can change this behaviour in Settings.</translation>
     <message>
         <location filename="../src/MainWindow.cpp" line="1295"/>
         <source>Shaman - Idle (Upgrades Available)</source>
-        <translation type="obsolete">Shaman - Idle (Upgrades Available)</translation>
+        <translation type="obsolete">Shaman - Idle (可用的更新)</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1440"/>
@@ -1316,20 +1316,20 @@ You can change this behaviour in Settings.</translation>
         <location filename="../src/MainWindow.cpp" line="878"/>
         <source>There is %1 upgradeable package.
 Click here to upgrade your System.</source>
-        <translation type="obsolete">这里有  %1 可更新的软件包，
-点击这里来更新你的系统<byte value="x9"/>。</translation>
+        <translation type="obsolete">有  %1 可更新的软件包。
+点击这里来更新您的系统。</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="878"/>
         <source>There are %1 upgradeable packages.
 Click here to upgrade your System.</source>
-        <translation type="obsolete">这里有  %1 可更新的软件包，
-点击这里来更新你的系统<byte value="x9"/>。</translation>
+        <translation type="obsolete">有  %1 个可更新的软件包，
+点击这里来更新你的系统。</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="477"/>
         <source>All Repositories</source>
-        <translation>所有的仓库<byte value="x9"/></translation>
+        <translation>所有的仓库</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="480"/>
@@ -1344,7 +1344,7 @@ Click here to upgrade your System.</source>
     <message>
         <location filename="../src/MainWindow.cpp" line="941"/>
         <source>Mark for Reinstallation</source>
-        <translation type="obsolete">标记以<byte value="x9"/>便重新安装</translation>
+        <translation type="obsolete">标记以便重新安装</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="2035"/>
@@ -1369,7 +1369,7 @@ Click here to upgrade your System.</source>
     <message>
         <location filename="../src/MainWindow.cpp" line="717"/>
         <source>Installed</source>
-        <translation>安装</translation>
+        <translation>已安装</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="719"/>
@@ -1403,12 +1403,12 @@ Last error reported was:
     <message>
         <location filename="../src/MainWindow.cpp" line="857"/>
         <source>Database Update</source>
-        <translation>数据库更新<byte value="x9"/></translation>
+        <translation>更新数据库</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="859"/>
         <source>Databases Updated Successfully</source>
-        <translation>数据库更新成功</translation>
+        <translation>成功更新数据库</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="947"/>
@@ -1418,7 +1418,7 @@ Last error reported was:
     <message>
         <location filename="../src/MainWindow.cpp" line="920"/>
         <source>Cancel Action</source>
-        <translation type="obsolete">取消动作</translation>
+        <translation type="obsolete">取消操作</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="998"/>
@@ -1455,7 +1455,7 @@ Please wait.</source>
     <message>
         <location filename="../src/MainWindow.cpp" line="1740"/>
         <source>Queue Processed</source>
-        <translation>Queue Processed</translation>
+        <translation>处理队列</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1738"/>
@@ -1485,7 +1485,7 @@ Please wait.</source>
     <message>
         <location filename="../src/MainWindow.cpp" line="1485"/>
         <source>Your Queue is about to be processed. You are going to:&lt;br /&gt;</source>
-        <translation type="obsolete">Your Queue is about to be processed. You are going to:&lt;br /&gt;</translation>
+        <translation type="obsolete">你的队列即将被处理， 你可以:&lt;br /&gt;</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1487"/>
@@ -1520,7 +1520,7 @@ Please wait.</source>
     <message>
         <location filename="../src/MainWindow.cpp" line="1904"/>
         <source>Arch Linux Packages (*.pkg.tar.gz)</source>
-        <translation>Arch Linux<byte value="x9"/>软件包<byte value="x9"/>(*.pkg.tar.gz)</translation>
+        <translation>Arch Linux 软件包(*.pkg.tar.gz)</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1913"/>
@@ -1540,17 +1540,17 @@ building feature. Do you want to install it now?</source>
         <location filename="../src/MainWindow.cpp" line="1746"/>
         <source>You can not remove packages when processing
 your queue from Source</source>
-        <translation type="obsolete">You can not remove packages when processing
-your queue from Source</translation>
+        <translation type="obsolete">当从源文件处理队列时，你将无法卸载软件包
+</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1775"/>
         <source>Some of your packages do not belong to Arch
 Linux&apos;s official repository. Shaman is able to
 build packages from official sources only.</source>
-        <translation type="obsolete">Some of your packages do not belong to Arch
-Linux&apos;s official repository. Shaman is able to
-build packages from official sources only.</translation>
+        <translation type="obsolete">你的一些软件包不属于Arch
+Linux&apos;s 官方 仓库， Shaman 只能从官方源文件
+编译软件包。</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1809"/>
@@ -1560,7 +1560,7 @@ build packages from official sources only.</translation>
     <message>
         <location filename="../src/MainWindow.cpp" line="1815"/>
         <source>You are about to install &lt;b&gt;%1 packages&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
-        <translation type="obsolete">You are about to install &lt;b&gt;%1 packages&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</translation>
+        <translation type="obsolete">您将安装 &lt;b&gt;%1 软件包&lt;/b&gt; 从源文件。从源文件编译&lt;br&gt;能够获取某些优点。&lt;br&gt;但是编译时很慢&lt;br&gt;如果您不太确定， 最好选择处理&lt;br&gt;你的队列从二进制文件。在你继续之前&lt;br&gt;最好查看下你的配置以便改善编译的效果。</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1987"/>
@@ -1576,13 +1576,13 @@ build packages from official sources only.</translation>
         <location filename="../src/MainWindow.cpp" line="1924"/>
         <source>Your packages Failed to Build.
 Look at the output for more details.</source>
-        <translation type="obsolete">软件包编译失败 !请查看输出获得更多信息。
-</translation>
+        <translation type="obsolete">软件包编译失败 !
+请查看输出获得更多信息。</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1962"/>
         <source>Close</source>
-        <translation type="obsolete">关闭</translation>
+        <translation type="obsolete">关闭r</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1952"/>
@@ -1593,7 +1593,8 @@ Look at the output for more details.</source>
         <location filename="../src/MainWindow.cpp" line="1955"/>
         <source>Some packages failed to build.
 Do you want to proceed anyway?</source>
-        <translation type="obsolete">某些软件包编译失败，无论如何你要处理它吗 ?</translation>
+        <translation type="obsolete">某些软件包编译失败，
+无论如何你要处理它吗 ?</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1982"/>
@@ -1619,25 +1620,25 @@ Do you want to proceed anyway?</source>
         <location filename="../src/MainWindow.cpp" line="1862"/>
         <source>%1 GiB</source>
         <comment>Size is in Gib</comment>
-        <translation type="obsolete">%1 Gb</translation>
+        <translation type="obsolete">%1 Gib</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1864"/>
         <source>%1 MiB</source>
         <comment>Size is in MiB</comment>
-        <translation type="obsolete">%1 Mb</translation>
+        <translation type="obsolete">%1 Mib</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1866"/>
         <source>%1 KiB</source>
         <comment>Size is in KiB</comment>
-        <translation type="obsolete">%1 Kb</translation>
+        <translation type="obsolete">%1 Kib</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1868"/>
         <source>%1 Bytes</source>
         <comment>Size is in Bytes</comment>
-        <translation type="obsolete">%1 Bits</translation>
+        <translation type="obsolete">%1 Bytes</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="713"/>
@@ -1661,7 +1662,7 @@ Do you want to proceed anyway?</source>
 to avoid version conflicts.
 Do you want to Upgrade Pacman now?</source>
         <translation>Pacman可更新。最好是单独处理它以便避免版本冲突，
-你现在愿意更新Paman吗?</translation>
+您现在愿意更新Paman吗?</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1485"/>
@@ -1673,8 +1674,8 @@ Do you want to Upgrade Pacman now?</source>
         <source>Shaman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Shaman now?</source>
-        <translation>Pacman可更新。最好是单独处理它以便避免版本冲突，
-你现在愿意更新Paman吗?</translation>
+        <translation>Shaman可更新。最好是单独处理它以便避免版本冲突，
+您现在愿意更新Shaman吗?</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1728"/>
@@ -1691,7 +1692,7 @@ please restart it to use the new version</source>
     <message>
         <location filename="../src/MainWindow.cpp" line="1986"/>
         <source>Library Question</source>
-        <translation>Library Question</translation>
+        <translation>库问题</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1858"/>
@@ -1708,10 +1709,10 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Une application libalpm en Qt&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;A libalpm frontend in Qt&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Licence: GPLv2+&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Version de libalpm: v.%1&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;License: GPLv2+&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Libalpm Version: v.%1&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf54321@yahoo.it&amp;gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;l.appelhans@gmx.de&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
@@ -1724,7 +1725,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/MainWindow.cpp" line="727"/>
         <source>Version in the Repository: </source>
-        <translation>仓库里的版本: </translation>
+        <translation>仓库里的版本 : </translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1487"/>
@@ -1741,7 +1742,7 @@ was not successfully processed</source>
     <message>
         <location filename="../src/MainWindow.cpp" line="1788"/>
         <source>News Alert</source>
-        <translation>新的警告</translation>
+        <translation>News Alert</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1789"/>
@@ -1754,8 +1755,8 @@ Do you want to read it?</source>
         <location filename="../src/MainWindow.cpp" line="1729"/>
         <source>Your Kernel has been updated.
 Please restart your PC soon to load the new Kernel.</source>
-        <translation>你的内核已经更新，
-请重启你的电脑以便加载<byte value="x9"/>新的内核。</translation>
+        <translation>您的内核已经更新，
+请重启您的电脑以便加载新的内核。</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="580"/>
@@ -1765,7 +1766,7 @@ Please restart your PC soon to load the new Kernel.</source>
     <message>
         <location filename="../ui/MainWindow.ui" line="740"/>
         <source>Read News</source>
-        <translation>阅读消息</translation>
+        <translation>阅读新闻</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="749"/>
@@ -1782,7 +1783,7 @@ was not successfully processed</source>
     <message>
         <location filename="../src/MainWindow.cpp" line="850"/>
         <source>One or more databases failed to update!</source>
-        <translation>一个或多个数据库无法更新 !</translation>
+        <translation>一个或多个数据库更新失败 !</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1688"/>
@@ -1803,6 +1804,11 @@ Do you want to install %1 anyway?</source>
 您无论如何也要安装%1吗?</translation>
     </message>
     <message>
+        <location filename="../ui/MainWindow.ui" line="552"/>
+        <source>&amp;File</source>
+        <translation>&amp;文件</translation>
+    </message>
+    <message>
         <location filename="../ui/MainWindow.ui" line="558"/>
         <source>&amp;Help</source>
         <translation>&amp;帮助</translation>
@@ -1820,12 +1826,12 @@ Do you want to install %1 anyway?</source>
     <message>
         <location filename="../ui/MainWindow.ui" line="247"/>
         <source>Re&amp;positories</source>
-        <translation>Re&amp;positories</translation>
+        <translation>&amp;仓库</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="270"/>
         <source>Package &amp;Groups</source>
-        <translation>Package &amp;Groups</translation>
+        <translation>软件包&amp;组</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="340"/>
@@ -1879,12 +1885,16 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf@kdemod.ath.cx&amp;gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../ui/MainWindow.ui" line="552"/>
-        <source>&amp;File</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;A libalpm frontend in Qt&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;License: GPLv2+&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Libalpm Version: v.%1&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf@kdemod.ath.cx&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -1927,24 +1937,24 @@ p, li { white-space: pre-wrap; }
         <location filename="../src/PackageProperties.cpp" line="48"/>
         <source>%1 MiB</source>
         <comment>Size is in MiB</comment>
-        <translation>%1 Mb</translation>
+        <translation>%1 Mib</translation>
     </message>
     <message>
         <location filename="../src/PackageProperties.cpp" line="50"/>
         <source>%1 KiB</source>
         <comment>Size is in KiB</comment>
-        <translation>%1 Kb</translation>
+        <translation>%1 Kib</translation>
     </message>
     <message>
         <location filename="../src/PackageProperties.cpp" line="52"/>
         <source>%1 Bytes</source>
         <comment>Size is in Bytes</comment>
-        <translation>%1 Bits</translation>
+        <translation>%1 Bytes</translation>
     </message>
     <message>
         <location filename="../src/PackageProperties.cpp" line="68"/>
         <source>Shaman - %1 properties</source>
-        <translation>属性 Shaman - %1</translation>
+        <translation>Shaman - %1 属性</translation>
     </message>
     <message>
         <location filename="../src/PackageProperties.cpp" line="89"/>
@@ -1964,8 +1974,8 @@ p, li { white-space: pre-wrap; }
         <location filename="../src/main.cpp" line="117"/>
         <source>You have to be root to run Shaman.
 Please restart it with root privileges.</source>
-        <translation type="obsolete">Vous devez être root pour lancer Shaman.
-SVP, redémarrer avec les privilièges root.</translation>
+        <translation type="obsolete">您必须以root身份运行Shaman,
+请用root权限重新启动Shaman</translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="334"/>
@@ -1976,8 +1986,8 @@ SVP, redémarrer avec les privilièges root.</translation>
         <location filename="../src/main.cpp" line="244"/>
         <source>There was a problem while testing libalpm.
 Maybe another application has a lock on it.</source>
-        <translation>Il y a eu un problème pendant le test libalpm.
-Une autre application l&apos;utilise peut-être.</translation>
+        <translation>测试libalpm时出现问题。
+也许是另外一个应用程序锁定它了。</translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="262"/>
@@ -2013,9 +2023,9 @@ Thanks again, and enjoy your translation!</comment>
         <source>Pacman is not updated.
 Shaman needs libalpm &gt;= 2.1.0 to run.
 Yours is %1. Please update Pacman.</source>
-        <translation>Pacman n&apos;a pas été mis à jour.
-Shaman requiert libalpm &gt;= 2.1.0 pour fonctionner.
-Votre version est %1. Mettez à jour Pacman, SVP.</translation>
+        <translation>Pacman 没有被更新。
+Shaman 要求 libalpm &gt;= 2.1.0 才能运行。
+你的版本是 %1. 请更新Pacman。</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="856"/>
@@ -2036,7 +2046,7 @@ Votre version est %1. Mettez à jour Pacman, SVP.</translation>
         <location filename="../src/main.cpp" line="263"/>
         <source>Your settings file seems unwritable.
 Please check permissions on it.</source>
-        <translation>你的设置文件好像不可读，
+        <translation>您的设置文件好像不可读，
 请您检查它的权限。</translation>
     </message>
     <message>
@@ -2044,23 +2054,23 @@ Please check permissions on it.</source>
         <source>You have started Shaman as root.
 It is advised to start it as unprivileged user.
 Shaman will ask you for root password when needed.</source>
-        <translation>You have started Shaman as root.
-It is advised to start it as unprivileged user.
-Shaman will ask you for root password when needed.</translation>
+        <translation>您以root身份启动Shaman,
+建议使用非特权用户启动。
+需要时Shaman将会询问root密码。</translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="223"/>
         <source>It looks like another copy of Shaman is running.
 You can only run one copy of Shaman at a time.</source>
-        <translation>It looks like another copy of Shaman is running.
-You can only run one copy of Shaman at a time.</translation>
+        <translation>看起来另外一个Shaman正在运行，
+您仅能够在同一时间内运行一个Shaman。</translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="316"/>
         <source>Shaman can not be started as root.
 Please restart it as unprivileged user.</source>
-        <translation>Shaman can not be started as root.
-Please restart it as unprivileged user.</translation>
+        <translation>Shaman不能够以root身份启动，
+请使用非特权用户重新启动它。</translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="239"/>
@@ -2095,7 +2105,7 @@ for more details.</translation>
     <message>
         <location filename="../src/ShamanDialog.cpp" line="146"/>
         <source>&amp;No</source>
-        <translation>&amp;否</translation>
+        <translation>&amp;确定</translation>
     </message>
     <message>
         <location filename="../src/ShamanDialog.cpp" line="228"/>
@@ -2143,7 +2153,7 @@ for more details.</translation>
     <message>
         <location filename="../src/QueueDialog.cpp" line="154"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Installation Started&lt;/b&gt;&lt;br&gt;</source>
-        <translation>&lt;br&gt;&lt;b&gt; * 软件包开始安装&lt;/b&gt;&lt;br&gt;</translation>
+        <translation>&lt;br&gt;&lt;b&gt; * L&apos;软件包开始安装&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="158"/>
@@ -2158,17 +2168,17 @@ for more details.</translation>
     <message>
         <location filename="../src/QueueDialog.cpp" line="199"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Removal Started&lt;/b&gt;&lt;br&gt;</source>
-        <translation>&lt;br&gt;&lt;b&gt; *开始卸载软件包&lt;/b&gt;&lt;br&gt;</translation>
+        <translation>&lt;br&gt;&lt;b&gt; * 开始卸载软件包&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="203"/>
         <source>Removing %1...</source>
-        <translation>正在卸载%1...</translation>
+        <translation>正在卸载 %1...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="232"/>
         <source>%1 (%2) removed successfully!</source>
-        <translation>%1 (%2) 卸载成功!</translation>
+        <translation>%1 (%2)  卸载成功!</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="244"/>
@@ -2234,12 +2244,12 @@ for more details.</translation>
         <location filename="../src/QueueDialog.cpp" line="371"/>
         <source>%p% (%1 KB/s, %4:%5:%6 remaining)</source>
         <comment>You just have to translate &apos;remaining&apos; here. Leave everything else as it is.</comment>
-        <translation>%p% (%1 KB/s, %4:%5:%6 restant)</translation>
+        <translation>%p% (%1 KB/s, %4:%5:%6 剩余)</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="379"/>
         <source>Downloading %1... (%2 MB of %3 MB)</source>
-        <translation>正在下载%1... (%2 MB of %3 MB)</translation>
+        <translation>正在下载 %1... (%2 MB of %3 MB)</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="382"/>
@@ -2254,7 +2264,7 @@ for more details.</translation>
     <message>
         <location filename="../src/QueueDialog.cpp" line="386"/>
         <source>Executing pre_install scriptlet...</source>
-        <translation type="obsolete">执行 pre_install scriptlet......</translation>
+        <translation type="obsolete">执行 pre_install scriptlet...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="390"/>
@@ -2264,22 +2274,22 @@ for more details.</translation>
     <message>
         <location filename="../src/QueueDialog.cpp" line="394"/>
         <source>Executing pre_remove scriptlet...</source>
-        <translation type="obsolete">执行 pre_remove scriptlet......</translation>
+        <translation type="obsolete">执行 pre_remove scriptlet...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="398"/>
         <source>Executing post_install scriptlet...</source>
-        <translation type="obsolete">执行  post_install scriptlet...</translation>
+        <translation type="obsolete">执行 post_install scriptlet...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="402"/>
         <source>Executing post_upgrade scriptlet...</source>
-        <translation type="obsolete">执行  post_upgrade scriptlet...</translation>
+        <translation type="obsolete">执行 post_upgrade scriptlet...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="406"/>
         <source>Executing post_remove scriptlet...</source>
-        <translation type="obsolete">执行  post_remove scriptlet...</translation>
+        <translation type="obsolete">执行 post_remove scriptlet...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="493"/>
@@ -2289,22 +2299,22 @@ for more details.</translation>
     <message>
         <location filename="../src/QueueDialog.cpp" line="557"/>
         <source>Extracting Scriptlet from package failed!!</source>
-        <translation>Extracting Scriptlet from package failed !!</translation>
+        <translation>Extracting Scriptlet from package failed!!</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="685"/>
         <source>Scriptlet processed successfully!</source>
-        <translation>Scriptlet processed successfully!</translation>
+        <translation>Script 处理成功!</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="637"/>
         <source>Scriptlet not found in this stage, or error processing it!</source>
-        <translation type="obsolete">Scriptlet not found in this stage, or error processing it!</translation>
+        <translation type="obsolete">Script在这阶段没有找到, 或者处理时出现错误!</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="500"/>
         <source>Executing %1 scriptlet for %2...</source>
-        <translation>执行  %1 scriptlet for %2...</translation>
+        <translation>执行 %1 scriptlet for %2...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="567"/>
@@ -2314,7 +2324,7 @@ for more details.</translation>
     <message>
         <location filename="../src/QueueDialog.cpp" line="691"/>
         <source>Error processing Scriptlet!!</source>
-        <translation>Error processing Scriptlet!!</translation>
+        <translation>处理Scriptlet错误!!</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="864"/>
@@ -2354,8 +2364,8 @@ for more details.</translation>
         <location filename="../src/QueueDialog.cpp" line="778"/>
         <source>Would you like to abort Queue Processing?
 This may damage your system.</source>
-        <translation>你真的要中止队列处理吗?
-这也许会损坏你的系统。</translation>
+        <translation>您真的要中止队列处理吗?
+这也许会损坏您的系统。</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="839"/>
@@ -2409,12 +2419,12 @@ p, li { white-space: pre-wrap; }
         <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Review Queue&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;查看队列&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/reviewQueueDialog.ui" line="45"/>
         <source>Keep Queue Dialog Open after the Queue is finished</source>
-        <translation>Keep Queue Dialog Open after the Queue is finished</translation>
+        <translation>队列完成后保持队列对话框</translation>
     </message>
 </context>
 <context>
@@ -2452,12 +2462,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/ReviewQueueDialog.cpp" line="83"/>
         <source>Complete Uninstall</source>
-        <translation>全部卸载</translation>
+        <translation>彻底卸载</translation>
     </message>
     <message>
         <location filename="../src/ReviewQueueDialog.cpp" line="109"/>
         <source>Your Queue is about to be processed. You are going to:&lt;br /&gt;</source>
-        <translation>你的队列即将别处理，你将做 :&lt;br /&gt;</translation>
+        <translation>你的队列即将被处理，你将做 :&lt;br /&gt;</translation>
     </message>
     <message>
         <location filename="../src/ReviewQueueDialog.cpp" line="111"/>
@@ -2482,7 +2492,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/ReviewQueueDialog.cpp" line="116"/>
         <source>Do you wish to continue?</source>
-        <translation>你真的要继续吗?</translation>
+        <translation>您真的要继续吗?</translation>
     </message>
     <message>
         <location filename="../src/ReviewQueueDialog.cpp" line="114"/>
@@ -2492,7 +2502,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/ReviewQueueDialog.cpp" line="115"/>
         <source>&lt;b&gt;%1&lt;/b&gt; will be freed</source>
-        <translation>&lt;b&gt;%1&lt;/b&gt;will be freed</translation>
+        <translation> &lt;b&gt;%1&lt;/b&gt;will be freed</translation>
     </message>
 </context>
 <context>
@@ -2500,22 +2510,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/ShamanStatusBar.cpp" line="81"/>
         <source>%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages</source>
-        <translation>%1 可用的软件包, %2 安装的软件包, %3 可更新的软件包</translation>
+        <translation>可用的软件包%1个, 已安装的软件包%2个, 可更新的软件包%3个</translation>
     </message>
     <message>
         <location filename="../src/ShamanStatusBar.cpp" line="107"/>
         <source>%1 will be used</source>
-        <translation>%1 将被使用</translation>
+        <translation>将被使用%1个</translation>
     </message>
     <message>
         <location filename="../src/ShamanStatusBar.cpp" line="114"/>
         <source>%1 will be freed</source>
-        <translation>%1 will be freed</translation>
+        <translation>will be freed%1个</translation>
     </message>
     <message>
         <location filename="../src/ShamanStatusBar.cpp" line="119"/>
         <source>%1 to be Installed, %2 to be Removed</source>
-        <translation>%1 需要安装，%2需要卸载</translation>
+        <translation>需要安装%1个,  需要卸载%2个</translation>
     </message>
 </context>
 <context>
@@ -2558,7 +2568,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/ShamanTrayIcon.cpp" line="122"/>
         <source>Shaman - Idle (Upgrades Available)</source>
-        <translation>Shaman - Idle (可更新的)</translation>
+        <translation>Shaman - Idle (可用的更新)</translation>
     </message>
     <message>
         <location filename="../src/ShamanTrayIcon.cpp" line="127"/>
@@ -2588,7 +2598,7 @@ Click here to upgrade your System.</source>
         <location filename="../src/ShamanTrayIcon.cpp" line="244"/>
         <source>There are new news available.
 Click here to review them.</source>
-        <translation>有可用的新闻，
+        <translation>有新的可用的新闻，
 点击这里来阅读它。</translation>
     </message>
     <message>
@@ -2609,17 +2619,22 @@ Click here to open the News Dialog for more details.</source>
     <message>
         <location filename="../src/SysUpgradeDialog.cpp" line="54"/>
         <source>There is &lt;b&gt;%1 upgradeable package&lt;/b&gt;. You can either&lt;br&gt; upgrade immediately or add it to the current Queue&lt;br&gt; and process it later.</source>
-        <translation>有 &lt;b&gt;%1 可更新的软件包&lt;/b&gt;. 你可以&lt;br&gt; 立即更新或者添加至当前队列&lt;br&gt; 稍后处理它.</translation>
+        <translation>有 &lt;b&gt;%1 可更新的软件包&lt;/b&gt;. 您可以&lt;br&gt; 立即更新或者添加到当前队列&lt;br&gt; 稍后处理它。</translation>
     </message>
     <message>
         <location filename="../src/SysUpgradeDialog.cpp" line="57"/>
-        <source>There are &lt;b&gt;%1 upgradeable packages&lt;/b&gt;. You can either&lt;br&gt; upgrade immediately or add them to the current Queue&lt;br&gt; and process them later.</source>
-        <translation>有 &lt;b&gt;%1 可更新的软件包&lt;/b&gt;. 你可以&lt;br&gt; 立即更新或者添加至当前队列&lt;br&gt; 稍后处理它。</translation>
+        <source>? &lt;b&gt;%1 upgradeable packages&lt;/b&gt;. You can either&lt;br&gt; upgrade immediately or add them to the current Queue&lt;br&gt; and process them later.</source>
+        <translation type="obsolete">有 &lt;b&gt;%1 可更新的软件包&lt;/b&gt;. 你可以&lt;br&gt; 立即更新或者添加至当前队列&lt;br&gt; 稍后处理它。</translation>
     </message>
     <message>
         <location filename="../src/SysUpgradeDialog.cpp" line="59"/>
         <source>To be Upgraded</source>
         <translation>需要更新</translation>
+    </message>
+    <message>
+        <location filename="../src/SysUpgradeDialog.cpp" line="57"/>
+        <source>There are &lt;b&gt;%1 upgradeable packages&lt;/b&gt;. You can either&lt;br&gt; upgrade immediately or add them to the current Queue&lt;br&gt; and process them later.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2851,7 +2866,7 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shaman 1.0 Beta (version 651)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shaman 1.0 Beta (revision 651)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/aboutDialog.ui" line="172"/>
@@ -2943,7 +2958,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/aboutDialog.ui" line="232"/>
         <source>Visit &amp;Website...</source>
-        <translation>访问&amp;网站...</translation>
+        <translation>访问 &amp;网站...</translation>
     </message>
     <message>
         <location filename="../ui/aboutDialog.ui" line="68"/>
@@ -2957,6 +2972,99 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shaman 1.0 Beta (revision 721)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../ui/aboutDialog.ui" line="172"/>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Shaman has received a lot of help from a lot of people, and it is also thanks to them if Shaman has seen the light. If we forgot to add you here, let us know.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Names are in alphabetical order, because even the smallest contribution has been important to us.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;The KDEmod Community&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Help, Testing, Support, everything started from here. If there was no KDEmod, probably&lt;/span&gt; &lt;span style=&quot; font-weight:400;&quot;&gt;there would be no Shaman&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Giannis Antoniou&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Greek Translator&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Carlos Berroteran&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Spanish Translator&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Jacques Disner&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;French Translator&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Stefano Giro&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Testing and Suggestions&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Georg Grabler&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Author of the Proxy patch, some help on the code and more.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Michael Knights&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Artwork creator, his icon proposal lies now in Arxin, but his splashscreen is in here ;)&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Till Luge&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Heavy tester, thanks!&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Rodrigo Mazak&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Brazilian Translator, and gave the name Shaman&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;Jan Mette&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;German Translation and KDEmod Developer, also the creator of the Icon&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Atilla Ontas&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Turkish Translator&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Martin Sandsmark&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Our hoster, and maintainer of Trac.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Johannes Schriewer&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;KDEmod Developer, and also some help on the code.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Shaman has received a lot of help from a lot of people, and it is also thanks to them if Shaman has seen the light. If we forgot to add you here, let us know.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Names are in alphabetical order, because even the smallest contribution has been important to us.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;The KDEmod Community&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Help, Testing, Support, everything started from here. If there was no KDEmod, probably&lt;/span&gt; &lt;span style=&quot; font-weight:400;&quot;&gt;there would be no Shaman&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Giannis Antoniou&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Greek Translator&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Carlos Berroteran&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Spanish Translator&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Jacques Disner&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;French Translator&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Stefano Giro&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Testing and Suggestions&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Georg Grabler&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Author of the Proxy patch, some help on the code and more.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Michael Knights&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Artwork creator, his icon proposal lies now in Arxin, but his splashscreen is in here ;)&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Till Luge&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Heavy tester, thanks!&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Rodrigo Mazak&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Brazilian Translator, and gave the name Shaman&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;Jan Mette&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;German Translation and KDEmod Developer, also the creator of the Icon&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Atilla Ontas&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Turkish Translator&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Martin Sandsmark&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Our hoster, and maintainer of Trac.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Johannes Schriewer&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;KDEmod Developer, and also some help on the code.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/aboutDialog.ui" line="172"/>
@@ -3062,7 +3170,7 @@ p, li { white-space: pre-wrap; }
         <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;编译 软件包...&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;编译软件包...&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/buildingDialog.ui" line="467"/>
@@ -3085,7 +3193,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/dbUpdateDialog.ui" line="13"/>
         <source>Database Update</source>
-        <translation>更新数据库<byte value="x9"/></translation>
+        <translation>更新数据库</translation>
     </message>
     <message>
         <location filename="../ui/dbUpdateDialog.ui" line="401"/>
@@ -3194,7 +3302,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/newsDialog.ui" line="13"/>
         <source>Arch Linux News</source>
-        <translation>Arch Linux新闻</translation>
+        <translation>Arch Linux 新闻</translation>
     </message>
     <message>
         <location filename="../ui/newsDialog.ui" line="52"/>
@@ -3256,7 +3364,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/pkgProperties.ui" line="100"/>
         <source>Package Information</source>
-        <translation>软件包信息<byte value="x9"/></translation>
+        <translation>软件包信息</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="106"/>
@@ -3365,7 +3473,7 @@ p, li { white-space: pre-wrap; }
         <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Build Queue From Source&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;源代码编译队列&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="85"/>
@@ -3469,7 +3577,7 @@ p, li { white-space: pre-wrap; }
         <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Process Queue&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;处理队列&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
