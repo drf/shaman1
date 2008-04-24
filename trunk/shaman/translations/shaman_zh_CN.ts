@@ -119,7 +119,7 @@ All Process will be lost.</source>
         <location filename="../src/BuildingHandler.cpp" line="87"/>
         <source>You need to have ABS installed to use Shaman&apos;s
 building feature. Do you want to install it now?</source>
-        <translation>你需要安装ABS才能够使用Shaman的编译功能.&apos;
+        <translation>您需要安装ABS才能够使用Shaman的编译功能.&apos;
 现在就安装ABS吗 ?</translation>
     </message>
     <message>
@@ -145,22 +145,22 @@ Linux&apos;s官方仓库。 Shaman 仅仅只能
     <message>
         <location filename="../src/BuildingHandler.cpp" line="165"/>
         <source>You are about to install &lt;b&gt;%1 package&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
-        <translation>你将安装 &lt;b&gt;%1 软件包&lt;/b&gt; 从源文件。从源文件编译&lt;br&gt;能够获得一些高级特征, 但是编译过程是很慢的。&lt;br&gt;如果你不确定, 你最好选择处理&lt;br&gt;你的队列从二进制文件。 在你继续之前, 建议&lt;br&gt;查看你的编译配置以便改善你的编译效果。</translation>
+        <translation>您将安装 &lt;b&gt;%1 个软件包&lt;/b&gt; 从源文件。从源文件编译&lt;br&gt;能够获得一些高级特征, 但是编译过程是很慢的。&lt;br&gt;如果您不确定, 您最好选择处理&lt;br&gt;您的队列从二进制文件。 在您继续之前, 建议&lt;br&gt;查看您的编译配置以便改善您的编译效果。</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="171"/>
         <source>You are about to install &lt;b&gt;%1 packages&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
-        <translation>你将安装 &lt;b&gt;%1 软件包&lt;/b&gt; 从源文件。从源文件编译&lt;br&gt;能够获得一些高级特征, 但是编译过程是很慢的。&lt;br&gt;如果你不确定, 你最好选择处理&lt;br&gt;你的队列从二进制文件。 在你继续之前, 建议&lt;br&gt;查看你的编译配置以便改善你的编译效果。</translation>
+        <translation>您将安装 &lt;b&gt;%1 个软件包&lt;/b&gt; 从源文件。从源文件编译&lt;br&gt;能够获得一些高级特征, 但是编译过程是很慢的。&lt;br&gt;如果您不确定, 您最好选择处理&lt;br&gt;您的队列从二进制文件。 在您继续之前, 建议&lt;br&gt;查看您的编译配置以便改善编译效果。</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="190"/>
         <source>To be Installed</source>
-        <translation>需要安装</translation>
+        <translation>将安装</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="197"/>
         <source>To be Upgraded</source>
-        <translation>需要更新</translation>
+        <translation>将更新</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="340"/>
@@ -198,7 +198,7 @@ Look at the output for more details.</source>
         <location filename="../src/BuildingHandler.cpp" line="313"/>
         <source>Some packages failed to build.
 Do you want to proceed anyway?</source>
-        <translation>某些软件包编译失败，无论如何你要处理它吗 ?</translation>
+        <translation>某些软件包编译失败，无论如何您要处理它吗 ?</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="335"/>
@@ -232,7 +232,7 @@ Do you want to proceed anyway?</source>
         <location filename="../src/callbacks.cpp" line="113"/>
         <source>%1 requires installing %2 from IgnorePkg/IgnoreGroup.
  Install anyway?</source>
-        <translation>需要安装%1个 %2个 从 IgnorePkg/IgnoreGroup.
+        <translation>%1个需要安装 %2个 从 IgnorePkg/IgnoreGroup.
        无论如何安装吗?</translation>
     </message>
     <message>
@@ -279,7 +279,7 @@ Do you want to delete it?</source>
         <location filename="../src/callbacks.cpp" line="135"/>
         <source>File %1 is corrupted.
 Do you want to delete it?</source>
-        <translation>文件 %s 损坏，
+        <translation>文件 %1 损坏，
 您想删除它吗？</translation>
     </message>
 </context>
@@ -528,7 +528,7 @@ and Pacman.</source>
     <message>
         <location filename="../ui/configDialog.ui" line="823"/>
         <source>Use supfiles that match your current repositories</source>
-        <translation>使用符合你当前仓库的supfiles</translation>
+        <translation>使用符合您当前仓库的supfiles</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="830"/>
@@ -850,7 +850,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/configDialog.ui" line="800"/>
         <source>Process all dependencies and queue from binary first (recommended)</source>
-        <translation>优先从二进制文件处理所有依赖关系和队列 (recommended)</translation>
+        <translation>优先从二进制文件处理所有依赖关系和队列 (推荐)</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="374"/>
@@ -1316,7 +1316,7 @@ You can change this behaviour in Settings.</source>
         <location filename="../src/MainWindow.cpp" line="878"/>
         <source>There is %1 upgradeable package.
 Click here to upgrade your System.</source>
-        <translation type="obsolete">有  %1 可更新的软件包。
+        <translation type="obsolete">有  %1 个可更新的软件包。
 点击这里来更新您的系统。</translation>
     </message>
     <message>
@@ -1460,32 +1460,32 @@ Please wait.</source>
     <message>
         <location filename="../src/MainWindow.cpp" line="1738"/>
         <source>Your Queue was successfully processed!</source>
-        <translation>你的队列已成功处理!</translation>
+        <translation>您的队列已成功处理!</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1742"/>
         <source>Your Queue was successfully processed!!</source>
-        <translation>你的队列已成功处理!!</translation>
+        <translation>您的队列已成功处理!!</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1449"/>
         <source>To be Installed</source>
-        <translation type="obsolete">需要安装</translation>
+        <translation type="obsolete">将安装</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1456"/>
         <source>To be Upgraded</source>
-        <translation type="obsolete">需要更新</translation>
+        <translation type="obsolete">将更新</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1470"/>
         <source>To be Removed</source>
-        <translation type="obsolete">需要卸载</translation>
+        <translation type="obsolete">将卸载</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1485"/>
         <source>Your Queue is about to be processed. You are going to:&lt;br /&gt;</source>
-        <translation type="obsolete">你的队列即将被处理， 你可以:&lt;br /&gt;</translation>
+        <translation type="obsolete">您的队列即将被处理， 您可以:&lt;br /&gt;</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1487"/>
@@ -1495,17 +1495,17 @@ Please wait.</source>
     <message>
         <location filename="../src/MainWindow.cpp" line="1487"/>
         <source>Remove &lt;b&gt;%1 packages&lt;/b&gt;&lt;br /&gt;</source>
-        <translation type="obsolete">卸载 &lt;b&gt;%1 软件包&lt;/b&gt;&lt;br /&gt;</translation>
+        <translation type="obsolete">卸载 &lt;b&gt;%1 个软件包&lt;/b&gt;&lt;br /&gt;</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1489"/>
         <source>Install/Upgrade &lt;b&gt;%1 package&lt;/b&gt;&lt;br /&gt;</source>
-        <translation type="obsolete">安装/更新 &lt;b&gt;%1 软件包&lt;/b&gt;&lt;br /&gt;</translation>
+        <translation type="obsolete">安装/更新 &lt;b&gt;%1 个软件包&lt;/b&gt;&lt;br /&gt;</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1489"/>
         <source>Install/Upgrade &lt;b&gt;%1 packages&lt;/b&gt;&lt;br /&gt;</source>
-        <translation type="obsolete">安装/更新 &lt;b&gt;%1 软件包&lt;/b&gt;&lt;br /&gt;</translation>
+        <translation type="obsolete">安装/更新 &lt;b&gt;%1 个软件包&lt;/b&gt;&lt;br /&gt;</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1490"/>
@@ -1533,14 +1533,14 @@ a valid package</source>
         <location filename="../src/MainWindow.cpp" line="1717"/>
         <source>You need to have ABS installed to use Shaman&apos;s
 building feature. Do you want to install it now?</source>
-        <translation type="obsolete">你需要安装ABS才能够使用Shaman的编译功能.&apos;
+        <translation type="obsolete">您需要安装ABS才能够使用Shaman的编译功能.&apos;
 现在就安装ABS吗 ?</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1746"/>
         <source>You can not remove packages when processing
 your queue from Source</source>
-        <translation type="obsolete">当从源文件处理队列时，你将无法卸载软件包
+        <translation type="obsolete">当从源文件处理队列时，您将无法卸载软件包
 </translation>
     </message>
     <message>
@@ -1548,19 +1548,19 @@ your queue from Source</source>
         <source>Some of your packages do not belong to Arch
 Linux&apos;s official repository. Shaman is able to
 build packages from official sources only.</source>
-        <translation type="obsolete">你的一些软件包不属于Arch
+        <translation type="obsolete">您的一些软件包不属于Arch
 Linux&apos;s 官方 仓库， Shaman 只能从官方源文件
 编译软件包。</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1809"/>
         <source>You are about to install &lt;b&gt;%1 package&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
-        <translation type="obsolete">You are about to install &lt;b&gt;%1 package&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</translation>
+        <translation type="obsolete">您将安装 &lt;b&gt;%1 个软件包&lt;/b&gt; 从源文件。从源文件编译&lt;br&gt;能够获取某些优点。&lt;br&gt;但是编译时很慢&lt;br&gt;如果您不太确定， 最好选择处理&lt;br&gt;您的队列从二进制文件。在您继续之前，建议&lt;br&gt;查看下您的配置以便改善编译的效果。</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1815"/>
         <source>You are about to install &lt;b&gt;%1 packages&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
-        <translation type="obsolete">您将安装 &lt;b&gt;%1 软件包&lt;/b&gt; 从源文件。从源文件编译&lt;br&gt;能够获取某些优点。&lt;br&gt;但是编译时很慢&lt;br&gt;如果您不太确定， 最好选择处理&lt;br&gt;你的队列从二进制文件。在你继续之前&lt;br&gt;最好查看下你的配置以便改善编译的效果。</translation>
+        <translation type="obsolete">您将安装 &lt;b&gt;%1 个软件包&lt;/b&gt; 从源文件。从源文件编译&lt;br&gt;能够获取某些优点。&lt;br&gt;但是编译时很慢&lt;br&gt;如果您不太确定， 最好选择处理&lt;br&gt;您的队列从二进制文件。在您继续之前，建议&lt;br&gt;查看下您的配置以便改善编译的效果。</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1987"/>
@@ -1582,7 +1582,7 @@ Look at the output for more details.</source>
     <message>
         <location filename="../src/MainWindow.cpp" line="1962"/>
         <source>Close</source>
-        <translation type="obsolete">关闭r</translation>
+        <translation type="obsolete">关闭</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1952"/>
@@ -1620,19 +1620,19 @@ Do you want to proceed anyway?</source>
         <location filename="../src/MainWindow.cpp" line="1862"/>
         <source>%1 GiB</source>
         <comment>Size is in Gib</comment>
-        <translation type="obsolete">%1 Gib</translation>
+        <translation type="obsolete">%1 G</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1864"/>
         <source>%1 MiB</source>
         <comment>Size is in MiB</comment>
-        <translation type="obsolete">%1 Mib</translation>
+        <translation type="obsolete">%1 M</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1866"/>
         <source>%1 KiB</source>
         <comment>Size is in KiB</comment>
-        <translation type="obsolete">%1 Kib</translation>
+        <translation type="obsolete">%1 KB</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1868"/>
@@ -1748,7 +1748,7 @@ was not successfully processed</source>
         <location filename="../src/MainWindow.cpp" line="1789"/>
         <source>There is an unread news about %1.
 Do you want to read it?</source>
-        <translation>这里有未读的消息 %1，
+        <translation>这里有%1个未读的消息，
 你想阅读它吗?</translation>
     </message>
     <message>
@@ -1937,13 +1937,13 @@ p, li { white-space: pre-wrap; }
         <location filename="../src/PackageProperties.cpp" line="48"/>
         <source>%1 MiB</source>
         <comment>Size is in MiB</comment>
-        <translation>%1 Mib</translation>
+        <translation>%1 M</translation>
     </message>
     <message>
         <location filename="../src/PackageProperties.cpp" line="50"/>
         <source>%1 KiB</source>
         <comment>Size is in KiB</comment>
-        <translation>%1 Kib</translation>
+        <translation>%1 KB</translation>
     </message>
     <message>
         <location filename="../src/PackageProperties.cpp" line="52"/>
@@ -2388,7 +2388,7 @@ This may damage your system.</source>
     <message>
         <location filename="../ui/reviewQueueDialog.ui" line="38"/>
         <source>Process in Tray</source>
-        <translation>Process in Tray</translation>
+        <translation>至托盘处理</translation>
     </message>
     <message>
         <location filename="../ui/reviewQueueDialog.ui" line="54"/>
@@ -2437,7 +2437,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/ReviewQueueDialog.cpp" line="60"/>
         <source>To be Installed</source>
-        <translation>需要安装</translation>
+        <translation>将安装</translation>
     </message>
     <message>
         <location filename="../src/ReviewQueueDialog.cpp" line="65"/>
@@ -2447,7 +2447,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/ReviewQueueDialog.cpp" line="69"/>
         <source>To be Upgraded</source>
-        <translation>需要更新</translation>
+        <translation>将更新</translation>
     </message>
     <message>
         <location filename="../src/ReviewQueueDialog.cpp" line="74"/>
@@ -2457,7 +2457,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/ReviewQueueDialog.cpp" line="87"/>
         <source>To be Removed</source>
-        <translation>需要卸载</translation>
+        <translation>将卸载</translation>
     </message>
     <message>
         <location filename="../src/ReviewQueueDialog.cpp" line="83"/>
@@ -2467,27 +2467,27 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/ReviewQueueDialog.cpp" line="109"/>
         <source>Your Queue is about to be processed. You are going to:&lt;br /&gt;</source>
-        <translation>你的队列即将被处理，你将做 :&lt;br /&gt;</translation>
+        <translation>您的队列即将被处理，您将 :&lt;br /&gt;</translation>
     </message>
     <message>
         <location filename="../src/ReviewQueueDialog.cpp" line="111"/>
         <source>Remove &lt;b&gt;%1 package&lt;/b&gt;&lt;br /&gt;</source>
-        <translation>卸载 &lt;b&gt;%1 软件包&lt;/b&gt;&lt;br /&gt;</translation>
+        <translation>卸载 &lt;b&gt;%1 个软件包&lt;/b&gt;&lt;br /&gt;</translation>
     </message>
     <message>
         <location filename="../src/ReviewQueueDialog.cpp" line="111"/>
         <source>Remove &lt;b&gt;%1 packages&lt;/b&gt;&lt;br /&gt;</source>
-        <translation>卸载 &lt;b&gt;%1 软件包&lt;/b&gt;&lt;br /&gt;</translation>
+        <translation>卸载 &lt;b&gt;%1 个软件包&lt;/b&gt;&lt;br /&gt;</translation>
     </message>
     <message>
         <location filename="../src/ReviewQueueDialog.cpp" line="113"/>
         <source>Install/Upgrade &lt;b&gt;%1 package&lt;/b&gt;&lt;br /&gt;</source>
-        <translation>安装/更新 &lt;b&gt;%1 软件包&lt;/b&gt;&lt;br /&gt;</translation>
+        <translation>安装/更新 &lt;b&gt;%1 个软件包&lt;/b&gt;&lt;br /&gt;</translation>
     </message>
     <message>
         <location filename="../src/ReviewQueueDialog.cpp" line="113"/>
         <source>Install/Upgrade &lt;b&gt;%1 packages&lt;/b&gt;&lt;br /&gt;</source>
-        <translation>安装/更新 &lt;b&gt;%1 软件包&lt;/b&gt;&lt;br /&gt;</translation>
+        <translation>安装/更新 &lt;b&gt;%1 个软件包&lt;/b&gt;&lt;br /&gt;</translation>
     </message>
     <message>
         <location filename="../src/ReviewQueueDialog.cpp" line="116"/>
@@ -2502,7 +2502,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/ReviewQueueDialog.cpp" line="115"/>
         <source>&lt;b&gt;%1&lt;/b&gt; will be freed</source>
-        <translation> &lt;b&gt;%1&lt;/b&gt;will be freed</translation>
+        <translation> &lt;b&gt;%1&lt;/b&gt;将被释放</translation>
     </message>
 </context>
 <context>
@@ -2520,12 +2520,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/ShamanStatusBar.cpp" line="114"/>
         <source>%1 will be freed</source>
-        <translation>will be freed%1个</translation>
+        <translation>将被释放%1个</translation>
     </message>
     <message>
         <location filename="../src/ShamanStatusBar.cpp" line="119"/>
         <source>%1 to be Installed, %2 to be Removed</source>
-        <translation>需要安装%1个,  需要卸载%2个</translation>
+        <translation>将安装%1个, 将卸载%2个</translation>
     </message>
 </context>
 <context>
@@ -2579,14 +2579,14 @@ p, li { white-space: pre-wrap; }
         <location filename="../src/ShamanTrayIcon.cpp" line="128"/>
         <source>There is %1 upgradeable package.
 Click here to upgrade your System.</source>
-        <translation>有  %1 可更新的软件包。
+        <translation>有  %1 个可更新的软件包。
 点击来更新您的系统。</translation>
     </message>
     <message>
         <location filename="../src/ShamanTrayIcon.cpp" line="128"/>
         <source>There are %1 upgradeable packages.
 Click here to upgrade your System.</source>
-        <translation>有  %1 可更新的软件包。
+        <translation>有  %1 个可更新的软件包。
 点击来更新您的系统。</translation>
     </message>
     <message>
@@ -2619,17 +2619,17 @@ Click here to open the News Dialog for more details.</source>
     <message>
         <location filename="../src/SysUpgradeDialog.cpp" line="54"/>
         <source>There is &lt;b&gt;%1 upgradeable package&lt;/b&gt;. You can either&lt;br&gt; upgrade immediately or add it to the current Queue&lt;br&gt; and process it later.</source>
-        <translation>有 &lt;b&gt;%1 可更新的软件包&lt;/b&gt;. 您可以&lt;br&gt; 立即更新或者添加到当前队列&lt;br&gt; 稍后处理它。</translation>
+        <translation>有 &lt;b&gt;%1 个可更新的软件包&lt;/b&gt;. 您可以&lt;br&gt; 立即更新或者添加到当前队列&lt;br&gt; 稍后处理它。</translation>
     </message>
     <message>
         <location filename="../src/SysUpgradeDialog.cpp" line="57"/>
         <source>? &lt;b&gt;%1 upgradeable packages&lt;/b&gt;. You can either&lt;br&gt; upgrade immediately or add them to the current Queue&lt;br&gt; and process them later.</source>
-        <translation type="obsolete">有 &lt;b&gt;%1 可更新的软件包&lt;/b&gt;. 你可以&lt;br&gt; 立即更新或者添加至当前队列&lt;br&gt; 稍后处理它。</translation>
+        <translation type="obsolete">有 &lt;b&gt;%1 个可更新的软件包&lt;/b&gt;. 您可以&lt;br&gt; 立即更新或者添加至当前队列&lt;br&gt; 稍后处理它。</translation>
     </message>
     <message>
         <location filename="../src/SysUpgradeDialog.cpp" line="59"/>
         <source>To be Upgraded</source>
-        <translation>需要更新</translation>
+        <translation>将更新</translation>
     </message>
     <message>
         <location filename="../src/SysUpgradeDialog.cpp" line="57"/>
