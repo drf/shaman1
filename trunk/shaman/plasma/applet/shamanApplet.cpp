@@ -26,13 +26,15 @@
 #include <QLineEdit>
 
 #include <KIcon>
+#include <KMenu>
 
 #include <plasma/widgets/icon.h>
 
 ShamanApplet::ShamanApplet(QObject *parent, const QVariantList &args)
   : Plasma::Applet(parent, args),
     dbus(QDBusConnection::systemBus()),
-    m_packageLineEdit(0)
+    m_packageLineEdit(0),
+    m_contextMenu(0)
 {
     //setDrawStandardBackground(true);//TODO
 }
@@ -50,6 +52,7 @@ void ShamanApplet::init()
     else {
         kDebug()<<"Shaman Engine could not be loaded";
     }
+    m_contextMenu = new KMenu(0);
 
     QGraphicsLinearLayout *m_layout = new QGraphicsLinearLayout(Qt::Vertical, this);
 
@@ -76,9 +79,12 @@ void ShamanApplet::init()
     QAction *m_installAction = new QAction(KIcon("list-add"), i18n("Install Package"), this);
     connect(m_installAction, SIGNAL(triggered()), SLOT(installPackage()));
     m_actionIcon->addAction(m_installAction);
+    m_contextMenu->addAction(m_installAction);
     QAction *m_removeAction = new QAction(KIcon("list-remove"), i18n("Uninstall Package"), this);
     connect(m_removeAction, SIGNAL(triggered()), SLOT(removePackage()));
     m_actionIcon->addAction(m_removeAction);
+    m_contextMenu->addAction(m_removeAction);
+    connect(m_actionIcon, SIGNAL(activated()), SLOT(showContextMenu()));
 
     m_lineLayout->addItem(m_actionIcon);
 
@@ -116,6 +122,12 @@ void ShamanApplet::removePackage()
 void ShamanApplet::dataUpdated(const QString &name, const Plasma::DataEngine::Data &data)
 {
     //TODO: Do the Info-updates here...
+}
+
+void ShamanApplet::showContextMenu()
+{
+    if (m_contextMenu)
+        m_contextMenu->popup(QCursor::pos());
 }
 
 #include "shamanApplet.moc"

@@ -26,6 +26,7 @@
 #include <QtDBus/QDBusConnection>
 
 class QLineEdit;
+class KMenu;
 
 class ShamanApplet : public Plasma::Applet
 {
@@ -42,12 +43,14 @@ class ShamanApplet : public Plasma::Applet
         void upgradeSystem();
         void installPackage();
         void removePackage();
+        void showContextMenu();
 
     private:
         void init();
 
         QDBusConnection dbus;
         QLineEdit *m_packageLineEdit;
+        KMenu *m_contextMenu;
 }; 
 
 K_EXPORT_PLASMA_APPLET(shaman, ShamanApplet)
