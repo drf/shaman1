@@ -151,6 +151,8 @@ void UpdateDbDialog::scopeEnded()
 	dbth->deleteLater();
 	
 	emit killMe();
+	
+	close();
 }
 
 UpDbThread::UpDbThread(AlpmHandler *aH)
