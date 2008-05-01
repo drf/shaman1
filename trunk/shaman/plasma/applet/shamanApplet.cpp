@@ -28,11 +28,11 @@
 #include <KIcon>
 
 #include <plasma/widgets/icon.h>
-#include <plasma/dataengine.h>
 
 ShamanApplet::ShamanApplet(QObject *parent, const QVariantList &args)
   : Plasma::Applet(parent, args),
-    dbus(QDBusConnection::systemBus())
+    dbus(QDBusConnection::systemBus()),
+    m_packageLineEdit(0)
 {
     //setDrawStandardBackground(true);//TODO
 }
@@ -68,7 +68,8 @@ void ShamanApplet::init()
     QGraphicsLinearLayout *m_lineLayout = new QGraphicsLinearLayout(m_layout);
 
     QGraphicsProxyWidget *m_lineEdit = new QGraphicsProxyWidget(this);
-    m_lineEdit->setWidget(new QLineEdit(0));
+    m_packageLineEdit = new QLineEdit(0);
+    m_lineEdit->setWidget(m_packageLineEdit);
     m_lineLayout->addItem(m_lineEdit);
 
     Plasma::Icon *m_actionIcon = new Plasma::Icon(KIcon("tools-wizard"), i18n("Action"), this);
@@ -88,14 +89,28 @@ void ShamanApplet::init()
 
 void ShamanApplet::updateDatabase()
 {
-	QDBusMessage msg = QDBusMessage::createMethodCall("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", "doDbUpdate");
-	dbus.call(msg);
+    QDBusMessage msg = QDBusMessage::createMethodCall("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", "doDbUpdate");
+    dbus.call(msg);
 }
 
 void ShamanApplet::upgradeSystem()
 {
-	QDBusMessage msg = QDBusMessage::createMethodCall("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", "fullSysUpgrade");
-	dbus.call(msg);
+    QDBusMessage msg = QDBusMessage::createMethodCall("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", "fullSysUpgrade");
+    dbus.call(msg);
+}
+
+void ShamanApplet::installPackage()
+{
+    QDBusMessage msg = QDBusMessage::createMethodCall("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", "installPackage");
+    msg << m_packageLineEdit->text();
+    dbus.call(msg);
+}
+
+void ShamanApplet::removePackage()
+{
+    QDBusMessage msg = QDBusMessage::createMethodCall("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", "removePackage");
+    msg << m_packageLineEdit->text();
+    dbus.call(msg);
 }
 
 void ShamanApplet::dataUpdated(const QString &name, const Plasma::DataEngine::Data &data)

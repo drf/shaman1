@@ -25,13 +25,7 @@
 #include <plasma/dataengine.h>
 #include <QtDBus/QDBusConnection>
 
-namespace Plasma
-{
-    class HBoxLayout;
-    class VBoxLayout;
-    class Icon;
-    class LineEdit;
-}
+class QLineEdit;
 
 class ShamanApplet : public Plasma::Applet
 {
@@ -46,11 +40,14 @@ class ShamanApplet : public Plasma::Applet
     private slots:
         void updateDatabase();
         void upgradeSystem();
+        void installPackage();
+        void removePackage();
 
     private:
         void init();
 
         QDBusConnection dbus;
+        QLineEdit *m_packageLineEdit;
 }; 
 
 K_EXPORT_PLASMA_APPLET(shaman, ShamanApplet)
