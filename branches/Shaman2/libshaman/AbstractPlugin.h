@@ -19,7 +19,7 @@ class AbstractPlugin
         /**
          * \struct data
          * Defines all the informations needed about a plugin.
-         *///TODO: Const???? Can we do that in structs?
+         */
         struct ModuleData {
             /** The name of the plugin */
             QString name;
@@ -44,7 +44,7 @@ class AbstractPlugin
 
         AbstractPlugin();
   
-        virtual ModuleData getPluginData() = 0;
+        virtual ModuleData getPluginData() const = 0;
         virtual QStringList getDependencies() = 0;
         virtual QWidget* configurationWidget() {return 0;}
   
