@@ -53,10 +53,10 @@ void ShamanApplet::init()
 
     QGraphicsLinearLayout *m_layout = new QGraphicsLinearLayout(Qt::Vertical, this);
     QGraphicsLinearLayout *m_actionsLayout = new QGraphicsLinearLayout(m_layout);
-    Plasma::Icon *m_updateDatabaseIcon = new Plasma::Icon(KIcon("unknown"), i18n("Update Database"), this);
+    Plasma::Icon *m_updateDatabaseIcon = new Plasma::Icon(KIcon("view-refresh"), i18n("Update Database"), this);
     connect(m_updateDatabaseIcon, SIGNAL(clicked()), SLOT(updateDatabase()));
     m_actionsLayout->addItem(m_updateDatabaseIcon);
-    Plasma::Icon *m_upgradeSystemIcon = new Plasma::Icon(KIcon("unknown"), i18n("Upgrade System"), this);
+    Plasma::Icon *m_upgradeSystemIcon = new Plasma::Icon(KIcon("system-software-update"), i18n("Upgrade System"), this);
     connect(m_upgradeSystemIcon, SIGNAL(clicked()), SLOT(upgradeSystem()));
     m_actionsLayout->addItem(m_upgradeSystemIcon);
     m_layout->addItem(m_actionsLayout);
@@ -64,7 +64,7 @@ void ShamanApplet::init()
     QGraphicsProxyWidget *m_lineEdit = new QGraphicsProxyWidget(this);
     m_lineEdit->setWidget(new QLineEdit(0));
     m_lineLayout->addItem(m_lineEdit);
-    Plasma::Icon *m_actionIcon = new Plasma::Icon(KIcon("unknown"), i18n("Action"), this);
+    Plasma::Icon *m_actionIcon = new Plasma::Icon(KIcon("tools-wizard"), i18n("Action"), this);
     m_lineLayout->addItem(m_actionIcon);
     m_layout->addItem(m_lineLayout);
     setLayout(m_layout);
