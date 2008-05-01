@@ -110,6 +110,8 @@ void ShamanApplet::installPackage()
     QDBusMessage msg = QDBusMessage::createMethodCall("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", "installPackage");
     msg << m_packageLineEdit->text();
     dbus.call(msg);
+    QDBusMessage processMsg = QDBusMessage::createMethodCall("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", "widgetQueueToAlpmQueue");
+    dbus.call(processMsg);
 }
 
 void ShamanApplet::removePackage()
@@ -117,6 +119,8 @@ void ShamanApplet::removePackage()
     QDBusMessage msg = QDBusMessage::createMethodCall("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", "removePackage");
     msg << m_packageLineEdit->text();
     dbus.call(msg);
+    QDBusMessage processMsg = QDBusMessage::createMethodCall("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", "widgetQueueToAlpmQueue");
+    dbus.call(processMsg);
 }
 
 void ShamanApplet::dataUpdated(const QString &name, const Plasma::DataEngine::Data &data)
