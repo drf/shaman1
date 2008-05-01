@@ -35,17 +35,18 @@ namespace Backend {//Why that?
 		AllPackages,
 		InstalledPackages,
 		UpgradeablePackages
-	};
+	};//TODO: Use PackageStatus stuff from Package-class...
 
 }  // namespace Alpm
 
-class ShamanBackendPlugin : public QObject, private ConfigurationParser
+namespace Shaman{
+class BackendPlugin : public QObject, private ConfigurationParser
 {
 	Q_OBJECT
 
 public:
-	ShamanBackendPlugin(bool init = false);
-	virtual ~ShamanBackendPlugin();
+	BackendPlugin(bool init = false);
+	virtual ~BackendPlugin();
 
 	bool isTransaction();
 	bool testLibrary();//Fuck all :P Wth is that?????
@@ -147,5 +148,6 @@ private:
 	Authenticator ath;
 
 };
+}
 
 #endif /*AlpmHandler_H_*/
