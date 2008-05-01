@@ -42,13 +42,13 @@ class AbstractPlugin
             Configurator
         };
 
-        ShamanAbstractPlugin();
+        AbstractPlugin();
   
-        virtual ShamanPlugin::moduleData getPluginData() = 0;
+        virtual ModuleData getPluginData() = 0;
         virtual QStringList getDependencies() = 0;
         virtual QWidget* configurationWidget() {return 0;}
   
-        virtual ShamanPlugin::PluginType getPluginType() = 0;
+        virtual PluginType getPluginType() = 0;
 };
 }
 

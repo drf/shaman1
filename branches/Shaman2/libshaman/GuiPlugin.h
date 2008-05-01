@@ -2,17 +2,19 @@
 class QWidget;
 class QDockWidget;
 class QAction;
-//TODO: namespace Shaman { ++ remove shaman from name
-class ShamanGuiPlugin : public ShamanAbstractPlugin
+
+namespace Shaman{
+class GuiPlugin : public AbstractPlugin
 {
     public:  
-        ShamanAbstractPlugin();
+        GuiPlugin();
 
         void addToolBarAction(QAction *action);//TODO: Probably split out to a "GUI-Interface"?
         void addDockWidget(QDockWidget *widget);
         void addMainWidget(QWidget *widget);
   
-        virtual ShamanPlugin::PluginType getPluginType() {return ShamanPlugin::GUI;}
+        virtual AbstractPlugin::PluginType getPluginType() {return AbstractPlugin::GUI;}
 };
+}
 
-Q_DECLARE_INTERFACE(ShamanGuiPlugin, "org.shaman.Modules.ShamanGui/1.0"); 
+Q_DECLARE_INTERFACE(Shaman::GuiPlugin, "org.shaman.Modules.ShamanGui/1.0"); 
