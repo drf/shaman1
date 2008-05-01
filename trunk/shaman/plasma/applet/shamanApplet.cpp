@@ -20,20 +20,22 @@
 #include "shamanApplet.h"
 
 #include <QAction>
+#include <QtDBus/QDBusMessage>
+#include <QGraphicsLinearLayout>
+#include <QGraphicsProxyWidget>
+#include <QLineEdit>
 
 #include <KIcon>
 
-#include <plasma/layouts/boxlayout.h>
 #include <plasma/widgets/icon.h>
-#include <plasma/widgets/lineedit.h>
-#include <QtDBus/QDBusMessage>
+#include <plasma/dataengine.h>
 
 ShamanApplet::ShamanApplet(QObject *parent, const QVariantList &args)
   : Plasma::Applet(parent, args),
     dbus(QDBusConnection::systemBus())
 {
-    setDrawStandardBackground(true);
-} 
+    //setDrawStandardBackground(true);//TODO
+}
 
 ShamanApplet::~ShamanApplet()
 {
@@ -41,7 +43,7 @@ ShamanApplet::~ShamanApplet()
 
 void ShamanApplet::init()
 {
-    m_engine = dataEngine("shaman");
+    Plasma::DataEngine *m_engine = dataEngine("shaman");
     if (m_engine) {
         m_engine->connectSource("Shaman", this);
     }
@@ -49,21 +51,15 @@ void ShamanApplet::init()
         kDebug()<<"Shaman Engine could not be loaded";
     }
 
-    m_layout = new Plasma::VBoxLayout(this);
-    m_actionLayout = new Plasma::HBoxLayout(m_layout);
-    m_lineLayout = new Plasma::HBoxLayout(m_layout);
-    //Why are those things not shown?
-    m_updateDatabaseIcon = new Plasma::Icon(KIcon("view-refresh"), tr("Update Database"), this);
-    m_actionLayout->addItem(m_updateDatabaseIcon);
-    connect(m_updateDatabaseIcon, SIGNAL(clicked()), SLOT(updateDatabase()));
-    m_upgradeSystemIcon = new Plasma::Icon(KIcon("edit-redo.png"), tr("Upgrade System"), this);
-    m_actionLayout->addItem(m_upgradeSystemIcon);
-    connect(m_upgradeSystemIcon, SIGNAL(clicked()), SLOT(upgradeSystem()));
-
-    m_packageLine = new Plasma::LineEdit(this);
-    
-    m_lineLayout->addItem(m_packageLine);
-    m_layout->addItem(m_actionLayout);
+    QGraphicsLinearLayout *m_layout = new QGraphicsLinearLayout(Qt::Vertical, this);
+    Plasma::Icon *m_updateDatabaseIcon = new Plasma::Icon(KIcon("unknown"), i18n("Update Database"), this);
+    m_layout->addItem(m_updateDatabaseIcon);
+    QGraphicsLinearLayout *m_lineLayout = new QGraphicsLinearLayout(m_layout);
+    QGraphicsProxyWidget *m_lineEdit = new QGraphicsProxyWidget(this);
+    m_lineEdit->setWidget(new QLineEdit(0));
+    m_lineLayout->addItem(m_lineEdit);
+    Plasma::Icon *m_actionIcon = new Plasma::Icon(KIcon("unknown"), i18n("Action"), this);
+    m_lineLayout->addItem(m_actionIcon);
     m_layout->addItem(m_lineLayout);
     setLayout(m_layout);
 }

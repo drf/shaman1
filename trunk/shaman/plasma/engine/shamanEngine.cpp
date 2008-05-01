@@ -50,7 +50,7 @@ ShamanEngine::~ShamanEngine()
 
 void ShamanEngine::setRefreshTime(uint time)
 {
-        setUpdateInterval(time);
+        setPollingInterval(time);
 }
 
 uint ShamanEngine::refreshTime() const
@@ -73,7 +73,7 @@ bool ShamanEngine::updateSource(const QString &name)
 
 void ShamanEngine::getShamanData(const QString &name)
 {
-	clearData(name);
+	removeAllData(name);
 
 	if(isDBusServiceRegistered()) 
 	{

@@ -51,13 +51,6 @@ class ShamanApplet : public Plasma::Applet
         void init();
 
         QDBusConnection dbus;
-        Plasma::VBoxLayout * m_layout;
-        Plasma::HBoxLayout * m_actionLayout;
-        Plasma::HBoxLayout *m_lineLayout;
-        Plasma::Icon *m_updateDatabaseIcon;
-        Plasma::Icon *m_upgradeSystemIcon;
-        Plasma::LineEdit *m_packageLine;
-        Plasma::DataEngine *m_engine;
 }; 
 
 K_EXPORT_PLASMA_APPLET(shaman, ShamanApplet)
