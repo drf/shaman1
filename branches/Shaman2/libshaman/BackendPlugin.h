@@ -42,9 +42,8 @@ namespace Backend {//Why that?
 namespace Shaman{
 class BackendPlugin : public QObject, private ConfigurationParser
 {
-	Q_OBJECT
-
-public:
+Q_OBJECT
+    public:
 	BackendPlugin(bool init = false);
 	virtual ~BackendPlugin();
 
@@ -110,13 +109,13 @@ public:
 	
 	void setUserAgent();
 
-private:
+    private:
 	bool initTransaction(pmtranstype_t type, pmtransflag_t flags);
 	bool releaseTransaction();
 	bool setUpAlpmSettings();
 	void handleError(int action, alpm_list_t *data);
 
-signals:
+    signals:
 	void streamDbUpdatingStatus(const QString &repo, int action);//Action ---> enum :P
 	void dbUpdated(const QString &dbname);//TODO: DataBase class?
 	void dbQty(const QStringList &db);//TODO: Ouh? naming?
@@ -128,25 +127,6 @@ signals:
 	void preparingUpgradeError();//TODO: Simplify
 	void preparingTransactionError(const QString &msg);
 	void committingTransactionError(const QString &msg);
-
-private:
-	pmdb_t *db_local;
-	alpm_list_t *sync_databases;
-	alpm_list_t *registered_db;
-	pmdb_t *dbs_sync;
-	bool onTransaction;
-	bool removeAct;
-	bool syncAct;
-	bool upgradeAct;
-	bool fromFileAct;
-	bool logFileIsSet;
-	
-	QStringList toRemove;
-	QStringList toSync;
-	QStringList toFromFile;
-	
-	Authenticator ath;
-
 };
 }
 
