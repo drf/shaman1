@@ -1,6 +1,7 @@
 namespace Shaman {
-class AbstractPlugin
+class AbstractPlugin : public KPlugin
 {
+    Q_OBJECT
     public:
         /**
          * \struct vrs
@@ -45,11 +46,9 @@ class AbstractPlugin
         AbstractPlugin();
   
         virtual ModuleData getPluginData() const = 0;
-        virtual QStringList getDependencies() = 0;
+        virtual QStringList getDependencies() const= 0;
         virtual QWidget* configurationWidget() {return 0;}
   
-        virtual PluginType getPluginType() = 0;
+        virtual PluginType getPluginType() const= 0;
 };
 }
-
-Q_DECLARE_INTERFACE(Shaman::AbstractPlugin, "org.shaman.Modules.ShamanAbstract/1.0");//TODO: Move to KPlugin system

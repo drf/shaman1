@@ -8,6 +8,7 @@ class GuiPlugin : public AbstractPlugin
 {
     public:  
         GuiPlugin();
+        ~GuiPlugin();
 
         void addToolBarAction(QAction *action);//TODO: Probably split out to a "GUI-Interface"?
         void addDockWidget(QDockWidget *widget);
@@ -16,5 +17,3 @@ class GuiPlugin : public AbstractPlugin
         virtual AbstractPlugin::PluginType getPluginType() {return AbstractPlugin::GUI;}
 };
 }
-
-Q_DECLARE_INTERFACE(Shaman::GuiPlugin, "org.shaman.Modules.ShamanGui/1.0"); 
