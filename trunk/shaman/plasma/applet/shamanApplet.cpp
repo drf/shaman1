@@ -30,6 +30,7 @@
 
 #include <KIcon>
 #include <KMenu>
+#include <KDebug>
 
 #include <plasma/widgets/icon.h>
 
@@ -143,6 +144,8 @@ void ShamanApplet::removePackage()
 
 void ShamanApplet::dataUpdated(const QString &name, const Plasma::DataEngine::Data &data)
 {
+    kDebug() << "called";
+    
     if ( data.size() == 0 ) 
         return;
     
