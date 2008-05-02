@@ -24,6 +24,8 @@
 #include <QGraphicsLinearLayout>
 #include <QGraphicsProxyWidget>
 #include <QLineEdit>
+#include <QLabel>
+#include <QProgressBar>
 
 #include <KIcon>
 #include <KMenu>
@@ -89,6 +91,19 @@ void ShamanApplet::init()
     m_lineLayout->addItem(m_actionIcon);
 
     m_layout->addItem(m_lineLayout);
+
+    QGraphicsProxyWidget *m_statusLabel = new QGraphicsProxyWidget(this);
+    QLabel *m_statusLabelWidget = new QLabel(0);
+    m_statusLabelWidget->setStyleSheet("background-color: transparent; color: white");
+    m_statusLabelWidget->setAlignment(Qt::AlignCenter);
+    m_statusLabelWidget->setText("Hello this is the status");
+    m_statusLabel->setWidget(m_statusLabelWidget);
+    m_layout->addItem(m_statusLabel);
+
+    QGraphicsProxyWidget *m_progressBar = new QGraphicsProxyWidget(this);
+    QProgressBar *m_progressBarWidget = new QProgressBar(0);
+    m_progressBar->setWidget(m_progressBarWidget);
+    m_layout->addItem(m_progressBar);
 
     setLayout(m_layout);
 }
