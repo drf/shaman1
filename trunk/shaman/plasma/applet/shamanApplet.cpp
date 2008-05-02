@@ -17,6 +17,7 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
+
 #include "shamanApplet.h"
 
 #include <QAction>
@@ -93,7 +94,7 @@ void ShamanApplet::init()
     m_layout->addItem(m_lineLayout);
 
     QGraphicsProxyWidget *m_statusLabel = new QGraphicsProxyWidget(this);
-    QLabel *m_statusLabelWidget = new QLabel(0);
+    m_statusLabelWidget = new QLabel(0);
     m_statusLabelWidget->setStyleSheet("background-color: transparent; color: white");
     m_statusLabelWidget->setAlignment(Qt::AlignCenter);
     m_statusLabelWidget->setText("Hello this is the status");
@@ -101,7 +102,7 @@ void ShamanApplet::init()
     m_layout->addItem(m_statusLabel);
 
     QGraphicsProxyWidget *m_progressBar = new QGraphicsProxyWidget(this);
-    QProgressBar *m_progressBarWidget = new QProgressBar(0);
+    m_progressBarWidget = new QProgressBar(0);
     m_progressBarWidget->setStyleSheet("background-color: transparent");
     m_progressBarWidget->setValue(30);
     m_progressBar->setWidget(m_progressBarWidget);
@@ -142,7 +143,15 @@ void ShamanApplet::removePackage()
 
 void ShamanApplet::dataUpdated(const QString &name, const Plasma::DataEngine::Data &data)
 {
-    //TODO: Do the Info-updates here...
+    if ( data.size() == 0 ) 
+        return;
+    
+    if ( name != "shaman" )
+        return;
+    
+    m_progressBarWidget->setValue( data[ "TotalDlPercent" ].toInt() );
+    
+    m_statusLabelWidget->setText( data[ "transactionStatus" ].toString() );
 }
 
 void ShamanApplet::showContextMenu()

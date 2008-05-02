@@ -27,6 +27,8 @@
 
 class QLineEdit;
 class KMenu;
+class QProgressBar;
+class QLabel;
 
 class ShamanApplet : public Plasma::Applet
 {
@@ -51,6 +53,8 @@ class ShamanApplet : public Plasma::Applet
         QDBusConnection dbus;
         QLineEdit *m_packageLineEdit;
         KMenu *m_contextMenu;
+        QProgressBar *m_progressBarWidget;
+        QLabel *m_statusLabelWidget;
 }; 
 
 K_EXPORT_PLASMA_APPLET(shaman, ShamanApplet)
