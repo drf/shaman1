@@ -30,7 +30,7 @@ class Package : public QObject //TODO: Probably not needed??
         PackageState packageState() const;
         void setPackageAction(const PackageAction &action);
         PackageAction packageAction() const;
-        virtual QList<Package*> dependecies();//TODO: = 0 ???
+        virtual QList<Package*> dependecies();
         virtual QList<Package*> conflicts();
         //TODO: Providers, not found dependencies...
 
