@@ -1,5 +1,0 @@
-<RCC>
-    <qresource prefix="/Images" >
-        <file>images/archtest.jpg</file>
-    </qresource>
-</RCC>
