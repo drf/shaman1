@@ -102,6 +102,7 @@ void ShamanApplet::init()
 
     QGraphicsProxyWidget *m_progressBar = new QGraphicsProxyWidget(this);
     QProgressBar *m_progressBarWidget = new QProgressBar(0);
+    m_progressBarWidget->setStyleSheet("background-color: transparent");
     m_progressBar->setWidget(m_progressBarWidget);
     m_layout->addItem(m_progressBar);
 
