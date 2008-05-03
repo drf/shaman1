@@ -51,7 +51,7 @@ void ShamanApplet::init()
 {
     Plasma::DataEngine *m_engine = dataEngine("shaman");
     if (m_engine) {
-        m_engine->connectSource("Shaman", this);
+        m_engine->connectAllSources(this);
     }
     else {
         kDebug()<<"Shaman Engine could not be loaded";
