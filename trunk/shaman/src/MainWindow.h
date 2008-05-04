@@ -144,6 +144,7 @@ private slots:
 	void showAuthDialog(int count);
 	void settingsClosed();
 	void openUrl();
+	void triggerEditTimer();
 	
 private:
 	void loadDbUpdateDialog();
@@ -165,6 +166,7 @@ private:
 	QPointer<LogViewer> lView;
 	QPointer<ShamanStatusBar> stBar;
 	QPointer<PackageProperties> pkgProp;
+	QPointer<QTimer> editTimer;
 
 	QPointer<QDialog> reviewQueue;
 	ShamanTrayIcon *trayicon;

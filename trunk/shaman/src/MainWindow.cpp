@@ -112,6 +112,11 @@ turnOffSys(false)
 		qWarning() << "Failed to register alias Service on DBus";
 	else
 		qDebug() << "Service org.archlinux.shaman successfully exported on the System Bus.";
+	
+	editTimer = new QTimer(this);
+	editTimer->setSingleShot(true);
+	
+	connect(editTimer, SIGNAL(timeout()), SLOT(refinePkgView()));
 
 	pkgsViewWG->setContextMenuPolicy(Qt::CustomContextMenu);
 	repoList->setContextMenuPolicy(Qt::CustomContextMenu);
@@ -142,7 +147,7 @@ turnOffSys(false)
 	connect(actionUpgrade_System, SIGNAL(triggered()), SLOT(fullSysUpgrade()));
 	connect(packageSwitchCombo, SIGNAL(currentIndexChanged(int)), SLOT(refinePkgView()));
 	connect(nameDescBox, SIGNAL(currentIndexChanged(int)), SLOT(refinePkgView()));
-	connect(searchLine, SIGNAL(textChanged(const QString&)), SLOT(refinePkgView()));
+	connect(searchLine, SIGNAL(textChanged(const QString&)), SLOT(triggerEditTimer()));
 	connect(refineRepoEdit, SIGNAL(textChanged(const QString&)), SLOT(refineRepoView()));
 	connect(actionPacman_Preferences, SIGNAL(triggered()), SLOT(showSettings()));
 	connect(actionQuit, SIGNAL(triggered()), SLOT(quitApp()));
@@ -456,6 +461,7 @@ void MainWindow::populateGrpsColumn()
 
 	connect(repoList, SIGNAL(itemPressed(QListWidgetItem*)), this,
 			SLOT(refinePkgView()));
+    editTimer->setInterval(800);
 }
 
 void MainWindow::refinePkgView()
@@ -2207,4 +2213,11 @@ void MainWindow::showInfoDialog()
 	pkgProp->reloadPkgInfo();
 	
 	pkgProp->show();
+}
+
+void MainWindow::triggerEditTimer()
+{
+    editTimer->stop();
+    
+    editTimer->start(800);
 }
