@@ -160,7 +160,7 @@ void ShamanRunner::run(const Plasma::RunnerContext *context, const Plasma::Query
 {
     Q_UNUSED(action);
 	
-	execTerm = search->query();
+	execTerm = context->query();
     
     /* First of all, let's check if Shaman has been already
      * started.
