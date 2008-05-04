@@ -49,6 +49,8 @@ void ShamanRunner::match(Plasma::RunnerContext *search)
 {
     kDebug() << "Match search context?";
     QString term = search->query();
+    
+    Plasma::QueryMatch* match = 0;
 
     foreach(QString word, words)
     {
@@ -58,33 +60,27 @@ void ShamanRunner::match(Plasma::RunnerContext *search)
     				word == "update-db" || word == "update-database" || 
     				word == "ud")
     		{
-    			Plasma::QueryMatch* match = new Plasma::QueryMatch(this);
+    			match = new Plasma::QueryMatch(this);
     			match->setType(Plasma::QueryMatch::ExactMatch);
     			
     			match->setIcon(QIcon(":/Icons/icons/shaman/shaman-yellow-icon-32.png"));
     			match->setText(i18n("Update Databases"));
-    			
-    			match->setRelevance(1);
-    			search->addMatch(term, match);
     		}
     		else if (word == "upgrade-system" || word == "upgrade system" ||
     				word == "us")
     		{
-    			Plasma::QueryMatch* match = new Plasma::QueryMatch(this);
+    			match = new Plasma::QueryMatch(this);
     			match->setType(Plasma::QueryMatch::ExactMatch);
 
     			match->setIcon(QIcon(":/Icons/icons/shaman/shaman-system-is-up-to-date-32.png"));
     			match->setText(i18n("Upgrade System"));
-
-    			match->setRelevance(1);
-    			search->addMatch(term, match);
     		}
     		else if (word == "install" || word == "i")
     		{
     			if(term.split(' ').count() < 2)
     				return;
     			
-    			Plasma::QueryMatch* match = new Plasma::QueryMatch(this);
+    			match = new Plasma::QueryMatch(this);
     			match->setType(Plasma::QueryMatch::ExactMatch);
 
     			match->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
@@ -100,16 +96,13 @@ void ShamanRunner::match(Plasma::RunnerContext *search)
     				
     				match->setText(textA);
     			}
-
-    			match->setRelevance(1);
-    			search->addMatch(term, match);
     		}
     		else if (word == "remove" || word == "r")
     		{
     			if(term.split(' ').count() < 2)
     				return;
 
-    			Plasma::QueryMatch* match = new Plasma::QueryMatch(this);
+    			match = new Plasma::QueryMatch(this);
     			match->setType(Plasma::QueryMatch::ExactMatch);
 
     			match->setIcon(QIcon(":/Icons/icons/shaman/shaman-updates-available-32.png"));
@@ -125,33 +118,30 @@ void ShamanRunner::match(Plasma::RunnerContext *search)
 
     				match->setText(textA);
     			}
-
-    			match->setRelevance(1);
-    			search->addMatch(term, match);
     		}
     		else if (word == "pm" || word == "shaman" || 
     				word == "package manager")
     		{
-    			Plasma::QueryMatch* match = new Plasma::QueryMatch(this);
+    			match = new Plasma::QueryMatch(this);
     			match->setType(Plasma::QueryMatch::ExactMatch);
 
     			match->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
     			match->setText(i18n("Start Package Manager"));
-
-    			match->setRelevance(1);
-    			search->addMatch(term, match);
     		}
     		else
     		{
-    			Plasma::QueryMatch* match = new Plasma::QueryMatch(this);
+    			match = new Plasma::QueryMatch(this);
     			match->setType(Plasma::QueryMatch::ExactMatch);
     			
     			match->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
     			match->setText(i18n("Package Manager: %1", term));
-    			
-    			match->setRelevance(1);
-    			search->addMatch(term, match);
     		}  		
+    	}
+
+    	if ( match )
+    	{
+    	    match->setRelevance(1);
+    	    search->addMatch(term, match);
     	}
     }
 }
