@@ -43,3 +43,6 @@ GUI:
    
 i18n:
    - Added Chinese translation
+   
+Plasmoid:
+   - Basic functionalities added
