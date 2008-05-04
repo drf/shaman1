@@ -45,10 +45,10 @@ ShamanRunner::~ShamanRunner()
 {
 }
 
-void ShamanRunner::match(Plasma::SearchContext *search)
+void ShamanRunner::match(Plasma::RunnerContext *search)
 {
     kDebug() << "Match search context?";
-    QString term = search->searchTerm();
+    QString term = search->query();
 
     foreach(QString word, words)
     {
@@ -156,11 +156,11 @@ void ShamanRunner::match(Plasma::SearchContext *search)
     }
 }
 
-void ShamanRunner::exec(const Plasma::SearchContext *search, const Plasma::SearchMatch *action)
+void ShamanRunner::run(const Plasma::RunnerContext *context, const Plasma::QueryMatch *action)
 {
     Q_UNUSED(action);
 	
-	execTerm = search->searchTerm();
+	execTerm = search->query();
     
     /* First of all, let's check if Shaman has been already
      * started.
