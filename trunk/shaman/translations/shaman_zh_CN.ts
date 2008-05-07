@@ -279,8 +279,8 @@ Do you want to delete it?</source>
         <location filename="../src/callbacks.cpp" line="135"/>
         <source>File %1 is corrupted.
 Do you want to delete it?</source>
-        <translation>文件 %1 损坏，
-您想删除它吗？</translation>
+        <translation>文件 %1 损坏,
+您想删除它吗?</translation>
     </message>
 </context>
 <context>
@@ -1125,7 +1125,7 @@ Do you want to save it?</source>
         <translation>仓库</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="435"/>
+        <location filename="../src/MainWindow.cpp" line="440"/>
         <source>Package Groups</source>
         <translation>软件包组</translation>
     </message>
@@ -1280,7 +1280,7 @@ Do you want to save it?</source>
         <translation type="obsolete">Shaman - Idle</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="221"/>
+        <location filename="../src/MainWindow.cpp" line="226"/>
         <source>Shaman will keep running in the system tray.
 To close it, click Quit in the file menu or in the tray icon context menu.
 While in the System Tray, Shaman will update your Databases
@@ -1293,12 +1293,12 @@ You can change this behaviour in Settings.</source>
 您可以在设置里面改变这种行为。</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="218"/>
+        <location filename="../src/MainWindow.cpp" line="223"/>
         <source>Shaman - Reducing To Tray</source>
         <translation>Shaman - 缩小到托盘</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2040"/>
+        <location filename="../src/MainWindow.cpp" line="2046"/>
         <source>Upgrade</source>
         <translation>更新</translation>
     </message>
@@ -1308,7 +1308,7 @@ You can change this behaviour in Settings.</source>
         <translation type="obsolete">Shaman - Idle (可用的更新)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1440"/>
+        <location filename="../src/MainWindow.cpp" line="1446"/>
         <source>System Upgrade</source>
         <translation>更新系统</translation>
     </message>
@@ -1327,17 +1327,17 @@ Click here to upgrade your System.</source>
 点击这里来更新你的系统。</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="477"/>
+        <location filename="../src/MainWindow.cpp" line="483"/>
         <source>All Repositories</source>
         <translation>所有的仓库</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="480"/>
+        <location filename="../src/MainWindow.cpp" line="486"/>
         <source>Local Packages</source>
         <translation>本地软件包</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1113"/>
+        <location filename="../src/MainWindow.cpp" line="1119"/>
         <source>All Groups</source>
         <translation>所有的组</translation>
     </message>
@@ -1347,37 +1347,37 @@ Click here to upgrade your System.</source>
         <translation type="obsolete">标记以便重新安装</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2035"/>
+        <location filename="../src/MainWindow.cpp" line="2041"/>
         <source>Install</source>
         <translation>安装</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2045"/>
+        <location filename="../src/MainWindow.cpp" line="2051"/>
         <source>Uninstall</source>
         <translation>卸载</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2046"/>
+        <location filename="../src/MainWindow.cpp" line="2052"/>
         <source>Complete Uninstall</source>
         <translation>完全卸载</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="715"/>
+        <location filename="../src/MainWindow.cpp" line="721"/>
         <source>Status: </source>
         <translation>状态 : </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="717"/>
+        <location filename="../src/MainWindow.cpp" line="723"/>
         <source>Installed</source>
         <translation>已安装</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="719"/>
+        <location filename="../src/MainWindow.cpp" line="725"/>
         <source>Not installed</source>
         <translation>没有安装</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="733"/>
+        <location filename="../src/MainWindow.cpp" line="739"/>
         <source>Action: </source>
         <translation>操作 : </translation>
     </message>
@@ -1387,12 +1387,12 @@ Click here to upgrade your System.</source>
         <translation type="obsolete">Shaman - 处理</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1913"/>
+        <location filename="../src/MainWindow.cpp" line="1919"/>
         <source>Error</source>
         <translation>错误</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="848"/>
+        <location filename="../src/MainWindow.cpp" line="854"/>
         <source>One or more Databases could not be updated.
 Last error reported was:
 %1</source>
@@ -1401,17 +1401,17 @@ Last error reported was:
 %1</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="857"/>
+        <location filename="../src/MainWindow.cpp" line="863"/>
         <source>Database Update</source>
         <translation>更新数据库</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="859"/>
+        <location filename="../src/MainWindow.cpp" line="865"/>
         <source>Databases Updated Successfully</source>
         <translation>成功更新数据库</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="947"/>
+        <location filename="../src/MainWindow.cpp" line="953"/>
         <source>Mark for Upgrade</source>
         <translation>标记以便更新</translation>
     </message>
@@ -1421,49 +1421,49 @@ Last error reported was:
         <translation type="obsolete">取消操作</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="998"/>
+        <location filename="../src/MainWindow.cpp" line="1004"/>
         <source>Mark all for installation</source>
         <translation>标记所有以便安装</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1000"/>
+        <location filename="../src/MainWindow.cpp" line="1006"/>
         <source>Mark all for reinstallation</source>
         <translation>标记所有以便重新安装</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1002"/>
+        <location filename="../src/MainWindow.cpp" line="1008"/>
         <source>Mark all for removal</source>
         <translation>标记所有以便删除</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1444"/>
+        <location filename="../src/MainWindow.cpp" line="1450"/>
         <source>Your system is up to date!</source>
         <translation>您的系统已最新!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1648"/>
+        <location filename="../src/MainWindow.cpp" line="1654"/>
         <source>Queue Processing</source>
         <translation>处理队列</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1648"/>
+        <location filename="../src/MainWindow.cpp" line="1654"/>
         <source>Your Queue is being processed.
 Please wait.</source>
         <translation>您的队列正在处理，
 请等待。</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1740"/>
+        <location filename="../src/MainWindow.cpp" line="1746"/>
         <source>Queue Processed</source>
         <translation>处理队列</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1738"/>
+        <location filename="../src/MainWindow.cpp" line="1744"/>
         <source>Your Queue was successfully processed!</source>
         <translation>您的队列已成功处理!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1742"/>
+        <location filename="../src/MainWindow.cpp" line="1748"/>
         <source>Your Queue was successfully processed!!</source>
         <translation>您的队列已成功处理!!</translation>
     </message>
@@ -1513,17 +1513,17 @@ Please wait.</source>
         <translation type="obsolete">您愿意继续吗?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1904"/>
+        <location filename="../src/MainWindow.cpp" line="1910"/>
         <source>Install a Package</source>
         <translation>安装软件包</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1904"/>
+        <location filename="../src/MainWindow.cpp" line="1910"/>
         <source>Arch Linux Packages (*.pkg.tar.gz)</source>
         <translation>Arch Linux 软件包(*.pkg.tar.gz)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1913"/>
+        <location filename="../src/MainWindow.cpp" line="1919"/>
         <source>%1 does not seem
 a valid package</source>
         <translation>%1 不存在
@@ -1652,12 +1652,12 @@ Do you want to proceed anyway?</source>
         <translation type="obsolete">不要再显示</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1463"/>
+        <location filename="../src/MainWindow.cpp" line="1469"/>
         <source>Pacman Update</source>
         <translation>更新Pacman</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1465"/>
+        <location filename="../src/MainWindow.cpp" line="1471"/>
         <source>Pacman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Pacman now?</source>
@@ -1665,12 +1665,12 @@ Do you want to Upgrade Pacman now?</source>
 您现在愿意更新Paman吗?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1485"/>
+        <location filename="../src/MainWindow.cpp" line="1491"/>
         <source>Shaman Update</source>
         <translation>更新Shaman</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1487"/>
+        <location filename="../src/MainWindow.cpp" line="1493"/>
         <source>Shaman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Shaman now?</source>
@@ -1678,19 +1678,19 @@ Do you want to Upgrade Shaman now?</source>
 您现在愿意更新Shaman吗?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1728"/>
+        <location filename="../src/MainWindow.cpp" line="1734"/>
         <source>Restart required</source>
         <translation>需要重启</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1721"/>
+        <location filename="../src/MainWindow.cpp" line="1727"/>
         <source>Pacman or Shaman was updated. Shaman will now quit,
 please restart it to use the new version</source>
         <translation>Pacman 或 Shaman已被更新。 Shaman 将会退出,
 请重启它以便使用新的版本</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1986"/>
+        <location filename="../src/MainWindow.cpp" line="1992"/>
         <source>Library Question</source>
         <translation>库问题</translation>
     </message>
@@ -1718,12 +1718,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;l.appelhans@gmx.de&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="722"/>
+        <location filename="../src/MainWindow.cpp" line="728"/>
         <source>Local Version: </source>
         <translation>本地版本 : </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="727"/>
+        <location filename="../src/MainWindow.cpp" line="733"/>
         <source>Version in the Repository: </source>
         <translation>仓库里的版本 : </translation>
     </message>
@@ -1735,24 +1735,24 @@ was not successfully processed</source>
 将无法成功处理</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="170"/>
+        <location filename="../src/MainWindow.cpp" line="175"/>
         <source>Esc</source>
         <translation>退出</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1788"/>
+        <location filename="../src/MainWindow.cpp" line="1794"/>
         <source>News Alert</source>
         <translation>News Alert</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1789"/>
+        <location filename="../src/MainWindow.cpp" line="1795"/>
         <source>There is an unread news about %1.
 Do you want to read it?</source>
         <translation>这里有%1个未读的消息，
 你想阅读它吗?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1729"/>
+        <location filename="../src/MainWindow.cpp" line="1735"/>
         <source>Your Kernel has been updated.
 Please restart your PC soon to load the new Kernel.</source>
         <translation>您的内核已经更新，
@@ -1774,19 +1774,19 @@ Please restart your PC soon to load the new Kernel.</source>
         <translation>查看日志</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1686"/>
+        <location filename="../src/MainWindow.cpp" line="1692"/>
         <source>One or more errors occurred, your Queue
 was not successfully processed</source>
         <translation>一个或多个错误发生，你的队列
 将无法成功处理</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="850"/>
+        <location filename="../src/MainWindow.cpp" line="856"/>
         <source>One or more databases failed to update!</source>
         <translation>一个或多个数据库更新失败 !</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1688"/>
+        <location filename="../src/MainWindow.cpp" line="1694"/>
         <source>Error Processing Queue!!</source>
         <translation>错误的处理队列!!</translation>
     </message>
@@ -1797,7 +1797,7 @@ was not successfully processed</source>
         <translation type="obsolete">名字</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1148"/>
+        <location filename="../src/MainWindow.cpp" line="1154"/>
         <source>A package providing %1 is already installed.
 Do you want to install %1 anyway?</source>
         <translation>软件包提供%1已经安装，
@@ -1806,75 +1806,75 @@ Do you want to install %1 anyway?</source>
     <message>
         <location filename="../ui/MainWindow.ui" line="552"/>
         <source>&amp;File</source>
-        <translation>&amp;文件</translation>
+        <translation>文件(&amp;F)</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="558"/>
         <source>&amp;Help</source>
-        <translation>&amp;帮助</translation>
+        <translation>帮助(&amp;H)</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="564"/>
         <source>&amp;Actions</source>
-        <translation>&amp;操作</translation>
+        <translation>操作(&amp;A)</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="584"/>
         <source>&amp;Tools</source>
-        <translation>&amp;工具</translation>
+        <translation>工具(&amp;T)</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="247"/>
         <source>Re&amp;positories</source>
-        <translation>&amp;仓库</translation>
+        <translation>仓库(&amp;P)</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="270"/>
         <source>Package &amp;Groups</source>
-        <translation>软件包&amp;组</translation>
+        <translation>软件包组(&amp;G)</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="340"/>
         <source>Mark for &amp;Installation</source>
-        <translation>标记以便&amp;安装</translation>
+        <translation>标记以便安装(&amp;I)</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="360"/>
         <source>Mark for &amp;Removal</source>
-        <translation>标记以便&amp;卸载</translation>
+        <translation>标记以便卸载(&amp;R)</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="380"/>
         <source>Mark for complete re&amp;moval</source>
-        <translation>标记以便彻底&amp;卸载</translation>
+        <translation>标记以便彻底卸载(&amp;M)</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="447"/>
         <source>Package I&amp;nformation</source>
-        <translation>软件包&amp;信息</translation>
+        <translation>软件包信息(&amp;N)</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="491"/>
         <source>File&amp;s</source>
-        <translation>文件&amp;</translation>
+        <translation>文件(&amp;S)</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="519"/>
         <source>&amp;Dependencies</source>
-        <translation>&amp;依赖关系</translation>
+        <translation>依赖关系(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="972"/>
+        <location filename="../src/MainWindow.cpp" line="978"/>
         <source>Mark for Re&amp;installation</source>
-        <translation>标记以便重新&amp;安装</translation>
+        <translation>标记以便重新安装(&amp;I)</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="400"/>
         <source>&amp;Cancel Action</source>
-        <translation>&amp;取消操作</translation>
+        <translation>取消操作(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1949"/>
+        <location filename="../src/MainWindow.cpp" line="1955"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -2095,32 +2095,32 @@ for more details.</translation>
     <message>
         <location filename="../src/configDialog.cpp" line="53"/>
         <source>O&amp;k</source>
-        <translation>&amp;确定</translation>
+        <translation>确定(&amp;O)</translation>
     </message>
     <message>
         <location filename="../src/ShamanDialog.cpp" line="144"/>
         <source>&amp;Yes</source>
-        <translation>&amp;是</translation>
+        <translation>是(&amp;Y)</translation>
     </message>
     <message>
         <location filename="../src/ShamanDialog.cpp" line="146"/>
         <source>&amp;No</source>
-        <translation>&amp;确定</translation>
+        <translation>否(&amp;N)</translation>
     </message>
     <message>
         <location filename="../src/ShamanDialog.cpp" line="228"/>
         <source>Do not &amp;show this Again</source>
-        <translation>不要再&amp;显示</translation>
+        <translation>不要再显示(&amp;S)</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="54"/>
         <source>C&amp;ancel</source>
-        <translation>&amp;取消</translation>
+        <translation>取消(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1962"/>
+        <location filename="../src/MainWindow.cpp" line="1968"/>
         <source>Whoa, that&apos;s co&amp;ol!</source>
-        <translation>哇，这么&amp;酷!</translation>
+        <translation>哇,这么&amp;酷!</translation>
     </message>
 </context>
 <context>
@@ -2958,7 +2958,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/aboutDialog.ui" line="232"/>
         <source>Visit &amp;Website...</source>
-        <translation>访问 &amp;网站...</translation>
+        <translation>访问网站(&amp;W)...</translation>
     </message>
     <message>
         <location filename="../ui/aboutDialog.ui" line="68"/>
