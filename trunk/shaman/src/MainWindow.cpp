@@ -19,7 +19,9 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
+
 #include "MainWindow.h"
+
 #include "callbacks.h"
 #include "UpdateDbDialog.h"
 #include "SysUpgradeDialog.h"
@@ -821,9 +823,9 @@ void MainWindow::doDbUpdate()
 
 void MainWindow::finishDbUpdate()
 {
-	if(!dbActive)
+	if(!dbdialog)
 	{
-		Q_ASSERT_X(1 == 2, "finishDbUpdate", "dbdialog seems not to be valid");
+		//Q_ASSERT_X(1 == 2, "finishDbUpdate", "dbdialog seems not to be valid");
 		return;
 	}
 
