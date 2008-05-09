@@ -34,6 +34,7 @@ Core:
    - Better Tray Icon Handling
    - Support for "Add upgradeable to Queue"
    - Solved a bug that caused freezing or loading failed
+   - Added force (pacman -f) option
 
 GUI:
    - Removed version hardcoding in the About Dialog to allow String Freeze
