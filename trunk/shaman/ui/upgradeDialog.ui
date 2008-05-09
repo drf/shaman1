@@ -53,6 +53,13 @@
       </layout>
      </item>
      <item>
+      <widget class="QCheckBox" name="forceBox" >
+       <property name="text" >
+        <string>Force Queue Processing</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QCheckBox" name="checkBox" >
        <property name="text" >
         <string>Remember my choice</string>

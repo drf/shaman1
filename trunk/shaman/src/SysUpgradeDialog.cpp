@@ -132,3 +132,8 @@ void SysUpgradeDialog::adjust(bool tgld)
 	
 	adjustSize();
 }
+
+bool SysUpgradeDialog::force()
+{
+    return forceBox->isChecked();
+}

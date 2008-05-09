@@ -36,6 +36,7 @@ public:
 	virtual ~ReviewQueueDialog();
 	bool isInTray();
 	bool isTurnOff();
+	bool force();
 	
 public slots:
 	void processQueue();

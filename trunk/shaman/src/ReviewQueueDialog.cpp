@@ -161,6 +161,11 @@ bool ReviewQueueDialog::isTurnOff()
 	return turnoffBox->isChecked();
 }
 
+bool ReviewQueueDialog::force()
+{
+    return forceBox->isChecked();
+}
+
 void ReviewQueueDialog::adjust(bool tgld)
 {
 	if(tgld)

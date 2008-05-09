@@ -100,14 +100,15 @@ void QueueDialog::adjust(bool tgld)
 	adjustSize();
 }
 
-TrCommitThread::TrCommitThread(AlpmHandler *aH)
+TrCommitThread::TrCommitThread(AlpmHandler *aH, bool fc)
 {
 	aHandle = aH;
+	force = fc;
 }
 
-void QueueDialog::startProcessing()
+void QueueDialog::startProcessing(bool force)
 {	
-	cTh = new TrCommitThread(aHandle);
+	cTh = new TrCommitThread(aHandle, force);
 	
 	cTh->start();
 	
@@ -116,7 +117,7 @@ void QueueDialog::startProcessing()
 
 void TrCommitThread::run()
 {
-	aHandle->processQueue();
+	aHandle->processQueue(force);
 }
 
 void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)

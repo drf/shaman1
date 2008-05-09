@@ -13,7 +13,8 @@
    <string>Review Queue</string>
   </property>
   <property name="windowIcon" >
-   <iconset resource="shaman.qrc" >:/Icons/icons/shaman/shaman-yellow-icon-32.png</iconset>
+   <iconset resource="shaman.qrc" >
+    <normaloff>:/Icons/icons/shaman/shaman-yellow-icon-32.png</normaloff>:/Icons/icons/shaman/shaman-yellow-icon-32.png</iconset>
   </property>
   <layout class="QGridLayout" >
    <item row="1" column="0" >
@@ -22,6 +23,13 @@
       <widget class="QLabel" name="queueInfo" >
        <property name="text" >
         <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="forceBox" >
+       <property name="text" >
+        <string>Force Queue Processing</string>
        </property>
       </widget>
      </item>
@@ -54,7 +62,8 @@
           <string>Show packages...</string>
          </property>
          <property name="icon" >
-          <iconset resource="shaman.qrc" >:/Icons/icons/view-list-tree.png</iconset>
+          <iconset resource="shaman.qrc" >
+           <normaloff>:/Icons/icons/view-list-tree.png</normaloff>:/Icons/icons/view-list-tree.png</iconset>
          </property>
          <property name="checkable" >
           <bool>true</bool>
@@ -66,7 +75,7 @@
          <property name="orientation" >
           <enum>Qt::Horizontal</enum>
          </property>
-         <property name="sizeHint" >
+         <property name="sizeHint" stdset="0" >
           <size>
            <width>40</width>
            <height>20</height>
@@ -93,7 +102,8 @@
           <string>Cancel</string>
          </property>
          <property name="icon" >
-          <iconset resource="shaman.qrc" >:/Icons/icons/dialog-cancel.png</iconset>
+          <iconset resource="shaman.qrc" >
+           <normaloff>:/Icons/icons/dialog-cancel.png</normaloff>:/Icons/icons/dialog-cancel.png</iconset>
          </property>
         </widget>
        </item>
@@ -102,7 +112,7 @@
          <property name="orientation" >
           <enum>Qt::Horizontal</enum>
          </property>
-         <property name="sizeHint" >
+         <property name="sizeHint" stdset="0" >
           <size>
            <width>81</width>
            <height>20</height>
@@ -116,7 +126,8 @@
           <string>Process</string>
          </property>
          <property name="icon" >
-          <iconset resource="shaman.qrc" >:/Icons/icons/dialog-ok-apply.png</iconset>
+          <iconset resource="shaman.qrc" >
+           <normaloff>:/Icons/icons/dialog-ok-apply.png</normaloff>:/Icons/icons/dialog-ok-apply.png</iconset>
          </property>
         </widget>
        </item>

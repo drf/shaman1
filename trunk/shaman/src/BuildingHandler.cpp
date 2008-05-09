@@ -488,7 +488,7 @@ void BuildingHandler::processBuildWizard()
 
 		connect(queueDl, SIGNAL(terminated(bool)), SLOT(startSourceProcessing()));
 
-		queueDl->startProcessing();
+		queueDl->startProcessing(false);
 
 		queueDl->show();
 	}

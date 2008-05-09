@@ -24,8 +24,16 @@
 
 #include <iostream>
 #include <string>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 #include <alpm.h>
 #include <alpm_list.h>
+#ifdef __cplusplus
+}
+#endif
+
 #include <unistd.h>
 #include <dirent.h>
 #include <errno.h>
@@ -63,7 +71,6 @@ toSync(NULL)
 	onTransaction = false;
 
 	setUpAlpmSettings();
-
 }
 
 AlpmHandler::~AlpmHandler()
@@ -130,7 +137,7 @@ bool AlpmHandler::testLibrary()
 	 * on database this test will reveal it.
 	 */
 
-	if(!initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_ALLDEPS))
+	if(!initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_ALLDEPS, false))
 		return false;
 
 	if(!releaseTransaction())
@@ -139,7 +146,7 @@ bool AlpmHandler::testLibrary()
 	return true;
 }
 
-bool AlpmHandler::initTransaction(pmtranstype_t type, pmtransflag_t flags)
+bool AlpmHandler::initTransaction(pmtranstype_t type, pmtransflag_t flags, bool force)
 {
 	if(isTransaction())
 		return false;
@@ -147,6 +154,8 @@ bool AlpmHandler::initTransaction(pmtranstype_t type, pmtransflag_t flags)
 	if (!ath.switchToRoot())
 		return false;
 		
+	if(force)
+	    flags = (pmtransflag_t) ((pmtransflag_t)flags | (pmtransflag_t)PM_TRANS_FLAG_FORCE);
 
 	setuseragent();
 	
@@ -279,7 +288,7 @@ bool AlpmHandler::updateDatabase()
 	
 	syncdbs = alpm_list_first(sync_databases);
 
-	if(!initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_NOSCRIPTLET))
+	if(!initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_NOSCRIPTLET, false))
 		return false;
 
 	while(syncdbs != NULL)
@@ -692,7 +701,7 @@ int AlpmHandler::getNumberOfTargets(int action)
 		return toRemove.size();
 }
 
-void AlpmHandler::processQueue()
+void AlpmHandler::processQueue(bool force)
 {
 	
 	if(removeAct)
@@ -700,7 +709,7 @@ void AlpmHandler::processQueue()
 		qDebug() << "Starting Package Removal";
 		
 		/* Well, we need to remove packages first. Let's do this. */
-		initTransaction(PM_TRANS_TYPE_REMOVE, PM_TRANS_FLAG_NOSCRIPTLET /*/PM_TRANS_FLAG_NOSCRIPTLET*/);
+		initTransaction(PM_TRANS_TYPE_REMOVE, PM_TRANS_FLAG_NOSCRIPTLET, force);
 		
 		for (int i = 0; i < toRemove.size(); ++i)
 		{
@@ -717,7 +726,7 @@ void AlpmHandler::processQueue()
 		qDebug() << "Starting Package Syncing";
 		
 		/* Time to install and upgrade packages, right? */
-		initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_NOSCRIPTLET);
+		initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_NOSCRIPTLET, force);
 		
 		for (int i = 0; i < toSync.size(); ++i)
 		{
@@ -735,7 +744,7 @@ void AlpmHandler::processQueue()
 		qDebug() << "Starting Package Upgrade";
 
 		/* We need some special handling. */
-		initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_NOSCRIPTLET);
+		initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_NOSCRIPTLET, force);
 
 		if(alpm_trans_sysupgrade() == -1)
 		{
@@ -750,7 +759,7 @@ void AlpmHandler::processQueue()
 	{
 		qDebug() << "Starting Package From File installation";
 		
-		initTransaction(PM_TRANS_TYPE_UPGRADE, PM_TRANS_FLAG_NOSCRIPTLET);
+		initTransaction(PM_TRANS_TYPE_UPGRADE, PM_TRANS_FLAG_NOSCRIPTLET, force);
 
 		for (int i = 0; i < toFromFile.size(); ++i)
 		{

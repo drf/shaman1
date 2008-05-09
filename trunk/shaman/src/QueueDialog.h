@@ -33,10 +33,11 @@
 class TrCommitThread : public QThread
 {
 public:
-	TrCommitThread(AlpmHandler *aH);
+	TrCommitThread(AlpmHandler *aH, bool fc);
 	void run();
 private:
 	AlpmHandler *aHandle;
+	bool force;
 };
 
 class QueueDialog : public QDialog, private Ui::transactionDialog
@@ -46,7 +47,7 @@ class QueueDialog : public QDialog, private Ui::transactionDialog
 public:
 	explicit QueueDialog(AlpmHandler *hnd, QWidget *parent = 0);
 	~QueueDialog();
-	void startProcessing();
+	void startProcessing(bool force);
 	bool isScriptletRunning();
 	
 public slots:

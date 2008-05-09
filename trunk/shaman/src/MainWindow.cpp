@@ -1642,12 +1642,8 @@ void MainWindow::processQueue()
 	queueDl = new QueueDialog(aHandle, this);
 
 	connect(queueDl, SIGNAL(terminated(bool)), SLOT(queueProcessingEnded(bool)));
-
-	queueDl->startProcessing();
-
-	emit actionStatusChanged("queueProcessingStarted");
-
-	queueDl->show();
+	
+	bool force = false;
 
 	if(qUi)
 	{
@@ -1660,12 +1656,23 @@ void MainWindow::processQueue()
 
 		if(qUi->isTurnOff())
 			turnOffSys = true;
+		
+		force = qUi->force();
 
 		qUi->deleteLater();
 	}
 
-	if(upActive)
-		upDl->deleteLater();
+	if(upDl)
+	{
+	    upDl->deleteLater();
+	    force = upDl->force();
+	}
+
+	queueDl->startProcessing(force);
+
+	emit actionStatusChanged("queueProcessingStarted");
+
+	queueDl->show();
 
 	upActive = false;
 	revActive = false;

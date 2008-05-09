@@ -119,7 +119,7 @@ public:
 	QStringList getRemoveInQueue();
 	QStringList getFFInQueue();
 	
-	void processQueue();
+	void processQueue(bool force);
 	int getNumberOfTargets(int action);
 	
 	bool cleanUnusedDb(const char *dbpath);
@@ -146,7 +146,7 @@ public:
 	void setuseragent();
 
 private:
-	bool initTransaction(pmtranstype_t type, pmtransflag_t flags);
+	bool initTransaction(pmtranstype_t type, pmtransflag_t flags, bool force);
 	bool releaseTransaction();
 	bool setUpAlpmSettings();
 	void handleError(int action, alpm_list_t *data);

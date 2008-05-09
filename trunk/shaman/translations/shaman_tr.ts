@@ -3,27 +3,27 @@
 <context>
     <name>AlpmHandler</name>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1100"/>
+        <location filename="../src/AlpmHandler.cpp" line="1109"/>
         <source>: requires </source>
         <translation>: gerektirir</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1110"/>
+        <location filename="../src/AlpmHandler.cpp" line="1119"/>
         <source>: conflicts with </source>
         <translation>: çakışır</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1164"/>
+        <location filename="../src/AlpmHandler.cpp" line="1173"/>
         <source>Alpm did not give further details.</source>
         <translation>Alpm daha fazla ayrıntı vermedi.</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1137"/>
+        <location filename="../src/AlpmHandler.cpp" line="1146"/>
         <source>%1 exists in both &apos;%2&apos; and &apos;%3&apos;</source>
         <translation>%1 hem &apos;%2&apos; hem de &apos;%3&apos; içinde bulunuyor</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1145"/>
+        <location filename="../src/AlpmHandler.cpp" line="1154"/>
         <source>: %1 exists in filesystem</source>
         <translation>: %1 dosya sisteminde mevcut</translation>
     </message>
@@ -1001,7 +1001,7 @@ Kaydetmek ister misiniz?</translation>
         <translation>Tanım</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="226"/>
+        <location filename="../src/MainWindow.cpp" line="228"/>
         <source>Shaman will keep running in the system tray.
 To close it, click Quit in the file menu or in the tray icon context menu.
 While in the System Tray, Shaman will update your Databases
@@ -1019,12 +1019,12 @@ Sistem çubuğundayken Shaman, düzenli aralıklarla Veritabanlarını güncelle
         <translation type="obsolete">Bunu Tekrar Gösterme</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="223"/>
+        <location filename="../src/MainWindow.cpp" line="225"/>
         <source>Shaman - Reducing To Tray</source>
         <translation>Shaman - Sistemçubuğuna yerleşiyor</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2046"/>
+        <location filename="../src/MainWindow.cpp" line="2055"/>
         <source>Upgrade</source>
         <translation>Yükselt</translation>
     </message>
@@ -1034,22 +1034,22 @@ Sistem çubuğundayken Shaman, düzenli aralıklarla Veritabanlarını güncelle
         <translation>Depolar</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="483"/>
+        <location filename="../src/MainWindow.cpp" line="485"/>
         <source>All Repositories</source>
         <translation>Bütün Depolar</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="486"/>
+        <location filename="../src/MainWindow.cpp" line="488"/>
         <source>Local Packages</source>
         <translation>Yerel Paketler</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="440"/>
+        <location filename="../src/MainWindow.cpp" line="442"/>
         <source>Package Groups</source>
         <translation>Paket Grupları</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1119"/>
+        <location filename="../src/MainWindow.cpp" line="1121"/>
         <source>All Groups</source>
         <translation>Bütün Gruplar</translation>
     </message>
@@ -1084,57 +1084,57 @@ Sistem çubuğundayken Shaman, düzenli aralıklarla Veritabanlarını güncelle
         <translation type="obsolete">Yükleme için İşaretle</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2041"/>
+        <location filename="../src/MainWindow.cpp" line="2050"/>
         <source>Install</source>
         <translation>Yükle</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2051"/>
+        <location filename="../src/MainWindow.cpp" line="2060"/>
         <source>Uninstall</source>
         <translation>Kaldır</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2052"/>
+        <location filename="../src/MainWindow.cpp" line="2061"/>
         <source>Complete Uninstall</source>
         <translation>Tam Kaldırma</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="721"/>
+        <location filename="../src/MainWindow.cpp" line="723"/>
         <source>Status: </source>
         <translation>Durum: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="723"/>
+        <location filename="../src/MainWindow.cpp" line="725"/>
         <source>Installed</source>
         <translation>Yüklü</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="725"/>
+        <location filename="../src/MainWindow.cpp" line="727"/>
         <source>Not installed</source>
         <translation>Yüklenmemiş</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="728"/>
+        <location filename="../src/MainWindow.cpp" line="730"/>
         <source>Local Version: </source>
         <translation>Yerel Sürüm: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="733"/>
+        <location filename="../src/MainWindow.cpp" line="735"/>
         <source>Version in the Repository: </source>
         <translation>Depodaki Sürüm: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="739"/>
+        <location filename="../src/MainWindow.cpp" line="741"/>
         <source>Action: </source>
         <translation>Eylem: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1919"/>
+        <location filename="../src/MainWindow.cpp" line="1928"/>
         <source>Error</source>
         <translation>Hata</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="854"/>
+        <location filename="../src/MainWindow.cpp" line="856"/>
         <source>One or more Databases could not be updated.
 Last error reported was:
 %1</source>
@@ -1143,22 +1143,22 @@ Raporlanan son hata şuydu:
 %1</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="863"/>
+        <location filename="../src/MainWindow.cpp" line="865"/>
         <source>Database Update</source>
         <translation>Veritabanı Güncelleme</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="865"/>
+        <location filename="../src/MainWindow.cpp" line="867"/>
         <source>Databases Updated Successfully</source>
         <translation>Veritabanı Başarıyla Güncellendi</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1469"/>
+        <location filename="../src/MainWindow.cpp" line="1471"/>
         <source>Pacman Update</source>
         <translation>Pacman Güncelleme</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1471"/>
+        <location filename="../src/MainWindow.cpp" line="1473"/>
         <source>Pacman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Pacman now?</source>
@@ -1167,12 +1167,12 @@ için tek başına yapmanız önerilir.
 Şimdi Pacman&apos;ı Yükseltmek ister misiniz?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1491"/>
+        <location filename="../src/MainWindow.cpp" line="1493"/>
         <source>Shaman Update</source>
         <translation>Shaman Güncelleme</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1493"/>
+        <location filename="../src/MainWindow.cpp" line="1495"/>
         <source>Shaman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Shaman now?</source>
@@ -1186,7 +1186,7 @@ için tek başına yapmanız önerilir.
         <translation type="obsolete">Kaldırma için İşaretle</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="953"/>
+        <location filename="../src/MainWindow.cpp" line="955"/>
         <source>Mark for Upgrade</source>
         <translation>Yükseltme için İşaretle</translation>
     </message>
@@ -1196,17 +1196,17 @@ için tek başına yapmanız önerilir.
         <translation type="obsolete">Eylemi İptal Et</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1004"/>
+        <location filename="../src/MainWindow.cpp" line="1006"/>
         <source>Mark all for installation</source>
         <translation>Tümünü yükleme için İşaretle</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1006"/>
+        <location filename="../src/MainWindow.cpp" line="1008"/>
         <source>Mark all for reinstallation</source>
         <translation>Tümünü yeniden yükleme için İşaretle</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1008"/>
+        <location filename="../src/MainWindow.cpp" line="1010"/>
         <source>Mark all for removal</source>
         <translation>Tümünü Kaldırma için İşaretle</translation>
     </message>
@@ -1216,29 +1216,29 @@ için tek başına yapmanız önerilir.
         <translation>Tüm eylemleri iptal et</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1446"/>
+        <location filename="../src/MainWindow.cpp" line="1448"/>
         <source>System Upgrade</source>
         <translation>Sistem Yükseltme</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1450"/>
+        <location filename="../src/MainWindow.cpp" line="1452"/>
         <source>Your system is up to date!</source>
         <translation>Sisteminiz güncel!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1654"/>
+        <location filename="../src/MainWindow.cpp" line="1652"/>
         <source>Queue Processing</source>
         <translation>Sıra İşleniyor</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1654"/>
+        <location filename="../src/MainWindow.cpp" line="1652"/>
         <source>Your Queue is being processed.
 Please wait.</source>
         <translation>Sıra işleniyor.
 Lütfen bekleyin.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1746"/>
+        <location filename="../src/MainWindow.cpp" line="1755"/>
         <source>Queue Processed</source>
         <translation>Sıra işlendi</translation>
     </message>
@@ -1250,19 +1250,19 @@ was not successfully processed</source>
 başarıyla işlenemedi</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1734"/>
+        <location filename="../src/MainWindow.cpp" line="1743"/>
         <source>Restart required</source>
         <translation>Yeniden Başlatma gerekiyor</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1727"/>
+        <location filename="../src/MainWindow.cpp" line="1736"/>
         <source>Pacman or Shaman was updated. Shaman will now quit,
 please restart it to use the new version</source>
         <translation>Pacman veya Shaman güncellendi.Shaman kapanacak.
 Yeni sürümü kullanmak için lütfen Shamanı yeniden başlatın</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1735"/>
+        <location filename="../src/MainWindow.cpp" line="1744"/>
         <source>Your Kernel has been updated.
 Please restart your PC soon to load the new Kernel.</source>
         <translation>Kernel güncellendi.
@@ -1270,27 +1270,27 @@ Yeni kerneli kullanmak için lütfen bilgisayarınızı
 yeniden başlatın.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1744"/>
+        <location filename="../src/MainWindow.cpp" line="1753"/>
         <source>Your Queue was successfully processed!</source>
         <translation>Sıra başarıyla işlendi!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1748"/>
+        <location filename="../src/MainWindow.cpp" line="1757"/>
         <source>Your Queue was successfully processed!!</source>
         <translation>Sıra başarıyla işlendi!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1910"/>
+        <location filename="../src/MainWindow.cpp" line="1919"/>
         <source>Install a Package</source>
         <translation>Bir Paket yükle</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1910"/>
+        <location filename="../src/MainWindow.cpp" line="1919"/>
         <source>Arch Linux Packages (*.pkg.tar.gz)</source>
         <translation>Arch Linux Paketleri (*.pkg.tar.gz)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1919"/>
+        <location filename="../src/MainWindow.cpp" line="1928"/>
         <source>%1 does not seem
 a valid package</source>
         <translation>%1 geçerli bir paket
@@ -1335,7 +1335,7 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">%1 Bayt</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1992"/>
+        <location filename="../src/MainWindow.cpp" line="2001"/>
         <source>Library Question</source>
         <translation>Kütüphane Sorusu</translation>
     </message>
@@ -1511,17 +1511,17 @@ p, li { white-space: pre-wrap; }
         <translation>Sırayı İşle</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="175"/>
+        <location filename="../src/MainWindow.cpp" line="177"/>
         <source>Esc</source>
         <translation>Esc</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1794"/>
+        <location filename="../src/MainWindow.cpp" line="1803"/>
         <source>News Alert</source>
         <translation>Haber Alarmı</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1795"/>
+        <location filename="../src/MainWindow.cpp" line="1804"/>
         <source>There is an unread news about %1.
 Do you want to read it?</source>
         <translation>%1 hakkında okunmamış haberler var.
@@ -1543,19 +1543,19 @@ Okumak ister misiniz?</translation>
         <translation>Kayıtları Oku</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1692"/>
+        <location filename="../src/MainWindow.cpp" line="1701"/>
         <source>One or more errors occurred, your Queue
 was not successfully processed</source>
         <translation>Bir vaya daha fazla hata oluştu;Sıra
 başarıyla işlenemedi</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="856"/>
+        <location filename="../src/MainWindow.cpp" line="858"/>
         <source>One or more databases failed to update!</source>
         <translation>Bir veya bir kaç veritabanının güncellenmesi başarısız!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1694"/>
+        <location filename="../src/MainWindow.cpp" line="1703"/>
         <source>Error Processing Queue!!</source>
         <translation>Sıra işlemede hata!</translation>
     </message>
@@ -1566,7 +1566,7 @@ başarıyla işlenemedi</translation>
         <translation type="obsolete">Ad</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1154"/>
+        <location filename="../src/MainWindow.cpp" line="1156"/>
         <source>A package providing %1 is already installed.
 Do you want to install %1 anyway?</source>
         <translation>%1 özelliğini sunan bir pakaet zaten yüklü.
@@ -1633,7 +1633,7 @@ Do you want to install %1 anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="978"/>
+        <location filename="../src/MainWindow.cpp" line="980"/>
         <source>Mark for Re&amp;installation</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1643,7 +1643,7 @@ Do you want to install %1 anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1955"/>
+        <location filename="../src/MainWindow.cpp" line="1964"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -1804,7 +1804,7 @@ Ytekisiz kullanıcı olarak çalıştırılması önerilir.
 Gerektiğinde Shaman kök parolanızı soracaktır.</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="856"/>
+        <location filename="../src/QueueDialog.cpp" line="857"/>
         <source>Ok</source>
         <translation>Tamam</translation>
     </message>
@@ -1878,7 +1878,7 @@ okuyabilirsiniz.</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1968"/>
+        <location filename="../src/MainWindow.cpp" line="1977"/>
         <source>Whoa, that&apos;s co&amp;ol!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1891,202 +1891,202 @@ okuyabilirsiniz.</translation>
         <translation>&lt;br&gt;&lt;b&gt; * İşlem Onaylanıyor&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="136"/>
+        <location filename="../src/QueueDialog.cpp" line="137"/>
         <source>Validating Dependencies...</source>
         <translation>Bağımlılıklar Onaylanıyor...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="140"/>
+        <location filename="../src/QueueDialog.cpp" line="141"/>
         <source>Checking for Conflicts...</source>
         <translation>Çakışmalar Denetleniyor...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="144"/>
+        <location filename="../src/QueueDialog.cpp" line="145"/>
         <source>Resolving Dependencies...</source>
         <translation>Bağımlılıklar Çözümleniyor...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="148"/>
+        <location filename="../src/QueueDialog.cpp" line="149"/>
         <source>Looking for Inter-Conflicts...</source>
         <translation>İç-Çakışmalar aranıyor...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="154"/>
+        <location filename="../src/QueueDialog.cpp" line="155"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Installation Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Paket Yükleme Başladı&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="158"/>
+        <location filename="../src/QueueDialog.cpp" line="159"/>
         <source>Installing %1...</source>
         <translation>%1 Yükleniyor...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="187"/>
+        <location filename="../src/QueueDialog.cpp" line="188"/>
         <source>%1 (%2) installed successfully!</source>
         <translation>%1 (%2) başarıyla yüklendi!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="199"/>
+        <location filename="../src/QueueDialog.cpp" line="200"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Removal Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Paket Kaldırma Başladı&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="203"/>
+        <location filename="../src/QueueDialog.cpp" line="204"/>
         <source>Removing %1...</source>
         <translation>%1 Kaldırılıyor...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="232"/>
+        <location filename="../src/QueueDialog.cpp" line="233"/>
         <source>%1 (%2) removed successfully!</source>
         <translation>%1 (%2) başarıyla kaldırıldı!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="244"/>
+        <location filename="../src/QueueDialog.cpp" line="245"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Upgrading Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Paket Yükseltme Başladı&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="248"/>
+        <location filename="../src/QueueDialog.cpp" line="249"/>
         <source>Upgrading %1...</source>
         <translation>%1 Yükseltiliyor...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="278"/>
+        <location filename="../src/QueueDialog.cpp" line="279"/>
         <source>Upgraded %1 successfully (%2 -&gt; %3)</source>
         <translation>%1 başarıyla yükseltildi (%2 -&gt; %3)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="292"/>
+        <location filename="../src/QueueDialog.cpp" line="293"/>
         <source>&lt;br&gt;&lt;b&gt; * Queue Processing Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Sıra İşleme Başladı&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="296"/>
+        <location filename="../src/QueueDialog.cpp" line="297"/>
         <source>Checking package integrity...</source>
         <translation>Paket içeriği denetlenyior...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="300"/>
+        <location filename="../src/QueueDialog.cpp" line="301"/>
         <source>Checking delta integrity...</source>
         <translation>Delta içeriği denetleniyor...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="303"/>
+        <location filename="../src/QueueDialog.cpp" line="304"/>
         <source>Applying deltas...</source>
         <translation>Delta uygulanıyor...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="306"/>
+        <location filename="../src/QueueDialog.cpp" line="307"/>
         <source>Generating %1 with %2... </source>
         <translation>%1, %2 ile üretiliyor... </translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="310"/>
+        <location filename="../src/QueueDialog.cpp" line="311"/>
         <source>Success!</source>
         <translation>Başarılı!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="313"/>
+        <location filename="../src/QueueDialog.cpp" line="314"/>
         <source>Failed!</source>
         <translation>Başarısız!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="327"/>
+        <location filename="../src/QueueDialog.cpp" line="328"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Downloading Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Paket İndirme Başladı&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="331"/>
+        <location filename="../src/QueueDialog.cpp" line="332"/>
         <source>Starting downloading packages from %1...</source>
         <translation>Paketlerin %1 deposundan indirilmesine başlanıyor...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="371"/>
+        <location filename="../src/QueueDialog.cpp" line="372"/>
         <source>%p% (%1 KB/s, %4:%5:%6 remaining)</source>
         <comment>You just have to translate &apos;remaining&apos; here. Leave everything else as it is.</comment>
         <translation>%p% (%1 KB/s, %4:%5:%6 kaldı)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="379"/>
+        <location filename="../src/QueueDialog.cpp" line="380"/>
         <source>Downloading %1... (%2 MB of %3 MB)</source>
         <translation>%1 İndiriliyor... (%2 MB / %3 MB)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="382"/>
+        <location filename="../src/QueueDialog.cpp" line="383"/>
         <source>Downloading %1... (%2 KB of %3 KB)</source>
         <translation>%1 İndiriliyor... (%2 KB / %3 KB)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="433"/>
+        <location filename="../src/QueueDialog.cpp" line="434"/>
         <source>Queue processed, please wait...</source>
         <translation>Sıra işlendi, lütfen bekleyin...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="444"/>
+        <location filename="../src/QueueDialog.cpp" line="445"/>
         <source>Queue processing failed!</source>
         <translation>Sıra işleme başarısız!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="449"/>
+        <location filename="../src/QueueDialog.cpp" line="450"/>
         <source>Queue processed successfully!</source>
         <translation>Sıra başarıyla işlendi!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="457"/>
+        <location filename="../src/QueueDialog.cpp" line="458"/>
         <source>Close</source>
         <translation>Kapat</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="493"/>
+        <location filename="../src/QueueDialog.cpp" line="494"/>
         <source>Unexpected Error. Shaman might be corrupted.</source>
         <translation>Beklenmeyen Hata. Shaman bozulmuş olabilir.</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="500"/>
+        <location filename="../src/QueueDialog.cpp" line="501"/>
         <source>Executing %1 scriptlet for %2...</source>
         <translation>%1 betiği %2 için çalıştırılıyor...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="557"/>
+        <location filename="../src/QueueDialog.cpp" line="558"/>
         <source>Extracting Scriptlet from package failed!!</source>
         <translation>Paketten betik ayıklama başarısız!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="567"/>
+        <location filename="../src/QueueDialog.cpp" line="568"/>
         <source>Package %1 does not have %2 scriptlet</source>
         <translation>%1 paketi %2 betiği içermiyor</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="685"/>
+        <location filename="../src/QueueDialog.cpp" line="686"/>
         <source>Scriptlet processed successfully!</source>
         <translation>Betik başarıyla işlendi!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="691"/>
+        <location filename="../src/QueueDialog.cpp" line="692"/>
         <source>Error processing Scriptlet!!</source>
         <translation>Betik işlemede hata!!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="864"/>
+        <location filename="../src/QueueDialog.cpp" line="865"/>
         <source>Queue Processing</source>
         <translation>Sıra İşleme</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="778"/>
+        <location filename="../src/QueueDialog.cpp" line="779"/>
         <source>Would you like to abort Queue Processing?
 This may damage your system.</source>
         <translation>Sıra İşlemeyi iptal etmek ister misiniz?
 Bu sisteminize zarar verebilir.</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="814"/>
+        <location filename="../src/QueueDialog.cpp" line="815"/>
         <source>There has been an error while preparing the transaction.
 </source>
         <translation>İşleme hazırlanılırken bir hata oluştu.
 </translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="851"/>
+        <location filename="../src/QueueDialog.cpp" line="852"/>
         <source>There has been an error while committing the transaction.
 </source>
         <translation>İşlem gerçekleştirilirken bir hata oluştu.
@@ -2106,47 +2106,52 @@ Bu sisteminize zarar verebilir.</translation>
         <translation>Sırayı Gözden Geçir</translation>
     </message>
     <message>
-        <location filename="../ui/reviewQueueDialog.ui" line="31"/>
+        <location filename="../ui/reviewQueueDialog.ui" line="39"/>
         <source>Turn off PC when Queue is done</source>
         <translation>Sıra tamamlandıktan sonra bilgisayarı kapat</translation>
     </message>
     <message>
-        <location filename="../ui/reviewQueueDialog.ui" line="38"/>
+        <location filename="../ui/reviewQueueDialog.ui" line="46"/>
         <source>Process in Tray</source>
         <translation>Sistem Çubuğunda çalıştır</translation>
     </message>
     <message>
-        <location filename="../ui/reviewQueueDialog.ui" line="45"/>
+        <location filename="../ui/reviewQueueDialog.ui" line="53"/>
         <source>Keep Queue Dialog Open after the Queue is finished</source>
         <translation>Sıra bittikten sonra da Sıra Penceresini açık tut</translation>
     </message>
     <message>
-        <location filename="../ui/reviewQueueDialog.ui" line="54"/>
+        <location filename="../ui/reviewQueueDialog.ui" line="62"/>
         <source>Show packages...</source>
         <translation>Paketleri Göster...</translation>
     </message>
     <message>
-        <location filename="../ui/reviewQueueDialog.ui" line="83"/>
+        <location filename="../ui/reviewQueueDialog.ui" line="92"/>
         <source>Packages In Queue</source>
         <translation>Sıradaki Paketler</translation>
     </message>
     <message>
-        <location filename="../ui/reviewQueueDialog.ui" line="93"/>
+        <location filename="../ui/reviewQueueDialog.ui" line="102"/>
         <source>Cancel</source>
         <translation>İptal</translation>
     </message>
     <message>
-        <location filename="../ui/reviewQueueDialog.ui" line="116"/>
+        <location filename="../ui/reviewQueueDialog.ui" line="126"/>
         <source>Process</source>
         <translation>İşlem</translation>
     </message>
     <message>
-        <location filename="../ui/reviewQueueDialog.ui" line="145"/>
+        <location filename="../ui/reviewQueueDialog.ui" line="156"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Review Queue&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;(new line)p, li { white-space: pre-wrap; }(new line)&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;(new line)&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Sırayı Gözden Geçir&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../ui/reviewQueueDialog.ui" line="32"/>
+        <source>Force Queue Processing</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2985,32 +2990,32 @@ p, li { white-space: pre-wrap; }
         <translation>Sistem Yükseltme</translation>
     </message>
     <message>
-        <location filename="../ui/upgradeDialog.ui" line="58"/>
+        <location filename="../ui/upgradeDialog.ui" line="65"/>
         <source>Remember my choice</source>
         <translation>Seçimimi hatırla</translation>
     </message>
     <message>
-        <location filename="../ui/upgradeDialog.ui" line="69"/>
+        <location filename="../ui/upgradeDialog.ui" line="76"/>
         <source>Abort</source>
         <translation>İptal</translation>
     </message>
     <message>
-        <location filename="../ui/upgradeDialog.ui" line="93"/>
+        <location filename="../ui/upgradeDialog.ui" line="100"/>
         <source>Show packages...</source>
         <translation>Paketleri göster...</translation>
     </message>
     <message>
-        <location filename="../ui/upgradeDialog.ui" line="110"/>
+        <location filename="../ui/upgradeDialog.ui" line="117"/>
         <source>Add to Queue</source>
         <translation>Sıraya ekle</translation>
     </message>
     <message>
-        <location filename="../ui/upgradeDialog.ui" line="121"/>
+        <location filename="../ui/upgradeDialog.ui" line="128"/>
         <source>Upgrade Now</source>
         <translation>Şimdi Yükselt</translation>
     </message>
     <message>
-        <location filename="../ui/upgradeDialog.ui" line="143"/>
+        <location filename="../ui/upgradeDialog.ui" line="150"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -3018,9 +3023,14 @@ p, li { white-space: pre-wrap; }
         <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Sistem Yükseltme&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/upgradeDialog.ui" line="182"/>
+        <location filename="../ui/upgradeDialog.ui" line="189"/>
         <source>Packages to Upgrade</source>
         <translation>Yükseltilecek Paketler</translation>
+    </message>
+    <message>
+        <location filename="../ui/upgradeDialog.ui" line="58"/>
+        <source>Force Queue Processing</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

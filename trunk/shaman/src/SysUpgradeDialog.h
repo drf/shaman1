@@ -35,6 +35,8 @@ public:
 	explicit SysUpgradeDialog(AlpmHandler *hnd, QWidget *parent = 0);
 	~SysUpgradeDialog();
 	
+	bool force();
+	
 private slots:
 	void abort();
 	void initSysUpgrade();
