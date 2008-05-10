@@ -22,6 +22,9 @@
 
 #include "shamanApplet.h"
 
+#include "AbstractView.h"
+#include "ErrorView.h"
+
 #include <QAction>
 #include <QtDBus/QDBusMessage>
 #include <QGraphicsLinearLayout>
@@ -158,25 +161,63 @@ void ShamanApplet::removePackage()
     dbus.call(processMsg);
 }
 
-void ShamanApplet::dataUpdated(const QString &name, const Plasma::DataEngine::Data &data)
+void ShamanApplet::dataUpdated(const QString &source, const Plasma::DataEngine::Data &data)
 {
     kDebug() << "called";
     
-    if ( data.size() == 0 ) 
-        return;
-    
-    if ( name != "shaman" )
-        return;
-    
-    m_progressBarWidget->setValue( data[ "TotalDlPercent" ].toInt() );
-    
-    m_statusLabelWidget->setText( data[ "transactionStatus" ].toString() );
+    Q_UNUSED(source)
+
+    if( data["error"].toBool() && !m_error ) 
+    {
+        m_errorMessage = data["errorMessage"].toString();
+        loadView(ShamanApplet::ErrorViewType);
+    }
+    else if( !data["error"].toBool() ) 
+    {
+        /*loadTransferGraph(config().readEntry("graphType", QVariant(PlasmaKGet::BarChartType)).toUInt());
+
+        if(m_transferGraph && m_transferGraph->transfers() != data["transfers"].toMap()) {
+            m_transferGraph->setTransfers(data["transfers"].toMap());
+        }*/
+        loadView(ShamanApplet::IdleType);
+    }
+
+    m_error = data["error"].toBool();
 }
 
 void ShamanApplet::showContextMenu()
 {
     if (m_contextMenu)
         m_contextMenu->popup(QCursor::pos());
+}
+
+void ShamanApplet::loadView(uint type)
+{
+    // QSizeF size = geometry().size();
+
+    if(type != m_viewType) {
+        delete m_view;
+
+        switch(type)
+        {
+            case ShamanApplet::ErrorViewType :
+                m_view = new ErrorView(this, m_errorMessage);
+                break;
+            case ShamanApplet::TransactionType :
+                //m_view = new TransactionView(this);
+                break;
+            case ShamanApplet::IdleType :
+                
+            default:
+                //m_view = new IdleView(this);
+                break;
+        }
+
+        resize(QSize(m_layout->geometry().width(), m_layout->geometry().height()));
+        // updateGeometry();
+        m_viewType = type;
+    }
+//    resize(size);
 }
 
 #include "shamanApplet.moc"

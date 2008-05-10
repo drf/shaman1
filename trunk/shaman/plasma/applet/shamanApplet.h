@@ -32,13 +32,23 @@ class KMenu;
 class QProgressBar;
 class QLabel;
 class QGraphicsLinearLayout;
+class AbstractView;
 
 class ShamanApplet : public Plasma::Applet
 {
     Q_OBJECT
+    
     public:
+        enum ViewType {
+                ErrorViewType = 1,
+                IdleType = 2,
+                TransactionType = 3
+            };
+        
         ShamanApplet(QObject *parent, const QVariantList &args);
         ~ShamanApplet();
+        
+        void init();
 
     public slots:
         void dataUpdated(const QString &name, const Plasma::DataEngine::Data &data);
@@ -51,7 +61,9 @@ class ShamanApplet : public Plasma::Applet
         void showContextMenu();
 
     private:
-        void init();
+        void loadView(uint type);
+    
+    private:
 
         Plasma::DataEngine *m_engine;
         QGraphicsLinearLayout *m_layout;
@@ -60,6 +72,10 @@ class ShamanApplet : public Plasma::Applet
         KMenu *m_contextMenu;
         QProgressBar *m_progressBarWidget;
         QLabel *m_statusLabelWidget;
+        AbstractView *m_view;
+        QString m_errorMessage;
+        bool m_error;
+        uint m_viewType;
 }; 
 
 K_EXPORT_PLASMA_APPLET(shaman, ShamanApplet)
