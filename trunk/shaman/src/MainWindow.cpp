@@ -164,6 +164,8 @@ turnOffSys(false)
 	connect(&CbackReference, SIGNAL(streamTransDlProg(const QString&,int,int,int,int)), 
 			SIGNAL(streamTransDlProg(const QString&,int,int,int,int)));
 	connect(&athCback, SIGNAL(passwordRequired(int)), SLOT(showAuthDialog(int)));
+	connect(aHandle, SIGNAL(transactionStarted()), SIGNAL(transactionStarted()));
+	connect(aHandle, SIGNAL(transactionReleased()), SIGNAL(transactionReleased()));
 
 	QSettings *settings = new QSettings();
 

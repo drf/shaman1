@@ -82,6 +82,8 @@ signals:
 					int totalPercent, int totalSpeed);
 	void buildingStarted();
 	void buildingFinished();
+	void transactionStarted();
+	void transactionReleased();
 
 	void startTimer();
 	void stopTimer();

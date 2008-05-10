@@ -18,6 +18,14 @@
 			<arg type="b" direction="out" />
 		</method>
 		
+		<signal name="transactionStarted">
+		</signal>
+		<signal name="transactionReleased">
+		</signal>
+		<signal name="buildingStarted">
+		</signal>
+		<signal name="buildingFinished">
+		</signal>
 		<signal name="systemIsUpToDate">
 		</signal>
 		<signal name="actionStatusChanged">
