@@ -174,11 +174,7 @@ void ShamanApplet::dataUpdated(const QString &source, const Plasma::DataEngine::
     }
     else if( !data["error"].toBool() ) 
     {
-        /*loadTransferGraph(config().readEntry("graphType", QVariant(PlasmaKGet::BarChartType)).toUInt());
-
-        if(m_transferGraph && m_transferGraph->transfers() != data["transfers"].toMap()) {
-            m_transferGraph->setTransfers(data["transfers"].toMap());
-        }*/
+        
         loadView(ShamanApplet::IdleType);
     }
 

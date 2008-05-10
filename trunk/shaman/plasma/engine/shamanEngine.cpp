@@ -96,6 +96,7 @@ void ShamanEngine::getShamanData(const QString &name)
 		setData(name, "CurrentItemDlPercent", singleDlPercent);
 		setData(name, "TotalDlSpeed", totalDlSpd);
 		setData(name, "TotalDlPercent", totalDlPercent);
+		setData(name, "onTransaction", onTransaction);
 	}
 	else 
 	{
@@ -155,6 +156,18 @@ void ShamanEngine::connectDBusSlots()
 		dbusError = true;
 	else
 		dbusError = false;
+
+	if(!dbus.connect("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", 
+	        "transactionStarted", this, SLOT(transactionStarted())))
+	    dbusError = true;
+	else
+	    dbusError = false;
+
+	if(!dbus.connect("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", 
+	        "transactionReleased", this, SLOT(transactionReleased())))
+	    dbusError = true;
+	else
+	    dbusError = false;
 }
 
 void ShamanEngine::dbUpdate(const QString &repo, int action)
@@ -171,6 +184,18 @@ void ShamanEngine::dlProg(const QString &filename, int singlePercent, int single
 	singleDlSpd = singleSpeed;
 	totalDlPercent = totalPercent;
 	totalDlSpd = totalSpeed;
+}
+
+void ShamanEngine::transactionStarted()
+{
+    onTransaction = true;
+    updateSourceEvent("Shaman");
+}
+
+void ShamanEngine::transactionReleased()
+{
+    onTransaction = false;
+    updateSourceEvent("Shaman");
 }
 
 #include "shamanEngine.moc"

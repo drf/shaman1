@@ -56,6 +56,8 @@ private slots:
 	void actionChanged(const QString &action);
 	void dlProg(const QString &filename, int singlePercent, int singleSpeed,
 			int totalPercent, int totalSpeed);
+	void transactionStarted();
+	void transactionReleased();
 	
 private:
 	bool isDBusServiceRegistered();
@@ -72,6 +74,8 @@ private:
 	int singleDlSpd;
 	int totalDlPercent;
 	int totalDlSpd;
+	
+	bool onTransaction;
 };
 
 K_EXPORT_PLASMA_DATAENGINE(shaman, ShamanEngine)
