@@ -39,7 +39,7 @@ public:
 	ErrorView(Plasma::Applet *parent, const QString &message);
 	virtual ~ErrorView();
 	
-private:
+private slots:
     void launchShaman();
 
 private:
