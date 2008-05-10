@@ -141,7 +141,7 @@ void ShamanRunner::match(Plasma::RunnerContext *search)
     	if ( match )
     	{
     	    match->setRelevance(1);
-    	    search->addMatch(term, match);
+    	    search->addMatch(term, *match);
     	}
     }
 }

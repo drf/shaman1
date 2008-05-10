@@ -1,6 +1,4 @@
 /***************************************************************************
- *   Copyright (C) 2008 by Lukas Appelhans                                 *
- *   l.appelhans@gmx.de                                                    *
  *   Copyright (C) 2008 by Dario Freddi                                    *
  *   drf54321@yahoo.it                                                     *
  *                                                                         *
@@ -20,48 +18,56 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 
-#ifndef SHAMANAPPLET_H
-#define SHAMANAPPLET_H
+#include "ErrorView.h"
 
-#include <plasma/applet.h>
-#include <plasma/dataengine.h>
-#include <QtDBus/QDBusConnection>
+#include "AbstractView.h"
 
-class QLineEdit;
-class KMenu;
-class QProgressBar;
-class QLabel;
-class QGraphicsLinearLayout;
+#include <plasma/widgets/icon.h>
 
-class ShamanApplet : public Plasma::Applet
+#include <QGraphicsLinearLayout>
+#include <QGraphicsProxyWidget>
+#include <QLabel>
+#include <QProcess>
+#include <QPushButton>
+
+#include <KIcon>
+
+ErrorView::ErrorView(Plasma::Applet *parent, const QString &message)
+: AbstractView(parent)
 {
-    Q_OBJECT
-    public:
-        ShamanApplet(QObject *parent, const QVariantList &args);
-        ~ShamanApplet();
+    m_layout = static_cast <QGraphicsLinearLayout *> (parent->layout());
+    if (m_layout)
+    {
+        m_icon = new Plasma::Icon(KIcon("dialog-warning"), "");
 
-    public slots:
-        void dataUpdated(const QString &name, const Plasma::DataEngine::Data &data);
+        QLabel *errorLabel = new QLabel();
+        errorLabel->setStyleSheet("background-color: transparent; color: white");
+        errorLabel->setText(message);
+        errorLabel->setAlignment(Qt::AlignCenter);
 
-    private slots:
-        void updateDatabase();
-        void upgradeSystem();
-        void installPackage();
-        void removePackage();
-        void showContextMenu();
+        QPushButton *launchButton = new QPushButton(KIcon("kget"), "Launch Shaman");
+        launchButton->setAutoFillBackground(false);
 
-    private:
-        void init();
+        m_proxyErrorLabel = new QGraphicsProxyWidget(parent);
+        m_proxyErrorLabel->setWidget(errorLabel);
 
-        Plasma::DataEngine *m_engine;
-        QGraphicsLinearLayout *m_layout;
-        QDBusConnection dbus;
-        QLineEdit *m_packageLineEdit;
-        KMenu *m_contextMenu;
-        QProgressBar *m_progressBarWidget;
-        QLabel *m_statusLabelWidget;
-}; 
+        m_proxyLaunchButton = new QGraphicsProxyWidget(parent);
+        m_proxyLaunchButton->setWidget(launchButton);
 
-K_EXPORT_PLASMA_APPLET(shaman, ShamanApplet)
+        m_layout->addItem(m_icon);
+        m_layout->addItem(m_proxyErrorLabel);
+        m_layout->addItem(m_proxyLaunchButton);
 
-#endif
+        connect(launchButton, SIGNAL(clicked()), SLOT(launchShaman()));
+    }
+}
+
+ErrorView::~ErrorView()
+{
+}
+
+void ErrorView::launchShaman()
+{
+    QProcess *shamanProcess = new QProcess(this);
+    shamanProcess->startDetached("shaman");
+}

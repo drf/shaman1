@@ -4,6 +4,8 @@ INCLUDE_DIRECTORIES( ${KDE4_INCLUDES} )
 
 set(plasma_applet_shaman_SRCS
   shamanApplet.cpp
+  AbstractView.cpp
+  ErrorView.cpp
 )
 
 kde4_add_plugin(plasma_applet_shaman ${plasma_applet_shaman_SRCS})

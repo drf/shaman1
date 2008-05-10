@@ -1,6 +1,4 @@
 /***************************************************************************
- *   Copyright (C) 2008 by Lukas Appelhans                                 *
- *   l.appelhans@gmx.de                                                    *
  *   Copyright (C) 2008 by Dario Freddi                                    *
  *   drf54321@yahoo.it                                                     *
  *                                                                         *
@@ -20,48 +18,15 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 
-#ifndef SHAMANAPPLET_H
-#define SHAMANAPPLET_H
+#include "AbstractView.h"
 
 #include <plasma/applet.h>
-#include <plasma/dataengine.h>
-#include <QtDBus/QDBusConnection>
 
-class QLineEdit;
-class KMenu;
-class QProgressBar;
-class QLabel;
-class QGraphicsLinearLayout;
-
-class ShamanApplet : public Plasma::Applet
+AbstractView::AbstractView(Plasma::Applet *parent)
 {
-    Q_OBJECT
-    public:
-        ShamanApplet(QObject *parent, const QVariantList &args);
-        ~ShamanApplet();
+    m_applet = parent;
+}
 
-    public slots:
-        void dataUpdated(const QString &name, const Plasma::DataEngine::Data &data);
-
-    private slots:
-        void updateDatabase();
-        void upgradeSystem();
-        void installPackage();
-        void removePackage();
-        void showContextMenu();
-
-    private:
-        void init();
-
-        Plasma::DataEngine *m_engine;
-        QGraphicsLinearLayout *m_layout;
-        QDBusConnection dbus;
-        QLineEdit *m_packageLineEdit;
-        KMenu *m_contextMenu;
-        QProgressBar *m_progressBarWidget;
-        QLabel *m_statusLabelWidget;
-}; 
-
-K_EXPORT_PLASMA_APPLET(shaman, ShamanApplet)
-
-#endif
+AbstractView::~AbstractView()
+{
+}

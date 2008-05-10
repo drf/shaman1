@@ -1,6 +1,8 @@
 /***************************************************************************
  *   Copyright (C) 2008 by Lukas Appelhans                                 *
  *   l.appelhans@gmx.de                                                    *
+ *   Copyright (C) 2008 by Dario Freddi                                    *
+ *   drf54321@yahoo.it                                                     *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -34,6 +36,10 @@
 
 #include <plasma/widgets/icon.h>
 
+#define TOP_MARGIN 60
+#define MARGIN 10
+#define SPACING 4
+
 ShamanApplet::ShamanApplet(QObject *parent, const QVariantList &args)
   : Plasma::Applet(parent, args),
     dbus(QDBusConnection::systemBus()),
@@ -49,16 +55,26 @@ ShamanApplet::~ShamanApplet()
 
 void ShamanApplet::init()
 {
-    Plasma::DataEngine *m_engine = dataEngine("shaman");
-    if (m_engine) {
-        m_engine->connectAllSources(this);
+    m_layout = new QGraphicsLinearLayout(this);
+    m_layout->setOrientation(Qt::Vertical);
+    m_layout->setContentsMargins(MARGIN, TOP_MARGIN, MARGIN, MARGIN);
+    m_layout->setSpacing(SPACING);
+
+    m_engine = dataEngine("shaman");
+    
+    if ( m_engine ) 
+    {
+        m_engine->connectSource("shaman", this);
+        m_engine->setProperty("refreshTime", 2000);
     }
-    else {
-        kDebug()<<"Shaman Engine could not be loaded";
-    }
+    else 
+        kDebug() << "Shaman Engine could not be loaded";
+    
+    setLayout(m_layout);
+    
     m_contextMenu = new KMenu(0);
 
-    QGraphicsLinearLayout *m_layout = new QGraphicsLinearLayout(Qt::Vertical, this);
+    /*QGraphicsLinearLayout *m_layout = new QGraphicsLinearLayout(Qt::Vertical, this);
 
     QGraphicsLinearLayout *m_actionsLayout = new QGraphicsLinearLayout(m_layout);
 
@@ -109,7 +125,7 @@ void ShamanApplet::init()
     m_progressBar->setWidget(m_progressBarWidget);
     m_layout->addItem(m_progressBar);
 
-    setLayout(m_layout);
+    setLayout(m_layout);*/
 }
 
 void ShamanApplet::updateDatabase()
