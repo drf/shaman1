@@ -42,10 +42,20 @@ ShamanEngine::ShamanEngine(QObject *parent, const QVariantList &args)
 {
 	Q_UNUSED(args)
 	
+	setMinimumPollingInterval(MINIMUM_UPDATE_INTERVAL);
+	
 }
 
 ShamanEngine::~ShamanEngine()
 {
+}
+
+QStringList ShamanEngine::sources() const
+{
+    QStringList sources;
+    sources << "Shaman";
+
+    return sources;
 }
 
 void ShamanEngine::setRefreshTime(uint time)
@@ -58,14 +68,14 @@ uint ShamanEngine::refreshTime() const
         return 1000;
 }
 
-bool ShamanEngine::sourceRequested(const QString &name)
+bool ShamanEngine::sourceRequestEvent(const QString &name)
 {
-	return updateSource(name);
+	return updateSourceEvent(name);
 }
 
-bool ShamanEngine::updateSource(const QString &name)
+bool ShamanEngine::updateSourceEvent(const QString &name)
 {
-	if(!name.compare("shaman", Qt::CaseInsensitive))
+	if(!name.compare("Shaman", Qt::CaseInsensitive))
 		getShamanData(name);
 	
 	return true;
@@ -118,12 +128,12 @@ bool ShamanEngine::isDBusServiceRegistered()
 void ShamanEngine::actionChanged(const QString &action)
 {
 	currentAction = action;
-	updateSource("shaman");
+	updateSourceEvent("Shaman");
 }
 
 void ShamanEngine::updateShamanData()
 {
-	getShamanData("shaman");
+	getShamanData("Shaman");
 }
 
 void ShamanEngine::connectDBusSlots()

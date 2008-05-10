@@ -64,7 +64,7 @@ void ShamanApplet::init()
     
     if ( m_engine ) 
     {
-        m_engine->connectSource("shaman", this);
+        m_engine->connectSource("Shaman", this);
         m_engine->setProperty("refreshTime", 2000);
     }
     else 

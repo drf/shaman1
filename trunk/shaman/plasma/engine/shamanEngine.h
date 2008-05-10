@@ -28,6 +28,7 @@
 static const QString SHAMAN_DBUS_SERVICE = "org.archlinux.shaman";
 static const QString SHAMAN_DBUS_PATH = "/Shaman";
 static const QString SHAMAN_DBUS_INTERFACE = "org.archlinux.shaman";
+static const uint MINIMUM_UPDATE_INTERVAL = 1000;
 
 class ShamanEngine : public Plasma::DataEngine
 {
@@ -37,12 +38,15 @@ class ShamanEngine : public Plasma::DataEngine
 public:
 	ShamanEngine(QObject* parent, const QVariantList &args);
 	~ShamanEngine();
+	
+	QStringList sources() const;
+	
 	void setRefreshTime(uint time);
 	uint refreshTime() const;
 
 protected:
-	bool sourceRequested(const QString &name);
-	bool updateSource(const QString &name);
+    bool sourceRequestEvent(const QString &name);
+    bool updateSourceEvent(const QString& source);
 
 private slots:
 	void getShamanData(const QString &name);
