@@ -31,6 +31,7 @@
 #include <QPushButton>
 
 #include <KIcon>
+#include <KRun>
 
 ErrorView::ErrorView(Plasma::Applet *parent, const QString &message)
 : AbstractView(parent)
@@ -68,6 +69,5 @@ ErrorView::~ErrorView()
 
 void ErrorView::launchShaman()
 {
-    QProcess *shamanProcess = new QProcess(this);
-    shamanProcess->startDetached("shaman");
+    KRun::runCommand("shaman", "Shaman Package Manager", "shaman", 0);
 }
