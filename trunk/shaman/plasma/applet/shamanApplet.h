@@ -26,6 +26,7 @@
 #include <plasma/applet.h>
 #include <plasma/dataengine.h>
 #include <QtDBus/QDBusConnection>
+#include <QPointer>
 
 class QLineEdit;
 class KMenu;
@@ -72,7 +73,7 @@ class ShamanApplet : public Plasma::Applet
         KMenu *m_contextMenu;
         QProgressBar *m_progressBarWidget;
         QLabel *m_statusLabelWidget;
-        AbstractView *m_view;
+        QPointer<AbstractView> m_view;
         QString m_errorMessage;
         bool m_error;
         uint m_viewType;

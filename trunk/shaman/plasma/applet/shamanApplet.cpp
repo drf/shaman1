@@ -191,8 +191,10 @@ void ShamanApplet::loadView(uint type)
 {
     // QSizeF size = geometry().size();
 
-    if(type != m_viewType) {
-        delete m_view;
+    if ( type != m_viewType ) 
+    {
+        if ( m_view )
+            delete m_view;
 
         switch(type)
         {
