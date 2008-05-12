@@ -30,3 +30,5 @@ AbstractView::AbstractView(Plasma::Applet *parent)
 AbstractView::~AbstractView()
 {
 }
+
+#include "AbstractView.moc"

@@ -18,8 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 
-#ifndef ERRORVIEW_H
-#define ERRORVIEW_H
+#ifndef IDLEVIEW_H_
+#define IDLEVIEW_H_
 
 namespace Plasma {
     class Applet;
@@ -28,25 +28,39 @@ namespace Plasma {
 
 #include "AbstractView.h"
 
+#include <QtDBus/QDBusConnection>
+
 class QGraphicsLinearLayout;
 class QGraphicsProxyWidget;
+class QLineEdit;
+class KMenu;
 
-class ErrorView : public AbstractView
+class IdleView : public AbstractView
 {
     Q_OBJECT
     
 public:
-	ErrorView(Plasma::Applet *parent, const QString &message);
-	virtual ~ErrorView();
-	
-private slots:
-    void launchShaman();
+	IdleView(Plasma::Applet *parent, QDBusConnection dbs);
+	virtual ~IdleView();
 
+private slots:
+    void updateDatabase();
+    void upgradeSystem();
+    void installPackage();
+    void removePackage();
+    void showContextMenu();
+	
 private:
+    QDBusConnection m_dbus;
     QGraphicsLinearLayout *m_layout;
-    QGraphicsProxyWidget *m_proxyErrorLabel;
-    QGraphicsProxyWidget *m_proxyLaunchButton;
-    Plasma::Icon *m_icon;
+    QLineEdit *m_packageLineEdit;
+    Plasma::Icon *m_updateDatabaseIcon;
+    Plasma::Icon *m_upgradeSystemIcon;
+    QGraphicsLinearLayout *m_actionsLayout;
+    Plasma::Icon *m_actionIcon;
+    QGraphicsLinearLayout *m_lineLayout;
+    QGraphicsProxyWidget *m_lineEdit;
+    KMenu *m_contextMenu;
 };
 
-#endif /*ERRORVIEW_H*/
+#endif /*IDLEVIEW_H_*/

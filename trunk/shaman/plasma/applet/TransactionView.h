@@ -18,8 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 
-#ifndef ERRORVIEW_H
-#define ERRORVIEW_H
+#ifndef TRANSACTIONVIEW_H
+#define TRANSACTIONVIEW_H
 
 namespace Plasma {
     class Applet;
@@ -28,25 +28,32 @@ namespace Plasma {
 
 #include "AbstractView.h"
 
+#include <QtDBus/QDBusConnection>
+
 class QGraphicsLinearLayout;
 class QGraphicsProxyWidget;
+class QProgressBar;
+class QLabel;
 
-class ErrorView : public AbstractView
+class TransactionView : public AbstractView
 {
     Q_OBJECT
     
 public:
-	ErrorView(Plasma::Applet *parent, const QString &message);
-	virtual ~ErrorView();
+	TransactionView(Plasma::Applet *parent, QDBusConnection dbs);
+	virtual ~TransactionView();
 	
 private slots:
-    void launchShaman();
-
+    void status(const QString &status);
+    void dlProgress(const QString &filename, int totalPercent, int totalSpeed);
+	
 private:
+    QDBusConnection m_dbus;
     QGraphicsLinearLayout *m_layout;
-    QGraphicsProxyWidget *m_proxyErrorLabel;
-    QGraphicsProxyWidget *m_proxyLaunchButton;
-    Plasma::Icon *m_icon;
+    QProgressBar *m_progressBarWidget;
+    QLabel *m_statusLabelWidget;
+    QGraphicsProxyWidget *m_statusLabel;
+    QGraphicsProxyWidget *m_progressBar;
 };
 
-#endif /*ERRORVIEW_H*/
+#endif /*TRANSACTIONVIEW_H*/

@@ -65,9 +65,21 @@ ErrorView::ErrorView(Plasma::Applet *parent, const QString &message)
 
 ErrorView::~ErrorView()
 {
+    m_layout->removeItem(m_icon);
+    m_layout->removeItem(m_proxyErrorLabel);
+    m_layout->removeItem(m_proxyLaunchButton);
+
+    m_proxyErrorLabel->setWidget(0);
+    m_proxyLaunchButton->setWidget(0);
+
+    delete m_proxyErrorLabel;
+    delete m_proxyLaunchButton;
+    delete m_icon;
 }
 
 void ErrorView::launchShaman()
 {
     KRun::runCommand("shaman", "Shaman Package Manager", "shaman", 0);
 }
+
+#include "ErrorView.moc"

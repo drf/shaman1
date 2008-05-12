@@ -6,6 +6,8 @@ set(plasma_applet_shaman_SRCS
   shamanApplet.cpp
   AbstractView.cpp
   ErrorView.cpp
+  IdleView.cpp
+  TransactionView.cpp
 )
 
 kde4_add_plugin(plasma_applet_shaman 

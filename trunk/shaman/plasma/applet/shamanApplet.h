@@ -54,25 +54,19 @@ class ShamanApplet : public Plasma::Applet
     public slots:
         void dataUpdated(const QString &name, const Plasma::DataEngine::Data &data);
 
-    private slots:
-        void updateDatabase();
-        void upgradeSystem();
-        void installPackage();
-        void removePackage();
-        void showContextMenu();
-
     private:
         void loadView(uint type);
+            
+    signals:
+        void status(const QString &status);
+        void dlProgress(const QString &filename, int totalPercent, int totalSpeed);
+        void transProgress();
     
     private:
 
         Plasma::DataEngine *m_engine;
         QGraphicsLinearLayout *m_layout;
-        QDBusConnection dbus;
-        QLineEdit *m_packageLineEdit;
-        KMenu *m_contextMenu;
-        QProgressBar *m_progressBarWidget;
-        QLabel *m_statusLabelWidget;
+        QDBusConnection m_dbus;
         QPointer<AbstractView> m_view;
         QString m_errorMessage;
         bool m_error;

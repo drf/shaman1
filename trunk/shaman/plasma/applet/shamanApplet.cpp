@@ -24,17 +24,14 @@
 
 #include "AbstractView.h"
 #include "ErrorView.h"
+#include "IdleView.h"
+#include "TransactionView.h"
 
-#include <QAction>
 #include <QtDBus/QDBusMessage>
 #include <QGraphicsLinearLayout>
 #include <QGraphicsProxyWidget>
-#include <QLineEdit>
-#include <QLabel>
-#include <QProgressBar>
 
 #include <KIcon>
-#include <KMenu>
 #include <KDebug>
 
 #include <plasma/widgets/icon.h>
@@ -45,9 +42,7 @@
 
 ShamanApplet::ShamanApplet(QObject *parent, const QVariantList &args)
   : Plasma::Applet(parent, args),
-    dbus(QDBusConnection::systemBus()),
-    m_packageLineEdit(0),
-    m_contextMenu(0)
+    m_dbus(QDBusConnection::systemBus())
 {
     //setDrawStandardBackground(true);//TODO
 }
@@ -74,91 +69,6 @@ void ShamanApplet::init()
         kDebug() << "Shaman Engine could not be loaded";
     
     setLayout(m_layout);
-    
-    m_contextMenu = new KMenu(0);
-
-    /*QGraphicsLinearLayout *m_layout = new QGraphicsLinearLayout(Qt::Vertical, this);
-
-    QGraphicsLinearLayout *m_actionsLayout = new QGraphicsLinearLayout(m_layout);
-
-    Plasma::Icon *m_updateDatabaseIcon = new Plasma::Icon(KIcon("view-refresh"), i18n("Update Database"), this);
-    connect(m_updateDatabaseIcon, SIGNAL(activated()), SLOT(updateDatabase()));
-    m_actionsLayout->addItem(m_updateDatabaseIcon);
-
-    Plasma::Icon *m_upgradeSystemIcon = new Plasma::Icon(KIcon("system-software-update"), i18n("Upgrade System"), this);
-    connect(m_upgradeSystemIcon, SIGNAL(activated()), SLOT(upgradeSystem()));
-    m_actionsLayout->addItem(m_upgradeSystemIcon);
-
-    m_layout->addItem(m_actionsLayout);
-
-    QGraphicsLinearLayout *m_lineLayout = new QGraphicsLinearLayout(m_layout);
-
-    QGraphicsProxyWidget *m_lineEdit = new QGraphicsProxyWidget(this);
-    m_packageLineEdit = new QLineEdit(0);
-    m_lineEdit->setWidget(m_packageLineEdit);
-    m_lineLayout->addItem(m_lineEdit);
-
-    Plasma::Icon *m_actionIcon = new Plasma::Icon(KIcon("tools-wizard"), i18n("Action"), this);
-    QAction *m_installAction = new QAction(KIcon("list-add"), i18n("Install Package"), this);
-    connect(m_installAction, SIGNAL(triggered()), SLOT(installPackage()));
-    m_actionIcon->addAction(m_installAction);
-    m_contextMenu->addAction(m_installAction);
-    QAction *m_removeAction = new QAction(KIcon("list-remove"), i18n("Uninstall Package"), this);
-    connect(m_removeAction, SIGNAL(triggered()), SLOT(removePackage()));
-    m_actionIcon->addAction(m_removeAction);
-    m_contextMenu->addAction(m_removeAction);
-    connect(m_actionIcon, SIGNAL(activated()), SLOT(showContextMenu()));
-
-    m_lineLayout->addItem(m_actionIcon);
-
-    m_layout->addItem(m_lineLayout);
-
-    QGraphicsProxyWidget *m_statusLabel = new QGraphicsProxyWidget(this);
-    m_statusLabelWidget = new QLabel(0);
-    m_statusLabelWidget->setStyleSheet("background-color: transparent; color: white");
-    m_statusLabelWidget->setAlignment(Qt::AlignCenter);
-    m_statusLabelWidget->setText("Hello this is the status");
-    m_statusLabel->setWidget(m_statusLabelWidget);
-    m_layout->addItem(m_statusLabel);
-
-    QGraphicsProxyWidget *m_progressBar = new QGraphicsProxyWidget(this);
-    m_progressBarWidget = new QProgressBar(0);
-    m_progressBarWidget->setStyleSheet("background-color: transparent");
-    m_progressBarWidget->setValue(30);
-    m_progressBar->setWidget(m_progressBarWidget);
-    m_layout->addItem(m_progressBar);
-
-    setLayout(m_layout);*/
-}
-
-void ShamanApplet::updateDatabase()
-{
-    QDBusMessage msg = QDBusMessage::createMethodCall("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", "doDbUpdate");
-    dbus.call(msg);
-}
-
-void ShamanApplet::upgradeSystem()
-{
-    QDBusMessage msg = QDBusMessage::createMethodCall("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", "fullSysUpgrade");
-    dbus.call(msg);
-}
-
-void ShamanApplet::installPackage()
-{
-    QDBusMessage msg = QDBusMessage::createMethodCall("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", "installPackage");
-    msg << m_packageLineEdit->text();
-    dbus.call(msg);
-    QDBusMessage processMsg = QDBusMessage::createMethodCall("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", "widgetQueueToAlpmQueue");
-    dbus.call(processMsg);
-}
-
-void ShamanApplet::removePackage()
-{
-    QDBusMessage msg = QDBusMessage::createMethodCall("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", "removePackage");
-    msg << m_packageLineEdit->text();
-    dbus.call(msg);
-    QDBusMessage processMsg = QDBusMessage::createMethodCall("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", "widgetQueueToAlpmQueue");
-    dbus.call(processMsg);
 }
 
 void ShamanApplet::dataUpdated(const QString &source, const Plasma::DataEngine::Data &data)
@@ -174,17 +84,21 @@ void ShamanApplet::dataUpdated(const QString &source, const Plasma::DataEngine::
     }
     else if( !data["error"].toBool() ) 
     {
-        
-        loadView(ShamanApplet::IdleType);
+        if( data["onTransaction"].toBool() && data["transactionStatus"].toString() != "idle" )
+        {
+            kDebug() << "Is on transaction";
+            loadView(ShamanApplet::TransactionType);
+            
+            emit status(data["transactionStatus"].toString());
+            emit dlProgress(data["CurrentItemProcessed"].toString(),
+                    data["TotalDlPercent"].toInt(),
+                    data["TotalDlSpeed"].toInt());
+        }
+        else
+            loadView(ShamanApplet::IdleType);
     }
 
     m_error = data["error"].toBool();
-}
-
-void ShamanApplet::showContextMenu()
-{
-    if (m_contextMenu)
-        m_contextMenu->popup(QCursor::pos());
 }
 
 void ShamanApplet::loadView(uint type)
@@ -194,7 +108,10 @@ void ShamanApplet::loadView(uint type)
     if ( type != m_viewType ) 
     {
         if ( m_view )
+        {
+            kDebug() << "Deleting old view";
             delete m_view;
+        }
 
         switch(type)
         {
@@ -202,12 +119,12 @@ void ShamanApplet::loadView(uint type)
                 m_view = new ErrorView(this, m_errorMessage);
                 break;
             case ShamanApplet::TransactionType :
-                //m_view = new TransactionView(this);
+                m_view = new TransactionView(this, m_dbus);
                 break;
             case ShamanApplet::IdleType :
                 
             default:
-                //m_view = new IdleView(this);
+                m_view = new IdleView(this, m_dbus);
                 break;
         }
 
