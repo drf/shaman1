@@ -80,6 +80,7 @@ signals:
 	void streamDbUpdatingStatus(const QString &repo, int action);
 	void streamTransDlProg(const QString &filename, int singlePercent, int singleSpeed,
 					int totalPercent, int totalSpeed);
+	void streamTransactionProgress(int percent);
 	void buildingStarted();
 	void buildingFinished();
 	void transactionStarted();

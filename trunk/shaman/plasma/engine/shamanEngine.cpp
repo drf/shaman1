@@ -97,6 +97,8 @@ void ShamanEngine::getShamanData(const QString &name)
 		setData(name, "TotalDlSpeed", totalDlSpd);
 		setData(name, "TotalDlPercent", totalDlPercent);
 		setData(name, "onTransaction", onTransaction);
+		setData(name, "onDownloading", onDownloading);
+		setData(name, "transactionPercent", transactionPercent);
 	}
 	else 
 	{
@@ -158,6 +160,12 @@ void ShamanEngine::connectDBusSlots()
 		dbusError = false;
 
 	if(!dbus.connect("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", 
+	        "streamTransactionProgress", this, SLOT(transProg(int))))
+	    dbusError = true;
+	else
+	    dbusError = false;
+
+	if(!dbus.connect("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", 
 	        "transactionStarted", this, SLOT(transactionStarted())))
 	    dbusError = true;
 	else
@@ -184,6 +192,13 @@ void ShamanEngine::dlProg(const QString &filename, int singlePercent, int single
 	singleDlSpd = singleSpeed;
 	totalDlPercent = totalPercent;
 	totalDlSpd = totalSpeed;
+	onDownloading = true;
+}
+
+void ShamanEngine::transProg(int percent)
+{
+    transactionPercent = percent;
+    onDownloading = false;
 }
 
 void ShamanEngine::transactionStarted()

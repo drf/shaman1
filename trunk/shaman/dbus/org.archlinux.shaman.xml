@@ -42,6 +42,9 @@
 			<arg type="i" direction="out" />
 			<arg type="i" direction="out" />
 		</signal>
+		<signal name="streamTransactionProgress">
+			<arg type="i" direction="out" />
+		</signal>
 		<signal name="shamanReady">
 		</signal>
 		<signal name="aboutToQuit">

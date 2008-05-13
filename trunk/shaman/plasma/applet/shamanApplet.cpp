@@ -30,21 +30,30 @@
 #include <QtDBus/QDBusMessage>
 #include <QGraphicsLinearLayout>
 #include <QGraphicsProxyWidget>
+#include <QPainter>
 
 #include <KIcon>
 #include <KDebug>
 
-#include <plasma/widgets/icon.h>
+#include <plasma/svg.h>
+#include <plasma/applet.h>
+#include <plasma/theme.h>
+#include <plasma/dataengine.h>
 
-#define TOP_MARGIN 60
-#define MARGIN 10
-#define SPACING 4
+#define TOP_MARGIN 90
+#define MARGIN 20
+#define SPACING 30
 
 ShamanApplet::ShamanApplet(QObject *parent, const QVariantList &args)
   : Plasma::Applet(parent, args),
     m_dbus(QDBusConnection::systemBus())
 {
-    //setDrawStandardBackground(true);//TODO
+    setHasConfigurationInterface(false);
+    //setAspectRatioMode(Plasma::IgnoreAspectRatio);
+    //setBackgroundHints(Applet::DefaultBackground);
+    
+    m_theme = new Plasma::Svg(this);
+    m_theme->setImagePath("widgets/kget");
 }
 
 ShamanApplet::~ShamanApplet()
@@ -53,10 +62,21 @@ ShamanApplet::~ShamanApplet()
 
 void ShamanApplet::init()
 {
-    m_layout = new QGraphicsLinearLayout(this);
+    m_layout = new QGraphicsLinearLayout();
     m_layout->setOrientation(Qt::Vertical);
-    m_layout->setContentsMargins(MARGIN, TOP_MARGIN, MARGIN, MARGIN);
     m_layout->setSpacing(SPACING);
+
+    m_form = new QGraphicsWidget(this);
+    m_form->setContentsMargins(MARGIN, TOP_MARGIN, MARGIN, 35);
+    m_form->setLayout(m_layout);
+
+    if(formFactor() == Plasma::Vertical || formFactor() == Plasma::Horizontal) 
+    {
+        m_form->setContentsMargins(0, 0, 0, 0);
+        setBackgroundHints(NoBackground);
+    }
+    else 
+        resize(QSize(350, 350));
 
     m_engine = dataEngine("shaman");
     
@@ -69,6 +89,38 @@ void ShamanApplet::init()
         kDebug() << "Shaman Engine could not be loaded";
     
     setLayout(m_layout);
+}
+
+QSizeF ShamanApplet::contentSizeHint() const
+{
+    if (!m_form) 
+        return QSizeF(600, 600);
+    else
+        return m_form->effectiveSizeHint(Qt::PreferredSize, geometry().size());
+}
+
+void ShamanApplet::constraintsEvent(Plasma::Constraints constraints)
+{
+    if (constraints & Plasma::SizeConstraint) {
+        if (m_layout) {
+            m_form->resize(geometry().size());
+        }
+    }
+}
+
+void ShamanApplet::paintInterface(QPainter *p, const QStyleOptionGraphicsItem *option, const QRect &contentsRect)
+{
+    Q_UNUSED(option);
+    if(formFactor() == Plasma::Planar || formFactor() == Plasma::MediaCenter) 
+    {
+        p->setRenderHint(QPainter::SmoothPixmapTransform);
+
+        m_theme->paint(p, QRect(contentsRect.x() + SPACING + 10, 
+                                contentsRect.y() + SPACING + 10, 111, 35), "title");
+        m_theme->paint(p, QRect(contentsRect.x() + SPACING + 10, 
+                                contentsRect.y() + SPACING + 45, 
+                                contentsRect.width() - (SPACING + 10) * 2, 1), "line");
+    }
 }
 
 void ShamanApplet::dataUpdated(const QString &source, const Plasma::DataEngine::Data &data)
@@ -90,9 +142,13 @@ void ShamanApplet::dataUpdated(const QString &source, const Plasma::DataEngine::
             loadView(ShamanApplet::TransactionType);
             
             emit status(data["transactionStatus"].toString());
-            emit dlProgress(data["CurrentItemProcessed"].toString(),
-                    data["TotalDlPercent"].toInt(),
-                    data["TotalDlSpeed"].toInt());
+
+            if( data["onDownloading"].toBool() )
+                emit dlProgress(data["CurrentItemProcessed"].toString(),
+                        data["TotalDlPercent"].toInt(),
+                        data["TotalDlSpeed"].toInt());
+            else
+                emit transProgress(data["transactionPercent"].toInt());
         }
         else
             loadView(ShamanApplet::IdleType);
@@ -103,8 +159,6 @@ void ShamanApplet::dataUpdated(const QString &source, const Plasma::DataEngine::
 
 void ShamanApplet::loadView(uint type)
 {
-    // QSizeF size = geometry().size();
-
     if ( type != m_viewType ) 
     {
         if ( m_view )
@@ -128,11 +182,11 @@ void ShamanApplet::loadView(uint type)
                 break;
         }
 
-        resize(QSize(m_layout->geometry().width(), m_layout->geometry().height()));
-        // updateGeometry();
         m_viewType = type;
     }
-//    resize(size);
+    
+    m_layout->updateGeometry();
+    
 }
 
 #include "shamanApplet.moc"

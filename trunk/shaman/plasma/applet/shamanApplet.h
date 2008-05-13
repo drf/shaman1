@@ -28,6 +28,10 @@
 #include <QtDBus/QDBusConnection>
 #include <QPointer>
 
+namespace Plasma {
+    class Svg;
+}
+
 class QLineEdit;
 class KMenu;
 class QProgressBar;
@@ -50,6 +54,10 @@ class ShamanApplet : public Plasma::Applet
         ~ShamanApplet();
         
         void init();
+        
+        QSizeF contentSizeHint() const;
+        void constraintsEvent(Plasma::Constraints constraints);
+        void paintInterface(QPainter *p, const QStyleOptionGraphicsItem *option, const QRect &contentsRect);
 
     public slots:
         void dataUpdated(const QString &name, const Plasma::DataEngine::Data &data);
@@ -60,12 +68,13 @@ class ShamanApplet : public Plasma::Applet
     signals:
         void status(const QString &status);
         void dlProgress(const QString &filename, int totalPercent, int totalSpeed);
-        void transProgress();
+        void transProgress(int percent);
     
     private:
-
+        Plasma::Svg *m_theme;
         Plasma::DataEngine *m_engine;
         QGraphicsLinearLayout *m_layout;
+        QGraphicsWidget *m_form;
         QDBusConnection m_dbus;
         QPointer<AbstractView> m_view;
         QString m_errorMessage;

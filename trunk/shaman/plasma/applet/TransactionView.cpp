@@ -53,6 +53,7 @@ TransactionView::TransactionView(Plasma::Applet *parent, QDBusConnection dbs)
     
     connect(parent, SIGNAL(dlProgress(const QString&,int,int)), SLOT(dlProgress(const QString&,int,int)));
     connect(parent, SIGNAL(status(const QString&)), SLOT(status(const QString&)));
+    connect(parent, SIGNAL(transProgress(int)), SLOT(transProgress(int)));
 }
 
 TransactionView::~TransactionView()
@@ -73,6 +74,12 @@ void TransactionView::dlProgress(const QString &filename, int totalPercent, int 
     
     m_progressBarWidget->setValue(totalPercent);
     m_statusLabelWidget->setText("Downloading " + filename);
+}
+
+void TransactionView::transProgress(int percent)
+{
+    m_progressBarWidget->setValue(percent);
+    m_statusLabelWidget->setText("Committing Transaction...");
 }
 
 void TransactionView::status(const QString &status)

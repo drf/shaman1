@@ -1644,6 +1644,7 @@ void MainWindow::processQueue()
 	queueDl = new QueueDialog(aHandle, this);
 
 	connect(queueDl, SIGNAL(terminated(bool)), SLOT(queueProcessingEnded(bool)));
+	connect(queueDl, SIGNAL(streamTransactionProgress(int)), SIGNAL(streamTransactionProgress(int)));
 	
 	bool force = false;
 

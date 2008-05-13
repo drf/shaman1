@@ -395,8 +395,13 @@ void QueueDialog::updateProgressBar(pmtransprog_t event, char *pkgname, int perc
 	{
 		progressBar->setFormat("%p%");
 		progressBar->setRange(0,100);
-		if(progressBar->value() != (int)(((float)remain / (float)howmany) * (float)100))
-			progressBar->setValue((int)(((float)remain / (float)howmany) * (float)100));		
+		
+		int value = (int)(((float)remain / (float)howmany) * (float)100);
+		
+		if(progressBar->value() != value)
+			progressBar->setValue(value);
+		
+		emit streamTransactionProgress(value);
 	}
 }
 

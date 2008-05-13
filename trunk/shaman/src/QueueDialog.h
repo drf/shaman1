@@ -78,6 +78,7 @@ private slots:
 	
 signals:
 	void terminated(bool errors);
+	void streamTransactionProgress(int percent);
 
 private:
 	bool runScriptlet(int action, const QString &p1N, const QString &p1V, 

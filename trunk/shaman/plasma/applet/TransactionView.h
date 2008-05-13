@@ -46,6 +46,7 @@ public:
 private slots:
     void status(const QString &status);
     void dlProgress(const QString &filename, int totalPercent, int totalSpeed);
+    void transProgress(int percent);
 	
 private:
     QDBusConnection m_dbus;
