@@ -40,7 +40,7 @@
 #include <plasma/theme.h>
 #include <plasma/dataengine.h>
 
-#define TOP_MARGIN 90
+#define TOP_MARGIN 0
 #define MARGIN 20
 #define SPACING 30
 
@@ -52,8 +52,8 @@ ShamanApplet::ShamanApplet(QObject *parent, const QVariantList &args)
     //setAspectRatioMode(Plasma::IgnoreAspectRatio);
     //setBackgroundHints(Applet::DefaultBackground);
     
-    m_theme = new Plasma::Svg(this);
-    m_theme->setImagePath("widgets/kget");
+    //m_theme = new Plasma::Svg(this);
+    //m_theme->setImagePath("widgets/kget");
 }
 
 ShamanApplet::~ShamanApplet()
@@ -62,7 +62,7 @@ ShamanApplet::~ShamanApplet()
 
 void ShamanApplet::init()
 {
-    m_layout = new QGraphicsLinearLayout();
+    m_layout = new QGraphicsLinearLayout(this);
     m_layout->setOrientation(Qt::Vertical);
     m_layout->setSpacing(SPACING);
 
@@ -111,7 +111,7 @@ void ShamanApplet::constraintsEvent(Plasma::Constraints constraints)
 void ShamanApplet::paintInterface(QPainter *p, const QStyleOptionGraphicsItem *option, const QRect &contentsRect)
 {
     Q_UNUSED(option);
-    if(formFactor() == Plasma::Planar || formFactor() == Plasma::MediaCenter) 
+    /**if(formFactor() == Plasma::Planar || formFactor() == Plasma::MediaCenter) 
     {
         p->setRenderHint(QPainter::SmoothPixmapTransform);
 
@@ -120,7 +120,7 @@ void ShamanApplet::paintInterface(QPainter *p, const QStyleOptionGraphicsItem *o
         m_theme->paint(p, QRect(contentsRect.x() + SPACING + 10, 
                                 contentsRect.y() + SPACING + 45, 
                                 contentsRect.width() - (SPACING + 10) * 2, 1), "line");
-    }
+    }**/
 }
 
 void ShamanApplet::dataUpdated(const QString &source, const Plasma::DataEngine::Data &data)
