@@ -44,89 +44,32 @@ class BackendPlugin : public QObject, private ConfigurationParser
 {
 Q_OBJECT
     public:
-	BackendPlugin(bool init = false);
+	BackendPlugin(QObject *parent);
 	virtual ~BackendPlugin();
 
 	bool isTransaction();
 	bool testLibrary();//Fuck all :P Wth is that?????
 	bool interruptTransaction();//Fuck all :P Wth is that?????
 
-	QStringList getAvailableRepos();
-	
-	QStringList getPackageGroups();
-	
-	PackageList getPackagesFromRepo(const QString &reponame);
-	
-	PackageList getUpgradeablePackages();
-	PackageList getInstalledPackages();
+        RepositoriesList availableRepos();
 
-	QStringList getPackageDependencies(Package *package);
-	QStringList getPackageDependencies(const QString &name, const QString &repo);
+        GroupsList packageGroups();//With s or not?
 
-	QStringList getDependenciesOnPackage(Package package);
-	QStringList getDependenciesOnPackage(const QString &name, const QString &repo);
-	
-	QStringList getPackageFiles(Package package);
-	QStringList getPackageFiles(const QString &name);
-	
-	int countPackages(Alpm::PackageStatus status);
-	
-	QStringList getProviders(const QString &name, const QString &repo);
-	QStringList getProviders(Package pkg);
-	bool isProviderInstalled(const QString &provider);
-	
-	unsigned long getPackageSize(const QString &name, const QString &repo);
-	unsigned long getPackageSize(Package package);
-	
-	QString getPackageVersion(const QString &name, const QString &repo);
-	QString getPackageVersion(Package package);
-	
-	QString getPackageRepo(const QString &name, bool checkver = false);
-	
-	void initQueue(bool rem, bool syncd, bool ff);//Fuck all :P Wth is that?????
-	
-	void addSyncToQueue(const QString &toAdd);//Look down?
-	void addRemoveToQueue(const QString &toRm);//Look down
-	void addFFToQueue(const QString &toFF);//What's FF?
-	
-	QStringList getSyncInQueue();//See above
-	QStringList getRemoveInQueue();//Fuck all :P Wth is that?????
-	QStringList getFFInQueue();//Fuck all :P Wth is that?????
-	
-	void processQueue();
-	int getNumberOfTargets(int action);//Fuck all :P Wth is that?????
+        Package * package(const QString &name);
+        PackageList packages(Package::State state);
+        PackageList packages(Package::Action action);
 
-	bool updateDatabase();
-	bool fullSystemUpgrade();
+        void processQueue();
 
-	bool performCurrentTransaction();//Fuck all :P Wth is that?????   processQueue???
+        void updateDatabase();
+        void fullSystemUpgrade();
 
-	bool reloadBackendConfiguration(); // In case the user modifies it.
-	
-	Package getPackageFromName(const QString &name, const QString &repo);
-	
-	QString getBackendVersion();//Use struct
-	
-	void setUserAgent();
-
-    private:
-	bool initTransaction(pmtranstype_t type, pmtransflag_t flags);
-	bool releaseTransaction();
-	bool setUpAlpmSettings();
-	void handleError(int action, alpm_list_t *data);
+        bool reloadBackendConfiguration(); // In case the user modifies it.
 
     signals:
-	void streamDbUpdatingStatus(const QString &repo, int action);//Action ---> enum :P
-	void dbUpdated(const QString &dbname);//TODO: DataBase class?
-	void dbQty(const QStringList &db);//TODO: Ouh? naming?
-	void dbUpdatePerformed();//TODO: DataBaseClass as param, or better use QObject::sender() in slots?
-	void transactionStarted();//+1
-	void transactionReleased();//+1
-	
-	// Error streaming
-	void preparingUpgradeError();//TODO: Simplify
-	void preparingTransactionError(const QString &msg);
-	void committingTransactionError(const QString &msg);
+        void statusChanged(Status status);
+        void processingSuccesfull();
+        void error(Error error);
 };
 }
 

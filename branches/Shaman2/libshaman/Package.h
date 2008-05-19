@@ -7,32 +7,34 @@ class Package : public QObject //TODO: Probably not needed??
 {
     Q_OBJECT
     public:
-        enum PackageState {
+        enum State {
             Installed,
             NotInstalled,
             Upgradeable
-        }
-        enum PackageAction {
+        };
+        enum Action {
             NoAction,
             Install,
             Remove,
             Upgrade
-        }
+        };
         Package(const QString &name, const QString &description, const Version &version /*TODO*/, const PackageState &state, QObject *parent);//TODO: Need more params? anyway probably use another PackageData class, not struct, cause we need const values...
         ~Package();
 
         QString name() const;//TODO: Do we need a setName(), imo not ;)
-        void setDescription(const QString &desc);
+        void setDescription(const QString &desc);//TODO: New PackageData-class?
         QString description() const;
         void setVersion(const Version &version);
         Version version() const;
-        void setPackageState(const PackageState &state);
+        void setPackageState(const State &state);
         PackageState packageState() const;
-        void setPackageAction(const PackageAction &action);
+        void setPackageAction(const Action &action);
         PackageAction packageAction() const;
-        virtual QList<Package*> dependecies();
-        virtual QList<Package*> conflicts();
-        //TODO: Providers, not found dependencies...
+        bool isProviderInstalled();
+        PackagesList providers();
+        virtual PackagesList dependecies();
+        virtual PackagesList dependenciesOnPackage();
+        virtual PackagesList conflicts();
 
     private:
         QString m_name;
