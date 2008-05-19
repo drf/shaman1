@@ -5,7 +5,7 @@ First of all, we'll need some different sets of plugins:
  - Backend (for package management)
  - GUI (for GUI-related stuff)
  - Data (for handling processes, such as ABS, AUR or makepkg handling)
- - Configuration Plugins (if really needed)
+ - Configuration Plugins (if really needed) (Not needed, since every plugin can have its own configuration-widget)
 
 Every plugin will have a set of dependancies on another plugin. So, this will be our base class structure.
 
@@ -28,9 +28,11 @@ We need a function to access each part of the GUI, for example:
 addDockWidget(QDockWidget *widget, orientation);
 addToolBarAction(QAction *action);
 
-POINT 1: "Should the PackageView be a plugin?"
-   -+1 from Lukas
-   -Dario?
-
-POINT 2: "We should only have one "Package-Manager"-Plugin loaded. How to handle that?"
+POINT 1: "We should only have one "Package-Manager"-Plugin loaded. How to handle that?"
    -Lukas: no idea ;) Dependency and Conflict tree?
+   -Lukas: Conflict is bad idea, better handle that from source, so only one data-plugin loaded...
+
+
+Loading and selecting of Plugins:
+*Use KPluginSelector
+*Probably extend it?
