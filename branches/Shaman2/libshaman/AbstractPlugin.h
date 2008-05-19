@@ -3,40 +3,7 @@ class AbstractPlugin : public KPlugin
 {
     Q_OBJECT
     public:
-        /**
-         * \struct vrs
-         * \brief Contains the version of the module
-         * Uses 3 int values to create a version in format: "v major.minor.fix".
-         */
-        struct Version {
-            /** The major version number */
-            int major;
-            /** The minor version number */
-            int minor;
-            /** The fix version number */
-            int fix;
-        };
-
-        /**
-         * \struct data
-         * Defines all the informations needed about a plugin.
-         */
-        struct ModuleData {
-            /** The name of the plugin */
-            QString name;
-            /** The description of the plugin */
-            QString description;
-            /** The version of the plugin */
-            struct Version ModuleVersion;
-            /** The author of the plugin */
-            QString author;
-            /** The website of the plugin */
-            QString website;
-            /** The icon of the plugin. This will be used for displaying it in the list */
-            QIcon icon;
-        };
-
-        enum PluginType {
+        enum PluginType {//TODO: Probably to .desktop file as well?
             Backend,
             GUI,
             PackageView,
@@ -44,9 +11,7 @@ class AbstractPlugin : public KPlugin
         };
 
         AbstractPlugin();
-  
-        virtual ModuleData getPluginData() const = 0;
-        virtual QStringList getDependencies() const= 0;
+
         virtual QWidget* configurationWidget() {return 0;}
   
         virtual PluginType getPluginType() const= 0;
