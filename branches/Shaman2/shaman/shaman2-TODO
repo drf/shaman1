@@ -17,7 +17,7 @@ Core:
 	Package-class:
 		*enum Status {Installed, NotInstalled, Upgradeable}
 		*enum Action {Install, Remove, Upgrade, NoAction}
-		*void rebuild() (rebuild package from source)
+		*void rebuild() (rebuild package from source) (Mmh we need to connect with Provider plugin?)
 		*void setAction(Action action)
 		*void process()
 		*string name()
