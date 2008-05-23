@@ -70,13 +70,13 @@ void ShamanApplet::init()
     m_form->setContentsMargins(MARGIN, TOP_MARGIN, MARGIN, 35);
     m_form->setLayout(m_layout);
 
-    if(formFactor() == Plasma::Vertical || formFactor() == Plasma::Horizontal) 
+    if (formFactor() == Plasma::Vertical || formFactor() == Plasma::Horizontal) 
     {
         m_form->setContentsMargins(0, 0, 0, 0);
         setBackgroundHints(NoBackground);
     }
     else 
-        resize(QSize(350, 350));
+        resize(QSize(350, 200));
 
     m_engine = dataEngine("shaman");
     
