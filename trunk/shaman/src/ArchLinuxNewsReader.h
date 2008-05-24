@@ -18,8 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 
-#ifndef ARCHLINUXNEWSREADER_H_
-#define ARCHLINUXNEWSREADER_H_
+#ifndef ARCHLINUXNEWSREADER_H
+#define ARCHLINUXNEWSREADER_H
 
 #include <QHttp>
 #include <QWidget>
@@ -85,4 +85,4 @@ private:
 	int connectionId;
 };
 
-#endif /*ARCHLINUXNEWSREADER_H_*/
+#endif /*ARCHLINUXNEWSREADER_H*/

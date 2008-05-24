@@ -18,8 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 
-#ifndef ABSHANDLER_H_
-#define ABSHANDLER_H_
+#ifndef ABSHANDLER_H
+#define ABSHANDLER_H
 
 #include <QString>
 
@@ -53,4 +53,4 @@ private:
 
 };
 
-#endif /*ABSHANDLER_H_*/
+#endif /*ABSHANDLER_H*/

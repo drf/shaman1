@@ -18,8 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 
-#ifndef MAINWINDOW_H_
-#define MAINWINDOW_H_
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
 
 #include <iostream>
 #include <QWidget>
@@ -183,4 +183,4 @@ private:
 
 };
 
-#endif /*MAINWINDOW_H_*/
+#endif /*MAINWINDOW_H*/

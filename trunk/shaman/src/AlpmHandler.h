@@ -18,8 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 
-#ifndef ALPMHANDLER_H_
-#define ALPMHANDLER_H_
+#ifndef ALPMHANDLER_H
+#define ALPMHANDLER_H
 
 #include <alpm.h>
 #include <alpm_list.h>
@@ -184,4 +184,4 @@ private:
 
 };
 
-#endif /*AlpmHandler_H_*/
+#endif /*ALPMHANDLER_H*/
