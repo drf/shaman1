@@ -31,10 +31,10 @@
 
 /* Defines the Version */
 
-#define SHAMAN_VERSION "1.0 beta 3"
+#define SHAMAN_VERSION "1.0 RC 1-dev"
 
 /* Defines the Revision */
 
-#define SHAMAN_REVISION "800"
+#define SHAMAN_REVISION "803"
 
 #endif /*CONFIG_H*/
