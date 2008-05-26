@@ -29,9 +29,11 @@
 #include <QDBusConnectionInterface>
 
 ShamanRunner::ShamanRunner(QObject *parent, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, args),
+    : Plasma::AbstractRunner( parent ),
     dbus(QDBusConnection::systemBus())
 {
+    KGlobal::locale()->insertCatalog("krunner_shamanrunner");
+    
     Q_UNUSED(args)
 
     words << "install" << "remove" << "uninstall" << "upgrade-system" << "upgrade system" << "update database" 
@@ -45,112 +47,134 @@ ShamanRunner::~ShamanRunner()
 {
 }
 
-void ShamanRunner::match(Plasma::RunnerContext *search)
+void ShamanRunner::match(Plasma::RunnerContext &context)
 {
     kDebug() << "Match search context?";
-    QString term = search->query();
-    
-    Plasma::QueryMatch* match = 0;
+    QString term = context.query();
 
     foreach(QString word, words)
     {
     	if (term.startsWith(word, Qt::CaseInsensitive))
     	{
-    		if (word == "update database" || word == "update db" || 
-    				word == "update-db" || word == "update-database" || 
-    				word == "ud")
-    		{
-    			match = new Plasma::QueryMatch(this);
-    			match->setType(Plasma::QueryMatch::ExactMatch);
-    			
-    			match->setIcon(QIcon(":/Icons/icons/shaman/shaman-yellow-icon-32.png"));
-    			match->setText(i18n("Update Databases"));
-    		}
-    		else if (word == "upgrade-system" || word == "upgrade system" ||
-    				word == "us")
-    		{
-    			match = new Plasma::QueryMatch(this);
-    			match->setType(Plasma::QueryMatch::ExactMatch);
+    	    if (word == "update database" || word == "update db" || 
+    	            word == "update-db" || word == "update-database" || 
+    	            word == "ud")
+    	    {
+    	        Plasma::QueryMatch match(this);
 
-    			match->setIcon(QIcon(":/Icons/icons/shaman/shaman-system-is-up-to-date-32.png"));
-    			match->setText(i18n("Upgrade System"));
-    		}
-    		else if (word == "install" || word == "i")
-    		{
-    			if(term.split(' ').count() < 2)
-    				return;
-    			
-    			match = new Plasma::QueryMatch(this);
-    			match->setType(Plasma::QueryMatch::ExactMatch);
+    	        match.setType(Plasma::QueryMatch::ExactMatch);
 
-    			match->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
-    			
-    			if(term.split(' ').count() == 2)
-    				match->setText(i18n("Install %1", term.split(' ').at(1)));
-    			else
-    			{
-    				QString textA = i18n("Install Packages: %1", term.split(' ').at(1));
-    				
-    				for(int i = 2; i < term.split(' ').count(); i++)
-    					textA.append(QString(", %1").arg(term.split(' ').at(i)));
-    				
-    				match->setText(textA);
-    			}
-    		}
-    		else if (word == "remove" || word == "r")
-    		{
-    			if(term.split(' ').count() < 2)
-    				return;
+    	        match.setIcon(QIcon(":/Icons/icons/shaman/shaman-yellow-icon-32.png"));
+    	        match.setText(i18n("Update Databases"));
 
-    			match = new Plasma::QueryMatch(this);
-    			match->setType(Plasma::QueryMatch::ExactMatch);
+    	        match.setRelevance(1);
+    	        match.setId(QString());
+    	        context.addMatch(term, match);
+    	    }
+    	    else if (word == "upgrade-system" || word == "upgrade system" ||
+    	            word == "us")
+    	    {
+    	        Plasma::QueryMatch match(this);
 
-    			match->setIcon(QIcon(":/Icons/icons/shaman/shaman-updates-available-32.png"));
+    	        match.setType(Plasma::QueryMatch::ExactMatch);
 
-    			if(term.split(' ').count() == 2)
-    				match->setText(i18n("Remove %1", term.split(' ').at(1)));
-    			else
-    			{
-    				QString textA = i18n("Remove Packages: %1", term.split(' ').at(1));
+    	        match.setIcon(QIcon(":/Icons/icons/shaman/shaman-system-is-up-to-date-32.png"));
+    	        match.setText(i18n("Upgrade System"));
 
-    				for(int i = 2; i < term.split(' ').count(); i++)
-    					textA.append(QString(", %1").arg(term.split(' ').at(i)));
+    	        match.setRelevance(1);
+    	        match.setId(QString());
+    	        context.addMatch(term, match);
+    	    }
+    	    else if (word == "install" || word == "i")
+    	    {
+    	        if(term.split(' ').count() < 2)
+    	            return;
 
-    				match->setText(textA);
-    			}
-    		}
-    		else if (word == "pm" || word == "shaman" || 
-    				word == "package manager")
-    		{
-    			match = new Plasma::QueryMatch(this);
-    			match->setType(Plasma::QueryMatch::ExactMatch);
+    	        Plasma::QueryMatch match(this);
 
-    			match->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
-    			match->setText(i18n("Start Package Manager"));
-    		}
-    		else
-    		{
-    			match = new Plasma::QueryMatch(this);
-    			match->setType(Plasma::QueryMatch::ExactMatch);
-    			
-    			match->setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
-    			match->setText(i18n("Package Manager: %1", term));
-    		}  		
-    	}
+    	        match.setType(Plasma::QueryMatch::ExactMatch);
 
-    	if ( match )
-    	{
-    	    match->setRelevance(1);
-    	    search->addMatch(term, *match);
+    	        match.setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
+
+    	        if(term.split(' ').count() == 2)
+    	            match.setText(i18n("Install %1", term.split(' ').at(1)));
+    	        else
+    	        {
+    	            QString textA = i18n("Install Packages: %1", term.split(' ').at(1));
+
+    	            for(int i = 2; i < term.split(' ').count(); i++)
+    	                textA.append(QString(", %1").arg(term.split(' ').at(i)));
+
+    	            match.setText(textA);
+    	        }
+
+    	        match.setRelevance(1);
+    	        match.setId(QString());
+    	        context.addMatch(term, match);
+    	    }
+    	    else if (word == "remove" || word == "r")
+    	    {
+    	        if(term.split(' ').count() < 2)
+    	            return;
+
+    	        Plasma::QueryMatch match(this);
+
+    	        match.setType(Plasma::QueryMatch::ExactMatch);
+
+    	        match.setIcon(QIcon(":/Icons/icons/shaman/shaman-updates-available-32.png"));
+
+    	        if(term.split(' ').count() == 2)
+    	            match.setText(i18n("Remove %1", term.split(' ').at(1)));
+    	        else
+    	        {
+    	            QString textA = i18n("Remove Packages: %1", term.split(' ').at(1));
+
+    	            for(int i = 2; i < term.split(' ').count(); i++)
+    	                textA.append(QString(", %1").arg(term.split(' ').at(i)));
+
+    	            match.setText(textA);
+    	        }
+
+    	        match.setRelevance(1);
+    	        match.setId(QString());
+    	        context.addMatch(term, match);
+    	    }
+    	    else if (word == "pm" || word == "shaman" || 
+    	            word == "package manager")
+    	    {
+    	        Plasma::QueryMatch match(this);
+
+    	        match.setType(Plasma::QueryMatch::ExactMatch);
+
+    	        match.setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
+    	        match.setText(i18n("Start Package Manager"));
+
+    	        match.setRelevance(1);
+    	        match.setId(QString());
+    	        context.addMatch(term, match);
+    	    }
+    	    else
+    	    {
+    	        Plasma::QueryMatch match(this);
+
+    	        match.setType(Plasma::QueryMatch::ExactMatch);
+
+    	        match.setIcon(QIcon(":/Icons/icons/shaman/shaman-32.png"));
+    	        match.setText(i18n("Package Manager: %1", term));
+
+    	        match.setRelevance(1);
+    	        match.setId(QString());
+    	        context.addMatch(term, match);
+    	    }  		
     	}
     }
 }
 
-void ShamanRunner::run(const Plasma::RunnerContext *context, const Plasma::QueryMatch *action)
+void ShamanRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
 {
-    Q_UNUSED(action);
+    Q_UNUSED(context);
 	
-	execTerm = context->query();
+	execTerm = match.data().toString();
     
     /* First of all, let's check if Shaman has been already
      * started.

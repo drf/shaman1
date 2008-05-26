@@ -32,8 +32,8 @@ class ShamanRunner : public Plasma::AbstractRunner
         ShamanRunner(QObject *parent, const QVariantList &args);
         ~ShamanRunner();
 
-        void match(Plasma::RunnerContext *search);
-        void run(const Plasma::RunnerContext *context, const Plasma::QueryMatch *action);
+        void match(Plasma::RunnerContext &context);
+        void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action);
         
     private slots:
     	void executeAction();
