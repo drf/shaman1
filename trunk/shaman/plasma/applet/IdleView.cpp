@@ -64,12 +64,12 @@ IdleView::IdleView(Plasma::Applet *parent, QDBusConnection dbs)
         m_actionIcon = new Plasma::Icon(KIcon("tools-wizard"), i18n("Action"), parent);
         QAction *m_installAction = new QAction(KIcon("list-add"), i18n("Install Package"), this);
         connect(m_installAction, SIGNAL(triggered()), SLOT(installPackage()));
-        m_actionIcon->addAction(m_installAction);
+        m_actionIcon->addIconAction(m_installAction);
         m_contextMenu->addAction(m_installAction);
         
         QAction *m_removeAction = new QAction(KIcon("list-remove"), i18n("Uninstall Package"), this);
         connect(m_removeAction, SIGNAL(triggered()), SLOT(removePackage()));
-        m_actionIcon->addAction(m_removeAction);
+        m_actionIcon->addIconAction(m_removeAction);
         m_contextMenu->addAction(m_removeAction);
         connect(m_actionIcon, SIGNAL(activated()), SLOT(showContextMenu()));
 
