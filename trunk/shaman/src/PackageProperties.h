@@ -18,8 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  **************************************************************************/
 
-#ifndef PACKAGEPROPERTIES_H_
-#define PACKAGEPROPERTIES_H_
+#ifndef PACKAGEPROPERTIES_H
+#define PACKAGEPROPERTIES_H
 
 #include "ui_pkgProperties.h"
 #include "AlpmHandler.h"
@@ -54,4 +54,4 @@ private:
 	QString pName;
 };
 
-#endif /*PACKAGEPROPERTIES_H_*/
+#endif /*PACKAGEPROPERTIES_H*/

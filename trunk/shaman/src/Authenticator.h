@@ -18,8 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  **************************************************************************/
 
-#ifndef AUTHENTICATOR_H_
-#define AUTHENTICATOR_H_
+#ifndef AUTHENTICATOR_H
+#define AUTHENTICATOR_H
 
 #include <security/pam_appl.h>
 
@@ -77,4 +77,4 @@ protected:
 int auth_cback(int num_msg, const struct pam_message **msg,
                 struct pam_response **resp, void *appdata_ptr);
 
-#endif /*AUTHENTICATOR_H_*/
+#endif /*AUTHENTICATOR_H*/

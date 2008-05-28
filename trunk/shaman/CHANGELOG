@@ -50,3 +50,14 @@ Plasmoid:
    
 Runner:
    - Port the Runner to the new API syntax
+
+Beta 3  --> 
+
+Core:
+
+   - Better Thread handling when reloading packages view
+   - Corrected include guards
+   
+GUI:
+
+   - Faster startup and no freezes thanks to better Thread Handling

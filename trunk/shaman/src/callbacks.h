@@ -18,8 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 
-#ifndef CALLBACKS_H_
-#define CALLBACKS_H_
+#ifndef CALLBACKS_H
+#define CALLBACKS_H
 
 #include <iostream>
 #include <alpm.h>
@@ -86,4 +86,4 @@ void cb_log(pmloglevel_t level, char *fmt, va_list args);
 int pm_vasprintf(char **string, pmloglevel_t level, const char *format, va_list args);
 
 
-#endif /*CALLBACKS_H_*/
+#endif /*CALLBACKS_H*/

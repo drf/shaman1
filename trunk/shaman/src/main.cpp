@@ -39,8 +39,6 @@
 #include <signal.h>
 #include <alpm.h>
 
-#include <config.h>
-
 static void cleanup(int signum)
 {
 	if(signum==SIGSEGV)
@@ -79,11 +77,18 @@ static void cleanup(int signum)
 
 void stdDebugOutput(QtMsgType type, const char *msg)
 {
-	switch (type) {
+    QString rmsg;
+    
+    switch (type) {
 	case QtDebugMsg:
 		fprintf(stderr, "%s\n", msg);
 		break;
 	case QtWarningMsg:
+	    rmsg = msg;
+	    
+	    if(rmsg.contains("QPixmap"))
+	        return;
+
 		fprintf(stderr, "Shaman/%s - Warning: %s\n", SHAMAN_VERSION, msg);
 		break;
 	case QtCriticalMsg:
@@ -100,10 +105,17 @@ void stdDebugOutput(QtMsgType type, const char *msg)
 
 void noDebugOutput(QtMsgType type, const char *msg)
 {
-	switch (type) {
+    QString rmsg;
+    
+    switch (type) {
 	case QtDebugMsg:
 		break;
 	case QtWarningMsg:
+	    rmsg = msg;
+	    
+	    if(rmsg.contains("QPixmap"))
+	        return;
+	    
 		fprintf(stderr, "Shaman/%s - Warning: %s\n", SHAMAN_VERSION, msg);
 		break;
 	case QtCriticalMsg:
@@ -286,7 +298,7 @@ int main(int argc, char **argv)
 	qDebug() << ">>		Compiled against Qt" << QT_VERSION_STR;
 	qDebug() << ">>		Running with Qt" << qVersion();
 	qDebug() << ">>";
-	qDebug() << ">>	Shaman is in beta phase, please report bugs!!";
+	qDebug() << ">>	Shaman is in RC phase, please report bugs to make gold release perfect!!";
 	qDebug() << ">>	Our website is @ http://shaman.iskrembilen.com/ , join in!!";
 	qDebug() << ">>	You can also find a bugtracker in the website, please use it.";
 	qDebug() << ">>";

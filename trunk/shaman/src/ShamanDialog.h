@@ -18,8 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 
-#ifndef SHAMANDIALOG_H_
-#define SHAMANDIALOG_H_
+#ifndef SHAMANDIALOG_H
+#define SHAMANDIALOG_H
 
 #include <QWidget>
 #include <QString>
@@ -56,4 +56,4 @@ public:
 			QWidget *parent, ShamanProperties::DialogType dtype = ShamanProperties::InformationDialog);
 };
 
-#endif /*SHAMANDIALOG_H_*/
+#endif /*SHAMANDIALOG_H*/

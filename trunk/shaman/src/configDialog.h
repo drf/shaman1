@@ -106,4 +106,4 @@ private:
 	Authenticator ath;
 };
 
-#endif
+#endif /*CONFIGDIALOG_H*/

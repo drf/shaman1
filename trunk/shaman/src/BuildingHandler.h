@@ -18,8 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  **************************************************************************/
 
-#ifndef BUILDINGHANDLER_H_
-#define BUILDINGHANDLER_H_
+#ifndef BUILDINGHANDLER_H
+#define BUILDINGHANDLER_H
 
 #include <QStringList>
 #include <QDialog>
@@ -73,4 +73,4 @@ private:
 	QStringList buildTargets;
 };
 
-#endif /*BUILDINGHANDLER_H_*/
+#endif /*BUILDINGHANDLER_H*/

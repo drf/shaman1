@@ -18,8 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 
-#ifndef NEWSVIEWER_H_
-#define NEWSVIEWER_H_
+#ifndef NEWSVIEWER_H
+#define NEWSVIEWER_H
 
 #include "ui_newsDialog.h"
 
@@ -47,4 +47,4 @@ private:
 	ArchLinuxNewsReader *newsHandler;
 };
 
-#endif /*NEWSVIEWER_H_*/
+#endif /*NEWSVIEWER_H*/

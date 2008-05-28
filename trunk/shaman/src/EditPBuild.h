@@ -18,8 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 
-#ifndef EDITPBUILD_H_
-#define EDITPBUILD_H_
+#ifndef EDITPBUILD_H
+#define EDITPBUILD_H
 
 #include "ui_editPBDialog.h"
 #include "ABSHandler.h"
@@ -49,4 +49,4 @@ private:
 	QString lastItem;
 };
 
-#endif /*EDITPBUILD_H_*/
+#endif /*EDITPBUILD_H*/

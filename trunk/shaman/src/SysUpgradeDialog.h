@@ -18,8 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 
-#ifndef SYSUPGRADEDIALOG_H_
-#define SYSUPGRADEDIALOG_H_
+#ifndef SYSUPGRADEDIALOG_H
+#define SYSUPGRADEDIALOG_H
 
 #include <iostream>
 #include "ui_upgradeDialog.h"
@@ -52,4 +52,4 @@ private:
 	AlpmHandler *aHandle;
 };
 
-#endif /*SYSUPGRADEDIALOG_H_*/
+#endif /*SYSUPGRADEDIALOG_H*/

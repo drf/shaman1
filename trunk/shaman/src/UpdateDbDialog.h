@@ -18,8 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 
-#ifndef UPDATEDBDIALOG_H_
-#define UPDATEDBDIALOG_H_
+#ifndef UPDATEDBDIALOG_H
+#define UPDATEDBDIALOG_H
 
 #include <iostream>
 #include "ui_dbUpdateDialog.h"
@@ -85,4 +85,4 @@ private:
 	
 };
 
-#endif /*UPDATEDBDIALOG_H_*/
+#endif /*UPDATEDBDIALOG_H*/

@@ -18,8 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 
-#ifndef QUEUEDIALOG_H_
-#define QUEUEDIALOG_H_
+#ifndef QUEUEDIALOG_H
+#define QUEUEDIALOG_H
 
 #include <iostream>
 #include "ui_transactionDialog.h"
@@ -97,4 +97,4 @@ private:
 	bool errors;
 };
 
-#endif /*QUEUEDIALOG_H_*/
+#endif /*QUEUEDIALOG_H*/

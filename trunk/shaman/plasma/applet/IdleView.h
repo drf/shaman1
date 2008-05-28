@@ -18,8 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 
-#ifndef IDLEVIEW_H_
-#define IDLEVIEW_H_
+#ifndef IDLEVIEW_H
+#define IDLEVIEW_H
 
 namespace Plasma {
     class Applet;
@@ -63,4 +63,4 @@ private:
     KMenu *m_contextMenu;
 };
 
-#endif /*IDLEVIEW_H_*/
+#endif /*IDLEVIEW_H*/

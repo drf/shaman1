@@ -18,8 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 
-#ifndef BUILDINGDIALOG_H_
-#define BUILDINGDIALOG_H_
+#ifndef BUILDINGDIALOG_H
+#define BUILDINGDIALOG_H
 
 #include <iostream>
 #include "AlpmHandler.h"
@@ -79,4 +79,4 @@ private:
 	
 };
 
-#endif /*BUILDINGDIALOG_H_*/
+#endif /*BUILDINGDIALOG_H*/

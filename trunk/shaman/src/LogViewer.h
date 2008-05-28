@@ -18,8 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 
-#ifndef LOGVIEWER_H_
-#define LOGVIEWER_H_
+#ifndef LOGVIEWER_H
+#define LOGVIEWER_H
 
 #include "ui_logViewer.h"
 
@@ -41,4 +41,4 @@ private:
 	QStringList contents;
 };
 
-#endif /*LOGVIEWER_H_*/
+#endif /*LOGVIEWER_H*/

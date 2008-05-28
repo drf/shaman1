@@ -52,6 +52,23 @@ class LogViewer;
 class ShamanStatusBar;
 class PackageProperties;
 
+class CreateItemsThread : public QThread
+{
+    Q_OBJECT
+    
+public:
+    CreateItemsThread(AlpmHandler *aH);
+    void run();
+    QList<QTreeWidgetItem *> getResult();
+    
+signals:
+    void updateProgress(int percentage);
+    
+private:
+    QList<QTreeWidgetItem *> retlist;
+    AlpmHandler *m_handler;
+};
+
 class MainWindow : public QMainWindow, public Ui::MainWindow
 {
 	Q_OBJECT
@@ -90,7 +107,8 @@ signals:
 	void stopTimer();
 
 public slots:
-	bool populatePackagesView();
+	void populatePackagesView();
+	void populatePackagesViewFinished();
 	void refinePkgView();
 	void refineRepoView();
 	void populateRepoColumn();
@@ -170,6 +188,7 @@ private:
 	QPointer<ShamanStatusBar> stBar;
 	QPointer<PackageProperties> pkgProp;
 	QPointer<QTimer> editTimer;
+	QPointer<CreateItemsThread> cThread;
 
 	QPointer<QDialog> reviewQueue;
 	ShamanTrayIcon *trayicon;

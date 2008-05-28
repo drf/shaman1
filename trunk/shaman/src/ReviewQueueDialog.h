@@ -20,8 +20,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 
-#ifndef REVIEWQUEUEDIALOG_H_
-#define REVIEWQUEUEDIALOG_H_
+#ifndef REVIEWQUEUEDIALOG_H
+#define REVIEWQUEUEDIALOG_H
 
 #include "ui_reviewQueueDialog.h"
 #include "AlpmHandler.h"
@@ -52,4 +52,4 @@ private:
 
 };
 
-#endif /*REVIEWQUEUEDIALOG_H_*/
+#endif /*REVIEWQUEUEDIALOG_H*/

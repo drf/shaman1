@@ -74,6 +74,148 @@ extern QWaitCondition wCond;
 extern Authenticator_Callback athCback;
 extern struct pam_response *reply;
 
+// Thread Definition
+
+CreateItemsThread::CreateItemsThread(AlpmHandler *aH)
+ : m_handler(aH)
+{
+}
+
+QList<QTreeWidgetItem *> CreateItemsThread::getResult()
+{
+    return retlist;
+}
+
+void CreateItemsThread::run()
+{
+    alpm_list_t *databases;
+    int count = 0;
+    int totalPkgs = m_handler->countPackages(Alpm::AllPackages);
+    QList<QTreeWidgetItem *> itmLst;
+    alpm_list_t *currentpkgs;
+
+    databases = m_handler->getAvailableRepos();
+
+    databases = alpm_list_first(databases);
+
+    count = 0;
+
+    QStringList conflPackages;
+
+    while(databases != NULL)
+    {
+        pmdb_t *dbcrnt = (pmdb_t *)alpm_list_getdata(databases);
+
+        currentpkgs = alpm_db_getpkgcache(dbcrnt);
+
+        while(currentpkgs != NULL)
+        {
+            pmpkg_t *pkg = (pmpkg_t *)alpm_list_getdata(currentpkgs);
+            bool installed = false;         
+
+            if (m_handler->isInstalled(pkg))
+            {
+                pmpkg_t *pkg1 = m_handler->getPackageFromName(alpm_pkg_get_name(pkg), "local");
+
+                if (m_handler->getPackageVersion(pkg) != m_handler->getPackageVersion(pkg1))
+                    conflPackages.append(alpm_pkg_get_name(pkg));
+                else
+                {
+                    pkg = pkg1;
+                    installed = true;
+                }
+            }
+
+            QTreeWidgetItem *item = new QTreeWidgetItem();
+            alpm_list_t *grps = (alpm_list_t *)alpm_pkg_get_groups(pkg);
+            QString grStr;
+
+            if(installed)
+            {
+                //item->setText(0, tr("Installed"));
+                item->setIcon(0, QIcon(":/Icons/icons/user-online.png"));
+            }
+            else
+            {
+                //item->setText(0, tr("Not Installed"));
+                item->setIcon(0, QIcon(":/Icons/icons/user-offline.png"));
+            }
+
+            item->setText(3, alpm_pkg_get_version(pkg));
+            item->setText(1, alpm_pkg_get_name(pkg));
+            item->setText(5, alpm_db_get_name(dbcrnt));
+            item->setText(4, PackageProperties::formatSize(m_handler->getPackageSize(item->text(1), item->text(5))));
+            item->setText(7, alpm_pkg_get_desc(pkg));
+
+            while(grps != NULL)
+            {
+                grStr.append(' ');
+
+                grStr.append((char *)alpm_list_getdata(grps));
+                grps = alpm_list_next(grps);
+            }
+            
+            grStr.append(' ');
+
+            item->setText(6, grStr);
+
+            currentpkgs = alpm_list_next(currentpkgs);
+
+            retlist.append(item);
+
+            count++;
+
+            emit updateProgress( (int) ( count / totalPkgs ) * 100 );           
+        }
+
+        databases = alpm_list_next(databases);
+    }
+
+    databases = alpm_list_first(databases);
+
+    alpm_list_t *locPkg = m_handler->getPackagesFromRepo("local");
+
+    while(locPkg != NULL)
+    {
+        pmpkg_t *pkg = (pmpkg_t *)alpm_list_getdata(locPkg);
+        QTreeWidgetItem *item = new QTreeWidgetItem();
+
+        item->setIcon(0, QIcon(":/Icons/icons/user-online.png"));
+        item->setText(1, alpm_pkg_get_name(pkg));
+        item->setText(3, alpm_pkg_get_version(pkg));
+        item->setText(7, alpm_pkg_get_desc(pkg));
+        item->setText(5, "local");
+        item->setText(4, PackageProperties::formatSize(m_handler->getPackageSize(item->text(1), item->text(5))));
+
+        retlist.append(item);
+
+        locPkg = alpm_list_next(locPkg);
+    }
+
+    foreach(QString ent, conflPackages)
+    {
+        int count = 0;
+        QTreeWidgetItem *match = 0;
+        
+        foreach(QTreeWidgetItem *itm, retlist)
+        {
+            if(itm->text(1) == ent)
+            {
+                count++;
+                match = itm;
+            }
+        }
+        
+        if(count == 1)
+        {
+            match->setIcon(0, QIcon(":/Icons/icons/user-online.png"));
+            match->setText(3, m_handler->getPackageVersion(match->text(1), "local"));
+        }
+    }
+}
+
+// MainWindow Definition
+
 MainWindow::MainWindow(AlpmHandler *handler, QMainWindow *parent)
 : QMainWindow(parent),
 queueDl(),
@@ -254,13 +396,8 @@ void MainWindow::removeRepoColumn()
 	disconnect(repoList, SIGNAL(itemPressed(QListWidgetItem*)), 0, 0);
 }
 
-bool MainWindow::populatePackagesView()
+void MainWindow::populatePackagesView()
 {
-	alpm_list_t *databases;
-	int count = 0;
-	int totalPkgs = aHandle->countPackages(Alpm::AllPackages);
-	QList<QTreeWidgetItem *> itmLst;
-
 	pkgsViewWG->setSortingEnabled(false);
 
 	disconnect(pkgsViewWG, SIGNAL(itemSelectionChanged()), 0, 0);
@@ -268,131 +405,36 @@ bool MainWindow::populatePackagesView()
 	disconnect(pkgsViewWG, SIGNAL(itemDoubleClicked(QTreeWidgetItem*,int)),0,0);
 
 	removePackagesView();
-
-	databases = aHandle->getAvailableRepos();
-
-	databases = alpm_list_first(databases);
+	
+	if(cThread)
+	    cThread->deleteLater();
+	
+	cThread = new CreateItemsThread(aHandle);
+	
+	connect(cThread, SIGNAL(finished()), SLOT(populatePackagesViewFinished()));
+	connect(cThread, SIGNAL(updateProgress(int)), stBar, SLOT(updateProgressBar(int)));
 	
 	stBar->startProgressBar();
-		
-	count = 0;
 	
-	QStringList conflPackages;
-	
-	while(databases != NULL)
-	{
-		pmdb_t *dbcrnt = (pmdb_t *)alpm_list_getdata(databases);
+	cThread->start();
+}
 
-		currentpkgs = alpm_db_getpkgcache(dbcrnt);
+void MainWindow::populatePackagesViewFinished()
+{
+    pkgsViewWG->addTopLevelItems(cThread->getResult());
+    
+    cThread->deleteLater();
 
-		while(currentpkgs != NULL)
-		{
-			pmpkg_t *pkg = (pmpkg_t *)alpm_list_getdata(currentpkgs);
-			bool installed = false;			
-			
-			if (aHandle->isInstalled(pkg))
-			{
-				pmpkg_t *pkg1 = aHandle->getPackageFromName(alpm_pkg_get_name(pkg), "local");
-				
-				if (aHandle->getPackageVersion(pkg) != aHandle->getPackageVersion(pkg1))
-					conflPackages.append(alpm_pkg_get_name(pkg));
-				else
-				{
-					pkg = pkg1;
-					installed = true;
-				}
-			}
-			
-			QTreeWidgetItem *item = new QTreeWidgetItem();
-			alpm_list_t *grps = (alpm_list_t *)alpm_pkg_get_groups(pkg);
-			QString grStr;
+    pkgsViewWG->sortItems(1, Qt::AscendingOrder);
+    pkgsViewWG->setSortingEnabled(true);//Enable sorting *after* inserting :D
 
-			if(installed)
-			{
-				//item->setText(0, tr("Installed"));
-				item->setIcon(0, QIcon(":/Icons/icons/user-online.png"));
-			}
-			else
-			{
-				//item->setText(0, tr("Not Installed"));
-				item->setIcon(0, QIcon(":/Icons/icons/user-offline.png"));
-			}
-			
-			item->setText(3, alpm_pkg_get_version(pkg));
-			item->setText(1, alpm_pkg_get_name(pkg));
-			item->setText(5, alpm_db_get_name(dbcrnt));
-			item->setText(4, PackageProperties::formatSize(aHandle->getPackageSize(item->text(1), item->text(5))));
-			item->setText(7, alpm_pkg_get_desc(pkg));
+    stBar->stopProgressBar();
 
-			while(grps != NULL)
-			{
-				grStr.append(' ');
+    connect(pkgsViewWG, SIGNAL(itemSelectionChanged()), this,
+            SLOT(itemChanged()));
 
-				grStr.append((char *)alpm_list_getdata(grps));
-				grps = alpm_list_next(grps);
-			}
-			grStr.append(' ');
-
-			item->setText(6, grStr);
-
-			currentpkgs = alpm_list_next(currentpkgs);
-			
-			itmLst.append(item);
-
-			count++;
-			
-			stBar->updateProgressBar( (int) ( count / totalPkgs) * 100 );			
-		}
-
-		databases = alpm_list_next(databases);
-	}
-
-	databases = alpm_list_first(databases);
-	
-	alpm_list_t *locPkg = aHandle->getPackagesFromRepo("local");
-
-	while(locPkg != NULL)
-	{
-		pmpkg_t *pkg = (pmpkg_t *)alpm_list_getdata(locPkg);
-		QTreeWidgetItem *item = new QTreeWidgetItem();
-
-		item->setIcon(0, QIcon(":/Icons/icons/user-online.png"));
-		item->setText(1, alpm_pkg_get_name(pkg));
-		item->setText(3, alpm_pkg_get_version(pkg));
-		item->setText(7, alpm_pkg_get_desc(pkg));
-		item->setText(5, "local");
-		item->setText(4, PackageProperties::formatSize(aHandle->getPackageSize(item->text(1), item->text(5))));
-
-		itmLst.append(item);
-
-		locPkg = alpm_list_next(locPkg);
-	}
-
-	pkgsViewWG->addTopLevelItems(itmLst);
-
-	foreach(QString ent, conflPackages)
-	{
-		QList<QTreeWidgetItem*> list = pkgsViewWG->findItems(ent, Qt::MatchExactly, 1);
-
-		if(list.count() == 1)
-		{
-			list.at(0)->setIcon(0, QIcon(":/Icons/icons/user-online.png"));
-			list.at(0)->setText(3, aHandle->getPackageVersion(list.at(0)->text(1), "local"));
-		}
-	}
-
-	pkgsViewWG->sortItems(1, Qt::AscendingOrder);
-	pkgsViewWG->setSortingEnabled(true);//Enable sorting *after* inserting :D
-	
-	stBar->stopProgressBar();
-
-	connect(pkgsViewWG, SIGNAL(itemSelectionChanged()), this,
-			SLOT(itemChanged()));
-
-	connect(PkgInfos, SIGNAL(currentChanged(int)), SLOT(showPkgInfo()));
-	connect(pkgsViewWG, SIGNAL(itemDoubleClicked(QTreeWidgetItem*,int)), SLOT(shiftItemAction()));
-
-	return true;
+    connect(PkgInfos, SIGNAL(currentChanged(int)), SLOT(showPkgInfo()));
+    connect(pkgsViewWG, SIGNAL(itemDoubleClicked(QTreeWidgetItem*,int)), SLOT(shiftItemAction()));
 }
 
 void MainWindow::shiftItemAction()
@@ -2231,5 +2273,5 @@ void MainWindow::triggerEditTimer()
 {
     editTimer->stop();
     
-    editTimer->start(800);
+    editTimer->start(500);
 }

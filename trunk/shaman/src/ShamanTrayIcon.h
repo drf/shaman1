@@ -18,8 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 
-#ifndef SHAMANTRAYICON_H_
-#define SHAMANTRAYICON_H_
+#ifndef SHAMANTRAYICON_H
+#define SHAMANTRAYICON_H
 
 #include "kanimatedsystemtrayicon.h"
 #include "MainWindow.h"
@@ -78,4 +78,4 @@ private:
 	
 };
 
-#endif /*SHAMANTRAYICON_H_*/
+#endif /*SHAMANTRAYICON_H*/

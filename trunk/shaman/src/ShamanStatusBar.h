@@ -18,8 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  **************************************************************************/
 
-#ifndef SHAMANSTATUSBAR_H_
-#define SHAMANSTATUSBAR_H_
+#ifndef SHAMANSTATUSBAR_H
+#define SHAMANSTATUSBAR_H
 
 #include <QStatusBar>
 #include <QPointer>
@@ -58,4 +58,4 @@ private:
 	QPointer<QProgressBar> stBarProg;
 };
 
-#endif /*SHAMANSTATUSBAR_H_*/
+#endif /*SHAMANSTATUSBAR_H*/

@@ -18,8 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 
-#ifndef CONFIGURATIONPARSER_H_
-#define CONFIGURATIONPARSER_H_
+#ifndef CONFIGURATIONPARSER_H
+#define CONFIGURATIONPARSER_H
 
 #include <iostream>
 #include <string>
@@ -106,4 +106,4 @@ private:
 	Authenticator ath;
 };
 
-#endif /*CONFIGURATIONPARSER_H_*/
+#endif /*CONFIGURATIONPARSER_H*/
