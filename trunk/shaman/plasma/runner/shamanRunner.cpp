@@ -172,9 +172,9 @@ void ShamanRunner::match(Plasma::RunnerContext &context)
 
 void ShamanRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
 {
-    Q_UNUSED(context);
+    Q_UNUSED(match);
 	
-	execTerm = match.data().toString();
+	execTerm = context.query();
     
     /* First of all, let's check if Shaman has been already
      * started.

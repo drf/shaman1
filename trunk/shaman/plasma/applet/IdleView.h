@@ -32,8 +32,9 @@ namespace Plasma {
 
 class QGraphicsLinearLayout;
 class QGraphicsProxyWidget;
-class QLineEdit;
+class KLineEdit;
 class KMenu;
+class KCompletion;
 
 class IdleView : public AbstractView
 {
@@ -49,11 +50,12 @@ private slots:
     void installPackage();
     void removePackage();
     void showContextMenu();
+    void updateCompletionItem(const QStringList &packages);
 	
 private:
     QDBusConnection m_dbus;
     QGraphicsLinearLayout *m_layout;
-    QLineEdit *m_packageLineEdit;
+    KLineEdit *m_packageLineEdit;
     Plasma::Icon *m_updateDatabaseIcon;
     Plasma::Icon *m_upgradeSystemIcon;
     QGraphicsLinearLayout *m_actionsLayout;
@@ -61,6 +63,7 @@ private:
     QGraphicsLinearLayout *m_lineLayout;
     QGraphicsProxyWidget *m_lineEdit;
     KMenu *m_contextMenu;
+    KCompletion *m_completion;
 };
 
 #endif /*IDLEVIEW_H*/

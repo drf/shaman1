@@ -24,11 +24,12 @@
 #include <QtDBus/QDBusMessage>
 #include <QGraphicsLinearLayout>
 #include <QGraphicsProxyWidget>
-#include <QLineEdit>
 
+#include <KLineEdit>
 #include <KIcon>
 #include <KMenu>
 #include <KDebug>
+#include <KCompletion>
 
 #include <plasma/widgets/icon.h>
 
@@ -57,7 +58,18 @@ IdleView::IdleView(Plasma::Applet *parent, QDBusConnection dbs)
         m_lineLayout = new QGraphicsLinearLayout(m_layout);
 
         m_lineEdit = new QGraphicsProxyWidget(parent);
-        m_packageLineEdit = new QLineEdit(0);
+        m_packageLineEdit = new KLineEdit(0);
+        
+        m_packageLineEdit->setClearButtonShown(true);
+        m_completion = new KCompletion();
+
+        m_completion->setOrder( KCompletion::Sorted );
+
+        m_dbus.connect("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", 
+                "streamPackages", m_completion, SLOT(setItems(const QStringList&)));
+
+        m_packageLineEdit->setCompletionObject( m_completion );
+        
         m_lineEdit->setWidget(m_packageLineEdit);
         m_lineLayout->addItem(m_lineEdit);
 
@@ -77,6 +89,9 @@ IdleView::IdleView(Plasma::Applet *parent, QDBusConnection dbs)
 
         m_layout->addItem(m_lineLayout);
     }
+    
+    QDBusMessage msg = QDBusMessage::createMethodCall("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", "doStreamPackages");
+        m_dbus.call(msg);
 }
 
 IdleView::~IdleView()

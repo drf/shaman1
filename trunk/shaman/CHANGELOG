@@ -51,13 +51,20 @@ Plasmoid:
 Runner:
    - Port the Runner to the new API syntax
 
-Beta 3  --> 
+Beta 3  --> RC 1
 
 Core:
-
    - Better Thread handling when reloading packages view
    - Corrected include guards
+   - Removed introspection in DBus system due to some custom code needed
    
 GUI:
-
    - Faster startup and no freezes thanks to better Thread Handling
+   - Avoid Horizontal stretching in Queue Dialog
+   - Port Messages to Utf8 where possible.
+
+KRunner:
+   - Fixed and stabilized for new Plasma API. The Runner now works in KDE4.1
+
+Plasmoid:
+   - Added Autocompletion for Packages

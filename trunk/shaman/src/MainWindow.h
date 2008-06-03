@@ -105,6 +105,7 @@ signals:
 
 	void startTimer();
 	void stopTimer();
+	void streamPackages(const QStringList&);
 
 public slots:
 	void populatePackagesView();
@@ -139,6 +140,7 @@ public slots:
 	void openLogViewer();
 	void shiftItemAction();
 	void showInfoDialog();
+	void doStreamPackages();
 
 protected:
 	void closeEvent(QCloseEvent *evt);

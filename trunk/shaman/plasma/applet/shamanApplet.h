@@ -57,7 +57,6 @@ class ShamanApplet : public Plasma::Applet
         
         QSizeF contentSizeHint() const;
         void constraintsEvent(Plasma::Constraints constraints);
-        void paintInterface(QPainter *p, const QStyleOptionGraphicsItem *option, const QRect &contentsRect);
 
     public slots:
         void dataUpdated(const QString &name, const Plasma::DataEngine::Data &data);
@@ -71,7 +70,7 @@ class ShamanApplet : public Plasma::Applet
         void transProgress(int percent);
     
     private:
-        Plasma::Svg *m_theme;
+        //Plasma::Svg *m_theme;
         Plasma::DataEngine *m_engine;
         QGraphicsLinearLayout *m_layout;
         QGraphicsWidget *m_form;

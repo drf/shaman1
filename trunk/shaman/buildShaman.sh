@@ -6,7 +6,9 @@ cat << _EOF
 >>	and set up the SUID bit.
 _EOF
 
-cmake . -DCMAKE_INSTALL_PREFIX=/usr
+mkdir build
+cd build
+cmake ../ -DCMAKE_INSTALL_PREFIX=/usr
 make
 sudo chown root shaman
 sudo chmod u+s shaman

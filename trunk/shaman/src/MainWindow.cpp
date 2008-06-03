@@ -34,7 +34,7 @@
 #include "ShamanTrayIcon.h"
 #include "ui_aboutDialog.h"
 #include "ui_authDialog.h"
-#include "shamanadaptor.h"
+#include "dbus/shamanadaptor.h"
 #include "ReviewQueueDialog.h"
 #include "ArchLinuxNewsReader.h"
 #include "NewsViewer.h"
@@ -2274,4 +2274,35 @@ void MainWindow::triggerEditTimer()
     editTimer->stop();
     
     editTimer->start(500);
+}
+
+void MainWindow::doStreamPackages()
+{
+    QStringList packages;
+
+    alpm_list_t *databases = aHandle->getAvailableRepos();
+
+    databases = alpm_list_first(databases);
+
+    while(databases != NULL)
+    {
+        pmdb_t *dbcrnt = (pmdb_t *)alpm_list_getdata(databases);
+
+        alpm_list_t *currentpkgs = alpm_db_getpkgcache(dbcrnt);
+
+        currentpkgs = alpm_list_first(currentpkgs);
+        
+        while(currentpkgs != NULL)
+        {
+            pmpkg_t *pkgcrnt = (pmpkg_t *)alpm_list_getdata(currentpkgs);
+            
+            packages.append(alpm_pkg_get_name(pkgcrnt));
+            
+            currentpkgs = alpm_list_next(currentpkgs);
+        }
+
+        databases = alpm_list_next(databases);
+    }
+    
+    emit streamPackages(packages);
 }

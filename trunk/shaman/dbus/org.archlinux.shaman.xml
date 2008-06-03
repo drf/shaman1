@@ -17,6 +17,8 @@
 			<arg type="s" direction="in" />
 			<arg type="b" direction="out" />
 		</method>
+		<method name="doStreamPackages">
+		</method>
 		
 		<signal name="transactionStarted">
 		</signal>
@@ -44,6 +46,9 @@
 		</signal>
 		<signal name="streamTransactionProgress">
 			<arg type="i" direction="out" />
+		</signal>
+		<signal name="streamPackages">
+			<arg type="s" direction="out" />
 		</signal>
 		<signal name="shamanReady">
 		</signal>

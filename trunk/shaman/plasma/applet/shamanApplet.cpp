@@ -49,30 +49,32 @@ ShamanApplet::ShamanApplet(QObject *parent, const QVariantList &args)
     m_dbus(QDBusConnection::systemBus())
 {
     setHasConfigurationInterface(false);
-    //setAspectRatioMode(Plasma::IgnoreAspectRatio);
-    //setBackgroundHints(Applet::DefaultBackground);
+    setAspectRatioMode(Plasma::IgnoreAspectRatio);
+    setBackgroundHints(Applet::DefaultBackground);
     
-    //m_theme = new Plasma::Svg(this);
-    //m_theme->setImagePath("widgets/kget");
+    //connect(Plasma::Theme::defaultTheme(), SIGNAL(themeChanged()), this, SLOT(themeRefresh()));
 }
 
 ShamanApplet::~ShamanApplet()
 {
+    delete m_layout;
+    delete m_view;
+    delete m_engine;
 }
 
 void ShamanApplet::init()
 {
+    setSizePolicy(QSizePolicy(QSizePolicy::Expanding,QSizePolicy::Expanding));
+    
     m_layout = new QGraphicsLinearLayout(this);
     m_layout->setOrientation(Qt::Vertical);
     m_layout->setSpacing(SPACING);
 
-    m_form = new QGraphicsWidget(this);
-    m_form->setContentsMargins(MARGIN, TOP_MARGIN, MARGIN, 35);
-    m_form->setLayout(m_layout);
+    setContentsMargins(MARGIN, TOP_MARGIN, MARGIN, 35);
+    setLayout(m_layout);
 
     if (formFactor() == Plasma::Vertical || formFactor() == Plasma::Horizontal) 
     {
-        m_form->setContentsMargins(0, 0, 0, 0);
         setBackgroundHints(NoBackground);
     }
     else 
@@ -87,40 +89,20 @@ void ShamanApplet::init()
     }
     else 
         kDebug() << "Shaman Engine could not be loaded";
-    
-    setLayout(m_layout);
 }
 
 QSizeF ShamanApplet::contentSizeHint() const
 {
-    if (!m_form) 
-        return QSizeF(600, 600);
-    else
-        return m_form->effectiveSizeHint(Qt::PreferredSize, geometry().size());
+    return effectiveSizeHint(Qt::PreferredSize, geometry().size());
 }
 
 void ShamanApplet::constraintsEvent(Plasma::Constraints constraints)
 {
     if (constraints & Plasma::SizeConstraint) {
         if (m_layout) {
-            m_form->resize(geometry().size());
+            resize(geometry().size());
         }
     }
-}
-
-void ShamanApplet::paintInterface(QPainter *p, const QStyleOptionGraphicsItem *option, const QRect &contentsRect)
-{
-    Q_UNUSED(option);
-    /**if(formFactor() == Plasma::Planar || formFactor() == Plasma::MediaCenter) 
-    {
-        p->setRenderHint(QPainter::SmoothPixmapTransform);
-
-        m_theme->paint(p, QRect(contentsRect.x() + SPACING + 10, 
-                                contentsRect.y() + SPACING + 10, 111, 35), "title");
-        m_theme->paint(p, QRect(contentsRect.x() + SPACING + 10, 
-                                contentsRect.y() + SPACING + 45, 
-                                contentsRect.width() - (SPACING + 10) * 2, 1), "line");
-    }**/
 }
 
 void ShamanApplet::dataUpdated(const QString &source, const Plasma::DataEngine::Data &data)

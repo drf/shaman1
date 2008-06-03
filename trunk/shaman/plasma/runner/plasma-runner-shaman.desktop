@@ -1,7 +1,13 @@
 [Desktop Entry]
 Name=Package Manager Runner
+
 X-KDE-ServiceTypes=Plasma/Runner
 Type=Service
 X-KDE-Library=krunner_shaman
-X-Plasma-RunnerName=Shaman
-X-Plasma-RunnerPhase=first
+
+X-KDE-PluginInfo-Author=Dario Freddi
+X-KDE-PluginInfo-Email=drf@kdemod.ath.cx
+X-KDE-PluginInfo-Name=Shaman
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-EnabledByDefault=true

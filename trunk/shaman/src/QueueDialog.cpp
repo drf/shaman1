@@ -190,7 +190,7 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 		actionDetail->setText(addTxt);
 		textEdit->append(addTxt);
 		addTxt.append(QChar('\n'));
-		alpm_logaction(addTxt.toAscii().data());
+		alpm_logaction(addTxt.toUtf8().data());
 
 		break;
 	case PM_TRANS_EVT_REMOVE_START:
@@ -236,7 +236,7 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 		actionDetail->setText(remTxt);
 		textEdit->append(remTxt);
 		remTxt.append(QChar('\n'));
-		alpm_logaction(remTxt.toAscii().data());
+		alpm_logaction(remTxt.toUtf8().data());
 		break;
 	case PM_TRANS_EVT_UPGRADE_START:
 		if(status != 2)
@@ -283,7 +283,7 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 		actionDetail->setText(upgTxt);
 		textEdit->append(upgTxt);
 		upgTxt.append(QChar('\n'));
-		alpm_logaction(upgTxt.toAscii().data());
+		alpm_logaction(upgTxt.toUtf8().data());
 
 		break;
 	case PM_TRANS_EVT_INTEGRITY_START:
@@ -511,7 +511,7 @@ bool QueueDialog::runScriptlet(int action, const QString &p1N, const QString &p1
 
 	QString tmpdir("/tmp/alpm_XXXXXX");
 
-	if(mkdtemp(tmpdir.toAscii().data()) == NULL) 
+	if(mkdtemp(tmpdir.toUtf8().data()) == NULL) 
 	{
 		return false;
 	}
@@ -621,7 +621,7 @@ bool QueueDialog::unpackPkg(const QString &pathToPkg, const QString &pathToEx, c
 	archive_read_support_compression_all(_archive);
 	archive_read_support_format_all(_archive);
 
-	if(archive_read_open_filename(_archive, pathToPkg.toAscii().data(), ARCHIVE_DEFAULT_BYTES_PER_BLOCK) != ARCHIVE_OK)
+	if(archive_read_open_filename(_archive, pathToPkg.toUtf8().data(), ARCHIVE_DEFAULT_BYTES_PER_BLOCK) != ARCHIVE_OK)
 	{
 		return false;
 	}
@@ -641,7 +641,7 @@ bool QueueDialog::unpackPkg(const QString &pathToPkg, const QString &pathToEx, c
 		else if(S_ISDIR(st->st_mode))
 			archive_entry_set_mode(entry, 0755);
 
-		if(file.toAscii().data() && strcmp(file.toAscii().data(), entryname)) 
+		if(file.toUtf8().data() && strcmp(file.toUtf8().data(), entryname)) 
 		{
 			if (archive_read_data_skip(_archive) != ARCHIVE_OK) 
 			{
@@ -654,7 +654,7 @@ bool QueueDialog::unpackPkg(const QString &pathToPkg, const QString &pathToEx, c
 			continue;
 		}
 		
-		snprintf(expath, PATH_MAX, "%s/%s", pathToEx.toAscii().data(), entryname);
+		snprintf(expath, PATH_MAX, "%s/%s", pathToEx.toUtf8().data(), entryname);
 		archive_entry_set_pathname(entry, expath);
 
 		int readret = archive_read_extract(_archive, entry, 0);
@@ -671,7 +671,7 @@ bool QueueDialog::unpackPkg(const QString &pathToPkg, const QString &pathToEx, c
 			return false;
 		}
 
-		if(file.toAscii().data())
+		if(file.toUtf8().data())
 			break;
 	}
 
@@ -697,7 +697,7 @@ void QueueDialog::finishedScriptletRunning(int eC,QProcess::ExitStatus eS)
 		actionDetail->setText(QString(tr("Error processing Scriptlet!!")));
 	}
 
-	chdir(cwd.toAscii().data());
+	chdir(cwd.toUtf8().data());
 
 	proc->deleteLater();
 
@@ -724,7 +724,7 @@ void QueueDialog::writeLineProgress()
 		if(!view.endsWith(QChar('\n')))
 			view.append(QChar('\n'));
 		
-		alpm_logaction(view.toAscii().data());
+		alpm_logaction(view.toUtf8().data());
 
 		textEdit->moveCursor(QTextCursor::End);
 	}
@@ -746,7 +746,7 @@ void QueueDialog::writeLineProgressErr()
 		if(!view.endsWith(QChar('\n')))
 			view.append(QChar('\n'));
 
-		alpm_logaction(view.toAscii().data());
+		alpm_logaction(view.toUtf8().data());
 
 		textEdit->moveCursor(QTextCursor::End);
 	}
