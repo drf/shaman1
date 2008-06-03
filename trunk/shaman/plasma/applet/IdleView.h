@@ -50,7 +50,6 @@ private slots:
     void installPackage();
     void removePackage();
     void showContextMenu();
-    void updateCompletionItem(const QStringList &packages);
 	
 private:
     QDBusConnection m_dbus;
