@@ -1,0 +1,758 @@
+<ui version="4.0" >
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1195</width>
+    <height>722</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Shaman</string>
+  </property>
+  <property name="windowIcon" >
+   <iconset resource="shaman.qrc" >
+    <normaloff>:/Icons/icons/shaman/shaman-32.png</normaloff>:/Icons/icons/shaman/shaman-32.png</iconset>
+  </property>
+  <property name="toolButtonStyle" >
+   <enum>Qt::ToolButtonTextUnderIcon</enum>
+  </property>
+  <property name="dockNestingEnabled" >
+   <bool>true</bool>
+  </property>
+  <property name="dockOptions" >
+   <set>QMainWindow::AllowNestedDocks|QMainWindow::AllowTabbedDocks|QMainWindow::AnimatedDocks|QMainWindow::ForceTabbedDocks|QMainWindow::VerticalTabs</set>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac" >
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>68</y>
+     <width>1195</width>
+     <height>630</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" >
+    <item row="0" column="1" >
+     <layout class="QVBoxLayout" >
+      <property name="topMargin" >
+       <number>0</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" >
+        <property name="spacing" >
+         <number>4</number>
+        </property>
+        <item>
+         <widget class="QComboBox" name="packageSwitchCombo" >
+          <property name="sizePolicy" >
+           <sizepolicy vsizetype="Ignored" hsizetype="Maximum" >
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <item>
+           <property name="text" >
+            <string>All packages</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Installed packages</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Not installed packages</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Upgradeable packages</string>
+           </property>
+          </item>
+          <item>
+           <property name="text" >
+            <string>Packages in Queue</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <spacer>
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>40</width>
+            <height>31</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="searchLine" >
+          <property name="sizePolicy" >
+           <sizepolicy vsizetype="Ignored" hsizetype="MinimumExpanding" >
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="inputMask" >
+           <string/>
+          </property>
+          <property name="text" >
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="nameDescBox" >
+          <property name="sizePolicy" >
+           <sizepolicy vsizetype="Ignored" hsizetype="Preferred" >
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTreeWidget" name="pkgsViewWG" >
+        <property name="sizePolicy" >
+         <sizepolicy vsizetype="MinimumExpanding" hsizetype="MinimumExpanding" >
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="selectionMode" >
+         <enum>QAbstractItemView::ExtendedSelection</enum>
+        </property>
+        <property name="indentation" >
+         <number>0</number>
+        </property>
+        <property name="rootIsDecorated" >
+         <bool>false</bool>
+        </property>
+        <property name="itemsExpandable" >
+         <bool>false</bool>
+        </property>
+        <property name="sortingEnabled" >
+         <bool>false</bool>
+        </property>
+        <column>
+         <property name="text" >
+          <string>Status</string>
+         </property>
+        </column>
+        <column>
+         <property name="text" >
+          <string comment="Name of the Package" >Name</string>
+         </property>
+        </column>
+        <column>
+         <property name="text" >
+          <string>Action</string>
+         </property>
+        </column>
+        <column>
+         <property name="text" >
+          <string>Version</string>
+         </property>
+        </column>
+        <column>
+         <property name="text" >
+          <string>Size</string>
+         </property>
+        </column>
+        <column>
+         <property name="text" >
+          <string>Repository</string>
+         </property>
+        </column>
+        <column>
+         <property name="text" >
+          <string>Groups</string>
+         </property>
+        </column>
+        <column>
+         <property name="text" >
+          <string>Description</string>
+         </property>
+        </column>
+        <column>
+         <property name="text" >
+          <string>Action-Text</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item rowspan="2" row="0" column="0" >
+     <widget class="QDockWidget" name="repoDockWidget" >
+      <property name="floating" >
+       <bool>false</bool>
+      </property>
+      <property name="features" >
+       <set>QDockWidget::AllDockWidgetFeatures</set>
+      </property>
+      <property name="allowedAreas" >
+       <set>Qt::AllDockWidgetAreas</set>
+      </property>
+      <property name="windowTitle" >
+       <string>Repositories</string>
+      </property>
+      <widget class="QWidget" name="dockWidgetContents_2" >
+       <property name="geometry" >
+        <rect>
+         <x>2</x>
+         <y>22</y>
+         <width>310</width>
+         <height>598</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" >
+        <item row="0" column="0" >
+         <layout class="QVBoxLayout" >
+          <item>
+           <widget class="QLineEdit" name="refineRepoEdit" />
+          </item>
+          <item>
+           <widget class="QListWidget" name="repoList" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="switchToRepo" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Maximum" hsizetype="Preferred" >
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text" >
+             <string>Re&amp;positories</string>
+            </property>
+            <property name="icon" >
+             <iconset resource="shaman.qrc" >
+              <normaloff>:/Icons/icons/network-server-database.png</normaloff>:/Icons/icons/network-server-database.png</iconset>
+            </property>
+            <property name="checkable" >
+             <bool>true</bool>
+            </property>
+            <property name="checked" >
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="switchToGrps" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Maximum" hsizetype="Preferred" >
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text" >
+             <string>Package &amp;Groups</string>
+            </property>
+            <property name="icon" >
+             <iconset resource="shaman.qrc" >
+              <normaloff>:/Icons/icons/bookmark-new-list.png</normaloff>:/Icons/icons/bookmark-new-list.png</iconset>
+            </property>
+            <property name="checkable" >
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="1" column="1" >
+     <widget class="QDockWidget" name="pkgDockWidget" >
+      <property name="floating" >
+       <bool>false</bool>
+      </property>
+      <property name="features" >
+       <set>QDockWidget::AllDockWidgetFeatures</set>
+      </property>
+      <property name="windowTitle" >
+       <string>Package Information</string>
+      </property>
+      <widget class="QWidget" name="dockWidgetContents" >
+       <property name="geometry" >
+        <rect>
+         <x>2</x>
+         <y>22</y>
+         <width>865</width>
+         <height>286</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" >
+        <item row="0" column="0" >
+         <layout class="QVBoxLayout" >
+          <item>
+           <layout class="QHBoxLayout" >
+            <item>
+             <spacer>
+              <property name="orientation" >
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType" >
+               <enum>QSizePolicy::MinimumExpanding</enum>
+              </property>
+              <property name="sizeHint" stdset="0" >
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="installButton" >
+              <property name="sizePolicy" >
+               <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="toolTip" >
+               <string>Install selected package</string>
+              </property>
+              <property name="text" >
+               <string>Mark for &amp;Installation</string>
+              </property>
+              <property name="icon" >
+               <iconset resource="shaman.qrc" >
+                <normaloff>:/Icons/icons/list-add.png</normaloff>:/Icons/icons/list-add.png</iconset>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="removeButton" >
+              <property name="sizePolicy" >
+               <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="toolTip" >
+               <string>Remove selected package</string>
+              </property>
+              <property name="text" >
+               <string>Mark for &amp;Removal</string>
+              </property>
+              <property name="icon" >
+               <iconset resource="shaman.qrc" >
+                <normaloff>:/Icons/icons/list-remove.png</normaloff>:/Icons/icons/list-remove.png</iconset>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="completeRemoveButton" >
+              <property name="sizePolicy" >
+               <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="toolTip" >
+               <string>Complete Remove selected package (pacman -Rcs)</string>
+              </property>
+              <property name="text" >
+               <string>Mark for complete re&amp;moval</string>
+              </property>
+              <property name="icon" >
+               <iconset resource="shaman.qrc" >
+                <normaloff>:/Icons/icons/edit-delete.png</normaloff>:/Icons/icons/edit-delete.png</iconset>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="cancelButton" >
+              <property name="sizePolicy" >
+               <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="toolTip" >
+               <string>Cancel action for selected package</string>
+              </property>
+              <property name="text" >
+               <string>&amp;Cancel Action</string>
+              </property>
+              <property name="icon" >
+               <iconset resource="shaman.qrc" >
+                <normaloff>:/Icons/icons/dialog-cancel.png</normaloff>:/Icons/icons/dialog-cancel.png</iconset>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer>
+              <property name="orientation" >
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType" >
+               <enum>QSizePolicy::MinimumExpanding</enum>
+              </property>
+              <property name="sizeHint" stdset="0" >
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QTabWidget" name="PkgInfos" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Preferred" hsizetype="Minimum" >
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="currentIndex" >
+             <number>0</number>
+            </property>
+            <widget class="QWidget" name="tab" >
+             <property name="geometry" >
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>843</width>
+               <height>199</height>
+              </rect>
+             </property>
+             <attribute name="title" >
+              <string>Package I&amp;nformation</string>
+             </attribute>
+             <attribute name="icon" >
+              <iconset resource="shaman.qrc" >
+               <normaloff>:/Icons/icons/help-about.png</normaloff>:/Icons/icons/help-about.png</iconset>
+             </attribute>
+             <layout class="QGridLayout" >
+              <item row="0" column="0" >
+               <widget class="QTextEdit" name="pkgInfo" >
+                <property name="enabled" >
+                 <bool>true</bool>
+                </property>
+                <property name="sizePolicy" >
+                 <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="acceptDrops" >
+                 <bool>false</bool>
+                </property>
+                <property name="undoRedoEnabled" >
+                 <bool>false</bool>
+                </property>
+                <property name="readOnly" >
+                 <bool>true</bool>
+                </property>
+                <property name="acceptRichText" >
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="tab_2" >
+             <property name="geometry" >
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>843</width>
+               <height>199</height>
+              </rect>
+             </property>
+             <attribute name="title" >
+              <string>File&amp;s</string>
+             </attribute>
+             <attribute name="icon" >
+              <iconset resource="shaman.qrc" >
+               <normaloff>:/Icons/icons/document-open-folder.png</normaloff>:/Icons/icons/document-open-folder.png</iconset>
+             </attribute>
+             <layout class="QGridLayout" >
+              <item row="0" column="0" >
+               <widget class="QTreeWidget" name="filesWidget" >
+                <column>
+                 <property name="text" >
+                  <string>1</string>
+                 </property>
+                </column>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="dependenciesTab" >
+             <property name="geometry" >
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>843</width>
+               <height>199</height>
+              </rect>
+             </property>
+             <attribute name="title" >
+              <string>&amp;Dependencies</string>
+             </attribute>
+             <attribute name="icon" >
+              <iconset resource="shaman.qrc" >
+               <normaloff>:/Icons/icons/view-list-tree.png</normaloff>:/Icons/icons/view-list-tree.png</iconset>
+             </attribute>
+             <layout class="QGridLayout" >
+              <item row="0" column="0" >
+               <widget class="QListWidget" name="dependenciesWidget" />
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1195</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile" >
+    <property name="title" >
+     <string>&amp;File</string>
+    </property>
+    <addaction name="actionQuit" />
+   </widget>
+   <widget class="QMenu" name="menuHelp" >
+    <property name="title" >
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="actionAbout" />
+   </widget>
+   <widget class="QMenu" name="menuActions" >
+    <property name="title" >
+     <string>&amp;Actions</string>
+    </property>
+    <widget class="QMenu" name="menuInstall_and_Build_from_Source" >
+     <property name="title" >
+      <string>Build and Install from Source</string>
+     </property>
+     <addaction name="actionUpdate_ABS_Tree" />
+     <addaction name="separator" />
+     <addaction name="actionBuild_and_Install_Selected" />
+    </widget>
+    <addaction name="actionUpdate_Database" />
+    <addaction name="actionUpgrade_System" />
+    <addaction name="separator" />
+    <addaction name="actionProcess_Queue" />
+    <addaction name="actionInstall_Package_From_File" />
+    <addaction name="separator" />
+    <addaction name="menuInstall_and_Build_from_Source" />
+   </widget>
+   <widget class="QMenu" name="menuTools" >
+    <property name="title" >
+     <string>&amp;Tools</string>
+    </property>
+    <addaction name="actionReadNews" />
+    <addaction name="actionViewLog" />
+    <addaction name="separator" />
+    <addaction name="actionPacman_Preferences" />
+   </widget>
+   <addaction name="menuFile" />
+   <addaction name="menuActions" />
+   <addaction name="menuTools" />
+   <addaction name="menuHelp" />
+  </widget>
+  <widget class="QToolBar" name="toolBar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>27</y>
+     <width>1195</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="acceptDrops" >
+    <bool>true</bool>
+   </property>
+   <property name="windowTitle" >
+    <string>Quick Actions</string>
+   </property>
+   <property name="movable" >
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea" >
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak" >
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionUpdate_Database" />
+   <addaction name="actionUpgrade_System" />
+   <addaction name="actionProcess_Queue" />
+   <addaction name="separator" />
+   <addaction name="actionCancel_all_actions" />
+   <addaction name="separator" />
+   <addaction name="actionReadNews" />
+   <addaction name="actionViewLog" />
+   <addaction name="separator" />
+   <addaction name="actionPacman_Preferences" />
+  </widget>
+  <widget class="QStatusBar" name="statusBar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>698</y>
+     <width>1195</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <action name="actionPacman_Preferences" >
+   <property name="icon" >
+    <iconset resource="shaman.qrc" >
+     <normaloff>:/Icons/icons/preferences-system.png</normaloff>:/Icons/icons/preferences-system.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Settings...</string>
+   </property>
+  </action>
+  <action name="actionAbout" >
+   <property name="icon" >
+    <iconset resource="shaman.qrc" >
+     <normaloff>:/Icons/icons/help-about.png</normaloff>:/Icons/icons/help-about.png</iconset>
+   </property>
+   <property name="text" >
+    <string>About...</string>
+   </property>
+  </action>
+  <action name="actionUpdate_Database" >
+   <property name="icon" >
+    <iconset resource="shaman.qrc" >
+     <normaloff>:/Icons/icons/view-refresh.png</normaloff>:/Icons/icons/view-refresh.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Update Database</string>
+   </property>
+  </action>
+  <action name="actionUpgrade_System" >
+   <property name="icon" >
+    <iconset resource="shaman.qrc" >
+     <normaloff>:/Icons/icons/system-software-update.png</normaloff>:/Icons/icons/system-software-update.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Upgrade System</string>
+   </property>
+  </action>
+  <action name="actionInstall_Package_From_File" >
+   <property name="icon" >
+    <iconset resource="shaman.qrc" >
+     <normaloff>:/Icons/icons/document-open.png</normaloff>:/Icons/icons/document-open.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Install Package From File</string>
+   </property>
+   <property name="menuRole" >
+    <enum>QAction::TextHeuristicRole</enum>
+   </property>
+  </action>
+  <action name="actionUpdate_ABS_Tree" >
+   <property name="icon" >
+    <iconset resource="shaman.qrc" >
+     <normaloff>:/Icons/icons/document-open-remote.png</normaloff>:/Icons/icons/document-open-remote.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Update ABS Tree</string>
+   </property>
+  </action>
+  <action name="actionBuild_and_Install_Selected" >
+   <property name="icon" >
+    <iconset resource="shaman.qrc" >
+     <normaloff>:/Icons/icons/applications-development.png</normaloff>:/Icons/icons/applications-development.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Build and Install Queue</string>
+   </property>
+  </action>
+  <action name="actionQuit" >
+   <property name="icon" >
+    <iconset resource="shaman.qrc" >
+     <normaloff>:/Icons/icons/application-exit.png</normaloff>:/Icons/icons/application-exit.png</iconset>
+   </property>
+   <property name="text" >
+    <string comment="Quit the application" >Quit</string>
+   </property>
+  </action>
+  <action name="actionProcess_Queue" >
+   <property name="icon" >
+    <iconset resource="shaman.qrc" >
+     <normaloff>:/Icons/icons/dialog-ok-apply.png</normaloff>:/Icons/icons/dialog-ok-apply.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Process Queue</string>
+   </property>
+  </action>
+  <action name="actionCancel_all_actions" >
+   <property name="icon" >
+    <iconset resource="shaman.qrc" >
+     <normaloff>:/Icons/icons/dialog-cancel.png</normaloff>:/Icons/icons/dialog-cancel.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Cancel all actions</string>
+   </property>
+  </action>
+  <action name="actionReadNews" >
+   <property name="icon" >
+    <iconset resource="shaman.qrc" >
+     <normaloff>:/Icons/icons/news-subscribe.png</normaloff>:/Icons/icons/news-subscribe.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Read News</string>
+   </property>
+  </action>
+  <action name="actionViewLog" >
+   <property name="icon" >
+    <iconset resource="shaman.qrc" >
+     <normaloff>:/Icons/icons/accessories-text-editor.png</normaloff>:/Icons/icons/accessories-text-editor.png</iconset>
+   </property>
+   <property name="text" >
+    <string>View Log</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="0" margin="0" />
+ <resources>
+  <include location="shaman.qrc" />
+ </resources>
+ <connections/>
+</ui>
