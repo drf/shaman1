@@ -51,6 +51,7 @@ Plasmoid:
 Runner:
    - Port the Runner to the new API syntax
 
+
 Beta 3  --> RC 1
 
 Core:
@@ -69,3 +70,6 @@ KRunner:
 
 Plasmoid:
    - Added Autocompletion for Packages
+
+
+RC1  -->
