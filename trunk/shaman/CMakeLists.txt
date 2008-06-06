@@ -84,7 +84,7 @@ SET(shaman_MOC_HDRS
     src/Authenticator.h
     src/ShamanStatusBar.h
     src/PackageProperties.h
-    src/ShamanTreeWidgetItem.h
+#    src/ShamanTreeWidgetItem.h
 )
 
 SET(shaman_UIS

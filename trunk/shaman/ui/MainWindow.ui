@@ -154,7 +154,7 @@
         </column>
         <column>
          <property name="text" >
-          <string>Name</string>
+          <string comment="Name of the Package" >Name</string>
          </property>
         </column>
         <column>

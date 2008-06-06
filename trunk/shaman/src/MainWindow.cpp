@@ -431,7 +431,7 @@ void MainWindow::populatePackagesViewFinished()
 {
     foreach(ShamanTreeWidgetItem *ent, cThread->getResult())
         pkgsViewWG->addTopLevelItem(ent);
-    
+        
     cThread->deleteLater();
 
     pkgsViewWG->sortItems(1, Qt::AscendingOrder);
