@@ -43,6 +43,7 @@
 #include "ShamanDialog.h"
 #include "ShamanStatusBar.h"
 #include "PackageProperties.h"
+#include "ShamanTreeWidgetItem.h"
 
 #include <config.h>
 
@@ -67,6 +68,8 @@
 #include <QMutex>
 #include <QDesktopServices>
 #include <QUrl>
+#include <QStandardItemModel>
+#include <QSortFilterProxyModel>
 
 extern CallBacks CbackReference;
 extern QMutex mutex;
@@ -81,7 +84,7 @@ CreateItemsThread::CreateItemsThread(AlpmHandler *aH)
 {
 }
 
-QList<QTreeWidgetItem *> CreateItemsThread::getResult()
+QList<ShamanTreeWidgetItem *> CreateItemsThread::getResult()
 {
     return retlist;
 }
@@ -91,7 +94,7 @@ void CreateItemsThread::run()
     alpm_list_t *databases;
     int count = 0;
     int totalPkgs = m_handler->countPackages(Alpm::AllPackages);
-    QList<QTreeWidgetItem *> itmLst;
+    QList<ShamanTreeWidgetItem *> itmLst;
     alpm_list_t *currentpkgs;
 
     databases = m_handler->getAvailableRepos();
@@ -126,7 +129,7 @@ void CreateItemsThread::run()
                 }
             }
 
-            QTreeWidgetItem *item = new QTreeWidgetItem();
+            ShamanTreeWidgetItem *item = new ShamanTreeWidgetItem();
             alpm_list_t *grps = (alpm_list_t *)alpm_pkg_get_groups(pkg);
             QString grStr;
 
@@ -144,7 +147,11 @@ void CreateItemsThread::run()
             item->setText(3, alpm_pkg_get_version(pkg));
             item->setText(1, alpm_pkg_get_name(pkg));
             item->setText(5, alpm_db_get_name(dbcrnt));
-            item->setText(4, PackageProperties::formatSize(m_handler->getPackageSize(item->text(1), item->text(5))));
+            
+            int size = m_handler->getPackageSize(item->text(1), item->text(5));
+            
+            item->setText(4, PackageProperties::formatSize(size));
+            item->setData(4, Qt::UserRole, size);
             item->setText(7, alpm_pkg_get_desc(pkg));
 
             while(grps != NULL)
@@ -178,7 +185,7 @@ void CreateItemsThread::run()
     while(locPkg != NULL)
     {
         pmpkg_t *pkg = (pmpkg_t *)alpm_list_getdata(locPkg);
-        QTreeWidgetItem *item = new QTreeWidgetItem();
+        ShamanTreeWidgetItem *item = new ShamanTreeWidgetItem();
 
         item->setIcon(0, QIcon(":/Icons/icons/user-online.png"));
         item->setText(1, alpm_pkg_get_name(pkg));
@@ -186,6 +193,7 @@ void CreateItemsThread::run()
         item->setText(7, alpm_pkg_get_desc(pkg));
         item->setText(5, "local");
         item->setText(4, PackageProperties::formatSize(m_handler->getPackageSize(item->text(1), item->text(5))));
+        item->setData(4, Qt::UserRole, (int)m_handler->getPackageSize(item->text(1), item->text(5)));
 
         retlist.append(item);
 
@@ -195,9 +203,9 @@ void CreateItemsThread::run()
     foreach(QString ent, conflPackages)
     {
         int count = 0;
-        QTreeWidgetItem *match = 0;
+        ShamanTreeWidgetItem *match = 0;
         
-        foreach(QTreeWidgetItem *itm, retlist)
+        foreach(ShamanTreeWidgetItem *itm, retlist)
         {
             if(itm->text(1) == ent)
             {
@@ -421,12 +429,19 @@ void MainWindow::populatePackagesView()
 
 void MainWindow::populatePackagesViewFinished()
 {
-    pkgsViewWG->addTopLevelItems(cThread->getResult());
+    foreach(ShamanTreeWidgetItem *ent, cThread->getResult())
+        pkgsViewWG->addTopLevelItem(ent);
     
     cThread->deleteLater();
 
     pkgsViewWG->sortItems(1, Qt::AscendingOrder);
     pkgsViewWG->setSortingEnabled(true);//Enable sorting *after* inserting :D
+    QAbstractItemModel *model = pkgsViewWG->model();
+    
+    QSortFilterProxyModel *proxyModel = new QSortFilterProxyModel(this);
+    proxyModel->setSourceModel(model);
+    
+    proxyModel->setSortRole(Qt::UserRole);
 
     stBar->stopProgressBar();
 

@@ -51,6 +51,7 @@ class NewsViewer;
 class LogViewer;
 class ShamanStatusBar;
 class PackageProperties;
+class ShamanTreeWidgetItem;
 
 class CreateItemsThread : public QThread
 {
@@ -59,13 +60,13 @@ class CreateItemsThread : public QThread
 public:
     CreateItemsThread(AlpmHandler *aH);
     void run();
-    QList<QTreeWidgetItem *> getResult();
+    QList<ShamanTreeWidgetItem *> getResult();
     
 signals:
     void updateProgress(int percentage);
     
 private:
-    QList<QTreeWidgetItem *> retlist;
+    QList<ShamanTreeWidgetItem *> retlist;
     AlpmHandler *m_handler;
 };
 

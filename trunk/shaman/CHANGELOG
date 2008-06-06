@@ -62,6 +62,7 @@ GUI:
    - Faster startup and no freezes thanks to better Thread Handling
    - Avoid Horizontal stretching in Queue Dialog
    - Port Messages to Utf8 where possible.
+   - Fixed sorting by size bug
 
 KRunner:
    - Fixed and stabilized for new Plasma API. The Runner now works in KDE4.1
