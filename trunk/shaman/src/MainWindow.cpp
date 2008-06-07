@@ -84,7 +84,7 @@ CreateItemsThread::CreateItemsThread(AlpmHandler *aH)
 {
 }
 
-QList<ShamanTreeWidgetItem *> CreateItemsThread::getResult()
+QList<QTreeWidgetItem *> CreateItemsThread::getResult()
 {
     return retlist;
 }
@@ -94,7 +94,7 @@ void CreateItemsThread::run()
     alpm_list_t *databases;
     int count = 0;
     int totalPkgs = m_handler->countPackages(Alpm::AllPackages);
-    QList<ShamanTreeWidgetItem *> itmLst;
+    QList<QTreeWidgetItem *> itmLst;
     alpm_list_t *currentpkgs;
 
     databases = m_handler->getAvailableRepos();
@@ -203,9 +203,9 @@ void CreateItemsThread::run()
     foreach(QString ent, conflPackages)
     {
         int count = 0;
-        ShamanTreeWidgetItem *match = 0;
+        QTreeWidgetItem *match = 0;
         
-        foreach(ShamanTreeWidgetItem *itm, retlist)
+        foreach(QTreeWidgetItem *itm, retlist)
         {
             if(itm->text(1) == ent)
             {
@@ -429,12 +429,7 @@ void MainWindow::populatePackagesView()
 
 void MainWindow::populatePackagesViewFinished()
 {
-    QList<QTreeWidgetItem *> plist;
-    
-    foreach(ShamanTreeWidgetItem *ent, cThread->getResult())
-        plist.append(ent);
-    
-    pkgsViewWG->addTopLevelItems(plist);
+    pkgsViewWG->addTopLevelItems(cThread->getResult());
         
     cThread->deleteLater();
 

@@ -60,13 +60,13 @@ class CreateItemsThread : public QThread
 public:
     CreateItemsThread(AlpmHandler *aH);
     void run();
-    QList<ShamanTreeWidgetItem *> getResult();
+    QList<QTreeWidgetItem *> getResult();
     
 signals:
     void updateProgress(int percentage);
     
 private:
-    QList<ShamanTreeWidgetItem *> retlist;
+    QList<QTreeWidgetItem *> retlist;
     AlpmHandler *m_handler;
 };
 
