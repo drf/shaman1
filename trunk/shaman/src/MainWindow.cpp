@@ -429,8 +429,12 @@ void MainWindow::populatePackagesView()
 
 void MainWindow::populatePackagesViewFinished()
 {
+    QList<QTreeWidgetItem *> plist;
+    
     foreach(ShamanTreeWidgetItem *ent, cThread->getResult())
-        pkgsViewWG->addTopLevelItem(ent);
+        plist.append(ent);
+    
+    pkgsViewWG->addTopLevelItems(plist);
         
     cThread->deleteLater();
 
