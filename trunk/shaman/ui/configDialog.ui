@@ -5,8 +5,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>811</width>
-    <height>659</height>
+    <width>810</width>
+    <height>643</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -76,8 +76,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>679</width>
-        <height>617</height>
+        <width>678</width>
+        <height>601</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" >
@@ -258,8 +258,8 @@ p, li { white-space: pre-wrap; }
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>679</width>
-        <height>607</height>
+        <width>678</width>
+        <height>601</height>
        </rect>
       </property>
       <layout class="QGridLayout" >
@@ -410,8 +410,8 @@ p, li { white-space: pre-wrap; }
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>679</width>
-        <height>607</height>
+        <width>678</width>
+        <height>601</height>
        </rect>
       </property>
       <layout class="QGridLayout" >
@@ -425,8 +425,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>100</width>
-            <height>30</height>
+            <width>658</width>
+            <height>553</height>
            </rect>
           </property>
           <attribute name="title" >
@@ -783,8 +783,8 @@ and Pacman.</string>
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>679</width>
-        <height>607</height>
+        <width>678</width>
+        <height>601</height>
        </rect>
       </property>
       <layout class="QGridLayout" >
@@ -946,8 +946,8 @@ and Pacman.</string>
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>679</width>
-        <height>617</height>
+        <width>678</width>
+        <height>601</height>
        </rect>
       </property>
       <layout class="QGridLayout" >
@@ -1187,6 +1187,13 @@ and Pacman.</string>
           <string>Interface</string>
          </property>
          <layout class="QVBoxLayout" >
+          <item>
+           <widget class="QCheckBox" name="useAnimatedBox" >
+            <property name="text" >
+             <string>Use Animated Tray Icon</string>
+            </property>
+           </widget>
+          </item>
           <item>
            <widget class="QCheckBox" name="autoStartBox" >
             <property name="text" >

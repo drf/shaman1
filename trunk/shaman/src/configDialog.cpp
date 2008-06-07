@@ -453,6 +453,8 @@ void ConfigDialog::setupAdvanced()
 		
 	autoStartBox->setChecked(settings->value("gui/autostart").toBool());
 	
+	useAnimatedBox->setChecked(settings->value("trayicon/useanimatedicon", true).toBool());
+	
 	settings->deleteLater();
 }
 
@@ -1152,6 +1154,7 @@ void ConfigDialog::saveSettings()
 	settings->setValue("newsreader/queuenotifier", notifyQueueRSSBox->isChecked());
 	settings->setValue("gui/noroot", noRootBox->isChecked());
 	settings->setValue("gui/autostart", autoStartBox->isChecked());
+	settings->setValue("trayicon/useanimatedicon", useAnimatedBox->isChecked());
 
 	/* Additional checks here. Since this thing could be rm -rf'ed,
 	 * better being sure that is set properly. */

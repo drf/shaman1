@@ -77,3 +77,4 @@ RC1  -->
 Core:
    - Fixed bug when Adding Upgradeable packages to Queue (bug #39)
    - Fixed the empty Upgrade dialog bug
+   - Added the possibility to switch off the animated Icon

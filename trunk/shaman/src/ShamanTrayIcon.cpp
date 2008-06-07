@@ -110,8 +110,18 @@ void ShamanTrayIcon::changeIconStatus(ShamanIcon::IconStatus status)
 	}
 	else if(status == ShamanIcon::ProcessingIcon)
 	{
-		setMovie(new QMovie(":/Icons/icons/shaman/shaman-animation.mng"));
-		startMovie();
+		QSettings *settings = new QSettings();
+
+		if(settings->value("trayicon/useanimatedicon", true).toBool())
+		{
+		    setMovie(new QMovie(":/Icons/icons/shaman/shaman-animation.mng"));
+		    startMovie();
+		}
+		else
+		    setIcon(QIcon(":/Icons/icons/shaman/shaman-yellow-icon-32.png"));
+		
+		settings->deleteLater();
+		
 		setToolTip(QString(tr("Shaman - Processing")));
 	}
 	else
