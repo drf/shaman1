@@ -37,6 +37,8 @@ public:
 	
 	bool force();
 	
+	void init();
+	
 private slots:
 	void abort();
 	void initSysUpgrade();

@@ -450,6 +450,8 @@ void MainWindow::populatePackagesViewFinished()
 
     connect(PkgInfos, SIGNAL(currentChanged(int)), SLOT(showPkgInfo()));
     connect(pkgsViewWG, SIGNAL(itemDoubleClicked(QTreeWidgetItem*,int)), SLOT(shiftItemAction()));
+    
+    emit packagesLoaded();
 }
 
 void MainWindow::shiftItemAction()
@@ -1615,13 +1617,12 @@ void MainWindow::upgrade(const QStringList &packages)
 
 		upDl = new SysUpgradeDialog(aHandle, this);
 
-		upDl->show();
-
-		upActive = true;
-
 		connect(upDl, SIGNAL(aborted()), SLOT(upgradeAborted()));
 		connect(upDl, SIGNAL(upgradeNow()), SLOT(processQueue()));
 		connect(upDl, SIGNAL(addToPkgQueue()), SLOT(addUpgradeableToQueue()));
+		
+		upDl->init();
+		upActive = true;
 	}
 
 }
@@ -1634,9 +1635,20 @@ void MainWindow::upgradeAborted()
 
 void MainWindow::addUpgradeableToQueue()
 {
-	qDebug() << "UpgradeableToQueue";
+	if(upDl)
+	    upDl->deleteLater();
+    
+    qDebug() << "UpgradeableToQueue";
 	if (aHandle->getUpgradeablePackages().isEmpty())
 		return;
+	
+	disconnect(this, SIGNAL(packagesLoaded()), this, SLOT(addUpgradeableToQueue()));
+	
+	if ( !pkgsViewWG->topLevelItemCount() )
+	{
+	    connect(this, SIGNAL(packagesLoaded()), this, SLOT(addUpgradeableToQueue()));
+	    return;
+	}
 
 	foreach (QString package, aHandle->getUpgradeablePackages())
 	{

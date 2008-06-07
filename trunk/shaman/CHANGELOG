@@ -73,3 +73,7 @@ Plasmoid:
 
 
 RC1  -->
+
+Core:
+   - Fixed bug when Adding Upgradeable packages to Queue (bug #39)
+   - Fixed the empty Upgrade dialog bug

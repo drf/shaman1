@@ -107,6 +107,7 @@ signals:
 	void startTimer();
 	void stopTimer();
 	void streamPackages(const QStringList&);
+	void packagesLoaded();
 
 public slots:
 	void populatePackagesView();
