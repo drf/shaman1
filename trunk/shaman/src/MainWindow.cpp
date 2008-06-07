@@ -450,6 +450,8 @@ void MainWindow::populatePackagesViewFinished()
     connect(PkgInfos, SIGNAL(currentChanged(int)), SLOT(showPkgInfo()));
     connect(pkgsViewWG, SIGNAL(itemDoubleClicked(QTreeWidgetItem*,int)), SLOT(shiftItemAction()));
     
+    refinePkgView();
+    
     emit packagesLoaded();
 }
 

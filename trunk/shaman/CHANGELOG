@@ -79,3 +79,6 @@ Core:
    - Fixed the empty Upgrade dialog bug
    - Added the possibility to switch off the animated Icon
    - Fixed speed regression when loading packages
+
+GUI:
+   - Packages are now refined when reloaded.
