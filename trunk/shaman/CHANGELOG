@@ -72,7 +72,7 @@ Plasmoid:
    - Added Autocompletion for Packages
 
 
-RC1  -->
+RC1  --> RC2
 
 Core:
    - Fixed bug when Adding Upgradeable packages to Queue (bug #39)
