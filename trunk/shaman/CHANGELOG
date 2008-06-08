@@ -82,3 +82,9 @@ Core:
 
 GUI:
    - Packages are now refined when reloaded.
+
+RC2 -->
+
+i18n:
+   - Added Czech Translation
+
