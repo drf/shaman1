@@ -1070,7 +1070,7 @@ Do you want to save it?</source>
         <translation>Κατάσταση</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="624"/>
+        <location filename="../src/MainWindow.cpp" line="625"/>
         <source>Name</source>
         <translation>Όνομα</translation>
     </message>
@@ -1115,7 +1115,7 @@ Do you want to save it?</source>
         <translation>Repositories</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="503"/>
+        <location filename="../src/MainWindow.cpp" line="504"/>
         <source>Package Groups</source>
         <translation>Ομάδες πακέτων</translation>
     </message>
@@ -1288,7 +1288,7 @@ You can change this behaviour in Settings.</source>
         <translation>Shaman - Κλείσιμο στο Tray</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2127"/>
+        <location filename="../src/MainWindow.cpp" line="2128"/>
         <source>Upgrade</source>
         <translation>Αναβάθμιση</translation>
     </message>
@@ -1298,7 +1298,7 @@ You can change this behaviour in Settings.</source>
         <translation type="obsolete">Shaman - Αδράνεια (Διαθέσιμες Αναβαθμίσεις)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1509"/>
+        <location filename="../src/MainWindow.cpp" line="1510"/>
         <source>System Upgrade</source>
         <translation>Αναβάθμιση Συστήματος</translation>
     </message>
@@ -1317,17 +1317,17 @@ Click here to upgrade your System.</source>
 Κάντε click για να αναβαθμίσετε το Σύστημα.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="546"/>
+        <location filename="../src/MainWindow.cpp" line="547"/>
         <source>All Repositories</source>
         <translation>Όλα τα Repositories</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="549"/>
+        <location filename="../src/MainWindow.cpp" line="550"/>
         <source>Local Packages</source>
         <translation>Τοπικά πακέτα</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1182"/>
+        <location filename="../src/MainWindow.cpp" line="1183"/>
         <source>All Groups</source>
         <translation>Όλες οι Ομάδες</translation>
     </message>
@@ -1337,37 +1337,37 @@ Click here to upgrade your System.</source>
         <translation type="obsolete">Επιλογή για Επανεγκατάσταση</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2122"/>
+        <location filename="../src/MainWindow.cpp" line="2123"/>
         <source>Install</source>
         <translation>Εγκατάσταση</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2132"/>
+        <location filename="../src/MainWindow.cpp" line="2133"/>
         <source>Uninstall</source>
         <translation>Απεγκατάσταση</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2133"/>
+        <location filename="../src/MainWindow.cpp" line="2134"/>
         <source>Complete Uninstall</source>
         <translation>Ολική Απεγκατάσταση</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="784"/>
+        <location filename="../src/MainWindow.cpp" line="785"/>
         <source>Status: </source>
         <translation>Κατάσταση:</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="786"/>
+        <location filename="../src/MainWindow.cpp" line="787"/>
         <source>Installed</source>
         <translation>Εγκατεστημένα</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="788"/>
+        <location filename="../src/MainWindow.cpp" line="789"/>
         <source>Not installed</source>
         <translation>Μη Εγκατεστημένα</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="802"/>
+        <location filename="../src/MainWindow.cpp" line="803"/>
         <source>Action: </source>
         <translation>Ενέργεια:</translation>
     </message>
@@ -1377,12 +1377,12 @@ Click here to upgrade your System.</source>
         <translation type="obsolete">Shaman - Επεξεργασία</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2000"/>
+        <location filename="../src/MainWindow.cpp" line="2001"/>
         <source>Error</source>
         <translation>Σφάλμα</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="917"/>
+        <location filename="../src/MainWindow.cpp" line="918"/>
         <source>One or more Databases could not be updated.
 Last error reported was:
 %1</source>
@@ -1391,17 +1391,17 @@ Last error reported was:
 %1</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="926"/>
+        <location filename="../src/MainWindow.cpp" line="927"/>
         <source>Database Update</source>
         <translation>Ανανέωση Βάσης Δεδομένων</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="928"/>
+        <location filename="../src/MainWindow.cpp" line="929"/>
         <source>Databases Updated Successfully</source>
         <translation>Οι Βάσεις Δεδομένων ανανεώθηκαν με επιτυχία</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1016"/>
+        <location filename="../src/MainWindow.cpp" line="1017"/>
         <source>Mark for Upgrade</source>
         <translation>Επιλογή για Αναβάθμιση</translation>
     </message>
@@ -1411,49 +1411,49 @@ Last error reported was:
         <translation type="obsolete">Ακύρωση Ενέργειας</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1067"/>
+        <location filename="../src/MainWindow.cpp" line="1068"/>
         <source>Mark all for installation</source>
         <translation>Επιλογή όλων για εγκατάσταση</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1069"/>
+        <location filename="../src/MainWindow.cpp" line="1070"/>
         <source>Mark all for reinstallation</source>
         <translation>Επιλογή όλων για επανεγκατάσταση</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1071"/>
+        <location filename="../src/MainWindow.cpp" line="1072"/>
         <source>Mark all for removal</source>
         <translation>Επιλογή όλων για αφαίρεση</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1513"/>
+        <location filename="../src/MainWindow.cpp" line="1514"/>
         <source>Your system is up to date!</source>
         <translation>Το σύστημα είναι ενημερωμένο!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1724"/>
+        <location filename="../src/MainWindow.cpp" line="1725"/>
         <source>Queue Processing</source>
         <translation>Επεξεργασία Ουράς</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1724"/>
+        <location filename="../src/MainWindow.cpp" line="1725"/>
         <source>Your Queue is being processed.
 Please wait.</source>
         <translation>Η ουρά επεξεργάζεται.
 Παρακαλώ περιμένετε.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1827"/>
+        <location filename="../src/MainWindow.cpp" line="1828"/>
         <source>Queue Processed</source>
         <translation>Η Ουρά επεξεργάστηκε</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1825"/>
+        <location filename="../src/MainWindow.cpp" line="1826"/>
         <source>Your Queue was successfully processed!</source>
         <translation>Η επεξεργασία της Ουράς έγινε με επιτυχία!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1829"/>
+        <location filename="../src/MainWindow.cpp" line="1830"/>
         <source>Your Queue was successfully processed!!</source>
         <translation>Η επεξεργασία της Ουράς έγινε με επιτυχία!!</translation>
     </message>
@@ -1503,17 +1503,17 @@ Please wait.</source>
         <translation type="obsolete">Θέλετε να συνεχίσετε;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1991"/>
+        <location filename="../src/MainWindow.cpp" line="1992"/>
         <source>Install a Package</source>
         <translation>Εγκατάσταση Πακέτου</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1991"/>
+        <location filename="../src/MainWindow.cpp" line="1992"/>
         <source>Arch Linux Packages (*.pkg.tar.gz)</source>
         <translation>Πακέτα του Arch Linux (*.pkg.tar.gz)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2000"/>
+        <location filename="../src/MainWindow.cpp" line="2001"/>
         <source>%1 does not seem
 a valid package</source>
         <translation>Το πακέτο %1 δεν
@@ -1643,12 +1643,12 @@ Do you want to proceed anyway?</source>
         <translation type="obsolete">Να μην εμφανιστεί ξανά</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1532"/>
+        <location filename="../src/MainWindow.cpp" line="1533"/>
         <source>Pacman Update</source>
         <translation>Ανανέωση του Pacman</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1534"/>
+        <location filename="../src/MainWindow.cpp" line="1535"/>
         <source>Pacman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Pacman now?</source>
@@ -1657,12 +1657,12 @@ Do you want to Upgrade Pacman now?</source>
 Θέλετε να αναβαθμίσετε το Pacman τώρα;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1554"/>
+        <location filename="../src/MainWindow.cpp" line="1555"/>
         <source>Shaman Update</source>
         <translation>Ανανέωση του Shaman</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1556"/>
+        <location filename="../src/MainWindow.cpp" line="1557"/>
         <source>Shaman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Shaman now?</source>
@@ -1671,12 +1671,12 @@ Do you want to Upgrade Shaman now?</source>
 Θέλετε να αναβαθμίσετε το Shaman τώρα;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1815"/>
+        <location filename="../src/MainWindow.cpp" line="1816"/>
         <source>Restart required</source>
         <translation>Απαιτείται επανεκκίνηση</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1808"/>
+        <location filename="../src/MainWindow.cpp" line="1809"/>
         <source>Pacman or Shaman was updated. Shaman will now quit,
 please restart it to use the new version</source>
         <translation>Το Pacman ή το Shaman αναβαθμίστηκε. Το Shaman θα κλείσει,
@@ -1706,17 +1706,17 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;l.appelhans@gmx.de&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2073"/>
+        <location filename="../src/MainWindow.cpp" line="2074"/>
         <source>Library Question</source>
         <translation>Ερώτηση Βιβλιοθήκης</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="791"/>
+        <location filename="../src/MainWindow.cpp" line="792"/>
         <source>Local Version: </source>
         <translation>Τοπική Έκδοση:</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="796"/>
+        <location filename="../src/MainWindow.cpp" line="797"/>
         <source>Version in the Repository: </source>
         <translation>Έκδοση στο Repository:</translation>
     </message>
@@ -1733,19 +1733,19 @@ was not successfully processed</source>
         <translation>Esc</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1875"/>
+        <location filename="../src/MainWindow.cpp" line="1876"/>
         <source>News Alert</source>
         <translation>Ειδοποίηση Νέων</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1876"/>
+        <location filename="../src/MainWindow.cpp" line="1877"/>
         <source>There is an unread news about %1.
 Do you want to read it?</source>
         <translation>Υπάρχει ένα αδιάβαστο μήνυμα για το %1.
 Θέλετε να το διαβάσετε;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1816"/>
+        <location filename="../src/MainWindow.cpp" line="1817"/>
         <source>Your Kernel has been updated.
 Please restart your PC soon to load the new Kernel.</source>
         <translation>Έγινε αναβάθμιση του Kernel.
@@ -1767,20 +1767,20 @@ Please restart your PC soon to load the new Kernel.</source>
         <translation>Εμφάνιση Log</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1773"/>
+        <location filename="../src/MainWindow.cpp" line="1774"/>
         <source>One or more errors occurred, your Queue
 was not successfully processed</source>
         <translation>Εμφανίστηκαν ένα ή περισσότερα σφάλματα,
 η Ουρά δεν επεξεργάστηκε με επιτυχία</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="919"/>
+        <location filename="../src/MainWindow.cpp" line="920"/>
         <source>One or more databases failed to update!</source>
         <translation>Μία ή περισσότερες βάσεις δεδομένων
 απέτυχαν να ανανεωθούν!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1775"/>
+        <location filename="../src/MainWindow.cpp" line="1776"/>
         <source>Error Processing Queue!!</source>
         <translation>Σφάλμα κατά την επεξεργασία της Ουράς!!!</translation>
     </message>
@@ -1791,7 +1791,7 @@ was not successfully processed</source>
         <translation type="obsolete">Όνομα</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1217"/>
+        <location filename="../src/MainWindow.cpp" line="1218"/>
         <source>A package providing %1 is already installed.
 Do you want to install %1 anyway?</source>
         <translation type="unfinished"></translation>
@@ -1857,7 +1857,7 @@ Do you want to install %1 anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1041"/>
+        <location filename="../src/MainWindow.cpp" line="1042"/>
         <source>Mark for Re&amp;installation</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1867,7 +1867,7 @@ Do you want to install %1 anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2036"/>
+        <location filename="../src/MainWindow.cpp" line="2037"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -2109,7 +2109,7 @@ chown root shaman &amp;&amp; chmod u+s shaman.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2049"/>
+        <location filename="../src/MainWindow.cpp" line="2050"/>
         <source>Whoa, that&apos;s co&amp;ol!</source>
         <translation type="unfinished"></translation>
     </message>
