@@ -3,4 +3,5 @@
 
 Server = http://kdemod.ath.cx/repo/$repo/$arch
 Server = http://kdemod.iskrembilen.com/repo/$repo/$arch
+Server = http://kdemod.bednarek.org.pl/$repo/$arch
 
