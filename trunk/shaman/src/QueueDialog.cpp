@@ -77,6 +77,8 @@ QueueDialog::QueueDialog(AlpmHandler *hnd, QWidget *parent)
 	transLabel->setPixmap(QIcon(":/Icons/icons/edit-redo.png").pixmap(22));
 	textEdit->append(QString(tr("<br><b> * Validating Transaction</b><br>")));
 	
+	actionDetail->setText(actionDetail->text() + QChar('\n'));
+	
 	progressBar->setRange(0, 1);
 	progressBar->setValue(0);
 	adjustSize();

@@ -85,6 +85,9 @@ GUI:
 
 RC2 -->
 
+GUI:
+   - Fixed small detail in Queue Dialog
+
 i18n:
    - Added Czech Translation
 

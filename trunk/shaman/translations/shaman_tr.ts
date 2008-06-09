@@ -1815,7 +1815,7 @@ Ytekisiz kullanıcı olarak çalıştırılması önerilir.
 Gerektiğinde Shaman kök parolanızı soracaktır.</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="862"/>
+        <location filename="../src/QueueDialog.cpp" line="864"/>
         <source>Ok</source>
         <translation>Tamam</translation>
     </message>
@@ -1902,202 +1902,202 @@ okuyabilirsiniz.</translation>
         <translation>&lt;br&gt;&lt;b&gt; * İşlem Onaylanıyor&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="137"/>
+        <location filename="../src/QueueDialog.cpp" line="139"/>
         <source>Validating Dependencies...</source>
         <translation>Bağımlılıklar Onaylanıyor...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="141"/>
+        <location filename="../src/QueueDialog.cpp" line="143"/>
         <source>Checking for Conflicts...</source>
         <translation>Çakışmalar Denetleniyor...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="145"/>
+        <location filename="../src/QueueDialog.cpp" line="147"/>
         <source>Resolving Dependencies...</source>
         <translation>Bağımlılıklar Çözümleniyor...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="149"/>
+        <location filename="../src/QueueDialog.cpp" line="151"/>
         <source>Looking for Inter-Conflicts...</source>
         <translation>İç-Çakışmalar aranıyor...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="155"/>
+        <location filename="../src/QueueDialog.cpp" line="157"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Installation Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Paket Yükleme Başladı&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="159"/>
+        <location filename="../src/QueueDialog.cpp" line="161"/>
         <source>Installing %1...</source>
         <translation>%1 Yükleniyor...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="188"/>
+        <location filename="../src/QueueDialog.cpp" line="190"/>
         <source>%1 (%2) installed successfully!</source>
         <translation>%1 (%2) başarıyla yüklendi!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="200"/>
+        <location filename="../src/QueueDialog.cpp" line="202"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Removal Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Paket Kaldırma Başladı&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="204"/>
+        <location filename="../src/QueueDialog.cpp" line="206"/>
         <source>Removing %1...</source>
         <translation>%1 Kaldırılıyor...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="233"/>
+        <location filename="../src/QueueDialog.cpp" line="235"/>
         <source>%1 (%2) removed successfully!</source>
         <translation>%1 (%2) başarıyla kaldırıldı!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="245"/>
+        <location filename="../src/QueueDialog.cpp" line="247"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Upgrading Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Paket Yükseltme Başladı&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="249"/>
+        <location filename="../src/QueueDialog.cpp" line="251"/>
         <source>Upgrading %1...</source>
         <translation>%1 Yükseltiliyor...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="279"/>
+        <location filename="../src/QueueDialog.cpp" line="281"/>
         <source>Upgraded %1 successfully (%2 -&gt; %3)</source>
         <translation>%1 başarıyla yükseltildi (%2 -&gt; %3)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="293"/>
+        <location filename="../src/QueueDialog.cpp" line="295"/>
         <source>&lt;br&gt;&lt;b&gt; * Queue Processing Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Sıra İşleme Başladı&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="297"/>
+        <location filename="../src/QueueDialog.cpp" line="299"/>
         <source>Checking package integrity...</source>
         <translation>Paket içeriği denetlenyior...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="301"/>
+        <location filename="../src/QueueDialog.cpp" line="303"/>
         <source>Checking delta integrity...</source>
         <translation>Delta içeriği denetleniyor...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="304"/>
+        <location filename="../src/QueueDialog.cpp" line="306"/>
         <source>Applying deltas...</source>
         <translation>Delta uygulanıyor...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="307"/>
+        <location filename="../src/QueueDialog.cpp" line="309"/>
         <source>Generating %1 with %2... </source>
         <translation>%1, %2 ile üretiliyor... </translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="311"/>
+        <location filename="../src/QueueDialog.cpp" line="313"/>
         <source>Success!</source>
         <translation>Başarılı!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="314"/>
+        <location filename="../src/QueueDialog.cpp" line="316"/>
         <source>Failed!</source>
         <translation>Başarısız!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="328"/>
+        <location filename="../src/QueueDialog.cpp" line="330"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Downloading Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Paket İndirme Başladı&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="332"/>
+        <location filename="../src/QueueDialog.cpp" line="334"/>
         <source>Starting downloading packages from %1...</source>
         <translation>Paketlerin %1 deposundan indirilmesine başlanıyor...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="372"/>
+        <location filename="../src/QueueDialog.cpp" line="374"/>
         <source>%p% (%1 KB/s, %4:%5:%6 remaining)</source>
         <comment>You just have to translate &apos;remaining&apos; here. Leave everything else as it is.</comment>
         <translation>%p% (%1 KB/s, %4:%5:%6 kaldı)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="380"/>
+        <location filename="../src/QueueDialog.cpp" line="382"/>
         <source>Downloading %1... (%2 MB of %3 MB)</source>
         <translation>%1 İndiriliyor... (%2 MB / %3 MB)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="383"/>
+        <location filename="../src/QueueDialog.cpp" line="385"/>
         <source>Downloading %1... (%2 KB of %3 KB)</source>
         <translation>%1 İndiriliyor... (%2 KB / %3 KB)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="439"/>
+        <location filename="../src/QueueDialog.cpp" line="441"/>
         <source>Queue processed, please wait...</source>
         <translation>Sıra işlendi, lütfen bekleyin...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="450"/>
+        <location filename="../src/QueueDialog.cpp" line="452"/>
         <source>Queue processing failed!</source>
         <translation>Sıra işleme başarısız!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="455"/>
+        <location filename="../src/QueueDialog.cpp" line="457"/>
         <source>Queue processed successfully!</source>
         <translation>Sıra başarıyla işlendi!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="463"/>
+        <location filename="../src/QueueDialog.cpp" line="465"/>
         <source>Close</source>
         <translation>Kapat</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="499"/>
+        <location filename="../src/QueueDialog.cpp" line="501"/>
         <source>Unexpected Error. Shaman might be corrupted.</source>
         <translation>Beklenmeyen Hata. Shaman bozulmuş olabilir.</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="506"/>
+        <location filename="../src/QueueDialog.cpp" line="508"/>
         <source>Executing %1 scriptlet for %2...</source>
         <translation>%1 betiği %2 için çalıştırılıyor...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="563"/>
+        <location filename="../src/QueueDialog.cpp" line="565"/>
         <source>Extracting Scriptlet from package failed!!</source>
         <translation>Paketten betik ayıklama başarısız!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="573"/>
+        <location filename="../src/QueueDialog.cpp" line="575"/>
         <source>Package %1 does not have %2 scriptlet</source>
         <translation>%1 paketi %2 betiği içermiyor</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="691"/>
+        <location filename="../src/QueueDialog.cpp" line="693"/>
         <source>Scriptlet processed successfully!</source>
         <translation>Betik başarıyla işlendi!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="697"/>
+        <location filename="../src/QueueDialog.cpp" line="699"/>
         <source>Error processing Scriptlet!!</source>
         <translation>Betik işlemede hata!!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="870"/>
+        <location filename="../src/QueueDialog.cpp" line="872"/>
         <source>Queue Processing</source>
         <translation>Sıra İşleme</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="784"/>
+        <location filename="../src/QueueDialog.cpp" line="786"/>
         <source>Would you like to abort Queue Processing?
 This may damage your system.</source>
         <translation>Sıra İşlemeyi iptal etmek ister misiniz?
 Bu sisteminize zarar verebilir.</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="820"/>
+        <location filename="../src/QueueDialog.cpp" line="822"/>
         <source>There has been an error while preparing the transaction.
 </source>
         <translation>İşleme hazırlanılırken bir hata oluştu.
 </translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="857"/>
+        <location filename="../src/QueueDialog.cpp" line="859"/>
         <source>There has been an error while committing the transaction.
 </source>
         <translation>İşlem gerçekleştirilirken bir hata oluştu.
