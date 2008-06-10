@@ -115,7 +115,9 @@ bool UpdateDbDialog::anyErrors()
 void UpdateDbDialog::updateTotalProg()
 {
 	actionDone++;
-	emit pBar( (int) (( (float)actionDone / (float) totalAction) * (float)100) );
+	
+	if(totalAction != 0)
+	    emit pBar( (int) (( (float)actionDone / (float) totalAction) * (float)100) );
 }
 
 void UpdateDbDialog::updateDlBar(char *c, int bytedone, int bytetotal, int speed,
