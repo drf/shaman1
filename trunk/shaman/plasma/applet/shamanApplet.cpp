@@ -57,7 +57,8 @@ ShamanApplet::ShamanApplet(QObject *parent, const QVariantList &args)
 
 ShamanApplet::~ShamanApplet()
 {
-    delete m_layout;
+    m_engine->disconnectSource("Shaman", this);
+    
     delete m_view;
     delete m_engine;
 }
@@ -72,6 +73,10 @@ void ShamanApplet::init()
 
     setContentsMargins(MARGIN, TOP_MARGIN, MARGIN, 35);
     setLayout(m_layout);
+
+    m_form = new QGraphicsWidget(this);
+    m_form->setContentsMargins(MARGIN, TOP_MARGIN, MARGIN, MARGIN);
+    m_form->setLayout(m_layout);
 
     if (formFactor() == Plasma::Vertical || formFactor() == Plasma::Horizontal) 
     {
@@ -91,7 +96,7 @@ void ShamanApplet::init()
         kDebug() << "Shaman Engine could not be loaded";
 }
 
-QSizeF ShamanApplet::contentSizeHint() const
+/*QSizeF ShamanApplet::contentSizeHint() const
 {
     return effectiveSizeHint(Qt::PreferredSize, geometry().size());
 }
@@ -103,7 +108,7 @@ void ShamanApplet::constraintsEvent(Plasma::Constraints constraints)
             resize(geometry().size());
         }
     }
-}
+}*/
 
 void ShamanApplet::dataUpdated(const QString &source, const Plasma::DataEngine::Data &data)
 {

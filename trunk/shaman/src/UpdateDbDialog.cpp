@@ -50,6 +50,7 @@ UpdateDbDialog::~UpdateDbDialog()
 	disconnect(aHandle, SIGNAL(streamDbUpdatingStatus(const QString&,int)), 0, 0);
 	disconnect(aHandle, SIGNAL(dbQty(const QStringList&)), 0, 0);
 	disconnect(aHandle, SIGNAL(dbUpdated(const QString&)), 0, 0);
+	connect(aHandle, SIGNAL(dbUpdatePerformed()), SLOT(updateTotalProg()));
 	disconnect(&CbackReference, SIGNAL(streamTransDlProg(char*,int,int,int,int,int,int)), 0, 0);
 }
 

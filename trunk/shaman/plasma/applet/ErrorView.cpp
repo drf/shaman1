@@ -79,7 +79,8 @@ ErrorView::~ErrorView()
 
 void ErrorView::launchShaman()
 {
-    KRun::runCommand("shaman", "Shaman Package Manager", "shaman", 0);
+    QProcess *shamanProcess = new QProcess(this);
+    shamanProcess->startDetached("shaman");
 }
 
 #include "ErrorView.moc"

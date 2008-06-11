@@ -96,17 +96,7 @@ IdleView::IdleView(Plasma::Applet *parent, QDBusConnection dbs)
 
 IdleView::~IdleView()
 {
-    m_lineLayout->removeItem(m_lineEdit);
-    m_lineLayout->removeItem(m_actionIcon);
-    
     m_lineEdit->setWidget(0);
-    
-    m_layout->removeItem(m_lineLayout);
-    
-    m_actionsLayout->removeItem(m_updateDatabaseIcon);
-    m_actionsLayout->removeItem(m_upgradeSystemIcon);
-    
-    m_layout->removeItem(m_actionsLayout);
     
     delete m_lineEdit;
     delete m_actionIcon;

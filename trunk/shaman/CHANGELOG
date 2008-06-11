@@ -87,7 +87,11 @@ RC2 -->
 
 GUI:
    - Fixed small detail in Queue Dialog
+   - Fixed unsafe code in UpdateDbDialog
 
 i18n:
    - Added Czech Translation
+
+Runner:
+   - Improved .desktop file to be more consistent
 

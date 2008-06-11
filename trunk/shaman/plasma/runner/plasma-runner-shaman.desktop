@@ -1,5 +1,9 @@
 [Desktop Entry]
-Name=Package Manager Runner
+Name=Shaman
+Name[it]=Shaman
+
+Comment=Manage Basic Package Management operations
+Comment[it]=Gestisce operazioni di base con i Pacchetti
 
 X-KDE-ServiceTypes=Plasma/Runner
 Type=Service

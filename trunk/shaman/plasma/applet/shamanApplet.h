@@ -55,8 +55,8 @@ class ShamanApplet : public Plasma::Applet
         
         void init();
         
-        QSizeF contentSizeHint() const;
-        void constraintsEvent(Plasma::Constraints constraints);
+        //QSizeF contentSizeHint() const;
+        //void constraintsEvent(Plasma::Constraints constraints);
 
     public slots:
         void dataUpdated(const QString &name, const Plasma::DataEngine::Data &data);
