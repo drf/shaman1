@@ -228,8 +228,8 @@ void CallBacks::cb_dl_progress(const char *filename, int file_xfered, int file_t
 	
 	emit streamTransDlProg((char *)filename, file_xfered, file_total, (int)rate_f,
 			list_xfered, list_total, (int)rate_l);
-	emit streamTransDlProg(QString((char *)filename), filePercent, 
-			rate_f, listPercent, rate_l);
+/*	emit streamTransDlProg(QString((char *)filename), filePercent, 
+			rate_f, listPercent, rate_l);*/
 }
 
 void CallBacks::cb_log(pmloglevel_t level, char *fmt, va_list args)
