@@ -220,8 +220,11 @@ void CallBacks::cb_dl_progress(const char *filename, int file_xfered, int file_t
 		xfered_total = list_xfered;
 	}
 	
-	int filePercent = (float)((float)file_xfered/(float)file_total) * 100;
-	int listPercent = (float)((float)list_xfered/(float)list_total) * 100;
+	int fx = file_xfered * 100;
+	int lx = list_xfered * 100;
+	
+	int filePercent = fx / file_total;
+	int listPercent = lx / list_total;
 	
 	emit streamTransDlProg((char *)filename, file_xfered, file_total, (int)rate_f,
 			list_xfered, list_total, (int)rate_l);

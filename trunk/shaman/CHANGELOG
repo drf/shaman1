@@ -85,6 +85,9 @@ GUI:
 
 RC2 -->
 
+Core:
+   - Removed unsafe casts
+
 GUI:
    - Fixed small detail in Queue Dialog
    - Fixed unsafe code in UpdateDbDialog

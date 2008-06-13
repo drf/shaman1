@@ -117,8 +117,10 @@ void UpdateDbDialog::updateTotalProg()
 {
 	actionDone++;
 	
+	int actd = actionDone * 100;
+	
 	if(totalAction != 0)
-	    emit pBar( (int) (( (float)actionDone / (float) totalAction) * (float)100) );
+	    emit pBar( actd / totalAction );
 }
 
 void UpdateDbDialog::updateDlBar(char *c, int bytedone, int bytetotal, int speed,
