@@ -301,9 +301,9 @@ int main(int argc, char **argv)
 	qDebug() << ">>	Our website is @ http://shaman.iskrembilen.com/ , join in!!";
 	qDebug() << ">>	You can also find a bugtracker in the website, please use it.";
 	qDebug() << ">> ";
-	qDebug() << ">> Have you found a bug? Help us solving it faster! Please read";
-	qDebug() << ">> http://shaman.iskrembilen.com/trac/wiki/Debugging_Shaman";
-	qDebug() << ">> and please follow these steps to report bugs effectively!";
+	qDebug() << ">>    Have you found a bug? Help us solving it faster! Please read";
+	qDebug() << ">>    http://shaman.iskrembilen.com/trac/wiki/Debugging_Shaman";
+	qDebug() << ">>    and please follow these steps to report bugs effectively!";
 	qDebug() << ">>";
 	qDebug() << ">>	Starting Up Shaman...";
 	qDebug() << "";
