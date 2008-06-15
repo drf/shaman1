@@ -364,7 +364,8 @@ void QueueDialog::updateProgressBar(char *c, int bytedone, int bytetotal, int sp
 
 	unsigned int eta_h = 0, eta_m = 0, eta_s = 0;
 
-	eta_s = (listtotal - listdone) / (speedtotal * 1024.0);
+        if (!speedtotal)
+	    eta_s = (listtotal - listdone) / (speedtotal * 1024.0);
 	eta_h = eta_s / 3600;
 	eta_s -= eta_h * 3600;
 	eta_m = eta_s / 60;
