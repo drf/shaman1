@@ -357,15 +357,14 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 void QueueDialog::updateProgressBar(char *c, int bytedone, int bytetotal, int speed,
 		int listdone, int listtotal, int speedtotal)
 {
-	Q_UNUSED(speedtotal);
-
 	double bt = bytetotal/1024;
 	double bd = bytedone/1024;
 
-	unsigned int eta_h = 0, eta_m = 0, eta_s = 0;
+	float eta_h = 0, eta_m = 0, eta_s = 0;
 
-        if (!speedtotal)
+   if ( speedtotal != 0 )
 	    eta_s = (listtotal - listdone) / (speedtotal * 1024.0);
+   
 	eta_h = eta_s / 3600;
 	eta_s -= eta_h * 3600;
 	eta_m = eta_s / 60;
