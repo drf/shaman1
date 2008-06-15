@@ -360,16 +360,20 @@ void QueueDialog::updateProgressBar(char *c, int bytedone, int bytetotal, int sp
 	double bt = bytetotal/1024;
 	double bd = bytedone/1024;
 
-	float eta_h = 0, eta_m = 0, eta_s = 0;
+	unsigned int eta_h = 0, eta_m = 0, eta_s = 0;
 
-   if ( speedtotal != 0 )
-	    eta_s = (listtotal - listdone) / (speedtotal * 1024.0);
-   
+	if ( speedtotal == 0 )
+	    return;
+
+	eta_s = (listtotal - listdone) / (speedtotal * 1024.0);
+
 	eta_h = eta_s / 3600;
 	eta_s -= eta_h * 3600;
 	eta_m = eta_s / 60;
 	eta_s -= eta_m * 60;
 
+	qDebug() << eta_h << eta_s << eta_m;
+	
 	progressBar->setFormat(QString(tr("%p% (%1 KB/s, %4:%5:%6 remaining)", "You just have to "
 			"translate 'remaining' here. Leave everything else as it is.")).
 			arg(speed).arg((int)eta_h,2,10,QChar('0')).arg((int)eta_m,2,10,QChar('0')).
