@@ -87,6 +87,8 @@ RC2 -->
 
 Core:
    - Removed unsafe casts
+   - Fixed some floating point issues
+   - Added support for local mirrors (file://)
 
 GUI:
    - Fixed small detail in Queue Dialog

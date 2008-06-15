@@ -1181,7 +1181,8 @@ void ConfigDialog::addMirror()
 	QString mirror(addMirrorLine->text());
 
 	if(!mirror.contains(QString("$repo")) || (!mirror.startsWith(QString("http://")) &&
-			!mirror.startsWith(QString("ftp://"))) || mirror.contains(QString(" ")) || !QUrl(mirror).isValid())
+			!mirror.startsWith(QString("ftp://")) && !mirror.startsWith(QString("file://"))) ||
+			mirror.contains(QString(" ")) || !QUrl(mirror).isValid())
 	{
 		ShamanDialog::popupDialog(tr("Add Mirror"), tr("Mirror Format is incorrect. "
 				"Your mirror should look like this:\nhttp://mirror.org/$repo/os/i686",
