@@ -46,7 +46,7 @@ se perderá.</translation>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="70"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Building Process Aborted by the User. Building Failed.&lt;/b&gt;</source>
-        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;La construcción del paquete fue cancelada por el usuario. Ha fallado.&lt;/b&gt;</translation>
+        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;La construcción del paquete fue cancelada por el usuario y ha fallado.&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="88"/>
