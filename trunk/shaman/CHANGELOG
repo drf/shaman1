@@ -96,6 +96,8 @@ GUI:
 
 i18n:
    - Added Czech Translation
+   - Added Norwegian Translation
+   - Added Dutch translation
 
 Runner:
    - Improved .desktop file to be more consistent
