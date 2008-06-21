@@ -805,7 +805,7 @@ tarafından kullanılır.</translation>
         <translation>Gelişmiş</translation>
     </message>
     <message>
-        <location filename="../../ArchLinux/PKBUILDS/shaman-svn/src/shaman/ui/configDialog.ui" line="230"/>
+        <location filename="ArchLinux/PKBUILDS/shaman-svn/src/shaman/ui/configDialog.ui" line="230"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -943,7 +943,7 @@ You need to restart Shaman to make them effective.</source>
 Shaman&apos;ı yeniden başlatmanız gerekiyor.</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="240"/>
+        <location filename="shaman-1.0rc2/ui/configDialog.ui" line="240"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -960,22 +960,22 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Shaman Bakım.&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Lütfen menüden bir eylem seçin.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="840"/>
         <source>RSync Server:</source>
-        <translation type="unfinished"></translation>
+        <translation>RSync Sunucusu:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1011"/>
         <source>Update Database at</source>
-        <translation type="unfinished"></translation>
+        <translation>Veritabanını güncelle</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1193"/>
         <source>Use Animated Tray Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Hareketli sistem çubuğu simgesi kullan</translation>
     </message>
 </context>
 <context>
@@ -1019,7 +1019,7 @@ Sistem çubuğundayken Shaman, düzenli aralıklarla Veritabanlarını güncelle
  ve sizi güncellemeler hakkında bilgilendirir.Bu davranışı ayarlardan değiştirebilirsiniz.</translation>
     </message>
     <message>
-        <location filename="../../ArchLinux/PKBUILDS/shaman-svn/src/shaman/src/MainWindow.cpp" line="224"/>
+        <location filename="ArchLinux/PKBUILDS/shaman-svn/src/shaman/src/MainWindow.cpp" line="224"/>
         <source>Do not show this Again</source>
         <translation type="obsolete">Bunu Tekrar Gösterme</translation>
     </message>
@@ -1079,12 +1079,12 @@ Sistem çubuğundayken Shaman, düzenli aralıklarla Veritabanlarını güncelle
         <translation>Sıradaki Paketler</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="941"/>
+        <location filename="shaman-1.0rc2/src/MainWindow.cpp" line="941"/>
         <source>Mark for Reinstallation</source>
         <translation type="obsolete">Yeniden Yükleme için İşaretle</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="914"/>
+        <location filename="shaman-1.0rc2/src/MainWindow.cpp" line="914"/>
         <source>Mark for Installation</source>
         <translation type="obsolete">Yükleme için İşaretle</translation>
     </message>
@@ -1186,7 +1186,7 @@ için tek başına yapmanız önerilir.
 Şimdi Shaman&apos;ı Yükseltmek ister misiniz?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="916"/>
+        <location filename="shaman-1.0rc2/src/MainWindow.cpp" line="916"/>
         <source>Mark for Removal</source>
         <translation type="obsolete">Kaldırma için İşaretle</translation>
     </message>
@@ -1196,7 +1196,7 @@ için tek başına yapmanız önerilir.
         <translation>Yükseltme için İşaretle</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="920"/>
+        <location filename="shaman-1.0rc2/src/MainWindow.cpp" line="920"/>
         <source>Cancel Action</source>
         <translation type="obsolete">Eylemi İptal Et</translation>
     </message>
@@ -1248,7 +1248,7 @@ Lütfen bekleyin.</translation>
         <translation>Sıra işlendi</translation>
     </message>
     <message>
-        <location filename="../../ArchLinux/PKBUILDS/shaman-svn/src/ArchLinux/PKBUILDS/shaman-svn/src/shaman-build/src/MainWindow.cpp" line="1487"/>
+        <location filename="ArchLinux/PKBUILDS/shaman-svn/src/ArchLinux/PKBUILDS/shaman-svn/src/shaman-build/src/MainWindow.cpp" line="1487"/>
         <source>One or more errors occourred, your Queue
 was not successfully processed</source>
         <translation type="obsolete">Bir vaya daha fazla hata oluştu;Sıra
@@ -1302,7 +1302,7 @@ a valid package</source>
 değil</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1858"/>
+        <location filename="shaman-1.0rc2/src/MainWindow.cpp" line="1858"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -1316,25 +1316,25 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;A libalpm frontend in Qt&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Lisans: GPLv2+&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Libalpm Sürümü: v.%1&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf54321@yahoo.it&amp;gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;l.appelhans@gmx.de&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1862"/>
+        <location filename="shaman-1.0rc2/src/MainWindow.cpp" line="1862"/>
         <source>%1 GiB</source>
         <comment>Size is in Gib</comment>
         <translation type="obsolete">%1 GB</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1864"/>
+        <location filename="shaman-1.0rc2/src/MainWindow.cpp" line="1864"/>
         <source>%1 MiB</source>
         <comment>Size is in MiB</comment>
         <translation type="obsolete">%1 MB</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1866"/>
+        <location filename="shaman-1.0rc2/src/MainWindow.cpp" line="1866"/>
         <source>%1 KiB</source>
         <comment>Size is in KiB</comment>
         <translation type="obsolete">%1 KB</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1868"/>
+        <location filename="shaman-1.0rc2/src/MainWindow.cpp" line="1868"/>
         <source>%1 Bytes</source>
         <comment>Size is in Bytes</comment>
         <translation type="obsolete">%1 Bayt</translation>
@@ -1410,7 +1410,7 @@ p, li { white-space: pre-wrap; }
         <translation>Seçili paketi Tamamen Kaldır (pacman -Rcs)</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="380"/>
+        <location filename="shaman-1.0rc2/ui/MainWindow.ui" line="380"/>
         <source>Mark for complete removal</source>
         <translation type="obsolete">Tam kaldırma için işaretle</translation>
     </message>
@@ -1420,12 +1420,12 @@ p, li { white-space: pre-wrap; }
         <translation>Seçili paket eylemini iptal et</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="400"/>
+        <location filename="shaman-1.0rc2/ui/MainWindow.ui" line="400"/>
         <source>Cancel action</source>
         <translation type="obsolete">Eylemi iptal et</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="491"/>
+        <location filename="shaman-1.0rc2/ui/MainWindow.ui" line="491"/>
         <source>Files</source>
         <translation type="obsolete">Dosyalar</translation>
     </message>
@@ -1435,22 +1435,22 @@ p, li { white-space: pre-wrap; }
         <translation>1</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="519"/>
+        <location filename="shaman-1.0rc2/ui/MainWindow.ui" line="519"/>
         <source>Dependencies</source>
         <translation type="obsolete">Bağımlılıklar</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="548"/>
+        <location filename="shaman-1.0rc2/ui/MainWindow.ui" line="548"/>
         <source>File</source>
         <translation type="obsolete">Dosya</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="554"/>
+        <location filename="shaman-1.0rc2/ui/MainWindow.ui" line="554"/>
         <source>Help</source>
         <translation type="obsolete">Yardım</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="560"/>
+        <location filename="shaman-1.0rc2/ui/MainWindow.ui" line="560"/>
         <source>Actions</source>
         <translation type="obsolete">Eylemler</translation>
     </message>
@@ -1465,7 +1465,7 @@ p, li { white-space: pre-wrap; }
         <translation>Hızlı Eylemler</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="643"/>
+        <location filename="shaman-1.0rc2/ui/MainWindow.ui" line="643"/>
         <source>Package Repositories</source>
         <translation type="obsolete">Paket Depoları</translation>
     </message>
@@ -1538,7 +1538,7 @@ Okumak ister misiniz?</translation>
         <translation>Haberleri Oku</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="580"/>
+        <location filename="shaman-1.0rc2/ui/MainWindow.ui" line="580"/>
         <source>Tools</source>
         <translation type="obsolete">Araçlar</translation>
     </message>
@@ -1565,7 +1565,7 @@ başarıyla işlenemedi</translation>
         <translation>Sıra işlemede hata!</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="154"/>
+        <location filename="shaman-1.0rc2/ui/MainWindow.ui" line="154"/>
         <source>Name</source>
         <comment>The name of the Package</comment>
         <translation type="obsolete">Ad</translation>
@@ -1580,72 +1580,72 @@ Do you want to install %1 anyway?</source>
     <message>
         <location filename="../ui/MainWindow.ui" line="552"/>
         <source>&amp;File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Dosya</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="558"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Yardım</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="564"/>
         <source>&amp;Actions</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Eylemler</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="584"/>
         <source>&amp;Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Araçlar</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="247"/>
         <source>Re&amp;positories</source>
-        <translation type="unfinished"></translation>
+        <translation>De&amp;polar</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="270"/>
         <source>Package &amp;Groups</source>
-        <translation type="unfinished"></translation>
+        <translation>Paket &amp;Grupları</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="340"/>
         <source>Mark for &amp;Installation</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Yükleme için işaretle</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="360"/>
         <source>Mark for &amp;Removal</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kaldırma için işaretle</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="380"/>
         <source>Mark for complete re&amp;moval</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tamamen kaldırma için işaretle</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="447"/>
         <source>Package I&amp;nformation</source>
-        <translation type="unfinished"></translation>
+        <translation>Paket B&amp;ilgisi</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="491"/>
         <source>File&amp;s</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya&amp;lar</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="519"/>
         <source>&amp;Dependencies</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bağımlılıklar</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1042"/>
         <source>Mark for Re&amp;installation</source>
-        <translation type="unfinished"></translation>
+        <translation>Yeniden&amp;yükleme için işaretle</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="400"/>
         <source>&amp;Cancel Action</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Eylemi İptal Et</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="2037"/>
@@ -1659,13 +1659,13 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf@kdemod.ath.cx&amp;gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Qt üzerinde bir libalpm ön yüzü&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Lisans: GPLv2+&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Libalpm Sürümü: v.%1&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="157"/>
         <source>Name</source>
         <comment>Name of the Package</comment>
-        <translation type="unfinished">Ad</translation>
+        <translation>Ad</translation>
     </message>
 </context>
 <context>
@@ -1751,7 +1751,7 @@ Thanks again, and enjoy your translation!</comment>
         <translation>Shaman</translation>
     </message>
     <message>
-        <location filename="../../ArchLinux/PKBUILDS/shaman-svn/src/ArchLinux/PKBUILDS/shaman-svn/src/shaman-build/translations/Download/Programlar/ArchLinux/PKBUILDS/shaman-svn/src/shaman-build/src/main.cpp" line="222"/>
+        <location filename="ArchLinux/PKBUILDS/shaman-svn/src/ArchLinux/PKBUILDS/shaman-svn/src/shaman-build/translations/Download/Programlar/ArchLinux/PKBUILDS/shaman-svn/src/shaman-build/src/main.cpp" line="222"/>
         <source>You have to be root to run Shaman.
 Please restart it with root privileges.</source>
         <translation type="obsolete">Shaman&apos;ı çalıştırmak için root hakları gerekli
@@ -1820,12 +1820,12 @@ Gerektiğinde Shaman kök parolanızı soracaktır.</translation>
         <translation>Tamam</translation>
     </message>
     <message>
-        <location filename="../src/ShamanDialog.cpp" line="144"/>
+        <location filename="shaman-1.0rc2/src/ShamanDialog.cpp" line="144"/>
         <source>Yes</source>
         <translation type="obsolete">Evet</translation>
     </message>
     <message>
-        <location filename="../src/ShamanDialog.cpp" line="146"/>
+        <location filename="shaman-1.0rc2/src/ShamanDialog.cpp" line="146"/>
         <source>No</source>
         <translation type="obsolete">Hayır</translation>
     </message>
@@ -1859,39 +1859,39 @@ Bu, güvenlidir.Daha fazla bilgi için Shaman wiki sayfalarını
 okuyabilirsiniz.</translation>
     </message>
     <message>
-        <location filename="../src/ShamanDialog.cpp" line="228"/>
+        <location filename="shaman-1.0rc2/src/ShamanDialog.cpp" line="228"/>
         <source>Do not show this Again</source>
         <translation type="obsolete">Bunu Tekrar Gösterme</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="53"/>
         <source>O&amp;k</source>
-        <translation type="unfinished"></translation>
+        <translation>Ta&amp;mam</translation>
     </message>
     <message>
         <location filename="../src/ShamanDialog.cpp" line="144"/>
         <source>&amp;Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Evet</translation>
     </message>
     <message>
         <location filename="../src/ShamanDialog.cpp" line="146"/>
         <source>&amp;No</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hayır</translation>
     </message>
     <message>
         <location filename="../src/ShamanDialog.cpp" line="228"/>
         <source>Do not &amp;show this Again</source>
-        <translation type="unfinished"></translation>
+        <translation>Bunu bir daha &amp;Gösterme</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="54"/>
         <source>C&amp;ancel</source>
-        <translation type="unfinished"></translation>
+        <translation>İ&amp;ptal</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="2050"/>
         <source>Whoa, that&apos;s co&amp;ol!</source>
-        <translation type="unfinished"></translation>
+        <translation>Ha ha ha, bu iyi&amp;ydi!</translation>
     </message>
 </context>
 <context>
@@ -2104,7 +2104,7 @@ Bu sisteminize zarar verebilir.</translation>
 </translation>
     </message>
     <message>
-        <location filename="../../ArchLinux/PKBUILDS/shaman-svn/src/shaman/src/QueueDialog.cpp" line="839"/>
+        <location filename="ArchLinux/PKBUILDS/shaman-svn/src/shaman/src/QueueDialog.cpp" line="839"/>
         <source>Ok</source>
         <translation type="obsolete">Tamam</translation>
     </message>
@@ -2162,7 +2162,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/reviewQueueDialog.ui" line="32"/>
         <source>Force Queue Processing</source>
-        <translation type="unfinished"></translation>
+        <translation>Sıra işlemeye zorla</translation>
     </message>
 </context>
 <context>
@@ -2235,12 +2235,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/ReviewQueueDialog.cpp" line="114"/>
         <source>&lt;b&gt;%1&lt;/b&gt; will be used</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;%1&lt;/b&gt; kullanılacak</translation>
     </message>
     <message>
         <location filename="../src/ReviewQueueDialog.cpp" line="115"/>
         <source>&lt;b&gt;%1&lt;/b&gt; will be freed</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;%1&lt;/b&gt; alan boşalacak</translation>
     </message>
 </context>
 <context>
@@ -2253,17 +2253,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/ShamanStatusBar.cpp" line="107"/>
         <source>%1 will be used</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 kullanılacak</translation>
     </message>
     <message>
         <location filename="../src/ShamanStatusBar.cpp" line="114"/>
         <source>%1 will be freed</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 boşalacak</translation>
     </message>
     <message>
         <location filename="../src/ShamanStatusBar.cpp" line="119"/>
         <source>%1 to be Installed, %2 to be Removed</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 yüklenecek, %2 Kaldırılacak</translation>
     </message>
 </context>
 <context>
@@ -2378,7 +2378,7 @@ Daha fazla bilgi için buraya tıklayarak Haberler Penceresini açın.</translat
         <translation>Shaman Hakkında</translation>
     </message>
     <message>
-        <location filename="../../ArchLinux/PKBUILDS/shaman-svn/src/ArchLinux/PKBUILDS/shaman-svn/src/shaman-build/ui/aboutDialog.ui" line="62"/>
+        <location filename="ArchLinux/PKBUILDS/shaman-svn/src/ArchLinux/PKBUILDS/shaman-svn/src/shaman-build/ui/aboutDialog.ui" line="62"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -2414,7 +2414,7 @@ p, li { white-space: pre-wrap; }
         <translation>Teşekkür</translation>
     </message>
     <message>
-        <location filename="../../ArchLinux/PKBUILDS/shaman-svn/src/ArchLinux/PKBUILDS/shaman-svn/src/shaman-build/ui/aboutDialog.ui" line="142"/>
+        <location filename="ArchLinux/PKBUILDS/shaman-svn/src/ArchLinux/PKBUILDS/shaman-svn/src/shaman-build/ui/aboutDialog.ui" line="142"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -2456,7 +2456,7 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;Shaman has received a lot of help from a lot of people, and it is also thanks to them if Shaman has seen the light. If we forgot to add you here, let us know.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;Names are in alphabetical order, because even the smallest contribution has been important to us.&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:600;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:600;&quot;&gt;The KDEMod Community&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Help, Testing, Support, everything started from here. If there was no KDEMod, probably&lt;/span&gt; &lt;span style=&quot; font-weight:400;&quot;&gt;there would be no Shaman&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Giannis Antoniou&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;Greek Translator&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Carlos Berroteran&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;Spanish Translator&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Jacques Disner&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;French Translator&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Georg Grabler&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Author of the Proxy patch, some help on the code and more.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Michael Knights&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;Artwork creator, his icon proposal lies now in Arxin, but his splashscreen is in here ;)&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Till Luge&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Heavy tester, thanks!&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Rodrigo Mazak&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;Brazilian Translator, and gave the name Shaman&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:600;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:600;&quot;&gt;Jan Mette&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;German Translation and KDEMod-Developer, also the creator of the Icon&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Martin Sandsmark&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;Our hoster, and maintainer of Trac.&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Johannes Schriewer&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;KDEMod Developer, and also some help on the code.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../../ArchLinux/PKBUILDS/shaman-svn/src/shaman/ui/aboutDialog.ui" line="62"/>
+        <location filename="ArchLinux/PKBUILDS/shaman-svn/src/shaman/ui/aboutDialog.ui" line="62"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -2464,7 +2464,7 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shaman 1.0 Alpha (revision 552)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/aboutDialog.ui" line="68"/>
+        <location filename="shaman-1.0rc2/ui/aboutDialog.ui" line="68"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -2475,10 +2475,10 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/aboutDialog.ui" line="238"/>
         <source>Visit &amp;Website...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Web sitemizi ziyaret edin...</translation>
     </message>
     <message>
-        <location filename="../ui/aboutDialog.ui" line="68"/>
+        <location filename="shaman-1.0rc2/ui/aboutDialog.ui" line="68"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -2688,7 +2688,7 @@ p, li { white-space: pre-wrap; }
         <translation>Görünümü Tazele</translation>
     </message>
     <message>
-        <location filename="../../ArchLinux/PKBUILDS/shaman-svn/src/shaman/ui/logViewer.ui" line="205"/>
+        <location filename="ArchLinux/PKBUILDS/shaman-svn/src/shaman/ui/logViewer.ui" line="205"/>
         <source>Close</source>
         <translation type="obsolete">Kapat</translation>
     </message>
@@ -2698,7 +2698,7 @@ p, li { white-space: pre-wrap; }
         <translation>Süzgeç</translation>
     </message>
     <message>
-        <location filename="../../ArchLinux/PKBUILDS/shaman-svn/src/ArchLinux/PKBUILDS/shaman-svn/src/shaman-build/ui/logViewer.ui" line="157"/>
+        <location filename="ArchLinux/PKBUILDS/shaman-svn/src/ArchLinux/PKBUILDS/shaman-svn/src/shaman-build/ui/logViewer.ui" line="157"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -2729,7 +2729,7 @@ p, li { white-space: pre-wrap; }
         <translation>Arch Linux Haberler</translation>
     </message>
     <message>
-        <location filename="../../ArchLinux/PKBUILDS/shaman-svn/src/shaman/ui/newsDialog.ui" line="48"/>
+        <location filename="ArchLinux/PKBUILDS/shaman-svn/src/shaman/ui/newsDialog.ui" line="48"/>
         <source>Title</source>
         <translation type="obsolete">Başlık</translation>
     </message>
@@ -2759,7 +2759,7 @@ p, li { white-space: pre-wrap; }
         <translation>Tazele</translation>
     </message>
     <message>
-        <location filename="../../ArchLinux/PKBUILDS/shaman-svn/src/shaman/ui/newsDialog.ui" line="130"/>
+        <location filename="ArchLinux/PKBUILDS/shaman-svn/src/shaman/ui/newsDialog.ui" line="130"/>
         <source>Close</source>
         <translation type="obsolete">Kapat</translation>
     </message>
@@ -3047,7 +3047,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/upgradeDialog.ui" line="58"/>
         <source>Force Queue Processing</source>
-        <translation type="unfinished"></translation>
+        <translation>Sıra İşlemeyi Zorla</translation>
     </message>
 </context>
 </TS>
