@@ -170,6 +170,7 @@ private slots:
 	void settingsClosed();
 	void openUrl();
 	void triggerEditTimer();
+	void installPackageFromFile(const QString &filename);
 	
 private:
 	void loadDbUpdateDialog();

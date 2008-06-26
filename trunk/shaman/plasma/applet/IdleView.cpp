@@ -24,6 +24,7 @@
 #include <QtDBus/QDBusMessage>
 #include <QGraphicsLinearLayout>
 #include <QGraphicsProxyWidget>
+#include <QGraphicsSceneDragDropEvent>
 
 #include <KLineEdit>
 #include <KIcon>
@@ -133,6 +134,14 @@ void IdleView::installPackage()
     m_dbus.call(processMsg);
 }
 
+void IdleView::installPackageFromFile(const QString &filename)
+{
+    QDBusMessage msg = QDBusMessage::createMethodCall("org.archlinux.shaman", "/Shaman",
+            "org.archlinux.shaman", "installPackageFromFile");
+    msg << filename;
+    m_dbus.call(msg);
+}
+
 void IdleView::removePackage()
 {
     QDBusMessage msg = QDBusMessage::createMethodCall("org.archlinux.shaman", "/Shaman",
@@ -142,6 +151,23 @@ void IdleView::removePackage()
     QDBusMessage processMsg = QDBusMessage::createMethodCall("org.archlinux.shaman", "/Shaman",
             "org.archlinux.shaman", "widgetQueueToAlpmQueue");
     m_dbus.call(processMsg);
+}
+
+void IdleView::dropEvent(QGraphicsSceneDragDropEvent *event)
+{
+    if ( KUrl::List::canDecode(event->mimeData()) ) 
+    {
+        const KUrl::List urls = KUrl::List::fromMimeData(event->mimeData());
+        if ( urls.count() > 0 )
+        {
+            event->accept();
+            
+            foreach ( const KUrl& url, urls )
+            {
+                installPackageFromFile(url.path());
+            }
+        }
+    }
 }
 
 #include "IdleView.moc"

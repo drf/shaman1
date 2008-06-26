@@ -1990,16 +1990,22 @@ void MainWindow::getPackageFromFile()
 {
 	QString fileName = QFileDialog::getOpenFileName(this,
 			tr("Install a Package"), qgetenv("HOME"), tr("Arch Linux Packages (*.pkg.tar.gz)"));
-	pmpkg_t *pkg;
 
 	if(fileName == NULL)
 		return;
+	
+	installPackageFromFile(fileName);
+}
 
-	// Sanity check
-	if(alpm_pkg_load(fileName.toUtf8().data(), 1, &pkg) == -1)
+void MainWindow::installPackageFromFile(const QString &filename)
+{
+    pmpkg_t *pkg;
+    
+    // Sanity check
+	if(alpm_pkg_load(filename.toUtf8().data(), 1, &pkg) == -1)
 	{
 		ShamanDialog::popupDialog(tr("Error"), QString(tr("%1 does not seem\na valid package")).
-				arg(fileName), this, ShamanProperties::ErrorDialog);
+				arg(filename), this, ShamanProperties::ErrorDialog);
 
 		return;
 	}
@@ -2010,7 +2016,7 @@ void MainWindow::getPackageFromFile()
 
 	aHandle->initQueue(false, false, true);
 
-	aHandle->addFFToQueue(fileName);
+	aHandle->addFFToQueue(filename);
 
 	processQueue();
 

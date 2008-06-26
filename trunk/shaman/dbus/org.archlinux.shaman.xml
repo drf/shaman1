@@ -7,6 +7,9 @@
 		<method name="removePackage">
 			<arg type="s" direction="in" />
 		</method>
+		<method name="installPackageFromFile">
+			<arg type="s" direction="in" />
+		</method>
 		<method name="doDbUpdate">
 		</method>
 		<method name="widgetQueueToAlpmQueue">

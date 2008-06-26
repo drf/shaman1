@@ -48,8 +48,12 @@ private slots:
     void updateDatabase();
     void upgradeSystem();
     void installPackage();
+    void installPackageFromFile(const QString &filename);
     void removePackage();
     void showContextMenu();
+    
+protected:
+    void dropEvent(QGraphicsSceneDragDropEvent *event);
 	
 private:
     QDBusConnection m_dbus;

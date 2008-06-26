@@ -1195,7 +1195,11 @@ void ConfigDialog::addMirror()
 	toInsert.append(mirror);
 
 	ath.switchToRoot();
-	
+
+	QFile::copy("/etc/pacman.conf", QString("/etc/pacman.conf.bak.").append(QDate::currentDate().toString("ddMMyyyy")));
+	QFile::copy("/etc/makepkg.conf", QString("/etc/makepkg.conf.bak.").append(QDate::currentDate().toString("ddMMyyyy")));
+	QFile::copy("/etc/abs.conf", QString("/etc/abs.conf.bak.").append(QDate::currentDate().toString("ddMMyyyy")));
+
 	QFile file("/etc/pacman.d/mirrorlist");
 	file.open(QIODevice::Append | QIODevice::Text);
 
