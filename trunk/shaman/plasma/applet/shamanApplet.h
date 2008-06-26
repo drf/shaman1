@@ -63,6 +63,9 @@ class ShamanApplet : public Plasma::Applet
 
     private:
         void loadView(uint type);
+        
+    protected:
+        void dropEvent(QGraphicsSceneDragDropEvent *event);
             
     signals:
         void status(const QString &status);

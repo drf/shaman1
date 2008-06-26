@@ -31,6 +31,7 @@
 #include <QGraphicsLinearLayout>
 #include <QGraphicsProxyWidget>
 #include <QPainter>
+#include <QGraphicsSceneDragDropEvent>
 
 #include <KIcon>
 #include <KDebug>
@@ -94,6 +95,8 @@ void ShamanApplet::init()
     }
     else 
         kDebug() << "Shaman Engine could not be loaded";
+    
+    setAcceptDrops(true);
 }
 
 /*QSizeF ShamanApplet::contentSizeHint() const
@@ -174,6 +177,33 @@ void ShamanApplet::loadView(uint type)
     
     m_layout->updateGeometry();
     
+}
+
+void ShamanApplet::dropEvent(QGraphicsSceneDragDropEvent *event)
+{
+    kDebug() << "Drop happened";
+    
+    IdleView *idleview = qobject_cast<IdleView *>(m_view);
+    
+    if ( !idleview )
+    {
+        event->ignore();
+        return;
+    }
+    
+    if ( KUrl::List::canDecode(event->mimeData()) ) 
+    {
+        const KUrl::List urls = KUrl::List::fromMimeData(event->mimeData());
+        if ( urls.count() > 0 )
+        {
+            event->accept();
+            
+            foreach ( const KUrl& url, urls )
+            {
+                idleview->installPackageFromFile(url.path());
+            }
+        }
+    }
 }
 
 #include "shamanApplet.moc"

@@ -43,17 +43,16 @@ class IdleView : public AbstractView
 public:
 	IdleView(Plasma::Applet *parent, QDBusConnection dbs);
 	virtual ~IdleView();
+	
+	void installPackageFromFile(const QString &filename);
 
 private slots:
     void updateDatabase();
     void upgradeSystem();
     void installPackage();
-    void installPackageFromFile(const QString &filename);
     void removePackage();
     void showContextMenu();
-    
-protected:
-    void dropEvent(QGraphicsSceneDragDropEvent *event);
+   
 	
 private:
     QDBusConnection m_dbus;

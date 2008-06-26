@@ -101,4 +101,7 @@ i18n:
 
 Runner:
    - Improved .desktop file to be more consistent
+   
+Plasmoid:
+   - Added Drag & Drop support for packages
 
