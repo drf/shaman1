@@ -89,6 +89,7 @@ Core:
    - Removed unsafe casts
    - Fixed some floating point issues
    - Added support for local mirrors (file://)
+   - Added support for installing packages from command line "shaman <package name>"
 
 GUI:
    - Fixed small detail in Queue Dialog

@@ -143,6 +143,7 @@ public slots:
 	void shiftItemAction();
 	void showInfoDialog();
 	void doStreamPackages();
+	void installPackageFromFile(const QString &filename);
 
 protected:
 	void closeEvent(QCloseEvent *evt);
@@ -170,7 +171,6 @@ private slots:
 	void settingsClosed();
 	void openUrl();
 	void triggerEditTimer();
-	void installPackageFromFile(const QString &filename);
 	
 private:
 	void loadDbUpdateDialog();

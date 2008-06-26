@@ -230,7 +230,20 @@ int main(int argc, char **argv)
 	QDBusConnection testconn = QDBusConnection::systemBus();
 	if(testconn.interface()->isServiceRegistered("org.archlinux.shaman"))
 	{
-		ShamanDialog::popupDialog(QObject::tr("Shaman"), 
+		foreach ( QString ent, arguments )
+		{
+		    if ( ent.contains("pkg.tar.gz") )
+		    {
+		        QDBusMessage msg = QDBusMessage::createMethodCall("org.archlinux.shaman", "/Shaman",
+		                "org.archlinux.shaman", "installPackageFromFile");
+		        msg << ent;
+		        testconn.call(msg);
+		        
+		        exit(0);
+		    }
+		}
+	    
+	    ShamanDialog::popupDialog(QObject::tr("Shaman"), 
 				QObject::tr("It looks like another copy of Shaman is running.\nYou can only run "
 						"one copy of Shaman at a time."), NULL, ShamanProperties::ErrorDialog);
 
@@ -443,6 +456,14 @@ int main(int argc, char **argv)
 	qDebug() << "Log file is:" << alpm_option_get_logfile();
 	
 	mainwin.streamReadySignal();
+
+	foreach ( QString ent, arguments )
+	{
+	    if ( ent.contains("pkg.tar.gz") )
+	    {
+	        mainwin.installPackageFromFile(ent);
+	    }
+	}
 	
 	return app.exec();
 
