@@ -13,8 +13,11 @@ Comment[de]=Eine grafische Paketverwaltung für Arch Linux
 Comment[es]=Un administrador gráfico de paquetes para Arch Linux
 Comment[fr]=Un gestionnaire graphique de paquets pour Arch Linux
 
+MimeType=application/x-shaman-package;
 Exec=shaman
 Icon=shaman-32
 Type=Application
 Terminal=false
+X-DBUS-StartupType=Single
+X-DBUS-ServiceName=org.archlinux.shaman
 Categories=Qt;System;

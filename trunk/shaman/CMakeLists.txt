@@ -219,6 +219,16 @@ INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/ui/icons/shaman/shaman-32.png ${CMAKE_
 		DESTINATION ${CMAKE_INSTALL_PREFIX}/share/pixmaps)
 INSTALL(CODE "MESSAGE(\"Installing Shaman Desktop File...\")")
 INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/etc/shaman.desktop DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications)
+
+# for KDE 4.1 we require at least version 0.20
+set(SHARED_MIME_INFO_MINIMUM_VERSION "0.20")
+find_package(SharedMimeInfo REQUIRED)
+
+########### install files ###############
+INSTALL(CODE "MESSAGE(\"Installing Archlinux Package Mimetypes...\")")
+install(FILES etc/shaman.xml DESTINATION ${XDG_MIME_INSTALL_DIR})
+update_xdg_mimetypes(${XDG_MIME_INSTALL_DIR})
+
 INSTALL(CODE "MESSAGE(\"Installing Miscellaneous Shaman Files...\")")
 INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/etc/kdemodmirrorlist DESTINATION /etc/pacman.d)
 

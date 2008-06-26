@@ -83,7 +83,7 @@ Core:
 GUI:
    - Packages are now refined when reloaded.
 
-RC2 -->
+RC2 --> 1.0.0
 
 Core:
    - Removed unsafe casts
