@@ -105,4 +105,8 @@ Runner:
    
 Plasmoid:
    - Added Drag & Drop support for packages
+   - Fixed Crashes when Changing views
+   - Fixed Size Troubles
+   - Fixed Crash on unload
+   - All those lines to say: we have a cool, working plasmoid, I was losing faith in it :)
 

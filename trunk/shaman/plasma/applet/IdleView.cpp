@@ -34,7 +34,7 @@
 #include <plasma/widgets/icon.h>
 
 IdleView::IdleView(Plasma::Applet *parent, QDBusConnection dbs)
-: AbstractView(parent),
+: AbstractView(0),
     m_dbus(dbs)
 {
     m_layout = static_cast <QGraphicsLinearLayout *> (parent->layout());
@@ -43,7 +43,7 @@ IdleView::IdleView(Plasma::Applet *parent, QDBusConnection dbs)
     {
         m_contextMenu = new KMenu(0);
         
-        m_actionsLayout = new QGraphicsLinearLayout(m_layout);
+        m_actionsLayout = new QGraphicsLinearLayout();
 
         m_updateDatabaseIcon = new Plasma::Icon(KIcon("view-refresh"), i18n("Update Database"), parent);
         connect(m_updateDatabaseIcon, SIGNAL(activated()), SLOT(updateDatabase()));
@@ -55,7 +55,7 @@ IdleView::IdleView(Plasma::Applet *parent, QDBusConnection dbs)
 
         m_layout->addItem(m_actionsLayout);
 
-        m_lineLayout = new QGraphicsLinearLayout(m_layout);
+        m_lineLayout = new QGraphicsLinearLayout();
 
         m_lineEdit = new QGraphicsProxyWidget(parent);
         m_packageLineEdit = new KLineEdit(0);
@@ -96,9 +96,11 @@ IdleView::IdleView(Plasma::Applet *parent, QDBusConnection dbs)
 
 IdleView::~IdleView()
 {
+    m_layout->removeItem(m_actionsLayout);
+    m_layout->removeItem(m_lineLayout);
+    
     m_lineEdit->setWidget(0);
     
-    delete m_lineEdit;
     delete m_actionIcon;
     delete m_updateDatabaseIcon;
     delete m_upgradeSystemIcon;

@@ -58,33 +58,32 @@ ShamanApplet::ShamanApplet(QObject *parent, const QVariantList &args)
 
 ShamanApplet::~ShamanApplet()
 {
-    m_engine->disconnectSource("Shaman", this);
+    //m_engine->disconnectSource("Shaman", this);
     
     delete m_view;
-    delete m_engine;
 }
 
 void ShamanApplet::init()
 {
     setSizePolicy(QSizePolicy(QSizePolicy::Expanding,QSizePolicy::Expanding));
     
-    m_layout = new QGraphicsLinearLayout(this);
-    m_layout->setOrientation(Qt::Vertical);
+    m_layout = new QGraphicsLinearLayout();
     m_layout->setSpacing(SPACING);
+    m_layout->setOrientation(Qt::Vertical);
 
-    setContentsMargins(MARGIN, TOP_MARGIN, MARGIN, 35);
-    setLayout(m_layout);
-
-    m_form = new QGraphicsWidget(this);
+    /*m_form = new QGraphicsWidget(this);
     m_form->setContentsMargins(MARGIN, TOP_MARGIN, MARGIN, MARGIN);
-    m_form->setLayout(m_layout);
+    m_form->setLayout(m_layout);*/
 
-    if (formFactor() == Plasma::Vertical || formFactor() == Plasma::Horizontal) 
-    {
+    if(formFactor() == Plasma::Vertical || formFactor() == Plasma::Horizontal) {
+        m_layout->setContentsMargins(0, 0, 0, 0);
         setBackgroundHints(NoBackground);
     }
-    else 
-        resize(QSize(350, 200));
+    else {
+        m_layout->setContentsMargins(MARGIN, TOP_MARGIN, MARGIN, MARGIN);
+        setMinimumSize(QSize(300, 300));
+    }
+    setLayout(m_layout);
 
     m_engine = dataEngine("shaman");
     
@@ -157,6 +156,8 @@ void ShamanApplet::loadView(uint type)
             delete m_view;
         }
 
+        kDebug() << "Creating new View";
+        
         switch(type)
         {
             case ShamanApplet::ErrorViewType :
@@ -172,11 +173,16 @@ void ShamanApplet::loadView(uint type)
                 break;
         }
 
+        kDebug() << "New View Created";
+
         m_viewType = type;
-    }
-    
-    m_layout->updateGeometry();
-    
+
+        kDebug() << "Updating Geometry...";
+
+        m_layout->updateGeometry();
+
+        kDebug() << "Done.";
+    }    
 }
 
 void ShamanApplet::dropEvent(QGraphicsSceneDragDropEvent *event)
