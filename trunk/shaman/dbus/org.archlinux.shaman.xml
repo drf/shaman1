@@ -51,7 +51,7 @@
 			<arg type="i" direction="out" />
 		</signal>
 		<signal name="streamPackages">
-			<arg type="s" direction="out" />
+			<arg type="as" direction="out" />
 		</signal>
 		<signal name="shamanReady">
 		</signal>

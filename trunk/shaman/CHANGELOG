@@ -90,6 +90,7 @@ Core:
    - Fixed some floating point issues
    - Added support for local mirrors (file://)
    - Added support for installing packages from command line "shaman <package name>"
+   - Reintroduced DBus introspection, now QStringLists are handled by introspection itself
 
 GUI:
    - Fixed small detail in Queue Dialog

@@ -34,7 +34,7 @@
 #include "ShamanTrayIcon.h"
 #include "ui_aboutDialog.h"
 #include "ui_authDialog.h"
-#include "dbus/shamanadaptor.h"
+#include "shamanadaptor.h"
 #include "ReviewQueueDialog.h"
 #include "ArchLinuxNewsReader.h"
 #include "NewsViewer.h"
