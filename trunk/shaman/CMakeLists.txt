@@ -4,6 +4,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.4.0)
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules")
 
 include(FindQt4)
+include(FindSharedMimeInfo)
 
 configure_file(config.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config.h )
 
@@ -214,7 +215,8 @@ INSTALL(TARGETS shaman DESTINATION bin)
 INSTALL(CODE "MESSAGE(\"Installing Shaman DBus Configuration File...\")")
 INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/etc/shaman.conf DESTINATION /etc/dbus-1/system.d)
 INSTALL(CODE "MESSAGE(\"Installing Shaman Icons...\")")
-INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/ui/icons/shaman/shaman-32.png ${CMAKE_CURRENT_SOURCE_DIR}/ui/icons/shaman/shaman-64.png
+INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/ui/icons/shaman/shaman-32.png
+		${CMAKE_CURRENT_SOURCE_DIR}/ui/icons/shaman/shaman-64.png
 		${CMAKE_CURRENT_SOURCE_DIR}/ui/icons/shaman/shaman-128.png ${CMAKE_CURRENT_SOURCE_DIR}/ui/icons/shaman/shaman-48.png
 		DESTINATION ${CMAKE_INSTALL_PREFIX}/share/pixmaps)
 INSTALL(CODE "MESSAGE(\"Installing Shaman Desktop File...\")")
@@ -222,12 +224,15 @@ INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/etc/shaman.desktop DESTINATION ${CMAKE
 
 # for KDE 4.1 we require at least version 0.20
 set(SHARED_MIME_INFO_MINIMUM_VERSION "0.20")
-find_package(SharedMimeInfo REQUIRED)
+find_package(SharedMimeInfo)
 
+if(SHAREDMIMEINFO_FOUND)
 ########### install files ###############
-INSTALL(CODE "MESSAGE(\"Installing Archlinux Package Mimetypes...\")")
-install(FILES etc/shaman.xml DESTINATION ${XDG_MIME_INSTALL_DIR})
-update_xdg_mimetypes(${XDG_MIME_INSTALL_DIR})
+    INSTALL(CODE "MESSAGE(\"Installing Archlinux Package Mimetypes...\")")
+    install(FILES etc/shaman.xml DESTINATION ${XDG_MIME_INSTALL_DIR})
+    update_xdg_mimetypes(${XDG_MIME_INSTALL_DIR})
+
+endif(SHAREDMIMEINFO_FOUND)
 
 INSTALL(CODE "MESSAGE(\"Installing Miscellaneous Shaman Files...\")")
 INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/etc/kdemodmirrorlist DESTINATION /etc/pacman.d)
