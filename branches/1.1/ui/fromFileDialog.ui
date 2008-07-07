@@ -1,0 +1,196 @@
+<ui version="4.0" >
+ <class>Form</class>
+ <widget class="QWidget" name="Form" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>501</width>
+    <height>268</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" >
+   <item>
+    <widget class="QFrame" name="frame" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Maximum" hsizetype="Preferred" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="frameShape" >
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow" >
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <layout class="QGridLayout" name="_2" >
+      <item row="0" column="0" >
+       <widget class="QLabel" name="label_4" >
+        <property name="text" >
+         <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Bitstream Vera Sans';">&lt;span style=" font-weight:600;">Local Package Installation&lt;/span>&lt;/p>&lt;/body>&lt;/html></string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" >
+       <widget class="QLabel" name="label_5" >
+        <property name="sizePolicy" >
+         <sizepolicy vsizetype="Maximum" hsizetype="Maximum" >
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize" >
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="text" >
+         <string/>
+        </property>
+        <property name="pixmap" >
+         <pixmap resource="shaman.qrc" >:/Icons/icons/dialog-ok-apply.png</pixmap>
+        </property>
+        <property name="scaledContents" >
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label" >
+     <property name="text" >
+      <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;span style=" font-size:11pt; font-weight:600;">Dummy Package (1.0.0-1)&lt;/span>&lt;/p>&lt;/body>&lt;/html></string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_6" >
+     <property name="text" >
+      <string>Sample Description</string>
+     </property>
+     <property name="scaledContents" >
+      <bool>true</bool>
+     </property>
+     <property name="wordWrap" >
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout" >
+     <item>
+      <widget class="QLabel" name="label_3" >
+       <property name="maximumSize" >
+        <size>
+         <width>24</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text" >
+        <string/>
+       </property>
+       <property name="pixmap" >
+        <pixmap resource="shaman.qrc" >:/Icons/icons/dialog-ok-apply.png</pixmap>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2" >
+       <property name="text" >
+        <string>Package is installed</string>
+       </property>
+       <property name="scaledContents" >
+        <bool>true</bool>
+       </property>
+       <property name="wordWrap" >
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_7" >
+     <property name="text" >
+      <string>2 Additional packages will be installed as dependencies</string>
+     </property>
+     <property name="scaledContents" >
+      <bool>true</bool>
+     </property>
+     <property name="wordWrap" >
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2" >
+     <item>
+      <widget class="QPushButton" name="pushButton" >
+       <property name="text" >
+        <string>More Details...</string>
+       </property>
+       <property name="icon" >
+        <iconset resource="shaman.qrc" >
+         <normaloff>:/Icons/icons/bookmark-new-list.png</normaloff>:/Icons/icons/bookmark-new-list.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer" >
+       <property name="orientation" >
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0" >
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2" >
+       <property name="text" >
+        <string>Cancel</string>
+       </property>
+       <property name="icon" >
+        <iconset resource="shaman.qrc" >
+         <normaloff>:/Icons/icons/dialog-cancel.png</normaloff>:/Icons/icons/dialog-cancel.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_3" >
+       <property name="text" >
+        <string>Install Package</string>
+       </property>
+       <property name="icon" >
+        <iconset resource="shaman.qrc" >
+         <normaloff>:/Icons/icons/dialog-ok-apply.png</normaloff>:/Icons/icons/dialog-ok-apply.png</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="shaman.qrc" />
+ </resources>
+ <connections/>
+</ui>
