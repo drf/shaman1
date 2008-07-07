@@ -25,7 +25,7 @@
     <message>
         <location filename="../src/AlpmHandler.cpp" line="1173"/>
         <source>Alpm did not give further details.</source>
-        <translation>Alpm nepředal další detaily.</translation>
+        <translation>Alpm nepředal další informace.</translation>
     </message>
 </context>
 <context>
@@ -253,7 +253,7 @@ Přesto instalovat?</translation>
     <message>
         <location filename="../src/callbacks.cpp" line="123"/>
         <source>Replace %1 with %2/%3?</source>
-        <translation type="unfinished">Nahradit %2/%3  za %1 ?</translation>
+        <translation>Nahradit %1 za %2/%3?</translation>
     </message>
     <message>
         <location filename="../src/callbacks.cpp" line="127"/>
@@ -294,7 +294,7 @@ Chcete ho odstranit?</translation>
     <message>
         <location filename="../ui/configDialog.ui" line="87"/>
         <source>Favourite Actions</source>
-        <translation>Oblíbené akce</translation>
+        <translation>Upřednostněné akce</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="96"/>
@@ -314,17 +314,17 @@ Chcete ho odstranit?</translation>
     <message>
         <location filename="../ui/configDialog.ui" line="119"/>
         <source>Ask</source>
-        <translation>Dotaz</translation>
+        <translation>Dotázat se</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="135"/>
         <source>When Processing Queue</source>
-        <translation>Při zpracovávání fronty:</translation>
+        <translation>Při zpracovávání fronty</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="142"/>
         <source>Keep application running in System Tray only</source>
-        <translation>Nechat aplikaci běžet jen v systémové části panelu</translation>
+        <translation>Skrýt do systémové části panelu</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="152"/>
@@ -339,12 +339,12 @@ Chcete ho odstranit?</translation>
     <message>
         <location filename="../ui/configDialog.ui" line="957"/>
         <source>When Application is in System Tray only</source>
-        <translation>Pokud je aplikace jen v systémové části panelu</translation>
+        <translation>Pokud je aplikace pouze v systémové části panelu</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="963"/>
         <source>Update Database every</source>
-        <translation>Aktualizovat databázy každých</translation>
+        <translation>Aktualizovat databáze každých</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="196"/>
@@ -394,32 +394,32 @@ Chcete ho odstranit?</translation>
     <message>
         <location filename="../ui/configDialog.ui" line="315"/>
         <source>HoldPkgs:</source>
-        <translation>HoldPkgs:</translation>
+        <translation>Držené balíčky:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="325"/>
         <source>IgnorePkgs:</source>
-        <translation>IgnorePkgs:</translation>
+        <translation>Ignorované balíčky:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="335"/>
         <source>IgnoreGroups:</source>
-        <translation>IgnoreGroups:</translation>
+        <translation>Ignorované skupiny balíčků:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="345"/>
         <source>NoUpgrade:</source>
-        <translation>NoUpgrade:</translation>
+        <translation>Neaktualizovat balíčky:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="355"/>
         <source>NoExtract:</source>
-        <translation>NoExtract:</translation>
+        <translation>Nerozbalovat:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="379"/>
         <source>XFerCommand: (example: /path/to/command %u) Blank for Default</source>
-        <translation>XFerCommand: (příklad: /cesta/k/příkazu %u) Původně prázdné</translation>
+        <translation>XFerCommand: (příklad: /cesta/k/příkazu %u) Výchozí - prázdné</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="433"/>
@@ -483,7 +483,7 @@ KDEmod je nejlepší cesta k vyzkoušení síly KDE a jednoduchosti Arch Linux.<
         <source>You can extend your packages choice by adding other repositories. Third-Party 
 Repositories act just as normal ones, and will be accessible through both Shaman
 and Pacman.</source>
-        <translation>Můžete rozšířit výběr bylíčků přidáním dalších repozitářů. Tyto repozitáře se chovají
+        <translation>Můžete rozšířit výběr balíčků přidáním dalších repozitářů. Tyto repozitáře se chovají
 jako obyčejné repozitáře a jsou přístupné z aplikací Shaman i Pacman.</translation>
     </message>
     <message>
@@ -574,7 +574,7 @@ jako obyčejné repozitáře a jsou přístupné z aplikací Shaman i Pacman.</t
     <message>
         <location filename="../ui/configDialog.ui" line="918"/>
         <source>Building Path</source>
-        <translation>Sestavovací cesta</translation>
+        <translation>Sestavovací adresář</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="928"/>
@@ -604,12 +604,12 @@ jako obyčejné repozitáře a jsou přístupné z aplikací Shaman i Pacman.</t
     <message>
         <location filename="../src/configDialog.cpp" line="600"/>
         <source>Empty Cache</source>
-        <translation>Cache je prázdná</translation>
+        <translation>Vyprázdnit cache</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="612"/>
         <source>Optimize Pacman Database</source>
-        <translation>Optimalizovat databázy aplikace Pacman</translation>
+        <translation>Optimalizovat databáze aplikace Pacman</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="630"/>
@@ -727,7 +727,7 @@ http://mirror.org/$repo/os/i686</source>
 http://mirror.org/$repo/os/i686</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1214"/>
+        <location filename="../src/configDialog.cpp" line="1218"/>
         <source>Your Mirror was successfully added!
 It is now available in mirrorlist.</source>
         <comment>mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.</comment>
@@ -735,34 +735,34 @@ It is now available in mirrorlist.</source>
 Nyní je k dispozici v /etc/pacman.d/mirrorlist .</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1300"/>
+        <location filename="../src/configDialog.cpp" line="1304"/>
         <source>Pacman Database Optimized Successfully!</source>
         <translation>Databáze aplikace Pacman byla úspěšně aktualizována!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1306"/>
+        <location filename="../src/configDialog.cpp" line="1310"/>
         <source>Could not Optimize Pacman Database!</source>
-        <translation>Nebylo možné optimalizovat databázy aplikace Pacman!</translation>
+        <translation>Nebylo možné optimalizovat databáze aplikace Pacman!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1324"/>
+        <location filename="../src/configDialog.cpp" line="1328"/>
         <source>Operation Completed Successfully!</source>
         <translation>Operace úspěšně dokončena!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1323"/>
+        <location filename="../src/configDialog.cpp" line="1327"/>
         <source>Sync was successfully executed!!</source>
         <comment>Sync is always the command</comment>
         <translation>Příkaz sync byl úspěšně vykonán!!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1328"/>
+        <location filename="../src/configDialog.cpp" line="1332"/>
         <source>Sync could not be executed!</source>
         <comment>Sync is always the command</comment>
         <translation>Příkaz sync nemohl být vykonán!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1329"/>
+        <location filename="../src/configDialog.cpp" line="1333"/>
         <source>Sync could not be executed!!</source>
         <comment>Sync is always the command</comment>
         <translation>Příkaz sync nemohl být vykonán!</translation>
@@ -770,7 +770,7 @@ Nyní je k dispozici v /etc/pacman.d/mirrorlist .</translation>
     <message>
         <location filename="../ui/configDialog.ui" line="194"/>
         <source>Process Selected</source>
-        <translation>Proces byl vybrán</translation>
+        <translation>Spustit údržbu</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="620"/>
@@ -827,7 +827,7 @@ p, li { white-space: pre-wrap; }
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1314"/>
+        <location filename="../src/configDialog.cpp" line="1318"/>
         <source>Running sync...</source>
         <comment>sync is a command, so it should not be translated</comment>
         <translation>Probíhá příkaz sync...</translation>
@@ -856,7 +856,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/configDialog.ui" line="980"/>
         <source>Show tray notification Windows</source>
-        <translation>Ukázat okna upozornění systémové části panelu</translation>
+        <translation>Zobazovat upozornění v systémové části panelu</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1024"/>
@@ -886,7 +886,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/configDialog.ui" line="1118"/>
         <source>Use Shaman RSS Capabilities</source>
-        <translation>Použít funkce RSS aplikace Shaman</translation>
+        <translation>Použít RSS</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1130"/>
@@ -941,7 +941,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/configDialog.ui" line="1207"/>
         <source>Forbid starting Shaman as root</source>
-        <translation>Zakázat spuštění aplikace Shaman pod uživatelem root</translation>
+        <translation>Zakázat spouštění aplikace Shaman pod uživatelem root</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="1093"/>
@@ -954,14 +954,14 @@ p, li { white-space: pre-wrap; }
         <translation>Nebylo možné uložit konfiguraci!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1231"/>
+        <location filename="../src/configDialog.cpp" line="1235"/>
         <source>Mirror Format is incorrect. Your mirror should look like this:
 http://mirror.org/$repo/$arch</source>
         <comment>Obviously keep the example as it is ;)</comment>
         <translation>Zrcadlo není platné. Adresa by měla vypadat takto:http://mirror.org/$repo/$arch</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1268"/>
+        <location filename="../src/configDialog.cpp" line="1272"/>
         <source>Your Mirror was successfully added!
 It is now available in kdemodmirrorlist.</source>
         <comment>mirrorlist here means /etc/pacman.d/kdemodmirrorlist, so it should not be translated.</comment>
@@ -995,7 +995,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/configDialog.ui" line="1011"/>
         <source>Update Database at</source>
-        <translation>Aktualizovat databázy v</translation>
+        <translation>Aktualizovat databáze v</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1193"/>
@@ -1056,7 +1056,7 @@ Chcete ho uložit?</translation>
         <translation>Stav</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="625"/>
+        <location filename="../src/MainWindow.cpp~" line="625"/>
         <source>Name</source>
         <translation>Jméno</translation>
     </message>
@@ -1101,9 +1101,9 @@ Chcete ho uložit?</translation>
         <translation>Repozitáře</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="504"/>
+        <location filename="../src/MainWindow.cpp~" line="504"/>
         <source>Package Groups</source>
-        <translation>Skupiny bylíčků</translation>
+        <translation>Skupiny balíčků</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="296"/>
@@ -1208,12 +1208,12 @@ Chcete ho uložit?</translation>
     <message>
         <location filename="../ui/MainWindow.ui" line="665"/>
         <source>Update Database</source>
-        <translation>Aktualizovat databázy</translation>
+        <translation>Aktualizovat databáze</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="674"/>
         <source>Upgrade System</source>
-        <translation>Aktualyzovat systém</translation>
+        <translation>Aktualizovat systém</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="683"/>
@@ -1256,7 +1256,7 @@ Chcete ho uložit?</translation>
         <translation type="obsolete">Shaman - untätig</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="380"/>
+        <location filename="../src/MainWindow.cpp~" line="380"/>
         <source>Shaman will keep running in the system tray.
 To close it, click Quit in the file menu or in the tray icon context menu.
 While in the System Tray, Shaman will update your Databases
@@ -1265,17 +1265,17 @@ You can change this behaviour in Settings.</source>
         <translation>Aplikace Shaman zůstane běžet v systémové
 části panelu. Pokud jí chcete ukončit, vyberte 
 Ukončit v menu nebo v kontextovém menu ikony v systémové
-části panelu. Takto minimalizovaný Shaman bude nadále aktualizovat
-databázy a upozorní vás na dostupné aktualizace.
+části panelu. Takto minimalizovaná aplikace bude nadále aktualizovat
+databáze a upozorní vás na dostupné aktualizace.
 Toto chování můžete změnit v Nastavení.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="377"/>
+        <location filename="../src/MainWindow.cpp~" line="377"/>
         <source>Shaman - Reducing To Tray</source>
         <translation>Shaman - Minimalizace do systémové části panelu</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2128"/>
+        <location filename="../src/MainWindow.cpp~" line="2134"/>
         <source>Upgrade</source>
         <translation>Aktualizace</translation>
     </message>
@@ -1285,7 +1285,7 @@ Toto chování můžete změnit v Nastavení.</translation>
         <translation type="obsolete">Shaman - untätig (Aktualisierungen verfügbar)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1510"/>
+        <location filename="../src/MainWindow.cpp~" line="1510"/>
         <source>System Upgrade</source>
         <translation>Aktualizace systému</translation>
     </message>
@@ -1306,17 +1306,17 @@ Verfügung. Hier klicken um die
 Aktualisierung zu starten.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="547"/>
+        <location filename="../src/MainWindow.cpp~" line="547"/>
         <source>All Repositories</source>
         <translation>Všechny repozitáře</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="550"/>
+        <location filename="../src/MainWindow.cpp~" line="550"/>
         <source>Local Packages</source>
         <translation>Místní balíčky</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1183"/>
+        <location filename="../src/MainWindow.cpp~" line="1183"/>
         <source>All Groups</source>
         <translation>Všechny skupiny</translation>
     </message>
@@ -1326,37 +1326,37 @@ Aktualisierung zu starten.</translation>
         <translation type="obsolete">Für Neuinstallation vormerken</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2123"/>
+        <location filename="../src/MainWindow.cpp~" line="2129"/>
         <source>Install</source>
         <translation>Instalovat</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2133"/>
+        <location filename="../src/MainWindow.cpp~" line="2139"/>
         <source>Uninstall</source>
         <translation>Odebrat</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2134"/>
+        <location filename="../src/MainWindow.cpp~" line="2140"/>
         <source>Complete Uninstall</source>
         <translation>Kompletně odebrat</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="785"/>
+        <location filename="../src/MainWindow.cpp~" line="785"/>
         <source>Status: </source>
         <translation>Stav:</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="787"/>
+        <location filename="../src/MainWindow.cpp~" line="787"/>
         <source>Installed</source>
         <translation>Nainstalováno</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="789"/>
+        <location filename="../src/MainWindow.cpp~" line="789"/>
         <source>Not installed</source>
         <translation>Není Nainstalování</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="803"/>
+        <location filename="../src/MainWindow.cpp~" line="803"/>
         <source>Action: </source>
         <translation>Akce:</translation>
     </message>
@@ -1366,12 +1366,12 @@ Aktualisierung zu starten.</translation>
         <translation type="obsolete">Shaman - Arbeite</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2001"/>
+        <location filename="../src/MainWindow.cpp~" line="2007"/>
         <source>Error</source>
         <translation>Chyba</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="918"/>
+        <location filename="../src/MainWindow.cpp~" line="918"/>
         <source>One or more Databases could not be updated.
 Last error reported was:
 %1</source>
@@ -1380,17 +1380,17 @@ Poslední chyba:
 %1</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="927"/>
+        <location filename="../src/MainWindow.cpp~" line="927"/>
         <source>Database Update</source>
         <translation>Aktualizace databáze</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="929"/>
+        <location filename="../src/MainWindow.cpp~" line="929"/>
         <source>Databases Updated Successfully</source>
         <translation>Databáze byly úspěšně aktualizovány</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1017"/>
+        <location filename="../src/MainWindow.cpp~" line="1017"/>
         <source>Mark for Upgrade</source>
         <translation>Označit pro Aktualizaci</translation>
     </message>
@@ -1400,49 +1400,49 @@ Poslední chyba:
         <translation type="obsolete">Aktion abbrechen</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1068"/>
+        <location filename="../src/MainWindow.cpp~" line="1068"/>
         <source>Mark all for installation</source>
         <translation>Označit vše pro instalaci</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1070"/>
+        <location filename="../src/MainWindow.cpp~" line="1070"/>
         <source>Mark all for reinstallation</source>
         <translation>Označit vče pro reinstalaci</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1072"/>
+        <location filename="../src/MainWindow.cpp~" line="1072"/>
         <source>Mark all for removal</source>
         <translation>Označit pro odstranění</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1514"/>
+        <location filename="../src/MainWindow.cpp~" line="1514"/>
         <source>Your system is up to date!</source>
         <translation>Váš systém je aktuální!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1725"/>
+        <location filename="../src/MainWindow.cpp~" line="1725"/>
         <source>Queue Processing</source>
         <translation>Zpracovávání fronty</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1725"/>
+        <location filename="../src/MainWindow.cpp~" line="1725"/>
         <source>Your Queue is being processed.
 Please wait.</source>
         <translation>Fronta je nyní zpracovávána.
 Čekejte prosím.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1828"/>
+        <location filename="../src/MainWindow.cpp~" line="1828"/>
         <source>Queue Processed</source>
         <translation>Fronta byla zpracována</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1826"/>
+        <location filename="../src/MainWindow.cpp~" line="1826"/>
         <source>Your Queue was successfully processed!</source>
         <translation>Fronta byla úspěšně zpracována!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1830"/>
+        <location filename="../src/MainWindow.cpp~" line="1830"/>
         <source>Your Queue was successfully processed!!</source>
         <translation>Fronta byla úspěšně zpracována!</translation>
     </message>
@@ -1492,17 +1492,17 @@ Please wait.</source>
         <translation type="obsolete">Soll der Vorgang fortgesetzt werden?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1992"/>
+        <location filename="../src/MainWindow.cpp~" line="1992"/>
         <source>Install a Package</source>
         <translation>Instalovat balíček</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1992"/>
+        <location filename="../src/MainWindow.cpp~" line="1992"/>
         <source>Arch Linux Packages (*.pkg.tar.gz)</source>
         <translation>Balíček Arch Linux (*.pkg.tar.gz)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2001"/>
+        <location filename="../src/MainWindow.cpp~" line="2007"/>
         <source>%1 does not seem
 a valid package</source>
         <translation>%1 není platný balíček</translation>
@@ -1632,12 +1632,12 @@ fortsetzen?</translation>
         <translation type="obsolete">Nicht erneut anzeigen</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1533"/>
+        <location filename="../src/MainWindow.cpp~" line="1533"/>
         <source>Pacman Update</source>
         <translation>Aktualizace aplikace Pacman</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1535"/>
+        <location filename="../src/MainWindow.cpp~" line="1535"/>
         <source>Pacman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Pacman now?</source>
@@ -1646,24 +1646,24 @@ samostatně kvůli možným kenfliktům verzí.
 Chcete aktualizovat aplikaci Pacman nyní?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1555"/>
+        <location filename="../src/MainWindow.cpp~" line="1555"/>
         <source>Shaman Update</source>
         <translation>Aktualizace aplikace Shaman</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1557"/>
+        <location filename="../src/MainWindow.cpp~" line="1557"/>
         <source>Shaman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Shaman now?</source>
         <translation>Shaman může být aktualizován. Je doporučeno provést aktualizacisamostatně kvůli možným kenfliktům verzí.Chcete aktualizovat aplikaci Shaman nyní?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1816"/>
+        <location filename="../src/MainWindow.cpp~" line="1816"/>
         <source>Restart required</source>
         <translation>Je vyžádoná restart aplikace</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1809"/>
+        <location filename="../src/MainWindow.cpp~" line="1809"/>
         <source>Pacman or Shaman was updated. Shaman will now quit,
 please restart it to use the new version</source>
         <translation>Pacman nebo Shaman byl aktualizován. Aplikace Shaman
@@ -1693,17 +1693,17 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;l.appelhans@gmx.de&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2074"/>
+        <location filename="../src/MainWindow.cpp~" line="2080"/>
         <source>Library Question</source>
         <translation>Knihovní dotaz</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="792"/>
+        <location filename="../src/MainWindow.cpp~" line="792"/>
         <source>Local Version: </source>
         <translation>Místní veze:</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="797"/>
+        <location filename="../src/MainWindow.cpp~" line="797"/>
         <source>Version in the Repository: </source>
         <translation>Verze v repozitáři:</translation>
     </message>
@@ -1716,7 +1716,7 @@ Die Warteschlange wurde nicht erfolgreich
 verarbeitet</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1817"/>
+        <location filename="../src/MainWindow.cpp~" line="1817"/>
         <source>Your Kernel has been updated.
 Please restart your PC soon to load the new Kernel.</source>
         <translation>Jádro (Kernel) bylo aktualizováno.
@@ -1724,17 +1724,17 @@ Pokud chete použít nové jádro, restartujte vaše
  PC hned jak to bude možné.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="329"/>
+        <location filename="../src/MainWindow.cpp~" line="329"/>
         <source>Esc</source>
         <translation>Esc</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1876"/>
+        <location filename="../src/MainWindow.cpp~" line="1876"/>
         <source>News Alert</source>
         <translation>Upozornění na zprávy</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1877"/>
+        <location filename="../src/MainWindow.cpp~" line="1877"/>
         <source>There is an unread news about %1.
 Do you want to read it?</source>
         <translation>Nepřečtené zprávy o %1.
@@ -1751,19 +1751,19 @@ Chtete je přečíst?</translation>
         <translation>Zobrazit log</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1774"/>
+        <location filename="../src/MainWindow.cpp~" line="1774"/>
         <source>One or more errors occurred, your Queue
 was not successfully processed</source>
         <translation>Nastala jedna nebo více chyb. Fronta nebyla
 úspěšně zpracována</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="920"/>
+        <location filename="../src/MainWindow.cpp~" line="920"/>
         <source>One or more databases failed to update!</source>
         <translation>Nebylo možné aktualizovat jednu nebo více databází!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1776"/>
+        <location filename="../src/MainWindow.cpp~" line="1776"/>
         <source>Error Processing Queue!!</source>
         <translation>Chyba při zpracovávání fronty!!</translation>
     </message>
@@ -1774,7 +1774,7 @@ was not successfully processed</source>
         <translation type="obsolete">Name</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1218"/>
+        <location filename="../src/MainWindow.cpp~" line="1218"/>
         <source>A package providing %1 is already installed.
 Do you want to install %1 anyway?</source>
         <translation>Balíček poskytující %1 je již nainstalován.
@@ -1841,7 +1841,7 @@ Chtete %1 přesto nainstalovat?</translation>
         <translation>&amp;Závislosti</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1042"/>
+        <location filename="../src/MainWindow.cpp~" line="1042"/>
         <source>Mark for Re&amp;installation</source>
         <translation>Onzačit pro &amp;Reinstalaci</translation>
     </message>
@@ -1851,7 +1851,7 @@ Chtete %1 přesto nainstalovat?</translation>
         <translation>Zr&amp;ušit akci</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2037"/>
+        <location filename="../src/MainWindow.cpp~" line="2043"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -1952,19 +1952,19 @@ Please restart it with root privileges.</source>
 ausgeführt werden.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="344"/>
+        <location filename="../src/main.cpp" line="357"/>
         <source>Shaman</source>
         <translation>Shaman</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="256"/>
+        <location filename="../src/main.cpp" line="269"/>
         <source>There was a problem while testing libalpm.
 Maybe another application has a lock on it.</source>
         <translation>Nastal problém při testování libalpm.
 Je možné, že ho blokuje jiná aplikace.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="274"/>
+        <location filename="../src/main.cpp" line="287"/>
         <source>Shaman</source>
         <comment>Hey! If you are reading this, first of all thanks for helping us in making Shaman better. There are not many comments unless where needed, since all the strings are pretty self-explanatory. You will see a lot of HTML in some cases: do not let that scare you, but please edit text only. Editing HTML tags too may break our layout, so be careful. A good practice could be copying the whole string, and then translating just what&apos;s outside the tags, usually just a few words. If you have any doubts, or if you just want to drop us a line, there goes our email addresses:
 Dario: drf54321@gmail.com
@@ -1973,7 +1973,7 @@ Thanks again, and enjoy your translation!</comment>
         <translation>Shaman</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="345"/>
+        <location filename="../src/main.cpp" line="358"/>
         <source>Pacman is not updated.
 Shaman needs libalpm &gt;= 2.1.0 to run.
 Yours is %1. Please update Pacman.</source>
@@ -1982,34 +1982,34 @@ Shaman potřebuje k běhu libalpm &gt;= 2.1.0.
 Nynější verze je %1. Aktualizujte pposím Pacman.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="316"/>
+        <location filename="../src/main.cpp" line="329"/>
         <source>Please Wait...</source>
         <translation>Čekejte prosím....</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="396"/>
+        <location filename="../src/main.cpp" line="409"/>
         <source>Loading Databases...</source>
         <translation>Načítání databází...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="404"/>
+        <location filename="../src/main.cpp" line="417"/>
         <source>Loading Packages...</source>
         <translation>Načítání balíčků...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="412"/>
+        <location filename="../src/main.cpp" line="425"/>
         <source>Starting up Shaman...</source>
-        <translation>Spouštění Shaman...</translation>
+        <translation>Spouštění aplikace Shaman...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="275"/>
+        <location filename="../src/main.cpp" line="288"/>
         <source>Your settings file seems unwritable.
 Please check permissions on it.</source>
         <translation>Soubor s nastavení není zapisovatelný.
 Zkontrolujte prosím přístupová práva.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="335"/>
+        <location filename="../src/main.cpp" line="348"/>
         <source>You have started Shaman as root.
 It is advised to start it as unprivileged user.
 Shaman will ask you for root password when needed.</source>
@@ -2023,13 +2023,13 @@ Shaman vás požádá o root heslo pokud bude potřeba.</translation>
         <translation>Ok</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="235"/>
+        <location filename="../src/main.cpp" line="248"/>
         <source>It looks like another copy of Shaman is running.
 You can only run one copy of Shaman at a time.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="326"/>
+        <location filename="../src/main.cpp" line="339"/>
         <source>Shaman can not be started as root.
 Please restart it as unprivileged user.</source>
         <translation>Shaman nemůže být spuštěn
@@ -2037,14 +2037,14 @@ pod uživaelem root. Spustě ho znovu jako
 obyčejný uživatel.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="251"/>
+        <location filename="../src/main.cpp" line="264"/>
         <source>Shaman could not switch to root.
 Probably you have not set the SUID bit to it.
 You can do that by issuing as root
 chown root shaman &amp;&amp; chmod u+s shaman.
 Note that this is safe, please read Shaman wiki
 for more details.</source>
-        <translation>Shaman nemohl byt přepnut pod
+        <translation>Shaman nemohl být přepnut pod
 uživatele root. Pravděpodobně nemáte nastavený
 SUID bit.
 Nastavit ho můžete následujícím přikazem pod uživatelem
@@ -2084,9 +2084,9 @@ pro další informace.</translation>
         <translation>&amp;Zrušit</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2050"/>
+        <location filename="../src/MainWindow.cpp~" line="2056"/>
         <source>Whoa, that&apos;s co&amp;ol!</source>
-        <translation>Wow, to je &amp;hustý.</translation>
+        <translation>Wow, to je &amp;hustý!</translation>
     </message>
 </context>
 <context>
@@ -2504,7 +2504,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/ShamanTrayIcon.cpp" line="45"/>
         <source>Update Database</source>
-        <translation>Aktualizovat databázy</translation>
+        <translation>Aktualizovat databáze</translation>
     </message>
     <message>
         <location filename="../src/ShamanTrayIcon.cpp" line="49"/>
@@ -2590,17 +2590,17 @@ Klikněte sem pro další detaily.</translation>
     <message>
         <location filename="../src/SysUpgradeDialog.cpp" line="64"/>
         <source>There is &lt;b&gt;%1 upgradeable package&lt;/b&gt;. You can either&lt;br&gt; upgrade immediately or add it to the current Queue&lt;br&gt; and process it later.</source>
-        <translation>Es ist &lt;b&gt;%1 aktualisiertes Paket&lt;/b&gt; vorhanden. Es kann entweder&lt;br&gt; sofort aktualisiert werden oder der Warteschlange hinzugefügt&lt;br&gt; und später verarbeitet werden.</translation>
+        <translation>&lt;b&gt;%1 balíček&lt;/b&gt; je dostupný k aktualizaci. Můžete jej &lt;br&gt;aktualizovat ihned nebo jej zařadit do fronty&lt;br&gt; a provést aktualizaci později.</translation>
     </message>
     <message>
         <location filename="../src/SysUpgradeDialog.cpp" line="67"/>
         <source>There are &lt;b&gt;%1 upgradeable packages&lt;/b&gt;. You can either&lt;br&gt; upgrade immediately or add them to the current Queue&lt;br&gt; and process them later.</source>
-        <translation>Es sind &lt;b&gt;%1 aktualisierte Pakete&lt;/b&gt; vorhanden. Es kann entweder&lt;br&gt; sofort aktualisiert werden oder der Warteschlange hinzugefügt&lt;br&gt; und später verarbeitet werden.</translation>
+        <translation>&lt;b&gt;%1 balíčků&lt;/b&gt; je dostupných k aktualizaci. Můžete je &lt;br&gt;aktualizovat ihned nebo je zařadit do fronty&lt;br&gt; a provést aktualizaci později.</translation>
     </message>
     <message>
         <location filename="../src/SysUpgradeDialog.cpp" line="69"/>
         <source>To be Upgraded</source>
-        <translation>Wird aktualisiert</translation>
+        <translation>K atualizaci</translation>
     </message>
 </context>
 <context>
@@ -2915,12 +2915,12 @@ Zadejte prosím heslo uživatele root do následujícího pole.</translation>
     <message>
         <location filename="../ui/authDialog.ui" line="87"/>
         <source>Backspace</source>
-        <translation type="unfinished"></translation>
+        <translation>Backspace</translation>
     </message>
     <message>
         <location filename="../ui/authDialog.ui" line="74"/>
         <source>Return</source>
-        <translation type="unfinished"></translation>
+        <translation>Enter</translation>
     </message>
 </context>
 <context>
@@ -3087,7 +3087,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/newsDialog.ui" line="103"/>
         <source>Refresh</source>
-        <translation>Obnocit</translation>
+        <translation>Obnovit</translation>
     </message>
     <message>
         <location filename="../ui/newsDialog.ui" line="130"/>
@@ -3296,17 +3296,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/transactionDialog.ui" line="32"/>
         <source>Download Packages</source>
-        <translation>Stáhnout balíčky</translation>
+        <translation>Stažení baláčků</translation>
     </message>
     <message>
         <location filename="../ui/transactionDialog.ui" line="39"/>
         <source>Process queue</source>
-        <translation>Zpracovat frontu</translation>
+        <translation>Zpracování fronty</translation>
     </message>
     <message>
         <location filename="../ui/transactionDialog.ui" line="46"/>
         <source>Cleanup</source>
-        <translation>Vyčistit</translation>
+        <translation>Čištění</translation>
     </message>
     <message>
         <location filename="../ui/transactionDialog.ui" line="138"/>
