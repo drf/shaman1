@@ -52,6 +52,7 @@ class LogViewer;
 class ShamanStatusBar;
 class PackageProperties;
 class ShamanTreeWidgetItem;
+class LocalPackageDialog;
 
 class CreateItemsThread : public QThread
 {
@@ -194,6 +195,7 @@ private:
 	QPointer<PackageProperties> pkgProp;
 	QPointer<QTimer> editTimer;
 	QPointer<CreateItemsThread> cThread;
+	QPointer<LocalPackageDialog> lpkgDialog;
 
 	QPointer<QDialog> reviewQueue;
 	ShamanTrayIcon *trayicon;

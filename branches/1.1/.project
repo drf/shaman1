@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>Shaman</name>
+	<name>Shaman 1.1</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -36,6 +36,10 @@
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.contents</key>
 					<value>org.eclipse.cdt.make.core.activeConfigSettings</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.buildLocation</key>
+					<value>${workspace_loc:/Shaman 1.1/Debug}</value>
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.useDefaultBuildCmd</key>

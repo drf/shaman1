@@ -1,16 +1,20 @@
 <ui version="4.0" >
- <class>Form</class>
- <widget class="QWidget" name="Form" >
+ <class>LocalPackage</class>
+ <widget class="QDialog" name="LocalPackage" >
   <property name="geometry" >
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>501</width>
-    <height>268</height>
+    <width>472</width>
+    <height>287</height>
    </rect>
   </property>
   <property name="windowTitle" >
-   <string>Form</string>
+   <string>Install Package from File</string>
+  </property>
+  <property name="windowIcon" >
+   <iconset resource="shaman.qrc" >
+    <normaloff>:/Icons/icons/shaman/shaman-yellow-icon-22.png</normaloff>:/Icons/icons/shaman/shaman-yellow-icon-22.png</iconset>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout" >
    <item>
@@ -68,20 +72,16 @@ p, li { white-space: pre-wrap; }
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="label" >
+    <widget class="QLabel" name="nameLabel" >
      <property name="text" >
-      <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
-&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
-p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;span style=" font-size:11pt; font-weight:600;">Dummy Package (1.0.0-1)&lt;/span>&lt;/p>&lt;/body>&lt;/html></string>
+      <string/>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="label_6" >
+    <widget class="QLabel" name="descLabel" >
      <property name="text" >
-      <string>Sample Description</string>
+      <string/>
      </property>
      <property name="scaledContents" >
       <bool>true</bool>
@@ -94,7 +94,7 @@ p, li { white-space: pre-wrap; }
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout" >
      <item>
-      <widget class="QLabel" name="label_3" >
+      <widget class="QLabel" name="iconLabel" >
        <property name="maximumSize" >
         <size>
          <width>24</width>
@@ -110,9 +110,9 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_2" >
+      <widget class="QLabel" name="statusLabel" >
        <property name="text" >
-        <string>Package is installed</string>
+        <string/>
        </property>
        <property name="scaledContents" >
         <bool>true</bool>
@@ -125,22 +125,49 @@ p, li { white-space: pre-wrap; }
     </layout>
    </item>
    <item>
-    <widget class="QLabel" name="label_7" >
-     <property name="text" >
-      <string>2 Additional packages will be installed as dependencies</string>
-     </property>
-     <property name="scaledContents" >
-      <bool>true</bool>
-     </property>
-     <property name="wordWrap" >
-      <bool>true</bool>
-     </property>
-    </widget>
+    <layout class="QHBoxLayout" name="horizontalLayout_3" >
+     <item>
+      <widget class="QLabel" name="depsLabel" >
+       <property name="text" >
+        <string/>
+       </property>
+       <property name="scaledContents" >
+        <bool>true</bool>
+       </property>
+       <property name="wordWrap" >
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="showButton" >
+       <property name="maximumSize" >
+        <size>
+         <width>130</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text" >
+        <string>Show...</string>
+       </property>
+       <property name="icon" >
+        <iconset resource="shaman.qrc" >
+         <normaloff>:/Icons/icons/view-list-tree.png</normaloff>:/Icons/icons/view-list-tree.png</iconset>
+       </property>
+       <property name="checkable" >
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QListWidget" name="listWidget" />
    </item>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_2" >
      <item>
-      <widget class="QPushButton" name="pushButton" >
+      <widget class="QPushButton" name="detailsButton" >
        <property name="text" >
         <string>More Details...</string>
        </property>
@@ -164,7 +191,7 @@ p, li { white-space: pre-wrap; }
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2" >
+      <widget class="QPushButton" name="cancelButton" >
        <property name="text" >
         <string>Cancel</string>
        </property>
@@ -175,7 +202,7 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_3" >
+      <widget class="QPushButton" name="installButton" >
        <property name="text" >
         <string>Install Package</string>
        </property>
@@ -192,5 +219,22 @@ p, li { white-space: pre-wrap; }
  <resources>
   <include location="shaman.qrc" />
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>showButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>listWidget</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>435</x>
+     <y>145</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>252</x>
+     <y>284</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

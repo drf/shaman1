@@ -44,6 +44,7 @@
 #include "ShamanStatusBar.h"
 #include "PackageProperties.h"
 #include "ShamanTreeWidgetItem.h"
+#include "LocalPackageDialog.h"
 
 #include <config.h>
 
@@ -2011,14 +2012,16 @@ void MainWindow::installPackageFromFile(const QString &filename)
 	}
 
 	qDebug() << "Selected" << alpm_pkg_get_name(pkg);
+	
+	lpkgDialog = new LocalPackageDialog(aHandle, this);
 
-	alpm_pkg_free(pkg);
+	lpkgDialog->loadPackage(pkg, filename);
+	
+	lpkgDialog->show();
+	
+	qDebug() << "Package Shown";
 
-	aHandle->initQueue(false, false, true);
-
-	aHandle->addFFToQueue(filename);
-
-	processQueue();
+	connect(lpkgDialog, SIGNAL(queueReady()), SLOT(processQueue()));
 
 }
 

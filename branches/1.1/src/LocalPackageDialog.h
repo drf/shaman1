@@ -16,43 +16,38 @@
  *   along with this program; if not, write to the                         *
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
- **************************************************************************/
+ ***************************************************************************/
 
-#ifndef PACKAGEPROPERTIES_H
-#define PACKAGEPROPERTIES_H
+#ifndef LOCALPACKAGEDIALOG_H
+#define LOCALPACKAGEDIALOG_H
 
-#include "ui_pkgProperties.h"
+#include "ui_fromFileDialog.h"
 #include "AlpmHandler.h"
 
-class PackageProperties : public QDialog, private Ui::pkgProperties
+class LocalPackageDialog : public QDialog, private Ui::LocalPackage
 {
-	Q_OBJECT
-	
+    Q_OBJECT
+    
 public:
-	explicit PackageProperties(AlpmHandler *aH, QWidget *parent = 0);
-	virtual ~PackageProperties();
+	LocalPackageDialog(AlpmHandler *aH, QWidget *parent = 0);
+	virtual ~LocalPackageDialog();
 	
-	void setPackage(const QString &pkgname);
+	void loadPackage(pmpkg_t *pkg, const QString &fname);
 	
-	void reloadPkgInfo();
+private slots:
+	void adjust(bool tgld);
 	
-	static QString formatSize(unsigned long size);
+	void showDetails();
+	void goInstall();
 	
-	void setPackage(pmpkg_t *pkg, bool forceGiven = false);
-	
-private:
-	
-	void populateFileWidget();
-	void populateDepsWidget();
-	void populateRequiredWidget();
-	void populateInfoWidget();
-	void populateLogWidget();
-	void populateChangelogWidget();
+signals:
+    void queueReady();
 	
 private:
-	AlpmHandler *aHandle;
-	pmpkg_t *curPkg;
-	QString pName;
+    AlpmHandler *aHandle;
+    pmpkg_t *package;
+    QString filename;
+	
 };
 
-#endif /*PACKAGEPROPERTIES_H*/
+#endif /*LOCALPACKAGEDIALOG_H_*/
