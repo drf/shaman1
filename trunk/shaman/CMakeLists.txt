@@ -214,6 +214,7 @@ INSTALL(CODE "MESSAGE(\"Installing Shaman Icons...\")")
 INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/ui/icons/shaman/shaman-32.png
 		${CMAKE_CURRENT_SOURCE_DIR}/ui/icons/shaman/shaman-64.png
 		${CMAKE_CURRENT_SOURCE_DIR}/ui/icons/shaman/shaman-128.png ${CMAKE_CURRENT_SOURCE_DIR}/ui/icons/shaman/shaman-48.png
+		${CMAKE_CURRENT_SOURCE_DIR}/ui/icons/shaman/application-x-shaman-package.png
 		DESTINATION ${CMAKE_INSTALL_PREFIX}/share/pixmaps)
 INSTALL(CODE "MESSAGE(\"Installing Shaman Desktop File...\")")
 INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/etc/shaman.desktop DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications)
