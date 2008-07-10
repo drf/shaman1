@@ -1056,7 +1056,7 @@ Chcete ho uložit?</translation>
         <translation>Stav</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="625"/>
+        <location filename="../src/MainWindow.cpp" line="625"/>
         <source>Name</source>
         <translation>Jméno</translation>
     </message>
@@ -1101,7 +1101,7 @@ Chcete ho uložit?</translation>
         <translation>Repozitáře</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="504"/>
+        <location filename="../src/MainWindow.cpp" line="504"/>
         <source>Package Groups</source>
         <translation>Skupiny balíčků</translation>
     </message>
@@ -1256,7 +1256,7 @@ Chcete ho uložit?</translation>
         <translation type="obsolete">Shaman - untätig</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="380"/>
+        <location filename="../src/MainWindow.cpp" line="380"/>
         <source>Shaman will keep running in the system tray.
 To close it, click Quit in the file menu or in the tray icon context menu.
 While in the System Tray, Shaman will update your Databases
@@ -1270,12 +1270,12 @@ databáze a upozorní vás na dostupné aktualizace.
 Toto chování můžete změnit v Nastavení.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="377"/>
+        <location filename="../src/MainWindow.cpp" line="377"/>
         <source>Shaman - Reducing To Tray</source>
         <translation>Shaman - Minimalizace do systémové části panelu</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="2134"/>
+        <location filename="../src/MainWindow.cpp" line="2134"/>
         <source>Upgrade</source>
         <translation>Aktualizace</translation>
     </message>
@@ -1285,7 +1285,7 @@ Toto chování můžete změnit v Nastavení.</translation>
         <translation type="obsolete">Shaman - untätig (Aktualisierungen verfügbar)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1510"/>
+        <location filename="../src/MainWindow.cpp" line="1510"/>
         <source>System Upgrade</source>
         <translation>Aktualizace systému</translation>
     </message>
@@ -1306,17 +1306,17 @@ Verfügung. Hier klicken um die
 Aktualisierung zu starten.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="547"/>
+        <location filename="../src/MainWindow.cpp" line="547"/>
         <source>All Repositories</source>
         <translation>Všechny repozitáře</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="550"/>
+        <location filename="../src/MainWindow.cpp" line="550"/>
         <source>Local Packages</source>
         <translation>Místní balíčky</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1183"/>
+        <location filename="../src/MainWindow.cpp" line="1183"/>
         <source>All Groups</source>
         <translation>Všechny skupiny</translation>
     </message>
@@ -1326,37 +1326,37 @@ Aktualisierung zu starten.</translation>
         <translation type="obsolete">Für Neuinstallation vormerken</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="2129"/>
+        <location filename="../src/MainWindow.cpp" line="2129"/>
         <source>Install</source>
         <translation>Instalovat</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="2139"/>
+        <location filename="../src/MainWindow.cpp" line="2139"/>
         <source>Uninstall</source>
         <translation>Odebrat</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="2140"/>
+        <location filename="../src/MainWindow.cpp" line="2140"/>
         <source>Complete Uninstall</source>
         <translation>Kompletně odebrat</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="785"/>
+        <location filename="../src/MainWindow.cpp" line="785"/>
         <source>Status: </source>
         <translation>Stav:</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="787"/>
+        <location filename="../src/MainWindow.cpp" line="787"/>
         <source>Installed</source>
         <translation>Nainstalováno</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="789"/>
+        <location filename="../src/MainWindow.cpp" line="789"/>
         <source>Not installed</source>
         <translation>Není Nainstalování</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="803"/>
+        <location filename="../src/MainWindow.cpp" line="803"/>
         <source>Action: </source>
         <translation>Akce:</translation>
     </message>
@@ -1366,12 +1366,12 @@ Aktualisierung zu starten.</translation>
         <translation type="obsolete">Shaman - Arbeite</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="2007"/>
+        <location filename="../src/MainWindow.cpp" line="2007"/>
         <source>Error</source>
         <translation>Chyba</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="918"/>
+        <location filename="../src/MainWindow.cpp" line="918"/>
         <source>One or more Databases could not be updated.
 Last error reported was:
 %1</source>
@@ -1380,17 +1380,17 @@ Poslední chyba:
 %1</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="927"/>
+        <location filename="../src/MainWindow.cpp" line="927"/>
         <source>Database Update</source>
         <translation>Aktualizace databáze</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="929"/>
+        <location filename="../src/MainWindow.cpp" line="929"/>
         <source>Databases Updated Successfully</source>
         <translation>Databáze byly úspěšně aktualizovány</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1017"/>
+        <location filename="../src/MainWindow.cpp" line="1017"/>
         <source>Mark for Upgrade</source>
         <translation>Označit pro Aktualizaci</translation>
     </message>
@@ -1400,49 +1400,49 @@ Poslední chyba:
         <translation type="obsolete">Aktion abbrechen</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1068"/>
+        <location filename="../src/MainWindow.cpp" line="1068"/>
         <source>Mark all for installation</source>
         <translation>Označit vše pro instalaci</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1070"/>
+        <location filename="../src/MainWindow.cpp" line="1070"/>
         <source>Mark all for reinstallation</source>
         <translation>Označit vče pro reinstalaci</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1072"/>
+        <location filename="../src/MainWindow.cpp" line="1072"/>
         <source>Mark all for removal</source>
         <translation>Označit pro odstranění</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1514"/>
+        <location filename="../src/MainWindow.cpp" line="1514"/>
         <source>Your system is up to date!</source>
         <translation>Váš systém je aktuální!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1725"/>
+        <location filename="../src/MainWindow.cpp" line="1725"/>
         <source>Queue Processing</source>
         <translation>Zpracovávání fronty</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1725"/>
+        <location filename="../src/MainWindow.cpp" line="1725"/>
         <source>Your Queue is being processed.
 Please wait.</source>
         <translation>Fronta je nyní zpracovávána.
 Čekejte prosím.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1828"/>
+        <location filename="../src/MainWindow.cpp" line="1828"/>
         <source>Queue Processed</source>
         <translation>Fronta byla zpracována</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1826"/>
+        <location filename="../src/MainWindow.cpp" line="1826"/>
         <source>Your Queue was successfully processed!</source>
         <translation>Fronta byla úspěšně zpracována!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1830"/>
+        <location filename="../src/MainWindow.cpp" line="1830"/>
         <source>Your Queue was successfully processed!!</source>
         <translation>Fronta byla úspěšně zpracována!</translation>
     </message>
@@ -1492,17 +1492,17 @@ Please wait.</source>
         <translation type="obsolete">Soll der Vorgang fortgesetzt werden?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1992"/>
+        <location filename="../src/MainWindow.cpp" line="1992"/>
         <source>Install a Package</source>
         <translation>Instalovat balíček</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1992"/>
+        <location filename="../src/MainWindow.cpp" line="1992"/>
         <source>Arch Linux Packages (*.pkg.tar.gz)</source>
         <translation>Balíček Arch Linux (*.pkg.tar.gz)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="2007"/>
+        <location filename="../src/MainWindow.cpp" line="2007"/>
         <source>%1 does not seem
 a valid package</source>
         <translation>%1 není platný balíček</translation>
@@ -1632,12 +1632,12 @@ fortsetzen?</translation>
         <translation type="obsolete">Nicht erneut anzeigen</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1533"/>
+        <location filename="../src/MainWindow.cpp" line="1533"/>
         <source>Pacman Update</source>
         <translation>Aktualizace aplikace Pacman</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1535"/>
+        <location filename="../src/MainWindow.cpp" line="1535"/>
         <source>Pacman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Pacman now?</source>
@@ -1646,24 +1646,24 @@ samostatně kvůli možným kenfliktům verzí.
 Chcete aktualizovat aplikaci Pacman nyní?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1555"/>
+        <location filename="../src/MainWindow.cpp" line="1555"/>
         <source>Shaman Update</source>
         <translation>Aktualizace aplikace Shaman</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1557"/>
+        <location filename="../src/MainWindow.cpp" line="1557"/>
         <source>Shaman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Shaman now?</source>
         <translation>Shaman může být aktualizován. Je doporučeno provést aktualizacisamostatně kvůli možným kenfliktům verzí.Chcete aktualizovat aplikaci Shaman nyní?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1816"/>
+        <location filename="../src/MainWindow.cpp" line="1816"/>
         <source>Restart required</source>
         <translation>Je vyžádoná restart aplikace</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1809"/>
+        <location filename="../src/MainWindow.cpp" line="1809"/>
         <source>Pacman or Shaman was updated. Shaman will now quit,
 please restart it to use the new version</source>
         <translation>Pacman nebo Shaman byl aktualizován. Aplikace Shaman
@@ -1693,17 +1693,17 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;l.appelhans@gmx.de&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="2080"/>
+        <location filename="../src/MainWindow.cpp" line="2080"/>
         <source>Library Question</source>
         <translation>Knihovní dotaz</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="792"/>
+        <location filename="../src/MainWindow.cpp" line="792"/>
         <source>Local Version: </source>
         <translation>Místní veze:</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="797"/>
+        <location filename="../src/MainWindow.cpp" line="797"/>
         <source>Version in the Repository: </source>
         <translation>Verze v repozitáři:</translation>
     </message>
@@ -1716,7 +1716,7 @@ Die Warteschlange wurde nicht erfolgreich
 verarbeitet</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1817"/>
+        <location filename="../src/MainWindow.cpp" line="1817"/>
         <source>Your Kernel has been updated.
 Please restart your PC soon to load the new Kernel.</source>
         <translation>Jádro (Kernel) bylo aktualizováno.
@@ -1724,17 +1724,17 @@ Pokud chete použít nové jádro, restartujte vaše
  PC hned jak to bude možné.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="329"/>
+        <location filename="../src/MainWindow.cpp" line="329"/>
         <source>Esc</source>
         <translation>Esc</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1876"/>
+        <location filename="../src/MainWindow.cpp" line="1876"/>
         <source>News Alert</source>
         <translation>Upozornění na zprávy</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1877"/>
+        <location filename="../src/MainWindow.cpp" line="1877"/>
         <source>There is an unread news about %1.
 Do you want to read it?</source>
         <translation>Nepřečtené zprávy o %1.
@@ -1751,19 +1751,19 @@ Chtete je přečíst?</translation>
         <translation>Zobrazit log</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1774"/>
+        <location filename="../src/MainWindow.cpp" line="1774"/>
         <source>One or more errors occurred, your Queue
 was not successfully processed</source>
         <translation>Nastala jedna nebo více chyb. Fronta nebyla
 úspěšně zpracována</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="920"/>
+        <location filename="../src/MainWindow.cpp" line="920"/>
         <source>One or more databases failed to update!</source>
         <translation>Nebylo možné aktualizovat jednu nebo více databází!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1776"/>
+        <location filename="../src/MainWindow.cpp" line="1776"/>
         <source>Error Processing Queue!!</source>
         <translation>Chyba při zpracovávání fronty!!</translation>
     </message>
@@ -1774,7 +1774,7 @@ was not successfully processed</source>
         <translation type="obsolete">Name</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1218"/>
+        <location filename="../src/MainWindow.cpp" line="1218"/>
         <source>A package providing %1 is already installed.
 Do you want to install %1 anyway?</source>
         <translation>Balíček poskytující %1 je již nainstalován.
@@ -1841,7 +1841,7 @@ Chtete %1 přesto nainstalovat?</translation>
         <translation>&amp;Závislosti</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1042"/>
+        <location filename="../src/MainWindow.cpp" line="1042"/>
         <source>Mark for Re&amp;installation</source>
         <translation>Onzačit pro &amp;Reinstalaci</translation>
     </message>
@@ -1851,7 +1851,7 @@ Chtete %1 přesto nainstalovat?</translation>
         <translation>Zr&amp;ušit akci</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="2043"/>
+        <location filename="../src/MainWindow.cpp" line="2043"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -2084,7 +2084,7 @@ pro další informace.</translation>
         <translation>&amp;Zrušit</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="2056"/>
+        <location filename="../src/MainWindow.cpp" line="2056"/>
         <source>Whoa, that&apos;s co&amp;ol!</source>
         <translation>Wow, to je &amp;hustý!</translation>
     </message>

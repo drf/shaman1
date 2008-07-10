@@ -983,7 +983,7 @@ Wilt u het opslaan?</translation>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="625"/>
+        <location filename="../src/MainWindow.cpp" line="625"/>
         <source>Name</source>
         <translation>Naam</translation>
     </message>
@@ -993,17 +993,17 @@ Wilt u het opslaan?</translation>
         <translation>Beschrijving</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="329"/>
+        <location filename="../src/MainWindow.cpp" line="329"/>
         <source>Esc</source>
         <translation>Esc</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="377"/>
+        <location filename="../src/MainWindow.cpp" line="377"/>
         <source>Shaman - Reducing To Tray</source>
         <translation>Shaman - Sluiten naar systeemvak</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="380"/>
+        <location filename="../src/MainWindow.cpp" line="380"/>
         <source>Shaman will keep running in the system tray.
 To close it, click Quit in the file menu or in the tray icon context menu.
 While in the System Tray, Shaman will update your Databases
@@ -1021,22 +1021,22 @@ U kunt dit gedrag wijzigen in Instellingen.</translation>
         <translation>Repositories</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="547"/>
+        <location filename="../src/MainWindow.cpp" line="547"/>
         <source>All Repositories</source>
         <translation>Alle Repositories</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="550"/>
+        <location filename="../src/MainWindow.cpp" line="550"/>
         <source>Local Packages</source>
         <translation>Lokale paketten</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="504"/>
+        <location filename="../src/MainWindow.cpp" line="504"/>
         <source>Package Groups</source>
         <translation>Pakketgroepen</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1183"/>
+        <location filename="../src/MainWindow.cpp" line="1183"/>
         <source>All Groups</source>
         <translation>Alle groepen</translation>
     </message>
@@ -1061,7 +1061,7 @@ U kunt dit gedrag wijzigen in Instellingen.</translation>
         <translation>Paketten in de wachtrij</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1042"/>
+        <location filename="../src/MainWindow.cpp" line="1042"/>
         <source>Mark for Re&amp;installation</source>
         <translation>Markeren voor Her&amp;installatie</translation>
     </message>
@@ -1071,57 +1071,57 @@ U kunt dit gedrag wijzigen in Instellingen.</translation>
         <translation>Markeer voor &amp;Installatie</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="2129"/>
+        <location filename="../src/MainWindow.cpp" line="2129"/>
         <source>Install</source>
         <translation>Installeer</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="2139"/>
+        <location filename="../src/MainWindow.cpp" line="2139"/>
         <source>Uninstall</source>
         <translation>Installatie ongedaan maken</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="2140"/>
+        <location filename="../src/MainWindow.cpp" line="2140"/>
         <source>Complete Uninstall</source>
         <translation>Installatie volledig verwijderen</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="785"/>
+        <location filename="../src/MainWindow.cpp" line="785"/>
         <source>Status: </source>
         <translation>Status: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="787"/>
+        <location filename="../src/MainWindow.cpp" line="787"/>
         <source>Installed</source>
         <translation>Geïnstalleerd</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="789"/>
+        <location filename="../src/MainWindow.cpp" line="789"/>
         <source>Not installed</source>
         <translation>Niet geïnstalleerd</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="792"/>
+        <location filename="../src/MainWindow.cpp" line="792"/>
         <source>Local Version: </source>
         <translation>Lokale versie: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="797"/>
+        <location filename="../src/MainWindow.cpp" line="797"/>
         <source>Version in the Repository: </source>
         <translation>Versie in de repository: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="803"/>
+        <location filename="../src/MainWindow.cpp" line="803"/>
         <source>Action: </source>
         <translation>Actie: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="2007"/>
+        <location filename="../src/MainWindow.cpp" line="2007"/>
         <source>Error</source>
         <translation>Fout</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="918"/>
+        <location filename="../src/MainWindow.cpp" line="918"/>
         <source>One or more Databases could not be updated.
 Last error reported was:
 %1</source>
@@ -1130,27 +1130,27 @@ Laatst vermelde fout was:
 %1</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="927"/>
+        <location filename="../src/MainWindow.cpp" line="927"/>
         <source>Database Update</source>
         <translation>Database update</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="920"/>
+        <location filename="../src/MainWindow.cpp" line="920"/>
         <source>One or more databases failed to update!</source>
         <translation>Een of meer databases konden niet worden geupdate!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="929"/>
+        <location filename="../src/MainWindow.cpp" line="929"/>
         <source>Databases Updated Successfully</source>
         <translation>Databases succesvol geupdate</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1533"/>
+        <location filename="../src/MainWindow.cpp" line="1533"/>
         <source>Pacman Update</source>
         <translation>Pacman Update</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1535"/>
+        <location filename="../src/MainWindow.cpp" line="1535"/>
         <source>Pacman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Pacman now?</source>
@@ -1159,12 +1159,12 @@ deze apart te installeren om versie-conflicten te vermijden.
 Wilt u Pacman nu bijwerken?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1555"/>
+        <location filename="../src/MainWindow.cpp" line="1555"/>
         <source>Shaman Update</source>
         <translation>Shaman Update</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1557"/>
+        <location filename="../src/MainWindow.cpp" line="1557"/>
         <source>Shaman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Shaman now?</source>
@@ -1178,7 +1178,7 @@ Wilt u Shaman nu bijwerken?</translation>
         <translation>Markeren voor &amp;Verwijdering</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1017"/>
+        <location filename="../src/MainWindow.cpp" line="1017"/>
         <source>Mark for Upgrade</source>
         <translation>Markeren voor Upgrade</translation>
     </message>
@@ -1193,17 +1193,17 @@ Wilt u Shaman nu bijwerken?</translation>
         <translation>Pakketinformatie</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1068"/>
+        <location filename="../src/MainWindow.cpp" line="1068"/>
         <source>Mark all for installation</source>
         <translation>Markeer alle voor installatie</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1070"/>
+        <location filename="../src/MainWindow.cpp" line="1070"/>
         <source>Mark all for reinstallation</source>
         <translation>Markeer alle voor herinstallatie</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1072"/>
+        <location filename="../src/MainWindow.cpp" line="1072"/>
         <source>Mark all for removal</source>
         <translation>Markeer alle voor verwijdering</translation>
     </message>
@@ -1218,75 +1218,75 @@ Wilt u Shaman nu bijwerken?</translation>
         <translation>Shaman</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1218"/>
+        <location filename="../src/MainWindow.cpp" line="1218"/>
         <source>A package providing %1 is already installed.
 Do you want to install %1 anyway?</source>
         <translation>Een pakket dat %1 voorziet is al geïnstalleerd.
 Wilt u %1 toch installeren?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1510"/>
+        <location filename="../src/MainWindow.cpp" line="1510"/>
         <source>System Upgrade</source>
         <translation>Systeem bijwerken</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1514"/>
+        <location filename="../src/MainWindow.cpp" line="1514"/>
         <source>Your system is up to date!</source>
         <translation>Uw systeem is bijgewerkt!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1876"/>
+        <location filename="../src/MainWindow.cpp" line="1876"/>
         <source>News Alert</source>
         <translation>Waarschuwing: nieuws</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1877"/>
+        <location filename="../src/MainWindow.cpp" line="1877"/>
         <source>There is an unread news about %1.
 Do you want to read it?</source>
         <translation>Er is ongelezen nieuws over %1.
 Wilt u het lezen?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="2134"/>
+        <location filename="../src/MainWindow.cpp" line="2134"/>
         <source>Upgrade</source>
         <translation>Bijwerken</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1725"/>
+        <location filename="../src/MainWindow.cpp" line="1725"/>
         <source>Queue Processing</source>
         <translation>Wachtrij wordt verwerkt</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1725"/>
+        <location filename="../src/MainWindow.cpp" line="1725"/>
         <source>Your Queue is being processed.
 Please wait.</source>
         <translation>Uw wachtrij wordt verwerkt.
 Gelieve even te wachten.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1828"/>
+        <location filename="../src/MainWindow.cpp" line="1828"/>
         <source>Queue Processed</source>
         <translation>Wachtrij verwerkt</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1774"/>
+        <location filename="../src/MainWindow.cpp" line="1774"/>
         <source>One or more errors occurred, your Queue
 was not successfully processed</source>
         <translation>Een of meerdere fouten bij het verwerken 
 van uw wachtrij. Verwerking mislukt</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1776"/>
+        <location filename="../src/MainWindow.cpp" line="1776"/>
         <source>Error Processing Queue!!</source>
         <translation>Fout bij verwerking wachtrij!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1816"/>
+        <location filename="../src/MainWindow.cpp" line="1816"/>
         <source>Restart required</source>
         <translation>Herstart nodig</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1809"/>
+        <location filename="../src/MainWindow.cpp" line="1809"/>
         <source>Pacman or Shaman was updated. Shaman will now quit,
 please restart it to use the new version</source>
         <translation>Pacman of Shaman zijn bijgewerkt. Shaman wordt nu 
@@ -1294,40 +1294,40 @@ afgesloten. Herstart het programma om de nieuwe
 versie te gebruiken</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1817"/>
+        <location filename="../src/MainWindow.cpp" line="1817"/>
         <source>Your Kernel has been updated.
 Please restart your PC soon to load the new Kernel.</source>
         <translation>De kernel is bijgewerkt. 
 Start zo snel mogelijk uw PC opnieuw op, om de nieuwe kernel te laden.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1826"/>
+        <location filename="../src/MainWindow.cpp" line="1826"/>
         <source>Your Queue was successfully processed!</source>
         <translation>Uw wachtrij werd succesvol verwerkt!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1830"/>
+        <location filename="../src/MainWindow.cpp" line="1830"/>
         <source>Your Queue was successfully processed!!</source>
         <translation>Uw wachtrij werd succesvol verwerkt!!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1992"/>
+        <location filename="../src/MainWindow.cpp" line="1992"/>
         <source>Install a Package</source>
         <translation>Installeer een pakket</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="1992"/>
+        <location filename="../src/MainWindow.cpp" line="1992"/>
         <source>Arch Linux Packages (*.pkg.tar.gz)</source>
         <translation>Arch Linux pakketten (*.pkg.tar.gz)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="2007"/>
+        <location filename="../src/MainWindow.cpp" line="2007"/>
         <source>%1 does not seem
 a valid package</source>
         <translation>%1 lijkt geen geldig pakket</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="2043"/>
+        <location filename="../src/MainWindow.cpp" line="2043"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -1350,7 +1350,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="2080"/>
+        <location filename="../src/MainWindow.cpp" line="2080"/>
         <source>Library Question</source>
         <translation>Library Vraag</translation>
     </message>
@@ -1616,7 +1616,7 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/MainWindow.cpp~" line="2056"/>
+        <location filename="../src/MainWindow.cpp" line="2056"/>
         <source>Whoa, that&apos;s co&amp;ol!</source>
         <translation>Whoa, that&apos;s co&amp;ol!</translation>
     </message>
