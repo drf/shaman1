@@ -1541,6 +1541,12 @@ p, li { white-space: pre-wrap; }
         <source>View Log</source>
         <translation>Bekijk de log</translation>
     </message>
+    <message>
+        <location filename="../src/MainWindow.cpp" line="330"/>
+        <source>Ctrl+Q</source>
+        <comment>Exit Shaman Shortcut</comment>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>NewsViewer</name>
