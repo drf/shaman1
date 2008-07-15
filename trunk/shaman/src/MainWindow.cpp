@@ -326,8 +326,8 @@ turnOffSys(false)
 
 	setProxy();
 
-	QShortcut *clearLineEdit = new QShortcut(tr("Esc"), searchLine, SLOT(clear()));
-	Q_UNUSED(clearLineEdit);
+	new QShortcut(tr("Esc"), searchLine, SLOT(clear()));
+	new QShortcut(QKeySequence(tr("Ctrl+Q", "Exit Shaman Shortcut")), this, SLOT(quitApp()));
 	
 	stBar = new ShamanStatusBar(aHandle, this);
 	

@@ -1886,6 +1886,12 @@ p, li { white-space: pre-wrap; }
         <comment>Name of the Package</comment>
         <translation type="unfinished">Όνομα</translation>
     </message>
+    <message>
+        <location filename="../src/MainWindow.cpp" line="330"/>
+        <source>Ctrl+Q</source>
+        <comment>Exit Shaman Shortcut</comment>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>NewsViewer</name>
