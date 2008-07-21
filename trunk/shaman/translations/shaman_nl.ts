@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="1.1" language="nl">
+<!DOCTYPE TS><TS version="1.1">
 <context>
     <name>AlpmHandler</name>
     <message>
@@ -1703,8 +1703,8 @@ Thanks again, and enjoy your translation!</comment>
         <location filename="../src/main.cpp" line="288"/>
         <source>Your settings file seems unwritable.
 Please check permissions on it.</source>
-        <translation>Uw instelligen kunnen niet weggeschreven worden.
-Bekijk de permissies ervan.</translation>
+        <translation>Uw instellingen kunnen niet weggeschreven worden.
+Bekijk de permissies van uw configuratiefile.</translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="329"/>

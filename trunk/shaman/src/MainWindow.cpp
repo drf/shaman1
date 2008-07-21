@@ -2249,8 +2249,15 @@ void MainWindow::showAuthDialog(int count)
 		pam_response tmp;
 		tmp.resp_retcode = 0;
 
+		qDebug() << "Allocating Memory";
 		char *str = (char *) malloc(strlen(aUi.lineEdit->text().toUtf8().data()) * sizeof(char));
+		qDebug() << "Memory allocated, copying string...";
+		
+		if(str == NULL)
+		    qDebug() << "Segfault in 3, 2, 1...";
+		
 		strcpy(str, aUi.lineEdit->text().toUtf8().data());
+		qDebug() << "String copied";
 
 		tmp.resp = str;
 
