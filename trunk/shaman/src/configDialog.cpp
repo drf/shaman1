@@ -173,16 +173,42 @@ void ConfigDialog::setupRepos()
 			testingBox->setChecked(true);
 		else if(!strcmp(alpm_db_get_name(curdb), "unstable"))
 			unstableBox->setChecked(true);
-		else if(!strcmp(alpm_db_get_name(curdb), "kdemod"))
+		else if(!strcmp(alpm_db_get_name(curdb), "kdemod-core"))
 		{
 			if(kmod.isEmpty())
 			{
 				kdemodMirror = alpm_db_get_url(curdb);
 				
-				kmod = kdemodMirror.split(QString("current"),
+				kmod = kdemodMirror.split(QString("core"),
 							QString::SkipEmptyParts, Qt::CaseInsensitive);
 			}
-			KDEMod3Box->setChecked(true);
+			KDEMod4Box->setChecked(true);
+		}
+		else if(!strcmp(alpm_db_get_name(curdb), "kdemod-extragear"))
+		{
+			if(kmod.isEmpty())
+			{
+				kdemodMirror = alpm_db_get_url(curdb);
+
+				kmod = kdemodMirror.split(QString("extragear"),
+						QString::SkipEmptyParts, Qt::CaseInsensitive);
+			}
+			
+			kdemodMirror = alpm_db_get_url(curdb);
+			KDEMod4ExtragearBox->setChecked(true);
+		}
+		else if(!strcmp(alpm_db_get_name(curdb), "kdemod-playground"))
+		{
+			if(kmod.isEmpty())
+			{
+				kdemodMirror = alpm_db_get_url(curdb);
+
+				kmod = kdemodMirror.split(QString("playground"),
+						QString::SkipEmptyParts, Qt::CaseInsensitive);
+			}
+
+			kdemodMirror = alpm_db_get_url(curdb);
+			KDEMod4PlaygroundBox->setChecked(true);
 		}
 		else if(!strcmp(alpm_db_get_name(curdb), "kdemod-testing"))
 		{
@@ -193,9 +219,9 @@ void ConfigDialog::setupRepos()
 				kmod = kdemodMirror.split(QString("testing"),
 						QString::SkipEmptyParts, Qt::CaseInsensitive);
 			}
-			
+
 			kdemodMirror = alpm_db_get_url(curdb);
-			KDEMod3TestBox->setChecked(true);
+			KDEMod4TestingBox->setChecked(true);
 		}
 		else if(!strcmp(alpm_db_get_name(curdb), "kdemod-unstable"))
 		{
@@ -208,7 +234,20 @@ void ConfigDialog::setupRepos()
 			}
 
 			kdemodMirror = alpm_db_get_url(curdb);
-			KDEMod4Box->setChecked(true);
+			KDEMod4UnstableBox->setChecked(true);
+		}
+		else if(!strcmp(alpm_db_get_name(curdb), "kdemod-legacy"))
+		{
+			if(kmod.isEmpty())
+			{
+				kdemodMirror = alpm_db_get_url(curdb);
+
+				kmod = kdemodMirror.split(QString("legacy"),
+						QString::SkipEmptyParts, Qt::CaseInsensitive);
+			}
+
+			kdemodMirror = alpm_db_get_url(curdb);
+			KDEMod3Box->setChecked(true);
 		}
 		else
 		{
@@ -856,23 +895,79 @@ void ConfigDialog::saveConfiguration()
 			dbChanged = true;
 	}
 
-	if(KDEMod3Box->isChecked())
+	if(KDEMod4Box->isChecked())
 	{
-		if(!editPacmanKey("kdemod/Server", kdemodmirror, 0))
+		if(!editPacmanKey("kdemod-core/Server", kdemodmirror, 0))
 		{
-			if(editPacmanKey("kdemod/Server", kdemodmirror, 1))
+			if(editPacmanKey("kdemod-core/Server", kdemodmirror, 1))
 				dbChanged = true;
 		}
 		else
 			dbChanged = true;
 	}
 	else
-		if(editPacmanKey("kdemod/Server", NULL, 2))
+		if(editPacmanKey("kdemod-core/Server", NULL, 2))
 			dbChanged = true;
 
-	if(KDEMod3TestBox->isChecked())
+	if(KDEMod4ExtragearBox->isChecked())
+	{
+		if(!editPacmanKey("kdemod-extragear/Server", kdemodmirror, 0))
+		{
+			if(editPacmanKey("kdemod-extragear/Server", kdemodmirror, 1))
+				dbChanged = true;
+		}
+		else
+			dbChanged = true;
+	}
+	else
+		if(editPacmanKey("kdemod-extragear/Server", NULL, 2))
+			dbChanged = true;
+
+	if(KDEMod4PlaygroundBox->isChecked())
+	{
+		if(!editPacmanKey("kdemod-playground/Server", kdemodmirror, 0))
+		{
+			if(editPacmanKey("kdemod-playground/Server", kdemodmirror, 1))
+				dbChanged = true;
+		}
+		else
+			dbChanged = true;
+	}
+	else
+		if(editPacmanKey("kdemod-playground/Server", NULL, 2))
+			dbChanged = true;
+
+	if(KDEMod4TestingBox->isChecked())
 	{
 		if(!editPacmanKey("kdemod-testing/Server", kdemodmirror, 0))
+		{
+			if(editPacmanKey("kdemod-testing/Server", kdemodmirror, 1))
+				dbChanged = true;
+		}
+		else
+			dbChanged = true;
+	}
+	else
+		if(editPacmanKey("kdemod-testing/Server", NULL, 2))
+			dbChanged = true;
+
+	if(KDEMod4UnstableBox->isChecked())
+	{
+		if(!editPacmanKey("kdemod-unstable/Server", kdemodmirror, 0))
+		{
+			if(editPacmanKey("kdemod-unstable/Server", kdemodmirror, 1))
+				dbChanged = true;
+		}
+		else
+			dbChanged = true;
+	}
+	else
+		if(editPacmanKey("kdemod-unstable/Server", NULL, 2))
+			dbChanged = true;
+
+	if(KDEMod3Box->isChecked())
+	{
+		if(!editPacmanKey("kdemod-legacy/Server", kdemodmirror, 0))
 		{
 			if(editPacmanKey("kdemod-testing/Server", kdemodmirror, 1))
 				dbChanged = true;
@@ -906,7 +1001,7 @@ void ConfigDialog::saveConfiguration()
 	foreach(QString dbs, m_handler->getAvailableReposNames())
 	{
 		if(dbs != "core" && dbs != "extra" && dbs != "community" && dbs != "testing"
-			&& dbs != "unstable" && dbs != "kdemod" && dbs != "kdemod-unstable" && dbs != "kdemod-testing" &&
+			&& dbs != "unstable" && dbs != "kdemod-core" && dbs != "kdemod-extragear" && dbs != "kdemod-playground" && dbs != "kdemod-testing" && dbs != "kdemod-unstable" && dbs != "kdemod-legacy" &&
 			thirdPartyWidget->findItems(dbs, Qt::MatchExactly, 0).isEmpty())
 			if(editPacmanKey(QString(dbs + "/Server"), NULL, 2))
 				dbChanged = true;

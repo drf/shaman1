@@ -429,12 +429,18 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 			
 			QString repo(tmp2lst.at(0));
 			
-			if(repo == "kdemod")
-				repo = "current";
+			if(repo == "kdemod-core")
+				repo = "core";
+			if(repo == "kdemod-extragear")
+				repo = "extragear";
+			if(repo == "kdemod-playground")
+				repo = "playground";
 			if(repo == "kdemod-testing")
 				repo = "testing";
 			if(repo == "kdemod-unstable")
 				repo = "unstable";
+			if(repo == "kdemod-legacy")
+				repo = "legacy";
 			
 			dserv.append(repo);
 			

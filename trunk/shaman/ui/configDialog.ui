@@ -6,7 +6,7 @@
     <x>0</x>
     <y>0</y>
     <width>810</width>
-    <height>643</height>
+    <height>644</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -69,7 +69,7 @@
       </sizepolicy>
      </property>
      <property name="currentIndex" >
-      <number>0</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="Seite" >
       <property name="geometry" >
@@ -77,7 +77,7 @@
         <x>0</x>
         <y>0</y>
         <width>678</width>
-        <height>601</height>
+        <height>602</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" >
@@ -259,7 +259,7 @@ p, li { white-space: pre-wrap; }
         <x>0</x>
         <y>0</y>
         <width>678</width>
-        <height>601</height>
+        <height>602</height>
        </rect>
       </property>
       <layout class="QGridLayout" >
@@ -411,22 +411,22 @@ p, li { white-space: pre-wrap; }
         <x>0</x>
         <y>0</y>
         <width>678</width>
-        <height>601</height>
+        <height>602</height>
        </rect>
       </property>
       <layout class="QGridLayout" >
        <item row="1" column="0" >
         <widget class="QTabWidget" name="repoTab" >
          <property name="currentIndex" >
-          <number>0</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="officialTab" >
           <property name="geometry" >
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>658</width>
-            <height>553</height>
+            <width>662</width>
+            <height>560</height>
            </rect>
           </property>
           <attribute name="title" >
@@ -559,8 +559,8 @@ Please note that packages from Unstable and Testing may break your system.</stri
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>640</width>
-            <height>320</height>
+            <width>662</width>
+            <height>560</height>
            </rect>
           </property>
           <attribute name="title" >
@@ -598,23 +598,44 @@ of KDE with the simplicity and the power of Arch.</string>
               </layout>
              </item>
              <item>
+              <widget class="QCheckBox" name="KDEMod4Box" >
+               <property name="text" >
+                <string>KDEMod 4 Repository</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="KDEMod4ExtragearBox" >
+               <property name="text" >
+                <string>KDEMod 4 Extragear Repository</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="KDEMod4PlaygroundBox" >
+               <property name="text" >
+                <string>KDEMod 4 Playground Repository</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="KDEMod4TestingBox" >
+               <property name="text" >
+                <string>KDEMod 4 Testing Repository</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="KDEMod4UnstableBox" >
+               <property name="text" >
+                <string>KDEMod 4 Unstable Repository (Testers only!)</string>
+               </property>
+              </widget>
+             </item>
+             <item>
               <widget class="QCheckBox" name="KDEMod3Box" >
                <property name="text" >
                 <string>KDEMod 3 Repository</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QCheckBox" name="KDEMod3TestBox" >
-               <property name="text" >
-                <string>KDEMod 3 Testing Repository</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QCheckBox" name="KDEMod4Box" >
-               <property name="text" >
-                <string>KDEMod 4 Repository (Unstable, testers only)</string>
                </property>
               </widget>
              </item>
@@ -677,8 +698,8 @@ of KDE with the simplicity and the power of Arch.</string>
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>640</width>
-            <height>320</height>
+            <width>662</width>
+            <height>560</height>
            </rect>
           </property>
           <attribute name="title" >
