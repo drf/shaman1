@@ -969,28 +969,14 @@ void ConfigDialog::saveConfiguration()
 	{
 		if(!editPacmanKey("kdemod-legacy/Server", kdemodmirror, 0))
 		{
-			if(editPacmanKey("kdemod-testing/Server", kdemodmirror, 1))
+			if(editPacmanKey("kdemod-legacy/Server", kdemodmirror, 1))
 				dbChanged = true;
 		}
 		else
 			dbChanged = true;
 	}
 	else
-		if(editPacmanKey("kdemod-testing/Server", NULL, 2))
-			dbChanged = true;
-
-	if(KDEMod4Box->isChecked())
-	{
-		if(!editPacmanKey("kdemod-unstable/Server", kdemodmirror, 0))
-		{
-			if(editPacmanKey("kdemod-unstable/Server", kdemodmirror, 1))
-				dbChanged = true;
-		}
-		else
-			dbChanged = true;
-	}
-	else
-		if(editPacmanKey("kdemod-unstable/Server", NULL, 2))
+		if(editPacmanKey("kdemod-legacy/Server", NULL, 2))
 			dbChanged = true;
 
 	/* Whew, now with the third party elements. We also take the
