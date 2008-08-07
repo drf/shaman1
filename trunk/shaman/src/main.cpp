@@ -227,7 +227,7 @@ int main(int argc, char **argv)
 	else
 		qWarning() << "Translations are Disabled on user request.";
 
-	QDBusConnection testconn = QDBusConnection::systemBus();
+	/*QDBusConnection testconn = QDBusConnection::systemBus();
 	if(testconn.interface()->isServiceRegistered("org.archlinux.shaman"))
 	{
 		foreach ( QString ent, arguments )
@@ -248,7 +248,7 @@ int main(int argc, char **argv)
 						"one copy of Shaman at a time."), NULL, ShamanProperties::ErrorDialog);
 
 		exit(1);
-	}
+	}*/
 
 	AlpmHandler *aHandler = new AlpmHandler(true);
 

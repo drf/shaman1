@@ -390,13 +390,13 @@ bool AlpmHandler::setUpAlpmSettings()
 {
 	PacmanConf pdata;
 	int count = 0;
-	registered_db = alpm_list_new();
+	registered_db = new __alpm_list_t;
 
 	/* Let's prepare Alpm for the big showdown. First of all, let's set up
 	 * some root paths, we will use pacman's default for now
 	 */
 
-	pdata = getPacmanConf(false);
+	pdata = getPacmanConf(true);
 	
 	alpm_option_set_root("/");
 	alpm_option_set_dbpath("/var/lib/pacman");
@@ -433,7 +433,7 @@ bool AlpmHandler::setUpAlpmSettings()
 			qDebug() << "Could not find a matching repo for" << pdata.syncdbs.at(i);
 			continue;
 		}
-			
+
 		dbs_sync = alpm_db_register_sync(pdata.syncdbs.at(i).toAscii().data());
 
 		if(alpm_db_setserver(dbs_sync, pdata.serverAssoc.at(i).toAscii().data()) == 0)
@@ -454,7 +454,7 @@ bool AlpmHandler::setUpAlpmSettings()
 		alpm_option_set_xfercommand(pdata.xferCommand.toAscii().data());
 	}
 	
-	alpm_option_set_dlcb(cb_dl_progress);
+	//alpm_option_set_dlcb(cb_dl_progress);//TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO
 	alpm_option_set_nopassiveftp(pdata.noPassiveFTP);
 	
 	foreach(QString str, pdata.HoldPkg)
@@ -1158,7 +1158,7 @@ void AlpmHandler::handleError(int action, alpm_list_t *data)
 			
 			break;
 			
-		case PM_ERR_PKG_CORRUPTED:
+		case PM_ERR_PKG_INVALID:
 			for(i = data; i; i = alpm_list_next(i)) 
 			{
 				errMsg.append((char*)alpm_list_getdata(i));

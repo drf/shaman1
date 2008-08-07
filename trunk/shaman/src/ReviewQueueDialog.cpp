@@ -108,11 +108,9 @@ aHandle(hnd)
 	toShow.append(QString(tr("Your Queue is about to be processed. "
 			"You are going to:<br />")));
 	int n = aHandle->getNumberOfTargets(1);
-	toShow.append(QString(n == 1 ? tr("Remove <b>%1 package</b><br />") : tr("Remove <b>%1 packages</b><br />")).arg(n));
+	toShow.append(QString(tr("Remove <b>%n package(s)</b><br />", "", n)));
 	int k = aHandle->getNumberOfTargets(0);
-	toShow.append(QString(k == 1 ? tr("Install/Upgrade <b>%1 package</b><br />") : tr("Install/Upgrade <b>%1 packages</b><br />")).arg(k));
-	toShow.append(QString(spaceToDo == true ? tr("<b>%1</b> will be used").arg(sizeToShow)
-			: tr("<b>%1</b> will be freed").arg(sizeToShow)) + "<br />");
+	toShow.append(QString(tr("Install/Upgrade <b>%n package(s)</b><br />", "", k)));
 	toShow.append(tr("Do you wish to continue?"));
 
 	queueInfo->setText(toShow);

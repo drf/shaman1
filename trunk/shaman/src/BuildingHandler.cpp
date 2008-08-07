@@ -158,19 +158,13 @@ void BuildingHandler::validateSourceQueue()
 	reviewBQueue->setWindowModality(Qt::ApplicationModal);
 	reviewBQueue->setAttribute(Qt::WA_DeleteOnClose, true);
 
-	revBuildUi->infoLabel->setText((mWin->getUpgradePackagesInWidgetQueue().size() + 
-			mWin->getInstallPackagesInWidgetQueue().size()) == 1 ? QString(tr("You are about to install <b>%1"
-					" package</b> from source. Building from source<br>can give some advantages, however is very slow.<br>If "
+	revBuildUi->infoLabel->setText((mWin->getUpgradePackagesInWidgetQueue().size() +
+				QString(tr("You are about to install <b>%n package(s)</b> "
+					"from source. Building from source<br>can give some advantages, however is very slow.<br>If "
 					"you are not sure about that, you would probably prefer to process<br>your queue from binary files. "
-					"Before you continue, you are advised to<br>review your configuration to improve your building performance.")).arg(
-							mWin->getUpgradePackagesInWidgetQueue().size() + 
-							mWin->getInstallPackagesInWidgetQueue().size()) : 
-								QString(tr("You are about to install <b>%1"
-										" packages</b> from source. Building from source<br>can give some advantages, however is very slow.<br>If "
-										"you are not sure about that, you would probably prefer to process<br>your queue from binary files. "
-										"Before you continue, you are advised to<br>review your configuration to improve your building performance.")).arg(
-												mWin->getUpgradePackagesInWidgetQueue().size() + 
-												mWin->getInstallPackagesInWidgetQueue().size()));
+					"Before you continue, you are advised to<br>review your configuration to improve your building performance.", "",
+					mWin->getUpgradePackagesInWidgetQueue().size() + mWin->getInstallPackagesInWidgetQueue().size()))
+				));
 
 	if(!mWin->getInstallPackagesInWidgetQueue().isEmpty())
 	{

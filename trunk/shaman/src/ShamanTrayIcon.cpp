@@ -134,9 +134,8 @@ void ShamanTrayIcon::changeIconStatus(ShamanIcon::IconStatus status)
 		QSettings *settings = new QSettings();
 		if (settings->value("scheduledUpdate/updateDbShowNotify").toBool())
 		{
-			showMessage(QString(tr("System Upgrade")), QString(upgrds.size() == 1 ? tr("There is %1 upgradeable package.\n"
-					"Click here to upgrade your System.") :	tr("There are %1 upgradeable packages.\nClick here to upgrade your System.")).
-					arg(upgrds.size()));
+			showMessage(QString(tr("System Upgrade")), QString(tr("Upgradeable package(s): %n.\n"
+					"Click here to upgrade your System.", "", upgrds.size())));
 			disconnect(this, SIGNAL(messageClicked()), 0, 0);
 			connect(this, SIGNAL(messageClicked()), SIGNAL(upgradePkgs()));
 			QTimer::singleShot(10000, this, SLOT(disconnectBaloon()));

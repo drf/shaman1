@@ -58,13 +58,10 @@ void SysUpgradeDialog::init()
 
         int n = data.size();
 
-        upgradeMessage->setText(QString(n == 1 ? tr("There is <b>%1 upgradeable "
-                "package</b>. You can either<br> upgrade "
+        upgradeMessage->setText(QString(tr("<b>Upgradeable package(s): %n</b> "
+                "You can either<br> upgrade "
                 "immediately or add it to the current Queue"
-                "<br> and process it later.") : tr("There are <b>%1 upgradeable "
-                        "packages</b>. You can either<br> upgrade "
-                        "immediately or add them to the current Queue"
-                        "<br> and process them later.")).arg(n));
+                "<br> and process it later.", "", n)));
 
         QTreeWidgetItem *itm = new QTreeWidgetItem(treeWidget, QStringList(tr("To be Upgraded")));
         treeWidget->addTopLevelItem(itm);
