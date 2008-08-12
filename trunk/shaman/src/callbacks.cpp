@@ -99,16 +99,16 @@ void CallBacks::cb_trans_conv(pmtransconv_t event, void *data1, void *data2,
 	 * a separate thread and really block the process here until somebody gets
 	 * an answer. libalpm sucks. Really.
 	 */
-	
+
 	qDebug() << "Alpm is asking a question.";
-	
+
 	QMutexLocker lock(&mutex);
 	QString message;
-	
-	switch(event) 
+
+	switch(event)
 	{
 	case PM_TRANS_CONV_INSTALL_IGNOREPKG:
-		if(data2) 
+		if(data2)
 			/* TODO we take this route based on data2 being not null? WTF (you suck)*/
 			message = QString(tr("%1 requires installing %2 from IgnorePkg/IgnoreGroup.\n Install anyway?")).arg(alpm_pkg_get_name((pmpkg_t *)data1)).
 					arg(alpm_pkg_get_name((pmpkg_t *)data2));
@@ -135,17 +135,17 @@ void CallBacks::cb_trans_conv(pmtransconv_t event, void *data1, void *data2,
 		message = QString(tr("File %1 is corrupted.\nDo you want to delete it?")).arg((char *)data1);
 		break;
 	}
-	
+
 	emit questionStreamed(message);
-	
+
 	qDebug() << "Question Streamed, Alpm Thread waiting.";
-	
+
 	wCond.wait(&mutex);
-	
+
 	qDebug() << "Alpm Thread awake, committing answer.";
-	
+
 	*response = answer;
-	
+
 	return;
 
 }
@@ -155,7 +155,7 @@ void CallBacks::cb_trans_progress(pmtransprog_t event, const char *pkgname, int 
 {
 	float timediff = 0.0;
 
-	if(percent == 0) 
+	if(percent == 0)
 	{
 		gettimeofday(&initial_time, NULL);
 		timediff = get_update_timediff(1);
@@ -164,7 +164,7 @@ void CallBacks::cb_trans_progress(pmtransprog_t event, const char *pkgname, int 
 	{
 		timediff = get_update_timediff(0);
 
-		if(timediff < UPDATE_SPEED_SEC) 
+		if(timediff < UPDATE_SPEED_SEC)
 			return;
 	}
 
@@ -174,8 +174,18 @@ void CallBacks::cb_trans_progress(pmtransprog_t event, const char *pkgname, int 
 	emit streamTransProgress(event, (char *)pkgname, percent, howmany, remain);
 }
 
-void CallBacks::cb_dl_progress(const char *filename, int file_xfered, int file_total,
-		int list_xfered, int list_total)
+void CallBacks::cb_dl_total(off_t total)
+{
+	list_total = total;
+	/* if we get a 0 value, it means this list has finished downloading,
+	 * so clear out our list_xfered as well */
+	if(total == 0) {
+		list_xfered = 0;
+	}
+}
+
+/* callback to handle display of download progress */
+void CallBacks::cb_dl_progress(const char *filename, off_t file_xfered, off_t file_total)
 {
 	float timediff = 0.0;
 	float rate_f = 0.0, eta_s_f = 0.0;
@@ -199,7 +209,7 @@ void CallBacks::cb_dl_progress(const char *filename, int file_xfered, int file_t
 	{
 		timediff = get_update_timediff(0);
 
-		if(timediff < UPDATE_SPEED_SEC) 
+		if(timediff < UPDATE_SPEED_SEC)
 		{
 			/* return if the calling interval was too short */
 			return;
@@ -219,10 +229,9 @@ void CallBacks::cb_dl_progress(const char *filename, int file_xfered, int file_t
 		rate_total = rate_l;
 		xfered_total = list_xfered;
 	}
-		
+
 	emit streamTransDlProg((char *)filename, file_xfered, file_total, (int)rate_f,
 			list_xfered, list_total, (int)rate_l);
-
 }
 
 void CallBacks::cb_log(pmloglevel_t level, char *fmt, va_list args)
@@ -234,8 +243,8 @@ void CallBacks::cb_log(pmloglevel_t level, char *fmt, va_list args)
 	char *string = NULL;
 	if(pm_vasprintf(&string, level, fmt, args) == -1)
 		return;
-	
-	if(string != NULL) 
+
+	if(string != NULL)
 	{
 		QString msg(string);
 		emit logMsgStreamed(msg);
@@ -244,11 +253,16 @@ void CallBacks::cb_log(pmloglevel_t level, char *fmt, va_list args)
 
 /* Now the real suckness is coming... */
 
-void cb_dl_progress(const char *filename, int file_xfered, int file_total,
-		int list_xfered, int list_total)
+void cb_dl_total(off_t total)
 {
-	CbackReference.cb_dl_progress(filename, file_xfered, file_total,
-			list_xfered, list_total);
+	qDebug() << "called";
+
+	CbackReference.cb_dl_total(total);
+}
+
+void cb_dl_progress(const char *filename, off_t file_xfered, off_t file_total)
+{
+	CbackReference.cb_dl_progress(filename, file_xfered, file_total);
 }
 
 void cb_trans_progress(pmtransprog_t event, const char *pkgname, int percent,
@@ -287,7 +301,7 @@ int pm_vasprintf(char **string, pmloglevel_t level, const char *format, va_list 
 	ret = vasprintf(&msg, format, args);
 
 	/* print a prefix to the message */
-	switch(level) 
+	switch(level)
 	{
 		case PM_LOG_DEBUG:
 			return -1;
@@ -304,7 +318,7 @@ int pm_vasprintf(char **string, pmloglevel_t level, const char *format, va_list 
 		default:
 			break;
 	}
-	
+
 	free(msg);
 
 	return(ret);

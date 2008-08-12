@@ -87,25 +87,25 @@ AlpmHandler::~AlpmHandler()
 QStringList AlpmHandler::alpmListToStringList(alpm_list_t *list)
 {
 	QStringList retlist;
-	
+
 	list = alpm_list_first(list);
-	
+
 	while(list != NULL)
 	{
 		retlist.append((char *) alpm_list_getdata(list));
 		list = alpm_list_next(list);
 	}
-	
+
 	return retlist;
 }
 
 pmpkg_t *AlpmHandler::getPackageFromName(const QString &name, const QString &repo)
-{	
+{
 	if(!repo.compare("local"))
 		return alpm_db_get_pkg(db_local, name.toAscii().data());
-	
+
 	alpm_list_t *dbsync = alpm_list_first(sync_databases);
-	
+
 	while(dbsync != NULL)
 	{
 		pmdb_t *dbcrnt = (pmdb_t *)alpm_list_getdata(dbsync);
@@ -150,23 +150,23 @@ bool AlpmHandler::initTransaction(pmtranstype_t type, pmtransflag_t flags, bool 
 {
 	if(isTransaction())
 		return false;
-	
+
 	if (!ath.switchToRoot())
 		return false;
-		
+
 	if(force)
 	    flags = (pmtransflag_t) ((pmtransflag_t)flags | (pmtransflag_t)PM_TRANS_FLAG_FORCE);
 
 	setuseragent();
-	
+
 	if(alpm_trans_init(type, flags, cb_trans_evt, cb_trans_conv,
 			cb_trans_progress) == -1)
 		return false;
 
 	onTransaction = true;
-	
+
 	emit transactionStarted();
-	
+
 	return onTransaction;
 }
 
@@ -183,7 +183,7 @@ bool AlpmHandler::releaseTransaction()
 
 	onTransaction = false;
 	emit transactionReleased();
-	
+
 	return true;
 }
 
@@ -201,7 +201,7 @@ bool AlpmHandler::interruptTransaction()
 
 	onTransaction = false;
 	emit transactionReleased();
-	
+
 	return true;
 }
 
@@ -214,16 +214,16 @@ QStringList AlpmHandler::getAvailableReposNames()
 {
 	alpm_list_t *dbs = sync_databases;
 	QStringList retlist;
-	
+
 	retlist.clear();
 	dbs = alpm_list_first(dbs);
-	
+
 	while(dbs != NULL)
 	{
 		retlist.append(alpm_db_get_name((pmdb_t *) alpm_list_getdata(dbs)));
 		dbs = alpm_list_next(dbs);
 	}
-	
+
 	return retlist;
 }
 
@@ -241,11 +241,11 @@ QStringList AlpmHandler::getUpgradeablePackages()
 
 	syncdbs = alpm_list_first(sync_databases);
 
-	if(alpm_sync_sysupgrade(db_local, syncdbs, &syncpkgs) == -1) 
+	if(alpm_sync_sysupgrade(db_local, syncdbs, &syncpkgs) == -1)
 		return retlist;
-	
+
 	syncpkgs = alpm_list_first(syncpkgs);
-	
+
 	if(!syncpkgs)
 		return retlist;
 	else
@@ -271,21 +271,21 @@ bool AlpmHandler::updateDatabase()
 	int r;
 	bool updated = false;
 	alpm_list_t *syncdbs;
-	
+
 	syncdbs = alpm_list_first(sync_databases);
-	
+
 	QStringList list;
-	
+
 	while(syncdbs != NULL)
 	{
 		pmdb_t *dbcrnt = (pmdb_t *)alpm_list_getdata(syncdbs);
-		
+
 		list.append(QString((char *)alpm_db_get_name(dbcrnt)));
 		syncdbs = alpm_list_next(syncdbs);
 	}
-	
+
 	emit dbQty(list);
-	
+
 	syncdbs = alpm_list_first(sync_databases);
 
 	if(!initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_NOSCRIPTLET, false))
@@ -297,15 +297,15 @@ bool AlpmHandler::updateDatabase()
 		QString curdbname((char *)alpm_db_get_name(dbcrnt));
 
 		emit streamDbUpdatingStatus(curdbname, 0);
-		
+
 		r = alpm_db_update(0, dbcrnt);
-		
+
 		if(r == 1)
 			emit streamDbUpdatingStatus(curdbname, 3);
-		
+
 		else if(r < 0)
 			emit streamDbUpdatingStatus(curdbname, 4);
-		
+
 		else
 		{
 			emit dbUpdated(curdbname);
@@ -319,7 +319,7 @@ bool AlpmHandler::updateDatabase()
 
 	if(!releaseTransaction())
 		qDebug() << "Failed to release transaction!!";
-	
+
 	qDebug() << "Database Update Performed";
 
 	return updated;
@@ -330,20 +330,20 @@ bool AlpmHandler::reloadPacmanConfiguration()
 {
 	if(!ath.switchToRoot())
 		return false;
-	
+
 	PacmanConf pdata;
 
 	/* After reloading configuration, we immediately commit changes to Alpm,
 	 * otherwise users would have to reboot Shaman. You know, we're not
 	 * Windows, right?
 	 */
-	
+
 	while(registered_db != NULL)
-	{	
+	{
 		alpm_db_unregister((pmdb_t *)alpm_list_getdata(registered_db));
 		registered_db = alpm_list_next(registered_db);
 	}
-	
+
 	alpm_db_unregister(db_local);
 
 
@@ -380,7 +380,7 @@ bool AlpmHandler::reloadPacmanConfiguration()
 		return false;
 
 	setUpAlpmSettings();
-	
+
 	ath.switchToStdUsr();
 
 	return true;
@@ -390,14 +390,14 @@ bool AlpmHandler::setUpAlpmSettings()
 {
 	PacmanConf pdata;
 	int count = 0;
-	registered_db = new __alpm_list_t;
+	registered_db = NULL;
 
 	/* Let's prepare Alpm for the big showdown. First of all, let's set up
 	 * some root paths, we will use pacman's default for now
 	 */
 
 	pdata = getPacmanConf(true);
-	
+
 	alpm_option_set_root("/");
 	alpm_option_set_dbpath("/var/lib/pacman");
 	alpm_option_add_cachedir("/var/cache/pacman/pkg");
@@ -411,7 +411,7 @@ bool AlpmHandler::setUpAlpmSettings()
 			alpm_option_set_logfile("/var/log/pacman.log");
 		else
 			alpm_option_set_logfile(pdata.logFile.toAscii().data());
-		
+
 		logFileIsSet = true;
 	}
 	else
@@ -444,7 +444,7 @@ bool AlpmHandler::setUpAlpmSettings()
 		}
 		else
 			qDebug() << "Failed to add" << pdata.syncdbs.at(i) << "!!";
-		
+
 		count++;
 	}
 
@@ -453,16 +453,18 @@ bool AlpmHandler::setUpAlpmSettings()
 		qDebug() << "XFerCommand is:" << pdata.xferCommand;
 		alpm_option_set_xfercommand(pdata.xferCommand.toAscii().data());
 	}
-	
-	//alpm_option_set_dlcb(cb_dl_progress);//TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO
+
+	alpm_option_set_dlcb(cb_dl_progress);
+	alpm_option_set_totaldlcb(cb_dl_total);
+
 	alpm_option_set_nopassiveftp(pdata.noPassiveFTP);
-	
+
 	foreach(QString str, pdata.HoldPkg)
 		alpm_option_add_holdpkg(str.toAscii().data());
-	
+
 	foreach(QString str, pdata.IgnorePkg)
 		alpm_option_add_ignorepkg(str.toAscii().data());
-		
+
 	foreach(QString str, pdata.IgnoreGrp)
 		alpm_option_add_ignoregrp(str.toAscii().data());
 
@@ -582,7 +584,7 @@ QStringList AlpmHandler::getDependenciesOnPackage(pmpkg_t *package)
 {
 	if (package == NULL)
 		return QStringList();
-	
+
 	alpm_list_t *deps;
 	QStringList retlist;
 
@@ -618,7 +620,7 @@ bool AlpmHandler::isInstalled(pmpkg_t *pkg)
 	pmpkg_t *localpackage = alpm_db_get_pkg(db_local, alpm_pkg_get_name(pkg));
 	if(localpackage == NULL)
 		return false;
-	
+
 	return true;
 }
 
@@ -635,15 +637,15 @@ QStringList AlpmHandler::getPackageFiles(pmpkg_t *package)
 {
 	alpm_list_t *files;
 	QStringList retlist;
-	
+
 	files = alpm_pkg_get_files(alpm_db_get_pkg(db_local, alpm_pkg_get_name(package)));
-	
+
 	while(files != NULL)
 	{
 		retlist.append(QString((char*)alpm_list_getdata(files)).prepend(alpm_option_get_root()));
 		files = alpm_list_next(files);
 	}
-	
+
 	return retlist;
 }
 
@@ -651,20 +653,20 @@ QStringList AlpmHandler::getPackageFiles(const QString &name)
 {
 	alpm_list_t *files;
 	QStringList retlist;
-	
+
 	files = alpm_pkg_get_files(alpm_db_get_pkg(db_local, name.toAscii().data()));
-	
+
 	while(files != NULL)
 	{
 		retlist.append(QString((char*)alpm_list_getdata(files)).prepend(alpm_option_get_root()));
 		files = alpm_list_next(files);
 	}
-	
+
 	return retlist;
 }
 
 void AlpmHandler::initQueue(bool rem, bool syncd, bool ff)
-{	
+{
 	removeAct = rem;
 	syncAct = syncd;
 	upgradeAct = false;
@@ -703,40 +705,40 @@ int AlpmHandler::getNumberOfTargets(int action)
 
 void AlpmHandler::processQueue(bool force)
 {
-	
+
 	if(removeAct)
 	{
 		qDebug() << "Starting Package Removal";
-		
+
 		/* Well, we need to remove packages first. Let's do this. */
 		initTransaction(PM_TRANS_TYPE_REMOVE, PM_TRANS_FLAG_NOSCRIPTLET, force);
-		
+
 		for (int i = 0; i < toRemove.size(); ++i)
 		{
 			int res = alpm_trans_addtarget(toRemove.at(i).toAscii().data());
 			if(res == -1)
 				qDebug() << "Unable to add Target:" << toRemove.at(i);
 		}
-		
+
 		performCurrentTransaction();
-		
+
 	}
 	if(syncAct)
 	{
 		qDebug() << "Starting Package Syncing";
-		
+
 		/* Time to install and upgrade packages, right? */
 		initTransaction(PM_TRANS_TYPE_SYNC, PM_TRANS_FLAG_NOSCRIPTLET, force);
-		
+
 		for (int i = 0; i < toSync.size(); ++i)
 		{
 			int res = alpm_trans_addtarget(toSync.at(i).toAscii().data());
 			if(res == -1)
 				qDebug() << "Unable to add Target:" << toSync.at(i);
 		}
-		
+
 		performCurrentTransaction();
-		
+
 
 	}
 	if(upgradeAct)
@@ -758,7 +760,7 @@ void AlpmHandler::processQueue(bool force)
 	if(fromFileAct)
 	{
 		qDebug() << "Starting Package From File installation";
-		
+
 		initTransaction(PM_TRANS_TYPE_UPGRADE, PM_TRANS_FLAG_NOSCRIPTLET, force);
 
 		for (int i = 0; i < toFromFile.size(); ++i)
@@ -778,7 +780,7 @@ bool AlpmHandler::cleanUnusedDb(const char *dbpath)
 {
 	if(!ath.switchToRoot())
 		return false;
-	
+
 	DIR *dir;
 	struct dirent *ent;
 
@@ -792,7 +794,7 @@ bool AlpmHandler::cleanUnusedDb(const char *dbpath)
 
 	rewinddir(dir);
 	/* step through the directory one file at a time */
-	while((ent = readdir(dir)) != NULL) 
+	while((ent = readdir(dir)) != NULL)
 	{
 		char path[4096];
 		alpm_list_t *syncdbs = NULL, *i;
@@ -801,7 +803,7 @@ bool AlpmHandler::cleanUnusedDb(const char *dbpath)
 
 		if(!strcmp(dname, ".") || !strcmp(dname, ".."))
 			continue;
-		
+
 		qDebug() << dname;
 
 		/* skip the local and sync directories */
@@ -809,7 +811,7 @@ bool AlpmHandler::cleanUnusedDb(const char *dbpath)
 			continue;
 
 		syncdbs = alpm_option_get_syncdbs();
-		for(i = syncdbs; i && !found; i = alpm_list_next(i)) 
+		for(i = syncdbs; i && !found; i = alpm_list_next(i))
 		{
 			pmdb_t *db = (pmdb_t *)alpm_list_getdata(i);
 			found = !strcmp(dname, alpm_db_get_name(db));
@@ -817,12 +819,12 @@ bool AlpmHandler::cleanUnusedDb(const char *dbpath)
 
 		/* We have a directory that doesn't match any syncdb.
 		 * Ask the user if he wants to remove it. */
-		if(!found) 
+		if(!found)
 		{
 			/* build the full path */
 			snprintf(path, 4096, "%s%s", dbpath, ent->d_name);
 
-			if(rmrf(path)) 
+			if(rmrf(path))
 			{
 				ath.switchToStdUsr();
 				return false;
@@ -843,9 +845,9 @@ int AlpmHandler::rmrf(const char *path)
 
 	if(!unlink(path))
 		return(0);
-	else 
+	else
 	{
-		if(errno == ENOENT) 
+		if(errno == ENOENT)
 			return(0);
 		else if(errno == EPERM) { }
 			/* fallthrough */
@@ -859,9 +861,9 @@ int AlpmHandler::rmrf(const char *path)
 
 		if((dirp = opendir(path)) == (DIR *)-1)
 			return(1);
-		for(dp = readdir(dirp); dp != NULL; dp = readdir(dirp)) 
+		for(dp = readdir(dirp); dp != NULL; dp = readdir(dirp))
 		{
-			if(dp->d_ino) 
+			if(dp->d_ino)
 			{
 				char name[4096];
 				sprintf(name, "%s/%s", path, dp->d_name);
@@ -869,11 +871,11 @@ int AlpmHandler::rmrf(const char *path)
 					errflag += rmrf(name);
 			}
 		}
-		
+
 		closedir(dirp);
 		if(rmdir(path))
 			errflag++;
-		
+
 		return(errflag);
 	}
 }
@@ -882,17 +884,17 @@ bool AlpmHandler::cleanCache(bool empty)
 {
 	if (!ath.switchToRoot())
 		return false;
-	
+
 	alpm_list_t* cachedirs = alpm_option_get_cachedirs();
 	QString cachedir((char *)alpm_list_getdata(cachedirs));
 
-	if(!empty) 
+	if(!empty)
 	{
 		qDebug() << "Incomplete Cleanup";
 		/* incomplete cleanup */
-		QDir dir(cachedir); 
+		QDir dir(cachedir);
 
-		if(!dir.exists()) 
+		if(!dir.exists())
 		{
 			ath.switchToStdUsr();
 			return false;
@@ -919,7 +921,7 @@ bool AlpmHandler::cleanCache(bool empty)
 				/* delete package, not present in local DB */
 				unlink(fileInfo.absolutePath().toAscii().data());
 			else if(alpm_pkg_vercmp(alpm_pkg_get_version(localpkg),
-					alpm_pkg_get_version(dbpkg)) != 0) 
+					alpm_pkg_get_version(dbpkg)) != 0)
 				/* delete package, it was found but version differs */
 				unlink(fileInfo.absolutePath().toAscii().data());
 
@@ -927,8 +929,8 @@ bool AlpmHandler::cleanCache(bool empty)
 			/* free the local file package */
 			alpm_pkg_free(localpkg);
 		}
-	} 
-	else 
+	}
+	else
 	{
 		/* full cleanup */
 
@@ -937,10 +939,10 @@ bool AlpmHandler::cleanCache(bool empty)
 			ath.switchToStdUsr();
 			return false;
 		}
-		
+
 		QDir dir;
 
-		if(!dir.mkpath(cachedir)) 
+		if(!dir.mkpath(cachedir))
 		{
 			ath.switchToStdUsr();
 			return false;
@@ -989,14 +991,14 @@ bool AlpmHandler::isProviderInstalled(const QString &provider)
 	 * packages, and find if something between them provides
 	 * &provider
 	 */
-	
+
 	alpm_list_t *localpack = alpm_db_getpkgcache(db_local);
-	
+
 	while(localpack != NULL)
 	{
 		QStringList prv(getProviders(QString(alpm_pkg_get_name(
 				(pmpkg_t *)alpm_list_getdata(localpack))), QString("local")));
-		
+
 		for(int i = 0; i < prv.size(); ++i)
 		{
 			QStringList tmp(prv.at(i).split("="));
@@ -1007,10 +1009,10 @@ bool AlpmHandler::isProviderInstalled(const QString &provider)
 				return true;
 			}
 		}
-		
+
 		localpack = alpm_list_next(localpack);
 	}
-	
+
 	return false;
 }
 
@@ -1028,16 +1030,16 @@ QString AlpmHandler::getAlpmVersion()
 {
 	QProcess *proc = new QProcess();
 	proc->start("pacman --version");
-	
+
 	proc->waitForFinished();
-	
+
 	QByteArray btAr(proc->readAllStandardOutput());
 	btAr.remove(0, btAr.indexOf("libalpm"));
 	btAr.remove(0, 9);
 	btAr.remove(5, btAr.length());
-	
+
 	QString version(btAr);
-	
+
 	return version;
 }
 
@@ -1065,20 +1067,20 @@ QString AlpmHandler::getPackageVersion(const QString &name, const QString &repo)
 QString AlpmHandler::getPackageRepo(const QString &name, bool checkver)
 {
 	alpm_list_t *syncdbs = alpm_option_get_syncdbs();
-	for(alpm_list_t *i = syncdbs; i; i = alpm_list_next(i)) 
+	for(alpm_list_t *i = syncdbs; i; i = alpm_list_next(i))
 	{
 		pmdb_t *db = (pmdb_t *)alpm_list_getdata(i);
 		pmpkg_t *pkg;
 		pkg = alpm_db_get_pkg(db, name.toAscii().data());
 		if(pkg == NULL)
 			continue;
-		
+
 		if(checkver && (alpm_pkg_get_version(pkg) == getPackageVersion(alpm_pkg_get_name(pkg), "local")))
 			continue;
-			
+
 		return alpm_db_get_name(db);
 	}
-	
+
 	return QString();
 }
 
@@ -1087,7 +1089,7 @@ void AlpmHandler::handleError(int action, alpm_list_t *data)
 	QString errMsg;
 	QMutexLocker lock(&mutex);
 
-	switch(action) 
+	switch(action)
 	{
 	case 0:
 		// Error while init'ing a upgrade
@@ -1097,11 +1099,11 @@ void AlpmHandler::handleError(int action, alpm_list_t *data)
 
 	case 1:
 		// Error while preparing a transaction
-		switch(pm_errno) 
+		switch(pm_errno)
 		{
 		alpm_list_t *i;
 		case PM_ERR_UNSATISFIED_DEPS:
-			for(i = data; i; i = alpm_list_next(i)) 
+			for(i = data; i; i = alpm_list_next(i))
 			{
 				pmdepmissing_t *miss = (pmdepmissing_t *)alpm_list_getdata(i);
 				pmdepend_t *dep = alpm_miss_get_dep(miss);
@@ -1110,16 +1112,16 @@ void AlpmHandler::handleError(int action, alpm_list_t *data)
 				free(depstring);
 			}
 			break;
-			
+
 		case PM_ERR_CONFLICTING_DEPS:
-			for(i = data; i; i = alpm_list_next(i)) 
+			for(i = data; i; i = alpm_list_next(i))
 			{
 				pmconflict_t *conflict = (pmconflict_t *)alpm_list_getdata(i);
-				errMsg.append(QString(alpm_conflict_get_package1(conflict) + tr(": conflicts with ") 
+				errMsg.append(QString(alpm_conflict_get_package1(conflict) + tr(": conflicts with ")
 						+ alpm_conflict_get_package2(conflict) + ("\n")));
 			}
 			break;
-			
+
 		default:
 			break;
 		}
@@ -1133,14 +1135,14 @@ void AlpmHandler::handleError(int action, alpm_list_t *data)
 
 	case 2:
 		// Error while committing a transaction
-		switch(pm_errno) 
+		switch(pm_errno)
 		{
 		alpm_list_t *i;
 		case PM_ERR_FILE_CONFLICTS:
-			for(i = data; i; i = alpm_list_next(i)) 
+			for(i = data; i; i = alpm_list_next(i))
 			{
 				pmfileconflict_t *conflict = (pmfileconflict_t *)alpm_list_getdata(i);
-				switch(alpm_fileconflict_get_type(conflict)) 
+				switch(alpm_fileconflict_get_type(conflict))
 				{
 				case PM_FILECONFLICT_TARGET:
 					errMsg.append(QString(tr("%1 exists in both '%2' and '%3'")  + ("\n")).
@@ -1148,32 +1150,32 @@ void AlpmHandler::handleError(int action, alpm_list_t *data)
 							arg(alpm_fileconflict_get_target(conflict)).
 							arg(alpm_fileconflict_get_ctarget(conflict)));
 					break;
-					
+
 				case PM_FILECONFLICT_FILESYSTEM:
-					errMsg.append(QString(alpm_fileconflict_get_target(conflict) + 
+					errMsg.append(QString(alpm_fileconflict_get_target(conflict) +
 							tr(": %1 exists in filesystem") + ("\n")).arg(alpm_fileconflict_get_file(conflict)));
 					break;
 				}
 			}
-			
+
 			break;
-			
+
 		case PM_ERR_PKG_INVALID:
-			for(i = data; i; i = alpm_list_next(i)) 
+			for(i = data; i; i = alpm_list_next(i))
 			{
 				errMsg.append((char*)alpm_list_getdata(i));
 			}
 			break;
-			
+
 		default:
 			break;
 		}
-		
+
 		if(errMsg.isEmpty())
 			errMsg = QString(tr("Alpm did not give further details."));
-			
+
 		emit committingTransactionError(errMsg);
-		
+
 		break;
 
 	default:
@@ -1191,31 +1193,31 @@ alpm_list_t *AlpmHandler::getPackagesFromRepo(const QString &reponame)
 	 * getInstalledPackages(), here by local we mean packages that
 	 * don't belong to any other repo.
 	 */
-	
+
 	alpm_list_t *retlist;
-	
+
 	retlist = NULL;
-	
+
 	if(reponame == "local")
 	{
 		alpm_list_t *pkglist = alpm_db_getpkgcache(db_local);
-		
+
 		pkglist = alpm_list_first(pkglist);
-		
+
 		while(pkglist != NULL)
 		{
 			if(getPackageRepo(alpm_pkg_get_name((pmpkg_t *) alpm_list_getdata(pkglist))) == QString())
 				retlist = alpm_list_add(retlist, alpm_list_getdata(pkglist));
-			
+
 			pkglist = alpm_list_next(pkglist);
 		}
 	}
 	else
 	{
 		alpm_list_t *syncdbs = sync_databases;
-		
+
 		syncdbs = alpm_list_first(syncdbs);
-		
+
 		while(syncdbs != NULL)
 		{
 			if(!reponame.compare(alpm_db_get_name((pmdb_t *) alpm_list_getdata(syncdbs))))
@@ -1223,13 +1225,13 @@ alpm_list_t *AlpmHandler::getPackagesFromRepo(const QString &reponame)
 				retlist = alpm_db_getpkgcache((pmdb_t *) alpm_list_getdata(syncdbs));
 				break;
 			}
-			
+
 			syncdbs = alpm_list_next(syncdbs);
 		}
-		
+
 		syncdbs = alpm_list_first(syncdbs);
 	}
-	
+
 	return retlist;
 }
 
@@ -1253,7 +1255,7 @@ int AlpmHandler::countPackages(Alpm::PackageStatus status)
 	if (status == Alpm::AllPackages)
 	{
 		int retvalue = 0;
-		
+
 		alpm_list_t *databases = getAvailableRepos();
 
 		databases = alpm_list_first(databases);
@@ -1263,12 +1265,12 @@ int AlpmHandler::countPackages(Alpm::PackageStatus status)
 			pmdb_t *dbcrnt = (pmdb_t *)alpm_list_getdata(databases);
 
 			alpm_list_t *currentpkgs = alpm_db_getpkgcache(dbcrnt);
-			
+
 			retvalue += alpm_list_count(currentpkgs);
-			
+
 			databases = alpm_list_next(databases);
 		}
-		
+
 		return retvalue;
 	}
 	else if (status == Alpm::UpgradeablePackages)
@@ -1278,7 +1280,7 @@ int AlpmHandler::countPackages(Alpm::PackageStatus status)
 	else if (status == Alpm::InstalledPackages)
 	{
 		alpm_list_t *currentpkgs = alpm_db_getpkgcache(db_local);
-		
+
 		return alpm_list_count(currentpkgs);
 	}
 	else
