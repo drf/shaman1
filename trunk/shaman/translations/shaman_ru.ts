@@ -1015,172 +1015,172 @@ Do you want to save it?</source>
         <translation>Shaman</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="61"/>
+        <location filename="../ui/MainWindow.ui" line="53"/>
         <source>All packages</source>
         <translation>Все пакеты</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="66"/>
+        <location filename="../ui/MainWindow.ui" line="58"/>
         <source>Installed packages</source>
         <translation>Установленные пакеты</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="71"/>
+        <location filename="../ui/MainWindow.ui" line="63"/>
         <source>Not installed packages</source>
         <translation>Не установленные пакеты</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="76"/>
+        <location filename="../ui/MainWindow.ui" line="68"/>
         <source>Upgradeable packages</source>
         <translation>Пакеты, с доступными обновлениями</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="81"/>
+        <location filename="../ui/MainWindow.ui" line="73"/>
         <source>Packages in Queue</source>
         <translation>Пакеты в очереди</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="152"/>
+        <location filename="../ui/MainWindow.ui" line="144"/>
         <source>Status</source>
         <translation>Статус</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="625"/>
+        <location filename="../ui/MainWindow.ui" line="149"/>
         <source>Name</source>
         <translation>Название</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="162"/>
+        <location filename="../ui/MainWindow.ui" line="154"/>
         <source>Action</source>
         <translation>Действие</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="167"/>
+        <location filename="../ui/MainWindow.ui" line="159"/>
         <source>Version</source>
         <translation>Версия</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="172"/>
+        <location filename="../ui/MainWindow.ui" line="164"/>
         <source>Size</source>
         <translation>Размер</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="177"/>
+        <location filename="../ui/MainWindow.ui" line="169"/>
         <source>Repository</source>
         <translation>Репозиторий</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="182"/>
+        <location filename="../ui/MainWindow.ui" line="174"/>
         <source>Groups</source>
         <translation>Группы</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="187"/>
+        <location filename="../ui/MainWindow.ui" line="179"/>
         <source>Description</source>
         <translation>Описание</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="192"/>
+        <location filename="../ui/MainWindow.ui" line="184"/>
         <source>Action-Text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="211"/>
+        <location filename="../ui/MainWindow.ui" line="203"/>
         <source>Repositories</source>
         <translation>Репозитории</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="504"/>
+        <location filename="../src/MainWindow.cpp" line="505"/>
         <source>Package Groups</source>
         <translation>Группы пакетов</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="296"/>
+        <location filename="../ui/MainWindow.ui" line="280"/>
         <source>Package Information</source>
         <translation>Информация о пакете</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="337"/>
+        <location filename="../ui/MainWindow.ui" line="313"/>
         <source>Install selected package</source>
         <translation>Установить выбранный пакет</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="357"/>
+        <location filename="../ui/MainWindow.ui" line="333"/>
         <source>Remove selected package</source>
         <translation>Удалить выбранный пакет</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="377"/>
+        <location filename="../ui/MainWindow.ui" line="353"/>
         <source>Complete Remove selected package (pacman -Rcs)</source>
         <translation>Полностью удалить выбранный пакет (pacman -Rcs)</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="397"/>
+        <location filename="../ui/MainWindow.ui" line="373"/>
         <source>Cancel action for selected package</source>
         <translation>Отменить действие для выбранного пакета</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="502"/>
+        <location filename="../ui/MainWindow.ui" line="462"/>
         <source>1</source>
         <translation>1</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="568"/>
+        <location filename="../ui/MainWindow.ui" line="520"/>
         <source>Build and Install from Source</source>
         <translation>Собрать и установить из исходников</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="609"/>
+        <location filename="../ui/MainWindow.ui" line="553"/>
         <source>Quick Actions</source>
         <translation>Быстрые действия</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="647"/>
+        <location filename="../ui/MainWindow.ui" line="582"/>
         <source>Settings...</source>
         <translation>Настройки...</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="656"/>
+        <location filename="../ui/MainWindow.ui" line="591"/>
         <source>About...</source>
         <translation>О программе...</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="665"/>
+        <location filename="../ui/MainWindow.ui" line="600"/>
         <source>Update Database</source>
         <translation>Обновить базу данных</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="674"/>
+        <location filename="../ui/MainWindow.ui" line="609"/>
         <source>Upgrade System</source>
         <translation>Обновить систему</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="683"/>
+        <location filename="../ui/MainWindow.ui" line="618"/>
         <source>Install Package From File</source>
         <translation>Установить пакет из файла</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="695"/>
+        <location filename="../ui/MainWindow.ui" line="630"/>
         <source>Update ABS Tree</source>
         <translation>Обновить дерево ABS</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="704"/>
+        <location filename="../ui/MainWindow.ui" line="639"/>
         <source>Build and Install Queue</source>
         <translation>Собрать устанавливаемые пакеты</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="722"/>
+        <location filename="../ui/MainWindow.ui" line="657"/>
         <source>Process Queue</source>
         <translation>Выполнить очередь</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="731"/>
+        <location filename="../ui/MainWindow.ui" line="666"/>
         <source>Cancel all actions</source>
         <translation>Отменить все действия</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="380"/>
+        <location filename="../src/MainWindow.cpp" line="381"/>
         <source>Shaman will keep running in the system tray.
 To close it, click Quit in the file menu or in the tray icon context menu.
 While in the System Tray, Shaman will update your Databases
@@ -1193,77 +1193,77 @@ You can change this behaviour in Settings.</source>
 Вы можете изменить это поведение в Настройках.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="377"/>
+        <location filename="../src/MainWindow.cpp" line="378"/>
         <source>Shaman - Reducing To Tray</source>
         <translation>Shaman - сворачивание в область уведомлений</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2134"/>
+        <location filename="../src/MainWindow.cpp" line="2143"/>
         <source>Upgrade</source>
         <translation>Обновить</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1510"/>
+        <location filename="../src/MainWindow.cpp" line="1519"/>
         <source>System Upgrade</source>
         <translation>Обновить систему</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="547"/>
+        <location filename="../src/MainWindow.cpp" line="548"/>
         <source>All Repositories</source>
         <translation>Все репозитории</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="550"/>
+        <location filename="../src/MainWindow.cpp" line="551"/>
         <source>Local Packages</source>
         <translation>Локальные пакеты</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1183"/>
+        <location filename="../src/MainWindow.cpp" line="1192"/>
         <source>All Groups</source>
         <translation>Все группы</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2129"/>
+        <location filename="../src/MainWindow.cpp" line="2138"/>
         <source>Install</source>
         <translation>Установить</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2139"/>
+        <location filename="../src/MainWindow.cpp" line="2148"/>
         <source>Uninstall</source>
         <translation>Удалить</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2140"/>
+        <location filename="../src/MainWindow.cpp" line="2149"/>
         <source>Complete Uninstall</source>
         <translation>Удалить полностью</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="785"/>
+        <location filename="../src/MainWindow.cpp" line="794"/>
         <source>Status: </source>
         <translation>Статус:</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="787"/>
+        <location filename="../src/MainWindow.cpp" line="796"/>
         <source>Installed</source>
         <translation>Установлен</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="789"/>
+        <location filename="../src/MainWindow.cpp" line="798"/>
         <source>Not installed</source>
         <translation>Не установлен</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="803"/>
+        <location filename="../src/MainWindow.cpp" line="812"/>
         <source>Action: </source>
         <translation>Действие:</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2007"/>
+        <location filename="../src/MainWindow.cpp" line="2016"/>
         <source>Error</source>
         <translation>Ошибка</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="918"/>
+        <location filename="../src/MainWindow.cpp" line="927"/>
         <source>One or more Databases could not be updated.
 Last error reported was:
 %1</source>
@@ -1272,97 +1272,97 @@ Last error reported was:
 %1</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="927"/>
+        <location filename="../src/MainWindow.cpp" line="936"/>
         <source>Database Update</source>
         <translation>Обновление базы данных</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="929"/>
+        <location filename="../src/MainWindow.cpp" line="938"/>
         <source>Databases Updated Successfully</source>
         <translation>База данных обновлена успешно</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1017"/>
+        <location filename="../src/MainWindow.cpp" line="1026"/>
         <source>Mark for Upgrade</source>
         <translation>Отметить для обновления</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1068"/>
+        <location filename="../src/MainWindow.cpp" line="1077"/>
         <source>Mark all for installation</source>
         <translation>Отметить для установки</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1070"/>
+        <location filename="../src/MainWindow.cpp" line="1079"/>
         <source>Mark all for reinstallation</source>
         <translation>Отметить для переустановки</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1072"/>
+        <location filename="../src/MainWindow.cpp" line="1081"/>
         <source>Mark all for removal</source>
         <translation>Отметить все для удаления</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1514"/>
+        <location filename="../src/MainWindow.cpp" line="1523"/>
         <source>Your system is up to date!</source>
         <translation>Система в актуальном состоянии!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1725"/>
+        <location filename="../src/MainWindow.cpp" line="1734"/>
         <source>Queue Processing</source>
         <translation>Обработка очереди</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1725"/>
+        <location filename="../src/MainWindow.cpp" line="1734"/>
         <source>Your Queue is being processed.
 Please wait.</source>
         <translation>Выполняется обработка очереди.
 Пожалуйста, подождите.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1828"/>
+        <location filename="../src/MainWindow.cpp" line="1837"/>
         <source>Queue Processed</source>
         <translation>Очередь обработана</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1826"/>
+        <location filename="../src/MainWindow.cpp" line="1835"/>
         <source>Your Queue was successfully processed!</source>
         <translation>Очередь успешно обработана!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1830"/>
+        <location filename="../src/MainWindow.cpp" line="1839"/>
         <source>Your Queue was successfully processed!!</source>
         <translation>Очередь успешно обработана!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1992"/>
+        <location filename="../src/MainWindow.cpp" line="2001"/>
         <source>Install a Package</source>
         <translation>Установить пакет</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1992"/>
+        <location filename="../src/MainWindow.cpp" line="2001"/>
         <source>Arch Linux Packages (*.pkg.tar.gz)</source>
         <translation>Пакеты Arch Linux (*.pkg.tar.gz)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2007"/>
+        <location filename="../src/MainWindow.cpp" line="2016"/>
         <source>%1 does not seem
 a valid package</source>
         <translation>%1 не похож
 на нормальный пакет</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="713"/>
+        <location filename="../ui/MainWindow.ui" line="648"/>
         <source>Quit</source>
         <comment>Quit the application</comment>
         <translation>Выйти</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1533"/>
+        <location filename="../src/MainWindow.cpp" line="1542"/>
         <source>Pacman Update</source>
         <translation>Обновление Pacman</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1535"/>
+        <location filename="../src/MainWindow.cpp" line="1544"/>
         <source>Pacman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Pacman now?</source>
@@ -1371,12 +1371,12 @@ Do you want to Upgrade Pacman now?</source>
 Обновить Pacman?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1555"/>
+        <location filename="../src/MainWindow.cpp" line="1564"/>
         <source>Shaman Update</source>
         <translation>Обновление Shaman</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1557"/>
+        <location filename="../src/MainWindow.cpp" line="1566"/>
         <source>Shaman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Shaman now?</source>
@@ -1385,162 +1385,162 @@ Do you want to Upgrade Shaman now?</source>
 Обновить Shaman?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1816"/>
+        <location filename="../src/MainWindow.cpp" line="1825"/>
         <source>Restart required</source>
         <translation>Требуется перезапуск</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1809"/>
+        <location filename="../src/MainWindow.cpp" line="1818"/>
         <source>Pacman or Shaman was updated. Shaman will now quit,
 please restart it to use the new version</source>
         <translation>Pacman и/или Shaman обновлен. Shaman сейчас завершится,
 перезапустите его, чтобы использовать новую версию</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2080"/>
+        <location filename="../src/MainWindow.cpp" line="2089"/>
         <source>Library Question</source>
         <translation type="unfinished">Вопрос библиотеки</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="792"/>
+        <location filename="../src/MainWindow.cpp" line="801"/>
         <source>Local Version: </source>
         <translation>Локальная версия:</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="797"/>
+        <location filename="../src/MainWindow.cpp" line="806"/>
         <source>Version in the Repository: </source>
         <translation>Версия в репозитории: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1817"/>
+        <location filename="../src/MainWindow.cpp" line="1826"/>
         <source>Your Kernel has been updated.
 Please restart your PC soon to load the new Kernel.</source>
         <translation>Ядро системы (linux kernel) было обновлено.
 Перезапустите компьютер, чтобы использовать новую версию ядра.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="329"/>
+        <location filename="../src/MainWindow.cpp" line="330"/>
         <source>Esc</source>
         <translation>Esc</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1876"/>
+        <location filename="../src/MainWindow.cpp" line="1885"/>
         <source>News Alert</source>
         <translation>Уведомление о новостях</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1877"/>
+        <location filename="../src/MainWindow.cpp" line="1886"/>
         <source>There is an unread news about %1.
 Do you want to read it?</source>
         <translation>Есть непрочитанная новость о %1.
 Прочитать ее?</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="740"/>
+        <location filename="../ui/MainWindow.ui" line="675"/>
         <source>Read News</source>
         <translation>Читать новости</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="749"/>
+        <location filename="../ui/MainWindow.ui" line="684"/>
         <source>View Log</source>
         <translation>Смотреть журнал</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1774"/>
+        <location filename="../src/MainWindow.cpp" line="1783"/>
         <source>One or more errors occurred, your Queue
 was not successfully processed</source>
         <translation>Произошла одна или более ошибок, очередь
 не была успешно обработана</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="920"/>
+        <location filename="../src/MainWindow.cpp" line="929"/>
         <source>One or more databases failed to update!</source>
         <translation>Не удалось обновить одну или более базу данных!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1776"/>
+        <location filename="../src/MainWindow.cpp" line="1785"/>
         <source>Error Processing Queue!!</source>
         <translation>Ошибка обработки очереди!!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1218"/>
+        <location filename="../src/MainWindow.cpp" line="1227"/>
         <source>A package providing %1 is already installed.
 Do you want to install %1 anyway?</source>
         <translation>Пакет, предоставляющий %1, уже установлен.
 Все равно установить %1?</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="552"/>
+        <location filename="../ui/MainWindow.ui" line="504"/>
         <source>&amp;File</source>
         <translation>&amp;Файл</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="558"/>
+        <location filename="../ui/MainWindow.ui" line="510"/>
         <source>&amp;Help</source>
         <translation>&amp;Помощь</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="564"/>
+        <location filename="../ui/MainWindow.ui" line="516"/>
         <source>&amp;Actions</source>
         <translation>&amp;Действия</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="584"/>
+        <location filename="../ui/MainWindow.ui" line="536"/>
         <source>&amp;Tools</source>
         <translation>&amp;Инструменты</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="247"/>
+        <location filename="../ui/MainWindow.ui" line="231"/>
         <source>Re&amp;positories</source>
         <translation>&amp;Репозитории</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="270"/>
+        <location filename="../ui/MainWindow.ui" line="254"/>
         <source>Package &amp;Groups</source>
         <translation>&amp;Группы пакетов</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="340"/>
+        <location filename="../ui/MainWindow.ui" line="316"/>
         <source>Mark for &amp;Installation</source>
         <translation>Отметить для &amp;установки</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="360"/>
+        <location filename="../ui/MainWindow.ui" line="336"/>
         <source>Mark for &amp;Removal</source>
         <translation>Отметить для у&amp;даления</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="380"/>
+        <location filename="../ui/MainWindow.ui" line="356"/>
         <source>Mark for complete re&amp;moval</source>
         <translation>Отметить для &amp;полного удаления</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="447"/>
+        <location filename="../ui/MainWindow.ui" line="415"/>
         <source>Package I&amp;nformation</source>
         <translation>&amp;Информация о пакете</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="491"/>
+        <location filename="../ui/MainWindow.ui" line="451"/>
         <source>File&amp;s</source>
         <translation>Файл&amp;ы</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="519"/>
+        <location filename="../ui/MainWindow.ui" line="471"/>
         <source>&amp;Dependencies</source>
         <translation>&amp;Зависимости</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1042"/>
+        <location filename="../src/MainWindow.cpp" line="1051"/>
         <source>Mark for Re&amp;installation</source>
         <translation>Отметить для п&amp;ереустановки</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="400"/>
+        <location filename="../ui/MainWindow.ui" line="376"/>
         <source>&amp;Cancel Action</source>
         <translation>&amp;Отменить действие</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2043"/>
+        <location filename="../src/MainWindow.cpp" line="2052"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -1557,13 +1557,18 @@ p, li { white-space: pre-wrap; }
         <location filename="../ui/MainWindow.ui" line="157"/>
         <source>Name</source>
         <comment>Name of the Package</comment>
-        <translation>Название</translation>
+        <translation type="obsolete">Название</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="330"/>
+        <location filename="../src/MainWindow.cpp" line="331"/>
         <source>Ctrl+Q</source>
         <comment>Exit Shaman Shortcut</comment>
         <translation></translation>
+    </message>
+    <message>
+        <location filename="../src/MainWindow.cpp" line="640"/>
+        <source>Name and Description</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1707,7 +1712,7 @@ Shaman will ask you for root password when needed.</source>
 Shaman спросит пароль пользователя root, когда он понадобится.</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="868"/>
+        <location filename="../src/QueueDialog.cpp" line="866"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
@@ -1766,7 +1771,7 @@ wiki для более подробной информации.</translation>
         <translation>&amp;Отмена</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2056"/>
+        <location filename="../src/MainWindow.cpp" line="2065"/>
         <source>Whoa, that&apos;s co&amp;ol!</source>
         <translation>Ух ты, круто!</translation>
     </message>
@@ -1889,94 +1894,94 @@ wiki для более подробной информации.</translation>
         <translation>Начато скачивание пакетов из %1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="378"/>
+        <location filename="../src/QueueDialog.cpp" line="376"/>
         <source>%p% (%1 KB/s, %4:%5:%6 remaining)</source>
         <comment>You just have to translate &apos;remaining&apos; here. Leave everything else as it is.</comment>
         <translation>%p% (%1 KB/s, осталось %4:%5:%6)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="386"/>
+        <location filename="../src/QueueDialog.cpp" line="384"/>
         <source>Downloading %1... (%2 MB of %3 MB)</source>
         <translation>Скачивается %1... (%2 Мб из %3 Мб)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="389"/>
+        <location filename="../src/QueueDialog.cpp" line="387"/>
         <source>Downloading %1... (%2 KB of %3 KB)</source>
         <translation>Скачивается %1... (%2 Кб из %3 Кб)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="445"/>
+        <location filename="../src/QueueDialog.cpp" line="443"/>
         <source>Queue processed, please wait...</source>
         <translation>Очередь обработана, пожалуйста, подождите...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="505"/>
+        <location filename="../src/QueueDialog.cpp" line="503"/>
         <source>Unexpected Error. Shaman might be corrupted.</source>
         <translation>Непредвиденная ошибка. Возможно, Shaman поврежден.</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="569"/>
+        <location filename="../src/QueueDialog.cpp" line="567"/>
         <source>Extracting Scriptlet from package failed!!</source>
         <translation>Не удалось извлечь из пакета установочные скрипты!!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="697"/>
+        <location filename="../src/QueueDialog.cpp" line="695"/>
         <source>Scriptlet processed successfully!</source>
         <translation>Установочные скрипты обработаны успешно!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="512"/>
+        <location filename="../src/QueueDialog.cpp" line="510"/>
         <source>Executing %1 scriptlet for %2...</source>
         <translation>Выполнение скрипта %1 для %2...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="579"/>
+        <location filename="../src/QueueDialog.cpp" line="577"/>
         <source>Package %1 does not have %2 scriptlet</source>
         <translation>Пакет %1 не содержит скрипта %2</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="703"/>
+        <location filename="../src/QueueDialog.cpp" line="701"/>
         <source>Error processing Scriptlet!!</source>
         <translation>Ошибка обработки установочного скрипта!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="876"/>
+        <location filename="../src/QueueDialog.cpp" line="874"/>
         <source>Queue Processing</source>
         <translation>Выполнение очереди</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="826"/>
+        <location filename="../src/QueueDialog.cpp" line="824"/>
         <source>There has been an error while preparing the transaction.
 </source>
         <translation>Произошла ошибка при подготовке транзакции.
 </translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="863"/>
+        <location filename="../src/QueueDialog.cpp" line="861"/>
         <source>There has been an error while committing the transaction.
 </source>
         <translation>Произошла ошибка при завершении транзакции.
 </translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="790"/>
+        <location filename="../src/QueueDialog.cpp" line="788"/>
         <source>Would you like to abort Queue Processing?
 This may damage your system.</source>
         <translation>Вы действительно хотите прервать выполнение очереди?
 Ваша система может быть повреждена.</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="469"/>
+        <location filename="../src/QueueDialog.cpp" line="467"/>
         <source>Close</source>
         <translation>Закрыть</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="456"/>
+        <location filename="../src/QueueDialog.cpp" line="454"/>
         <source>Queue processing failed!</source>
         <translation>Ошибка обработки очереди!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="461"/>
+        <location filename="../src/QueueDialog.cpp" line="459"/>
         <source>Queue processed successfully!</source>
         <translation>Очередь успешно выполнена!</translation>
     </message>

@@ -114,7 +114,7 @@ void CreateItemsThread::run()
         while(currentpkgs != NULL)
         {
             pmpkg_t *pkg = (pmpkg_t *)alpm_list_getdata(currentpkgs);
-            bool installed = false;         
+            bool installed = false;
 
             if (m_handler->isInstalled(pkg))
             {
@@ -147,9 +147,9 @@ void CreateItemsThread::run()
             item->setText(3, alpm_pkg_get_version(pkg));
             item->setText(1, alpm_pkg_get_name(pkg));
             item->setText(5, alpm_db_get_name(dbcrnt));
-            
+
             int size = m_handler->getPackageSize(item->text(1), item->text(5));
-            
+
             item->setText(4, PackageProperties::formatSize(size));
             item->setData(4, Qt::UserRole, size);
             item->setText(7, alpm_pkg_get_desc(pkg));
@@ -161,7 +161,7 @@ void CreateItemsThread::run()
                 grStr.append((char *)alpm_list_getdata(grps));
                 grps = alpm_list_next(grps);
             }
-            
+
             grStr.append(' ');
 
             item->setText(6, grStr);
@@ -172,7 +172,7 @@ void CreateItemsThread::run()
 
             count++;
 
-            emit updateProgress( (int) ( count / totalPkgs ) * 100 );           
+            emit updateProgress( (int) ( count / totalPkgs ) * 100 );
         }
 
         databases = alpm_list_next(databases);
@@ -204,7 +204,7 @@ void CreateItemsThread::run()
     {
         int count = 0;
         QTreeWidgetItem *match = 0;
-        
+
         foreach(QTreeWidgetItem *itm, retlist)
         {
             if(itm->text(1) == ent)
@@ -213,7 +213,7 @@ void CreateItemsThread::run()
                 match = itm;
             }
         }
-        
+
         if(count == 1)
         {
             match->setIcon(0, QIcon(":/Icons/icons/user-online.png"));
@@ -264,10 +264,10 @@ turnOffSys(false)
 		qWarning() << "Failed to register alias Service on DBus";
 	else
 		qDebug() << "Service org.archlinux.shaman successfully exported on the System Bus.";
-	
+
 	editTimer = new QTimer(this);
 	editTimer->setSingleShot(true);
-	
+
 	connect(editTimer, SIGNAL(timeout()), SLOT(refinePkgView()));
 
 	pkgsViewWG->setContextMenuPolicy(Qt::CustomContextMenu);
@@ -285,6 +285,7 @@ turnOffSys(false)
 
 	nameDescBox->addItem(tr("Name"));
 	nameDescBox->addItem(tr("Description"));
+	nameDescBox->addItem(tr("Name and Description"));
 
 	connect(&CbackReference, SIGNAL(questionStreamed(const QString&)), this, SLOT(streamTransQuestion(const QString&)));
 	connect(actionUpdate_Database, SIGNAL(triggered()), SLOT(doDbUpdate()));
@@ -311,7 +312,7 @@ turnOffSys(false)
 	connect(actionReadNews, SIGNAL(triggered()), SLOT(openNewsDialog()));
 	connect(actionViewLog, SIGNAL(triggered()), SLOT(openLogViewer()));
 	connect(aHandle, SIGNAL(streamDbUpdatingStatus(const QString&,int)), SIGNAL(streamDbUpdatingStatus(const QString&,int)));
-	connect(&CbackReference, SIGNAL(streamTransDlProg(const QString&,int,int,int,int)), 
+	connect(&CbackReference, SIGNAL(streamTransDlProg(const QString&,int,int,int,int)),
 			SIGNAL(streamTransDlProg(const QString&,int,int,int,int)));
 	connect(&athCback, SIGNAL(passwordRequired(int)), SLOT(showAuthDialog(int)));
 	connect(aHandle, SIGNAL(transactionStarted()), SIGNAL(transactionStarted()));
@@ -328,9 +329,9 @@ turnOffSys(false)
 
 	new QShortcut(tr("Esc"), searchLine, SLOT(clear()));
 	new QShortcut(QKeySequence(tr("Ctrl+Q", "Exit Shaman Shortcut")), this, SLOT(quitApp()));
-	
+
 	stBar = new ShamanStatusBar(aHandle, this);
-	
+
 	setStatusBar(stBar);
 
 	return;
@@ -374,12 +375,12 @@ void MainWindow::quitApp()
 
 void MainWindow::closeEvent(QCloseEvent *evt)
 {
-	ShamanDialog::popupDialogDontShow(QString(tr("Shaman - Reducing To Tray")), 
+	ShamanDialog::popupDialogDontShow(QString(tr("Shaman - Reducing To Tray")),
 			QString(tr("Shaman will keep running in the system tray.\nTo close it, click Quit in the file menu "
 					"or in the tray icon context menu.\nWhile in the System Tray, Shaman will update your Databases\nat a regular"
-					" interval and notify you about available upgrades.\nYou can change this behaviour in Settings.")), 
+					" interval and notify you about available upgrades.\nYou can change this behaviour in Settings.")),
 					"gui/confirmquit", this, ShamanProperties::InformationDialog);
-	
+
 	emit startTimer();
 
 	evt->accept();
@@ -413,33 +414,33 @@ void MainWindow::populatePackagesView()
 	disconnect(pkgsViewWG, SIGNAL(itemDoubleClicked(QTreeWidgetItem*,int)),0,0);
 
 	removePackagesView();
-	
+
 	if(cThread)
 	    cThread->deleteLater();
-	
+
 	cThread = new CreateItemsThread(aHandle);
-	
+
 	connect(cThread, SIGNAL(finished()), SLOT(populatePackagesViewFinished()));
 	connect(cThread, SIGNAL(updateProgress(int)), stBar, SLOT(updateProgressBar(int)));
-	
+
 	stBar->startProgressBar();
-	
+
 	cThread->start();
 }
 
 void MainWindow::populatePackagesViewFinished()
 {
     pkgsViewWG->addTopLevelItems(cThread->getResult());
-        
+
     cThread->deleteLater();
 
     pkgsViewWG->sortItems(1, Qt::AscendingOrder);
     pkgsViewWG->setSortingEnabled(true);//Enable sorting *after* inserting :D
     QAbstractItemModel *model = pkgsViewWG->model();
-    
+
     QSortFilterProxyModel *proxyModel = new QSortFilterProxyModel(this);
     proxyModel->setSourceModel(model);
-    
+
     proxyModel->setSortRole(Qt::UserRole);
 
     stBar->stopProgressBar();
@@ -449,9 +450,9 @@ void MainWindow::populatePackagesViewFinished()
 
     connect(PkgInfos, SIGNAL(currentChanged(int)), SLOT(showPkgInfo()));
     connect(pkgsViewWG, SIGNAL(itemDoubleClicked(QTreeWidgetItem*,int)), SLOT(shiftItemAction()));
-    
+
     refinePkgView();
-    
+
     emit packagesLoaded();
 }
 
@@ -491,7 +492,7 @@ void MainWindow::populateRepoColumn()
 	QListWidgetItem *itm = new QListWidgetItem(repoList);
 
 	itm->setText(tr("Local Packages"));
-	
+
 	refineRepoView();
 
 	connect(repoList, SIGNAL(itemPressed(QListWidgetItem*)), this,
@@ -520,7 +521,7 @@ void MainWindow::populateGrpsColumn()
 	item->setText(tr("All Groups"));
 	item->setSelected(true);
 	repoList->insertItem(0, item);
-	
+
 	refineRepoView();
 
 	connect(repoList, SIGNAL(itemPressed(QListWidgetItem*)), this,
@@ -548,19 +549,19 @@ void MainWindow::refinePkgView()
 					(Qt::MatchFlags)Qt::MatchExactly).isEmpty())
 				// First time, so don't check anything.
 				if(repoList->selectedItems().at(0)->text().compare(tr("Local Packages")))
-					list = pkgsViewWG->findItems(repoList->selectedItems().at(0)->text(), 
+					list = pkgsViewWG->findItems(repoList->selectedItems().at(0)->text(),
 							(Qt::MatchFlags)Qt::MatchExactly, 5);
 				else
-					list = pkgsViewWG->findItems("local", 
+					list = pkgsViewWG->findItems("local",
 							(Qt::MatchFlags)Qt::MatchExactly, 5);
 			else
 			{
-				list = pkgsViewWG->findItems(repoList->selectedItems().at(0)->text(), 
+				list = pkgsViewWG->findItems(repoList->selectedItems().at(0)->text(),
 						(Qt::MatchFlags)Qt::MatchExactly, 6);
 				QString tmp = repoList->selectedItems().at(0)->text();
 				tmp.append(" ");
 				tmp.prepend(" ");
-				list += pkgsViewWG->findItems(tmp, 
+				list += pkgsViewWG->findItems(tmp,
 						(Qt::MatchFlags)Qt::MatchContains, 6);
 			}
 		}
@@ -632,6 +633,14 @@ void MainWindow::refinePkgView()
 			else if(nameDescBox->currentText() == tr("Description"))
 			{
 				if (!item->text(7).contains(searchLine->text(), Qt::CaseInsensitive))
+				{
+					list.removeAt(list.indexOf(item));
+				}
+			}
+			else if(nameDescBox->currentText() == tr("Name and Description"))
+			{
+				if (!item->text(7).contains(searchLine->text(), Qt::CaseInsensitive) &&
+						!item->text(1).contains(searchLine->text(), Qt::CaseInsensitive))
 				{
 					list.removeAt(list.indexOf(item));
 				}
@@ -871,7 +880,7 @@ void MainWindow::doDbUpdate()
 	dbActive = true;
 
 	emit actionStatusChanged("dbUpdateStarted");
-	
+
 	stBar->startProgressBar();
 
 	if(isVisible())
@@ -901,7 +910,7 @@ void MainWindow::finishDbUpdate()
 	}
 
 	qDebug() << "DB Update Finished";
-	
+
 	stBar->stopProgressBar();
 
 	QStringList list(aHandle->getUpgradeablePackages());
@@ -916,7 +925,7 @@ void MainWindow::finishDbUpdate()
 		else
 			trayicon->showMessage(QString(tr("Database Update")), QString(tr("One or more Databases could "
 					"not be updated.\nLast error reported was:\n%1")).arg(alpm_strerrorlast()));
-		
+
 		stBar->showStBarAction(QString(tr("One or more databases failed to update!")), QPixmap(":/Icons/icons/edit-delete.png"));
 	}
 	else
@@ -925,7 +934,7 @@ void MainWindow::finishDbUpdate()
 		QSettings *settings = new QSettings();
 		if(dbdialog->isHidden() && list.isEmpty() && settings->value("scheduledUpdate/updateDbShowNotify").toBool())
 			trayicon->showMessage(QString(tr("Database Update")), QString(tr("Databases Updated Successfully")));
-		
+
 		stBar->showStBarAction(QString(tr("Databases Updated Successfully")), QPixmap(":/Icons/icons/dialog-ok-apply.png"));
 	}
 
@@ -969,16 +978,16 @@ void MainWindow::finishDbUpdate()
 				case QMessageBox::Yes:
 
 					/* Ok, let's set up a special queue for Shaman. */
-					
+
 					qDebug() << "Shaman Queue";
 
 					cancelAllActions();
-					
+
 					if(list.contains("kdemod4-shaman-svn"))
 						reinstallPackage("kdemod4-shaman-svn");
 					else
 						reinstallPackage("shaman");
-					
+
 					widgetQueueToAlpmQueue();
 
 					break;
@@ -1018,12 +1027,12 @@ void MainWindow::showPkgsViewContextMenu()
 	connect(upgradeAction, SIGNAL(triggered()), SLOT(upgradePackage()));
 	QAction *cancelAction = menu->addAction(QIcon(":/Icons/icons/dialog-cancel.png"), tr("&Cancel Action"));
 	connect(cancelAction, SIGNAL(triggered()), SLOT(cancelAction()));
-	
+
 	menu->addSeparator();
-	
+
 	QAction *infoAction = menu->addAction(QIcon(":/Icons/icons/help-about.png"), tr("Package Information"));
 	connect(infoAction, SIGNAL(triggered()), SLOT(showInfoDialog()));
-	
+
 
 	if (aHandle->isInstalled(item->text(1)) && aHandle->getUpgradeablePackages().contains(item->text(1)))
 	{
@@ -1083,10 +1092,10 @@ void MainWindow::cancelAllActions()
 	{
 		if (!item->text(8).isEmpty())
 			item->setText(8, QString());
-		
+
 		item->setIcon(2, QIcon());
 	}
-	
+
 	stBar->updateStatusBar();
 }
 
@@ -1114,7 +1123,7 @@ void MainWindow::installAllRepoPackages()
 			installPackage(item->text(1));
 		}
 	}
-	
+
 	stBar->updateStatusBar();
 }
 
@@ -1145,7 +1154,7 @@ void MainWindow::reinstallAllRepoPackages()
 				reinstallPackage(item->text(1));
 		}
 	}
-	
+
 	stBar->updateStatusBar();
 }
 
@@ -1171,7 +1180,7 @@ void MainWindow::removeAllRepoPackages()
 			removePackage(item->text(1));
 		}
 	}
-	
+
 	stBar->updateStatusBar();
 }
 
@@ -1197,7 +1206,7 @@ void MainWindow::cancelAllRepoActions()
 			cancelAction(item->text(1));
 		}
 	}
-	
+
 	stBar->updateStatusBar();
 }
 
@@ -1211,7 +1220,7 @@ void MainWindow::installPackage()
 	foreach (QTreeWidgetItem *item, pkgsViewWG->selectedItems())
 	{
 		qDebug() << "Streaming package";
-		
+
 		if (aHandle->isProviderInstalled(item->text(1)))
 		{
 			switch(ShamanDialog::popupQuestionDialog(tr("Shaman"), QString(tr("A package providing %1 is already installed.\n"
@@ -1226,7 +1235,7 @@ void MainWindow::installPackage()
 						break;
 					}
 		}
-		
+
 		installPackage(item->text(1), item->text(5));
 	}
 
@@ -1288,27 +1297,27 @@ void MainWindow::reinstallPackage(const QString &package, const QString &repo)
 void MainWindow::installPackage(const QString &package, const QString &repo)
 {
 	qDebug() << "Install package: " + package;
-	
+
 	if (pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 1).isEmpty())
 	{
 		qDebug() << "Can't find package: " + package;
 		return;
 	}
-	
+
 	QTreeWidgetItem *item;
-	
+
 	if (repo.isEmpty())
 		item = pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 1).first();
 	else
 	{
 		item = NULL;
-		
+
 		foreach(QTreeWidgetItem *ent, pkgsViewWG->findItems(package, (Qt::MatchFlags)Qt::MatchExactly, 1))
 		{
 			if(ent->text(5) == repo)
 				item = ent;
 		}
-		
+
 		if(!item)
 			return;
 	}
@@ -1317,7 +1326,7 @@ void MainWindow::installPackage(const QString &package, const QString &repo)
 
 	if (aHandle->isProviderInstalled(package))
 		return;
-		
+
 	if (item->text(8) == tr("Install") || aHandle->isInstalled(item->text(1)))
 		return;
 	else
@@ -1375,7 +1384,7 @@ void MainWindow::removePackage(const QString &package, const QString &repo)
 	}
 
 	qDebug() << item->text(1);
-	
+
 	if (!aHandle->isInstalled(item->text(1)) || item->text(8) == tr("Uninstall"))
 		return;
 	else
@@ -1401,7 +1410,7 @@ void MainWindow::completeRemovePackage()
 	QTreeWidgetItem *item = pkgsViewWG->selectedItems().first();
 
 	qDebug() << item->text(1);
-	
+
 	if (!aHandle->isInstalled(item->text(1)))
 		return;
 	else
@@ -1461,7 +1470,7 @@ void MainWindow::cancelAction(const QString &package, const QString &repo)
 		if(!item)
 			return;
 	}
-	
+
 	if (item->text(8).isEmpty())
 		return;
 
@@ -1510,7 +1519,7 @@ void MainWindow::startUpgrading()
 				trayicon->showMessage(QString(tr("System Upgrade")), QString(tr("Your system is up to date!")));
 
 		}
-		
+
 		stBar->showStBarAction(QString(tr("Your system is up to date!")), QPixmap(":/Icons/icons/dialog-ok-apply.png"));
 
 		qDebug() << "System is up to date";
@@ -1560,12 +1569,12 @@ void MainWindow::upgrade(const QStringList &packages)
 			/* Ok, let's set up a special queue for Shaman. */
 
 			cancelAllActions();
-				
+
 			if(packages.contains("kdemod4-shaman-svn"))
 				reinstallPackage("kdemod4-shaman-svn");
 			else
 				reinstallPackage("shaman");
-				
+
 			widgetQueueToAlpmQueue();
 
 			break;
@@ -1597,8 +1606,8 @@ void MainWindow::upgrade(const QStringList &packages)
 			{
 				if(newsReader->checkUnreadNewsOnPkg(ent))
 				{
-					switch (ShamanDialog::popupQuestionDialog(QString(tr("News Alert")), 
-							QString(tr("There is an unread news about %1.\nDo you want to read it?")).arg(ent), this)) 
+					switch (ShamanDialog::popupQuestionDialog(QString(tr("News Alert")),
+							QString(tr("There is an unread news about %1.\nDo you want to read it?")).arg(ent), this))
 					{
 					case QMessageBox::Yes:
 						openNewsDialog();
@@ -1621,7 +1630,7 @@ void MainWindow::upgrade(const QStringList &packages)
 		connect(upDl, SIGNAL(aborted()), SLOT(upgradeAborted()));
 		connect(upDl, SIGNAL(upgradeNow()), SLOT(processQueue()));
 		connect(upDl, SIGNAL(addToPkgQueue()), SLOT(addUpgradeableToQueue()));
-		
+
 		upDl->init();
 		upActive = true;
 	}
@@ -1638,13 +1647,13 @@ void MainWindow::addUpgradeableToQueue()
 {
 	if(upDl)
 	    upDl->deleteLater();
-    
+
     qDebug() << "UpgradeableToQueue";
 	if (aHandle->getUpgradeablePackages().isEmpty())
 		return;
-	
+
 	disconnect(this, SIGNAL(packagesLoaded()), this, SLOT(addUpgradeableToQueue()));
-	
+
 	if ( !pkgsViewWG->topLevelItemCount() )
 	{
 	    connect(this, SIGNAL(packagesLoaded()), this, SLOT(addUpgradeableToQueue()));
@@ -1674,7 +1683,7 @@ void MainWindow::fullSysUpgrade()
 
 	if(isVisible())
 		dbdialog->show();
-	
+
 	stBar->startProgressBar();
 
 	connect(dbdialog, SIGNAL(killMe()), this, SLOT(startUpgrading()));
@@ -1715,7 +1724,7 @@ void MainWindow::processQueue()
 
 	connect(queueDl, SIGNAL(terminated(bool)), SLOT(queueProcessingEnded(bool)));
 	connect(queueDl, SIGNAL(streamTransactionProgress(int)), SIGNAL(streamTransactionProgress(int)));
-	
+
 	bool force = false;
 
 	if(qUi)
@@ -1729,7 +1738,7 @@ void MainWindow::processQueue()
 
 		if(qUi->isTurnOff())
 			turnOffSys = true;
-		
+
 		force = qUi->force();
 
 		qUi->deleteLater();
@@ -1772,7 +1781,7 @@ void MainWindow::queueProcessingEnded(bool errors)
 		else
 			trayicon->showMessage(QString(tr("Queue Processed")), QString(tr("One or more errors occurred, your Queue\n"
 					"was not successfully processed")));
-		
+
 		stBar->showStBarAction(QString(tr("Error Processing Queue!!")), QPixmap(":/Icons/icons/edit-delete.png"));
 	}
 	else
@@ -1826,7 +1835,7 @@ void MainWindow::queueProcessingEnded(bool errors)
 			ShamanDialog::popupDialog(tr("Queue Processed"), tr("Your Queue was successfully processed!"), this);
 		else
 			trayicon->showMessage(QString(tr("Queue Processed")), QString(tr("Your Queue was successfully processed!!")));
-		
+
 		stBar->showStBarAction(QString(tr("Your Queue was successfully processed!!")), QPixmap(":/Icons/icons/dialog-ok-apply.png"));
 
 		if(turnOffSys)
@@ -1873,8 +1882,8 @@ void MainWindow::widgetQueueToAlpmQueue()
 		{
 			if(newsReader->checkUnreadNewsOnPkg(ent->text(1)))
 			{
-				switch (ShamanDialog::popupQuestionDialog(QString(tr("News Alert")), 
-						QString(tr("There is an unread news about %1.\nDo you want to read it?")).arg(ent->text(1)), this)) 
+				switch (ShamanDialog::popupQuestionDialog(QString(tr("News Alert")),
+						QString(tr("There is an unread news about %1.\nDo you want to read it?")).arg(ent->text(1)), this))
 				{
 				case QMessageBox::Yes:
 					openNewsDialog();
@@ -1930,7 +1939,7 @@ void MainWindow::showSettings()
 	connect (configDialog, SIGNAL(setProxy()), this, SLOT(setProxy()));
 
 	configDialog->show();
-	
+
 	connect(configDialog, SIGNAL(accepted()), SLOT(settingsClosed()));
 	connect(configDialog, SIGNAL(rejected()), SLOT(settingsClosed()));
 }
@@ -1938,11 +1947,11 @@ void MainWindow::showSettings()
 void MainWindow::settingsClosed()
 {
 	qDebug() << "Closing Settings";
-	
+
 	if(configDialog->result() == QDialog::Accepted)
 	{
 		populateRepoColumn();
-		
+
 		if(configDialog->doDbUpdate())
 			doDbUpdate();
 
@@ -1965,7 +1974,7 @@ void MainWindow::systrayActivated(QSystemTrayIcon::ActivationReason reason)
 			emit stopTimer();
 			show();
 			foreach (QObject *ent, children())
-			{	
+			{
 				QDialog *dlog = qobject_cast<QDialog *>(ent);
 				if(dlog != 0)
 					dlog->show();
@@ -1977,7 +1986,7 @@ void MainWindow::systrayActivated(QSystemTrayIcon::ActivationReason reason)
 			emit startTimer();
 			hide();
 			foreach (QObject *ent, children())
-			{	
+			{
 				QDialog *dlog = qobject_cast<QDialog *>(ent);
 				if(dlog != 0)
 					dlog->hide();
@@ -1993,14 +2002,14 @@ void MainWindow::getPackageFromFile()
 
 	if(fileName == NULL)
 		return;
-	
+
 	installPackageFromFile(fileName);
 }
 
 void MainWindow::installPackageFromFile(const QString &filename)
 {
     pmpkg_t *pkg;
-    
+
     // Sanity check
 	if(alpm_pkg_load(filename.toUtf8().data(), 1, &pkg) == -1)
 	{
@@ -2041,7 +2050,7 @@ void MainWindow::showAboutDialog()
 			" margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Dario Freddi &lt;drf@kdemod.ath.cx&gt;</p>\n"
 			"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">"
 			"(C) 2008 Lukas Appelhans &lt;boom1992@kdemod.ath.cx&gt;</p></body></html>")).arg(aHandle->getAlpmVersion()));
-	
+
 	ui.headerLabel->setText(QString("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" "
 			"\"http://www.w3.org/TR/REC-html40/strict.dtd\"><html><head><meta name=\"qrichtext\""
 			" content=\"1\" /><style type=\"text/css\">p, li { white-space: pre-wrap; }</style>"
@@ -2050,12 +2059,12 @@ void MainWindow::showAboutDialog()
 			"; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">"
 			"Shaman ") + SHAMAN_VERSION + QString(" (r") + SHAMAN_REVISION + QString(")"
 			"</span></p></body></html>"));
-	
+
 	QPushButton *okb = ui.buttonBox->button(QDialogButtonBox::Ok);
-	
+
 	okb->setText(QObject::tr("Whoa, that's co&ol!"));
 	okb->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
-	
+
 	connect(ui.websiteButton, SIGNAL(clicked()), SLOT(openUrl()));
 
 	about->setWindowModality(Qt::ApplicationModal);
@@ -2180,7 +2189,7 @@ void MainWindow::setProxy()
 		QNetworkProxy::setApplicationProxy(QNetworkProxy(QNetworkProxy::HttpProxy, settings->value("proxy/proxyServer").toString(),
 				settings->value("proxy/proxyPort").toInt()));
 	}
-	else 
+	else
 	{
 		unsetenv("HTTP_PROXY");
 		qDebug() << "--> UNSETENV HTTP_PROXY";
@@ -2238,7 +2247,7 @@ void MainWindow::showAuthDialog(int count)
 	// Let's Hide out other dialogs
 
 	foreach(QObject *ent, children())
-	{	
+	{
 		QDialog *edl = qobject_cast<QDialog *>(ent);
 		if(edl != 0)
 			edl->hide();
@@ -2252,10 +2261,10 @@ void MainWindow::showAuthDialog(int count)
 		qDebug() << "Allocating Memory";
 		char *str = (char *) malloc(strlen(aUi.lineEdit->text().toUtf8().data()) * sizeof(char));
 		qDebug() << "Memory allocated, copying string...";
-		
+
 		if(str == NULL)
 		    qDebug() << "Segfault in 3, 2, 1...";
-		
+
 		strcpy(str, aUi.lineEdit->text().toUtf8().data());
 		qDebug() << "String copied";
 
@@ -2271,12 +2280,12 @@ void MainWindow::showAuthDialog(int count)
 		qDebug() << "Reply freed, aborting...";
 		reply = NULL;
 	}
-	
+
 	QSettings *settings = new QSettings();
-	
+
 	if(aUi.checkBox->isChecked())
 		settings->setValue("askedforkeeping", true);
-	
+
 	settings->deleteLater();
 
 	dlog->deleteLater();
@@ -2284,7 +2293,7 @@ void MainWindow::showAuthDialog(int count)
 	// Ok, let's show back again hidden dialogs
 
 	foreach(QObject *ent, children())
-	{	
+	{
 		QDialog *dlog = qobject_cast<QDialog *>(ent);
 		if(dlog != 0)
 			dlog->show();
@@ -2297,23 +2306,23 @@ void MainWindow::showInfoDialog()
 {
 	if(pkgProp != NULL)
 		pkgProp->deleteLater();
-	
+
 	if(pkgsViewWG->selectedItems().isEmpty())
 		return;
-	
+
 	pkgProp = new PackageProperties(aHandle, this);
-	
+
 	pkgProp->setPackage(pkgsViewWG->selectedItems().first()->text(1));
-	
+
 	pkgProp->reloadPkgInfo();
-	
+
 	pkgProp->show();
 }
 
 void MainWindow::triggerEditTimer()
 {
     editTimer->stop();
-    
+
     editTimer->start(500);
 }
 
@@ -2332,18 +2341,18 @@ void MainWindow::doStreamPackages()
         alpm_list_t *currentpkgs = alpm_db_getpkgcache(dbcrnt);
 
         currentpkgs = alpm_list_first(currentpkgs);
-        
+
         while(currentpkgs != NULL)
         {
             pmpkg_t *pkgcrnt = (pmpkg_t *)alpm_list_getdata(currentpkgs);
-            
+
             packages.append(alpm_pkg_get_name(pkgcrnt));
-            
+
             currentpkgs = alpm_list_next(currentpkgs);
         }
 
         databases = alpm_list_next(databases);
     }
-    
+
     emit streamPackages(packages);
 }
