@@ -230,9 +230,9 @@ Vuoi proseguire comunque?</translation>
     <message numerus="yes">
         <location filename="../src/BuildingHandler.cpp" line="166"/>
         <source>You are about to install &lt;b&gt;%n package(s)&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Stai per installare &lt;b&gt;%n pacchetto&lt;/b&gt; da sorgente. Compilare da sorgente&lt;br&gt;può dare diversi vantaggi, ma è comunque molto lento.&lt;br&gt;Se non ne sei sicuro, probabilmente preferiresti eseguire la tua coda da file&lt;br&gt;binari. Prima di continuare, è consigliabile rivedere la tua configurazione&lt;br&gt;per massimizzare le prestazioni della compilazione.</numerusform>
+            <numerusform>Stai per installare &lt;b&gt;%n pacchetti&lt;/b&gt; da sorgente. Compilare da sorgente&lt;br&gt;può dare diversi vantaggi, ma è comunque molto lento.&lt;br&gt;Se non ne sei sicuro, probabilmente preferiresti eseguire la tua coda da file&lt;br&gt;binari. Prima di continuare, è consigliabile rivedere la tua configurazione&lt;br&gt;per massimizzare le prestazioni della compilazione.</numerusform>
         </translation>
     </message>
 </context>
@@ -1030,27 +1030,27 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/configDialog.ui" line="603"/>
         <source>KDEMod 4 Repository</source>
-        <translation type="unfinished">Deposito di KDEMod 3 {4 ?}</translation>
+        <translation>Deposito di KDEMod 4</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="610"/>
         <source>KDEMod 4 Extragear Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Deposito Extragear di KDEmod 4</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="617"/>
         <source>KDEMod 4 Playground Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Deposito Playground di KDEmod 4</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="624"/>
         <source>KDEMod 4 Testing Repository</source>
-        <translation type="unfinished">Deposito Testing di KDEMod 3 {4 ?}</translation>
+        <translation>Deposito Testing di KDEMod 4</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="631"/>
         <source>KDEMod 4 Unstable Repository (Testers only!)</source>
-        <translation type="unfinished"></translation>
+        <translation>Deposito Instabile di KDEmod 4 (solo per tester)</translation>
     </message>
 </context>
 <context>
@@ -1931,7 +1931,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/MainWindow.cpp" line="640"/>
         <source>Name and Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome e descrizione</translation>
     </message>
 </context>
 <context>
@@ -2616,17 +2616,17 @@ p, li { white-space: pre-wrap; }
     <message numerus="yes">
         <location filename="../src/ReviewQueueDialog.cpp" line="111"/>
         <source>Remove &lt;b&gt;%n package(s)&lt;/b&gt;&lt;br /&gt;</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Rimuovere &lt;b&gt;%n pacchetto&lt;/b&gt;&lt;br /&gt;</numerusform>
+            <numerusform>Rimuovere &lt;b&gt;%n pacchetti&lt;/b&gt;&lt;br /&gt;</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../src/ReviewQueueDialog.cpp" line="113"/>
         <source>Install/Upgrade &lt;b&gt;%n package(s)&lt;/b&gt;&lt;br /&gt;</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Installare/Aggiornare &lt;b&gt;%n pacchetto&lt;/b&gt;&lt;br /&gt;</numerusform>
+            <numerusform>Installare/Aggiornare &lt;b&gt;%n pacchetti&lt;/b&gt;&lt;br /&gt;</numerusform>
         </translation>
     </message>
 </context>
@@ -2743,9 +2743,11 @@ ulteriori dettagli.</translation>
         <location filename="../src/ShamanTrayIcon.cpp" line="138"/>
         <source>Upgradeable package(s): %n.
 Click here to upgrade your System.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>C&apos;è %n pacchetto aggiornabile.
+Fai clic qui per aggiornare il tuo sistema.</numerusform>
+            <numerusform>Ci sono %n pacchetti aggiornabili.
+Fai clic qui per aggiornare il tuo sistema.</numerusform>
         </translation>
     </message>
 </context>
@@ -2769,9 +2771,9 @@ Click here to upgrade your System.</source>
     <message numerus="yes">
         <location filename="../src/SysUpgradeDialog.cpp" line="64"/>
         <source>&lt;b&gt;Upgradeable package(s): %n&lt;/b&gt; You can either&lt;br&gt; upgrade immediately or add it to the current Queue&lt;br&gt; and process it later.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>C&apos;è &lt;b&gt;%n pacchetto aggiornabile&lt;/b&gt;. Puoi aggiornare&lt;br&gt;immediatamente o aggiungerlo alla coda ed&lt;br&gt;aggiornare più tardi.</numerusform>
+            <numerusform>Ci sono &lt;b&gt;%n pacchetti aggiornabili&lt;/b&gt;. Puoi aggiornare&lt;br&gt;immediatamente o aggiungerli alla coda ed&lt;br&gt;aggiornare più tardi.</numerusform>
         </translation>
     </message>
 </context>
