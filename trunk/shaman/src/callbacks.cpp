@@ -177,6 +177,7 @@ void CallBacks::cb_trans_progress(pmtransprog_t event, const char *pkgname, int 
 void CallBacks::cb_dl_total(off_t total)
 {
 	list_total = total;
+	qDebug() << "total called, offset" << total;
 	/* if we get a 0 value, it means this list has finished downloading,
 	 * so clear out our list_xfered as well */
 	if(total == 0) {
@@ -187,51 +188,65 @@ void CallBacks::cb_dl_total(off_t total)
 /* callback to handle display of download progress */
 void CallBacks::cb_dl_progress(const char *filename, off_t file_xfered, off_t file_total)
 {
-	float timediff = 0.0;
-	float rate_f = 0.0, eta_s_f = 0.0;
-	float rate_l = 0.0, eta_s_l = 0.0;
+	off_t xfered, total;
+	float rate = 0.0, timediff = 0.0, f_xfered = 0.0;
 
-	if(onDl == 0)
-	{
-		xfered_total = 0;
-		rate_total = 0.0;
-		onDl = 1;
+	/* only use TotalDownload if enabled and we have a callback value */
+	if(list_total) {
+		xfered = list_xfered + file_xfered;
+		total = list_total;
+	} else {
+		xfered = file_xfered;
+		total = file_total;
 	}
 
-	if(file_xfered == 0)
-	{
-		gettimeofday(&initial_time, NULL);
-		timediff = get_update_timediff(1);
-		xfered_last = 0;
-		rate_last = 0.0;
-	}
-	else
-	{
+	/* this is basically a switch on xfered: 0, total, and
+	 * anything else */
+	if(file_xfered == 0) {
+		/* set default starting values, ensure we only call this once
+		 * if TotalDownload is enabled */
+		if(list_xfered == 0) {
+			gettimeofday(&initial_time, NULL);
+			xfered_last = (off_t)0;
+			rate_last = 0.0;
+			timediff = get_update_timediff(1);
+		}
+	} else if(file_xfered == file_total) {
+		/* compute final values */
+		struct timeval current_time;
+		float diff_sec, diff_usec;
+
+		gettimeofday(&current_time, NULL);
+		diff_sec = current_time.tv_sec - initial_time.tv_sec;
+		diff_usec = current_time.tv_usec - initial_time.tv_usec;
+		timediff = diff_sec + (diff_usec / 1000000.0);
+		rate = xfered / (timediff * 1024.0);
+	} else {
+		/* compute current average values */
 		timediff = get_update_timediff(0);
 
-		if(timediff < UPDATE_SPEED_SEC)
-		{
+		if(timediff < UPDATE_SPEED_SEC) {
 			/* return if the calling interval was too short */
 			return;
 		}
-		rate_f = (file_xfered - xfered_last) / (timediff * 1024.0);
+		rate = (xfered - xfered_last) / (timediff * 1024.0);
 		/* average rate to reduce jumpiness */
-		rate_f = (rate_f + 2*rate_last) / 3;
-		eta_s_f = (file_total - file_xfered) / (rate_f * 1024.0);
-
-		rate_l = (list_xfered - xfered_total) / (timediff * 1024.0);
-		/* average rate to reduce jumpiness */
-		rate_l = (rate_l + 2*rate_total) / 3;
-		eta_s_l = (list_total - list_xfered) / (rate_l * 1024.0);
-
-		rate_last = rate_f;
-		xfered_last = file_xfered;
-		rate_total = rate_l;
-		xfered_total = list_xfered;
+		rate = (rate + 2 * rate_last) / 3;
+		rate_last = rate;
+		xfered_last = xfered;
 	}
 
-	emit streamTransDlProg((char *)filename, file_xfered, file_total, (int)rate_f,
-			list_xfered, list_total, (int)rate_l);
+
+	if(list_total) {
+
+		/* if we are at the end, add the completed file to list_xfered */
+		if(file_xfered == file_total) {
+			list_xfered += file_total;
+		}
+	}
+
+	emit streamTransDlProg((char *)filename, (float)file_xfered, (float)file_total, (int)rate,
+			list_xfered + file_xfered, list_total, (int)rate);
 }
 
 void CallBacks::cb_log(pmloglevel_t level, char *fmt, va_list args)
@@ -255,8 +270,6 @@ void CallBacks::cb_log(pmloglevel_t level, char *fmt, va_list args)
 
 void cb_dl_total(off_t total)
 {
-	qDebug() << "called";
-
 	CbackReference.cb_dl_total(total);
 }
 

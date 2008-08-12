@@ -1024,19 +1024,7 @@ unsigned long AlpmHandler::getPackageSize(const QString &name, const QString &re
 
 QString AlpmHandler::getAlpmVersion()
 {
-	QProcess *proc = new QProcess();
-	proc->start("pacman --version");
-
-	proc->waitForFinished();
-
-	QByteArray btAr(proc->readAllStandardOutput());
-	btAr.remove(0, btAr.indexOf("libalpm"));
-	btAr.remove(0, 9);
-	btAr.remove(5, btAr.length());
-
-	QString version(btAr);
-
-	return version;
+	return QString(alpm_version());
 }
 
 void AlpmHandler::setuseragent()
