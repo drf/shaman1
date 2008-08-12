@@ -497,7 +497,7 @@ QStringList AlpmHandler::getPackageGroups()
 
 		while(grps != NULL)
 		{
-			retlist.append((char *)alpm_list_getdata(grps));
+			retlist.append(alpm_grp_get_name((pmgrp_t *)alpm_list_getdata(grps)));
 			grps = alpm_list_next(grps);
 		}
 
