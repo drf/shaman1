@@ -338,14 +338,10 @@ bool AlpmHandler::reloadPacmanConfiguration()
 	 * Windows, right?
 	 */
 
-	while(registered_db != NULL)
-	{
-		alpm_db_unregister((pmdb_t *)alpm_list_getdata(registered_db));
-		registered_db = alpm_list_next(registered_db);
-	}
-
 	alpm_db_unregister(db_local);
+	alpm_db_unregister_all();
 
+	registered_db = NULL;
 
 	pdata.HoldPkg = alpmListToStringList(alpm_option_get_holdpkgs());
 
