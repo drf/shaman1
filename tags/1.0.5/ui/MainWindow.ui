@@ -29,14 +29,6 @@
    <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralwidget" >
-   <property name="geometry" >
-    <rect>
-     <x>0</x>
-     <y>68</y>
-     <width>1195</width>
-     <height>630</height>
-    </rect>
-   </property>
    <layout class="QGridLayout" >
     <item row="0" column="1" >
      <layout class="QVBoxLayout" >
@@ -154,7 +146,7 @@
         </column>
         <column>
          <property name="text" >
-          <string comment="Name of the Package" >Name</string>
+          <string>Name</string>
          </property>
         </column>
         <column>
@@ -211,14 +203,6 @@
        <string>Repositories</string>
       </property>
       <widget class="QWidget" name="dockWidgetContents_2" >
-       <property name="geometry" >
-        <rect>
-         <x>2</x>
-         <y>22</y>
-         <width>310</width>
-         <height>598</height>
-        </rect>
-       </property>
        <layout class="QGridLayout" >
         <item row="0" column="0" >
          <layout class="QVBoxLayout" >
@@ -296,14 +280,6 @@
        <string>Package Information</string>
       </property>
       <widget class="QWidget" name="dockWidgetContents" >
-       <property name="geometry" >
-        <rect>
-         <x>2</x>
-         <y>22</y>
-         <width>865</width>
-         <height>286</height>
-        </rect>
-       </property>
        <layout class="QGridLayout" >
         <item row="0" column="0" >
          <layout class="QVBoxLayout" >
@@ -435,14 +411,6 @@
              <number>0</number>
             </property>
             <widget class="QWidget" name="tab" >
-             <property name="geometry" >
-              <rect>
-               <x>0</x>
-               <y>0</y>
-               <width>843</width>
-               <height>199</height>
-              </rect>
-             </property>
              <attribute name="title" >
               <string>Package I&amp;nformation</string>
              </attribute>
@@ -479,14 +447,6 @@
              </layout>
             </widget>
             <widget class="QWidget" name="tab_2" >
-             <property name="geometry" >
-              <rect>
-               <x>0</x>
-               <y>0</y>
-               <width>843</width>
-               <height>199</height>
-              </rect>
-             </property>
              <attribute name="title" >
               <string>File&amp;s</string>
              </attribute>
@@ -507,14 +467,6 @@
              </layout>
             </widget>
             <widget class="QWidget" name="dependenciesTab" >
-             <property name="geometry" >
-              <rect>
-               <x>0</x>
-               <y>0</y>
-               <width>843</width>
-               <height>199</height>
-              </rect>
-             </property>
              <attribute name="title" >
               <string>&amp;Dependencies</string>
              </attribute>
@@ -594,14 +546,6 @@
    <addaction name="menuHelp" />
   </widget>
   <widget class="QToolBar" name="toolBar" >
-   <property name="geometry" >
-    <rect>
-     <x>0</x>
-     <y>27</y>
-     <width>1195</width>
-     <height>41</height>
-    </rect>
-   </property>
    <property name="acceptDrops" >
     <bool>true</bool>
    </property>
@@ -628,16 +572,7 @@
    <addaction name="separator" />
    <addaction name="actionPacman_Preferences" />
   </widget>
-  <widget class="QStatusBar" name="statusBar" >
-   <property name="geometry" >
-    <rect>
-     <x>0</x>
-     <y>698</y>
-     <width>1195</width>
-     <height>24</height>
-    </rect>
-   </property>
-  </widget>
+  <widget class="QStatusBar" name="statusBar" />
   <action name="actionPacman_Preferences" >
    <property name="icon" >
     <iconset resource="shaman.qrc" >

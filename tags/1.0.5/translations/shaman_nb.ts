@@ -1012,27 +1012,27 @@ Do you want to save it?</source>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../src/MainWindow.cpp" line="625"/>
+        <location filename="../ui/MainWindow.ui" line="149"/>
         <source>Name</source>
         <translation>Navn</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="187"/>
+        <location filename="../ui/MainWindow.ui" line="179"/>
         <source>Description</source>
         <translation>Beskrivelse</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="329"/>
+        <location filename="../src/MainWindow.cpp" line="330"/>
         <source>Esc</source>
         <translation>Esc</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="377"/>
+        <location filename="../src/MainWindow.cpp" line="378"/>
         <source>Shaman - Reducing To Tray</source>
         <translation>Shaman - Minimer til systemkurven</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="380"/>
+        <location filename="../src/MainWindow.cpp" line="381"/>
         <source>Shaman will keep running in the system tray.
 To close it, click Quit in the file menu or in the tray icon context menu.
 While in the System Tray, Shaman will update your Databases
@@ -1044,112 +1044,112 @@ Når Shaman er i systemkurven vil den oppdatere databasen ved gitte intervaller,
 Du kan endre denne oppførselen i Innstillinger.</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="211"/>
+        <location filename="../ui/MainWindow.ui" line="203"/>
         <source>Repositories</source>
         <translation>Pakkearkiv</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="547"/>
+        <location filename="../src/MainWindow.cpp" line="548"/>
         <source>All Repositories</source>
         <translation>Alle pakkearkiv</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="550"/>
+        <location filename="../src/MainWindow.cpp" line="551"/>
         <source>Local Packages</source>
         <translation>Lokale pakker</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="504"/>
+        <location filename="../src/MainWindow.cpp" line="505"/>
         <source>Package Groups</source>
         <translation>Pakkegrupper</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1183"/>
+        <location filename="../src/MainWindow.cpp" line="1192"/>
         <source>All Groups</source>
         <translation>Alle grupper</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="66"/>
+        <location filename="../ui/MainWindow.ui" line="58"/>
         <source>Installed packages</source>
         <translation>Installerte pakker</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="71"/>
+        <location filename="../ui/MainWindow.ui" line="63"/>
         <source>Not installed packages</source>
         <translation>Ikke instellerte pakker</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="76"/>
+        <location filename="../ui/MainWindow.ui" line="68"/>
         <source>Upgradeable packages</source>
         <translation>Pakker som kan oppgraderes</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="81"/>
+        <location filename="../ui/MainWindow.ui" line="73"/>
         <source>Packages in Queue</source>
         <translation>Pakker i køen</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1042"/>
+        <location filename="../src/MainWindow.cpp" line="1051"/>
         <source>Mark for Re&amp;installation</source>
         <translation>Marker for re&amp;installasjon</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="340"/>
+        <location filename="../ui/MainWindow.ui" line="316"/>
         <source>Mark for &amp;Installation</source>
         <translation>Marker for &amp;installasjon</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2129"/>
+        <location filename="../src/MainWindow.cpp" line="2138"/>
         <source>Install</source>
         <translation>Installèr</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2139"/>
+        <location filename="../src/MainWindow.cpp" line="2148"/>
         <source>Uninstall</source>
         <translation>Avinstallèr</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2140"/>
+        <location filename="../src/MainWindow.cpp" line="2149"/>
         <source>Complete Uninstall</source>
         <translation>Fullstendig avinstallering</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="785"/>
+        <location filename="../src/MainWindow.cpp" line="794"/>
         <source>Status: </source>
         <translation>Status:</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="787"/>
+        <location filename="../src/MainWindow.cpp" line="796"/>
         <source>Installed</source>
         <translation>Installert</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="789"/>
+        <location filename="../src/MainWindow.cpp" line="798"/>
         <source>Not installed</source>
         <translation>Ikke installert</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="792"/>
+        <location filename="../src/MainWindow.cpp" line="801"/>
         <source>Local Version: </source>
         <translation>Lokal versjon:</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="797"/>
+        <location filename="../src/MainWindow.cpp" line="806"/>
         <source>Version in the Repository: </source>
         <translation>Versjon i pakkearkivet:</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="803"/>
+        <location filename="../src/MainWindow.cpp" line="812"/>
         <source>Action: </source>
         <translation>Handling:</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2007"/>
+        <location filename="../src/MainWindow.cpp" line="2016"/>
         <source>Error</source>
         <translation>Feil</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="918"/>
+        <location filename="../src/MainWindow.cpp" line="927"/>
         <source>One or more Databases could not be updated.
 Last error reported was:
 %1</source>
@@ -1158,27 +1158,27 @@ Siste rapporterte feil var:
 %1</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="927"/>
+        <location filename="../src/MainWindow.cpp" line="936"/>
         <source>Database Update</source>
         <translation>Oppdatering av databaser</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="920"/>
+        <location filename="../src/MainWindow.cpp" line="929"/>
         <source>One or more databases failed to update!</source>
         <translation>En eller flere av databasene kunne ikke oppdateres!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="929"/>
+        <location filename="../src/MainWindow.cpp" line="938"/>
         <source>Databases Updated Successfully</source>
         <translation>Oppdatering av databasene var vellykket</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1533"/>
+        <location filename="../src/MainWindow.cpp" line="1542"/>
         <source>Pacman Update</source>
         <translation>Oppdatering av Pacman</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1535"/>
+        <location filename="../src/MainWindow.cpp" line="1544"/>
         <source>Pacman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Pacman now?</source>
@@ -1187,12 +1187,12 @@ for seg selv, for å forhindre konflikter.
 Ønsker du å oppdatere pacman nå?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1555"/>
+        <location filename="../src/MainWindow.cpp" line="1564"/>
         <source>Shaman Update</source>
         <translation>Oppdatering av Shaman</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1557"/>
+        <location filename="../src/MainWindow.cpp" line="1566"/>
         <source>Shaman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Shaman now?</source>
@@ -1201,42 +1201,42 @@ for seg selv, for å forhindre konflikter.
 Ønsker du å oppdatere Shaman nå?</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="360"/>
+        <location filename="../ui/MainWindow.ui" line="336"/>
         <source>Mark for &amp;Removal</source>
         <translation>Marker for avinstalle&amp;ring</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1017"/>
+        <location filename="../src/MainWindow.cpp" line="1026"/>
         <source>Mark for Upgrade</source>
         <translation>Marker for oppgradering</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="400"/>
+        <location filename="../ui/MainWindow.ui" line="376"/>
         <source>&amp;Cancel Action</source>
         <translation>&amp;Avbryt handling</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="296"/>
+        <location filename="../ui/MainWindow.ui" line="280"/>
         <source>Package Information</source>
         <translation>Pakkeinformasjon</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1068"/>
+        <location filename="../src/MainWindow.cpp" line="1077"/>
         <source>Mark all for installation</source>
         <translation>Marker alle for installasjon</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1070"/>
+        <location filename="../src/MainWindow.cpp" line="1079"/>
         <source>Mark all for reinstallation</source>
         <translation>Marker alle for reinstallasjon</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1072"/>
+        <location filename="../src/MainWindow.cpp" line="1081"/>
         <source>Mark all for removal</source>
         <translation>Marker alle for avinstallering</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="731"/>
+        <location filename="../ui/MainWindow.ui" line="666"/>
         <source>Cancel all actions</source>
         <translation>Avbryt alle handlinger</translation>
     </message>
@@ -1246,116 +1246,116 @@ for seg selv, for å forhindre konflikter.
         <translation>Shaman</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1218"/>
+        <location filename="../src/MainWindow.cpp" line="1227"/>
         <source>A package providing %1 is already installed.
 Do you want to install %1 anyway?</source>
         <translation>En pakke som tilfører %1 er allerede installert.
 Ønsker du å allikevel installere %1?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1510"/>
+        <location filename="../src/MainWindow.cpp" line="1519"/>
         <source>System Upgrade</source>
         <translation>Oppgradering av systemet</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1514"/>
+        <location filename="../src/MainWindow.cpp" line="1523"/>
         <source>Your system is up to date!</source>
         <translation>Systemet ditt er allerede oppgradert!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1876"/>
+        <location filename="../src/MainWindow.cpp" line="1885"/>
         <source>News Alert</source>
         <translation>Nyhetsvarsel</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1877"/>
+        <location filename="../src/MainWindow.cpp" line="1886"/>
         <source>There is an unread news about %1.
 Do you want to read it?</source>
         <translation>Det finnes uleste nyheter om %1.
 Ønsker du å lese det?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2134"/>
+        <location filename="../src/MainWindow.cpp" line="2143"/>
         <source>Upgrade</source>
         <translation>Oppgrader</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1725"/>
+        <location filename="../src/MainWindow.cpp" line="1734"/>
         <source>Queue Processing</source>
         <translation>Behandling av køen</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1725"/>
+        <location filename="../src/MainWindow.cpp" line="1734"/>
         <source>Your Queue is being processed.
 Please wait.</source>
         <translation>Køen blir behandlet.
 Vennligst vent.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1828"/>
+        <location filename="../src/MainWindow.cpp" line="1837"/>
         <source>Queue Processed</source>
         <translation>Kø behandlet</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1774"/>
+        <location filename="../src/MainWindow.cpp" line="1783"/>
         <source>One or more errors occurred, your Queue
 was not successfully processed</source>
         <translation>En eller flere feil oppstod,
 behandlingen av køen var ikke vellykket</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1776"/>
+        <location filename="../src/MainWindow.cpp" line="1785"/>
         <source>Error Processing Queue!!</source>
         <translation>Feil ved behandling av køen!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1816"/>
+        <location filename="../src/MainWindow.cpp" line="1825"/>
         <source>Restart required</source>
         <translation>Omstart nødvendig</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1809"/>
+        <location filename="../src/MainWindow.cpp" line="1818"/>
         <source>Pacman or Shaman was updated. Shaman will now quit,
 please restart it to use the new version</source>
         <translation>Pacman eller Shaman ble oppgradert. Shaman vil nå avslutte,
 vennligst start den på nytt for å benytte deg av den nye versjonen</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1817"/>
+        <location filename="../src/MainWindow.cpp" line="1826"/>
         <source>Your Kernel has been updated.
 Please restart your PC soon to load the new Kernel.</source>
         <translation>Kjernen har blitt oppdatert.
 Vennligst start datamaskinen din på nytt for å bruke den nye kjernen.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1826"/>
+        <location filename="../src/MainWindow.cpp" line="1835"/>
         <source>Your Queue was successfully processed!</source>
         <translation>Behandlingen av køen var vellykket!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1830"/>
+        <location filename="../src/MainWindow.cpp" line="1839"/>
         <source>Your Queue was successfully processed!!</source>
         <translation>Behandlingen av køen var vellykket!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1992"/>
+        <location filename="../src/MainWindow.cpp" line="2001"/>
         <source>Install a Package</source>
         <translation>Installer en pakke</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1992"/>
+        <location filename="../src/MainWindow.cpp" line="2001"/>
         <source>Arch Linux Packages (*.pkg.tar.gz)</source>
         <translation>Arch Linux-pakker (*.pkg.tar.gz)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2007"/>
+        <location filename="../src/MainWindow.cpp" line="2016"/>
         <source>%1 does not seem
 a valid package</source>
         <translation>%1 ser ikke ut
 som en gyldig pakke</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2043"/>
+        <location filename="../src/MainWindow.cpp" line="2052"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -1369,17 +1369,17 @@ p, li { white-space: pre-wrap; }
         <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;A libalpm frontend in Qt&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Lisens: GPLv2+&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Libalpm Versjon: v.%1&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2080"/>
+        <location filename="../src/MainWindow.cpp" line="2089"/>
         <source>Library Question</source>
         <translation>Biblioteksspørsmål</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="61"/>
+        <location filename="../ui/MainWindow.ui" line="53"/>
         <source>All packages</source>
         <translation>Alle pakker</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="152"/>
+        <location filename="../ui/MainWindow.ui" line="144"/>
         <source>Status</source>
         <translation>Status</translation>
     </message>
@@ -1387,183 +1387,188 @@ p, li { white-space: pre-wrap; }
         <location filename="../ui/MainWindow.ui" line="157"/>
         <source>Name</source>
         <comment>Name of the Package</comment>
-        <translation>Navn</translation>
+        <translation type="obsolete">Navn</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="162"/>
+        <location filename="../ui/MainWindow.ui" line="154"/>
         <source>Action</source>
         <translation>Handling</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="167"/>
+        <location filename="../ui/MainWindow.ui" line="159"/>
         <source>Version</source>
         <translation>Versjon</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="172"/>
+        <location filename="../ui/MainWindow.ui" line="164"/>
         <source>Size</source>
         <translation>Størrelse</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="177"/>
+        <location filename="../ui/MainWindow.ui" line="169"/>
         <source>Repository</source>
         <translation>Pakkearkiv</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="182"/>
+        <location filename="../ui/MainWindow.ui" line="174"/>
         <source>Groups</source>
         <translation>Grupper</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="192"/>
+        <location filename="../ui/MainWindow.ui" line="184"/>
         <source>Action-Text</source>
         <translation>Handlingstekst</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="247"/>
+        <location filename="../ui/MainWindow.ui" line="231"/>
         <source>Re&amp;positories</source>
         <translation>&amp;Pakkearkiv</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="270"/>
+        <location filename="../ui/MainWindow.ui" line="254"/>
         <source>Package &amp;Groups</source>
         <translation>Pakke&amp;grupper</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="337"/>
+        <location filename="../ui/MainWindow.ui" line="313"/>
         <source>Install selected package</source>
         <translation>Installèr valgte pakker</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="357"/>
+        <location filename="../ui/MainWindow.ui" line="333"/>
         <source>Remove selected package</source>
         <translation>Avinstallèr valgte pakker</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="377"/>
+        <location filename="../ui/MainWindow.ui" line="353"/>
         <source>Complete Remove selected package (pacman -Rcs)</source>
         <translation>Fullstendig avinstallering av valgte pakker (ekv. pacman -Rcs)</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="380"/>
+        <location filename="../ui/MainWindow.ui" line="356"/>
         <source>Mark for complete re&amp;moval</source>
         <translation>Marker for fullstendig avinstalle&amp;ring</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="397"/>
+        <location filename="../ui/MainWindow.ui" line="373"/>
         <source>Cancel action for selected package</source>
         <translation>Avbryt handling for valgte pakker</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="447"/>
+        <location filename="../ui/MainWindow.ui" line="415"/>
         <source>Package I&amp;nformation</source>
         <translation>Pakke&amp;informasjon</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="491"/>
+        <location filename="../ui/MainWindow.ui" line="451"/>
         <source>File&amp;s</source>
         <translation>Fil&amp;er</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="502"/>
+        <location filename="../ui/MainWindow.ui" line="462"/>
         <source>1</source>
         <translation>1</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="519"/>
+        <location filename="../ui/MainWindow.ui" line="471"/>
         <source>&amp;Dependencies</source>
         <translation>&amp;Avhengigheter</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="552"/>
+        <location filename="../ui/MainWindow.ui" line="504"/>
         <source>&amp;File</source>
         <translation>&amp;Fil</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="558"/>
+        <location filename="../ui/MainWindow.ui" line="510"/>
         <source>&amp;Help</source>
         <translation>&amp;Hjelp</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="564"/>
+        <location filename="../ui/MainWindow.ui" line="516"/>
         <source>&amp;Actions</source>
         <translation>&amp;Handlinger</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="568"/>
+        <location filename="../ui/MainWindow.ui" line="520"/>
         <source>Build and Install from Source</source>
         <translation>Bygg og installer fra kildekode</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="584"/>
+        <location filename="../ui/MainWindow.ui" line="536"/>
         <source>&amp;Tools</source>
         <translation>&amp;Verktøy</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="609"/>
+        <location filename="../ui/MainWindow.ui" line="553"/>
         <source>Quick Actions</source>
         <translation>Hurtighandlinger</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="647"/>
+        <location filename="../ui/MainWindow.ui" line="582"/>
         <source>Settings...</source>
         <translation>Innstillinger...</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="656"/>
+        <location filename="../ui/MainWindow.ui" line="591"/>
         <source>About...</source>
         <translation>Om...</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="665"/>
+        <location filename="../ui/MainWindow.ui" line="600"/>
         <source>Update Database</source>
         <translation>Oppdater database</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="674"/>
+        <location filename="../ui/MainWindow.ui" line="609"/>
         <source>Upgrade System</source>
         <translation>Oppgrader system</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="683"/>
+        <location filename="../ui/MainWindow.ui" line="618"/>
         <source>Install Package From File</source>
         <translation>Installer pakke fra fil</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="695"/>
+        <location filename="../ui/MainWindow.ui" line="630"/>
         <source>Update ABS Tree</source>
         <translation>Oppdater ABS-tre</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="704"/>
+        <location filename="../ui/MainWindow.ui" line="639"/>
         <source>Build and Install Queue</source>
         <translation>Bygg og installer fra køen</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="713"/>
+        <location filename="../ui/MainWindow.ui" line="648"/>
         <source>Quit</source>
         <comment>Quit the application</comment>
         <translation>Avslutt</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="722"/>
+        <location filename="../ui/MainWindow.ui" line="657"/>
         <source>Process Queue</source>
         <translation>Prossesser kø</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="740"/>
+        <location filename="../ui/MainWindow.ui" line="675"/>
         <source>Read News</source>
         <translation>Les nyheter</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="749"/>
+        <location filename="../ui/MainWindow.ui" line="684"/>
         <source>View Log</source>
         <translation>Vis logg</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="330"/>
+        <location filename="../src/MainWindow.cpp" line="331"/>
         <source>Ctrl+Q</source>
         <comment>Exit Shaman Shortcut</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/MainWindow.cpp" line="640"/>
+        <source>Name and Description</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1641,12 +1646,12 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2056"/>
+        <location filename="../src/MainWindow.cpp" line="2065"/>
         <source>Whoa, that&apos;s co&amp;ol!</source>
         <translation>Oi, det var &amp;tøft!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="868"/>
+        <location filename="../src/QueueDialog.cpp" line="866"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
@@ -1888,92 +1893,92 @@ Din er versjon %1. Vennligst oppgrader Pacman.</translation>
         <translation>Laster ned pakker fra %1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="378"/>
+        <location filename="../src/QueueDialog.cpp" line="376"/>
         <source>%p% (%1 KB/s, %4:%5:%6 remaining)</source>
         <comment>You just have to translate &apos;remaining&apos; here. Leave everything else as it is.</comment>
         <translation>%p% (%1 KB/s, %4:%5:%6 gjenstår)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="386"/>
+        <location filename="../src/QueueDialog.cpp" line="384"/>
         <source>Downloading %1... (%2 MB of %3 MB)</source>
         <translation>Laster ned %1... (%2 MB av %3 MB)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="389"/>
+        <location filename="../src/QueueDialog.cpp" line="387"/>
         <source>Downloading %1... (%2 KB of %3 KB)</source>
         <translation>Laster ned %1... (%2 KB av %3 KB)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="445"/>
+        <location filename="../src/QueueDialog.cpp" line="443"/>
         <source>Queue processed, please wait...</source>
         <translation>Køen er behandlet, vennligst vent...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="456"/>
+        <location filename="../src/QueueDialog.cpp" line="454"/>
         <source>Queue processing failed!</source>
         <translation>Behandling av køen feilet!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="461"/>
+        <location filename="../src/QueueDialog.cpp" line="459"/>
         <source>Queue processed successfully!</source>
         <translation>Behandlingen av køen var vellykket!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="469"/>
+        <location filename="../src/QueueDialog.cpp" line="467"/>
         <source>Close</source>
         <translation>Lukk</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="505"/>
+        <location filename="../src/QueueDialog.cpp" line="503"/>
         <source>Unexpected Error. Shaman might be corrupted.</source>
         <translation>Det oppstod en uventet feil. Shaman kan være korrupt.</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="512"/>
+        <location filename="../src/QueueDialog.cpp" line="510"/>
         <source>Executing %1 scriptlet for %2...</source>
         <translation>Kjører %1 skript for %2...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="569"/>
+        <location filename="../src/QueueDialog.cpp" line="567"/>
         <source>Extracting Scriptlet from package failed!!</source>
         <translation>Utpakking av skript fra pakke feilet!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="579"/>
+        <location filename="../src/QueueDialog.cpp" line="577"/>
         <source>Package %1 does not have %2 scriptlet</source>
         <translation>Pakke %1 har ikke %2 skript</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="697"/>
+        <location filename="../src/QueueDialog.cpp" line="695"/>
         <source>Scriptlet processed successfully!</source>
         <translation>Behandling av skript var vellykket!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="703"/>
+        <location filename="../src/QueueDialog.cpp" line="701"/>
         <source>Error processing Scriptlet!!</source>
         <translation>Feil under behandling av skript!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="876"/>
+        <location filename="../src/QueueDialog.cpp" line="874"/>
         <source>Queue Processing</source>
         <translation>Behandling av køen</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="790"/>
+        <location filename="../src/QueueDialog.cpp" line="788"/>
         <source>Would you like to abort Queue Processing?
 This may damage your system.</source>
         <translation>Ønsker du å avbryte købehandlingen?
 Dette kan skade systemet ditt.</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="826"/>
+        <location filename="../src/QueueDialog.cpp" line="824"/>
         <source>There has been an error while preparing the transaction.
 </source>
         <translation>Det oppstod en feil under forberedelsen av transaksjonen.
 </translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="863"/>
+        <location filename="../src/QueueDialog.cpp" line="861"/>
         <source>There has been an error while committing the transaction.
 </source>
         <translation>Det oppstod en feil under uførelsen av transaksjonen.</translation>

@@ -223,13 +223,13 @@ INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/etc/shaman.desktop DESTINATION ${CMAKE
 set(SHARED_MIME_INFO_MINIMUM_VERSION "0.20")
 find_package(SharedMimeInfo)
 
-#if(SHAREDMIMEINFO_FOUND)
+if(PLASMA_FOUND)
 ########### install files ###############
     INSTALL(CODE "MESSAGE(\"Installing Archlinux Package Mimetypes...\")")
     install(FILES etc/shaman.xml DESTINATION ${XDG_MIME_INSTALL_DIR})
     update_xdg_mimetypes(${XDG_MIME_INSTALL_DIR})
 
-#endif(SHAREDMIMEINFO_FOUND)
+endif(PLASMA_FOUND)
 
 INSTALL(CODE "MESSAGE(\"Installing Miscellaneous Shaman Files...\")")
 INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/etc/kdemodmirrorlist DESTINATION /etc/pacman.d)

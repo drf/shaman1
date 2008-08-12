@@ -220,9 +220,9 @@ Deseja proceder mesmo assim?</translation>
     <message numerus="yes">
         <location filename="../src/BuildingHandler.cpp" line="166"/>
         <source>You are about to install &lt;b&gt;%n package(s)&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Você está para instalar &lt;b&gt;%n pacote&lt;/b&gt; a partir do código fonte. Instalar do código fonte&lt;br&gt;pode ter algumas vantagens, entretando é bem lento.&lt;br&gt;Se você não tem certeza sobre isso, você deve provavelmente preferir aplicar &lt;br&gt;suas alterações a partir dos pacotes binários. Antes de continuar, é recomendado que você&lt;br&gt;reveja suas configurações, para melhorar a performance da compilação.</numerusform>
+            <numerusform>Você está para instalar &lt;b&gt;%n pacotes&lt;/b&gt; a partir do código fonte. Instalar do código fonte&lt;br&gt;pode ter algumas vantagens, entretando é bem lento. &lt;br&gt;Se você não tem certeza sobre isso, você provavelmente deve preferir aplicar &lt;br&gt;suas alterações a partir dos pacotes binários. Antes de continuar, é recomendado que você &lt;br&gt;reveja suas configurações, para melhorar a performance da compilação.</numerusform>
         </translation>
     </message>
 </context>
@@ -1024,27 +1024,27 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/configDialog.ui" line="603"/>
         <source>KDEMod 4 Repository</source>
-        <translation type="unfinished">KDEMod 3 {4 ?}</translation>
+        <translation>Repositório do KDEMod 4</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="610"/>
         <source>KDEMod 4 Extragear Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Repositório Extragear do KDEMod 4</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="617"/>
         <source>KDEMod 4 Playground Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Repositório Playground do KDEMod 4</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="624"/>
         <source>KDEMod 4 Testing Repository</source>
-        <translation type="unfinished">Repositório Testing do KDEMod 3 {4 ?}</translation>
+        <translation>Repositório Testing do KDEMod 4</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="631"/>
         <source>KDEMod 4 Unstable Repository (Testers only!)</source>
-        <translation type="unfinished"></translation>
+        <translation>Repositório Unstable do KDEMod 4 (só para testers!)</translation>
     </message>
 </context>
 <context>
@@ -1070,92 +1070,92 @@ Deseja salvá-lo?</translation>
         <translation>Shaman</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="61"/>
+        <location filename="../ui/MainWindow.ui" line="53"/>
         <source>All packages</source>
         <translation>Todos os pacotes</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="66"/>
+        <location filename="../ui/MainWindow.ui" line="58"/>
         <source>Installed packages</source>
         <translation>Pacotes instalados</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="71"/>
+        <location filename="../ui/MainWindow.ui" line="63"/>
         <source>Not installed packages</source>
         <translation>Pacotes não instalados</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="76"/>
+        <location filename="../ui/MainWindow.ui" line="68"/>
         <source>Upgradeable packages</source>
         <translation>Pacotes atualizáveis</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="81"/>
+        <location filename="../ui/MainWindow.ui" line="73"/>
         <source>Packages in Queue</source>
         <translation>Pacotes na fila</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="152"/>
+        <location filename="../ui/MainWindow.ui" line="144"/>
         <source>Status</source>
         <translation>Estado</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="625"/>
+        <location filename="../ui/MainWindow.ui" line="149"/>
         <source>Name</source>
         <translation>Nome</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="162"/>
+        <location filename="../ui/MainWindow.ui" line="154"/>
         <source>Action</source>
         <translation>Ação</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="167"/>
+        <location filename="../ui/MainWindow.ui" line="159"/>
         <source>Version</source>
         <translation>Versão</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="172"/>
+        <location filename="../ui/MainWindow.ui" line="164"/>
         <source>Size</source>
         <translation>Tamanho</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="177"/>
+        <location filename="../ui/MainWindow.ui" line="169"/>
         <source>Repository</source>
         <translation>Repositório</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="182"/>
+        <location filename="../ui/MainWindow.ui" line="174"/>
         <source>Groups</source>
         <translation>Grupos</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="187"/>
+        <location filename="../ui/MainWindow.ui" line="179"/>
         <source>Description</source>
         <translation>Descrição</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="192"/>
+        <location filename="../ui/MainWindow.ui" line="184"/>
         <source>Action-Text</source>
         <translation>Texto da ação</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="211"/>
+        <location filename="../ui/MainWindow.ui" line="203"/>
         <source>Repositories</source>
         <translation>Repositórios</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="504"/>
+        <location filename="../src/MainWindow.cpp" line="505"/>
         <source>Package Groups</source>
         <translation>Grupos de pacotes</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="296"/>
+        <location filename="../ui/MainWindow.ui" line="280"/>
         <source>Package Information</source>
         <translation>Informação do pacote</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="337"/>
+        <location filename="../ui/MainWindow.ui" line="313"/>
         <source>Install selected package</source>
         <translation>Instalar pacote selecionado</translation>
     </message>
@@ -1165,7 +1165,7 @@ Deseja salvá-lo?</translation>
         <translation type="obsolete">Marcar para instalação</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="357"/>
+        <location filename="../ui/MainWindow.ui" line="333"/>
         <source>Remove selected package</source>
         <translation>Remover pacote selecionado</translation>
     </message>
@@ -1175,7 +1175,7 @@ Deseja salvá-lo?</translation>
         <translation type="obsolete">Marcar para remoção</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="377"/>
+        <location filename="../ui/MainWindow.ui" line="353"/>
         <source>Complete Remove selected package (pacman -Rcs)</source>
         <translation>Remover completamente o pacote selecionado (pacman -Rcs)</translation>
     </message>
@@ -1185,7 +1185,7 @@ Deseja salvá-lo?</translation>
         <translation type="obsolete">Marcar para remoção completa</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="397"/>
+        <location filename="../ui/MainWindow.ui" line="373"/>
         <source>Cancel action for selected package</source>
         <translation>Cancelar ação para os pacotes selecionados</translation>
     </message>
@@ -1200,7 +1200,7 @@ Deseja salvá-lo?</translation>
         <translation type="obsolete">Arquivos</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="502"/>
+        <location filename="../ui/MainWindow.ui" line="462"/>
         <source>1</source>
         <translation>1</translation>
     </message>
@@ -1225,12 +1225,12 @@ Deseja salvá-lo?</translation>
         <translation type="obsolete">Ações</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="568"/>
+        <location filename="../ui/MainWindow.ui" line="520"/>
         <source>Build and Install from Source</source>
         <translation>Construir e instalar da fonte</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="609"/>
+        <location filename="../ui/MainWindow.ui" line="553"/>
         <source>Quick Actions</source>
         <translation>Ações rápidas</translation>
     </message>
@@ -1240,52 +1240,52 @@ Deseja salvá-lo?</translation>
         <translation type="obsolete">Repositórios de pacotes</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="647"/>
+        <location filename="../ui/MainWindow.ui" line="582"/>
         <source>Settings...</source>
         <translation>Configurações...</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="656"/>
+        <location filename="../ui/MainWindow.ui" line="591"/>
         <source>About...</source>
         <translation>Sobre...</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="665"/>
+        <location filename="../ui/MainWindow.ui" line="600"/>
         <source>Update Database</source>
         <translation>Atualizar base de dados</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="674"/>
+        <location filename="../ui/MainWindow.ui" line="609"/>
         <source>Upgrade System</source>
         <translation>Atualizar Sistema</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="683"/>
+        <location filename="../ui/MainWindow.ui" line="618"/>
         <source>Install Package From File</source>
         <translation>Instalar pacote do arquivo</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="695"/>
+        <location filename="../ui/MainWindow.ui" line="630"/>
         <source>Update ABS Tree</source>
         <translation>Atualizar árvore ABS</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="704"/>
+        <location filename="../ui/MainWindow.ui" line="639"/>
         <source>Build and Install Queue</source>
         <translation>Construir e instalar pacotes</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="722"/>
+        <location filename="../ui/MainWindow.ui" line="657"/>
         <source>Process Queue</source>
         <translation>Aplicar</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="731"/>
+        <location filename="../ui/MainWindow.ui" line="666"/>
         <source>Cancel all actions</source>
         <translation>Cancelar tudo</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="380"/>
+        <location filename="../src/MainWindow.cpp" line="381"/>
         <source>Shaman will keep running in the system tray.
 To close it, click Quit in the file menu or in the tray icon context menu.
 While in the System Tray, Shaman will update your Databases
@@ -1298,32 +1298,32 @@ cada período de tempo regular e o notificará sobre atualizações disponíveis
 Você pode mudar seu comportamento em Configurações.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="377"/>
+        <location filename="../src/MainWindow.cpp" line="378"/>
         <source>Shaman - Reducing To Tray</source>
         <translation>Shaman - minimizando para o tray</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2134"/>
+        <location filename="../src/MainWindow.cpp" line="2143"/>
         <source>Upgrade</source>
         <translation>Atualizar</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1510"/>
+        <location filename="../src/MainWindow.cpp" line="1519"/>
         <source>System Upgrade</source>
         <translation>Atualização do Sistema</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="547"/>
+        <location filename="../src/MainWindow.cpp" line="548"/>
         <source>All Repositories</source>
         <translation>Todos os repositórios</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="550"/>
+        <location filename="../src/MainWindow.cpp" line="551"/>
         <source>Local Packages</source>
         <translation>Pacotes locais</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1183"/>
+        <location filename="../src/MainWindow.cpp" line="1192"/>
         <source>All Groups</source>
         <translation>Todos os grupos</translation>
     </message>
@@ -1333,47 +1333,47 @@ Você pode mudar seu comportamento em Configurações.</translation>
         <translation type="obsolete">Marcar para reinstalação</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2129"/>
+        <location filename="../src/MainWindow.cpp" line="2138"/>
         <source>Install</source>
         <translation>Instalar</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2139"/>
+        <location filename="../src/MainWindow.cpp" line="2148"/>
         <source>Uninstall</source>
         <translation>Desinstalar</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2140"/>
+        <location filename="../src/MainWindow.cpp" line="2149"/>
         <source>Complete Uninstall</source>
         <translation>Desinstalação completa</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="785"/>
+        <location filename="../src/MainWindow.cpp" line="794"/>
         <source>Status: </source>
         <translation>Estado: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="787"/>
+        <location filename="../src/MainWindow.cpp" line="796"/>
         <source>Installed</source>
         <translation>Instalado</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="789"/>
+        <location filename="../src/MainWindow.cpp" line="798"/>
         <source>Not installed</source>
         <translation>Não instalado</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="803"/>
+        <location filename="../src/MainWindow.cpp" line="812"/>
         <source>Action: </source>
         <translation>Ação: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2007"/>
+        <location filename="../src/MainWindow.cpp" line="2016"/>
         <source>Error</source>
         <translation>Erro</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="918"/>
+        <location filename="../src/MainWindow.cpp" line="927"/>
         <source>One or more Databases could not be updated.
 Last error reported was:
 %1</source>
@@ -1382,17 +1382,17 @@ O erro reportado foi:
 %1</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="927"/>
+        <location filename="../src/MainWindow.cpp" line="936"/>
         <source>Database Update</source>
         <translation>Atualização da base de dados</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="929"/>
+        <location filename="../src/MainWindow.cpp" line="938"/>
         <source>Databases Updated Successfully</source>
         <translation>Bases de dados atualizadas com sucesso</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1017"/>
+        <location filename="../src/MainWindow.cpp" line="1026"/>
         <source>Mark for Upgrade</source>
         <translation>Marcar para atualização</translation>
     </message>
@@ -1402,49 +1402,49 @@ O erro reportado foi:
         <translation type="obsolete">Cancelar ação</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1068"/>
+        <location filename="../src/MainWindow.cpp" line="1077"/>
         <source>Mark all for installation</source>
         <translation>Marcar todos para instalação</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1070"/>
+        <location filename="../src/MainWindow.cpp" line="1079"/>
         <source>Mark all for reinstallation</source>
         <translation>Marcar todos para reinstalação</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1072"/>
+        <location filename="../src/MainWindow.cpp" line="1081"/>
         <source>Mark all for removal</source>
         <translation>Marcar todos para remoção</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1514"/>
+        <location filename="../src/MainWindow.cpp" line="1523"/>
         <source>Your system is up to date!</source>
         <translation>Seu sistema está atualizado!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1725"/>
+        <location filename="../src/MainWindow.cpp" line="1734"/>
         <source>Queue Processing</source>
         <translation>Processamento</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1725"/>
+        <location filename="../src/MainWindow.cpp" line="1734"/>
         <source>Your Queue is being processed.
 Please wait.</source>
         <translation>Sua ação está sendo processada.
 Por favor, aguarde.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1828"/>
+        <location filename="../src/MainWindow.cpp" line="1837"/>
         <source>Queue Processed</source>
         <translation>Concluído</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1826"/>
+        <location filename="../src/MainWindow.cpp" line="1835"/>
         <source>Your Queue was successfully processed!</source>
         <translation>Sua ação foi processada com sucesso!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1830"/>
+        <location filename="../src/MainWindow.cpp" line="1839"/>
         <source>Your Queue was successfully processed!!</source>
         <translation>Sua ação foi processada com sucesso!!</translation>
     </message>
@@ -1494,17 +1494,17 @@ Por favor, aguarde.</translation>
         <translation type="obsolete">Você deseja continuar?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1992"/>
+        <location filename="../src/MainWindow.cpp" line="2001"/>
         <source>Install a Package</source>
         <translation>Instala um pacote</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1992"/>
+        <location filename="../src/MainWindow.cpp" line="2001"/>
         <source>Arch Linux Packages (*.pkg.tar.gz)</source>
         <translation>Pacotes do Arch Linux (*.pkg.tar.gz)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2007"/>
+        <location filename="../src/MainWindow.cpp" line="2016"/>
         <source>%1 does not seem
 a valid package</source>
         <translation>%1 não parece um
@@ -1535,7 +1535,7 @@ pacote válido</translation>
         <translation type="obsolete">%1 Bytes</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="713"/>
+        <location filename="../ui/MainWindow.ui" line="648"/>
         <source>Quit</source>
         <comment>Quit the application</comment>
         <translation>Sair</translation>
@@ -1546,12 +1546,12 @@ pacote válido</translation>
         <translation type="obsolete">Não mostrar novamente</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1533"/>
+        <location filename="../src/MainWindow.cpp" line="1542"/>
         <source>Pacman Update</source>
         <translation>Atualização do Pacman</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1535"/>
+        <location filename="../src/MainWindow.cpp" line="1544"/>
         <source>Pacman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Pacman now?</source>
@@ -1560,12 +1560,12 @@ o Pacman, para evitar conflitos de versão.
 Deseja atualizar o Pacman agora?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1555"/>
+        <location filename="../src/MainWindow.cpp" line="1564"/>
         <source>Shaman Update</source>
         <translation>Atualização do Shaman</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1557"/>
+        <location filename="../src/MainWindow.cpp" line="1566"/>
         <source>Shaman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Shaman now?</source>
@@ -1574,19 +1574,19 @@ o Shaman, para evitar conflitos de versão.
 Deseja atualizar o Shaman agora?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1816"/>
+        <location filename="../src/MainWindow.cpp" line="1825"/>
         <source>Restart required</source>
         <translation>Necessário reiniciar</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1809"/>
+        <location filename="../src/MainWindow.cpp" line="1818"/>
         <source>Pacman or Shaman was updated. Shaman will now quit,
 please restart it to use the new version</source>
         <translation>Pacman ou Shaman foi atualizado. O Shaman será fechado.
 Por favor, reinicie-o para usar a nova versão</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2080"/>
+        <location filename="../src/MainWindow.cpp" line="2089"/>
         <source>Library Question</source>
         <translation>Questão de bibliotecas</translation>
     </message>
@@ -1614,12 +1614,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;l.appelhans@gmx.de&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="792"/>
+        <location filename="../src/MainWindow.cpp" line="801"/>
         <source>Local Version: </source>
         <translation>Versão local: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="797"/>
+        <location filename="../src/MainWindow.cpp" line="806"/>
         <source>Version in the Repository: </source>
         <translation>Versão do repositório: </translation>
     </message>
@@ -1631,31 +1631,31 @@ was not successfully processed</source>
 não foi processada com sucesso</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1817"/>
+        <location filename="../src/MainWindow.cpp" line="1826"/>
         <source>Your Kernel has been updated.
 Please restart your PC soon to load the new Kernel.</source>
         <translation>Seu kernel foi atualizado.
 Por favor, reinicie o PC para carregar o novo kernel.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="329"/>
+        <location filename="../src/MainWindow.cpp" line="330"/>
         <source>Esc</source>
         <translation>Esc</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1876"/>
+        <location filename="../src/MainWindow.cpp" line="1885"/>
         <source>News Alert</source>
         <translation>Alerta de notícias</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1877"/>
+        <location filename="../src/MainWindow.cpp" line="1886"/>
         <source>There is an unread news about %1.
 Do you want to read it?</source>
         <translation>Há notícias não lidas sobre %1.
 Deseja lê-la?</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="740"/>
+        <location filename="../ui/MainWindow.ui" line="675"/>
         <source>Read News</source>
         <translation>Ler Notícias</translation>
     </message>
@@ -1665,24 +1665,24 @@ Deseja lê-la?</translation>
         <translation type="obsolete">Ferramentas</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="749"/>
+        <location filename="../ui/MainWindow.ui" line="684"/>
         <source>View Log</source>
         <translation>Ver Log</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="920"/>
+        <location filename="../src/MainWindow.cpp" line="929"/>
         <source>One or more databases failed to update!</source>
         <translation>Uma ou mais bases de dados falharam ao atualizar!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1774"/>
+        <location filename="../src/MainWindow.cpp" line="1783"/>
         <source>One or more errors occurred, your Queue
 was not successfully processed</source>
         <translation>Um ou mais erros ocorreram. Sua ação
 não foi processada com sucesso</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1776"/>
+        <location filename="../src/MainWindow.cpp" line="1785"/>
         <source>Error Processing Queue!!</source>
         <translation>Erro Processando Ação!!</translation>
     </message>
@@ -1693,84 +1693,84 @@ não foi processada com sucesso</translation>
         <translation type="obsolete">Nome</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1218"/>
+        <location filename="../src/MainWindow.cpp" line="1227"/>
         <source>A package providing %1 is already installed.
 Do you want to install %1 anyway?</source>
         <translation>Um pacote que contém %1 já está instalado.
 Deseja instalar %1 mesmo assim?</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="552"/>
+        <location filename="../ui/MainWindow.ui" line="504"/>
         <source>&amp;File</source>
         <translation>&amp;Arquivo</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="558"/>
+        <location filename="../ui/MainWindow.ui" line="510"/>
         <source>&amp;Help</source>
         <translation>&amp;Ajuda</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="564"/>
+        <location filename="../ui/MainWindow.ui" line="516"/>
         <source>&amp;Actions</source>
         <translation>&amp;Ações</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="584"/>
+        <location filename="../ui/MainWindow.ui" line="536"/>
         <source>&amp;Tools</source>
         <translation>&amp;Ferramentas</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="247"/>
+        <location filename="../ui/MainWindow.ui" line="231"/>
         <source>Re&amp;positories</source>
         <translation>Re&amp;positórios</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="270"/>
+        <location filename="../ui/MainWindow.ui" line="254"/>
         <source>Package &amp;Groups</source>
         <translation>&amp;Grupos de Pacotes</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="340"/>
+        <location filename="../ui/MainWindow.ui" line="316"/>
         <source>Mark for &amp;Installation</source>
         <translation>Marcar para &amp;Instalação</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="360"/>
+        <location filename="../ui/MainWindow.ui" line="336"/>
         <source>Mark for &amp;Removal</source>
         <translation>Marcar para &amp;Remoção</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="380"/>
+        <location filename="../ui/MainWindow.ui" line="356"/>
         <source>Mark for complete re&amp;moval</source>
         <translation>Marcar para re&amp;moção completa</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="447"/>
+        <location filename="../ui/MainWindow.ui" line="415"/>
         <source>Package I&amp;nformation</source>
         <translation>I&amp;nformação do pacote</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="491"/>
+        <location filename="../ui/MainWindow.ui" line="451"/>
         <source>File&amp;s</source>
         <translation>Arquivo&amp;s</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="519"/>
+        <location filename="../ui/MainWindow.ui" line="471"/>
         <source>&amp;Dependencies</source>
         <translation>&amp;Dependências</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1042"/>
+        <location filename="../src/MainWindow.cpp" line="1051"/>
         <source>Mark for Re&amp;installation</source>
         <translation>Marcar para Re&amp;instalação</translation>
     </message>
     <message>
-        <location filename="../ui/MainWindow.ui" line="400"/>
+        <location filename="../ui/MainWindow.ui" line="376"/>
         <source>&amp;Cancel Action</source>
         <translation>&amp;Cancelar</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2043"/>
+        <location filename="../src/MainWindow.cpp" line="2052"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -1796,12 +1796,17 @@ p, li { white-space: pre-wrap; }
         <location filename="../ui/MainWindow.ui" line="157"/>
         <source>Name</source>
         <comment>Name of the Package</comment>
-        <translation>Nome</translation>
+        <translation type="obsolete">Nome</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="330"/>
+        <location filename="../src/MainWindow.cpp" line="331"/>
         <source>Ctrl+Q</source>
         <comment>Exit Shaman Shortcut</comment>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../src/MainWindow.cpp" line="640"/>
+        <source>Name and Description</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1952,7 +1957,7 @@ Shaman will ask you for root password when needed.</source>
 O Shaman pedirá a senha de root quando necessário.</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="868"/>
+        <location filename="../src/QueueDialog.cpp" line="866"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
@@ -2026,7 +2031,7 @@ Shaman para mais detalhes.</translation>
         <translation>C&amp;ancelar</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2056"/>
+        <location filename="../src/MainWindow.cpp" line="2065"/>
         <source>Whoa, that&apos;s co&amp;ol!</source>
         <translation>Uau, isto é le&amp;gal!</translation>
     </message>
@@ -2149,94 +2154,94 @@ Shaman para mais detalhes.</translation>
         <translation>Iniciando download de pacotes de %1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="378"/>
+        <location filename="../src/QueueDialog.cpp" line="376"/>
         <source>%p% (%1 KB/s, %4:%5:%6 remaining)</source>
         <comment>You just have to translate &apos;remaining&apos; here. Leave everything else as it is.</comment>
         <translation>%p% (%1 KB/s, %4:%5:%6 restando)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="386"/>
+        <location filename="../src/QueueDialog.cpp" line="384"/>
         <source>Downloading %1... (%2 MB of %3 MB)</source>
         <translation>Baixando %1... (%2 MB de %3 MB)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="389"/>
+        <location filename="../src/QueueDialog.cpp" line="387"/>
         <source>Downloading %1... (%2 KB of %3 KB)</source>
         <translation>Baixando %1... (%2 KB de %3 KB)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="445"/>
+        <location filename="../src/QueueDialog.cpp" line="443"/>
         <source>Queue processed, please wait...</source>
         <translation>Ação processada, por favor aguarde...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="505"/>
+        <location filename="../src/QueueDialog.cpp" line="503"/>
         <source>Unexpected Error. Shaman might be corrupted.</source>
         <translation>Erro inesperado. O Shaman pode estar corrompido.</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="569"/>
+        <location filename="../src/QueueDialog.cpp" line="567"/>
         <source>Extracting Scriptlet from package failed!!</source>
         <translation>Extração do scriptlet do pacote falhou!!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="697"/>
+        <location filename="../src/QueueDialog.cpp" line="695"/>
         <source>Scriptlet processed successfully!</source>
         <translation>Scriptlet processado com sucesso!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="512"/>
+        <location filename="../src/QueueDialog.cpp" line="510"/>
         <source>Executing %1 scriptlet for %2...</source>
         <translation>Executando %1 scriptlet para %2...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="579"/>
+        <location filename="../src/QueueDialog.cpp" line="577"/>
         <source>Package %1 does not have %2 scriptlet</source>
         <translation>Pacotes %1 nao tem %2 scriptlet</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="703"/>
+        <location filename="../src/QueueDialog.cpp" line="701"/>
         <source>Error processing Scriptlet!!</source>
         <translation>Erro processando Scriptlet!!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="876"/>
+        <location filename="../src/QueueDialog.cpp" line="874"/>
         <source>Queue Processing</source>
         <translation>Processando ações</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="826"/>
+        <location filename="../src/QueueDialog.cpp" line="824"/>
         <source>There has been an error while preparing the transaction.
 </source>
         <translation>Houve um erro na preparação da transação.
 </translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="863"/>
+        <location filename="../src/QueueDialog.cpp" line="861"/>
         <source>There has been an error while committing the transaction.
 </source>
         <translation>Houve um erro no processamento da transação.
 </translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="790"/>
+        <location filename="../src/QueueDialog.cpp" line="788"/>
         <source>Would you like to abort Queue Processing?
 This may damage your system.</source>
         <translation>Gostaria de cancelar o processamento da ação?
 Isso pode danificar o sistema.</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="469"/>
+        <location filename="../src/QueueDialog.cpp" line="467"/>
         <source>Close</source>
         <translation>Fechar</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="456"/>
+        <location filename="../src/QueueDialog.cpp" line="454"/>
         <source>Queue processing failed!</source>
         <translation>Processamento da ação falhou!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="461"/>
+        <location filename="../src/QueueDialog.cpp" line="459"/>
         <source>Queue processed successfully!</source>
         <translation>Ação processada com sucesso!</translation>
     </message>
@@ -2380,17 +2385,17 @@ p, li { white-space: pre-wrap; }
     <message numerus="yes">
         <location filename="../src/ReviewQueueDialog.cpp" line="111"/>
         <source>Remove &lt;b&gt;%n package(s)&lt;/b&gt;&lt;br /&gt;</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Remover &lt;b&gt;%npacote&lt;/b&gt;&lt;br /&gt;</numerusform>
+            <numerusform>Remover &lt;b&gt;%npacotes&lt;/b&gt;&lt;br /&gt;</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../src/ReviewQueueDialog.cpp" line="113"/>
         <source>Install/Upgrade &lt;b&gt;%n package(s)&lt;/b&gt;&lt;br /&gt;</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Instalar/Atualizar &lt;b&gt;%n pacote&lt;/b&gt;&lt;br /&gt;</numerusform>
+            <numerusform>Instalar/Atualizar &lt;b&gt;%n pacotes&lt;/b&gt;&lt;br /&gt;</numerusform>
         </translation>
     </message>
 </context>
@@ -2506,9 +2511,11 @@ Clique aqui para mais detalhes.</translation>
         <location filename="../src/ShamanTrayIcon.cpp" line="138"/>
         <source>Upgradeable package(s): %n.
 Click here to upgrade your System.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Pacote atualizável: %n.
+Cilque aqui para atualizar o sistema.</numerusform>
+            <numerusform>Pacotes atualizáveis: %n.
+Cilque aqui para atualizar o sistema.</numerusform>
         </translation>
     </message>
 </context>
@@ -2532,9 +2539,9 @@ Click here to upgrade your System.</source>
     <message numerus="yes">
         <location filename="../src/SysUpgradeDialog.cpp" line="64"/>
         <source>&lt;b&gt;Upgradeable package(s): %n&lt;/b&gt; You can either&lt;br&gt; upgrade immediately or add it to the current Queue&lt;br&gt; and process it later.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>&lt;b&gt;Pacote atualizável: %n&lt;/b&gt; Você pode tanto&lt;br&gt; atualizar imediatamente como colocá-lo na lista&lt;br&gt; para instalá-lo depois.</numerusform>
+            <numerusform>&lt;b&gt;Pacotes atualizáveis: %n&lt;/b&gt; Você pode tanto&lt;br&gt; atualizar imediatamente como colocá-lo na lista&lt;br&gt; para instalá-lo depois.</numerusform>
         </translation>
     </message>
 </context>
