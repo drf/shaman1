@@ -3,27 +3,27 @@
 <context>
     <name>AlpmHandler</name>
     <message>
-        <location filename="../src/AlpmHandler.cpp~" line="1109"/>
+        <location filename="../src/AlpmHandler.cpp" line="1095"/>
         <source>: requires </source>
         <translation>: зависит от</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp~" line="1119"/>
+        <location filename="../src/AlpmHandler.cpp" line="1105"/>
         <source>: conflicts with </source>
         <translation>: конфликтует с</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp~" line="1146"/>
+        <location filename="../src/AlpmHandler.cpp" line="1132"/>
         <source>%1 exists in both &apos;%2&apos; and &apos;%3&apos;</source>
         <translation>%1 содержится в &apos;%2&apos; и в &apos;%3&apos;</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp~" line="1154"/>
+        <location filename="../src/AlpmHandler.cpp" line="1140"/>
         <source>: %1 exists in filesystem</source>
         <translation>: %1 существует в файловой системе</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp~" line="1173"/>
+        <location filename="../src/AlpmHandler.cpp" line="1159"/>
         <source>Alpm did not give further details.</source>
         <translation>Alpm не предоставляет более подробной информации.</translation>
     </message>
@@ -145,6 +145,16 @@ build packages from official sources only.</source>
 источников.</translation>
     </message>
     <message>
+        <location filename="../src/BuildingHandler.cpp" line="165"/>
+        <source>You are about to install &lt;b&gt;%1 package&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
+        <translation type="obsolete">Вы собираетесь установить &lt;b&gt;%1 пакет&lt;/b&gt; из исходников. Сборка из исходников&lt;br&gt;может иметь некоторые приемущества, но это довольно длительный процесс.&lt;br&gt;Если Вы не уверены, скорее всего лучше предпочесть установку бинарных&lt;br&gt;пакетов. Прежде, чем продолжить, рекомендуется просмотреть конфигурацию, чтобы улучшить производительность процесса сборки.</translation>
+    </message>
+    <message>
+        <location filename="../src/BuildingHandler.cpp" line="171"/>
+        <source>You are about to install &lt;b&gt;%1 packages&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
+        <translation type="obsolete">Вы собираетесь установить &lt;b&gt;%1 пакетов&lt;/b&gt; из исходников. Сборка из исходников&lt;br&gt;может иметь некоторые приемущества, но это довольно длительный процесс.&lt;br&gt;Если Вы не уверены, скорее всего лучше предпочесть установку бинарных&lt;br&gt;пакетов. Прежде, чем продолжить, рекомендуется просмотреть конфигурацию, чтобы улучшить производительность процесса сборки.</translation>
+    </message>
+    <message>
         <location filename="../src/BuildingHandler.cpp" line="184"/>
         <source>To be Installed</source>
         <translation>Будет установлено</translation>
@@ -211,10 +221,10 @@ Do you want to proceed anyway?</source>
     <message numerus="yes">
         <location filename="../src/BuildingHandler.cpp" line="166"/>
         <source>You are about to install &lt;b&gt;%n package(s)&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
-        <translation>
-            <numerusform>Вы собираетесь установить &lt;b&gt;%n пакет&lt;/b&gt; из исходников. Сборка из исходников&lt;br&gt;может иметь некоторые приемущества, но это довольно длительный процесс.&lt;br&gt;Если Вы не уверены, скорее всего лучше предпочесть установку бинарных&lt;br&gt;пакетов. Прежде, чем продолжить, рекомендуется просмотреть конфигурацию, чтобы улучшить производительность процесса сборки.</numerusform>
-            <numerusform>Вы собираетесь установить &lt;b&gt;%n пакета&lt;/b&gt; из исходников. Сборка из исходников&lt;br&gt;может иметь некоторые приемущества, но это довольно длительный процесс.&lt;br&gt;Если Вы не уверены, скорее всего лучше предпочесть установку бинарных&lt;br&gt;пакетов. Прежде, чем продолжить, рекомендуется просмотреть конфигурацию, чтобы улучшить производительность процесса сборки.</numerusform>
-            <numerusform>Вы собираетесь установить &lt;b&gt;%n пакетов&lt;/b&gt; из исходников. Сборка из исходников&lt;br&gt;может иметь некоторые приемущества, но это довольно длительный процесс.&lt;br&gt;Если Вы не уверены, скорее всего лучше предпочесть установку бинарных&lt;br&gt;пакетов. Прежде, чем продолжить, рекомендуется просмотреть конфигурацию, чтобы улучшить производительность процесса сборки.</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -436,11 +446,11 @@ Arch Linux использовать. Пожалуйста, имейте в ви�
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="591"/>
-        <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an
+        <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an 
 improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme,
 and lots of addons, KDEMod is the best way to taste the ease and the power
 of KDE with the simplicity and the power of Arch.</source>
-        <translation type="obsolete">KDEMod - улучшенная версия KDE, изюминка Arch Linux. Она интересна
+        <translation>KDEMod - улучшенная версия KDE, изюминка Arch Linux. Она интересна
 улучшенной сборкой Qt, совместимой с Qt из официальных репозиториев,
 улучшенной темой оформления, большим количеством дополнений.
 KDEMod - наилучший способ познакомиться с легкостью использования
@@ -458,10 +468,10 @@ KDEMod - наилучший способ познакомиться с легк�
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="718"/>
-        <source>You can extend your packages choice by adding other repositories. Third-Party
+        <source>You can extend your packages choice by adding other repositories. Third-Party 
 Repositories act just as normal ones, and will be accessible through both Shaman
 and Pacman.</source>
-        <translation type="obsolete">Вы можете расширить выбор пакетов, добавив сторонние репозитории.
+        <translation>Вы можете расширить выбор пакетов, добавив сторонние репозитории.
 С ними можно работать так же, как с обычными, и они доступны и для
 Shaman и для Pacman.</translation>
     </message>
@@ -980,27 +990,6 @@ p, li { white-space: pre-wrap; }
         <location filename="../ui/configDialog.ui" line="631"/>
         <source>KDEMod 4 Unstable Repository (Testers only!)</source>
         <translation>Репозиторий KDEMod 4 Unstable (только для тестеров!)</translation>
-    </message>
-    <message>
-        <location filename="../ui/configDialog.ui" line="591"/>
-        <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an 
-improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme,
-and lots of addons, KDEMod is the best way to taste the ease and the power
-of KDE with the simplicity and the power of Arch.</source>
-        <translation>KDEMod - улучшенная версия KDE, изюминка Arch Linux. Она интересна
-улучшенной сборкой Qt, совместимой с Qt из официальных репозиториев,
-улучшенной темой оформления, большим количеством дополнений.
-KDEMod - наилучший способ познакомиться с легкостью использования
-и богатыми возможностями KDE, в совокупности с простотой и мощью Arch.</translation>
-    </message>
-    <message>
-        <location filename="../ui/configDialog.ui" line="718"/>
-        <source>You can extend your packages choice by adding other repositories. Third-Party 
-Repositories act just as normal ones, and will be accessible through both Shaman
-and Pacman.</source>
-        <translation>Вы можете расширить выбор пакетов, добавив сторонние репозитории.
-С ними можно работать так же, как с обычными, и они доступны и для
-Shaman и для Pacman.</translation>
     </message>
 </context>
 <context>
@@ -1651,19 +1640,19 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/main.cpp~" line="357"/>
+        <location filename="../src/main.cpp" line="357"/>
         <source>Shaman</source>
         <translation>Shaman</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="269"/>
+        <location filename="../src/main.cpp" line="269"/>
         <source>There was a problem while testing libalpm.
 Maybe another application has a lock on it.</source>
         <translation>При проверке libalpm произошла ошибка.
 Возможно, он заблокирован другим приложением.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="287"/>
+        <location filename="../src/main.cpp" line="287"/>
         <source>Shaman</source>
         <comment>Hey! If you are reading this, first of all thanks for helping us in making Shaman better. There are not many comments unless where needed, since all the strings are pretty self-explanatory. You will see a lot of HTML in some cases: do not let that scare you, but please edit text only. Editing HTML tags too may break our layout, so be careful. A good practice could be copying the whole string, and then translating just what&apos;s outside the tags, usually just a few words. If you have any doubts, or if you just want to drop us a line, there goes our email addresses:
 Dario: drf54321@gmail.com
@@ -1672,7 +1661,7 @@ Thanks again, and enjoy your translation!</comment>
         <translation>Shaman</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="358"/>
+        <location filename="../src/main.cpp" line="358"/>
         <source>Pacman is not updated.
 Shaman needs libalpm &gt;= 2.1.0 to run.
 Yours is %1. Please update Pacman.</source>
@@ -1682,34 +1671,34 @@ Shaman требует libalpm &gt;= 2.1.0 для работы,
 обновите Pacman.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="329"/>
+        <location filename="../src/main.cpp" line="329"/>
         <source>Please Wait...</source>
         <translation>Пожалуйста, подождите...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="409"/>
+        <location filename="../src/main.cpp" line="409"/>
         <source>Loading Databases...</source>
         <translation>Загрузка баз данных...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="417"/>
+        <location filename="../src/main.cpp" line="417"/>
         <source>Loading Packages...</source>
         <translation>Загрузка пакетов...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="425"/>
+        <location filename="../src/main.cpp" line="425"/>
         <source>Starting up Shaman...</source>
         <translation>Запуск Shaman...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="288"/>
+        <location filename="../src/main.cpp" line="288"/>
         <source>Your settings file seems unwritable.
 Please check permissions on it.</source>
         <translation>Файл настроек недоступен для записи.
 Проверьте права доступа на него.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="348"/>
+        <location filename="../src/main.cpp" line="348"/>
         <source>You have started Shaman as root.
 It is advised to start it as unprivileged user.
 Shaman will ask you for root password when needed.</source>
@@ -1718,7 +1707,7 @@ Shaman will ask you for root password when needed.</source>
 Shaman спросит пароль пользователя root, когда он понадобится.</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="868"/>
+        <location filename="../src/QueueDialog.cpp" line="868"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
@@ -1730,14 +1719,14 @@ You can only run one copy of Shaman at a time.</source>
 В один момент времени не может работать более одной копии.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="339"/>
+        <location filename="../src/main.cpp" line="339"/>
         <source>Shaman can not be started as root.
 Please restart it as unprivileged user.</source>
         <translation>Shaman не может быть запущен от имени root.
 Пожалуйста, запустите его от имени обычного пользователя.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="264"/>
+        <location filename="../src/main.cpp" line="264"/>
         <source>Shaman could not switch to root.
 Probably you have not set the SUID bit to it.
 You can do that by issuing as root
@@ -1785,209 +1774,209 @@ wiki для более подробной информации.</translation>
 <context>
     <name>QueueDialog</name>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="78"/>
+        <location filename="../src/QueueDialog.cpp" line="78"/>
         <source>&lt;br&gt;&lt;b&gt; * Validating Transaction&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Проверка транзакции&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="139"/>
+        <location filename="../src/QueueDialog.cpp" line="139"/>
         <source>Validating Dependencies...</source>
         <translation>Проверка зависимостей...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="143"/>
+        <location filename="../src/QueueDialog.cpp" line="143"/>
         <source>Checking for Conflicts...</source>
         <translation>Проверка конфликтов...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="147"/>
+        <location filename="../src/QueueDialog.cpp" line="147"/>
         <source>Resolving Dependencies...</source>
         <translation>Разрешение зависимостей...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="151"/>
+        <location filename="../src/QueueDialog.cpp" line="151"/>
         <source>Looking for Inter-Conflicts...</source>
         <translation>Проверка на взаимную совместимость...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="157"/>
+        <location filename="../src/QueueDialog.cpp" line="157"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Installation Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Начата установка пакетов&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="161"/>
+        <location filename="../src/QueueDialog.cpp" line="161"/>
         <source>Installing %1...</source>
         <translation>Устанавливается %1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="190"/>
+        <location filename="../src/QueueDialog.cpp" line="190"/>
         <source>%1 (%2) installed successfully!</source>
         <translation>%1 (%2) успешно установлен!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="202"/>
+        <location filename="../src/QueueDialog.cpp" line="202"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Removal Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Начато удаление пакетов&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="206"/>
+        <location filename="../src/QueueDialog.cpp" line="206"/>
         <source>Removing %1...</source>
         <translation>Удаляется %1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="235"/>
+        <location filename="../src/QueueDialog.cpp" line="235"/>
         <source>%1 (%2) removed successfully!</source>
         <translation>%1 (%2) успешно удален!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="247"/>
+        <location filename="../src/QueueDialog.cpp" line="247"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Upgrading Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Начато обновление пакетов&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="251"/>
+        <location filename="../src/QueueDialog.cpp" line="251"/>
         <source>Upgrading %1...</source>
         <translation>Обновляется %1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="281"/>
+        <location filename="../src/QueueDialog.cpp" line="281"/>
         <source>Upgraded %1 successfully (%2 -&gt; %3)</source>
         <translation>%1 успешно обновлен (%2 -&gt; %3)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="295"/>
+        <location filename="../src/QueueDialog.cpp" line="295"/>
         <source>&lt;br&gt;&lt;b&gt; * Queue Processing Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Начато выполнение очереди&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="299"/>
+        <location filename="../src/QueueDialog.cpp" line="299"/>
         <source>Checking package integrity...</source>
         <translation>Проверка целостности пакета...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="303"/>
+        <location filename="../src/QueueDialog.cpp" line="303"/>
         <source>Checking delta integrity...</source>
         <translation>Проверка целостности delta...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="306"/>
+        <location filename="../src/QueueDialog.cpp" line="306"/>
         <source>Applying deltas...</source>
         <translation>Применение delta...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="309"/>
+        <location filename="../src/QueueDialog.cpp" line="309"/>
         <source>Generating %1 with %2... </source>
         <translation type="unfinished">Генерируется %1 с %2... </translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="313"/>
+        <location filename="../src/QueueDialog.cpp" line="313"/>
         <source>Success!</source>
         <translation>Успешно!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="316"/>
+        <location filename="../src/QueueDialog.cpp" line="316"/>
         <source>Failed!</source>
         <translation>Ошибка!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="330"/>
+        <location filename="../src/QueueDialog.cpp" line="330"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Downloading Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Начато скачивание пакетов&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="334"/>
+        <location filename="../src/QueueDialog.cpp" line="334"/>
         <source>Starting downloading packages from %1...</source>
         <translation>Начато скачивание пакетов из %1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="378"/>
+        <location filename="../src/QueueDialog.cpp" line="378"/>
         <source>%p% (%1 KB/s, %4:%5:%6 remaining)</source>
         <comment>You just have to translate &apos;remaining&apos; here. Leave everything else as it is.</comment>
         <translation>%p% (%1 KB/s, осталось %4:%5:%6)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="386"/>
+        <location filename="../src/QueueDialog.cpp" line="386"/>
         <source>Downloading %1... (%2 MB of %3 MB)</source>
         <translation>Скачивается %1... (%2 Мб из %3 Мб)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="389"/>
+        <location filename="../src/QueueDialog.cpp" line="389"/>
         <source>Downloading %1... (%2 KB of %3 KB)</source>
         <translation>Скачивается %1... (%2 Кб из %3 Кб)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="445"/>
+        <location filename="../src/QueueDialog.cpp" line="445"/>
         <source>Queue processed, please wait...</source>
         <translation>Очередь обработана, пожалуйста, подождите...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="505"/>
+        <location filename="../src/QueueDialog.cpp" line="505"/>
         <source>Unexpected Error. Shaman might be corrupted.</source>
         <translation>Непредвиденная ошибка. Возможно, Shaman поврежден.</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="569"/>
+        <location filename="../src/QueueDialog.cpp" line="569"/>
         <source>Extracting Scriptlet from package failed!!</source>
         <translation>Не удалось извлечь из пакета установочные скрипты!!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="697"/>
+        <location filename="../src/QueueDialog.cpp" line="697"/>
         <source>Scriptlet processed successfully!</source>
         <translation>Установочные скрипты обработаны успешно!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="512"/>
+        <location filename="../src/QueueDialog.cpp" line="512"/>
         <source>Executing %1 scriptlet for %2...</source>
         <translation>Выполнение скрипта %1 для %2...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="579"/>
+        <location filename="../src/QueueDialog.cpp" line="579"/>
         <source>Package %1 does not have %2 scriptlet</source>
         <translation>Пакет %1 не содержит скрипта %2</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="703"/>
+        <location filename="../src/QueueDialog.cpp" line="703"/>
         <source>Error processing Scriptlet!!</source>
         <translation>Ошибка обработки установочного скрипта!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="876"/>
+        <location filename="../src/QueueDialog.cpp" line="876"/>
         <source>Queue Processing</source>
         <translation>Выполнение очереди</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="826"/>
+        <location filename="../src/QueueDialog.cpp" line="826"/>
         <source>There has been an error while preparing the transaction.
 </source>
         <translation>Произошла ошибка при подготовке транзакции.
 </translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="863"/>
+        <location filename="../src/QueueDialog.cpp" line="863"/>
         <source>There has been an error while committing the transaction.
 </source>
         <translation>Произошла ошибка при завершении транзакции.
 </translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="790"/>
+        <location filename="../src/QueueDialog.cpp" line="790"/>
         <source>Would you like to abort Queue Processing?
 This may damage your system.</source>
         <translation>Вы действительно хотите прервать выполнение очереди?
 Ваша система может быть повреждена.</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="469"/>
+        <location filename="../src/QueueDialog.cpp" line="469"/>
         <source>Close</source>
         <translation>Закрыть</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="456"/>
+        <location filename="../src/QueueDialog.cpp" line="456"/>
         <source>Queue processing failed!</source>
         <translation>Ошибка обработки очереди!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="461"/>
+        <location filename="../src/QueueDialog.cpp" line="461"/>
         <source>Queue processed successfully!</source>
         <translation>Очередь успешно выполнена!</translation>
     </message>
@@ -2094,26 +2083,56 @@ p, li { white-space: pre-wrap; }
         <translation>Очередь готова к выполнению. Запланированные действия:&lt;br /&gt;</translation>
     </message>
     <message>
+        <location filename="../src/ReviewQueueDialog.cpp" line="111"/>
+        <source>Remove &lt;b&gt;%1 package&lt;/b&gt;&lt;br /&gt;</source>
+        <translation type="obsolete">Удалить &lt;b&gt;%1 пакет&lt;/b&gt;&lt;/b&gt;&lt;br /&gt;</translation>
+    </message>
+    <message>
+        <location filename="../src/ReviewQueueDialog.cpp" line="111"/>
+        <source>Remove &lt;b&gt;%1 packages&lt;/b&gt;&lt;br /&gt;</source>
+        <translation type="obsolete">Удалить &lt;b&gt;%1 пакетов&lt;/b&gt;&lt;/b&gt;&lt;br /&gt;</translation>
+    </message>
+    <message>
+        <location filename="../src/ReviewQueueDialog.cpp" line="113"/>
+        <source>Install/Upgrade &lt;b&gt;%1 package&lt;/b&gt;&lt;br /&gt;</source>
+        <translation type="obsolete">Установить/обновить &lt;b&gt;%1 пакет&lt;/b&gt;&lt;br /&gt;</translation>
+    </message>
+    <message>
+        <location filename="../src/ReviewQueueDialog.cpp" line="113"/>
+        <source>Install/Upgrade &lt;b&gt;%1 packages&lt;/b&gt;&lt;br /&gt;</source>
+        <translation type="obsolete">Установить/обновить &lt;b&gt;%1 пакетов&lt;/b&gt;&lt;br /&gt;</translation>
+    </message>
+    <message>
         <location filename="../src/ReviewQueueDialog.cpp" line="114"/>
         <source>Do you wish to continue?</source>
         <translation>Продолжить?</translation>
     </message>
+    <message>
+        <location filename="../src/ReviewQueueDialog.cpp" line="114"/>
+        <source>&lt;b&gt;%1&lt;/b&gt; will be used</source>
+        <translation type="obsolete">Будет занято &lt;b&gt;%1&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <location filename="../src/ReviewQueueDialog.cpp" line="115"/>
+        <source>&lt;b&gt;%1&lt;/b&gt; will be freed</source>
+        <translation type="obsolete">Будет освобождено &lt;b&gt;%1&lt;/b&gt;</translation>
+    </message>
     <message numerus="yes">
         <location filename="../src/ReviewQueueDialog.cpp" line="111"/>
         <source>Remove &lt;b&gt;%n package(s)&lt;/b&gt;&lt;br /&gt;</source>
-        <translation>
-            <numerusform>Удалить &lt;b&gt;%n пакет&lt;/b&gt;&lt;/b&gt;&lt;br /&gt;</numerusform>
-            <numerusform>Удалить &lt;b&gt;%n пакета&lt;/b&gt;&lt;/b&gt;&lt;br /&gt;</numerusform>
-            <numerusform>Удалить &lt;b&gt;%n пакетов&lt;/b&gt;&lt;/b&gt;&lt;br /&gt;</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../src/ReviewQueueDialog.cpp" line="113"/>
         <source>Install/Upgrade &lt;b&gt;%n package(s)&lt;/b&gt;&lt;br /&gt;</source>
-        <translation>
-            <numerusform>Установить/обновить &lt;b&gt;%n пакет&lt;/b&gt;&lt;br /&gt;</numerusform>
-            <numerusform>Установить/обновить &lt;b&gt;%n пакета&lt;/b&gt;&lt;br /&gt;</numerusform>
-            <numerusform>Установить/обновить &lt;b&gt;%n пакетов&lt;/b&gt;&lt;br /&gt;</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -2188,6 +2207,20 @@ p, li { white-space: pre-wrap; }
         <translation>Обновление системы</translation>
     </message>
     <message>
+        <location filename="../src/ShamanTrayIcon.cpp" line="138"/>
+        <source>There is %1 upgradeable package.
+Click here to upgrade your System.</source>
+        <translation type="obsolete">Доступны обновления для %1 пакета.
+Нажмите здесь, чтобы обновить систему.</translation>
+    </message>
+    <message>
+        <location filename="../src/ShamanTrayIcon.cpp" line="138"/>
+        <source>There are %1 upgradeable packages.
+Click here to upgrade your System.</source>
+        <translation type="obsolete">Доступны обновления для %1 пакетов.
+Нажмите здесь, чтобы обновить систему.</translation>
+    </message>
+    <message>
         <location filename="../src/ShamanTrayIcon.cpp" line="252"/>
         <source>New News Available</source>
         <translation>Доступны новости</translation>
@@ -2215,18 +2248,25 @@ Click here to open the News Dialog for more details.</source>
         <location filename="../src/ShamanTrayIcon.cpp" line="138"/>
         <source>Upgradeable package(s): %n.
 Click here to upgrade your System.</source>
-        <translation>
-            <numerusform>Доступны обновления для %n пакета.
-Нажмите здесь, чтобы обновить систему.</numerusform>
-            <numerusform>Доступны обновления для %n пакетов.
-Нажмите здесь, чтобы обновить систему.</numerusform>
-            <numerusform>Доступны обновления для %n пакетов.
-Нажмите здесь, чтобы обновить систему.</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
 </context>
 <context>
     <name>SysUpgradeDialog</name>
+    <message>
+        <location filename="../src/SysUpgradeDialog.cpp" line="64"/>
+        <source>There is &lt;b&gt;%1 upgradeable package&lt;/b&gt;. You can either&lt;br&gt; upgrade immediately or add it to the current Queue&lt;br&gt; and process it later.</source>
+        <translation type="obsolete">Пакетов, доступных для обновления: &lt;b&gt;%1&lt;/b&gt;. Вы можете&lt;br&gt;обновить их незамедлительно, или добавить в очередь&lt;br&gt;и обработать ее позднее.</translation>
+    </message>
+    <message>
+        <location filename="../src/SysUpgradeDialog.cpp" line="67"/>
+        <source>There are &lt;b&gt;%1 upgradeable packages&lt;/b&gt;. You can either&lt;br&gt; upgrade immediately or add them to the current Queue&lt;br&gt; and process them later.</source>
+        <translation type="obsolete">Пакетов, доступных для обновления: &lt;b&gt;%1&lt;/b&gt;. Вы можете&lt;br&gt;обновить их незамедлительно, или добавить в очередь&lt;br&gt;и обработать ее позднее.</translation>
+    </message>
     <message>
         <location filename="../src/SysUpgradeDialog.cpp" line="66"/>
         <source>To be Upgraded</source>
@@ -2235,10 +2275,10 @@ Click here to upgrade your System.</source>
     <message numerus="yes">
         <location filename="../src/SysUpgradeDialog.cpp" line="64"/>
         <source>&lt;b&gt;Upgradeable package(s): %n&lt;/b&gt; You can either&lt;br&gt; upgrade immediately or add it to the current Queue&lt;br&gt; and process it later.</source>
-        <translation>
-            <numerusform>Для обновления доступен &lt;b&gt;%n пакет&lt;/n&gt;. Можно выполнить обновление немедленно, или добавить в очередь&lt;br&gt;и обработать ее позднее.</numerusform>
-            <numerusform>Для обновления доступно &lt;b&gt;%n пакета&lt;/n&gt;. Можно выполнить обновление немедленно, или добавить в очередь&lt;br&gt;и обработать ее позднее.</numerusform>
-            <numerusform>Для обновления доступно &lt;b&gt;%n пакетов&lt;/n&gt;. Можно выполнить обновление немедленно, или добавить в очередь&lt;br&gt;и обработать ее позднее.</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -2286,7 +2326,7 @@ p, li { white-space: pre-wrap; }
         <translation>Благодарности</translation>
     </message>
     <message>
-        <location filename="../ui/aboutDialog.ui" line="217"/>
+        <location filename="../ui/aboutDialog.ui" line="220"/>
         <source>Visit &amp;Website...</source>
         <translation>&amp;Сайт проекта...</translation>
     </message>
@@ -2457,7 +2497,10 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Chinese Translator&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Anton Gritsay&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Russian Translator and Patches related to Translations&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Russian Translator and Patches related to Translations&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Bartek Iwaniec&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Polish Translator&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

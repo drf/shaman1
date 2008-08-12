@@ -3,27 +3,27 @@
 <context>
     <name>AlpmHandler</name>
     <message>
-        <location filename="../src/AlpmHandler.cpp~" line="1109"/>
+        <location filename="../src/AlpmHandler.cpp" line="1095"/>
         <source>: requires </source>
         <translation>: krever</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp~" line="1119"/>
+        <location filename="../src/AlpmHandler.cpp" line="1105"/>
         <source>: conflicts with </source>
         <translation>: kan ikke installeres med</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp~" line="1173"/>
+        <location filename="../src/AlpmHandler.cpp" line="1159"/>
         <source>Alpm did not give further details.</source>
         <translation>ALPM returnerte ingen flere detaljer.</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp~" line="1146"/>
+        <location filename="../src/AlpmHandler.cpp" line="1132"/>
         <source>%1 exists in both &apos;%2&apos; and &apos;%3&apos;</source>
         <translation>%1 finnes i både &apos;%2&apos; og &apos;%3&apos;</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp~" line="1154"/>
+        <location filename="../src/AlpmHandler.cpp" line="1140"/>
         <source>: %1 exists in filesystem</source>
         <translation>: %1 finnes allerede på filsystemet</translation>
     </message>
@@ -1646,7 +1646,7 @@ p, li { white-space: pre-wrap; }
         <translation>Oi, det var &amp;tøft!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="868"/>
+        <location filename="../src/QueueDialog.cpp" line="868"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
@@ -1676,7 +1676,7 @@ p, li { white-space: pre-wrap; }
         <translation>&amp;Avbryt</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="357"/>
+        <location filename="../src/main.cpp" line="357"/>
         <source>Shaman</source>
         <translation>Shaman</translation>
     </message>
@@ -1688,7 +1688,7 @@ You can only run one copy of Shaman at a time.</source>
 Du kan bare kjører er instans om gangen.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="264"/>
+        <location filename="../src/main.cpp" line="264"/>
         <source>Shaman could not switch to root.
 Probably you have not set the SUID bit to it.
 You can do that by issuing as root
@@ -1702,14 +1702,14 @@ chown root shaman &amp;&amp; chmod u+s shaman
 Dette er ikke en sikkerhetsrisiko, vennligst se hjemmesiden til Shaman dersom du ønsker å vite mer.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="269"/>
+        <location filename="../src/main.cpp" line="269"/>
         <source>There was a problem while testing libalpm.
 Maybe another application has a lock on it.</source>
         <translation>Det oppstod en feil mens libalpm ble testet.
 Det kan hende en annen applikasjon har låst pakkebehandlingssystemet.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="287"/>
+        <location filename="../src/main.cpp" line="287"/>
         <source>Shaman</source>
         <comment>Hey! If you are reading this, first of all thanks for helping us in making Shaman better. There are not many comments unless where needed, since all the strings are pretty self-explanatory. You will see a lot of HTML in some cases: do not let that scare you, but please edit text only. Editing HTML tags too may break our layout, so be careful. A good practice could be copying the whole string, and then translating just what&apos;s outside the tags, usually just a few words. If you have any doubts, or if you just want to drop us a line, there goes our email addresses:
 Dario: drf54321@gmail.com
@@ -1718,26 +1718,26 @@ Thanks again, and enjoy your translation!</comment>
         <translation>Shaman</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="288"/>
+        <location filename="../src/main.cpp" line="288"/>
         <source>Your settings file seems unwritable.
 Please check permissions on it.</source>
         <translation>Får ikke skrevet til konfigurasjonsfilen.
 Vennligst sjekk tilgangsrettighetene på den.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="329"/>
+        <location filename="../src/main.cpp" line="329"/>
         <source>Please Wait...</source>
         <translation>Vennligst vent...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="339"/>
+        <location filename="../src/main.cpp" line="339"/>
         <source>Shaman can not be started as root.
 Please restart it as unprivileged user.</source>
         <translation>Shaman kan ikke startes som root.
 Vennligst start den som en vanlig bruker.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="348"/>
+        <location filename="../src/main.cpp" line="348"/>
         <source>You have started Shaman as root.
 It is advised to start it as unprivileged user.
 Shaman will ask you for root password when needed.</source>
@@ -1746,7 +1746,7 @@ Det er anbefalt å kjøre den som en vanlig bruker.
 Shaman vil spørre deg om passordet til root når det er nødvendig.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="358"/>
+        <location filename="../src/main.cpp" line="358"/>
         <source>Pacman is not updated.
 Shaman needs libalpm &gt;= 2.1.0 to run.
 Yours is %1. Please update Pacman.</source>
@@ -1755,17 +1755,17 @@ Shaman trenger libalpm versjon 2.1.0 eller høyere for å kjøre.
 Din er versjon %1. Vennligst oppgrader Pacman.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="409"/>
+        <location filename="../src/main.cpp" line="409"/>
         <source>Loading Databases...</source>
         <translation>Laster databaser...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="417"/>
+        <location filename="../src/main.cpp" line="417"/>
         <source>Loading Packages...</source>
         <translation>Laster pakker...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="425"/>
+        <location filename="../src/main.cpp" line="425"/>
         <source>Starting up Shaman...</source>
         <translation>Starter Shaman...</translation>
     </message>
@@ -1773,207 +1773,207 @@ Din er versjon %1. Vennligst oppgrader Pacman.</translation>
 <context>
     <name>QueueDialog</name>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="78"/>
+        <location filename="../src/QueueDialog.cpp" line="78"/>
         <source>&lt;br&gt;&lt;b&gt; * Validating Transaction&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Validerer transaksjon&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="139"/>
+        <location filename="../src/QueueDialog.cpp" line="139"/>
         <source>Validating Dependencies...</source>
         <translation>Validerer avhengigheter...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="143"/>
+        <location filename="../src/QueueDialog.cpp" line="143"/>
         <source>Checking for Conflicts...</source>
         <translation>Sjekker for konflikter...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="147"/>
+        <location filename="../src/QueueDialog.cpp" line="147"/>
         <source>Resolving Dependencies...</source>
         <translation>Beregner avhengigheter...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="151"/>
+        <location filename="../src/QueueDialog.cpp" line="151"/>
         <source>Looking for Inter-Conflicts...</source>
         <translation>Ser for mellom-konflikter...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="157"/>
+        <location filename="../src/QueueDialog.cpp" line="157"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Installation Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Pakkeinstallasjon startet&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="161"/>
+        <location filename="../src/QueueDialog.cpp" line="161"/>
         <source>Installing %1...</source>
         <translation>Installerer %1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="190"/>
+        <location filename="../src/QueueDialog.cpp" line="190"/>
         <source>%1 (%2) installed successfully!</source>
         <translation>Installeringen av %1 (%2) var vellykket!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="202"/>
+        <location filename="../src/QueueDialog.cpp" line="202"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Removal Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Avinstallering av pakke startet&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="206"/>
+        <location filename="../src/QueueDialog.cpp" line="206"/>
         <source>Removing %1...</source>
         <translation>Avinstallerer %1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="235"/>
+        <location filename="../src/QueueDialog.cpp" line="235"/>
         <source>%1 (%2) removed successfully!</source>
         <translation>Avinstalleringen av %1 (%2) var vellykket!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="247"/>
+        <location filename="../src/QueueDialog.cpp" line="247"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Upgrading Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Oppgradering av pakker startet&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="251"/>
+        <location filename="../src/QueueDialog.cpp" line="251"/>
         <source>Upgrading %1...</source>
         <translation>Oppgraderer %1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="281"/>
+        <location filename="../src/QueueDialog.cpp" line="281"/>
         <source>Upgraded %1 successfully (%2 -&gt; %3)</source>
         <translation>Oppgraderingen av %1 var vellykket (%2 -&gt; %3)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="295"/>
+        <location filename="../src/QueueDialog.cpp" line="295"/>
         <source>&lt;br&gt;&lt;b&gt; * Queue Processing Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Behandling av køen startet&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="299"/>
+        <location filename="../src/QueueDialog.cpp" line="299"/>
         <source>Checking package integrity...</source>
         <translation>SJekker pakkeintegritet...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="303"/>
+        <location filename="../src/QueueDialog.cpp" line="303"/>
         <source>Checking delta integrity...</source>
         <translation>Sjekker deltaintegritet...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="306"/>
+        <location filename="../src/QueueDialog.cpp" line="306"/>
         <source>Applying deltas...</source>
         <translation>Påfører deltaer...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="309"/>
+        <location filename="../src/QueueDialog.cpp" line="309"/>
         <source>Generating %1 with %2... </source>
         <translation>Genererer %1 med %2...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="313"/>
+        <location filename="../src/QueueDialog.cpp" line="313"/>
         <source>Success!</source>
         <translation>Vellykket!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="316"/>
+        <location filename="../src/QueueDialog.cpp" line="316"/>
         <source>Failed!</source>
         <translation>Feilet!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="330"/>
+        <location filename="../src/QueueDialog.cpp" line="330"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Downloading Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Nedlasting av pakker startet&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="334"/>
+        <location filename="../src/QueueDialog.cpp" line="334"/>
         <source>Starting downloading packages from %1...</source>
         <translation>Laster ned pakker fra %1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="378"/>
+        <location filename="../src/QueueDialog.cpp" line="378"/>
         <source>%p% (%1 KB/s, %4:%5:%6 remaining)</source>
         <comment>You just have to translate &apos;remaining&apos; here. Leave everything else as it is.</comment>
         <translation>%p% (%1 KB/s, %4:%5:%6 gjenstår)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="386"/>
+        <location filename="../src/QueueDialog.cpp" line="386"/>
         <source>Downloading %1... (%2 MB of %3 MB)</source>
         <translation>Laster ned %1... (%2 MB av %3 MB)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="389"/>
+        <location filename="../src/QueueDialog.cpp" line="389"/>
         <source>Downloading %1... (%2 KB of %3 KB)</source>
         <translation>Laster ned %1... (%2 KB av %3 KB)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="445"/>
+        <location filename="../src/QueueDialog.cpp" line="445"/>
         <source>Queue processed, please wait...</source>
         <translation>Køen er behandlet, vennligst vent...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="456"/>
+        <location filename="../src/QueueDialog.cpp" line="456"/>
         <source>Queue processing failed!</source>
         <translation>Behandling av køen feilet!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="461"/>
+        <location filename="../src/QueueDialog.cpp" line="461"/>
         <source>Queue processed successfully!</source>
         <translation>Behandlingen av køen var vellykket!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="469"/>
+        <location filename="../src/QueueDialog.cpp" line="469"/>
         <source>Close</source>
         <translation>Lukk</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="505"/>
+        <location filename="../src/QueueDialog.cpp" line="505"/>
         <source>Unexpected Error. Shaman might be corrupted.</source>
         <translation>Det oppstod en uventet feil. Shaman kan være korrupt.</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="512"/>
+        <location filename="../src/QueueDialog.cpp" line="512"/>
         <source>Executing %1 scriptlet for %2...</source>
         <translation>Kjører %1 skript for %2...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="569"/>
+        <location filename="../src/QueueDialog.cpp" line="569"/>
         <source>Extracting Scriptlet from package failed!!</source>
         <translation>Utpakking av skript fra pakke feilet!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="579"/>
+        <location filename="../src/QueueDialog.cpp" line="579"/>
         <source>Package %1 does not have %2 scriptlet</source>
         <translation>Pakke %1 har ikke %2 skript</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="697"/>
+        <location filename="../src/QueueDialog.cpp" line="697"/>
         <source>Scriptlet processed successfully!</source>
         <translation>Behandling av skript var vellykket!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="703"/>
+        <location filename="../src/QueueDialog.cpp" line="703"/>
         <source>Error processing Scriptlet!!</source>
         <translation>Feil under behandling av skript!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="876"/>
+        <location filename="../src/QueueDialog.cpp" line="876"/>
         <source>Queue Processing</source>
         <translation>Behandling av køen</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="790"/>
+        <location filename="../src/QueueDialog.cpp" line="790"/>
         <source>Would you like to abort Queue Processing?
 This may damage your system.</source>
         <translation>Ønsker du å avbryte købehandlingen?
 Dette kan skade systemet ditt.</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="826"/>
+        <location filename="../src/QueueDialog.cpp" line="826"/>
         <source>There has been an error while preparing the transaction.
 </source>
         <translation>Det oppstod en feil under forberedelsen av transaksjonen.
 </translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="863"/>
+        <location filename="../src/QueueDialog.cpp" line="863"/>
         <source>There has been an error while committing the transaction.
 </source>
         <translation>Det oppstod en feil under uførelsen av transaksjonen.</translation>
@@ -2364,7 +2364,7 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;￼&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;￼p, li { white-space: pre-wrap; }￼&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Shaman har mottatt hjelp fra mange mennesker, og det er takket være disse at Shaman har sett dagens lys. Dersom vi har glemt å legge deg til her, send oss en mail!&lt;/span&gt;&lt;/p&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Navnene er i alfabetisk rekkefølge, fordi selv de minste bidrag betyr mye for oss.&lt;/p&gt;￼&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;KDEmod-samfunnet&lt;/p&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Hjelp, testing, brukerstøtte,, alt startet der. Dersom det ikke fantes noen KDEmod, sannsynligvis ingen Shaman.&lt;/span&gt;&lt;/p&gt;￼&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Giannis Antoniou&lt;/span&gt;&lt;/p&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Gresk oversetter&lt;/p&gt;￼&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Carlos Berroteran&lt;/span&gt;&lt;/p&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Spansk oversetter&lt;/p&gt;￼&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Jacques Disner&lt;/span&gt;&lt;/p&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Fransk oversetter&lt;/p&gt;￼&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Jan Dupal&lt;/span&gt;&lt;/p&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Tsjekkisk oversetter&lt;/p&gt;￼&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Stefano Giro&lt;/span&gt;&lt;/p&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Testing og forslag&lt;/span&gt;&lt;/p&gt;￼&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Georg Grabler&lt;/span&gt;&lt;/p&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Proxypatch, hjelp med kode og mer.&lt;/span&gt;&lt;/p&gt;￼&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Michael Knights&lt;/span&gt;&lt;/p&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Grafikk, ikonet hans havnet i Arxin, men oppstartsskjermen hans er her!&lt;/p&gt;￼&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Till Luge&lt;/span&gt;&lt;/p&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Mye testing, takk!&lt;/span&gt;&lt;/p&gt;￼&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Rodrigo Mazak&lt;/span&gt;&lt;/p&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Braziliansk oversetter, og kom med navnet Shaman.&lt;/p&gt;￼&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;Jan Mette&lt;/p&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Tysk oversetter og KDEmod-utvikler, og også ikonet!&lt;/p&gt;￼&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Atilla Ontas&lt;/span&gt;&lt;/p&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Tyrkisk oversetter&lt;/p&gt;￼&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Martin Sandsmark&lt;/span&gt;&lt;/p&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Tjeneransvarlig, Trac-giver, norsk oversettelse, KDEmod-utvikler&lt;/p&gt;￼&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Johannes Schriewer&lt;/span&gt;&lt;/p&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;KDEmod-utvikler, hjelp med koden&lt;/span&gt;&lt;/p&gt;￼&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Xiang Yixiang&lt;/span&gt;&lt;/p&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Kinesisk oversetter&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/aboutDialog.ui" line="217"/>
+        <location filename="../ui/aboutDialog.ui" line="220"/>
         <source>Visit &amp;Website...</source>
         <translation>Besøk &amp;hjemmesiden...</translation>
     </message>
@@ -2426,7 +2426,10 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Chinese Translator&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Anton Gritsay&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Russian Translator and Patches related to Translations&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Russian Translator and Patches related to Translations&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Bartek Iwaniec&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Polish Translator&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

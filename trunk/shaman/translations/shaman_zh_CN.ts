@@ -3,27 +3,27 @@
 <context>
     <name>AlpmHandler</name>
     <message>
-        <location filename="../src/AlpmHandler.cpp~" line="1109"/>
+        <location filename="../src/AlpmHandler.cpp" line="1095"/>
         <source>: requires </source>
         <translation>: 要求 </translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp~" line="1119"/>
+        <location filename="../src/AlpmHandler.cpp" line="1105"/>
         <source>: conflicts with </source>
         <translation>: 冲突 </translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp~" line="1146"/>
+        <location filename="../src/AlpmHandler.cpp" line="1132"/>
         <source>%1 exists in both &apos;%2&apos; and &apos;%3&apos;</source>
         <translation>%1 同时存在 &apos;%2&apos; 和 &apos;%3&apos;</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp~" line="1154"/>
+        <location filename="../src/AlpmHandler.cpp" line="1140"/>
         <source>: %1 exists in filesystem</source>
         <translation>: %1 在文件系统中存在</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp~" line="1173"/>
+        <location filename="../src/AlpmHandler.cpp" line="1159"/>
         <source>Alpm did not give further details.</source>
         <translation>Alpm 无法获取详情。</translation>
     </message>
@@ -2027,19 +2027,19 @@ Please restart it with root privileges.</source>
 请用root权限重新启动Shaman</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="357"/>
+        <location filename="../src/main.cpp" line="357"/>
         <source>Shaman</source>
         <translation>Shaman</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="269"/>
+        <location filename="../src/main.cpp" line="269"/>
         <source>There was a problem while testing libalpm.
 Maybe another application has a lock on it.</source>
         <translation>测试libalpm时出现问题。
 也许是另外一个应用程序锁定它了。</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="287"/>
+        <location filename="../src/main.cpp" line="287"/>
         <source>Shaman</source>
         <comment>Hey! If you are reading this, first of all thanks for helping us in making Shaman better. There are not many comments unless where needed, since all the strings are pretty self-explanatory. You will see a lot of HTML in some cases: do not let that scare you, but please edit text only. Editing HTML tags too may break our layout, so be careful. A good practice could be copying the whole string, and then translating just what&apos;s outside the tags, usually just a few words. If you have any doubts, or if you just want to drop us a line, there goes our email addresses:
 Dario: drf54321@gmail.com
@@ -2048,27 +2048,27 @@ Thanks again, and enjoy your translation!</comment>
         <translation>Shaman</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="329"/>
+        <location filename="../src/main.cpp" line="329"/>
         <source>Please Wait...</source>
         <translation>请等待...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="409"/>
+        <location filename="../src/main.cpp" line="409"/>
         <source>Loading Databases...</source>
         <translation>载入数据库...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="417"/>
+        <location filename="../src/main.cpp" line="417"/>
         <source>Loading Packages...</source>
         <translation>载入软件包...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="425"/>
+        <location filename="../src/main.cpp" line="425"/>
         <source>Starting up Shaman...</source>
         <translation>启动Shaman...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="358"/>
+        <location filename="../src/main.cpp" line="358"/>
         <source>Pacman is not updated.
 Shaman needs libalpm &gt;= 2.1.0 to run.
 Yours is %1. Please update Pacman.</source>
@@ -2077,7 +2077,7 @@ Shaman 要求 libalpm &gt;= 2.1.0 才能运行。
 你的版本是 %1. 请更新Pacman。</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="868"/>
+        <location filename="../src/QueueDialog.cpp" line="868"/>
         <source>Ok</source>
         <translation>确定</translation>
     </message>
@@ -2092,14 +2092,14 @@ Shaman 要求 libalpm &gt;= 2.1.0 才能运行。
         <translation type="obsolete">否</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="288"/>
+        <location filename="../src/main.cpp" line="288"/>
         <source>Your settings file seems unwritable.
 Please check permissions on it.</source>
         <translation>您的设置文件好像不可读，
 请您检查它的权限。</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="348"/>
+        <location filename="../src/main.cpp" line="348"/>
         <source>You have started Shaman as root.
 It is advised to start it as unprivileged user.
 Shaman will ask you for root password when needed.</source>
@@ -2115,14 +2115,14 @@ You can only run one copy of Shaman at a time.</source>
 您仅能够在同一时间内运行一个Shaman。</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="339"/>
+        <location filename="../src/main.cpp" line="339"/>
         <source>Shaman can not be started as root.
 Please restart it as unprivileged user.</source>
         <translation>Shaman不能够以root身份启动，
 请使用非特权用户重新启动它。</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp~" line="264"/>
+        <location filename="../src/main.cpp" line="264"/>
         <source>Shaman could not switch to root.
 Probably you have not set the SUID bit to it.
 You can do that by issuing as root
@@ -2175,138 +2175,138 @@ for more details.</translation>
 <context>
     <name>QueueDialog</name>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="78"/>
+        <location filename="../src/QueueDialog.cpp" line="78"/>
         <source>&lt;br&gt;&lt;b&gt; * Validating Transaction&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * 校验事务&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="139"/>
+        <location filename="../src/QueueDialog.cpp" line="139"/>
         <source>Validating Dependencies...</source>
         <translation>检查依赖关系...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="143"/>
+        <location filename="../src/QueueDialog.cpp" line="143"/>
         <source>Checking for Conflicts...</source>
         <translation>正在检查冲突...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="147"/>
+        <location filename="../src/QueueDialog.cpp" line="147"/>
         <source>Resolving Dependencies...</source>
         <translation>正在解决依赖关系...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="151"/>
+        <location filename="../src/QueueDialog.cpp" line="151"/>
         <source>Looking for Inter-Conflicts...</source>
         <translation>查找内部冲突...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="157"/>
+        <location filename="../src/QueueDialog.cpp" line="157"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Installation Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * L&apos;软件包开始安装&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="161"/>
+        <location filename="../src/QueueDialog.cpp" line="161"/>
         <source>Installing %1...</source>
         <translation>正在安装 %1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="190"/>
+        <location filename="../src/QueueDialog.cpp" line="190"/>
         <source>%1 (%2) installed successfully!</source>
         <translation>%1 (%2) 安装成功 !</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="202"/>
+        <location filename="../src/QueueDialog.cpp" line="202"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Removal Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * 开始卸载软件包&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="206"/>
+        <location filename="../src/QueueDialog.cpp" line="206"/>
         <source>Removing %1...</source>
         <translation>正在卸载 %1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="235"/>
+        <location filename="../src/QueueDialog.cpp" line="235"/>
         <source>%1 (%2) removed successfully!</source>
         <translation>%1 (%2)  卸载成功!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="247"/>
+        <location filename="../src/QueueDialog.cpp" line="247"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Upgrading Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * 开始更新软件包&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="251"/>
+        <location filename="../src/QueueDialog.cpp" line="251"/>
         <source>Upgrading %1...</source>
         <translation>正在更新 %1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="281"/>
+        <location filename="../src/QueueDialog.cpp" line="281"/>
         <source>Upgraded %1 successfully (%2 -&gt; %3)</source>
         <translation>更新 %1 成功 (%2 -&gt; %3)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="295"/>
+        <location filename="../src/QueueDialog.cpp" line="295"/>
         <source>&lt;br&gt;&lt;b&gt; * Queue Processing Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * 开始处理队列&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="299"/>
+        <location filename="../src/QueueDialog.cpp" line="299"/>
         <source>Checking package integrity...</source>
         <translation>检查软件包完整性...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="303"/>
+        <location filename="../src/QueueDialog.cpp" line="303"/>
         <source>Checking delta integrity...</source>
         <translation>检查 delta 完整性...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="306"/>
+        <location filename="../src/QueueDialog.cpp" line="306"/>
         <source>Applying deltas...</source>
         <translation>应用 deltas...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="309"/>
+        <location filename="../src/QueueDialog.cpp" line="309"/>
         <source>Generating %1 with %2... </source>
         <translation>正在生成 %1 用 %2... </translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="313"/>
+        <location filename="../src/QueueDialog.cpp" line="313"/>
         <source>Success!</source>
         <translation>成功 !</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="316"/>
+        <location filename="../src/QueueDialog.cpp" line="316"/>
         <source>Failed!</source>
         <translation>失败 !</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="330"/>
+        <location filename="../src/QueueDialog.cpp" line="330"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Downloading Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * 开始下载软件包&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="334"/>
+        <location filename="../src/QueueDialog.cpp" line="334"/>
         <source>Starting downloading packages from %1...</source>
         <translation>从 %1开始下载软件包...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="378"/>
+        <location filename="../src/QueueDialog.cpp" line="378"/>
         <source>%p% (%1 KB/s, %4:%5:%6 remaining)</source>
         <comment>You just have to translate &apos;remaining&apos; here. Leave everything else as it is.</comment>
         <translation>%p% (%1 KB/s, %4:%5:%6 剩余)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="386"/>
+        <location filename="../src/QueueDialog.cpp" line="386"/>
         <source>Downloading %1... (%2 MB of %3 MB)</source>
         <translation>正在下载 %1... (%2 MB of %3 MB)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="389"/>
+        <location filename="../src/QueueDialog.cpp" line="389"/>
         <source>Downloading %1... (%2 KB of %3 KB)</source>
         <translation>正在下载 %1... (%2 KB of %3 KB)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="445"/>
+        <location filename="../src/QueueDialog.cpp" line="445"/>
         <source>Queue processed, please wait...</source>
         <translation>处理队列,请等待...</translation>
     </message>
@@ -2341,17 +2341,17 @@ for more details.</translation>
         <translation type="obsolete">执行 post_remove scriptlet...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="505"/>
+        <location filename="../src/QueueDialog.cpp" line="505"/>
         <source>Unexpected Error. Shaman might be corrupted.</source>
         <translation>异常错误，Shaman也许损坏了。</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="569"/>
+        <location filename="../src/QueueDialog.cpp" line="569"/>
         <source>Extracting Scriptlet from package failed!!</source>
         <translation>Extracting Scriptlet from package failed!!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="697"/>
+        <location filename="../src/QueueDialog.cpp" line="697"/>
         <source>Scriptlet processed successfully!</source>
         <translation>Script 处理成功!</translation>
     </message>
@@ -2361,56 +2361,56 @@ for more details.</translation>
         <translation type="obsolete">Script在这阶段没有找到, 或者处理时出现错误!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="512"/>
+        <location filename="../src/QueueDialog.cpp" line="512"/>
         <source>Executing %1 scriptlet for %2...</source>
         <translation>执行 %1 scriptlet for %2...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="579"/>
+        <location filename="../src/QueueDialog.cpp" line="579"/>
         <source>Package %1 does not have %2 scriptlet</source>
         <translation>软件包 %1 没有 %2 scriptlet</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="703"/>
+        <location filename="../src/QueueDialog.cpp" line="703"/>
         <source>Error processing Scriptlet!!</source>
         <translation>处理Scriptlet错误!!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="876"/>
+        <location filename="../src/QueueDialog.cpp" line="876"/>
         <source>Queue Processing</source>
         <translation>处理队列</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="826"/>
+        <location filename="../src/QueueDialog.cpp" line="826"/>
         <source>There has been an error while preparing the transaction.
 </source>
         <translation>准备事务时发生错误。
 </translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="863"/>
+        <location filename="../src/QueueDialog.cpp" line="863"/>
         <source>There has been an error while committing the transaction.
 </source>
         <translation>提交事务时发生错误。
 </translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="456"/>
+        <location filename="../src/QueueDialog.cpp" line="456"/>
         <source>Queue processing failed!</source>
         <translation>处理队列失败 !</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="461"/>
+        <location filename="../src/QueueDialog.cpp" line="461"/>
         <source>Queue processed successfully!</source>
         <translation>处理队列成功 !</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="469"/>
+        <location filename="../src/QueueDialog.cpp" line="469"/>
         <source>Close</source>
         <translation>关闭</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp~" line="790"/>
+        <location filename="../src/QueueDialog.cpp" line="790"/>
         <source>Would you like to abort Queue Processing?
 This may damage your system.</source>
         <translation>您真的要中止队列处理吗?
@@ -3039,7 +3039,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;KDEMod Developer, and also some help on the code.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/aboutDialog.ui" line="217"/>
+        <location filename="../ui/aboutDialog.ui" line="220"/>
         <source>Visit &amp;Website...</source>
         <translation>访问网站(&amp;W)...</translation>
     </message>
@@ -3207,7 +3207,10 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Chinese Translator&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Anton Gritsay&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Russian Translator and Patches related to Translations&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Russian Translator and Patches related to Translations&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Bartek Iwaniec&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Polish Translator&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
