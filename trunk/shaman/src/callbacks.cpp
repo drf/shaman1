@@ -236,17 +236,14 @@ void CallBacks::cb_dl_progress(const char *filename, off_t file_xfered, off_t fi
 		xfered_last = xfered;
 	}
 
+	if ( last_file_xfered > file_xfered )
+		last_file_xfered = 0;
 
-	if(list_total) {
-
-		/* if we are at the end, add the completed file to list_xfered */
-		if(file_xfered == file_total) {
-			list_xfered += file_total;
-		}
-	}
+	list_xfered += file_xfered - last_file_xfered;
+	last_file_xfered = file_xfered;
 
 	emit streamTransDlProg((char *)filename, (float)file_xfered, (float)file_total, (int)rate,
-			list_xfered + file_xfered, list_total, (int)rate);
+			list_xfered, list_total, (int)rate);
 }
 
 void CallBacks::cb_log(pmloglevel_t level, char *fmt, va_list args)

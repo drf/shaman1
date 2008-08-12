@@ -58,27 +58,27 @@ QueueDialog::QueueDialog(AlpmHandler *hnd, QWidget *parent)
 	setupUi(this);
 	textEdit->hide();
 	setWindowModality(Qt::WindowModal);
-	
+
 	qRegisterMetaType<pmtransevt_t>("pmtransevt_t");
-	
+
 	connect(&CbackReference, SIGNAL(streamTransEvent(pmtransevt_t, void*, void*)),
 			SLOT(changeStatus(pmtransevt_t, void*, void*)));
-	connect(&CbackReference, SIGNAL(logMsgStreamed(const QString&)), 
+	connect(&CbackReference, SIGNAL(logMsgStreamed(const QString&)),
 			SLOT(handleAlpmMessage(const QString&)));
-	connect(aHandle, SIGNAL(preparingTransactionError(const QString&)), 
+	connect(aHandle, SIGNAL(preparingTransactionError(const QString&)),
 			SLOT(handlePreparingError(const QString&)));
-	connect(aHandle, SIGNAL(committingTransactionError(const QString&)), 
+	connect(aHandle, SIGNAL(committingTransactionError(const QString&)),
 				SLOT(handleCommittingError(const QString&)));
 	connect(abortTr, SIGNAL(clicked()), SLOT(abortTransaction()));
 	connect(showDetails, SIGNAL(toggled(bool)), SLOT(adjust(bool)));
-	
+
 	qDebug() << "Queue signals connected";
-	
+
 	transLabel->setPixmap(QIcon(":/Icons/icons/edit-redo.png").pixmap(22));
 	textEdit->append(QString(tr("<br><b> * Validating Transaction</b><br>")));
-	
+
 	actionDetail->setText(actionDetail->text() + QChar('\n'));
-	
+
 	progressBar->setRange(0, 1);
 	progressBar->setValue(0);
 	adjustSize();
@@ -109,11 +109,11 @@ TrCommitThread::TrCommitThread(AlpmHandler *aH, bool fc)
 }
 
 void QueueDialog::startProcessing(bool force)
-{	
+{
 	cTh = new TrCommitThread(aHandle, force);
-	
+
 	cTh->start();
-	
+
 	connect(cTh, SIGNAL(finished()), SLOT(cleanup()));
 }
 
@@ -125,14 +125,14 @@ void TrCommitThread::run()
 void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 {
 	QMutexLocker lock(&mutex);
-	
+
 	qDebug() << "Entering Queue Lock";
-	
+
 	QString upgTxt;
 	QString addTxt;
 	QString remTxt;
 
-	switch(event) 
+	switch(event)
 	{
 	case PM_TRANS_EVT_CHECKDEPS_START:
 		actionDetail->setText(QString(tr("Validating Dependencies...")));
@@ -167,8 +167,8 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 			QString p1Name(alpm_pkg_get_name((pmpkg_t *)data1));
 			QString p1Ver(alpm_pkg_get_version((pmpkg_t *)data1));
 			QString pArch(alpm_pkg_get_arch((pmpkg_t *)data1));
-			
-			
+
+
 
 			runScriptlet(0, p1Name, p1Ver, pArch, "");
 		}
@@ -181,8 +181,8 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 			QString p1Name(alpm_pkg_get_name((pmpkg_t *)data1));
 			QString p1Ver(alpm_pkg_get_version((pmpkg_t *)data1));
 			QString pArch(alpm_pkg_get_arch((pmpkg_t *)data1));
-			
-			
+
+
 
 			runScriptlet(3, p1Name, p1Ver, pArch, "");
 		}
@@ -212,8 +212,8 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 			QString p1Name(alpm_pkg_get_name((pmpkg_t *)data1));
 			QString p1Ver(alpm_pkg_get_version((pmpkg_t *)data1));
 			QString pArch(alpm_pkg_get_arch((pmpkg_t *)data1));
-			
-			
+
+
 
 			runScriptlet(2, p1Name, p1Ver, pArch, "");
 		}
@@ -226,15 +226,15 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 			QString p1Name(alpm_pkg_get_name((pmpkg_t *)data1));
 			QString p1Ver(alpm_pkg_get_version((pmpkg_t *)data1));
 			QString pArch(alpm_pkg_get_arch((pmpkg_t *)data1));
-			
-			
+
+
 
 			runScriptlet(5, p1Name, p1Ver, pArch, "");
 		}
 
 		remTxt = QString(tr("%1 (%2) removed successfully!")).
 				arg(alpm_pkg_get_name((pmpkg_t *)data1)).arg(alpm_pkg_get_version((pmpkg_t *)data1));
-		
+
 		actionDetail->setText(remTxt);
 		textEdit->append(remTxt);
 		remTxt.append(QChar('\n'));
@@ -258,8 +258,8 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 			QString p1Name(alpm_pkg_get_name((pmpkg_t *)data1));
 			QString p1Ver(alpm_pkg_get_version((pmpkg_t *)data1));
 			QString pArch(alpm_pkg_get_arch((pmpkg_t *)data1));
-			
-			
+
+
 
 			runScriptlet(1, p1Name, p1Ver, pArch, "");
 		}
@@ -277,11 +277,11 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 
 			runScriptlet(4, p1Name, p1Ver, pArch, p2Ver);
 		}
-		
+
 		upgTxt = QString(tr("Upgraded %1 successfully (%2 -> %3)")).arg(
 				(char *)alpm_pkg_get_name((pmpkg_t *)data1)).arg((char *)alpm_pkg_get_version((pmpkg_t *)data2)).
 				arg((char *)alpm_pkg_get_version((pmpkg_t *)data1));
-		
+
 		actionDetail->setText(upgTxt);
 		textEdit->append(upgTxt);
 		upgTxt.append(QChar('\n'));
@@ -344,7 +344,7 @@ void QueueDialog::changeStatus(pmtransevt_t event, void *data1, void *data2)
 	case PM_TRANS_EVT_DELTA_PATCHES_DONE:
 		break;
 	}
-	
+
 	if(!isScriptletRunning())
 	{
 		wCond.wakeAll();
@@ -372,8 +372,6 @@ void QueueDialog::updateProgressBar(char *c, int bytedone, int bytetotal, int sp
 	eta_m = eta_s / 60;
 	eta_s -= eta_m * 60;
 
-	qDebug() << eta_h << eta_s << eta_m;
-	
 	progressBar->setFormat(QString(tr("%p% (%1 KB/s, %4:%5:%6 remaining)", "You just have to "
 			"translate 'remaining' here. Leave everything else as it is.")).
 			arg(speed).arg((int)eta_h,2,10,QChar('0')).arg((int)eta_m,2,10,QChar('0')).
@@ -396,17 +394,17 @@ void QueueDialog::updateProgressBar(pmtransprog_t event, char *pkgname, int perc
 	Q_UNUSED(pkgname);
 	Q_UNUSED(event);
 	Q_UNUSED(percent);
-	 
+
 	if(progressBar->value() != remain)
 	{
 		progressBar->setFormat("%p%");
 		progressBar->setRange(0,100);
-		
+
 		int value = (int)(((float)remain / (float)howmany) * (float)100);
-		
+
 		if(progressBar->value() != value)
 			progressBar->setValue(value);
-		
+
 		emit streamTransactionProgress(value);
 	}
 }
@@ -416,7 +414,7 @@ void QueueDialog::startDownload()
 	transLabel->setPixmap(QIcon(":/Icons/icons/dialog-ok-apply.png").pixmap(22));
 	dlLabel->setPixmap(QIcon(":/Icons/icons/edit-redo.png").pixmap(22));
 
-	connect(&CbackReference, SIGNAL(streamTransDlProg(char*,int,int,int,int,int,int)), 
+	connect(&CbackReference, SIGNAL(streamTransDlProg(char*,int,int,int,int,int,int)),
 			SLOT(updateProgressBar(char*,int,int,int,int,int,int)));
 
 	if(progressBar->isHidden())
@@ -428,7 +426,7 @@ void QueueDialog::startProcess()
 	transLabel->setPixmap(QIcon(":/Icons/icons/dialog-ok-apply.png").pixmap(22));
 	dlLabel->setPixmap(QIcon(":/Icons/icons/dialog-ok-apply.png").pixmap(22));
 	processLabel->setPixmap(QIcon(":/Icons/icons/edit-redo.png").pixmap(22));
-	
+
 	disconnect(&CbackReference, SIGNAL(streamTransDlProg(char*,int,int,int,int,int,int)), 0, 0);
 	qRegisterMetaType<pmtransprog_t>("pmtransprog_t");
 	connect(&CbackReference, SIGNAL(streamTransProgress(pmtransprog_t,char*,int,int,int)),
@@ -441,15 +439,15 @@ void QueueDialog::cleanup()
 	disconnect(&CbackReference, SIGNAL(streamTransProgress(pmtransprog_t,char*,int,int,int)), 0, 0);
 	processLabel->setPixmap(QIcon(":/Icons/icons/dialog-ok-apply.png").pixmap(22));
 	cleanUpLabel->setPixmap(QIcon(":/Icons/icons/edit-redo.png").pixmap(22));
-	
+
 	actionDetail->setText(QString(tr("Queue processed, please wait...")));
-	
+
 	qApp->processEvents();
-	
+
 	emit terminated(errors);
-	
+
 	cleanUpLabel->setPixmap(QIcon(":/Icons/icons/dialog-ok-apply.png").pixmap(22));
-	
+
 	if(errors)
 	{
 		actionDetail->setText(QString(tr("Queue processing failed!")));
@@ -460,9 +458,9 @@ void QueueDialog::cleanup()
 		actionDetail->setText(QString(tr("Queue processed successfully!")));
 		textEdit->append(QString("<br><b> * " + tr("Queue processed successfully!") + "</b>"));
 	}
-	
+
 	QSettings *settings = new QSettings();
-	
+
 	if(settings->value("gui/keepqueuedialogopen", true).toBool())
 	{
 		disconnect(abortTr, SIGNAL(clicked()), 0, 0);
@@ -470,15 +468,15 @@ void QueueDialog::cleanup()
 		abortTr->setIcon(QIcon(":/Icons/icons/application-exit.png"));
 		connect(abortTr, SIGNAL(clicked()), SLOT(deleteLater()));
 	}
-	
+
 	settings->deleteLater();
 }
 
-bool QueueDialog::runScriptlet(int action, const QString &p1N, const QString &p1V, 
+bool QueueDialog::runScriptlet(int action, const QString &p1N, const QString &p1V,
 		const QString &pA, const QString &p2V)
 {
 	QString realAct;
-	
+
 	switch(action)
 	{
 	case 0:
@@ -517,11 +515,11 @@ bool QueueDialog::runScriptlet(int action, const QString &p1N, const QString &p1
 
 	QString tmpdir("/tmp/alpm_XXXXXX");
 
-	if(mkdtemp(tmpdir.toUtf8().data()) == NULL) 
+	if(mkdtemp(tmpdir.toUtf8().data()) == NULL)
 	{
 		return false;
 	}
-	else 
+	else
 		clean_tmpdir = 1;
 
 	QString scriptfn(tmpdir);
@@ -531,7 +529,7 @@ bool QueueDialog::runScriptlet(int action, const QString &p1N, const QString &p1
 	pkgpath.append(p1N);
 	pkgpath.append("-");
 	pkgpath.append(p1V);
-	
+
 	if(pA.compare("i686") && pA.compare("x86_64"))
 	{
 		QString strtmp = pkgpath;
@@ -581,7 +579,7 @@ bool QueueDialog::runScriptlet(int action, const QString &p1N, const QString &p1
 	}
 
 	QString cmdline;
-	
+
 	if(action != 4)
 		cmdline = QString(". %1; %2 %3").arg(scriptfn).arg(realAct).arg(p1V);
 	else
@@ -589,22 +587,22 @@ bool QueueDialog::runScriptlet(int action, const QString &p1N, const QString &p1
 				arg(p2V);
 
 	cwd = QDir::currentPath();
-	
+
 	chdir("/");
-	
+
 	proc = new RootProcess(this);
 	connect(proc, SIGNAL(readyReadStandardOutput()), SLOT(writeLineProgress()));
 	connect(proc, SIGNAL(readyReadStandardError()), SLOT(writeLineProgressErr()));
 	connect(proc, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(finishedScriptletRunning(int,QProcess::ExitStatus)));
-	
+
 	qApp->processEvents();
-	
+
 	proc->setWorkingDirectory("/");
 
 	qDebug() << "Scriptlet commandline is:" << cmdline;
-	
+
 	scrRun = true;
-		
+
 	proc->start("sh", QStringList() << "-c" << cmdline);
 
 	return true;
@@ -613,7 +611,7 @@ bool QueueDialog::runScriptlet(int action, const QString &p1N, const QString &p1
 bool QueueDialog::unpackPkg(const QString &pathToPkg, const QString &pathToEx, const QString &file)
 {
 	/* This is a copy-paste from util.c */
-	
+
 	mode_t oldmask;
 	struct archive *_archive;
 	struct archive_entry *entry;
@@ -633,8 +631,8 @@ bool QueueDialog::unpackPkg(const QString &pathToPkg, const QString &pathToEx, c
 	}
 
 	oldmask = umask(0022);
-	
-	while(archive_read_next_header(_archive, &entry) == ARCHIVE_OK) 
+
+	while(archive_read_next_header(_archive, &entry) == ARCHIVE_OK)
 	{
 		const struct stat *st;
 		const char *entryname; /* the name of the file in the archive */
@@ -647,29 +645,29 @@ bool QueueDialog::unpackPkg(const QString &pathToPkg, const QString &pathToEx, c
 		else if(S_ISDIR(st->st_mode))
 			archive_entry_set_mode(entry, 0755);
 
-		if(file.toUtf8().data() && strcmp(file.toUtf8().data(), entryname)) 
+		if(file.toUtf8().data() && strcmp(file.toUtf8().data(), entryname))
 		{
-			if (archive_read_data_skip(_archive) != ARCHIVE_OK) 
+			if (archive_read_data_skip(_archive) != ARCHIVE_OK)
 			{
 				umask(oldmask);
 				archive_read_finish(_archive);
 				qDebug() << "Skipping Data Failed";
 				return false;
 			}
-			
+
 			continue;
 		}
-		
+
 		snprintf(expath, PATH_MAX, "%s/%s", pathToEx.toUtf8().data(), entryname);
 		archive_entry_set_pathname(entry, expath);
 
 		int readret = archive_read_extract(_archive, entry, 0);
-		if(readret == ARCHIVE_WARN) 
+		if(readret == ARCHIVE_WARN)
 		{
 			/* operation succeeded but a non-critical error was encountered */
 			qDebug() << "Warning extracting " << entryname << " (" << archive_error_string(_archive) << ")";
-		} 
-		else if(readret != ARCHIVE_OK) 
+		}
+		else if(readret != ARCHIVE_OK)
 		{
 			qDebug() << "Could not extract " << entryname << " (" << archive_error_string(_archive) << ")";
 			umask(oldmask);
@@ -689,7 +687,7 @@ bool QueueDialog::unpackPkg(const QString &pathToPkg, const QString &pathToEx, c
 void QueueDialog::finishedScriptletRunning(int eC,QProcess::ExitStatus eS)
 {
 	Q_UNUSED(eS);
-	
+
 	if(eC == 0)
 	{
 		qDebug() << "Scriptlet Run successfully!!";
@@ -708,9 +706,9 @@ void QueueDialog::finishedScriptletRunning(int eC,QProcess::ExitStatus eS)
 	proc->deleteLater();
 
 	aHandle->rmrf("/tmp/alpm_XXXXXX");
-	
+
 	scrRun = false;
-	
+
 	wCond.wakeAll();
 }
 
@@ -722,14 +720,14 @@ void QueueDialog::writeLineProgress()
 	while(!proc->atEnd())
 	{
 		QString view(proc->readLine(1024));
-		
+
 		qDebug() << view;
 
 		textEdit->append(view.remove(QChar('\n')));
-		
+
 		if(!view.endsWith(QChar('\n')))
 			view.append(QChar('\n'));
-		
+
 		alpm_logaction(view.toUtf8().data());
 
 		textEdit->moveCursor(QTextCursor::End);
@@ -740,7 +738,7 @@ void QueueDialog::writeLineProgressErr()
 {
 	if(proc->readChannel() != QProcess::StandardError)
 		proc->setReadChannel(QProcess::StandardError);
-	
+
 	while(!proc->atEnd())
 	{
 		QString view(proc->readLine(1024));
@@ -786,23 +784,23 @@ bool QueueDialog::checkScriptlet(const QString &path, const QString &action)
 
 void QueueDialog::abortTransaction()
 {
-	switch (ShamanDialog::popupQuestionDialog(QString(tr("Queue Processing")), 
+	switch (ShamanDialog::popupQuestionDialog(QString(tr("Queue Processing")),
 			QString(tr("Would you like to abort Queue Processing?\nThis may damage your system.")), this,
-			ShamanProperties::WarningDialog)) 
+			ShamanProperties::WarningDialog))
 	{
 	case QMessageBox::Yes:
 		errors = true;
-		
+
 		qDebug() << "Interrupting transaction...";
-		
+
 		aHandle->interruptTransaction();
-		
+
 		cTh->terminate();
-		
+
 		qDebug() << "Transaction interrupted";
-		
+
 		cleanup();
-		
+
 		break;
 	case QMessageBox::No:
 		break;
@@ -815,7 +813,7 @@ void QueueDialog::abortTransaction()
 void QueueDialog::handlePreparingError(const QString &msg)
 {
 	qDebug() << "Creating Preparing Error";
-	
+
 	QDialog *dlog = new QDialog(this);
 	QLabel *lbl = new QLabel(dlog);
 	QTextEdit *txtEd = new QTextEdit(msg, dlog);
@@ -852,7 +850,7 @@ void QueueDialog::handlePreparingError(const QString &msg)
 void QueueDialog::handleCommittingError(const QString &msg)
 {
 	qDebug() << "Creating Committing Error";
-	
+
 	QDialog *dlog = new QDialog(this);
 	QLabel *lbl = new QLabel(dlog);
 	QTextEdit *txtEd = new QTextEdit(msg, dlog);
@@ -871,17 +869,17 @@ void QueueDialog::handleCommittingError(const QString &msg)
 	lay->addWidget(lbl);
 	lay->addWidget(txtEd);
 	lay->addWidget(but);
-	
+
 	dlog->setLayout(lay);
 	dlog->setWindowTitle(QString(tr("Queue Processing")));
 	dlog->setWindowModality(Qt::ApplicationModal);
-	
+
 	connect(but, SIGNAL(accepted()), dlog, SLOT(accept()));
 
 	dlog->exec();
 
 	errors = true;
-	
+
 	qDebug() << "Streaming Awakening to Error Thread";
 	wCond.wakeAll();
 }
@@ -890,9 +888,9 @@ void QueueDialog::handleAlpmMessage(const QString &msg)
 {
 	textEdit->append(QString());
 	QString view(QString("<p><b><i> ==> ") + msg + QString("</b></i></p><br>"));
-	
+
 	qDebug() << msg;
-	
+
 	view.remove(QChar('\n'));
 
 	textEdit->insertHtml(view);

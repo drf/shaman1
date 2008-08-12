@@ -73,6 +73,7 @@ private:
 	int xfered_total;
 	float list_total;
 	float list_xfered;
+	float last_file_xfered;
 	int onDl;
 	struct timeval initial_time;
 };
