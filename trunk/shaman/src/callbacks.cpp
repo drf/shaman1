@@ -189,7 +189,7 @@ void CallBacks::cb_dl_total(off_t total)
 void CallBacks::cb_dl_progress(const char *filename, off_t file_xfered, off_t file_total)
 {
 	off_t xfered, total;
-	float rate = 0.0, timediff = 0.0, f_xfered = 0.0;
+	float rate = 0.0, timediff = 0.0;
 
 	/* only use TotalDownload if enabled and we have a callback value */
 	if(list_total) {
@@ -272,6 +272,7 @@ void cb_dl_total(off_t total)
 
 void cb_dl_progress(const char *filename, off_t file_xfered, off_t file_total)
 {
+	qDebug() << file_total;
 	CbackReference.cb_dl_progress(filename, file_xfered, file_total);
 }
 
