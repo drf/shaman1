@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS><TS version="1.1" language="pl_PL">
+<defaultcodec></defaultcodec>
 <context>
     <name>AlpmHandler</name>
     <message>
@@ -25,7 +26,7 @@
     <message>
         <location filename="../src/AlpmHandler.cpp" line="1140"/>
         <source>: %1 exists in filesystem</source>
-        <translation>: %1 istnieje w systemie plików</translation>
+        <translation>: %1 znajduje się w systemie</translation>
     </message>
 </context>
 <context>
@@ -233,7 +234,7 @@ Czy mimo wszystko chcesz kontynuować?</translation>
         <location filename="../src/callbacks.cpp" line="113"/>
         <source>%1 requires installing %2 from IgnorePkg/IgnoreGroup.
  Install anyway?</source>
-        <translation>%1 wymaga instalacji % z IgnorePkg/IgnoreGroup
+        <translation>%1 wymaga instalacji %2 z IgnorePkg/IgnoreGroup
 Zainstalować mimo wszystko?</translation>
     </message>
     <message>
@@ -509,7 +510,7 @@ Jest on teraz dostępny w mirrorlist.</translation>
     <message>
         <location filename="../ui/configDialog.ui" line="142"/>
         <source>Keep application running in System Tray only</source>
-        <translation>Pozostaw aplikację działające tylko w tacce systemowej</translation>
+        <translation>Pozostaw aplikację działającą tylko w tacce systemowej</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="152"/>
@@ -863,7 +864,7 @@ jak i Pacmana.</translation>
     <message>
         <location filename="../ui/configDialog.ui" line="1165"/>
         <source>Notify upon new items</source>
-        <translation>Powiadamiaj o nowych rzeczach</translation>
+        <translation>Powiadamiaj o nowościach</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1172"/>
@@ -1109,7 +1110,7 @@ Możesz zmienić to zachowanie w Ustawieniach.</translation>
     <message>
         <location filename="../src/MainWindow.cpp" line="794"/>
         <source>Status: </source>
-        <translation>Status:</translation>
+        <translation>Stan:</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="796"/>
@@ -1219,7 +1220,7 @@ Do you want to Upgrade Shaman now?</source>
     <message>
         <location filename="../src/MainWindow.cpp" line="1523"/>
         <source>Your system is up to date!</source>
-        <translation>Twoj system jest już w najnowszej wersji!</translation>
+        <translation>Twój system jest już w najnowszej wersji!</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1734"/>
@@ -1570,7 +1571,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/MainWindow.cpp" line="640"/>
         <source>Name and Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Nazwa i Opis</translation>
     </message>
 </context>
 <context>
@@ -1923,27 +1924,27 @@ po więcej informacji.</translation>
     <message>
         <location filename="../src/QueueDialog.cpp" line="510"/>
         <source>Executing %1 scriptlet for %2...</source>
-        <translation>Uruchamianie %1 skryptu dla %2...</translation>
+        <translation>Uruchamianie %1 skryptu instalacyjnego dla %2...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="567"/>
         <source>Extracting Scriptlet from package failed!!</source>
-        <translation>Rozpakowanie skryptu z pakietu nie powiodło się!</translation>
+        <translation>Rozpakowanie skryptu instalacyjnego z pakietu nie powiodło się!</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="577"/>
         <source>Package %1 does not have %2 scriptlet</source>
-        <translation>Pakiet %1 nie posiada %2 skryptu</translation>
+        <translation>Pakiet %1 nie posiada %2 skryptu instalacyjnego</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="695"/>
         <source>Scriptlet processed successfully!</source>
-        <translation>Skrypt przetworzony pomyślnie!</translation>
+        <translation>Skrypt instalacyjny przetworzony pomyślnie!</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="701"/>
         <source>Error processing Scriptlet!!</source>
-        <translation>Błąd podczas przetwarzania skryptu!!</translation>
+        <translation>Błąd podczas przetwarzania skryptu instalacyjnego!!</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="874"/>
@@ -2190,7 +2191,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/ShamanTrayIcon.cpp" line="109"/>
         <source>Shaman - Idle</source>
-        <translation>Shaman -Bezczynny</translation>
+        <translation>Shaman - Bezczynny</translation>
     </message>
     <message>
         <location filename="../src/ShamanTrayIcon.cpp" line="125"/>
@@ -2525,7 +2526,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/dbUpdateDialog.ui" line="401"/>
         <source>Update Database..</source>
-        <translation>Aktualizuj bazę danych..</translation>
+        <translation>Aktualizowanie bazy danych..</translation>
     </message>
 </context>
 <context>
@@ -2715,7 +2716,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/pkgProperties.ui" line="197"/>
         <source>Has a Scriptlet</source>
-        <translation>Posiada skrypt</translation>
+        <translation>Posiada skrypt instalacyjny</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="274"/>
@@ -2791,7 +2792,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="98"/>
         <source>Do not install immediately when building is finished</source>
-        <translation>Nie instaluj natychmiast po zakończeniu budowania</translation>
+        <translation>Nie instaluj po zakończeniu budowania</translation>
     </message>
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="108"/>
