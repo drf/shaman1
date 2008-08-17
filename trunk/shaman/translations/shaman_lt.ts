@@ -1005,6 +1005,70 @@ Do you want to save it?</source>
     </message>
 </context>
 <context>
+    <name>LocalPackage</name>
+    <message>
+        <location filename="../ui/fromFileDialog.ui" line="13"/>
+        <source>Install Package from File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/fromFileDialog.ui" line="38"/>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Bitstream Vera Sans&apos;;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Local Package Installation&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/fromFileDialog.ui" line="151"/>
+        <source>Show...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/fromFileDialog.ui" line="172"/>
+        <source>More Details...</source>
+        <translation type="unfinished">Daugiau detalių...</translation>
+    </message>
+    <message>
+        <location filename="../ui/fromFileDialog.ui" line="196"/>
+        <source>Cancel</source>
+        <translation type="unfinished">Atšaukti</translation>
+    </message>
+    <message>
+        <location filename="../ui/fromFileDialog.ui" line="207"/>
+        <source>Install Package</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LocalPackageDialog</name>
+    <message>
+        <location filename="../src/LocalPackageDialog.cpp" line="59"/>
+        <source>Package is not installed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/LocalPackageDialog.cpp" line="64"/>
+        <source>Version %1 of this package is already installed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/LocalPackageDialog.cpp" line="78"/>
+        <source>All dependencies are satisfied</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../src/LocalPackageDialog.cpp" line="83"/>
+        <source>%n package(s) will be installed as dependencies</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+</context>
+<context>
     <name>MainWindow</name>
     <message>
         <location filename="../ui/MainWindow.ui" line="149"/>
@@ -1017,23 +1081,23 @@ Do you want to save it?</source>
         <translation>Apibūdinimas</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="333"/>
+        <location filename="../src/MainWindow.cpp" line="334"/>
         <source>Esc</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="334"/>
+        <location filename="../src/MainWindow.cpp" line="335"/>
         <source>Ctrl+Q</source>
         <comment>Exit Shaman Shortcut</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="381"/>
+        <location filename="../src/MainWindow.cpp" line="382"/>
         <source>Shaman - Reducing To Tray</source>
         <translation>„Shaman“ - slepiamas į sistemos dėklą</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="384"/>
+        <location filename="../src/MainWindow.cpp" line="385"/>
         <source>Shaman will keep running in the system tray.
 To close it, click Quit in the file menu or in the tray icon context menu.
 While in the System Tray, Shaman will update your Databases
@@ -1050,22 +1114,22 @@ Kai „Shaman“ yra sistemos dėkle, jis atnaujins duomenų bazes nustatytu int
         <translation>Saugyklos</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="551"/>
+        <location filename="../src/MainWindow.cpp" line="552"/>
         <source>All Repositories</source>
         <translation>Visos saugyklos</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="554"/>
+        <location filename="../src/MainWindow.cpp" line="555"/>
         <source>Local Packages</source>
         <translation>Vietiniai paketai</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="508"/>
+        <location filename="../src/MainWindow.cpp" line="509"/>
         <source>Package Groups</source>
         <translation>Paketų grupės</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1195"/>
+        <location filename="../src/MainWindow.cpp" line="1196"/>
         <source>All Groups</source>
         <translation>Visos grupės</translation>
     </message>
@@ -1090,7 +1154,7 @@ Kai „Shaman“ yra sistemos dėkle, jis atnaujins duomenų bazes nustatytu int
         <translation>Paketai eilėje</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1054"/>
+        <location filename="../src/MainWindow.cpp" line="1055"/>
         <source>Mark for Re&amp;installation</source>
         <translation>Pažymėti perrašymui</translation>
     </message>
@@ -1100,57 +1164,57 @@ Kai „Shaman“ yra sistemos dėkle, jis atnaujins duomenų bazes nustatytu int
         <translation>Pažymėti įrašymui</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2141"/>
+        <location filename="../src/MainWindow.cpp" line="2144"/>
         <source>Install</source>
         <translation>Įrašyti</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2151"/>
+        <location filename="../src/MainWindow.cpp" line="2154"/>
         <source>Uninstall</source>
         <translation>Pašalinti</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2152"/>
+        <location filename="../src/MainWindow.cpp" line="2155"/>
         <source>Complete Uninstall</source>
         <translation>Visiškai pašalinti</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="797"/>
+        <location filename="../src/MainWindow.cpp" line="798"/>
         <source>Status: </source>
         <translation>Padėtis:</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="799"/>
+        <location filename="../src/MainWindow.cpp" line="800"/>
         <source>Installed</source>
         <translation>Įrašytas</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="801"/>
+        <location filename="../src/MainWindow.cpp" line="802"/>
         <source>Not installed</source>
         <translation>Neįrašytas</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="804"/>
+        <location filename="../src/MainWindow.cpp" line="805"/>
         <source>Local Version: </source>
         <translation>Vietinė versija:</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="809"/>
+        <location filename="../src/MainWindow.cpp" line="810"/>
         <source>Version in the Repository: </source>
         <translation>Versija saugykloje:</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="815"/>
+        <location filename="../src/MainWindow.cpp" line="816"/>
         <source>Action: </source>
         <translation>Veiksmas:</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2019"/>
+        <location filename="../src/MainWindow.cpp" line="2020"/>
         <source>Error</source>
         <translation>Klaida</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="930"/>
+        <location filename="../src/MainWindow.cpp" line="931"/>
         <source>One or more Databases could not be updated.
 Last error reported was:
 %1</source>
@@ -1159,27 +1223,27 @@ Paskutinė klaida buvo:
 %1</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="939"/>
+        <location filename="../src/MainWindow.cpp" line="940"/>
         <source>Database Update</source>
         <translation>Duomenų bazės atnaujinimas</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="932"/>
+        <location filename="../src/MainWindow.cpp" line="933"/>
         <source>One or more databases failed to update!</source>
         <translation>Nepasisekė atnaujinti vienos ar daugiau duomenų bazės!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="941"/>
+        <location filename="../src/MainWindow.cpp" line="942"/>
         <source>Databases Updated Successfully</source>
         <translation>Duomenų bazės atnaujintos sėkmingai</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1545"/>
+        <location filename="../src/MainWindow.cpp" line="1546"/>
         <source>Pacman Update</source>
         <translation>„Pacman“ atnaujinimas</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1547"/>
+        <location filename="../src/MainWindow.cpp" line="1548"/>
         <source>Pacman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Pacman now?</source>
@@ -1187,12 +1251,12 @@ Do you want to Upgrade Pacman now?</source>
 Ar norite atnaujinti „Pacman“ dabar?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1567"/>
+        <location filename="../src/MainWindow.cpp" line="1568"/>
         <source>Shaman Update</source>
         <translation>„Shaman“ atnaujinimas</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1569"/>
+        <location filename="../src/MainWindow.cpp" line="1570"/>
         <source>Shaman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Shaman now?</source>
@@ -1204,7 +1268,7 @@ Do you want to Upgrade Shaman now?</source>
         <translation>Pažymėti pašalinimui</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1029"/>
+        <location filename="../src/MainWindow.cpp" line="1030"/>
         <source>Mark for Upgrade</source>
         <translation>Pažymėti atnaujinimui</translation>
     </message>
@@ -1219,17 +1283,17 @@ Do you want to Upgrade Shaman now?</source>
         <translation>Paketo informacija</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1080"/>
+        <location filename="../src/MainWindow.cpp" line="1081"/>
         <source>Mark all for installation</source>
         <translation>Pažymėti visus įrašymui</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1082"/>
+        <location filename="../src/MainWindow.cpp" line="1083"/>
         <source>Mark all for reinstallation</source>
         <translation>Pažymėti visus perrašymui</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1084"/>
+        <location filename="../src/MainWindow.cpp" line="1085"/>
         <source>Mark all for removal</source>
         <translation>Pažymėti visus pašalinimui</translation>
     </message>
@@ -1244,113 +1308,113 @@ Do you want to Upgrade Shaman now?</source>
         <translation>„Shaman“</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1230"/>
+        <location filename="../src/MainWindow.cpp" line="1231"/>
         <source>A package providing %1 is already installed.
 Do you want to install %1 anyway?</source>
         <translation>Paketas %1 jau įdiegtas.
 Vistiek norite įdiekti %1 ?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1522"/>
+        <location filename="../src/MainWindow.cpp" line="1523"/>
         <source>System Upgrade</source>
         <translation>Sistemos atnaujinimas</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1526"/>
+        <location filename="../src/MainWindow.cpp" line="1527"/>
         <source>Your system is up to date!</source>
         <translation>Jūsų sistema atnaujinta!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1888"/>
+        <location filename="../src/MainWindow.cpp" line="1889"/>
         <source>News Alert</source>
         <translation>Naujienų pranešimas</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1889"/>
+        <location filename="../src/MainWindow.cpp" line="1890"/>
         <source>There is an unread news about %1.
 Do you want to read it?</source>
         <translation>Yra apie %1 neskaitytų naujienų.
 Ar norite jas perskaityti?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2146"/>
+        <location filename="../src/MainWindow.cpp" line="2149"/>
         <source>Upgrade</source>
         <translation>Atnaujinimas</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1737"/>
+        <location filename="../src/MainWindow.cpp" line="1738"/>
         <source>Queue Processing</source>
         <translation>Vykdoma eilė</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1737"/>
+        <location filename="../src/MainWindow.cpp" line="1738"/>
         <source>Your Queue is being processed.
 Please wait.</source>
         <translation>Jūsų eilė yra vykdoma.
 Prašome palaukti.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1840"/>
+        <location filename="../src/MainWindow.cpp" line="1841"/>
         <source>Queue Processed</source>
         <translation>Eilė įvykdyta</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1786"/>
+        <location filename="../src/MainWindow.cpp" line="1787"/>
         <source>One or more errors occurred, your Queue
 was not successfully processed</source>
         <translation>Pasitaikė viena ar daugiau klaidų, eilė nebuvo sėkmingai įvykdyta</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1788"/>
+        <location filename="../src/MainWindow.cpp" line="1789"/>
         <source>Error Processing Queue!!</source>
         <translation>Klaida vykdant eilę!!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1828"/>
+        <location filename="../src/MainWindow.cpp" line="1829"/>
         <source>Restart required</source>
         <translation>Reikalingas perkrovimas</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1821"/>
+        <location filename="../src/MainWindow.cpp" line="1822"/>
         <source>Pacman or Shaman was updated. Shaman will now quit,
 please restart it to use the new version</source>
         <translation>„Pacman“ arba „Shaman“ buvo atnaujintas. „Shaman“ dabar išsijungs, kad naudoti naują versiją, prašome perkrauti</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1829"/>
+        <location filename="../src/MainWindow.cpp" line="1830"/>
         <source>Your Kernel has been updated.
 Please restart your PC soon to load the new Kernel.</source>
         <translation>Jūsų sistemos branduolys buvo atnaujintas.
 Prašome perkrauti AK kai tik galėsite norint naudoti naują branduolį.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1838"/>
+        <location filename="../src/MainWindow.cpp" line="1839"/>
         <source>Your Queue was successfully processed!</source>
         <translation>Eilė buvo sėkmingai įvykdyta</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1842"/>
+        <location filename="../src/MainWindow.cpp" line="1843"/>
         <source>Your Queue was successfully processed!!</source>
         <translation>Eilė buvo sėkmingai įvykdyta</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2004"/>
+        <location filename="../src/MainWindow.cpp" line="2005"/>
         <source>Install a Package</source>
         <translation>Įrašyti paketą</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2004"/>
+        <location filename="../src/MainWindow.cpp" line="2005"/>
         <source>Arch Linux Packages (*.pkg.tar.gz)</source>
         <translation>Arch Linux paketai (*.pkg.tar.gz)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2019"/>
+        <location filename="../src/MainWindow.cpp" line="2020"/>
         <source>%1 does not seem
 a valid package</source>
         <translation>%1 neteisingas paketas</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2055"/>
+        <location filename="../src/MainWindow.cpp" line="2058"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -1364,7 +1428,7 @@ p, li { white-space: pre-wrap; }
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2092"/>
+        <location filename="../src/MainWindow.cpp" line="2095"/>
         <source>Library Question</source>
         <translation>Bibliotekos klausimas</translation>
     </message>
@@ -1556,7 +1620,7 @@ p, li { white-space: pre-wrap; }
         <translation>Žiūrėti žurnalą</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="643"/>
+        <location filename="../src/MainWindow.cpp" line="644"/>
         <source>Name and Description</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1773,18 +1837,18 @@ p, li { white-space: pre-wrap; }
         <translation>%1 baitai</translation>
     </message>
     <message>
-        <location filename="../src/PackageProperties.cpp" line="68"/>
+        <location filename="../src/PackageProperties.cpp" line="73"/>
         <source>Shaman - %1 properties</source>
         <translation>Shaman - %1 nustatymai</translation>
     </message>
     <message>
-        <location filename="../src/PackageProperties.cpp" line="89"/>
+        <location filename="../src/PackageProperties.cpp" line="94"/>
         <source>N/A</source>
         <comment>Stands for: Not Available</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/PackageProperties.cpp" line="209"/>
+        <location filename="../src/PackageProperties.cpp" line="214"/>
         <source>Changelog not available for this package</source>
         <translation>Žurnalas negalimas šiam paketui</translation>
     </message>
@@ -1792,7 +1856,7 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2068"/>
+        <location filename="../src/MainWindow.cpp" line="2071"/>
         <source>Whoa, that&apos;s co&amp;ol!</source>
         <translation>Ką?, tai šau&amp;nu!</translation>
     </message>
