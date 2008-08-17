@@ -59,6 +59,7 @@ SET(shaman_SRCS ${shaman_adaptor_SRCS}
     src/ShamanStatusBar.cpp
     src/PackageProperties.cpp
     src/ShamanTreeWidgetItem.cpp
+    src/MaintenanceBar.cpp
 )
 
 SET(shaman_MOC_HDRS
@@ -81,6 +82,7 @@ SET(shaman_MOC_HDRS
     src/Authenticator.h
     src/ShamanStatusBar.h
     src/PackageProperties.h
+    src/MaintenanceBar.h
 #    src/ShamanTreeWidgetItem.h
 )
 

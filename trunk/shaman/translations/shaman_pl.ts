@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS><TS version="1.1" language="pl_PL">
-<defaultcodec></defaultcodec>
 <context>
     <name>AlpmHandler</name>
     <message>
@@ -1025,7 +1024,7 @@ Czy chcesz go zapisać?</translation>
         <translation>Opis</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="381"/>
+        <location filename="../src/MainWindow.cpp" line="384"/>
         <source>Shaman will keep running in the system tray.
 To close it, click Quit in the file menu or in the tray icon context menu.
 While in the System Tray, Shaman will update your Databases
@@ -1038,12 +1037,12 @@ w regularnych odstępach czasu oraz będzie Cie informował o dostępnych aktual
 Możesz zmienić to zachowanie w Ustawieniach.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="378"/>
+        <location filename="../src/MainWindow.cpp" line="381"/>
         <source>Shaman - Reducing To Tray</source>
         <translation>Shaman - minimalizowanie do tacki systemowej</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2143"/>
+        <location filename="../src/MainWindow.cpp" line="2146"/>
         <source>Upgrade</source>
         <translation>Aktualizuj</translation>
     </message>
@@ -1053,22 +1052,22 @@ Możesz zmienić to zachowanie w Ustawieniach.</translation>
         <translation>Repozytoria</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="548"/>
+        <location filename="../src/MainWindow.cpp" line="551"/>
         <source>All Repositories</source>
         <translation>Wszystkie repozytoria</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="551"/>
+        <location filename="../src/MainWindow.cpp" line="554"/>
         <source>Local Packages</source>
         <translation>Pakiety lokalne</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="505"/>
+        <location filename="../src/MainWindow.cpp" line="508"/>
         <source>Package Groups</source>
         <translation>Grupy pakietów</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1192"/>
+        <location filename="../src/MainWindow.cpp" line="1195"/>
         <source>All Groups</source>
         <translation>Wszystkie grupy</translation>
     </message>
@@ -1093,57 +1092,57 @@ Możesz zmienić to zachowanie w Ustawieniach.</translation>
         <translation>Pakiety w kolejce</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2138"/>
+        <location filename="../src/MainWindow.cpp" line="2141"/>
         <source>Install</source>
         <translation>Instaluj</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2148"/>
+        <location filename="../src/MainWindow.cpp" line="2151"/>
         <source>Uninstall</source>
         <translation>Odinstaluj</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2149"/>
+        <location filename="../src/MainWindow.cpp" line="2152"/>
         <source>Complete Uninstall</source>
         <translation>Odinstaluj całkowicie</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="794"/>
+        <location filename="../src/MainWindow.cpp" line="797"/>
         <source>Status: </source>
         <translation>Stan:</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="796"/>
+        <location filename="../src/MainWindow.cpp" line="799"/>
         <source>Installed</source>
         <translation>Zainstalowany</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="798"/>
+        <location filename="../src/MainWindow.cpp" line="801"/>
         <source>Not installed</source>
         <translation>Niezainstalowany</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="801"/>
+        <location filename="../src/MainWindow.cpp" line="804"/>
         <source>Local Version: </source>
         <translation>Wersja lokalna:</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="806"/>
+        <location filename="../src/MainWindow.cpp" line="809"/>
         <source>Version in the Repository: </source>
         <translation>Wersja w repozytorium:</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="812"/>
+        <location filename="../src/MainWindow.cpp" line="815"/>
         <source>Action: </source>
         <translation>Działanie:</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2016"/>
+        <location filename="../src/MainWindow.cpp" line="2019"/>
         <source>Error</source>
         <translation>Błąd</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="927"/>
+        <location filename="../src/MainWindow.cpp" line="930"/>
         <source>One or more Databases could not be updated.
 Last error reported was:
 %1</source>
@@ -1152,22 +1151,22 @@ Ostatni zgłoszony bład to:
 %1</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="936"/>
+        <location filename="../src/MainWindow.cpp" line="939"/>
         <source>Database Update</source>
         <translation>Aktualizacja bazy danych</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="938"/>
+        <location filename="../src/MainWindow.cpp" line="941"/>
         <source>Databases Updated Successfully</source>
         <translation>Aktualizacja bazy danych zakończona pomyślnie</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1542"/>
+        <location filename="../src/MainWindow.cpp" line="1545"/>
         <source>Pacman Update</source>
         <translation>Aktualizacja Pacmana</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1544"/>
+        <location filename="../src/MainWindow.cpp" line="1547"/>
         <source>Pacman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Pacman now?</source>
@@ -1176,34 +1175,34 @@ przetworzyć tą aktualizację osobno, aby uniknąć konfliktów.
 Czy chcesz zaktualizować teraz Pacmana?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1564"/>
+        <location filename="../src/MainWindow.cpp" line="1567"/>
         <source>Shaman Update</source>
         <translation>Aktualizacja Shamana</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1566"/>
+        <location filename="../src/MainWindow.cpp" line="1569"/>
         <source>Shaman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Shaman now?</source>
         <translation>Shaman może zostać zaktualizowany. Zalecane jest, aby przetworzyć tą aktualizację osobno, aby uniknąć konfliktów.Czy chcesz zaktualizować teraz Shamana?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1026"/>
+        <location filename="../src/MainWindow.cpp" line="1029"/>
         <source>Mark for Upgrade</source>
         <translation>Oznacz do aktualizacji</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1077"/>
+        <location filename="../src/MainWindow.cpp" line="1080"/>
         <source>Mark all for installation</source>
         <translation>Oznacz wszystko do instalacji</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1079"/>
+        <location filename="../src/MainWindow.cpp" line="1082"/>
         <source>Mark all for reinstallation</source>
         <translation>Oznacz wszystko do reinstalacji</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1081"/>
+        <location filename="../src/MainWindow.cpp" line="1084"/>
         <source>Mark all for removal</source>
         <translation>Oznacz wszystko do usunięcia</translation>
     </message>
@@ -1213,73 +1212,73 @@ Do you want to Upgrade Shaman now?</source>
         <translation>Anuluj wszystkie działania</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1519"/>
+        <location filename="../src/MainWindow.cpp" line="1522"/>
         <source>System Upgrade</source>
         <translation>Aktualizacja systemu</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1523"/>
+        <location filename="../src/MainWindow.cpp" line="1526"/>
         <source>Your system is up to date!</source>
         <translation>Twój system jest już w najnowszej wersji!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1734"/>
+        <location filename="../src/MainWindow.cpp" line="1737"/>
         <source>Queue Processing</source>
         <translation>Przetwarzanie kolejki</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1734"/>
+        <location filename="../src/MainWindow.cpp" line="1737"/>
         <source>Your Queue is being processed.
 Please wait.</source>
         <translation>Twoja kolejka jest obecnie przetwarzana.
 Proszę czekać.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1837"/>
+        <location filename="../src/MainWindow.cpp" line="1840"/>
         <source>Queue Processed</source>
         <translation>Kolejka przetworzona</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1825"/>
+        <location filename="../src/MainWindow.cpp" line="1828"/>
         <source>Restart required</source>
         <translation>Wymagane ponowne uruchomienie</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1818"/>
+        <location filename="../src/MainWindow.cpp" line="1821"/>
         <source>Pacman or Shaman was updated. Shaman will now quit,
 please restart it to use the new version</source>
         <translation>Pacman lub Shaman został zaktualizowany. Shaman teraz zakończy swoje działanie,
 proszę ponownie go uruchomić aby rozpocząc korzystanie z nowej wersji</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1835"/>
+        <location filename="../src/MainWindow.cpp" line="1838"/>
         <source>Your Queue was successfully processed!</source>
         <translation>Twoja kolejka została pomyślnie przetworzona!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1839"/>
+        <location filename="../src/MainWindow.cpp" line="1842"/>
         <source>Your Queue was successfully processed!!</source>
         <translation>Twoja kolejka została pomyślnie przetworzona!!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2001"/>
+        <location filename="../src/MainWindow.cpp" line="2004"/>
         <source>Install a Package</source>
         <translation>Zainstaluj pakiet</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2001"/>
+        <location filename="../src/MainWindow.cpp" line="2004"/>
         <source>Arch Linux Packages (*.pkg.tar.gz)</source>
         <translation>Pakiety Arch Linux (*.pkg.tar.gz)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2016"/>
+        <location filename="../src/MainWindow.cpp" line="2019"/>
         <source>%1 does not seem
 a valid package</source>
         <translation>%1 nie jest
 prawidłowym pakietem</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2089"/>
+        <location filename="../src/MainWindow.cpp" line="2092"/>
         <source>Library Question</source>
         <translation>Pytanie o bibliotekę</translation>
     </message>
@@ -1415,24 +1414,24 @@ prawidłowym pakietem</translation>
         <translation>Przetwórz kolejkę</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1826"/>
+        <location filename="../src/MainWindow.cpp" line="1829"/>
         <source>Your Kernel has been updated.
 Please restart your PC soon to load the new Kernel.</source>
         <translation>Twój Kernel został zaktualizowany.
 Proszę zrestartować swój komputer, aby móc wczytać nowego Kernela.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="330"/>
+        <location filename="../src/MainWindow.cpp" line="333"/>
         <source>Esc</source>
         <translation>Esc</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1885"/>
+        <location filename="../src/MainWindow.cpp" line="1888"/>
         <source>News Alert</source>
         <translation>News alarm</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1886"/>
+        <location filename="../src/MainWindow.cpp" line="1889"/>
         <source>There is an unread news about %1.
 Do you want to read it?</source>
         <translation>Jest nieprzeczytany news o %1.
@@ -1449,24 +1448,24 @@ Czy chcesz go przeczytać?</translation>
         <translation>Przejrzyj Log</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1783"/>
+        <location filename="../src/MainWindow.cpp" line="1786"/>
         <source>One or more errors occurred, your Queue
 was not successfully processed</source>
         <translation>Wystąpił jeden lub więcej błędów, Twoja kolejka
 nie została pomyślnie przetworzona</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="929"/>
+        <location filename="../src/MainWindow.cpp" line="932"/>
         <source>One or more databases failed to update!</source>
         <translation>Nie powiodła się aktualizacja jednej lub więcej baz danych!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1785"/>
+        <location filename="../src/MainWindow.cpp" line="1788"/>
         <source>Error Processing Queue!!</source>
         <translation>Błąd podczas przetwarzania kolejki!!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1227"/>
+        <location filename="../src/MainWindow.cpp" line="1230"/>
         <source>A package providing %1 is already installed.
 Do you want to install %1 anyway?</source>
         <translation>Pakiet dostarczający %1 jest obecnie zainstalowany.
@@ -1533,7 +1532,7 @@ Czy mimo wszystko chcesz zainstalować %1?</translation>
         <translation>&amp;Zależności</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1051"/>
+        <location filename="../src/MainWindow.cpp" line="1054"/>
         <source>Mark for Re&amp;installation</source>
         <translation>Oznacz do re&amp;instalacji</translation>
     </message>
@@ -1543,7 +1542,7 @@ Czy mimo wszystko chcesz zainstalować %1?</translation>
         <translation>&amp;Anuluj działanie</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2052"/>
+        <location filename="../src/MainWindow.cpp" line="2055"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -1563,15 +1562,172 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">Nazwa</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="331"/>
+        <location filename="../src/MainWindow.cpp" line="334"/>
         <source>Ctrl+Q</source>
         <comment>Exit Shaman Shortcut</comment>
         <translation>Ctrl+Q</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="640"/>
+        <location filename="../src/MainWindow.cpp" line="643"/>
         <source>Name and Description</source>
         <translation>Nazwa i Opis</translation>
+    </message>
+</context>
+<context>
+    <name>MaintenanceBar</name>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="42"/>
+        <source>Please choose an action to start maintenance...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="43"/>
+        <source>Clean Unused Databases</source>
+        <translation type="unfinished">Wyczyść nieużywane bazy danych</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="43"/>
+        <source>Clean Cache</source>
+        <translation type="unfinished">Wyczyść cache</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="44"/>
+        <source>Empty Cache</source>
+        <translation type="unfinished">Opróżnij cache</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="44"/>
+        <source>Optimize Pacman Database</source>
+        <translation type="unfinished">Zoptymalizuj bazę danych Pacmana</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="44"/>
+        <source>Clean All Building Environments</source>
+        <translation type="unfinished">Wyczyść wszystkie środowiska budowania</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="77"/>
+        <source>Cleaning up unused Databases...</source>
+        <translation type="unfinished">Czyszczenie nieużywanych baz danych...</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="91"/>
+        <source>Cleaning up Cache...</source>
+        <translation type="unfinished">Czyszczenie cache...</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="105"/>
+        <source>Deleting Cache...</source>
+        <translation type="unfinished">Usuwanie cache...</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="122"/>
+        <source>Optimizing Pacman Database...</source>
+        <translation type="unfinished">Optymalizacja bazy danych Pacmana...</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="139"/>
+        <source>Cleaning up building Environments...</source>
+        <translation type="unfinished">Czyszczenie środowisk budowania...</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="165"/>
+        <source>Abort</source>
+        <translation type="unfinished">Przerwij</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="178"/>
+        <source>System Maintenance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="189"/>
+        <source>Unused Databases Cleaned up successfully!</source>
+        <translation type="unfinished">Czyszczenie nieużywanych baz danych zakończone pomyślnie!</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="195"/>
+        <source>Cache Cleaned Up Successfully!</source>
+        <translation type="unfinished">Cache oczyszczony pomyślnie!</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="201"/>
+        <source>Cache Successfully Deleted!</source>
+        <translation type="unfinished">Cache usunięty pomyślnie!</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="207"/>
+        <source>Build Environments Successfully Cleaned!</source>
+        <translation type="unfinished">Środowiska budowania oczyszczone pomyślnie!</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="312"/>
+        <source>Close</source>
+        <translation type="unfinished">Zamknij</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="232"/>
+        <source>Cleaning up Unused Databases Failed!</source>
+        <translation type="unfinished">Czyszczenie nieużywanych baz danych nie powiodło się!</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="237"/>
+        <source>Cleaning up Cache Failed!</source>
+        <translation type="unfinished">Czyszczenie cache nie powiodło się!</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="242"/>
+        <source>Deleting Cache Failed!</source>
+        <translation type="unfinished">Usuwanie cache nie powiodło się!</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="247"/>
+        <source>Could not clean Build Environments!!</source>
+        <translation type="unfinished">Czyszczenie środowisk budowania nie powiodło się!</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="274"/>
+        <source>Pacman Database Optimized Successfully!</source>
+        <translation type="unfinished">Baza Pacmana została pomyślnie zoptymalizowana!</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="280"/>
+        <source>Could not Optimize Pacman Database!</source>
+        <translation type="unfinished">Nie można zoptymalizować bazy Pacmana!</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="288"/>
+        <source>Running sync...</source>
+        <comment>sync is a command, so it should not be translated</comment>
+        <translation type="unfinished">Uruchamianie sync...</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="298"/>
+        <source>Operation Completed Successfully!</source>
+        <translation type="unfinished">Operacja zakończona pomyślnie!</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="297"/>
+        <source>Sync was successfully executed!!</source>
+        <comment>Sync is always the command</comment>
+        <translation type="unfinished">Sync został pomyślnie uruchomiony!</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="302"/>
+        <source>Sync could not be executed!</source>
+        <comment>Sync is always the command</comment>
+        <translation type="unfinished">Sync nie może zostać uruchomiony!</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="303"/>
+        <source>Sync could not be executed!!</source>
+        <comment>Sync is always the command</comment>
+        <translation type="unfinished">Sync nie może zostać uruchomiony!</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="39"/>
+        <source>Maintenance Actions</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1773,7 +1929,7 @@ po więcej informacji.</translation>
         <translation>A&amp;nuluj</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2065"/>
+        <location filename="../src/MainWindow.cpp" line="2068"/>
         <source>Whoa, that&apos;s co&amp;ol!</source>
         <translation>Hoho, to sup&amp;er!</translation>
     </message>

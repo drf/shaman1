@@ -1162,7 +1162,7 @@ Do you want to save it?</source>
         <translation>仓库</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="505"/>
+        <location filename="../src/MainWindow.cpp" line="508"/>
         <source>Package Groups</source>
         <translation>软件包组</translation>
     </message>
@@ -1317,7 +1317,7 @@ Do you want to save it?</source>
         <translation type="obsolete">Shaman - Idle</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="381"/>
+        <location filename="../src/MainWindow.cpp" line="384"/>
         <source>Shaman will keep running in the system tray.
 To close it, click Quit in the file menu or in the tray icon context menu.
 While in the System Tray, Shaman will update your Databases
@@ -1330,12 +1330,12 @@ You can change this behaviour in Settings.</source>
 这种行为。</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="378"/>
+        <location filename="../src/MainWindow.cpp" line="381"/>
         <source>Shaman - Reducing To Tray</source>
         <translation>Shaman - 缩小到托盘</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2143"/>
+        <location filename="../src/MainWindow.cpp" line="2146"/>
         <source>Upgrade</source>
         <translation>更新</translation>
     </message>
@@ -1345,7 +1345,7 @@ You can change this behaviour in Settings.</source>
         <translation type="obsolete">Shaman - Idle (可用的更新)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1519"/>
+        <location filename="../src/MainWindow.cpp" line="1522"/>
         <source>System Upgrade</source>
         <translation>更新系统</translation>
     </message>
@@ -1364,17 +1364,17 @@ Click here to upgrade your System.</source>
 点击这里来更新你的系统。</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="548"/>
+        <location filename="../src/MainWindow.cpp" line="551"/>
         <source>All Repositories</source>
         <translation>所有的仓库</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="551"/>
+        <location filename="../src/MainWindow.cpp" line="554"/>
         <source>Local Packages</source>
         <translation>本地软件包</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1192"/>
+        <location filename="../src/MainWindow.cpp" line="1195"/>
         <source>All Groups</source>
         <translation>所有的组</translation>
     </message>
@@ -1384,37 +1384,37 @@ Click here to upgrade your System.</source>
         <translation type="obsolete">标记以便重新安装</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2138"/>
+        <location filename="../src/MainWindow.cpp" line="2141"/>
         <source>Install</source>
         <translation>安装</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2148"/>
+        <location filename="../src/MainWindow.cpp" line="2151"/>
         <source>Uninstall</source>
         <translation>卸载</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2149"/>
+        <location filename="../src/MainWindow.cpp" line="2152"/>
         <source>Complete Uninstall</source>
         <translation>完全卸载</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="794"/>
+        <location filename="../src/MainWindow.cpp" line="797"/>
         <source>Status: </source>
         <translation>状态 : </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="796"/>
+        <location filename="../src/MainWindow.cpp" line="799"/>
         <source>Installed</source>
         <translation>已安装</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="798"/>
+        <location filename="../src/MainWindow.cpp" line="801"/>
         <source>Not installed</source>
         <translation>没有安装</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="812"/>
+        <location filename="../src/MainWindow.cpp" line="815"/>
         <source>Action: </source>
         <translation>操作 : </translation>
     </message>
@@ -1424,12 +1424,12 @@ Click here to upgrade your System.</source>
         <translation type="obsolete">Shaman - 处理</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2016"/>
+        <location filename="../src/MainWindow.cpp" line="2019"/>
         <source>Error</source>
         <translation>错误</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="927"/>
+        <location filename="../src/MainWindow.cpp" line="930"/>
         <source>One or more Databases could not be updated.
 Last error reported was:
 %1</source>
@@ -1438,17 +1438,17 @@ Last error reported was:
 %1</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="936"/>
+        <location filename="../src/MainWindow.cpp" line="939"/>
         <source>Database Update</source>
         <translation>更新数据库</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="938"/>
+        <location filename="../src/MainWindow.cpp" line="941"/>
         <source>Databases Updated Successfully</source>
         <translation>成功更新数据库</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1026"/>
+        <location filename="../src/MainWindow.cpp" line="1029"/>
         <source>Mark for Upgrade</source>
         <translation>标记以便更新</translation>
     </message>
@@ -1458,49 +1458,49 @@ Last error reported was:
         <translation type="obsolete">取消操作</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1077"/>
+        <location filename="../src/MainWindow.cpp" line="1080"/>
         <source>Mark all for installation</source>
         <translation>标记所有以便安装</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1079"/>
+        <location filename="../src/MainWindow.cpp" line="1082"/>
         <source>Mark all for reinstallation</source>
         <translation>标记所有以便重新安装</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1081"/>
+        <location filename="../src/MainWindow.cpp" line="1084"/>
         <source>Mark all for removal</source>
         <translation>标记所有以便删除</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1523"/>
+        <location filename="../src/MainWindow.cpp" line="1526"/>
         <source>Your system is up to date!</source>
         <translation>您的系统已最新!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1734"/>
+        <location filename="../src/MainWindow.cpp" line="1737"/>
         <source>Queue Processing</source>
         <translation>处理队列</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1734"/>
+        <location filename="../src/MainWindow.cpp" line="1737"/>
         <source>Your Queue is being processed.
 Please wait.</source>
         <translation>您的队列正在处理，
 请等待。</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1837"/>
+        <location filename="../src/MainWindow.cpp" line="1840"/>
         <source>Queue Processed</source>
         <translation>处理队列</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1835"/>
+        <location filename="../src/MainWindow.cpp" line="1838"/>
         <source>Your Queue was successfully processed!</source>
         <translation>您的队列已成功处理!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1839"/>
+        <location filename="../src/MainWindow.cpp" line="1842"/>
         <source>Your Queue was successfully processed!!</source>
         <translation>您的队列已成功处理!!</translation>
     </message>
@@ -1550,17 +1550,17 @@ Please wait.</source>
         <translation type="obsolete">您愿意继续吗?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2001"/>
+        <location filename="../src/MainWindow.cpp" line="2004"/>
         <source>Install a Package</source>
         <translation>安装软件包</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2001"/>
+        <location filename="../src/MainWindow.cpp" line="2004"/>
         <source>Arch Linux Packages (*.pkg.tar.gz)</source>
         <translation>Arch Linux 软件包(*.pkg.tar.gz)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2016"/>
+        <location filename="../src/MainWindow.cpp" line="2019"/>
         <source>%1 does not seem
 a valid package</source>
         <translation>%1 不存在
@@ -1689,12 +1689,12 @@ Do you want to proceed anyway?</source>
         <translation type="obsolete">不要再显示</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1542"/>
+        <location filename="../src/MainWindow.cpp" line="1545"/>
         <source>Pacman Update</source>
         <translation>更新Pacman</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1544"/>
+        <location filename="../src/MainWindow.cpp" line="1547"/>
         <source>Pacman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Pacman now?</source>
@@ -1702,12 +1702,12 @@ Do you want to Upgrade Pacman now?</source>
 您现在愿意更新Paman吗?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1564"/>
+        <location filename="../src/MainWindow.cpp" line="1567"/>
         <source>Shaman Update</source>
         <translation>更新Shaman</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1566"/>
+        <location filename="../src/MainWindow.cpp" line="1569"/>
         <source>Shaman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Shaman now?</source>
@@ -1715,19 +1715,19 @@ Do you want to Upgrade Shaman now?</source>
 您现在愿意更新Shaman吗?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1825"/>
+        <location filename="../src/MainWindow.cpp" line="1828"/>
         <source>Restart required</source>
         <translation>需要重启</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1818"/>
+        <location filename="../src/MainWindow.cpp" line="1821"/>
         <source>Pacman or Shaman was updated. Shaman will now quit,
 please restart it to use the new version</source>
         <translation>Pacman 或 Shaman已被更新。 Shaman 将会退出,
 请重启它以便使用新的版本</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2089"/>
+        <location filename="../src/MainWindow.cpp" line="2092"/>
         <source>Library Question</source>
         <translation>库问题</translation>
     </message>
@@ -1755,12 +1755,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;l.appelhans@gmx.de&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="801"/>
+        <location filename="../src/MainWindow.cpp" line="804"/>
         <source>Local Version: </source>
         <translation>本地版本 : </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="806"/>
+        <location filename="../src/MainWindow.cpp" line="809"/>
         <source>Version in the Repository: </source>
         <translation>仓库里的版本 : </translation>
     </message>
@@ -1772,24 +1772,24 @@ was not successfully processed</source>
 将无法成功处理</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="330"/>
+        <location filename="../src/MainWindow.cpp" line="333"/>
         <source>Esc</source>
         <translation>退出</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1885"/>
+        <location filename="../src/MainWindow.cpp" line="1888"/>
         <source>News Alert</source>
         <translation>News Alert</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1886"/>
+        <location filename="../src/MainWindow.cpp" line="1889"/>
         <source>There is an unread news about %1.
 Do you want to read it?</source>
         <translation>这里有%1个未读的消息，
 你想阅读它吗?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1826"/>
+        <location filename="../src/MainWindow.cpp" line="1829"/>
         <source>Your Kernel has been updated.
 Please restart your PC soon to load the new Kernel.</source>
         <translation>您的内核已经更新，
@@ -1811,19 +1811,19 @@ Please restart your PC soon to load the new Kernel.</source>
         <translation>查看日志</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1783"/>
+        <location filename="../src/MainWindow.cpp" line="1786"/>
         <source>One or more errors occurred, your Queue
 was not successfully processed</source>
         <translation>一个或多个错误发生，你的队列
 将无法成功处理</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="929"/>
+        <location filename="../src/MainWindow.cpp" line="932"/>
         <source>One or more databases failed to update!</source>
         <translation>一个或多个数据库更新失败 !</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1785"/>
+        <location filename="../src/MainWindow.cpp" line="1788"/>
         <source>Error Processing Queue!!</source>
         <translation>错误的处理队列!!</translation>
     </message>
@@ -1834,7 +1834,7 @@ was not successfully processed</source>
         <translation type="obsolete">名字</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1227"/>
+        <location filename="../src/MainWindow.cpp" line="1230"/>
         <source>A package providing %1 is already installed.
 Do you want to install %1 anyway?</source>
         <translation>软件包提供%1已经安装，
@@ -1901,7 +1901,7 @@ Do you want to install %1 anyway?</source>
         <translation>依赖关系(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1051"/>
+        <location filename="../src/MainWindow.cpp" line="1054"/>
         <source>Mark for Re&amp;installation</source>
         <translation>标记以便重新安装(&amp;I)</translation>
     </message>
@@ -1911,7 +1911,7 @@ Do you want to install %1 anyway?</source>
         <translation>取消操作(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2052"/>
+        <location filename="../src/MainWindow.cpp" line="2055"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -1940,14 +1940,171 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">名字</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="331"/>
+        <location filename="../src/MainWindow.cpp" line="334"/>
         <source>Ctrl+Q</source>
         <comment>Exit Shaman Shortcut</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="640"/>
+        <location filename="../src/MainWindow.cpp" line="643"/>
         <source>Name and Description</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>MaintenanceBar</name>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="42"/>
+        <source>Please choose an action to start maintenance...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="43"/>
+        <source>Clean Unused Databases</source>
+        <translation type="unfinished">清理未使用的数据库</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="43"/>
+        <source>Clean Cache</source>
+        <translation type="unfinished">清除缓存</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="44"/>
+        <source>Empty Cache</source>
+        <translation type="unfinished">清空缓存</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="44"/>
+        <source>Optimize Pacman Database</source>
+        <translation type="unfinished">优化Pacman数据库</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="44"/>
+        <source>Clean All Building Environments</source>
+        <translation type="unfinished">清除所有的编译环境</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="77"/>
+        <source>Cleaning up unused Databases...</source>
+        <translation type="unfinished">清理未使用的数据库...</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="91"/>
+        <source>Cleaning up Cache...</source>
+        <translation type="unfinished">清除缓存...</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="105"/>
+        <source>Deleting Cache...</source>
+        <translation type="unfinished">删除缓存...</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="122"/>
+        <source>Optimizing Pacman Database...</source>
+        <translation type="unfinished">优化Pacman数据库...</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="139"/>
+        <source>Cleaning up building Environments...</source>
+        <translation type="unfinished">清除编译环境...</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="165"/>
+        <source>Abort</source>
+        <translation type="unfinished">放弃</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="178"/>
+        <source>System Maintenance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="189"/>
+        <source>Unused Databases Cleaned up successfully!</source>
+        <translation type="unfinished">成功清除未使用的数据库 !</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="195"/>
+        <source>Cache Cleaned Up Successfully!</source>
+        <translation type="unfinished">清除缓存成功 !</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="201"/>
+        <source>Cache Successfully Deleted!</source>
+        <translation type="unfinished">删除缓存成功 !</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="207"/>
+        <source>Build Environments Successfully Cleaned!</source>
+        <translation type="unfinished">编译环境成功清除!</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="312"/>
+        <source>Close</source>
+        <translation type="unfinished">关闭</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="232"/>
+        <source>Cleaning up Unused Databases Failed!</source>
+        <translation type="unfinished">清理未使用的数据库失败!</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="237"/>
+        <source>Cleaning up Cache Failed!</source>
+        <translation type="unfinished">清除缓存失败!</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="242"/>
+        <source>Deleting Cache Failed!</source>
+        <translation type="unfinished">删除缓存失败 !</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="247"/>
+        <source>Could not clean Build Environments!!</source>
+        <translation type="unfinished">无法清除编译环境 !</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="274"/>
+        <source>Pacman Database Optimized Successfully!</source>
+        <translation type="unfinished">Pacman数据库优化成功 !</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="280"/>
+        <source>Could not Optimize Pacman Database!</source>
+        <translation type="unfinished">无法优化Pacman数据库!</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="288"/>
+        <source>Running sync...</source>
+        <comment>sync is a command, so it should not be translated</comment>
+        <translation type="unfinished">运行Sync...</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="298"/>
+        <source>Operation Completed Successfully!</source>
+        <translation type="unfinished">操作执行成功 !</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="297"/>
+        <source>Sync was successfully executed!!</source>
+        <comment>Sync is always the command</comment>
+        <translation type="unfinished">Sync 执行成功 !!</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="302"/>
+        <source>Sync could not be executed!</source>
+        <comment>Sync is always the command</comment>
+        <translation type="unfinished">Sync 无法执行 !</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="303"/>
+        <source>Sync could not be executed!!</source>
+        <comment>Sync is always the command</comment>
+        <translation type="unfinished">Sync 无法执行 !!</translation>
+    </message>
+    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="39"/>
+        <source>Maintenance Actions</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2172,7 +2329,7 @@ for more details.</translation>
         <translation>取消(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2065"/>
+        <location filename="../src/MainWindow.cpp" line="2068"/>
         <source>Whoa, that&apos;s co&amp;ol!</source>
         <translation>哇,这么&amp;酷!</translation>
     </message>

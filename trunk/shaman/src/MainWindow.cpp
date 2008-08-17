@@ -44,6 +44,7 @@
 #include "ShamanStatusBar.h"
 #include "PackageProperties.h"
 #include "ShamanTreeWidgetItem.h"
+#include "MaintenanceBar.h"
 
 #include <config.h>
 
@@ -317,6 +318,8 @@ turnOffSys(false)
 	connect(&athCback, SIGNAL(passwordRequired(int)), SLOT(showAuthDialog(int)));
 	connect(aHandle, SIGNAL(transactionStarted()), SIGNAL(transactionStarted()));
 	connect(aHandle, SIGNAL(transactionReleased()), SIGNAL(transactionReleased()));
+
+	addToolBar(new MaintenanceBar(aHandle, this));
 
 	QSettings *settings = new QSettings();
 
