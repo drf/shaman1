@@ -54,17 +54,22 @@ QString PackageProperties::formatSize(unsigned long size)
 	return s;
 }
 
-void PackageProperties::setPackage(pmpkg_t *pkg)
+void PackageProperties::setPackage(pmpkg_t *pkg, bool forceGiven)
 {
 	curPkg = pkg;
 	
 	// We can throw a lot more info if the package is local, let's check.
-	if(aHandle->isInstalled(curPkg) || curPkg == NULL)
+	if(forceGiven && curPkg == NULL)
+	    return;
+	else if((aHandle->isInstalled(curPkg) || curPkg == NULL) && !forceGiven)
 	{
 		qDebug() << "Getting info from local database";
 		curPkg = aHandle->getPackageFromName(pName, "local");
 	}
-	
+
+	if(pName.isEmpty())
+	    pName = alpm_pkg_get_name(curPkg);
+
 	setWindowTitle(QString(tr("Shaman - %1 properties")).arg(pName));
 }
 

@@ -52,19 +52,20 @@ class LogViewer;
 class ShamanStatusBar;
 class PackageProperties;
 class ShamanTreeWidgetItem;
+class LocalPackageDialog;
 
 class CreateItemsThread : public QThread
 {
     Q_OBJECT
-    
+
 public:
     CreateItemsThread(AlpmHandler *aH);
     void run();
     QList<QTreeWidgetItem *> getResult();
-    
+
 signals:
     void updateProgress(int percentage);
-    
+
 private:
     QList<QTreeWidgetItem *> retlist;
     AlpmHandler *m_handler;
@@ -171,12 +172,12 @@ private slots:
 	void settingsClosed();
 	void openUrl();
 	void triggerEditTimer();
-	
+
 private:
 	void loadDbUpdateDialog();
 	void removeDbUpdateDialog();
 	void upgrade(const QStringList &packages);
-	
+
 public:
 	QueueDialog *queueDl;
 
@@ -194,6 +195,7 @@ private:
 	QPointer<PackageProperties> pkgProp;
 	QPointer<QTimer> editTimer;
 	QPointer<CreateItemsThread> cThread;
+	QPointer<LocalPackageDialog> lpkgDialog;
 
 	QPointer<QDialog> reviewQueue;
 	ShamanTrayIcon *trayicon;

@@ -45,6 +45,7 @@
 #include "PackageProperties.h"
 #include "ShamanTreeWidgetItem.h"
 #include "MaintenanceBar.h"
+#include "LocalPackageDialog.h"
 
 #include <config.h>
 
@@ -2024,13 +2025,15 @@ void MainWindow::installPackageFromFile(const QString &filename)
 
 	qDebug() << "Selected" << alpm_pkg_get_name(pkg);
 
-	alpm_pkg_free(pkg);
+	lpkgDialog = new LocalPackageDialog(aHandle, this);
 
-	aHandle->initQueue(false, false, true);
+	lpkgDialog->loadPackage(pkg, filename);
 
-	aHandle->addFFToQueue(filename);
+	lpkgDialog->show();
 
-	processQueue();
+	qDebug() << "Package Shown";
+
+	connect(lpkgDialog, SIGNAL(queueReady()), SLOT(processQueue()));
 
 }
 

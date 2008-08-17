@@ -60,6 +60,7 @@ SET(shaman_SRCS ${shaman_adaptor_SRCS}
     src/PackageProperties.cpp
     src/ShamanTreeWidgetItem.cpp
     src/MaintenanceBar.cpp
+    src/LocalPackageDialog.cpp
 )
 
 SET(shaman_MOC_HDRS
@@ -83,6 +84,7 @@ SET(shaman_MOC_HDRS
     src/ShamanStatusBar.h
     src/PackageProperties.h
     src/MaintenanceBar.h
+    src/LocalPackageDialog.h
 #    src/ShamanTreeWidgetItem.h
 )
 
@@ -101,6 +103,7 @@ SET(shaman_UIS
     ui/logViewer.ui
     ui/authDialog.ui
     ui/pkgProperties.ui
+    ui/fromFileDialog.ui
 )
 
 SET(shaman_RESOUCES
