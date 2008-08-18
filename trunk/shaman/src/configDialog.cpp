@@ -77,35 +77,35 @@ QStringList ConfigDialog::getMirrorList(ShamanProperties::MirrorType type)
 		else
 			return QStringList();
 	}
-		
+
 	QStringList retlist;
-	
+
 	if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
 		return retlist;
-	
+
 	QTextStream in(&file);
-	while (!in.atEnd()) 
+	while (!in.atEnd())
 	{
 		QString line = in.readLine();
 		if(line.startsWith('#'))
 			continue;
-		
+
 		if(!line.contains("server", Qt::CaseInsensitive))
 			continue;
-		
-		QStringList list(line.split("=", QString::SkipEmptyParts));
+
+		QStringList list(line.split('=', QString::SkipEmptyParts));
 		if (list.count() >= 1)
 		{
 			QString serverN(list.at(1));
-		
+
 			serverN.remove(QChar(' '), Qt::CaseInsensitive);
-		
+
 			retlist.append(serverN);
 		}
 	}
-	
+
 	file.close();
-	
+
 	return retlist;
 
 }
@@ -150,7 +150,7 @@ void ConfigDialog::setupRepos()
 	QString whichMirror;
 	QString kdemodMirror;
 	QStringList kmod;
-	
+
 	kmod.clear();
 
 	mirrorBox->addItems(getMirrorList());
@@ -178,7 +178,7 @@ void ConfigDialog::setupRepos()
 			if(kmod.isEmpty())
 			{
 				kdemodMirror = alpm_db_get_url(curdb);
-				
+
 				kmod = kdemodMirror.split(QString("core"),
 							QString::SkipEmptyParts, Qt::CaseInsensitive);
 			}
@@ -193,7 +193,7 @@ void ConfigDialog::setupRepos()
 				kmod = kdemodMirror.split(QString("extragear"),
 						QString::SkipEmptyParts, Qt::CaseInsensitive);
 			}
-			
+
 			kdemodMirror = alpm_db_get_url(curdb);
 			KDEMod4ExtragearBox->setChecked(true);
 		}
@@ -276,9 +276,9 @@ void ConfigDialog::setupRepos()
 	if (kmod.count() >= 1)
 	{
 		QString dserv(kmod.at(0));
-		
+
 		qDebug() << "Searching for" << dserv;
-		
+
 		if(KDEModMirrorBox->findText(dserv, Qt::MatchContains) != -1)
 			KDEModMirrorBox->setCurrentIndex(KDEModMirrorBox->findText(dserv, Qt::MatchContains));
 		else
@@ -393,7 +393,7 @@ void ConfigDialog::setupABS()
 	connect(useCustomSupRadio, SIGNAL(toggled(bool)), SLOT(obfuscateSupfiles(bool)));
 
 	ABSConf abD = getABSConf();
-	
+
 	supEdit->setText(abD.supfiles);
 	rsyncServerEdit->setText(abD.rsyncsrv);
 
@@ -414,7 +414,7 @@ void ConfigDialog::setupAdvanced()
 	item->setTextAlignment(Qt::AlignHCenter);
 	item->setSizeHint(QSize(90, 50));
 	listWidget->insertItem(4, item);
-	
+
 	QSettings *settings = new QSettings();
 
 	if(settings->value("scheduledUpdate/enabled").toBool())
@@ -462,10 +462,10 @@ void ConfigDialog::setupAdvanced()
 		upNotifyAddRadio->setChecked(true);
 	else
 		upNotifyRadio->setChecked(true);
-	
+
 	if(settings->value("newsreader/userss", true).toBool())
 		useRSSBox->setChecked(true);
-	
+
 	if(settings->value("newsreader/doupdate").toBool())
 		updateRSSBox->setChecked(true);
 	else
@@ -475,25 +475,25 @@ void ConfigDialog::setupAdvanced()
 	}
 
 	connect(updateRSSBox, SIGNAL(toggled(bool)), SLOT(obfuscateRSSUpdate(bool)));
-	
+
 	updateRSSSpin->setValue(settings->value("newsreader/updateinterval", 60).toInt());
-	
+
 	if(settings->value("newsreader/notifynew").toBool())
 		notifyRSSBox->setChecked(true);
 	else
 		notifyRSSBox->setChecked(false);
-	
+
 	if(settings->value("newsreader/queuenotifier", true).toBool())
 		notifyQueueRSSBox->setChecked(true);
 	else
 		notifyQueueRSSBox->setChecked(false);
 
 	noRootBox->setChecked(settings->value("gui/noroot").toBool());
-		
+
 	autoStartBox->setChecked(settings->value("gui/autostart").toBool());
-	
+
 	useAnimatedBox->setChecked(settings->value("trayicon/useanimatedicon", true).toBool());
-	
+
 	settings->deleteLater();
 }
 
@@ -518,7 +518,7 @@ void ConfigDialog::openAddDialog()
 
 	connect(okb, SIGNAL(clicked()), addDialog, SLOT(accept()));
 	connect(cancb, SIGNAL(clicked()), addDialog, SLOT(reject()));
-	
+
 	hlay->insertStretch(0);
 	hlay->addWidget(cancb);
 	hlay->addWidget(okb);
@@ -657,13 +657,13 @@ void ConfigDialog::performManteinanceAction()
 
 		statusLabel->setText(QString(tr("Optimizing Pacman Database...")));
 		mantDetails->append(QString(tr("Optimizing Pacman Database...")));
-		
+
 		qDebug() << "Starting the process";
-		
+
 		ath.switchToRoot();
-		
+
 		mantProc->start("pacman-optimize");
-		
+
 		ath.switchToStdUsr();
 	}
 	else if(!mantActionBox->currentText().compare(QString(tr("Clean All Building Environments"))))
@@ -678,7 +678,7 @@ void ConfigDialog::performManteinanceAction()
 		connect(cTh, SIGNAL(finished()), SLOT(cleanThread()));
 		cTh->start();
 	}
-	
+
 	mantDetails->moveCursor(QTextCursor::End);
 }
 
@@ -708,7 +708,7 @@ void ConfigDialog::showFailure(int act)
 	}
 
 	mantDetails->moveCursor(QTextCursor::End);
-	
+
 	mantProcessButton->setEnabled(true);
 }
 
@@ -740,7 +740,7 @@ void ConfigDialog::showSuccess(int act)
 		alpm_logaction(QString(tr("Build Environments Successfully Cleaned!") + QChar('\n')).toUtf8().data());
 		break;
 	}
-	
+
 	mantDetails->moveCursor(QTextCursor::End);
 
 	mantProcessButton->setEnabled(true);
@@ -749,7 +749,7 @@ void ConfigDialog::showSuccess(int act)
 void ConfigDialog::saveConfiguration()
 {
 	qDebug() << "Saving Configuration...";
-	
+
 	bool dbChanged = false, restartNeeded = false;
 	QString mirror(mirrorBox->currentText());
 	QString kdemodmirror(KDEModMirrorBox->currentText());
@@ -764,29 +764,29 @@ void ConfigDialog::saveConfiguration()
 			arch = "i686";
 		else
 			arch = "x86_64";
-		
-		QStringList tmplst = kdemodmirror.split(QString("$arch"), 
+
+		QStringList tmplst = kdemodmirror.split(QString("$arch"),
 				QString::SkipEmptyParts, Qt::CaseInsensitive);
 
 		QString dserv(tmplst.at(0));
 
 		dserv.append(arch);
-		
+
 		if(tmplst.count() > 1)
 			dserv.append(tmplst.at(1));
-		
+
 		kdemodmirror = dserv;
 	}
-	
+
 	saveSettings();
 
 	emit setProxy();
-	
+
 	if(!ath.switchToRoot())
 	{
 		ShamanDialog::popupDialog(tr("Saving Configuration"), tr("Unable to save Pacman configuration!"),
 				this, ShamanProperties::ErrorDialog);
-		
+
 		return;
 	}
 
@@ -1080,14 +1080,14 @@ void ConfigDialog::saveConfiguration()
 	if(logFileLine->isModified())
 	{
 		restartNeeded = true;
-		
+
 		if(logFileLine->text().isEmpty())
 			editPacmanKey("options/LogFile", QString(), 2);
 		else
 			if(!editPacmanKey("options/LogFile", logFileLine->text(), 0))
 				editPacmanKey("options/LogFile", logFileLine->text(), 1);
 	}
-	
+
 	/* Ok, saving finished, commit changes to Alpm now */
 	m_handler->reloadPacmanConfiguration();
 
@@ -1107,12 +1107,12 @@ void ConfigDialog::saveConfiguration()
 			QFile::copy("/usr/share/applications/shaman.desktop", "/etc/xdg/autostart/shaman.desktop");
 	}
 	else
-	{		
+	{
 		QFile::remove("/etc/xdg/autostart/shaman.desktop");
 	}
 
 	ath.switchToRoot();
-	
+
 	if(useMatchSupRadio->isChecked())
 	{
 		/* We need to generate a SUPFILES containing our current repos
@@ -1145,12 +1145,12 @@ void ConfigDialog::saveConfiguration()
 		if(supEdit->isModified())
 			editABSSection("repos", supEdit->text());
 	}
-	
+
 	if(rsyncServerEdit->isModified())
 		editABSSection("rsync", rsyncServerEdit->text());
 
 	/* Last, but not least, commit changes to makepkg.conf */
-	
+
 	ath.switchToRoot();
 
 	if(CFlagEdit->isModified())
@@ -1167,9 +1167,9 @@ void ConfigDialog::saveConfiguration()
 
 	if(docDirsEdit->isModified())
 		editMakepkgSection("docdirs", docDirsEdit->text());
-	
+
 	ath.switchToStdUsr();
-	
+
 	if(restartNeeded)
 		ShamanDialog::popupDialogDontShow(tr("Saving Configuration"), tr("Some of your changes have not been applied,\n"
 				"since alpm needs to be released.\nYou need to restart Shaman to make them effective."), "gui/configwarning", this,
@@ -1178,11 +1178,11 @@ void ConfigDialog::saveConfiguration()
 	/* Did we change anything in the repos? Better update our
 	 * local DB then.
 	 */
-	
+
 	if(dbChanged)
 	{
-		switch (ShamanDialog::popupQuestionDialog(QString(tr("Settings Changed")), 
-				QString(tr("Your repositories have changed.\nDo you want to Update Your Database?")), this)) 
+		switch (ShamanDialog::popupQuestionDialog(QString(tr("Settings Changed")),
+				QString(tr("Your repositories have changed.\nDo you want to Update Your Database?")), this))
 		{
 		case QMessageBox::Yes:
 			upDb = true;
@@ -1288,7 +1288,7 @@ void ConfigDialog::addMirror()
 	file.write("\n", 1);
 
 	file.close();
-	
+
 	ath.switchToStdUsr();
 
 	mirrorBox->addItem(mirror);
@@ -1333,16 +1333,16 @@ void ConfigDialog::addKDEModMirror()
 		file.setFileName("kdemodmirrorlist");
 	else
 		return;
-	
+
 	ath.switchToRoot();
-	
+
 	file.open(QIODevice::Append | QIODevice::Text);
 
 	file.write(toInsert.toUtf8().data(), toInsert.length());
 	file.write("\n", 1);
 
 	file.close();
-	
+
 	ath.switchToStdUsr();
 
 	KDEModMirrorBox->addItem(mirror);
@@ -1392,16 +1392,16 @@ void ConfigDialog::cleanProc(int eC, QProcess::ExitStatus eS)
 	}
 
 	mantProc->deleteLater();
-	
+
 	mantDetails->moveCursor(QTextCursor::End);
 
 	statusLabel->setText(QString(tr("Running sync...", "sync is a command, so it should not be translated")));
 	mantDetails->append(QString(tr("Running sync...", "sync is a command, so it should not be translated")));
 
 	mantProc = new RootProcess();
-	
+
 	ath.switchToRoot();
-	
+
 	if(mantProc->execute("sync") == 0)
 	{
 		statusLabel->setText(QString(tr("Operation Completed Successfully!")));
@@ -1413,9 +1413,9 @@ void ConfigDialog::cleanProc(int eC, QProcess::ExitStatus eS)
 		statusLabel->setText(QString(tr("Sync could not be executed!", "Sync is always the command")));
 		mantDetails->append(QString(tr("Sync could not be executed!!", "Sync is always the command")));
 	}
-	
+
 	ath.switchToStdUsr();
-	
+
 	mantDetails->moveCursor(QTextCursor::End);
 
 	mantProc->deleteLater();

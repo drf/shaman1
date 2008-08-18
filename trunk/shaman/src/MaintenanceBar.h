@@ -41,7 +41,7 @@ class MaintenanceBar : public QToolBar
     Q_OBJECT
 
 public:
-	MaintenanceBar(AlpmHandler *aH, QWidget *parent = 0);
+	explicit MaintenanceBar(AlpmHandler *aH, QWidget *parent = 0);
 	virtual ~MaintenanceBar();
 
 private slots:

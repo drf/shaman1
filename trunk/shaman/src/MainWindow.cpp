@@ -202,7 +202,7 @@ void CreateItemsThread::run()
         locPkg = alpm_list_next(locPkg);
     }
 
-    foreach(QString ent, conflPackages)
+    foreach(const QString &ent, conflPackages)
     {
         int count = 0;
         QTreeWidgetItem *match = 0;
@@ -485,7 +485,7 @@ void MainWindow::populateRepoColumn()
 	item->setText(tr("All Repositories"));
 	item->setSelected(true);
 
-	foreach(QString dbname, list)
+	foreach(const QString &dbname, list)
 	{
 		QListWidgetItem *item = new QListWidgetItem(repoList);
 
@@ -823,7 +823,7 @@ void MainWindow::showPkgInfo()
 	else if(PkgInfos->currentIndex() == 2)
 	{
 		dependenciesWidget->clear();
-		foreach (QString dep, aHandle->getPackageDependencies(alpm_pkg_get_name(pkg) , pkgsViewWG->currentItem()->text(5)))
+		foreach (const QString &dep, aHandle->getPackageDependencies(alpm_pkg_get_name(pkg) , pkgsViewWG->currentItem()->text(5)))
 		{
 			if (!dep.isEmpty())
 				dependenciesWidget->addItem(dep);
@@ -835,11 +835,11 @@ void MainWindow::showPkgInfo()
 		filesWidget->clear();
 		filesWidget->header()->hide();
 		QStringList files = aHandle->getPackageFiles(pkgsViewWG->selectedItems().first()->text(1));
-		foreach (QString file, files)
+		foreach (const QString &file, files)
 		{
-			QStringList splitted = file.split("/");
+			QStringList splitted = file.split('/');
 			QTreeWidgetItem *parentItem = 0;
-			foreach (QString spl, splitted)
+			foreach (const QString &spl, splitted)
 			{
 				if (spl.isEmpty())
 					continue;
@@ -1341,7 +1341,7 @@ void MainWindow::installPackage(const QString &package, const QString &repo)
 	qDebug() << item->text(5);
 
 
-	foreach (QString dep, aHandle->getPackageDependencies(package, item->text(5)))
+	foreach (const QString &dep, aHandle->getPackageDependencies(package, item->text(5)))
 	{
 		installPackage(dep);
 	}
@@ -1398,7 +1398,7 @@ void MainWindow::removePackage(const QString &package, const QString &repo)
 	}
 	qDebug() << item->text(5);
 
-	foreach (QString dep, aHandle->getDependenciesOnPackage(package, item->text(5)))
+	foreach (const QString &dep, aHandle->getDependenciesOnPackage(package, item->text(5)))
 	{
 		removePackage(dep);
 	}
@@ -1425,11 +1425,11 @@ void MainWindow::completeRemovePackage()
 
 	//Now we remove the on-package-dependencies and the dependencies...
 
-	foreach (QString onDep, aHandle->getDependenciesOnPackage(item->text(1), item->text(5)))
+	foreach (const QString &onDep, aHandle->getDependenciesOnPackage(item->text(1), item->text(5)))
 	{
 		removePackage(onDep);
 	}
-	foreach (QString dep, aHandle->getPackageDependencies(item->text(1), item->text(5)))
+	foreach (const QString &dep, aHandle->getPackageDependencies(item->text(1), item->text(5)))
 	{
 		removePackage(dep);
 	}
@@ -1481,11 +1481,11 @@ void MainWindow::cancelAction(const QString &package, const QString &repo)
 	item->setText(8, QString());
 	item->setIcon(2, QIcon());
 
-	foreach (QString onDep, aHandle->getDependenciesOnPackage(item->text(1), item->text(5)))
+	foreach (const QString &onDep, aHandle->getDependenciesOnPackage(item->text(1), item->text(5)))
 	{
 		cancelAction(onDep);
 	}
-	foreach (QString dep, aHandle->getPackageDependencies(item->text(1), item->text(5)))
+	foreach (const QString &dep, aHandle->getPackageDependencies(item->text(1), item->text(5)))
 	{
 		cancelAction(dep);
 	}
@@ -1606,7 +1606,7 @@ void MainWindow::upgrade(const QStringList &packages)
 
 		if(settings->value("newsreader/userss", true).toBool() && settings->value("newsreader/queuenotifier", true).toBool())
 		{
-			foreach(QString ent, packages)
+			foreach(const QString &ent, packages)
 			{
 				if(newsReader->checkUnreadNewsOnPkg(ent))
 				{
@@ -1664,7 +1664,7 @@ void MainWindow::addUpgradeableToQueue()
 	    return;
 	}
 
-	foreach (QString package, aHandle->getUpgradeablePackages())
+	foreach (const QString &package, aHandle->getUpgradeablePackages())
 	{
 		QTreeWidgetItem *item = pkgsViewWG->findItems(package, Qt::MatchExactly, 1).first();
 		item->setIcon(0, QIcon(":/Icons/icons/user-invisible.png"));

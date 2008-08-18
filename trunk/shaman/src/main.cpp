@@ -48,20 +48,20 @@ static void cleanup(int signum)
 		qCritical() << "Please report it to our bugtracker ( http://shaman.iskrembilen.com/trac ), including: when it crashed,";
 		qCritical() << "Terminal output, and possibly a backtrace (use gdb for that)";
 		exit(signum);
-	} 
-	else if((signum == SIGINT)) 
+	}
+	else if((signum == SIGINT))
 	{
 		printf("\n");
-		
+
 		qCritical() << "Caught Interrupt Signal";
-		
+
 		if(alpm_trans_interrupt() == 0)
 			/* a transaction is being interrupted, don't exit Shaman yet. */
 			return;
 
 		/* no committing transaction, we can release it now and then exit pacman */
 		alpm_trans_release();
-		
+
 		qCritical("Shaman was terminated and all Alpm Transactions interrupted and released.");
 		/* output a newline to be sure we clear any line we may be on */
 		printf("\n");
@@ -78,14 +78,14 @@ static void cleanup(int signum)
 void stdDebugOutput(QtMsgType type, const char *msg)
 {
     QString rmsg;
-    
+
     switch (type) {
 	case QtDebugMsg:
 		fprintf(stderr, "%s\n", msg);
 		break;
 	case QtWarningMsg:
 	    rmsg = msg;
-	    
+
 	    if(rmsg.contains("QPixmap"))
 	        return;
 
@@ -106,16 +106,16 @@ void stdDebugOutput(QtMsgType type, const char *msg)
 void noDebugOutput(QtMsgType type, const char *msg)
 {
     QString rmsg;
-    
+
     switch (type) {
 	case QtDebugMsg:
 		break;
 	case QtWarningMsg:
 	    rmsg = msg;
-	    
+
 	    if(rmsg.contains("QPixmap"))
 	        return;
-	    
+
 		fprintf(stderr, "Shaman/%s - Warning: %s\n", SHAMAN_VERSION, msg);
 		break;
 	case QtCriticalMsg:
@@ -172,7 +172,7 @@ int main(int argc, char **argv)
 	{
 		printf("\n");
 		printf("This System is running Qt Version %s\n", qVersion());
-		printf("Shaman was compiled against Qt Version %s\n", QT_VERSION_STR);		
+		printf("Shaman was compiled against Qt Version %s\n", QT_VERSION_STR);
 		printf("\n");
 		printf("\n");
 		return(EXIT_SUCCESS);
@@ -198,16 +198,16 @@ int main(int argc, char **argv)
 		qInstallMsgHandler(noDebugOutput);
 	else
 		qInstallMsgHandler(stdDebugOutput);
-	
+
 	QTranslator translator;
 
 	if(!arguments.contains("--no-i18n"))
 	{
 		QString locale = QLocale::system().name();
 
-		qDebug() << "Translations are enabled."; 
+		qDebug() << "Translations are enabled.";
 		QString trpath(QString("shaman_") + locale);
-		
+
 		QString filePath = INSTALL_PREFIX;
 		filePath.append("/share/shaman/translations/");
 
@@ -215,7 +215,7 @@ int main(int argc, char **argv)
 			if(!translator.load(trpath, filePath))
 				if(!translator.load(trpath, "translations/"))
 					qDebug() << "Could not find a translation for this locale.";
-				else 
+				else
 					qDebug() << "Loading translations from" << "translations/";
 			else
 				qDebug() << "Loading translations from" << filePath;
@@ -238,12 +238,12 @@ int main(int argc, char **argv)
 		                "org.archlinux.shaman", "installPackageFromFile");
 		        msg << ent;
 		        testconn.call(msg);
-		        
+
 		        exit(0);
 		    }
 		}
-	    
-	    ShamanDialog::popupDialog(QObject::tr("Shaman"), 
+
+	    ShamanDialog::popupDialog(QObject::tr("Shaman"),
 				QObject::tr("It looks like another copy of Shaman is running.\nYou can only run "
 						"one copy of Shaman at a time."), NULL, ShamanProperties::ErrorDialog);
 
@@ -284,13 +284,13 @@ int main(int argc, char **argv)
 				"and then translating just what's outside the tags, usually just a few words. "
 				"If you have any doubts, or if you just want to drop us a line, there goes our email addresses:\n"
 				"Dario: drf54321@gmail.com\nLukas: l.appelhans@gmx.de\n"
-				"Thanks again, and enjoy your translation!"), 
+				"Thanks again, and enjoy your translation!"),
 				QObject::tr("Your settings file seems unwritable.\nPlease check permissions on it."), NULL,
 				ShamanProperties::ErrorDialog);
-		
+
 		exit(1);
 	}
-	
+
 	qDebug() << settings->fileName();
 
 	if(arguments.contains("--clear-settings"))
@@ -334,7 +334,7 @@ int main(int argc, char **argv)
 	{
 		if(settings->value("gui/noroot").toBool())
 		{
-			ShamanDialog::popupDialog(QObject::tr("Shaman"), 
+			ShamanDialog::popupDialog(QObject::tr("Shaman"),
 					QObject::tr("Shaman can not be started as root.\nPlease restart it as "
 							"unprivileged user."), NULL,
 							ShamanProperties::ErrorDialog);
@@ -343,7 +343,7 @@ int main(int argc, char **argv)
 		}
 
 
-		ShamanDialog::popupDialogDontShow(QObject::tr("Shaman"), 
+		ShamanDialog::popupDialogDontShow(QObject::tr("Shaman"),
 				QObject::tr("You have started Shaman as root.\nIt is advised to start it as unprivileged user.\n"
 						"Shaman will ask you for root password when needed."), "gui/rootwarning", NULL,
 						ShamanProperties::WarningDialog);
@@ -351,26 +351,26 @@ int main(int argc, char **argv)
 
 	QString alversion(aHandler->getAlpmVersion());
 	alversion[1];
-	
+
 	if(alversion[0].digitValue() <= 2 && alversion[2].digitValue() < 1)
 	{
 		ShamanDialog::popupDialog(QObject::tr("Shaman"), QString(QObject::tr("Pacman is not updated."
 				"\nShaman needs libalpm >= 2.1.0 to run.\nYours is %1. Please update Pacman.")).arg(alversion),
 				NULL, ShamanProperties::ErrorDialog);
-		
+
 		exit(1);
 	}
-	
+
 	app.setQuitOnLastWindowClosed(false);
 
 	signal(SIGINT, cleanup);
 	signal(SIGTERM, cleanup);
 	signal(SIGSEGV, cleanup);
-	
+
 	aHandler->setuseragent();
-	
+
 	qDebug() << "User agent is:" << qgetenv("HTTP_USER_AGENT");
-	
+
 	if(settings->value("gui/startupmode").toString() == 0)
 	{
 		/* Whoa! This probably means that this is either the first time we
@@ -378,11 +378,11 @@ int main(int argc, char **argv)
 		 * let's create some reasonable defaults. And let's backup
 		 * conf files too, our parser rocks, but one never knows, right?
 		 */
-		
+
 		QFile::copy("/etc/pacman.conf", QString("/etc/pacman.conf.bak.").append(QDate::currentDate().toString("ddMMyyyy")));
 		QFile::copy("/etc/makepkg.conf", QString("/etc/makepkg.conf.bak.").append(QDate::currentDate().toString("ddMMyyyy")));
 		QFile::copy("/etc/abs.conf", QString("/etc/abs.conf.bak.").append(QDate::currentDate().toString("ddMMyyyy")));
-		
+
 		settings->setValue("gui/startupmode", "window");
 		settings->setValue("scheduledUpdate/enabled", true);
 		settings->setValue("scheduledUpdate/interval", 60);
@@ -392,7 +392,7 @@ int main(int argc, char **argv)
 		settings->setValue("gui/showsplashscreen", true);
 	}
 
-	if(settings->value("absbuilding/buildpath").toString() == 0 || !settings->contains("absbuilding/buildpath") || 
+	if(settings->value("absbuilding/buildpath").toString() == 0 || !settings->contains("absbuilding/buildpath") ||
 			settings->value("absbuilding/buildpath").toString() == "/")
 		// This can be dangerous, so set it properly
 		settings->setValue("absbuilding/buildpath", "/var/shaman/builds");
@@ -425,7 +425,7 @@ int main(int argc, char **argv)
 		splscr.showMessage(QString(QObject::tr("Starting up Shaman...")), Qt::AlignBottom | Qt::AlignRight, Qt::white);
 		app.processEvents();
 	}
-	
+
 	mainwin.setUpTrayIcon();
 
 	if((settings->value("gui/startupmode").toString() == "window" || arguments.contains("--start-in-window")) &&
@@ -434,7 +434,7 @@ int main(int argc, char **argv)
 		/* case 1: we want to show Main Window
 		 */
 		mainwin.show();
-		
+
 	}
 	else
 	{
@@ -442,29 +442,29 @@ int main(int argc, char **argv)
 		 * we want the program to start up in the systray
 		 * only.
 		 */
-		
+
 		mainwin.startTrayTimer();
 	}
 
 	QObject::connect(&mainwin, SIGNAL(aboutToQuit()), &app, SLOT(quit()));
-	
+
 	if(showSplash)
 		splscr.close();
-	
+
 	settings->deleteLater();
-	
+
 	qDebug() << "Log file is:" << alpm_option_get_logfile();
-	
+
 	mainwin.streamReadySignal();
 
-	foreach ( QString ent, arguments )
+	foreach ( const QString &ent, arguments )
 	{
 	    if ( ent.contains("pkg.tar.gz") )
 	    {
 	        mainwin.installPackageFromFile(ent);
 	    }
 	}
-	
+
 	return app.exec();
 
 }

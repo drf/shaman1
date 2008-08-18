@@ -29,13 +29,13 @@ LogViewer::LogViewer(QWidget *parent)
  : QDialog(parent)
 {
 	setupUi(this);
-	
+
 	loadLog();
 	refreshView();
-	
+
 	connect(refreshButton, SIGNAL(clicked()), SLOT(refreshView()));
 	connect(searchLine, SIGNAL(textChanged(QString)), SLOT(refreshView()));
-	
+
 	setAttribute(Qt::WA_DeleteOnClose);
 }
 
@@ -46,26 +46,26 @@ LogViewer::~LogViewer()
 void LogViewer::loadLog()
 {
 	QFile fp(alpm_option_get_logfile());
-	
+
 	contents.clear();
-	
+
 	if(!fp.open(QIODevice::ReadOnly | QIODevice::Text))
 		return;
-	
+
 	QTextStream in(&fp);
 
-	while(!in.atEnd()) 
+	while(!in.atEnd())
 	{
 		QString line = in.readLine();
 		contents.append(line);
 	}
-	
+
 	fp.close();
-	
+
 	yearFromSpin->setValue(contents.at(0).mid(1, 4).toInt());
 	monthFromSpin->setValue(contents.at(0).mid(6, 2).toInt());
 	dayFromSpin->setValue(contents.at(0).mid(9, 2).toInt());
-	
+
 	yearTilSpin->setValue(contents.at(contents.size() - 1).mid(1, 4).toInt());
 	monthTilSpin->setValue(contents.at(contents.size() - 1).mid(6, 2).toInt());
 	dayTilSpin->setValue(contents.at(contents.size() - 1).mid(9, 2).toInt());
@@ -74,20 +74,20 @@ void LogViewer::loadLog()
 void LogViewer::refreshView()
 {
 	QString toShow;
-	
+
 	refreshButton->setEnabled(false);
-	
+
 	qApp->processEvents();
-	
+
 	textEdit->clear();
-	
-	foreach(QString ent, contents)
+
+	foreach(const QString &ent, contents)
 	{
 		if(dateFromBox->isChecked())
 		{
 			QDate boxDate(yearFromSpin->value(), monthFromSpin->value(), dayFromSpin->value());
 			QDate lineDate(ent.mid(1, 4).toInt(), ent.mid(6, 2).toInt(), ent.mid(9, 2).toInt());
-			
+
 			if(lineDate < boxDate)
 				continue;
 		}
@@ -100,17 +100,17 @@ void LogViewer::refreshView()
 			if(lineDate > boxDate)
 				continue;
 		}
-		
+
 		if(!searchLine->text().isEmpty())
 			if(!ent.contains(searchLine->text()))
 				continue;
-		
+
 		toShow.append(ent + QChar('\n'));
 	}
-	
+
 	textEdit->setText(toShow);
-	
+
 	textEdit->moveCursor(QTextCursor::End);
-	
+
 	refreshButton->setEnabled(true);
 }

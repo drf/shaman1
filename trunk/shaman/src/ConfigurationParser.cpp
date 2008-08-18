@@ -42,12 +42,12 @@ QStringList ConfigurationParser::setrepeatingoption(const QString &ptr)
 	QStringList strlist;
 	QStringList list;
 
-	strlist = ptr.split(" ", QString::SkipEmptyParts);
-	
+	strlist = ptr.split(' ', QString::SkipEmptyParts);
+
 	for (int i = 0; i < strlist.size(); ++i)
 	{
 		QString dest(strlist.at(i));
-		
+
 		list.append(dest);
 	}
 
@@ -78,14 +78,14 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 	QTextStream in(&fp);
 
 	/* if we are passed a section, use it as our starting point */
-	if(givensection != NULL) 
-		section.operator=(givensection);	
+	if(givensection != NULL)
+		section.operator=(givensection);
 
 	/* if we are passed a db, use it as our starting point */
 	if(givendb != NULL)
 		db.operator=(givendb);
 
-	while(!in.atEnd()) 
+	while(!in.atEnd())
 	{
 		QString line = in.readLine();
 		linenum++;
@@ -94,20 +94,20 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 			line.remove(line.indexOf('\n'), 1);
 
 		/* ignore whole line and end of line comments */
-		if(line.length() == 0 || line.startsWith('#')) 
+		if(line.length() == 0 || line.startsWith('#'))
 			continue;
 
-		if(line.indexOf("#") != -1) 
+		if(line.indexOf("#") != -1)
 			line.truncate(line.indexOf("#"));
-		
+
 		if(line.contains('[') && line.contains(']'))
 		{
 			while(line.contains(' '))
 				line.remove(' ');
 		}
-				
 
-		if(line.startsWith('[') && line.endsWith(']')) 
+
+		if(line.startsWith('[') && line.endsWith(']'))
 		{
 			/* new config section, skip the '[' */
 			line.remove(0,1);
@@ -115,7 +115,7 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 			section.operator=(line);
 			while(section.contains(' '))
 				section.remove(section.indexOf(' '), 1);
-			
+
 			if(section.operator!=("options"))
 			{
 				QString toAdd(section);
@@ -124,13 +124,13 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 					pacData.syncdbs.append(toAdd);
 					serverparsed = 0;
 				}
-				
+
 				db.operator=(line);
-				
+
 				qDebug() << "Parsing " << toAdd;
 			}
 		}
-		else 
+		else
 		{
 			/* directive */
 			QString key;
@@ -151,7 +151,7 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 			else
 			{
 				key = line;
-				line = QString();
+				line.clear();
 			}
 
 			if(key == NULL)
@@ -161,7 +161,7 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 				return;
 			}
 
-			if(section == NULL) 
+			if(section == NULL)
 			{
 				pacData.loaded = false;
 				qDebug() << "Section not found error";
@@ -171,7 +171,7 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 			while(key.contains(' '))
 				key.remove(key.indexOf(' '), 1);
 
-			if((line == NULL || line == QString()) && section.compare("options", Qt::CaseInsensitive) == 0) 
+			if(line.isEmpty() && section.compare("options", Qt::CaseInsensitive) == 0)
 			{
 				/* directives without settings, all in [options] */
 				if(key.compare("NoPassiveFTP", Qt::CaseInsensitive) == 0)
@@ -179,8 +179,8 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 				else if(key.compare("UseSyslog", Qt::CaseInsensitive) == 0)
 					pacData.useSysLog = 1;
 				else if(key.compare("UseDelta", Qt::CaseInsensitive) == 0)
-					pacData.useDelta = 1; 
-				else if(key.compare("UseDelta", Qt::CaseInsensitive) == 0 || 
+					pacData.useDelta = 1;
+				else if(key.compare("UseDelta", Qt::CaseInsensitive) == 0 ||
 						key.compare("ILoveCandy", Qt::CaseInsensitive) == 0)
 					continue;
 
@@ -235,7 +235,7 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 							pacData.IgnoreGrp = pacData.IgnoreGrp + setrepeatingoption(line);
 						else
 							pacData.IgnoreGrp = setrepeatingoption(line);
-					
+
 					else if(key.compare("HoldPkg", Qt::CaseInsensitive) == 0)
 						if(!pacData.HoldPkg.isEmpty())
 							pacData.HoldPkg = pacData.HoldPkg + setrepeatingoption(line);
@@ -247,8 +247,8 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 						while(line.startsWith(QChar(' ')))
 							line.remove(0, 1);
 
-						pacData.logFile = line;	
-						
+						pacData.logFile = line;
+
 						qDebug() << "Log File will be:" << line;
 					}
 
@@ -256,12 +256,12 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 					{
 						while(line.startsWith(QChar(' ')))
 							line.remove(0, 1);
-						
-						pacData.xferCommand = line;	
+
+						pacData.xferCommand = line;
 					}
 
-				} 
-				else if(key.compare("Server", Qt::CaseInsensitive) == 0) 
+				}
+				else if(key.compare("Server", Qt::CaseInsensitive) == 0)
 				{
 					if(serverparsed == 1)
 						continue;
@@ -270,14 +270,14 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 					/* let's attempt a replacement for the current repo */
 					while(line.contains(' '))
 						line.remove(line.indexOf(' '), 1);
-					
+
 
 					if(line.contains('$'))
 					{
-						QStringList tmplst = line.split(QString("$repo"), 
+						QStringList tmplst = line.split(QString("$repo"),
 								QString::SkipEmptyParts, Qt::CaseInsensitive);
 						QString toAdd(tmplst.at(0));
-						
+
 						toAdd.append(section);
 						toAdd.append(tmplst.at(1));
 
@@ -288,7 +288,7 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 						pacData.serverAssoc.append(line);
 					}
 				}
-				else 
+				else
 				{
 					qDebug() << "Unknown error:" << key << line;
 					pacData.loaded = false;
@@ -298,7 +298,7 @@ void ConfigurationParser::parsePacmanConfig(const QString &file, const QString &
 		}
 	}
 	fp.close();
-	
+
 	qDebug() << "Parser exited";
 }
 
@@ -316,7 +316,7 @@ void ConfigurationParser::parseABSConfig()
 
 	QTextStream in(&fp);
 
-	while(!in.atEnd()) 
+	while(!in.atEnd())
 	{
 		QString line = in.readLine();
 
@@ -336,7 +336,7 @@ void ConfigurationParser::parseABSConfig()
 			absData.rsyncsrv = line;
 		}
 	}
-	
+
 	fp.close();
 }
 
@@ -354,7 +354,7 @@ void ConfigurationParser::parseMakepkgConfig()
 
 	QTextStream in(&fp);
 
-	while(!in.atEnd()) 
+	while(!in.atEnd())
 	{
 		QString line = in.readLine();
 
@@ -396,39 +396,39 @@ void ConfigurationParser::parseMakepkgConfig()
 		else
 			continue;
 	}
-	
+
 	fp.close();
 }
 
 bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value, int action)
 {
-	
-	
+
+
 	QFile fp("/etc/pacman.conf");
-	QStringList list(key.split("/")), fileContent;
+	QStringList list(key.split('/')), fileContent;
 	QString key1(list.at(0)), key2(list.at(1)), realVal;
 
 	if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
 	{
-		
+
 		return false;
 	}
 
 	QTextStream in(&fp);
-	
+
 	if(value != NULL)
 	{
 		if(value.contains('$'))
 		{
-			QStringList tmplst = value.split(QString("$repo"), 
+			QStringList tmplst = value.split(QString("$repo"),
 					QString::SkipEmptyParts, Qt::CaseInsensitive);
-			QStringList tmp2lst = key.split(QString("/"), 
+			QStringList tmp2lst = key.split(QString("/"),
 					QString::SkipEmptyParts, Qt::CaseInsensitive);
 
 			QString dserv(tmplst.at(0));
-			
+
 			QString repo(tmp2lst.at(0));
-			
+
 			if(repo == "kdemod-core")
 				repo = "core";
 			if(repo == "kdemod-extragear")
@@ -441,24 +441,24 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 				repo = "unstable";
 			if(repo == "kdemod-legacy")
 				repo = "legacy";
-			
+
 			dserv.append(repo);
-			
+
 			dserv.append(tmplst.at(1));
 			realVal = dserv;
 		}
 		else
 			realVal = value;
 	}
-	
-	while(!in.atEnd()) 
+
+	while(!in.atEnd())
 	{
 		QString line(in.readLine());
 		fileContent.append(line);
 	}
-	
+
 	fp.close();
-	
+
 	if(action == 0)
 	{
 		// Add
@@ -481,7 +481,7 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 
 						if(fileContent.at(j).startsWith(key2))
 						{
-							
+
 							return false;
 						}
 					}
@@ -493,7 +493,7 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 					QFile::remove("/etc/pacman.conf");
 					if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
 					{
-						
+
 						return false;
 					}
 
@@ -503,12 +503,12 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 						str << fileContent.at(i) << endl;
 
 					fp.close();
-					
+
 					return true;
 
 				}
 			}
-			
+
 			QString toAdd("[");
 			toAdd.append(key1);
 			toAdd.append(QChar(']'));
@@ -521,19 +521,19 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 			QFile::remove("/etc/pacman.conf");
 			if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
 			{
-				
+
 				return false;
 			}
-			
+
 			QTextStream str(&fp);
-			
+
 			for(int i=0; i < fileContent.size(); ++i)
 				str << fileContent.at(i) << endl;
-			
+
 			fp.close();
-			
-			
-			
+
+
+
 			return true;
 		}
 		else
@@ -541,17 +541,17 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 			for(int i=0; i < fileContent.size(); ++i)
 				if(fileContent.at(i).startsWith(key2))
 				{
-					
+
 					return false;
 				}
-			
+
 			for(int i=0; i < fileContent.size(); ++i)
 			{
 				if(!fileContent.at(i).startsWith("[options]"))
 					continue;
 				QString toAdd(key2);
-				
-				if(!realVal.isEmpty() || (!key2.compare("UseSyslog", Qt::CaseInsensitive) && 
+
+				if(!realVal.isEmpty() || (!key2.compare("UseSyslog", Qt::CaseInsensitive) &&
 						!key2.compare("NoPassiveFTP", Qt::CaseInsensitive)))
 					toAdd.append("=");
 
@@ -561,7 +561,7 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 				QFile::remove("/etc/pacman.conf");
 				if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
 				{
-					
+
 					return false;
 				}
 
@@ -571,15 +571,15 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 					str << fileContent.at(i) << endl;
 
 				fp.close();
-				
+
 				return true;
-				
+
 			}
-			
+
 			return false;
 		}
-		
-		
+
+
 		return false;
 
 	}
@@ -591,28 +591,28 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 		toFindE.append(QChar(']'));
 		if(fileContent.filter(toFindE).isEmpty())
 		{
-			
+
 			return false;
 		}
-		
+
 		int found = 0;
-		
+
 		for(int i=0; i < fileContent.size(); ++i)
 		{
 			if(!fileContent.at(i).startsWith(toFindE) && found == 0)
 				continue;
-			
+
 			found = 1;
-			
+
 			if(fileContent.at(i).startsWith(toFindE))
 				continue;
-			
+
 			if(fileContent.at(i).startsWith(QChar('[')))
 			{
-				
+
 				return false;
 			}
-			
+
 			if(fileContent.at(i).startsWith(key2))
 			{
 				QString toAdd(key2);
@@ -624,16 +624,16 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 				check2.remove(' ');
 				if(!check1.compare(check2))
 				{
-					
+
 					return false;
 				}
-				
+
 				fileContent.replace(i, toAdd);
 
 				QFile::remove("/etc/pacman.conf");
 				if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
 				{
-					
+
 					return false;
 				}
 
@@ -643,15 +643,15 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 					str << fileContent.at(i) << endl;
 
 				fp.close();
-				
-				
-				
+
+
+
 				return true;
 			}
 		}
 
-		
-		return false;	
+
+		return false;
 	}
 	else if(action == 2)
 	{
@@ -661,7 +661,7 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 		toFindE.append(QChar(']'));
 		if(fileContent.filter(toFindE).isEmpty())
 		{
-			
+
 			return false;
 		}
 
@@ -673,14 +673,14 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 				continue;
 
 			found = 1;
-			
+
 			int removeroot = 1;
 			bool changed = false;
 			for(int j=i+1; j < fileContent.size(); ++j)
 			{
 				if(fileContent.at(j).startsWith(QChar('[')))
 					break;
-				
+
 				if(!fileContent.at(j).startsWith(key2) && !fileContent.at(j).startsWith(QChar('#'))
 						&& !fileContent.at(j).isEmpty())
 					removeroot = 0;
@@ -692,7 +692,7 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 					QFile::remove("/etc/pacman.conf");
 					if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
 					{
-						
+
 						return false;
 					}
 
@@ -705,7 +705,7 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 					changed = true;
 				}
 			}
-			
+
 			if(removeroot == 1)
 			{
 				fileContent.removeAt(i);
@@ -713,7 +713,7 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 				QFile::remove("/etc/pacman.conf");
 				if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
 				{
-					
+
 					return false;
 				}
 
@@ -723,47 +723,47 @@ bool ConfigurationParser::editPacmanKey(const QString &key, const QString &value
 					str << fileContent.at(k) << endl;
 
 				fp.close();
-				
+
 				return true;
 			}
-			
+
 			if(changed == false)
 				return false;
-				
+
 			return true;
 		}
 		return false;
 	}
 	else
-		return false;	
-	
+		return false;
+
 	return false;
 }
 
 bool ConfigurationParser::editABSSection(const QString &section, const QString &value)
 {
-	
+
 	QFile fp("/etc/abs.conf");
 	QStringList fileContent;
 
 	if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
 	{
-		
+
 		return false;
 	}
 
 	QTextStream in(&fp);
-	
+
 	/* Get the file contents */
 
-	while(!in.atEnd()) 
+	while(!in.atEnd())
 	{
 		QString line(in.readLine());
 		fileContent.append(line);
 	}
 
 	fp.close();
-	
+
 	if(section == "repos")
 	{
 		QString val("REPOS=(");
@@ -824,7 +824,7 @@ bool ConfigurationParser::editABSSection(const QString &section, const QString &
 
 			fp.close();
 
-			return true;			
+			return true;
 		}
 	}
 	if(section == "rsync")
@@ -886,7 +886,7 @@ bool ConfigurationParser::editABSSection(const QString &section, const QString &
 
 			fp.close();
 
-			return true;			
+			return true;
 		}
 	}
 
@@ -900,30 +900,30 @@ bool ConfigurationParser::editMakepkgSection(const QString &section, const QStri
 
 	if(!fp.open(QIODevice::ReadOnly | QIODevice::Text))
 	{
-		
+
 		return false;
 	}
-	
+
 	qDebug() << section << value;
 
 	QTextStream in(&fp);
 
 	/* Get the file contents */
 
-	while(!in.atEnd()) 
+	while(!in.atEnd())
 	{
 		QString line(in.readLine());
 		fileContent.append(line);
 	}
 
 	fp.close();
-	
+
 	if(section == "cflags")
 	{
 		QString val("CFLAGS=\"");
 		val.append(value);
 		val.append('"');
-		
+
 		qDebug() << "In CFLAGS";
 
 		if(!fileContent.filter("CFLAGS").isEmpty())
@@ -942,7 +942,7 @@ bool ConfigurationParser::editMakepkgSection(const QString &section, const QStri
 				fileContent.replace(i, val);
 
 				QFile::remove("/etc/makepkg.conf");
-				
+
 				if(!fp.open(QIODevice::ReadWrite | QIODevice::Text))
 				{
 					return false;
@@ -954,15 +954,15 @@ bool ConfigurationParser::editMakepkgSection(const QString &section, const QStri
 					str << fileContent.at(k) << endl;
 
 				fp.close();
-				
+
 				return true;
 			}
-			
+
 			return false;
 		}
 		else
 		{
-			
+
 			return false;
 		}
 	}
@@ -1119,8 +1119,8 @@ ConfigurationParser::ConfigurationParser()
 	pacData.useDelta = 0;
 	pacData.useSysLog = 0;
 	pacData.noPassiveFTP = 0;
-    pacData.xferCommand = QString();
-    pacData.logFile = QString();
+    pacData.xferCommand.clear();
+    pacData.logFile.clear();
     pacData.IgnoreGrp.clear();
     pacData.IgnorePkg.clear();
     pacData.NoExtract.clear();
@@ -1133,22 +1133,22 @@ ConfigurationParser::ConfigurationParser()
 
 ConfigurationParser::~ConfigurationParser()
 {
-	
+
 }
 
 PacmanConf ConfigurationParser::getPacmanConf(bool forcereload)
 {
 	if(pacData.loaded && !forcereload)
 		return pacData;
-	
+
 	pacData.syncdbs.clear();
 	pacData.serverAssoc.clear();
 
 	pacData.useDelta = 0;
 	pacData.useSysLog = 0;
 	pacData.noPassiveFTP = 0;
-	pacData.xferCommand = QString();
-	pacData.logFile = QString();
+	pacData.xferCommand.clear();
+	pacData.logFile.clear();
 	pacData.IgnoreGrp.clear();
 	pacData.IgnorePkg.clear();
 	pacData.NoExtract.clear();
@@ -1157,7 +1157,7 @@ PacmanConf ConfigurationParser::getPacmanConf(bool forcereload)
 	pacData.loaded = false;
 
 	parsePacmanConfig("/etc/pacman.conf", NULL, NULL);
-	
+
 	return pacData;
 }
 
@@ -1165,9 +1165,9 @@ ABSConf ConfigurationParser::getABSConf(bool forcereload)
 {
 	if(absData.loaded && !forcereload)
 		return absData;
-	
+
 	parseABSConfig();
-	
+
 	return absData;
 }
 
@@ -1175,8 +1175,8 @@ MakePkgConf ConfigurationParser::getMakepkgConf(bool forcereload)
 {
 	if(makepkgData.loaded && !forcereload)
 		return makepkgData;
-	
+
 	parseMakepkgConfig();
-	
+
 	return makepkgData;
 }

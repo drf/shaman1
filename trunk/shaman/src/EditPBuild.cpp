@@ -32,11 +32,11 @@ targets(tg)
 {
 	setupUi(this);
 	setWindowModality(Qt::ApplicationModal);
-	
+
 	packagesBox->addItems(targets);
 	needsSaving = false;
 	loadFile(packagesBox->currentText());
-	
+
 	connect(packagesBox, SIGNAL(currentIndexChanged(const QString&)), SLOT(loadFile(const QString&)));
 	connect(PBEdit, SIGNAL(textChanged()), SLOT(hasBeenModified()));
 	connect(closeButton, SIGNAL(clicked()), SLOT(close()));
@@ -57,7 +57,7 @@ bool EditPBuild::loadFile(const QString &name)
 	if(needsSaving)
 	{
 		switch (ShamanDialog::popupQuestionDialog(QString(tr("Saving")), QString(tr("You modified this PKGBUILD.\n"
-				"Do you want to save it?")), this, ShamanProperties::WarningDialog)) 
+				"Do you want to save it?")), this, ShamanProperties::WarningDialog))
 		{
 		case QMessageBox::Yes:
 			saveFile(lastItem);
@@ -69,30 +69,30 @@ bool EditPBuild::loadFile(const QString &name)
 			break;
 		}
 	}
-	
+
 	lastItem = packagesBox->currentText();
 
 	QString absSource(getABSPath(name));
 
-	if(absSource == QString())
+	if(absSource.isEmpty())
 		return false;
 
 	if(!absSource.endsWith(QChar('/')))
 		absSource.append(QChar('/'));
-	
+
 	absSource.append("PKGBUILD");
-	
+
 	QFile file(absSource);
 
 	if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
 		return false;
-	
+
 	PBEdit->setPlainText(file.readAll());
-	
+
 	file.close();
-	
+
 	needsSaving = false;
-	
+
 	return true;
 }
 
@@ -102,33 +102,33 @@ bool EditPBuild::saveFile(const QString &name)
 	absDir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot | QDir::NoSymLinks);
 
 	QString absSource(getABSPath(name));
-	
-	if(absSource == QString())
+
+	if(absSource.isEmpty())
 		return false;
-	
+
 	if(!absSource.endsWith(QChar('/')))
 		absSource.append(QChar('/'));
-	
+
 	absSource.append("PKGBUILD");
-	
+
 	ath.switchToRoot();
-	
+
 	QFile file(absSource);
-	
+
 	file.remove();
 
 	if (!file.open(QIODevice::ReadWrite | QIODevice::Text))
 		return false;
-	
+
 	if(file.write(PBEdit->toPlainText().toAscii()) == -1)
 		return false;
-	
+
 	file.close();
-	
+
 	ath.switchToStdUsr();
-	
+
 	needsSaving = false;
-	
+
 	return true;
 }
 
@@ -142,8 +142,8 @@ void EditPBuild::closeEvent(QCloseEvent *evt)
 	if(needsSaving)
 	{
 		switch (ShamanDialog::popupQuestionDialog(QString(tr("Saving")), QString(tr("You modified this PKGBUILD.\n"
-				"Do you want to save it?")), this, ShamanProperties::WarningDialog)) 
-		{	
+				"Do you want to save it?")), this, ShamanProperties::WarningDialog))
+		{
 		case QMessageBox::Yes:
 			saveFile(lastItem);
 			break;
@@ -154,6 +154,6 @@ void EditPBuild::closeEvent(QCloseEvent *evt)
 			break;
 		}
 	}
-	
+
 	evt->accept();
 }

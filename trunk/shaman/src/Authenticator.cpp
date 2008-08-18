@@ -54,7 +54,7 @@ bool Authenticator::switchToRoot()
 {
 	if(geteuid() == 0)
 		return true;
-	
+
 	seteuid(0);
 	//setuid(0);
 
@@ -66,7 +66,7 @@ bool Authenticator::switchToRoot()
 	else
 	{
 		QSettings *settings = new QSettings();
-		
+
 		if(settings->value("auth/askforpwd", true).toBool())
 		{
 			if(!alreadyAuthed)
@@ -80,12 +80,12 @@ bool Authenticator::switchToRoot()
 		}
 
 		settings->deleteLater();
-		
+
 		qDebug() << "Root Privileges granted.";
 	}
-		
+
 	qDebug() << "Uid is:" << getuid();
-	
+
 	return true;
 }
 
@@ -93,7 +93,7 @@ bool Authenticator::switchToStdUsr()
 {
 	if(geteuid() == getuid())
 		return true;
-	
+
 	seteuid(getuid());
 	//setuid(real_uid);
 
@@ -104,7 +104,7 @@ bool Authenticator::switchToStdUsr()
 	}
 	else
 		qDebug() << "Root privileges retired.";
-	
+
 	return true;
 }
 
@@ -127,13 +127,13 @@ bool Authenticator::checkUser(const QString &uname)
 		qDebug() << "Authentication was successful!";
 		alreadyAuthed = true;
 		QSettings *settings = new QSettings();
-		
+
 		if(settings->value("askedforkeeping", false).toBool())
 		{
 			settings->remove("askedforkeeping");
 			settings->setValue("auth/askforpwd", false);
 		}
-		
+
 		settings->deleteLater();
 	}
 	else
@@ -141,7 +141,7 @@ bool Authenticator::checkUser(const QString &uname)
 
 	/* This is where we have been authorized or not. */
 
-	if (retval == PAM_SUCCESS) 
+	if (retval == PAM_SUCCESS)
 		return true;
 	else
 		return false;
@@ -152,7 +152,7 @@ bool Authenticator::releaseTransaction()
 {
 	if(pam_end(pamh,retval) != PAM_SUCCESS)
 		return false;
-	
+
 	return true;
 }
 
@@ -165,12 +165,12 @@ int auth_cback(int num_msg, const struct pam_message **msg,
 Authenticator_Callback::Authenticator_Callback(QObject *parent)
 : QObject(parent)
 {
-	
+
 }
 
 Authenticator_Callback::~Authenticator_Callback()
 {
-	
+
 }
 
 int Authenticator_Callback::auth_cback(int num_msg, const struct pam_message **msg,
@@ -178,11 +178,11 @@ int Authenticator_Callback::auth_cback(int num_msg, const struct pam_message **m
 {
 	Q_UNUSED(appdata_ptr);
 	Q_UNUSED(msg);
-	
+
 	QMutexLocker lock(&mutex);
-	
+
 	qDebug() << "Starting PAM Auth Routine, messages to process:" << num_msg;
-	
+
 	int count=0;
 
 	if (num_msg <= 0)
@@ -190,20 +190,22 @@ int Authenticator_Callback::auth_cback(int num_msg, const struct pam_message **m
 
 	reply = (struct pam_response *) calloc(num_msg,
 			sizeof(struct pam_response));
-	
+
 	if (reply == NULL)
 		return PAM_CONV_ERR;
 
-	for (count=0; count < num_msg; ++count) 
+	for (count=0; count < num_msg; ++count)
 	{
 		qDebug() << "Processing message" << count;
 
 		pam_response tmp;
 		tmp.resp_retcode = 15;
-		
+
 		QString fakePwd("shaman_reserved_password_for_pam_trs");
 
-		tmp.resp = fakePwd.toAscii().data();
+		QByteArray b = fakePwd.toAscii();
+		tmp.resp = b.data();
+
 		reply[count] = tmp;
 
 		emit passwordRequired(count);
@@ -216,7 +218,7 @@ int Authenticator_Callback::auth_cback(int num_msg, const struct pam_message **m
 		if(reply[count].resp == tmp.resp && reply[count].resp_retcode == tmp.resp_retcode)
 			wCond.wait(&mutex);
 	}
-	
+
 	qDebug() << "Ok, streaming now the response";
 
 	*resp = reply;
@@ -228,12 +230,12 @@ int Authenticator_Callback::auth_cback(int num_msg, const struct pam_message **m
 RootProcess::RootProcess(QObject *parent)
  : QProcess(parent)
  {
-	
+
  }
 
 RootProcess::~RootProcess()
 {
-	
+
 }
 
 void RootProcess::setupChildProcess()

@@ -44,13 +44,13 @@ QString ABSHandler::getABSPath(const QString &package)
 
 	QFileInfoList list = absDir.entryInfoList();
 
-	for (int i = 0; i < list.size(); ++i) 
+	for (int i = 0; i < list.size(); ++i)
 	{
 		QDir subAbsDir(list.at(i).absoluteFilePath());
 		subAbsDir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot | QDir::NoSymLinks);
 		QFileInfoList subList = subAbsDir.entryInfoList();
 
-		for (int j = 0; j < subList.size(); ++j) 
+		for (int j = 0; j < subList.size(); ++j)
 		{
 			qDebug() << subList.at(j).absoluteFilePath();
 			if(!subList.at(j).baseName().compare(package))
@@ -113,7 +113,7 @@ bool ABSHandler::setUpBuildingEnvironment(const QString &package)
 
 	QString abspath(getABSPath(package));
 
-	if(abspath == QString())
+	if(abspath.isEmpty())
 	{
 		qDebug() << "Couldn't find a matching ABS Dir!!";
 		return false;
@@ -124,7 +124,7 @@ bool ABSHandler::setUpBuildingEnvironment(const QString &package)
 
 	QFileInfoList Plist = absPDir.entryInfoList();
 
-	for (int i = 0; i < Plist.size(); ++i) 
+	for (int i = 0; i < Plist.size(); ++i)
 	{
 		QString dest(path);
 		if(!dest.endsWith(QChar('/')))
@@ -169,7 +169,7 @@ QStringList ABSHandler::getMakeDepends(const QString &package)
 
 	QString absSource(ABSHandler::getABSPath(package));
 
-	if(absSource == QString())
+	if(absSource.isEmpty())
 		return retList;
 
 	if(!absSource.endsWith(QChar('/')))
@@ -184,7 +184,7 @@ QStringList ABSHandler::getMakeDepends(const QString &package)
 
 	QTextStream in(&fp);
 
-	while(!in.atEnd()) 
+	while(!in.atEnd())
 	{
 		QString line = in.readLine();
 
@@ -198,8 +198,8 @@ QStringList ABSHandler::getMakeDepends(const QString &package)
 		{
 			if(line.contains('('))
 				line = line.split('(').at(1);
-			
-			foreach(QString dep, line.split("'", QString::SkipEmptyParts))
+
+			foreach(QString dep, line.split(QChar('\''), QString::SkipEmptyParts))
 			{
 				if(!dep.contains(')') && !dep.contains(' '))
 				{
@@ -226,7 +226,7 @@ QStringList ABSHandler::getMakeDepends(const QString &package)
 			testline = line;
 			testline.remove(' ');
 		}
-		
+
 		break;
 	}
 
@@ -243,9 +243,9 @@ int ABSHandler::rmrf(const char *path)
 
 	if(!unlink(path))
 		return(0);
-	else 
+	else
 	{
-		if(errno == ENOENT) 
+		if(errno == ENOENT)
 			return(0);
 		else if(errno == EPERM) { }
 		/* fallthrough */
@@ -259,9 +259,9 @@ int ABSHandler::rmrf(const char *path)
 
 		if((dirp = opendir(path)) == (DIR *)-1)
 			return(1);
-		for(dp = readdir(dirp); dp != NULL; dp = readdir(dirp)) 
+		for(dp = readdir(dirp); dp != NULL; dp = readdir(dirp))
 		{
-			if(dp->d_ino) 
+			if(dp->d_ino)
 			{
 				char name[4096];
 				sprintf(name, "%s/%s", path, dp->d_name);

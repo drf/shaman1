@@ -353,19 +353,19 @@ bool AlpmHandler::reloadPacmanConfiguration()
 
 	pdata.NoUpgrade = alpmListToStringList(alpm_option_get_noupgrades());
 
-	foreach(QString str, pdata.HoldPkg)
+	foreach(const QString &str, pdata.HoldPkg)
 		alpm_option_remove_holdpkg(str.toAscii().data());
 
-	foreach(QString str, pdata.IgnorePkg)
+	foreach(const QString &str, pdata.IgnorePkg)
 		alpm_option_remove_ignorepkg(str.toAscii().data());
 
-	foreach(QString str, pdata.IgnoreGrp)
+	foreach(const QString &str, pdata.IgnoreGrp)
 		alpm_option_remove_ignoregrp(str.toAscii().data());
 
-	foreach(QString str, pdata.NoExtract)
+	foreach(const QString &str, pdata.NoExtract)
 		alpm_option_remove_noextract(str.toAscii().data());
 
-	foreach(QString str, pdata.NoUpgrade)
+	foreach(const QString &str, pdata.NoUpgrade)
 		alpm_option_remove_noupgrade(str.toAscii().data());
 
 	alpm_option_remove_cachedir("/var/cache/pacman/pkg");
@@ -444,7 +444,7 @@ bool AlpmHandler::setUpAlpmSettings()
 		count++;
 	}
 
-	if(pdata.xferCommand != QString())
+	if(!pdata.xferCommand.isEmpty())
 	{
 		qDebug() << "XFerCommand is:" << pdata.xferCommand;
 		alpm_option_set_xfercommand(pdata.xferCommand.toAscii().data());
@@ -455,19 +455,19 @@ bool AlpmHandler::setUpAlpmSettings()
 
 	alpm_option_set_nopassiveftp(pdata.noPassiveFTP);
 
-	foreach(QString str, pdata.HoldPkg)
+	foreach(const QString &str, pdata.HoldPkg)
 		alpm_option_add_holdpkg(str.toAscii().data());
 
-	foreach(QString str, pdata.IgnorePkg)
+	foreach(const QString &str, pdata.IgnorePkg)
 		alpm_option_add_ignorepkg(str.toAscii().data());
 
-	foreach(QString str, pdata.IgnoreGrp)
+	foreach(const QString &str, pdata.IgnoreGrp)
 		alpm_option_add_ignoregrp(str.toAscii().data());
 
-	foreach(QString str, pdata.NoExtract)
+	foreach(const QString &str, pdata.NoExtract)
 		alpm_option_add_noextract(str.toAscii().data());
 
-	foreach(QString str, pdata.NoUpgrade)
+	foreach(const QString &str, pdata.NoUpgrade)
 		alpm_option_add_noupgrade(str.toAscii().data());
 
 	//alpm_option_set_usedelta(pdata.useDelta); Until a proper implementation is there
@@ -997,7 +997,7 @@ bool AlpmHandler::isProviderInstalled(const QString &provider)
 
 		for(int i = 0; i < prv.size(); ++i)
 		{
-			QStringList tmp(prv.at(i).split("="));
+			QStringList tmp(prv.at(i).split('='));
 			if(!tmp.at(0).compare(provider))
 			{
 				qDebug() << "Provider is installed and it is" << alpm_pkg_get_name(
@@ -1190,7 +1190,7 @@ alpm_list_t *AlpmHandler::getPackagesFromRepo(const QString &reponame)
 
 		while(pkglist != NULL)
 		{
-			if(getPackageRepo(alpm_pkg_get_name((pmpkg_t *) alpm_list_getdata(pkglist))) == QString())
+			if(getPackageRepo(alpm_pkg_get_name((pmpkg_t *) alpm_list_getdata(pkglist))).isEmpty())
 				retlist = alpm_list_add(retlist, alpm_list_getdata(pkglist));
 
 			pkglist = alpm_list_next(pkglist);

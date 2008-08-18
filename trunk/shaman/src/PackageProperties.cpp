@@ -57,7 +57,7 @@ QString PackageProperties::formatSize(unsigned long size)
 void PackageProperties::setPackage(pmpkg_t *pkg, bool forceGiven)
 {
 	curPkg = pkg;
-	
+
 	// We can throw a lot more info if the package is local, let's check.
 	if(forceGiven && curPkg == NULL)
 	    return;
@@ -92,7 +92,7 @@ void PackageProperties::populateInfoWidget()
 {
 	char buf[80];
 	QString notAvailable(QString(tr("N/A", "Stands for: Not Available")));
-	
+
 	if (aHandle->isInstalled(curPkg))
 		installedLabel->setPixmap(QPixmap(":/Icons/icons/dialog-ok-apply.png"));
 	else
@@ -120,7 +120,7 @@ void PackageProperties::populateInfoWidget()
 		builddateLabel->setText(notAvailable);
 	else
 		builddateLabel->setText(buf);
-	
+
 	now = alpm_pkg_get_installdate(curPkg);
 	ts = gmtime(&now);
 	strftime(buf, sizeof(buf), "%Y-%m-%d %H:%M:%S", ts);
@@ -130,7 +130,7 @@ void PackageProperties::populateInfoWidget()
 		installdateLabel->setText(notAvailable);
 	else
 		installdateLabel->setText(buf);
-	
+
 	QString packager(alpm_pkg_get_packager(curPkg));
 
 	if (packager.isEmpty())
@@ -147,11 +147,11 @@ void PackageProperties::populateFileWidget()
 	treeWidget->clear();
 	treeWidget->header()->hide();
 	QStringList files = aHandle->getPackageFiles(curPkg);
-	foreach (QString file, files)
+	foreach (const QString &file, files)
 	{
-		QStringList splitted = file.split("/");
+		QStringList splitted = file.split(QChar('/'));
 		QTreeWidgetItem *parentItem = 0;
-		foreach (QString spl, splitted)
+		foreach (const QString &spl, splitted)
 		{
 			if (spl.isEmpty())
 				continue;
@@ -190,14 +190,14 @@ void PackageProperties::populateFileWidget()
 void PackageProperties::populateDepsWidget()
 {
 	dependsWidget->clear();
-	foreach (QString dep, aHandle->getPackageDependencies(curPkg))
+	foreach (const QString &dep, aHandle->getPackageDependencies(curPkg))
 	{
 		if (!dep.isEmpty())
 			dependsWidget->addItem(dep);
 	}
 
 	requiredWidget->clear();
-	foreach (QString dep, aHandle->getDependenciesOnPackage(curPkg))
+	foreach (const QString &dep, aHandle->getDependenciesOnPackage(curPkg))
 	{
 		if (!dep.isEmpty())
 			requiredWidget->addItem(dep);
@@ -209,11 +209,11 @@ void PackageProperties::populateChangelogWidget()
 	void *fp = NULL;
 	QString text;
 
-	if ((fp = alpm_pkg_changelog_open(curPkg)) == NULL) 
+	if ((fp = alpm_pkg_changelog_open(curPkg)) == NULL)
 	{
 		changeLogEdit->setText(QString(tr("Changelog not available for this package")));
-	} 
-	else 
+	}
+	else
 	{
 		/* allocate a buffer to get the changelog back in chunks */
 		char buf[CLBUF_SIZE];
@@ -243,22 +243,22 @@ void PackageProperties::populateLogWidget()
 
 	QTextStream in(&fp);
 
-	while(!in.atEnd()) 
+	while(!in.atEnd())
 	{
 		QString line = in.readLine();
 		contents.append(line);
 	}
-	
+
 	fp.close();
 
 	QString toShow;
 	QString pkgName(pName);
 
-	foreach(QString ent, contents)
+	foreach(const QString &ent, contents)
 	{
 		if(!ent.contains(pkgName, Qt::CaseInsensitive))
 			continue;
-		
+
 		toShow.append(ent + QChar('\n'));
 	}
 
