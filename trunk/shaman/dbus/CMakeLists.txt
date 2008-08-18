@@ -1,0 +1,1 @@
+qt4_add_dbus_adaptor(shaman_adaptor_SRCS org.archlinux.shaman.xml ../src/MainWindow.h MainWindow)
