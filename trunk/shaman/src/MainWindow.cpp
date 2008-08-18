@@ -845,7 +845,6 @@ void MainWindow::showPkgInfo()
 					continue;
 				if (parentItem)
 				{
-					qDebug() << "Yay, we have a parentItem";
 					bool there = false;
 					int j = parentItem->childCount();
 					for (int i = 0;i != j; i++)
@@ -865,7 +864,6 @@ void MainWindow::showPkgInfo()
 					QList<QTreeWidgetItem*> list = filesWidget->findItems(spl, Qt::MatchExactly);
 					if (!list.isEmpty())
 					{
-						qDebug() << "Hehe we have the same item already found";
 						parentItem = list.first();
 					}
 					else
