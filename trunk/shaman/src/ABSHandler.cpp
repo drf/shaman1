@@ -199,9 +199,11 @@ QStringList ABSHandler::getMakeDepends(const QString &package)
 			if(line.contains('('))
 				line = line.split('(').at(1);
 
-			foreach(QString dep, line.split(QChar('\''), QString::SkipEmptyParts))
+			foreach(const QString &rdep, line.split(QChar('\''), QString::SkipEmptyParts))
 			{
-				if(!dep.contains(')') && !dep.contains(' '))
+				QString dep(rdep);
+
+			    if(!dep.contains(')') && !dep.contains(' '))
 				{
 					if(dep.contains('>'))
 						dep.truncate(dep.indexOf('>'));

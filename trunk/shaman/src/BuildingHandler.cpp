@@ -65,7 +65,7 @@ void BuildingHandler::updateABSTree()
 
 		return;
 	}
-	
+
 
 	emit buildingStarted();
 
@@ -73,7 +73,7 @@ void BuildingHandler::updateABSTree()
 	connect(buildDialog, SIGNAL(nullifyPointer()), SLOT(ABSUpdateEnded()));
 
 	buildDialog->show();
-	
+
 	connect(buildDialog->reduceButton, SIGNAL(clicked()), SLOT(reduceBuildingInTray()));
 
 	buildDialog->updateABSTree();
@@ -142,7 +142,7 @@ void BuildingHandler::validateSourceQueue()
 	revBuildUi->treeWidget->hide();
 
 	reviewBQueue->adjustSize();
-	
+
 	connect(revBuildUi->showPackages, SIGNAL(toggled(bool)), SLOT(adjust(bool)));
 
 	QSettings *settings = new QSettings();
@@ -296,15 +296,15 @@ void BuildingHandler::finishedBuilding(int failure, const QStringList &targets)
 		buildDialog->processingLabel->setText(QString(tr("Building Packages Failed!!")));
 		buildDialog->buildingLabel->setText(QString());
 
-		return;	
+		return;
 	}
 	else if(failure == 1)
-	{		
+	{
 		buildDialog->processingLabel->setText(QString(tr("Building Packages Failed!!")));
 		buildDialog->buildingLabel->setText(QString());
 
-		switch (ShamanDialog::popupQuestionDialog(QString(tr("Error")), 
-				QString(tr("Some packages failed to build.\nDo you want to proceed anyway?")), buildDialog, ShamanProperties::WarningDialog)) 
+		switch (ShamanDialog::popupQuestionDialog(QString(tr("Error")),
+				QString(tr("Some packages failed to build.\nDo you want to proceed anyway?")), buildDialog, ShamanProperties::WarningDialog))
 				{
 				case QMessageBox::Yes:
 					failure = 0;
@@ -352,7 +352,7 @@ void BuildingHandler::processBuiltPackages()
 
 	if(!installedMakeDepends.isEmpty() || !installedBinaryPkgs.isEmpty())
 	{
-		/* Huh, we installed something just to compile the package. Let's 
+		/* Huh, we installed something just to compile the package. Let's
 		 * see if the user wants installed makedepends to be immediately
 		 * removed, otherwise we just skip this part.
 		 */
@@ -367,7 +367,7 @@ void BuildingHandler::processBuiltPackages()
 			 * can remove just the stuff that is requesting our list.
 			 */
 
-			foreach(QString rmv, installedMakeDepends)
+			foreach(const QString &rmv, installedMakeDepends)
 				aHandle->addRemoveToQueue(rmv);
 		}
 
@@ -377,11 +377,11 @@ void BuildingHandler::processBuiltPackages()
 
 		if(!installedBinaryPkgs.isEmpty())
 		{
-			foreach(QString rmv, installedBinaryPkgs)
+			foreach(const QString &rmv, installedBinaryPkgs)
 			{
 				bool found = false;
 
-				foreach(QString match, buildTargets)
+				foreach(const QString &match, buildTargets)
 				{
 					if(match.contains(rmv))
 						found = true;
@@ -391,14 +391,14 @@ void BuildingHandler::processBuiltPackages()
 					aHandle->addRemoveToQueue(rmv);
 			}
 		}
-		
+
 		if(aHandle->getRemoveInQueue().isEmpty())
-			aHandle->initQueue(false, false, true);		
+			aHandle->initQueue(false, false, true);
 	}
 	else
 		aHandle->initQueue(false, false, true);
 
-	foreach(QString pac, buildTargets)
+	foreach(const QString &pac, buildTargets)
 		aHandle->addFFToQueue(pac);
 
 	installedMakeDepends.clear();
@@ -430,13 +430,13 @@ void BuildingHandler::processBuildWizard()
 	foreach(QTreeWidgetItem *itm, mWin->getUpgradePackagesInWidgetQueue())
 		pkgList.append(itm->text(1));
 
-	foreach(QString pkg, pkgList)
+	foreach(const QString &pkg, pkgList)
 	{
-		foreach(QString mkdp, ABSHandler::getMakeDepends(pkg))
+		foreach(const QString &mkdp, ABSHandler::getMakeDepends(pkg))
 		{
 			if(!aHandle->isInstalled(mkdp) && !pkgList.contains(mkdp, Qt::CaseInsensitive))
 				//Add to binary queue
-			{ 
+			{
 				qDebug() << "Makedepend is missing: " << mkdp;
 				depsList.append(mkdp);
 			}
@@ -444,7 +444,7 @@ void BuildingHandler::processBuildWizard()
 
 		if(!aHandle->isInstalled(pkg))
 			//Add to binary queue
-		{ 
+		{
 			qDebug() << "Package is not installed: " << pkg << ", installing it from binary first.";
 			binaryList.append(pkg);
 		}
@@ -472,10 +472,10 @@ void BuildingHandler::processBuildWizard()
 		installedMakeDepends = depsList;
 		installedBinaryPkgs = binaryList;
 
-		foreach(QString syn, binaryList)
+		foreach(const QString &syn, binaryList)
 			aHandle->addSyncToQueue(syn);
 
-		foreach(QString syn, depsList)
+		foreach(const QString &syn, depsList)
 			aHandle->addSyncToQueue(syn);
 
 		queueDl = new QueueDialog(aHandle, mWin);

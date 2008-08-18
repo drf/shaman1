@@ -33,33 +33,33 @@ NewsViewer::NewsViewer(ArchLinuxNewsReader *nR, QWidget *parent)
  newsHandler(nR)
 {
 	setupUi(this);
-	
+
 	treeWidget->hideColumn(4);
-	
+
 	connect(newsHandler, SIGNAL(fetchingStarted()), SLOT(fetching()));
 	connect(newsHandler, SIGNAL(fetchingFinished()), SLOT(fetching()));
 	connect(newsHandler, SIGNAL(fetchingFinished()), SLOT(populateView()));
 	connect(newsHandler, SIGNAL(fetchingFailed()), SLOT(fetching()));
 	connect(newsHandler, SIGNAL(fetchingFailed()), SLOT(fetchingError()));
-	
+
 	label->setHidden(true);
 	label->setText(QString(tr("Please wait, fetching items...")));
-	
+
 	asReadButton->setEnabled(false);
 	openButton->setEnabled(false);
-	
+
 	connect(asReadButton, SIGNAL(clicked()), SLOT(markAsRead()));
 	connect(openButton, SIGNAL(clicked()), SLOT(openInBrowser()));
 	connect(treeWidget, SIGNAL(itemDoubleClicked(QTreeWidgetItem *, int)), SLOT(openInBrowser()));
 	connect(refreshButton, SIGNAL(clicked()), SLOT(refreshView()));
-	
+
 	treeWidget->setColumnWidth(0, 30);
 	treeWidget->setColumnWidth(1, 30);
-	
+
 	connect(treeWidget, SIGNAL(itemSelectionChanged()), SLOT(itemChanged()));
-	
+
 	populateView();
-	
+
 	connect(closeButton, SIGNAL(clicked()), SLOT(deleteLater()));
 	setAttribute(Qt::WA_DeleteOnClose);
 }
@@ -79,13 +79,13 @@ void NewsViewer::populateView()
 
 	if(entries.isEmpty())
 		return;
-	
-	foreach(ArchLinuxNews::ArchNews ent, entries)
+
+	foreach(const ArchLinuxNews::ArchNews &ent, entries)
 	{
 		qDebug() << "Adding News item";
-		
+
 		itm = new QTreeWidgetItem(treeWidget);
-		
+
 		if(ent.nRead)
 		{
 			itm->setIcon(0, QIcon(":/Icons/icons/mail-mark-read.png"));
@@ -96,10 +96,10 @@ void NewsViewer::populateView()
 			itm->setIcon(0, QIcon(":/Icons/icons/mail-mark-unread-new.png"));
 			itm->setText(4, "unread");
 		}
-		
+
 		if(ent.nNew)
 			itm->setIcon(1, QIcon(":/Icons/icons/mail-message-new.png"));
-		
+
 		itm->setText(2, ent.title);
 		itm->setText(3, ent.link);
 	}
@@ -116,7 +116,7 @@ void NewsViewer::itemChanged()
 
 	asReadButton->setEnabled(true);
 	openButton->setEnabled(true);
-	
+
 	if(treeWidget->selectedItems().first()->text(4) == "unread")
 		asReadButton->setText(QString(tr("Mark as Read")));
 	else
@@ -132,9 +132,9 @@ void NewsViewer::markAsRead()
 		newsHandler->markAsRead(treeWidget->selectedItems().first()->text(2), true);
 	else
 		newsHandler->markAsRead(treeWidget->selectedItems().first()->text(2), false);
-	
+
 	treeWidget->selectedItems().first()->setIcon(1, QIcon());
-	
+
 	populateView();
 }
 
@@ -144,7 +144,7 @@ void NewsViewer::openInBrowser()
 		return;
 
 	//markAsRead();
-	
+
 	QTreeWidgetItem *item = treeWidget->selectedItems().first();
 
 	QDesktopServices::openUrl(QUrl(item->text(3)));
@@ -158,7 +158,7 @@ void NewsViewer::refreshView()
 void NewsViewer::fetching()
 {
 	qDebug() << "Fetching Status Changed";
-	
+
 	if(label->isHidden())
 	{
 		label->setHidden(false);

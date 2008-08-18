@@ -66,10 +66,10 @@ void SysUpgradeDialog::init()
         QTreeWidgetItem *itm = new QTreeWidgetItem(treeWidget, QStringList(tr("To be Upgraded")));
         treeWidget->addTopLevelItem(itm);
 
-        foreach(QString pkg, aHandle->getUpgradeablePackages())
+        foreach(const QString &pkg, aHandle->getUpgradeablePackages())
         {
-            new QTreeWidgetItem(itm, QStringList() << QString(pkg + " (" + 
-                    aHandle->getPackageVersion(pkg, "local") + "-->" + 
+            new QTreeWidgetItem(itm, QStringList() << QString(pkg + " (" +
+                    aHandle->getPackageVersion(pkg, "local") + "-->" +
                     aHandle->getPackageVersion(pkg, aHandle->getPackageRepo(pkg, true)) + QChar(')')));
         }
 
@@ -82,7 +82,7 @@ void SysUpgradeDialog::init()
 
         //treeWidget->hide();
         adjustSize();
-        
+
         show();
     }
 
@@ -97,28 +97,28 @@ void SysUpgradeDialog::abort()
 void SysUpgradeDialog::addPkg()
 {
 	QSettings *settings = new QSettings();
-	
+
 	if(checkBox->isChecked())
 		settings->setValue("gui/actionupgrade", "add");
-	
+
 	settings->deleteLater();
-	
+
 	emit addToPkgQueue();
 }
 
 void SysUpgradeDialog::initSysUpgrade()
 {
 	QSettings *settings = new QSettings();
-		
+
 	if(checkBox->isChecked())
 		settings->setValue("gui/actionupgrade", "upgrade");
-	
+
 	aHandle->fullSystemUpgrade();
-	
+
 	qDebug() << "Upgrade signal sent";
-	
+
 	settings->deleteLater();
-	
+
 	emit upgradeNow();
 }
 
@@ -131,7 +131,7 @@ void SysUpgradeDialog::adjust(bool tgld)
 		treeWidget->hide();
 		resize(minimumSize());
 	}
-	
+
 	adjustSize();
 }
 

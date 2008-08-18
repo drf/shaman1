@@ -1,8 +1,8 @@
 /*
- *   Copyright (C) 2008 by Lukas Appelhans				   				   
- *   l.appelhans@gmx.de		
- *   Copyright (C) 2008 by Dario Freddi                                    
- *   drf54321@yahoo.it                                                     					   						   
+ *   Copyright (C) 2008 by Lukas Appelhans
+ *   l.appelhans@gmx.de
+ *   Copyright (C) 2008 by Dario Freddi
+ *   drf54321@yahoo.it
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License version 2 as
@@ -33,13 +33,13 @@ ShamanRunner::ShamanRunner(QObject *parent, const QVariantList &args)
     dbus(QDBusConnection::systemBus())
 {
     KGlobal::locale()->insertCatalog("krunner_shamanrunner");
-    
+
     Q_UNUSED(args)
 
-    words << "install" << "remove" << "uninstall" << "upgrade-system" << "upgrade system" << "update database" 
-                            << "update db" << "update-db" << "update-database" << "us" << "ud" << "i" << "r" 
+    words << "install" << "remove" << "uninstall" << "upgrade-system" << "upgrade system" << "update database"
+                            << "update db" << "update-db" << "update-database" << "us" << "ud" << "i" << "r"
                             << "complete-remove" << "complete-uninstall" << "pm" << "shaman" << "package manager";
-    
+
     setObjectName(i18n("Shaman Package Manager"));
 }
 
@@ -52,12 +52,12 @@ void ShamanRunner::match(Plasma::RunnerContext &context)
     kDebug() << "Match search context?";
     QString term = context.query();
 
-    foreach(QString word, words)
+    foreach(const QString &word, words)
     {
     	if (term.startsWith(word, Qt::CaseInsensitive))
     	{
-    	    if (word == "update database" || word == "update db" || 
-    	            word == "update-db" || word == "update-database" || 
+    	    if (word == "update database" || word == "update db" ||
+    	            word == "update-db" || word == "update-database" ||
     	            word == "ud")
     	    {
     	        Plasma::QueryMatch match(this);
@@ -139,7 +139,7 @@ void ShamanRunner::match(Plasma::RunnerContext &context)
     	        match.setId(QString());
     	        context.addMatch(term, match);
     	    }
-    	    else if (word == "pm" || word == "shaman" || 
+    	    else if (word == "pm" || word == "shaman" ||
     	            word == "package manager")
     	    {
     	        Plasma::QueryMatch match(this);
@@ -165,7 +165,7 @@ void ShamanRunner::match(Plasma::RunnerContext &context)
     	        match.setRelevance(1);
     	        match.setId(QString());
     	        context.addMatch(term, match);
-    	    }  		
+    	    }
     	}
     }
 }
@@ -173,13 +173,13 @@ void ShamanRunner::match(Plasma::RunnerContext &context)
 void ShamanRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
 {
     Q_UNUSED(match);
-	
+
 	execTerm = context.query();
-    
+
     /* First of all, let's check if Shaman has been already
      * started.
      */
-    
+
     if(!dbus.interface()->isServiceRegistered("org.archlinux.shaman"))
     	startShaman();
     else
@@ -188,10 +188,10 @@ void ShamanRunner::run(const Plasma::RunnerContext &context, const Plasma::Query
 
 void ShamanRunner::executeAction()
 {
-	dbus.disconnect("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", 
+	dbus.disconnect("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman",
 			"shamanReady", this, SLOT(executeAction()));
 
-	if (execTerm.startsWith("install", Qt::CaseInsensitive) || 
+	if (execTerm.startsWith("install", Qt::CaseInsensitive) ||
 			execTerm.startsWith("i ", Qt::CaseInsensitive))
 	{
 		if (execTerm.split(' ').count() <= 1)
@@ -204,7 +204,7 @@ void ShamanRunner::executeAction()
 
 		iface.call("widgetQueueToAlpmQueue");
 	}
-	else if (execTerm.startsWith("remove", Qt::CaseInsensitive) || execTerm.startsWith("uninstall", Qt::CaseInsensitive) || 
+	else if (execTerm.startsWith("remove", Qt::CaseInsensitive) || execTerm.startsWith("uninstall", Qt::CaseInsensitive) ||
 			execTerm.startsWith("r ", Qt::CaseInsensitive))
 	{
 		if (execTerm.split(' ').count() <= 1)
@@ -224,8 +224,8 @@ void ShamanRunner::executeAction()
 
 		iface.call("fullSysUpgrade");
 	}
-	else if (execTerm.startsWith("update database", Qt::CaseInsensitive) || execTerm.startsWith("update-database", Qt::CaseInsensitive) || 
-			execTerm.startsWith("update db", Qt::CaseInsensitive) || execTerm.startsWith("update-db", Qt::CaseInsensitive) || 
+	else if (execTerm.startsWith("update database", Qt::CaseInsensitive) || execTerm.startsWith("update-database", Qt::CaseInsensitive) ||
+			execTerm.startsWith("update db", Qt::CaseInsensitive) || execTerm.startsWith("update-db", Qt::CaseInsensitive) ||
 			execTerm == "ud")
 	{
 		QDBusInterface iface("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", QDBusConnection::systemBus());
@@ -240,8 +240,8 @@ void ShamanRunner::startShaman()
 
 	if (!dbus.interface()->isServiceRegistered("org.archlinux.shaman"))
 		sleep(0.2);
-	
-	dbus.connect("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", 
+
+	dbus.connect("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman",
 				"shamanReady", this, SLOT(executeAction()));
 }
 

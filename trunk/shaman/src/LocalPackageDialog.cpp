@@ -67,7 +67,7 @@ void LocalPackageDialog::loadPackage(pmpkg_t *pkg, const QString &fname)
 
     QStringList deps;
 
-    foreach (QString ent, aHandle->getPackageDependencies(package) )
+    foreach (const QString &ent, aHandle->getPackageDependencies(package) )
     {
         if ( !aHandle->isInstalled(ent) )
             deps.append(ent);

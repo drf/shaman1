@@ -984,7 +984,7 @@ void ConfigDialog::saveConfiguration()
 	 * But first, let's check if we need to remove something.
 	 */
 
-	foreach(QString dbs, m_handler->getAvailableReposNames())
+	foreach(const QString &dbs, m_handler->getAvailableReposNames())
 	{
 		if(dbs != "core" && dbs != "extra" && dbs != "community" && dbs != "testing"
 			&& dbs != "unstable" && dbs != "kdemod-core" && dbs != "kdemod-extragear" && dbs != "kdemod-playground" && dbs != "kdemod-testing" && dbs != "kdemod-unstable" && dbs != "kdemod-legacy" &&
