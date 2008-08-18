@@ -10,7 +10,7 @@ mkdir build
 cd build
 cmake .. -DCMAKE_INSTALL_PREFIX=/usr
 make
-sudo chown root shaman
-sudo chmod u+s shaman
+sudo chown root src/shaman
+sudo chmod u+s src/shaman
 
 #sudo make install
