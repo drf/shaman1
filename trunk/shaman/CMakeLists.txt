@@ -43,11 +43,15 @@ CONFIGURE_FILE(
        IMMEDIATE @ONLY)
 ADD_CUSTOM_TARGET(uninstall "${CMAKE_COMMAND}" -P "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake")
 
-add_subdirectory(ui)
-add_subdirectory(dbus)
-add_subdirectory(src)
-add_subdirectory(translations)
-add_subdirectory(etc)
+if(NOT PLASMA_ONLY)
+
+	add_subdirectory(ui)
+	add_subdirectory(dbus)
+	add_subdirectory(src)
+	add_subdirectory(translations)
+	add_subdirectory(etc)
+
+endif(NOT PLASMA_ONLY)
 
 FIND_PACKAGE(KDE4)
 FIND_PACKAGE(Plasma)
