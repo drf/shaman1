@@ -258,7 +258,7 @@ void CallBacks::cb_log(pmloglevel_t level, char *fmt, va_list args)
 
 	if(string != NULL)
 	{
-		QString msg(string);
+		QString msg = QString::fromLocal8Bit(string);
 		emit logMsgStreamed(msg);
 	}
 }

@@ -106,7 +106,7 @@ void BuildingDialog::writeLineProgress()
 	
 	ABSProc->setReadChannel(QProcess::StandardOutput);
 	
-	QString view(ABSProc->readLine(1024));
+	QString view = QString::fromLocal8Bit(ABSProc->readLine(1024));
 	
 	view.replace(QChar('\n'), "<br>");
 
@@ -128,7 +128,7 @@ void BuildingDialog::writeLineProgressErr()
 	
 	ABSProc->setReadChannel(QProcess::StandardError);
 
-	QString view(ABSProc->readLine(1024));
+	QString view = QString::fromLocal8Bit(ABSProc->readLine(1024));
 
 	view.replace(QChar('\n'), "<br>");
 	
@@ -150,7 +150,7 @@ void BuildingDialog::writeLineProgressMk()
 	
 	MakePkgProc->setReadChannel(QProcess::StandardOutput);
 	
-	QString view(MakePkgProc->readLine(1024));
+	QString view = QString::fromLocal8Bit(MakePkgProc->readLine(1024));
 	
 	view.replace(QChar('\n'), "<br>");
 
@@ -172,7 +172,7 @@ void BuildingDialog::writeLineProgressErrMk()
 	
 	MakePkgProc->setReadChannel(QProcess::StandardError);
 
-	QString view(MakePkgProc->readLine(1024));
+	QString view = QString::fromLocal8Bit(MakePkgProc->readLine(1024));
 
 	view.replace(QChar('\n'), "<br>");
 	

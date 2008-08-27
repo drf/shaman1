@@ -923,10 +923,10 @@ void MainWindow::finishDbUpdate()
 
 		if(dbdialog->isVisible())
 			ShamanDialog::popupDialog(tr("Error"), QString(tr("One or more Databases could not be updated.\nLast error reported was:\n%1"))
-					.arg(alpm_strerrorlast()), this, ShamanProperties::ErrorDialog);
+					.arg(QString::fromLocal8Bit(alpm_strerrorlast())), this, ShamanProperties::ErrorDialog);
 		else
 			trayicon->showMessage(QString(tr("Database Update")), QString(tr("One or more Databases could "
-					"not be updated.\nLast error reported was:\n%1")).arg(alpm_strerrorlast()));
+					"not be updated.\nLast error reported was:\n%1")).arg(QString::fromLocal8Bit(alpm_strerrorlast())));
 
 		stBar->showStBarAction(QString(tr("One or more databases failed to update!")), QPixmap(":/Icons/icons/edit-delete.png"));
 	}
@@ -971,7 +971,7 @@ void MainWindow::finishDbUpdate()
 
 
 	}
-	else if (list.contains("shaman") || list.contains("kdemod4-shaman-svn"))
+	else if (list.contains("shaman") || list.contains("kdemod4-shaman"))
 	{
 		switch (ShamanDialog::popupQuestionDialog(QString(tr("Shaman Update")), QString(tr("Shaman can be upgraded. "
 				"It is advised to process it alone\nto avoid version conflicts.\n"
@@ -985,8 +985,8 @@ void MainWindow::finishDbUpdate()
 
 					cancelAllActions();
 
-					if(list.contains("kdemod4-shaman-svn"))
-						reinstallPackage("kdemod4-shaman-svn");
+					if(list.contains("kdemod4-shaman"))
+						reinstallPackage("kdemod4-shaman");
 					else
 						reinstallPackage("shaman");
 
@@ -1561,7 +1561,7 @@ void MainWindow::upgrade(const QStringList &packages)
 			break;
 		}
 	}
-	else if (packages.contains("shaman") || packages.contains("kdemod4-shaman-svn"))
+	else if (packages.contains("shaman") || packages.contains("kdemod4-shaman"))
 	{
 		switch (ShamanDialog::popupQuestionDialog(QString(tr("Shaman Update")), QString(tr("Shaman can be upgraded. "
 				"It is advised to process it alone\nto avoid version conflicts.\n"
@@ -1572,8 +1572,8 @@ void MainWindow::upgrade(const QStringList &packages)
 
 			cancelAllActions();
 
-			if(packages.contains("kdemod4-shaman-svn"))
-				reinstallPackage("kdemod4-shaman-svn");
+			if(packages.contains("kdemod4-shaman"))
+				reinstallPackage("kdemod4-shaman");
 			else
 				reinstallPackage("shaman");
 
@@ -1812,9 +1812,9 @@ void MainWindow::queueProcessingEnded(bool errors)
 			}
 		}
 
-		if(!pkgsViewWG->findItems("kdemod4-shaman-svn", Qt::MatchExactly, 1).isEmpty())
+		if(!pkgsViewWG->findItems("kdemod4-shaman", Qt::MatchExactly, 1).isEmpty())
 		{
-			if(!pkgsViewWG->findItems("kdemod4-shaman-svn", Qt::MatchExactly, 1).first()->text(8).isEmpty())
+			if(!pkgsViewWG->findItems("kdemod4-shaman", Qt::MatchExactly, 1).first()->text(8).isEmpty())
 			{
 				ShamanDialog::popupDialog(tr("Restart required"), tr("Pacman or Shaman was updated. Shaman will now quit,\nplease restart it "
 						"to use the new version"), this, ShamanProperties::WarningDialog);

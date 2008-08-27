@@ -1368,7 +1368,7 @@ void ConfigDialog::cleanThread()
 void ConfigDialog::mantProgress()
 {
 	mantProc->setReadChannel(QProcess::StandardError);
-	QString str(mantProc->readLine(1024));
+	QString str = QString::fromLocal8Bit(mantProc->readLine(1024));
 	mantDetails->append(QString("<b><i>" + str + "</b></i>"));
 	qDebug() << str;
 	mantDetails->moveCursor(QTextCursor::End);

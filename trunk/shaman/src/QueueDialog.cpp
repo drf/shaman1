@@ -719,7 +719,7 @@ void QueueDialog::writeLineProgress()
 
 	while(!proc->atEnd())
 	{
-		QString view(proc->readLine(1024));
+		QString view = QString::fromLocal8Bit(proc->readLine(1024));
 
 		qDebug() << view;
 
@@ -741,7 +741,7 @@ void QueueDialog::writeLineProgressErr()
 
 	while(!proc->atEnd())
 	{
-		QString view(proc->readLine(1024));
+		QString view = QString::fromLocal8Bit(proc->readLine(1024));
 
 		qDebug() << view;
 
@@ -821,7 +821,7 @@ void QueueDialog::handlePreparingError(const QString &msg)
 	QVBoxLayout *lay = new QVBoxLayout();
 
 	lbl->setText(QString(tr("There has been an error"
-			" while preparing the transaction.\n") + alpm_strerrorlast()));
+			" while preparing the transaction.\n") + QString::fromLocal8Bit(alpm_strerrorlast())));
 
 	txtEd->setReadOnly(true);
 
@@ -858,7 +858,7 @@ void QueueDialog::handleCommittingError(const QString &msg)
 	QVBoxLayout *lay = new QVBoxLayout();
 
 	lbl->setText(QString(tr("There has been an error"
-			" while committing the transaction.\n") + alpm_strerrorlast()));
+			" while committing the transaction.\n") + QString::fromLocal8Bit(alpm_strerrorlast())));
 
 	txtEd->setReadOnly(true);
 

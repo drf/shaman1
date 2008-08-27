@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS><TS version="1.1" language="tr_TR">
+<defaultcodec></defaultcodec>
 <context>
     <name>AlpmHandler</name>
     <message>
@@ -219,9 +220,9 @@ Yine de devam etmek istiyor musunuz?</translation>
     <message numerus="yes">
         <location filename="../src/BuildingHandler.cpp" line="166"/>
         <source>You are about to install &lt;b&gt;%n package(s)&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Kaynaktan &lt;b&gt; %n adet paket)&lt;/b&gt; kurmak üzeresiniz. Kaynaktan derlemek &lt;br&gt;size bazı avantajlar sunabilir, fakat çok yavaştır&lt;br&gt;Emin değilseniz sıra işlemeyi paket dosyalarından&lt;br&gt; denemelisiniz. Devam etmeden önce, derleme verimliliğini arttırmak için&lt;br&gt;yapılandırmanızı gözden geçirmeniz önerilir.</numerusform>
+            <numerusform>Kaynaktan &lt;b&gt; %n adet paket)&lt;/b&gt; kurmak üzeresiniz. Kaynaktan derlemek &lt;br&gt;size bazı avantajlar sunabilir, fakat çok yavaştır&lt;br&gt;Emin değilseniz sıra işlemeyi paket dosyalarından&lt;br&gt; denemelisiniz. Devam etmeden önce, derleme verimliliğini arttırmak için&lt;br&gt;yapılandırmanızı gözden geçirmeniz önerilir.</numerusform>
         </translation>
     </message>
 </context>
@@ -988,27 +989,27 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/configDialog.ui" line="603"/>
         <source>KDEMod 4 Repository</source>
-        <translation type="unfinished">KDEMod 3 Deposu {4 ?}</translation>
+        <translation>KDEMod 4 Deposu</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="610"/>
         <source>KDEMod 4 Extragear Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>KDEMod 4 Extragear Deposu</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="617"/>
         <source>KDEMod 4 Playground Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>KDEMod 4 Playground Deposu</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="624"/>
         <source>KDEMod 4 Testing Repository</source>
-        <translation type="unfinished">KDEMod 3 Testing Deposu {4 ?}</translation>
+        <translation>KDEMod 4 Testing Deposu</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="631"/>
         <source>KDEMod 4 Unstable Repository (Testers only!)</source>
-        <translation type="unfinished"></translation>
+        <translation>KDEMod 4 Unstable Deposu (Sadece denemek isteyenler için)</translation>
     </message>
 </context>
 <context>
@@ -1031,7 +1032,7 @@ Kaydetmek ister misiniz?</translation>
     <message>
         <location filename="../ui/fromFileDialog.ui" line="13"/>
         <source>Install Package from File</source>
-        <translation type="unfinished"></translation>
+        <translation>Paketi dosyadan kur</translation>
     </message>
     <message>
         <location filename="../ui/fromFileDialog.ui" line="38"/>
@@ -1040,27 +1041,27 @@ Kaydetmek ister misiniz?</translation>
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Bitstream Vera Sans&apos;;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Local Package Installation&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Bitstream Vera Sans&apos;;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Yerel Paket Kurulumu&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/fromFileDialog.ui" line="151"/>
         <source>Show...</source>
-        <translation type="unfinished"></translation>
+        <translation>Göster...</translation>
     </message>
     <message>
         <location filename="../ui/fromFileDialog.ui" line="172"/>
         <source>More Details...</source>
-        <translation type="unfinished">Daha Fazla Bilgi...</translation>
+        <translation>Daha Fazla Bilgi...</translation>
     </message>
     <message>
         <location filename="../ui/fromFileDialog.ui" line="196"/>
         <source>Cancel</source>
-        <translation type="unfinished">İptal</translation>
+        <translation>İptal</translation>
     </message>
     <message>
         <location filename="../ui/fromFileDialog.ui" line="207"/>
         <source>Install Package</source>
-        <translation type="unfinished"></translation>
+        <translation>Paketi Kur</translation>
     </message>
 </context>
 <context>
@@ -1068,23 +1069,23 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/LocalPackageDialog.cpp" line="59"/>
         <source>Package is not installed</source>
-        <translation type="unfinished"></translation>
+        <translation>Paket kurulu değil</translation>
     </message>
     <message>
         <location filename="../src/LocalPackageDialog.cpp" line="64"/>
         <source>Version %1 of this package is already installed</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu paketin %1 sürümü zaten kurulu</translation>
     </message>
     <message>
         <location filename="../src/LocalPackageDialog.cpp" line="78"/>
         <source>All dependencies are satisfied</source>
-        <translation type="unfinished"></translation>
+        <translation>Bütün bağımlılıklar sağlandı</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/LocalPackageDialog.cpp" line="83"/>
         <source>%n package(s) will be installed as dependencies</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n adet paket bağımlılık olarak kurulacak</numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -1767,12 +1768,12 @@ p, li { white-space: pre-wrap; }
         <location filename="../src/MainWindow.cpp" line="335"/>
         <source>Ctrl+Q</source>
         <comment>Exit Shaman Shortcut</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Q</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="644"/>
         <source>Name and Description</source>
-        <translation type="unfinished"></translation>
+        <translation>İsim ve Açıklama</translation>
     </message>
 </context>
 <context>
@@ -1780,156 +1781,156 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="42"/>
         <source>Please choose an action to start maintenance...</source>
-        <translation type="unfinished"></translation>
+        <translation>Bakımı başlatmak için bir eylem seçin...</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="43"/>
         <source>Clean Unused Databases</source>
-        <translation type="unfinished">Kullanılmayan Veritabanlarını Temizle</translation>
+        <translation>Kullanılmayan Veritabanlarını Temizle</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="43"/>
         <source>Clean Cache</source>
-        <translation type="unfinished">Cache&apos;yi Temizle</translation>
+        <translation>Ön belleği Temizle</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="44"/>
         <source>Empty Cache</source>
-        <translation type="unfinished">Cache&apos;yi Boşalt</translation>
+        <translation>Ön belleğii Boşalt</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="44"/>
         <source>Optimize Pacman Database</source>
-        <translation type="unfinished">Pacman Veritabanını İyileştir</translation>
+        <translation>Pacman Veritabanını İyileştir</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="44"/>
         <source>Clean All Building Environments</source>
-        <translation type="unfinished">Tüm Derleme Ortamlarını Temizle</translation>
+        <translation>Tüm Derleme Ortamlarını Temizle</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="77"/>
         <source>Cleaning up unused Databases...</source>
-        <translation type="unfinished">Kullanılmayan Veritabanları temizleniyor...</translation>
+        <translation>Kullanılmayan Veritabanları temizleniyor...</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="91"/>
         <source>Cleaning up Cache...</source>
-        <translation type="unfinished">Cache Temizleniyor...</translation>
+        <translation>Ön bellek Temizleniyor...</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="105"/>
         <source>Deleting Cache...</source>
-        <translation type="unfinished">Cache Siliniyor...</translation>
+        <translation>Ön bellek Siliniyor...</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="122"/>
         <source>Optimizing Pacman Database...</source>
-        <translation type="unfinished">Pacman Veritabanı İyileştiriliyor...</translation>
+        <translation>Pacman Veritabanı İyileştiriliyor...</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="139"/>
         <source>Cleaning up building Environments...</source>
-        <translation type="unfinished">Derleme Ortamları temizleniyor...</translation>
+        <translation>Derleme Ortamları temizleniyor...</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="165"/>
         <source>Abort</source>
-        <translation type="unfinished">İptal</translation>
+        <translation>İptal</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="178"/>
         <source>System Maintenance</source>
-        <translation type="unfinished"></translation>
+        <translation>Sistem Bakımı</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="189"/>
         <source>Unused Databases Cleaned up successfully!</source>
-        <translation type="unfinished">Kullanılmayan Veritabanları başarıyla Temizlendi!</translation>
+        <translation>Kullanılmayan Veritabanları başarıyla Temizlendi!</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="195"/>
         <source>Cache Cleaned Up Successfully!</source>
-        <translation type="unfinished">Cache Başarıyla Temizlendi!</translation>
+        <translation>Ön bellek Başarıyla Temizlendi!</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="201"/>
         <source>Cache Successfully Deleted!</source>
-        <translation type="unfinished">Cache Başarıyla Silindi!</translation>
+        <translation>Ön bellek Başarıyla Silindi!</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="207"/>
         <source>Build Environments Successfully Cleaned!</source>
-        <translation type="unfinished">Derleme Ortamları Başarıyla Temizlendi!</translation>
+        <translation>Derleme Ortamları Başarıyla Temizlendi!</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="312"/>
         <source>Close</source>
-        <translation type="unfinished">Kapat</translation>
+        <translation>Kapat</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="232"/>
         <source>Cleaning up Unused Databases Failed!</source>
-        <translation type="unfinished">Kullanılmayan Veritabanlarını Silme Başarısız!</translation>
+        <translation>Kullanılmayan Veritabanlarını Silme Başarısız!</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="237"/>
         <source>Cleaning up Cache Failed!</source>
-        <translation type="unfinished">Cache Temizleme Başarısız!</translation>
+        <translation>Ön bellek Temizleme Başarısız!</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="242"/>
         <source>Deleting Cache Failed!</source>
-        <translation type="unfinished">Cache Silme Başarısız!</translation>
+        <translation>Ön bellek Silme Başarısız!</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="247"/>
         <source>Could not clean Build Environments!!</source>
-        <translation type="unfinished">Derleme Ortamları Temizlenemiyor!</translation>
+        <translation>Derleme Ortamları Temizlenemiyor!</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="274"/>
         <source>Pacman Database Optimized Successfully!</source>
-        <translation type="unfinished">Pacman Veritabanı başarıyla İyileştirildi!</translation>
+        <translation>Pacman Veritabanı başarıyla İyileştirildi!</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="280"/>
         <source>Could not Optimize Pacman Database!</source>
-        <translation type="unfinished">Pacman Veritabanı iyileştirilemiyor!</translation>
+        <translation>Pacman Veritabanı iyileştirilemiyor!</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="288"/>
         <source>Running sync...</source>
         <comment>sync is a command, so it should not be translated</comment>
-        <translation type="unfinished">sync çalıştırılıyor...</translation>
+        <translation>sync çalıştırılıyor...</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="298"/>
         <source>Operation Completed Successfully!</source>
-        <translation type="unfinished">İşlem Başarıyla Tamamlandı!</translation>
+        <translation>İşlem Başarıyla Tamamlandı!</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="297"/>
         <source>Sync was successfully executed!!</source>
         <comment>Sync is always the command</comment>
-        <translation type="unfinished">Sync başarıyla çalıştırıldı!!</translation>
+        <translation>Sync başarıyla çalıştırıldı!!</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="302"/>
         <source>Sync could not be executed!</source>
         <comment>Sync is always the command</comment>
-        <translation type="unfinished">Sync çalıştırılamıyor!</translation>
+        <translation>Sync çalıştırılamıyor!</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="303"/>
         <source>Sync could not be executed!!</source>
         <comment>Sync is always the command</comment>
-        <translation type="unfinished">Sync çalıştırılamıyor!</translation>
+        <translation>Sync çalıştırılamıyor!</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="39"/>
         <source>Maintenance Actions</source>
-        <translation type="unfinished"></translation>
+        <translation>Bakım Eylemleri</translation>
     </message>
 </context>
 <context>
@@ -2509,16 +2510,16 @@ p, li { white-space: pre-wrap; }
     <message numerus="yes">
         <location filename="../src/ReviewQueueDialog.cpp" line="111"/>
         <source>Remove &lt;b&gt;%n package(s)&lt;/b&gt;&lt;br /&gt;</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>&lt;b&gt;%n adet  paketi&lt;/b&gt;&lt;br /&gt; kaldır</numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../src/ReviewQueueDialog.cpp" line="113"/>
         <source>Install/Upgrade &lt;b&gt;%n package(s)&lt;/b&gt;&lt;br /&gt;</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>&lt;b&gt;%n adet  paketi&lt;/b&gt;&lt;br /&gt; Kur/ Yükselt</numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -2635,9 +2636,11 @@ Daha fazla bilgi için buraya tıklayarak Haberler Penceresini açın.</translat
         <location filename="../src/ShamanTrayIcon.cpp" line="138"/>
         <source>Upgradeable package(s): %n.
 Click here to upgrade your System.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Yükseltilebilir paketler: %n
+Sistemi yükseltmek için buraya tıklayın.</numerusform>
+            <numerusform>Yükseltilebilir paketler: %n
+Sistemi yükseltmek için buraya tıklayın.</numerusform>
         </translation>
     </message>
 </context>
@@ -2661,9 +2664,9 @@ Click here to upgrade your System.</source>
     <message numerus="yes">
         <location filename="../src/SysUpgradeDialog.cpp" line="64"/>
         <source>&lt;b&gt;Upgradeable package(s): %n&lt;/b&gt; You can either&lt;br&gt; upgrade immediately or add it to the current Queue&lt;br&gt; and process it later.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>&lt;b&gt;Yükseltilebilir paketler: %n&lt;/b&gt; &lt;b&gt;Derhal yükseltme veya geçerli sıraya ekleme&lt;b&gt; seçeneklerinden birini seçebilirsiniz.</numerusform>
+            <numerusform>&lt;b&gt;Yükseltilebilir paketler: %n&lt;/b&gt; &lt;b&gt;Derhal yükseltme veya geçerli sıraya ekleme&lt;b&gt; seçeneklerinden birini seçebilirsiniz.</numerusform>
         </translation>
     </message>
 </context>
@@ -2845,7 +2848,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Bartek Iwaniec&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Polish Translator&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>

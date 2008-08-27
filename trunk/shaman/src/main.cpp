@@ -69,7 +69,7 @@ static void cleanup(int signum)
 
 	/* free alpm library resources */
 	if(alpm_release() == -1) {
-		qCritical() << alpm_strerrorlast();
+		qCritical() << QString::fromLocal8Bit(alpm_strerrorlast());
 	}
 
 	exit(signum);
