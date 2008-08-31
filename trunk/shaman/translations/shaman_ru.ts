@@ -1154,7 +1154,7 @@ p, li { white-space: pre-wrap; }
         <translation>Репозитории</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="509"/>
+        <location filename="../src/MainWindow.cpp.orig" line="509"/>
         <source>Package Groups</source>
         <translation>Группы пакетов</translation>
     </message>
@@ -1244,7 +1244,7 @@ p, li { white-space: pre-wrap; }
         <translation>Отменить все действия</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="385"/>
+        <location filename="../src/MainWindow.cpp.orig" line="385"/>
         <source>Shaman will keep running in the system tray.
 To close it, click Quit in the file menu or in the tray icon context menu.
 While in the System Tray, Shaman will update your Databases
@@ -1257,77 +1257,77 @@ You can change this behaviour in Settings.</source>
 Вы можете изменить это поведение в Настройках.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="382"/>
+        <location filename="../src/MainWindow.cpp.orig" line="382"/>
         <source>Shaman - Reducing To Tray</source>
         <translation>Shaman - сворачивание в область уведомлений</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2149"/>
+        <location filename="../src/MainWindow.cpp.orig" line="2147"/>
         <source>Upgrade</source>
         <translation>Обновить</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1523"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1521"/>
         <source>System Upgrade</source>
         <translation>Обновить систему</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="552"/>
+        <location filename="../src/MainWindow.cpp.orig" line="552"/>
         <source>All Repositories</source>
         <translation>Все репозитории</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="555"/>
+        <location filename="../src/MainWindow.cpp.orig" line="555"/>
         <source>Local Packages</source>
         <translation>Локальные пакеты</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1196"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1194"/>
         <source>All Groups</source>
         <translation>Все группы</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2144"/>
+        <location filename="../src/MainWindow.cpp.orig" line="2142"/>
         <source>Install</source>
         <translation>Установить</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2154"/>
+        <location filename="../src/MainWindow.cpp.orig" line="2152"/>
         <source>Uninstall</source>
         <translation>Удалить</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2155"/>
+        <location filename="../src/MainWindow.cpp.orig" line="2153"/>
         <source>Complete Uninstall</source>
         <translation>Удалить полностью</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="798"/>
+        <location filename="../src/MainWindow.cpp.orig" line="798"/>
         <source>Status: </source>
         <translation>Статус:</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="800"/>
+        <location filename="../src/MainWindow.cpp.orig" line="800"/>
         <source>Installed</source>
         <translation>Установлен</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="802"/>
+        <location filename="../src/MainWindow.cpp.orig" line="802"/>
         <source>Not installed</source>
         <translation>Не установлен</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="816"/>
+        <location filename="../src/MainWindow.cpp.orig" line="816"/>
         <source>Action: </source>
         <translation>Действие:</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2020"/>
+        <location filename="../src/MainWindow.cpp.orig" line="2018"/>
         <source>Error</source>
         <translation>Ошибка</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="931"/>
+        <location filename="../src/MainWindow.cpp.orig" line="929"/>
         <source>One or more Databases could not be updated.
 Last error reported was:
 %1</source>
@@ -1336,79 +1336,79 @@ Last error reported was:
 %1</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="940"/>
+        <location filename="../src/MainWindow.cpp.orig" line="938"/>
         <source>Database Update</source>
         <translation>Обновление базы данных</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="942"/>
+        <location filename="../src/MainWindow.cpp.orig" line="940"/>
         <source>Databases Updated Successfully</source>
         <translation>База данных обновлена успешно</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1030"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1028"/>
         <source>Mark for Upgrade</source>
         <translation>Отметить для обновления</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1081"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1079"/>
         <source>Mark all for installation</source>
         <translation>Отметить для установки</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1083"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1081"/>
         <source>Mark all for reinstallation</source>
         <translation>Отметить для переустановки</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1085"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1083"/>
         <source>Mark all for removal</source>
         <translation>Отметить все для удаления</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1527"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1525"/>
         <source>Your system is up to date!</source>
         <translation>Система в актуальном состоянии!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1738"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1736"/>
         <source>Queue Processing</source>
         <translation>Обработка очереди</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1738"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1736"/>
         <source>Your Queue is being processed.
 Please wait.</source>
         <translation>Выполняется обработка очереди.
 Пожалуйста, подождите.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1841"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1839"/>
         <source>Queue Processed</source>
         <translation>Очередь обработана</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1839"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1837"/>
         <source>Your Queue was successfully processed!</source>
         <translation>Очередь успешно обработана!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1843"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1841"/>
         <source>Your Queue was successfully processed!!</source>
         <translation>Очередь успешно обработана!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2005"/>
+        <location filename="../src/MainWindow.cpp.orig" line="2003"/>
         <source>Install a Package</source>
         <translation>Установить пакет</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2005"/>
+        <location filename="../src/MainWindow.cpp.orig" line="2003"/>
         <source>Arch Linux Packages (*.pkg.tar.gz)</source>
         <translation>Пакеты Arch Linux (*.pkg.tar.gz)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2020"/>
+        <location filename="../src/MainWindow.cpp.orig" line="2018"/>
         <source>%1 does not seem
 a valid package</source>
         <translation>%1 не похож
@@ -1421,12 +1421,12 @@ a valid package</source>
         <translation>Выйти</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1546"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1544"/>
         <source>Pacman Update</source>
         <translation>Обновление Pacman</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1548"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1546"/>
         <source>Pacman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Pacman now?</source>
@@ -1435,12 +1435,12 @@ Do you want to Upgrade Pacman now?</source>
 Обновить Pacman?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1568"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1566"/>
         <source>Shaman Update</source>
         <translation>Обновление Shaman</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1570"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1568"/>
         <source>Shaman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Shaman now?</source>
@@ -1449,51 +1449,51 @@ Do you want to Upgrade Shaman now?</source>
 Обновить Shaman?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1829"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1827"/>
         <source>Restart required</source>
         <translation>Требуется перезапуск</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1822"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1820"/>
         <source>Pacman or Shaman was updated. Shaman will now quit,
 please restart it to use the new version</source>
         <translation>Pacman и/или Shaman обновлен. Shaman сейчас завершится,
 перезапустите его, чтобы использовать новую версию</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2095"/>
+        <location filename="../src/MainWindow.cpp.orig" line="2093"/>
         <source>Library Question</source>
         <translation type="unfinished">Вопрос библиотеки</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="805"/>
+        <location filename="../src/MainWindow.cpp.orig" line="805"/>
         <source>Local Version: </source>
         <translation>Локальная версия:</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="810"/>
+        <location filename="../src/MainWindow.cpp.orig" line="810"/>
         <source>Version in the Repository: </source>
         <translation>Версия в репозитории: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1830"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1828"/>
         <source>Your Kernel has been updated.
 Please restart your PC soon to load the new Kernel.</source>
         <translation>Ядро системы (linux kernel) было обновлено.
 Перезапустите компьютер, чтобы использовать новую версию ядра.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="334"/>
+        <location filename="../src/MainWindow.cpp.orig" line="334"/>
         <source>Esc</source>
         <translation>Esc</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1889"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1887"/>
         <source>News Alert</source>
         <translation>Уведомление о новостях</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1890"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1888"/>
         <source>There is an unread news about %1.
 Do you want to read it?</source>
         <translation>Есть непрочитанная новость о %1.
@@ -1510,24 +1510,24 @@ Do you want to read it?</source>
         <translation>Смотреть журнал</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1787"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1785"/>
         <source>One or more errors occurred, your Queue
 was not successfully processed</source>
         <translation>Произошла одна или более ошибок, очередь
 не была успешно обработана</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="933"/>
+        <location filename="../src/MainWindow.cpp.orig" line="931"/>
         <source>One or more databases failed to update!</source>
         <translation>Не удалось обновить одну или более базу данных!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1789"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1787"/>
         <source>Error Processing Queue!!</source>
         <translation>Ошибка обработки очереди!!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1231"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1229"/>
         <source>A package providing %1 is already installed.
 Do you want to install %1 anyway?</source>
         <translation>Пакет, предоставляющий %1, уже установлен.
@@ -1594,7 +1594,7 @@ Do you want to install %1 anyway?</source>
         <translation>&amp;Зависимости</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1055"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1053"/>
         <source>Mark for Re&amp;installation</source>
         <translation>Отметить для п&amp;ереустановки</translation>
     </message>
@@ -1604,7 +1604,7 @@ Do you want to install %1 anyway?</source>
         <translation>&amp;Отменить действие</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2058"/>
+        <location filename="../src/MainWindow.cpp.orig" line="2056"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -1624,13 +1624,13 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">Название</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="335"/>
+        <location filename="../src/MainWindow.cpp.orig" line="335"/>
         <source>Ctrl+Q</source>
         <comment>Exit Shaman Shortcut</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="644"/>
+        <location filename="../src/MainWindow.cpp.orig" line="644"/>
         <source>Name and Description</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1992,7 +1992,7 @@ wiki для более подробной информации.</translation>
         <translation>&amp;Отмена</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2071"/>
+        <location filename="../src/MainWindow.cpp.orig" line="2069"/>
         <source>Whoa, that&apos;s co&amp;ol!</source>
         <translation>Ух ты, круто!</translation>
     </message>
@@ -2552,7 +2552,7 @@ p, li { white-space: pre-wrap; }
         <translation>Благодарности</translation>
     </message>
     <message>
-        <location filename="../ui/aboutDialog.ui" line="220"/>
+        <location filename="../ui/aboutDialog.ui" line="223"/>
         <source>Visit &amp;Website...</source>
         <translation>&amp;Сайт проекта...</translation>
     </message>
@@ -2726,7 +2726,10 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Russian Translator and Patches related to Translations&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Bartek Iwaniec&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Polish Translator&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Polish Translator&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Marko Doda&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Macedonian Translator&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
