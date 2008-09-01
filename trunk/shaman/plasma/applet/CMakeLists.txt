@@ -21,5 +21,5 @@ target_link_libraries(plasma_applet_shaman
 	${KDE4_KIO_LIBS}
 )
 
-install(TARGETS plasma_applet_shaman DESTINATION ${KDE4_LIB_DIR}/kde4/)
-install(FILES shaman-applet-default.desktop DESTINATION ${KDE4_LIB_DIR}/../share/kde4/services/)
+install(TARGETS plasma_applet_shaman DESTINATION ${PLUGIN_INSTALL_DIR})
+install(FILES shaman-applet-default.desktop DESTINATION ${SERVICES_INSTALL_DIR})
