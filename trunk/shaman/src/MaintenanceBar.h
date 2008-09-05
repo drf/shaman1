@@ -65,7 +65,7 @@ private:
     QPointer<QDialog> m_dialog;
     QPointer<QPushButton> m_button;
 
-    Authenticator ath;
+    QPointer<Authenticator> ath;
 };
 
 #endif /* MAINTENANCEBAR_H */

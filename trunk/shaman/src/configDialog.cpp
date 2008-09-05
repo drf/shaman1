@@ -39,7 +39,8 @@
 ConfigDialog::ConfigDialog(AlpmHandler *handler, QWidget *parent)
 : QDialog(parent),
 m_handler(handler),
-upDb(false)
+upDb(false),
+ath(new Authenticator(this))
 {
 	setupUi(this);
 	setupGeneral();
@@ -660,11 +661,11 @@ void ConfigDialog::performManteinanceAction()
 
 		qDebug() << "Starting the process";
 
-		ath.switchToRoot();
+		ath->switchToRoot();
 
 		mantProc->start("pacman-optimize");
 
-		ath.switchToStdUsr();
+		ath->switchToStdUsr();
 	}
 	else if(!mantActionBox->currentText().compare(QString(tr("Clean All Building Environments"))))
 	{
@@ -782,7 +783,7 @@ void ConfigDialog::saveConfiguration()
 
 	emit setProxy();
 
-	if(!ath.switchToRoot())
+	if(!ath->switchToRoot())
 	{
 		ShamanDialog::popupDialog(tr("Saving Configuration"), tr("Unable to save Pacman configuration!"),
 				this, ShamanProperties::ErrorDialog);
@@ -1111,7 +1112,7 @@ void ConfigDialog::saveConfiguration()
 		QFile::remove("/etc/xdg/autostart/shaman.desktop");
 	}
 
-	ath.switchToRoot();
+	ath->switchToRoot();
 
 	if(useMatchSupRadio->isChecked())
 	{
@@ -1151,7 +1152,7 @@ void ConfigDialog::saveConfiguration()
 
 	/* Last, but not least, commit changes to makepkg.conf */
 
-	ath.switchToRoot();
+	ath->switchToRoot();
 
 	if(CFlagEdit->isModified())
 		editMakepkgSection("cflags", CFlagEdit->text());
@@ -1168,7 +1169,7 @@ void ConfigDialog::saveConfiguration()
 	if(docDirsEdit->isModified())
 		editMakepkgSection("docdirs", docDirsEdit->text());
 
-	ath.switchToStdUsr();
+	ath->switchToStdUsr();
 
 	if(restartNeeded)
 		ShamanDialog::popupDialogDontShow(tr("Saving Configuration"), tr("Some of your changes have not been applied,\n"
@@ -1275,7 +1276,7 @@ void ConfigDialog::addMirror()
 	QString toInsert("Server=");
 	toInsert.append(mirror);
 
-	ath.switchToRoot();
+	ath->switchToRoot();
 
 	QFile::copy("/etc/pacman.conf", QString("/etc/pacman.conf.bak.").append(QDate::currentDate().toString("ddMMyyyy")));
 	QFile::copy("/etc/makepkg.conf", QString("/etc/makepkg.conf.bak.").append(QDate::currentDate().toString("ddMMyyyy")));
@@ -1289,7 +1290,7 @@ void ConfigDialog::addMirror()
 
 	file.close();
 
-	ath.switchToStdUsr();
+	ath->switchToStdUsr();
 
 	mirrorBox->addItem(mirror);
 
@@ -1334,7 +1335,7 @@ void ConfigDialog::addKDEModMirror()
 	else
 		return;
 
-	ath.switchToRoot();
+	ath->switchToRoot();
 
 	file.open(QIODevice::Append | QIODevice::Text);
 
@@ -1343,7 +1344,7 @@ void ConfigDialog::addKDEModMirror()
 
 	file.close();
 
-	ath.switchToStdUsr();
+	ath->switchToStdUsr();
 
 	KDEModMirrorBox->addItem(mirror);
 
@@ -1400,7 +1401,7 @@ void ConfigDialog::cleanProc(int eC, QProcess::ExitStatus eS)
 
 	mantProc = new RootProcess();
 
-	ath.switchToRoot();
+	ath->switchToRoot();
 
 	if(mantProc->execute("sync") == 0)
 	{
@@ -1414,7 +1415,7 @@ void ConfigDialog::cleanProc(int eC, QProcess::ExitStatus eS)
 		mantDetails->append(QString(tr("Sync could not be executed!!", "Sync is always the command")));
 	}
 
-	ath.switchToStdUsr();
+	ath->switchToStdUsr();
 
 	mantDetails->moveCursor(QTextCursor::End);
 

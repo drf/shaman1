@@ -32,7 +32,8 @@
 
 MaintenanceBar::MaintenanceBar(AlpmHandler *aH, QWidget *parent)
  : QToolBar(parent),
- m_handler(aH)
+ m_handler(aH),
+ ath(new Authenticator(this))
 {
     setObjectName("MaintenanceBar");
 
@@ -123,11 +124,11 @@ void MaintenanceBar::performAction()
 
             qDebug() << "Starting the process";
 
-            ath.switchToRoot();
+            ath->switchToRoot();
 
             mantProc->start("pacman-optimize");
 
-            ath.switchToStdUsr();
+            ath->switchToStdUsr();
             break;
 
         case 6:
@@ -289,7 +290,7 @@ void MaintenanceBar::cleanProc(int eC, QProcess::ExitStatus eS)
 
     mantProc = new RootProcess();
 
-    ath.switchToRoot();
+    ath->switchToRoot();
 
     if(mantProc->execute("sync") == 0)
     {
@@ -303,7 +304,7 @@ void MaintenanceBar::cleanProc(int eC, QProcess::ExitStatus eS)
         mantDetails->append(QString(tr("Sync could not be executed!!", "Sync is always the command")));
     }
 
-    ath.switchToStdUsr();
+    ath->switchToStdUsr();
 
     mantDetails->moveCursor(QTextCursor::End);
 

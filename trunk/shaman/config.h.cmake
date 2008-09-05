@@ -31,10 +31,11 @@
 
 /* Defines the Version */
 
-#define SHAMAN_VERSION "\"Three is a charm\" 1.0.5"
+#define SHAMAN_VERSION "1.0.9"
+#define SHAMAN_CODENAME "0KB"
 
 /* Defines the Revision */
 
-#define SHAMAN_REVISION "890"
+#define SHAMAN_REVISION "916"
 
 #endif /*CONFIG_H*/

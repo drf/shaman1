@@ -21,11 +21,11 @@
 #ifndef ARCHLINUXNEWSREADER_H
 #define ARCHLINUXNEWSREADER_H
 
+#include <QPointer>
 #include <QHttp>
-#include <QWidget>
-#include <QBuffer>
 #include <QXmlStreamReader>
-#include <QTimer>
+
+class QTimer;
 
 namespace ArchLinuxNews {
 
@@ -35,7 +35,7 @@ namespace ArchLinuxNews {
 		bool nRead;
 		bool nNew;
 	};
-	
+
 	typedef struct arNws ArchNews;
 
 }  // namespace ArchLinuxNews
@@ -43,19 +43,19 @@ namespace ArchLinuxNews {
 class ArchLinuxNewsReader : public QObject
 {
 	Q_OBJECT
-	
+
 public:
 	ArchLinuxNewsReader();
 	virtual ~ArchLinuxNewsReader();
-	
+
 	QList<ArchLinuxNews::ArchNews> getAllEntries();
 	void setUpdateInterval();
-	
+
 	QStringList getEntriesNames();
 	bool isEntryRead(const QString &title);
-	
+
 	QString getHttpError();
-	
+
 	bool checkUnreadNewsOnPkg(const QString &pkgname);
 
 public slots:
@@ -63,7 +63,7 @@ public slots:
 	void finished(int id, bool error);
 	void readData(const QHttpResponseHeader &);
 	void markAsRead(const QString &name, bool status);
-	
+
 signals:
 	void fetchingFailed();
 	void newItems();
@@ -78,10 +78,10 @@ private:
 	QString currentTag;
 
 	QXmlStreamReader xml;
-	QHttp http;
-	QTimer timer;
+	QPointer<QHttp> http;
+	QPointer<QTimer> timer;
 	QList<ArchLinuxNews::ArchNews> entries;
-	
+
 	int connectionId;
 };
 

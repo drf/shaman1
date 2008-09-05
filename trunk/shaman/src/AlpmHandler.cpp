@@ -57,10 +57,12 @@ extern "C" {
 extern QMutex mutex;
 extern QWaitCondition wCond;
 
-AlpmHandler::AlpmHandler(bool init)
-: logFileIsSet(false),
-toRemove(NULL),
-toSync(NULL)
+AlpmHandler::AlpmHandler(QObject *parent, bool init)
+: QObject(parent),
+ logFileIsSet(false),
+ toRemove(0),
+ toSync(0),
+ ath(new Authenticator(this))
 {
 	/* First, initialize Alpm. Then, make the whole class aware that no
 	 * transaction with libalpm is in progress */
@@ -151,7 +153,7 @@ bool AlpmHandler::initTransaction(pmtranstype_t type, pmtransflag_t flags, bool 
 	if(isTransaction())
 		return false;
 
-	if (!ath.switchToRoot())
+	if (!ath->switchToRoot())
 		return false;
 
 	if(force)
@@ -179,7 +181,7 @@ bool AlpmHandler::releaseTransaction()
 		if(alpm_trans_interrupt() == -1)
 			return false;
 
-	ath.switchToStdUsr();
+	ath->switchToStdUsr();
 
 	onTransaction = false;
 	emit transactionReleased();
@@ -328,7 +330,7 @@ bool AlpmHandler::updateDatabase()
 
 bool AlpmHandler::reloadPacmanConfiguration()
 {
-	if(!ath.switchToRoot())
+	if(!ath->switchToRoot())
 		return false;
 
 	PacmanConf pdata;
@@ -377,7 +379,7 @@ bool AlpmHandler::reloadPacmanConfiguration()
 
 	setUpAlpmSettings();
 
-	ath.switchToStdUsr();
+	ath->switchToStdUsr();
 
 	return true;
 }
@@ -397,6 +399,13 @@ bool AlpmHandler::setUpAlpmSettings()
 	alpm_option_set_root("/");
 	alpm_option_set_dbpath("/var/lib/pacman");
 	alpm_option_add_cachedir("/var/cache/pacman/pkg");
+
+	/* Register local database */
+
+	db_local = alpm_db_register_local();
+
+	alpm_option_set_dlcb(cb_dl_progress);
+	alpm_option_set_totaldlcb(cb_dl_total);
 	alpm_option_set_logcb(cb_log);
 
 	qDebug() << "Log File should be:" << pdata.logFile;
@@ -412,10 +421,6 @@ bool AlpmHandler::setUpAlpmSettings()
 	}
 	else
 		qDebug() << "Not reloading the logfile.";
-
-	/* Register local database */
-
-	db_local = alpm_db_register_local();
 
 	/* Register our sync databases, kindly taken from pacdata */
 
@@ -449,9 +454,6 @@ bool AlpmHandler::setUpAlpmSettings()
 		qDebug() << "XFerCommand is:" << pdata.xferCommand;
 		alpm_option_set_xfercommand(pdata.xferCommand.toAscii().data());
 	}
-
-	alpm_option_set_dlcb(cb_dl_progress);
-	alpm_option_set_totaldlcb(cb_dl_total);
 
 	alpm_option_set_nopassiveftp(pdata.noPassiveFTP);
 
@@ -774,7 +776,7 @@ void AlpmHandler::processQueue(bool force)
 
 bool AlpmHandler::cleanUnusedDb(const char *dbpath)
 {
-	if(!ath.switchToRoot())
+	if(!ath->switchToRoot())
 		return false;
 
 	DIR *dir;
@@ -784,7 +786,7 @@ bool AlpmHandler::cleanUnusedDb(const char *dbpath)
 	if(dir == NULL)
 	{
 		qDebug() << "Couldn't open db Dir";
-		ath.switchToStdUsr();
+		ath->switchToStdUsr();
 		return false;
 	}
 
@@ -822,14 +824,14 @@ bool AlpmHandler::cleanUnusedDb(const char *dbpath)
 
 			if(rmrf(path))
 			{
-				ath.switchToStdUsr();
+				ath->switchToStdUsr();
 				return false;
 			}
 		}
 
 	}
 
-	ath.switchToStdUsr();
+	ath->switchToStdUsr();
 	return true;
 }
 
@@ -878,7 +880,7 @@ int AlpmHandler::rmrf(const char *path)
 
 bool AlpmHandler::cleanCache(bool empty)
 {
-	if (!ath.switchToRoot())
+	if (!ath->switchToRoot())
 		return false;
 
 	alpm_list_t* cachedirs = alpm_option_get_cachedirs();
@@ -892,7 +894,7 @@ bool AlpmHandler::cleanCache(bool empty)
 
 		if(!dir.exists())
 		{
-			ath.switchToStdUsr();
+			ath->switchToStdUsr();
 			return false;
 		}
 
@@ -932,7 +934,7 @@ bool AlpmHandler::cleanCache(bool empty)
 
 		if(rmrf(cachedir.toAscii().data()))
 		{
-			ath.switchToStdUsr();
+			ath->switchToStdUsr();
 			return false;
 		}
 
@@ -940,12 +942,12 @@ bool AlpmHandler::cleanCache(bool empty)
 
 		if(!dir.mkpath(cachedir))
 		{
-			ath.switchToStdUsr();
+			ath->switchToStdUsr();
 			return false;
 		}
 	}
 
-	ath.switchToStdUsr();
+	ath->switchToStdUsr();
 	return true;
 }
 

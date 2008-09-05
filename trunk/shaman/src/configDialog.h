@@ -26,6 +26,7 @@
 #include "Authenticator.h"
 #include <QThread>
 #include <QProcess>
+#include <QPointer>
 
 namespace ShamanProperties {
 
@@ -98,12 +99,12 @@ private:
 	QStringList getMirrorList(ShamanProperties::MirrorType type = ShamanProperties::OfficialMirrors);
 
 private:
-	AlpmHandler *m_handler;
-	QDialog *addDialog;
-	CleanThread *cTh;
-	RootProcess *mantProc;
+	QPointer<AlpmHandler> m_handler;
+	QPointer<QDialog> addDialog;
+	QPointer<CleanThread> cTh;
+	QPointer<RootProcess> mantProc;
 	bool upDb;
-	Authenticator ath;
+	QPointer<Authenticator> ath;
 };
 
 #endif /*CONFIGDIALOG_H*/

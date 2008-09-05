@@ -38,8 +38,9 @@ static struct pam_conv conv = {
     NULL
 };
 
-Authenticator::Authenticator()
- : pamh(NULL),
+Authenticator::Authenticator(QObject *parent)
+ : QObject(parent),
+ pamh(NULL),
  retval(0),
  onTransaction(false),
  alreadyAuthed(false)

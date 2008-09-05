@@ -34,17 +34,17 @@ class ABSHandler;
 class BuildingDialog : public QDialog, public Ui::buildingDialog, private ABSHandler
 {
 	Q_OBJECT
-	
+
 public:
 	explicit BuildingDialog(AlpmHandler *hnd, QWidget *parent = 0);
 	virtual ~BuildingDialog();
-	
+
 	void initBuildingQueue();
 	void addBuildingQueueItem(const QString &item);
 	void processBuildingQueue();
 	void waitBeforeProcess(bool yn);
 	bool reviewOutputFirst();
-	
+
 public slots:
 	void updateABSTree();
 	void writeLineProgress();
@@ -54,17 +54,17 @@ public slots:
 	void finishedUpdateABSTree(int ecode, QProcess::ExitStatus estat);
 	void finishedBuildingAction(int ecode, QProcess::ExitStatus estat);
 	void abortProcess();
-	
+
 protected:
 	void closeEvent(QCloseEvent *evt);
-	
+
 private:
 	void processCurrentQueueItem();
-	
+
 signals:
 	void finishedBuilding(int failurelevel, const QStringList &bp);
 	void nullifyPointer();
-	
+
 private:
 	QPointer<RootProcess> ABSProc;
 	QPointer<QProcess> MakePkgProc;
@@ -75,8 +75,8 @@ private:
 	bool allFailed;
 	bool waitProcessing;
 	AlpmHandler *aHandle;
-	Authenticator ath;
-	
+	QPointer<Authenticator> ath;
+
 };
 
 #endif /*BUILDINGDIALOG_H*/

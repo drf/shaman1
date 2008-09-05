@@ -25,16 +25,19 @@
 #include <QNetworkProxy>
 #include <QSettings>
 #include <QDebug>
+#include <QTimer>
 
 ArchLinuxNewsReader::ArchLinuxNewsReader()
+ : http(new QHttp(this)),
+ timer(new QTimer(this))
 {
-	connect(&http, SIGNAL(readyRead(const QHttpResponseHeader &)),
+	connect(http, SIGNAL(readyRead(const QHttpResponseHeader &)),
 			this, SLOT(readData(const QHttpResponseHeader &)));
 
-	connect(&http, SIGNAL(requestFinished(int, bool)),
+	connect(http, SIGNAL(requestFinished(int, bool)),
 			this, SLOT(finished(int, bool)));
 
-	connect(&timer, SIGNAL(timeout()), SLOT(fetch()));
+	connect(timer, SIGNAL(timeout()), SLOT(fetch()));
 }
 
 ArchLinuxNewsReader::~ArchLinuxNewsReader()
@@ -43,17 +46,17 @@ ArchLinuxNewsReader::~ArchLinuxNewsReader()
 
 void ArchLinuxNewsReader::setUpdateInterval()
 {
-	if(timer.isActive())
-		timer.stop();
+	if(timer->isActive())
+		timer->stop();
 
 	QSettings *settings = new QSettings();
 
 	if(!settings->value("newsreader/doupdate").toBool())
 		return;
 
-	timer.setInterval(settings->value("newsreader/updateinterval", 60).toInt() * 60000);
+	timer->setInterval(settings->value("newsreader/updateinterval", 60).toInt() * 60000);
 
-	timer.start();
+	timer->start();
 }
 
 void ArchLinuxNewsReader::fetch()
@@ -67,9 +70,9 @@ void ArchLinuxNewsReader::fetch()
 
 	QUrl url("http://www.archlinux.org/feeds/news/");
 
-	http.setProxy(QNetworkProxy());
-	http.setHost(url.host());
-	connectionId = http.get(url.path());
+	http->setProxy(QNetworkProxy());
+	http->setHost(url.host());
+	connectionId = http->get(url.path());
 }
 
 void ArchLinuxNewsReader::finished(int id, bool error)
@@ -89,10 +92,10 @@ void ArchLinuxNewsReader::finished(int id, bool error)
 void ArchLinuxNewsReader::readData(const QHttpResponseHeader &resp)
 {
     if (resp.statusCode() != 200)
-        http.abort();
+        http->abort();
     else
     {
-        xml.addData(http.readAll());
+        xml.addData(http->readAll());
         parseXml();
     }
 }
@@ -172,7 +175,7 @@ void ArchLinuxNewsReader::parseXml()
 	if (xml.error() && xml.error() != QXmlStreamReader::PrematureEndOfDocumentError)
 	{
 		qWarning() << "XML ERROR:" << xml.lineNumber() << ": " << xml.errorString();
-		http.abort();
+		http->abort();
 	}
 
 	settings->deleteLater();
@@ -251,7 +254,7 @@ bool ArchLinuxNewsReader::isEntryRead(const QString &title)
 
 QString ArchLinuxNewsReader::getHttpError()
 {
-	return http.errorString();
+	return http->errorString();
 }
 
 bool ArchLinuxNewsReader::checkUnreadNewsOnPkg(const QString &pkgname)

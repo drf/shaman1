@@ -29,6 +29,7 @@
 
 #include <QString>
 #include <QStringList>
+#include <QPointer>
 
 #include "Authenticator.h"
 
@@ -77,33 +78,32 @@ class ConfigurationParser
 	 * with inheritance (best, since it tries to avoid parsing the same
 	 * file multiple times), or just by using it as an object.
 	 */
-	
+
 public:
 	ConfigurationParser();
 	virtual ~ConfigurationParser();
-	
+
 	PacmanConf getPacmanConf(bool forcereload = false);
 	ABSConf getABSConf(bool forcereload = false);
 	MakePkgConf getMakepkgConf(bool forcereload = false);
-	
+
 	bool editPacmanKey(const QString &key, const QString &value, int action);
 	bool editABSSection(const QString &section, const QString &value);
 	bool editMakepkgSection(const QString &section, const QString &value);
-	
+
 protected:
 	QStringList setrepeatingoption(const QString &ptr);
-	
+
 private:
 	void parsePacmanConfig(const QString &file, const QString &givensection,
 			const QString &givendb);
 	void parseABSConfig();
 	void parseMakepkgConfig();
-	
+
 private:
 	PacmanConf pacData;
 	ABSConf absData;
 	MakePkgConf makepkgData;
-	Authenticator ath;
 };
 
 #endif /*CONFIGURATIONPARSER_H*/

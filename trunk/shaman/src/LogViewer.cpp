@@ -62,13 +62,14 @@ void LogViewer::loadLog()
 
 	fp.close();
 
-	yearFromSpin->setValue(contents.at(0).mid(1, 4).toInt());
-	monthFromSpin->setValue(contents.at(0).mid(6, 2).toInt());
-	dayFromSpin->setValue(contents.at(0).mid(9, 2).toInt());
+	dateFrom->setDate(QDate(contents.at(0).mid(1, 4).toInt(),
+	        contents.at(0).mid(6, 2).toInt(),
+	        contents.at(0).mid(9, 2).toInt()));
 
-	yearTilSpin->setValue(contents.at(contents.size() - 1).mid(1, 4).toInt());
-	monthTilSpin->setValue(contents.at(contents.size() - 1).mid(6, 2).toInt());
-	dayTilSpin->setValue(contents.at(contents.size() - 1).mid(9, 2).toInt());
+	dateUntil->setDate(QDate(contents.at(contents.size() - 1).mid(1, 4).toInt(),
+	        contents.at(contents.size() - 1).mid(6, 2).toInt(),
+	        contents.at(contents.size() - 1).mid(9, 2).toInt()));
+
 }
 
 void LogViewer::refreshView()
@@ -85,19 +86,17 @@ void LogViewer::refreshView()
 	{
 		if(dateFromBox->isChecked())
 		{
-			QDate boxDate(yearFromSpin->value(), monthFromSpin->value(), dayFromSpin->value());
 			QDate lineDate(ent.mid(1, 4).toInt(), ent.mid(6, 2).toInt(), ent.mid(9, 2).toInt());
 
-			if(lineDate < boxDate)
+			if(lineDate < dateFrom->date())
 				continue;
 		}
 
 		if(dateTilBox->isChecked())
 		{
-			QDate boxDate(yearTilSpin->value(), monthTilSpin->value(), dayTilSpin->value());
 			QDate lineDate(ent.mid(1, 4).toInt(), ent.mid(6, 2).toInt(), ent.mid(9, 2).toInt());
 
-			if(lineDate > boxDate)
+			if(lineDate > dateUntil->date())
 				continue;
 		}
 

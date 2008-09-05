@@ -17,6 +17,12 @@
     <layout class="QHBoxLayout" >
      <item>
       <widget class="QLabel" name="label_2" >
+       <property name="maximumSize" >
+        <size>
+         <width>140</width>
+         <height>16777215</height>
+        </size>
+       </property>
        <property name="text" >
         <string/>
        </property>
@@ -30,6 +36,12 @@
        <property name="text" >
         <string>Shaman needs root privileges to perform this action.
 Please enter in the field below the root password to continue.</string>
+       </property>
+       <property name="scaledContents" >
+        <bool>true</bool>
+       </property>
+       <property name="wordWrap" >
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -54,7 +66,7 @@ Please enter in the field below the root password to continue.</string>
      <property name="orientation" >
       <enum>Qt::Horizontal</enum>
      </property>
-     <property name="sizeHint" >
+     <property name="sizeHint" stdset="0" >
       <size>
        <width>40</width>
        <height>20</height>
@@ -68,7 +80,8 @@ Please enter in the field below the root password to continue.</string>
       <string>Ok</string>
      </property>
      <property name="icon" >
-      <iconset resource="shaman.qrc" >:/Icons/icons/dialog-ok-apply.png</iconset>
+      <iconset resource="shaman.qrc" >
+       <normaloff>:/Icons/icons/dialog-ok-apply.png</normaloff>:/Icons/icons/dialog-ok-apply.png</iconset>
      </property>
      <property name="shortcut" >
       <string>Return</string>
@@ -81,7 +94,8 @@ Please enter in the field below the root password to continue.</string>
       <string>Cancel</string>
      </property>
      <property name="icon" >
-      <iconset resource="shaman.qrc" >:/Icons/icons/dialog-cancel.png</iconset>
+      <iconset resource="shaman.qrc" >
+       <normaloff>:/Icons/icons/dialog-cancel.png</normaloff>:/Icons/icons/dialog-cancel.png</iconset>
      </property>
      <property name="shortcut" >
       <string>Backspace</string>

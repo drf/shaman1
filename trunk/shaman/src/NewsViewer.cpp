@@ -35,6 +35,7 @@ NewsViewer::NewsViewer(ArchLinuxNewsReader *nR, QWidget *parent)
 	setupUi(this);
 
 	treeWidget->hideColumn(4);
+	treeWidget->setHeaderLabels(QStringList() << QString() << QString());
 
 	connect(newsHandler, SIGNAL(fetchingStarted()), SLOT(fetching()));
 	connect(newsHandler, SIGNAL(fetchingFinished()), SLOT(fetching()));

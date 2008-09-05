@@ -25,12 +25,21 @@ ENDMACRO (MACRO_OPTIONAL_FIND_PACKAGE)
 SET(QT_MIN_VERSION "4.4.0")
 
 FIND_PACKAGE(Qt4 REQUIRED)
+FIND_PACKAGE(Alpm REQUIRED)
+FIND_PACKAGE(LibArchive REQUIRED)
+
+#optional packages
+FIND_PACKAGE(KDE4)
+FIND_PACKAGE(Plasma)
+
 INCLUDE(${QT_USE_FILE})
 
 SET(QT_USE_QTXML)
 
 INCLUDE_DIRECTORIES(
     ${QT_INCLUDES}
+    ${ALPM_INCLUDE_DIR}
+    ${LIBARCHIVE_INCLUDE_DIR}
     ${CMAKE_SOURCE_DIR}
     ${CMAKE_CURRENT_BINARY_DIR}
     ${CMAKE_CURRENT_BINARY_DIR}/src
@@ -51,18 +60,22 @@ if(NOT PLASMA_ONLY)
 	add_subdirectory(translations)
 	add_subdirectory(etc)
 
+else(NOT PLASMA_ONLY)
+	message("Building only plasma components, skipping shaman core")
 endif(NOT PLASMA_ONLY)
-
-FIND_PACKAGE(KDE4)
-FIND_PACKAGE(Plasma)
 
 if(NOT NO_PLASMA)
 
 	if (PLASMA_FOUND)
     		add_subdirectory(plasma)
+	else (PLASMA_FOUND)
+		message("Plasma not found, plasma components won't be built")
 	endif(PLASMA_FOUND)
-	
+
+else(NOT NO_PLASMA)
+	message("Plasma components disabled by the user, they won't be built")
 endif(NOT NO_PLASMA)
+
 
 # verbose - on
 # SET(CMAKE_VERBOSE_MAKEFILE ON)

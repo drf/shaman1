@@ -139,11 +139,13 @@ void CreateItemsThread::run()
             {
                 //item->setText(0, tr("Installed"));
                 item->setIcon(0, QIcon(":/Icons/icons/user-online.png"));
+                item->setData(0, Qt::UserRole, (int)2);
             }
             else
             {
                 //item->setText(0, tr("Not Installed"));
                 item->setIcon(0, QIcon(":/Icons/icons/user-offline.png"));
+                item->setData(0, Qt::UserRole, (int)0);
             }
 
             item->setText(3, alpm_pkg_get_version(pkg));
@@ -190,6 +192,7 @@ void CreateItemsThread::run()
         ShamanTreeWidgetItem *item = new ShamanTreeWidgetItem();
 
         item->setIcon(0, QIcon(":/Icons/icons/user-online.png"));
+        item->setData(0, Qt::UserRole, (int)2);
         item->setText(1, alpm_pkg_get_name(pkg));
         item->setText(3, alpm_pkg_get_version(pkg));
         item->setText(7, alpm_pkg_get_desc(pkg));
@@ -219,6 +222,7 @@ void CreateItemsThread::run()
         if(count == 1)
         {
             match->setIcon(0, QIcon(":/Icons/icons/user-online.png"));
+            match->setData(0, Qt::UserRole, (int)2);
             match->setText(3, m_handler->getPackageVersion(match->text(1), "local"));
         }
     }
@@ -319,6 +323,8 @@ turnOffSys(false)
 	connect(&athCback, SIGNAL(passwordRequired(int)), SLOT(showAuthDialog(int)));
 	connect(aHandle, SIGNAL(transactionStarted()), SIGNAL(transactionStarted()));
 	connect(aHandle, SIGNAL(transactionReleased()), SIGNAL(transactionReleased()));
+
+	completeRemoveButton->setEnabled(false); // Until it works...
 
 	addToolBar(new MaintenanceBar(aHandle, this));
 
@@ -2061,8 +2067,8 @@ void MainWindow::showAboutDialog()
 			"</head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-weight:400; "
 			"font-style:normal;\"><p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px"
 			"; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">"
-			"Shaman ") + SHAMAN_VERSION + QString(" (r") + SHAMAN_REVISION + QString(")"
-			"</span></p></body></html>"));
+			"Shaman \"%1\" %2 (r %3)</span></p></body></html>").arg(SHAMAN_CODENAME).arg(SHAMAN_VERSION)
+			.arg(SHAMAN_REVISION));
 
 	QPushButton *okb = ui.buttonBox->button(QDialogButtonBox::Ok);
 

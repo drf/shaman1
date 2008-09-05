@@ -34,7 +34,8 @@ BuildingDialog::BuildingDialog(AlpmHandler *hnd, QWidget *parent)
 : QDialog(parent),
 ABSProc(),
 MakePkgProc(),
-aHandle(hnd)
+aHandle(hnd),
+ath(new Authenticator(this))
 {
 	setupUi(this);
 	setWindowModality(Qt::ApplicationModal);
@@ -48,7 +49,7 @@ BuildingDialog::~BuildingDialog()
 void BuildingDialog::abortProcess()
 {
 	switch (ShamanDialog::popupQuestionDialog(QString(tr("Error")), QString(tr("Would you like to abort building?."
-			"\nAll Process will be lost.")), this, ShamanProperties::WarningDialog)) 
+			"\nAll Process will be lost.")), this, ShamanProperties::WarningDialog))
 	{
 	case QMessageBox::Yes:
 		if(MakePkgProc)
@@ -67,7 +68,7 @@ void BuildingDialog::abortProcess()
 			disconnect(ABSProc, 0, 0, 0);
 			ABSProc->kill();
 			ABSProc->deleteLater();
-			progressEdit->append(QString(tr("<br><br><b>Building Process Aborted by the User. Building Failed.</b>")));	
+			progressEdit->append(QString(tr("<br><br><b>Building Process Aborted by the User. Building Failed.</b>")));
 		}
 		emit finishedBuilding(2, builtPaths);
 		break;
@@ -80,22 +81,22 @@ void BuildingDialog::abortProcess()
 }
 
 void BuildingDialog::updateABSTree()
-{	
+{
 	ABSProc = new RootProcess(this);
 	connect(ABSProc, SIGNAL(readyReadStandardOutput()), SLOT(writeLineProgress()));
 	connect(ABSProc, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(finishedUpdateABSTree(int,QProcess::ExitStatus)));
 
-	processingLabel->setText(QString(tr("Updating ABS Tree...")));
+	processingLabel->setText(tr("Updating ABS Tree..."));
 	buildingLabel->setText(QString());
 
 	progressEdit->append(QString(tr("<b>Starting ABS Tree Update...</b><br><br>")));
-	
-	ath.switchToRoot();
-	
+
+	ath->switchToRoot();
+
 	ABSProc->start("abs");
-	
-	ath.switchToStdUsr();
-	
+
+	ath->switchToStdUsr();
+
 	progressEdit->moveCursor(QTextCursor::End);
 }
 
@@ -103,11 +104,11 @@ void BuildingDialog::writeLineProgress()
 {
 	if(ABSProc->readChannel() == QProcess::StandardError)
 		progressEdit->append(QString());
-	
+
 	ABSProc->setReadChannel(QProcess::StandardOutput);
-	
+
 	QString view = QString::fromLocal8Bit(ABSProc->readLine(1024));
-	
+
 	view.replace(QChar('\n'), "<br>");
 
 	QString tmp(view);
@@ -117,7 +118,7 @@ void BuildingDialog::writeLineProgress()
 		return;
 
 	progressEdit->insertHtml(view);
-	
+
 	progressEdit->moveCursor(QTextCursor::End);
 }
 
@@ -125,21 +126,21 @@ void BuildingDialog::writeLineProgressErr()
 {
 	if(ABSProc->readChannel() == QProcess::StandardOutput)
 		progressEdit->append(QString());
-	
+
 	ABSProc->setReadChannel(QProcess::StandardError);
 
 	QString view = QString::fromLocal8Bit(ABSProc->readLine(1024));
 
 	view.replace(QChar('\n'), "<br>");
-	
+
 	QString tmp(view);
 	tmp.remove(QChar('.'));
-	
+
 	if(tmp.isEmpty())
 		return;
-	
+
 	progressEdit->insertHtml("<b><i>" + view + "</i></b>");
-	
+
 	progressEdit->moveCursor(QTextCursor::End);
 }
 
@@ -147,11 +148,11 @@ void BuildingDialog::writeLineProgressMk()
 {
 	if(MakePkgProc->readChannel() == QProcess::StandardError)
 		progressEdit->append(QString());
-	
+
 	MakePkgProc->setReadChannel(QProcess::StandardOutput);
-	
+
 	QString view = QString::fromLocal8Bit(MakePkgProc->readLine(1024));
-	
+
 	view.replace(QChar('\n'), "<br>");
 
 	QString tmp(view);
@@ -161,7 +162,7 @@ void BuildingDialog::writeLineProgressMk()
 		return;
 
 	progressEdit->insertHtml(view);
-	
+
 	progressEdit->moveCursor(QTextCursor::End);
 }
 
@@ -169,34 +170,34 @@ void BuildingDialog::writeLineProgressErrMk()
 {
 	if(MakePkgProc->readChannel() == QProcess::StandardOutput)
 		progressEdit->append(QString());
-	
+
 	MakePkgProc->setReadChannel(QProcess::StandardError);
 
 	QString view = QString::fromLocal8Bit(MakePkgProc->readLine(1024));
 
 	view.replace(QChar('\n'), "<br>");
-	
+
 	QString tmp(view);
 	tmp.remove(QChar('.'));
-	
+
 	if(tmp.isEmpty())
 		return;
-	
+
 	progressEdit->insertHtml("<b><i>" + view + "</i></b>");
-	
+
 	progressEdit->moveCursor(QTextCursor::End);
 }
 
 void BuildingDialog::finishedUpdateABSTree(int ecode, QProcess::ExitStatus estat)
 {
 	Q_UNUSED(estat);
-	
+
 	ABSProc->deleteLater();
-	
+
 	if(ecode == 0)
 	{
 		progressEdit->append(QString(tr("<br><br><b>ABS Tree Was Successfully Updated!</b>")));
-	
+
 		ShamanDialog::popupDialog(tr("ABS Update"), QString(tr("Your ABS Tree was updated!")), this, ShamanProperties::SuccessDialog);
 	}
 	else
@@ -212,7 +213,7 @@ void BuildingDialog::finishedUpdateABSTree(int ecode, QProcess::ExitStatus estat
 void BuildingDialog::finishedBuildingAction(int ecode, QProcess::ExitStatus estat)
 {
 	Q_UNUSED(estat);
-	
+
 	if(ecode != 0)
 	{
 		failed = true;
@@ -234,14 +235,14 @@ void BuildingDialog::finishedBuildingAction(int ecode, QProcess::ExitStatus esta
 			path.append(QChar('/'));
 
 		path.append(buildQueue.at(currentItem));
-		
+
 		QDir dir(path);
 
 		dir.setFilter(QDir::Files | QDir::NoDotAndDotDot | QDir::NoSymLinks);
 
 		QFileInfoList list = dir.entryInfoList();
-		
-		for (int i = 0; i < list.size(); ++i) 
+
+		for (int i = 0; i < list.size(); ++i)
 		{
 			if(list.at(i).absoluteFilePath().endsWith("pkg.tar.gz"))
 			{
@@ -249,11 +250,11 @@ void BuildingDialog::finishedBuildingAction(int ecode, QProcess::ExitStatus esta
 				qDebug() << "In queue: " << list.at(i).absoluteFilePath();
 			}
 		}
-		
+
 	}
-	
+
 	currentItem++;
-	
+
 	if(currentItem == buildQueue.size())
 	{
 		if(allFailed)
@@ -262,32 +263,32 @@ void BuildingDialog::finishedBuildingAction(int ecode, QProcess::ExitStatus esta
 			emit finishedBuilding(1, builtPaths);
 		else
 			emit finishedBuilding(0, builtPaths);
-		
+
 		return;
 	}
-	
+
 	processCurrentQueueItem();
-	
+
 }
 
 void BuildingDialog::processCurrentQueueItem()
 {
 	MakePkgProc->deleteLater();
-	
+
 	MakePkgProc = new QProcess();
-	
+
 	processingLabel->setText(QString(tr("Processing Package %1 of %2...")).arg(currentItem + 1).arg(buildQueue.size()));
 	buildingLabel->setText(QString(tr("Building %1...")).arg(buildQueue.at(currentItem)));
 
 	/* Let's build the path we need */
-	
+
 	if(!setUpBuildingEnvironment(buildQueue.at(currentItem)))
 	{
 		progressEdit->append(QString(tr("<b>Could not set up the environment correctly for %1!!</b><br><br>")).arg(buildQueue.at(currentItem)));
 		finishedBuildingAction(1, QProcess::CrashExit);
 		return;
 	}
-		
+
 	QSettings *settings = new QSettings();
 
 	QString path(settings->value("absbuilding/buildpath").toString());
@@ -298,15 +299,15 @@ void BuildingDialog::processCurrentQueueItem()
 		path.append(QChar('/'));
 
 	path.append(buildQueue.at(currentItem));
-	
+
 	MakePkgProc->setWorkingDirectory(path);
 
 	connect(MakePkgProc, SIGNAL(readyReadStandardOutput()), SLOT(writeLineProgressMk()));
 	connect(MakePkgProc, SIGNAL(readyReadStandardError()), SLOT(writeLineProgressErrMk()));
 	connect(MakePkgProc, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(finishedBuildingAction(int,QProcess::ExitStatus)));
-	
+
 	progressEdit->append(QString(tr("<b>Building %1...</b><br><br>")).arg(buildQueue.at(currentItem)));
-		
+
 	MakePkgProc->start("makepkg");
 
 }
@@ -329,9 +330,9 @@ void BuildingDialog::processBuildingQueue()
 {
 	if(buildQueue.isEmpty())
 		return;
-	
+
 	progressEdit->append(QString(tr("<b>Building operation has started.</b><br><br>")));
-	
+
 	processCurrentQueueItem();
 }
 

@@ -5,7 +5,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>810</width>
+    <width>848</width>
     <height>644</height>
    </rect>
   </property>
@@ -72,14 +72,6 @@
       <number>0</number>
      </property>
      <widget class="QWidget" name="Seite" >
-      <property name="geometry" >
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>678</width>
-        <height>602</height>
-       </rect>
-      </property>
       <layout class="QVBoxLayout" >
        <item>
         <widget class="QGroupBox" name="groupBox_5" >
@@ -254,14 +246,6 @@ p, li { white-space: pre-wrap; }
       </layout>
      </widget>
      <widget class="QWidget" name="Seite_2" >
-      <property name="geometry" >
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>678</width>
-        <height>602</height>
-       </rect>
-      </property>
       <layout class="QGridLayout" >
        <item row="0" column="0" >
         <widget class="QGroupBox" name="groupBox_2" >
@@ -406,29 +390,13 @@ p, li { white-space: pre-wrap; }
       </layout>
      </widget>
      <widget class="QWidget" name="page" >
-      <property name="geometry" >
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>678</width>
-        <height>602</height>
-       </rect>
-      </property>
       <layout class="QGridLayout" >
        <item row="1" column="0" >
         <widget class="QTabWidget" name="repoTab" >
          <property name="currentIndex" >
-          <number>0</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="officialTab" >
-          <property name="geometry" >
-           <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>662</width>
-            <height>560</height>
-           </rect>
-          </property>
           <attribute name="title" >
            <string>Arch Linux Official Repositories</string>
           </attribute>
@@ -445,6 +413,12 @@ p, li { white-space: pre-wrap; }
                 <layout class="QHBoxLayout" >
                  <item>
                   <widget class="QLabel" name="label_18" >
+                   <property name="maximumSize" >
+                    <size>
+                     <width>150</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
                    <property name="text" >
                     <string/>
                    </property>
@@ -456,8 +430,13 @@ p, li { white-space: pre-wrap; }
                  <item>
                   <widget class="QLabel" name="officialLabel" >
                    <property name="text" >
-                    <string>Here you can choose what repositories to use between Arch Linux's official ones.
-Please note that packages from Unstable and Testing may break your system.</string>
+                    <string>Here you can choose what repositories to use between Arch Linux's official ones. Please note that packages from Unstable and Testing may break your system.</string>
+                   </property>
+                   <property name="scaledContents" >
+                    <bool>true</bool>
+                   </property>
+                   <property name="wordWrap" >
+                    <bool>true</bool>
                    </property>
                   </widget>
                  </item>
@@ -555,14 +534,6 @@ Please note that packages from Unstable and Testing may break your system.</stri
           </layout>
          </widget>
          <widget class="QWidget" name="KDEModTab" >
-          <property name="geometry" >
-           <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>662</width>
-            <height>560</height>
-           </rect>
-          </property>
           <attribute name="title" >
            <string>KDEMod Repositories</string>
           </attribute>
@@ -577,6 +548,12 @@ Please note that packages from Unstable and Testing may break your system.</stri
               <layout class="QHBoxLayout" >
                <item>
                 <widget class="QLabel" name="label_15" >
+                 <property name="maximumSize" >
+                  <size>
+                   <width>150</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
                  <property name="text" >
                   <string/>
                  </property>
@@ -588,10 +565,13 @@ Please note that packages from Unstable and Testing may break your system.</stri
                <item>
                 <widget class="QLabel" name="KDEModLabel" >
                  <property name="text" >
-                  <string>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an 
-improved Qt build, compatible with Arch Linux standard Qt's, an improved theme,
-and lots of addons, KDEMod is the best way to taste the ease and the power
-of KDE with the simplicity and the power of Arch.</string>
+                  <string>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an improved Qt build, compatible with Arch Linux standard Qt's, an improved theme, and lots of addons, KDEMod is the best way to taste the ease and the power of KDE with the simplicity and the power of Arch.</string>
+                 </property>
+                 <property name="scaledContents" >
+                  <bool>true</bool>
+                 </property>
+                 <property name="wordWrap" >
+                  <bool>true</bool>
                  </property>
                 </widget>
                </item>
@@ -694,14 +674,6 @@ of KDE with the simplicity and the power of Arch.</string>
           </layout>
          </widget>
          <widget class="QWidget" name="thirdPartyTab" >
-          <property name="geometry" >
-           <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>662</width>
-            <height>560</height>
-           </rect>
-          </property>
           <attribute name="title" >
            <string>Third-Party Repositories</string>
           </attribute>
@@ -715,9 +687,13 @@ of KDE with the simplicity and the power of Arch.</string>
              <item>
               <widget class="QLabel" name="thirdPartyLabel" >
                <property name="text" >
-                <string>You can extend your packages choice by adding other repositories. Third-Party 
-Repositories act just as normal ones, and will be accessible through both Shaman
-and Pacman.</string>
+                <string>You can extend your packages choice by adding other repositories. Third-Party Repositories act just as normal ones, and will be accessible through both Shaman and Pacman.</string>
+               </property>
+               <property name="scaledContents" >
+                <bool>true</bool>
+               </property>
+               <property name="wordWrap" >
+                <bool>true</bool>
                </property>
               </widget>
              </item>
@@ -800,14 +776,6 @@ and Pacman.</string>
       </layout>
      </widget>
      <widget class="QWidget" name="Seite_3" >
-      <property name="geometry" >
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>678</width>
-        <height>601</height>
-       </rect>
-      </property>
       <layout class="QGridLayout" >
        <item row="0" column="0" >
         <widget class="QGroupBox" name="groupBox_9" >
@@ -963,14 +931,6 @@ and Pacman.</string>
       </layout>
      </widget>
      <widget class="QWidget" name="page_2" >
-      <property name="geometry" >
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>678</width>
-        <height>601</height>
-       </rect>
-      </property>
       <layout class="QGridLayout" >
        <item row="0" column="0" >
         <widget class="QGroupBox" name="groupBox_11" >

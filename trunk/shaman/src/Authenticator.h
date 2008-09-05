@@ -27,19 +27,19 @@
 #include <QString>
 #include <QProcess>
 
-class Authenticator
+class Authenticator : public QObject
 {
 public:
-	Authenticator();
+	Authenticator(QObject *parent = 0);
 	virtual ~Authenticator();
-	
+
 	bool switchToRoot();
 	bool switchToStdUsr();
-	
+
 private:
 	bool checkUser(const QString &uname);
 	bool releaseTransaction();
-	
+
 private:
 	pam_handle_t *pamh;
 	int retval;
@@ -50,14 +50,14 @@ private:
 class Authenticator_Callback : public QObject
 {
 	Q_OBJECT
-	
+
 public:
 	explicit Authenticator_Callback(QObject *parent = 0);
 	virtual ~Authenticator_Callback();
-	
+
 	int auth_cback(int num_msg, const struct pam_message **msg,
             struct pam_response **resp, void *appdata_ptr);
-	
+
 signals:
 	void passwordRequired(int count);
 };
@@ -65,12 +65,12 @@ signals:
 class RootProcess : public QProcess
 {
 	Q_OBJECT
-	
+
 public:
 	explicit RootProcess( QObject * parent = 0 );
 	virtual ~RootProcess();
-	
-protected:	
+
+protected:
 	virtual void setupChildProcess();
 };
 

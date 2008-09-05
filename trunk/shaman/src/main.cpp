@@ -181,17 +181,17 @@ int main(int argc, char **argv)
 	if(arguments.contains("--you-suck"))
 	{
 		printf("\n\nOh, really?\n");
-		exit(0);
+		return(0);
 	}
 	if(arguments.contains("--ya-rly"))
 	{
 		printf("\n\nHonestly, you DO suck more than me\n");
-		exit(0);
+		return(0);
 	}
 	if(arguments.contains("--well-actually-not"))
 	{
 		printf("\n\nNo, you are a sucker. Get away from here and go kill yourself. Bitch.\n");
-		exit(0);
+		return(0);
 	}
 
 	if(arguments.contains("--no-debugging-output"))
@@ -227,10 +227,10 @@ int main(int argc, char **argv)
 	else
 		qWarning() << "Translations are Disabled on user request.";
 
-	/*QDBusConnection testconn = QDBusConnection::systemBus();
+	QDBusConnection testconn = QDBusConnection::systemBus();
 	if(testconn.interface()->isServiceRegistered("org.archlinux.shaman"))
 	{
-		foreach ( QString ent, arguments )
+		foreach ( const QString &ent, arguments )
 		{
 		    if ( ent.contains("pkg.tar.gz") )
 		    {
@@ -239,7 +239,7 @@ int main(int argc, char **argv)
 		        msg << ent;
 		        testconn.call(msg);
 
-		        exit(0);
+		        return(0);
 		    }
 		}
 
@@ -247,10 +247,10 @@ int main(int argc, char **argv)
 				QObject::tr("It looks like another copy of Shaman is running.\nYou can only run "
 						"one copy of Shaman at a time."), NULL, ShamanProperties::ErrorDialog);
 
-		exit(1);
-	}*/
+		return(1);
+	}
 
-	AlpmHandler *aHandler = new AlpmHandler(true);
+	AlpmHandler *aHandler = new AlpmHandler(0, true);
 
 	if(!aHandler->testLibrary())
 	{
@@ -262,14 +262,14 @@ int main(int argc, char **argv)
 					" switch to root.\nProbably you have not set the SUID bit to it.\nYou can do that by "
 					"issuing as root\nchown root shaman && chmod u+s shaman.\nNote that this is safe, please "
 					"read Shaman wiki\nfor more details."), NULL, ShamanProperties::ErrorDialog);
-			exit(1);
+			return(1);
 		}
 
 		ShamanDialog::popupDialog(QObject::tr("Shaman"), QObject::tr("There was a problem"
 				" while testing libalpm.\nMaybe another application has a lock on it."), NULL,
 				ShamanProperties::ErrorDialog);
 
-		exit(1);
+		return(1);
 	}
 
 	QSettings *settings = new QSettings();
@@ -288,7 +288,7 @@ int main(int argc, char **argv)
 				QObject::tr("Your settings file seems unwritable.\nPlease check permissions on it."), NULL,
 				ShamanProperties::ErrorDialog);
 
-		exit(1);
+		return(1);
 	}
 
 	qDebug() << settings->fileName();
@@ -339,7 +339,7 @@ int main(int argc, char **argv)
 							"unprivileged user."), NULL,
 							ShamanProperties::ErrorDialog);
 
-			exit(1);
+			return(1);
 		}
 
 
@@ -358,7 +358,7 @@ int main(int argc, char **argv)
 				"\nShaman needs libalpm >= 2.1.0 to run.\nYours is %1. Please update Pacman.")).arg(alversion),
 				NULL, ShamanProperties::ErrorDialog);
 
-		exit(1);
+		return(1);
 	}
 
 	app.setQuitOnLastWindowClosed(false);
@@ -465,6 +465,10 @@ int main(int argc, char **argv)
 	    }
 	}
 
-	return app.exec();
+	int returncode = app.exec();
+
+	aHandler->deleteLater();
+
+	return returncode;
 
 }

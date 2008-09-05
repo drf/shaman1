@@ -27,6 +27,7 @@
 #include <string>
 #include <QString>
 #include <QStringList>
+#include <QPointer>
 
 #include "ConfigurationParser.h"
 #include "Authenticator.h"
@@ -60,7 +61,7 @@ class AlpmHandler : public QObject, private ConfigurationParser
 	 * voids*, better use a QStringList. We only use alpm_list_t* where
 	 * we can't do otherwise or it's a good solution for the sake of not implementing
 	 * a useless type (something libalpm devs should learn too).
-	 * 
+	 *
 	 * By inheriting ConfigurationParser we have all our configuration
 	 * files at a glance, without the need of re-parsing it every time, as
 	 * it is done only once, optimizing our flow.
@@ -69,7 +70,7 @@ class AlpmHandler : public QObject, private ConfigurationParser
 	Q_OBJECT
 
 public:
-	AlpmHandler(bool init = false);
+	explicit AlpmHandler(QObject *parent = 0, bool init = false);
 	virtual ~AlpmHandler();
 
 	bool isTransaction();
@@ -78,11 +79,11 @@ public:
 
 	alpm_list_t *getAvailableRepos();
 	QStringList getAvailableReposNames();
-	
+
 	QStringList getPackageGroups();
-	
+
 	alpm_list_t *getPackagesFromRepo(const QString &reponame);
-	
+
 	QStringList getUpgradeablePackages();
 	alpm_list_t *getInstalledPackages();
 
@@ -91,42 +92,42 @@ public:
 
 	QStringList getDependenciesOnPackage(pmpkg_t *package);
 	QStringList getDependenciesOnPackage(const QString &name, const QString &repo);
-	
+
 	QStringList getPackageFiles(pmpkg_t *package);
 	QStringList getPackageFiles(const QString &name);
-	
+
 	int countPackages(Alpm::PackageStatus status);
-	
+
 	QStringList getProviders(const QString &name, const QString &repo);
 	QStringList getProviders(pmpkg_t *pkg);
 	bool isProviderInstalled(const QString &provider);
-	
+
 	unsigned long getPackageSize(const QString &name, const QString &repo);
 	unsigned long getPackageSize(pmpkg_t *package);
-	
+
 	QString getPackageVersion(const QString &name, const QString &repo);
 	QString getPackageVersion(pmpkg_t *package);
-	
+
 	QString getPackageRepo(const QString &name, bool checkver = false);
-	
+
 	void initQueue(bool rem, bool syncd, bool ff);
-	
+
 	void addSyncToQueue(const QString &toAdd);
 	void addRemoveToQueue(const QString &toRm);
 	void addFFToQueue(const QString &toFF);
-	
+
 	QStringList getSyncInQueue();
 	QStringList getRemoveInQueue();
 	QStringList getFFInQueue();
-	
+
 	void processQueue(bool force);
 	int getNumberOfTargets(int action);
-	
+
 	bool cleanUnusedDb(const char *dbpath);
 	bool cleanCache(bool empty = false);
-	
+
 	int rmrf(const char *path);
-	
+
 	bool isInstalled(pmpkg_t *pkg);
 	bool isInstalled(const QString &pkg);
 
@@ -136,13 +137,13 @@ public:
 	bool performCurrentTransaction();
 
 	bool reloadPacmanConfiguration(); // In case the user modifies it.
-	
+
 	pmpkg_t *getPackageFromName(const QString &name, const QString &repo);
-	
+
 	QStringList alpmListToStringList(alpm_list_t *list);
-	
+
 	QString getAlpmVersion();
-	
+
 	void setuseragent();
 
 private:
@@ -158,7 +159,7 @@ signals:
 	void dbUpdatePerformed();
 	void transactionStarted();
 	void transactionReleased();
-	
+
 	// Error streaming
 	void preparingUpgradeError();
 	void preparingTransactionError(const QString &msg);
@@ -175,12 +176,12 @@ private:
 	bool upgradeAct;
 	bool fromFileAct;
 	bool logFileIsSet;
-	
+
 	QStringList toRemove;
 	QStringList toSync;
 	QStringList toFromFile;
-	
-	Authenticator ath;
+
+	QPointer<Authenticator> ath;
 
 };
 

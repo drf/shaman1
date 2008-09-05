@@ -94,8 +94,8 @@ TARGET_LINK_LIBRARIES(shaman
     ${QT_QTGUI_LIBRARY}
     ${QT_QTDBUS_LIBRARY}
     ${QT_QTNETWORK_LIBRARY}
-    -lalpm
-    -larchive
+    ${ALPM_LIBS}
+    ${LIBARCHIVE_LIBS}
     -lpam
 )
 
