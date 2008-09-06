@@ -338,6 +338,7 @@ turnOffSys(false)
 	setProxy();
 
 	new QShortcut(tr("Esc"), searchLine, SLOT(clear()));
+	new QShortcut(QKeySequence("F5"), this, SLOT(doDbUpdate()));
 	new QShortcut(QKeySequence(tr("Ctrl+Q", "Exit Shaman Shortcut")), this, SLOT(quitApp()));
 
 	stBar = new ShamanStatusBar(aHandle, this);
