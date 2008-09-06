@@ -26,10 +26,13 @@
 #include "ABSHandler.h"
 #include "ShamanDialog.h"
 
+#include <config.h>
+
 #include <QLineEdit>
 #include <QSettings>
 #include <QMessageBox>
 #include <QFile>
+#include <QDir>
 #include <QTextStream>
 #include <QUrl>
 #include <QProcess>
@@ -140,6 +143,39 @@ void ConfigDialog::setupGeneral()
 
 	if(settings->value("gui/showsplashscreen", true).toBool())
 		splashScreenBox->setChecked(true);
+
+	QString filePath = INSTALL_PREFIX;
+	filePath.append("/share/shaman/translations/");
+
+	QDir dir(filePath);
+	QStringList locales;
+
+	foreach ( const QString &ent, dir.entryList(QDir::Files | QDir::NoSymLinks) )
+	{
+	    if ( !ent.contains('_') || !ent.contains('.') )
+	        continue;
+
+	    locales.append(ent.split('_').at(1).split('.').at(0));
+	}
+
+	languageCombo->addItems(locales);
+
+	if ( settings->value("gui/language").toString().isEmpty() )
+	{
+	    QString locale = QLocale::system().name();
+
+	    foreach ( const QString &ent, locales )
+	    {
+	        if ( locale.contains(ent) )
+	        {
+	            languageCombo->setCurrentIndex(languageCombo->findText(ent));
+	        }
+	    }
+	}
+	else
+	{
+	    languageCombo->setCurrentIndex(languageCombo->findText(settings->value("gui/language").toString()));
+	}
 
 	settings->deleteLater();
 }
@@ -1214,6 +1250,8 @@ void ConfigDialog::saveSettings()
 		settings->setValue("gui/startupmode", "tray");
 	else
 		settings->setValue("gui/startupmode", "window");
+
+	settings->setValue("gui/language", languageCombo->currentText());
 
 	settings->setValue("gui/showsplashscreen", splashScreenBox->isChecked());
 	settings->setValue("scheduledUpdate/enabled", updateDbTrayBox->isChecked());

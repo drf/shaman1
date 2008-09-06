@@ -200,11 +200,22 @@ int main(int argc, char **argv)
 	else
 		qInstallMsgHandler(stdDebugOutput);
 
+	QSettings *settings = new QSettings();
+
 	QTranslator translator;
 
 	if(!arguments.contains("--no-i18n"))
 	{
-		QString locale = QLocale::system().name();
+	    QString locale;
+
+	    if ( settings->value("gui/language").toString().isEmpty() )
+	    {
+	        locale = QLocale::system().name();
+	    }
+	    else
+	    {
+	        locale = settings->value("gui/language").toString();
+	    }
 
 		foreach ( const QString &ent, arguments )
 		{
@@ -280,8 +291,6 @@ int main(int argc, char **argv)
 
 		return(1);
 	}
-
-	QSettings *settings = new QSettings();
 
 	if(!settings->isWritable())
 	{
