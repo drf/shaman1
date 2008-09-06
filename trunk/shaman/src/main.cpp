@@ -150,6 +150,7 @@ int main(int argc, char **argv)
 		printf("      --qt-version             shows version of the Qt toolkit installed on the system\n"
 				"                               and version of the Qt toolkit Shaman was compiled against and exits\n\n");
 		printf("      --no-i18n                disables translations\n");
+		printf("      --force-i18n=locale      forces Shaman to use locale as language\n");
 		printf("      --no-splashscreen        does not show the splashscreen\n\n");
 		printf("      --start-in-window        shows main window on startup\n");
 		printf("      --start-in-tray          starts Shaman in the system tray\n\n");
@@ -204,6 +205,14 @@ int main(int argc, char **argv)
 	if(!arguments.contains("--no-i18n"))
 	{
 		QString locale = QLocale::system().name();
+
+		foreach ( const QString &ent, arguments )
+		{
+		    if ( ent.contains("--force-i18n=") )
+		    {
+		        locale = ent.split('=').at(1);
+		    }
+		}
 
 		qDebug() << "Translations are enabled.";
 		QString trpath(QString("shaman_") + locale);

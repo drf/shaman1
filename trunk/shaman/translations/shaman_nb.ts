@@ -1810,27 +1810,27 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>NewsViewer</name>
     <message>
-        <location filename="../src/NewsViewer.cpp" line="46"/>
+        <location filename="../src/NewsViewer.cpp" line="47"/>
         <source>Please wait, fetching items...</source>
         <translation>Vennligst vent, henter elementer...</translation>
     </message>
     <message>
-        <location filename="../src/NewsViewer.cpp" line="121"/>
+        <location filename="../src/NewsViewer.cpp" line="122"/>
         <source>Mark as Read</source>
         <translation>Marker som lest</translation>
     </message>
     <message>
-        <location filename="../src/NewsViewer.cpp" line="123"/>
+        <location filename="../src/NewsViewer.cpp" line="124"/>
         <source>Mark as Unread</source>
         <translation>Marker som ulest</translation>
     </message>
     <message>
-        <location filename="../src/NewsViewer.cpp" line="182"/>
+        <location filename="../src/NewsViewer.cpp" line="183"/>
         <source>Error</source>
         <translation>Feil</translation>
     </message>
     <message>
-        <location filename="../src/NewsViewer.cpp" line="183"/>
+        <location filename="../src/NewsViewer.cpp" line="184"/>
         <source>Could not fetch the RSS feed! Error reported was:</source>
         <translation>RSS-kilden kunne ikke lastes ned! Feilen som ble rapportert var:</translation>
     </message>
@@ -2809,17 +2809,17 @@ p, li { white-space: pre-wrap; }
         <translation>Vis bare logger fra</translation>
     </message>
     <message>
-        <location filename="../ui/logViewer.ui" line="80"/>
+        <location filename="../ui/logViewer.ui" line="54"/>
         <source>Show Only Logs Until</source>
         <translation>Vis bare logger til</translation>
     </message>
     <message>
-        <location filename="../ui/logViewer.ui" line="131"/>
+        <location filename="../ui/logViewer.ui" line="79"/>
         <source>Filter</source>
         <translation>Filter</translation>
     </message>
     <message>
-        <location filename="../ui/logViewer.ui" line="161"/>
+        <location filename="../ui/logViewer.ui" line="109"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -2828,15 +2828,20 @@ p, li { white-space: pre-wrap; }
         <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;￼&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;￼p, li { white-space: pre-wrap; }￼&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;￼&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/logViewer.ui" line="191"/>
+        <location filename="../ui/logViewer.ui" line="139"/>
         <source>Refresh View</source>
         <translation>Oppdater visning</translation>
     </message>
     <message>
-        <location filename="../ui/logViewer.ui" line="208"/>
+        <location filename="../ui/logViewer.ui" line="156"/>
         <source>Close</source>
         <comment>close the dialog</comment>
         <translation>Lukk</translation>
+    </message>
+    <message>
+        <location filename="../ui/logViewer.ui" line="66"/>
+        <source>dd/MM/yyyy</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3115,37 +3120,37 @@ p, li { white-space: pre-wrap; }
         <translation>Oppgrader system</translation>
     </message>
     <message>
-        <location filename="../ui/upgradeDialog.ui" line="58"/>
+        <location filename="../ui/upgradeDialog.ui" line="61"/>
         <source>Force Queue Processing</source>
         <translation>Tving købehandling</translation>
     </message>
     <message>
-        <location filename="../ui/upgradeDialog.ui" line="65"/>
+        <location filename="../ui/upgradeDialog.ui" line="68"/>
         <source>Remember my choice</source>
         <translation>Husk mitt valg</translation>
     </message>
     <message>
-        <location filename="../ui/upgradeDialog.ui" line="76"/>
+        <location filename="../ui/upgradeDialog.ui" line="79"/>
         <source>Abort</source>
         <translation>Avbryt</translation>
     </message>
     <message>
-        <location filename="../ui/upgradeDialog.ui" line="100"/>
+        <location filename="../ui/upgradeDialog.ui" line="103"/>
         <source>Show packages...</source>
         <translation>Vis pakker...</translation>
     </message>
     <message>
-        <location filename="../ui/upgradeDialog.ui" line="117"/>
+        <location filename="../ui/upgradeDialog.ui" line="120"/>
         <source>Add to Queue</source>
         <translation>Legg til i kø</translation>
     </message>
     <message>
-        <location filename="../ui/upgradeDialog.ui" line="128"/>
+        <location filename="../ui/upgradeDialog.ui" line="131"/>
         <source>Upgrade Now</source>
         <translation>Oppgrader nå</translation>
     </message>
     <message>
-        <location filename="../ui/upgradeDialog.ui" line="150"/>
+        <location filename="../ui/upgradeDialog.ui" line="153"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -3153,7 +3158,7 @@ p, li { white-space: pre-wrap; }
         <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;￼p, li { white-space: pre-wrap; }￼&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;￼&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Systemoppgradering&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/upgradeDialog.ui" line="189"/>
+        <location filename="../ui/upgradeDialog.ui" line="192"/>
         <source>Packages to Upgrade</source>
         <translation>Pakker som skal oppgraderes</translation>
     </message>
