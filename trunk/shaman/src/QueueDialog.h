@@ -32,69 +32,69 @@
 
 class TrCommitThread : public QThread
 {
-public:
-	TrCommitThread(AlpmHandler *aH, bool fc);
-	void run();
-private:
-	AlpmHandler *aHandle;
-	bool force;
+    public:
+        TrCommitThread( AlpmHandler *aH, bool fc );
+        void run();
+    private:
+        AlpmHandler *aHandle;
+        bool force;
 };
 
 class QueueDialog : public QDialog, private Ui::transactionDialog
 {
-	Q_OBJECT
-	
-public:
-	explicit QueueDialog(AlpmHandler *hnd, QWidget *parent = 0);
-	~QueueDialog();
-	void startProcessing(bool force);
-	bool isScriptletRunning();
-	
-public slots:
-	void abortTransaction();
+        Q_OBJECT
 
-private slots:
-	void writeLineProgress();
-	void writeLineProgressErr();
+    public:
+        explicit QueueDialog( AlpmHandler *hnd, QWidget *parent = 0 );
+        ~QueueDialog();
+        void startProcessing( bool force );
+        bool isScriptletRunning();
 
-	void updateProgressBar(char *c, int bytedone, int bytetotal, int speed,
-			int listdone, int listtotal, int speedtotal);
-	void updateProgressBar(pmtransprog_t event, char *pkgname, int percent,
-			int howmany, int remain);
-	void startDownload();
-	void startProcess();
-	void cleanup();
+    public slots:
+        void abortTransaction();
 
-	void handlePreparingError(const QString &msg);
-	void handleCommittingError(const QString &msg);
+    private slots:
+        void writeLineProgress();
+        void writeLineProgressErr();
 
-	void handleAlpmMessage(const QString &msg);
+        void updateProgressBar( char *c, int bytedone, int bytetotal, int speed,
+                                int listdone, int listtotal, int speedtotal );
+        void updateProgressBar( pmtransprog_t event, char *pkgname, int percent,
+                                int howmany, int remain );
+        void startDownload();
+        void startProcess();
+        void cleanup();
 
-	void changeStatus(pmtransevt_t event, void *data1, void *data2);
+        void handlePreparingError( const QString &msg );
+        void handleCommittingError( const QString &msg );
 
-	void finishedScriptletRunning(int eC,QProcess::ExitStatus eS);
-	
-	void adjust(bool tgld);
-	
-signals:
-	void terminated(bool errors);
-	void streamTransactionProgress(int percent);
+        void handleAlpmMessage( const QString &msg );
 
-private:
-	bool runScriptlet(int action, const QString &p1N, const QString &p1V, 
-			const QString &pA, const QString &p2V);
+        void changeStatus( pmtransevt_t event, void *data1, void *data2 );
 
-	bool unpackPkg(const QString &pathToPkg, const QString &pathToEx, const QString &file);
-	bool checkScriptlet(const QString &path, const QString &action);
-	
-private:
-	AlpmHandler *aHandle;
-	TrCommitThread *cTh;
-	RootProcess *proc;
-	int status;
-	QString cwd;
-	bool scrRun;
-	bool errors;
+        void finishedScriptletRunning( int eC, QProcess::ExitStatus eS );
+
+        void adjust( bool tgld );
+
+    signals:
+        void terminated( bool errors );
+        void streamTransactionProgress( int percent );
+
+    private:
+        bool runScriptlet( int action, const QString &p1N, const QString &p1V,
+                           const QString &pA, const QString &p2V );
+
+        bool unpackPkg( const QString &pathToPkg, const QString &pathToEx, const QString &file );
+        bool checkScriptlet( const QString &path, const QString &action );
+
+    private:
+        AlpmHandler *aHandle;
+        TrCommitThread *cTh;
+        RootProcess *proc;
+        int status;
+        QString cwd;
+        bool scrRun;
+        bool errors;
 };
 
 #endif /*QUEUEDIALOG_H*/

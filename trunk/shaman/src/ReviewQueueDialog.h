@@ -29,26 +29,26 @@
 
 class ReviewQueueDialog : public QDialog, private Ui::QueueReadyDialog
 {
-	Q_OBJECT
-	
-public:
-	ReviewQueueDialog(AlpmHandler *hnd, MainWindow *parent);
-	virtual ~ReviewQueueDialog();
-	bool isInTray();
-	bool isTurnOff();
-	bool force();
-	
-public slots:
-	void processQueue();
-	
-private slots:
-	void adjust(bool tgld);
-	
-signals:
-	void goProcess();
-	
-private:
-	AlpmHandler *aHandle;
+        Q_OBJECT
+
+    public:
+        ReviewQueueDialog( AlpmHandler *hnd, MainWindow *parent );
+        virtual ~ReviewQueueDialog();
+        bool isInTray();
+        bool isTurnOff();
+        bool force();
+
+    public slots:
+        void processQueue();
+
+    private slots:
+        void adjust( bool tgld );
+
+    signals:
+        void goProcess();
+
+    private:
+        AlpmHandler *aHandle;
 
 };
 

@@ -33,44 +33,43 @@
 #include <KIcon>
 #include <KRun>
 
-ErrorView::ErrorView(Plasma::Applet *parent, const QString &message)
-: AbstractView(parent)
+ErrorView::ErrorView( Plasma::Applet *parent, const QString &message )
+        : AbstractView( parent )
 {
-    m_layout = static_cast <QGraphicsLinearLayout *> (parent->layout());
-    if (m_layout)
-    {
-        m_icon = new Plasma::Icon(KIcon("dialog-warning"), "");
+    m_layout = static_cast <QGraphicsLinearLayout *>( parent->layout() );
+    if ( m_layout ) {
+        m_icon = new Plasma::Icon( KIcon( "dialog-warning" ), "" );
 
         QLabel *errorLabel = new QLabel();
-        errorLabel->setStyleSheet("background-color: transparent; color: white");
-        errorLabel->setText(message);
-        errorLabel->setAlignment(Qt::AlignCenter);
+        errorLabel->setStyleSheet( "background-color: transparent; color: white" );
+        errorLabel->setText( message );
+        errorLabel->setAlignment( Qt::AlignCenter );
 
-        QPushButton *launchButton = new QPushButton(KIcon("kget"), "Launch Shaman");
-        launchButton->setAutoFillBackground(false);
+        QPushButton *launchButton = new QPushButton( KIcon( "kget" ), "Launch Shaman" );
+        launchButton->setAutoFillBackground( false );
 
-        m_proxyErrorLabel = new QGraphicsProxyWidget(parent);
-        m_proxyErrorLabel->setWidget(errorLabel);
+        m_proxyErrorLabel = new QGraphicsProxyWidget( parent );
+        m_proxyErrorLabel->setWidget( errorLabel );
 
-        m_proxyLaunchButton = new QGraphicsProxyWidget(parent);
-        m_proxyLaunchButton->setWidget(launchButton);
+        m_proxyLaunchButton = new QGraphicsProxyWidget( parent );
+        m_proxyLaunchButton->setWidget( launchButton );
 
-        m_layout->addItem(m_icon);
-        m_layout->addItem(m_proxyErrorLabel);
-        m_layout->addItem(m_proxyLaunchButton);
+        m_layout->addItem( m_icon );
+        m_layout->addItem( m_proxyErrorLabel );
+        m_layout->addItem( m_proxyLaunchButton );
 
-        connect(launchButton, SIGNAL(clicked()), SLOT(launchShaman()));
+        connect( launchButton, SIGNAL( clicked() ), SLOT( launchShaman() ) );
     }
 }
 
 ErrorView::~ErrorView()
 {
-    m_layout->removeItem(m_icon);
-    m_layout->removeItem(m_proxyErrorLabel);
-    m_layout->removeItem(m_proxyLaunchButton);
+    m_layout->removeItem( m_icon );
+    m_layout->removeItem( m_proxyErrorLabel );
+    m_layout->removeItem( m_proxyLaunchButton );
 
-    m_proxyErrorLabel->setWidget(0);
-    m_proxyLaunchButton->setWidget(0);
+    m_proxyErrorLabel->setWidget( 0 );
+    m_proxyLaunchButton->setWidget( 0 );
 
     delete m_proxyErrorLabel;
     delete m_proxyLaunchButton;
@@ -79,8 +78,8 @@ ErrorView::~ErrorView()
 
 void ErrorView::launchShaman()
 {
-    QProcess *shamanProcess = new QProcess(this);
-    shamanProcess->startDetached("shaman");
+    QProcess *shamanProcess = new QProcess( this );
+    shamanProcess->startDetached( "shaman" );
 }
 
 #include "ErrorView.moc"

@@ -26,56 +26,57 @@
 #include "AlpmHandler.h"
 #include <QPointer>
 
-namespace ShamanIcon {
+namespace ShamanIcon
+{
 
-	enum IconStatus {
-		IdleIcon,
-		UpgradesAvailableIcon,
-		ProcessingIcon
-	};
+enum IconStatus {
+    IdleIcon,
+    UpgradesAvailableIcon,
+    ProcessingIcon
+};
 
 }  // namespace ShamanIcon
 
 
 class ShamanTrayIcon : public KAnimatedSystemTrayIcon
 {
-	Q_OBJECT
-	
-public:
-	explicit ShamanTrayIcon(MainWindow *mW, AlpmHandler *aH);
-	virtual ~ShamanTrayIcon();
-	
-public slots:
-	void changeIconStatus(ShamanIcon::IconStatus status);
-	void dbUpdateTray();
-	void startTimer();
-	void stopTimer();
-	void changeTimerInterval();
-	void newNewsAvailable();
-	void newsFetchingFailed();
-	void resetTimerAt();
-	
-private slots:
-	void transactionStarted();
-	void transactionReleased();
-	void enableTrayActions();
-	void disableTrayActions();
-	void disconnectBaloon();
-	void timerAtElapsed();
-	void enableTimer();
-	void enableTimerAt();
-	
-signals:
-	void startDbUpdate();
-	void upgradePkgs();
-	
-private:
-	MainWindow *mainWin;
-	AlpmHandler *aHandle;
-	QPointer<QTimer> trayUpDb;
-	QPointer<QTimer> trayUpDbAt;
-	QList<QAction *> systrayAct;
-	
+        Q_OBJECT
+
+    public:
+        explicit ShamanTrayIcon( MainWindow *mW, AlpmHandler *aH );
+        virtual ~ShamanTrayIcon();
+
+    public slots:
+        void changeIconStatus( ShamanIcon::IconStatus status );
+        void dbUpdateTray();
+        void startTimer();
+        void stopTimer();
+        void changeTimerInterval();
+        void newNewsAvailable();
+        void newsFetchingFailed();
+        void resetTimerAt();
+
+    private slots:
+        void transactionStarted();
+        void transactionReleased();
+        void enableTrayActions();
+        void disableTrayActions();
+        void disconnectBaloon();
+        void timerAtElapsed();
+        void enableTimer();
+        void enableTimerAt();
+
+    signals:
+        void startDbUpdate();
+        void upgradePkgs();
+
+    private:
+        MainWindow *mainWin;
+        AlpmHandler *aHandle;
+        QPointer<QTimer> trayUpDb;
+        QPointer<QTimer> trayUpDbAt;
+        QList<QAction *> systrayAct;
+
 };
 
 #endif /*SHAMANTRAYICON_H*/

@@ -29,29 +29,29 @@
 
 class SysUpgradeDialog : public QDialog, private Ui::upgradeDialog
 {
-	Q_OBJECT
-	
-public:
-	explicit SysUpgradeDialog(AlpmHandler *hnd, QWidget *parent = 0);
-	~SysUpgradeDialog();
-	
-	bool force();
-	
-	void init();
-	
-private slots:
-	void abort();
-	void initSysUpgrade();
-	void addPkg();
-	void adjust(bool tgld);
-	
-signals:
-	void aborted();
-	void upgradeNow();
-	void addToPkgQueue();
-	
-private:
-	AlpmHandler *aHandle;
+        Q_OBJECT
+
+    public:
+        explicit SysUpgradeDialog( AlpmHandler *hnd, QWidget *parent = 0 );
+        ~SysUpgradeDialog();
+
+        bool force();
+
+        void init();
+
+    private slots:
+        void abort();
+        void initSysUpgrade();
+        void addPkg();
+        void adjust( bool tgld );
+
+    signals:
+        void aborted();
+        void upgradeNow();
+        void addToPkgQueue();
+
+    private:
+        AlpmHandler *aHandle;
 };
 
 #endif /*SYSUPGRADEDIALOG_H*/

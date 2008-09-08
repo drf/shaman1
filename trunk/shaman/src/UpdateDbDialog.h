@@ -32,57 +32,57 @@
 
 class UpDbThread : public QThread
 {
-public:
-	UpDbThread(AlpmHandler *aH);
-	void run();
-	bool getResult();
-private:
-	AlpmHandler *aHandle;
-	bool result;
+    public:
+        UpDbThread( AlpmHandler *aH );
+        void run();
+        bool getResult();
+    private:
+        AlpmHandler *aHandle;
+        bool result;
 };
 
 class UpdateDbDialog : public QDialog, private Ui::dbUpdateDialog
 {
-	Q_OBJECT
-	
-public:
-	explicit UpdateDbDialog(AlpmHandler *hnd, QWidget *parent = 0);
-	~UpdateDbDialog();
-	
-	bool dbHasBeenUpdated();
-	bool anyErrors();
+        Q_OBJECT
 
-public slots:
-	void doAction();
-	QStringList getUpdatedRepos();
-		
-private slots:
-	void updateLabel(const QString &repo, int action);
-	//void updateDlProg(float bytetotal, float bytedled, float speed);
-	void createWidgets(const QStringList &list);
-	void updateTotalProg();
-	void setUpdated(const QString &dbname);
-	void scopeEnded();
-	void updateDlBar(char *c, int bytedone, int bytetotal, int speed,
-			int i, int j, int k);
-	
-signals:
-	void killMe();
-	void updateRepo(const QString &dbname);
-	void pBar(int val);
-	
-private:
-	int currentAction;
-	char *currentRepo;
-	int actionDone;
-	int totalAction;
-	bool updated;
-	AlpmHandler *aHandle;
-	bool errorsOccourred;
-	UpDbThread *dbth;
-	QList<QLabel *> labelList;
-	QStringList updatedRepos;
-	
+    public:
+        explicit UpdateDbDialog( AlpmHandler *hnd, QWidget *parent = 0 );
+        ~UpdateDbDialog();
+
+        bool dbHasBeenUpdated();
+        bool anyErrors();
+
+    public slots:
+        void doAction();
+        QStringList getUpdatedRepos();
+
+    private slots:
+        void updateLabel( const QString &repo, int action );
+        //void updateDlProg(float bytetotal, float bytedled, float speed);
+        void createWidgets( const QStringList &list );
+        void updateTotalProg();
+        void setUpdated( const QString &dbname );
+        void scopeEnded();
+        void updateDlBar( char *c, int bytedone, int bytetotal, int speed,
+                          int i, int j, int k );
+
+    signals:
+        void killMe();
+        void updateRepo( const QString &dbname );
+        void pBar( int val );
+
+    private:
+        int currentAction;
+        char *currentRepo;
+        int actionDone;
+        int totalAction;
+        bool updated;
+        AlpmHandler *aHandle;
+        bool errorsOccourred;
+        UpDbThread *dbth;
+        QList<QLabel *> labelList;
+        QStringList updatedRepos;
+
 };
 
 #endif /*UPDATEDBDIALOG_H*/

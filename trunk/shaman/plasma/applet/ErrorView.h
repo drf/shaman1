@@ -21,9 +21,10 @@
 #ifndef ERRORVIEW_H
 #define ERRORVIEW_H
 
-namespace Plasma {
-    class Applet;
-    class Icon;
+namespace Plasma
+{
+class Applet;
+class Icon;
 }
 
 #include "AbstractView.h"
@@ -33,20 +34,20 @@ class QGraphicsProxyWidget;
 
 class ErrorView : public AbstractView
 {
-    Q_OBJECT
-    
-public:
-	ErrorView(Plasma::Applet *parent, const QString &message);
-	virtual ~ErrorView();
-	
-private slots:
-    void launchShaman();
+        Q_OBJECT
 
-private:
-    QGraphicsLinearLayout *m_layout;
-    QGraphicsProxyWidget *m_proxyErrorLabel;
-    QGraphicsProxyWidget *m_proxyLaunchButton;
-    Plasma::Icon *m_icon;
+    public:
+        ErrorView( Plasma::Applet *parent, const QString &message );
+        virtual ~ErrorView();
+
+    private slots:
+        void launchShaman();
+
+    private:
+        QGraphicsLinearLayout *m_layout;
+        QGraphicsProxyWidget *m_proxyErrorLabel;
+        QGraphicsProxyWidget *m_proxyLaunchButton;
+        Plasma::Icon *m_icon;
 };
 
 #endif /*ERRORVIEW_H*/

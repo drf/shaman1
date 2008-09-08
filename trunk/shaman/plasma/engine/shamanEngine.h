@@ -32,55 +32,55 @@ static const uint MINIMUM_UPDATE_INTERVAL = 1000;
 
 class ShamanEngine : public Plasma::DataEngine
 {
-Q_OBJECT
-Q_PROPERTY(uint refreshTime READ refreshTime WRITE setRefreshTime)
-public:
-    ShamanEngine(QObject* parent, const QVariantList &args);
-    ~ShamanEngine();
+        Q_OBJECT
+        Q_PROPERTY( uint refreshTime READ refreshTime WRITE setRefreshTime )
+    public:
+        ShamanEngine( QObject* parent, const QVariantList &args );
+        ~ShamanEngine();
 
-    QStringList sources() const;
+        QStringList sources() const;
 
-    void setRefreshTime(uint time);
-    uint refreshTime() const;
+        void setRefreshTime( uint time );
+        uint refreshTime() const;
 
-protected:
-    bool sourceRequestEvent(const QString &name);
-    bool updateSourceEvent(const QString& source);
+    protected:
+        bool sourceRequestEvent( const QString &name );
+        bool updateSourceEvent( const QString& source );
 
-private slots:
-    void getShamanData(const QString &name);
-    void updateShamanData();
-    void connectDBusSlots();
-    void dbUpdate(const QString &repo, int action);
-    void actionChanged(const QString &action);
-    void dlProg(const QString &filename, int singlePercent, int singleSpeed,
-                                         int totalPercent, int totalSpeed);
-    void transProg(int percent);
-    void transactionStarted();
-    void transactionReleased();
+    private slots:
+        void getShamanData( const QString &name );
+        void updateShamanData();
+        void connectDBusSlots();
+        void dbUpdate( const QString &repo, int action );
+        void actionChanged( const QString &action );
+        void dlProg( const QString &filename, int singlePercent, int singleSpeed,
+                     int totalPercent, int totalSpeed );
+        void transProg( int percent );
+        void transactionStarted();
+        void transactionReleased();
 
-private:
-    bool isDBusServiceRegistered();
+    private:
+        bool isDBusServiceRegistered();
 
-    QDBusConnection dbus;
-    QString currentAction;
-    bool dbusError;
-    bool slotsAreConnected;
+        QDBusConnection dbus;
+        QString currentAction;
+        bool dbusError;
+        bool slotsAreConnected;
 
-    QString curitm;
-    int curitmAct;
+        QString curitm;
+        int curitmAct;
 
-    int singleDlPercent;
-    int singleDlSpd;
-    int totalDlPercent;
-    int totalDlSpd;
+        int singleDlPercent;
+        int singleDlSpd;
+        int totalDlPercent;
+        int totalDlSpd;
 
-    int transactionPercent;
+        int transactionPercent;
 
-    bool onTransaction;
-    bool onDownloading;
+        bool onTransaction;
+        bool onDownloading;
 };
 
-K_EXPORT_PLASMA_DATAENGINE(shaman, ShamanEngine)
+K_EXPORT_PLASMA_DATAENGINE( shaman, ShamanEngine )
 
 #endif

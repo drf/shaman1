@@ -26,27 +26,27 @@
 
 class LocalPackageDialog : public QDialog, private Ui::LocalPackage
 {
-    Q_OBJECT
+        Q_OBJECT
 
-public:
-	explicit LocalPackageDialog(AlpmHandler *aH, QWidget *parent = 0);
-	virtual ~LocalPackageDialog();
+    public:
+        explicit LocalPackageDialog( AlpmHandler *aH, QWidget *parent = 0 );
+        virtual ~LocalPackageDialog();
 
-	void loadPackage(pmpkg_t *pkg, const QString &fname);
+        void loadPackage( pmpkg_t *pkg, const QString &fname );
 
-private slots:
-	void adjust(bool tgld);
+    private slots:
+        void adjust( bool tgld );
 
-	void showDetails();
-	void goInstall();
+        void showDetails();
+        void goInstall();
 
-signals:
-    void queueReady();
+    signals:
+        void queueReady();
 
-private:
-    AlpmHandler *aHandle;
-    pmpkg_t *package;
-    QString filename;
+    private:
+        AlpmHandler *aHandle;
+        pmpkg_t *package;
+        QString filename;
 
 };
 

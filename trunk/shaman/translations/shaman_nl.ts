@@ -3,27 +3,27 @@
 <context>
     <name>AlpmHandler</name>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1097"/>
+        <location filename="../src/AlpmHandler.cpp.orig" line="1097"/>
         <source>: requires </source>
         <translation>: vereist</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1107"/>
+        <location filename="../src/AlpmHandler.cpp.orig" line="1107"/>
         <source>: conflicts with </source>
         <translation>: conflicteert met</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1161"/>
+        <location filename="../src/AlpmHandler.cpp.orig" line="1161"/>
         <source>Alpm did not give further details.</source>
         <translation>Alpm geeft geen verdere details.</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1134"/>
+        <location filename="../src/AlpmHandler.cpp.orig" line="1134"/>
         <source>%1 exists in both &apos;%2&apos; and &apos;%3&apos;</source>
         <translation>%1 bestaat zowel in &apos;%2&apos; en &apos;%3&apos;</translation>
     </message>
     <message>
-        <location filename="../src/AlpmHandler.cpp" line="1142"/>
+        <location filename="../src/AlpmHandler.cpp.orig" line="1142"/>
         <source>: %1 exists in filesystem</source>
         <translation>: %1 bestaat al in het bestandssysteem</translation>
     </message>
@@ -31,84 +31,84 @@
 <context>
     <name>BuildingDialog</name>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="51"/>
+        <location filename="../src/BuildingDialog.cpp.orig" line="51"/>
         <source>Error</source>
         <translation>Fout</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="52"/>
+        <location filename="../src/BuildingDialog.cpp.orig" line="52"/>
         <source>Would you like to abort building?.
 All Process will be lost.</source>
         <translation>Wilt u het bouwen van het pakket afsluiten?
 Alle vooruitgang zal verloren gaan.</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="71"/>
+        <location filename="../src/BuildingDialog.cpp.orig" line="71"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Building Process Aborted by the User. Building Failed.&lt;/b&gt;</source>
         <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Pakketbouw afgesloten door gebruiker. Pakketbouw mislukt.&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="89"/>
+        <location filename="../src/BuildingDialog.cpp.orig" line="89"/>
         <source>Updating ABS Tree...</source>
         <translation>ABS lijst wordt geupdate...</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="92"/>
+        <location filename="../src/BuildingDialog.cpp.orig" line="92"/>
         <source>&lt;b&gt;Starting ABS Tree Update...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
         <translation>&lt;b&gt;Begin met updaten van ABS lijst...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="199"/>
+        <location filename="../src/BuildingDialog.cpp.orig" line="199"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;ABS Tree Was Successfully Updated!&lt;/b&gt;</source>
         <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;ABS lijst werd succesvol geupdate !&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="207"/>
+        <location filename="../src/BuildingDialog.cpp.orig" line="207"/>
         <source>ABS Update</source>
         <translation>ABS Update</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="201"/>
+        <location filename="../src/BuildingDialog.cpp.orig" line="201"/>
         <source>Your ABS Tree was updated!</source>
         <translation>Uw ABS lijst werd geupdate!</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="207"/>
+        <location filename="../src/BuildingDialog.cpp.orig" line="207"/>
         <source>Could not update the ABS Tree!</source>
         <translation>Kon ABS lijst niet updaten!</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="220"/>
+        <location filename="../src/BuildingDialog.cpp.orig" line="220"/>
         <source>&lt;b&gt;Building %1 failed!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
         <translation>&lt;b&gt;Bouw van %1 mislukt!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="225"/>
+        <location filename="../src/BuildingDialog.cpp.orig" line="225"/>
         <source>&lt;b&gt;%1 was built successfully!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
         <translation>&lt;b&gt;%1 is succesvol gecreëerd!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="280"/>
+        <location filename="../src/BuildingDialog.cpp.orig" line="280"/>
         <source>Processing Package %1 of %2...</source>
         <translation>Pakket %1 van %2 aan het verwerken...</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="281"/>
+        <location filename="../src/BuildingDialog.cpp.orig" line="281"/>
         <source>Building %1...</source>
         <translation>%1 aan het bouwen...</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="287"/>
+        <location filename="../src/BuildingDialog.cpp.orig" line="287"/>
         <source>&lt;b&gt;Could not set up the environment correctly for %1!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
         <translation>&lt;b&gt;Kon de omgeving voor %1 niet correct bepalen!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="309"/>
+        <location filename="../src/BuildingDialog.cpp.orig" line="309"/>
         <source>&lt;b&gt;Building %1...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
         <translation>&lt;b&gt;%1 aan het bouwen...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="334"/>
+        <location filename="../src/BuildingDialog.cpp.orig" line="334"/>
         <source>&lt;b&gt;Building operation has started.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
         <translation>&lt;b&gt;Begonnen met bouwen van pakket.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
@@ -116,26 +116,26 @@ Alle vooruitgang zal verloren gaan.</translation>
 <context>
     <name>BuildingHandler</name>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="306"/>
+        <location filename="../src/BuildingHandler.cpp.orig" line="306"/>
         <source>Error</source>
         <translation>Fout</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="87"/>
+        <location filename="../src/BuildingHandler.cpp.orig" line="87"/>
         <source>You need to have ABS installed to use Shaman&apos;s
 building feature. Do you want to install it now?</source>
         <translation>Om Shaman&apos;s pakketbouw functie te gebruiken 
 moet u ABS geïnstalleerd hebben. Nu installeren?</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="117"/>
+        <location filename="../src/BuildingHandler.cpp.orig" line="117"/>
         <source>You can not remove packages when processing
 your queue from Source</source>
         <translation>U kan geen pakketten verwijderen tijdens het
 bewerken van uw broncode-wachtrij</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="129"/>
+        <location filename="../src/BuildingHandler.cpp.orig" line="129"/>
         <source>Some of your packages do not belong to Arch
 Linux&apos;s official repository. Shaman is able to
 build packages from official sources only.</source>
@@ -154,71 +154,71 @@ pakketten bouwen uit officiële bron.</translation>
         <translation type="obsolete">U staat op het punt &lt;b&gt;%1 pakketten&lt;/b&gt; vanuit broncode te installeren. Installeren uit broncode &lt;br&gt;kan enkele voordelen hebben, maar is zeer traag.&lt;br&gt; Als u niet zeker bent, wilt u waarschijnlijk binaire paketten&lt;br&gt; gebruiken. Voor u doorgaat; adviseren we u om uw&lt;br&gt; configuratie opnieuw te bekijken zodat pakketbouw sneller verloopt.</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="184"/>
+        <location filename="../src/BuildingHandler.cpp.orig" line="184"/>
         <source>To be Installed</source>
         <translation>Te installeren</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="191"/>
+        <location filename="../src/BuildingHandler.cpp.orig" line="191"/>
         <source>To be Upgraded</source>
         <translation>Bij te werken</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="334"/>
+        <location filename="../src/BuildingHandler.cpp.orig" line="334"/>
         <source>Package Building</source>
         <translation>Pakket aan het bouwen</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="288"/>
+        <location filename="../src/BuildingHandler.cpp.orig" line="288"/>
         <source>Your Packages failed to build!</source>
         <translation>De bouw van uw pakket is mislukt!</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="291"/>
+        <location filename="../src/BuildingHandler.cpp.orig" line="291"/>
         <source>Your packages Failed to Build.
 Look at the output for more details.</source>
         <translation>De bouw van uw pakket is mislukt.
 Bekijk de output voor meer details.</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="313"/>
+        <location filename="../src/BuildingHandler.cpp.orig" line="313"/>
         <source>Close</source>
         <translation>Sluiten</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="303"/>
+        <location filename="../src/BuildingHandler.cpp.orig" line="303"/>
         <source>Building Packages Failed!!</source>
         <translation>De bouw van uw paketten is mislukt!</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="307"/>
+        <location filename="../src/BuildingHandler.cpp.orig" line="307"/>
         <source>Some packages failed to build.
 Do you want to proceed anyway?</source>
         <translation>Sommige pakketten konden niet gecreëerd worden.
 Toch verdergaan?</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="329"/>
+        <location filename="../src/BuildingHandler.cpp.orig" line="329"/>
         <source>Install Built Packages</source>
         <translation>Installeer de gecreëerde pakketten</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="330"/>
+        <location filename="../src/BuildingHandler.cpp.orig" line="330"/>
         <source>Close Without Installing</source>
         <translation>Sluit zonder te installeren</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="331"/>
+        <location filename="../src/BuildingHandler.cpp.orig" line="331"/>
         <source>Packages Built Successfully!</source>
         <translation>Pakketten succesvol gecreëerd!</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="335"/>
+        <location filename="../src/BuildingHandler.cpp.orig" line="335"/>
         <source>Your Packages have been built successfully, and are ready to be installed</source>
         <translation>Uw pakketten zijn succesvol gecreëerd, en kunnen geïnstalleerd worden</translation>
     </message>
     <message numerus="yes">
-        <location filename="../src/BuildingHandler.cpp" line="166"/>
+        <location filename="../src/BuildingHandler.cpp.orig" line="166"/>
         <source>You are about to install &lt;b&gt;%n package(s)&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -229,47 +229,47 @@ Toch verdergaan?</translation>
 <context>
     <name>CallBacks</name>
     <message>
-        <location filename="../src/callbacks.cpp" line="113"/>
+        <location filename="../src/callbacks.cpp.orig" line="113"/>
         <source>%1 requires installing %2 from IgnorePkg/IgnoreGroup.
  Install anyway?</source>
         <translation>%1 vereist de installatie van %2 uit de IgnorePkg/IgnoreGroup.
       Toch installeren?</translation>
     </message>
     <message>
-        <location filename="../src/callbacks.cpp" line="116"/>
+        <location filename="../src/callbacks.cpp.orig" line="116"/>
         <source>%1 is in IgnorePkg/IgnoreGroup.
  Install anyway?</source>
         <translation>%1 is vermeld in IgnorePkg/IgnoreGroup.
       Toch installeren?</translation>
     </message>
     <message>
-        <location filename="../src/callbacks.cpp" line="120"/>
+        <location filename="../src/callbacks.cpp.orig" line="120"/>
         <source>%1 is designated as a HoldPkg.
  Remove anyway?</source>
         <translation>%1 is vermeld in HoldPkg.
       Toch verwijderen?</translation>
     </message>
     <message>
-        <location filename="../src/callbacks.cpp" line="123"/>
+        <location filename="../src/callbacks.cpp.orig" line="123"/>
         <source>Replace %1 with %2/%3?</source>
         <translation>%1 vervangen door %2/%3?</translation>
     </message>
     <message>
-        <location filename="../src/callbacks.cpp" line="127"/>
+        <location filename="../src/callbacks.cpp.orig" line="127"/>
         <source>%1 conflicts with %2.
 Remove %3?</source>
         <translation>%1 conflicteert met %2.
 %3 verwijderen?</translation>
     </message>
     <message>
-        <location filename="../src/callbacks.cpp" line="131"/>
+        <location filename="../src/callbacks.cpp.orig" line="131"/>
         <source>%1-%2: local version is newer.
 Upgrade anyway?</source>
         <translation>%1-%2: lokale versie is recenter.
 Toch vernieuwen?</translation>
     </message>
     <message>
-        <location filename="../src/callbacks.cpp" line="135"/>
+        <location filename="../src/callbacks.cpp.orig" line="135"/>
         <source>File %1 is corrupted.
 Do you want to delete it?</source>
         <translation>Bestand %1 is corrupt.
@@ -279,152 +279,152 @@ Wilt u het verwijderen?</translation>
 <context>
     <name>ConfigDialog</name>
     <message>
-        <location filename="../src/configDialog.cpp" line="119"/>
+        <location filename="../src/configDialog.cpp.orig" line="119"/>
         <source>General</source>
         <translation>Algemeen</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="652"/>
+        <location filename="../src/configDialog.cpp.orig" line="653"/>
         <source>Clean Unused Databases</source>
         <translation>Niet-gebruikte databases opruimen</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="664"/>
+        <location filename="../src/configDialog.cpp.orig" line="665"/>
         <source>Clean Cache</source>
         <translation>Cache opruimen</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="676"/>
+        <location filename="../src/configDialog.cpp.orig" line="677"/>
         <source>Empty Cache</source>
         <translation>Cache leegmaken</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="688"/>
+        <location filename="../src/configDialog.cpp.orig" line="689"/>
         <source>Optimize Pacman Database</source>
         <translation>Pacman Database optimaliseren</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="706"/>
+        <location filename="../src/configDialog.cpp.orig" line="707"/>
         <source>Clean All Building Environments</source>
         <translation>Alle ontwikkelomgevingen opruimen</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="185"/>
+        <location filename="../src/configDialog.cpp.orig" line="186"/>
         <source>Repositories</source>
         <translation>Repositories</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="335"/>
+        <location filename="../src/configDialog.cpp.orig" line="336"/>
         <source>Pacman</source>
         <translation>Pacman</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="407"/>
+        <location filename="../src/configDialog.cpp.orig" line="408"/>
         <source>ABS</source>
         <translation>ABS</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="450"/>
+        <location filename="../src/configDialog.cpp.orig" line="451"/>
         <source>Advanced</source>
         <translation>Geavanceerd</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="590"/>
+        <location filename="../src/configDialog.cpp.orig" line="591"/>
         <source>Enter Here the Repository&apos;s Name</source>
         <translation>Voer hier de naam van de repository in</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="592"/>
+        <location filename="../src/configDialog.cpp.orig" line="593"/>
         <source>Enter Here the Repository&apos;s Server</source>
         <translation>Voer hier het server-adres van de repository in</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1238"/>
+        <location filename="../ui/configDialog.ui" line="1245"/>
         <source>Ok</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1255"/>
+        <location filename="../ui/configDialog.ui" line="1262"/>
         <source>Cancel</source>
         <translation>Annuleren</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="657"/>
+        <location filename="../src/configDialog.cpp.orig" line="658"/>
         <source>Cleaning up unused Databases...</source>
         <translation>Bezig met opruimen van ongebruikte databases...</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="669"/>
+        <location filename="../src/configDialog.cpp.orig" line="670"/>
         <source>Cleaning up Cache...</source>
         <translation>Bezig met opruimen van Cache...</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="681"/>
+        <location filename="../src/configDialog.cpp.orig" line="682"/>
         <source>Deleting Cache...</source>
         <translation>Bezig met verwijderen van Cache...</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="696"/>
+        <location filename="../src/configDialog.cpp.orig" line="697"/>
         <source>Optimizing Pacman Database...</source>
         <translation>Pacman database aan het optimaliseren...</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="711"/>
+        <location filename="../src/configDialog.cpp.orig" line="712"/>
         <source>Cleaning up building Environments...</source>
         <translation>Bezig met opruimen van ontwikkelomgevingen...</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="728"/>
+        <location filename="../src/configDialog.cpp.orig" line="729"/>
         <source>Cleaning up Unused Databases Failed!</source>
         <translation>Opruimen van ongebruikte databases mislukt!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="733"/>
+        <location filename="../src/configDialog.cpp.orig" line="734"/>
         <source>Cleaning up Cache Failed!</source>
         <translation>Opruimen van Cache mislukt!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="738"/>
+        <location filename="../src/configDialog.cpp.orig" line="739"/>
         <source>Deleting Cache Failed!</source>
         <translation>Verwijderen van Cache mislukt!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="743"/>
+        <location filename="../src/configDialog.cpp.orig" line="744"/>
         <source>Could not clean Build Environments!!</source>
         <translation>Kon ontwikkelomgevingen niet opruimen!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="759"/>
+        <location filename="../src/configDialog.cpp.orig" line="760"/>
         <source>Unused Databases Cleaned up successfully!</source>
         <translation>Ongebruikte databases succesvol opgeruimd!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="765"/>
+        <location filename="../src/configDialog.cpp.orig" line="766"/>
         <source>Cache Cleaned Up Successfully!</source>
         <translation>Cache succesvol opgeruimd!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="771"/>
+        <location filename="../src/configDialog.cpp.orig" line="772"/>
         <source>Cache Successfully Deleted!</source>
         <translation>Cache succesvol verwijderd!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="777"/>
+        <location filename="../src/configDialog.cpp.orig" line="778"/>
         <source>Build Environments Successfully Cleaned!</source>
         <translation>Ontwikkelomgevingen succesvol opgeruimd!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1211"/>
+        <location filename="../src/configDialog.cpp.orig" line="1212"/>
         <source>Saving Configuration</source>
         <translation>Bezig met opslaan van de configuratie</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="824"/>
+        <location filename="../src/configDialog.cpp.orig" line="825"/>
         <source>Unable to save Pacman configuration!</source>
         <translation>Kan Pacman-configuratie niet opslaan!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1212"/>
+        <location filename="../src/configDialog.cpp.orig" line="1213"/>
         <source>Some of your changes have not been applied,
 since alpm needs to be released.
 You need to restart Shaman to make them effective.</source>
@@ -433,24 +433,24 @@ omdat alpm opnieuw moet worden opgestart.
 Herstart Shaman om uw veranderingen door te voeren.</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1221"/>
+        <location filename="../src/configDialog.cpp.orig" line="1222"/>
         <source>Settings Changed</source>
         <translation>Instellingen gewijzigd</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1222"/>
+        <location filename="../src/configDialog.cpp.orig" line="1223"/>
         <source>Your repositories have changed.
 Do you want to Update Your Database?</source>
         <translation>Uw repositories zijn veranderd.
 Wilt u uw database updaten?</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="676"/>
+        <location filename="../ui/configDialog.ui" line="683"/>
         <source>Add Mirror</source>
         <translation>Voeg spiegelserver toe</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1309"/>
+        <location filename="../src/configDialog.cpp.orig" line="1311"/>
         <source>Mirror Format is incorrect. Your mirror should look like this:
 http://mirror.org/$repo/os/i686</source>
         <comment>Obviously keep the example as it is ;)</comment>
@@ -458,7 +458,7 @@ http://mirror.org/$repo/os/i686</source>
 http://mirror.org/$repo/os/i686</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1338"/>
+        <location filename="../src/configDialog.cpp.orig" line="1340"/>
         <source>Your Mirror was successfully added!
 It is now available in mirrorlist.</source>
         <comment>mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.</comment>
@@ -466,54 +466,54 @@ It is now available in mirrorlist.</source>
 De server is beschikbaar in mirrorlist.</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1355"/>
+        <location filename="../src/configDialog.cpp.orig" line="1357"/>
         <source>Mirror Format is incorrect. Your mirror should look like this:
 http://mirror.org/$repo/$arch</source>
         <comment>Obviously keep the example as it is ;)</comment>
         <translation>Incorrecte invoer spiegelserver. Input moet er als volgt uitzien:http://mirror.org/$repo/$arch</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1392"/>
+        <location filename="../src/configDialog.cpp.orig" line="1394"/>
         <source>Your Mirror was successfully added!
 It is now available in kdemodmirrorlist.</source>
         <comment>mirrorlist here means /etc/pacman.d/kdemodmirrorlist, so it should not be translated.</comment>
         <translation>Uw spiegelserver werd succesvol toegevoegd!De server is beschikbaar in kdemodmirrorlist.</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1424"/>
+        <location filename="../src/configDialog.cpp.orig" line="1426"/>
         <source>Pacman Database Optimized Successfully!</source>
         <translation>Pacman database succesvol geoptimaliseerd!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1430"/>
+        <location filename="../src/configDialog.cpp.orig" line="1432"/>
         <source>Could not Optimize Pacman Database!</source>
         <translation>Kon Pacman database niet optimaliseren!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1438"/>
+        <location filename="../src/configDialog.cpp.orig" line="1440"/>
         <source>Running sync...</source>
         <comment>sync is a command, so it should not be translated</comment>
         <translation>sync aan het uitvoeren...</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1448"/>
+        <location filename="../src/configDialog.cpp.orig" line="1450"/>
         <source>Operation Completed Successfully!</source>
         <translation>Operatie succesvol uitgevoerd!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1447"/>
+        <location filename="../src/configDialog.cpp.orig" line="1449"/>
         <source>Sync was successfully executed!!</source>
         <comment>Sync is always the command</comment>
         <translation>Sync succesvol uitgevoerd!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1452"/>
+        <location filename="../src/configDialog.cpp.orig" line="1454"/>
         <source>Sync could not be executed!</source>
         <comment>Sync is always the command</comment>
         <translation>Sync kon niet worden uitgevoerd!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1453"/>
+        <location filename="../src/configDialog.cpp.orig" line="1455"/>
         <source>Sync could not be executed!!</source>
         <comment>Sync is always the command</comment>
         <translation>Sync kon niet worden uitgevoerd!!</translation>
@@ -574,23 +574,23 @@ It is now available in kdemodmirrorlist.</source>
         <translation>Toon Splashscreen</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="184"/>
+        <location filename="../ui/configDialog.ui" line="191"/>
         <source>Maintenance</source>
         <translation>Onderhoud</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="203"/>
+        <location filename="../ui/configDialog.ui" line="210"/>
         <source>Process Selected</source>
         <translation>Proces geselecteerd</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="231"/>
+        <location filename="../ui/configDialog.ui" line="238"/>
         <source>Waiting</source>
         <comment>Waiting for a user action</comment>
         <translation>Aan het wachten</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="249"/>
+        <location filename="../ui/configDialog.ui" line="256"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -605,67 +605,67 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Kies aub een mogelijkheid uit het Drop-Down Menu&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="276"/>
+        <location filename="../ui/configDialog.ui" line="283"/>
         <source>Checkable Options</source>
         <translation>Aanvinkbare opties</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="282"/>
+        <location filename="../ui/configDialog.ui" line="289"/>
         <source>Use Active FTP</source>
         <translation>Gebruik actieve FTP</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="289"/>
+        <location filename="../ui/configDialog.ui" line="296"/>
         <source>Use Deltas (needs xdelta to be installed)</source>
         <translation>Gebruik Deltas (xdelta moet geïnstalleerd zijn)</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="296"/>
+        <location filename="../ui/configDialog.ui" line="303"/>
         <source>Use SysLog</source>
         <translation>Gebruik Syslog</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="306"/>
+        <location filename="../ui/configDialog.ui" line="313"/>
         <source>Advanced Options</source>
         <translation>Geavanceerde Opties</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="316"/>
+        <location filename="../ui/configDialog.ui" line="323"/>
         <source>HoldPkgs:</source>
         <translation>HoldPkgs:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="326"/>
+        <location filename="../ui/configDialog.ui" line="333"/>
         <source>IgnorePkgs:</source>
         <translation>IgnorePkgs:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="336"/>
+        <location filename="../ui/configDialog.ui" line="343"/>
         <source>IgnoreGroups:</source>
         <translation>IgnoreGroups:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="346"/>
+        <location filename="../ui/configDialog.ui" line="353"/>
         <source>NoUpgrade:</source>
         <translation>NoUpgrade:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="356"/>
+        <location filename="../ui/configDialog.ui" line="363"/>
         <source>NoExtract:</source>
         <translation>NoExtract:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="366"/>
+        <location filename="../ui/configDialog.ui" line="373"/>
         <source>Log File:</source>
         <translation>Logbestand:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="380"/>
+        <location filename="../ui/configDialog.ui" line="387"/>
         <source>XFerCommand: (example: /path/to/command %u) Blank for Default</source>
         <translation>XFerCommand: (bijvoorbeeld: /pad/naar/opdracht %u) Laat leeg voor standaard</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="418"/>
+        <location filename="../ui/configDialog.ui" line="425"/>
         <source>Arch Linux Official Repositories</source>
         <translation>Arch Linux Officiële Repositories</translation>
     </message>
@@ -677,47 +677,47 @@ Please note that packages from Unstable and Testing may break your system.</sour
 Opgelet: paketten uit Unstable en Testing kunnen uw systeem beschadigen.</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="465"/>
+        <location filename="../ui/configDialog.ui" line="472"/>
         <source>Core</source>
         <comment>Do not translate</comment>
         <translation>Core</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="472"/>
+        <location filename="../ui/configDialog.ui" line="479"/>
         <source>Extra</source>
         <comment>Do not translate</comment>
         <translation>Extra</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="479"/>
+        <location filename="../ui/configDialog.ui" line="486"/>
         <source>Community</source>
         <comment>Do not translate</comment>
         <translation>Community</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="486"/>
+        <location filename="../ui/configDialog.ui" line="493"/>
         <source>Testing</source>
         <comment>Do not translate</comment>
         <translation>Testing</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="493"/>
+        <location filename="../ui/configDialog.ui" line="500"/>
         <source>Unstable</source>
         <comment>Do not translate</comment>
         <translation>Unstable</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="732"/>
+        <location filename="../ui/configDialog.ui" line="739"/>
         <source>Server</source>
         <translation>Server</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="661"/>
+        <location filename="../ui/configDialog.ui" line="668"/>
         <source>Mirror:</source>
         <translation>Spiegelserver:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="555"/>
+        <location filename="../ui/configDialog.ui" line="562"/>
         <source>KDEMod Repositories</source>
         <translation>KDEMod Repositories</translation>
     </message>
@@ -733,7 +733,7 @@ veel extra&apos;s. KDEMod is de beste manier om het gemak en de pure kracht van 
 combineren met de eenvoud van Arch.</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="635"/>
+        <location filename="../ui/configDialog.ui" line="642"/>
         <source>KDEMod 3 Repository</source>
         <translation>KDEMod 3 Repository</translation>
     </message>
@@ -748,7 +748,7 @@ combineren met de eenvoud van Arch.</translation>
         <translation type="obsolete">KDEMod 4 Repository (Onstabiel, alleen voor testers)</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="695"/>
+        <location filename="../ui/configDialog.ui" line="702"/>
         <source>Third-Party Repositories</source>
         <translation>Repositories van derden</translation>
     </message>
@@ -762,253 +762,253 @@ Die gedragen zich net als normale repositories, en zijn beschikbaar zowel in Sha
 als Pacman.</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="727"/>
+        <location filename="../ui/configDialog.ui" line="734"/>
         <source>Repository</source>
         <translation>Repository</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="755"/>
+        <location filename="../ui/configDialog.ui" line="762"/>
         <source>Add New Repository</source>
         <translation>Nieuwe Repository toevoegen</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="766"/>
+        <location filename="../ui/configDialog.ui" line="773"/>
         <source>Edit Repository</source>
         <translation>Repository bewerken</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="777"/>
+        <location filename="../ui/configDialog.ui" line="784"/>
         <source>Remove Repository</source>
         <translation>Repository verwijderen</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="800"/>
+        <location filename="../ui/configDialog.ui" line="807"/>
         <source>Preferences</source>
         <translation>Voorkeuren</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="806"/>
+        <location filename="../ui/configDialog.ui" line="813"/>
         <source>Process all dependencies and queue from binary first (recommended)</source>
         <translation>Verwerk alle dependencies en gebruik binaire paketten eerst (aanbevolen)</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="813"/>
+        <location filename="../ui/configDialog.ui" line="820"/>
         <source>Review Building output before installing</source>
         <translation>Bekijk building output voor het installeren</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="823"/>
+        <location filename="../ui/configDialog.ui" line="830"/>
         <source>ABS Configuration</source>
         <translation>ABS Configuratie</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="829"/>
+        <location filename="../ui/configDialog.ui" line="836"/>
         <source>Use supfiles that match your current repositories</source>
         <translation>Gebruik supfiles die overeenkomen met uw huidige repositories</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="836"/>
+        <location filename="../ui/configDialog.ui" line="843"/>
         <source>Define supfiles manually</source>
         <translation>Benoem supfiles manueel</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="846"/>
+        <location filename="../ui/configDialog.ui" line="853"/>
         <source>RSync Server:</source>
         <translation>RSync Server:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="859"/>
+        <location filename="../ui/configDialog.ui" line="866"/>
         <source>Makepkg Configuration</source>
         <translation>Makepkg Configuratie</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="865"/>
+        <location filename="../ui/configDialog.ui" line="872"/>
         <source>CFlags</source>
         <translation>CFlags</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="875"/>
+        <location filename="../ui/configDialog.ui" line="882"/>
         <source>CXXFlags</source>
         <translation>CXXFlags</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="885"/>
+        <location filename="../ui/configDialog.ui" line="892"/>
         <source>BuildEnv</source>
         <translation>BuildEnv</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="895"/>
+        <location filename="../ui/configDialog.ui" line="902"/>
         <source>Options</source>
         <translation>Opties</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="905"/>
+        <location filename="../ui/configDialog.ui" line="912"/>
         <source>Doc_Dirs</source>
         <translation>Doc_Dirs</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="918"/>
+        <location filename="../ui/configDialog.ui" line="925"/>
         <source>Build Environment</source>
         <translation>Build Environment</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="924"/>
+        <location filename="../ui/configDialog.ui" line="931"/>
         <source>Building Path</source>
         <translation>Building Path</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="934"/>
+        <location filename="../ui/configDialog.ui" line="941"/>
         <source>Remove installed makedepends after build</source>
         <translation>Verwijder geïnstalleerde makedepends na build</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="941"/>
+        <location filename="../ui/configDialog.ui" line="948"/>
         <source>Clean Build Environment after installation</source>
         <translation>Ruim Build Environment op na installatie</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="955"/>
+        <location filename="../ui/configDialog.ui" line="962"/>
         <source>When Application is in System Tray only</source>
         <translation>Als het programma alleen in het systeemvak zit</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="961"/>
+        <location filename="../ui/configDialog.ui" line="968"/>
         <source>Update Database every</source>
         <translation>Database vernieuwen iedere</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1135"/>
+        <location filename="../ui/configDialog.ui" line="1142"/>
         <source>min</source>
         <comment>As in &quot;minutes&quot;</comment>
         <translation>minuut</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="978"/>
+        <location filename="../ui/configDialog.ui" line="985"/>
         <source>Show tray notification Windows</source>
         <translation>Toon meldingsvensters</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="988"/>
+        <location filename="../ui/configDialog.ui" line="995"/>
         <source>If upgrades are available:</source>
         <translation>Als upgrades beschikbaar zijn:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="995"/>
+        <location filename="../ui/configDialog.ui" line="1002"/>
         <source>Just Notify</source>
         <translation>Alleen melden</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1002"/>
+        <location filename="../ui/configDialog.ui" line="1009"/>
         <source>Notify and add them to Queue</source>
         <translation>Melden en aan wachtrij toevoegen</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1009"/>
+        <location filename="../ui/configDialog.ui" line="1016"/>
         <source>Update Database at</source>
         <translation>Database updaten met</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1022"/>
+        <location filename="../ui/configDialog.ui" line="1029"/>
         <source>Use a proxy-server</source>
         <translation>Gebruik een proxy-server</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1034"/>
+        <location filename="../ui/configDialog.ui" line="1041"/>
         <source>IP:</source>
         <translation>IP:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1057"/>
+        <location filename="../ui/configDialog.ui" line="1064"/>
         <source>Port:</source>
         <translation>Poort:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1099"/>
+        <location filename="../ui/configDialog.ui" line="1106"/>
         <source>HTTP Proxy</source>
         <translation>HTTP Proxy</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1106"/>
+        <location filename="../ui/configDialog.ui" line="1113"/>
         <source>FTP Proxy</source>
         <translation>FTP Proxy</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1116"/>
+        <location filename="../ui/configDialog.ui" line="1123"/>
         <source>Use Shaman RSS Capabilities</source>
         <translation>Gebruik Shaman RSS mogelijkheden</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1128"/>
+        <location filename="../ui/configDialog.ui" line="1135"/>
         <source>Update RSS Feed Every</source>
         <translation>Update RSS Feed elke</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1142"/>
+        <location filename="../ui/configDialog.ui" line="1149"/>
         <source>Notify upon new items</source>
         <translation>Meld bij nieuwe items</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1149"/>
+        <location filename="../ui/configDialog.ui" line="1156"/>
         <source>Check if there is an unread news about a package in Queue before processing it</source>
         <translation>Check of er ongelezen nieuws over een pakket in de wachtrij is, vooraleer het te verwerken</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1185"/>
+        <location filename="../ui/configDialog.ui" line="1192"/>
         <source>Interface</source>
         <translation>Interface</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1191"/>
+        <location filename="../ui/configDialog.ui" line="1198"/>
         <source>Use Animated Tray Icon</source>
         <translation>Gebruik bewegend systeemvak pictogram</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1198"/>
+        <location filename="../ui/configDialog.ui" line="1205"/>
         <source>Start Shaman Automatically on X Startup</source>
         <translation>Start Shaman bij het starten van X</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1205"/>
+        <location filename="../ui/configDialog.ui" line="1212"/>
         <source>Forbid starting Shaman as root</source>
         <translation>Verhinder dat Shaman als root gestart wordt</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="600"/>
+        <location filename="../ui/configDialog.ui" line="607"/>
         <source>KDEMod 4 Repository</source>
         <translation type="unfinished">KDEMod 3 Repository {4 ?}</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="607"/>
+        <location filename="../ui/configDialog.ui" line="614"/>
         <source>KDEMod 4 Extragear Repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="614"/>
+        <location filename="../ui/configDialog.ui" line="621"/>
         <source>KDEMod 4 Playground Repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="621"/>
+        <location filename="../ui/configDialog.ui" line="628"/>
         <source>KDEMod 4 Testing Repository</source>
         <translation type="unfinished">KDEMod 3 Testing Repository {4 ?}</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="628"/>
+        <location filename="../ui/configDialog.ui" line="635"/>
         <source>KDEMod 4 Unstable Repository (Testers only!)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="450"/>
+        <location filename="../ui/configDialog.ui" line="457"/>
         <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones. Please note that packages from Unstable and Testing may break your system.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="585"/>
+        <location filename="../ui/configDialog.ui" line="592"/>
         <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme, and lots of addons, KDEMod is the best way to taste the ease and the power of KDE with the simplicity and the power of Arch.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="707"/>
+        <location filename="../ui/configDialog.ui" line="714"/>
         <source>You can extend your packages choice by adding other repositories. Third-Party Repositories act just as normal ones, and will be accessible through both Shaman and Pacman.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1017,16 +1017,21 @@ als Pacman.</translation>
         <source>Use the following language:</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../ui/configDialog.ui" line="181"/>
+        <source>Disable Tray Icon</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>EditPBuild</name>
     <message>
-        <location filename="../src/EditPBuild.cpp" line="144"/>
+        <location filename="../src/EditPBuild.cpp.orig" line="144"/>
         <source>Saving</source>
         <translation>Bezig met opslaan</translation>
     </message>
     <message>
-        <location filename="../src/EditPBuild.cpp" line="145"/>
+        <location filename="../src/EditPBuild.cpp.orig" line="145"/>
         <source>You modified this PKGBUILD.
 Do you want to save it?</source>
         <translation>U hebt deze PKGBUILD gewijzigd.
@@ -1073,22 +1078,22 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>LocalPackageDialog</name>
     <message>
-        <location filename="../src/LocalPackageDialog.cpp" line="59"/>
+        <location filename="../src/LocalPackageDialog.cpp.orig" line="59"/>
         <source>Package is not installed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/LocalPackageDialog.cpp" line="64"/>
+        <location filename="../src/LocalPackageDialog.cpp.orig" line="64"/>
         <source>Version %1 of this package is already installed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/LocalPackageDialog.cpp" line="78"/>
+        <location filename="../src/LocalPackageDialog.cpp.orig" line="78"/>
         <source>All dependencies are satisfied</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../src/LocalPackageDialog.cpp" line="83"/>
+        <location filename="../src/LocalPackageDialog.cpp.orig" line="83"/>
         <source>%n package(s) will be installed as dependencies</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -1111,15 +1116,15 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/MainWindow.cpp" line="340"/>
         <source>Esc</source>
-        <translation>Esc</translation>
+        <translation type="obsolete">Esc</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="388"/>
+        <location filename="../src/MainWindow.cpp.orig" line="390"/>
         <source>Shaman - Reducing To Tray</source>
         <translation>Shaman - Sluiten naar systeemvak</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="391"/>
+        <location filename="../src/MainWindow.cpp.orig" line="396"/>
         <source>Shaman will keep running in the system tray.
 To close it, click Quit in the file menu or in the tray icon context menu.
 While in the System Tray, Shaman will update your Databases
@@ -1137,22 +1142,22 @@ U kunt dit gedrag wijzigen in Instellingen.</translation>
         <translation>Repositories</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="558"/>
+        <location filename="../src/MainWindow.cpp.orig" line="559"/>
         <source>All Repositories</source>
         <translation>Alle Repositories</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="561"/>
+        <location filename="../src/MainWindow.cpp.orig" line="562"/>
         <source>Local Packages</source>
         <translation>Lokale paketten</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="515"/>
+        <location filename="../src/MainWindow.cpp.orig" line="519"/>
         <source>Package Groups</source>
         <translation>Pakketgroepen</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1200"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1138"/>
         <source>All Groups</source>
         <translation>Alle groepen</translation>
     </message>
@@ -1177,7 +1182,7 @@ U kunt dit gedrag wijzigen in Instellingen.</translation>
         <translation>Paketten in de wachtrij</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1059"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1006"/>
         <source>Mark for Re&amp;installation</source>
         <translation>Markeren voor Her&amp;installatie</translation>
     </message>
@@ -1187,57 +1192,57 @@ U kunt dit gedrag wijzigen in Instellingen.</translation>
         <translation>Markeer voor &amp;Installatie</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2148"/>
+        <location filename="../src/MainWindow.cpp.orig" line="2039"/>
         <source>Install</source>
         <translation>Installeer</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2158"/>
+        <location filename="../src/MainWindow.cpp.orig" line="2049"/>
         <source>Uninstall</source>
         <translation>Installatie ongedaan maken</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2159"/>
+        <location filename="../src/MainWindow.cpp.orig" line="2050"/>
         <source>Complete Uninstall</source>
         <translation>Installatie volledig verwijderen</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="804"/>
+        <location filename="../src/MainWindow.cpp.orig" line="769"/>
         <source>Status: </source>
         <translation>Status: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="806"/>
+        <location filename="../src/MainWindow.cpp.orig" line="771"/>
         <source>Installed</source>
         <translation>Geïnstalleerd</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="808"/>
+        <location filename="../src/MainWindow.cpp.orig" line="773"/>
         <source>Not installed</source>
         <translation>Niet geïnstalleerd</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="811"/>
+        <location filename="../src/MainWindow.cpp.orig" line="775"/>
         <source>Local Version: </source>
         <translation>Lokale versie: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="816"/>
+        <location filename="../src/MainWindow.cpp.orig" line="779"/>
         <source>Version in the Repository: </source>
         <translation>Versie in de repository: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="822"/>
+        <location filename="../src/MainWindow.cpp.orig" line="784"/>
         <source>Action: </source>
         <translation>Actie: </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2024"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1905"/>
         <source>Error</source>
         <translation>Fout</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="935"/>
+        <location filename="../src/MainWindow.cpp.orig" line="884"/>
         <source>One or more Databases could not be updated.
 Last error reported was:
 %1</source>
@@ -1246,27 +1251,27 @@ Laatst vermelde fout was:
 %1</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="944"/>
+        <location filename="../src/MainWindow.cpp.orig" line="894"/>
         <source>Database Update</source>
         <translation>Database update</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="937"/>
+        <location filename="../src/MainWindow.cpp.orig" line="887"/>
         <source>One or more databases failed to update!</source>
         <translation>Een of meer databases konden niet worden geupdate!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="946"/>
+        <location filename="../src/MainWindow.cpp.orig" line="897"/>
         <source>Databases Updated Successfully</source>
         <translation>Databases succesvol geupdate</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1550"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1453"/>
         <source>Pacman Update</source>
         <translation>Pacman Update</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1552"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1455"/>
         <source>Pacman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Pacman now?</source>
@@ -1275,12 +1280,12 @@ deze apart te installeren om versie-conflicten te vermijden.
 Wilt u Pacman nu bijwerken?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1572"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1472"/>
         <source>Shaman Update</source>
         <translation>Shaman Update</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1574"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1474"/>
         <source>Shaman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Shaman now?</source>
@@ -1294,7 +1299,7 @@ Wilt u Shaman nu bijwerken?</translation>
         <translation>Markeren voor &amp;Verwijdering</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1034"/>
+        <location filename="../src/MainWindow.cpp.orig" line="984"/>
         <source>Mark for Upgrade</source>
         <translation>Markeren voor Upgrade</translation>
     </message>
@@ -1309,17 +1314,17 @@ Wilt u Shaman nu bijwerken?</translation>
         <translation>Pakketinformatie</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1085"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1033"/>
         <source>Mark all for installation</source>
         <translation>Markeer alle voor installatie</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1087"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1036"/>
         <source>Mark all for reinstallation</source>
         <translation>Markeer alle voor herinstallatie</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1089"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1039"/>
         <source>Mark all for removal</source>
         <translation>Markeer alle voor verwijdering</translation>
     </message>
@@ -1334,75 +1339,75 @@ Wilt u Shaman nu bijwerken?</translation>
         <translation>Shaman</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1235"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1168"/>
         <source>A package providing %1 is already installed.
 Do you want to install %1 anyway?</source>
         <translation>Een pakket dat %1 voorziet is al geïnstalleerd.
 Wilt u %1 toch installeren?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1527"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1433"/>
         <source>System Upgrade</source>
         <translation>Systeem bijwerken</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1531"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1437"/>
         <source>Your system is up to date!</source>
         <translation>Uw systeem is bijgewerkt!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1893"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1781"/>
         <source>News Alert</source>
         <translation>Waarschuwing: nieuws</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1894"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1783"/>
         <source>There is an unread news about %1.
 Do you want to read it?</source>
         <translation>Er is ongelezen nieuws over %1.
 Wilt u het lezen?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2153"/>
+        <location filename="../src/MainWindow.cpp.orig" line="2044"/>
         <source>Upgrade</source>
         <translation>Bijwerken</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1742"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1632"/>
         <source>Queue Processing</source>
         <translation>Wachtrij wordt verwerkt</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1742"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1633"/>
         <source>Your Queue is being processed.
 Please wait.</source>
         <translation>Uw wachtrij wordt verwerkt.
 Gelieve even te wachten.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1845"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1733"/>
         <source>Queue Processed</source>
         <translation>Wachtrij verwerkt</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1791"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1683"/>
         <source>One or more errors occurred, your Queue
 was not successfully processed</source>
         <translation>Een of meerdere fouten bij het verwerken 
 van uw wachtrij. Verwerking mislukt</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1793"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1685"/>
         <source>Error Processing Queue!!</source>
         <translation>Fout bij verwerking wachtrij!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1833"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1721"/>
         <source>Restart required</source>
         <translation>Herstart nodig</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1826"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1714"/>
         <source>Pacman or Shaman was updated. Shaman will now quit,
 please restart it to use the new version</source>
         <translation>Pacman of Shaman zijn bijgewerkt. Shaman wordt nu 
@@ -1410,40 +1415,40 @@ afgesloten. Herstart het programma om de nieuwe
 versie te gebruiken</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1834"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1722"/>
         <source>Your Kernel has been updated.
 Please restart your PC soon to load the new Kernel.</source>
         <translation>De kernel is bijgewerkt. 
 Start zo snel mogelijk uw PC opnieuw op, om de nieuwe kernel te laden.</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1843"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1731"/>
         <source>Your Queue was successfully processed!</source>
         <translation>Uw wachtrij werd succesvol verwerkt!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1847"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1736"/>
         <source>Your Queue was successfully processed!!</source>
         <translation>Uw wachtrij werd succesvol verwerkt!!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2009"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1891"/>
         <source>Install a Package</source>
         <translation>Installeer een pakket</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2009"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1891"/>
         <source>Arch Linux Packages (*.pkg.tar.gz)</source>
         <translation>Arch Linux pakketten (*.pkg.tar.gz)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2024"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1905"/>
         <source>%1 does not seem
 a valid package</source>
         <translation>%1 lijkt geen geldig pakket</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2062"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1953"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -1466,7 +1471,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2099"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1991"/>
         <source>Library Question</source>
         <translation>Library Vraag</translation>
     </message>
@@ -1658,13 +1663,13 @@ p, li { white-space: pre-wrap; }
         <translation>Bekijk de log</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="341"/>
+        <location filename="../src/MainWindow.cpp.orig" line="336"/>
         <source>Ctrl+Q</source>
         <comment>Exit Shaman Shortcut</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="650"/>
+        <location filename="../src/MainWindow.cpp.orig" line="629"/>
         <source>Name and Description</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1672,156 +1677,156 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>MaintenanceBar</name>
     <message>
-        <location filename="../src/MaintenanceBar.cpp" line="43"/>
+        <location filename="../src/MaintenanceBar.cpp.orig" line="43"/>
         <source>Please choose an action to start maintenance...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MaintenanceBar.cpp" line="44"/>
+        <location filename="../src/MaintenanceBar.cpp.orig" line="44"/>
         <source>Clean Unused Databases</source>
         <translation type="unfinished">Niet-gebruikte databases opruimen</translation>
     </message>
     <message>
-        <location filename="../src/MaintenanceBar.cpp" line="44"/>
+        <location filename="../src/MaintenanceBar.cpp.orig" line="44"/>
         <source>Clean Cache</source>
         <translation type="unfinished">Cache opruimen</translation>
     </message>
     <message>
-        <location filename="../src/MaintenanceBar.cpp" line="45"/>
+        <location filename="../src/MaintenanceBar.cpp.orig" line="45"/>
         <source>Empty Cache</source>
         <translation type="unfinished">Cache leegmaken</translation>
     </message>
     <message>
-        <location filename="../src/MaintenanceBar.cpp" line="45"/>
+        <location filename="../src/MaintenanceBar.cpp.orig" line="45"/>
         <source>Optimize Pacman Database</source>
         <translation type="unfinished">Pacman Database optimaliseren</translation>
     </message>
     <message>
-        <location filename="../src/MaintenanceBar.cpp" line="45"/>
+        <location filename="../src/MaintenanceBar.cpp.orig" line="45"/>
         <source>Clean All Building Environments</source>
         <translation type="unfinished">Alle ontwikkelomgevingen opruimen</translation>
     </message>
     <message>
-        <location filename="../src/MaintenanceBar.cpp" line="78"/>
+        <location filename="../src/MaintenanceBar.cpp.orig" line="78"/>
         <source>Cleaning up unused Databases...</source>
         <translation type="unfinished">Bezig met opruimen van ongebruikte databases...</translation>
     </message>
     <message>
-        <location filename="../src/MaintenanceBar.cpp" line="92"/>
+        <location filename="../src/MaintenanceBar.cpp.orig" line="92"/>
         <source>Cleaning up Cache...</source>
         <translation type="unfinished">Bezig met opruimen van Cache...</translation>
     </message>
     <message>
-        <location filename="../src/MaintenanceBar.cpp" line="106"/>
+        <location filename="../src/MaintenanceBar.cpp.orig" line="106"/>
         <source>Deleting Cache...</source>
         <translation type="unfinished">Bezig met verwijderen van Cache...</translation>
     </message>
     <message>
-        <location filename="../src/MaintenanceBar.cpp" line="123"/>
+        <location filename="../src/MaintenanceBar.cpp.orig" line="123"/>
         <source>Optimizing Pacman Database...</source>
         <translation type="unfinished">Pacman database aan het optimaliseren...</translation>
     </message>
     <message>
-        <location filename="../src/MaintenanceBar.cpp" line="140"/>
+        <location filename="../src/MaintenanceBar.cpp.orig" line="140"/>
         <source>Cleaning up building Environments...</source>
         <translation type="unfinished">Bezig met opruimen van ontwikkelomgevingen...</translation>
     </message>
     <message>
-        <location filename="../src/MaintenanceBar.cpp" line="166"/>
+        <location filename="../src/MaintenanceBar.cpp.orig" line="166"/>
         <source>Abort</source>
         <translation type="unfinished">Afbreken</translation>
     </message>
     <message>
-        <location filename="../src/MaintenanceBar.cpp" line="179"/>
+        <location filename="../src/MaintenanceBar.cpp.orig" line="179"/>
         <source>System Maintenance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MaintenanceBar.cpp" line="190"/>
+        <location filename="../src/MaintenanceBar.cpp.orig" line="190"/>
         <source>Unused Databases Cleaned up successfully!</source>
         <translation type="unfinished">Ongebruikte databases succesvol opgeruimd!</translation>
     </message>
     <message>
-        <location filename="../src/MaintenanceBar.cpp" line="196"/>
+        <location filename="../src/MaintenanceBar.cpp.orig" line="196"/>
         <source>Cache Cleaned Up Successfully!</source>
         <translation type="unfinished">Cache succesvol opgeruimd!</translation>
     </message>
     <message>
-        <location filename="../src/MaintenanceBar.cpp" line="202"/>
+        <location filename="../src/MaintenanceBar.cpp.orig" line="202"/>
         <source>Cache Successfully Deleted!</source>
         <translation type="unfinished">Cache succesvol verwijderd!</translation>
     </message>
     <message>
-        <location filename="../src/MaintenanceBar.cpp" line="208"/>
+        <location filename="../src/MaintenanceBar.cpp.orig" line="208"/>
         <source>Build Environments Successfully Cleaned!</source>
         <translation type="unfinished">Ontwikkelomgevingen succesvol opgeruimd!</translation>
     </message>
     <message>
-        <location filename="../src/MaintenanceBar.cpp" line="313"/>
+        <location filename="../src/MaintenanceBar.cpp.orig" line="313"/>
         <source>Close</source>
         <translation type="unfinished">Sluiten</translation>
     </message>
     <message>
-        <location filename="../src/MaintenanceBar.cpp" line="233"/>
+        <location filename="../src/MaintenanceBar.cpp.orig" line="233"/>
         <source>Cleaning up Unused Databases Failed!</source>
         <translation type="unfinished">Opruimen van ongebruikte databases mislukt!</translation>
     </message>
     <message>
-        <location filename="../src/MaintenanceBar.cpp" line="238"/>
+        <location filename="../src/MaintenanceBar.cpp.orig" line="238"/>
         <source>Cleaning up Cache Failed!</source>
         <translation type="unfinished">Opruimen van Cache mislukt!</translation>
     </message>
     <message>
-        <location filename="../src/MaintenanceBar.cpp" line="243"/>
+        <location filename="../src/MaintenanceBar.cpp.orig" line="243"/>
         <source>Deleting Cache Failed!</source>
         <translation type="unfinished">Verwijderen van Cache mislukt!</translation>
     </message>
     <message>
-        <location filename="../src/MaintenanceBar.cpp" line="248"/>
+        <location filename="../src/MaintenanceBar.cpp.orig" line="248"/>
         <source>Could not clean Build Environments!!</source>
         <translation type="unfinished">Kon ontwikkelomgevingen niet opruimen!</translation>
     </message>
     <message>
-        <location filename="../src/MaintenanceBar.cpp" line="275"/>
+        <location filename="../src/MaintenanceBar.cpp.orig" line="275"/>
         <source>Pacman Database Optimized Successfully!</source>
         <translation type="unfinished">Pacman database succesvol geoptimaliseerd!</translation>
     </message>
     <message>
-        <location filename="../src/MaintenanceBar.cpp" line="281"/>
+        <location filename="../src/MaintenanceBar.cpp.orig" line="281"/>
         <source>Could not Optimize Pacman Database!</source>
         <translation type="unfinished">Kon Pacman database niet optimaliseren!</translation>
     </message>
     <message>
-        <location filename="../src/MaintenanceBar.cpp" line="289"/>
+        <location filename="../src/MaintenanceBar.cpp.orig" line="289"/>
         <source>Running sync...</source>
         <comment>sync is a command, so it should not be translated</comment>
         <translation type="unfinished">sync aan het uitvoeren...</translation>
     </message>
     <message>
-        <location filename="../src/MaintenanceBar.cpp" line="299"/>
+        <location filename="../src/MaintenanceBar.cpp.orig" line="299"/>
         <source>Operation Completed Successfully!</source>
         <translation type="unfinished">Operatie succesvol uitgevoerd!</translation>
     </message>
     <message>
-        <location filename="../src/MaintenanceBar.cpp" line="298"/>
+        <location filename="../src/MaintenanceBar.cpp.orig" line="298"/>
         <source>Sync was successfully executed!!</source>
         <comment>Sync is always the command</comment>
         <translation type="unfinished">Sync succesvol uitgevoerd!</translation>
     </message>
     <message>
-        <location filename="../src/MaintenanceBar.cpp" line="303"/>
+        <location filename="../src/MaintenanceBar.cpp.orig" line="303"/>
         <source>Sync could not be executed!</source>
         <comment>Sync is always the command</comment>
         <translation type="unfinished">Sync kon niet worden uitgevoerd!</translation>
     </message>
     <message>
-        <location filename="../src/MaintenanceBar.cpp" line="304"/>
+        <location filename="../src/MaintenanceBar.cpp.orig" line="304"/>
         <source>Sync could not be executed!!</source>
         <comment>Sync is always the command</comment>
         <translation type="unfinished">Sync kon niet worden uitgevoerd!!</translation>
     </message>
     <message>
-        <location filename="../src/MaintenanceBar.cpp" line="40"/>
+        <location filename="../src/MaintenanceBar.cpp.orig" line="40"/>
         <source>Maintenance Actions</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1829,27 +1834,27 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>NewsViewer</name>
     <message>
-        <location filename="../src/NewsViewer.cpp" line="47"/>
+        <location filename="../src/NewsViewer.cpp.orig" line="47"/>
         <source>Please wait, fetching items...</source>
         <translation>Even geduld, items aan het ophalen...</translation>
     </message>
     <message>
-        <location filename="../src/NewsViewer.cpp" line="122"/>
+        <location filename="../src/NewsViewer.cpp.orig" line="122"/>
         <source>Mark as Read</source>
         <translation>Markeer als Gelezen</translation>
     </message>
     <message>
-        <location filename="../src/NewsViewer.cpp" line="124"/>
+        <location filename="../src/NewsViewer.cpp.orig" line="124"/>
         <source>Mark as Unread</source>
         <translation>Markeer als Ongelezen</translation>
     </message>
     <message>
-        <location filename="../src/NewsViewer.cpp" line="183"/>
+        <location filename="../src/NewsViewer.cpp.orig" line="183"/>
         <source>Error</source>
         <translation>Fout</translation>
     </message>
     <message>
-        <location filename="../src/NewsViewer.cpp" line="184"/>
+        <location filename="../src/NewsViewer.cpp.orig" line="184"/>
         <source>Could not fetch the RSS feed! Error reported was:</source>
         <translation>Kon RSS feed niet ontvangen! Fout was:</translation>
     </message>
@@ -1857,42 +1862,42 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>PackageProperties</name>
     <message>
-        <location filename="../src/PackageProperties.cpp" line="46"/>
+        <location filename="../src/PackageProperties.cpp.orig" line="46"/>
         <source>%1 GiB</source>
         <comment>Size is in Gib</comment>
         <translation>%1 GiB</translation>
     </message>
     <message>
-        <location filename="../src/PackageProperties.cpp" line="48"/>
+        <location filename="../src/PackageProperties.cpp.orig" line="48"/>
         <source>%1 MiB</source>
         <comment>Size is in MiB</comment>
         <translation>%1 MiB</translation>
     </message>
     <message>
-        <location filename="../src/PackageProperties.cpp" line="50"/>
+        <location filename="../src/PackageProperties.cpp.orig" line="50"/>
         <source>%1 KiB</source>
         <comment>Size is in KiB</comment>
         <translation>%1 KiB</translation>
     </message>
     <message>
-        <location filename="../src/PackageProperties.cpp" line="52"/>
+        <location filename="../src/PackageProperties.cpp.orig" line="52"/>
         <source>%1 Bytes</source>
         <comment>Size is in Bytes</comment>
         <translation>%1 Bytes</translation>
     </message>
     <message>
-        <location filename="../src/PackageProperties.cpp" line="73"/>
+        <location filename="../src/PackageProperties.cpp.orig" line="73"/>
         <source>Shaman - %1 properties</source>
         <translation>Shaman - %1 eigenschappen</translation>
     </message>
     <message>
-        <location filename="../src/PackageProperties.cpp" line="94"/>
+        <location filename="../src/PackageProperties.cpp.orig" line="94"/>
         <source>N/A</source>
         <comment>Stands for: Not Available</comment>
         <translation>N/A</translation>
     </message>
     <message>
-        <location filename="../src/PackageProperties.cpp" line="214"/>
+        <location filename="../src/PackageProperties.cpp.orig" line="214"/>
         <source>Changelog not available for this package</source>
         <translation>Changelog niet beschikbaar voor dit pakket</translation>
     </message>
@@ -1900,54 +1905,54 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2075"/>
+        <location filename="../src/MainWindow.cpp.orig" line="1967"/>
         <source>Whoa, that&apos;s co&amp;ol!</source>
         <translation>Whoa, that&apos;s co&amp;ol!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="866"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="866"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="57"/>
+        <location filename="../src/configDialog.cpp.orig" line="57"/>
         <source>O&amp;k</source>
         <translation>O&amp;k</translation>
     </message>
     <message>
-        <location filename="../src/ShamanDialog.cpp" line="144"/>
+        <location filename="../src/ShamanDialog.cpp.orig" line="144"/>
         <source>&amp;Yes</source>
         <translation>&amp;Ja</translation>
     </message>
     <message>
-        <location filename="../src/ShamanDialog.cpp" line="146"/>
+        <location filename="../src/ShamanDialog.cpp.orig" line="146"/>
         <source>&amp;No</source>
         <translation>&amp;Nee</translation>
     </message>
     <message>
-        <location filename="../src/ShamanDialog.cpp" line="228"/>
+        <location filename="../src/ShamanDialog.cpp.orig" line="228"/>
         <source>Do not &amp;show this Again</source>
         <translation>Niet &amp;opnieuw tonen</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="58"/>
+        <location filename="../src/configDialog.cpp.orig" line="58"/>
         <source>C&amp;ancel</source>
         <translation>&amp;Annuleren</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="375"/>
+        <location filename="../src/main.cpp.orig" line="375"/>
         <source>Shaman</source>
         <translation>Shaman</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="268"/>
+        <location filename="../src/main.cpp.orig" line="268"/>
         <source>It looks like another copy of Shaman is running.
 You can only run one copy of Shaman at a time.</source>
         <translation type="unfinished">Een andere instantie van Shaman draait al.
 U kan maar een instantie van Shaman tegelijkertijd draaien.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="284"/>
+        <location filename="../src/main.cpp.orig" line="284"/>
         <source>Shaman could not switch to root.
 Probably you have not set the SUID bit to it.
 You can do that by issuing as root
@@ -1962,14 +1967,14 @@ Dit is perfect veilig. Lees de Shaman wiki voor meer
 details.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="289"/>
+        <location filename="../src/main.cpp.orig" line="289"/>
         <source>There was a problem while testing libalpm.
 Maybe another application has a lock on it.</source>
         <translation>Er trad een probleem op bij het testen van libalpm.
 Misschien wordt het al gebruikt door een ander programma.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="305"/>
+        <location filename="../src/main.cpp.orig" line="305"/>
         <source>Shaman</source>
         <comment>Hey! If you are reading this, first of all thanks for helping us in making Shaman better. There are not many comments unless where needed, since all the strings are pretty self-explanatory. You will see a lot of HTML in some cases: do not let that scare you, but please edit text only. Editing HTML tags too may break our layout, so be careful. A good practice could be copying the whole string, and then translating just what&apos;s outside the tags, usually just a few words. If you have any doubts, or if you just want to drop us a line, there goes our email addresses:
 Dario: drf54321@gmail.com
@@ -1978,26 +1983,26 @@ Thanks again, and enjoy your translation!</comment>
         <translation>Shaman</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="306"/>
+        <location filename="../src/main.cpp.orig" line="306"/>
         <source>Your settings file seems unwritable.
 Please check permissions on it.</source>
         <translation>Uw instellingen kunnen niet weggeschreven worden.
 Bekijk de permissies van uw configuratiefile.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="347"/>
+        <location filename="../src/main.cpp.orig" line="347"/>
         <source>Please Wait...</source>
         <translation>Gelieve even te wachten...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="357"/>
+        <location filename="../src/main.cpp.orig" line="357"/>
         <source>Shaman can not be started as root.
 Please restart it as unprivileged user.</source>
         <translation>Shaman mag niet gestart worden als root.
 Start opnieuw als een normale gebruiker.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="366"/>
+        <location filename="../src/main.cpp.orig" line="366"/>
         <source>You have started Shaman as root.
 It is advised to start it as unprivileged user.
 Shaman will ask you for root password when needed.</source>
@@ -2006,7 +2011,7 @@ Het wordt aangeraden Shaman te starten als normale gebruiker.
 Shaman zal u uw root password vragen indien nodig.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="376"/>
+        <location filename="../src/main.cpp.orig" line="376"/>
         <source>Pacman is not updated.
 Shaman needs libalpm &gt;= 2.1.0 to run.
 Yours is %1. Please update Pacman.</source>
@@ -2015,17 +2020,17 @@ Shaman heeft libalpm &gt;= 2.1.0 nodig om te kunnen werken.
 De uwe is versie %1. Gelieve Pacman te updaten.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="427"/>
+        <location filename="../src/main.cpp.orig" line="427"/>
         <source>Loading Databases...</source>
         <translation>Databases aan het laden...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="435"/>
+        <location filename="../src/main.cpp.orig" line="435"/>
         <source>Loading Packages...</source>
         <translation>Paketten aan het laden...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="443"/>
+        <location filename="../src/main.cpp.orig" line="443"/>
         <source>Starting up Shaman...</source>
         <translation>Shaman wordt opgestart...</translation>
     </message>
@@ -2033,207 +2038,207 @@ De uwe is versie %1. Gelieve Pacman te updaten.</translation>
 <context>
     <name>QueueDialog</name>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="78"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="78"/>
         <source>&lt;br&gt;&lt;b&gt; * Validating Transaction&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Transactie aan het valideren&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="139"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="139"/>
         <source>Validating Dependencies...</source>
         <translation>Dependencies aan het valideren...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="143"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="143"/>
         <source>Checking for Conflicts...</source>
         <translation>Aan het controleren op conflicten...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="147"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="147"/>
         <source>Resolving Dependencies...</source>
         <translation>Dependencies opzoeken...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="151"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="151"/>
         <source>Looking for Inter-Conflicts...</source>
         <translation>Zoeken naar Inter-Conflicts...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="157"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="157"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Installation Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Pakket installatie gestart&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="161"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="161"/>
         <source>Installing %1...</source>
         <translation>%1 wordt geïnstalleerd...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="190"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="190"/>
         <source>%1 (%2) installed successfully!</source>
         <translation>%1 (%2) succesvol geïnstalleerd!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="202"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="202"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Removal Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Pakketverwijdering gestart&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="206"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="206"/>
         <source>Removing %1...</source>
         <translation>%1 wordt verwijderd...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="235"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="235"/>
         <source>%1 (%2) removed successfully!</source>
         <translation>%1 (%2) succesvol verwijderd!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="247"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="247"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Upgrading Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Bijwerken van pakket gestart&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="251"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="251"/>
         <source>Upgrading %1...</source>
         <translation>%1 wordt bijgewerkt...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="281"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="281"/>
         <source>Upgraded %1 successfully (%2 -&gt; %3)</source>
         <translation>%1 succesvol bijgewerkt! (%2 -&gt; %3)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="295"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="295"/>
         <source>&lt;br&gt;&lt;b&gt; * Queue Processing Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Verwerking van wachtrij gestart&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="299"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="299"/>
         <source>Checking package integrity...</source>
         <translation>Pakketintegriteit wordt gecontroleerd...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="303"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="303"/>
         <source>Checking delta integrity...</source>
         <translation>Delta integriteit wordt gecontroleerd...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="306"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="306"/>
         <source>Applying deltas...</source>
         <translation>Deltas worden toegepast...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="309"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="309"/>
         <source>Generating %1 with %2... </source>
         <translation>%1 wordt gegenereerd met %2...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="313"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="313"/>
         <source>Success!</source>
         <translation>Succes!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="316"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="316"/>
         <source>Failed!</source>
         <translation>Mislukt!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="330"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="330"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Downloading Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Binnenhalen van pakket gestart&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="334"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="334"/>
         <source>Starting downloading packages from %1...</source>
         <translation>Het downloaden van de pakketten van %1 wordt gestart...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="376"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="376"/>
         <source>%p% (%1 KB/s, %4:%5:%6 remaining)</source>
         <comment>You just have to translate &apos;remaining&apos; here. Leave everything else as it is.</comment>
         <translation>%p% (%1 KB/s, %4:%5:%6 overblijvend)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="384"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="384"/>
         <source>Downloading %1... (%2 MB of %3 MB)</source>
         <translation>%1 aan het downloaden... (%2 MB of %3 MB)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="387"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="387"/>
         <source>Downloading %1... (%2 KB of %3 KB)</source>
         <translation>%1 aan het downloaden... (%2 KB of %3 KB)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="443"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="443"/>
         <source>Queue processed, please wait...</source>
         <translation>Wachtrij wordt verwerkt, gelieve even te wachten...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="454"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="454"/>
         <source>Queue processing failed!</source>
         <translation>Verwerking van wachtrij mislukt!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="459"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="459"/>
         <source>Queue processed successfully!</source>
         <translation>Verwerking van wachtrij succesvol!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="467"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="467"/>
         <source>Close</source>
         <translation>Sluiten</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="503"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="503"/>
         <source>Unexpected Error. Shaman might be corrupted.</source>
         <translation>Onverwachte fout. Shaman is misschien corrupt.</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="510"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="510"/>
         <source>Executing %1 scriptlet for %2...</source>
         <translation>Voer %1 scriplet uit voor %2...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="567"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="567"/>
         <source>Extracting Scriptlet from package failed!!</source>
         <translation>Uitpakken van scriplet uit pakket mislukt!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="577"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="577"/>
         <source>Package %1 does not have %2 scriptlet</source>
         <translation>Pakket %1 bevat geen %2 scriplet</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="695"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="695"/>
         <source>Scriptlet processed successfully!</source>
         <translation>Scriplet succesvol verwerkt!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="701"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="701"/>
         <source>Error processing Scriptlet!!</source>
         <translation>Fout bij verwerking scriplet!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="874"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="874"/>
         <source>Queue Processing</source>
         <translation>Wachtrij wordt verwerkt</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="788"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="788"/>
         <source>Would you like to abort Queue Processing?
 This may damage your system.</source>
         <translation>Wilt u het verwerken van de wachtrij onderbreken?
 Dit kan uw systeem beschadigen.</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="824"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="824"/>
         <source>There has been an error while preparing the transaction.
 </source>
         <translation>Er is een fout opgetreden bij het voorbereiden van de transactie.
 </translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="861"/>
+        <location filename="../src/QueueDialog.cpp.orig" line="861"/>
         <source>There has been an error while committing the transaction.
 </source>
         <translation>Er is een fout opgetreden bij het bevestigen van de transactie.</translation>
@@ -2301,42 +2306,42 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>ReviewQueueDialog</name>
     <message>
-        <location filename="../src/ReviewQueueDialog.cpp" line="56"/>
+        <location filename="../src/ReviewQueueDialog.cpp.orig" line="56"/>
         <source>Install</source>
         <translation>Installeer</translation>
     </message>
     <message>
-        <location filename="../src/ReviewQueueDialog.cpp" line="60"/>
+        <location filename="../src/ReviewQueueDialog.cpp.orig" line="60"/>
         <source>To be Installed</source>
         <translation>Te installeren</translation>
     </message>
     <message>
-        <location filename="../src/ReviewQueueDialog.cpp" line="65"/>
+        <location filename="../src/ReviewQueueDialog.cpp.orig" line="65"/>
         <source>Upgrade</source>
         <translation>Bijwerken</translation>
     </message>
     <message>
-        <location filename="../src/ReviewQueueDialog.cpp" line="69"/>
+        <location filename="../src/ReviewQueueDialog.cpp.orig" line="69"/>
         <source>To be Upgraded</source>
         <translation>Bij te werken</translation>
     </message>
     <message>
-        <location filename="../src/ReviewQueueDialog.cpp" line="74"/>
+        <location filename="../src/ReviewQueueDialog.cpp.orig" line="74"/>
         <source>Uninstall</source>
         <translation>Installatie ongedaan maken</translation>
     </message>
     <message>
-        <location filename="../src/ReviewQueueDialog.cpp" line="87"/>
+        <location filename="../src/ReviewQueueDialog.cpp.orig" line="87"/>
         <source>To be Removed</source>
         <translation>Te verwijderen</translation>
     </message>
     <message>
-        <location filename="../src/ReviewQueueDialog.cpp" line="83"/>
+        <location filename="../src/ReviewQueueDialog.cpp.orig" line="83"/>
         <source>Complete Uninstall</source>
         <translation>Installatie volledig verwijderen</translation>
     </message>
     <message>
-        <location filename="../src/ReviewQueueDialog.cpp" line="109"/>
+        <location filename="../src/ReviewQueueDialog.cpp.orig" line="109"/>
         <source>Your Queue is about to be processed. You are going to:&lt;br /&gt;</source>
         <translation>Uw wachtrij staat op het punt verwerkt te worden. U zal:&lt;br /&gt;</translation>
     </message>
@@ -2371,12 +2376,12 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">&lt;b&gt;%1&lt;/b&gt; zal vrijkomen</translation>
     </message>
     <message>
-        <location filename="../src/ReviewQueueDialog.cpp" line="114"/>
+        <location filename="../src/ReviewQueueDialog.cpp.orig" line="114"/>
         <source>Do you wish to continue?</source>
         <translation type="unfinished">Wilt u verder gaan?</translation>
     </message>
     <message numerus="yes">
-        <location filename="../src/ReviewQueueDialog.cpp" line="111"/>
+        <location filename="../src/ReviewQueueDialog.cpp.orig" line="111"/>
         <source>Remove &lt;b&gt;%n package(s)&lt;/b&gt;&lt;br /&gt;</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -2384,7 +2389,7 @@ p, li { white-space: pre-wrap; }
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../src/ReviewQueueDialog.cpp" line="113"/>
+        <location filename="../src/ReviewQueueDialog.cpp.orig" line="113"/>
         <source>Install/Upgrade &lt;b&gt;%n package(s)&lt;/b&gt;&lt;br /&gt;</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -2395,22 +2400,22 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>ShamanStatusBar</name>
     <message>
-        <location filename="../src/ShamanStatusBar.cpp" line="81"/>
+        <location filename="../src/ShamanStatusBar.cpp.orig" line="81"/>
         <source>%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages</source>
         <translation>%1 beschikbare pakketten, %2 geïnstalleerde pakketten, %3 pakketten bij te werken</translation>
     </message>
     <message>
-        <location filename="../src/ShamanStatusBar.cpp" line="107"/>
+        <location filename="../src/ShamanStatusBar.cpp.orig" line="107"/>
         <source>%1 will be used</source>
         <translation>%1 zal worden ingenomen</translation>
     </message>
     <message>
-        <location filename="../src/ShamanStatusBar.cpp" line="114"/>
+        <location filename="../src/ShamanStatusBar.cpp.orig" line="114"/>
         <source>%1 will be freed</source>
         <translation>%1 zal vrijkomen</translation>
     </message>
     <message>
-        <location filename="../src/ShamanStatusBar.cpp" line="119"/>
+        <location filename="../src/ShamanStatusBar.cpp.orig" line="119"/>
         <source>%1 to be Installed, %2 to be Removed</source>
         <translation>%1 te installeren, %2 te verwijderen</translation>
     </message>
@@ -2418,47 +2423,47 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>ShamanTrayIcon</name>
     <message>
-        <location filename="../src/ShamanTrayIcon.cpp" line="45"/>
+        <location filename="../src/ShamanTrayIcon.cpp.orig" line="45"/>
         <source>Update Database</source>
         <translation>Update Database</translation>
     </message>
     <message>
-        <location filename="../src/ShamanTrayIcon.cpp" line="49"/>
+        <location filename="../src/ShamanTrayIcon.cpp.orig" line="49"/>
         <source>Upgrade System</source>
         <translation>Systeem bijwerken</translation>
     </message>
     <message>
-        <location filename="../src/ShamanTrayIcon.cpp" line="53"/>
+        <location filename="../src/ShamanTrayIcon.cpp.orig" line="53"/>
         <source>Process Queue</source>
         <translation>Verwerk wachtrij</translation>
     </message>
     <message>
-        <location filename="../src/ShamanTrayIcon.cpp" line="58"/>
+        <location filename="../src/ShamanTrayIcon.cpp.orig" line="58"/>
         <source>Settings</source>
         <translation>Instellingen</translation>
     </message>
     <message>
-        <location filename="../src/ShamanTrayIcon.cpp" line="63"/>
+        <location filename="../src/ShamanTrayIcon.cpp.orig" line="63"/>
         <source>Quit</source>
         <translation>Afsluiten</translation>
     </message>
     <message>
-        <location filename="../src/ShamanTrayIcon.cpp" line="109"/>
+        <location filename="../src/ShamanTrayIcon.cpp.orig" line="109"/>
         <source>Shaman - Idle</source>
         <translation>Shaman - Ruststand</translation>
     </message>
     <message>
-        <location filename="../src/ShamanTrayIcon.cpp" line="125"/>
+        <location filename="../src/ShamanTrayIcon.cpp.orig" line="125"/>
         <source>Shaman - Processing</source>
         <translation>Shaman - Aan het verwerken</translation>
     </message>
     <message>
-        <location filename="../src/ShamanTrayIcon.cpp" line="132"/>
+        <location filename="../src/ShamanTrayIcon.cpp.orig" line="132"/>
         <source>Shaman - Idle (Upgrades Available)</source>
         <translation>Shaman - Ruststand (Upgrades beschikbaar)</translation>
     </message>
     <message>
-        <location filename="../src/ShamanTrayIcon.cpp" line="137"/>
+        <location filename="../src/ShamanTrayIcon.cpp.orig" line="137"/>
         <source>System Upgrade</source>
         <translation>Systeem bijwerken</translation>
     </message>
@@ -2477,31 +2482,31 @@ Click here to upgrade your System.</source>
 Klik hier om uw systeem bij te werken.</translation>
     </message>
     <message>
-        <location filename="../src/ShamanTrayIcon.cpp" line="252"/>
+        <location filename="../src/ShamanTrayIcon.cpp.orig" line="252"/>
         <source>New News Available</source>
         <translation>Nieuws beschikbaar</translation>
     </message>
     <message>
-        <location filename="../src/ShamanTrayIcon.cpp" line="253"/>
+        <location filename="../src/ShamanTrayIcon.cpp.orig" line="253"/>
         <source>There are new news available.
 Click here to review them.</source>
         <translation>Nieuws beschikbaar.
 Klik hier om het te bekijken.</translation>
     </message>
     <message>
-        <location filename="../src/ShamanTrayIcon.cpp" line="269"/>
+        <location filename="../src/ShamanTrayIcon.cpp.orig" line="269"/>
         <source>Failed Fetching News</source>
         <translation>Ophalen nieuws mislukt</translation>
     </message>
     <message>
-        <location filename="../src/ShamanTrayIcon.cpp" line="270"/>
+        <location filename="../src/ShamanTrayIcon.cpp.orig" line="270"/>
         <source>An error occourred while fetching news!
 Click here to open the News Dialog for more details.</source>
         <translation>Fout tijdens het ophalen van nieuws!
 Klik hier voor meer details.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../src/ShamanTrayIcon.cpp" line="138"/>
+        <location filename="../src/ShamanTrayIcon.cpp.orig" line="138"/>
         <source>Upgradeable package(s): %n.
 Click here to upgrade your System.</source>
         <translation type="unfinished">
@@ -2523,12 +2528,12 @@ Click here to upgrade your System.</source>
         <translation type="obsolete">Er zijn &lt;b&gt;%1 pakketten bij te werken&lt;/b&gt;. U kan ofwel &lt;br&gt;onmiddellijk bijwerken of de pakketten toevoegen aan de huidige wachtrij&lt;br&gt; en ze later verwerken.</translation>
     </message>
     <message>
-        <location filename="../src/SysUpgradeDialog.cpp" line="66"/>
+        <location filename="../src/SysUpgradeDialog.cpp.orig" line="66"/>
         <source>To be Upgraded</source>
         <translation>Bij te werken</translation>
     </message>
     <message numerus="yes">
-        <location filename="../src/SysUpgradeDialog.cpp" line="64"/>
+        <location filename="../src/SysUpgradeDialog.cpp.orig" line="64"/>
         <source>&lt;b&gt;Upgradeable package(s): %n&lt;/b&gt; You can either&lt;br&gt; upgrade immediately or add it to the current Queue&lt;br&gt; and process it later.</source>
         <translation type="unfinished">
             <numerusform></numerusform>

@@ -25,28 +25,28 @@
 #include "ABSHandler.h"
 #include "Authenticator.h"
 
-class EditPBuild : public QDialog, private Ui::editPBDialog, private ABSHandler 
+class EditPBuild : public QDialog, private Ui::editPBDialog, private ABSHandler
 {
-	Q_OBJECT
-	
-public:
-	explicit EditPBuild(const QStringList &tg, QWidget *parent = 0);
-	virtual ~EditPBuild();
-	
-public slots:
-	bool saveFile();
-	bool saveFile(const QString &name);
-	bool loadFile(const QString &name);
-	void hasBeenModified();
-	
-protected:
-	void closeEvent(QCloseEvent *evt);
-	
-private:
-	Authenticator ath;
-	QStringList targets;
-	bool needsSaving;
-	QString lastItem;
+        Q_OBJECT
+
+    public:
+        explicit EditPBuild( const QStringList &tg, QWidget *parent = 0 );
+        virtual ~EditPBuild();
+
+    public slots:
+        bool saveFile();
+        bool saveFile( const QString &name );
+        bool loadFile( const QString &name );
+        void hasBeenModified();
+
+    protected:
+        void closeEvent( QCloseEvent *evt );
+
+    private:
+        Authenticator ath;
+        QStringList targets;
+        bool needsSaving;
+        QString lastItem;
 };
 
 #endif /*EDITPBUILD_H*/

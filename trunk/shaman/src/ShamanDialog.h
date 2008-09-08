@@ -24,36 +24,37 @@
 #include <QWidget>
 #include <QString>
 
-namespace ShamanProperties {
+namespace ShamanProperties
+{
 
-	enum DialogType {
-		ErrorDialog,
-		WarningDialog,
-		InformationDialog,
-		SuccessDialog,
-		OtherDialog
-	};
+enum DialogType {
+    ErrorDialog,
+    WarningDialog,
+    InformationDialog,
+    SuccessDialog,
+    OtherDialog
+};
 
 }  // namespace ShamanProperties
 
 class ShamanDialog
 {
-	
-	/* This class handles popup dialogs streamed by Shaman. It takes care of giving
-	 * them a consistent look, handle creation and immediate deletion, and its
-	 * methods are static to allow a flexible usage.
-	 */
-	
-public:
-	ShamanDialog();
-	virtual ~ShamanDialog();
 
-	static void popupDialog(const QString &title, const QString &text, QWidget *parent,
-			ShamanProperties::DialogType dtype = ShamanProperties::InformationDialog);
-	static int popupQuestionDialog(const QString &title, const QString &text, QWidget *parent,
-			ShamanProperties::DialogType dtype = ShamanProperties::InformationDialog);
-	static void popupDialogDontShow(const QString &title, const QString &text, const QString &keyname,
-			QWidget *parent, ShamanProperties::DialogType dtype = ShamanProperties::InformationDialog);
+        /* This class handles popup dialogs streamed by Shaman. It takes care of giving
+         * them a consistent look, handle creation and immediate deletion, and its
+         * methods are static to allow a flexible usage.
+         */
+
+    public:
+        ShamanDialog();
+        virtual ~ShamanDialog();
+
+        static void popupDialog( const QString &title, const QString &text, QWidget *parent,
+                                 ShamanProperties::DialogType dtype = ShamanProperties::InformationDialog );
+        static int popupQuestionDialog( const QString &title, const QString &text, QWidget *parent,
+                                        ShamanProperties::DialogType dtype = ShamanProperties::InformationDialog );
+        static void popupDialogDontShow( const QString &title, const QString &text, const QString &keyname,
+                                         QWidget *parent, ShamanProperties::DialogType dtype = ShamanProperties::InformationDialog );
 };
 
 #endif /*SHAMANDIALOG_H*/

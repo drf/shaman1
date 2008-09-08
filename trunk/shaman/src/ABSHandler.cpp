@@ -34,248 +34,235 @@ ABSHandler::~ABSHandler()
 {
 }
 
-QString ABSHandler::getABSPath(const QString &package)
+QString ABSHandler::getABSPath( const QString &package )
 {
-	QDir absDir("/var/abs");
-	absDir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot | QDir::NoSymLinks);
+    QDir absDir( "/var/abs" );
+    absDir.setFilter( QDir::Dirs | QDir::NoDotAndDotDot | QDir::NoSymLinks );
 
-	int found = 0;
-	QString absSource;
+    int found = 0;
+    QString absSource;
 
-	QFileInfoList list = absDir.entryInfoList();
+    QFileInfoList list = absDir.entryInfoList();
 
-	for (int i = 0; i < list.size(); ++i)
-	{
-		QDir subAbsDir(list.at(i).absoluteFilePath());
-		subAbsDir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot | QDir::NoSymLinks);
-		QFileInfoList subList = subAbsDir.entryInfoList();
+    for ( int i = 0; i < list.size(); ++i ) {
+        QDir subAbsDir( list.at( i ).absoluteFilePath() );
+        subAbsDir.setFilter( QDir::Dirs | QDir::NoDotAndDotDot | QDir::NoSymLinks );
+        QFileInfoList subList = subAbsDir.entryInfoList();
 
-		for (int j = 0; j < subList.size(); ++j)
-		{
-			qDebug() << subList.at(j).absoluteFilePath();
-			if(!subList.at(j).baseName().compare(package))
-			{
-				found = 1;
-				absSource = subList.at(j).absoluteFilePath();
-				break;
-			}
-		}
+        for ( int j = 0; j < subList.size(); ++j ) {
+            qDebug() << subList.at( j ).absoluteFilePath();
+            if ( !subList.at( j ).baseName().compare( package ) ) {
+                found = 1;
+                absSource = subList.at( j ).absoluteFilePath();
+                break;
+            }
+        }
 
-		if(found == 1)
-			break;
-	}
+        if ( found == 1 )
+            break;
+    }
 
-	if(!found)
-		return QString();
+    if ( !found )
+        return QString();
 
-	qDebug() << "ABS Dir is " << absSource;
+    qDebug() << "ABS Dir is " << absSource;
 
-	return absSource;
+    return absSource;
 }
 
-bool ABSHandler::cleanBuildingEnvironment(const QString &package)
+bool ABSHandler::cleanBuildingEnvironment( const QString &package )
 {
-	QSettings *settings = new QSettings();
+    QSettings *settings = new QSettings();
 
-	QString path(settings->value("absbuilding/buildpath").toString());
+    QString path( settings->value( "absbuilding/buildpath" ).toString() );
 
-	settings->deleteLater();
+    settings->deleteLater();
 
-	if(!path.endsWith(QChar('/')))
-		path.append(QChar('/'));
+    if ( !path.endsWith( QChar( '/' ) ) )
+        path.append( QChar( '/' ) );
 
-	path.append(package);
+    path.append( package );
 
-	rmrf(path.toAscii().data());
+    rmrf( path.toAscii().data() );
 
-	return true;
+    return true;
 }
 
-bool ABSHandler::setUpBuildingEnvironment(const QString &package)
+bool ABSHandler::setUpBuildingEnvironment( const QString &package )
 {
-	QSettings *settings = new QSettings();
+    QSettings *settings = new QSettings();
 
-	QString path(settings->value("absbuilding/buildpath").toString());
+    QString path( settings->value( "absbuilding/buildpath" ).toString() );
 
-	settings->deleteLater();
+    settings->deleteLater();
 
-	if(!path.endsWith(QChar('/')))
-		path.append(QChar('/'));
+    if ( !path.endsWith( QChar( '/' ) ) )
+        path.append( QChar( '/' ) );
 
-	path.append(package);
+    path.append( package );
 
-	QDir pathDir(path);
-	if(pathDir.exists())
-		cleanBuildingEnvironment(package);
+    QDir pathDir( path );
+    if ( pathDir.exists() )
+        cleanBuildingEnvironment( package );
 
-	if(!pathDir.mkpath(path))
-		return false;
+    if ( !pathDir.mkpath( path ) )
+        return false;
 
-	QString abspath(getABSPath(package));
+    QString abspath( getABSPath( package ) );
 
-	if(abspath.isEmpty())
-	{
-		qDebug() << "Couldn't find a matching ABS Dir!!";
-		return false;
-	}
+    if ( abspath.isEmpty() ) {
+        qDebug() << "Couldn't find a matching ABS Dir!!";
+        return false;
+    }
 
-	QDir absPDir(abspath);
-	absPDir.setFilter(QDir::Files | QDir::Hidden | QDir::NoDotAndDotDot | QDir::NoSymLinks);
+    QDir absPDir( abspath );
+    absPDir.setFilter( QDir::Files | QDir::Hidden | QDir::NoDotAndDotDot | QDir::NoSymLinks );
 
-	QFileInfoList Plist = absPDir.entryInfoList();
+    QFileInfoList Plist = absPDir.entryInfoList();
 
-	for (int i = 0; i < Plist.size(); ++i)
-	{
-		QString dest(path);
-		if(!dest.endsWith(QChar('/')))
-			dest.append(QChar('/'));
-		dest.append(Plist.at(i).fileName());
+    for ( int i = 0; i < Plist.size(); ++i ) {
+        QString dest( path );
+        if ( !dest.endsWith( QChar( '/' ) ) )
+            dest.append( QChar( '/' ) );
+        dest.append( Plist.at( i ).fileName() );
 
-		qDebug() << "Copying " << Plist.at(i).absoluteFilePath() << " to " << dest;
+        qDebug() << "Copying " << Plist.at( i ).absoluteFilePath() << " to " << dest;
 
-		if(!QFile::copy(Plist.at(i).absoluteFilePath(), dest))
-		{
-			return false;
-		}
-	}
+        if ( !QFile::copy( Plist.at( i ).absoluteFilePath(), dest ) ) {
+            return false;
+        }
+    }
 
-	return true;
+    return true;
 }
 
 bool ABSHandler::cleanAllBuildingEnvironments()
 {
-	QSettings *settings = new QSettings();
+    QSettings *settings = new QSettings();
 
-	int ret;
+    int ret;
 
-	ret = rmrf(settings->value("absbuilding/buildpath").toString().toAscii().data());
+    ret = rmrf( settings->value( "absbuilding/buildpath" ).toString().toAscii().data() );
 
-	settings->deleteLater();
+    settings->deleteLater();
 
-	if(ret == 0)
-		return true;
-	else
-		return false;
+    if ( ret == 0 )
+        return true;
+    else
+        return false;
 }
 
-QStringList ABSHandler::getMakeDepends(const QString &package)
+QStringList ABSHandler::getMakeDepends( const QString &package )
 {
-	QStringList retList;
+    QStringList retList;
 
-	retList.clear();
+    retList.clear();
 
-	QDir absDir("/var/abs");
-	absDir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot | QDir::NoSymLinks);
+    QDir absDir( "/var/abs" );
+    absDir.setFilter( QDir::Dirs | QDir::NoDotAndDotDot | QDir::NoSymLinks );
 
-	QString absSource(ABSHandler::getABSPath(package));
+    QString absSource( ABSHandler::getABSPath( package ) );
 
-	if(absSource.isEmpty())
-		return retList;
+    if ( absSource.isEmpty() )
+        return retList;
 
-	if(!absSource.endsWith(QChar('/')))
-		absSource.append(QChar('/'));
+    if ( !absSource.endsWith( QChar( '/' ) ) )
+        absSource.append( QChar( '/' ) );
 
-	absSource.append("PKGBUILD");
+    absSource.append( "PKGBUILD" );
 
-	QFile fp(absSource);
+    QFile fp( absSource );
 
-	if(!fp.open(QIODevice::ReadOnly | QIODevice::Text))
-		return retList;
+    if ( !fp.open( QIODevice::ReadOnly | QIODevice::Text ) )
+        return retList;
 
-	QTextStream in(&fp);
+    QTextStream in( &fp );
 
-	while(!in.atEnd())
-	{
-		QString line = in.readLine();
+    while ( !in.atEnd() ) {
+        QString line = in.readLine();
 
-		if(!line.startsWith("makedepends"))
-			continue;
+        if ( !line.startsWith( "makedepends" ) )
+            continue;
 
-		QString testline(line);
-		testline.remove(' ');
+        QString testline( line );
+        testline.remove( ' ' );
 
-		while(true)
-		{
-			if(line.contains('('))
-				line = line.split('(').at(1);
+        while ( true ) {
+            if ( line.contains( '(' ) )
+                line = line.split( '(' ).at( 1 );
 
-			foreach(const QString &rdep, line.split(QChar('\''), QString::SkipEmptyParts))
-			{
-				QString dep(rdep);
+            foreach( const QString &rdep, line.split( QChar( '\'' ), QString::SkipEmptyParts ) ) {
+                QString dep( rdep );
 
-			    if(!dep.contains(')') && !dep.contains(' '))
-				{
-					if(dep.contains('>'))
-						dep.truncate(dep.indexOf('>'));
+                if ( !dep.contains( ')' ) && !dep.contains( ' ' ) ) {
+                    if ( dep.contains( '>' ) )
+                        dep.truncate( dep.indexOf( '>' ) );
 
-					if(dep.contains('<'))
-						dep.truncate(dep.indexOf('<'));
+                    if ( dep.contains( '<' ) )
+                        dep.truncate( dep.indexOf( '<' ) );
 
-					if(dep.contains('='))
-						dep.truncate(dep.indexOf('='));
+                    if ( dep.contains( '=' ) )
+                        dep.truncate( dep.indexOf( '=' ) );
 
-					qDebug() << "Adding" << dep;
+                    qDebug() << "Adding" << dep;
 
-					retList.append(dep);
-				}
-			}
+                    retList.append( dep );
+                }
+            }
 
-			if(testline.endsWith(')'))
-				break;
+            if ( testline.endsWith( ')' ) )
+                break;
 
-			line = in.readLine();
+            line = in.readLine();
 
-			testline = line;
-			testline.remove(' ');
-		}
+            testline = line;
+            testline.remove( ' ' );
+        }
 
-		break;
-	}
+        break;
+    }
 
-	fp.close();
+    fp.close();
 
-	return retList;
+    return retList;
 }
 
-int ABSHandler::rmrf(const char *path)
+int ABSHandler::rmrf( const char *path )
 {
-	int errflag = 0;
-	struct dirent *dp;
-	DIR *dirp;
+    int errflag = 0;
+    struct dirent *dp;
+    DIR *dirp;
 
-	if(!unlink(path))
-		return(0);
-	else
-	{
-		if(errno == ENOENT)
-			return(0);
-		else if(errno == EPERM) { }
-		/* fallthrough */
-		else if(errno == EISDIR) { }
-		/* fallthrough */
-		else if(errno == ENOTDIR)
-			return(1);
-		else
-			/* not a directory */
-			return(1);
+    if ( !unlink( path ) )
+        return( 0 );
+    else {
+        if ( errno == ENOENT )
+            return( 0 );
+        else if ( errno == EPERM ) { }
+        /* fallthrough */
+        else if ( errno == EISDIR ) { }
+        /* fallthrough */
+        else if ( errno == ENOTDIR )
+            return( 1 );
+        else
+            /* not a directory */
+            return( 1 );
 
-		if((dirp = opendir(path)) == (DIR *)-1)
-			return(1);
-		for(dp = readdir(dirp); dp != NULL; dp = readdir(dirp))
-		{
-			if(dp->d_ino)
-			{
-				char name[4096];
-				sprintf(name, "%s/%s", path, dp->d_name);
-				if(strcmp(dp->d_name, "..") && strcmp(dp->d_name, "."))
-					errflag += rmrf(name);
-			}
-		}
+        if (( dirp = opendir( path ) ) == ( DIR * ) - 1 )
+            return( 1 );
+        for ( dp = readdir( dirp ); dp != NULL; dp = readdir( dirp ) ) {
+            if ( dp->d_ino ) {
+                char name[4096];
+                sprintf( name, "%s/%s", path, dp->d_name );
+                if ( strcmp( dp->d_name, ".." ) && strcmp( dp->d_name, "." ) )
+                    errflag += rmrf( name );
+            }
+        }
 
-		closedir(dirp);
-		if(rmdir(path))
-			errflag++;
+        closedir( dirp );
+        if ( rmdir( path ) )
+            errflag++;
 
-		return(errflag);
-	}
+        return( errflag );
+    }
 }

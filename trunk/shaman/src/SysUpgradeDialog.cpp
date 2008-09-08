@@ -26,59 +26,57 @@
 #include <QDebug>
 #include "AlpmHandler.h"
 
-SysUpgradeDialog::SysUpgradeDialog(AlpmHandler *hnd, QWidget *parent)
-: QDialog(parent),
-aHandle(hnd)
+SysUpgradeDialog::SysUpgradeDialog( AlpmHandler *hnd, QWidget *parent )
+        : QDialog( parent ),
+        aHandle( hnd )
 {
-    setupUi(this);
+    setupUi( this );
 }
 
 SysUpgradeDialog::~SysUpgradeDialog()
 {
-    disconnect(abortButton, 0, 0, 0);
-    disconnect(addToQueue, 0, 0, 0);
-    disconnect(goUpgrading, 0, 0, 0);
+    disconnect( abortButton, 0, 0, 0 );
+    disconnect( addToQueue, 0, 0, 0 );
+    disconnect( goUpgrading, 0, 0, 0 );
 }
 
 void SysUpgradeDialog::init()
 {
     QSettings *settings = new QSettings();
 
-    if(settings->value("gui/actionupgrade").toString() == "add")
+    if ( settings->value( "gui/actionupgrade" ).toString() == "add" )
         addPkg();
-    else if(settings->value("gui/actionupgrade").toString() == "upgrade")
+    else if ( settings->value( "gui/actionupgrade" ).toString() == "upgrade" )
         initSysUpgrade();
-    else
-    {
+    else {
         QStringList data;
 
-        setWindowModality(Qt::ApplicationModal);
+        setWindowModality( Qt::ApplicationModal );
 
         data = aHandle->getUpgradeablePackages();
 
         int n = data.size();
 
-        upgradeMessage->setText(QString(tr("<b>Upgradeable package(s): %n</b> "
-                "You can either<br> upgrade "
-                "immediately or add it to the current Queue"
-                "<br> and process it later.", "", n)));
+        upgradeMessage->setText( QString( tr( "<b>Upgradeable package(s): %n</b> "
+                                              "You can either<br> upgrade "
+                                              "immediately or add it to the current Queue"
+                                              "<br> and process it later.", "", n ) ) );
 
-        QTreeWidgetItem *itm = new QTreeWidgetItem(treeWidget, QStringList(tr("To be Upgraded")));
-        treeWidget->addTopLevelItem(itm);
+        QTreeWidgetItem *itm = new QTreeWidgetItem( treeWidget, QStringList( tr( "To be Upgraded" ) ) );
+        treeWidget->addTopLevelItem( itm );
 
-        foreach(const QString &pkg, aHandle->getUpgradeablePackages())
-        {
-            new QTreeWidgetItem(itm, QStringList() << QString(pkg + " (" +
-                    aHandle->getPackageVersion(pkg, "local") + "-->" +
-                    aHandle->getPackageVersion(pkg, aHandle->getPackageRepo(pkg, true)) + QChar(')')));
+        foreach( const QString &pkg, aHandle->getUpgradeablePackages() ) {
+            new QTreeWidgetItem( itm, QStringList() << QString( pkg + " (" +
+                                 aHandle->getPackageVersion( pkg, "local" ) + "-->" +
+                                 aHandle->getPackageVersion( pkg, aHandle->getPackageRepo( pkg, true ) ) + QChar( ')' ) ) );
         }
 
-        itm->setExpanded(true);
+        itm->setExpanded( true );
 
-        connect(abortButton, SIGNAL(clicked()), SLOT(abort()));
-        connect(addToQueue, SIGNAL(clicked()), SLOT(addPkg()));
-        connect(goUpgrading, SIGNAL(clicked()), SLOT(initSysUpgrade()));
-        connect(showPackages, SIGNAL(toggled(bool)), SLOT(adjust(bool)));
+        connect( abortButton, SIGNAL( clicked() ), SLOT( abort() ) );
+        connect( addToQueue, SIGNAL( clicked() ), SLOT( addPkg() ) );
+        connect( goUpgrading, SIGNAL( clicked() ), SLOT( initSysUpgrade() ) );
+        connect( showPackages, SIGNAL( toggled( bool ) ), SLOT( adjust( bool ) ) );
 
         //treeWidget->hide();
         adjustSize();
@@ -91,48 +89,47 @@ void SysUpgradeDialog::init()
 
 void SysUpgradeDialog::abort()
 {
-	emit aborted();
+    emit aborted();
 }
 
 void SysUpgradeDialog::addPkg()
 {
-	QSettings *settings = new QSettings();
+    QSettings *settings = new QSettings();
 
-	if(checkBox->isChecked())
-		settings->setValue("gui/actionupgrade", "add");
+    if ( checkBox->isChecked() )
+        settings->setValue( "gui/actionupgrade", "add" );
 
-	settings->deleteLater();
+    settings->deleteLater();
 
-	emit addToPkgQueue();
+    emit addToPkgQueue();
 }
 
 void SysUpgradeDialog::initSysUpgrade()
 {
-	QSettings *settings = new QSettings();
+    QSettings *settings = new QSettings();
 
-	if(checkBox->isChecked())
-		settings->setValue("gui/actionupgrade", "upgrade");
+    if ( checkBox->isChecked() )
+        settings->setValue( "gui/actionupgrade", "upgrade" );
 
-	aHandle->fullSystemUpgrade();
+    aHandle->fullSystemUpgrade();
 
-	qDebug() << "Upgrade signal sent";
+    qDebug() << "Upgrade signal sent";
 
-	settings->deleteLater();
+    settings->deleteLater();
 
-	emit upgradeNow();
+    emit upgradeNow();
 }
 
-void SysUpgradeDialog::adjust(bool tgld)
+void SysUpgradeDialog::adjust( bool tgld )
 {
-	if(tgld)
-		treeWidget->show();
-	else
-	{
-		treeWidget->hide();
-		resize(minimumSize());
-	}
+    if ( tgld )
+        treeWidget->show();
+    else {
+        treeWidget->hide();
+        resize( minimumSize() );
+    }
 
-	adjustSize();
+    adjustSize();
 }
 
 bool SysUpgradeDialog::force()

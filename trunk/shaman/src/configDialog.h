@@ -28,12 +28,13 @@
 #include <QProcess>
 #include <QPointer>
 
-namespace ShamanProperties {
+namespace ShamanProperties
+{
 
-	enum MirrorType {
-		OfficialMirrors,
-		KDEModMirrors
-	};
+enum MirrorType {
+    OfficialMirrors,
+    KDEModMirrors
+};
 
 }  // namespace ShamanProperties
 
@@ -41,70 +42,70 @@ class AlpmHandler;
 
 class CleanThread : public QThread
 {
-	Q_OBJECT
+        Q_OBJECT
 
-public:
-	CleanThread(AlpmHandler *aH, int act);
-	void run();
+    public:
+        CleanThread( AlpmHandler *aH, int act );
+        void run();
 
-signals:
-	void success(int act);
-	void failure(int act);
+    signals:
+        void success( int act );
+        void failure( int act );
 
-private:
-	AlpmHandler *m_handler;
-	int action;
+    private:
+        AlpmHandler *m_handler;
+        int action;
 };
 
 
 class ConfigDialog : public QDialog, public Ui::ConfigDialog, private ConfigurationParser
 {
 
-	Q_OBJECT
+        Q_OBJECT
 
-public:
-	explicit ConfigDialog(AlpmHandler *handler, QWidget *parent = 0);
-	~ConfigDialog();
-	bool doDbUpdate();
+    public:
+        explicit ConfigDialog( AlpmHandler *handler, QWidget *parent = 0 );
+        ~ConfigDialog();
+        bool doDbUpdate();
 
-signals:
-	void setProxy();
+    signals:
+        void setProxy();
 
-private slots:
-	void changeWidget(int position);
-	void openAddDialog();
-	void openEditDialog();
-	void removeThirdParty();
-	void performManteinanceAction();
-	void cleanProc(int eC, QProcess::ExitStatus eS);
-	void mantProgress();
-	void showSuccess(int act);
-	void showFailure(int act);
-	void cleanThread();
-	void saveConfiguration();
-	void addMirror();
-	void addKDEModMirror();
-	void obfuscateSupfiles(bool state);
-	void obfuscateDBUpdate(bool state);
-	void obfuscateDBUpdateAt(bool state);
-	void obfuscateRSSUpdate(bool state);
+    private slots:
+        void changeWidget( int position );
+        void openAddDialog();
+        void openEditDialog();
+        void removeThirdParty();
+        void performManteinanceAction();
+        void cleanProc( int eC, QProcess::ExitStatus eS );
+        void mantProgress();
+        void showSuccess( int act );
+        void showFailure( int act );
+        void cleanThread();
+        void saveConfiguration();
+        void addMirror();
+        void addKDEModMirror();
+        void obfuscateSupfiles( bool state );
+        void obfuscateDBUpdate( bool state );
+        void obfuscateDBUpdateAt( bool state );
+        void obfuscateRSSUpdate( bool state );
 
-private:
-	void setupRepos();
-	void setupGeneral();
-	void setupPacman();
-	void setupABS();
-	void setupAdvanced();
-	void saveSettings();
-	QStringList getMirrorList(ShamanProperties::MirrorType type = ShamanProperties::OfficialMirrors);
+    private:
+        void setupRepos();
+        void setupGeneral();
+        void setupPacman();
+        void setupABS();
+        void setupAdvanced();
+        void saveSettings();
+        QStringList getMirrorList( ShamanProperties::MirrorType type = ShamanProperties::OfficialMirrors );
 
-private:
-	QPointer<AlpmHandler> m_handler;
-	QPointer<QDialog> addDialog;
-	QPointer<CleanThread> cTh;
-	QPointer<RootProcess> mantProc;
-	bool upDb;
-	QPointer<Authenticator> ath;
+    private:
+        QPointer<AlpmHandler> m_handler;
+        QPointer<QDialog> addDialog;
+        QPointer<CleanThread> cTh;
+        QPointer<RootProcess> mantProc;
+        bool upDb;
+        QPointer<Authenticator> ath;
 };
 
 #endif /*CONFIGDIALOG_H*/

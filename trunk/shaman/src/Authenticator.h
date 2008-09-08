@@ -29,52 +29,52 @@
 
 class Authenticator : public QObject
 {
-public:
-	Authenticator(QObject *parent = 0);
-	virtual ~Authenticator();
+    public:
+        Authenticator( QObject *parent = 0 );
+        virtual ~Authenticator();
 
-	bool switchToRoot();
-	bool switchToStdUsr();
+        bool switchToRoot();
+        bool switchToStdUsr();
 
-private:
-	bool checkUser(const QString &uname);
-	bool releaseTransaction();
+    private:
+        bool checkUser( const QString &uname );
+        bool releaseTransaction();
 
-private:
-	pam_handle_t *pamh;
-	int retval;
-	bool onTransaction;
-	bool alreadyAuthed;
+    private:
+        pam_handle_t *pamh;
+        int retval;
+        bool onTransaction;
+        bool alreadyAuthed;
 };
 
 class Authenticator_Callback : public QObject
 {
-	Q_OBJECT
+        Q_OBJECT
 
-public:
-	explicit Authenticator_Callback(QObject *parent = 0);
-	virtual ~Authenticator_Callback();
+    public:
+        explicit Authenticator_Callback( QObject *parent = 0 );
+        virtual ~Authenticator_Callback();
 
-	int auth_cback(int num_msg, const struct pam_message **msg,
-            struct pam_response **resp, void *appdata_ptr);
+        int auth_cback( int num_msg, const struct pam_message **msg,
+                        struct pam_response **resp, void *appdata_ptr );
 
-signals:
-	void passwordRequired(int count);
+    signals:
+        void passwordRequired( int count );
 };
 
 class RootProcess : public QProcess
 {
-	Q_OBJECT
+        Q_OBJECT
 
-public:
-	explicit RootProcess( QObject * parent = 0 );
-	virtual ~RootProcess();
+    public:
+        explicit RootProcess( QObject * parent = 0 );
+        virtual ~RootProcess();
 
-protected:
-	virtual void setupChildProcess();
+    protected:
+        virtual void setupChildProcess();
 };
 
-int auth_cback(int num_msg, const struct pam_message **msg,
-                struct pam_response **resp, void *appdata_ptr);
+int auth_cback( int num_msg, const struct pam_message **msg,
+                struct pam_response **resp, void *appdata_ptr );
 
 #endif /*AUTHENTICATOR_H*/

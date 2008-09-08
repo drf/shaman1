@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2008 by Lukas Appelhans                                 *
- *   l.appelhans@gmx.de       											   *
+ *   l.appelhans@gmx.de                     *
  *   Copyright (C) 2008 by Dario Freddi                                    *
  *   drf54321@yahoo.it                                                     *
  *                                                                         *
@@ -27,23 +27,23 @@
 
 #include "plasma/datacontainer.h"
 
-ShamanEngine::ShamanEngine(QObject *parent, const QVariantList &args)
-  : Plasma::DataEngine(parent),
-  dbus(QDBusConnection::systemBus()),
-  currentAction("idle"),
-  dbusError(false),
-  slotsAreConnected(false),
-  curitm(QString()),
-  curitmAct(0),
-  singleDlPercent(0),
-  singleDlSpd(0),
-  totalDlPercent(0),
-  totalDlSpd(0)
+ShamanEngine::ShamanEngine( QObject *parent, const QVariantList &args )
+        : Plasma::DataEngine( parent ),
+        dbus( QDBusConnection::systemBus() ),
+        currentAction( "idle" ),
+        dbusError( false ),
+        slotsAreConnected( false ),
+        curitm( QString() ),
+        curitmAct( 0 ),
+        singleDlPercent( 0 ),
+        singleDlSpd( 0 ),
+        totalDlPercent( 0 ),
+        totalDlSpd( 0 )
 {
-	Q_UNUSED(args)
-	
-	setMinimumPollingInterval(MINIMUM_UPDATE_INTERVAL);
-	
+    Q_UNUSED( args )
+
+    setMinimumPollingInterval( MINIMUM_UPDATE_INTERVAL );
+
 }
 
 ShamanEngine::~ShamanEngine()
@@ -58,144 +58,136 @@ QStringList ShamanEngine::sources() const
     return sources;
 }
 
-void ShamanEngine::setRefreshTime(uint time)
+void ShamanEngine::setRefreshTime( uint time )
 {
-        setPollingInterval(time);
+    setPollingInterval( time );
 }
 
 uint ShamanEngine::refreshTime() const
 {
-        return 1000;
+    return 1000;
 }
 
-bool ShamanEngine::sourceRequestEvent(const QString &name)
+bool ShamanEngine::sourceRequestEvent( const QString &name )
 {
-	return updateSourceEvent(name);
+    return updateSourceEvent( name );
 }
 
-bool ShamanEngine::updateSourceEvent(const QString &name)
+bool ShamanEngine::updateSourceEvent( const QString &name )
 {
-	if(!name.compare("Shaman", Qt::CaseInsensitive))
-		getShamanData(name);
-	
-	return true;
+    if ( !name.compare( "Shaman", Qt::CaseInsensitive ) )
+        getShamanData( name );
+
+    return true;
 }
 
-void ShamanEngine::getShamanData(const QString &name)
+void ShamanEngine::getShamanData( const QString &name )
 {
-	removeAllData(name);
+    removeAllData( name );
 
-	if(isDBusServiceRegistered()) 
-	{
-		setData(name, "error", false);
-		setData(name, "transactionStatus", currentAction);
-		setData(name, "DBusError", dbusError);
-		setData(name, "CurrentItemProcessed", curitm);
-		setData(name, "CurrentItemStatus", curitmAct);
-		setData(name, "CurrentItemDlSpeed", singleDlSpd);
-		setData(name, "CurrentItemDlPercent", singleDlPercent);
-		setData(name, "TotalDlSpeed", totalDlSpd);
-		setData(name, "TotalDlPercent", totalDlPercent);
-		setData(name, "onTransaction", onTransaction);
-		setData(name, "onDownloading", onDownloading);
-		setData(name, "transactionPercent", transactionPercent);
-	}
-	else 
-	{
-		setData(name, "error", true);
-		setData(name, "errorMessage", I18N_NOOP("Is Shaman up and running?"));
-	}
+    if ( isDBusServiceRegistered() ) {
+        setData( name, "error", false );
+        setData( name, "transactionStatus", currentAction );
+        setData( name, "DBusError", dbusError );
+        setData( name, "CurrentItemProcessed", curitm );
+        setData( name, "CurrentItemStatus", curitmAct );
+        setData( name, "CurrentItemDlSpeed", singleDlSpd );
+        setData( name, "CurrentItemDlPercent", singleDlPercent );
+        setData( name, "TotalDlSpeed", totalDlSpd );
+        setData( name, "TotalDlPercent", totalDlPercent );
+        setData( name, "onTransaction", onTransaction );
+        setData( name, "onDownloading", onDownloading );
+        setData( name, "transactionPercent", transactionPercent );
+    } else {
+        setData( name, "error", true );
+        setData( name, "errorMessage", I18N_NOOP( "Is Shaman up and running?" ) );
+    }
 }
 
 bool ShamanEngine::isDBusServiceRegistered()
 {
-	if(dbus.interface()->isServiceRegistered(SHAMAN_DBUS_SERVICE))
-	{
-		if(!slotsAreConnected)
-		{
-			connectDBusSlots();
-			slotsAreConnected = true;
-		}
-		return true;
-	}
-	else
-	{
-		if(slotsAreConnected)
-		{
-			slotsAreConnected = false;
-		}
-		return false;
-	}
+    if ( dbus.interface()->isServiceRegistered( SHAMAN_DBUS_SERVICE ) ) {
+        if ( !slotsAreConnected ) {
+            connectDBusSlots();
+            slotsAreConnected = true;
+        }
+        return true;
+    } else {
+        if ( slotsAreConnected ) {
+            slotsAreConnected = false;
+        }
+        return false;
+    }
 }
 
-void ShamanEngine::actionChanged(const QString &action)
+void ShamanEngine::actionChanged( const QString &action )
 {
-	currentAction = action;
-	updateSourceEvent("Shaman");
+    currentAction = action;
+    updateSourceEvent( "Shaman" );
 }
 
 void ShamanEngine::updateShamanData()
 {
-	getShamanData("Shaman");
+    getShamanData( "Shaman" );
 }
 
 void ShamanEngine::connectDBusSlots()
 {
-	if(!dbus.connect("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", 
-			"actionStatusChanged", this, SLOT(actionChanged(const QString&))))
-		dbusError = true;
-	else
-		dbusError = false;
+    if ( !dbus.connect( "org.archlinux.shaman", "/Shaman", "org.archlinux.shaman",
+                        "actionStatusChanged", this, SLOT( actionChanged( const QString& ) ) ) )
+        dbusError = true;
+    else
+        dbusError = false;
 
-	if(!dbus.connect("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", 
-			"streamDbUpdatingStatus", this, SLOT(dbUpdate(const QString&,int))))
-		dbusError = true;
-	else
-		dbusError = false;
+    if ( !dbus.connect( "org.archlinux.shaman", "/Shaman", "org.archlinux.shaman",
+                        "streamDbUpdatingStatus", this, SLOT( dbUpdate( const QString&, int ) ) ) )
+        dbusError = true;
+    else
+        dbusError = false;
 
-	if(!dbus.connect("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", 
-			"streamTransDlProg", this, SLOT(dlProg(const QString&,int,int,int,int))))
-		dbusError = true;
-	else
-		dbusError = false;
+    if ( !dbus.connect( "org.archlinux.shaman", "/Shaman", "org.archlinux.shaman",
+                        "streamTransDlProg", this, SLOT( dlProg( const QString&, int, int, int, int ) ) ) )
+        dbusError = true;
+    else
+        dbusError = false;
 
-	if(!dbus.connect("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", 
-	        "streamTransactionProgress", this, SLOT(transProg(int))))
-	    dbusError = true;
-	else
-	    dbusError = false;
+    if ( !dbus.connect( "org.archlinux.shaman", "/Shaman", "org.archlinux.shaman",
+                        "streamTransactionProgress", this, SLOT( transProg( int ) ) ) )
+        dbusError = true;
+    else
+        dbusError = false;
 
-	if(!dbus.connect("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", 
-	        "transactionStarted", this, SLOT(transactionStarted())))
-	    dbusError = true;
-	else
-	    dbusError = false;
+    if ( !dbus.connect( "org.archlinux.shaman", "/Shaman", "org.archlinux.shaman",
+                        "transactionStarted", this, SLOT( transactionStarted() ) ) )
+        dbusError = true;
+    else
+        dbusError = false;
 
-	if(!dbus.connect("org.archlinux.shaman", "/Shaman", "org.archlinux.shaman", 
-	        "transactionReleased", this, SLOT(transactionReleased())))
-	    dbusError = true;
-	else
-	    dbusError = false;
+    if ( !dbus.connect( "org.archlinux.shaman", "/Shaman", "org.archlinux.shaman",
+                        "transactionReleased", this, SLOT( transactionReleased() ) ) )
+        dbusError = true;
+    else
+        dbusError = false;
 }
 
-void ShamanEngine::dbUpdate(const QString &repo, int action)
+void ShamanEngine::dbUpdate( const QString &repo, int action )
 {
-	curitm = repo;
-	curitmAct = action;
+    curitm = repo;
+    curitmAct = action;
 }
 
-void ShamanEngine::dlProg(const QString &filename, int singlePercent, int singleSpeed,
-		int totalPercent, int totalSpeed)
+void ShamanEngine::dlProg( const QString &filename, int singlePercent, int singleSpeed,
+                           int totalPercent, int totalSpeed )
 {
-	curitm = filename;
-	singleDlPercent = singlePercent;
-	singleDlSpd = singleSpeed;
-	totalDlPercent = totalPercent;
-	totalDlSpd = totalSpeed;
-	onDownloading = true;
+    curitm = filename;
+    singleDlPercent = singlePercent;
+    singleDlSpd = singleSpeed;
+    totalDlPercent = totalPercent;
+    totalDlSpd = totalSpeed;
+    onDownloading = true;
 }
 
-void ShamanEngine::transProg(int percent)
+void ShamanEngine::transProg( int percent )
 {
     transactionPercent = percent;
     onDownloading = false;
@@ -204,13 +196,13 @@ void ShamanEngine::transProg(int percent)
 void ShamanEngine::transactionStarted()
 {
     onTransaction = true;
-    updateSourceEvent("Shaman");
+    updateSourceEvent( "Shaman" );
 }
 
 void ShamanEngine::transactionReleased()
 {
     onTransaction = false;
-    updateSourceEvent("Shaman");
+    updateSourceEvent( "Shaman" );
 }
 
 #include "shamanEngine.moc"

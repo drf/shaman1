@@ -38,34 +38,34 @@ class QPushButton;
 
 class MaintenanceBar : public QToolBar
 {
-    Q_OBJECT
+        Q_OBJECT
 
-public:
-	explicit MaintenanceBar(AlpmHandler *aH, QWidget *parent = 0);
-	virtual ~MaintenanceBar();
+    public:
+        explicit MaintenanceBar( AlpmHandler *aH, QWidget *parent = 0 );
+        virtual ~MaintenanceBar();
 
-private slots:
-    void performAction();
-    void openDialog();
+    private slots:
+        void performAction();
+        void openDialog();
 
-    void showSuccess(int act);
-    void showFailure(int act);
+        void showSuccess( int act );
+        void showFailure( int act );
 
-    void cleanProc(int eC, QProcess::ExitStatus eS);
-    void mantProgress();
+        void cleanProc( int eC, QProcess::ExitStatus eS );
+        void mantProgress();
 
-private:
-    QPointer<QAction> m_comboBox;
-    CleanThread *cTh;
-    RootProcess *mantProc;
-    AlpmHandler *m_handler;
+    private:
+        QPointer<QAction> m_comboBox;
+        CleanThread *cTh;
+        RootProcess *mantProc;
+        AlpmHandler *m_handler;
 
-    QPointer<QLabel> statusLabel;
-    QPointer<QTextEdit> mantDetails;
-    QPointer<QDialog> m_dialog;
-    QPointer<QPushButton> m_button;
+        QPointer<QLabel> statusLabel;
+        QPointer<QTextEdit> mantDetails;
+        QPointer<QDialog> m_dialog;
+        QPointer<QPushButton> m_button;
 
-    QPointer<Authenticator> ath;
+        QPointer<Authenticator> ath;
 };
 
 #endif /* MAINTENANCEBAR_H */

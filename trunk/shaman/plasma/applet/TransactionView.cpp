@@ -27,64 +27,63 @@
 #include <QLabel>
 #include <QProgressBar>
 
-TransactionView::TransactionView(Plasma::Applet *parent, QDBusConnection dbs)
-: AbstractView(parent),
-    m_dbus(dbs)
+TransactionView::TransactionView( Plasma::Applet *parent, QDBusConnection dbs )
+        : AbstractView( parent ),
+        m_dbus( dbs )
 {
-    m_layout = static_cast <QGraphicsLinearLayout *> (parent->layout());
+    m_layout = static_cast <QGraphicsLinearLayout *>( parent->layout() );
 
-    if ( m_layout )
-    {
-        m_statusLabel = new QGraphicsProxyWidget(parent);
-        m_statusLabelWidget = new QLabel(0);
-        m_statusLabelWidget->setStyleSheet("background-color: transparent; color: white");
-        m_statusLabelWidget->setAlignment(Qt::AlignCenter);
-        m_statusLabelWidget->setText("Please Wait...");
-        m_statusLabel->setWidget(m_statusLabelWidget);
-        m_layout->addItem(m_statusLabel);
+    if ( m_layout ) {
+        m_statusLabel = new QGraphicsProxyWidget( parent );
+        m_statusLabelWidget = new QLabel( 0 );
+        m_statusLabelWidget->setStyleSheet( "background-color: transparent; color: white" );
+        m_statusLabelWidget->setAlignment( Qt::AlignCenter );
+        m_statusLabelWidget->setText( "Please Wait..." );
+        m_statusLabel->setWidget( m_statusLabelWidget );
+        m_layout->addItem( m_statusLabel );
 
-        m_progressBar = new QGraphicsProxyWidget(parent);
-        m_progressBarWidget = new QProgressBar(0);
-        m_progressBarWidget->setStyleSheet("background-color: transparent");
-        m_progressBarWidget->setValue(0);
-        m_progressBar->setWidget(m_progressBarWidget);
-        m_layout->addItem(m_progressBar);
+        m_progressBar = new QGraphicsProxyWidget( parent );
+        m_progressBarWidget = new QProgressBar( 0 );
+        m_progressBarWidget->setStyleSheet( "background-color: transparent" );
+        m_progressBarWidget->setValue( 0 );
+        m_progressBar->setWidget( m_progressBarWidget );
+        m_layout->addItem( m_progressBar );
     }
-    
-    connect(parent, SIGNAL(dlProgress(const QString&,int,int)), SLOT(dlProgress(const QString&,int,int)));
-    connect(parent, SIGNAL(status(const QString&)), SLOT(status(const QString&)));
-    connect(parent, SIGNAL(transProgress(int)), SLOT(transProgress(int)));
+
+    connect( parent, SIGNAL( dlProgress( const QString&, int, int ) ), SLOT( dlProgress( const QString&, int, int ) ) );
+    connect( parent, SIGNAL( status( const QString& ) ), SLOT( status( const QString& ) ) );
+    connect( parent, SIGNAL( transProgress( int ) ), SLOT( transProgress( int ) ) );
 }
 
 TransactionView::~TransactionView()
 {
-    m_layout->removeItem(m_statusLabel);
-    m_layout->removeItem(m_progressBar);
-    
-    m_statusLabel->setWidget(0);
-    m_progressBar->setWidget(0);
-    
+    m_layout->removeItem( m_statusLabel );
+    m_layout->removeItem( m_progressBar );
+
+    m_statusLabel->setWidget( 0 );
+    m_progressBar->setWidget( 0 );
+
     delete m_statusLabel;
     delete m_progressBar;
 }
 
-void TransactionView::dlProgress(const QString &filename, int totalPercent, int totalSpeed)
+void TransactionView::dlProgress( const QString &filename, int totalPercent, int totalSpeed )
 {
-    Q_UNUSED(totalSpeed);
-    
-    m_progressBarWidget->setValue(totalPercent);
-    m_statusLabelWidget->setText("Downloading " + filename);
+    Q_UNUSED( totalSpeed );
+
+    m_progressBarWidget->setValue( totalPercent );
+    m_statusLabelWidget->setText( "Downloading " + filename );
 }
 
-void TransactionView::transProgress(int percent)
+void TransactionView::transProgress( int percent )
 {
-    m_progressBarWidget->setValue(percent);
-    m_statusLabelWidget->setText("Committing Transaction...");
+    m_progressBarWidget->setValue( percent );
+    m_statusLabelWidget->setText( "Committing Transaction..." );
 }
 
-void TransactionView::status(const QString &status)
+void TransactionView::status( const QString &status )
 {
-    Q_UNUSED(status);
+    Q_UNUSED( status );
 }
 
 #include "TransactionView.moc"

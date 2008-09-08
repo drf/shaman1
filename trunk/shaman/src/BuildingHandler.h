@@ -35,42 +35,42 @@ class QueueDialog;
 
 class BuildingHandler : public QObject
 {
-	Q_OBJECT
-	
-public:
-	explicit BuildingHandler(MainWindow *mW, AlpmHandler *aH);
-	virtual ~BuildingHandler();
+        Q_OBJECT
 
-public slots:
-	void updateABSTree();
-	void validateSourceQueue();
-	void startSourceProcessing();
-	void finishedBuilding(int failure, const QStringList &targets);
-	void processBuiltPackages();
-	void openPBuildDialog();
-	void processBuildWizard();
-	void reduceBuildingInTray();
-	void ABSUpdateEnded();
-	void nullifyBDialog();
-	void adjust(bool tgld);
-	
-signals:
-	void outOfScope();
-	void buildingStarted();
-	void buildingFinished();
+    public:
+        explicit BuildingHandler( MainWindow *mW, AlpmHandler *aH );
+        virtual ~BuildingHandler();
 
-private:
-	QPointer<BuildingDialog> buildDialog;
-	Ui::reviewBuildingDialog *revBuildUi;
-	QPointer<EditPBuild> pBuildEditor;
-	QPointer<QDialog> reviewBQueue;
-	QPointer<QueueDialog> queueDl;
-	MainWindow *mWin;
-	AlpmHandler *aHandle;
+    public slots:
+        void updateABSTree();
+        void validateSourceQueue();
+        void startSourceProcessing();
+        void finishedBuilding( int failure, const QStringList &targets );
+        void processBuiltPackages();
+        void openPBuildDialog();
+        void processBuildWizard();
+        void reduceBuildingInTray();
+        void ABSUpdateEnded();
+        void nullifyBDialog();
+        void adjust( bool tgld );
 
-	QStringList installedMakeDepends;
-	QStringList installedBinaryPkgs;
-	QStringList buildTargets;
+    signals:
+        void outOfScope();
+        void buildingStarted();
+        void buildingFinished();
+
+    private:
+        QPointer<BuildingDialog> buildDialog;
+        Ui::reviewBuildingDialog *revBuildUi;
+        QPointer<EditPBuild> pBuildEditor;
+        QPointer<QDialog> reviewBQueue;
+        QPointer<QueueDialog> queueDl;
+        MainWindow *mWin;
+        AlpmHandler *aHandle;
+
+        QStringList installedMakeDepends;
+        QStringList installedBinaryPkgs;
+        QStringList buildTargets;
 };
 
 #endif /*BUILDINGHANDLER_H*/

@@ -25,11 +25,11 @@
 
 class ShamanTreeWidgetItem : public QTreeWidgetItem
 {
-public:
-	ShamanTreeWidgetItem();
-	virtual ~ShamanTreeWidgetItem();
-	
-	virtual bool operator<(const QTreeWidgetItem &other) const;
+    public:
+        ShamanTreeWidgetItem();
+        virtual ~ShamanTreeWidgetItem();
+
+        virtual bool operator<( const QTreeWidgetItem &other ) const;
 };
 
 #endif /*SHAMANTREEWIDGETITEM_H*/

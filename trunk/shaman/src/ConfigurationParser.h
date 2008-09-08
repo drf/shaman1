@@ -36,34 +36,34 @@
 using namespace std;
 
 struct PcCnf {
-	QStringList syncdbs;
-	QStringList NoUpgrade;
-	QStringList NoExtract;
-	QStringList IgnorePkg;
-	QStringList IgnoreGrp;
-	QStringList HoldPkg;
-	int noPassiveFTP;
-	int useDelta;
-	int useSysLog;
-	QString xferCommand;
-	QString logFile;
-	QStringList serverAssoc;
-	bool loaded;
+    QStringList syncdbs;
+    QStringList NoUpgrade;
+    QStringList NoExtract;
+    QStringList IgnorePkg;
+    QStringList IgnoreGrp;
+    QStringList HoldPkg;
+    int noPassiveFTP;
+    int useDelta;
+    int useSysLog;
+    QString xferCommand;
+    QString logFile;
+    QStringList serverAssoc;
+    bool loaded;
 };
 
 struct absCnf {
-	QString supfiles;
-	QString rsyncsrv;
-	bool loaded;
+    QString supfiles;
+    QString rsyncsrv;
+    bool loaded;
 };
 
 struct mkpkCnf {
-	QString cflags;
-	QString cxxflags;
-	QString buildenv;
-	QString options;
-	QString docdirs;
-	bool loaded;
+    QString cflags;
+    QString cxxflags;
+    QString buildenv;
+    QString options;
+    QString docdirs;
+    bool loaded;
 };
 
 typedef struct PcCnf PacmanConf;
@@ -72,38 +72,38 @@ typedef struct mkpkCnf MakePkgConf;
 
 class ConfigurationParser
 {
-	/* This parser will play bad tricks with your guts. It can parse
-	 * and write on pacman.conf, abs.conf and makepkg.conf. It is tha
-	 * tool to edit alpm configuration in any way you like. Can be used
-	 * with inheritance (best, since it tries to avoid parsing the same
-	 * file multiple times), or just by using it as an object.
-	 */
+        /* This parser will play bad tricks with your guts. It can parse
+         * and write on pacman.conf, abs.conf and makepkg.conf. It is tha
+         * tool to edit alpm configuration in any way you like. Can be used
+         * with inheritance (best, since it tries to avoid parsing the same
+         * file multiple times), or just by using it as an object.
+         */
 
-public:
-	ConfigurationParser();
-	virtual ~ConfigurationParser();
+    public:
+        ConfigurationParser();
+        virtual ~ConfigurationParser();
 
-	PacmanConf getPacmanConf(bool forcereload = false);
-	ABSConf getABSConf(bool forcereload = false);
-	MakePkgConf getMakepkgConf(bool forcereload = false);
+        PacmanConf getPacmanConf( bool forcereload = false );
+        ABSConf getABSConf( bool forcereload = false );
+        MakePkgConf getMakepkgConf( bool forcereload = false );
 
-	bool editPacmanKey(const QString &key, const QString &value, int action);
-	bool editABSSection(const QString &section, const QString &value);
-	bool editMakepkgSection(const QString &section, const QString &value);
+        bool editPacmanKey( const QString &key, const QString &value, int action );
+        bool editABSSection( const QString &section, const QString &value );
+        bool editMakepkgSection( const QString &section, const QString &value );
 
-protected:
-	QStringList setrepeatingoption(const QString &ptr);
+    protected:
+        QStringList setrepeatingoption( const QString &ptr );
 
-private:
-	void parsePacmanConfig(const QString &file, const QString &givensection,
-			const QString &givendb);
-	void parseABSConfig();
-	void parseMakepkgConfig();
+    private:
+        void parsePacmanConfig( const QString &file, const QString &givensection,
+                                const QString &givendb );
+        void parseABSConfig();
+        void parseMakepkgConfig();
 
-private:
-	PacmanConf pacData;
-	ABSConf absData;
-	MakePkgConf makepkgData;
+    private:
+        PacmanConf pacData;
+        ABSConf absData;
+        MakePkgConf makepkgData;
 };
 
 #endif /*CONFIGURATIONPARSER_H*/

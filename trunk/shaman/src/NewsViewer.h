@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2008 by Dario Freddi                                    *
- *   drf54321@yahoo.it													   *
+ *   drf54321@yahoo.it                *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -27,24 +27,24 @@ class ArchLinuxNewsReader;
 
 class NewsViewer : public QDialog, private Ui::newsDialog
 {
-	Q_OBJECT
-	
-public:
-	explicit NewsViewer(ArchLinuxNewsReader *nR, QWidget *parent = 0);
-	virtual ~NewsViewer();
-	
-public slots:
-	
-	void populateView();
-	void markAsRead();
-	void openInBrowser();
-	void refreshView();
-	void itemChanged();
-	void fetching();
-	void fetchingError();
-	
-private:
-	ArchLinuxNewsReader *newsHandler;
+        Q_OBJECT
+
+    public:
+        explicit NewsViewer( ArchLinuxNewsReader *nR, QWidget *parent = 0 );
+        virtual ~NewsViewer();
+
+    public slots:
+
+        void populateView();
+        void markAsRead();
+        void openInBrowser();
+        void refreshView();
+        void itemChanged();
+        void fetching();
+        void fetchingError();
+
+    private:
+        ArchLinuxNewsReader *newsHandler;
 };
 
 #endif /*NEWSVIEWER_H*/

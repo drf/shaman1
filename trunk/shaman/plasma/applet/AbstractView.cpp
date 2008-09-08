@@ -22,7 +22,7 @@
 
 #include <plasma/applet.h>
 
-AbstractView::AbstractView(Plasma::Applet *parent)
+AbstractView::AbstractView( Plasma::Applet *parent )
 {
     m_applet = parent;
 }

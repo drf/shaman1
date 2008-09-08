@@ -22,80 +22,73 @@
 
 #include "PackageProperties.h"
 
-LocalPackageDialog::LocalPackageDialog(AlpmHandler *aH, QWidget *parent)
- : QDialog(parent),
- aHandle(aH)
+LocalPackageDialog::LocalPackageDialog( AlpmHandler *aH, QWidget *parent )
+        : QDialog( parent ),
+        aHandle( aH )
 {
-    setupUi(this);
-    setWindowModality(Qt::ApplicationModal);
+    setupUi( this );
+    setWindowModality( Qt::ApplicationModal );
 
-    connect(installButton, SIGNAL(clicked()), SLOT(goInstall()));
-    connect(cancelButton, SIGNAL(clicked()), SLOT(deleteLater()));
-    connect(detailsButton, SIGNAL(clicked()), SLOT(showDetails()));
-    connect(showButton, SIGNAL(toggled(bool)), SLOT(adjust(bool)));
+    connect( installButton, SIGNAL( clicked() ), SLOT( goInstall() ) );
+    connect( cancelButton, SIGNAL( clicked() ), SLOT( deleteLater() ) );
+    connect( detailsButton, SIGNAL( clicked() ), SLOT( showDetails() ) );
+    connect( showButton, SIGNAL( toggled( bool ) ), SLOT( adjust( bool ) ) );
 }
 
 LocalPackageDialog::~LocalPackageDialog()
 {
 }
 
-void LocalPackageDialog::loadPackage(pmpkg_t *pkg, const QString &fname)
+void LocalPackageDialog::loadPackage( pmpkg_t *pkg, const QString &fname )
 {
     package = pkg;
     filename = fname;
 
-    nameLabel->setText(QString("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">"
-            "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">"
-            "p, li { white-space: pre-wrap; }"
-            "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;\">"
-            "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">"
-            "<span style=\" font-size:11pt; font-weight:600;\">") + alpm_pkg_get_name(package) + " ("  + alpm_pkg_get_version(package)
-            + ")</span></p></body></html>");
+    nameLabel->setText( QString( "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">"
+                                 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">"
+                                 "p, li { white-space: pre-wrap; }"
+                                 "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;\">"
+                                 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">"
+                                 "<span style=\" font-size:11pt; font-weight:600;\">" ) + alpm_pkg_get_name( package ) + " ("  + alpm_pkg_get_version( package )
+                        + ")</span></p></body></html>" );
 
-    descLabel->setText(QString(alpm_pkg_get_desc(package)));
+    descLabel->setText( QString( alpm_pkg_get_desc( package ) ) );
 
-    if ( !aHandle->isInstalled(package) )
-    {
-        statusLabel->setText(tr("Package is not installed"));
+    if ( !aHandle->isInstalled( package ) ) {
+        statusLabel->setText( tr( "Package is not installed" ) );
 
-    }
-    else
-    {
-        statusLabel->setText(QString(tr("Version %1 of this package is already installed"))
-                .arg(aHandle->getPackageVersion(alpm_pkg_get_name(package), "local")));
+    } else {
+        statusLabel->setText( QString( tr( "Version %1 of this package is already installed" ) )
+                              .arg( aHandle->getPackageVersion( alpm_pkg_get_name( package ), "local" ) ) );
     }
 
     QStringList deps;
 
-    foreach (const QString &ent, aHandle->getPackageDependencies(package) )
-    {
-        if ( !aHandle->isInstalled(ent) )
-            deps.append(ent);
+    foreach( const QString &ent, aHandle->getPackageDependencies( package ) ) {
+        if ( !aHandle->isInstalled( ent ) )
+            deps.append( ent );
     }
 
-    if ( deps.isEmpty() )
-    {
-        depsLabel->setText(tr("All dependencies are satisfied"));
-        showButton->setVisible(false);
-    }
-    else
-    {
-        depsLabel->setText(QString(tr("%n package(s) will be installed as dependencies", "", deps.count())));
-        showButton->setVisible(true);
-        showButton->setChecked(false);
+    if ( deps.isEmpty() ) {
+        depsLabel->setText( tr( "All dependencies are satisfied" ) );
+        showButton->setVisible( false );
+    } else {
+        depsLabel->setText( QString( tr( "%n package(s) will be installed as dependencies", "", deps.count() ) ) );
+        showButton->setVisible( true );
+        showButton->setChecked( false );
 
         listWidget->clear();
-        listWidget->addItems(deps);
+        listWidget->addItems( deps );
     }
 
-    adjust(false);
+    adjust( false );
 }
 
 void LocalPackageDialog::showDetails()
 {
-    PackageProperties *pkgProp = new PackageProperties(aHandle, this);
+    PackageProperties *pkgProp = new PackageProperties( aHandle, this );
 
-    pkgProp->setPackage(package, true);
+    pkgProp->setPackage( package, true );
 
     pkgProp->reloadPkgInfo();
 
@@ -104,21 +97,20 @@ void LocalPackageDialog::showDetails()
 
 void LocalPackageDialog::goInstall()
 {
-    aHandle->initQueue(false, false, true);
+    aHandle->initQueue( false, false, true );
 
-    aHandle->addFFToQueue(filename);
+    aHandle->addFFToQueue( filename );
 
     emit queueReady();
 
     deleteLater();
 }
 
-void LocalPackageDialog::adjust(bool tgld)
+void LocalPackageDialog::adjust( bool tgld )
 {
-    if(tgld)
+    if ( tgld )
         listWidget->show();
-    else
-    {
+    else {
         listWidget->hide();
         //resize(minimumSize());
     }

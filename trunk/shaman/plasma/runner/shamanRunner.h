@@ -1,8 +1,8 @@
 /*
- *	 Copyright (C) 2008 by Lukas Appelhans				   				   
- *   l.appelhans@gmx.de	
- *   Copyright (C) 2008 by Dario Freddi                                    
- *   drf54321@yahoo.it                                                     
+ *  Copyright (C) 2008 by Lukas Appelhans
+ *   l.appelhans@gmx.de
+ *   Copyright (C) 2008 by Dario Freddi
+ *   drf54321@yahoo.it
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License version 2 as
@@ -27,19 +27,19 @@
 
 class ShamanRunner : public Plasma::AbstractRunner
 {
-    Q_OBJECT
+        Q_OBJECT
     public:
-        ShamanRunner(QObject *parent, const QVariantList &args);
+        ShamanRunner( QObject *parent, const QVariantList &args );
         ~ShamanRunner();
 
-        void match(Plasma::RunnerContext &context);
-        void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action);
-        
+        void match( Plasma::RunnerContext &context );
+        void run( const Plasma::RunnerContext &context, const Plasma::QueryMatch &action );
+
     private slots:
-    	void executeAction();
-    	
+        void executeAction();
+
     private:
-    	void startShaman();
+        void startShaman();
 
     private:
         QStringList words;
@@ -47,6 +47,6 @@ class ShamanRunner : public Plasma::AbstractRunner
         QDBusConnection dbus;
 };
 
-K_EXPORT_PLASMA_RUNNER(shaman, ShamanRunner);
+K_EXPORT_PLASMA_RUNNER( shaman, ShamanRunner );
 
 #endif

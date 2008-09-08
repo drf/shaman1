@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2008 by Dario Freddi                                    *
- *   drf54321@yahoo.it													   *
+ *   drf54321@yahoo.it                *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -25,20 +25,20 @@
 
 class LogViewer : public QDialog, private Ui::logViewer
 {
-	Q_OBJECT
-	
-public:
-	explicit LogViewer(QWidget *parent = 0);
-	virtual ~LogViewer();
-	
-public slots:
-	void refreshView();
-	
-private:
-	void loadLog();
-	
-private:
-	QStringList contents;
+        Q_OBJECT
+
+    public:
+        explicit LogViewer( QWidget *parent = 0 );
+        virtual ~LogViewer();
+
+    public slots:
+        void refreshView();
+
+    private:
+        void loadLog();
+
+    private:
+        QStringList contents;
 };
 
 #endif /*LOGVIEWER_H*/
