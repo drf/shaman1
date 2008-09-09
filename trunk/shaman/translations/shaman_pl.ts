@@ -998,27 +998,27 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/configDialog.ui" line="457"/>
         <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones. Please note that packages from Unstable and Testing may break your system.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tutaj możesz wybrać repozytoria spośród oficjalnych dla Arch Linux. Proszę zwrócić uwagę, że pakiety z Unstable i Testing mogą uszkodzić Twój system.</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="592"/>
         <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme, and lots of addons, KDEMod is the best way to taste the ease and the power of KDE with the simplicity and the power of Arch.</source>
-        <translation type="unfinished"></translation>
+        <translation>KDEMod to ulepszona wersja KDE, stworzona wyłącznie dla Arch Linux. Zawiera ona ulepszone Qt, kompatybilne ze standardowym Qt Arch Linux, ulepszony theme oraz wiele różnych dodatków. KDEMod to najlepszy sposób na skosztowanie wygody i potęgi KDE zachowując jednocześnie prostote i potęgę Arch&apos;a.</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="714"/>
         <source>You can extend your packages choice by adding other repositories. Third-Party Repositories act just as normal ones, and will be accessible through both Shaman and Pacman.</source>
-        <translation type="unfinished"></translation>
+        <translation>Możesz zwiększyć ilość dostępnych pakietów poprzez dodanie innych repozytoriów. Repozytoria Third-Party działają tak samo jak zwykłe i będą dostępne zarówno poprzez Shamana jak i Pacmana.</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="164"/>
         <source>Use the following language:</source>
-        <translation type="unfinished"></translation>
+        <translation>Korzystaj z następujacęgo języka:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="181"/>
         <source>Disable Tray Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyłącz ikonę tacki systemowej</translation>
     </message>
 </context>
 <context>
@@ -1041,7 +1041,7 @@ Czy chcesz go zapisać?</translation>
     <message>
         <location filename="../ui/fromFileDialog.ui" line="13"/>
         <source>Install Package from File</source>
-        <translation type="unfinished"></translation>
+        <translation>Instaluj pakiet z pliku</translation>
     </message>
     <message>
         <location filename="../ui/fromFileDialog.ui" line="38"/>
@@ -1050,27 +1050,27 @@ Czy chcesz go zapisać?</translation>
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Bitstream Vera Sans&apos;;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Local Package Installation&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Bitstream Vera Sans&apos;;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Lokalna instalacja pakietów&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/fromFileDialog.ui" line="151"/>
         <source>Show...</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokaż...</translation>
     </message>
     <message>
         <location filename="../ui/fromFileDialog.ui" line="172"/>
         <source>More Details...</source>
-        <translation type="unfinished">Więcej szczegółów...</translation>
+        <translation>Więcej szczegółów...</translation>
     </message>
     <message>
         <location filename="../ui/fromFileDialog.ui" line="196"/>
         <source>Cancel</source>
-        <translation type="unfinished">Anuluj</translation>
+        <translation>Anuluj</translation>
     </message>
     <message>
         <location filename="../ui/fromFileDialog.ui" line="207"/>
         <source>Install Package</source>
-        <translation type="unfinished"></translation>
+        <translation>Zainstaluj pakiet</translation>
     </message>
 </context>
 <context>
@@ -1078,25 +1078,25 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/LocalPackageDialog.cpp.orig" line="59"/>
         <source>Package is not installed</source>
-        <translation type="unfinished"></translation>
+        <translation>Pakiet nie jest zainstalowany</translation>
     </message>
     <message>
         <location filename="../src/LocalPackageDialog.cpp.orig" line="64"/>
         <source>Version %1 of this package is already installed</source>
-        <translation type="unfinished"></translation>
+        <translation>Wersja %1 tego pakietu jest obecnie zainstalowana</translation>
     </message>
     <message>
         <location filename="../src/LocalPackageDialog.cpp.orig" line="78"/>
         <source>All dependencies are satisfied</source>
-        <translation type="unfinished"></translation>
+        <translation>Wszystkie zależności są spełnione</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/LocalPackageDialog.cpp.orig" line="83"/>
         <source>%n package(s) will be installed as dependencies</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n pakiet zostanie zainstalowany jako zależność</numerusform>
+            <numerusform>%n pakiety zostaną zainstalowane jako zależności</numerusform>
+            <numerusform>%n pakietów zostanie zainstalowanych jako zależności</numerusform>
         </translation>
     </message>
 </context>
@@ -1667,156 +1667,156 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/MaintenanceBar.cpp.orig" line="43"/>
         <source>Please choose an action to start maintenance...</source>
-        <translation type="unfinished"></translation>
+        <translation>Proszę wybrać działanie, aby rozpocząć konserwację systemu...</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp.orig" line="44"/>
         <source>Clean Unused Databases</source>
-        <translation type="unfinished">Wyczyść nieużywane bazy danych</translation>
+        <translation>Wyczyść nieużywane bazy danych</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp.orig" line="44"/>
         <source>Clean Cache</source>
-        <translation type="unfinished">Wyczyść cache</translation>
+        <translation>Wyczyść cache</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp.orig" line="45"/>
         <source>Empty Cache</source>
-        <translation type="unfinished">Opróżnij cache</translation>
+        <translation>Opróżnij cache</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp.orig" line="45"/>
         <source>Optimize Pacman Database</source>
-        <translation type="unfinished">Zoptymalizuj bazę danych Pacmana</translation>
+        <translation>Zoptymalizuj bazę danych Pacmana</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp.orig" line="45"/>
         <source>Clean All Building Environments</source>
-        <translation type="unfinished">Wyczyść wszystkie środowiska budowania</translation>
+        <translation>Wyczyść wszystkie środowiska budowania</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp.orig" line="78"/>
         <source>Cleaning up unused Databases...</source>
-        <translation type="unfinished">Czyszczenie nieużywanych baz danych...</translation>
+        <translation>Czyszczenie nieużywanych baz danych...</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp.orig" line="92"/>
         <source>Cleaning up Cache...</source>
-        <translation type="unfinished">Czyszczenie cache...</translation>
+        <translation>Czyszczenie cache...</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp.orig" line="106"/>
         <source>Deleting Cache...</source>
-        <translation type="unfinished">Usuwanie cache...</translation>
+        <translation>Usuwanie cache...</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp.orig" line="123"/>
         <source>Optimizing Pacman Database...</source>
-        <translation type="unfinished">Optymalizacja bazy danych Pacmana...</translation>
+        <translation>Optymalizacja bazy danych Pacmana...</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp.orig" line="140"/>
         <source>Cleaning up building Environments...</source>
-        <translation type="unfinished">Czyszczenie środowisk budowania...</translation>
+        <translation>Czyszczenie środowisk budowania...</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp.orig" line="166"/>
         <source>Abort</source>
-        <translation type="unfinished">Przerwij</translation>
+        <translation>Przerwij</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp.orig" line="179"/>
         <source>System Maintenance</source>
-        <translation type="unfinished"></translation>
+        <translation>Konserwacja systemu</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp.orig" line="190"/>
         <source>Unused Databases Cleaned up successfully!</source>
-        <translation type="unfinished">Czyszczenie nieużywanych baz danych zakończone pomyślnie!</translation>
+        <translation>Czyszczenie nieużywanych baz danych zakończone pomyślnie!</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp.orig" line="196"/>
         <source>Cache Cleaned Up Successfully!</source>
-        <translation type="unfinished">Cache oczyszczony pomyślnie!</translation>
+        <translation>Cache oczyszczony pomyślnie!</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp.orig" line="202"/>
         <source>Cache Successfully Deleted!</source>
-        <translation type="unfinished">Cache usunięty pomyślnie!</translation>
+        <translation>Cache usunięty pomyślnie!</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp.orig" line="208"/>
         <source>Build Environments Successfully Cleaned!</source>
-        <translation type="unfinished">Środowiska budowania oczyszczone pomyślnie!</translation>
+        <translation>Środowiska budowania oczyszczone pomyślnie!</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp.orig" line="313"/>
         <source>Close</source>
-        <translation type="unfinished">Zamknij</translation>
+        <translation>Zamknij</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp.orig" line="233"/>
         <source>Cleaning up Unused Databases Failed!</source>
-        <translation type="unfinished">Czyszczenie nieużywanych baz danych nie powiodło się!</translation>
+        <translation>Czyszczenie nieużywanych baz danych nie powiodło się!</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp.orig" line="238"/>
         <source>Cleaning up Cache Failed!</source>
-        <translation type="unfinished">Czyszczenie cache nie powiodło się!</translation>
+        <translation>Czyszczenie cache nie powiodło się!</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp.orig" line="243"/>
         <source>Deleting Cache Failed!</source>
-        <translation type="unfinished">Usuwanie cache nie powiodło się!</translation>
+        <translation>Usuwanie cache nie powiodło się!</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp.orig" line="248"/>
         <source>Could not clean Build Environments!!</source>
-        <translation type="unfinished">Czyszczenie środowisk budowania nie powiodło się!</translation>
+        <translation>Czyszczenie środowisk budowania nie powiodło się!</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp.orig" line="275"/>
         <source>Pacman Database Optimized Successfully!</source>
-        <translation type="unfinished">Baza Pacmana została pomyślnie zoptymalizowana!</translation>
+        <translation>Baza Pacmana została pomyślnie zoptymalizowana!</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp.orig" line="281"/>
         <source>Could not Optimize Pacman Database!</source>
-        <translation type="unfinished">Nie można zoptymalizować bazy Pacmana!</translation>
+        <translation>Nie można zoptymalizować bazy Pacmana!</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp.orig" line="289"/>
         <source>Running sync...</source>
         <comment>sync is a command, so it should not be translated</comment>
-        <translation type="unfinished">Uruchamianie sync...</translation>
+        <translation>Uruchamianie sync...</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp.orig" line="299"/>
         <source>Operation Completed Successfully!</source>
-        <translation type="unfinished">Operacja zakończona pomyślnie!</translation>
+        <translation>Operacja zakończona pomyślnie!</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp.orig" line="298"/>
         <source>Sync was successfully executed!!</source>
         <comment>Sync is always the command</comment>
-        <translation type="unfinished">Sync został pomyślnie uruchomiony!</translation>
+        <translation>Sync został pomyślnie uruchomiony!</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp.orig" line="303"/>
         <source>Sync could not be executed!</source>
         <comment>Sync is always the command</comment>
-        <translation type="unfinished">Sync nie może zostać uruchomiony!</translation>
+        <translation>Sync nie może zostać uruchomiony!</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp.orig" line="304"/>
         <source>Sync could not be executed!!</source>
         <comment>Sync is always the command</comment>
-        <translation type="unfinished">Sync nie może zostać uruchomiony!</translation>
+        <translation>Sync nie może zostać uruchomiony!</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp.orig" line="40"/>
         <source>Maintenance Actions</source>
-        <translation type="unfinished"></translation>
+        <translation>Operacje konserwacyjne</translation>
     </message>
 </context>
 <context>
@@ -1967,7 +1967,7 @@ Shaman zapyta Cię o hasło roota, gdy będzie to konieczne.</translation>
         <location filename="../src/main.cpp.orig" line="268"/>
         <source>It looks like another copy of Shaman is running.
 You can only run one copy of Shaman at a time.</source>
-        <translation type="unfinished">Wygląda na to, że Shaman obecnie jest już uruchomiony.
+        <translation>Wygląda na to, że Shaman obecnie jest już uruchomiony.
 Możesz posiadać tylko jeden proces programu Shaman uruchomiony jednocześnie.</translation>
     </message>
     <message>
@@ -2863,7 +2863,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/logViewer.ui" line="66"/>
         <source>dd/MM/yyyy</source>
-        <translation type="unfinished"></translation>
+        <translation>dd/MM/rrrr</translation>
     </message>
 </context>
 <context>
