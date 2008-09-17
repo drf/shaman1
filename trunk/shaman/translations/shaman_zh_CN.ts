@@ -1066,27 +1066,27 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/configDialog.ui" line="457"/>
         <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones. Please note that packages from Unstable and Testing may break your system.</source>
-        <translation type="unfinished"></translation>
+        <translation>从这里选择属于Arch Linux&apos;s 官方的仓库，请注意使用来自Unstable和Testing的软件包可能会损坏您的系统。</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="592"/>
         <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme, and lots of addons, KDEMod is the best way to taste the ease and the power of KDE with the simplicity and the power of Arch.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kdemod是为Arch linux 定制KDE的一个改进版本， 基于改善的QT，和Arch linux 标准的QT兼容，拥有改进的主题，和许多的附加特性。使用KDEMod，是感受强大的KDE魅力和简洁强大的Arch最好方式。</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="714"/>
         <source>You can extend your packages choice by adding other repositories. Third-Party Repositories act just as normal ones, and will be accessible through both Shaman and Pacman.</source>
-        <translation type="unfinished"></translation>
+        <translation>通过添加其他仓库，您可以扩展您的软件包选择。第三方仓库的作用和正常的仓库一样,可以通过Pacman和Shaman来使用。</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="164"/>
         <source>Use the following language:</source>
-        <translation type="unfinished"></translation>
+        <translation>使用下列语言:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="181"/>
         <source>Disable Tray Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>禁用托盘图标</translation>
     </message>
 </context>
 <context>
@@ -1109,7 +1109,7 @@ Do you want to save it?</source>
     <message>
         <location filename="../ui/fromFileDialog.ui" line="13"/>
         <source>Install Package from File</source>
-        <translation>从文件中安装软件不包</translation>
+        <translation>从文件中安装软件包</translation>
     </message>
     <message>
         <location filename="../ui/fromFileDialog.ui" line="38"/>
@@ -2364,7 +2364,7 @@ Shaman will ask you for root password when needed.</source>
         <location filename="../src/main.cpp.orig" line="268"/>
         <source>It looks like another copy of Shaman is running.
 You can only run one copy of Shaman at a time.</source>
-        <translation type="unfinished">看起来另外一个Shaman正在运行，
+        <translation>看起来另外一个Shaman正在运行，
 您仅能够在同一时间内运行一个Shaman。</translation>
     </message>
     <message>
@@ -2836,12 +2836,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/ShamanStatusBar.cpp.orig" line="107"/>
         <source>%1 will be used</source>
-        <translation>将被使用%1个</translation>
+        <translation>将被使用%1</translation>
     </message>
     <message>
         <location filename="../src/ShamanStatusBar.cpp.orig" line="114"/>
         <source>%1 will be freed</source>
-        <translation>将被释放%1个</translation>
+        <translation>将被释放%1</translation>
     </message>
     <message>
         <location filename="../src/ShamanStatusBar.cpp.orig" line="119"/>
@@ -3715,7 +3715,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/logViewer.ui" line="66"/>
         <source>dd/MM/yyyy</source>
-        <translation type="unfinished"></translation>
+        <translation>日/月/年</translation>
     </message>
 </context>
 <context>
