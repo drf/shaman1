@@ -197,8 +197,6 @@ void ConfigDialog::setupRepos()
             communityBox->setChecked( true );
         else if ( !strcmp( alpm_db_get_name( curdb ), "testing" ) )
             testingBox->setChecked( true );
-        else if ( !strcmp( alpm_db_get_name( curdb ), "unstable" ) )
-            unstableBox->setChecked( true );
         else if ( !strcmp( alpm_db_get_name( curdb ), "kdemod-core" ) ) {
             if ( kmod.isEmpty() ) {
                 kdemodMirror = alpm_db_get_url( curdb );
@@ -828,21 +826,6 @@ void ConfigDialog::saveConfiguration()
             dbChanged = true;
     }
 
-    if ( unstableBox->isChecked() ) {
-        if ( !editPacmanKey( "unstable/Server", mirror, 0 ) ) {
-            if ( editPacmanKey( "unstable/Server", mirror, 1 ) )
-                dbChanged = true;
-        } else {
-            dbChanged = true;
-            editPacmanKey( "unstable/Include", NULL, 2 );
-        }
-    } else {
-        if ( editPacmanKey( "unstable/Server", NULL, 2 ) )
-            dbChanged = true;
-        if ( editPacmanKey( "unstable/Include", NULL, 2 ) )
-            dbChanged = true;
-    }
-
     if ( KDEMod4Box->isChecked() ) {
         if ( !editPacmanKey( "kdemod-core/Server", kdemodmirror, 0 ) ) {
             if ( editPacmanKey( "kdemod-core/Server", kdemodmirror, 1 ) )
@@ -910,7 +893,7 @@ void ConfigDialog::saveConfiguration()
 
     foreach( const QString &dbs, m_handler->getAvailableReposNames() ) {
         if ( dbs != "core" && dbs != "extra" && dbs != "community" && dbs != "testing"
-                && dbs != "unstable" && dbs != "kdemod-core" && dbs != "kdemod-extragear" && dbs != "kdemod-playground" && dbs != "kdemod-testing" && dbs != "kdemod-unstable" && dbs != "kdemod-legacy" &&
+                && dbs != "kdemod-core" && dbs != "kdemod-extragear" && dbs != "kdemod-playground" && dbs != "kdemod-testing" && dbs != "kdemod-unstable" && dbs != "kdemod-legacy" &&
                 thirdPartyWidget->findItems( dbs, Qt::MatchExactly, 0 ).isEmpty() )
             if ( editPacmanKey( QString( dbs + "/Server" ), NULL, 2 ) )
                 dbChanged = true;
@@ -1041,8 +1024,6 @@ void ConfigDialog::saveConfiguration()
 
         supfiles.append( testingBox->isChecked() ? "testing" : "!testing" );
         supfiles.append( " " );
-
-        supfiles.append( unstableBox->isChecked() ? "unstable" : "!unstable" );
 
         editABSSection( "repos", supfiles );
     } else {

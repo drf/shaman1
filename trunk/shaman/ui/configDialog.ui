@@ -418,7 +418,7 @@ p, li { white-space: pre-wrap; }
        <item row="1" column="0" >
         <widget class="QTabWidget" name="repoTab" >
          <property name="currentIndex" >
-          <number>1</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="officialTab" >
           <attribute name="title" >
@@ -491,13 +491,6 @@ p, li { white-space: pre-wrap; }
                 <widget class="QCheckBox" name="testingBox" >
                  <property name="text" >
                   <string comment="Do not translate" >Testing</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QCheckBox" name="unstableBox" >
-                 <property name="text" >
-                  <string comment="Do not translate" >Unstable</string>
                  </property>
                 </widget>
                </item>
