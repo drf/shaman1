@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS><TS version="1.1" language="pl_PL">
 <context>
+    <name></name>
+    <message>
+        <location filename="../src/NewsViewer.cpp" line="47"/>
+        <source>Please wait, fetching items...</source>
+        <translation type="unfinished">Proszę czekać, pobieranie plików...</translation>
+    </message>
+</context>
+<context>
     <name>AlpmHandler</name>
     <message>
         <location filename="../src/AlpmHandler.cpp.orig" line="1097"/>
@@ -412,7 +420,7 @@ Do you want to Update Your Database?</source>
 Czy chcesz zaktualizować swoją bazę danych?</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="683"/>
+        <location filename="../ui/configDialog.ui" line="676"/>
         <source>Add Mirror</source>
         <translation>Dodaj serwer lustrzany</translation>
     </message>
@@ -527,27 +535,27 @@ Jest on teraz dostępny w mirrorlist.</translation>
         <translation>Pokazuj ekran powitalny</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="962"/>
+        <location filename="../ui/configDialog.ui" line="955"/>
         <source>When Application is in System Tray only</source>
         <translation>Gdy aplikacja działa tylko w tacce systemowej</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="968"/>
+        <location filename="../ui/configDialog.ui" line="961"/>
         <source>Update Database every</source>
         <translation>Aktualizuj bazę danych co</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="995"/>
+        <location filename="../ui/configDialog.ui" line="988"/>
         <source>If upgrades are available:</source>
         <translation>Gdy aktualizacje są dostępne:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1002"/>
+        <location filename="../ui/configDialog.ui" line="995"/>
         <source>Just Notify</source>
         <translation>Tylko powiadom</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1009"/>
+        <location filename="../ui/configDialog.ui" line="1002"/>
         <source>Notify and add them to Queue</source>
         <translation>Powiadom i dodaj je do kolejki</translation>
     </message>
@@ -657,20 +665,20 @@ Proszę zwrócić uwagę, że pakiety z Unstable i Testing mogą uszkodzić Twó
         <location filename="../ui/configDialog.ui" line="500"/>
         <source>Unstable</source>
         <comment>Do not translate</comment>
-        <translation>Unstable</translation>
+        <translation type="obsolete">Unstable</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="739"/>
+        <location filename="../ui/configDialog.ui" line="732"/>
         <source>Server</source>
         <translation>Serwer</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="668"/>
+        <location filename="../ui/configDialog.ui" line="661"/>
         <source>Mirror:</source>
         <translation>Serwer lustrzany:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="562"/>
+        <location filename="../ui/configDialog.ui" line="555"/>
         <source>KDEMod Repositories</source>
         <translation>Repozytoria KDEMod</translation>
     </message>
@@ -686,7 +694,7 @@ wiele różnych dodatków. KDEMod to najlepszy sposób na skosztowanie wygody i 
 zachowując jednocześnie prostote i potęgę Arch&apos;a.</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="642"/>
+        <location filename="../ui/configDialog.ui" line="635"/>
         <source>KDEMod 3 Repository</source>
         <translation>Repozytorium KDEMod 3</translation>
     </message>
@@ -696,7 +704,7 @@ zachowując jednocześnie prostote i potęgę Arch&apos;a.</translation>
         <translation type="obsolete">Repozytorium KDEMod 4 (Unstable, testers only)</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="702"/>
+        <location filename="../ui/configDialog.ui" line="695"/>
         <source>Third-Party Repositories</source>
         <translation>Repozytoria Third-Party</translation>
     </message>
@@ -710,102 +718,102 @@ Third-Party działają tak samo jak zwykłe i będą dostępne zarówno poprzez 
 jak i Pacmana.</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="734"/>
+        <location filename="../ui/configDialog.ui" line="727"/>
         <source>Repository</source>
         <translation>Repozytorium</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="762"/>
+        <location filename="../ui/configDialog.ui" line="755"/>
         <source>Add New Repository</source>
         <translation>Dodaj nowe repozytorium</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="773"/>
+        <location filename="../ui/configDialog.ui" line="766"/>
         <source>Edit Repository</source>
         <translation>Edytuj repozytorium</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="784"/>
+        <location filename="../ui/configDialog.ui" line="777"/>
         <source>Remove Repository</source>
         <translation>Usuń repozytorium</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="807"/>
+        <location filename="../ui/configDialog.ui" line="800"/>
         <source>Preferences</source>
         <translation>Preferencje</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="813"/>
+        <location filename="../ui/configDialog.ui" line="806"/>
         <source>Process all dependencies and queue from binary first (recommended)</source>
         <translation>Przetwórz wszystkie zależności najpierw z plików binarnych (zalecane)</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="820"/>
+        <location filename="../ui/configDialog.ui" line="813"/>
         <source>Review Building output before installing</source>
         <translation>Obejrzyj wyjście budowania pakietu przed instalacją</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="830"/>
+        <location filename="../ui/configDialog.ui" line="823"/>
         <source>ABS Configuration</source>
         <translation>Konfiguracja ABS</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="836"/>
+        <location filename="../ui/configDialog.ui" line="829"/>
         <source>Use supfiles that match your current repositories</source>
         <translation>Używaj supfiles, które są zgodne z Twoimi obecnymi repozytoriami</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="843"/>
+        <location filename="../ui/configDialog.ui" line="836"/>
         <source>Define supfiles manually</source>
         <translation>Zdefiniuj ręcznie supfiles</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="866"/>
+        <location filename="../ui/configDialog.ui" line="859"/>
         <source>Makepkg Configuration</source>
         <translation>Konfiguracja Makepkg</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="872"/>
+        <location filename="../ui/configDialog.ui" line="865"/>
         <source>CFlags</source>
         <translation>CFlags</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="882"/>
+        <location filename="../ui/configDialog.ui" line="875"/>
         <source>CXXFlags</source>
         <translation>CXXFlags</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="892"/>
+        <location filename="../ui/configDialog.ui" line="885"/>
         <source>BuildEnv</source>
         <translation>BuildEnv</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="902"/>
+        <location filename="../ui/configDialog.ui" line="895"/>
         <source>Options</source>
         <translation>Opcje</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="912"/>
+        <location filename="../ui/configDialog.ui" line="905"/>
         <source>Doc_Dirs</source>
         <translation>Doc_Dirs</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="925"/>
+        <location filename="../ui/configDialog.ui" line="918"/>
         <source>Build Environment</source>
         <translation>Środowisko budowania</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="931"/>
+        <location filename="../ui/configDialog.ui" line="924"/>
         <source>Building Path</source>
         <translation>Ścieżka budowania</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="941"/>
+        <location filename="../ui/configDialog.ui" line="934"/>
         <source>Remove installed makedepends after build</source>
         <translation>Usuń zainstalowane zależności, które były wymagane do kompilacji, po zbudowaniu pakietu</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="948"/>
+        <location filename="../ui/configDialog.ui" line="941"/>
         <source>Clean Build Environment after installation</source>
         <translation>Wyczyść środowisko budowania po instalacji</translation>
     </message>
@@ -815,58 +823,58 @@ jak i Pacmana.</translation>
         <translation>Zaawansowane</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1142"/>
+        <location filename="../ui/configDialog.ui" line="1135"/>
         <source>min</source>
         <comment>As in &quot;minutes&quot;</comment>
         <translation>min</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="985"/>
+        <location filename="../ui/configDialog.ui" line="978"/>
         <source>Show tray notification Windows</source>
         <translation>Pokaż okna powiadomień tacki systemowej</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1029"/>
+        <location filename="../ui/configDialog.ui" line="1022"/>
         <source>Use a proxy-server</source>
         <translation>Użyj serwera proxy</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1041"/>
+        <location filename="../ui/configDialog.ui" line="1034"/>
         <source>IP:</source>
         <translation>IP:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1064"/>
+        <location filename="../ui/configDialog.ui" line="1057"/>
         <source>Port:</source>
         <translation>Port:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1106"/>
+        <location filename="../ui/configDialog.ui" line="1099"/>
         <source>HTTP Proxy</source>
         <translation>HTTP Proxy</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1113"/>
+        <location filename="../ui/configDialog.ui" line="1106"/>
         <source>FTP Proxy</source>
         <translation>FTP Proxy</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1123"/>
+        <location filename="../ui/configDialog.ui" line="1116"/>
         <source>Use Shaman RSS Capabilities</source>
         <translation>Wykorzystaj możliwości Shaman do odczytu RSS</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1135"/>
+        <location filename="../ui/configDialog.ui" line="1128"/>
         <source>Update RSS Feed Every</source>
         <translation>Aktualizuj RSS Feed co</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1149"/>
+        <location filename="../ui/configDialog.ui" line="1142"/>
         <source>Notify upon new items</source>
         <translation>Powiadamiaj o nowościach</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1156"/>
+        <location filename="../ui/configDialog.ui" line="1149"/>
         <source>Check if there is an unread news about a package in Queue before processing it</source>
         <translation>Sprawdź czy dostępny jest nieprzeczytany news o pakiecie z kolejki przed jej przetworzeniem</translation>
     </message>
@@ -881,12 +889,12 @@ jak i Pacmana.</translation>
         <translation>Plik Log:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1245"/>
+        <location filename="../ui/configDialog.ui" line="1238"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1262"/>
+        <location filename="../ui/configDialog.ui" line="1255"/>
         <source>Cancel</source>
         <translation>Anuluj</translation>
     </message>
@@ -896,17 +904,17 @@ jak i Pacmana.</translation>
         <translation type="obsolete">Repozytorium KDEMod 3 Testing</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1192"/>
+        <location filename="../ui/configDialog.ui" line="1185"/>
         <source>Interface</source>
         <translation>Interfejs</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1205"/>
+        <location filename="../ui/configDialog.ui" line="1198"/>
         <source>Start Shaman Automatically on X Startup</source>
         <translation>Uruchamiaj Shamana automatycznie przy starcie X&apos;ów</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1212"/>
+        <location filename="../ui/configDialog.ui" line="1205"/>
         <source>Forbid starting Shaman as root</source>
         <translation>Zabroń uruchamiania Shamana jako root</translation>
     </message>
@@ -956,42 +964,42 @@ p, li { white-space: pre-wrap; }
         <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Konserwacja Shamana.&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Proszę o wybranie działania z rozwijanego menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="853"/>
+        <location filename="../ui/configDialog.ui" line="846"/>
         <source>RSync Server:</source>
         <translation>RSync Serwer:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1016"/>
+        <location filename="../ui/configDialog.ui" line="1009"/>
         <source>Update Database at</source>
         <translation>Aktualizuj bazę danych o</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1198"/>
+        <location filename="../ui/configDialog.ui" line="1191"/>
         <source>Use Animated Tray Icon</source>
         <translation>Użyj animowanej ikony w tacce systemowej</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="607"/>
+        <location filename="../ui/configDialog.ui" line="600"/>
         <source>KDEMod 4 Repository</source>
         <translation>KDEMod 4 Repozytorium</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="614"/>
+        <location filename="../ui/configDialog.ui" line="607"/>
         <source>KDEMod 4 Extragear Repository</source>
         <translation>KDEMod 4 Extragear Repozytorium</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="621"/>
+        <location filename="../ui/configDialog.ui" line="614"/>
         <source>KDEMod 4 Playground Repository</source>
         <translation>KDEMod 4 Playground Repozytorium</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="628"/>
+        <location filename="../ui/configDialog.ui" line="621"/>
         <source>KDEMod 4 Testing Repository</source>
         <translation>KDEMod 4 Testing Repozytorium</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="635"/>
+        <location filename="../ui/configDialog.ui" line="628"/>
         <source>KDEMod 4 Unstable Repository (Testers only!)</source>
         <translation>KDEMod 4 Unstable Repozytorium (tylko testerzy!)</translation>
     </message>
@@ -1001,12 +1009,12 @@ p, li { white-space: pre-wrap; }
         <translation>Tutaj możesz wybrać repozytoria spośród oficjalnych dla Arch Linux. Proszę zwrócić uwagę, że pakiety z Unstable i Testing mogą uszkodzić Twój system.</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="592"/>
+        <location filename="../ui/configDialog.ui" line="585"/>
         <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme, and lots of addons, KDEMod is the best way to taste the ease and the power of KDE with the simplicity and the power of Arch.</source>
         <translation>KDEMod to ulepszona wersja KDE, stworzona wyłącznie dla Arch Linux. Zawiera ona ulepszone Qt, kompatybilne ze standardowym Qt Arch Linux, ulepszony theme oraz wiele różnych dodatków. KDEMod to najlepszy sposób na skosztowanie wygody i potęgi KDE zachowując jednocześnie prostote i potęgę Arch&apos;a.</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="714"/>
+        <location filename="../ui/configDialog.ui" line="707"/>
         <source>You can extend your packages choice by adding other repositories. Third-Party Repositories act just as normal ones, and will be accessible through both Shaman and Pacman.</source>
         <translation>Możesz zwiększyć ilość dostępnych pakietów poprzez dodanie innych repozytoriów. Repozytoria Third-Party działają tak samo jak zwykłe i będą dostępne zarówno poprzez Shamana jak i Pacmana.</translation>
     </message>

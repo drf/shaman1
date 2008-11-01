@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS><TS version="1.1" language="nl">
-<defaultcodec></defaultcodec>
+<context>
+    <name></name>
+    <message>
+        <location filename="../src/NewsViewer.cpp" line="47"/>
+        <source>Please wait, fetching items...</source>
+        <translation type="unfinished">Even geduld, items worden opgehaald...</translation>
+    </message>
+</context>
 <context>
     <name>AlpmHandler</name>
     <message>
@@ -145,10 +152,12 @@ officiële Arch Linux-repository. Shaman kan alleen
 pakketten bouwen uit officiële bron.</translation>
     </message>
     <message>
+        <location filename="../src/BuildingHandler.cpp.orig" line="129"/>
         <source>You are about to install &lt;b&gt;%1 package&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
         <translation type="obsolete">U staat op het punt &lt;b&gt;%1 pakket&lt;/b&gt; vanuit broncode te installeren. Installeren uit broncode &lt;br&gt;kan enkele voordelen hebben, maar is zeer traag.&lt;br&gt; Als u niet zeker bent, wilt u waarschijnlijk binaire bestanden&lt;br&gt; gebruiken. Voor u doorgaat; adviseren we u om uw&lt;br&gt; configuratie opnieuw te bekijken zodat pakketbouw sneller verloopt.</translation>
     </message>
     <message>
+        <location filename="../src/BuildingHandler.cpp.orig" line="129"/>
         <source>You are about to install &lt;b&gt;%1 packages&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
         <translation type="obsolete">U staat op het punt &lt;b&gt;%1 pakketten&lt;/b&gt; vanuit broncode te installeren. Installeren uit broncode &lt;br&gt;kan enkele voordelen hebben, maar is zeer traag.&lt;br&gt; Als u niet zeker bent, wilt u waarschijnlijk binaire paketten&lt;br&gt; gebruiken. Voor u doorgaat; adviseren we u om uw&lt;br&gt; configuratie opnieuw te bekijken zodat pakketbouw sneller verloopt.</translation>
     </message>
@@ -338,12 +347,12 @@ Wilt u het verwijderen?</translation>
         <translation>Voer hier het server-adres van de repository in</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1245"/>
+        <location filename="../ui/configDialog.ui" line="1238"/>
         <source>Ok</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1262"/>
+        <location filename="../ui/configDialog.ui" line="1255"/>
         <source>Cancel</source>
         <translation>Annuleren</translation>
     </message>
@@ -444,7 +453,7 @@ Do you want to Update Your Database?</source>
 Wilt u uw database bijwerken?</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="683"/>
+        <location filename="../ui/configDialog.ui" line="676"/>
         <source>Add Mirror</source>
         <translation>Mirror toevoegen</translation>
     </message>
@@ -705,20 +714,20 @@ Opgelet: paketten uit Unstable en Testing kunnen uw systeem beschadigen.</transl
         <location filename="../ui/configDialog.ui" line="500"/>
         <source>Unstable</source>
         <comment>Do not translate</comment>
-        <translation>Unstable</translation>
+        <translation type="obsolete">Unstable</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="739"/>
+        <location filename="../ui/configDialog.ui" line="732"/>
         <source>Server</source>
         <translation>Server</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="668"/>
+        <location filename="../ui/configDialog.ui" line="661"/>
         <source>Mirror:</source>
         <translation>Mirror:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="562"/>
+        <location filename="../ui/configDialog.ui" line="555"/>
         <source>KDEMod Repositories</source>
         <translation>KDEMod Repositories</translation>
     </message>
@@ -734,20 +743,22 @@ veel extra&apos;s. KDEMod is de beste manier om het gemak en de pure kracht van 
 combineren met de eenvoud van Arch.</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="642"/>
+        <location filename="../ui/configDialog.ui" line="635"/>
         <source>KDEMod 3 Repository</source>
         <translation>KDEMod 3 Repository</translation>
     </message>
     <message>
+        <location filename="../ui/configDialog.ui" line="642"/>
         <source>KDEMod 3 Testing Repository</source>
         <translation type="obsolete">KDEMod 3 Testing Repository</translation>
     </message>
     <message>
+        <location filename="../ui/configDialog.ui" line="642"/>
         <source>KDEMod 4 Repository (Unstable, testers only)</source>
         <translation type="obsolete">KDEMod 4 Repository (Onstabiel, alleen voor testers)</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="702"/>
+        <location filename="../ui/configDialog.ui" line="695"/>
         <source>Third-Party Repositories</source>
         <translation>Repositories van derden</translation>
     </message>
@@ -761,238 +772,238 @@ Die gedragen zich net als normale repositories, en zijn beschikbaar zowel in Sha
 als Pacman.</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="734"/>
+        <location filename="../ui/configDialog.ui" line="727"/>
         <source>Repository</source>
         <translation>Repository</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="762"/>
+        <location filename="../ui/configDialog.ui" line="755"/>
         <source>Add New Repository</source>
         <translation>Nieuwe Repository toevoegen</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="773"/>
+        <location filename="../ui/configDialog.ui" line="766"/>
         <source>Edit Repository</source>
         <translation>Repository bewerken</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="784"/>
+        <location filename="../ui/configDialog.ui" line="777"/>
         <source>Remove Repository</source>
         <translation>Repository verwijderen</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="807"/>
+        <location filename="../ui/configDialog.ui" line="800"/>
         <source>Preferences</source>
         <translation>Voorkeuren</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="813"/>
+        <location filename="../ui/configDialog.ui" line="806"/>
         <source>Process all dependencies and queue from binary first (recommended)</source>
         <translation>Alle afhankelijkheden verwerken en eerst binaire pakketten gebruiken (aanbevolen)</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="820"/>
+        <location filename="../ui/configDialog.ui" line="813"/>
         <source>Review Building output before installing</source>
         <translation>Uitvoer bouwproces bekijken alvorens pakket te installeren</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="830"/>
+        <location filename="../ui/configDialog.ui" line="823"/>
         <source>ABS Configuration</source>
         <translation>ABS-instellingen</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="836"/>
+        <location filename="../ui/configDialog.ui" line="829"/>
         <source>Use supfiles that match your current repositories</source>
         <translation>Gebruik supfiles die overeenkomen met uw huidige repositories</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="843"/>
+        <location filename="../ui/configDialog.ui" line="836"/>
         <source>Define supfiles manually</source>
         <translation>supfiles handmatig opgeven</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="853"/>
+        <location filename="../ui/configDialog.ui" line="846"/>
         <source>RSync Server:</source>
         <translation>RSync-server:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="866"/>
+        <location filename="../ui/configDialog.ui" line="859"/>
         <source>Makepkg Configuration</source>
         <translation>Makepkg-instellingen</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="872"/>
+        <location filename="../ui/configDialog.ui" line="865"/>
         <source>CFlags</source>
         <translation>CFlags</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="882"/>
+        <location filename="../ui/configDialog.ui" line="875"/>
         <source>CXXFlags</source>
         <translation>CXXFlags</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="892"/>
+        <location filename="../ui/configDialog.ui" line="885"/>
         <source>BuildEnv</source>
         <translation>BuildEnv</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="902"/>
+        <location filename="../ui/configDialog.ui" line="895"/>
         <source>Options</source>
         <translation>Opties</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="912"/>
+        <location filename="../ui/configDialog.ui" line="905"/>
         <source>Doc_Dirs</source>
         <translation>Doc_Dirs</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="925"/>
+        <location filename="../ui/configDialog.ui" line="918"/>
         <source>Build Environment</source>
         <translation>Build Environment</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="931"/>
+        <location filename="../ui/configDialog.ui" line="924"/>
         <source>Building Path</source>
         <translation>Building Path</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="941"/>
+        <location filename="../ui/configDialog.ui" line="934"/>
         <source>Remove installed makedepends after build</source>
         <translation>Geïnstalleerde bouwafhankelijkheden verwijderen na bouwen</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="948"/>
+        <location filename="../ui/configDialog.ui" line="941"/>
         <source>Clean Build Environment after installation</source>
         <translation>Bouwomgeving opruimen na installatie</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="962"/>
+        <location filename="../ui/configDialog.ui" line="955"/>
         <source>When Application is in System Tray only</source>
         <translation>Als het programma alleen in het systeemvak zit</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="968"/>
+        <location filename="../ui/configDialog.ui" line="961"/>
         <source>Update Database every</source>
         <translation>Database vernieuwen iedere</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1142"/>
+        <location filename="../ui/configDialog.ui" line="1135"/>
         <source>min</source>
         <comment>As in &quot;minutes&quot;</comment>
         <translation>minuut</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="985"/>
+        <location filename="../ui/configDialog.ui" line="978"/>
         <source>Show tray notification Windows</source>
         <translation>Systeemvakmeldingen tonen</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="995"/>
+        <location filename="../ui/configDialog.ui" line="988"/>
         <source>If upgrades are available:</source>
         <translation>Als upgrades beschikbaar zijn:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1002"/>
+        <location filename="../ui/configDialog.ui" line="995"/>
         <source>Just Notify</source>
         <translation>Alleen melden</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1009"/>
+        <location filename="../ui/configDialog.ui" line="1002"/>
         <source>Notify and add them to Queue</source>
         <translation>Melden en aan wachtrij toevoegen</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1016"/>
+        <location filename="../ui/configDialog.ui" line="1009"/>
         <source>Update Database at</source>
         <translation>Database updaten om</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1029"/>
+        <location filename="../ui/configDialog.ui" line="1022"/>
         <source>Use a proxy-server</source>
         <translation>Proxy-server gebruiken</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1041"/>
+        <location filename="../ui/configDialog.ui" line="1034"/>
         <source>IP:</source>
         <translation>IP-adres:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1064"/>
+        <location filename="../ui/configDialog.ui" line="1057"/>
         <source>Port:</source>
         <translation>Poort:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1106"/>
+        <location filename="../ui/configDialog.ui" line="1099"/>
         <source>HTTP Proxy</source>
         <translation>HTTP-proxy</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1113"/>
+        <location filename="../ui/configDialog.ui" line="1106"/>
         <source>FTP Proxy</source>
         <translation>FTP-proxy</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1123"/>
+        <location filename="../ui/configDialog.ui" line="1116"/>
         <source>Use Shaman RSS Capabilities</source>
         <translation>Shamans RSS-mogelijkheden gebruiken</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1135"/>
+        <location filename="../ui/configDialog.ui" line="1128"/>
         <source>Update RSS Feed Every</source>
         <translation>RSS-feed bijwerken iedere</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1149"/>
+        <location filename="../ui/configDialog.ui" line="1142"/>
         <source>Notify upon new items</source>
         <translation>Nieuwe items melden</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1156"/>
+        <location filename="../ui/configDialog.ui" line="1149"/>
         <source>Check if there is an unread news about a package in Queue before processing it</source>
         <translation>Eerst controleren of er ongelezen nieuwsberichten zijn over een pakket alvorens het te installeren</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1192"/>
+        <location filename="../ui/configDialog.ui" line="1185"/>
         <source>Interface</source>
         <translation>Interface</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1198"/>
+        <location filename="../ui/configDialog.ui" line="1191"/>
         <source>Use Animated Tray Icon</source>
         <translation>Bewegend systeemvak pictogram gebruiken</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1205"/>
+        <location filename="../ui/configDialog.ui" line="1198"/>
         <source>Start Shaman Automatically on X Startup</source>
         <translation>Shaman starten bij het starten van X</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1212"/>
+        <location filename="../ui/configDialog.ui" line="1205"/>
         <source>Forbid starting Shaman as root</source>
         <translation>Verhinderen dat Shaman als root gestart wordt</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="607"/>
+        <location filename="../ui/configDialog.ui" line="600"/>
         <source>KDEMod 4 Repository</source>
         <translation>KDEMod 4 Repository</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="614"/>
+        <location filename="../ui/configDialog.ui" line="607"/>
         <source>KDEMod 4 Extragear Repository</source>
         <translation>KDEMod 4 Extragear Repository</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="621"/>
+        <location filename="../ui/configDialog.ui" line="614"/>
         <source>KDEMod 4 Playground Repository</source>
         <translation>KDEMod 4 Playground Repository</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="628"/>
+        <location filename="../ui/configDialog.ui" line="621"/>
         <source>KDEMod 4 Testing Repository</source>
         <translation>KDEMod 4 Testing Repository</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="635"/>
+        <location filename="../ui/configDialog.ui" line="628"/>
         <source>KDEMod 4 Unstable Repository (Testers only!)</source>
         <translation>KDEMod 4 Unstable Repository (alleen testers)</translation>
     </message>
@@ -1002,12 +1013,12 @@ als Pacman.</translation>
         <translation>Hier kunt u repositories selecteren die naast Arch Linux&apos; officiële repositories gebruikt worden. Merk op dat pakketten uit Unstable en Testing schade aan uw systeem kunnen toebrengen.</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="592"/>
+        <location filename="../ui/configDialog.ui" line="585"/>
         <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme, and lots of addons, KDEMod is the best way to taste the ease and the power of KDE with the simplicity and the power of Arch.</source>
         <translation>KDEMod is een verbeterde versie van KDE, exclusief voor Arch Linux. Het bevat een verbeterde Qt-installatie (compatibel met Arch Linux&apos; standaard Qt-installaties), een verbeterde stijl en vele extra&apos;s. KDEMod is de beste manier om van de kracht van KDE te proeven, met de eenvoudigheid van Arch.</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="714"/>
+        <location filename="../ui/configDialog.ui" line="707"/>
         <source>You can extend your packages choice by adding other repositories. Third-Party Repositories act just as normal ones, and will be accessible through both Shaman and Pacman.</source>
         <translation>U kunt het pakketaanbod uitbreiden door andere repositories toe te voegen. Repositories van derden gedragen zich als normale repositories, en zijn benaderbaar via Shaman en Pacman.</translation>
     </message>
@@ -1503,7 +1514,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/MainWindow.ui" line="164"/>
         <source>Size</source>
-        <translation>Formaat wijzigen</translation>
+        <translation>Grootte</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="169"/>
@@ -1593,7 +1604,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/MainWindow.ui" line="520"/>
         <source>Build and Install from Source</source>
-        <translation>Bouw en installeer van broncode</translation>
+        <translation type="unfinished">Bouwen en installeren van broncode</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="536"/>
@@ -2345,26 +2356,32 @@ p, li { white-space: pre-wrap; }
         <translation>Uw wachtrij staat op het punt verwerkt te worden. U zal:&lt;br /&gt;</translation>
     </message>
     <message>
+        <location filename="../src/ReviewQueueDialog.cpp.orig" line="109"/>
         <source>Remove &lt;b&gt;%1 package&lt;/b&gt;&lt;br /&gt;</source>
         <translation type="obsolete">&lt;b&gt;%1 pakket&lt;/b&gt; verwijderen&lt;br /&gt;</translation>
     </message>
     <message>
+        <location filename="../src/ReviewQueueDialog.cpp.orig" line="109"/>
         <source>Remove &lt;b&gt;%1 packages&lt;/b&gt;&lt;br /&gt;</source>
         <translation type="obsolete">&lt;b&gt;%1 pakketten&lt;/b&gt; verwijderen&lt;br /&gt; </translation>
     </message>
     <message>
+        <location filename="../src/ReviewQueueDialog.cpp.orig" line="109"/>
         <source>Install/Upgrade &lt;b&gt;%1 package&lt;/b&gt;&lt;br /&gt;</source>
         <translation type="obsolete">&lt;b&gt;%1 pakket&lt;/b&gt; installeren/bijwerken&lt;br /&gt; </translation>
     </message>
     <message>
+        <location filename="../src/ReviewQueueDialog.cpp.orig" line="109"/>
         <source>Install/Upgrade &lt;b&gt;%1 packages&lt;/b&gt;&lt;br /&gt;</source>
         <translation type="obsolete">&lt;b&gt;%1 pakketten&lt;/b&gt; installeren/bijwerken&lt;br /&gt; </translation>
     </message>
     <message>
+        <location filename="../src/ReviewQueueDialog.cpp.orig" line="109"/>
         <source>&lt;b&gt;%1&lt;/b&gt; will be used</source>
         <translation type="obsolete">&lt;b&gt;%1&lt;/b&gt; zal worden ingenomen</translation>
     </message>
     <message>
+        <location filename="../src/ReviewQueueDialog.cpp.orig" line="109"/>
         <source>&lt;b&gt;%1&lt;/b&gt; will be freed</source>
         <translation type="obsolete">&lt;b&gt;%1&lt;/b&gt; zal vrijkomen</translation>
     </message>
@@ -2386,7 +2403,7 @@ p, li { white-space: pre-wrap; }
         <source>Install/Upgrade &lt;b&gt;%n package(s)&lt;/b&gt;&lt;br /&gt;</source>
         <translation>
             <numerusform>&lt;b&gt;%n pakket&lt;/b&gt; installeren/bijwerken&lt;br /&gt;</numerusform>
-            <numerusform>&lt;b&gt;%n pakketten&lt;/b&gt; installeren/bijwerken&lt;/br /&gt;</numerusform>
+            <numerusform>&lt;b&gt;%n pakketten&lt;/b&gt; installeren/bijwerken&lt;br /&gt;</numerusform>
         </translation>
     </message>
 </context>
@@ -2461,12 +2478,14 @@ p, li { white-space: pre-wrap; }
         <translation>Systeem bijwerken</translation>
     </message>
     <message>
+        <location filename="../src/ShamanTrayIcon.cpp.orig" line="137"/>
         <source>There is %1 upgradeable package.
 Click here to upgrade your System.</source>
         <translation type="obsolete">%1 pakket kan bijgewerkt worden.
 Klik hier om uw systeem bij te werken.</translation>
     </message>
     <message>
+        <location filename="../src/ShamanTrayIcon.cpp.orig" line="137"/>
         <source>There are %1 upgradeable packages.
 Click here to upgrade your System.</source>
         <translation type="obsolete">%1 pakketten kunnen bijgewerkt worden.
@@ -2510,10 +2529,12 @@ Klik hier om uw systeem bij te werken.</numerusform>
 <context>
     <name>SysUpgradeDialog</name>
     <message>
+        <location filename="../src/ShamanTrayIcon.cpp.orig" line="138"/>
         <source>There is &lt;b&gt;%1 upgradeable package&lt;/b&gt;. You can either&lt;br&gt; upgrade immediately or add it to the current Queue&lt;br&gt; and process it later.</source>
         <translation type="obsolete">Er is &lt;b&gt;%1 pakket bij te werken&lt;/b&gt;. U kan ofwel &lt;br&gt;onmiddellijk bijwerken of het pakket toevoegen aan de huidige wachtrij&lt;br&gt; en het later verwerken.</translation>
     </message>
     <message>
+        <location filename="../src/ShamanTrayIcon.cpp.orig" line="138"/>
         <source>There are &lt;b&gt;%1 upgradeable packages&lt;/b&gt;. You can either&lt;br&gt; upgrade immediately or add them to the current Queue&lt;br&gt; and process them later.</source>
         <translation type="obsolete">Er zijn &lt;b&gt;%1 pakketten bij te werken&lt;/b&gt;. U kan ofwel &lt;br&gt;onmiddellijk bijwerken of de pakketten toevoegen aan de huidige wachtrij&lt;br&gt; en ze later verwerken.</translation>
     </message>
