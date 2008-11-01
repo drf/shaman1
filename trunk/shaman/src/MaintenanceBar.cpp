@@ -40,9 +40,14 @@ MaintenanceBar::MaintenanceBar( AlpmHandler *aH, QWidget *parent )
     setWindowTitle( QString( tr( "Maintenance Actions" ) ) );
 
     QComboBox *box = new QComboBox();
-    box->addItems( QStringList() << QString( tr( "Please choose an action to start maintenance..." ) ) << QString() <<
-                   QString( tr( "Clean Unused Databases" ) ) << QString( tr( "Clean Cache" ) ) <<
-                   QString( tr( "Empty Cache" ) ) << QString( tr( "Optimize Pacman Database" ) ) << QString( tr( "Clean All Building Environments" ) ) );
+    box->addItems( QStringList() <<
+                   QString( tr( "Please choose an action to start maintenance..." ) ) <<
+                   QString() <<
+                   QString( tr( "Clean Unused Databases" ) ) <<
+                   QString( tr( "Clean Cache" ) ) <<
+                   QString( tr( "Empty Cache" ) ) <<
+                   QString( tr( "Optimize Pacman Database" ) ) <<
+                   QString( tr( "Clean All Building Environments" ) ) );
 
     box->setCurrentIndex( 0 );
 

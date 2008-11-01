@@ -31,6 +31,7 @@
 #include <QString>
 #include <QSettings>
 #include <QFile>
+#include <QDir>
 #include <QDate>
 #include <QTranslator>
 #include <QDebug>
@@ -234,10 +235,16 @@ int main( int argc, char **argv )
     QDBusConnection testconn = QDBusConnection::systemBus();
     if ( testconn.interface()->isServiceRegistered( "org.archlinux.shaman" ) ) {
         foreach( const QString &ent, arguments ) {
-            if ( ent.contains( "pkg.tar.gz" ) ) {
+            QString path = ent;
+
+            if ( path.contains( "pkg.tar.gz" ) ) {
+                if ( !path.startsWith( QChar('/') ) ) {
+                    path.prepend( QString ( QDir::currentPath() + QChar( '/' ) ) );
+                }
+
                 QDBusMessage msg = QDBusMessage::createMethodCall( "org.archlinux.shaman", "/Shaman",
                                    "org.archlinux.shaman", "installPackageFromFile" );
-                msg << ent;
+                msg << path;
                 testconn.call( msg );
 
                 return( 0 );
