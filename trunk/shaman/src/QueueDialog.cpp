@@ -115,7 +115,7 @@ void QueueDialog::changeStatus( pmtransevt_t event, void *data1, void *data2 )
 {
     QMutexLocker lock( Backend::instance()->backendMutex() );
 
-    qDebug() << "Entering Queue Lock";
+    qDebug() << "Entering Queue Lock, with event " << event;
 
     QString upgTxt;
     QString addTxt;
@@ -388,6 +388,7 @@ void QueueDialog::startDownload()
     transLabel->setPixmap( QIcon( ":/Icons/icons/dialog-ok-apply.png" ).pixmap( 22 ) );
     dlLabel->setPixmap( QIcon( ":/Icons/icons/edit-redo.png" ).pixmap( 22 ) );
 
+    qDebug() << "Package Download detected";
     connect( Backend::instance(), SIGNAL( streamTransDlProg( char*, int, int, int, int, int, int ) ),
              SLOT( updateProgressBar( char*, int, int, int, int, int, int ) ) );
 

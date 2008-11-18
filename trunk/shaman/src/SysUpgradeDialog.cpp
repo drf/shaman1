@@ -47,11 +47,12 @@ void SysUpgradeDialog::init()
 {
     QSettings *settings = new QSettings();
 
-    if ( settings->value( "gui/actionupgrade" ).toString() == "add" )
+    if ( settings->value( "gui/actionupgrade" ).toString() == "add" ) {
         addPkg();
-    else if ( settings->value( "gui/actionupgrade" ).toString() == "upgrade" )
+    }
+    else if ( settings->value( "gui/actionupgrade" ).toString() == "upgrade" ) {
         initSysUpgrade();
-    else {
+    } else {
         QStringList data;
 
         setWindowModality( Qt::ApplicationModal );
