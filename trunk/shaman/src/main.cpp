@@ -234,8 +234,9 @@ int main( int argc, char **argv )
             qDebug() << "Loading translations from" << '.';
 
         app.installTranslator( &translator );
-    } else
+    } else {
         qWarning() << "Translations are Disabled on user request.";
+    }
 
     QDBusConnection testconn = QDBusConnection::systemBus();
     if ( testconn.interface()->isServiceRegistered( "org.archlinux.shaman" ) ) {
@@ -262,6 +263,9 @@ int main( int argc, char **argv )
 
         return( 1 );
     }
+
+    // Let's fire up aqpm
+    Backend::instance()->setUpAlpm();
 
     if ( !Backend::instance()->testLibrary() ) {
         Authenticator ath;

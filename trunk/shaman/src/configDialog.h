@@ -22,14 +22,10 @@
 #define CONFIGDIALOG_H
 
 #include "ui_configDialog.h"
-#include <aqpm/ConfigurationParser.h>
-#include <aqpm/Backend.h>
 #include "Authenticator.h"
 #include <QThread>
 #include <QProcess>
 #include <QPointer>
-
-using namespace Aqpm;
 
 namespace ShamanProperties
 {
@@ -58,7 +54,7 @@ class CleanThread : public QThread
 };
 
 
-class ConfigDialog : public QDialog, public Ui::ConfigDialog, private ConfigurationParser
+class ConfigDialog : public QDialog, public Ui::ConfigDialog
 {
 
         Q_OBJECT
