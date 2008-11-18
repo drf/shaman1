@@ -49,6 +49,8 @@
 
 #include <config.h>
 
+#include <aqpm/Backend.h>
+
 #include <iostream>
 #include <alpm.h>
 #include <sys/types.h>
@@ -73,16 +75,15 @@
 #include <QStandardItemModel>
 #include <QSortFilterProxyModel>
 
-extern CallBacks CbackReference;
-extern QMutex mutex;
-extern QWaitCondition wCond;
 extern Authenticator_Callback athCback;
 extern struct pam_response *reply;
 
+using namespace Aqpm;
+
 // Thread Definition
 
-CreateItemsThread::CreateItemsThread( AlpmHandler *aH )
-        : m_handler( aH )
+CreateItemsThread::CreateItemsThread(QObject *parent)
+        : QThread(parent)
 {
 }
 
@@ -95,11 +96,11 @@ void CreateItemsThread::run()
 {
     alpm_list_t *databases;
     int count = 0;
-    int totalPkgs = m_handler->countPackages( Alpm::AllPackages );
+    int totalPkgs = Backend::instance()->countPackages( Backend::AllPackages );
     QList<QTreeWidgetItem *> itmLst;
     alpm_list_t *currentpkgs;
 
-    databases = m_handler->getAvailableRepos();
+    databases = Backend::instance()->getAvailableRepos();
 
     databases = alpm_list_first( databases );
 
@@ -116,10 +117,10 @@ void CreateItemsThread::run()
             pmpkg_t *pkg = ( pmpkg_t * )alpm_list_getdata( currentpkgs );
             bool installed = false;
 
-            if ( m_handler->isInstalled( pkg ) ) {
-                pmpkg_t *pkg1 = m_handler->getPackageFromName( alpm_pkg_get_name( pkg ), "local" );
+            if ( Backend::instance()->isInstalled( pkg ) ) {
+                pmpkg_t *pkg1 = Backend::instance()->getPackageFromName( alpm_pkg_get_name( pkg ), "local" );
 
-                if ( m_handler->getPackageVersion( pkg ) != m_handler->getPackageVersion( pkg1 ) )
+                if ( Backend::instance()->getPackageVersion( pkg ) != Backend::instance()->getPackageVersion( pkg1 ) )
                     conflPackages.append( alpm_pkg_get_name( pkg ) );
                 else {
                     pkg = pkg1;
@@ -145,7 +146,7 @@ void CreateItemsThread::run()
             item->setText( 1, alpm_pkg_get_name( pkg ) );
             item->setText( 5, alpm_db_get_name( dbcrnt ) );
 
-            int size = m_handler->getPackageSize( item->text( 1 ), item->text( 5 ) );
+            int size = Backend::instance()->getPackageSize( item->text( 1 ), item->text( 5 ) );
 
             item->setText( 4, PackageProperties::formatSize( size ) );
             item->setData( 4, Qt::UserRole, size );
@@ -176,7 +177,7 @@ void CreateItemsThread::run()
 
     databases = alpm_list_first( databases );
 
-    alpm_list_t *locPkg = m_handler->getPackagesFromRepo( "local" );
+    alpm_list_t *locPkg = Backend::instance()->getPackagesFromRepo( "local" );
 
     while ( locPkg != NULL ) {
         pmpkg_t *pkg = ( pmpkg_t * )alpm_list_getdata( locPkg );
@@ -188,9 +189,9 @@ void CreateItemsThread::run()
         item->setText( 3, alpm_pkg_get_version( pkg ) );
         item->setText( 7, alpm_pkg_get_desc( pkg ) );
         item->setText( 5, "local" );
-        item->setText( 4, PackageProperties::formatSize( m_handler->getPackageSize( item->text( 1 ),
+        item->setText( 4, PackageProperties::formatSize( Backend::instance()->getPackageSize( item->text( 1 ),
                        item->text( 5 ) ) ) );
-        item->setData( 4, Qt::UserRole, ( int )m_handler->getPackageSize( item->text( 1 ),
+        item->setData( 4, Qt::UserRole, ( int )Backend::instance()->getPackageSize( item->text( 1 ),
                        item->text( 5 ) ) );
 
         retlist.append( item );
@@ -212,18 +213,17 @@ void CreateItemsThread::run()
         if ( count == 1 ) {
             match->setIcon( 0, QIcon( ":/Icons/icons/user-online.png" ) );
             match->setData( 0, Qt::UserRole, ( int )2 );
-            match->setText( 3, m_handler->getPackageVersion( match->text( 1 ), "local" ) );
+            match->setText( 3, Backend::instance()->getPackageVersion( match->text( 1 ), "local" ) );
         }
     }
 }
 
 // MainWindow Definition
 
-MainWindow::MainWindow( AlpmHandler *handler, QMainWindow *parent )
+MainWindow::MainWindow( QMainWindow *parent )
         : QMainWindow( parent ),
         queueDl(),
         currentpkgs( 0 ),
-        aHandle( handler ),
         dbdialog(),
         upDl(),
         configDialog(),
@@ -283,7 +283,7 @@ MainWindow::MainWindow( AlpmHandler *handler, QMainWindow *parent )
     nameDescBox->addItem( tr( "Description" ) );
     nameDescBox->addItem( tr( "Name and Description" ) );
 
-    connect( &CbackReference, SIGNAL( questionStreamed( const QString& ) ), this,
+    connect( Backend::instance(), SIGNAL( questionStreamed( const QString& ) ), this,
              SLOT( streamTransQuestion( const QString& ) ) );
     connect( actionUpdate_Database, SIGNAL( triggered() ), SLOT( doDbUpdate() ) );
     connect( pkgsViewWG, SIGNAL( customContextMenuRequested( const QPoint & ) ),
@@ -310,17 +310,17 @@ MainWindow::MainWindow( AlpmHandler *handler, QMainWindow *parent )
     connect( actionCancel_all_actions, SIGNAL( triggered() ), SLOT( cancelAllActions() ) );
     connect( actionReadNews, SIGNAL( triggered() ), SLOT( openNewsDialog() ) );
     connect( actionViewLog, SIGNAL( triggered() ), SLOT( openLogViewer() ) );
-    connect( aHandle, SIGNAL( streamDbUpdatingStatus( const QString&, int ) ),
+    connect( Backend::instance(), SIGNAL( streamDbUpdatingStatus( const QString&, int ) ),
              SIGNAL( streamDbUpdatingStatus( const QString&, int ) ) );
-    connect( &CbackReference, SIGNAL( streamTransDlProg( const QString&, int, int, int, int ) ),
+    connect( Backend::instance(), SIGNAL( streamTransDlProg( const QString&, int, int, int, int ) ),
              SIGNAL( streamTransDlProg( const QString&, int, int, int, int ) ) );
     connect( &athCback, SIGNAL( passwordRequired( int ) ), SLOT( showAuthDialog( int ) ) );
-    connect( aHandle, SIGNAL( transactionStarted() ), SIGNAL( transactionStarted() ) );
-    connect( aHandle, SIGNAL( transactionReleased() ), SIGNAL( transactionReleased() ) );
+    connect( Backend::instance(), SIGNAL( transactionStarted() ), SIGNAL( transactionStarted() ) );
+    connect( Backend::instance(), SIGNAL( transactionReleased() ), SIGNAL( transactionReleased() ) );
 
     completeRemoveButton->setEnabled( false ); // Until it works...
 
-    addToolBar( new MaintenanceBar( aHandle, this ) );
+    addToolBar( new MaintenanceBar( Backend::instance(), this ) );
 
     QSettings *settings = new QSettings();
 
@@ -335,7 +335,7 @@ MainWindow::MainWindow( AlpmHandler *handler, QMainWindow *parent )
     new QShortcut( QKeySequence( "F5" ), this, SLOT( doDbUpdate() ) );
     new QShortcut( QKeySequence( tr( "Ctrl+Q", "Exit Shaman Shortcut" ) ), this, SLOT( quitApp() ) );
 
-    stBar = new ShamanStatusBar( aHandle, this );
+    stBar = new ShamanStatusBar( Backend::instance(), this );
 
     setStatusBar( stBar );
 
@@ -349,7 +349,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::setUpTrayIcon()
 {
-    trayicon = new ShamanTrayIcon( this, aHandle );
+    trayicon = new ShamanTrayIcon( this, Backend::instance() );
 
     connect( trayicon, SIGNAL( activated( QSystemTrayIcon::ActivationReason ) ),
              SLOT( systrayActivated( QSystemTrayIcon::ActivationReason ) ) );
@@ -433,7 +433,7 @@ void MainWindow::populatePackagesView()
     if ( cThread )
         cThread->deleteLater();
 
-    cThread = new CreateItemsThread( aHandle );
+    cThread = new CreateItemsThread( Backend::instance() );
 
     connect( cThread, SIGNAL( finished() ), SLOT( populatePackagesViewFinished() ) );
     connect( cThread, SIGNAL( updateProgress( int ) ), stBar, SLOT( updateProgressBar( int ) ) );
@@ -475,7 +475,7 @@ void MainWindow::shiftItemAction()
 {
     if ( !pkgsViewWG->selectedItems().first()->text( 8 ).isEmpty() )
         cancelAction();
-    else if ( aHandle->isInstalled( pkgsViewWG->selectedItems().first()->text( 1 ) ) )
+    else if ( Backend::instance()->isInstalled( pkgsViewWG->selectedItems().first()->text( 1 ) ) )
         removePackage();
     else
         installPackage();
@@ -487,7 +487,7 @@ void MainWindow::populateRepoColumn()
 
     switchToGrps->setChecked( false );
     repoDockWidget->setWindowTitle( tr( "Repositories" ) );
-    QStringList list = aHandle->getAvailableReposNames();
+    QStringList list = Backend::instance()->getAvailableReposAsStringList();
 
     removeRepoColumn();
 
@@ -517,7 +517,7 @@ void MainWindow::populateGrpsColumn()
 {
     switchToRepo->setChecked( false );
     repoDockWidget->setWindowTitle( tr( "Package Groups" ) );
-    QStringList grps = aHandle->getPackageGroups();
+    QStringList grps = Backend::instance()->getAvailableGroupsAsStringList();
 
     removeRepoColumn();
 
@@ -587,22 +587,22 @@ void MainWindow::refinePkgView()
             //qDebug() << "We should only show the installed packages";
             foreach( QTreeWidgetItem *item, list ) {
                 //qDebug() << "Checking for installed packages" + item->text(2);
-                if ( !aHandle->isInstalled( item->text( 1 ) ) )
+                if ( !Backend::instance()->isInstalled( item->text( 1 ) ) )
                     list.removeAt( list.indexOf( item ) );
             }
         }
         if ( packageSwitchCombo->currentText() == tr( "Not installed packages" ) ) {
             foreach( QTreeWidgetItem *item, list ) {
                 //qDebug() << "Checking for installed packages" + item->text(2);
-                if ( aHandle->isInstalled( item->text( 1 ) ) )
+                if ( Backend::instance()->isInstalled( item->text( 1 ) ) )
                     list.removeAt( list.indexOf( item ) );
             }
         }
         if ( packageSwitchCombo->currentText() == tr( "Upgradeable packages" ) ) {
-            QStringList stringList = aHandle->getUpgradeablePackages();
+            QStringList stringList = Backend::instance()->getUpgradeablePackagesAsStringList();
             foreach( QTreeWidgetItem *item, list ) {
                 //qDebug() << "Checking for upgradeable packages" + item->text(2);
-                if ( !aHandle->isInstalled( item->text( 1 ) ) || !stringList.contains( item->text( 1 ) ) )
+                if ( !Backend::instance()->isInstalled( item->text( 1 ) ) || !stringList.contains( item->text( 1 ) ) )
                     list.removeAt( list.indexOf( item ) );
             }
         }
@@ -691,7 +691,7 @@ void MainWindow::itemChanged()
         return;
 
     cancelButton->setDisabled( true );
-    if ( aHandle->isInstalled( pkgsViewWG->selectedItems().first()->text( 1 ) ) ) {
+    if ( Backend::instance()->isInstalled( pkgsViewWG->selectedItems().first()->text( 1 ) ) ) {
         removeButton->setEnabled( true );
         installButton->setEnabled( true );
         installButton->setText( tr( "Mark for Re&installation" ) );
@@ -699,7 +699,7 @@ void MainWindow::itemChanged()
         disconnect( installButton, SIGNAL( clicked() ), this, SLOT( installPackage() ) );
         connect( installButton, SIGNAL( clicked() ), SLOT( reinstallPackage() ) );
     }
-    if ( !aHandle->isInstalled( pkgsViewWG->selectedItems().first()->text( 1 ) ) ) {
+    if ( !Backend::instance()->isInstalled( pkgsViewWG->selectedItems().first()->text( 1 ) ) ) {
         removeButton->setDisabled( true );
         installButton->setEnabled( true );
         installButton->setText( tr( "Mark for &Installation" ) );
@@ -733,7 +733,7 @@ void MainWindow::showPkgInfo()
     pmdb_t *curdb = NULL;
     bool isLocal = false;
 
-    databases = aHandle->getAvailableRepos();
+    databases = Backend::instance()->getAvailableRepos();
 
     databases = alpm_list_first( databases );
 
@@ -752,7 +752,7 @@ void MainWindow::showPkgInfo()
         if ( !pkg ) {
             /* Well, if pkg is NULL we're probably searching for something coming
              * from the local database. */
-            pkg = aHandle->getPackageFromName( pkgsViewWG->currentItem()->text( 1 ).toUtf8().data(), "local" );
+            pkg = Backend::instance()->getPackageFromName( pkgsViewWG->currentItem()->text( 1 ).toUtf8().data(), "local" );
             isLocal = true;
         }
 
@@ -767,13 +767,13 @@ void MainWindow::showPkgInfo()
         description.append( alpm_pkg_get_desc( pkg ) );
         description.append( "<br><br>" );
         description.append( "<b>" + tr( "Status: " ) + "</b> " );
-        if ( aHandle->isInstalled( item->text( 1 ) ) )
+        if ( Backend::instance()->isInstalled( item->text( 1 ) ) )
             description.append( tr( "Installed" ) ); //FIXME: Icon!!!!
         else
             description.append( tr( "Not installed" ) );
-        if ( aHandle->isInstalled( item->text( 1 ) ) ) {
+        if ( Backend::instance()->isInstalled( item->text( 1 ) ) ) {
             description.append( "<br><b>" + tr( "Local Version: " ) + "</b> " );
-            description.append( aHandle->getPackageVersion( alpm_pkg_get_name( pkg ), "local" ) );
+            description.append( Backend::instance()->getPackageVersion( alpm_pkg_get_name( pkg ), "local" ) );
         }
         if ( !isLocal ) {
             description.append( "<br><b>" + tr( "Version in the Repository: " ) + "</b> " );
@@ -790,7 +790,7 @@ void MainWindow::showPkgInfo()
 
     else if ( PkgInfos->currentIndex() == 2 ) {
         dependenciesWidget->clear();
-        foreach( const QString &dep, aHandle->getPackageDependencies( alpm_pkg_get_name( pkg ) ,
+        foreach( const QString &dep, Backend::instance()->getPackageDependencies( alpm_pkg_get_name( pkg ) ,
                  pkgsViewWG->currentItem()->text( 5 ) ) ) {
             if ( !dep.isEmpty() )
                 dependenciesWidget->addItem( dep );
@@ -800,7 +800,7 @@ void MainWindow::showPkgInfo()
     else if ( PkgInfos->currentIndex() == 1 ) {
         filesWidget->clear();
         filesWidget->header()->hide();
-        QStringList files = aHandle->getPackageFiles( pkgsViewWG->selectedItems().first()->text( 1 ) );
+        QStringList files = Backend::instance()->getPackageFiles( pkgsViewWG->selectedItems().first()->text( 1 ) );
         foreach( const QString &file, files ) {
             QStringList splitted = file.split( '/' );
             QTreeWidgetItem *parentItem = 0;
@@ -834,7 +834,7 @@ void MainWindow::showPkgInfo()
 
 void MainWindow::doDbUpdate()
 {
-    dbdialog = new UpdateDbDialog( aHandle, this );
+    dbdialog = new UpdateDbDialog( Backend::instance(), this );
     dbActive = true;
 
     emit actionStatusChanged( "dbUpdateStarted" );
@@ -869,7 +869,7 @@ void MainWindow::finishDbUpdate()
 
     stBar->stopProgressBar();
 
-    QStringList list( aHandle->getUpgradeablePackages() );
+    QStringList list( Backend::instance()->getUpgradeablePackagesAsStringList() );
 
     if ( dbdialog->anyErrors() ) {
         emit actionStatusChanged( "dbUpdateFinished" );
@@ -994,12 +994,13 @@ void MainWindow::showPkgsViewContextMenu()
     connect( infoAction, SIGNAL( triggered() ), SLOT( showInfoDialog() ) );
 
 
-    if ( aHandle->isInstalled( item->text( 1 ) ) && aHandle->getUpgradeablePackages().contains( item->text( 1 ) ) ) {
+    if ( Backend::instance()->isInstalled( item->text( 1 ) ) &&
+         Backend::instance()->getUpgradeablePackagesAsStringList().contains( item->text( 1 ) ) ) {
         installAction->setText( tr( "Mark for Re&installation" ) );
         disconnect( installAction, 0, 0, 0 );
         connect( installAction, SIGNAL( triggered() ), SLOT( reinstallPackage() ) );
         removeAction->setDisabled( true );
-    } else if ( !aHandle->isInstalled( item->text( 1 ) ) ) {
+    } else if ( !Backend::instance()->isInstalled( item->text( 1 ) ) ) {
         removeAction->setDisabled( true );
         upgradeAction->setDisabled( true );
     } else { //Package is marked as installed
@@ -1094,13 +1095,13 @@ void MainWindow::reinstallAllRepoPackages()
         tmp.prepend( " " );
         qDebug() << "Hehe";
         foreach( QTreeWidgetItem *item, pkgsViewWG->findItems( tmp, ( Qt::MatchFlags )Qt::MatchContains, 6 ) ) {
-            if ( aHandle->isInstalled( item->text( 1 ) ) )
+            if ( Backend::instance()->isInstalled( item->text( 1 ) ) )
                 reinstallPackage( item->text( 1 ) );
         }
     } else {
         foreach( QTreeWidgetItem *item, pkgsViewWG->findItems( repoList->selectedItems().first()->text(),
                  Qt::MatchExactly, 5 ) ) {
-            if ( aHandle->isInstalled( item->text( 1 ) ) )
+            if ( Backend::instance()->isInstalled( item->text( 1 ) ) )
                 reinstallPackage( item->text( 1 ) );
         }
     }
@@ -1162,7 +1163,7 @@ void MainWindow::installPackage()
     foreach( QTreeWidgetItem *item, pkgsViewWG->selectedItems() ) {
         qDebug() << "Streaming package";
 
-        if ( aHandle->isProviderInstalled( item->text( 1 ) ) ) {
+        if ( Backend::instance()->isProviderInstalled( item->text( 1 ) ) ) {
             switch ( ShamanDialog::popupQuestionDialog( tr( "Shaman" ),
                      QString( tr( "A package providing %1 is already installed.\n"
                                   "Do you want to install %1 anyway?" ) ).arg( item->text( 1 ) ),
@@ -1257,10 +1258,10 @@ void MainWindow::installPackage( const QString &package, const QString &repo )
 
     qDebug() << item->text( 1 );
 
-    if ( aHandle->isProviderInstalled( package ) )
+    if ( Backend::instance()->isProviderInstalled( package ) )
         return;
 
-    if ( item->text( 8 ) == tr( "Install" ) || aHandle->isInstalled( item->text( 1 ) ) )
+    if ( item->text( 8 ) == tr( "Install" ) || Backend::instance()->isInstalled( item->text( 1 ) ) )
         return;
     else {
         item->setText( 8, tr( "Install" ) );
@@ -1269,7 +1270,7 @@ void MainWindow::installPackage( const QString &package, const QString &repo )
     qDebug() << item->text( 5 );
 
 
-    foreach( const QString &dep, aHandle->getPackageDependencies( package, item->text( 5 ) ) ) {
+    foreach( const QString &dep, Backend::instance()->getPackageDependencies( package, item->text( 5 ) ) ) {
         installPackage( dep );
     }
 }
@@ -1313,7 +1314,7 @@ void MainWindow::removePackage( const QString &package, const QString &repo )
 
     qDebug() << item->text( 1 );
 
-    if ( !aHandle->isInstalled( item->text( 1 ) ) || item->text( 8 ) == tr( "Uninstall" ) )
+    if ( !Backend::instance()->isInstalled( item->text( 1 ) ) || item->text( 8 ) == tr( "Uninstall" ) )
         return;
     else {
         item->setText( 8, tr( "Uninstall" ) );
@@ -1321,7 +1322,7 @@ void MainWindow::removePackage( const QString &package, const QString &repo )
     }
     qDebug() << item->text( 5 );
 
-    foreach( const QString &dep, aHandle->getDependenciesOnPackage( package, item->text( 5 ) ) ) {
+    foreach( const QString &dep, Backend::instance()->getDependenciesOnPackage( package, item->text( 5 ) ) ) {
         removePackage( dep );
     }
 }
@@ -1337,7 +1338,7 @@ void MainWindow::completeRemovePackage()
 
     qDebug() << item->text( 1 );
 
-    if ( !aHandle->isInstalled( item->text( 1 ) ) )
+    if ( !Backend::instance()->isInstalled( item->text( 1 ) ) )
         return;
     else {
         item->setText( 8, tr( "Complete Uninstall" ) );
@@ -1346,10 +1347,10 @@ void MainWindow::completeRemovePackage()
 
     //Now we remove the on-package-dependencies and the dependencies...
 
-    foreach( const QString &onDep, aHandle->getDependenciesOnPackage( item->text( 1 ), item->text( 5 ) ) ) {
+    foreach( const QString &onDep, Backend::instance()->getDependenciesOnPackage( item->text( 1 ), item->text( 5 ) ) ) {
         removePackage( onDep );
     }
-    foreach( const QString &dep, aHandle->getPackageDependencies( item->text( 1 ), item->text( 5 ) ) ) {
+    foreach( const QString &dep, Backend::instance()->getPackageDependencies( item->text( 1 ), item->text( 5 ) ) ) {
         removePackage( dep );
     }
 
@@ -1397,10 +1398,10 @@ void MainWindow::cancelAction( const QString &package, const QString &repo )
     item->setText( 8, QString() );
     item->setIcon( 2, QIcon() );
 
-    foreach( const QString &onDep, aHandle->getDependenciesOnPackage( item->text( 1 ), item->text( 5 ) ) ) {
+    foreach( const QString &onDep, Backend::instance()->getDependenciesOnPackage( item->text( 1 ), item->text( 5 ) ) ) {
         cancelAction( onDep );
     }
-    foreach( const QString &dep, aHandle->getPackageDependencies( item->text( 1 ), item->text( 5 ) ) ) {
+    foreach( const QString &dep, Backend::instance()->getPackageDependencies( item->text( 1 ), item->text( 5 ) ) ) {
         cancelAction( dep );
     }
 
@@ -1419,7 +1420,7 @@ void MainWindow::startUpgrading()
         }
     }
 
-    QStringList list = aHandle->getUpgradeablePackages();
+    QStringList list = Backend::instance()->getUpgradeablePackagesAsStringList();
     stBar->stopProgressBar();
 
     if ( list.isEmpty() ) {
@@ -1528,7 +1529,7 @@ void MainWindow::upgrade( const QStringList &packages )
 
         settings->deleteLater();
 
-        upDl = new SysUpgradeDialog( aHandle, this );
+        upDl = new SysUpgradeDialog( Backend::instance(), this );
 
         connect( upDl, SIGNAL( aborted() ), SLOT( upgradeAborted() ) );
         connect( upDl, SIGNAL( upgradeNow() ), SLOT( processQueue() ) );
@@ -1552,7 +1553,7 @@ void MainWindow::addUpgradeableToQueue()
         upDl->deleteLater();
 
     qDebug() << "UpgradeableToQueue";
-    if ( aHandle->getUpgradeablePackages().isEmpty() )
+    if ( Backend::instance()->getUpgradeablePackagesAsStringList().isEmpty() )
         return;
 
     disconnect( this, SIGNAL( packagesLoaded() ), this, SLOT( addUpgradeableToQueue() ) );
@@ -1562,7 +1563,7 @@ void MainWindow::addUpgradeableToQueue()
         return;
     }
 
-    foreach( const QString &package, aHandle->getUpgradeablePackages() ) {
+    foreach( const QString &package, Backend::instance()->getUpgradeablePackagesAsStringList() ) {
         QTreeWidgetItem *item = pkgsViewWG->findItems( package, Qt::MatchExactly, 1 ).first();
         item->setIcon( 0, QIcon( ":/Icons/icons/user-invisible.png" ) );
         item->setText( 8, tr( "Upgrade" ) );
@@ -1578,7 +1579,7 @@ void MainWindow::addUpgradeableToQueue()
 
 void MainWindow::fullSysUpgrade()
 {
-    dbdialog = new UpdateDbDialog( aHandle, this );
+    dbdialog = new UpdateDbDialog( Backend::instance(), this );
     dbActive = true;
 
     if ( isVisible() )
@@ -1619,7 +1620,7 @@ void MainWindow::processQueue()
 
     qDebug() << "Queue Dialog started";
 
-    queueDl = new QueueDialog( aHandle, this );
+    queueDl = new QueueDialog( Backend::instance(), this );
 
     connect( queueDl, SIGNAL( terminated( bool ) ), SLOT( queueProcessingEnded( bool ) ) );
     connect( queueDl, SIGNAL( streamTransactionProgress( int ) ), SIGNAL( streamTransactionProgress( int ) ) );
@@ -1808,16 +1809,16 @@ void MainWindow::widgetQueueToAlpmQueue()
 
     else if ( pkgsViewWG->findItems( tr( "Uninstall" ), Qt::MatchExactly, 8 ).isEmpty() &&
               pkgsViewWG->findItems( tr( "Complete Uninstall" ), Qt::MatchExactly, 8 ).isEmpty() )
-        aHandle->initQueue( false, true, false );
+        Backend::instance()->initQueue( false, true, false );
 
     else if ( pkgsViewWG->findItems( tr( "Install" ), Qt::MatchExactly, 8 ).isEmpty() &&
               pkgsViewWG->findItems( tr( "Upgrade" ), Qt::MatchExactly, 8 ).isEmpty() )
-        aHandle->initQueue( true, false, false );
+        Backend::instance()->initQueue( true, false, false );
 
     else
-        aHandle->initQueue( true, true, false );
+        Backend::instance()->initQueue( true, true, false );
 
-    qUi = new ReviewQueueDialog( aHandle, this );
+    qUi = new ReviewQueueDialog( Backend::instance(), this );
 
     revActive = true;
 
@@ -1829,7 +1830,7 @@ void MainWindow::widgetQueueToAlpmQueue()
 
 void MainWindow::showSettings()
 {
-    configDialog = new ConfigDialog( aHandle, this );
+    configDialog = new ConfigDialog( Backend::instance(), this );
 
     connect( configDialog, SIGNAL( setProxy() ), this, SLOT( setProxy() ) );
 
@@ -1910,7 +1911,7 @@ void MainWindow::installPackageFromFile( const QString &filename )
 
     qDebug() << "Selected" << alpm_pkg_get_name( pkg );
 
-    lpkgDialog = new LocalPackageDialog( aHandle, this );
+    lpkgDialog = new LocalPackageDialog( Backend::instance(), this );
 
     lpkgDialog->loadPackage( pkg, filename );
 
@@ -1951,7 +1952,7 @@ void MainWindow::showAboutDialog()
                                          "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; "
                                          "margin-right:0px; -qt-block-indent:0; text-indent:0px;\">"
                                          "(C) 2008 Lukas Appelhans &lt;boom1992@kdemod.ath.cx&gt;</p></body></html>" ) )
-                                .arg( aHandle->getAlpmVersion() ) );
+                                .arg( Backend::instance()->getAlpmVersion() ) );
 
     ui.headerLabel->setText( QString( "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" "
                                       "\"http://www.w3.org/TR/REC-html40/strict.dtd\"><html><head><meta name=\"qrichtext\""
@@ -1988,7 +1989,7 @@ void MainWindow::startTrayTimer()
 
 void MainWindow::streamTransQuestion( const QString &msg )
 {
-    switch ( ShamanDialog::popupQuestionDialog( QString( tr( "Library Question" ) ), msg, this ) ) {
+    /*switch ( ShamanDialog::popupQuestionDialog( QString( tr( "Library Question" ) ), msg, this ) ) {
     case QMessageBox::Yes:
         CbackReference.answer = 1;
         break;
@@ -2002,12 +2003,12 @@ void MainWindow::streamTransQuestion( const QString &msg )
 
     qDebug() << "Waking Alpm Thread";
 
-    wCond.wakeAll();
+    wCond.wakeAll();*/
 }
 
 void MainWindow::updateABSTree()
 {
-    bHandler = new BuildingHandler( this, aHandle );
+    bHandler = new BuildingHandler( this, Backend::instance() );
 
     bHandler->updateABSTree();
 
@@ -2020,7 +2021,7 @@ void MainWindow::initSourceQueue()
 {
     qDebug() << "Starting Building Handler";
 
-    bHandler = new BuildingHandler( this, aHandle );
+    bHandler = new BuildingHandler( this, Backend::instance() );
 
     bHandler->validateSourceQueue();
 
@@ -2190,7 +2191,7 @@ void MainWindow::showAuthDialog( int count )
             dlog->show();
     }
 
-    wCond.wakeAll();
+    Backend::instance()->backendWCond()->wakeAll();
 }
 
 void MainWindow::showInfoDialog()
@@ -2201,7 +2202,7 @@ void MainWindow::showInfoDialog()
     if ( pkgsViewWG->selectedItems().isEmpty() )
         return;
 
-    pkgProp = new PackageProperties( aHandle, this );
+    pkgProp = new PackageProperties( this );
 
     pkgProp->setPackage( pkgsViewWG->selectedItems().first()->text( 1 ) );
 
@@ -2221,7 +2222,7 @@ void MainWindow::doStreamPackages()
 {
     QStringList packages;
 
-    alpm_list_t *databases = aHandle->getAvailableRepos();
+    alpm_list_t *databases = Backend::instance()->getAvailableRepos();
 
     databases = alpm_list_first( databases );
 

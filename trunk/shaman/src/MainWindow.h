@@ -26,7 +26,6 @@
 #include <alpm.h>
 #include <alpm_list.h>
 #include "ui_MainWindow.h"
-#include "AlpmHandler.h"
 #include "kanimatedsystemtrayicon.h"
 
 #include <QThread>
@@ -59,7 +58,7 @@ class CreateItemsThread : public QThread
         Q_OBJECT
 
     public:
-        CreateItemsThread( AlpmHandler *aH );
+        CreateItemsThread(QObject *parent = 0);
         void run();
         QList<QTreeWidgetItem *> getResult();
 
@@ -68,7 +67,6 @@ class CreateItemsThread : public QThread
 
     private:
         QList<QTreeWidgetItem *> retlist;
-        AlpmHandler *m_handler;
 };
 
 class MainWindow : public QMainWindow, public Ui::MainWindow
@@ -76,7 +74,7 @@ class MainWindow : public QMainWindow, public Ui::MainWindow
         Q_OBJECT
 
     public:
-        explicit MainWindow( AlpmHandler *handler, QMainWindow *parent = 0 );
+        explicit MainWindow(QMainWindow *parent = 0 );
         ~MainWindow();
         void doUpdView();
         void startTrayTimer();
@@ -183,7 +181,6 @@ class MainWindow : public QMainWindow, public Ui::MainWindow
 
     private:
         alpm_list_t *currentpkgs;
-        AlpmHandler *aHandle;
         QPointer<UpdateDbDialog> dbdialog;
         QPointer<SysUpgradeDialog> upDl;
         QPointer<ConfigDialog> configDialog;

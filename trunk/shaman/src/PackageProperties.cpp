@@ -20,6 +20,8 @@
 
 #include "PackageProperties.h"
 
+#include <aqpm/Backend.h>
+
 #include <QHeaderView>
 #include <QFile>
 #include <QTextStream>
@@ -27,9 +29,8 @@
 
 #define CLBUF_SIZE 4096
 
-PackageProperties::PackageProperties( AlpmHandler *aH, QWidget *parent )
-        : QDialog( parent ),
-        aHandle( aH )
+PackageProperties::PackageProperties( QWidget *parent )
+        : QDialog( parent )
 {
     setupUi( this );
     setAttribute( Qt::WA_DeleteOnClose );
@@ -61,9 +62,9 @@ void PackageProperties::setPackage( pmpkg_t *pkg, bool forceGiven )
     // We can throw a lot more info if the package is local, let's check.
     if ( forceGiven && curPkg == NULL )
         return;
-    else if (( aHandle->isInstalled( curPkg ) || curPkg == NULL ) && !forceGiven ) {
+    else if (( Backend::instance()->isInstalled( curPkg ) || curPkg == NULL ) && !forceGiven ) {
         qDebug() << "Getting info from local database";
-        curPkg = aHandle->getPackageFromName( pName, "local" );
+        curPkg = Backend::instance()->getPackageFromName( pName, "local" );
     }
 
     if ( pName.isEmpty() )
@@ -75,7 +76,7 @@ void PackageProperties::setPackage( pmpkg_t *pkg, bool forceGiven )
 void PackageProperties::setPackage( const QString &pkgname )
 {
     pName = pkgname;
-    setPackage( aHandle->getPackageFromName( pkgname, aHandle->getPackageRepo( pkgname ) ) );
+    setPackage( Backend::instance()->getPackageFromName( pkgname, Backend::instance()->getPackageRepo( pkgname ) ) );
 }
 
 void PackageProperties::reloadPkgInfo()
@@ -92,12 +93,12 @@ void PackageProperties::populateInfoWidget()
     char buf[80];
     QString notAvailable( QString( tr( "N/A", "Stands for: Not Available" ) ) );
 
-    if ( aHandle->isInstalled( curPkg ) )
+    if ( Backend::instance()->isInstalled( curPkg ) )
         installedLabel->setPixmap( QPixmap( ":/Icons/icons/dialog-ok-apply.png" ) );
     else
         installedLabel->setPixmap( QPixmap( ":/Icons/icons/edit-delete.png" ) );
 
-    if ( aHandle->getUpgradeablePackages().contains( pName ) )
+    if ( Backend::instance()->getUpgradeablePackagesAsStringList().contains( pName ) )
         upgradeableLabel->setPixmap( QPixmap( ":/Icons/icons/dialog-ok-apply.png" ) );
     else
         upgradeableLabel->setPixmap( QPixmap( ":/Icons/icons/edit-delete.png" ) );
@@ -138,14 +139,14 @@ void PackageProperties::populateInfoWidget()
         packagerLabel->setText( alpm_pkg_get_packager( curPkg ) );
 
     sizeLabel->setText( formatSize( alpm_pkg_get_size( curPkg ) ) );
-    providesWidget->addItems( aHandle->getProviders( curPkg ) );
+    providesWidget->addItems( Backend::instance()->getProviders( curPkg ) );
 }
 
 void PackageProperties::populateFileWidget()
 {
     treeWidget->clear();
     treeWidget->header()->hide();
-    QStringList files = aHandle->getPackageFiles( curPkg );
+    QStringList files = Backend::instance()->getPackageFiles( curPkg );
     foreach( const QString &file, files ) {
         QStringList splitted = file.split( QChar( '/' ) );
         QTreeWidgetItem *parentItem = 0;
@@ -179,13 +180,13 @@ void PackageProperties::populateFileWidget()
 void PackageProperties::populateDepsWidget()
 {
     dependsWidget->clear();
-    foreach( const QString &dep, aHandle->getPackageDependencies( curPkg ) ) {
+    foreach( const QString &dep, Backend::instance()->getPackageDependencies( curPkg ) ) {
         if ( !dep.isEmpty() )
             dependsWidget->addItem( dep );
     }
 
     requiredWidget->clear();
-    foreach( const QString &dep, aHandle->getDependenciesOnPackage( curPkg ) ) {
+    foreach( const QString &dep, Backend::instance()->getDependenciesOnPackage( curPkg ) ) {
         if ( !dep.isEmpty() )
             requiredWidget->addItem( dep );
     }

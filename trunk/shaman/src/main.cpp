@@ -20,13 +20,16 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 
-#include "AlpmHandler.h"
 #include "MainWindow.h"
 #include "ShamanDialog.h"
+#include "Authenticator.h"
 
 #include <config.h>
 
+#include <aqpm/Backend.h>
+
 #include <iostream>
+#include <sys/utsname.h>
 #include <QApplication>
 #include <QString>
 #include <QSettings>
@@ -39,6 +42,8 @@
 #include <QtDBus>
 #include <signal.h>
 #include <alpm.h>
+
+using namespace Aqpm;
 
 static void cleanup( int signum )
 {
@@ -258,9 +263,7 @@ int main( int argc, char **argv )
         return( 1 );
     }
 
-    AlpmHandler *aHandler = new AlpmHandler( 0, true );
-
-    if ( !aHandler->testLibrary() ) {
+    if ( !Backend::instance()->testLibrary() ) {
         Authenticator ath;
 
         if ( !ath.switchToRoot() ) {
@@ -348,7 +351,7 @@ int main( int argc, char **argv )
                                            ShamanProperties::WarningDialog );
     }
 
-    QString alversion( aHandler->getAlpmVersion() );
+    QString alversion( Backend::instance()->getAlpmVersion() );
     alversion[1];
 
     if ( alversion[0].digitValue() <= 2 && alversion[2].digitValue() < 1 ) {
@@ -365,7 +368,13 @@ int main( int argc, char **argv )
     signal( SIGTERM, cleanup );
     signal( SIGSEGV, cleanup );
 
-    aHandler->setuseragent();
+    char agent[101];
+    struct utsname un;
+
+    uname( &un );
+    snprintf( agent, 100, "shaman/" SHAMAN_VERSION " (%s %s) libalpm/%s",
+            un.sysname, un.machine, Backend::instance()->getAlpmVersion().toAscii().data() );
+    setenv( "HTTP_USER_AGENT", agent, 0 );
 
     qDebug() << "User agent is:" << qgetenv( "HTTP_USER_AGENT" );
 
@@ -394,7 +403,7 @@ int main( int argc, char **argv )
         // This can be dangerous, so set it properly
         settings->setValue( "absbuilding/buildpath", "/var/shaman/builds" );
 
-    MainWindow mainwin( aHandler );
+    MainWindow mainwin;
 
     if ( settings->contains( "gui/size" ) )
         mainwin.resize( settings->value( "gui/size" ).toSize() );
@@ -457,8 +466,6 @@ int main( int argc, char **argv )
     }
 
     int returncode = app.exec();
-
-    aHandler->deleteLater();
 
     return returncode;
 

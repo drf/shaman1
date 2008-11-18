@@ -22,14 +22,15 @@
 #define PACKAGEPROPERTIES_H
 
 #include "ui_pkgProperties.h"
-#include "AlpmHandler.h"
+
+#include <QDialog>
 
 class PackageProperties : public QDialog, private Ui::pkgProperties
 {
         Q_OBJECT
 
     public:
-        explicit PackageProperties( AlpmHandler *aH, QWidget *parent = 0 );
+        explicit PackageProperties( QWidget *parent = 0 );
         virtual ~PackageProperties();
 
         void setPackage( const QString &pkgname );
@@ -50,7 +51,6 @@ class PackageProperties : public QDialog, private Ui::pkgProperties
         void populateChangelogWidget();
 
     private:
-        AlpmHandler *aHandle;
         pmpkg_t *curPkg;
         QString pName;
 };
