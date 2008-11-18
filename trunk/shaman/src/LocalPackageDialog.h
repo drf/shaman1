@@ -23,6 +23,8 @@
 
 #include "ui_fromFileDialog.h"
 
+#include <alpm.h>
+
 #include <QDialog>
 
 class LocalPackageDialog : public QDialog, private Ui::LocalPackage

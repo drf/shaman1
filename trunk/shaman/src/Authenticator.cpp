@@ -20,15 +20,12 @@
 
 #include "Authenticator.h"
 
-#include "callbacks.h"
+#include <aqpm/Backend.h>
 
 #include <QDebug>
 #include <QSettings>
 #include <QMutex>
 #include <QWaitCondition>
-
-extern QMutex mutex;
-extern QWaitCondition wCond;
 
 Authenticator_Callback athCback;
 struct pam_response *reply;
@@ -167,7 +164,7 @@ int Authenticator_Callback::auth_cback( int num_msg, const struct pam_message **
     Q_UNUSED( appdata_ptr );
     Q_UNUSED( msg );
 
-    QMutexLocker lock( &mutex );
+    QMutexLocker lock(Aqpm::Backend::instance()->backendMutex());
 
     qDebug() << "Starting PAM Auth Routine, messages to process:" << num_msg;
 
@@ -202,7 +199,7 @@ int Authenticator_Callback::auth_cback( int num_msg, const struct pam_message **
         }
 
         if ( reply[count].resp == tmp.resp && reply[count].resp_retcode == tmp.resp_retcode )
-            wCond.wait( &mutex );
+            Aqpm::Backend::instance()->backendWCond()->wait( Aqpm::Backend::instance()->backendMutex() );
     }
 
     qDebug() << "Ok, streaming now the response";

@@ -22,9 +22,13 @@
 
 #include "ReviewQueueDialog.h"
 
+#include <aqpm/Backend.h>
+
 #include "PackageProperties.h"
 
 #include <QSettings>
+
+using namespace Aqpm;
 
 ReviewQueueDialog::ReviewQueueDialog( MainWindow *parent )
         : QDialog( parent )
@@ -75,7 +79,7 @@ ReviewQueueDialog::ReviewQueueDialog( MainWindow *parent )
 
     foreach( QTreeWidgetItem *itm, parent->pkgsViewWG->findItems( tr( "Complete Uninstall" ), Qt::MatchExactly, 8 ) ) {
         Backend::instance()->addItemToQueue(new QueueItem(QString(itm->text(1)), QueueItem::Remove));
-        removeSize += BackendInstance::instance()->getPackageSize( itm->text( 1 ), itm->text( 5 ) );
+        removeSize += Backend::instance()->getPackageSize( itm->text( 1 ), itm->text( 5 ) );
         QTreeWidgetItem *itmL = treeWidget->findItems( tr( "To be Removed" ), Qt::MatchExactly, 0 ).first();
         new QTreeWidgetItem( itmL, QStringList( itm->text( 1 ) ) );
         itmL->setExpanded( true );

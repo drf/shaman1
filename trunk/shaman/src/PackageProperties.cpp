@@ -29,6 +29,8 @@
 
 #define CLBUF_SIZE 4096
 
+using namespace Aqpm;
+
 PackageProperties::PackageProperties( QWidget *parent )
         : QDialog( parent )
 {

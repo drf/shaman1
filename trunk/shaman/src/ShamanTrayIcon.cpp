@@ -30,7 +30,7 @@
 
 using namespace Aqpm;
 
-ShamanTrayIcon::ShamanTrayIcon( MainWindow *mW, AlpmHandler *aH )
+ShamanTrayIcon::ShamanTrayIcon( MainWindow *mW )
         : KAnimatedSystemTrayIcon( mW ),
         mainWin( mW )
 {
@@ -94,7 +94,7 @@ void ShamanTrayIcon::dbUpdateTray()
      * this cycle, and see you next time.
      */
 
-    if ( Backend::instance()->isTransaction() )
+    if ( Backend::instance()->isOnTransaction() )
         return;
 
     /* Ok, let's silently perform a Db Update.
@@ -341,7 +341,7 @@ void ShamanTrayIcon::timerAtElapsed()
      * this cycle, and see you next time.
      */
 
-    if ( Backend::instance()->isTransaction() )
+    if ( Backend::instance()->isOnTransaction() )
         return;
 
     /* Set back the timer */

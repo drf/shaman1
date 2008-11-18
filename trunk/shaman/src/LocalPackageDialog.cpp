@@ -89,7 +89,7 @@ void LocalPackageDialog::loadPackage( pmpkg_t *pkg, const QString &fname )
 
 void LocalPackageDialog::showDetails()
 {
-    PackageProperties *pkgProp = new PackageProperties( Backend::instance(), this );
+    PackageProperties *pkgProp = new PackageProperties( this );
 
     pkgProp->setPackage( package, true );
 

@@ -23,6 +23,8 @@
 
 #include "ui_pkgProperties.h"
 
+#include <alpm.h>
+
 #include <QDialog>
 
 class PackageProperties : public QDialog, private Ui::pkgProperties
