@@ -60,6 +60,8 @@ QueueDialog::QueueDialog( QWidget *parent )
              SLOT( changeStatus( pmtransevt_t, void*, void* ) ) );
     connect( Backend::instance(), SIGNAL( logMsgStreamed( const QString& ) ),
              SLOT( handleAlpmMessage( const QString& ) ) );
+    connect( Backend::instance(), SIGNAL( streamTransDlProg( char*, int, int, int, int, int, int ) ),
+             SLOT( updateProgressBar( char*, int, int, int, int, int, int ) ) );
     /*connect( aHandle, SIGNAL( preparingTransactionError( const QString& ) ),
              SLOT( handlePreparingError( const QString& ) ) );
     connect( aHandle, SIGNAL( committingTransactionError( const QString& ) ),
@@ -389,8 +391,6 @@ void QueueDialog::startDownload()
     dlLabel->setPixmap( QIcon( ":/Icons/icons/edit-redo.png" ).pixmap( 22 ) );
 
     qDebug() << "Package Download detected";
-    connect( Backend::instance(), SIGNAL( streamTransDlProg( char*, int, int, int, int, int, int ) ),
-             SLOT( updateProgressBar( char*, int, int, int, int, int, int ) ) );
 
     if ( progressBar->isHidden() )
         progressBar->show();
