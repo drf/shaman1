@@ -22,9 +22,10 @@
 
 #include "configDialog.h"
 
-#include "AlpmHandler.h"
 #include "ABSHandler.h"
 #include "ShamanDialog.h"
+
+#include <aqpm/Backend.h>
 
 #include <config.h>
 
@@ -39,7 +40,9 @@
 #include <QDebug>
 #include <QTime>
 
-ConfigDialog::ConfigDialog( AlpmHandler *handler, QWidget *parent )
+using namespace Aqpm;
+
+ConfigDialog::ConfigDialog( QWidget *parent )
         : QDialog( parent ),
         upDb( false ),
         ath( new Authenticator( this ) )

@@ -46,7 +46,7 @@ class CleanThread : public QThread
         Q_OBJECT
 
     public:
-        CleanThread( AlpmHandler *aH, int act );
+        CleanThread( int act );
         void run();
 
     signals:
@@ -54,7 +54,6 @@ class CleanThread : public QThread
         void failure( int act );
 
     private:
-        AlpmHandler *m_handler;
         int action;
 };
 
@@ -101,7 +100,6 @@ class ConfigDialog : public QDialog, public Ui::ConfigDialog, private Configurat
         QStringList getMirrorList( ShamanProperties::MirrorType type = ShamanProperties::OfficialMirrors );
 
     private:
-        QPointer<AlpmHandler> m_handler;
         QPointer<QDialog> addDialog;
         QPointer<CleanThread> cTh;
         QPointer<RootProcess> mantProc;
