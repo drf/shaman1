@@ -22,11 +22,14 @@
 #define CONFIGDIALOG_H
 
 #include "ui_configDialog.h"
-#include "ConfigurationParser.h"
+#include <aqpm/ConfigurationParser.h>
+#include <aqpm/Backend.h>
 #include "Authenticator.h"
 #include <QThread>
 #include <QProcess>
 #include <QPointer>
+
+using namespace Aqpm;
 
 namespace ShamanProperties
 {
@@ -37,8 +40,6 @@ enum MirrorType {
 };
 
 }  // namespace ShamanProperties
-
-class AlpmHandler;
 
 class CleanThread : public QThread
 {
@@ -64,7 +65,7 @@ class ConfigDialog : public QDialog, public Ui::ConfigDialog, private Configurat
         Q_OBJECT
 
     public:
-        explicit ConfigDialog( AlpmHandler *handler, QWidget *parent = 0 );
+        explicit ConfigDialog( QWidget *parent = 0 );
         ~ConfigDialog();
         bool doDbUpdate();
 

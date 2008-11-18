@@ -24,8 +24,6 @@
 #include <iostream>
 #include "ui_transactionDialog.h"
 #include <alpm.h>
-#include "callbacks.h"
-#include "AlpmHandler.h"
 
 #include <QThread>
 #include <QProcess>
@@ -45,7 +43,7 @@ class QueueDialog : public QDialog, private Ui::transactionDialog
         Q_OBJECT
 
     public:
-        explicit QueueDialog( AlpmHandler *hnd, QWidget *parent = 0 );
+        explicit QueueDialog( QWidget *parent = 0 );
         ~QueueDialog();
         void startProcessing( bool force );
         bool isScriptletRunning();
@@ -88,8 +86,6 @@ class QueueDialog : public QDialog, private Ui::transactionDialog
         bool checkScriptlet( const QString &path, const QString &action );
 
     private:
-        AlpmHandler *aHandle;
-        TrCommitThread *cTh;
         RootProcess *proc;
         int status;
         QString cwd;

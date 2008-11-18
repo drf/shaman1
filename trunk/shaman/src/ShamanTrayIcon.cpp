@@ -20,18 +20,21 @@
 
 #include "ShamanTrayIcon.h"
 
+#include <aqpm/Backend.h>
+
 #include <QTimer>
 #include <QSettings>
 #include <QMovie>
 #include <QTime>
 #include <QDebug>
 
+using namespace Aqpm;
+
 ShamanTrayIcon::ShamanTrayIcon( MainWindow *mW, AlpmHandler *aH )
         : KAnimatedSystemTrayIcon( mW ),
-        mainWin( mW ),
-        aHandle( aH )
+        mainWin( mW )
 {
-    if ( aHandle->getUpgradeablePackages().isEmpty() )
+    if ( Backend::instance()->getUpgradeablePackagesAsStringList().isEmpty() )
         changeIconStatus( ShamanIcon::IdleIcon );
     else
         changeIconStatus( ShamanIcon::UpgradesAvailableIcon );
@@ -67,8 +70,8 @@ ShamanTrayIcon::ShamanTrayIcon( MainWindow *mW, AlpmHandler *aH )
     //Add actions here ;)
     setContextMenu( systrayMenu );
 
-    connect( aHandle, SIGNAL( transactionStarted() ), SLOT( transactionStarted() ) );
-    connect( aHandle, SIGNAL( transactionReleased() ), SLOT( transactionReleased() ) );
+    connect( Backend::instance(), SIGNAL( transactionStarted() ), SLOT( transactionStarted() ) );
+    connect( Backend::instance(), SIGNAL( transactionReleased() ), SLOT( transactionReleased() ) );
 
     connect( mainWin, SIGNAL( buildingStarted() ), SLOT( transactionStarted() ) );
     connect( mainWin, SIGNAL( buildingFinished() ), SLOT( transactionReleased() ) );
@@ -91,7 +94,7 @@ void ShamanTrayIcon::dbUpdateTray()
      * this cycle, and see you next time.
      */
 
-    if ( aHandle->isTransaction() )
+    if ( Backend::instance()->isTransaction() )
         return;
 
     /* Ok, let's silently perform a Db Update.
@@ -119,7 +122,7 @@ void ShamanTrayIcon::changeIconStatus( ShamanIcon::IconStatus status )
 
         setToolTip( QString( tr( "Shaman - Processing" ) ) );
     } else {
-        QStringList upgrds = aHandle->getUpgradeablePackages();
+        QStringList upgrds = Backend::instance()->getUpgradeablePackagesAsStringList();
         stopMovie();
         setIcon( QIcon( ":/Icons/icons/shaman/shaman-updates-available-32.png" ) );
         setToolTip( QString( tr( "Shaman - Idle (Upgrades Available)" ) ) );
@@ -150,7 +153,7 @@ void ShamanTrayIcon::transactionReleased()
 {
     enableTrayActions();
 
-    if ( aHandle->getUpgradeablePackages().isEmpty() )
+    if ( Backend::instance()->getUpgradeablePackagesAsStringList().isEmpty() )
         changeIconStatus( ShamanIcon::IdleIcon );
     else
         changeIconStatus( ShamanIcon::UpgradesAvailableIcon );
@@ -338,7 +341,7 @@ void ShamanTrayIcon::timerAtElapsed()
      * this cycle, and see you next time.
      */
 
-    if ( aHandle->isTransaction() )
+    if ( Backend::instance()->isTransaction() )
         return;
 
     /* Set back the timer */

@@ -27,7 +27,6 @@
 #include <QProgressBar>
 #include <QWidget>
 
-#include "AlpmHandler.h"
 #include "MainWindow.h"
 
 class ShamanStatusBar : public QStatusBar
@@ -35,7 +34,7 @@ class ShamanStatusBar : public QStatusBar
         Q_OBJECT
 
     public:
-        explicit ShamanStatusBar( AlpmHandler *aH, MainWindow *parent = 0 );
+        explicit ShamanStatusBar( MainWindow *parent = 0 );
         virtual ~ShamanStatusBar();
 
     public Q_SLOTS:
@@ -50,7 +49,6 @@ class ShamanStatusBar : public QStatusBar
         void setUpStatusBar();
 
     private:
-        AlpmHandler *aHandle;
         MainWindow *mWin;
 
         QPointer<QLabel> stBarImage;

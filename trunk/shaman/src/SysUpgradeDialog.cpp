@@ -17,18 +17,19 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
+
 #include "SysUpgradeDialog.h"
 
 #include <iostream>
 #include <alpm.h>
-#include "callbacks.h"
+
+#include <aqpm/Backend.h>
+
 #include <QSettings>
 #include <QDebug>
-#include "AlpmHandler.h"
 
-SysUpgradeDialog::SysUpgradeDialog( AlpmHandler *hnd, QWidget *parent )
-        : QDialog( parent ),
-        aHandle( hnd )
+SysUpgradeDialog::SysUpgradeDialog( QWidget *parent )
+        : QDialog( parent )
 {
     setupUi( this );
 }
@@ -53,7 +54,7 @@ void SysUpgradeDialog::init()
 
         setWindowModality( Qt::ApplicationModal );
 
-        data = aHandle->getUpgradeablePackages();
+        data = Backend::instance()->getUpgradeablePackagesAsStringList();
 
         int n = data.size();
 
@@ -65,10 +66,10 @@ void SysUpgradeDialog::init()
         QTreeWidgetItem *itm = new QTreeWidgetItem( treeWidget, QStringList( tr( "To be Upgraded" ) ) );
         treeWidget->addTopLevelItem( itm );
 
-        foreach( const QString &pkg, aHandle->getUpgradeablePackages() ) {
+        foreach( const QString &pkg, Backend::instance()->getUpgradeablePackagesAsStringList() ) {
             new QTreeWidgetItem( itm, QStringList() << QString( pkg + " (" +
-                                 aHandle->getPackageVersion( pkg, "local" ) + "-->" +
-                                 aHandle->getPackageVersion( pkg, aHandle->getPackageRepo( pkg, true ) ) + QChar( ')' ) ) );
+                                 Backend::instance()->getPackageVersion( pkg, "local" ) + "-->" +
+                                 Backend::instance()->getPackageVersion( pkg, Backend::instance()->getPackageRepo( pkg, true ) ) + QChar( ')' ) ) );
         }
 
         itm->setExpanded( true );
@@ -111,7 +112,7 @@ void SysUpgradeDialog::initSysUpgrade()
     if ( checkBox->isChecked() )
         settings->setValue( "gui/actionupgrade", "upgrade" );
 
-    aHandle->fullSystemUpgrade();
+    Backend::instance()->fullSystemUpgrade();
 
     qDebug() << "Upgrade signal sent";
 

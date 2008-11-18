@@ -24,7 +24,6 @@
 #define REVIEWQUEUEDIALOG_H
 
 #include "ui_reviewQueueDialog.h"
-#include "AlpmHandler.h"
 #include "MainWindow.h"
 
 class ReviewQueueDialog : public QDialog, private Ui::QueueReadyDialog
@@ -32,7 +31,7 @@ class ReviewQueueDialog : public QDialog, private Ui::QueueReadyDialog
         Q_OBJECT
 
     public:
-        ReviewQueueDialog( AlpmHandler *hnd, MainWindow *parent );
+        ReviewQueueDialog( MainWindow *parent );
         virtual ~ReviewQueueDialog();
         bool isInTray();
         bool isTurnOff();
@@ -46,9 +45,6 @@ class ReviewQueueDialog : public QDialog, private Ui::QueueReadyDialog
 
     signals:
         void goProcess();
-
-    private:
-        AlpmHandler *aHandle;
 
 };
 

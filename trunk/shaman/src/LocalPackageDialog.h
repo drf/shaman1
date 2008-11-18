@@ -22,14 +22,15 @@
 #define LOCALPACKAGEDIALOG_H
 
 #include "ui_fromFileDialog.h"
-#include "AlpmHandler.h"
+
+#include <QDialog>
 
 class LocalPackageDialog : public QDialog, private Ui::LocalPackage
 {
         Q_OBJECT
 
     public:
-        explicit LocalPackageDialog( AlpmHandler *aH, QWidget *parent = 0 );
+        explicit LocalPackageDialog( QWidget *parent = 0 );
         virtual ~LocalPackageDialog();
 
         void loadPackage( pmpkg_t *pkg, const QString &fname );
@@ -44,7 +45,6 @@ class LocalPackageDialog : public QDialog, private Ui::LocalPackage
         void queueReady();
 
     private:
-        AlpmHandler *aHandle;
         pmpkg_t *package;
         QString filename;
 

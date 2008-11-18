@@ -20,11 +20,14 @@
 
 #include "LocalPackageDialog.h"
 
+#include <aqpm/Backend.h>
+
 #include "PackageProperties.h"
 
-LocalPackageDialog::LocalPackageDialog( AlpmHandler *aH, QWidget *parent )
-        : QDialog( parent ),
-        aHandle( aH )
+using namespace Aqpm;
+
+LocalPackageDialog::LocalPackageDialog( QWidget *parent )
+        : QDialog( parent )
 {
     setupUi( this );
     setWindowModality( Qt::ApplicationModal );
@@ -54,18 +57,18 @@ void LocalPackageDialog::loadPackage( pmpkg_t *pkg, const QString &fname )
 
     descLabel->setText( QString( alpm_pkg_get_desc( package ) ) );
 
-    if ( !aHandle->isInstalled( package ) ) {
+    if ( !Backend::instance()->isInstalled( package ) ) {
         statusLabel->setText( tr( "Package is not installed" ) );
 
     } else {
         statusLabel->setText( QString( tr( "Version %1 of this package is already installed" ) )
-                              .arg( aHandle->getPackageVersion( alpm_pkg_get_name( package ), "local" ) ) );
+                              .arg( Backend::instance()->getPackageVersion( alpm_pkg_get_name( package ), "local" ) ) );
     }
 
     QStringList deps;
 
-    foreach( const QString &ent, aHandle->getPackageDependencies( package ) ) {
-        if ( !aHandle->isInstalled( ent ) )
+    foreach( const QString &ent, Backend::instance()->getPackageDependencies( package ) ) {
+        if ( !Backend::instance()->isInstalled( ent ) )
             deps.append( ent );
     }
 
@@ -86,7 +89,7 @@ void LocalPackageDialog::loadPackage( pmpkg_t *pkg, const QString &fname )
 
 void LocalPackageDialog::showDetails()
 {
-    PackageProperties *pkgProp = new PackageProperties( aHandle, this );
+    PackageProperties *pkgProp = new PackageProperties( Backend::instance(), this );
 
     pkgProp->setPackage( package, true );
 
@@ -97,9 +100,9 @@ void LocalPackageDialog::showDetails()
 
 void LocalPackageDialog::goInstall()
 {
-    aHandle->initQueue( false, false, true );
+    Backend::instance()->clearQueue();
 
-    aHandle->addFFToQueue( filename );
+    Backend::instance()->addItemToQueue(new QueueItem(filename, QueueItem::FromFile));
 
     emit queueReady();
 

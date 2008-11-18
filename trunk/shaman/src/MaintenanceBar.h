@@ -41,7 +41,7 @@ class MaintenanceBar : public QToolBar
         Q_OBJECT
 
     public:
-        explicit MaintenanceBar( AlpmHandler *aH, QWidget *parent = 0 );
+        explicit MaintenanceBar( QWidget *parent = 0 );
         virtual ~MaintenanceBar();
 
     private slots:
@@ -58,7 +58,6 @@ class MaintenanceBar : public QToolBar
         QPointer<QAction> m_comboBox;
         CleanThread *cTh;
         RootProcess *mantProc;
-        AlpmHandler *m_handler;
 
         QPointer<QLabel> statusLabel;
         QPointer<QTextEdit> mantDetails;

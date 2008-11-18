@@ -41,7 +41,6 @@
 
 ConfigDialog::ConfigDialog( AlpmHandler *handler, QWidget *parent )
         : QDialog( parent ),
-        m_handler( handler ),
         upDb( false ),
         ath( new Authenticator( this ) )
 {
@@ -175,7 +174,7 @@ void ConfigDialog::setupGeneral()
 void ConfigDialog::setupRepos()
 {
     listWidget->addItem( new QListWidgetItem( QIcon( ":/Icons/icons/network-server-database.png" ), tr( "Repositories" ) ) );
-    alpm_list_t *repos = alpm_list_first( m_handler->getAvailableRepos() );
+    alpm_list_t *repos = alpm_list_first( Backend::instance()->getAvailableRepos() );
     QString whichMirror;
     QString kdemodMirror;
     QStringList kmod;
@@ -602,7 +601,7 @@ void ConfigDialog::performManteinanceAction()
     mantDetails->append( QString() );
 
     if ( !mantActionBox->currentText().compare( QString( tr( "Clean Unused Databases" ) ) ) ) {
-        cTh = new CleanThread( m_handler, 0 );
+        cTh = new CleanThread( 0 );
 
         statusLabel->setText( QString( tr( "Cleaning up unused Databases..." ) ) );
         mantDetails->append( QString( tr( "Cleaning up unused Databases..." ) ) );
@@ -612,7 +611,7 @@ void ConfigDialog::performManteinanceAction()
         connect( cTh, SIGNAL( finished() ), SLOT( cleanThread() ) );
         cTh->start();
     } else if ( !mantActionBox->currentText().compare( QString( tr( "Clean Cache" ) ) ) ) {
-        cTh = new CleanThread( m_handler, 1 );
+        cTh = new CleanThread( 1 );
 
         statusLabel->setText( QString( tr( "Cleaning up Cache..." ) ) );
         mantDetails->append( QString( tr( "Cleaning up Cache..." ) ) );
@@ -622,7 +621,7 @@ void ConfigDialog::performManteinanceAction()
         connect( cTh, SIGNAL( finished() ), SLOT( cleanThread() ) );
         cTh->start();
     } else if ( !mantActionBox->currentText().compare( QString( tr( "Empty Cache" ) ) ) ) {
-        cTh = new CleanThread( m_handler, 2 );
+        cTh = new CleanThread( 2 );
 
         statusLabel->setText( QString( tr( "Deleting Cache..." ) ) );
         mantDetails->append( QString( tr( "Deleting Cache..." ) ) );
@@ -648,7 +647,7 @@ void ConfigDialog::performManteinanceAction()
 
         ath->switchToStdUsr();
     } else if ( !mantActionBox->currentText().compare( QString( tr( "Clean All Building Environments" ) ) ) ) {
-        cTh = new CleanThread( m_handler, 3 );
+        cTh = new CleanThread( 3 );
 
         statusLabel->setText( QString( tr( "Cleaning up building Environments..." ) ) );
         mantDetails->append( QString( tr( "Cleaning up building Environments..." ) ) );
@@ -737,7 +736,7 @@ void ConfigDialog::saveConfiguration()
     QString arch;
 
     if ( kdemodmirror.contains( "$arch" ) ) {
-        if ( !strcmp( alpm_pkg_get_arch( m_handler->getPackageFromName( "pacman", "local" ) ), "i686" ) )
+        if ( !strcmp( alpm_pkg_get_arch( Backend::instance()->getPackageFromName( "pacman", "local" ) ), "i686" ) )
             arch = "i686";
         else
             arch = "x86_64";
@@ -891,7 +890,7 @@ void ConfigDialog::saveConfiguration()
      * But first, let's check if we need to remove something.
      */
 
-    foreach( const QString &dbs, m_handler->getAvailableReposNames() ) {
+    foreach( const QString &dbs, Backend::instance()->getAvailableReposAsStringList() ) {
         if ( dbs != "core" && dbs != "extra" && dbs != "community" && dbs != "testing"
                 && dbs != "kdemod-core" && dbs != "kdemod-extragear" && dbs != "kdemod-playground" && dbs != "kdemod-testing" && dbs != "kdemod-unstable" && dbs != "kdemod-legacy" &&
                 thirdPartyWidget->findItems( dbs, Qt::MatchExactly, 0 ).isEmpty() )
@@ -985,7 +984,7 @@ void ConfigDialog::saveConfiguration()
     }
 
     /* Ok, saving finished, commit changes to Alpm now */
-    m_handler->reloadPacmanConfiguration();
+    Backend::instance()->reloadPacmanConfiguration();
 
     /* Now, off to the Preferences in the settings file */
 
@@ -1304,16 +1303,15 @@ void ConfigDialog::cleanProc( int eC, QProcess::ExitStatus eS )
     mantProcessButton->setEnabled( true );
 }
 
-CleanThread::CleanThread( AlpmHandler *aH, int act )
-        : m_handler( aH ),
-        action( act )
+CleanThread::CleanThread( int act )
+        : action( act )
 {
 
 }
 
 void CleanThread::run()
 {
-    const char *dbpath = alpm_option_get_dbpath();
+    /*const char *dbpath = alpm_option_get_dbpath();
     char newdbpath[4096];
 
     switch ( action ) {
@@ -1351,7 +1349,7 @@ void CleanThread::run()
             emit failure( action );
         break;
 
-    }
+    }*/
 }
 
 void ConfigDialog::obfuscateDBUpdate( bool state )

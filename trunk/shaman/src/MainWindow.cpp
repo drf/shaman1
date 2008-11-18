@@ -320,7 +320,7 @@ MainWindow::MainWindow( QMainWindow *parent )
 
     completeRemoveButton->setEnabled( false ); // Until it works...
 
-    addToolBar( new MaintenanceBar( Backend::instance(), this ) );
+    addToolBar( new MaintenanceBar( this ) );
 
     QSettings *settings = new QSettings();
 
@@ -335,7 +335,7 @@ MainWindow::MainWindow( QMainWindow *parent )
     new QShortcut( QKeySequence( "F5" ), this, SLOT( doDbUpdate() ) );
     new QShortcut( QKeySequence( tr( "Ctrl+Q", "Exit Shaman Shortcut" ) ), this, SLOT( quitApp() ) );
 
-    stBar = new ShamanStatusBar( Backend::instance(), this );
+    stBar = new ShamanStatusBar( this );
 
     setStatusBar( stBar );
 
@@ -349,7 +349,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::setUpTrayIcon()
 {
-    trayicon = new ShamanTrayIcon( this, Backend::instance() );
+    trayicon = new ShamanTrayIcon( this );
 
     connect( trayicon, SIGNAL( activated( QSystemTrayIcon::ActivationReason ) ),
              SLOT( systrayActivated( QSystemTrayIcon::ActivationReason ) ) );
@@ -834,7 +834,7 @@ void MainWindow::showPkgInfo()
 
 void MainWindow::doDbUpdate()
 {
-    dbdialog = new UpdateDbDialog( Backend::instance(), this );
+    dbdialog = new UpdateDbDialog( this );
     dbActive = true;
 
     emit actionStatusChanged( "dbUpdateStarted" );
@@ -1529,7 +1529,7 @@ void MainWindow::upgrade( const QStringList &packages )
 
         settings->deleteLater();
 
-        upDl = new SysUpgradeDialog( Backend::instance(), this );
+        upDl = new SysUpgradeDialog( this );
 
         connect( upDl, SIGNAL( aborted() ), SLOT( upgradeAborted() ) );
         connect( upDl, SIGNAL( upgradeNow() ), SLOT( processQueue() ) );
@@ -1579,7 +1579,7 @@ void MainWindow::addUpgradeableToQueue()
 
 void MainWindow::fullSysUpgrade()
 {
-    dbdialog = new UpdateDbDialog( Backend::instance(), this );
+    dbdialog = new UpdateDbDialog( this );
     dbActive = true;
 
     if ( isVisible() )
@@ -1620,7 +1620,7 @@ void MainWindow::processQueue()
 
     qDebug() << "Queue Dialog started";
 
-    queueDl = new QueueDialog( Backend::instance(), this );
+    queueDl = new QueueDialog( this );
 
     connect( queueDl, SIGNAL( terminated( bool ) ), SLOT( queueProcessingEnded( bool ) ) );
     connect( queueDl, SIGNAL( streamTransactionProgress( int ) ), SIGNAL( streamTransactionProgress( int ) ) );
@@ -1807,18 +1807,7 @@ void MainWindow::widgetQueueToAlpmQueue()
         return;
     }
 
-    else if ( pkgsViewWG->findItems( tr( "Uninstall" ), Qt::MatchExactly, 8 ).isEmpty() &&
-              pkgsViewWG->findItems( tr( "Complete Uninstall" ), Qt::MatchExactly, 8 ).isEmpty() )
-        Backend::instance()->initQueue( false, true, false );
-
-    else if ( pkgsViewWG->findItems( tr( "Install" ), Qt::MatchExactly, 8 ).isEmpty() &&
-              pkgsViewWG->findItems( tr( "Upgrade" ), Qt::MatchExactly, 8 ).isEmpty() )
-        Backend::instance()->initQueue( true, false, false );
-
-    else
-        Backend::instance()->initQueue( true, true, false );
-
-    qUi = new ReviewQueueDialog( Backend::instance(), this );
+    qUi = new ReviewQueueDialog( this );
 
     revActive = true;
 
@@ -1830,7 +1819,7 @@ void MainWindow::widgetQueueToAlpmQueue()
 
 void MainWindow::showSettings()
 {
-    configDialog = new ConfigDialog( Backend::instance(), this );
+    configDialog = new ConfigDialog( this );
 
     connect( configDialog, SIGNAL( setProxy() ), this, SLOT( setProxy() ) );
 
@@ -1911,7 +1900,7 @@ void MainWindow::installPackageFromFile( const QString &filename )
 
     qDebug() << "Selected" << alpm_pkg_get_name( pkg );
 
-    lpkgDialog = new LocalPackageDialog( Backend::instance(), this );
+    lpkgDialog = new LocalPackageDialog( this );
 
     lpkgDialog->loadPackage( pkg, filename );
 
@@ -2008,7 +1997,7 @@ void MainWindow::streamTransQuestion( const QString &msg )
 
 void MainWindow::updateABSTree()
 {
-    bHandler = new BuildingHandler( this, Backend::instance() );
+    bHandler = new BuildingHandler( this );
 
     bHandler->updateABSTree();
 
@@ -2021,7 +2010,7 @@ void MainWindow::initSourceQueue()
 {
     qDebug() << "Starting Building Handler";
 
-    bHandler = new BuildingHandler( this, Backend::instance() );
+    bHandler = new BuildingHandler( this );
 
     bHandler->validateSourceQueue();
 

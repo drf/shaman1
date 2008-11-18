@@ -33,7 +33,7 @@
 class UpDbThread : public QThread
 {
     public:
-        UpDbThread( AlpmHandler *aH );
+        UpDbThread();
         void run();
         bool getResult();
     private:
@@ -46,7 +46,7 @@ class UpdateDbDialog : public QDialog, private Ui::dbUpdateDialog
         Q_OBJECT
 
     public:
-        explicit UpdateDbDialog( AlpmHandler *hnd, QWidget *parent = 0 );
+        explicit UpdateDbDialog( QWidget *parent = 0 );
         ~UpdateDbDialog();
 
         bool dbHasBeenUpdated();

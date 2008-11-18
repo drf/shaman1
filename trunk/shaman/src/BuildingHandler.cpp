@@ -26,8 +26,9 @@
 #include <QSettings>
 #include <QString>
 
+#include <aqpm/Backend.h>
+
 #include "MainWindow.h"
-#include "AlpmHandler.h"
 #include "ABSHandler.h"
 #include "BuildingDialog.h"
 #include "QueueDialog.h"
@@ -35,9 +36,10 @@
 #include "ShamanTrayIcon.h"
 #include "ShamanDialog.h"
 
-BuildingHandler::BuildingHandler( MainWindow *mW, AlpmHandler *aH )
-        : mWin( mW ),
-        aHandle( aH )
+using namespace Aqpm;
+
+BuildingHandler::BuildingHandler( MainWindow *mW )
+        : mWin( mW )
 {
 }
 
@@ -47,7 +49,7 @@ BuildingHandler::~BuildingHandler()
 
 void BuildingHandler::updateABSTree()
 {
-    if ( !aHandle->isInstalled( "abs" ) ) {
+    if ( !Backend::instance()->isInstalled( "abs" ) ) {
         switch ( ShamanDialog::popupQuestionDialog( QString( tr( "Error" ) ), QString( tr( "You need to have ABS "
                  "installed to use Shaman's\nbuilding feature. Do you want to install it now?" ) ), mWin ) ) {
         case QMessageBox::Yes:
@@ -68,7 +70,7 @@ void BuildingHandler::updateABSTree()
 
     emit buildingStarted();
 
-    buildDialog = new BuildingDialog( aHandle, mWin );
+    buildDialog = new BuildingDialog( mWin );
     connect( buildDialog, SIGNAL( nullifyPointer() ), SLOT( ABSUpdateEnded() ) );
 
     buildDialog->show();
@@ -80,7 +82,7 @@ void BuildingHandler::updateABSTree()
 
 void BuildingHandler::validateSourceQueue()
 {
-    if ( !aHandle->isInstalled( "abs" ) ) {
+    if ( !Backend::instance()->isInstalled( "abs" ) ) {
         switch ( ShamanDialog::popupQuestionDialog( QString( tr( "Error" ) ), QString( tr( "You need to have ABS "
                  "installed to use Shaman's\nbuilding feature. Do you want to install it now?" ) ), mWin ) ) {
         case QMessageBox::Yes:
@@ -169,13 +171,13 @@ void BuildingHandler::validateSourceQueue()
 
 
     foreach( QTreeWidgetItem *itm, mWin->getInstallPackagesInWidgetQueue() ) {
-        aHandle->addSyncToQueue( itm->text( 1 ) );
+        Backend::instance()->addSyncToQueue( itm->text( 1 ) );
         QTreeWidgetItem *itmL = revBuildUi->treeWidget->findItems( tr( "To be Installed" ), Qt::MatchExactly, 0 ).first();
         new QTreeWidgetItem( itmL, QStringList( itm->text( 1 ) ) );
     }
 
     foreach( QTreeWidgetItem *itm, mWin->getUpgradePackagesInWidgetQueue() ) {
-        aHandle->addSyncToQueue( itm->text( 1 ) );
+        Backend::instance()->addSyncToQueue( itm->text( 1 ) );
         QTreeWidgetItem *itmL = revBuildUi->treeWidget->findItems( tr( "To be Upgraded" ), Qt::MatchExactly, 0 ).first();
         new QTreeWidgetItem( itmL, QStringList( itm->text( 1 ) ) );
     }
@@ -232,7 +234,7 @@ void BuildingHandler::startSourceProcessing()
 
     emit buildingStarted();
 
-    buildDialog = new BuildingDialog( aHandle, mWin );
+    buildDialog = new BuildingDialog( mWin );
     connect( buildDialog, SIGNAL( nullifyPointer() ), SLOT( nullifyBDialog() ) );
 
     buildDialog->initBuildingQueue();
@@ -335,7 +337,7 @@ void BuildingHandler::processBuiltPackages()
 
         QSettings *settings = new QSettings();
 
-        aHandle->initQueue( true, false, true );
+        Backend::instance()->clearQueue();
 
         if ( settings->value( "absbuilding/clearmakedepends" ).toBool() && !installedMakeDepends.isEmpty() ) {
             /* Ok, let's cleanup then. We just need a special queue, so we
@@ -403,7 +405,7 @@ void BuildingHandler::processBuildWizard()
 
     foreach( const QString &pkg, pkgList ) {
         foreach( const QString &mkdp, ABSHandler::getMakeDepends( pkg ) ) {
-            if ( !aHandle->isInstalled( mkdp ) && !pkgList.contains( mkdp, Qt::CaseInsensitive ) )
+            if ( !Backend::instance()->isInstalled( mkdp ) && !pkgList.contains( mkdp, Qt::CaseInsensitive ) )
                 //Add to binary queue
             {
                 qDebug() << "Makedepend is missing: " << mkdp;
@@ -411,7 +413,7 @@ void BuildingHandler::processBuildWizard()
             }
         }
 
-        if ( !aHandle->isInstalled( pkg ) )
+        if ( !Backend::instance()->isInstalled( pkg ) )
             //Add to binary queue
         {
             qDebug() << "Package is not installed: " << pkg << ", installing it from binary first.";
@@ -444,7 +446,7 @@ void BuildingHandler::processBuildWizard()
         foreach( const QString &syn, depsList )
         aHandle->addSyncToQueue( syn );
 
-        queueDl = new QueueDialog( aHandle, mWin );
+        queueDl = new QueueDialog( mWin );
 
         connect( queueDl, SIGNAL( terminated( bool ) ), SLOT( startSourceProcessing() ) );
 

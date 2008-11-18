@@ -23,7 +23,6 @@
 
 #include "kanimatedsystemtrayicon.h"
 #include "MainWindow.h"
-#include "AlpmHandler.h"
 #include <QPointer>
 
 namespace ShamanIcon
@@ -43,7 +42,7 @@ class ShamanTrayIcon : public KAnimatedSystemTrayIcon
         Q_OBJECT
 
     public:
-        explicit ShamanTrayIcon( MainWindow *mW, AlpmHandler *aH );
+        explicit ShamanTrayIcon( MainWindow *mW);
         virtual ~ShamanTrayIcon();
 
     public slots:
@@ -72,7 +71,6 @@ class ShamanTrayIcon : public KAnimatedSystemTrayIcon
 
     private:
         MainWindow *mainWin;
-        AlpmHandler *aHandle;
         QPointer<QTimer> trayUpDb;
         QPointer<QTimer> trayUpDbAt;
         QList<QAction *> systrayAct;

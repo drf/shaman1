@@ -26,9 +26,8 @@
 
 #include <QSettings>
 
-ReviewQueueDialog::ReviewQueueDialog( AlpmHandler *hnd, MainWindow *parent )
-        : QDialog( parent ),
-        aHandle( hnd )
+ReviewQueueDialog::ReviewQueueDialog( MainWindow *parent )
+        : QDialog( parent )
 {
     int totalSize = 0;
     int removeSize = 0;
@@ -51,32 +50,32 @@ ReviewQueueDialog::ReviewQueueDialog( AlpmHandler *hnd, MainWindow *parent )
 
 
     foreach( QTreeWidgetItem *itm, parent->pkgsViewWG->findItems( tr( "Install" ), Qt::MatchExactly, 8 ) ) {
-        aHandle->addSyncToQueue( QString( itm->text( 5 ) + '/' + itm->text( 1 ) ) );
-        addSize += aHandle->getPackageSize( itm->text( 1 ), itm->text( 5 ) );
+        Backend::instance()->addItemToQueue(new QueueItem(QString(itm->text(5) + '/' + itm->text(1)), QueueItem::Sync));
+        addSize += Backend::instance()->getPackageSize( itm->text( 1 ), itm->text( 5 ) );
         QTreeWidgetItem *itmL = treeWidget->findItems( tr( "To be Installed" ), Qt::MatchExactly, 0 ).first();
         new QTreeWidgetItem( itmL, QStringList( itm->text( 1 ) ) );
         itmL->setExpanded( true );
     }
 
     foreach( QTreeWidgetItem *itm, parent->pkgsViewWG->findItems( tr( "Upgrade" ), Qt::MatchExactly, 8 ) ) {
-        aHandle->addSyncToQueue( QString( itm->text( 5 ) + '/' + itm->text( 1 ) ) );
-        addSize += aHandle->getPackageSize( itm->text( 1 ), itm->text( 5 ) );
+        Backend::instance()->addItemToQueue(new QueueItem(QString(itm->text(5) + '/' + itm->text(1)), QueueItem::Sync));
+        addSize += Backend::instance()->getPackageSize( itm->text( 1 ), itm->text( 5 ) );
         QTreeWidgetItem *itmL = treeWidget->findItems( tr( "To be Upgraded" ), Qt::MatchExactly, 0 ).first();
         new QTreeWidgetItem( itmL, QStringList( itm->text( 1 ) ) );
         itmL->setExpanded( true );
     }
 
     foreach( QTreeWidgetItem *itm, parent->pkgsViewWG->findItems( tr( "Uninstall" ), Qt::MatchExactly, 8 ) ) {
-        aHandle->addRemoveToQueue( itm->text( 1 ) );
-        removeSize += aHandle->getPackageSize( itm->text( 1 ), itm->text( 5 ) );
+        Backend::instance()->addItemToQueue(new QueueItem(QString(itm->text(1)), QueueItem::Remove));
+        removeSize += Backend::instance()->getPackageSize( itm->text( 1 ), itm->text( 5 ) );
         QTreeWidgetItem *itmL = treeWidget->findItems( tr( "To be Removed" ), Qt::MatchExactly, 0 ).first();
         new QTreeWidgetItem( itmL, QStringList( itm->text( 1 ) ) );
         itmL->setExpanded( true );
     }
 
     foreach( QTreeWidgetItem *itm, parent->pkgsViewWG->findItems( tr( "Complete Uninstall" ), Qt::MatchExactly, 8 ) ) {
-        aHandle->addRemoveToQueue( itm->text( 1 ) );
-        removeSize += aHandle->getPackageSize( itm->text( 1 ), itm->text( 5 ) );
+        Backend::instance()->addItemToQueue(new QueueItem(QString(itm->text(1)), QueueItem::Remove));
+        removeSize += BackendInstance::instance()->getPackageSize( itm->text( 1 ), itm->text( 5 ) );
         QTreeWidgetItem *itmL = treeWidget->findItems( tr( "To be Removed" ), Qt::MatchExactly, 0 ).first();
         new QTreeWidgetItem( itmL, QStringList( itm->text( 1 ) ) );
         itmL->setExpanded( true );
@@ -97,9 +96,9 @@ ReviewQueueDialog::ReviewQueueDialog( AlpmHandler *hnd, MainWindow *parent )
     QString toShow;
     toShow.append( QString( tr( "Your Queue is about to be processed. "
                                 "You are going to:<br />" ) ) );
-    int n = aHandle->getNumberOfTargets( 1 );
+    int n = 0;//BackendInstance::instance()->getNumberOfTargets( 1 );
     toShow.append( QString( tr( "Remove <b>%n package(s)</b><br />", "", n ) ) );
-    int k = aHandle->getNumberOfTargets( 0 );
+    int k = 1;//BackendInstance::instance()->getNumberOfTargets( 0 );
     toShow.append( QString( tr( "Install/Upgrade <b>%n package(s)</b><br />", "", k ) ) );
     toShow.append( tr( "Do you wish to continue?" ) );
 

@@ -20,6 +20,8 @@
 
 #include "MaintenanceBar.h"
 
+#include <aqpm/Backend.h>
+
 #include "configDialog.h"
 
 #include <QComboBox>
@@ -30,9 +32,8 @@
 #include <QVBoxLayout>
 #include <QPushButton>
 
-MaintenanceBar::MaintenanceBar( AlpmHandler *aH, QWidget *parent )
+MaintenanceBar::MaintenanceBar( QWidget *parent )
         : QToolBar( parent ),
-        m_handler( aH ),
         ath( new Authenticator( this ) )
 {
     setObjectName( "MaintenanceBar" );
@@ -76,7 +77,7 @@ void MaintenanceBar::performAction()
     case 2:
         openDialog();
 
-        cTh = new CleanThread( m_handler, 0 );
+        cTh = new CleanThread( 0 );
 
         statusLabel->setText( QString( tr( "Cleaning up unused Databases..." ) ) );
         mantDetails->append( QString( tr( "Cleaning up unused Databases..." ) ) );
@@ -90,7 +91,7 @@ void MaintenanceBar::performAction()
     case 3:
         openDialog();
 
-        cTh = new CleanThread( m_handler, 1 );
+        cTh = new CleanThread( 1 );
 
         statusLabel->setText( QString( tr( "Cleaning up Cache..." ) ) );
         mantDetails->append( QString( tr( "Cleaning up Cache..." ) ) );
@@ -104,7 +105,7 @@ void MaintenanceBar::performAction()
     case 4:
         openDialog();
 
-        cTh = new CleanThread( m_handler, 2 );
+        cTh = new CleanThread( 2 );
 
         statusLabel->setText( QString( tr( "Deleting Cache..." ) ) );
         mantDetails->append( QString( tr( "Deleting Cache..." ) ) );
@@ -138,7 +139,7 @@ void MaintenanceBar::performAction()
     case 6:
         openDialog();
 
-        cTh = new CleanThread( m_handler, 3 );
+        cTh = new CleanThread( 3 );
 
         statusLabel->setText( QString( tr( "Cleaning up building Environments..." ) ) );
         mantDetails->append( QString( tr( "Cleaning up building Environments..." ) ) );

@@ -25,14 +25,15 @@
 #include "ui_upgradeDialog.h"
 #include <alpm.h>
 #include "callbacks.h"
-#include "AlpmHandler.h"
+
+#include <QDialog>
 
 class SysUpgradeDialog : public QDialog, private Ui::upgradeDialog
 {
         Q_OBJECT
 
     public:
-        explicit SysUpgradeDialog( AlpmHandler *hnd, QWidget *parent = 0 );
+        explicit SysUpgradeDialog( QWidget *parent = 0 );
         ~SysUpgradeDialog();
 
         bool force();
@@ -50,8 +51,6 @@ class SysUpgradeDialog : public QDialog, private Ui::upgradeDialog
         void upgradeNow();
         void addToPkgQueue();
 
-    private:
-        AlpmHandler *aHandle;
 };
 
 #endif /*SYSUPGRADEDIALOG_H*/

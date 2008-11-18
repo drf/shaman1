@@ -28,7 +28,6 @@
 #include "ui_reviewBuildingDialog.h"
 
 class MainWindow;
-class AlpmHandler;
 class BuildingDialog;
 class EditPBuild;
 class QueueDialog;
@@ -38,7 +37,7 @@ class BuildingHandler : public QObject
         Q_OBJECT
 
     public:
-        explicit BuildingHandler( MainWindow *mW, AlpmHandler *aH );
+        explicit BuildingHandler( MainWindow *mW );
         virtual ~BuildingHandler();
 
     public slots:
@@ -66,7 +65,6 @@ class BuildingHandler : public QObject
         QPointer<QDialog> reviewBQueue;
         QPointer<QueueDialog> queueDl;
         MainWindow *mWin;
-        AlpmHandler *aHandle;
 
         QStringList installedMakeDepends;
         QStringList installedBinaryPkgs;

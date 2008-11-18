@@ -25,32 +25,31 @@ extern CallBacks CbackReference;
 
 using namespace std;
 
-UpdateDbDialog::UpdateDbDialog( AlpmHandler *hnd, QWidget *parent )
+UpdateDbDialog::UpdateDbDialog( QWidget *parent )
         : QDialog( parent ),
         actionDone( 0 ),
         updated( false ),
-        aHandle( hnd ),
         errorsOccourred( false )
 {
     setupUi( this );
     setWindowModality( Qt::WindowModal );
     setAttribute( Qt::WA_DeleteOnClose );
 
-    connect( aHandle, SIGNAL( streamDbUpdatingStatus( const QString&, int ) ),
+    connect( Backend::instance(), SIGNAL( streamDbUpdatingStatus( const QString&, int ) ),
              SLOT( updateLabel( const QString&, int ) ) );
-    connect( aHandle, SIGNAL( dbQty( const QStringList& ) ), SLOT( createWidgets( const QStringList& ) ) );
-    connect( aHandle, SIGNAL( dbUpdated( const QString& ) ), SLOT( setUpdated( const QString& ) ) );
-    connect( aHandle, SIGNAL( dbUpdatePerformed() ), SLOT( updateTotalProg() ) );
+    connect( Backend::instance(), SIGNAL( dbQty( const QStringList& ) ), SLOT( createWidgets( const QStringList& ) ) );
+    connect( Backend::instance(), SIGNAL( dbUpdated( const QString& ) ), SLOT( setUpdated( const QString& ) ) );
+    connect( Backend::instance(), SIGNAL( dbUpdatePerformed() ), SLOT( updateTotalProg() ) );
     connect( &CbackReference, SIGNAL( streamTransDlProg( char*, int, int, int, int, int, int ) ),
              SLOT( updateDlBar( char*, int, int, int, int, int, int ) ) );
 }
 
 UpdateDbDialog::~UpdateDbDialog()
 {
-    disconnect( aHandle, SIGNAL( streamDbUpdatingStatus( const QString&, int ) ), 0, 0 );
-    disconnect( aHandle, SIGNAL( dbQty( const QStringList& ) ), 0, 0 );
-    disconnect( aHandle, SIGNAL( dbUpdated( const QString& ) ), 0, 0 );
-    connect( aHandle, SIGNAL( dbUpdatePerformed() ), SLOT( updateTotalProg() ) );
+    disconnect( Backend::instance(), SIGNAL( streamDbUpdatingStatus( const QString&, int ) ), 0, 0 );
+    disconnect( Backend::instance(), SIGNAL( dbQty( const QStringList& ) ), 0, 0 );
+    disconnect( Backend::instance(), SIGNAL( dbUpdated( const QString& ) ), 0, 0 );
+    connect( Backend::instance(), SIGNAL( dbUpdatePerformed() ), SLOT( updateTotalProg() ) );
     disconnect( &CbackReference, SIGNAL( streamTransDlProg( char*, int, int, int, int, int, int ) ), 0, 0 );
 }
 
@@ -142,9 +141,8 @@ void UpdateDbDialog::updateDlBar( char *c, int bytedone, int bytetotal, int spee
 void UpdateDbDialog::doAction()
 {
     updatedRepos.clear();
-    dbth = new UpDbThread( aHandle );
-    dbth->start();
-    connect( dbth, SIGNAL( finished() ), this, SLOT( scopeEnded() ) );
+    Backend::instance()->updateDatabase();
+    //connect( dbth, SIGNAL( finished() ), this, SLOT( scopeEnded() ) );
 }
 
 void UpdateDbDialog::scopeEnded()
@@ -152,26 +150,9 @@ void UpdateDbDialog::scopeEnded()
     for ( int i = 0; i < labelList.size(); ++i )
         delete labelList.at( i );
 
-    dbth->deleteLater();
-
     emit killMe();
 
     close();
-}
-
-UpDbThread::UpDbThread( AlpmHandler *aH )
-{
-    aHandle = aH;
-}
-
-void UpDbThread::run()
-{
-    result = aHandle->updateDatabase();
-}
-
-bool UpDbThread::getResult()
-{
-    return result;
 }
 
 void UpdateDbDialog::createWidgets( const QStringList &list )

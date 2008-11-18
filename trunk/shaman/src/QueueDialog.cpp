@@ -22,8 +22,9 @@
 
 #include "ShamanDialog.h"
 #include "callbacks.h"
-#include "AlpmHandler.h"
 #include "ui_transactionDialog.h"
+
+#include <aqpm/Backend.h>
 
 #include <iostream>
 #include <alpm.h>
@@ -43,15 +44,11 @@
 #include <archive.h>
 #include <archive_entry.h>
 
-extern CallBacks CbackReference;
-extern QMutex mutex;
-extern QWaitCondition wCond;
-
 using namespace std;
+using namespace Aqpm;
 
 QueueDialog::QueueDialog( AlpmHandler *hnd, QWidget *parent )
         : QDialog( parent ),
-        aHandle( hnd ),
         scrRun( false ),
         errors( false )
 {
@@ -59,11 +56,9 @@ QueueDialog::QueueDialog( AlpmHandler *hnd, QWidget *parent )
     textEdit->hide();
     setWindowModality( Qt::WindowModal );
 
-    qRegisterMetaType<pmtransevt_t>( "pmtransevt_t" );
-
-    connect( &CbackReference, SIGNAL( streamTransEvent( pmtransevt_t, void*, void* ) ),
+    connect( Backend::instance(), SIGNAL( streamTransEvent( pmtransevt_t, void*, void* ) ),
              SLOT( changeStatus( pmtransevt_t, void*, void* ) ) );
-    connect( &CbackReference, SIGNAL( logMsgStreamed( const QString& ) ),
+    connect( Backend::instance(), SIGNAL( logMsgStreamed( const QString& ) ),
              SLOT( handleAlpmMessage( const QString& ) ) );
     connect( aHandle, SIGNAL( preparingTransactionError( const QString& ) ),
              SLOT( handlePreparingError( const QString& ) ) );
@@ -123,7 +118,7 @@ void TrCommitThread::run()
 
 void QueueDialog::changeStatus( pmtransevt_t event, void *data1, void *data2 )
 {
-    QMutexLocker lock( &mutex );
+    QMutexLocker lock( Backend::instance()->backendMutex() );
 
     qDebug() << "Entering Queue Lock";
 
@@ -333,7 +328,7 @@ void QueueDialog::changeStatus( pmtransevt_t event, void *data1, void *data2 )
     }
 
     if ( !isScriptletRunning() ) {
-        wCond.wakeAll();
+        Backend::instance()->backendWCond->wakeAll();
         qDebug() << "Releasing Queue Lock";
     } else
         qDebug() << "Waiting for the scriptlet";
@@ -398,7 +393,7 @@ void QueueDialog::startDownload()
     transLabel->setPixmap( QIcon( ":/Icons/icons/dialog-ok-apply.png" ).pixmap( 22 ) );
     dlLabel->setPixmap( QIcon( ":/Icons/icons/edit-redo.png" ).pixmap( 22 ) );
 
-    connect( &CbackReference, SIGNAL( streamTransDlProg( char*, int, int, int, int, int, int ) ),
+    connect( Backend::instance(), SIGNAL( streamTransDlProg( char*, int, int, int, int, int, int ) ),
              SLOT( updateProgressBar( char*, int, int, int, int, int, int ) ) );
 
     if ( progressBar->isHidden() )
@@ -411,16 +406,15 @@ void QueueDialog::startProcess()
     dlLabel->setPixmap( QIcon( ":/Icons/icons/dialog-ok-apply.png" ).pixmap( 22 ) );
     processLabel->setPixmap( QIcon( ":/Icons/icons/edit-redo.png" ).pixmap( 22 ) );
 
-    disconnect( &CbackReference, SIGNAL( streamTransDlProg( char*, int, int, int, int, int, int ) ), 0, 0 );
-    qRegisterMetaType<pmtransprog_t>( "pmtransprog_t" );
-    connect( &CbackReference, SIGNAL( streamTransProgress( pmtransprog_t, char*, int, int, int ) ),
+    disconnect( Backend::instance(), SIGNAL( streamTransDlProg( char*, int, int, int, int, int, int ) ), 0, 0 );
+    connect( Backend::instance(), SIGNAL( streamTransProgress( pmtransprog_t, char*, int, int, int ) ),
              SLOT( updateProgressBar( pmtransprog_t, char*, int, int, int ) ) );
 }
 
 void QueueDialog::cleanup()
 {
-    QMutexLocker lock( &mutex );
-    disconnect( &CbackReference, SIGNAL( streamTransProgress( pmtransprog_t, char*, int, int, int ) ), 0, 0 );
+    QMutexLocker lock( Backend::instance()->backendMutex() );
+    disconnect( Backend::instance(), SIGNAL( streamTransProgress( pmtransprog_t, char*, int, int, int ) ), 0, 0 );
     processLabel->setPixmap( QIcon( ":/Icons/icons/dialog-ok-apply.png" ).pixmap( 22 ) );
     cleanUpLabel->setPixmap( QIcon( ":/Icons/icons/edit-redo.png" ).pixmap( 22 ) );
 
@@ -665,11 +659,11 @@ void QueueDialog::finishedScriptletRunning( int eC, QProcess::ExitStatus eS )
 
     proc->deleteLater();
 
-    aHandle->rmrf( "/tmp/alpm_XXXXXX" );
+    //aHandle->rmrf( "/tmp/alpm_XXXXXX" );
 
     scrRun = false;
 
-    wCond.wakeAll();
+    Backend::instance()->backendWCond->wakeAll();
 }
 
 void QueueDialog::writeLineProgress()
@@ -747,9 +741,9 @@ void QueueDialog::abortTransaction()
 
         qDebug() << "Interrupting transaction...";
 
-        aHandle->interruptTransaction();
+        //aHandle->interruptTransaction();
 
-        cTh->terminate();
+        //cTh->terminate();
 
         qDebug() << "Transaction interrupted";
 

@@ -20,14 +20,17 @@
 
 #include "ShamanStatusBar.h"
 
+#include <aqpm/Backend.h>
+
 #include "PackageProperties.h"
 
 #include <QStatusBar>
 #include <QTimer>
 
-ShamanStatusBar::ShamanStatusBar( AlpmHandler *aH, MainWindow *parent )
+using namespace Aqpm;
+
+ShamanStatusBar::ShamanStatusBar( MainWindow *parent )
         : QStatusBar( parent ),
-        aHandle( aH ),
         mWin( parent )
 {
     setUpStatusBar();
@@ -77,9 +80,10 @@ void ShamanStatusBar::clearStBarAction()
 
 void ShamanStatusBar::updateStatusBar()
 {
-    QString text = QString( tr( "%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages" ).
-                            arg( aHandle->countPackages( Alpm::AllPackages ) ).arg( aHandle->countPackages( Alpm::InstalledPackages ) ).
-                            arg( aHandle->getUpgradeablePackages().count() ) );
+    QString text = QString( tr( "%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages" )
+                            .arg( Backend::instance()->countPackages( Backend::AllPackages ) )
+                            .arg( Backend::instance()->countPackages( Backend::InstalledPackages ) )
+                            .arg( Backend::instance()->getUpgradeablePackagesAsStringList().count() ) );
 
     text.append( ' ' );
 
@@ -91,12 +95,12 @@ void ShamanStatusBar::updateStatusBar()
     QList<QTreeWidgetItem *> addList = mWin->getInstallPackagesInWidgetQueue() + mWin->getUpgradePackagesInWidgetQueue();
 
     foreach( QTreeWidgetItem *itm, addList )
-    addSize += aHandle->getPackageSize( itm->text( 1 ), itm->text( 5 ) );
+    addSize += Backend::instance()->getPackageSize( itm->text( 1 ), itm->text( 5 ) );
 
     QList<QTreeWidgetItem *> removeList = mWin->getRemovePackagesInWidgetQueue();
 
     foreach( QTreeWidgetItem *itm, removeList )
-    removeSize += aHandle->getPackageSize( itm->text( 1 ), itm->text( 5 ) );
+    removeSize += Backend::instance()->getPackageSize( itm->text( 1 ), itm->text( 5 ) );
 
     QString spaceToDo;
 
