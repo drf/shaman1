@@ -21,7 +21,7 @@
 #include "QueueDialog.h"
 
 #include "ShamanDialog.h"
-#include "callbacks.h"
+#include "Authenticator.h"
 #include "ui_transactionDialog.h"
 
 #include <aqpm/Backend.h>
@@ -47,7 +47,7 @@
 using namespace std;
 using namespace Aqpm;
 
-QueueDialog::QueueDialog( AlpmHandler *hnd, QWidget *parent )
+QueueDialog::QueueDialog( QWidget *parent )
         : QDialog( parent ),
         scrRun( false ),
         errors( false )
@@ -60,10 +60,10 @@ QueueDialog::QueueDialog( AlpmHandler *hnd, QWidget *parent )
              SLOT( changeStatus( pmtransevt_t, void*, void* ) ) );
     connect( Backend::instance(), SIGNAL( logMsgStreamed( const QString& ) ),
              SLOT( handleAlpmMessage( const QString& ) ) );
-    connect( aHandle, SIGNAL( preparingTransactionError( const QString& ) ),
+    /*connect( aHandle, SIGNAL( preparingTransactionError( const QString& ) ),
              SLOT( handlePreparingError( const QString& ) ) );
     connect( aHandle, SIGNAL( committingTransactionError( const QString& ) ),
-             SLOT( handleCommittingError( const QString& ) ) );
+             SLOT( handleCommittingError( const QString& ) ) );*/
     connect( abortTr, SIGNAL( clicked() ), SLOT( abortTransaction() ) );
     connect( showDetails, SIGNAL( toggled( bool ) ), SLOT( adjust( bool ) ) );
 
@@ -96,24 +96,19 @@ void QueueDialog::adjust( bool tgld )
     adjustSize();
 }
 
-TrCommitThread::TrCommitThread( AlpmHandler *aH, bool fc )
-{
-    aHandle = aH;
-    force = fc;
-}
-
 void QueueDialog::startProcessing( bool force )
 {
-    cTh = new TrCommitThread( aHandle, force );
+    QList<pmtransflag_t> flags;
 
-    cTh->start();
+    flags.append(PM_TRANS_FLAG_ALLDEPS);
+    flags.append(PM_TRANS_FLAG_NOSCRIPTLET);
+    if (force) {
+        flags.append(PM_TRANS_FLAG_FORCE);
+    }
 
-    connect( cTh, SIGNAL( finished() ), SLOT( cleanup() ) );
-}
+    Backend::instance()->processQueue(flags);
 
-void TrCommitThread::run()
-{
-    aHandle->processQueue( force );
+    connect( Backend::instance(), SIGNAL( operationSuccessful() ), SLOT( cleanup() ) );
 }
 
 void QueueDialog::changeStatus( pmtransevt_t event, void *data1, void *data2 )
@@ -328,7 +323,7 @@ void QueueDialog::changeStatus( pmtransevt_t event, void *data1, void *data2 )
     }
 
     if ( !isScriptletRunning() ) {
-        Backend::instance()->backendWCond->wakeAll();
+        Backend::instance()->backendWCond()->wakeAll();
         qDebug() << "Releasing Queue Lock";
     } else
         qDebug() << "Waiting for the scriptlet";
@@ -663,7 +658,7 @@ void QueueDialog::finishedScriptletRunning( int eC, QProcess::ExitStatus eS )
 
     scrRun = false;
 
-    Backend::instance()->backendWCond->wakeAll();
+    Backend::instance()->backendWCond()->wakeAll();
 }
 
 void QueueDialog::writeLineProgress()
@@ -792,7 +787,7 @@ void QueueDialog::handlePreparingError( const QString &msg )
     errors = true;
 
     qDebug() << "Streaming Awakening to Error Thread";
-    wCond.wakeAll();
+    Backend::instance()->backendWCond()->wakeAll();
 }
 
 void QueueDialog::handleCommittingError( const QString &msg )
@@ -829,7 +824,7 @@ void QueueDialog::handleCommittingError( const QString &msg )
     errors = true;
 
     qDebug() << "Streaming Awakening to Error Thread";
-    wCond.wakeAll();
+    Backend::instance()->backendWCond()->wakeAll();
 }
 
 void QueueDialog::handleAlpmMessage( const QString &msg )

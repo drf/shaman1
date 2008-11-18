@@ -25,18 +25,9 @@
 #include "ui_transactionDialog.h"
 #include <alpm.h>
 
-#include <QThread>
 #include <QProcess>
 
-class TrCommitThread : public QThread
-{
-    public:
-        TrCommitThread( AlpmHandler *aH, bool fc );
-        void run();
-    private:
-        AlpmHandler *aHandle;
-        bool force;
-};
+class RootProcess;
 
 class QueueDialog : public QDialog, private Ui::transactionDialog
 {
