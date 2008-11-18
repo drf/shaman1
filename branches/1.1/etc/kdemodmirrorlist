@@ -1,0 +1,7 @@
+# This mirrorlist contains KDEMod Mirrors. It acts just like mirrorlist,
+# and it is used by shaman to take care of mirror selection for KDEMod.
+
+Server = http://kdemod.ath.cx/repo/$repo/$arch
+Server = http://kdemod.iskrembilen.com/repo/$repo/$arch
+Server = http://kdemod.bednarek.org.pl/$repo/$arch
+

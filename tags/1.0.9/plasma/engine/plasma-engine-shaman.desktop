@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Shaman Data Engine
+X-KDE-ServiceTypes=Plasma/DataEngine
+Type=Service
+Icon=kget
+X-KDE-Library=plasma_engine_shaman
+X-Plasma-EngineName=shaman

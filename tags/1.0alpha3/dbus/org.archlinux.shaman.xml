@@ -1,0 +1,39 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+	<interface name="org.archlinux.shaman">
+		<method name="installPackage">
+			<arg type="s" direction="in" />
+		</method>
+		<method name="doDbUpdate">
+		</method>
+		<method name="widgetQueueToAlpmQueue">
+		</method>
+		<method name="fullSysUpgrade">
+		</method>
+		<method name="packageExists">
+			<arg type="s" direction="in" />
+			<arg type="b" direction="out" />
+		</method>
+		
+		<signal name="systemIsUpToDate">
+		</signal>
+		<signal name="actionStatusChanged">
+			<arg type="s" direction="out" />
+		</signal>
+		<signal name="streamDbUpdatingStatus">
+			<arg type="s" direction="out" />
+			<arg type="i" direction="out" />
+		</signal>
+		<signal name="streamTransDlProg">
+			<arg type="s" direction="out" />
+			<arg type="i" direction="out" />
+			<arg type="i" direction="out" />
+			<arg type="i" direction="out" />
+			<arg type="i" direction="out" />
+		</signal>
+		<signal name="shamanReady">
+		</signal>
+		<signal name="aboutToQuit">
+		</signal>
+	</interface>
+</node>

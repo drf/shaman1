@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=Shaman
+Name[it]=Shaman
+
+Comment=Manage Basic Package Management operations
+Comment[it]=Gestisce operazioni di base con i Pacchetti
+
+X-KDE-ServiceTypes=Plasma/Runner
+Type=Service
+X-KDE-Library=krunner_shaman
+
+X-KDE-PluginInfo-Author=Dario Freddi
+X-KDE-PluginInfo-Email=drf@kdemod.ath.cx
+X-KDE-PluginInfo-Name=Shaman
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-EnabledByDefault=true

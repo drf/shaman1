@@ -1,0 +1,132 @@
+<ui version="4.0" >
+ <class>authDialog</class>
+ <widget class="QDialog" name="authDialog" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>472</width>
+    <height>232</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Root Password Required</string>
+  </property>
+  <layout class="QVBoxLayout" >
+   <item>
+    <layout class="QVBoxLayout" >
+     <item>
+      <layout class="QHBoxLayout" >
+       <item>
+        <widget class="QLabel" name="label_2" >
+         <property name="text" >
+          <string/>
+         </property>
+         <property name="pixmap" >
+          <pixmap resource="qtpacman.qrc" >:/Icons/icons/document-encrypt.svg</pixmap>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label" >
+         <property name="text" >
+          <string>Shaman needs root privileges to perform this action.
+Please enter in the field below the root password to continue.</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit" >
+       <property name="echoMode" >
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkBox" >
+       <property name="text" >
+        <string>Never ask for this anymore</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" >
+       <item>
+        <spacer>
+         <property name="orientation" >
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" >
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="cancelButton" >
+         <property name="text" >
+          <string>Cancel</string>
+         </property>
+         <property name="icon" >
+          <iconset resource="qtpacman.qrc" >:/Icons/icons/dialog-cancel.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="okButton" >
+         <property name="text" >
+          <string>Ok</string>
+         </property>
+         <property name="icon" >
+          <iconset resource="qtpacman.qrc" >:/Icons/icons/dialog-ok-apply.png</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="qtpacman.qrc" />
+ </resources>
+ <connections>
+  <connection>
+   <sender>okButton</sender>
+   <signal>clicked()</signal>
+   <receiver>authDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>374</x>
+     <y>134</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>210</x>
+     <y>76</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cancelButton</sender>
+   <signal>clicked()</signal>
+   <receiver>authDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>279</x>
+     <y>134</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>210</x>
+     <y>76</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,266 @@
+<ui version="4.0" >
+ <class>transactionDialog</class>
+ <widget class="QDialog" name="transactionDialog" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>370</width>
+    <height>389</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Processing Queue...</string>
+  </property>
+  <property name="windowIcon" >
+   <iconset resource="shaman.qrc" >
+    <normaloff>:/Icons/icons/shaman/animation_source/anim06.png</normaloff>:/Icons/icons/shaman/animation_source/anim06.png</iconset>
+  </property>
+  <layout class="QGridLayout" >
+   <item row="1" column="0" >
+    <layout class="QGridLayout" >
+     <item row="1" column="3" >
+      <widget class="QLabel" name="checkTransaction" >
+       <property name="text" >
+        <string>Check transaction validity</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3" >
+      <widget class="QLabel" name="downloadPackages" >
+       <property name="text" >
+        <string>Download Packages</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3" >
+      <widget class="QLabel" name="processingQueue" >
+       <property name="text" >
+        <string>Process queue</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="3" >
+      <widget class="QLabel" name="cleaningUp" >
+       <property name="text" >
+        <string>Cleanup</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="4" >
+      <widget class="QLabel" name="transLabel" >
+       <property name="sizePolicy" >
+        <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text" >
+        <string/>
+       </property>
+       <property name="pixmap" >
+        <pixmap resource="shaman.qrc" >:/Icons/icons/view-history.png</pixmap>
+       </property>
+       <property name="scaledContents" >
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="4" >
+      <widget class="QLabel" name="processLabel" >
+       <property name="sizePolicy" >
+        <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text" >
+        <string/>
+       </property>
+       <property name="pixmap" >
+        <pixmap resource="shaman.qrc" >:/Icons/icons/view-history.png</pixmap>
+       </property>
+       <property name="scaledContents" >
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="4" >
+      <widget class="QLabel" name="cleanUpLabel" >
+       <property name="sizePolicy" >
+        <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text" >
+        <string/>
+       </property>
+       <property name="pixmap" >
+        <pixmap resource="shaman.qrc" >:/Icons/icons/view-history.png</pixmap>
+       </property>
+       <property name="scaledContents" >
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="4" >
+      <widget class="QLabel" name="dlLabel" >
+       <property name="text" >
+        <string/>
+       </property>
+       <property name="pixmap" >
+        <pixmap resource="shaman.qrc" >:/Icons/icons/view-history.png</pixmap>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="2" column="0" >
+    <widget class="Line" name="line" >
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0" >
+    <widget class="QProgressBar" name="progressBar" >
+     <property name="value" >
+      <number>24</number>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0" >
+    <layout class="QHBoxLayout" >
+     <item>
+      <widget class="QPushButton" name="showDetails" >
+       <property name="text" >
+        <string>More Details...</string>
+       </property>
+       <property name="icon" >
+        <iconset resource="shaman.qrc" >
+         <normaloff>:/Icons/icons/help-about.png</normaloff>:/Icons/icons/help-about.png</iconset>
+       </property>
+       <property name="checkable" >
+        <bool>true</bool>
+       </property>
+       <property name="checked" >
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer>
+       <property name="orientation" >
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0" >
+        <size>
+         <width>71</width>
+         <height>30</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="abortTr" >
+       <property name="text" >
+        <string>Abort</string>
+       </property>
+       <property name="icon" >
+        <iconset resource="shaman.qrc" >
+         <normaloff>:/Icons/icons/dialog-cancel.png</normaloff>:/Icons/icons/dialog-cancel.png</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="3" column="0" >
+    <widget class="QLabel" name="actionDetail" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Maximum" hsizetype="Preferred" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text" >
+      <string>Please Wait...</string>
+     </property>
+     <property name="alignment" >
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" >
+    <widget class="QFrame" name="frame" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Maximum" hsizetype="Minimum" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="frameShape" >
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow" >
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <layout class="QGridLayout" >
+      <item row="0" column="0" >
+       <widget class="QLabel" name="label_5" >
+        <property name="text" >
+         <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;span style=" font-weight:600;">Process Queue&lt;/span>&lt;/p>&lt;/body>&lt;/html></string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" >
+       <widget class="QLabel" name="label_6" >
+        <property name="sizePolicy" >
+         <sizepolicy vsizetype="Maximum" hsizetype="Maximum" >
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize" >
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="maximumSize" >
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="text" >
+         <string/>
+        </property>
+        <property name="pixmap" >
+         <pixmap resource="shaman.qrc" >:/Icons/icons/edit-redo.png</pixmap>
+        </property>
+        <property name="scaledContents" >
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="6" column="0" >
+    <widget class="QTextEdit" name="textEdit" >
+     <property name="enabled" >
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="shaman.qrc" />
+ </resources>
+ <connections/>
+</ui>

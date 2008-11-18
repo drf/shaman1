@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="128"
+   height="128"
+   id="svg2424"
+   sodipodi:version="0.32"
+   inkscape:version="0.45.1"
+   version="1.0"
+   sodipodi:docbase="/home/lukas/qtPacman/shaman-arch/trunk/shaman/ui/icons"
+   sodipodi:docname="archlinux-icon-crystal-32.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:export-filename="/home/thayer/archlinux-logo-contest/archer-full-detail.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs2426">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#path1082_2_"
+       id="linearGradient2190"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-2.8706434,0,0,2.6542286,2653.3646,304.6363)"
+       x1="541.33502"
+       y1="104.50665"
+       x2="606.91248"
+       y2="303.14029" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       id="path1082_2_"
+       y2="129.3468"
+       x2="112.49853"
+       y1="6.1372099"
+       x1="112.49854"
+       gradientTransform="translate(287,-83)">
+      <stop
+         id="stop193"
+         offset="0"
+         style="stop-color:#ffffff;stop-opacity:0" />
+      <stop
+         id="stop195"
+         offset="1"
+         style="stop-color:#ffffff;stop-opacity:0.27450982;" />
+      <midPointStop
+         id="midPointStop197"
+         style="stop-color:#FFFFFF"
+         offset="0" />
+      <midPointStop
+         id="midPointStop199"
+         style="stop-color:#FFFFFF"
+         offset="0.5" />
+      <midPointStop
+         id="midPointStop201"
+         style="stop-color:#000000"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3388">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3390" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0.37113401;"
+         offset="1"
+         id="stop3392" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4346">
+      <stop
+         style="stop-color:#00bdec;stop-opacity:1"
+         offset="0"
+         id="stop4348" />
+      <stop
+         style="stop-color:#40bfde;stop-opacity:1"
+         offset="1"
+         id="stop4350" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4346"
+       id="linearGradient4352"
+       x1="400.6142"
+       y1="634.15063"
+       x2="616.48553"
+       y2="666.97791"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient5323">
+      <stop
+         style="stop-color:#6e6e6e;stop-opacity:1"
+         offset="0"
+         id="stop5325" />
+      <stop
+         style="stop-color:#4d4d4d;stop-opacity:1"
+         offset="1"
+         id="stop5327" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5323"
+       id="linearGradient5329"
+       x1="291.83591"
+       y1="238.08237"
+       x2="650.81366"
+       y2="348.96875"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#path1082_2_"
+       id="linearGradient2216"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.3937741,0,0,0.393752,978.34967,416.9815)"
+       x1="541.33502"
+       y1="104.50665"
+       x2="606.91248"
+       y2="303.14029" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="16"
+     inkscape:cy="16"
+     inkscape:document-units="px"
+     inkscape:current-layer="g2210"
+     inkscape:window-width="856"
+     inkscape:window-height="588"
+     inkscape:window-x="168"
+     inkscape:window-y="156"
+     width="128px"
+     height="128px" />
+  <metadata
+     id="metadata2429">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-309.51781,-259.60123)">
+    <g
+       id="g2424"
+       transform="matrix(1.3473684,0,0,1.3473684,-632.88236,-513.34366)">
+      <g
+         id="g2210"
+         transform="matrix(0.125,0,0,0.125,615.71887,519.21715)">
+        <path
+           style="fill:#1793d1;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+           d="M 1049.7502,435.62318 C 1015.9218,518.5613 999.29963,567.01382 961.63619,647.4865 C 984.72863,671.96446 1009.1919,706.24106 1055.2238,738.43566 C 1015.5282,735.6991 968.08183,705.51374 942.85435,684.29758 C 894.65235,784.87854 823.00191,920.26091 669.75015,1195.6232 C 790.17067,1126.1023 883.52271,1083.2213 970.52163,1066.8537 C 966.79955,1050.8095 964.81123,1033.3735 964.95523,1015.2716 L 965.04799,1011.4679 C 966.95927,934.29827 1007.1132,874.95815 1054.6672,878.98743 C 1102.221,883.01671 1139.2395,948.86371 1137.3283,1026.0333 C 1136.9683,1040.569 1135.2784,1054.5358 1132.4113,1067.5031 C 1218.474,1084.3453 1310.9456,1127.0352 1429.7502,1195.6232 C 1406.321,1152.4884 1385.3362,1121.4614 1365.3654,1084.4295 C 1333.9082,1060.048 1308.9473,1038.1209 1234.1838,986.14075 C 1280.1869,998.09427 1307.282,1002.1237 1332.9563,1017.5389 C 1129.9082,639.49882 1119.3799,599.0243 1049.7502,435.62318 z "
+           id="path2518"
+           sodipodi:nodetypes="ccccccccsscccccc" />
+      </g>
+    </g>
+  </g>
+</svg>

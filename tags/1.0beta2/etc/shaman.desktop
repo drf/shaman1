@@ -1,0 +1,20 @@
+[Desktop Entry]
+Name=Shaman
+
+GenericName=Package Manager
+GenericName[it]=Gestore di Pacchetti
+GenericName[de]=Paketverwaltung
+GenericName[es]=Administrador de Paquetes
+GenericName[fr]=Gestionnaire de paquets
+
+Comment=A Graphical Package Manager for ArchLinux
+Comment[it]=Un gestore di Pacchetti grafico per ArchLinux
+Comment[de]=Eine grafische Paketverwaltung für Arch Linux
+Comment[es]=Un administrador gráfico de paquetes para Arch Linux
+Comment[fr]=Un gestionnaire graphique de paquets pour Arch Linux
+
+Exec=shaman
+Icon=shaman-32
+Type=Application
+Terminal=false
+Categories=Qt;System;

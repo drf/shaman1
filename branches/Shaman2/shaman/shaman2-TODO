@@ -1,0 +1,55 @@
+TODO for qtPacman2:
+GUI:
+	Model/View:
+		*Reimplement a QAbstractItemModel and use a QList<Package*> in it..
+		*Reimplement QSortFilterProxyModel and reimplement filterAcceptsRow(...) for advanced-searching (f.e. only core-packages and search for kdegraphics)
+		*Use a QTreeView for the Graphical-stuff
+
+	MainWindow:
+		*Manage graphical things
+		*Manage model
+		*handle search request and drop it to the sortfilterproxymodel
+
+	Misc:
+		*Move the QDockWidgets to separate classes, with a Package as parameter
+
+Core:
+	Package-class:
+		*enum Status {Installed, NotInstalled, Upgradeable}
+		*enum Action {Install, Remove, Upgrade, NoAction}
+		*void rebuild() (rebuild package from source) (Mmh we need to connect with Provider plugin?)
+		*void setAction(Action action)
+		*void process()
+		*string name()
+		*float version()
+		*string description()
+		*Status status()
+		*string statusText()
+		*Action action()
+		*string actionText()
+		*string repository()
+		*stringlist groups()
+
+	Transaction-class:
+		*enum Action {containsPackagesToInstall, containsPackagesToRemove, containsPackagesToUpgrade}
+		*typedef Actions list<Action>
+		*Actions* actions();
+		*void processQueue();
+
+	Database-class:
+		*list<Package*> getAllPackages();
+		*list<Package*> getAllPackagesWithActions(); (<--better name would be nicer :P)
+
+
+All classes:
+	*MainWindow (QMainWindow)
+	*PackageModel (QAbstractItemModel)
+	*PackageView (QTreeView)
+	*PackageSortFilterProxyModel (QSortFilterProxyModel)
+	*PackageInformation (QDockWidget)
+	*RepoDock (QDockWidget)
+	*Package (perhaps alpm's package class)
+	*Database
+	*if Package-class == alpm's package class
+		*a namespace with static functions like:
+			*QStringList getPackageFiles(__pmkg *pkg); that we don't have to handle with alpmlists in Model/View...
