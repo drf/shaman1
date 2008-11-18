@@ -171,13 +171,13 @@ void BuildingHandler::validateSourceQueue()
 
 
     foreach( QTreeWidgetItem *itm, mWin->getInstallPackagesInWidgetQueue() ) {
-        Backend::instance()->addSyncToQueue( itm->text( 1 ) );
+        Backend::instance()->addItemToQueue(new QueueItem(itm->text(1), QueueItem::Sync));
         QTreeWidgetItem *itmL = revBuildUi->treeWidget->findItems( tr( "To be Installed" ), Qt::MatchExactly, 0 ).first();
         new QTreeWidgetItem( itmL, QStringList( itm->text( 1 ) ) );
     }
 
     foreach( QTreeWidgetItem *itm, mWin->getUpgradePackagesInWidgetQueue() ) {
-        Backend::instance()->addSyncToQueue( itm->text( 1 ) );
+        Backend::instance()->addItemToQueue(new QueueItem(itm->text(1), QueueItem::Sync));
         QTreeWidgetItem *itmL = revBuildUi->treeWidget->findItems( tr( "To be Upgraded" ), Qt::MatchExactly, 0 ).first();
         new QTreeWidgetItem( itmL, QStringList( itm->text( 1 ) ) );
     }
@@ -345,7 +345,7 @@ void BuildingHandler::processBuiltPackages()
              */
 
             foreach( const QString &rmv, installedMakeDepends )
-            aHandle->addRemoveToQueue( rmv );
+            Backend::instance()->addItemToQueue(new QueueItem(rmv, QueueItem::Remove));
         }
 
         /* If some packages failed to build and we installed them from binary
@@ -362,17 +362,14 @@ void BuildingHandler::processBuiltPackages()
                 }
 
                 if ( !found )
-                    aHandle->addRemoveToQueue( rmv );
+                    Backend::instance()->addItemToQueue(new QueueItem(rmv, QueueItem::Remove));
             }
         }
+    }
 
-        if ( aHandle->getRemoveInQueue().isEmpty() )
-            aHandle->initQueue( false, false, true );
-    } else
-        aHandle->initQueue( false, false, true );
-
-    foreach( const QString &pac, buildTargets )
-    aHandle->addFFToQueue( pac );
+    foreach( const QString &pac, buildTargets ) {
+        Backend::instance()->addItemToQueue(new QueueItem(pac, QueueItem::FromFile));
+    }
 
     installedMakeDepends.clear();
     installedBinaryPkgs.clear();
@@ -435,16 +432,18 @@ void BuildingHandler::processBuildWizard()
          * Queue, to remove makedepends installed.
          */
 
-        aHandle->initQueue( false, true, false );
+        Backend::instance()->clearQueue();
 
         installedMakeDepends = depsList;
         installedBinaryPkgs = binaryList;
 
-        foreach( const QString &syn, binaryList )
-        aHandle->addSyncToQueue( syn );
+        foreach( const QString &syn, binaryList ) {
+            Backend::instance()->addItemToQueue(new QueueItem(syn, QueueItem::Sync));
+        }
 
-        foreach( const QString &syn, depsList )
-        aHandle->addSyncToQueue( syn );
+        foreach( const QString &syn, depsList ) {
+            Backend::instance()->addItemToQueue(new QueueItem(syn, QueueItem::Sync));
+        }
 
         queueDl = new QueueDialog( mWin );
 

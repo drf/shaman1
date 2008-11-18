@@ -22,8 +22,8 @@
 #define BUILDINGDIALOG_H
 
 #include <iostream>
-#include "AlpmHandler.h"
 #include "ABSHandler.h"
+#include "Authenticator.h"
 #include "ui_buildingDialog.h"
 
 #include <QProcess>
@@ -36,7 +36,7 @@ class BuildingDialog : public QDialog, public Ui::buildingDialog, private ABSHan
         Q_OBJECT
 
     public:
-        explicit BuildingDialog( AlpmHandler *hnd, QWidget *parent = 0 );
+        explicit BuildingDialog( QWidget *parent = 0 );
         virtual ~BuildingDialog();
 
         void initBuildingQueue();
@@ -74,7 +74,6 @@ class BuildingDialog : public QDialog, public Ui::buildingDialog, private ABSHan
         bool failed;
         bool allFailed;
         bool waitProcessing;
-        AlpmHandler *aHandle;
         QPointer<Authenticator> ath;
 
 };

@@ -19,6 +19,8 @@
  ***************************************************************************/
 #include "BuildingDialog.h"
 
+#include <aqpm/Backend.h>
+
 #include <iostream>
 #include <QProcess>
 #include <QString>
@@ -30,11 +32,12 @@
 #include "ABSHandler.h"
 #include "ShamanDialog.h"
 
-BuildingDialog::BuildingDialog( AlpmHandler *hnd, QWidget *parent )
+using namespace Aqpm;
+
+BuildingDialog::BuildingDialog( QWidget *parent )
         : QDialog( parent ),
         ABSProc(),
         MakePkgProc(),
-        aHandle( hnd ),
         ath( new Authenticator( this ) )
 {
     setupUi( this );
