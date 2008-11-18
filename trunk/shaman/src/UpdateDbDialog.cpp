@@ -19,11 +19,11 @@
  ***************************************************************************/
 
 #include "UpdateDbDialog.h"
-#include "callbacks.h"
 
-extern CallBacks CbackReference;
+#include <aqpm/Backend.h>
 
 using namespace std;
+using namespace Aqpm;
 
 UpdateDbDialog::UpdateDbDialog( QWidget *parent )
         : QDialog( parent ),
@@ -35,28 +35,19 @@ UpdateDbDialog::UpdateDbDialog( QWidget *parent )
     setWindowModality( Qt::WindowModal );
     setAttribute( Qt::WA_DeleteOnClose );
 
-    connect( Backend::instance(), SIGNAL( streamDbUpdatingStatus( const QString&, int ) ),
+    connect( Backend::instance(), SIGNAL( dbStatusChanged( const QString&, int ) ),
              SLOT( updateLabel( const QString&, int ) ) );
     connect( Backend::instance(), SIGNAL( dbQty( const QStringList& ) ), SLOT( createWidgets( const QStringList& ) ) );
-    connect( Backend::instance(), SIGNAL( dbUpdated( const QString& ) ), SLOT( setUpdated( const QString& ) ) );
-    connect( Backend::instance(), SIGNAL( dbUpdatePerformed() ), SLOT( updateTotalProg() ) );
-    connect( &CbackReference, SIGNAL( streamTransDlProg( char*, int, int, int, int, int, int ) ),
+    connect( Backend::instance(), SIGNAL( streamTransDlProg( char*, int, int, int, int, int, int ) ),
              SLOT( updateDlBar( char*, int, int, int, int, int, int ) ) );
 }
 
 UpdateDbDialog::~UpdateDbDialog()
 {
-    disconnect( Backend::instance(), SIGNAL( streamDbUpdatingStatus( const QString&, int ) ), 0, 0 );
-    disconnect( Backend::instance(), SIGNAL( dbQty( const QStringList& ) ), 0, 0 );
-    disconnect( Backend::instance(), SIGNAL( dbUpdated( const QString& ) ), 0, 0 );
-    connect( Backend::instance(), SIGNAL( dbUpdatePerformed() ), SLOT( updateTotalProg() ) );
-    disconnect( &CbackReference, SIGNAL( streamTransDlProg( char*, int, int, int, int, int, int ) ), 0, 0 );
 }
 
 void UpdateDbDialog::updateLabel( const QString &repo, int action )
 {
-    Q_UNUSED( repo );
-
     /* Ok, you need to read createWidget first.
      * When we are here, first of all we obtain the current label,
      * that is at the index pointed by actionDone.
@@ -69,25 +60,32 @@ void UpdateDbDialog::updateLabel( const QString &repo, int action )
      */
 
     switch ( action ) {
-    case 0:
+    case Backend::Checking:
         // The Database is being checked
         toInsert->setPixmap( QIcon( ":/Icons/icons/edit-redo.png" ).pixmap( 22 ) );
         break;
-    case 1:
+    case Backend::Downloading:
         // The Database is being downloaded (Outdated, see updateDlBar instead)
         toInsert->setPixmap( QIcon( ":/Icons/icons/view-refresh.png" ).pixmap( 22 ) );
         break;
-    case 2:
+    case Backend::Updating:
         // The Database is being installed (this action is usually so quick that this icon is not even shown)
         toInsert->setPixmap( QIcon( ":/Icons/icons/edit-redo.png" ).pixmap( 22 ) );
         break;
-    case 3:
+    case Backend::Updated:
+        toInsert->setPixmap( QIcon( ":/Icons/icons/dialog-ok-apply.png" ).pixmap( 22 ) );
+        setUpdated(repo);
+        updateTotalProg();
+        break;
+    case Backend::Unchanged:
         // The Database has been processed successfully
         toInsert->setPixmap( QIcon( ":/Icons/icons/dialog-ok-apply.png" ).pixmap( 22 ) );
+        updateTotalProg();
         break;
-    case 4:
+    case Backend::DatabaseError:
         // There was an error updating the database
         toInsert->setPixmap( QIcon( ":/Icons/icons/edit-delete.png" ).pixmap( 22 ) );
+        updateTotalProg();
         errorsOccourred = true;
         break;
     default:
@@ -142,7 +140,7 @@ void UpdateDbDialog::doAction()
 {
     updatedRepos.clear();
     Backend::instance()->updateDatabase();
-    //connect( dbth, SIGNAL( finished() ), this, SLOT( scopeEnded() ) );
+    connect( Backend::instance(), SIGNAL( transactionReleased() ), this, SLOT( scopeEnded() ) );
 }
 
 void UpdateDbDialog::scopeEnded()

@@ -28,6 +28,8 @@
 #include <QSettings>
 #include <QDebug>
 
+using namespace Aqpm;
+
 SysUpgradeDialog::SysUpgradeDialog( QWidget *parent )
         : QDialog( parent )
 {

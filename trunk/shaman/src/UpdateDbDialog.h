@@ -23,23 +23,8 @@
 
 #include <iostream>
 #include "ui_dbUpdateDialog.h"
-#include <alpm.h>
-#include "callbacks.h"
-#include "AlpmHandler.h"
 
-#include <QThread>
 #include <QDialog>
-
-class UpDbThread : public QThread
-{
-    public:
-        UpDbThread();
-        void run();
-        bool getResult();
-    private:
-        AlpmHandler *aHandle;
-        bool result;
-};
 
 class UpdateDbDialog : public QDialog, private Ui::dbUpdateDialog
 {
@@ -77,9 +62,7 @@ class UpdateDbDialog : public QDialog, private Ui::dbUpdateDialog
         int actionDone;
         int totalAction;
         bool updated;
-        AlpmHandler *aHandle;
         bool errorsOccourred;
-        UpDbThread *dbth;
         QList<QLabel *> labelList;
         QStringList updatedRepos;
 
