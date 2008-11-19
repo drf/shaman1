@@ -31,8 +31,8 @@
 
 /* Defines the Version */
 
-#define SHAMAN_VERSION "1.0.9"
-#define SHAMAN_CODENAME "0KB"
+#define SHAMAN_VERSION "1.1.0"
+#define SHAMAN_CODENAME "Splitage"
 
 /* Defines the Revision */
 
