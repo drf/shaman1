@@ -24,7 +24,6 @@
 #include <iostream>
 #include "ui_upgradeDialog.h"
 #include <alpm.h>
-#include "callbacks.h"
 
 #include <QDialog>
 

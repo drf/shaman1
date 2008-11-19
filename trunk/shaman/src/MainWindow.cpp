@@ -22,7 +22,6 @@
 
 #include "MainWindow.h"
 
-#include "callbacks.h"
 #include "UpdateDbDialog.h"
 #include "SysUpgradeDialog.h"
 #include "QueueDialog.h"
