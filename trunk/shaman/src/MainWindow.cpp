@@ -93,24 +93,19 @@ QList<QTreeWidgetItem *> CreateItemsThread::getResult()
 
 void CreateItemsThread::run()
 {
-    alpm_list_t *databases;
     int count = 0;
     int totalPkgs = Backend::instance()->countPackages( Backend::AllPackages );
     QList<QTreeWidgetItem *> itmLst;
     alpm_list_t *currentpkgs;
 
-    databases = Backend::instance()->getAvailableRepos();
-
-    databases = alpm_list_first( databases );
+    QStringList databases = Backend::instance()->getAvailableReposAsStringList();
 
     count = 0;
 
     QStringList conflPackages;
 
-    while ( databases != NULL ) {
-        pmdb_t *dbcrnt = ( pmdb_t * )alpm_list_getdata( databases );
-
-        currentpkgs = alpm_db_getpkgcache( dbcrnt );
+    foreach (const QString &repo, databases) {
+        currentpkgs = Backend::instance()->getPackagesFromRepo(repo);
 
         while ( currentpkgs != NULL ) {
             pmpkg_t *pkg = ( pmpkg_t * )alpm_list_getdata( currentpkgs );
@@ -143,7 +138,7 @@ void CreateItemsThread::run()
 
             item->setText( 3, alpm_pkg_get_version( pkg ) );
             item->setText( 1, alpm_pkg_get_name( pkg ) );
-            item->setText( 5, alpm_db_get_name( dbcrnt ) );
+            item->setText( 5, repo );
 
             int size = Backend::instance()->getPackageSize( item->text( 1 ), item->text( 5 ) );
 
@@ -170,11 +165,7 @@ void CreateItemsThread::run()
 
             emit updateProgress(( int )( count / totalPkgs ) * 100 );
         }
-
-        databases = alpm_list_next( databases );
     }
-
-    databases = alpm_list_first( databases );
 
     alpm_list_t *locPkg = Backend::instance()->getPackagesFromRepo( "local" );
 
@@ -2210,26 +2201,14 @@ void MainWindow::doStreamPackages()
 {
     QStringList packages;
 
-    alpm_list_t *databases = Backend::instance()->getAvailableRepos();
+    QStringList databases = Backend::instance()->getAvailableReposAsStringList();
 
-    databases = alpm_list_first( databases );
+    foreach (const QString &repo, databases) {
+        QStringList currentpkgs = Backend::instance()->getPackagesFromRepoAsStringList(repo);
 
-    while ( databases != NULL ) {
-        pmdb_t *dbcrnt = ( pmdb_t * )alpm_list_getdata( databases );
-
-        alpm_list_t *currentpkgs = alpm_db_getpkgcache( dbcrnt );
-
-        currentpkgs = alpm_list_first( currentpkgs );
-
-        while ( currentpkgs != NULL ) {
-            pmpkg_t *pkgcrnt = ( pmpkg_t * )alpm_list_getdata( currentpkgs );
-
-            packages.append( alpm_pkg_get_name( pkgcrnt ) );
-
-            currentpkgs = alpm_list_next( currentpkgs );
+        foreach (const QString &package, currentpkgs) {
+            packages.append(package);
         }
-
-        databases = alpm_list_next( databases );
     }
 
     emit streamPackages( packages );

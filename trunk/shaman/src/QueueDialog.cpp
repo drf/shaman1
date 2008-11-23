@@ -299,10 +299,6 @@ void QueueDialog::changeStatus( pmtransevt_t event, void *data1, void *data2 )
         actionDetail->setText( QString( "%s" ).arg(( char* )data1 ) );
         textEdit->append( QString( "%s" ).arg(( char* )data1 ) );
         break;
-    case PM_TRANS_EVT_PRINTURI:
-        actionDetail->setText( QString( "%s/%s" ).arg(( char* )data1 ).arg(( char* )data2 ) );
-        textEdit->append( QString( "%s/%s" ).arg(( char* )data1 ).arg(( char* )data2 ) );
-        break;
     case PM_TRANS_EVT_RETRIEVE_START:
         if ( status != 1 ) {
             status = 1;
