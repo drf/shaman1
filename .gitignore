@@ -8,4 +8,6 @@ ui_*
 *.orig
 *~
 .svn/
-
+*.prefs
+*.pending
+*.stats
