@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-24 22:12+0200\n"
+"POT-Creation-Date: 2008-11-24 22:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,95 +13,155 @@ msgstr ""
 "X-Generator: Translate Toolkit 1.2.0\n"
 
 #: BuildingDialog#1
+#, fuzzy
 msgctxt "BuildingDialog#1"
 msgid "Error"
 msgstr ""
+"\n"
+"            "
 
 #: BuildingDialog#2
+#, fuzzy
 msgid ""
 "Would you like to abort building?.\n"
 "All Process will be lost."
 msgstr ""
+"\n"
+"            "
 
 #: BuildingDialog#3
+#, fuzzy
 msgid "<br><br><b>Building Process Aborted by the User. Building Failed.</b>"
 msgstr ""
+"\n"
+"            "
 
 #: BuildingDialog#4
+#, fuzzy
 msgid "Updating ABS Tree..."
 msgstr ""
+"\n"
+"            "
 
 #: BuildingDialog#5
+#, fuzzy
 msgid "<b>Starting ABS Tree Update...</b><br><br>"
 msgstr ""
+"\n"
+"            "
 
 #: BuildingDialog#6
+#, fuzzy
 msgid "<br><br><b>ABS Tree Was Successfully Updated!</b>"
 msgstr ""
+"\n"
+"            "
 
 #: BuildingDialog#7
+#, fuzzy
 msgid "ABS Update"
 msgstr ""
+"\n"
+"            "
 
 #: BuildingDialog#8
+#, fuzzy
 msgid "Your ABS Tree was updated!"
 msgstr ""
+"\n"
+"            "
 
 #: BuildingDialog#9
+#, fuzzy
 msgid "Could not update the ABS Tree!"
 msgstr ""
+"\n"
+"            "
 
 #: BuildingDialog#10
+#, fuzzy
 msgid "<b>Building %1 failed!!</b><br><br>"
 msgstr ""
+"\n"
+"            "
 
 #: BuildingDialog#11
+#, fuzzy
 msgid "<b>%1 was built successfully!!</b><br><br>"
 msgstr ""
+"\n"
+"            "
 
 #: BuildingDialog#12
+#, fuzzy
 msgid "Processing Package %1 of %2..."
 msgstr ""
+"\n"
+"            "
 
 #: BuildingDialog#13
+#, fuzzy
 msgid "Building %1..."
 msgstr ""
+"\n"
+"            "
 
 #: BuildingDialog#14
+#, fuzzy
 msgid "<b>Could not set up the environment correctly for %1!!</b><br><br>"
 msgstr ""
+"\n"
+"            "
 
 #: BuildingDialog#15
+#, fuzzy
 msgid "<b>Building %1...</b><br><br>"
 msgstr ""
+"\n"
+"            "
 
 #: BuildingDialog#16
+#, fuzzy
 msgid "<b>Building operation has started.</b><br><br>"
 msgstr ""
+"\n"
+"            "
 
 #: BuildingHandler#1
+#, fuzzy
 msgctxt "BuildingHandler#1"
 msgid "Error"
 msgstr ""
+"\n"
+"            "
 
 #: BuildingHandler#2
+#, fuzzy
 msgid ""
 "You need to have ABS installed to use Shaman's\n"
 "building feature. Do you want to install it now?"
 msgstr ""
+"\n"
+"            "
 
 #: BuildingHandler#3
+#, fuzzy
 msgid ""
 "You can not remove packages when processing\n"
 "your queue from Source"
 msgstr ""
+"\n"
+"            "
 
 #: BuildingHandler#4
+#, fuzzy
 msgid ""
 "Some of your packages do not belong to Arch\n"
 "Linux's official repository. Shaman is able to\n"
 "build packages from official sources only."
 msgstr ""
+"\n"
+"            "
 
 #: BuildingHandler#5
 #, fuzzy
@@ -117,352 +177,569 @@ msgstr ""
 "        "
 
 #: BuildingHandler#6
+#, fuzzy
 msgctxt "BuildingHandler#6"
 msgid "To be Installed"
 msgstr ""
+"\n"
+"            "
 
 #: BuildingHandler#7
+#, fuzzy
 msgctxt "BuildingHandler#7"
 msgid "To be Upgraded"
 msgstr ""
+"\n"
+"            "
 
 #: BuildingHandler#8
+#, fuzzy
 msgid "Package Building"
 msgstr ""
+"\n"
+"            "
 
 #: BuildingHandler#9
+#, fuzzy
 msgid "Your Packages failed to build!"
 msgstr ""
+"\n"
+"            "
 
 #: BuildingHandler#10
+#, fuzzy
 msgid ""
 "Your packages Failed to Build.\n"
 "Look at the output for more details."
 msgstr ""
+"\n"
+"            "
 
 #: BuildingHandler#11
+#, fuzzy
 msgctxt "BuildingHandler#11"
 msgid "Close"
 msgstr ""
+"\n"
+"            "
 
 #: BuildingHandler#12
+#, fuzzy
 msgid "Building Packages Failed!!"
 msgstr ""
+"\n"
+"            "
 
 #: BuildingHandler#13
+#, fuzzy
 msgid ""
 "Some packages failed to build.\n"
 "Do you want to proceed anyway?"
 msgstr ""
+"\n"
+"            "
 
 #: BuildingHandler#14
+#, fuzzy
 msgid "Install Built Packages"
 msgstr ""
+"\n"
+"            "
 
 #: BuildingHandler#15
+#, fuzzy
 msgid "Close Without Installing"
 msgstr ""
+"\n"
+"            "
 
 #: BuildingHandler#16
+#, fuzzy
 msgid "Packages Built Successfully!"
 msgstr ""
+"\n"
+"            "
 
 #: BuildingHandler#17
+#, fuzzy
 msgid ""
 "Your Packages have been built successfully, and are ready to be installed"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#1
+#, fuzzy
 msgid "General"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#2
+#, fuzzy
 msgctxt "ConfigDialog#2"
 msgid "Clean Unused Databases"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#3
+#, fuzzy
 msgctxt "ConfigDialog#3"
 msgid "Clean Cache"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#4
+#, fuzzy
 msgctxt "ConfigDialog#4"
 msgid "Empty Cache"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#5
+#, fuzzy
 msgctxt "ConfigDialog#5"
 msgid "Optimize Pacman Database"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#6
+#, fuzzy
 msgctxt "ConfigDialog#6"
 msgid "Clean All Building Environments"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#7
+#, fuzzy
 msgctxt "ConfigDialog#7"
 msgid "Repositories"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#8
+#, fuzzy
 msgid "Pacman"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#9
+#, fuzzy
 msgid "ABS"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#10
+#, fuzzy
 msgid "Advanced"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#11
+#, fuzzy
 msgid "Enter Here the Repository's Name"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#12
+#, fuzzy
 msgid "Enter Here the Repository's Server"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#13
+#, fuzzy
 msgctxt "ConfigDialog#13"
 msgid "Ok"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#14
+#, fuzzy
 msgctxt "ConfigDialog#14"
 msgid "Cancel"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#15
+#, fuzzy
 msgctxt "ConfigDialog#15"
 msgid "Cleaning up unused Databases..."
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#16
+#, fuzzy
 msgctxt "ConfigDialog#16"
 msgid "Cleaning up Cache..."
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#17
+#, fuzzy
 msgctxt "ConfigDialog#17"
 msgid "Deleting Cache..."
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#18
+#, fuzzy
 msgctxt "ConfigDialog#18"
 msgid "Optimizing Pacman Database..."
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#19
+#, fuzzy
 msgctxt "ConfigDialog#19"
 msgid "Cleaning up building Environments..."
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#20
+#, fuzzy
 msgctxt "ConfigDialog#20"
 msgid "Cleaning up Unused Databases Failed!"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#21
+#, fuzzy
 msgctxt "ConfigDialog#21"
 msgid "Cleaning up Cache Failed!"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#22
+#, fuzzy
 msgctxt "ConfigDialog#22"
 msgid "Deleting Cache Failed!"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#23
+#, fuzzy
 msgctxt "ConfigDialog#23"
 msgid "Could not clean Build Environments!!"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#24
+#, fuzzy
 msgctxt "ConfigDialog#24"
 msgid "Unused Databases Cleaned up successfully!"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#25
+#, fuzzy
 msgctxt "ConfigDialog#25"
 msgid "Cache Cleaned Up Successfully!"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#26
+#, fuzzy
 msgctxt "ConfigDialog#26"
 msgid "Cache Successfully Deleted!"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#27
+#, fuzzy
 msgctxt "ConfigDialog#27"
 msgid "Build Environments Successfully Cleaned!"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#28
+#, fuzzy
 msgid "Saving Configuration"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#29
+#, fuzzy
 msgid "Unable to save Pacman configuration!"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#30
+#, fuzzy
 msgid ""
 "Some of your changes have not been applied,\n"
 "since alpm needs to be released.\n"
 "You need to restart Shaman to make them effective."
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#31
+#, fuzzy
 msgid "Settings Changed"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#32
+#, fuzzy
 msgid ""
 "Your repositories have changed.\n"
 "Do you want to Update Your Database?"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#33
+#, fuzzy
 msgid "Add Mirror"
 msgstr ""
+"\n"
+"            "
 
 # Obviously keep the example as it is ;)
 #: ConfigDialog#34
+#, fuzzy
 msgid ""
 "Mirror Format is incorrect. Your mirror should look like this:\n"
 "http://mirror.org/$repo/os/i686"
 msgstr ""
+"\n"
+"            "
 
 # mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.
 #: ConfigDialog#35
+#, fuzzy
 msgid ""
 "Your Mirror was successfully added!\n"
 "It is now available in mirrorlist."
 msgstr ""
+"\n"
+"            "
 
 # Obviously keep the example as it is ;)
 #: ConfigDialog#36
+#, fuzzy
 msgid ""
 "Mirror Format is incorrect. Your mirror should look like this:\n"
 "http://mirror.org/$repo/$arch"
 msgstr ""
+"\n"
+"            "
 
 # mirrorlist here means /etc/pacman.d/kdemodmirrorlist, so it should not be translated.
 #: ConfigDialog#37
+#, fuzzy
 msgid ""
 "Your Mirror was successfully added!\n"
 "It is now available in kdemodmirrorlist."
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#38
+#, fuzzy
 msgctxt "ConfigDialog#38"
 msgid "Pacman Database Optimized Successfully!"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#39
+#, fuzzy
 msgctxt "ConfigDialog#39"
 msgid "Could not Optimize Pacman Database!"
 msgstr ""
+"\n"
+"            "
 
 # sync is a command, so it should not be translated
 #: ConfigDialog#40
+#, fuzzy
 msgctxt "ConfigDialog#40"
 msgid "Running sync..."
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#41
+#, fuzzy
 msgctxt "ConfigDialog#41"
 msgid "Operation Completed Successfully!"
 msgstr ""
+"\n"
+"            "
 
 # Sync is always the command
 #: ConfigDialog#42
+#, fuzzy
 msgctxt "ConfigDialog#42"
 msgid "Sync was successfully executed!!"
 msgstr ""
+"\n"
+"            "
 
 # Sync is always the command
 #: ConfigDialog#43
+#, fuzzy
 msgctxt "ConfigDialog#43"
 msgid "Sync could not be executed!"
 msgstr ""
+"\n"
+"            "
 
 # Sync is always the command
 #: ConfigDialog#44
+#, fuzzy
 msgctxt "ConfigDialog#44"
 msgid "Sync could not be executed!!"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#45
+#, fuzzy
 msgid "Shaman - Configuration"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#46
+#, fuzzy
 msgid "Favourite Actions"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#47
+#, fuzzy
 msgid "When Upgrading System:"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#48
+#, fuzzy
 msgid "Upgrade Immediately"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#49
+#, fuzzy
 msgid "Add Upgradeable Packages To Queue"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#50
+#, fuzzy
 msgid "Ask"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#51
+#, fuzzy
 msgid "When Processing Queue"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#52
+#, fuzzy
 msgid "Keep application running in System Tray only"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#53
+#, fuzzy
 msgid "GUI Startup"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#54
+#, fuzzy
 msgid "Start in the System Tray"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#55
+#, fuzzy
 msgid "Show Splashscreen"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#56
+#, fuzzy
 msgid "Use the following language:"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#57
+#, fuzzy
 msgid "Disable Tray Icon"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#58
+#, fuzzy
 msgid "Maintenance"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#59
+#, fuzzy
 msgid "Process Selected"
 msgstr ""
+"\n"
+"            "
 
 # Waiting for a user action
 #: ConfigDialog#60
+#, fuzzy
 msgid "Waiting"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#61
+#, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -478,328 +755,556 @@ msgid ""
 "Sans'; font-size:9pt;\">Please choose an action from the Drop-Down "
 "Menu.</p></body></html>"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#62
+#, fuzzy
 msgid "Checkable Options"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#63
+#, fuzzy
 msgid "Use Active FTP"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#64
+#, fuzzy
 msgid "Use Deltas (needs xdelta to be installed)"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#65
+#, fuzzy
 msgid "Use SysLog"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#66
+#, fuzzy
 msgid "Advanced Options"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#67
+#, fuzzy
 msgid "HoldPkgs:"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#68
+#, fuzzy
 msgid "IgnorePkgs:"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#69
+#, fuzzy
 msgid "IgnoreGroups:"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#70
+#, fuzzy
 msgid "NoUpgrade:"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#71
+#, fuzzy
 msgid "NoExtract:"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#72
+#, fuzzy
 msgid "Log File:"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#73
+#, fuzzy
 msgid "XFerCommand: (example: /path/to/command %u) Blank for Default"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#74
+#, fuzzy
 msgid "Arch Linux Official Repositories"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#75
+#, fuzzy
 msgid ""
 "Here you can choose what repositories to use between Arch Linux's official "
 "ones. Please note that packages from Unstable and Testing may break your "
 "system."
 msgstr ""
+"\n"
+"            "
 
 # Do not translate
 #: ConfigDialog#76
+#, fuzzy
 msgid "Core"
 msgstr ""
+"\n"
+"            "
 
 # Do not translate
 #: ConfigDialog#77
+#, fuzzy
 msgid "Extra"
 msgstr ""
+"\n"
+"            "
 
 # Do not translate
 #: ConfigDialog#78
+#, fuzzy
 msgid "Community"
 msgstr ""
+"\n"
+"            "
 
 # Do not translate
 #: ConfigDialog#79
+#, fuzzy
 msgid "Testing"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#80
+#, fuzzy
 msgid "Server"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#81
+#, fuzzy
 msgid "Mirror:"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#82
+#, fuzzy
 msgid "KDEMod Repositories"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#83
+#, fuzzy
 msgid ""
 "KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
 "improved Qt build, compatible with Arch Linux standard Qt's, an improved "
 "theme, and lots of addons, KDEMod is the best way to taste the ease and the "
 "power of KDE with the simplicity and the power of Arch."
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#84
+#, fuzzy
 msgid "KDEMod 4 Repository"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#85
+#, fuzzy
 msgid "KDEMod 4 Extragear Repository"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#86
+#, fuzzy
 msgid "KDEMod 4 Playground Repository"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#87
+#, fuzzy
 msgid "KDEMod 4 Testing Repository"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#88
+#, fuzzy
 msgid "KDEMod 4 Unstable Repository (Testers only!)"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#89
+#, fuzzy
 msgid "KDEMod 3 Repository"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#90
+#, fuzzy
 msgid "Third-Party Repositories"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#91
+#, fuzzy
 msgid ""
 "You can extend your packages choice by adding other repositories. Third-"
 "Party Repositories act just as normal ones, and will be accessible through "
 "both Shaman and Pacman."
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#92
+#, fuzzy
 msgctxt "ConfigDialog#92"
 msgid "Repository"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#93
+#, fuzzy
 msgid "Add New Repository"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#94
+#, fuzzy
 msgid "Edit Repository"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#95
+#, fuzzy
 msgid "Remove Repository"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#96
+#, fuzzy
 msgid "Preferences"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#97
+#, fuzzy
 msgid "Process all dependencies and queue from binary first (recommended)"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#98
+#, fuzzy
 msgid "Review Building output before installing"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#99
+#, fuzzy
 msgid "ABS Configuration"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#100
+#, fuzzy
 msgid "Use supfiles that match your current repositories"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#101
+#, fuzzy
 msgid "Define supfiles manually"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#102
+#, fuzzy
 msgid "RSync Server:"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#103
+#, fuzzy
 msgid "Makepkg Configuration"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#104
+#, fuzzy
 msgid "CFlags"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#105
+#, fuzzy
 msgid "CXXFlags"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#106
+#, fuzzy
 msgid "BuildEnv"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#107
+#, fuzzy
 msgid "Options"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#108
+#, fuzzy
 msgid "Doc_Dirs"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#109
+#, fuzzy
 msgid "Build Environment"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#110
+#, fuzzy
 msgid "Building Path"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#111
+#, fuzzy
 msgid "Remove installed makedepends after build"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#112
+#, fuzzy
 msgid "Clean Build Environment after installation"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#113
+#, fuzzy
 msgid "When Application is in System Tray only"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#114
+#, fuzzy
 msgid "Update Database every"
 msgstr ""
+"\n"
+"            "
 
 # As in "minutes"
 #: ConfigDialog#115
+#, fuzzy
 msgid "min"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#116
+#, fuzzy
 msgid "Show tray notification Windows"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#117
+#, fuzzy
 msgid "If upgrades are available:"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#118
+#, fuzzy
 msgid "Just Notify"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#119
+#, fuzzy
 msgid "Notify and add them to Queue"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#120
+#, fuzzy
 msgid "Update Database at"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#121
+#, fuzzy
 msgid "Use a proxy-server"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#122
+#, fuzzy
 msgid "IP:"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#123
+#, fuzzy
 msgid "Port:"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#124
+#, fuzzy
 msgid "HTTP Proxy"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#125
+#, fuzzy
 msgid "FTP Proxy"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#126
+#, fuzzy
 msgid "Use Shaman RSS Capabilities"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#127
+#, fuzzy
 msgid "Update RSS Feed Every"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#128
+#, fuzzy
 msgid "Notify upon new items"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#129
+#, fuzzy
 msgid ""
 "Check if there is an unread news about a package in Queue before processing "
 "it"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#130
+#, fuzzy
 msgid "Interface"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#131
+#, fuzzy
 msgid "Use Animated Tray Icon"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#132
+#, fuzzy
 msgid "Start Shaman Automatically on X Startup"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#133
+#, fuzzy
 msgid "Forbid starting Shaman as root"
 msgstr ""
+"\n"
+"            "
 
 #: EditPBuild#1
+#, fuzzy
 msgid "Saving"
 msgstr ""
+"\n"
+"            "
 
 #: EditPBuild#2
+#, fuzzy
 msgid ""
 "You modified this PKGBUILD.\n"
 "Do you want to save it?"
 msgstr ""
+"\n"
+"            "
 
 #: LocalPackage#1
+#, fuzzy
 msgid "Install Package from File"
 msgstr ""
+"\n"
+"            "
 
 #: LocalPackage#2
+#, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -812,36 +1317,59 @@ msgid ""
 "Sans';\"><span style=\" font-weight:600;\">Local Package "
 "Installation</span></p></body></html>"
 msgstr ""
+"\n"
+"            "
 
 #: LocalPackage#3
+#, fuzzy
 msgid "Show..."
 msgstr ""
+"\n"
+"            "
 
 #: LocalPackage#4
+#, fuzzy
 msgctxt "LocalPackage#4"
 msgid "More Details..."
 msgstr ""
+"\n"
+"            "
 
 #: LocalPackage#5
+#, fuzzy
 msgctxt "LocalPackage#5"
 msgid "Cancel"
 msgstr ""
+"\n"
+"            "
 
 #: LocalPackage#6
+#, fuzzy
 msgid "Install Package"
 msgstr ""
+"\n"
+"            "
 
 #: LocalPackageDialog#1
+#, fuzzy
 msgid "Package is not installed"
 msgstr ""
+"\n"
+"            "
 
 #: LocalPackageDialog#2
+#, fuzzy
 msgid "Version %1 of this package is already installed"
 msgstr ""
+"\n"
+"            "
 
 #: LocalPackageDialog#3
+#, fuzzy
 msgid "All dependencies are satisfied"
 msgstr ""
+"\n"
+"            "
 
 #: LocalPackageDialog#4
 #, fuzzy
@@ -852,27 +1380,43 @@ msgstr ""
 "        "
 
 #: MainWindow#1
+#, fuzzy
 msgid "Name"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#2
+#, fuzzy
 msgid "Description"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#3
+#, fuzzy
 msgid "Name and Description"
 msgstr ""
+"\n"
+"            "
 
 # Exit Shaman Shortcut
 #: MainWindow#4
+#, fuzzy
 msgid "Ctrl+Q"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#5
+#, fuzzy
 msgid "Shaman - Reducing To Tray"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#6
+#, fuzzy
 msgid ""
 "Shaman will keep running in the system tray.\n"
 "To close it, click Quit in the file menu or in the tray icon context menu.\n"
@@ -880,270 +1424,444 @@ msgid ""
 "at a regular interval and notify you about available upgrades.\n"
 "You can change this behaviour in Settings."
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#7
+#, fuzzy
 msgctxt "MainWindow#7"
 msgid "Repositories"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#8
+#, fuzzy
 msgid "All Repositories"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#9
+#, fuzzy
 msgid "Local Packages"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#10
+#, fuzzy
 msgid "Package Groups"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#11
+#, fuzzy
 msgid "All Groups"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#12
+#, fuzzy
 msgid "Installed packages"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#13
+#, fuzzy
 msgid "Not installed packages"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#14
+#, fuzzy
 msgid "Upgradeable packages"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#15
+#, fuzzy
 msgid "Packages in Queue"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#16
+#, fuzzy
 msgid "Mark for Re&installation"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#17
+#, fuzzy
 msgid "Mark for &Installation"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#18
+#, fuzzy
 msgctxt "MainWindow#18"
 msgid "Install"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#19
+#, fuzzy
 msgctxt "MainWindow#19"
 msgid "Uninstall"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#20
+#, fuzzy
 msgctxt "MainWindow#20"
 msgid "Complete Uninstall"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#21
+#, fuzzy
 msgid "Status: "
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#22
+#, fuzzy
 msgid "Installed"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#23
+#, fuzzy
 msgid "Not installed"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#24
+#, fuzzy
 msgid "Local Version: "
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#25
+#, fuzzy
 msgid "Version in the Repository: "
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#26
+#, fuzzy
 msgid "Action: "
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#27
+#, fuzzy
 msgctxt "MainWindow#27"
 msgid "Error"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#28
+#, fuzzy
 msgid ""
 "One or more Databases could not be updated.\n"
 "Last error reported was:\n"
 "%1"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#29
+#, fuzzy
 msgctxt "MainWindow#29"
 msgid "Database Update"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#30
+#, fuzzy
 msgid "One or more databases failed to update!"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#31
+#, fuzzy
 msgid "Databases Updated Successfully"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#32
+#, fuzzy
 msgid "Pacman Update"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#33
+#, fuzzy
 msgid ""
 "Pacman can be upgraded. It is advised to process it alone\n"
 "to avoid version conflicts.\n"
 "Do you want to Upgrade Pacman now?"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#34
+#, fuzzy
 msgid "Shaman Update"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#35
+#, fuzzy
 msgid ""
 "Shaman can be upgraded. It is advised to process it alone\n"
 "to avoid version conflicts.\n"
 "Do you want to Upgrade Shaman now?"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#36
+#, fuzzy
 msgid "Mark for &Removal"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#37
+#, fuzzy
 msgid "Mark for Upgrade"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#38
+#, fuzzy
 msgid "&Cancel Action"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#39
+#, fuzzy
 msgctxt "MainWindow#39"
 msgid "Package Information"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#40
+#, fuzzy
 msgid "Mark all for installation"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#41
+#, fuzzy
 msgid "Mark all for reinstallation"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#42
+#, fuzzy
 msgid "Mark all for removal"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#43
+#, fuzzy
 msgid "Cancel all actions"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#44
+#, fuzzy
 msgctxt "MainWindow#44"
 msgid "Shaman"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#45
+#, fuzzy
 msgid ""
 "A package providing %1 is already installed.\n"
 "Do you want to install %1 anyway?"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#46
+#, fuzzy
 msgctxt "MainWindow#46"
 msgid "System Upgrade"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#47
+#, fuzzy
 msgid "Your system is up to date!"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#48
+#, fuzzy
 msgid "News Alert"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#49
+#, fuzzy
 msgid ""
 "There is an unread news about %1.\n"
 "Do you want to read it?"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#50
+#, fuzzy
 msgctxt "MainWindow#50"
 msgid "Upgrade"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#51
+#, fuzzy
 msgctxt "MainWindow#51"
 msgid "Queue Processing"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#52
+#, fuzzy
 msgid ""
 "Your Queue is being processed.\n"
 "Please wait."
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#53
+#, fuzzy
 msgid "Queue Processed"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#54
+#, fuzzy
 msgid ""
 "One or more errors occurred, your Queue\n"
 "was not successfully processed"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#55
+#, fuzzy
 msgid "Error Processing Queue!!"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#56
+#, fuzzy
 msgid "Restart required"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#57
+#, fuzzy
 msgid ""
 "Pacman or Shaman was updated. Shaman will now quit,\n"
 "please restart it to use the new version"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#58
+#, fuzzy
 msgid ""
 "Your Kernel has been updated.\n"
 "Please restart your PC soon to load the new Kernel."
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#59
+#, fuzzy
 msgid "Your Queue was successfully processed!"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#60
+#, fuzzy
 msgid "Your Queue was successfully processed!!"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#61
+#, fuzzy
 msgid "Install a Package"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#62
+#, fuzzy
 msgid "Arch Linux Packages (*.pkg.tar.gz)"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#63
+#, fuzzy
 msgid ""
 "%1 does not seem\n"
 "a valid package"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#64
+#, fuzzy
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -1169,405 +1887,669 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Lukas Appelhans "
 "&lt;boom1992@kdemod.ath.cx&gt;</p></body></html>"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#65
+#, fuzzy
 msgid "All packages"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#66
+#, fuzzy
 msgid "Status"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#67
+#, fuzzy
 msgid "Action"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#68
+#, fuzzy
 msgid "Version"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#69
+#, fuzzy
 msgid "Size"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#70
+#, fuzzy
 msgctxt "MainWindow#70"
 msgid "Repository"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#71
+#, fuzzy
 msgid "Groups"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#72
+#, fuzzy
 msgid "Action-Text"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#73
+#, fuzzy
 msgid "Re&positories"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#74
+#, fuzzy
 msgid "Package &Groups"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#75
+#, fuzzy
 msgid "Install selected package"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#76
+#, fuzzy
 msgid "Remove selected package"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#77
+#, fuzzy
 msgid "Complete Remove selected package (pacman -Rcs)"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#78
+#, fuzzy
 msgid "Mark for complete re&moval"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#79
+#, fuzzy
 msgid "Cancel action for selected package"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#80
+#, fuzzy
 msgid "Package I&nformation"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#81
+#, fuzzy
 msgid "File&s"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#82
+#, fuzzy
 msgctxt "MainWindow#82"
 msgid "1"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#83
+#, fuzzy
 msgid "&Dependencies"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#84
+#, fuzzy
 msgid "&File"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#85
+#, fuzzy
 msgid "&Help"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#86
+#, fuzzy
 msgid "&Actions"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#87
+#, fuzzy
 msgid "Build and Install from Source"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#88
+#, fuzzy
 msgid "&Tools"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#89
+#, fuzzy
 msgid "Quick Actions"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#90
+#, fuzzy
 msgid "Settings..."
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#91
+#, fuzzy
 msgid "About..."
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#92
+#, fuzzy
 msgctxt "MainWindow#92"
 msgid "Update Database"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#93
+#, fuzzy
 msgctxt "MainWindow#93"
 msgid "Upgrade System"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#94
+#, fuzzy
 msgid "Install Package From File"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#95
+#, fuzzy
 msgid "Update ABS Tree"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#96
+#, fuzzy
 msgid "Build and Install Queue"
 msgstr ""
+"\n"
+"            "
 
 # Quit the application
 #: MainWindow#97
+#, fuzzy
 msgctxt "MainWindow#97"
 msgid "Quit"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#98
+#, fuzzy
 msgctxt "MainWindow#98"
 msgid "Process Queue"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#99
+#, fuzzy
 msgid "Read News"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#100
+#, fuzzy
 msgid "View Log"
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#1
+#, fuzzy
 msgid "Maintenance Actions"
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#2
+#, fuzzy
 msgid "Please choose an action to start maintenance..."
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#3
+#, fuzzy
 msgctxt "MaintenanceBar#3"
 msgid "Clean Unused Databases"
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#4
+#, fuzzy
 msgctxt "MaintenanceBar#4"
 msgid "Clean Cache"
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#5
+#, fuzzy
 msgctxt "MaintenanceBar#5"
 msgid "Empty Cache"
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#6
+#, fuzzy
 msgctxt "MaintenanceBar#6"
 msgid "Optimize Pacman Database"
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#7
+#, fuzzy
 msgctxt "MaintenanceBar#7"
 msgid "Clean All Building Environments"
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#8
+#, fuzzy
 msgctxt "MaintenanceBar#8"
 msgid "Cleaning up unused Databases..."
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#9
+#, fuzzy
 msgctxt "MaintenanceBar#9"
 msgid "Cleaning up Cache..."
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#10
+#, fuzzy
 msgctxt "MaintenanceBar#10"
 msgid "Deleting Cache..."
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#11
+#, fuzzy
 msgctxt "MaintenanceBar#11"
 msgid "Optimizing Pacman Database..."
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#12
+#, fuzzy
 msgctxt "MaintenanceBar#12"
 msgid "Cleaning up building Environments..."
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#13
+#, fuzzy
 msgctxt "MaintenanceBar#13"
 msgid "Abort"
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#14
+#, fuzzy
 msgid "System Maintenance"
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#15
+#, fuzzy
 msgctxt "MaintenanceBar#15"
 msgid "Unused Databases Cleaned up successfully!"
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#16
+#, fuzzy
 msgctxt "MaintenanceBar#16"
 msgid "Cache Cleaned Up Successfully!"
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#17
+#, fuzzy
 msgctxt "MaintenanceBar#17"
 msgid "Cache Successfully Deleted!"
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#18
+#, fuzzy
 msgctxt "MaintenanceBar#18"
 msgid "Build Environments Successfully Cleaned!"
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#19
+#, fuzzy
 msgctxt "MaintenanceBar#19"
 msgid "Close"
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#20
+#, fuzzy
 msgctxt "MaintenanceBar#20"
 msgid "Cleaning up Unused Databases Failed!"
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#21
+#, fuzzy
 msgctxt "MaintenanceBar#21"
 msgid "Cleaning up Cache Failed!"
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#22
+#, fuzzy
 msgctxt "MaintenanceBar#22"
 msgid "Deleting Cache Failed!"
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#23
+#, fuzzy
 msgctxt "MaintenanceBar#23"
 msgid "Could not clean Build Environments!!"
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#24
+#, fuzzy
 msgctxt "MaintenanceBar#24"
 msgid "Pacman Database Optimized Successfully!"
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#25
+#, fuzzy
 msgctxt "MaintenanceBar#25"
 msgid "Could not Optimize Pacman Database!"
 msgstr ""
+"\n"
+"            "
 
 # sync is a command, so it should not be translated
 #: MaintenanceBar#26
+#, fuzzy
 msgctxt "MaintenanceBar#26"
 msgid "Running sync..."
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#27
+#, fuzzy
 msgctxt "MaintenanceBar#27"
 msgid "Operation Completed Successfully!"
 msgstr ""
+"\n"
+"            "
 
 # Sync is always the command
 #: MaintenanceBar#28
+#, fuzzy
 msgctxt "MaintenanceBar#28"
 msgid "Sync was successfully executed!!"
 msgstr ""
+"\n"
+"            "
 
 # Sync is always the command
 #: MaintenanceBar#29
+#, fuzzy
 msgctxt "MaintenanceBar#29"
 msgid "Sync could not be executed!"
 msgstr ""
+"\n"
+"            "
 
 # Sync is always the command
 #: MaintenanceBar#30
+#, fuzzy
 msgctxt "MaintenanceBar#30"
 msgid "Sync could not be executed!!"
 msgstr ""
+"\n"
+"            "
 
 #: NewsViewer#1
+#, fuzzy
 msgid "Please wait, fetching items..."
 msgstr ""
+"\n"
+"            "
 
 #: NewsViewer#2
+#, fuzzy
 msgctxt "NewsViewer#2"
 msgid "Mark as Read"
 msgstr ""
+"\n"
+"            "
 
 #: NewsViewer#3
+#, fuzzy
 msgid "Mark as Unread"
 msgstr ""
+"\n"
+"            "
 
 #: NewsViewer#4
+#, fuzzy
 msgctxt "NewsViewer#4"
 msgid "Error"
 msgstr ""
+"\n"
+"            "
 
 #: NewsViewer#5
+#, fuzzy
 msgid "Could not fetch the RSS feed! Error reported was:"
 msgstr ""
+"\n"
+"            "
 
 # Size is in Gib
 #: PackageProperties#1
+#, fuzzy
 msgid "%1 GiB"
 msgstr ""
+"\n"
+"            "
 
 # Size is in MiB
 #: PackageProperties#2
+#, fuzzy
 msgid "%1 MiB"
 msgstr ""
+"\n"
+"            "
 
 # Size is in KiB
 #: PackageProperties#3
+#, fuzzy
 msgid "%1 KiB"
 msgstr ""
+"\n"
+"            "
 
 # Size is in Bytes
 #: PackageProperties#4
+#, fuzzy
 msgid "%1 Bytes"
 msgstr ""
+"\n"
+"            "
 
 #: PackageProperties#5
+#, fuzzy
 msgid "Shaman - %1 properties"
 msgstr ""
+"\n"
+"            "
 
 # Stands for: Not Available
 #: PackageProperties#6
+#, fuzzy
 msgid "N/A"
 msgstr ""
+"\n"
+"            "
 
 #: PackageProperties#7
+#, fuzzy
 msgid "Changelog not available for this package"
 msgstr ""
+"\n"
+"            "
 
 #: QObject#1
+#, fuzzy
 msgid "Whoa, that's co&ol!"
 msgstr ""
+"\n"
+"            "
 
 #: QObject#2
+#, fuzzy
 msgctxt "QObject#2"
 msgid "Ok"
 msgstr ""
+"\n"
+"            "
 
 #: QObject#3
+#, fuzzy
 msgid "O&k"
 msgstr ""
+"\n"
+"            "
 
 #: QObject#4
+#, fuzzy
 msgid "&Yes"
 msgstr ""
+"\n"
+"            "
 
 #: QObject#5
+#, fuzzy
 msgid "&No"
 msgstr ""
+"\n"
+"            "
 
 #: QObject#6
+#, fuzzy
 msgid "Do not &show this Again"
 msgstr ""
+"\n"
+"            "
 
 #: QObject#7
+#, fuzzy
 msgid "C&ancel"
 msgstr ""
+"\n"
+"            "
 
 #: QObject#8
+#, fuzzy
 msgctxt "QObject#8"
 msgid "Shaman"
 msgstr ""
+"\n"
+"            "
 
 #: QObject#9
+#, fuzzy
 msgid ""
 "It looks like another copy of Shaman is running.\n"
 "You can only run one copy of Shaman at a time."
 msgstr ""
+"\n"
+"            "
 
 #: QObject#10
+#, fuzzy
 msgid ""
 "Shaman could not switch to root.\n"
 "Probably you have not set the SUID bit to it.\n"
@@ -1576,272 +2558,452 @@ msgid ""
 "Note that this is safe, please read Shaman wiki\n"
 "for more details."
 msgstr ""
+"\n"
+"            "
 
 #: QObject#11
+#, fuzzy
 msgid ""
 "There was a problem while testing libalpm.\n"
 "Maybe another application has a lock on it."
 msgstr ""
+"\n"
+"            "
 
 # Hey! If you are reading this, first of all thanks for helping us in making Shaman better. There are not many comments unless where needed, since all the strings are pretty self-explanatory. You will see a lot of HTML in some cases: do not let that scare you, but please edit text only. Editing HTML tags too may break our layout, so be careful. A good practice could be copying the whole string, and then translating just what's outside the tags, usually just a few words. If you have any doubts, or if you just want to drop us a line, there goes our email addresses:
 # Dario: drf54321@gmail.com
 # Lukas: l.appelhans@gmx.de
 # Thanks again, and enjoy your translation!
 #: QObject#12
+#, fuzzy
 msgctxt "QObject#12"
 msgid "Shaman"
 msgstr ""
+"\n"
+"            "
 
 #: QObject#13
+#, fuzzy
 msgid ""
 "Your settings file seems unwritable.\n"
 "Please check permissions on it."
 msgstr ""
+"\n"
+"            "
 
 #: QObject#14
+#, fuzzy
 msgctxt "QObject#14"
 msgid "Please Wait..."
 msgstr ""
+"\n"
+"            "
 
 #: QObject#15
+#, fuzzy
 msgid ""
 "Shaman can not be started as root.\n"
 "Please restart it as unprivileged user."
 msgstr ""
+"\n"
+"            "
 
 #: QObject#16
+#, fuzzy
 msgid ""
 "You have started Shaman as root.\n"
 "It is advised to start it as unprivileged user.\n"
 "Shaman will ask you for root password when needed."
 msgstr ""
+"\n"
+"            "
 
 #: QObject#17
+#, fuzzy
 msgid ""
 "Pacman is not updated.\n"
 "Shaman needs libalpm >= 2.1.0 to run.\n"
 "Yours is %1. Please update Pacman."
 msgstr ""
+"\n"
+"            "
 
 #: QObject#18
+#, fuzzy
 msgid "Loading Databases..."
 msgstr ""
+"\n"
+"            "
 
 #: QObject#19
+#, fuzzy
 msgid "Loading Packages..."
 msgstr ""
+"\n"
+"            "
 
 #: QObject#20
+#, fuzzy
 msgid "Starting up Shaman..."
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#1
+#, fuzzy
 msgid "<br><b> * Validating Transaction</b><br>"
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#2
+#, fuzzy
 msgid "Validating Dependencies..."
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#3
+#, fuzzy
 msgid "Checking for Conflicts..."
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#4
+#, fuzzy
 msgid "Resolving Dependencies..."
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#5
+#, fuzzy
 msgid "Looking for Inter-Conflicts..."
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#6
+#, fuzzy
 msgid "<br><b> * Package Installation Started</b><br>"
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#7
+#, fuzzy
 msgid "Installing %1..."
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#8
+#, fuzzy
 msgid "%1 (%2) installed successfully!"
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#9
+#, fuzzy
 msgid "<br><b> * Package Removal Started</b><br>"
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#10
+#, fuzzy
 msgid "Removing %1..."
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#11
+#, fuzzy
 msgid "%1 (%2) removed successfully!"
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#12
+#, fuzzy
 msgid "<br><b> * Package Upgrading Started</b><br>"
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#13
+#, fuzzy
 msgid "Upgrading %1..."
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#14
+#, fuzzy
 msgid "Upgraded %1 successfully (%2 -> %3)"
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#15
+#, fuzzy
 msgid "<br><b> * Queue Processing Started</b><br>"
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#16
+#, fuzzy
 msgid "Checking package integrity..."
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#17
+#, fuzzy
 msgid "Checking delta integrity..."
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#18
+#, fuzzy
 msgid "Applying deltas..."
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#19
+#, fuzzy
 msgid "Generating %1 with %2... "
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#20
+#, fuzzy
 msgid "Success!"
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#21
+#, fuzzy
 msgid "Failed!"
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#22
+#, fuzzy
 msgid "<br><b> * Package Downloading Started</b><br>"
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#23
+#, fuzzy
 msgid "Starting downloading packages from %1..."
 msgstr ""
+"\n"
+"            "
 
 # You just have to translate 'remaining' here. Leave everything else as it is.
 #: QueueDialog#24
+#, fuzzy
 msgid "%p% (%1 KB/s, %4:%5:%6 remaining)"
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#25
+#, fuzzy
 msgid "Downloading %1... (%2 MB of %3 MB)"
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#26
+#, fuzzy
 msgid "Downloading %1... (%2 KB of %3 KB)"
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#27
+#, fuzzy
 msgid "Queue processed, please wait..."
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#28
+#, fuzzy
 msgid "Queue processing failed!"
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#29
+#, fuzzy
 msgid "Queue processed successfully!"
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#30
+#, fuzzy
 msgctxt "QueueDialog#30"
 msgid "Close"
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#31
+#, fuzzy
 msgid "Unexpected Error. Shaman might be corrupted."
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#32
+#, fuzzy
 msgid "Executing %1 scriptlet for %2..."
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#33
+#, fuzzy
 msgid "Extracting Scriptlet from package failed!!"
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#34
+#, fuzzy
 msgid "Package %1 does not have %2 scriptlet"
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#35
+#, fuzzy
 msgid "Scriptlet processed successfully!"
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#36
+#, fuzzy
 msgid "Error processing Scriptlet!!"
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#37
+#, fuzzy
 msgctxt "QueueDialog#37"
 msgid "Queue Processing"
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#38
+#, fuzzy
 msgid ""
 "Would you like to abort Queue Processing?\n"
 "This may damage your system."
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#39
+#, fuzzy
 msgid "There has been an error while preparing the transaction.\n"
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#40
+#, fuzzy
 msgid "There has been an error while committing the transaction.\n"
 msgstr ""
+"\n"
+"            "
 
 #: QueueReadyDialog#1
+#, fuzzy
 msgid "Review Queue"
 msgstr ""
+"\n"
+"            "
 
 #: QueueReadyDialog#2
+#, fuzzy
 msgctxt "QueueReadyDialog#2"
 msgid "Force Queue Processing"
 msgstr ""
+"\n"
+"            "
 
 #: QueueReadyDialog#3
+#, fuzzy
 msgctxt "QueueReadyDialog#3"
 msgid "Turn off PC when Queue is done"
 msgstr ""
+"\n"
+"            "
 
 #: QueueReadyDialog#4
+#, fuzzy
 msgid "Process in Tray"
 msgstr ""
+"\n"
+"            "
 
 #: QueueReadyDialog#5
+#, fuzzy
 msgid "Keep Queue Dialog Open after the Queue is finished"
 msgstr ""
+"\n"
+"            "
 
 #: QueueReadyDialog#6
+#, fuzzy
 msgctxt "QueueReadyDialog#6"
 msgid "Show packages..."
 msgstr ""
+"\n"
+"            "
 
 #: QueueReadyDialog#7
+#, fuzzy
 msgctxt "QueueReadyDialog#7"
 msgid "Packages In Queue"
 msgstr ""
+"\n"
+"            "
 
 #: QueueReadyDialog#8
+#, fuzzy
 msgctxt "QueueReadyDialog#8"
 msgid "Cancel"
 msgstr ""
+"\n"
+"            "
 
 #: QueueReadyDialog#9
+#, fuzzy
 msgid "Process"
 msgstr ""
+"\n"
+"            "
 
 #: QueueReadyDialog#10
+#, fuzzy
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -1851,44 +3013,70 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Review Queue</span></p></body></html>"
 msgstr ""
+"\n"
+"            "
 
 #: ReviewQueueDialog#1
+#, fuzzy
 msgctxt "ReviewQueueDialog#1"
 msgid "Install"
 msgstr ""
+"\n"
+"            "
 
 #: ReviewQueueDialog#2
+#, fuzzy
 msgctxt "ReviewQueueDialog#2"
 msgid "To be Installed"
 msgstr ""
+"\n"
+"            "
 
 #: ReviewQueueDialog#3
+#, fuzzy
 msgctxt "ReviewQueueDialog#3"
 msgid "Upgrade"
 msgstr ""
+"\n"
+"            "
 
 #: ReviewQueueDialog#4
+#, fuzzy
 msgctxt "ReviewQueueDialog#4"
 msgid "To be Upgraded"
 msgstr ""
+"\n"
+"            "
 
 #: ReviewQueueDialog#5
+#, fuzzy
 msgctxt "ReviewQueueDialog#5"
 msgid "Uninstall"
 msgstr ""
+"\n"
+"            "
 
 #: ReviewQueueDialog#6
+#, fuzzy
 msgid "To be Removed"
 msgstr ""
+"\n"
+"            "
 
 #: ReviewQueueDialog#7
+#, fuzzy
 msgctxt "ReviewQueueDialog#7"
 msgid "Complete Uninstall"
 msgstr ""
+"\n"
+"            "
 
 #: ReviewQueueDialog#8
+#, fuzzy
 msgid "Your Queue is about to be processed. You are going to:<br />"
 msgstr ""
+"\n"
+"            "
 
 #: ReviewQueueDialog#9
 #, fuzzy
@@ -1907,65 +3095,107 @@ msgstr ""
 "        "
 
 #: ReviewQueueDialog#11
+#, fuzzy
 msgid "Do you wish to continue?"
 msgstr ""
+"\n"
+"            "
 
 #: ShamanStatusBar#1
+#, fuzzy
 msgid "%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages"
 msgstr ""
+"\n"
+"            "
 
 #: ShamanStatusBar#2
+#, fuzzy
 msgid "%1 will be used"
 msgstr ""
+"\n"
+"            "
 
 #: ShamanStatusBar#3
+#, fuzzy
 msgid "%1 will be freed"
 msgstr ""
+"\n"
+"            "
 
 #: ShamanStatusBar#4
+#, fuzzy
 msgid "%1 to be Installed, %2 to be Removed"
 msgstr ""
+"\n"
+"            "
 
 #: ShamanTrayIcon#1
+#, fuzzy
 msgctxt "ShamanTrayIcon#1"
 msgid "Update Database"
 msgstr ""
+"\n"
+"            "
 
 #: ShamanTrayIcon#2
+#, fuzzy
 msgctxt "ShamanTrayIcon#2"
 msgid "Upgrade System"
 msgstr ""
+"\n"
+"            "
 
 #: ShamanTrayIcon#3
+#, fuzzy
 msgctxt "ShamanTrayIcon#3"
 msgid "Process Queue"
 msgstr ""
+"\n"
+"            "
 
 #: ShamanTrayIcon#4
+#, fuzzy
 msgid "Settings"
 msgstr ""
+"\n"
+"            "
 
 #: ShamanTrayIcon#5
+#, fuzzy
 msgctxt "ShamanTrayIcon#5"
 msgid "Quit"
 msgstr ""
+"\n"
+"            "
 
 #: ShamanTrayIcon#6
+#, fuzzy
 msgid "Shaman - Idle"
 msgstr ""
+"\n"
+"            "
 
 #: ShamanTrayIcon#7
+#, fuzzy
 msgid "Shaman - Processing"
 msgstr ""
+"\n"
+"            "
 
 #: ShamanTrayIcon#8
+#, fuzzy
 msgid "Shaman - Idle (Upgrades Available)"
 msgstr ""
+"\n"
+"            "
 
 #: ShamanTrayIcon#9
+#, fuzzy
 msgctxt "ShamanTrayIcon#9"
 msgid "System Upgrade"
 msgstr ""
+"\n"
+"            "
 
 #: ShamanTrayIcon#10
 #, fuzzy
@@ -1978,24 +3208,36 @@ msgstr ""
 "        "
 
 #: ShamanTrayIcon#11
+#, fuzzy
 msgid "New News Available"
 msgstr ""
+"\n"
+"            "
 
 #: ShamanTrayIcon#12
+#, fuzzy
 msgid ""
 "There are new news available.\n"
 "Click here to review them."
 msgstr ""
+"\n"
+"            "
 
 #: ShamanTrayIcon#13
+#, fuzzy
 msgid "Failed Fetching News"
 msgstr ""
+"\n"
+"            "
 
 #: ShamanTrayIcon#14
+#, fuzzy
 msgid ""
 "An error occourred while fetching news!\n"
 "Click here to open the News Dialog for more details."
 msgstr ""
+"\n"
+"            "
 
 #: SysUpgradeDialog#1
 #, fuzzy
@@ -2008,23 +3250,36 @@ msgstr ""
 "        "
 
 #: SysUpgradeDialog#2
+#, fuzzy
 msgctxt "SysUpgradeDialog#2"
 msgid "To be Upgraded"
 msgstr ""
+"\n"
+"            "
 
 #: aboutDialog#1
+#, fuzzy
 msgid "About Shaman"
 msgstr ""
+"\n"
+"            "
 
 #: aboutDialog#2
+#, fuzzy
 msgid "About"
 msgstr ""
+"\n"
+"            "
 
 #: aboutDialog#3
+#, fuzzy
 msgid "Authors"
 msgstr ""
+"\n"
+"            "
 
 #: aboutDialog#4
+#, fuzzy
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -2048,12 +3303,18 @@ msgid ""
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
 "indent:0px;\"></p></body></html>"
 msgstr ""
+"\n"
+"            "
 
 #: aboutDialog#5
+#, fuzzy
 msgid "Thanks To"
 msgstr ""
+"\n"
+"            "
 
 #: aboutDialog#6
+#, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -2238,48 +3499,78 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
 "style=\" font-weight:400;\">Macedonian Translator</span></p></body></html>"
 msgstr ""
+"\n"
+"            "
 
 #: aboutDialog#7
+#, fuzzy
 msgid "Visit &Website..."
 msgstr ""
+"\n"
+"            "
 
 #: authDialog#1
+#, fuzzy
 msgid "Root Password Required"
 msgstr ""
+"\n"
+"            "
 
 #: authDialog#2
+#, fuzzy
 msgid ""
 "Shaman needs root privileges to perform this action.\n"
 "Please enter in the field below the root password to continue."
 msgstr ""
+"\n"
+"            "
 
 #: authDialog#3
+#, fuzzy
 msgid "Never ask for this anymore"
 msgstr ""
+"\n"
+"            "
 
 #: authDialog#4
+#, fuzzy
 msgctxt "authDialog#4"
 msgid "Ok"
 msgstr ""
+"\n"
+"            "
 
 #: authDialog#5
+#, fuzzy
 msgid "Return"
 msgstr ""
+"\n"
+"            "
 
 #: authDialog#6
+#, fuzzy
 msgctxt "authDialog#6"
 msgid "Cancel"
 msgstr ""
+"\n"
+"            "
 
 #: authDialog#7
+#, fuzzy
 msgid "Backspace"
 msgstr ""
+"\n"
+"            "
 
 #: buildingDialog#1
+#, fuzzy
 msgid "Shaman - Building Packages"
 msgstr ""
+"\n"
+"            "
 
 #: buildingDialog#2
+#, fuzzy
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -2289,51 +3580,84 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Building Packages...</span></p></body></html>"
 msgstr ""
+"\n"
+"            "
 
 #: buildingDialog#3
+#, fuzzy
 msgctxt "buildingDialog#3"
 msgid "Abort"
 msgstr ""
+"\n"
+"            "
 
 #: buildingDialog#4
+#, fuzzy
 msgid "Reduce To Tray"
 msgstr ""
+"\n"
+"            "
 
 #: dbUpdateDialog#1
+#, fuzzy
 msgctxt "dbUpdateDialog#1"
 msgid "Database Update"
 msgstr ""
+"\n"
+"            "
 
 #: dbUpdateDialog#2
+#, fuzzy
 msgid "Update Database.."
 msgstr ""
+"\n"
+"            "
 
 #: editPBDialog#1
+#, fuzzy
 msgid "Editing PKGBUILD"
 msgstr ""
+"\n"
+"            "
 
 #: editPBDialog#2
+#, fuzzy
 msgid "Editing PKGBUILD of:"
 msgstr ""
+"\n"
+"            "
 
 #: editPBDialog#3
+#, fuzzy
 msgid "Save"
 msgstr ""
+"\n"
+"            "
 
 #: editPBDialog#4
+#, fuzzy
 msgid "Undo"
 msgstr ""
+"\n"
+"            "
 
 #: editPBDialog#5
+#, fuzzy
 msgid "Redo"
 msgstr ""
+"\n"
+"            "
 
 #: editPBDialog#6
+#, fuzzy
 msgctxt "editPBDialog#6"
 msgid "Ok"
 msgstr ""
+"\n"
+"            "
 
 #: editPBDialog#7
+#, fuzzy
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -2343,28 +3667,46 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Edit PKGBUILD</span></p></body></html>"
 msgstr ""
+"\n"
+"            "
 
 #: logViewer#1
+#, fuzzy
 msgid "Shaman - Log Viewer"
 msgstr ""
+"\n"
+"            "
 
 #: logViewer#2
+#, fuzzy
 msgid "Show Only Logs From"
 msgstr ""
+"\n"
+"            "
 
 #: logViewer#3
+#, fuzzy
 msgid "dd/MM/yyyy"
 msgstr ""
+"\n"
+"            "
 
 #: logViewer#4
+#, fuzzy
 msgid "Show Only Logs Until"
 msgstr ""
+"\n"
+"            "
 
 #: logViewer#5
+#, fuzzy
 msgid "Filter"
 msgstr ""
+"\n"
+"            "
 
 #: logViewer#6
+#, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -2376,53 +3718,86 @@ msgid ""
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
 "font-family:'Liberation Sans'; font-size:9pt;\"></p></body></html>"
 msgstr ""
+"\n"
+"            "
 
 #: logViewer#7
+#, fuzzy
 msgid "Refresh View"
 msgstr ""
+"\n"
+"            "
 
 # close the dialog
 #: logViewer#8
+#, fuzzy
 msgctxt "logViewer#8"
 msgid "Close"
 msgstr ""
+"\n"
+"            "
 
 #: newsDialog#1
+#, fuzzy
 msgid "Arch Linux News"
 msgstr ""
+"\n"
+"            "
 
 #: newsDialog#2
+#, fuzzy
 msgid "News-Title"
 msgstr ""
+"\n"
+"            "
 
 #: newsDialog#3
+#, fuzzy
 msgid "Link"
 msgstr ""
+"\n"
+"            "
 
 #: newsDialog#4
+#, fuzzy
 msgid "status"
 msgstr ""
+"\n"
+"            "
 
 #: newsDialog#5
+#, fuzzy
 msgctxt "newsDialog#5"
 msgid "Mark as Read"
 msgstr ""
+"\n"
+"            "
 
 #: newsDialog#6
+#, fuzzy
 msgid "Open in Browser"
 msgstr ""
+"\n"
+"            "
 
 #: newsDialog#7
+#, fuzzy
 msgid "Refresh"
 msgstr ""
+"\n"
+"            "
 
 # close the dialog
 #: newsDialog#8
+#, fuzzy
 msgctxt "newsDialog#8"
 msgid "Close"
 msgstr ""
+"\n"
+"            "
 
 #: pkgProperties#1
+#, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -2434,91 +3809,154 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Package Information</span></p></body></html>"
 msgstr ""
+"\n"
+"            "
 
 #: pkgProperties#2
+#, fuzzy
 msgctxt "pkgProperties#2"
 msgid "Package Information"
 msgstr ""
+"\n"
+"            "
 
 #: pkgProperties#3
+#, fuzzy
 msgid "Installed:"
 msgstr ""
+"\n"
+"            "
 
 #: pkgProperties#4
+#, fuzzy
 msgid "Description:"
 msgstr ""
+"\n"
+"            "
 
 #: pkgProperties#5
+#, fuzzy
 msgid "Upgradeable"
 msgstr ""
+"\n"
+"            "
 
 #: pkgProperties#6
+#, fuzzy
 msgid "Build Date:"
 msgstr ""
+"\n"
+"            "
 
 #: pkgProperties#7
+#, fuzzy
 msgid "Provides:"
 msgstr ""
+"\n"
+"            "
 
 #: pkgProperties#8
+#, fuzzy
 msgid "Install Date:"
 msgstr ""
+"\n"
+"            "
 
 #: pkgProperties#9
+#, fuzzy
 msgid "Packager:"
 msgstr ""
+"\n"
+"            "
 
 #: pkgProperties#10
+#, fuzzy
 msgid "Size:"
 msgstr ""
+"\n"
+"            "
 
 #: pkgProperties#11
+#, fuzzy
 msgid "Has a Scriptlet"
 msgstr ""
+"\n"
+"            "
 
 #: pkgProperties#12
+#, fuzzy
 msgid "Version:"
 msgstr ""
+"\n"
+"            "
 
 #: pkgProperties#13
+#, fuzzy
 msgid "Changelog"
 msgstr ""
+"\n"
+"            "
 
 #: pkgProperties#14
+#, fuzzy
 msgid "Files"
 msgstr ""
+"\n"
+"            "
 
 #: pkgProperties#15
+#, fuzzy
 msgctxt "pkgProperties#15"
 msgid "1"
 msgstr ""
+"\n"
+"            "
 
 #: pkgProperties#16
+#, fuzzy
 msgid "Dependencies"
 msgstr ""
+"\n"
+"            "
 
 #: pkgProperties#17
+#, fuzzy
 msgid "Depends on"
 msgstr ""
+"\n"
+"            "
 
 #: pkgProperties#18
+#, fuzzy
 msgid "Is Required by"
 msgstr ""
+"\n"
+"            "
 
 #: pkgProperties#19
+#, fuzzy
 msgid "Actions Performed"
 msgstr ""
+"\n"
+"            "
 
 #: pkgProperties#20
+#, fuzzy
 msgctxt "pkgProperties#20"
 msgid "Ok"
 msgstr ""
+"\n"
+"            "
 
 #: reviewBuildingDialog#1
+#, fuzzy
 msgid "Review Building Queue"
 msgstr ""
+"\n"
+"            "
 
 #: reviewBuildingDialog#2
+#, fuzzy
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -2529,87 +3967,144 @@ msgid ""
 "Serif';\"><span style=\" font-weight:600;\">Build Queue From "
 "Source</span></p></body></html>"
 msgstr ""
+"\n"
+"            "
 
 #: reviewBuildingDialog#3
+#, fuzzy
 msgid "Process All Dependencies from Binary First (advised)"
 msgstr ""
+"\n"
+"            "
 
 #: reviewBuildingDialog#4
+#, fuzzy
 msgid "This is useful if you want to review compiler's output"
 msgstr ""
+"\n"
+"            "
 
 #: reviewBuildingDialog#5
+#, fuzzy
 msgid "Do not install immediately when building is finished"
 msgstr ""
+"\n"
+"            "
 
 #: reviewBuildingDialog#6
+#, fuzzy
 msgctxt "reviewBuildingDialog#6"
 msgid "Turn off PC when Queue is done"
 msgstr ""
+"\n"
+"            "
 
 #: reviewBuildingDialog#7
+#, fuzzy
 msgctxt "reviewBuildingDialog#7"
 msgid "Show packages..."
 msgstr ""
+"\n"
+"            "
 
 #: reviewBuildingDialog#8
+#, fuzzy
 msgctxt "reviewBuildingDialog#8"
 msgid "Packages In Queue"
 msgstr ""
+"\n"
+"            "
 
 #: reviewBuildingDialog#9
+#, fuzzy
 msgctxt "reviewBuildingDialog#9"
 msgid "Abort"
 msgstr ""
+"\n"
+"            "
 
 #: reviewBuildingDialog#10
+#, fuzzy
 msgid "Process From Binary"
 msgstr ""
+"\n"
+"            "
 
 #: reviewBuildingDialog#11
+#, fuzzy
 msgid "Review PKGBUILDs"
 msgstr ""
+"\n"
+"            "
 
 #: reviewBuildingDialog#12
+#, fuzzy
 msgid "Process From Source"
 msgstr ""
+"\n"
+"            "
 
 #: transactionDialog#1
+#, fuzzy
 msgid "Processing Queue..."
 msgstr ""
+"\n"
+"            "
 
 #: transactionDialog#2
+#, fuzzy
 msgid "Check transaction validity"
 msgstr ""
+"\n"
+"            "
 
 #: transactionDialog#3
+#, fuzzy
 msgid "Download Packages"
 msgstr ""
+"\n"
+"            "
 
 #: transactionDialog#4
+#, fuzzy
 msgid "Process queue"
 msgstr ""
+"\n"
+"            "
 
 #: transactionDialog#5
+#, fuzzy
 msgid "Cleanup"
 msgstr ""
+"\n"
+"            "
 
 #: transactionDialog#6
+#, fuzzy
 msgctxt "transactionDialog#6"
 msgid "More Details..."
 msgstr ""
+"\n"
+"            "
 
 #: transactionDialog#7
+#, fuzzy
 msgctxt "transactionDialog#7"
 msgid "Abort"
 msgstr ""
+"\n"
+"            "
 
 #: transactionDialog#8
+#, fuzzy
 msgctxt "transactionDialog#8"
 msgid "Please Wait..."
 msgstr ""
+"\n"
+"            "
 
 #: transactionDialog#9
+#, fuzzy
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -2619,40 +4114,64 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Process Queue</span></p></body></html>"
 msgstr ""
+"\n"
+"            "
 
 #: upgradeDialog#1
+#, fuzzy
 msgctxt "upgradeDialog#1"
 msgid "System Upgrade"
 msgstr ""
+"\n"
+"            "
 
 #: upgradeDialog#2
+#, fuzzy
 msgctxt "upgradeDialog#2"
 msgid "Force Queue Processing"
 msgstr ""
+"\n"
+"            "
 
 #: upgradeDialog#3
+#, fuzzy
 msgid "Remember my choice"
 msgstr ""
+"\n"
+"            "
 
 #: upgradeDialog#4
+#, fuzzy
 msgctxt "upgradeDialog#4"
 msgid "Abort"
 msgstr ""
+"\n"
+"            "
 
 #: upgradeDialog#5
+#, fuzzy
 msgctxt "upgradeDialog#5"
 msgid "Show packages..."
 msgstr ""
+"\n"
+"            "
 
 #: upgradeDialog#6
+#, fuzzy
 msgid "Add to Queue"
 msgstr ""
+"\n"
+"            "
 
 #: upgradeDialog#7
+#, fuzzy
 msgid "Upgrade Now"
 msgstr ""
+"\n"
+"            "
 
 #: upgradeDialog#8
+#, fuzzy
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -2662,7 +4181,12 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">System-Upgrade</span></p></body></html>"
 msgstr ""
+"\n"
+"            "
 
 #: upgradeDialog#9
+#, fuzzy
 msgid "Packages to Upgrade"
 msgstr ""
+"\n"
+"            "

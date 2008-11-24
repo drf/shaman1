@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-24 22:12+0200\n"
+"POT-Creation-Date: 2008-11-24 22:13+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11,13 +11,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Translate Toolkit 1.2.0\n"
-
-#. (obsolete)
-#: 
-        #1
-msgctxt "#1"
-msgid "Please wait, fetching items..."
-msgstr "Čekejte prosím, získávám zprávy..."
 
 #. (obsolete)
 #: AlpmHandler#1
@@ -2259,7 +2252,6 @@ msgid "Maintenance Actions"
 msgstr "Činnosti údržby systému"
 
 #: NewsViewer#1
-msgctxt "NewsViewer#1"
 msgid "Please wait, fetching items..."
 msgstr "Čekejte prosím, získávám zprávy..."
 
