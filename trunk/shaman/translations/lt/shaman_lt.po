@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-24 22:13+0200\n"
+"POT-Creation-Date: 2008-11-24 22:17+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.2.0\n"
+"X-Generator: Translate Toolkit 1.1.1\n"
 
 #. (obsolete)
 #: AlpmHandler#1
@@ -38,7 +38,6 @@ msgid ": %1 exists in filesystem"
 msgstr ": %1 egzistuoja failų sistemoje"
 
 #: BuildingDialog#1
-msgctxt "BuildingDialog#1"
 msgid "Error"
 msgstr "Klaida"
 
@@ -108,7 +107,6 @@ msgid "<b>Building operation has started.</b><br><br>"
 msgstr "<b>Statymo operacija prasidėjo.</b><br><br>"
 
 #: BuildingHandler#1
-msgctxt "BuildingHandler#1"
 msgid "Error"
 msgstr "Klaida"
 
@@ -167,12 +165,10 @@ msgstr ""
 "atlikimą."
 
 #: BuildingHandler#7
-msgctxt "BuildingHandler#7"
 msgid "To be Installed"
 msgstr "Bus įrašyta"
 
 #: BuildingHandler#8
-msgctxt "BuildingHandler#8"
 msgid "To be Upgraded"
 msgstr "Bus atnaujinta"
 
@@ -193,7 +189,6 @@ msgstr ""
 "Žiūrėkite išvestį detalėms."
 
 #: BuildingHandler#12
-msgctxt "BuildingHandler#12"
 msgid "Close"
 msgstr "Uždaryti"
 
@@ -301,32 +296,26 @@ msgid "General"
 msgstr "Pagrindinis"
 
 #: ConfigDialog#2
-msgctxt "ConfigDialog#2"
 msgid "Clean Unused Databases"
 msgstr "Išvalyti nenaudojamas duomenų bazes"
 
 #: ConfigDialog#3
-msgctxt "ConfigDialog#3"
 msgid "Clean Cache"
 msgstr "Išvalyti atsargas"
 
 #: ConfigDialog#4
-msgctxt "ConfigDialog#4"
 msgid "Empty Cache"
 msgstr "Nėra atsargų"
 
 #: ConfigDialog#5
-msgctxt "ConfigDialog#5"
 msgid "Optimize Pacman Database"
 msgstr "Optimizuoti „Pacman“ duomenų bazę"
 
 #: ConfigDialog#6
-msgctxt "ConfigDialog#6"
 msgid "Clean All Building Environments"
 msgstr "Išvalyti visas statymo aplinkas"
 
 #: ConfigDialog#7
-msgctxt "ConfigDialog#7"
 msgid "Repositories"
 msgstr "Saugyklos"
 
@@ -351,77 +340,62 @@ msgid "Enter Here the Repository's Server"
 msgstr "Čia įveskite saugyklos serverį"
 
 #: ConfigDialog#13
-msgctxt "ConfigDialog#13"
 msgid "Ok"
 msgstr "Gerai"
 
 #: ConfigDialog#14
-msgctxt "ConfigDialog#14"
 msgid "Cancel"
 msgstr "Atšaukti"
 
 #: ConfigDialog#15
-msgctxt "ConfigDialog#15"
 msgid "Cleaning up unused Databases..."
 msgstr "Išvalomos nenaudojamos duomenų bazės"
 
 #: ConfigDialog#16
-msgctxt "ConfigDialog#16"
 msgid "Cleaning up Cache..."
 msgstr "Išvalomos atsargos..."
 
 #: ConfigDialog#17
-msgctxt "ConfigDialog#17"
 msgid "Deleting Cache..."
 msgstr "Ištrinamos atsargos..."
 
 #: ConfigDialog#18
-msgctxt "ConfigDialog#18"
 msgid "Optimizing Pacman Database..."
 msgstr "Optimizuojamos „Pacman“ duomenų bazės"
 
 #: ConfigDialog#19
-msgctxt "ConfigDialog#19"
 msgid "Cleaning up building Environments..."
 msgstr "Išvalomos statymo aplinkos..."
 
 #: ConfigDialog#20
-msgctxt "ConfigDialog#20"
 msgid "Cleaning up Unused Databases Failed!"
 msgstr "Duomenų bazės išvalymas nepavyko!"
 
 #: ConfigDialog#21
-msgctxt "ConfigDialog#21"
 msgid "Cleaning up Cache Failed!"
 msgstr "Atsargų išvalymas nepavyko!"
 
 #: ConfigDialog#22
-msgctxt "ConfigDialog#22"
 msgid "Deleting Cache Failed!"
 msgstr "Atsargų ištrynimas nepavyko!"
 
 #: ConfigDialog#23
-msgctxt "ConfigDialog#23"
 msgid "Could not clean Build Environments!!"
 msgstr "Negalima išvalyti statymo aplinkos!!"
 
 #: ConfigDialog#24
-msgctxt "ConfigDialog#24"
 msgid "Unused Databases Cleaned up successfully!"
 msgstr "Nenaudojamos duomenų bazės išvalytos sėkmingai!"
 
 #: ConfigDialog#25
-msgctxt "ConfigDialog#25"
 msgid "Cache Cleaned Up Successfully!"
 msgstr "Atsargos išvalytos sėkmingai!"
 
 #: ConfigDialog#26
-msgctxt "ConfigDialog#26"
 msgid "Cache Successfully Deleted!"
 msgstr "Atsargos sėkmingai ištrintos!"
 
 #: ConfigDialog#27
-msgctxt "ConfigDialog#27"
 msgid "Build Environments Successfully Cleaned!"
 msgstr "Statymo aplinkos sėkmingai išvalytos!"
 
@@ -496,41 +470,34 @@ msgstr ""
 "Dabar jis kdemodmirrorlist'e (/etc/pacman.d/kdemodmirrorlist)."
 
 #: ConfigDialog#38
-msgctxt "ConfigDialog#38"
 msgid "Pacman Database Optimized Successfully!"
 msgstr "„Pacman“ duomenų bazė sėkmingai optimizuota!"
 
 #: ConfigDialog#39
-msgctxt "ConfigDialog#39"
 msgid "Could not Optimize Pacman Database!"
 msgstr "Negalima optimizuoti „Pacman“ duomenų bazės!"
 
 # sync is a command, so it should not be translated
 #: ConfigDialog#40
-msgctxt "ConfigDialog#40"
 msgid "Running sync..."
 msgstr "Paleidžiama sync..."
 
 #: ConfigDialog#41
-msgctxt "ConfigDialog#41"
 msgid "Operation Completed Successfully!"
 msgstr "Operacija baigta sėkmingai!"
 
 # Sync is always the command
 #: ConfigDialog#42
-msgctxt "ConfigDialog#42"
 msgid "Sync was successfully executed!!"
 msgstr "Sync buvo sėkmingai atlikta!!"
 
 # Sync is always the command
 #: ConfigDialog#43
-msgctxt "ConfigDialog#43"
 msgid "Sync could not be executed!"
 msgstr "Sync negalėjo būti atlikta!"
 
 # Sync is always the command
 #: ConfigDialog#44
-msgctxt "ConfigDialog#44"
 msgid "Sync could not be executed!!"
 msgstr "Sync negalėjo būti atlikta!!"
 
@@ -775,7 +742,6 @@ msgstr ""
 "„Shaman“ ir per „Pacman“."
 
 #: ConfigDialog#87
-msgctxt "ConfigDialog#87"
 msgid "Repository"
 msgstr "Saugykla"
 
@@ -1083,13 +1049,11 @@ msgstr ""
 
 #: LocalPackage#4
 #, fuzzy
-msgctxt "LocalPackage#4"
 msgid "More Details..."
 msgstr "Daugiau detalių..."
 
 #: LocalPackage#5
 #, fuzzy
-msgctxt "LocalPackage#5"
 msgid "Cancel"
 msgstr "Atšaukti"
 
@@ -1130,7 +1094,6 @@ msgstr ""
 "        "
 
 #: MainWindow#1
-msgctxt "MainWindow#1"
 msgid "Name"
 msgstr "Pavadinimas"
 
@@ -1165,7 +1128,6 @@ msgstr ""
 "Šią elgseną galite nustatyti nustatymuose."
 
 #: MainWindow#6
-msgctxt "MainWindow#6"
 msgid "Repositories"
 msgstr "Saugyklos"
 
@@ -1210,17 +1172,14 @@ msgid "Mark for &Installation"
 msgstr "Pažymėti įrašymui"
 
 #: MainWindow#17
-msgctxt "MainWindow#17"
 msgid "Install"
 msgstr "Įrašyti"
 
 #: MainWindow#18
-msgctxt "MainWindow#18"
 msgid "Uninstall"
 msgstr "Pašalinti"
 
 #: MainWindow#19
-msgctxt "MainWindow#19"
 msgid "Complete Uninstall"
 msgstr "Visiškai pašalinti"
 
@@ -1249,7 +1208,6 @@ msgid "Action: "
 msgstr "Veiksmas:"
 
 #: MainWindow#26
-msgctxt "MainWindow#26"
 msgid "Error"
 msgstr "Klaida"
 
@@ -1264,7 +1222,6 @@ msgstr ""
 "%1"
 
 #: MainWindow#28
-msgctxt "MainWindow#28"
 msgid "Database Update"
 msgstr "Duomenų bazės atnaujinimas"
 
@@ -1316,7 +1273,6 @@ msgid "&Cancel Action"
 msgstr "Atšaukti veiksmą"
 
 #: MainWindow#38
-msgctxt "MainWindow#38"
 msgid "Package Information"
 msgstr "Paketo informacija"
 
@@ -1337,7 +1293,6 @@ msgid "Cancel all actions"
 msgstr "Atšaukti visus veiksmus"
 
 #: MainWindow#43
-msgctxt "MainWindow#43"
 msgid "Shaman"
 msgstr "„Shaman“"
 
@@ -1350,7 +1305,6 @@ msgstr ""
 "Vistiek norite įdiekti %1 ?"
 
 #: MainWindow#45
-msgctxt "MainWindow#45"
 msgid "System Upgrade"
 msgstr "Sistemos atnaujinimas"
 
@@ -1371,12 +1325,10 @@ msgstr ""
 "Ar norite jas perskaityti?"
 
 #: MainWindow#49
-msgctxt "MainWindow#49"
 msgid "Upgrade"
 msgstr "Atnaujinimas"
 
 #: MainWindow#50
-msgctxt "MainWindow#50"
 msgid "Queue Processing"
 msgstr "Vykdoma eilė"
 
@@ -1490,7 +1442,6 @@ msgstr "Padėtis"
 # Name of the Package
 #. (obsolete)
 #: MainWindow#67
-msgctxt "MainWindow#67"
 msgid "Name"
 msgstr "Pavadinimas"
 
@@ -1507,7 +1458,6 @@ msgid "Size"
 msgstr "Dydis"
 
 #: MainWindow#71
-msgctxt "MainWindow#71"
 msgid "Repository"
 msgstr "Saugykla"
 
@@ -1556,7 +1506,6 @@ msgid "File&s"
 msgstr "Failas"
 
 #: MainWindow#83
-msgctxt "MainWindow#83"
 msgid "1"
 msgstr "1"
 
@@ -1597,12 +1546,10 @@ msgid "About..."
 msgstr "Apie..."
 
 #: MainWindow#93
-msgctxt "MainWindow#93"
 msgid "Update Database"
 msgstr "Atnaujinti duomenų bazę"
 
 #: MainWindow#94
-msgctxt "MainWindow#94"
 msgid "Upgrade System"
 msgstr "Atnaujinti sistemą"
 
@@ -1620,12 +1567,10 @@ msgstr "Pastatyti ir įrašyti iš eilės"
 
 # Quit the application
 #: MainWindow#98
-msgctxt "MainWindow#98"
 msgid "Quit"
 msgstr "Išeiti"
 
 #: MainWindow#99
-msgctxt "MainWindow#99"
 msgid "Process Queue"
 msgstr "Procesų eilė"
 
@@ -1653,70 +1598,56 @@ msgstr ""
 
 #: MaintenanceBar#2
 #, fuzzy
-msgctxt "MaintenanceBar#2"
 msgid "Clean Unused Databases"
 msgstr "Išvalyti nenaudojamas duomenų bazes"
 
 #: MaintenanceBar#3
 #, fuzzy
-msgctxt "MaintenanceBar#3"
 msgid "Clean Cache"
 msgstr "Išvalyti atsargas"
 
 #: MaintenanceBar#4
 #, fuzzy
-msgctxt "MaintenanceBar#4"
 msgid "Empty Cache"
 msgstr "Nėra atsargų"
 
 #: MaintenanceBar#5
 #, fuzzy
-msgctxt "MaintenanceBar#5"
 msgid "Optimize Pacman Database"
 msgstr "Optimizuoti „Pacman“ duomenų bazę"
 
 #: MaintenanceBar#6
 #, fuzzy
-msgctxt "MaintenanceBar#6"
 msgid "Clean All Building Environments"
 msgstr "Išvalyti visas statymo aplinkas"
 
 #: MaintenanceBar#7
 #, fuzzy
-msgctxt "MaintenanceBar#7"
 msgid "Cleaning up unused Databases..."
 msgstr "Išvalomos nenaudojamos duomenų bazės"
 
 #: MaintenanceBar#8
 #, fuzzy
-msgctxt "MaintenanceBar#8"
 msgid "Cleaning up Cache..."
 msgstr "Išvalomos atsargos..."
 
 #: MaintenanceBar#9
 #, fuzzy
-msgctxt "MaintenanceBar#9"
 msgid "Deleting Cache..."
 msgstr "Ištrinamos atsargos..."
 
 #: MaintenanceBar#10
 #, fuzzy
-msgctxt "MaintenanceBar#10"
 msgid "Optimizing Pacman Database..."
 msgstr "Optimizuojamos „Pacman“ duomenų bazės"
 
 #: MaintenanceBar#11
 #, fuzzy
-msgctxt "MaintenanceBar#11"
 msgid "Cleaning up building Environments..."
 msgstr "Išvalomos statymo aplinkos..."
 
 #: MaintenanceBar#12
 #, fuzzy
-msgctxt "MaintenanceBar#12"
-"MaintenanceBar#12"
-"MaintenanceBar#12"
-"MaintenanceBar#12"
 msgid "Abort"
 msgstr ""
 "\n"
@@ -1731,101 +1662,85 @@ msgstr ""
 
 #: MaintenanceBar#14
 #, fuzzy
-msgctxt "MaintenanceBar#14"
 msgid "Unused Databases Cleaned up successfully!"
 msgstr "Nenaudojamos duomenų bazės išvalytos sėkmingai!"
 
 #: MaintenanceBar#15
 #, fuzzy
-msgctxt "MaintenanceBar#15"
 msgid "Cache Cleaned Up Successfully!"
 msgstr "Atsargos išvalytos sėkmingai!"
 
 #: MaintenanceBar#16
 #, fuzzy
-msgctxt "MaintenanceBar#16"
 msgid "Cache Successfully Deleted!"
 msgstr "Atsargos sėkmingai ištrintos!"
 
 #: MaintenanceBar#17
 #, fuzzy
-msgctxt "MaintenanceBar#17"
 msgid "Build Environments Successfully Cleaned!"
 msgstr "Statymo aplinkos sėkmingai išvalytos!"
 
 #: MaintenanceBar#18
 #, fuzzy
-msgctxt "MaintenanceBar#18"
 msgid "Close"
 msgstr "Uždaryti"
 
 #: MaintenanceBar#19
 #, fuzzy
-msgctxt "MaintenanceBar#19"
 msgid "Cleaning up Unused Databases Failed!"
 msgstr "Duomenų bazės išvalymas nepavyko!"
 
 #: MaintenanceBar#20
 #, fuzzy
-msgctxt "MaintenanceBar#20"
 msgid "Cleaning up Cache Failed!"
 msgstr "Atsargų išvalymas nepavyko!"
 
 #: MaintenanceBar#21
 #, fuzzy
-msgctxt "MaintenanceBar#21"
 msgid "Deleting Cache Failed!"
 msgstr "Atsargų ištrynimas nepavyko!"
 
 #: MaintenanceBar#22
 #, fuzzy
-msgctxt "MaintenanceBar#22"
 msgid "Could not clean Build Environments!!"
 msgstr "Negalima išvalyti statymo aplinkos!!"
 
 #: MaintenanceBar#23
 #, fuzzy
-msgctxt "MaintenanceBar#23"
 msgid "Pacman Database Optimized Successfully!"
 msgstr "„Pacman“ duomenų bazė sėkmingai optimizuota!"
 
 #: MaintenanceBar#24
 #, fuzzy
-msgctxt "MaintenanceBar#24"
 msgid "Could not Optimize Pacman Database!"
 msgstr "Negalima optimizuoti „Pacman“ duomenų bazės!"
 
 # sync is a command, so it should not be translated
 #: MaintenanceBar#25
 #, fuzzy
-msgctxt "MaintenanceBar#25"
 msgid "Running sync..."
 msgstr "Paleidžiama sync..."
 
 #: MaintenanceBar#26
 #, fuzzy
-msgctxt "MaintenanceBar#26"
 msgid "Operation Completed Successfully!"
 msgstr "Operacija baigta sėkmingai!"
 
 # Sync is always the command
 #: MaintenanceBar#27
 #, fuzzy
-msgctxt "MaintenanceBar#27"
 msgid "Sync was successfully executed!!"
 msgstr "Sync buvo sėkmingai atlikta!!"
 
 # Sync is always the command
 #: MaintenanceBar#28
 #, fuzzy
-msgctxt "MaintenanceBar#28"
 msgid "Sync could not be executed!"
 msgstr "Sync negalėjo būti atlikta!"
 
 # Sync is always the command
 #: MaintenanceBar#29
 #, fuzzy
-msgctxt "MaintenanceBar#29"
 msgid "Sync could not be executed!!"
 msgstr "Sync negalėjo būti atlikta!!"
 
@@ -1841,7 +1756,6 @@ msgid "Please wait, fetching items..."
 msgstr "Prašome palaukti, gaunama..."
 
 #: NewsViewer#2
-msgctxt "NewsViewer#2"
 msgid "Mark as Read"
 msgstr "Pažymėti kaip perskaitytus"
 
@@ -1850,7 +1764,6 @@ msgid "Mark as Unread"
 msgstr "Pažymėti kaip neperskaitytus"
 
 #: NewsViewer#4
-msgctxt "NewsViewer#4"
 msgid "Error"
 msgstr "Klaida"
 
@@ -1908,7 +1821,6 @@ msgid "Whoa, that's co&ol!"
 msgstr "Ką?, tai šau&nu!"
 
 #: QObject#2
-msgctxt "QObject#2"
 msgid "Ok"
 msgstr "Gerai"
 
@@ -1933,7 +1845,6 @@ msgid "C&ancel"
 msgstr "At&šaukti"
 
 #: QObject#8
-msgctxt "QObject#8"
 msgid "Shaman"
 msgstr "„Shaman“"
 
@@ -1973,7 +1884,6 @@ msgstr ""
 # Lukas: l.appelhans@gmx.de
 # Thanks again, and enjoy your translation!
 #: QObject#12
-msgctxt "QObject#12"
 msgid "Shaman"
 msgstr "„Shaman“"
 
@@ -1986,7 +1896,6 @@ msgstr ""
 "Prašome patikrinti ir pakeisti teises."
 
 #: QObject#14
-msgctxt "QObject#14"
 msgid "Please Wait..."
 msgstr "Prašome palaukti..."
 
@@ -2148,7 +2057,6 @@ msgid "Queue processed successfully!"
 msgstr "Eilės vykdymas pavyko!"
 
 #: QueueDialog#30
-msgctxt "QueueDialog#30"
 msgid "Close"
 msgstr "Uždaryti"
 
@@ -2177,7 +2085,6 @@ msgid "Error processing Scriptlet!!"
 msgstr "Negalima vykdyti skripto!!"
 
 #: QueueDialog#37
-msgctxt "QueueDialog#37"
 msgid "Queue Processing"
 msgstr "Eilės vykdymas"
 
@@ -2202,12 +2109,10 @@ msgid "Review Queue"
 msgstr "Peržiūrėti eilę"
 
 #: QueueReadyDialog#2
-msgctxt "QueueReadyDialog#2"
 msgid "Force Queue Processing"
 msgstr "Priverstinis eilės vykdymas"
 
 #: QueueReadyDialog#3
-msgctxt "QueueReadyDialog#3"
 msgid "Turn off PC when Queue is done"
 msgstr "Išjungti AK kai eilė pasibaigs"
 
@@ -2220,17 +2125,14 @@ msgid "Keep Queue Dialog Open after the Queue is finished"
 msgstr "Palikti eilės langą atidarytą, kai eilė pasibaigs"
 
 #: QueueReadyDialog#6
-msgctxt "QueueReadyDialog#6"
 msgid "Show packages..."
 msgstr "Rodyti paketus..."
 
 #: QueueReadyDialog#7
-msgctxt "QueueReadyDialog#7"
 msgid "Packages In Queue"
 msgstr "Paketai eilėje"
 
 #: QueueReadyDialog#8
-msgctxt "QueueReadyDialog#8"
 msgid "Cancel"
 msgstr "Atšaukti"
 
@@ -2257,27 +2159,22 @@ msgstr ""
 "weight:600;\">Peržiūrėti eilę</span></p></body></html>"
 
 #: ReviewQueueDialog#1
-msgctxt "ReviewQueueDialog#1"
 msgid "Install"
 msgstr "Įrašyti"
 
 #: ReviewQueueDialog#2
-msgctxt "ReviewQueueDialog#2"
 msgid "To be Installed"
 msgstr "Bus įrašyta"
 
 #: ReviewQueueDialog#3
-msgctxt "ReviewQueueDialog#3"
 msgid "Upgrade"
 msgstr "Atnaujinti"
 
 #: ReviewQueueDialog#4
-msgctxt "ReviewQueueDialog#4"
 msgid "To be Upgraded"
 msgstr "Bus atnaujinta"
 
 #: ReviewQueueDialog#5
-msgctxt "ReviewQueueDialog#5"
 msgid "Uninstall"
 msgstr "Pašalinti"
 
@@ -2286,7 +2183,6 @@ msgid "To be Removed"
 msgstr "Bus pašalinta"
 
 #: ReviewQueueDialog#7
-msgctxt "ReviewQueueDialog#7"
 msgid "Complete Uninstall"
 msgstr "Visiškas pašalinimas"
 
@@ -2361,17 +2257,14 @@ msgid "%1 to be Installed, %2 to be Removed"
 msgstr "%1 bus įrašyti(-as), %2 bus pašalinti(-as)"
 
 #: ShamanTrayIcon#1
-msgctxt "ShamanTrayIcon#1"
 msgid "Update Database"
 msgstr "Atnaujinti duomenų bazę"
 
 #: ShamanTrayIcon#2
-msgctxt "ShamanTrayIcon#2"
 msgid "Upgrade System"
 msgstr "Atnaujinti sistemą"
 
 #: ShamanTrayIcon#3
-msgctxt "ShamanTrayIcon#3"
 msgid "Process Queue"
 msgstr "Procesų eilė"
 
@@ -2380,7 +2273,6 @@ msgid "Settings"
 msgstr "Nustatymai"
 
 #: ShamanTrayIcon#5
-msgctxt "ShamanTrayIcon#5"
 msgid "Quit"
 msgstr "Išeiti"
 
@@ -2397,7 +2289,6 @@ msgid "Shaman - Idle (Upgrades Available)"
 msgstr "„Shaman“ - neturintis darbo (yra atnaujinimų)"
 
 #: ShamanTrayIcon#9
-msgctxt "ShamanTrayIcon#9"
 msgid "System Upgrade"
 msgstr "Sistemos atnaujinimas"
 
@@ -2472,7 +2363,6 @@ msgstr ""
 "nedelsiant arba įdėti juos į einamą eilę<br> ir atnaujinti vėliau."
 
 #: SysUpgradeDialog#3
-msgctxt "SysUpgradeDialog#3"
 msgid "To be Upgraded"
 msgstr "Bus atnaujinta"
 
@@ -3047,7 +2937,6 @@ msgid "Never ask for this anymore"
 msgstr "Daugiau nebeprašyti"
 
 #: authDialog#4
-msgctxt "authDialog#4"
 msgid "Ok"
 msgstr "Gerai"
 
@@ -3056,7 +2945,6 @@ msgid "Return"
 msgstr "Gryžti"
 
 #: authDialog#6
-msgctxt "authDialog#6"
 msgid "Cancel"
 msgstr "Atšaukti"
 
@@ -3086,7 +2974,6 @@ msgstr ""
 "style=\" font-weight:600;\">Statomi paketai...</span></p></body></html>"
 
 #: buildingDialog#3
-msgctxt "buildingDialog#3"
 msgid "Abort"
 msgstr "Nutraukti"
 
@@ -3095,7 +2982,6 @@ msgid "Reduce To Tray"
 msgstr "Sumažinti į sistemos dėklą"
 
 #: dbUpdateDialog#1
-msgctxt "dbUpdateDialog#1"
 msgid "Database Update"
 msgstr "Duomenų bazės atnaujinimas"
 
@@ -3124,7 +3010,6 @@ msgid "Redo"
 msgstr "Perdaryti"
 
 #: editPBDialog#6
-msgctxt "editPBDialog#6"
 msgid "Ok"
 msgstr "Gerai"
 
@@ -3184,7 +3069,6 @@ msgstr "Atnaujinti vaizdą"
 
 # close the dialog
 #: logViewer#7
-msgctxt "logViewer#7"
 msgid "Close"
 msgstr "Uždaryti"
 
@@ -3212,7 +3096,6 @@ msgid "status"
 msgstr "padėtis"
 
 #: newsDialog#5
-msgctxt "newsDialog#5"
 msgid "Mark as Read"
 msgstr "Pažymėti kaip peržiūrėtus"
 
@@ -3226,7 +3109,6 @@ msgstr "Atnaujinti"
 
 # close the dialog
 #: newsDialog#8
-msgctxt "newsDialog#8"
 msgid "Close"
 msgstr "Uždaryti"
 
@@ -3247,7 +3129,6 @@ msgstr ""
 "            "
 
 #: pkgProperties#2
-msgctxt "pkgProperties#2"
 msgid "Package Information"
 msgstr "Paketo informacija"
 
@@ -3301,7 +3182,6 @@ msgstr "Failai"
 
 #: pkgProperties#15
 #, fuzzy
-msgctxt "pkgProperties#15"
 msgid "1"
 msgstr ""
 "\n"
@@ -3324,7 +3204,6 @@ msgid "Actions Performed"
 msgstr "Įvykdyti veiksmai"
 
 #: pkgProperties#20
-msgctxt "pkgProperties#20"
 msgid "Ok"
 msgstr "Gerai"
 
@@ -3365,22 +3244,18 @@ msgid "Do not install immediately when building is finished"
 msgstr "Neįdiekite nedelsiant, kai statymas yra baigtas"
 
 #: reviewBuildingDialog#6
-msgctxt "reviewBuildingDialog#6"
 msgid "Turn off PC when Queue is done"
 msgstr "Išjunkti AK kai eilė baigsis"
 
 #: reviewBuildingDialog#7
-msgctxt "reviewBuildingDialog#7"
 msgid "Show packages..."
 msgstr "Rodyti paketus..."
 
 #: reviewBuildingDialog#8
-msgctxt "reviewBuildingDialog#8"
 msgid "Packages In Queue"
 msgstr "Paketai eilėje"
 
 #: reviewBuildingDialog#9
-msgctxt "reviewBuildingDialog#9"
 msgid "Abort"
 msgstr "Atšaukti"
 
@@ -3417,17 +3292,14 @@ msgid "Cleanup"
 msgstr "Išvalymas"
 
 #: transactionDialog#6
-msgctxt "transactionDialog#6"
 msgid "More Details..."
 msgstr "Daugiau detalių..."
 
 #: transactionDialog#7
-msgctxt "transactionDialog#7"
 msgid "Abort"
 msgstr "Nutraukti"
 
 #: transactionDialog#8
-msgctxt "transactionDialog#8"
 msgid "Please Wait..."
 msgstr "Prašome palaukti..."
 
@@ -3450,12 +3322,10 @@ msgstr ""
 "weight:600;\">Procesų eilė</span></p></body></html>"
 
 #: upgradeDialog#1
-msgctxt "upgradeDialog#1"
 msgid "System Upgrade"
 msgstr "Sistemos atnaujinimas"
 
 #: upgradeDialog#2
-msgctxt "upgradeDialog#2"
 msgid "Force Queue Processing"
 msgstr "Įtemtas eilės procesas"
 
@@ -3464,12 +3334,10 @@ msgid "Remember my choice"
 msgstr "Atsiminti pasirinkimą"
 
 #: upgradeDialog#4
-msgctxt "upgradeDialog#4"
 msgid "Abort"
 msgstr "Nutraukti"
 
 #: upgradeDialog#5
-msgctxt "upgradeDialog#5"
 msgid "Show packages..."
 msgstr "Rodyti paketus..."
 

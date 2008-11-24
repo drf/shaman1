@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-24 22:13+0200\n"
+"POT-Creation-Date: 2008-11-24 22:17+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.2.0\n"
+"X-Generator: Translate Toolkit 1.1.1\n"
 
 #. (obsolete)
 #: AlpmHandler#1
@@ -38,7 +38,6 @@ msgid ": %1 exists in filesystem"
 msgstr ": %1 finnes allerede på filsystemet"
 
 #: BuildingDialog#1
-msgctxt "BuildingDialog#1"
 msgid "Error"
 msgstr "Feil"
 
@@ -107,7 +106,6 @@ msgid "<b>Building operation has started.</b><br><br>"
 msgstr "<b>Byggeoperasjonen har startet.</b><br><br>"
 
 #: BuildingHandler#1
-msgctxt "BuildingHandler#1"
 msgid "Error"
 msgstr "Feil"
 
@@ -170,12 +168,10 @@ msgstr ""
 "som mulig."
 
 #: BuildingHandler#7
-msgctxt "BuildingHandler#7"
 msgid "To be Installed"
 msgstr "Installeres"
 
 #: BuildingHandler#8
-msgctxt "BuildingHandler#8"
 msgid "To be Upgraded"
 msgstr "Oppgraderes"
 
@@ -196,7 +192,6 @@ msgstr ""
 "Vennligst se på resultatutskriften for mer detaljer."
 
 #: BuildingHandler#12
-msgctxt "BuildingHandler#12"
 msgid "Close"
 msgstr "Lukk"
 
@@ -306,32 +301,26 @@ msgid "General"
 msgstr "Generelt"
 
 #: ConfigDialog#2
-msgctxt "ConfigDialog#2"
 msgid "Clean Unused Databases"
 msgstr "Fjern ubrukte databaser"
 
 #: ConfigDialog#3
-msgctxt "ConfigDialog#3"
 msgid "Clean Cache"
 msgstr "Rens ut mellomlager"
 
 #: ConfigDialog#4
-msgctxt "ConfigDialog#4"
 msgid "Empty Cache"
 msgstr "Tøm mellomlager"
 
 #: ConfigDialog#5
-msgctxt "ConfigDialog#5"
 msgid "Optimize Pacman Database"
 msgstr "Optimiser pakkedatabasen"
 
 #: ConfigDialog#6
-msgctxt "ConfigDialog#6"
 msgid "Clean All Building Environments"
 msgstr "Rensk ut alle byggemiljøer"
 
 #: ConfigDialog#7
-msgctxt "ConfigDialog#7"
 msgid "Repositories"
 msgstr "Pakkearkiver"
 
@@ -356,77 +345,62 @@ msgid "Enter Here the Repository's Server"
 msgstr "Addressen til pakkearkivet"
 
 #: ConfigDialog#13
-msgctxt "ConfigDialog#13"
 msgid "Ok"
 msgstr "Ok"
 
 #: ConfigDialog#14
-msgctxt "ConfigDialog#14"
 msgid "Cancel"
 msgstr "Avbryt"
 
 #: ConfigDialog#15
-msgctxt "ConfigDialog#15"
 msgid "Cleaning up unused Databases..."
 msgstr "Rensker opp ubrukte databaser..."
 
 #: ConfigDialog#16
-msgctxt "ConfigDialog#16"
 msgid "Cleaning up Cache..."
 msgstr "Rensker opp mellomlager..."
 
 #: ConfigDialog#17
-msgctxt "ConfigDialog#17"
 msgid "Deleting Cache..."
 msgstr "Tømmer mellomlager..."
 
 #: ConfigDialog#18
-msgctxt "ConfigDialog#18"
 msgid "Optimizing Pacman Database..."
 msgstr "Optimaliserer Pacmans database..."
 
 #: ConfigDialog#19
-msgctxt "ConfigDialog#19"
 msgid "Cleaning up building Environments..."
 msgstr "Rensker opp byggemiljøer..."
 
 #: ConfigDialog#20
-msgctxt "ConfigDialog#20"
 msgid "Cleaning up Unused Databases Failed!"
 msgstr "Rensking av ubrukte databaser feilet!"
 
 #: ConfigDialog#21
-msgctxt "ConfigDialog#21"
 msgid "Cleaning up Cache Failed!"
 msgstr "Rensking av mellomlager feilet!"
 
 #: ConfigDialog#22
-msgctxt "ConfigDialog#22"
 msgid "Deleting Cache Failed!"
 msgstr "Tømming av mellomlageret feilet!"
 
 #: ConfigDialog#23
-msgctxt "ConfigDialog#23"
 msgid "Could not clean Build Environments!!"
 msgstr "Kunne ikke renske ut byggemiljøene!"
 
 #: ConfigDialog#24
-msgctxt "ConfigDialog#24"
 msgid "Unused Databases Cleaned up successfully!"
 msgstr "Ubrukte databaser fjernet!"
 
 #: ConfigDialog#25
-msgctxt "ConfigDialog#25"
 msgid "Cache Cleaned Up Successfully!"
 msgstr "Mellomlager rensket!"
 
 #: ConfigDialog#26
-msgctxt "ConfigDialog#26"
 msgid "Cache Successfully Deleted!"
 msgstr "Mellomlager tømt!"
 
 #: ConfigDialog#27
-msgctxt "ConfigDialog#27"
 msgid "Build Environments Successfully Cleaned!"
 msgstr "Byggemiljøer rensket!"
 
@@ -501,41 +475,34 @@ msgstr ""
 "Det er nå tilgjengelig i filen \"kdemodmirrorlist\"."
 
 #: ConfigDialog#38
-msgctxt "ConfigDialog#38"
 msgid "Pacman Database Optimized Successfully!"
 msgstr "Databasen til Pacman ble oppdatert!"
 
 #: ConfigDialog#39
-msgctxt "ConfigDialog#39"
 msgid "Could not Optimize Pacman Database!"
 msgstr "Kunne ikke optimalisere Pacman sin database!"
 
 # sync is a command, so it should not be translated
 #: ConfigDialog#40
-msgctxt "ConfigDialog#40"
 msgid "Running sync..."
 msgstr "Kjører sync..."
 
 #: ConfigDialog#41
-msgctxt "ConfigDialog#41"
 msgid "Operation Completed Successfully!"
 msgstr "Operasjonen var vellykket!"
 
 # Sync is always the command
 #: ConfigDialog#42
-msgctxt "ConfigDialog#42"
 msgid "Sync was successfully executed!!"
 msgstr "Sync var vellykket!"
 
 # Sync is always the command
 #: ConfigDialog#43
-msgctxt "ConfigDialog#43"
 msgid "Sync could not be executed!"
 msgstr "Kunne ikke utføre sync!"
 
 # Sync is always the command
 #: ConfigDialog#44
-msgctxt "ConfigDialog#44"
 msgid "Sync could not be executed!!"
 msgstr "Kunne ikke utføre sync!"
 
@@ -776,7 +743,6 @@ msgstr ""
 "Shaman og Pacman."
 
 #: ConfigDialog#88
-msgctxt "ConfigDialog#88"
 msgid "Repository"
 msgstr "Pakkearkiv"
 
@@ -1068,13 +1034,11 @@ msgstr ""
 
 #: LocalPackage#4
 #, fuzzy
-msgctxt "LocalPackage#4"
 msgid "More Details..."
 msgstr "Flere detaljer..."
 
 #: LocalPackage#5
 #, fuzzy
-msgctxt "LocalPackage#5"
 msgid "Cancel"
 msgstr "Avbryt"
 
@@ -1115,7 +1079,6 @@ msgstr ""
 "        "
 
 #: MainWindow#1
-msgctxt "MainWindow#1"
 msgid "Name"
 msgstr "Navn"
 
@@ -1148,7 +1111,6 @@ msgstr ""
 "Du kan endre denne oppførselen i Innstillinger."
 
 #: MainWindow#6
-msgctxt "MainWindow#6"
 msgid "Repositories"
 msgstr "Pakkearkiv"
 
@@ -1193,17 +1155,14 @@ msgid "Mark for &Installation"
 msgstr "Marker for &installasjon"
 
 #: MainWindow#17
-msgctxt "MainWindow#17"
 msgid "Install"
 msgstr "Installèr"
 
 #: MainWindow#18
-msgctxt "MainWindow#18"
 msgid "Uninstall"
 msgstr "Avinstallèr"
 
 #: MainWindow#19
-msgctxt "MainWindow#19"
 msgid "Complete Uninstall"
 msgstr "Fullstendig avinstallering"
 
@@ -1232,7 +1191,6 @@ msgid "Action: "
 msgstr "Handling:"
 
 #: MainWindow#26
-msgctxt "MainWindow#26"
 msgid "Error"
 msgstr "Feil"
 
@@ -1247,7 +1205,6 @@ msgstr ""
 "%1"
 
 #: MainWindow#28
-msgctxt "MainWindow#28"
 msgid "Database Update"
 msgstr "Oppdatering av databaser"
 
@@ -1300,7 +1257,6 @@ msgid "&Cancel Action"
 msgstr "&Avbryt handling"
 
 #: MainWindow#38
-msgctxt "MainWindow#38"
 msgid "Package Information"
 msgstr "Pakkeinformasjon"
 
@@ -1321,7 +1277,6 @@ msgid "Cancel all actions"
 msgstr "Avbryt alle handlinger"
 
 #: MainWindow#43
-msgctxt "MainWindow#43"
 msgid "Shaman"
 msgstr "Shaman"
 
@@ -1334,8 +1289,6 @@ msgstr ""
 "Ønsker du å allikevel installere %1?"
 
 #: MainWindow#45
-msgctxt "MainWindow#45"
-"MainWindow#45"
 msgid "System Upgrade"
 msgstr "Oppgradering av systemet"
 
@@ -1356,12 +1309,10 @@ msgstr ""
 "Ønsker du å lese det?"
 
 #: MainWindow#49
-msgctxt "MainWindow#49"
 msgid "Upgrade"
 msgstr "Oppgrader"
 
 #: MainWindow#50
-msgctxt "MainWindow#50"
 msgid "Queue Processing"
 msgstr "Behandling av køen"
 
@@ -1495,7 +1446,6 @@ msgstr "Status"
 # Name of the Package
 #. (obsolete)
 #: MainWindow#67
-msgctxt "MainWindow#67"
 msgid "Name"
 msgstr "Navn"
 
@@ -1512,7 +1462,6 @@ msgid "Size"
 msgstr "Størrelse"
 
 #: MainWindow#71
-msgctxt "MainWindow#71"
 msgid "Repository"
 msgstr "Pakkearkiv"
 
@@ -1561,7 +1510,6 @@ msgid "File&s"
 msgstr "Fil&er"
 
 #: MainWindow#83
-msgctxt "MainWindow#83"
 msgid "1"
 msgstr "1"
 
@@ -1602,12 +1550,10 @@ msgid "About..."
 msgstr "Om..."
 
 #: MainWindow#93
-msgctxt "MainWindow#93"
 msgid "Update Database"
 msgstr "Oppdater database"
 
 #: MainWindow#94
-msgctxt "MainWindow#94"
 msgid "Upgrade System"
 msgstr "Oppgrader system"
 
@@ -1625,12 +1571,10 @@ msgstr "Bygg og installer fra køen"
 
 # Quit the application
 #: MainWindow#98
-msgctxt "MainWindow#98"
 msgid "Quit"
 msgstr "Avslutt"
 
 #: MainWindow#99
-msgctxt "MainWindow#99"
 msgid "Process Queue"
 msgstr "Prossesser kø"
 
@@ -1666,67 +1610,56 @@ msgstr ""
 
 #: MaintenanceBar#2
 #, fuzzy
-msgctxt "MaintenanceBar#2"
 msgid "Clean Unused Databases"
 msgstr "Fjern ubrukte databaser"
 
 #: MaintenanceBar#3
 #, fuzzy
-msgctxt "MaintenanceBar#3"
 msgid "Clean Cache"
 msgstr "Rens ut mellomlager"
 
 #: MaintenanceBar#4
 #, fuzzy
-msgctxt "MaintenanceBar#4"
 msgid "Empty Cache"
 msgstr "Tøm mellomlager"
 
 #: MaintenanceBar#5
 #, fuzzy
-msgctxt "MaintenanceBar#5"
 msgid "Optimize Pacman Database"
 msgstr "Optimiser pakkedatabasen"
 
 #: MaintenanceBar#6
 #, fuzzy
-msgctxt "MaintenanceBar#6"
 msgid "Clean All Building Environments"
 msgstr "Rensk ut alle byggemiljøer"
 
 #: MaintenanceBar#7
 #, fuzzy
-msgctxt "MaintenanceBar#7"
 msgid "Cleaning up unused Databases..."
 msgstr "Rensker opp ubrukte databaser..."
 
 #: MaintenanceBar#8
 #, fuzzy
-msgctxt "MaintenanceBar#8"
 msgid "Cleaning up Cache..."
 msgstr "Rensker opp mellomlager..."
 
 #: MaintenanceBar#9
 #, fuzzy
-msgctxt "MaintenanceBar#9"
 msgid "Deleting Cache..."
 msgstr "Tømmer mellomlager..."
 
 #: MaintenanceBar#10
 #, fuzzy
-msgctxt "MaintenanceBar#10"
 msgid "Optimizing Pacman Database..."
 msgstr "Optimaliserer Pacmans database..."
 
 #: MaintenanceBar#11
 #, fuzzy
-msgctxt "MaintenanceBar#11"
 msgid "Cleaning up building Environments..."
 msgstr "Rensker opp byggemiljøer..."
 
 #: MaintenanceBar#12
 #, fuzzy
-msgctxt "MaintenanceBar#12"
 msgid "Abort"
 msgstr "Avbryt"
 
@@ -1739,101 +1672,85 @@ msgstr ""
 
 #: MaintenanceBar#14
 #, fuzzy
-msgctxt "MaintenanceBar#14"
 msgid "Unused Databases Cleaned up successfully!"
 msgstr "Ubrukte databaser fjernet!"
 
 #: MaintenanceBar#15
 #, fuzzy
-msgctxt "MaintenanceBar#15"
 msgid "Cache Cleaned Up Successfully!"
 msgstr "Mellomlager rensket!"
 
 #: MaintenanceBar#16
 #, fuzzy
-msgctxt "MaintenanceBar#16"
 msgid "Cache Successfully Deleted!"
 msgstr "Mellomlager tømt!"
 
 #: MaintenanceBar#17
 #, fuzzy
-msgctxt "MaintenanceBar#17"
 msgid "Build Environments Successfully Cleaned!"
 msgstr "Byggemiljøer rensket!"
 
 #: MaintenanceBar#18
 #, fuzzy
-msgctxt "MaintenanceBar#18"
 msgid "Close"
 msgstr "Lukk"
 
 #: MaintenanceBar#19
 #, fuzzy
-msgctxt "MaintenanceBar#19"
 msgid "Cleaning up Unused Databases Failed!"
 msgstr "Rensking av ubrukte databaser feilet!"
 
 #: MaintenanceBar#20
 #, fuzzy
-msgctxt "MaintenanceBar#20"
 msgid "Cleaning up Cache Failed!"
 msgstr "Rensking av mellomlager feilet!"
 
 #: MaintenanceBar#21
 #, fuzzy
-msgctxt "MaintenanceBar#21"
 msgid "Deleting Cache Failed!"
 msgstr "Tømming av mellomlageret feilet!"
 
 #: MaintenanceBar#22
 #, fuzzy
-msgctxt "MaintenanceBar#22"
 msgid "Could not clean Build Environments!!"
 msgstr "Kunne ikke renske ut byggemiljøene!"
 
 #: MaintenanceBar#23
 #, fuzzy
-msgctxt "MaintenanceBar#23"
 msgid "Pacman Database Optimized Successfully!"
 msgstr "Databasen til Pacman ble oppdatert!"
 
 #: MaintenanceBar#24
 #, fuzzy
-msgctxt "MaintenanceBar#24"
 msgid "Could not Optimize Pacman Database!"
 msgstr "Kunne ikke optimalisere Pacman sin database!"
 
 # sync is a command, so it should not be translated
 #: MaintenanceBar#25
 #, fuzzy
-msgctxt "MaintenanceBar#25"
 msgid "Running sync..."
 msgstr "Kjører sync..."
 
 #: MaintenanceBar#26
 #, fuzzy
-msgctxt "MaintenanceBar#26"
 msgid "Operation Completed Successfully!"
 msgstr "Operasjonen var vellykket!"
 
 # Sync is always the command
 #: MaintenanceBar#27
 #, fuzzy
-msgctxt "MaintenanceBar#27"
 msgid "Sync was successfully executed!!"
 msgstr "Sync var vellykket!"
 
 # Sync is always the command
 #: MaintenanceBar#28
 #, fuzzy
-msgctxt "MaintenanceBar#28"
 msgid "Sync could not be executed!"
 msgstr "Kunne ikke utføre sync!"
 
 # Sync is always the command
 #: MaintenanceBar#29
 #, fuzzy
-msgctxt "MaintenanceBar#29"
 msgid "Sync could not be executed!!"
 msgstr "Kunne ikke utføre sync!"
 
@@ -1849,7 +1766,6 @@ msgid "Please wait, fetching items..."
 msgstr "Vennligst vent, henter elementer..."
 
 #: NewsViewer#2
-msgctxt "NewsViewer#2"
 msgid "Mark as Read"
 msgstr "Marker som lest"
 
@@ -1858,7 +1774,6 @@ msgid "Mark as Unread"
 msgstr "Marker som ulest"
 
 #: NewsViewer#4
-msgctxt "NewsViewer#4"
 msgid "Error"
 msgstr "Feil"
 
@@ -1904,7 +1819,6 @@ msgid "Whoa, that's co&ol!"
 msgstr "Oi, det var &tøft!"
 
 #: QObject#2
-msgctxt "QObject#2"
 msgid "Ok"
 msgstr "Ok"
 
@@ -1929,7 +1843,6 @@ msgid "C&ancel"
 msgstr "&Avbryt"
 
 #: QObject#8
-msgctxt "QObject#8"
 msgid "Shaman"
 msgstr "Shaman"
 
@@ -1972,7 +1885,6 @@ msgstr ""
 # Lukas: l.appelhans@gmx.de
 # Thanks again, and enjoy your translation!
 #: QObject#12
-msgctxt "QObject#12"
 msgid "Shaman"
 msgstr "Shaman"
 
@@ -1985,7 +1897,6 @@ msgstr ""
 "Vennligst sjekk tilgangsrettighetene på den."
 
 #: QObject#14
-msgctxt "QObject#14"
 msgid "Please Wait..."
 msgstr "Vennligst vent..."
 
@@ -2147,7 +2058,6 @@ msgid "Queue processed successfully!"
 msgstr "Behandlingen av køen var vellykket!"
 
 #: QueueDialog#30
-msgctxt "QueueDialog#30"
 msgid "Close"
 msgstr "Lukk"
 
@@ -2176,7 +2086,6 @@ msgid "Error processing Scriptlet!!"
 msgstr "Feil under behandling av skript!"
 
 #: QueueDialog#37
-msgctxt "QueueDialog#37"
 msgid "Queue Processing"
 msgstr "Behandling av køen"
 
@@ -2201,12 +2110,10 @@ msgid "Review Queue"
 msgstr "Se igjennom kø"
 
 #: QueueReadyDialog#2
-msgctxt "QueueReadyDialog#2"
 msgid "Force Queue Processing"
 msgstr "Tving købehandling"
 
 #: QueueReadyDialog#3
-msgctxt "QueueReadyDialog#3"
 msgid "Turn off PC when Queue is done"
 msgstr "Skru av maskinen når købehandlingen er ferdig"
 
@@ -2219,17 +2126,14 @@ msgid "Keep Queue Dialog Open after the Queue is finished"
 msgstr "Hold kødialogen åpen etter at købehandlingen er ferdig"
 
 #: QueueReadyDialog#6
-msgctxt "QueueReadyDialog#6"
 msgid "Show packages..."
 msgstr "Vis pakker..."
 
 #: QueueReadyDialog#7
-msgctxt "QueueReadyDialog#7"
 msgid "Packages In Queue"
 msgstr "Vis pakker i kø"
 
 #: QueueReadyDialog#8
-msgctxt "QueueReadyDialog#8"
 msgid "Cancel"
 msgstr "Avbryt"
 
@@ -2255,27 +2159,22 @@ msgstr ""
 "køen</span></p></body></html>"
 
 #: ReviewQueueDialog#1
-msgctxt "ReviewQueueDialog#1"
 msgid "Install"
 msgstr "Installèr"
 
 #: ReviewQueueDialog#2
-msgctxt "ReviewQueueDialog#2"
 msgid "To be Installed"
 msgstr "Installeres"
 
 #: ReviewQueueDialog#3
-msgctxt "ReviewQueueDialog#3"
 msgid "Upgrade"
 msgstr "Oppgrader"
 
 #: ReviewQueueDialog#4
-msgctxt "ReviewQueueDialog#4"
 msgid "To be Upgraded"
 msgstr "Oppgraderes"
 
 #: ReviewQueueDialog#5
-msgctxt "ReviewQueueDialog#5"
 msgid "Uninstall"
 msgstr "Avinstallèr"
 
@@ -2284,7 +2183,6 @@ msgid "To be Removed"
 msgstr "Avinstalleres"
 
 #: ReviewQueueDialog#7
-msgctxt "ReviewQueueDialog#7"
 msgid "Complete Uninstall"
 msgstr "Fullstendig avinstallering"
 
@@ -2359,17 +2257,14 @@ msgid "%1 to be Installed, %2 to be Removed"
 msgstr "%1 vil bli installert, %2 vil bli avinstallert"
 
 #: ShamanTrayIcon#1
-msgctxt "ShamanTrayIcon#1"
 msgid "Update Database"
 msgstr "Oppdater database"
 
 #: ShamanTrayIcon#2
-msgctxt "ShamanTrayIcon#2"
 msgid "Upgrade System"
 msgstr "Oppgrader system"
 
 #: ShamanTrayIcon#3
-msgctxt "ShamanTrayIcon#3"
 msgid "Process Queue"
 msgstr "Behandle kø"
 
@@ -2378,7 +2273,6 @@ msgid "Settings"
 msgstr "Innstillinger"
 
 #: ShamanTrayIcon#5
-msgctxt "ShamanTrayIcon#5"
 msgid "Quit"
 msgstr "Avslutt"
 
@@ -2395,7 +2289,6 @@ msgid "Shaman - Idle (Upgrades Available)"
 msgstr "Shaman - Inaktiv (Oppgraderinger tilgjengelig)"
 
 #: ShamanTrayIcon#9
-msgctxt "ShamanTrayIcon#9"
 msgid "System Upgrade"
 msgstr "Systemoppgradering"
 
@@ -2472,7 +2365,6 @@ msgstr ""
 "oppgradere senere."
 
 #: SysUpgradeDialog#3
-msgctxt "SysUpgradeDialog#3"
 msgid "To be Upgraded"
 msgstr "Oppgraderes"
 
@@ -3025,7 +2917,6 @@ msgid "Never ask for this anymore"
 msgstr "Aldri spør igjen"
 
 #: authDialog#4
-msgctxt "authDialog#4"
 msgid "Ok"
 msgstr "Ok"
 
@@ -3034,7 +2925,6 @@ msgid "Return"
 msgstr "Enter"
 
 #: authDialog#6
-msgctxt "authDialog#6"
 msgid "Cancel"
 msgstr "Avbryt"
 
@@ -3064,7 +2954,6 @@ msgstr ""
 "style=\" font-weight:600;\">Bygger pakker...</span></p></body></html>"
 
 #: buildingDialog#3
-msgctxt "buildingDialog#3"
 msgid "Abort"
 msgstr "Avbryt"
 
@@ -3073,7 +2962,6 @@ msgid "Reduce To Tray"
 msgstr "Minimer til systemkurv"
 
 #: dbUpdateDialog#1
-msgctxt "dbUpdateDialog#1"
 msgid "Database Update"
 msgstr "Oppdatering av database"
 
@@ -3102,7 +2990,6 @@ msgid "Redo"
 msgstr "Gjør om"
 
 #: editPBDialog#6
-msgctxt "editPBDialog#6"
 msgid "Ok"
 msgstr "Ok"
 
@@ -3166,7 +3053,6 @@ msgstr "Oppdater visning"
 
 # close the dialog
 #: logViewer#7
-msgctxt "logViewer#7"
 msgid "Close"
 msgstr "Lukk"
 
@@ -3194,7 +3080,6 @@ msgid "status"
 msgstr "status"
 
 #: newsDialog#5
-msgctxt "newsDialog#5"
 msgid "Mark as Read"
 msgstr "Marker som lest"
 
@@ -3208,7 +3093,6 @@ msgstr "Oppdater"
 
 # close the dialog
 #: newsDialog#8
-msgctxt "newsDialog#8"
 msgid "Close"
 msgstr "Lukk"
 
@@ -3233,7 +3117,6 @@ msgstr ""
 "style=\" font-weight:600;\">Pakkeinformasjon</span></p></body></html>"
 
 #: pkgProperties#2
-msgctxt "pkgProperties#2"
 msgid "Package Information"
 msgstr "Pakkeinformasjon"
 
@@ -3286,7 +3169,6 @@ msgid "Files"
 msgstr "Filer"
 
 #: pkgProperties#15
-msgctxt "pkgProperties#15"
 msgid "1"
 msgstr "1"
 
@@ -3307,7 +3189,6 @@ msgid "Actions Performed"
 msgstr "Handlinger utført"
 
 #: pkgProperties#20
-msgctxt "pkgProperties#20"
 msgid "Ok"
 msgstr "Ok"
 
@@ -3347,22 +3228,18 @@ msgid "Do not install immediately when building is finished"
 msgstr "Ikke installer med når byggingen er ferdig"
 
 #: reviewBuildingDialog#6
-msgctxt "reviewBuildingDialog#6"
 msgid "Turn off PC when Queue is done"
 msgstr "Skru av maskinen når byggingen er ferdig"
 
 #: reviewBuildingDialog#7
-msgctxt "reviewBuildingDialog#7"
 msgid "Show packages..."
 msgstr "Vis pakker..."
 
 #: reviewBuildingDialog#8
-msgctxt "reviewBuildingDialog#8"
 msgid "Packages In Queue"
 msgstr "Pakker i kø"
 
 #: reviewBuildingDialog#9
-msgctxt "reviewBuildingDialog#9"
 msgid "Abort"
 msgstr "Avbryt"
 
@@ -3399,17 +3276,14 @@ msgid "Cleanup"
 msgstr "Rensk opp"
 
 #: transactionDialog#6
-msgctxt "transactionDialog#6"
 msgid "More Details..."
 msgstr "Flere detaljer..."
 
 #: transactionDialog#7
-msgctxt "transactionDialog#7"
 msgid "Abort"
 msgstr "Avbryt"
 
 #: transactionDialog#8
-msgctxt "transactionDialog#8"
 msgid "Please Wait..."
 msgstr "Vennligst vent..."
 
@@ -3431,12 +3305,10 @@ msgstr ""
 "kø</span></p></body></html>"
 
 #: upgradeDialog#1
-msgctxt "upgradeDialog#1"
 msgid "System Upgrade"
 msgstr "Oppgrader system"
 
 #: upgradeDialog#2
-msgctxt "upgradeDialog#2"
 msgid "Force Queue Processing"
 msgstr "Tving købehandling"
 
@@ -3445,12 +3317,10 @@ msgid "Remember my choice"
 msgstr "Husk mitt valg"
 
 #: upgradeDialog#4
-msgctxt "upgradeDialog#4"
 msgid "Abort"
 msgstr "Avbryt"
 
 #: upgradeDialog#5
-msgctxt "upgradeDialog#5"
 msgid "Show packages..."
 msgstr "Vis pakker..."
 

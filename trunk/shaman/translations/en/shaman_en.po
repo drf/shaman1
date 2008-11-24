@@ -3,18 +3,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-24 22:14+0200\n"
+"POT-Creation-Date: 2008-11-24 22:17+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.2.0\n"
+"X-Generator: Translate Toolkit 1.1.1\n"
 
 #: BuildingDialog#1
 #, fuzzy
-msgctxt "BuildingDialog#1"
 msgid "Error"
 msgstr ""
 "\n"
@@ -129,7 +128,6 @@ msgstr ""
 
 #: BuildingHandler#1
 #, fuzzy
-msgctxt "BuildingHandler#1"
 msgid "Error"
 msgstr ""
 "\n"
@@ -178,7 +176,6 @@ msgstr ""
 
 #: BuildingHandler#6
 #, fuzzy
-msgctxt "BuildingHandler#6"
 msgid "To be Installed"
 msgstr ""
 "\n"
@@ -186,7 +183,6 @@ msgstr ""
 
 #: BuildingHandler#7
 #, fuzzy
-msgctxt "BuildingHandler#7"
 msgid "To be Upgraded"
 msgstr ""
 "\n"
@@ -217,7 +213,6 @@ msgstr ""
 
 #: BuildingHandler#11
 #, fuzzy
-msgctxt "BuildingHandler#11"
 msgid "Close"
 msgstr ""
 "\n"
@@ -277,7 +272,6 @@ msgstr ""
 
 #: ConfigDialog#2
 #, fuzzy
-msgctxt "ConfigDialog#2"
 msgid "Clean Unused Databases"
 msgstr ""
 "\n"
@@ -285,7 +279,6 @@ msgstr ""
 
 #: ConfigDialog#3
 #, fuzzy
-msgctxt "ConfigDialog#3"
 msgid "Clean Cache"
 msgstr ""
 "\n"
@@ -293,7 +286,6 @@ msgstr ""
 
 #: ConfigDialog#4
 #, fuzzy
-msgctxt "ConfigDialog#4"
 msgid "Empty Cache"
 msgstr ""
 "\n"
@@ -301,7 +293,6 @@ msgstr ""
 
 #: ConfigDialog#5
 #, fuzzy
-msgctxt "ConfigDialog#5"
 msgid "Optimize Pacman Database"
 msgstr ""
 "\n"
@@ -309,7 +300,6 @@ msgstr ""
 
 #: ConfigDialog#6
 #, fuzzy
-msgctxt "ConfigDialog#6"
 msgid "Clean All Building Environments"
 msgstr ""
 "\n"
@@ -317,7 +307,6 @@ msgstr ""
 
 #: ConfigDialog#7
 #, fuzzy
-msgctxt "ConfigDialog#7"
 msgid "Repositories"
 msgstr ""
 "\n"
@@ -360,7 +349,6 @@ msgstr ""
 
 #: ConfigDialog#13
 #, fuzzy
-msgctxt "ConfigDialog#13"
 msgid "Ok"
 msgstr ""
 "\n"
@@ -368,7 +356,6 @@ msgstr ""
 
 #: ConfigDialog#14
 #, fuzzy
-msgctxt "ConfigDialog#14"
 msgid "Cancel"
 msgstr ""
 "\n"
@@ -376,7 +363,6 @@ msgstr ""
 
 #: ConfigDialog#15
 #, fuzzy
-msgctxt "ConfigDialog#15"
 msgid "Cleaning up unused Databases..."
 msgstr ""
 "\n"
@@ -384,7 +370,6 @@ msgstr ""
 
 #: ConfigDialog#16
 #, fuzzy
-msgctxt "ConfigDialog#16"
 msgid "Cleaning up Cache..."
 msgstr ""
 "\n"
@@ -392,7 +377,6 @@ msgstr ""
 
 #: ConfigDialog#17
 #, fuzzy
-msgctxt "ConfigDialog#17"
 msgid "Deleting Cache..."
 msgstr ""
 "\n"
@@ -400,7 +384,6 @@ msgstr ""
 
 #: ConfigDialog#18
 #, fuzzy
-msgctxt "ConfigDialog#18"
 msgid "Optimizing Pacman Database..."
 msgstr ""
 "\n"
@@ -408,7 +391,6 @@ msgstr ""
 
 #: ConfigDialog#19
 #, fuzzy
-msgctxt "ConfigDialog#19"
 msgid "Cleaning up building Environments..."
 msgstr ""
 "\n"
@@ -416,7 +398,6 @@ msgstr ""
 
 #: ConfigDialog#20
 #, fuzzy
-msgctxt "ConfigDialog#20"
 msgid "Cleaning up Unused Databases Failed!"
 msgstr ""
 "\n"
@@ -424,7 +405,6 @@ msgstr ""
 
 #: ConfigDialog#21
 #, fuzzy
-msgctxt "ConfigDialog#21"
 msgid "Cleaning up Cache Failed!"
 msgstr ""
 "\n"
@@ -432,7 +412,6 @@ msgstr ""
 
 #: ConfigDialog#22
 #, fuzzy
-msgctxt "ConfigDialog#22"
 msgid "Deleting Cache Failed!"
 msgstr ""
 "\n"
@@ -440,7 +419,6 @@ msgstr ""
 
 #: ConfigDialog#23
 #, fuzzy
-msgctxt "ConfigDialog#23"
 msgid "Could not clean Build Environments!!"
 msgstr ""
 "\n"
@@ -448,7 +426,6 @@ msgstr ""
 
 #: ConfigDialog#24
 #, fuzzy
-msgctxt "ConfigDialog#24"
 msgid "Unused Databases Cleaned up successfully!"
 msgstr ""
 "\n"
@@ -456,7 +433,6 @@ msgstr ""
 
 #: ConfigDialog#25
 #, fuzzy
-msgctxt "ConfigDialog#25"
 msgid "Cache Cleaned Up Successfully!"
 msgstr ""
 "\n"
@@ -464,7 +440,6 @@ msgstr ""
 
 #: ConfigDialog#26
 #, fuzzy
-msgctxt "ConfigDialog#26"
 msgid "Cache Successfully Deleted!"
 msgstr ""
 "\n"
@@ -472,7 +447,6 @@ msgstr ""
 
 #: ConfigDialog#27
 #, fuzzy
-msgctxt "ConfigDialog#27"
 msgid "Build Environments Successfully Cleaned!"
 msgstr ""
 "\n"
@@ -567,7 +541,6 @@ msgstr ""
 
 #: ConfigDialog#38
 #, fuzzy
-msgctxt "ConfigDialog#38"
 msgid "Pacman Database Optimized Successfully!"
 msgstr ""
 "\n"
@@ -575,7 +548,6 @@ msgstr ""
 
 #: ConfigDialog#39
 #, fuzzy
-msgctxt "ConfigDialog#39"
 msgid "Could not Optimize Pacman Database!"
 msgstr ""
 "\n"
@@ -584,7 +556,6 @@ msgstr ""
 # sync is a command, so it should not be translated
 #: ConfigDialog#40
 #, fuzzy
-msgctxt "ConfigDialog#40"
 msgid "Running sync..."
 msgstr ""
 "\n"
@@ -592,7 +563,6 @@ msgstr ""
 
 #: ConfigDialog#41
 #, fuzzy
-msgctxt "ConfigDialog#41"
 msgid "Operation Completed Successfully!"
 msgstr ""
 "\n"
@@ -601,7 +571,6 @@ msgstr ""
 # Sync is always the command
 #: ConfigDialog#42
 #, fuzzy
-msgctxt "ConfigDialog#42"
 msgid "Sync was successfully executed!!"
 msgstr ""
 "\n"
@@ -610,7 +579,6 @@ msgstr ""
 # Sync is always the command
 #: ConfigDialog#43
 #, fuzzy
-msgctxt "ConfigDialog#43"
 msgid "Sync could not be executed!"
 msgstr ""
 "\n"
@@ -619,7 +587,6 @@ msgstr ""
 # Sync is always the command
 #: ConfigDialog#44
 #, fuzzy
-msgctxt "ConfigDialog#44"
 msgid "Sync could not be executed!!"
 msgstr ""
 "\n"
@@ -939,7 +906,6 @@ msgstr ""
 
 #: ConfigDialog#87
 #, fuzzy
-msgctxt "ConfigDialog#87"
 msgid "Repository"
 msgstr ""
 "\n"
@@ -1329,7 +1295,6 @@ msgstr ""
 
 #: LocalPackage#4
 #, fuzzy
-msgctxt "LocalPackage#4"
 msgid "More Details..."
 msgstr ""
 "\n"
@@ -1337,7 +1302,6 @@ msgstr ""
 
 #: LocalPackage#5
 #, fuzzy
-msgctxt "LocalPackage#5"
 msgid "Cancel"
 msgstr ""
 "\n"
@@ -1422,7 +1386,6 @@ msgstr ""
 
 #: MainWindow#6
 #, fuzzy
-msgctxt "MainWindow#6"
 msgid "Repositories"
 msgstr ""
 "\n"
@@ -1500,7 +1463,6 @@ msgstr ""
 
 #: MainWindow#17
 #, fuzzy
-msgctxt "MainWindow#17"
 msgid "Install"
 msgstr ""
 "\n"
@@ -1508,7 +1470,6 @@ msgstr ""
 
 #: MainWindow#18
 #, fuzzy
-msgctxt "MainWindow#18"
 msgid "Uninstall"
 msgstr ""
 "\n"
@@ -1516,7 +1477,6 @@ msgstr ""
 
 #: MainWindow#19
 #, fuzzy
-msgctxt "MainWindow#19"
 msgid "Complete Uninstall"
 msgstr ""
 "\n"
@@ -1566,7 +1526,6 @@ msgstr ""
 
 #: MainWindow#26
 #, fuzzy
-msgctxt "MainWindow#26"
 msgid "Error"
 msgstr ""
 "\n"
@@ -1584,7 +1543,6 @@ msgstr ""
 
 #: MainWindow#28
 #, fuzzy
-msgctxt "MainWindow#28"
 msgid "Database Update"
 msgstr ""
 "\n"
@@ -1661,7 +1619,6 @@ msgstr ""
 
 #: MainWindow#38
 #, fuzzy
-msgctxt "MainWindow#38"
 msgid "Package Information"
 msgstr ""
 "\n"
@@ -1697,7 +1654,6 @@ msgstr ""
 
 #: MainWindow#43
 #, fuzzy
-msgctxt "MainWindow#43"
 msgid "Shaman"
 msgstr ""
 "\n"
@@ -1714,7 +1670,6 @@ msgstr ""
 
 #: MainWindow#45
 #, fuzzy
-msgctxt "MainWindow#45"
 msgid "System Upgrade"
 msgstr ""
 "\n"
@@ -1745,7 +1700,6 @@ msgstr ""
 
 #: MainWindow#49
 #, fuzzy
-msgctxt "MainWindow#49"
 msgid "Upgrade"
 msgstr ""
 "\n"
@@ -1753,7 +1707,6 @@ msgstr ""
 
 #: MainWindow#50
 #, fuzzy
-msgctxt "MainWindow#50"
 msgid "Queue Processing"
 msgstr ""
 "\n"
@@ -1920,7 +1873,6 @@ msgstr ""
 
 #: MainWindow#69
 #, fuzzy
-msgctxt "MainWindow#69"
 msgid "Repository"
 msgstr ""
 "\n"
@@ -2005,7 +1957,6 @@ msgstr ""
 
 #: MainWindow#81
 #, fuzzy
-msgctxt "MainWindow#81"
 msgid "1"
 msgstr ""
 "\n"
@@ -2076,7 +2027,6 @@ msgstr ""
 
 #: MainWindow#91
 #, fuzzy
-msgctxt "MainWindow#91"
 msgid "Update Database"
 msgstr ""
 "\n"
@@ -2084,7 +2034,6 @@ msgstr ""
 
 #: MainWindow#92
 #, fuzzy
-msgctxt "MainWindow#92"
 msgid "Upgrade System"
 msgstr ""
 "\n"
@@ -2114,7 +2063,6 @@ msgstr ""
 # Quit the application
 #: MainWindow#96
 #, fuzzy
-msgctxt "MainWindow#96"
 msgid "Quit"
 msgstr ""
 "\n"
@@ -2122,7 +2070,6 @@ msgstr ""
 
 #: MainWindow#97
 #, fuzzy
-msgctxt "MainWindow#97"
 msgid "Process Queue"
 msgstr ""
 "\n"
@@ -2158,7 +2105,6 @@ msgstr ""
 
 #: MaintenanceBar#2
 #, fuzzy
-msgctxt "MaintenanceBar#2"
 msgid "Clean Unused Databases"
 msgstr ""
 "\n"
@@ -2166,7 +2112,6 @@ msgstr ""
 
 #: MaintenanceBar#3
 #, fuzzy
-msgctxt "MaintenanceBar#3"
 msgid "Clean Cache"
 msgstr ""
 "\n"
@@ -2174,7 +2119,6 @@ msgstr ""
 
 #: MaintenanceBar#4
 #, fuzzy
-msgctxt "MaintenanceBar#4"
 msgid "Empty Cache"
 msgstr ""
 "\n"
@@ -2182,7 +2126,6 @@ msgstr ""
 
 #: MaintenanceBar#5
 #, fuzzy
-msgctxt "MaintenanceBar#5"
 msgid "Optimize Pacman Database"
 msgstr ""
 "\n"
@@ -2190,7 +2133,6 @@ msgstr ""
 
 #: MaintenanceBar#6
 #, fuzzy
-msgctxt "MaintenanceBar#6"
 msgid "Clean All Building Environments"
 msgstr ""
 "\n"
@@ -2198,7 +2140,6 @@ msgstr ""
 
 #: MaintenanceBar#7
 #, fuzzy
-msgctxt "MaintenanceBar#7"
 msgid "Cleaning up unused Databases..."
 msgstr ""
 "\n"
@@ -2206,7 +2147,6 @@ msgstr ""
 
 #: MaintenanceBar#8
 #, fuzzy
-msgctxt "MaintenanceBar#8"
 msgid "Cleaning up Cache..."
 msgstr ""
 "\n"
@@ -2214,7 +2154,6 @@ msgstr ""
 
 #: MaintenanceBar#9
 #, fuzzy
-msgctxt "MaintenanceBar#9"
 msgid "Deleting Cache..."
 msgstr ""
 "\n"
@@ -2222,7 +2161,6 @@ msgstr ""
 
 #: MaintenanceBar#10
 #, fuzzy
-msgctxt "MaintenanceBar#10"
 msgid "Optimizing Pacman Database..."
 msgstr ""
 "\n"
@@ -2230,7 +2168,6 @@ msgstr ""
 
 #: MaintenanceBar#11
 #, fuzzy
-msgctxt "MaintenanceBar#11"
 msgid "Cleaning up building Environments..."
 msgstr ""
 "\n"
@@ -2238,7 +2175,6 @@ msgstr ""
 
 #: MaintenanceBar#12
 #, fuzzy
-msgctxt "MaintenanceBar#12"
 msgid "Abort"
 msgstr ""
 "\n"
@@ -2253,7 +2189,6 @@ msgstr ""
 
 #: MaintenanceBar#14
 #, fuzzy
-msgctxt "MaintenanceBar#14"
 msgid "Unused Databases Cleaned up successfully!"
 msgstr ""
 "\n"
@@ -2261,7 +2196,6 @@ msgstr ""
 
 #: MaintenanceBar#15
 #, fuzzy
-msgctxt "MaintenanceBar#15"
 msgid "Cache Cleaned Up Successfully!"
 msgstr ""
 "\n"
@@ -2269,7 +2203,6 @@ msgstr ""
 
 #: MaintenanceBar#16
 #, fuzzy
-msgctxt "MaintenanceBar#16"
 msgid "Cache Successfully Deleted!"
 msgstr ""
 "\n"
@@ -2277,7 +2210,6 @@ msgstr ""
 
 #: MaintenanceBar#17
 #, fuzzy
-msgctxt "MaintenanceBar#17"
 msgid "Build Environments Successfully Cleaned!"
 msgstr ""
 "\n"
@@ -2285,7 +2217,6 @@ msgstr ""
 
 #: MaintenanceBar#18
 #, fuzzy
-msgctxt "MaintenanceBar#18"
 msgid "Close"
 msgstr ""
 "\n"
@@ -2293,7 +2224,6 @@ msgstr ""
 
 #: MaintenanceBar#19
 #, fuzzy
-msgctxt "MaintenanceBar#19"
 msgid "Cleaning up Unused Databases Failed!"
 msgstr ""
 "\n"
@@ -2301,7 +2231,6 @@ msgstr ""
 
 #: MaintenanceBar#20
 #, fuzzy
-msgctxt "MaintenanceBar#20"
 msgid "Cleaning up Cache Failed!"
 msgstr ""
 "\n"
@@ -2309,7 +2238,6 @@ msgstr ""
 
 #: MaintenanceBar#21
 #, fuzzy
-msgctxt "MaintenanceBar#21"
 msgid "Deleting Cache Failed!"
 msgstr ""
 "\n"
@@ -2317,7 +2245,6 @@ msgstr ""
 
 #: MaintenanceBar#22
 #, fuzzy
-msgctxt "MaintenanceBar#22"
 msgid "Could not clean Build Environments!!"
 msgstr ""
 "\n"
@@ -2325,7 +2252,6 @@ msgstr ""
 
 #: MaintenanceBar#23
 #, fuzzy
-msgctxt "MaintenanceBar#23"
 msgid "Pacman Database Optimized Successfully!"
 msgstr ""
 "\n"
@@ -2333,7 +2259,6 @@ msgstr ""
 
 #: MaintenanceBar#24
 #, fuzzy
-msgctxt "MaintenanceBar#24"
 msgid "Could not Optimize Pacman Database!"
 msgstr ""
 "\n"
@@ -2342,7 +2267,6 @@ msgstr ""
 # sync is a command, so it should not be translated
 #: MaintenanceBar#25
 #, fuzzy
-msgctxt "MaintenanceBar#25"
 msgid "Running sync..."
 msgstr ""
 "\n"
@@ -2350,7 +2274,6 @@ msgstr ""
 
 #: MaintenanceBar#26
 #, fuzzy
-msgctxt "MaintenanceBar#26"
 msgid "Operation Completed Successfully!"
 msgstr ""
 "\n"
@@ -2359,7 +2282,6 @@ msgstr ""
 # Sync is always the command
 #: MaintenanceBar#27
 #, fuzzy
-msgctxt "MaintenanceBar#27"
 msgid "Sync was successfully executed!!"
 msgstr ""
 "\n"
@@ -2368,7 +2290,6 @@ msgstr ""
 # Sync is always the command
 #: MaintenanceBar#28
 #, fuzzy
-msgctxt "MaintenanceBar#28"
 msgid "Sync could not be executed!"
 msgstr ""
 "\n"
@@ -2377,7 +2298,6 @@ msgstr ""
 # Sync is always the command
 #: MaintenanceBar#29
 #, fuzzy
-msgctxt "MaintenanceBar#29"
 msgid "Sync could not be executed!!"
 msgstr ""
 "\n"
@@ -2399,7 +2319,6 @@ msgstr ""
 
 #: NewsViewer#2
 #, fuzzy
-msgctxt "NewsViewer#2"
 msgid "Mark as Read"
 msgstr ""
 "\n"
@@ -2414,7 +2333,6 @@ msgstr ""
 
 #: NewsViewer#4
 #, fuzzy
-msgctxt "NewsViewer#4"
 msgid "Error"
 msgstr ""
 "\n"
@@ -2490,7 +2408,6 @@ msgstr ""
 
 #: QObject#2
 #, fuzzy
-msgctxt "QObject#2"
 msgid "Ok"
 msgstr ""
 "\n"
@@ -2533,7 +2450,6 @@ msgstr ""
 
 #: QObject#8
 #, fuzzy
-msgctxt "QObject#8"
 msgid "Shaman"
 msgstr ""
 "\n"
@@ -2567,7 +2483,6 @@ msgstr ""
 # Thanks again, and enjoy your translation!
 #: QObject#11
 #, fuzzy
-msgctxt "QObject#11"
 msgid "Shaman"
 msgstr ""
 "\n"
@@ -2584,7 +2499,6 @@ msgstr ""
 
 #: QObject#13
 #, fuzzy
-msgctxt "QObject#13"
 msgid "Please Wait..."
 msgstr ""
 "\n"
@@ -2855,7 +2769,6 @@ msgstr ""
 
 #: QueueDialog#30
 #, fuzzy
-msgctxt "QueueDialog#30"
 msgid "Close"
 msgstr ""
 "\n"
@@ -2905,7 +2818,6 @@ msgstr ""
 
 #: QueueDialog#37
 #, fuzzy
-msgctxt "QueueDialog#37"
 msgid "Queue Processing"
 msgstr ""
 "\n"
@@ -2943,7 +2855,6 @@ msgstr ""
 
 #: QueueReadyDialog#2
 #, fuzzy
-msgctxt "QueueReadyDialog#2"
 msgid "Force Queue Processing"
 msgstr ""
 "\n"
@@ -2951,7 +2862,6 @@ msgstr ""
 
 #: QueueReadyDialog#3
 #, fuzzy
-msgctxt "QueueReadyDialog#3"
 msgid "Turn off PC when Queue is done"
 msgstr ""
 "\n"
@@ -2973,7 +2883,6 @@ msgstr ""
 
 #: QueueReadyDialog#6
 #, fuzzy
-msgctxt "QueueReadyDialog#6"
 msgid "Show packages..."
 msgstr ""
 "\n"
@@ -2981,7 +2890,6 @@ msgstr ""
 
 #: QueueReadyDialog#7
 #, fuzzy
-msgctxt "QueueReadyDialog#7"
 msgid "Packages In Queue"
 msgstr ""
 "\n"
@@ -2989,7 +2897,6 @@ msgstr ""
 
 #: QueueReadyDialog#8
 #, fuzzy
-msgctxt "QueueReadyDialog#8"
 msgid "Cancel"
 msgstr ""
 "\n"
@@ -3018,7 +2925,6 @@ msgstr ""
 
 #: ReviewQueueDialog#1
 #, fuzzy
-msgctxt "ReviewQueueDialog#1"
 msgid "Install"
 msgstr ""
 "\n"
@@ -3026,7 +2932,6 @@ msgstr ""
 
 #: ReviewQueueDialog#2
 #, fuzzy
-msgctxt "ReviewQueueDialog#2"
 msgid "To be Installed"
 msgstr ""
 "\n"
@@ -3034,7 +2939,6 @@ msgstr ""
 
 #: ReviewQueueDialog#3
 #, fuzzy
-msgctxt "ReviewQueueDialog#3"
 msgid "Upgrade"
 msgstr ""
 "\n"
@@ -3042,7 +2946,6 @@ msgstr ""
 
 #: ReviewQueueDialog#4
 #, fuzzy
-msgctxt "ReviewQueueDialog#4"
 msgid "To be Upgraded"
 msgstr ""
 "\n"
@@ -3050,7 +2953,6 @@ msgstr ""
 
 #: ReviewQueueDialog#5
 #, fuzzy
-msgctxt "ReviewQueueDialog#5"
 msgid "Uninstall"
 msgstr ""
 "\n"
@@ -3065,7 +2967,6 @@ msgstr ""
 
 #: ReviewQueueDialog#7
 #, fuzzy
-msgctxt "ReviewQueueDialog#7"
 msgid "Complete Uninstall"
 msgstr ""
 "\n"
@@ -3131,7 +3032,6 @@ msgstr ""
 
 #: ShamanTrayIcon#1
 #, fuzzy
-msgctxt "ShamanTrayIcon#1"
 msgid "Update Database"
 msgstr ""
 "\n"
@@ -3139,7 +3039,6 @@ msgstr ""
 
 #: ShamanTrayIcon#2
 #, fuzzy
-msgctxt "ShamanTrayIcon#2"
 msgid "Upgrade System"
 msgstr ""
 "\n"
@@ -3147,7 +3046,6 @@ msgstr ""
 
 #: ShamanTrayIcon#3
 #, fuzzy
-msgctxt "ShamanTrayIcon#3"
 msgid "Process Queue"
 msgstr ""
 "\n"
@@ -3162,7 +3060,6 @@ msgstr ""
 
 #: ShamanTrayIcon#5
 #, fuzzy
-msgctxt "ShamanTrayIcon#5"
 msgid "Quit"
 msgstr ""
 "\n"
@@ -3191,7 +3088,6 @@ msgstr ""
 
 #: ShamanTrayIcon#9
 #, fuzzy
-msgctxt "ShamanTrayIcon#9"
 msgid "System Upgrade"
 msgstr ""
 "\n"
@@ -3251,7 +3147,6 @@ msgstr ""
 
 #: SysUpgradeDialog#2
 #, fuzzy
-msgctxt "SysUpgradeDialog#2"
 msgid "To be Upgraded"
 msgstr ""
 "\n"
@@ -3534,7 +3429,6 @@ msgstr ""
 
 #: authDialog#4
 #, fuzzy
-msgctxt "authDialog#4"
 msgid "Ok"
 msgstr ""
 "\n"
@@ -3549,7 +3443,6 @@ msgstr ""
 
 #: authDialog#6
 #, fuzzy
-msgctxt "authDialog#6"
 msgid "Cancel"
 msgstr ""
 "\n"
@@ -3585,7 +3478,6 @@ msgstr ""
 
 #: buildingDialog#3
 #, fuzzy
-msgctxt "buildingDialog#3"
 msgid "Abort"
 msgstr ""
 "\n"
@@ -3600,7 +3492,6 @@ msgstr ""
 
 #: dbUpdateDialog#1
 #, fuzzy
-msgctxt "dbUpdateDialog#1"
 msgid "Database Update"
 msgstr ""
 "\n"
@@ -3650,7 +3541,6 @@ msgstr ""
 
 #: editPBDialog#6
 #, fuzzy
-msgctxt "editPBDialog#6"
 msgid "Ok"
 msgstr ""
 "\n"
@@ -3724,7 +3614,6 @@ msgstr ""
 # close the dialog
 #: logViewer#7
 #, fuzzy
-msgctxt "logViewer#7"
 msgid "Close"
 msgstr ""
 "\n"
@@ -3767,7 +3656,6 @@ msgstr ""
 
 #: newsDialog#5
 #, fuzzy
-msgctxt "newsDialog#5"
 msgid "Mark as Read"
 msgstr ""
 "\n"
@@ -3790,7 +3678,6 @@ msgstr ""
 # close the dialog
 #: newsDialog#8
 #, fuzzy
-msgctxt "newsDialog#8"
 msgid "Close"
 msgstr ""
 "\n"
@@ -3814,7 +3701,6 @@ msgstr ""
 
 #: pkgProperties#2
 #, fuzzy
-msgctxt "pkgProperties#2"
 msgid "Package Information"
 msgstr ""
 "\n"
@@ -3906,7 +3792,6 @@ msgstr ""
 
 #: pkgProperties#15
 #, fuzzy
-msgctxt "pkgProperties#15"
 msgid "1"
 msgstr ""
 "\n"
@@ -3942,7 +3827,6 @@ msgstr ""
 
 #: pkgProperties#20
 #, fuzzy
-msgctxt "pkgProperties#20"
 msgid "Ok"
 msgstr ""
 "\n"
@@ -3993,7 +3877,6 @@ msgstr ""
 
 #: reviewBuildingDialog#6
 #, fuzzy
-msgctxt "reviewBuildingDialog#6"
 msgid "Turn off PC when Queue is done"
 msgstr ""
 "\n"
@@ -4001,7 +3884,6 @@ msgstr ""
 
 #: reviewBuildingDialog#7
 #, fuzzy
-msgctxt "reviewBuildingDialog#7"
 msgid "Show packages..."
 msgstr ""
 "\n"
@@ -4009,7 +3891,6 @@ msgstr ""
 
 #: reviewBuildingDialog#8
 #, fuzzy
-msgctxt "reviewBuildingDialog#8"
 msgid "Packages In Queue"
 msgstr ""
 "\n"
@@ -4017,7 +3898,6 @@ msgstr ""
 
 #: reviewBuildingDialog#9
 #, fuzzy
-msgctxt "reviewBuildingDialog#9"
 msgid "Abort"
 msgstr ""
 "\n"
@@ -4081,7 +3961,6 @@ msgstr ""
 
 #: transactionDialog#6
 #, fuzzy
-msgctxt "transactionDialog#6"
 msgid "More Details..."
 msgstr ""
 "\n"
@@ -4089,7 +3968,6 @@ msgstr ""
 
 #: transactionDialog#7
 #, fuzzy
-msgctxt "transactionDialog#7"
 msgid "Abort"
 msgstr ""
 "\n"
@@ -4097,7 +3975,6 @@ msgstr ""
 
 #: transactionDialog#8
 #, fuzzy
-msgctxt "transactionDialog#8"
 msgid "Please Wait..."
 msgstr ""
 "\n"
@@ -4119,7 +3996,6 @@ msgstr ""
 
 #: upgradeDialog#1
 #, fuzzy
-msgctxt "upgradeDialog#1"
 msgid "System Upgrade"
 msgstr ""
 "\n"
@@ -4127,7 +4003,6 @@ msgstr ""
 
 #: upgradeDialog#2
 #, fuzzy
-msgctxt "upgradeDialog#2"
 msgid "Force Queue Processing"
 msgstr ""
 "\n"
@@ -4142,7 +4017,6 @@ msgstr ""
 
 #: upgradeDialog#4
 #, fuzzy
-msgctxt "upgradeDialog#4"
 msgid "Abort"
 msgstr ""
 "\n"
@@ -4150,7 +4024,6 @@ msgstr ""
 
 #: upgradeDialog#5
 #, fuzzy
-msgctxt "upgradeDialog#5"
 msgid "Show packages..."
 msgstr ""
 "\n"

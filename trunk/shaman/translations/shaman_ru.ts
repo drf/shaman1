@@ -222,8 +222,7 @@ Do you want to proceed anyway?</source>
         <location filename="../src/BuildingHandler.cpp" line="160"/>
         <source>You are about to install &lt;b&gt;%n package(s)&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
         <translation type="unfinished">
-            <numerusform>
-            </numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -1099,8 +1098,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../src/LocalPackageDialog.cpp" line="79"/>
         <source>%n package(s) will be installed as dependencies</source>
         <translation type="unfinished">
-            <numerusform>
-            </numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -2386,16 +2384,14 @@ p, li { white-space: pre-wrap; }
         <location filename="../src/ReviewQueueDialog.cpp" line="104"/>
         <source>Remove &lt;b&gt;%n package(s)&lt;/b&gt;&lt;br /&gt;</source>
         <translation type="unfinished">
-            <numerusform>
-            </numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../src/ReviewQueueDialog.cpp" line="106"/>
         <source>Install/Upgrade &lt;b&gt;%n package(s)&lt;/b&gt;&lt;br /&gt;</source>
         <translation type="unfinished">
-            <numerusform>
-            </numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -2512,8 +2508,7 @@ Click here to open the News Dialog for more details.</source>
         <source>Upgradeable package(s): %n.
 Click here to upgrade your System.</source>
         <translation type="unfinished">
-            <numerusform>
-            </numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -2538,8 +2533,7 @@ Click here to upgrade your System.</source>
         <location filename="../src/SysUpgradeDialog.cpp" line="67"/>
         <source>&lt;b&gt;Upgradeable package(s): %n&lt;/b&gt; You can either&lt;br&gt; upgrade immediately or add it to the current Queue&lt;br&gt; and process it later.</source>
         <translation type="unfinished">
-            <numerusform>
-            </numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
 </context>

@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-24 22:13+0200\n"
+"POT-Creation-Date: 2008-11-24 22:17+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.2.0\n"
+"X-Generator: Translate Toolkit 1.1.1\n"
 
 #. (obsolete)
 #: AlpmHandler#1
@@ -38,7 +38,6 @@ msgid ": %1 exists in filesystem"
 msgstr ": %1 dosya sisteminde mevcut"
 
 #: BuildingDialog#1
-msgctxt "BuildingDialog#1"
 msgid "Error"
 msgstr "Hata"
 
@@ -117,7 +116,6 @@ msgstr ""
 "sisteminizde ABS yüklü olmalı.Yüklensin mi?"
 
 #: BuildingHandler#2
-msgctxt "BuildingHandler#2"
 msgid "Error"
 msgstr "Hata"
 
@@ -168,12 +166,10 @@ msgstr ""
 "yapılandırmanızı gözden geçirmeniz önerilir."
 
 #: BuildingHandler#7
-msgctxt "BuildingHandler#7"
 msgid "To be Installed"
 msgstr "Yüklenecek"
 
 #: BuildingHandler#8
-msgctxt "BuildingHandler#8"
 msgid "To be Upgraded"
 msgstr "Yükseltilecek"
 
@@ -194,7 +190,6 @@ msgstr ""
 "Ayrıntılar için çıktılara göz atın."
 
 #: BuildingHandler#12
-msgctxt "BuildingHandler#12"
 msgid "Close"
 msgstr "Kapat"
 
@@ -304,32 +299,26 @@ msgid "General"
 msgstr "Genel"
 
 #: ConfigDialog#2
-msgctxt "ConfigDialog#2"
 msgid "Clean Unused Databases"
 msgstr "Kullanılmayan Veritabanlarını Temizle"
 
 #: ConfigDialog#3
-msgctxt "ConfigDialog#3"
 msgid "Clean Cache"
 msgstr "Cache'yi Temizle"
 
 #: ConfigDialog#4
-msgctxt "ConfigDialog#4"
 msgid "Empty Cache"
 msgstr "Cache'yi Boşalt"
 
 #: ConfigDialog#5
-msgctxt "ConfigDialog#5"
 msgid "Optimize Pacman Database"
 msgstr "Pacman Veritabanını İyileştir"
 
 #: ConfigDialog#6
-msgctxt "ConfigDialog#6"
 msgid "Clean All Building Environments"
 msgstr "Tüm Derleme Ortamlarını Temizle"
 
 #: ConfigDialog#7
-msgctxt "ConfigDialog#7"
 msgid "Repositories"
 msgstr "Depolar"
 
@@ -350,67 +339,54 @@ msgid "Enter Here the Repository's Server"
 msgstr "Deponun Sunucusunu Buraya Yazın"
 
 #: ConfigDialog#12
-msgctxt "ConfigDialog#12"
 msgid "Cleaning up unused Databases..."
 msgstr "Kullanılmayan Veritabanları temizleniyor..."
 
 #: ConfigDialog#13
-msgctxt "ConfigDialog#13"
 msgid "Cleaning up Cache..."
 msgstr "Cache Temizleniyor..."
 
 #: ConfigDialog#14
-msgctxt "ConfigDialog#14"
 msgid "Deleting Cache..."
 msgstr "Cache Siliniyor..."
 
 #: ConfigDialog#15
-msgctxt "ConfigDialog#15"
 msgid "Optimizing Pacman Database..."
 msgstr "Pacman Veritabanı İyileştiriliyor..."
 
 #: ConfigDialog#16
-msgctxt "ConfigDialog#16"
 msgid "Cleaning up building Environments..."
 msgstr "Derleme Ortamları temizleniyor..."
 
 #: ConfigDialog#17
-msgctxt "ConfigDialog#17"
 msgid "Cleaning up Unused Databases Failed!"
 msgstr "Kullanılmayan Veritabanlarını Silme Başarısız!"
 
 #: ConfigDialog#18
-msgctxt "ConfigDialog#18"
 msgid "Cleaning up Cache Failed!"
 msgstr "Cache Temizleme Başarısız!"
 
 #: ConfigDialog#19
-msgctxt "ConfigDialog#19"
 msgid "Deleting Cache Failed!"
 msgstr "Cache Silme Başarısız!"
 
 #: ConfigDialog#20
-msgctxt "ConfigDialog#20"
 msgid "Could not clean Build Environments!!"
 msgstr "Derleme Ortamları Temizlenemiyor!"
 
 #: ConfigDialog#21
-msgctxt "ConfigDialog#21"
 msgid "Unused Databases Cleaned up successfully!"
 msgstr "Kullanılmayan Veritabanları başarıyla Temizlendi!"
 
 #: ConfigDialog#22
-msgctxt "ConfigDialog#22"
 msgid "Cache Cleaned Up Successfully!"
 msgstr "Cache Başarıyla Temizlendi!"
 
 #: ConfigDialog#23
-msgctxt "ConfigDialog#23"
 msgid "Cache Successfully Deleted!"
 msgstr "Cache Başarıyla Silindi!"
 
 #: ConfigDialog#24
-msgctxt "ConfigDialog#24"
 msgid "Build Environments Successfully Cleaned!"
 msgstr "Derleme Ortamları Başarıyla Temizlendi!"
 
@@ -449,41 +425,34 @@ msgstr ""
 "Artık mirrorlist için yerini aldı."
 
 #: ConfigDialog#30
-msgctxt "ConfigDialog#30"
 msgid "Pacman Database Optimized Successfully!"
 msgstr "Pacman Veritabanı başarıyla İyileştirildi!"
 
 #: ConfigDialog#31
-msgctxt "ConfigDialog#31"
 msgid "Could not Optimize Pacman Database!"
 msgstr "Pacman Veritabanı iyileştirilemiyor!"
 
 # sync is a command, so it should not be translated
 #: ConfigDialog#32
-msgctxt "ConfigDialog#32"
 msgid "Running sync..."
 msgstr "sync çalıştırılıyor..."
 
 #: ConfigDialog#33
-msgctxt "ConfigDialog#33"
 msgid "Operation Completed Successfully!"
 msgstr "İşlem Başarıyla Tamamlandı!"
 
 # Sync is always the command
 #: ConfigDialog#34
-msgctxt "ConfigDialog#34"
 msgid "Sync was successfully executed!!"
 msgstr "Sync başarıyla çalıştırıldı!!"
 
 # Sync is always the command
 #: ConfigDialog#35
-msgctxt "ConfigDialog#35"
 msgid "Sync could not be executed!"
 msgstr "Sync çalıştırılamıyor!"
 
 # Sync is always the command
 #: ConfigDialog#36
-msgctxt "ConfigDialog#36"
 msgid "Sync could not be executed!!"
 msgstr "Sync çalıştırılamıyor!"
 
@@ -708,7 +677,6 @@ msgstr ""
 "tarafından kullanılır."
 
 #: ConfigDialog#80
-msgctxt "ConfigDialog#80"
 msgid "Repository"
 msgstr "Depo"
 
@@ -872,12 +840,10 @@ msgid "Log File:"
 msgstr "Kayıt Dosyası:"
 
 #: ConfigDialog#115
-msgctxt "ConfigDialog#115"
 msgid "Ok"
 msgstr "Tamam"
 
 #: ConfigDialog#116
-msgctxt "ConfigDialog#116"
 msgid "Cancel"
 msgstr "İptal"
 
@@ -1099,12 +1065,10 @@ msgid "Show..."
 msgstr "Göster..."
 
 #: LocalPackage#4
-msgctxt "LocalPackage#4"
 msgid "More Details..."
 msgstr "Daha Fazla Bilgi..."
 
 #: LocalPackage#5
-msgctxt "LocalPackage#5"
 msgid "Cancel"
 msgstr "İptal"
 
@@ -1133,7 +1097,6 @@ msgstr ""
 "        "
 
 #: MainWindow#1
-msgctxt "MainWindow#1"
 msgid "Name"
 msgstr "Ad"
 
@@ -1158,7 +1121,6 @@ msgstr ""
 
 #. (obsolete)
 #: MainWindow#4
-msgctxt "MainWindow#4"
 msgid "Do not show this Again"
 msgstr "Bunu Tekrar Gösterme"
 
@@ -1167,12 +1129,10 @@ msgid "Shaman - Reducing To Tray"
 msgstr "Shaman - Sistemçubuğuna yerleşiyor"
 
 #: MainWindow#6
-msgctxt "MainWindow#6"
 msgid "Upgrade"
 msgstr "Yükselt"
 
 #: MainWindow#7
-msgctxt "MainWindow#7"
 msgid "Repositories"
 msgstr "Depolar"
 
@@ -1219,17 +1179,14 @@ msgid "Mark for Installation"
 msgstr "Yükleme için İşaretle"
 
 #: MainWindow#18
-msgctxt "MainWindow#18"
 msgid "Install"
 msgstr "Yükle"
 
 #: MainWindow#19
-msgctxt "MainWindow#19"
 msgid "Uninstall"
 msgstr "Kaldır"
 
 #: MainWindow#20
-msgctxt "MainWindow#20"
 msgid "Complete Uninstall"
 msgstr "Tam Kaldırma"
 
@@ -1258,7 +1215,6 @@ msgid "Action: "
 msgstr "Eylem: "
 
 #: MainWindow#27
-msgctxt "MainWindow#27"
 msgid "Error"
 msgstr "Hata"
 
@@ -1273,7 +1229,6 @@ msgstr ""
 "%1"
 
 #: MainWindow#29
-msgctxt "MainWindow#29"
 msgid "Database Update"
 msgstr "Veritabanı Güncelleme"
 
@@ -1340,7 +1295,6 @@ msgid "Cancel all actions"
 msgstr "Tüm eylemleri iptal et"
 
 #: MainWindow#42
-msgctxt "MainWindow#42"
 msgid "System Upgrade"
 msgstr "Sistem Yükseltme"
 
@@ -1349,7 +1303,6 @@ msgid "Your system is up to date!"
 msgstr "Sisteminiz güncel!"
 
 #: MainWindow#44
-msgctxt "MainWindow#44"
 msgid "Queue Processing"
 msgstr "Sıra İşleniyor"
 
@@ -1469,28 +1422,24 @@ msgstr ""
 # Size is in Gib
 #. (obsolete)
 #: MainWindow#57
-msgctxt "MainWindow#57"
 msgid "%1 GiB"
 msgstr "%1 GB"
 
 # Size is in MiB
 #. (obsolete)
 #: MainWindow#58
-msgctxt "MainWindow#58"
 msgid "%1 MiB"
 msgstr "%1 MB"
 
 # Size is in KiB
 #. (obsolete)
 #: MainWindow#59
-msgctxt "MainWindow#59"
 msgid "%1 KiB"
 msgstr "%1 KB"
 
 # Size is in Bytes
 #. (obsolete)
 #: MainWindow#60
-msgctxt "MainWindow#60"
 msgid "%1 Bytes"
 msgstr "%1 Bayt"
 
@@ -1500,7 +1449,6 @@ msgid "Library Question"
 msgstr "Kütüphane Sorusu"
 
 #: MainWindow#62
-msgctxt "MainWindow#62"
 msgid "Shaman"
 msgstr "Shaman"
 
@@ -1525,7 +1473,6 @@ msgid "Size"
 msgstr "Boyut"
 
 #: MainWindow#68
-msgctxt "MainWindow#68"
 msgid "Repository"
 msgstr "Depo"
 
@@ -1538,7 +1485,6 @@ msgid "Action-Text"
 msgstr "Eylem-Metni"
 
 #: MainWindow#71
-msgctxt "MainWindow#71"
 msgid "Package Information"
 msgstr "Paket Bilgisi"
 
@@ -1570,18 +1516,15 @@ msgstr "Eylemi iptal et"
 
 #. (obsolete)
 #: MainWindow#78
-msgctxt "MainWindow#78"
 msgid "Files"
 msgstr "Dosyalar"
 
 #: MainWindow#79
-msgctxt "MainWindow#79"
 msgid "1"
 msgstr "1"
 
 #. (obsolete)
 #: MainWindow#80
-msgctxt "MainWindow#80"
 msgid "Dependencies"
 msgstr "Bağımlılıklar"
 
@@ -1622,12 +1565,10 @@ msgid "About..."
 msgstr "Hakkında..."
 
 #: MainWindow#89
-msgctxt "MainWindow#89"
 msgid "Update Database"
 msgstr "Veritabanını Güncelle"
 
 #: MainWindow#90
-msgctxt "MainWindow#90"
 msgid "Upgrade System"
 msgstr "Sistemi Yükselt"
 
@@ -1645,12 +1586,10 @@ msgstr "Sırayı Derle ve Yükle"
 
 # Quit the application
 #: MainWindow#94
-msgctxt "MainWindow#94"
 msgid "Quit"
 msgstr "Çıkış"
 
 #: MainWindow#95
-msgctxt "MainWindow#95"
 msgid "Process Queue"
 msgstr "Sırayı İşle"
 
@@ -1703,7 +1642,6 @@ msgstr "Sıra işlemede hata!"
 # The name of the Package
 #. (obsolete)
 #: MainWindow#105
-msgctxt "MainWindow#105"
 msgid "Name"
 msgstr "Ad"
 
@@ -1820,7 +1758,6 @@ msgstr ""
 # Name of the Package
 #. (obsolete)
 #: MainWindow#122
-msgctxt "MainWindow#122"
 msgid "Name"
 msgstr "Ad"
 
@@ -1838,57 +1775,46 @@ msgid "Please choose an action to start maintenance..."
 msgstr "Bakımı başlatmak için bir eylem seçin..."
 
 #: MaintenanceBar#2
-msgctxt "MaintenanceBar#2"
 msgid "Clean Unused Databases"
 msgstr "Kullanılmayan Veritabanlarını Temizle"
 
 #: MaintenanceBar#3
-msgctxt "MaintenanceBar#3"
 msgid "Clean Cache"
 msgstr "Ön belleği Temizle"
 
 #: MaintenanceBar#4
-msgctxt "MaintenanceBar#4"
 msgid "Empty Cache"
 msgstr "Ön belleğii Boşalt"
 
 #: MaintenanceBar#5
-msgctxt "MaintenanceBar#5"
 msgid "Optimize Pacman Database"
 msgstr "Pacman Veritabanını İyileştir"
 
 #: MaintenanceBar#6
-msgctxt "MaintenanceBar#6"
 msgid "Clean All Building Environments"
 msgstr "Tüm Derleme Ortamlarını Temizle"
 
 #: MaintenanceBar#7
-msgctxt "MaintenanceBar#7"
 msgid "Cleaning up unused Databases..."
 msgstr "Kullanılmayan Veritabanları temizleniyor..."
 
 #: MaintenanceBar#8
-msgctxt "MaintenanceBar#8"
 msgid "Cleaning up Cache..."
 msgstr "Ön bellek Temizleniyor..."
 
 #: MaintenanceBar#9
-msgctxt "MaintenanceBar#9"
 msgid "Deleting Cache..."
 msgstr "Ön bellek Siliniyor..."
 
 #: MaintenanceBar#10
-msgctxt "MaintenanceBar#10"
 msgid "Optimizing Pacman Database..."
 msgstr "Pacman Veritabanı İyileştiriliyor..."
 
 #: MaintenanceBar#11
-msgctxt "MaintenanceBar#11"
 msgid "Cleaning up building Environments..."
 msgstr "Derleme Ortamları temizleniyor..."
 
 #: MaintenanceBar#12
-msgctxt "MaintenanceBar#12"
 msgid "Abort"
 msgstr "İptal"
 
@@ -1897,86 +1823,70 @@ msgid "System Maintenance"
 msgstr "Sistem Bakımı"
 
 #: MaintenanceBar#14
-msgctxt "MaintenanceBar#14"
 msgid "Unused Databases Cleaned up successfully!"
 msgstr "Kullanılmayan Veritabanları başarıyla Temizlendi!"
 
 #: MaintenanceBar#15
-msgctxt "MaintenanceBar#15"
 msgid "Cache Cleaned Up Successfully!"
 msgstr "Ön bellek Başarıyla Temizlendi!"
 
 #: MaintenanceBar#16
-msgctxt "MaintenanceBar#16"
 msgid "Cache Successfully Deleted!"
 msgstr "Ön bellek Başarıyla Silindi!"
 
 #: MaintenanceBar#17
-msgctxt "MaintenanceBar#17"
 msgid "Build Environments Successfully Cleaned!"
 msgstr "Derleme Ortamları Başarıyla Temizlendi!"
 
 #: MaintenanceBar#18
-msgctxt "MaintenanceBar#18"
 msgid "Close"
 msgstr "Kapat"
 
 #: MaintenanceBar#19
-msgctxt "MaintenanceBar#19"
 msgid "Cleaning up Unused Databases Failed!"
 msgstr "Kullanılmayan Veritabanlarını Silme Başarısız!"
 
 #: MaintenanceBar#20
-msgctxt "MaintenanceBar#20"
 msgid "Cleaning up Cache Failed!"
 msgstr "Ön bellek Temizleme Başarısız!"
 
 #: MaintenanceBar#21
-msgctxt "MaintenanceBar#21"
 msgid "Deleting Cache Failed!"
 msgstr "Ön bellek Silme Başarısız!"
 
 #: MaintenanceBar#22
-msgctxt "MaintenanceBar#22"
 msgid "Could not clean Build Environments!!"
 msgstr "Derleme Ortamları Temizlenemiyor!"
 
 #: MaintenanceBar#23
-msgctxt "MaintenanceBar#23"
 msgid "Pacman Database Optimized Successfully!"
 msgstr "Pacman Veritabanı başarıyla İyileştirildi!"
 
 #: MaintenanceBar#24
-msgctxt "MaintenanceBar#24"
 msgid "Could not Optimize Pacman Database!"
 msgstr "Pacman Veritabanı iyileştirilemiyor!"
 
 # sync is a command, so it should not be translated
 #: MaintenanceBar#25
-msgctxt "MaintenanceBar#25"
 msgid "Running sync..."
 msgstr "sync çalıştırılıyor..."
 
 #: MaintenanceBar#26
-msgctxt "MaintenanceBar#26"
 msgid "Operation Completed Successfully!"
 msgstr "İşlem Başarıyla Tamamlandı!"
 
 # Sync is always the command
 #: MaintenanceBar#27
-msgctxt "MaintenanceBar#27"
 msgid "Sync was successfully executed!!"
 msgstr "Sync başarıyla çalıştırıldı!!"
 
 # Sync is always the command
 #: MaintenanceBar#28
-msgctxt "MaintenanceBar#28"
 msgid "Sync could not be executed!"
 msgstr "Sync çalıştırılamıyor!"
 
 # Sync is always the command
 #: MaintenanceBar#29
-msgctxt "MaintenanceBar#29"
 msgid "Sync could not be executed!!"
 msgstr "Sync çalıştırılamıyor!"
 
@@ -1989,7 +1899,6 @@ msgid "Please wait, fetching items..."
 msgstr "Lütfen bekleyin, getiriliyor..."
 
 #: NewsViewer#2
-msgctxt "NewsViewer#2"
 msgid "Mark as Read"
 msgstr "Okunmuş olarak işaretle"
 
@@ -1998,7 +1907,6 @@ msgid "Mark as Unread"
 msgstr "Okunmamış olarak işaretle"
 
 #: NewsViewer#4
-msgctxt "NewsViewer#4"
 msgid "Error"
 msgstr "Hata"
 
@@ -2008,25 +1916,21 @@ msgstr "RSS Beslemesi alınamıyor! Raporlanan hata:"
 
 # Size is in Gib
 #: PackageProperties#1
-msgctxt "PackageProperties#1"
 msgid "%1 GiB"
 msgstr "%1 GB"
 
 # Size is in MiB
 #: PackageProperties#2
-msgctxt "PackageProperties#2"
 msgid "%1 MiB"
 msgstr "%1 MB"
 
 # Size is in KiB
 #: PackageProperties#3
-msgctxt "PackageProperties#3"
 msgid "%1 KiB"
 msgstr "%1 KB"
 
 # Size is in Bytes
 #: PackageProperties#4
-msgctxt "PackageProperties#4"
 msgid "%1 Bytes"
 msgstr "%1 Bayt"
 
@@ -2048,7 +1952,6 @@ msgstr "Bu paket için changelog yok"
 # Lukas: l.appelhans@gmx.de
 # Thanks again, and enjoy your translation!
 #: QObject#1
-msgctxt "QObject#1"
 msgid "Shaman"
 msgstr "Shaman"
 
@@ -2062,7 +1965,6 @@ msgstr ""
 "Lütfen root haklarıyla başlatın."
 
 #: QObject#3
-msgctxt "QObject#3"
 msgid "Shaman"
 msgstr "Shaman"
 
@@ -2085,7 +1987,6 @@ msgstr ""
 "Sizinki %1. Lütfen Pacman'ı güncelleyin."
 
 #: QObject#6
-msgctxt "QObject#6"
 msgid "Please Wait..."
 msgstr "Lütfen Bekleyin..."
 
@@ -2120,7 +2021,6 @@ msgstr ""
 "Gerektiğinde Shaman kök parolanızı soracaktır."
 
 #: QObject#12
-msgctxt "QObject#12"
 msgid "Ok"
 msgstr "Tamam"
 
@@ -2168,7 +2068,6 @@ msgstr ""
 
 #. (obsolete)
 #: QObject#18
-msgctxt "QObject#18"
 msgid "Do not show this Again"
 msgstr "Bunu Tekrar Gösterme"
 
@@ -2314,7 +2213,6 @@ msgid "Queue processed successfully!"
 msgstr "Sıra başarıyla işlendi!"
 
 #: QueueDialog#30
-msgctxt "QueueDialog#30"
 msgid "Close"
 msgstr "Kapat"
 
@@ -2343,7 +2241,6 @@ msgid "Error processing Scriptlet!!"
 msgstr "Betik işlemede hata!!"
 
 #: QueueDialog#37
-msgctxt "QueueDialog#37"
 msgid "Queue Processing"
 msgstr "Sıra İşleme"
 
@@ -2365,7 +2262,6 @@ msgstr "İşlem gerçekleştirilirken bir hata oluştu.\n"
 
 #. (obsolete)
 #: QueueDialog#41
-msgctxt "QueueDialog#41"
 msgid "Ok"
 msgstr "Tamam"
 
@@ -2374,7 +2270,6 @@ msgid "Review Queue"
 msgstr "Sırayı Gözden Geçir"
 
 #: QueueReadyDialog#2
-msgctxt "QueueReadyDialog#2"
 msgid "Turn off PC when Queue is done"
 msgstr "Sıra tamamlandıktan sonra bilgisayarı kapat"
 
@@ -2387,18 +2282,14 @@ msgid "Keep Queue Dialog Open after the Queue is finished"
 msgstr "Sıra bittikten sonra da Sıra Penceresini açık tut"
 
 #: QueueReadyDialog#5
-msgctxt "QueueReadyDialog#5"
-"QueueReadyDialog#5"
 msgid "Show packages..."
 msgstr "Paketleri Göster..."
 
 #: QueueReadyDialog#6
-msgctxt "QueueReadyDialog#6"
 msgid "Packages In Queue"
 msgstr "Sıradaki Paketler"
 
 #: QueueReadyDialog#7
-msgctxt "QueueReadyDialog#7"
 msgid "Cancel"
 msgstr "İptal"
 
@@ -2425,32 +2316,26 @@ msgstr ""
 "Geçir</span></p></body></html>"
 
 #: QueueReadyDialog#10
-msgctxt "QueueReadyDialog#10"
 msgid "Force Queue Processing"
 msgstr "Sıra işlemeye zorla"
 
 #: ReviewQueueDialog#1
-msgctxt "ReviewQueueDialog#1"
 msgid "Install"
 msgstr "Yükle"
 
 #: ReviewQueueDialog#2
-msgctxt "ReviewQueueDialog#2"
 msgid "To be Installed"
 msgstr "Yüklenecek"
 
 #: ReviewQueueDialog#3
-msgctxt "ReviewQueueDialog#3"
 msgid "Upgrade"
 msgstr "Yükselt"
 
 #: ReviewQueueDialog#4
-msgctxt "ReviewQueueDialog#4"
 msgid "To be Upgraded"
 msgstr "Yükseltilecek"
 
 #: ReviewQueueDialog#5
-msgctxt "ReviewQueueDialog#5"
 msgid "Uninstall"
 msgstr "Kaldır"
 
@@ -2459,7 +2344,6 @@ msgid "To be Removed"
 msgstr "Kaldırılacak"
 
 #: ReviewQueueDialog#7
-msgctxt "ReviewQueueDialog#7"
 msgid "Complete Uninstall"
 msgstr "Tam Kaldırma"
 
@@ -2534,17 +2418,14 @@ msgid "%1 to be Installed, %2 to be Removed"
 msgstr "%1 yüklenecek, %2 Kaldırılacak"
 
 #: ShamanTrayIcon#1
-msgctxt "ShamanTrayIcon#1"
 msgid "Update Database"
 msgstr "Veritabanını Güncelle"
 
 #: ShamanTrayIcon#2
-msgctxt "ShamanTrayIcon#2"
 msgid "Upgrade System"
 msgstr "Sistemi Yükselt"
 
 #: ShamanTrayIcon#3
-msgctxt "ShamanTrayIcon#3"
 msgid "Process Queue"
 msgstr "Sırayı İşle"
 
@@ -2553,7 +2434,6 @@ msgid "Settings"
 msgstr "Ayarlar"
 
 #: ShamanTrayIcon#5
-msgctxt "ShamanTrayIcon#5"
 msgid "Quit"
 msgstr "Çıkış"
 
@@ -2570,7 +2450,6 @@ msgid "Shaman - Idle (Upgrades Available)"
 msgstr "Shaman - Boşta (Yükseltmeler Var)"
 
 #: ShamanTrayIcon#9
-msgctxt "ShamanTrayIcon#9"
 msgid "System Upgrade"
 msgstr "Sistem Yükseltme"
 
@@ -2645,7 +2524,6 @@ msgstr ""
 "sıraya ekleyerek</b> daha sonra yükseltebilirsiniz."
 
 #: SysUpgradeDialog#3
-msgctxt "SysUpgradeDialog#3"
 msgid "To be Upgraded"
 msgstr "Yükseltilecek"
 
@@ -3391,12 +3269,10 @@ msgid "Never ask for this anymore"
 msgstr "Bunu bir daha sorma"
 
 #: authDialog#4
-msgctxt "authDialog#4"
 msgid "Cancel"
 msgstr "İptal"
 
 #: authDialog#5
-msgctxt "authDialog#5"
 msgid "Ok"
 msgstr "Tamam"
 
@@ -3430,7 +3306,6 @@ msgstr ""
 "style=\" font-weight:600;\">Paketler Derleniyor...</span></p></body></html>"
 
 #: buildingDialog#3
-msgctxt "buildingDialog#3"
 msgid "Abort"
 msgstr "İptal"
 
@@ -3439,7 +3314,6 @@ msgid "Reduce To Tray"
 msgstr "Sistem Çubuğuna Küçült"
 
 #: dbUpdateDialog#1
-msgctxt "dbUpdateDialog#1"
 msgid "Database Update"
 msgstr "Veri Tabanı Güncelleme"
 
@@ -3468,7 +3342,6 @@ msgid "Redo"
 msgstr "İleri Al"
 
 #: editPBDialog#6
-msgctxt "editPBDialog#6"
 msgid "Ok"
 msgstr "Tamam"
 
@@ -3507,7 +3380,6 @@ msgstr "Görünümü Tazele"
 
 #. (obsolete)
 #: logViewer#5
-msgctxt "logViewer#5"
 msgid "Close"
 msgstr "Kapat"
 
@@ -3551,7 +3423,6 @@ msgstr ""
 
 # close the dialog
 #: logViewer#9
-msgctxt "logViewer#9"
 msgid "Close"
 msgstr "Kapat"
 
@@ -3577,7 +3448,6 @@ msgid "status"
 msgstr "durum"
 
 #: newsDialog#5
-msgctxt "newsDialog#5"
 msgid "Mark as Read"
 msgstr "Okunmuş olarak İşaretle"
 
@@ -3591,7 +3461,6 @@ msgstr "Tazele"
 
 #. (obsolete)
 #: newsDialog#8
-msgctxt "newsDialog#8"
 msgid "Close"
 msgstr "Kapat"
 
@@ -3601,7 +3470,6 @@ msgstr "Haber- Başlık"
 
 # close the dialog
 #: newsDialog#10
-msgctxt "newsDialog#10"
 msgid "Close"
 msgstr "Kapat"
 
@@ -3626,7 +3494,6 @@ msgstr ""
 "style=\" font-weight:600;\">Paket Bilgisi</span></p></body></html>"
 
 #: pkgProperties#2
-msgctxt "pkgProperties#2"
 msgid "Package Information"
 msgstr "Paket Bilgisi"
 
@@ -3678,17 +3545,14 @@ msgstr ""
 "            "
 
 #: pkgProperties#14
-msgctxt "pkgProperties#14"
 msgid "Files"
 msgstr "Dosyalar"
 
 #: pkgProperties#15
-msgctxt "pkgProperties#15"
 msgid "1"
 msgstr "1"
 
 #: pkgProperties#16
-msgctxt "pkgProperties#16"
 msgid "Dependencies"
 msgstr "Bağımlılıklar"
 
@@ -3705,7 +3569,6 @@ msgid "Actions Performed"
 msgstr "Gerçekleştirilen Eylemler"
 
 #: pkgProperties#20
-msgctxt "pkgProperties#20"
 msgid "Ok"
 msgstr "Tamam"
 
@@ -3745,22 +3608,18 @@ msgid "Do not install immediately when building is finished"
 msgstr "Derleme bittikten sonra hemen yükleme"
 
 #: reviewBuildingDialog#6
-msgctxt "reviewBuildingDialog#6"
 msgid "Turn off PC when Queue is done"
 msgstr "Sıra tamamlanınca bilgisayarı kapat"
 
 #: reviewBuildingDialog#7
-msgctxt "reviewBuildingDialog#7"
 msgid "Show packages..."
 msgstr "Paketleri göster..."
 
 #: reviewBuildingDialog#8
-msgctxt "reviewBuildingDialog#8"
 msgid "Packages In Queue"
 msgstr "Sıradaki Paketler"
 
 #: reviewBuildingDialog#9
-msgctxt "reviewBuildingDialog#9"
 msgid "Abort"
 msgstr "İptal"
 
@@ -3797,17 +3656,14 @@ msgid "Cleanup"
 msgstr "Temizleme"
 
 #: transactionDialog#6
-msgctxt "transactionDialog#6"
 msgid "More Details..."
 msgstr "Daha Fazla Bilgi..."
 
 #: transactionDialog#7
-msgctxt "transactionDialog#7"
 msgid "Abort"
 msgstr "İptal"
 
 #: transactionDialog#8
-msgctxt "transactionDialog#8"
 msgid "Please Wait..."
 msgstr "Lütfen Bekleyin..."
 
@@ -3829,7 +3685,6 @@ msgstr ""
 "İşle</span></p></body></html>"
 
 #: upgradeDialog#1
-msgctxt "upgradeDialog#1"
 msgid "System Upgrade"
 msgstr "Sistem Yükseltme"
 
@@ -3838,12 +3693,10 @@ msgid "Remember my choice"
 msgstr "Seçimimi hatırla"
 
 #: upgradeDialog#3
-msgctxt "upgradeDialog#3"
 msgid "Abort"
 msgstr "İptal"
 
 #: upgradeDialog#4
-msgctxt "upgradeDialog#4"
 msgid "Show packages..."
 msgstr "Paketleri göster..."
 
@@ -3877,6 +3730,5 @@ msgid "Packages to Upgrade"
 msgstr "Yükseltilecek Paketler"
 
 #: upgradeDialog#9
-msgctxt "upgradeDialog#9"
 msgid "Force Queue Processing"
 msgstr "Sıra İşlemeyi Zorla"

@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-24 22:13+0200\n"
+"POT-Creation-Date: 2008-11-24 22:17+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.2.0\n"
+"X-Generator: Translate Toolkit 1.1.1\n"
 
 #. (obsolete)
 #: AlpmHandler#1
@@ -38,7 +38,6 @@ msgid "Alpm did not give further details."
 msgstr "Alpm não deu detalhes adicionais."
 
 #: BuildingDialog#1
-msgctxt "BuildingDialog#1"
 msgid "Error"
 msgstr "Erro"
 
@@ -116,7 +115,6 @@ msgstr ""
 "de construção do Shaman. Deseja instalá-lo agora?"
 
 #: BuildingHandler#2
-msgctxt "BuildingHandler#2"
 msgid "Error"
 msgstr "Erro"
 
@@ -169,14 +167,10 @@ msgstr ""
 "você<br>reveja sua configuração para aumentar o desempenho na construção."
 
 #: BuildingHandler#7
-msgctxt "BuildingHandler#7"
-"BuildingHandler#7"
 msgid "To be Installed"
 msgstr "A ser instalado"
 
 #: BuildingHandler#8
-msgctxt "BuildingHandler#8"
-"BuildingHandler#8"
 msgid "To be Upgraded"
 msgstr "A ser atualizado"
 
@@ -197,7 +191,6 @@ msgstr ""
 "Cheque o log para mais detalhes."
 
 #: BuildingHandler#12
-msgctxt "BuildingHandler#12"
 msgid "Close"
 msgstr "Fechar"
 
@@ -493,7 +486,6 @@ msgstr ""
 "quanto pelo Pacman."
 
 #: ConfigDialog#40
-msgctxt "ConfigDialog#40"
 msgid "Repository"
 msgstr "Repositório"
 
@@ -586,32 +578,26 @@ msgid "General"
 msgstr "Geral"
 
 #: ConfigDialog#60
-msgctxt "ConfigDialog#60"
 msgid "Clean Unused Databases"
 msgstr "Limpar bases de dados não utilizadas"
 
 #: ConfigDialog#61
-msgctxt "ConfigDialog#61"
 msgid "Clean Cache"
 msgstr "Limpar cache"
 
 #: ConfigDialog#62
-msgctxt "ConfigDialog#62"
 msgid "Empty Cache"
 msgstr "Esvaziar cache"
 
 #: ConfigDialog#63
-msgctxt "ConfigDialog#63"
 msgid "Optimize Pacman Database"
 msgstr "Otimizar base de dados do Pacman"
 
 #: ConfigDialog#64
-msgctxt "ConfigDialog#64"
 msgid "Clean All Building Environments"
 msgstr "Limpar todos os ambientes de construção"
 
 #: ConfigDialog#65
-msgctxt "ConfigDialog#65"
 msgid "Repositories"
 msgstr "Repositórios"
 
@@ -638,67 +624,54 @@ msgid "Enter Here the Repository's Server"
 msgstr "Coloque aqui o Servidor do Repositório"
 
 #: ConfigDialog#70
-msgctxt "ConfigDialog#70"
 msgid "Cleaning up unused Databases..."
 msgstr "Limpando bases de dados não utilizadas..."
 
 #: ConfigDialog#71
-msgctxt "ConfigDialog#71"
 msgid "Cleaning up Cache..."
 msgstr "Limpando cache..."
 
 #: ConfigDialog#72
-msgctxt "ConfigDialog#72"
 msgid "Deleting Cache..."
 msgstr "Deletando cache..."
 
 #: ConfigDialog#73
-msgctxt "ConfigDialog#73"
 msgid "Optimizing Pacman Database..."
 msgstr "Otimizando base de dados do Pacman..."
 
 #: ConfigDialog#74
-msgctxt "ConfigDialog#74"
 msgid "Cleaning up building Environments..."
 msgstr "Limpando ambientes de construção..."
 
 #: ConfigDialog#75
-msgctxt "ConfigDialog#75"
 msgid "Cleaning up Unused Databases Failed!"
 msgstr "Limpeza das bases de dados não utilizadas falhou!"
 
 #: ConfigDialog#76
-msgctxt "ConfigDialog#76"
 msgid "Cleaning up Cache Failed!"
 msgstr "Limpeza do cache falhou!"
 
 #: ConfigDialog#77
-msgctxt "ConfigDialog#77"
 msgid "Deleting Cache Failed!"
 msgstr "Deleção do cache falhou!"
 
 #: ConfigDialog#78
-msgctxt "ConfigDialog#78"
 msgid "Could not clean Build Environments!!"
 msgstr "Não foi possível limpar ambientes de construção!!"
 
 #: ConfigDialog#79
-msgctxt "ConfigDialog#79"
 msgid "Unused Databases Cleaned up successfully!"
 msgstr "Bases de dados não utilizadas limpas com sucesso!"
 
 #: ConfigDialog#80
-msgctxt "ConfigDialog#80"
 msgid "Cache Cleaned Up Successfully!"
 msgstr "Cache limpo com sucesso!"
 
 #: ConfigDialog#81
-msgctxt "ConfigDialog#81"
 msgid "Cache Successfully Deleted!"
 msgstr "Cache deletado com sucesso!"
 
 #: ConfigDialog#82
-msgctxt "ConfigDialog#82"
 msgid "Build Environments Successfully Cleaned!"
 msgstr "Ambientes de construção limpos com sucesso!"
 
@@ -738,35 +711,29 @@ msgstr ""
 "Ele está disponível no mirrorlist."
 
 #: ConfigDialog#88
-msgctxt "ConfigDialog#88"
 msgid "Pacman Database Optimized Successfully!"
 msgstr "Base de dados do Pacman otimizada com sucesso!"
 
 #: ConfigDialog#89
-msgctxt "ConfigDialog#89"
 msgid "Could not Optimize Pacman Database!"
 msgstr "Não foi possível otimizar base de dados do Pacman!"
 
 #: ConfigDialog#90
-msgctxt "ConfigDialog#90"
 msgid "Operation Completed Successfully!"
 msgstr "Operação completada com sucesso!"
 
 # Sync is always the command
 #: ConfigDialog#91
-msgctxt "ConfigDialog#91"
 msgid "Sync was successfully executed!!"
 msgstr "Sync executado com sucesso!!"
 
 # Sync is always the command
 #: ConfigDialog#92
-msgctxt "ConfigDialog#92"
 msgid "Sync could not be executed!"
 msgstr "Sync não pode ser executado!"
 
 # Sync is always the command
 #: ConfigDialog#93
-msgctxt "ConfigDialog#93"
 msgid "Sync could not be executed!!"
 msgstr "Sync não pode ser executado!!"
 
@@ -809,7 +776,6 @@ msgstr ""
 
 # sync is a command, so it should not be translated
 #: ConfigDialog#99
-msgctxt "ConfigDialog#99"
 msgid "Running sync..."
 msgstr "Executando sync..."
 
@@ -933,12 +899,10 @@ msgid "Log File:"
 msgstr "Arquivo de log:"
 
 #: ConfigDialog#118
-msgctxt "ConfigDialog#118"
 msgid "Ok"
 msgstr "Ok"
 
 #: ConfigDialog#119
-msgctxt "ConfigDialog#119"
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -1178,13 +1142,11 @@ msgstr ""
 
 #: LocalPackage#4
 #, fuzzy
-msgctxt "LocalPackage#4"
 msgid "More Details..."
 msgstr "Mais detalhes..."
 
 #: LocalPackage#5
 #, fuzzy
-msgctxt "LocalPackage#5"
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -1225,7 +1187,6 @@ msgstr ""
 "        "
 
 #: MainWindow#1
-msgctxt "MainWindow#1"
 msgid "Shaman"
 msgstr "Shaman"
 
@@ -1254,7 +1215,6 @@ msgid "Status"
 msgstr "Estado"
 
 #: MainWindow#8
-msgctxt "MainWindow#8"
 msgid "Name"
 msgstr "Nome"
 
@@ -1271,7 +1231,6 @@ msgid "Size"
 msgstr "Tamanho"
 
 #: MainWindow#12
-msgctxt "MainWindow#12"
 msgid "Repository"
 msgstr "Repositório"
 
@@ -1288,7 +1247,6 @@ msgid "Action-Text"
 msgstr "Texto da ação"
 
 #: MainWindow#16
-msgctxt "MainWindow#16"
 msgid "Repositories"
 msgstr "Repositórios"
 
@@ -1297,7 +1255,6 @@ msgid "Package Groups"
 msgstr "Grupos de pacotes"
 
 #: MainWindow#18
-msgctxt "MainWindow#18"
 msgid "Package Information"
 msgstr "Informação do pacote"
 
@@ -1339,18 +1296,15 @@ msgstr "Cancelar ação"
 
 #. (obsolete)
 #: MainWindow#27
-msgctxt "MainWindow#27"
 msgid "Files"
 msgstr "Arquivos"
 
 #: MainWindow#28
-msgctxt "MainWindow#28"
 msgid "1"
 msgstr "1"
 
 #. (obsolete)
 #: MainWindow#29
-msgctxt "MainWindow#29"
 msgid "Dependencies"
 msgstr "Dependências"
 
@@ -1391,12 +1345,10 @@ msgid "About..."
 msgstr "Sobre..."
 
 #: MainWindow#38
-msgctxt "MainWindow#38"
 msgid "Update Database"
 msgstr "Atualizar base de dados"
 
 #: MainWindow#39
-msgctxt "MainWindow#39"
 msgid "Upgrade System"
 msgstr "Atualizar Sistema"
 
@@ -1413,7 +1365,6 @@ msgid "Build and Install Queue"
 msgstr "Construir e instalar pacotes"
 
 #: MainWindow#43
-msgctxt "MainWindow#43"
 msgid "Process Queue"
 msgstr "Aplicar"
 
@@ -1441,12 +1392,10 @@ msgid "Shaman - Reducing To Tray"
 msgstr "Shaman - minimizando para o tray"
 
 #: MainWindow#47
-msgctxt "MainWindow#47"
 msgid "Upgrade"
 msgstr "Atualizar"
 
 #: MainWindow#48
-msgctxt "MainWindow#48"
 msgid "System Upgrade"
 msgstr "Atualização do Sistema"
 
@@ -1468,17 +1417,14 @@ msgid "Mark for Reinstallation"
 msgstr "Marcar para reinstalação"
 
 #: MainWindow#53
-msgctxt "MainWindow#53"
 msgid "Install"
 msgstr "Instalar"
 
 #: MainWindow#54
-msgctxt "MainWindow#54"
 msgid "Uninstall"
 msgstr "Desinstalar"
 
 #: MainWindow#55
-msgctxt "MainWindow#55"
 msgid "Complete Uninstall"
 msgstr "Desinstalação completa"
 
@@ -1499,7 +1445,6 @@ msgid "Action: "
 msgstr "Ação: "
 
 #: MainWindow#60
-msgctxt "MainWindow#60"
 msgid "Error"
 msgstr "Erro"
 
@@ -1514,7 +1459,6 @@ msgstr ""
 "%1"
 
 #: MainWindow#62
-msgctxt "MainWindow#62"
 msgid "Database Update"
 msgstr "Atualização da base de dados"
 
@@ -1548,7 +1492,6 @@ msgid "Your system is up to date!"
 msgstr "Seu sistema está atualizado!"
 
 #: MainWindow#70
-msgctxt "MainWindow#70"
 msgid "Queue Processing"
 msgstr "Processamento"
 
@@ -1574,55 +1517,46 @@ msgstr "Sua ação foi processada com sucesso!!"
 
 #. (obsolete)
 #: MainWindow#75
-msgctxt "MainWindow#75"
 msgid "To be Installed"
 msgstr "A instalar"
 
 #. (obsolete)
 #: MainWindow#76
-msgctxt "MainWindow#76"
 msgid "To be Upgraded"
 msgstr "A atualizar"
 
 #. (obsolete)
 #: MainWindow#77
-msgctxt "MainWindow#77"
 msgid "To be Removed"
 msgstr "A remover"
 
 #. (obsolete)
 #: MainWindow#78
-msgctxt "MainWindow#78"
 msgid "Your Queue is about to be processed. You are going to:<br />"
 msgstr "Sua fila está para ser processada. Você irá:<br />"
 
 #. (obsolete)
 #: MainWindow#79
-msgctxt "MainWindow#79"
 msgid "Remove <b>%1 package</b><br />"
 msgstr "Remover <b>%1 pacote</b><br />"
 
 #. (obsolete)
 #: MainWindow#80
-msgctxt "MainWindow#80"
 msgid "Remove <b>%1 packages</b><br />"
 msgstr "Remover <b>%1 pacotes</b><br />"
 
 #. (obsolete)
 #: MainWindow#81
-msgctxt "MainWindow#81"
 msgid "Install/Upgrade <b>%1 package</b><br />"
 msgstr "Instalar/atualizar <b>%1 pacote</b><br />"
 
 #. (obsolete)
 #: MainWindow#82
-msgctxt "MainWindow#82"
 msgid "Install/Upgrade <b>%1 packages</b><br />"
 msgstr "Instalar/atualizar <b>%1 pacotes</b><br />"
 
 #. (obsolete)
 #: MainWindow#83
-msgctxt "MainWindow#83"
 msgid "Do you wish to continue?"
 msgstr "Você deseja continuar?"
 
@@ -1645,40 +1579,34 @@ msgstr ""
 # Size is in Gib
 #. (obsolete)
 #: MainWindow#87
-msgctxt "MainWindow#87"
 msgid "%1 GiB"
 msgstr "%1 GiB"
 
 # Size is in MiB
 #. (obsolete)
 #: MainWindow#88
-msgctxt "MainWindow#88"
 msgid "%1 MiB"
 msgstr "%1 MiB"
 
 # Size is in KiB
 #. (obsolete)
 #: MainWindow#89
-msgctxt "MainWindow#89"
 msgid "%1 KiB"
 msgstr "%1 KiB"
 
 # Size is in Bytes
 #. (obsolete)
 #: MainWindow#90
-msgctxt "MainWindow#90"
 msgid "%1 Bytes"
 msgstr "%1 Bytes"
 
 # Quit the application
 #: MainWindow#91
-msgctxt "MainWindow#91"
 msgid "Quit"
 msgstr "Sair"
 
 #. (obsolete)
 #: MainWindow#92
-msgctxt "MainWindow#92"
 msgid "Do not show this Again"
 msgstr "Não mostrar novamente"
 
@@ -1852,7 +1780,6 @@ msgstr "Erro Processando Ação!!"
 # The name of the Package
 #. (obsolete)
 #: MainWindow#114
-msgctxt "MainWindow#114"
 msgid "Name"
 msgstr "Nome"
 
@@ -1973,7 +1900,6 @@ msgstr ""
 # Name of the Package
 #. (obsolete)
 #: MainWindow#131
-msgctxt "MainWindow#131"
 msgid "Name"
 msgstr "Nome"
 
@@ -2001,67 +1927,56 @@ msgstr ""
 
 #: MaintenanceBar#2
 #, fuzzy
-msgctxt "MaintenanceBar#2"
 msgid "Clean Unused Databases"
 msgstr "Limpar bases de dados não utilizadas"
 
 #: MaintenanceBar#3
 #, fuzzy
-msgctxt "MaintenanceBar#3"
 msgid "Clean Cache"
 msgstr "Limpar cache"
 
 #: MaintenanceBar#4
 #, fuzzy
-msgctxt "MaintenanceBar#4"
 msgid "Empty Cache"
 msgstr "Esvaziar cache"
 
 #: MaintenanceBar#5
 #, fuzzy
-msgctxt "MaintenanceBar#5"
 msgid "Optimize Pacman Database"
 msgstr "Otimizar base de dados do Pacman"
 
 #: MaintenanceBar#6
 #, fuzzy
-msgctxt "MaintenanceBar#6"
 msgid "Clean All Building Environments"
 msgstr "Limpar todos os ambientes de construção"
 
 #: MaintenanceBar#7
 #, fuzzy
-msgctxt "MaintenanceBar#7"
 msgid "Cleaning up unused Databases..."
 msgstr "Limpando bases de dados não utilizadas..."
 
 #: MaintenanceBar#8
 #, fuzzy
-msgctxt "MaintenanceBar#8"
 msgid "Cleaning up Cache..."
 msgstr "Limpando cache..."
 
 #: MaintenanceBar#9
 #, fuzzy
-msgctxt "MaintenanceBar#9"
 msgid "Deleting Cache..."
 msgstr "Deletando cache..."
 
 #: MaintenanceBar#10
 #, fuzzy
-msgctxt "MaintenanceBar#10"
 msgid "Optimizing Pacman Database..."
 msgstr "Otimizando base de dados do Pacman..."
 
 #: MaintenanceBar#11
 #, fuzzy
-msgctxt "MaintenanceBar#11"
 msgid "Cleaning up building Environments..."
 msgstr "Limpando ambientes de construção..."
 
 #: MaintenanceBar#12
 #, fuzzy
-msgctxt "MaintenanceBar#12"
 msgid "Abort"
 msgstr "Cancelar"
 
@@ -2074,101 +1989,85 @@ msgstr ""
 
 #: MaintenanceBar#14
 #, fuzzy
-msgctxt "MaintenanceBar#14"
 msgid "Unused Databases Cleaned up successfully!"
 msgstr "Bases de dados não utilizadas limpas com sucesso!"
 
 #: MaintenanceBar#15
 #, fuzzy
-msgctxt "MaintenanceBar#15"
 msgid "Cache Cleaned Up Successfully!"
 msgstr "Cache limpo com sucesso!"
 
 #: MaintenanceBar#16
 #, fuzzy
-msgctxt "MaintenanceBar#16"
 msgid "Cache Successfully Deleted!"
 msgstr "Cache deletado com sucesso!"
 
 #: MaintenanceBar#17
 #, fuzzy
-msgctxt "MaintenanceBar#17"
 msgid "Build Environments Successfully Cleaned!"
 msgstr "Ambientes de construção limpos com sucesso!"
 
 #: MaintenanceBar#18
 #, fuzzy
-msgctxt "MaintenanceBar#18"
 msgid "Close"
 msgstr "Fechar"
 
 #: MaintenanceBar#19
 #, fuzzy
-msgctxt "MaintenanceBar#19"
 msgid "Cleaning up Unused Databases Failed!"
 msgstr "Limpeza das bases de dados não utilizadas falhou!"
 
 #: MaintenanceBar#20
 #, fuzzy
-msgctxt "MaintenanceBar#20"
 msgid "Cleaning up Cache Failed!"
 msgstr "Limpeza do cache falhou!"
 
 #: MaintenanceBar#21
 #, fuzzy
-msgctxt "MaintenanceBar#21"
 msgid "Deleting Cache Failed!"
 msgstr "Deleção do cache falhou!"
 
 #: MaintenanceBar#22
 #, fuzzy
-msgctxt "MaintenanceBar#22"
 msgid "Could not clean Build Environments!!"
 msgstr "Não foi possível limpar ambientes de construção!!"
 
 #: MaintenanceBar#23
 #, fuzzy
-msgctxt "MaintenanceBar#23"
 msgid "Pacman Database Optimized Successfully!"
 msgstr "Base de dados do Pacman otimizada com sucesso!"
 
 #: MaintenanceBar#24
 #, fuzzy
-msgctxt "MaintenanceBar#24"
 msgid "Could not Optimize Pacman Database!"
 msgstr "Não foi possível otimizar base de dados do Pacman!"
 
 # sync is a command, so it should not be translated
 #: MaintenanceBar#25
 #, fuzzy
-msgctxt "MaintenanceBar#25"
 msgid "Running sync..."
 msgstr "Executando sync..."
 
 #: MaintenanceBar#26
 #, fuzzy
-msgctxt "MaintenanceBar#26"
 msgid "Operation Completed Successfully!"
 msgstr "Operação completada com sucesso!"
 
 # Sync is always the command
 #: MaintenanceBar#27
 #, fuzzy
-msgctxt "MaintenanceBar#27"
 msgid "Sync was successfully executed!!"
 msgstr "Sync executado com sucesso!!"
 
 # Sync is always the command
 #: MaintenanceBar#28
 #, fuzzy
-msgctxt "MaintenanceBar#28"
 msgid "Sync could not be executed!"
 msgstr "Sync não pode ser executado!"
 
 # Sync is always the command
 #: MaintenanceBar#29
 #, fuzzy
-msgctxt "MaintenanceBar#29"
 msgid "Sync could not be executed!!"
 msgstr "Sync não pode ser executado!!"
 
@@ -2184,7 +2083,6 @@ msgid "Please wait, fetching items..."
 msgstr "Por favor aguarde, buscando itens..."
 
 #: NewsViewer#2
-msgctxt "NewsViewer#2"
 msgid "Mark as Read"
 msgstr "Marcar como lido"
 
@@ -2193,7 +2091,6 @@ msgid "Mark as Unread"
 msgstr "Marcar como não lido"
 
 #: NewsViewer#4
-msgctxt "NewsViewer#4"
 msgid "Error"
 msgstr "Erro"
 
@@ -2203,25 +2100,21 @@ msgstr "Não foi possível atualizar o RSS! O erro reportado foi:"
 
 # Size is in Gib
 #: PackageProperties#1
-msgctxt "PackageProperties#1"
 msgid "%1 GiB"
 msgstr "%1 GiB"
 
 # Size is in MiB
 #: PackageProperties#2
-msgctxt "PackageProperties#2"
 msgid "%1 MiB"
 msgstr "%1 MiB"
 
 # Size is in KiB
 #: PackageProperties#3
-msgctxt "PackageProperties#3"
 msgid "%1 KiB"
 msgstr "%1 KiB"
 
 # Size is in Bytes
 #: PackageProperties#4
-msgctxt "PackageProperties#4"
 msgid "%1 Bytes"
 msgstr "%1 Bytes"
 
@@ -2248,7 +2141,6 @@ msgstr ""
 "Por favor, reinicie o programa com privilégios de root."
 
 #: QObject#2
-msgctxt "QObject#2"
 msgid "Shaman"
 msgstr "Shaman"
 
@@ -2265,12 +2157,10 @@ msgstr ""
 # Lukas: l.appelhans@gmx.de
 # Thanks again, and enjoy your translation!
 #: QObject#4
-msgctxt "QObject#4"
 msgid "Shaman"
 msgstr "Shaman"
 
 #: QObject#5
-msgctxt "QObject#5"
 msgid "Please Wait..."
 msgstr "Por favor aguarde..."
 
@@ -2315,7 +2205,6 @@ msgstr ""
 "O Shaman pedirá a senha de root quando necessário."
 
 #: QObject#12
-msgctxt "QObject#12"
 msgid "Ok"
 msgstr "Ok"
 
@@ -2331,7 +2220,6 @@ msgstr "Não"
 
 #. (obsolete)
 #: QObject#15
-msgctxt "QObject#15"
 msgid "Do not show this Again"
 msgstr "Não mostrar novamente"
 
@@ -2526,7 +2414,6 @@ msgid "Error processing Scriptlet!!"
 msgstr "Erro processando Scriptlet!!"
 
 #: QueueDialog#34
-msgctxt "QueueDialog#34"
 msgid "Queue Processing"
 msgstr "Processando ações"
 
@@ -2547,7 +2434,6 @@ msgstr ""
 "Isso pode danificar o sistema."
 
 #: QueueDialog#38
-msgctxt "QueueDialog#38"
 msgid "Close"
 msgstr "Fechar"
 
@@ -2564,7 +2450,6 @@ msgid "Review Queue"
 msgstr "Revisar ações"
 
 #: QueueReadyDialog#2
-msgctxt "QueueReadyDialog#2"
 msgid "Turn off PC when Queue is done"
 msgstr "Desligar o PC quando as ações forem concluídas"
 
@@ -2573,17 +2458,14 @@ msgid "Process in Tray"
 msgstr "Processar no tray"
 
 #: QueueReadyDialog#4
-msgctxt "QueueReadyDialog#4"
 msgid "Show packages..."
 msgstr "Mostrar pacotes..."
 
 #: QueueReadyDialog#5
-msgctxt "QueueReadyDialog#5"
 msgid "Packages In Queue"
 msgstr "Pacotes na fila"
 
 #: QueueReadyDialog#6
-msgctxt "QueueReadyDialog#6"
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -2614,76 +2496,62 @@ msgid "Keep Queue Dialog Open after the Queue is finished"
 msgstr "Manter janela de ações aberta depois de terminado"
 
 #: QueueReadyDialog#10
-msgctxt "QueueReadyDialog#10"
 msgid "Force Queue Processing"
 msgstr "Forçar Processamento da ação"
 
 #: ReviewQueueDialog#1
-msgctxt "ReviewQueueDialog#1"
 msgid "Install"
 msgstr "Instalar"
 
 #: ReviewQueueDialog#2
-msgctxt "ReviewQueueDialog#2"
 msgid "To be Installed"
 msgstr "A ser instalado"
 
 #: ReviewQueueDialog#3
-msgctxt "ReviewQueueDialog#3"
 msgid "Upgrade"
 msgstr "Atualizar"
 
 #: ReviewQueueDialog#4
-msgctxt "ReviewQueueDialog#4"
 msgid "To be Upgraded"
 msgstr "A ser atualizado"
 
 #: ReviewQueueDialog#5
-msgctxt "ReviewQueueDialog#5"
 msgid "Uninstall"
 msgstr "Desinstalar"
 
 #: ReviewQueueDialog#6
-msgctxt "ReviewQueueDialog#6"
 msgid "To be Removed"
 msgstr "A remover"
 
 #: ReviewQueueDialog#7
-msgctxt "ReviewQueueDialog#7"
 msgid "Complete Uninstall"
 msgstr "Desinstalação completa"
 
 #: ReviewQueueDialog#8
-msgctxt "ReviewQueueDialog#8"
 msgid "Your Queue is about to be processed. You are going to:<br />"
 msgstr "Sua ação está para ser processada. Você irá:<br />"
 
 #. (obsolete)
 #: ReviewQueueDialog#9
-msgctxt "ReviewQueueDialog#9"
 msgid "Remove <b>%1 package</b><br />"
 msgstr "Remover <b>%1 pacote</b><br />"
 
 #. (obsolete)
 #: ReviewQueueDialog#10
-msgctxt "ReviewQueueDialog#10"
 msgid "Remove <b>%1 packages</b><br />"
 msgstr "Remover <b>%1 pacotes</b><br />"
 
 #. (obsolete)
 #: ReviewQueueDialog#11
-msgctxt "ReviewQueueDialog#11"
 msgid "Install/Upgrade <b>%1 package</b><br />"
 msgstr "Instalar/atualizar <b>%1 pacote</b><br />"
 
 #. (obsolete)
 #: ReviewQueueDialog#12
-msgctxt "ReviewQueueDialog#12"
 msgid "Install/Upgrade <b>%1 packages</b><br />"
 msgstr "Instalar/atualizar <b>%1 pacotes</b><br />"
 
 #: ReviewQueueDialog#13
-msgctxt "ReviewQueueDialog#13"
 msgid "Do you wish to continue?"
 msgstr "Você deseja continuar?"
 
@@ -2730,17 +2598,14 @@ msgid "%1 to be Installed, %2 to be Removed"
 msgstr "%1 a ser instalado(s), %2 a ser removido(s)"
 
 #: ShamanTrayIcon#1
-msgctxt "ShamanTrayIcon#1"
 msgid "Update Database"
 msgstr "Atualizar base de dados"
 
 #: ShamanTrayIcon#2
-msgctxt "ShamanTrayIcon#2"
 msgid "Upgrade System"
 msgstr "Atualizar Sistema"
 
 #: ShamanTrayIcon#3
-msgctxt "ShamanTrayIcon#3"
 msgid "Process Queue"
 msgstr "Aplicar"
 
@@ -2749,7 +2614,6 @@ msgid "Settings"
 msgstr "Configurações"
 
 #: ShamanTrayIcon#5
-msgctxt "ShamanTrayIcon#5"
 msgid "Quit"
 msgstr "Sair"
 
@@ -2766,7 +2630,6 @@ msgid "Shaman - Idle (Upgrades Available)"
 msgstr "Shaman - Parado (atualizações disponíveis)"
 
 #: ShamanTrayIcon#9
-msgctxt "ShamanTrayIcon#9"
 msgid "System Upgrade"
 msgstr "Atualização do Sistema"
 
@@ -2841,7 +2704,6 @@ msgstr ""
 "imediadamente ou colocá-los na fila e processá-los depois."
 
 #: SysUpgradeDialog#3
-msgctxt "SysUpgradeDialog#3"
 msgid "To be Upgraded"
 msgstr "A serem atualizados"
 
@@ -3697,12 +3559,10 @@ msgid "Never ask for this anymore"
 msgstr "Não pedir mais por isso"
 
 #: authDialog#4
-msgctxt "authDialog#4"
 msgid "Cancel"
 msgstr "Cancelar"
 
 #: authDialog#5
-msgctxt "authDialog#5"
 msgid "Ok"
 msgstr "Ok"
 
@@ -3737,7 +3597,6 @@ msgstr ""
 "weight:600;\">Construindo pacotes...</span></p></body></html>"
 
 #: buildingDialog#3
-msgctxt "buildingDialog#3"
 msgid "Abort"
 msgstr "Cancelar"
 
@@ -3746,7 +3605,6 @@ msgid "Reduce To Tray"
 msgstr "Minimizar para o tray"
 
 #: dbUpdateDialog#1
-msgctxt "dbUpdateDialog#1"
 msgid "Database Update"
 msgstr "Atualização da base de dados"
 
@@ -3775,7 +3633,6 @@ msgid "Redo"
 msgstr "Refazer"
 
 #: editPBDialog#6
-msgctxt "editPBDialog#6"
 msgid "Ok"
 msgstr "Ok"
 
@@ -3815,7 +3672,6 @@ msgstr "Atualizar"
 
 #. (obsolete)
 #: logViewer#5
-msgctxt "logViewer#5"
 msgid "Close"
 msgstr "Fechar"
 
@@ -3841,7 +3697,6 @@ msgstr ""
 
 # close the dialog
 #: logViewer#8
-msgctxt "logViewer#8"
 msgid "Close"
 msgstr "Fechar"
 
@@ -3876,7 +3731,6 @@ msgstr ""
 "            "
 
 #: newsDialog#5
-msgctxt "newsDialog#5"
 msgid "Mark as Read"
 msgstr "Marcar como lida"
 
@@ -3890,7 +3744,6 @@ msgstr "Atualizar"
 
 #. (obsolete)
 #: newsDialog#8
-msgctxt "newsDialog#8"
 msgid "Close"
 msgstr "Fechar"
 
@@ -3900,7 +3753,6 @@ msgstr "Título da notícia"
 
 # close the dialog
 #: newsDialog#10
-msgctxt "newsDialog#10"
 msgid "Close"
 msgstr "Fechar"
 
@@ -3927,7 +3779,6 @@ msgstr ""
 "weight:600;\">Informação do pacote</span></p></body></html>"
 
 #: pkgProperties#2
-msgctxt "pkgProperties#2"
 msgid "Package Information"
 msgstr "Informação do pacote"
 
@@ -3976,17 +3827,14 @@ msgid "Changelog"
 msgstr "Changelog"
 
 #: pkgProperties#14
-msgctxt "pkgProperties#14"
 msgid "Files"
 msgstr "Arquivos"
 
 #: pkgProperties#15
-msgctxt "pkgProperties#15"
 msgid "1"
 msgstr "1"
 
 #: pkgProperties#16
-msgctxt "pkgProperties#16"
 msgid "Dependencies"
 msgstr "Dependências"
 
@@ -4003,7 +3851,6 @@ msgid "Actions Performed"
 msgstr "Ações"
 
 #: pkgProperties#20
-msgctxt "pkgProperties#20"
 msgid "Ok"
 msgstr "Ok"
 
@@ -4040,22 +3887,18 @@ msgid "This is useful if you want to review compiler's output"
 msgstr "Isto é útil se você quiser revisar a saída do compilador"
 
 #: reviewBuildingDialog#5
-msgctxt "reviewBuildingDialog#5"
 msgid "Turn off PC when Queue is done"
 msgstr "Desligar o PC quando concluído"
 
 #: reviewBuildingDialog#6
-msgctxt "reviewBuildingDialog#6"
 msgid "Show packages..."
 msgstr "Mostrar pacotes..."
 
 #: reviewBuildingDialog#7
-msgctxt "reviewBuildingDialog#7"
 msgid "Packages In Queue"
 msgstr "Pacotes na fila"
 
 #: reviewBuildingDialog#8
-msgctxt "reviewBuildingDialog#8"
 msgid "Abort"
 msgstr "Cancelar"
 
@@ -4096,17 +3939,14 @@ msgid "Cleanup"
 msgstr "Limpar"
 
 #: transactionDialog#6
-msgctxt "transactionDialog#6"
 msgid "More Details..."
 msgstr "Mais detalhes..."
 
 #: transactionDialog#7
-msgctxt "transactionDialog#7"
 msgid "Abort"
 msgstr "Cancelar"
 
 #: transactionDialog#8
-msgctxt "transactionDialog#8"
 msgid "Please Wait..."
 msgstr "Por favor, aguarde..."
 
@@ -4129,7 +3969,6 @@ msgstr ""
 "weight:600;\">Fila de processos</span></p></body></html>"
 
 #: upgradeDialog#1
-msgctxt "upgradeDialog#1"
 msgid "System Upgrade"
 msgstr "Atualização do sistema"
 
@@ -4138,7 +3977,6 @@ msgid "Remember my choice"
 msgstr "Lembrar minhas opções"
 
 #: upgradeDialog#3
-msgctxt "upgradeDialog#3"
 msgid "Abort"
 msgstr "Cancelar"
 
@@ -4173,11 +4011,9 @@ msgid "Packages to Upgrade"
 msgstr "Pacotes a atualizar"
 
 #: upgradeDialog#8
-msgctxt "upgradeDialog#8"
 msgid "Show packages..."
 msgstr "Mostrar pacotes..."
 
 #: upgradeDialog#9
-msgctxt "upgradeDialog#9"
 msgid "Force Queue Processing"
 msgstr "Forçar processamento da ação"
