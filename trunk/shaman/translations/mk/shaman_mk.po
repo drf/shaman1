@@ -1,0 +1,3330 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-11-24 21:55+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 1.2.0\n"
+
+#. (obsolete)
+#: #1
+msgctxt "#1"
+msgid "Please wait, fetching items..."
+msgstr "Ве молиме почекајте, симнувам ставки..."
+
+#. (obsolete)
+#: AlpmHandler#1
+msgid ": requires "
+msgstr ": бара"
+
+#. (obsolete)
+#: AlpmHandler#2
+msgid ": conflicts with "
+msgstr ": е во конфликт со"
+
+#. (obsolete)
+#: AlpmHandler#3
+msgid "Alpm did not give further details."
+msgstr "Alpm не даде понатамошни детали."
+
+#. (obsolete)
+#: AlpmHandler#4
+msgid "%1 exists in both '%2' and '%3'"
+msgstr "%1 постои во '%2' и во '%3'"
+
+#. (obsolete)
+#: AlpmHandler#5
+msgid ": %1 exists in filesystem"
+msgstr ": %1 постои во податочниот систем"
+
+#: BuildingDialog#1
+msgctxt "BuildingDialog#1"
+msgid "Error"
+msgstr "Грешка"
+
+#: BuildingDialog#2
+msgid ""
+"Would you like to abort building?.\n"
+"All Process will be lost."
+msgstr ""
+"Дали сакате да го прекинете создавањето на пакетот?.\n"
+"Напредокот ќе биде изгубен"
+
+#: BuildingDialog#3
+msgid "<br><br><b>Building Process Aborted by the User. Building Failed.</b>"
+msgstr ""
+"<br><br><b>Создавањето на пакет е прекинато од корисникот. Создавањето на "
+"пакет не успеа.</b>"
+
+#: BuildingDialog#4
+msgid "Updating ABS Tree..."
+msgstr "Надргадување на ABS дрвото..."
+
+#: BuildingDialog#5
+msgid "<b>Starting ABS Tree Update...</b><br><br>"
+msgstr "<b>Започнувам со надградба на ABS дрвото...</b><br><br>"
+
+#: BuildingDialog#6
+msgid "<br><br><b>ABS Tree Was Successfully Updated!</b>"
+msgstr ""
+
+#: BuildingDialog#7
+msgid "ABS Update"
+msgstr "ABS Надградба"
+
+#: BuildingDialog#8
+msgid "Your ABS Tree was updated!"
+msgstr "Вашето ABS дрво е надградено!"
+
+#: BuildingDialog#9
+msgid "Could not update the ABS Tree!"
+msgstr "Не можеше да се надгради ABS дрвото!"
+
+#: BuildingDialog#10
+msgid "<b>Building %1 failed!!</b><br><br>"
+msgstr "<b>Создавањето на пакет %1 пропадна!!</b><br><br>"
+
+#: BuildingDialog#11
+msgid "<b>%1 was built successfully!!</b><br><br>"
+msgstr "<b>%1 беше создаден успешно!!</b><br><br>"
+
+#: BuildingDialog#12
+msgid "Processing Package %1 of %2..."
+msgstr "Процесирање на пакет %1 од %2..."
+
+#: BuildingDialog#13
+msgid "Building %1..."
+msgstr "Создавање на пакет %1..."
+
+#: BuildingDialog#14
+msgid "<b>Could not set up the environment correctly for %1!!</b><br><br>"
+msgstr "<b>Не можеше да се воспостави околина за %1!!</b><br><br>"
+
+#: BuildingDialog#15
+msgid "<b>Building %1...</b><br><br>"
+msgstr "<b>Создавање на пакет %1...</b><br><br>"
+
+#: BuildingDialog#16
+msgid "<b>Building operation has started.</b><br><br>"
+msgstr "<b>Операцијата за создавање на пакет започна.</b><br><br>"
+
+#: BuildingHandler#1
+msgctxt "BuildingHandler#1"
+msgid "Error"
+msgstr "Грешка"
+
+#: BuildingHandler#2
+msgid ""
+"You need to have ABS installed to use Shaman's\n"
+"building feature. Do you want to install it now?"
+msgstr ""
+"Треба да имате ABS инсталирано за да ја користите опцијата на Shaman\n"
+"за создавање пакети. Дали сакате да ја инсталирате сега?"
+
+#: BuildingHandler#3
+msgid ""
+"You can not remove packages when processing\n"
+"your queue from Source"
+msgstr ""
+"Не можете да отстранувате пакети додека се процесира\n"
+"листата за создавање пакети"
+
+#: BuildingHandler#4
+msgid ""
+"Some of your packages do not belong to Arch\n"
+"Linux's official repository. Shaman is able to\n"
+"build packages from official sources only."
+msgstr ""
+"Некои од вашите пакети не припаѓаат на официјалните\n"
+"репозитари на ArchLinux. Shaman може да создава\n"
+"пакети само од официјални извори."
+
+#: BuildingHandler#5
+msgctxt "BuildingHandler#5"
+msgid "To be Installed"
+msgstr "За инсталација"
+
+#: BuildingHandler#6
+msgctxt "BuildingHandler#6"
+msgid "To be Upgraded"
+msgstr "За надградба"
+
+#: BuildingHandler#7
+msgid "Package Building"
+msgstr "Создавање на пакет"
+
+#: BuildingHandler#8
+msgid "Your Packages failed to build!"
+msgstr "Вашите пакети не можеа да се создадат!"
+
+#: BuildingHandler#9
+msgid ""
+"Your packages Failed to Build.\n"
+"Look at the output for more details."
+msgstr ""
+"Вашите пакети не можеа да се создадат.\n"
+"Погледнете го излезот за повеќе детали."
+
+#: BuildingHandler#10
+msgctxt "BuildingHandler#10"
+msgid "Close"
+msgstr "Затвори"
+
+#: BuildingHandler#11
+msgid "Building Packages Failed!!"
+msgstr "Создавањето на пакети не успеа!!"
+
+#: BuildingHandler#12
+msgid ""
+"Some packages failed to build.\n"
+"Do you want to proceed anyway?"
+msgstr ""
+"Некои пакети не можеа да се создадат.\n"
+"Дали сакате да продолжите понатаму?"
+
+#: BuildingHandler#13
+msgid "Install Built Packages"
+msgstr "Инсталирај создадени пакети"
+
+#: BuildingHandler#14
+msgid "Close Without Installing"
+msgstr "Затвори без инсталација"
+
+#: BuildingHandler#15
+msgid "Packages Built Successfully!"
+msgstr "Пакетите беа создадени успешно!"
+
+#: BuildingHandler#16
+msgid ""
+"Your Packages have been built successfully, and are ready to be installed"
+msgstr "Вашите пакети се создадени, и можете да ги инсталирате"
+
+#: BuildingHandler#17
+msgid ""
+"You are about to install <b>%n package(s)</b> from source. Building from "
+"source<br>can give some advantages, however is very slow.<br>If you are not "
+"sure about that, you would probably prefer to process<br>your queue from "
+"binary files. Before you continue, you are advised to<br>review your "
+"configuration to improve your building performance."
+msgstr ""
+"\n"
+"            \n"
+"            \n"
+"            \n"
+"        "
+
+#. (obsolete)
+#: CallBacks#1
+msgid ""
+"%1 requires installing %2 from IgnorePkg/IgnoreGroup.\n"
+" Install anyway?"
+msgstr ""
+"%1 бара да се инсталира %2 од IgnorePkg/IgnoreGroup.\n"
+"Дали сакате да инсталирате?"
+
+#. (obsolete)
+#: CallBacks#2
+msgid ""
+"%1 is in IgnorePkg/IgnoreGroup.\n"
+" Install anyway?"
+msgstr ""
+"%1 е во IgnorePkg/IgnoreGroup.\n"
+"Дали сакате да инсталирате?"
+
+#. (obsolete)
+#: CallBacks#3
+msgid ""
+"%1 is designated as a HoldPkg.\n"
+" Remove anyway?"
+msgstr ""
+"%1 е означен како HoldPkg.\n"
+"Дали сакате да го отстраните?"
+
+#. (obsolete)
+#: CallBacks#4
+msgid "Replace %1 with %2/%3?"
+msgstr "Заменете го %1 со %2/%3?"
+
+#. (obsolete)
+#: CallBacks#5
+msgid ""
+"%1 conflicts with %2.\n"
+"Remove %3?"
+msgstr "%1 е во конфликт со %2. Отстранете го %3?"
+
+#. (obsolete)
+#: CallBacks#6
+msgid ""
+"%1-%2: local version is newer.\n"
+"Upgrade anyway?"
+msgstr ""
+"%1-%2: локалната верзија е понова.\n"
+"Дали сакате да надградите?"
+
+#. (obsolete)
+#: CallBacks#7
+msgid ""
+"File %1 is corrupted.\n"
+"Do you want to delete it?"
+msgstr ""
+"Датотеката %1 е неисправна.\n"
+"Дали сакате да ја избришете?"
+
+#: ConfigDialog#1
+msgid "General"
+msgstr "Генерално"
+
+#: ConfigDialog#2
+msgctxt "ConfigDialog#2"
+msgid "Clean Unused Databases"
+msgstr "Исчисти некористени датабази"
+
+#: ConfigDialog#3
+msgctxt "ConfigDialog#3"
+msgid "Clean Cache"
+msgstr "Исчисти го кешот"
+
+#: ConfigDialog#4
+msgctxt "ConfigDialog#4"
+msgid "Empty Cache"
+msgstr "Испразни го кешот"
+
+#: ConfigDialog#5
+msgctxt "ConfigDialog#5"
+msgid "Optimize Pacman Database"
+msgstr "Оптимизирај ја датабазата на Pacman"
+
+#: ConfigDialog#6
+msgctxt "ConfigDialog#6"
+msgid "Clean All Building Environments"
+msgstr "Исчистете ги сите околини за создавање на пакети"
+
+#: ConfigDialog#7
+msgctxt "ConfigDialog#7"
+msgid "Repositories"
+msgstr "Репозитари"
+
+#: ConfigDialog#8
+msgid "Pacman"
+msgstr "Pacman"
+
+#: ConfigDialog#9
+msgid "ABS"
+msgstr "ABS"
+
+#: ConfigDialog#10
+msgid "Advanced"
+msgstr "Напредно"
+
+#: ConfigDialog#11
+msgid "Enter Here the Repository's Name"
+msgstr "Внесете го името на репозитарот"
+
+#: ConfigDialog#12
+msgid "Enter Here the Repository's Server"
+msgstr "Внесете го серверот на репозитарот"
+
+#: ConfigDialog#13
+msgctxt "ConfigDialog#13"
+msgid "Ok"
+msgstr "Во ред"
+
+#: ConfigDialog#14
+msgctxt "ConfigDialog#14"
+msgid "Cancel"
+msgstr "Откажи"
+
+#: ConfigDialog#15
+msgctxt "ConfigDialog#15"
+msgid "Cleaning up unused Databases..."
+msgstr "Чистење на некористени датабази..."
+
+#: ConfigDialog#16
+msgctxt "ConfigDialog#16"
+msgid "Cleaning up Cache..."
+msgstr "Чистење на кешот..."
+
+#: ConfigDialog#17
+msgctxt "ConfigDialog#17"
+msgid "Deleting Cache..."
+msgstr "Бришење на кешот..."
+
+#: ConfigDialog#18
+msgctxt "ConfigDialog#18"
+msgid "Optimizing Pacman Database..."
+msgstr "Оптимизирање на датабазата на Pacman..."
+
+#: ConfigDialog#19
+msgctxt "ConfigDialog#19"
+msgid "Cleaning up building Environments..."
+msgstr "Чистење на околините за создавање на пакети..."
+
+#: ConfigDialog#20
+msgctxt "ConfigDialog#20"
+msgid "Cleaning up Unused Databases Failed!"
+msgstr "Чистењето на некористените датабази не успеа!"
+
+#: ConfigDialog#21
+msgctxt "ConfigDialog#21"
+msgid "Cleaning up Cache Failed!"
+msgstr "Чистењето на кешот не успеа!"
+
+#: ConfigDialog#22
+msgctxt "ConfigDialog#22"
+msgid "Deleting Cache Failed!"
+msgstr "Бришењето на кешот не успеа!"
+
+#: ConfigDialog#23
+msgctxt "ConfigDialog#23"
+msgid "Could not clean Build Environments!!"
+msgstr "Не можеше да се исчистат околините за создавање на пакети!!"
+
+#: ConfigDialog#24
+msgctxt "ConfigDialog#24"
+msgid "Unused Databases Cleaned up successfully!"
+msgstr "Некористените датабази се исчистени успешно!"
+
+#: ConfigDialog#25
+msgctxt "ConfigDialog#25"
+msgid "Cache Cleaned Up Successfully!"
+msgstr "Кешот е исчистен успешно!"
+
+#: ConfigDialog#26
+msgctxt "ConfigDialog#26"
+msgid "Cache Successfully Deleted!"
+msgstr "Кешот е избришан успешно!"
+
+#: ConfigDialog#27
+msgctxt "ConfigDialog#27"
+msgid "Build Environments Successfully Cleaned!"
+msgstr "Околините за создавање на пакети се успешно исчистени!"
+
+#: ConfigDialog#28
+msgid "Saving Configuration"
+msgstr "Зачувување на конфигурацијата"
+
+#: ConfigDialog#29
+msgid "Unable to save Pacman configuration!"
+msgstr "Не можеше да се зачува конфигурацијата за Pacman!"
+
+#: ConfigDialog#30
+msgid ""
+"Some of your changes have not been applied,\n"
+"since alpm needs to be released.\n"
+"You need to restart Shaman to make them effective."
+msgstr ""
+"Некои од вашите промени не беа применети,\n"
+"бидејќи alpm треба да се ослободи.\n"
+"Треба да го рестартирате Shaman за да имаат ефект."
+
+#: ConfigDialog#31
+msgid "Settings Changed"
+msgstr "Поставувањата се изменети"
+
+#: ConfigDialog#32
+msgid ""
+"Your repositories have changed.\n"
+"Do you want to Update Your Database?"
+msgstr ""
+"Вашите репозитари се сменија.\n"
+"Дали сакате да ја ажурирате вашата датабаза?"
+
+#: ConfigDialog#33
+msgid "Add Mirror"
+msgstr "Додај огледало"
+
+# Obviously keep the example as it is ;)
+#: ConfigDialog#34
+msgid ""
+"Mirror Format is incorrect. Your mirror should look like this:\n"
+"http://mirror.org/$repo/os/i686"
+msgstr ""
+"Форматот на огледалото е неточен. Вашето огледало треба да изгледа овака:\n"
+"http://mirror.org/$repo/$arch"
+
+# mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.
+#: ConfigDialog#35
+msgid ""
+"Your Mirror was successfully added!\n"
+"It is now available in mirrorlist."
+msgstr ""
+"Вашето огледало беше успешно додадено!\n"
+"сега е достапно во mirrorlist."
+
+# Obviously keep the example as it is ;)
+#: ConfigDialog#36
+msgid ""
+"Mirror Format is incorrect. Your mirror should look like this:\n"
+"http://mirror.org/$repo/$arch"
+msgstr ""
+"Форматот на огледалото е неточен. Вашето огледало треба да изгледа овака:\n"
+"http://mirror.org/$repo/$arch"
+
+# mirrorlist here means /etc/pacman.d/kdemodmirrorlist, so it should not be translated.
+#: ConfigDialog#37
+msgid ""
+"Your Mirror was successfully added!\n"
+"It is now available in kdemodmirrorlist."
+msgstr ""
+"Вашето огледало беше успешно додадено!\n"
+"сега е достапно во kdemodmirrorlist."
+
+#: ConfigDialog#38
+msgctxt "ConfigDialog#38"
+msgid "Pacman Database Optimized Successfully!"
+msgstr "Датабазата на Pacman беше оптимизирана успешно!"
+
+#: ConfigDialog#39
+msgctxt "ConfigDialog#39"
+msgid "Could not Optimize Pacman Database!"
+msgstr "не можеше да се оптимизира датабазата на Pacman!"
+
+# sync is a command, so it should not be translated
+#: ConfigDialog#40
+msgctxt "ConfigDialog#40"
+msgid "Running sync..."
+msgstr "Извршување на sync..."
+
+#: ConfigDialog#41
+msgctxt "ConfigDialog#41"
+msgid "Operation Completed Successfully!"
+msgstr "Операцијата е успешно завршена!"
+
+# Sync is always the command
+#: ConfigDialog#42
+msgctxt "ConfigDialog#42"
+msgid "Sync was successfully executed!!"
+msgstr "Sync беше успешно извршена!!"
+
+# Sync is always the command
+#: ConfigDialog#43
+msgctxt "ConfigDialog#43"
+msgid "Sync could not be executed!"
+msgstr "Sync не можеше да биде извршена!"
+
+# Sync is always the command
+#: ConfigDialog#44
+msgctxt "ConfigDialog#44"
+msgid "Sync could not be executed!!"
+msgstr "Sync не можеше да биде извршена!!"
+
+#: ConfigDialog#45
+msgid "Shaman - Configuration"
+msgstr "Shaman - конфигурација"
+
+#: ConfigDialog#46
+msgid "Favourite Actions"
+msgstr "Омилени акции"
+
+#: ConfigDialog#47
+msgid "When Upgrading System:"
+msgstr "Кога се надградува системот:"
+
+#: ConfigDialog#48
+msgid "Upgrade Immediately"
+msgstr "Надргради веднаш"
+
+#: ConfigDialog#49
+msgid "Add Upgradeable Packages To Queue"
+msgstr "Додади надградливи пакети во редицата"
+
+#: ConfigDialog#50
+msgid "Ask"
+msgstr "Прашај"
+
+#: ConfigDialog#51
+msgid "When Processing Queue"
+msgstr "Кога се обработува редицата"
+
+#: ConfigDialog#52
+msgid "Keep application running in System Tray only"
+msgstr "Задржи ја апликацијата да работи само во системска лента"
+
+#: ConfigDialog#53
+msgid "GUI Startup"
+msgstr "Стартување на GUI"
+
+#: ConfigDialog#54
+msgid "Start in the System Tray"
+msgstr "Стартувај во системската лента"
+
+#: ConfigDialog#55
+msgid "Show Splashscreen"
+msgstr "Прикажи поздравен екран"
+
+#: ConfigDialog#56
+msgid "Maintenance"
+msgstr "Одржување"
+
+#: ConfigDialog#57
+msgid "Process Selected"
+msgstr "Обработи ги одбраните"
+
+# Waiting for a user action
+#: ConfigDialog#58
+msgid "Waiting"
+msgstr "Исчекувам"
+
+#: ConfigDialog#59
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Liberation "
+"Sans'; font-size:9pt;\">Shaman Manteinance.</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Liberation "
+"Sans'; font-size:9pt;\">Please choose an action from the Drop-Down "
+"Menu.</p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\"><html><head><meta name=\"qrichtext\" content=\"1\" /><style "
+"type=\"text/css\">p, li { white-space: pre-wrap; }</style></head><body style=\" "
+"font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-"
+"style:normal;\"><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
+"family:'Liberation Sans'; font-size:9pt;\">Одржување на Shaman.</p><p style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px; font-family:'Liberation Sans'; font-"
+"size:9pt;\">Ве молиме одберете акција од паѓачкото мени.</p></body></html>"
+
+#: ConfigDialog#60
+msgid "Checkable Options"
+msgstr "Опции за чекирање"
+
+#: ConfigDialog#61
+msgid "Use Active FTP"
+msgstr "Користи активен FTP"
+
+#: ConfigDialog#62
+msgid "Use Deltas (needs xdelta to be installed)"
+msgstr "Користи Delta-и (потребно е да биде инсталирано xdelta)"
+
+#: ConfigDialog#63
+msgid "Use SysLog"
+msgstr "Користи SysLog"
+
+#: ConfigDialog#64
+msgid "Advanced Options"
+msgstr "Напредни опции"
+
+#: ConfigDialog#65
+msgid "HoldPkgs:"
+msgstr "HoldPkgs:"
+
+#: ConfigDialog#66
+msgid "IgnorePkgs:"
+msgstr "IgnorePkgs:"
+
+#: ConfigDialog#67
+msgid "IgnoreGroups:"
+msgstr "IgnoreGroups:"
+
+#: ConfigDialog#68
+msgid "NoUpgrade:"
+msgstr "NoUpgrade:"
+
+#: ConfigDialog#69
+msgid "NoExtract:"
+msgstr "NoExtract:"
+
+#: ConfigDialog#70
+msgid "Log File:"
+msgstr "Записничка датотека:"
+
+#: ConfigDialog#71
+msgid "XFerCommand: (example: /path/to/command %u) Blank for Default"
+msgstr "XFerCommand: ( пример: /патека/до/команда %u) Празно за предефинирано"
+
+#: ConfigDialog#72
+msgid "Arch Linux Official Repositories"
+msgstr "Официјални репозитари на Arch Linux"
+
+#. (obsolete)
+#: ConfigDialog#73
+msgid ""
+"Here you can choose what repositories to use between Arch Linux's official "
+"ones.\n"
+"Please note that packages from Unstable and Testing may break your system."
+msgstr ""
+"Овде можете да изберете кои официјални репозитари на Arch Linux да ги "
+"користите.\n"
+"Запомнете дека пакетите од Unstable и Testing можат да го расипат вашиот "
+"систем. "
+
+# Do not translate
+#: ConfigDialog#74
+msgid "Core"
+msgstr "Core"
+
+# Do not translate
+#: ConfigDialog#75
+msgid "Extra"
+msgstr "Extra"
+
+# Do not translate
+#: ConfigDialog#76
+msgid "Community"
+msgstr "Community"
+
+# Do not translate
+#: ConfigDialog#77
+msgid "Testing"
+msgstr "Testing"
+
+# Do not translate
+#. (obsolete)
+#: ConfigDialog#78
+msgid "Unstable"
+msgstr "Unstable"
+
+#: ConfigDialog#79
+msgid "Server"
+msgstr "Сервер"
+
+#: ConfigDialog#80
+msgid "Mirror:"
+msgstr "Огледало:"
+
+#: ConfigDialog#81
+msgid "KDEMod Repositories"
+msgstr "KDEMod репозитари"
+
+#. (obsolete)
+#: ConfigDialog#82
+msgid ""
+"KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an \n"
+"improved Qt build, compatible with Arch Linux standard Qt's, an improved "
+"theme,\n"
+"and lots of addons, KDEMod is the best way to taste the ease and the power\n"
+"of KDE with the simplicity and the power of Arch."
+msgstr ""
+"KDEMod е подобрена верзија на KDE, само за Arch Linux. Со подобрен Qt,\n"
+"компатибилен со стандардниот Qt на Arch Linux, подобрена тема и многѕ "
+"додатоци,\n"
+"KDEMod е најдобриот начин да ја вкусите леснотијата и силата на \n"
+"KDE со едноставноста и силата на Arch."
+
+#: ConfigDialog#83
+msgid "KDEMod 3 Repository"
+msgstr "KDEMod 3 репозитар"
+
+#: ConfigDialog#84
+msgid "Third-Party Repositories"
+msgstr "Неофицијални репозитари"
+
+#. (obsolete)
+#: ConfigDialog#85
+msgid ""
+"You can extend your packages choice by adding other repositories. Third-"
+"Party \n"
+"Repositories act just as normal ones, and will be accessible through both "
+"Shaman\n"
+"and Pacman."
+msgstr ""
+"Можете да го проширите изборот на вашите пакети со додавање на други "
+"репозитари. Неофицијални\n"
+"репозитари се однесуваат исто како официјални, и ќе бидат достапни \n"
+"и од Shaman и од Pacman."
+
+#: ConfigDialog#86
+msgctxt "ConfigDialog#86"
+msgid "Repository"
+msgstr "Репозитар"
+
+#: ConfigDialog#87
+msgid "Add New Repository"
+msgstr "Додај нов репозитар"
+
+#: ConfigDialog#88
+msgid "Edit Repository"
+msgstr "Уреди репозитар"
+
+#: ConfigDialog#89
+msgid "Remove Repository"
+msgstr "Отстрани репозитар"
+
+#: ConfigDialog#90
+msgid "Preferences"
+msgstr "Преференции"
+
+#: ConfigDialog#91
+msgid "Process all dependencies and queue from binary first (recommended)"
+msgstr ""
+"Обработи ги сите зависности и прво обработи од бинарни пакети (recommended)"
+
+#: ConfigDialog#92
+msgid "Review Building output before installing"
+msgstr "Прегледај го излезот од создавањето на пакет пред инсталирање"
+
+#: ConfigDialog#93
+msgid "ABS Configuration"
+msgstr "Конфигурација на ABS"
+
+#: ConfigDialog#94
+msgid "Use supfiles that match your current repositories"
+msgstr "Користи supfiles кои одговараат на вашите сегашни репозитари"
+
+#: ConfigDialog#95
+msgid "Define supfiles manually"
+msgstr "Дефинирај supfiles рачно"
+
+#: ConfigDialog#96
+msgid "RSync Server:"
+msgstr "RSync сервер:"
+
+#: ConfigDialog#97
+msgid "Makepkg Configuration"
+msgstr "Конфигурација Makepkg"
+
+#: ConfigDialog#98
+msgid "CFlags"
+msgstr "CFlags"
+
+#: ConfigDialog#99
+msgid "CXXFlags"
+msgstr "CXXFlags"
+
+#: ConfigDialog#100
+msgid "BuildEnv"
+msgstr "BuildEnv"
+
+#: ConfigDialog#101
+msgid "Options"
+msgstr "Опции"
+
+#: ConfigDialog#102
+msgid "Doc_Dirs"
+msgstr "Doc_Dirs"
+
+#: ConfigDialog#103
+msgid "Build Environment"
+msgstr "Околина за создавање на пакети"
+
+#: ConfigDialog#104
+msgid "Building Path"
+msgstr "Патека за создавање на пакети"
+
+#: ConfigDialog#105
+msgid "Remove installed makedepends after build"
+msgstr ""
+"Отстрани ги инсталираните зависности за создавање кога пакетот ќе се создаде"
+
+#: ConfigDialog#106
+msgid "Clean Build Environment after installation"
+msgstr "Исчисти ја околината за создавање на пакети по инсталација"
+
+#: ConfigDialog#107
+msgid "When Application is in System Tray only"
+msgstr "Кога апликацијата е во системска лента"
+
+#: ConfigDialog#108
+msgid "Update Database every"
+msgstr "Ажурирај ја датабазата секои"
+
+# As in "minutes"
+#: ConfigDialog#109
+msgid "min"
+msgstr "мин"
+
+#: ConfigDialog#110
+msgid "Show tray notification Windows"
+msgstr "Покажи прозорци за известување од системска лента"
+
+#: ConfigDialog#111
+msgid "If upgrades are available:"
+msgstr "Доколку надградби се достапни:"
+
+#: ConfigDialog#112
+msgid "Just Notify"
+msgstr "Само извести"
+
+#: ConfigDialog#113
+msgid "Notify and add them to Queue"
+msgstr "Извести и додади ги во редица"
+
+#: ConfigDialog#114
+msgid "Update Database at"
+msgstr "Ажурирај ја датабазата во"
+
+#: ConfigDialog#115
+msgid "Use a proxy-server"
+msgstr "Користи прокси сервер"
+
+#: ConfigDialog#116
+msgid "IP:"
+msgstr "IP:"
+
+#: ConfigDialog#117
+msgid "Port:"
+msgstr "Порта:"
+
+#: ConfigDialog#118
+msgid "HTTP Proxy"
+msgstr "HTTP Прокси"
+
+#: ConfigDialog#119
+msgid "FTP Proxy"
+msgstr "FTP Прокси"
+
+#: ConfigDialog#120
+msgid "Use Shaman RSS Capabilities"
+msgstr "Користи ги RSS можностите на Shaman"
+
+#: ConfigDialog#121
+msgid "Update RSS Feed Every"
+msgstr "Ажурирај го RSS доводот секои"
+
+#: ConfigDialog#122
+msgid "Notify upon new items"
+msgstr "Извести при нови вести"
+
+#: ConfigDialog#123
+msgid ""
+"Check if there is an unread news about a package in Queue before processing "
+"it"
+msgstr ""
+"Провери дали има непрочитана вест за пакет во редицата пред да се обработи"
+
+#: ConfigDialog#124
+msgid "Interface"
+msgstr "Интерфејс"
+
+#: ConfigDialog#125
+msgid "Start Shaman Automatically on X Startup"
+msgstr "Стартувај го Shaman автоматски при стартувањето на X"
+
+#: ConfigDialog#126
+msgid "Forbid starting Shaman as root"
+msgstr "Забрани стартување на Shaman како root"
+
+#: ConfigDialog#127
+msgid "Use Animated Tray Icon"
+msgstr "Користи анимирана икона во лента"
+
+#: ConfigDialog#128
+msgid "KDEMod 4 Repository"
+msgstr "KDEMod 4 репозитар"
+
+#: ConfigDialog#129
+msgid "KDEMod 4 Extragear Repository"
+msgstr "KDEMod 4 Extragear репозитар"
+
+#: ConfigDialog#130
+msgid "KDEMod 4 Playground Repository"
+msgstr "KDEMod 4 Playground репозитар"
+
+#: ConfigDialog#131
+msgid "KDEMod 4 Testing Repository"
+msgstr "KDEMod 4 Testing репозитар"
+
+#: ConfigDialog#132
+msgid "KDEMod 4 Unstable Repository (Testers only!)"
+msgstr "KDEMod 4 Unstable репозитар (само за тестери)"
+
+#: ConfigDialog#133
+msgid ""
+"Here you can choose what repositories to use between Arch Linux's official "
+"ones. Please note that packages from Unstable and Testing may break your "
+"system."
+msgstr ""
+
+#: ConfigDialog#134
+msgid ""
+"KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
+"improved Qt build, compatible with Arch Linux standard Qt's, an improved "
+"theme, and lots of addons, KDEMod is the best way to taste the ease and the "
+"power of KDE with the simplicity and the power of Arch."
+msgstr ""
+
+#: ConfigDialog#135
+msgid ""
+"You can extend your packages choice by adding other repositories. Third-"
+"Party Repositories act just as normal ones, and will be accessible through "
+"both Shaman and Pacman."
+msgstr ""
+
+#: ConfigDialog#136
+msgid "Use the following language:"
+msgstr ""
+
+#: ConfigDialog#137
+msgid "Disable Tray Icon"
+msgstr ""
+
+#: EditPBuild#1
+msgid "Saving"
+msgstr "Зачувувам"
+
+#: EditPBuild#2
+msgid ""
+"You modified this PKGBUILD.\n"
+"Do you want to save it?"
+msgstr ""
+"го модифициравте овој PKGBUILD.\n"
+"Дали сакате да го зачувате?"
+
+#: LocalPackage#1
+msgid "Install Package from File"
+msgstr "Инсталирај пакет од датотека"
+
+#: LocalPackage#2
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Bitstream Vera "
+"Sans';\"><span style=\" font-weight:600;\">Local Package "
+"Installation</span></p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\"><html><head><meta name=\"qrichtext\" content=\"1\" /><style "
+"type=\"text/css\">p, li { white-space: pre-wrap; }</style></head><body style=\" "
+"font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-"
+"style:normal;\"><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
+"family:'Bitstream Vera Sans';\"><span style=\" font-weight:600;\">Инсталација "
+"на локален пакет</span></p></body></html>"
+
+#: LocalPackage#3
+msgid "Show..."
+msgstr "Прикажи..."
+
+#: LocalPackage#4
+msgctxt "LocalPackage#4"
+msgid "More Details..."
+msgstr "Повеќе детали..."
+
+#: LocalPackage#5
+msgctxt "LocalPackage#5"
+msgid "Cancel"
+msgstr "Откажи"
+
+#: LocalPackage#6
+msgid "Install Package"
+msgstr "Инсталирај пакет"
+
+#: LocalPackageDialog#1
+msgid "Package is not installed"
+msgstr "Пакетот не е инсталиран"
+
+#: LocalPackageDialog#2
+msgid "Version %1 of this package is already installed"
+msgstr "Верзијата %1 на овој пакет е веќе инсталирана"
+
+#: LocalPackageDialog#3
+msgid "All dependencies are satisfied"
+msgstr "Сите зависности се задоволени"
+
+#: LocalPackageDialog#4
+msgid "%n package(s) will be installed as dependencies"
+msgstr ""
+"\n"
+"            \n"
+"            \n"
+"            \n"
+"        "
+
+#: MainWindow#1
+msgid "Name"
+msgstr "Име"
+
+#: MainWindow#2
+msgid "Description"
+msgstr "Опис"
+
+#. (obsolete)
+#: MainWindow#3
+msgid "Esc"
+msgstr "Esc"
+
+#: MainWindow#4
+msgid "Shaman - Reducing To Tray"
+msgstr "Shaman - спуштање  во лента"
+
+#: MainWindow#5
+msgid ""
+"Shaman will keep running in the system tray.\n"
+"To close it, click Quit in the file menu or in the tray icon context menu.\n"
+"While in the System Tray, Shaman will update your Databases\n"
+"at a regular interval and notify you about available upgrades.\n"
+"You can change this behaviour in Settings."
+msgstr ""
+"Shaman ќе остане да работи во системската лента.\n"
+"За да го затворите, кликнете исклучи во Датотека менито или во менито на "
+"иконата во системска лента.\n"
+"Додека е во системска лента, Shaman ќе ги ажурира вашите датабази \n"
+"на регуларен интервал и ќе ве извести за достапни надградби.\n"
+"Можете да го промените ова однесување во Поставувања."
+
+#: MainWindow#6
+msgctxt "MainWindow#6"
+msgid "Repositories"
+msgstr "Репозитари"
+
+#: MainWindow#7
+msgid "All Repositories"
+msgstr "Сите репозитари"
+
+#: MainWindow#8
+msgid "Local Packages"
+msgstr "Локални пакети"
+
+#: MainWindow#9
+msgid "Package Groups"
+msgstr "Групи на пакети"
+
+#: MainWindow#10
+msgid "All Groups"
+msgstr "Сите групи"
+
+#: MainWindow#11
+msgid "Installed packages"
+msgstr "Инсталирани пакети"
+
+#: MainWindow#12
+msgid "Not installed packages"
+msgstr "Не инсталирани пакети"
+
+#: MainWindow#13
+msgid "Upgradeable packages"
+msgstr "Надградливи пакети"
+
+#: MainWindow#14
+msgid "Packages in Queue"
+msgstr "Пакети во редица"
+
+#: MainWindow#15
+msgid "Mark for Re&installation"
+msgstr "Обележи за ре&инсталација"
+
+#: MainWindow#16
+msgid "Mark for &Installation"
+msgstr "Обележи за &инсталација"
+
+#: MainWindow#17
+msgctxt "MainWindow#17"
+msgid "Install"
+msgstr "Инсталирај"
+
+#: MainWindow#18
+msgctxt "MainWindow#18"
+msgid "Uninstall"
+msgstr "Отстрани"
+
+#: MainWindow#19
+msgctxt "MainWindow#19"
+msgid "Complete Uninstall"
+msgstr "Целосно отстранување"
+
+#: MainWindow#20
+msgid "Status: "
+msgstr "Статус:"
+
+#: MainWindow#21
+msgid "Installed"
+msgstr "Инсталирано"
+
+#: MainWindow#22
+msgid "Not installed"
+msgstr "Не е инсталирано"
+
+#: MainWindow#23
+msgid "Local Version: "
+msgstr "Локална верзија:"
+
+#: MainWindow#24
+msgid "Version in the Repository: "
+msgstr "Верзија за репозитарот:"
+
+#: MainWindow#25
+msgid "Action: "
+msgstr "Акција:"
+
+#: MainWindow#26
+msgctxt "MainWindow#26"
+msgid "Error"
+msgstr "Грешка"
+
+#: MainWindow#27
+msgid ""
+"One or more Databases could not be updated.\n"
+"Last error reported was:\n"
+"%1"
+msgstr ""
+"Една или повеќе датабази не можеше да биде надградена.\n"
+"Последната грешка пријавена беше:\n"
+"%1"
+
+#: MainWindow#28
+msgctxt "MainWindow#28"
+msgid "Database Update"
+msgstr "Ажурирање на датабазата"
+
+#: MainWindow#29
+msgid "One or more databases failed to update!"
+msgstr "Една или повеќе датабази не успеа да се ажурира!"
+
+#: MainWindow#30
+msgid "Databases Updated Successfully"
+msgstr "Датабазите се ажурирани успешно"
+
+#: MainWindow#31
+msgid "Pacman Update"
+msgstr "Ажурирање на Pacman"
+
+#: MainWindow#32
+msgid ""
+"Pacman can be upgraded. It is advised to process it alone\n"
+"to avoid version conflicts.\n"
+"Do you want to Upgrade Pacman now?"
+msgstr ""
+"Shaman може да се надгради. Препорачано е да го обработите само\n"
+"него за да избегнете конфликти со верзии.\n"
+"Дали сакате да го надградите Shaman сега?"
+
+#: MainWindow#33
+msgid "Shaman Update"
+msgstr "Ажурирање на Shaman"
+
+#: MainWindow#34
+msgid ""
+"Shaman can be upgraded. It is advised to process it alone\n"
+"to avoid version conflicts.\n"
+"Do you want to Upgrade Shaman now?"
+msgstr ""
+"Shaman може да се надгради. Препорачано е да го обработите само\n"
+"него за да избегнете конфликти со верзии.\n"
+"Дали сакате да го надградите Shaman сега?"
+
+#: MainWindow#35
+msgid "Mark for &Removal"
+msgstr "Обележи за &отстранување"
+
+#: MainWindow#36
+msgid "Mark for Upgrade"
+msgstr "Обележи за надградба"
+
+#: MainWindow#37
+msgid "&Cancel Action"
+msgstr "&Откажи ја акцијата"
+
+#: MainWindow#38
+msgctxt "MainWindow#38"
+msgid "Package Information"
+msgstr "Информација за пакетот"
+
+#: MainWindow#39
+msgid "Mark all for installation"
+msgstr "Обележи ги сите за инсталација"
+
+#: MainWindow#40
+msgid "Mark all for reinstallation"
+msgstr "Обележи ги сите за реинсталација"
+
+#: MainWindow#41
+msgid "Mark all for removal"
+msgstr "Обележи ги сите за отстранување"
+
+#: MainWindow#42
+msgid "Cancel all actions"
+msgstr "Откажи ги сите акции"
+
+#: MainWindow#43
+msgctxt "MainWindow#43"
+msgid "Shaman"
+msgstr "Shaman"
+
+#: MainWindow#44
+msgid ""
+"A package providing %1 is already installed.\n"
+"Do you want to install %1 anyway?"
+msgstr ""
+"Пакет кој го обезбедува %1 е веќе инсталиран.\n"
+"Дали сакате да го инсталирате %1 во секој случај?"
+
+#: MainWindow#45
+msgctxt "MainWindow#45"
+msgid "System Upgrade"
+msgstr "Надградба на системот"
+
+#: MainWindow#46
+msgid "Your system is up to date!"
+msgstr "Вашиот систем е ажуриран!"
+
+#: MainWindow#47
+msgid "News Alert"
+msgstr "Предупредување за вести"
+
+#: MainWindow#48
+msgid ""
+"There is an unread news about %1.\n"
+"Do you want to read it?"
+msgstr ""
+"Има непрочитана вест за %1.\n"
+"Дали сакате да ја прочитате?"
+
+#: MainWindow#49
+msgctxt "MainWindow#49"
+msgid "Upgrade"
+msgstr "Надгради"
+
+#: MainWindow#50
+msgctxt "MainWindow#50"
+msgid "Queue Processing"
+msgstr "Обработување на редица"
+
+#: MainWindow#51
+msgid ""
+"Your Queue is being processed.\n"
+"Please wait."
+msgstr ""
+"Вашата редица се обработува.\n"
+"Ве молиме почекајте"
+
+#: MainWindow#52
+msgid "Queue Processed"
+msgstr "Редицата е обработена"
+
+#: MainWindow#53
+msgid ""
+"One or more errors occurred, your Queue\n"
+"was not successfully processed"
+msgstr ""
+"Една или повеќе грешки се појавија, вашата редица \n"
+"не беше успешно обработена"
+
+#: MainWindow#54
+msgid "Error Processing Queue!!"
+msgstr "Грешка во обработувањето на редицата!!"
+
+#: MainWindow#55
+msgid "Restart required"
+msgstr "Потребно е рестартирање"
+
+#: MainWindow#56
+msgid ""
+"Pacman or Shaman was updated. Shaman will now quit,\n"
+"please restart it to use the new version"
+msgstr ""
+"Pacman или Shaman е надграден. Shaman ќе се исклучи,\n"
+"ве молиме вклучете го повторно за да ја користите новата верзија"
+
+#: MainWindow#57
+msgid ""
+"Your Kernel has been updated.\n"
+"Please restart your PC soon to load the new Kernel."
+msgstr ""
+"Вашето јардо беше ажурирано.\n"
+"Ве молиме рестартирајте го вашиот компјутер за са го вчитате новото јадро."
+
+#: MainWindow#58
+msgid "Your Queue was successfully processed!"
+msgstr "Вашата редица е успешно обработена!"
+
+#: MainWindow#59
+msgid "Your Queue was successfully processed!!"
+msgstr "Вашата редица е успешно обработена!!"
+
+#: MainWindow#60
+msgid "Install a Package"
+msgstr "Инсталирај пакет"
+
+#: MainWindow#61
+msgid "Arch Linux Packages (*.pkg.tar.gz)"
+msgstr "Пакети за Arch Linux (*.pkg.tar.gz)"
+
+#: MainWindow#62
+msgid ""
+"%1 does not seem\n"
+"a valid package"
+msgstr "%1 не изгледа како валиден пакет"
+
+#: MainWindow#63
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">A libalpm frontend in Qt</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">License: GPLv2+</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Libalpm Version: v.%1</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Dario Freddi "
+"&lt;drf@kdemod.ath.cx&gt;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Lukas Appelhans "
+"&lt;boom1992@kdemod.ath.cx&gt;</p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">p, "
+"li { white-space: pre-wrap; }</style></head><body style=\" font-family:'Sans "
+"Serif'; font-size:10pt; font-weight:400; font-style:normal;\"><p style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">libalpm "
+"фронтенд напишан во Qt</span></p><p style=\"-qt-paragraph-type:empty; margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px; font-weight:600;\"></p><p style=\" margin-top:0px; "
+"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
+"text-indent:0px;\">Лиценца: GPLv2+</p><p style=\" margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\">Libalpm верзија: v.%1</p><p style=\"-qt-paragraph-type:empty; "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px;\"></p><p style=\" margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\">(C) 2008 Dario Freddi &lt;drf@kdemod.ath.cx&gt;</p><p style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px;\">(C) 2008 Lukas Appelhans "
+"&lt;boom1992@kdemod.ath.cx&gt;</p></body></html>"
+
+#. (obsolete)
+#: MainWindow#64
+msgid "Library Question"
+msgstr "Прашање од библиотека"
+
+#: MainWindow#65
+msgid "All packages"
+msgstr "Сите пакети"
+
+#: MainWindow#66
+msgid "Status"
+msgstr "Статус"
+
+#: MainWindow#67
+msgid "Action"
+msgstr "Акција"
+
+#: MainWindow#68
+msgid "Version"
+msgstr "Верзија"
+
+#: MainWindow#69
+msgid "Size"
+msgstr "Големина"
+
+#: MainWindow#70
+msgctxt "MainWindow#70"
+msgid "Repository"
+msgstr "Репозитар"
+
+#: MainWindow#71
+msgid "Groups"
+msgstr "Групи"
+
+#: MainWindow#72
+msgid "Action-Text"
+msgstr "Action-Text"
+
+#: MainWindow#73
+msgid "Re&positories"
+msgstr "Ре&позитари"
+
+#: MainWindow#74
+msgid "Package &Groups"
+msgstr "&Групи на пакети"
+
+#: MainWindow#75
+msgid "Install selected package"
+msgstr "Инсталирај избран пакет"
+
+#: MainWindow#76
+msgid "Remove selected package"
+msgstr "Отстрани избрани пакети"
+
+#: MainWindow#77
+msgid "Complete Remove selected package (pacman -Rcs)"
+msgstr "Целосно острани ги избраните пакет (pacman -Rcs)"
+
+#: MainWindow#78
+msgid "Mark for complete re&moval"
+msgstr "Обележи за целосно от&странување"
+
+#: MainWindow#79
+msgid "Cancel action for selected package"
+msgstr "Откажи ја акцијата за избраниот пакет"
+
+#: MainWindow#80
+msgid "Package I&nformation"
+msgstr "И&нформација за пакетот"
+
+#: MainWindow#81
+msgid "File&s"
+msgstr "Датоте&ки"
+
+#: MainWindow#82
+msgctxt "MainWindow#82"
+msgid "1"
+msgstr "1"
+
+#: MainWindow#83
+msgid "&Dependencies"
+msgstr "&Зависности"
+
+#: MainWindow#84
+msgid "&File"
+msgstr "&Датотека"
+
+#: MainWindow#85
+msgid "&Help"
+msgstr "&Помош"
+
+#: MainWindow#86
+msgid "&Actions"
+msgstr "&Акции"
+
+#: MainWindow#87
+msgid "Build and Install from Source"
+msgstr "Создади и инсталирај од изворен код"
+
+#: MainWindow#88
+msgid "&Tools"
+msgstr "&Алати"
+
+#: MainWindow#89
+msgid "Quick Actions"
+msgstr "Брзи акции"
+
+#: MainWindow#90
+msgid "Settings..."
+msgstr "Поставувања..."
+
+#: MainWindow#91
+msgid "About..."
+msgstr "За..."
+
+#: MainWindow#92
+msgctxt "MainWindow#92"
+msgid "Update Database"
+msgstr "Ажурирај ја датабазата"
+
+#: MainWindow#93
+msgctxt "MainWindow#93"
+msgid "Upgrade System"
+msgstr "Надгради систем"
+
+#: MainWindow#94
+msgid "Install Package From File"
+msgstr "Инсталирај пакет од датотека"
+
+#: MainWindow#95
+msgid "Update ABS Tree"
+msgstr "Ажурирај го ABS дрвото"
+
+#: MainWindow#96
+msgid "Build and Install Queue"
+msgstr "Создади и инсталирај пакет"
+
+# Quit the application
+#: MainWindow#97
+msgctxt "MainWindow#97"
+msgid "Quit"
+msgstr "Исклучи"
+
+#: MainWindow#98
+msgctxt "MainWindow#98"
+msgid "Process Queue"
+msgstr "Обработи ја редицата"
+
+#: MainWindow#99
+msgid "Read News"
+msgstr "Прочитај вести"
+
+#: MainWindow#100
+msgid "View Log"
+msgstr "Прегледај записник"
+
+# Exit Shaman Shortcut
+#: MainWindow#101
+msgid "Ctrl+Q"
+msgstr "Ctrl+Q"
+
+#: MainWindow#102
+msgid "Name and Description"
+msgstr "Име и опис"
+
+#: MaintenanceBar#1
+msgid "Please choose an action to start maintenance..."
+msgstr "Ве молиме одберете акција за да започнете со одржување..."
+
+#: MaintenanceBar#2
+msgctxt "MaintenanceBar#2"
+msgid "Clean Unused Databases"
+msgstr "Исчисти некористени датабази"
+
+#: MaintenanceBar#3
+msgctxt "MaintenanceBar#3"
+msgid "Clean Cache"
+msgstr "Исчисти го кешот"
+
+#: MaintenanceBar#4
+msgctxt "MaintenanceBar#4"
+msgid "Empty Cache"
+msgstr "Испразни го кешот"
+
+#: MaintenanceBar#5
+msgctxt "MaintenanceBar#5"
+msgid "Optimize Pacman Database"
+msgstr "Оптимизирај ја датабазата на Pacman"
+
+#: MaintenanceBar#6
+msgctxt "MaintenanceBar#6"
+msgid "Clean All Building Environments"
+msgstr "Исчистете ги сите околини за создавање на пакети"
+
+#: MaintenanceBar#7
+msgctxt "MaintenanceBar#7"
+msgid "Cleaning up unused Databases..."
+msgstr "Чистење на некористени датабази..."
+
+#: MaintenanceBar#8
+msgctxt "MaintenanceBar#8"
+msgid "Cleaning up Cache..."
+msgstr "Чистење на кешот..."
+
+#: MaintenanceBar#9
+msgctxt "MaintenanceBar#9"
+msgid "Deleting Cache..."
+msgstr "Бришење на кешот..."
+
+#: MaintenanceBar#10
+msgctxt "MaintenanceBar#10"
+msgid "Optimizing Pacman Database..."
+msgstr "Оптимизирање на датабазата на Pacman..."
+
+#: MaintenanceBar#11
+msgctxt "MaintenanceBar#11"
+msgid "Cleaning up building Environments..."
+msgstr "Чистење на околините за создавање на пакети..."
+
+#: MaintenanceBar#12
+msgctxt "MaintenanceBar#12"
+msgid "Abort"
+msgstr "Откажи"
+
+#: MaintenanceBar#13
+msgid "System Maintenance"
+msgstr "Одржување на системот"
+
+#: MaintenanceBar#14
+msgctxt "MaintenanceBar#14"
+msgid "Unused Databases Cleaned up successfully!"
+msgstr "Некористените датабази се исчистени успешно!"
+
+#: MaintenanceBar#15
+msgctxt "MaintenanceBar#15"
+msgid "Cache Cleaned Up Successfully!"
+msgstr "Кешот е исчистен успешно!"
+
+#: MaintenanceBar#16
+msgctxt "MaintenanceBar#16"
+msgid "Cache Successfully Deleted!"
+msgstr "Кешот е избришан успешно!"
+
+#: MaintenanceBar#17
+msgctxt "MaintenanceBar#17"
+msgid "Build Environments Successfully Cleaned!"
+msgstr "Околините за создавање на пакети се успешно исчистени!"
+
+#: MaintenanceBar#18
+msgctxt "MaintenanceBar#18"
+msgid "Close"
+msgstr "Затвори"
+
+#: MaintenanceBar#19
+msgctxt "MaintenanceBar#19"
+msgid "Cleaning up Unused Databases Failed!"
+msgstr "Чистењето на некористените датабази не успеа!"
+
+#: MaintenanceBar#20
+msgctxt "MaintenanceBar#20"
+msgid "Cleaning up Cache Failed!"
+msgstr "Чистењето на кешот не успеа!"
+
+#: MaintenanceBar#21
+msgctxt "MaintenanceBar#21"
+msgid "Deleting Cache Failed!"
+msgstr "Бришењето на кешот не успеа!"
+
+#: MaintenanceBar#22
+msgctxt "MaintenanceBar#22"
+msgid "Could not clean Build Environments!!"
+msgstr "Не можеше да се исчистат околините за создавање на пакети!!"
+
+#: MaintenanceBar#23
+msgctxt "MaintenanceBar#23"
+msgid "Pacman Database Optimized Successfully!"
+msgstr "Датабазата на Pacman беше оптимизирана успешно!"
+
+#: MaintenanceBar#24
+msgctxt "MaintenanceBar#24"
+msgid "Could not Optimize Pacman Database!"
+msgstr "не можеше да се оптимизира датабазата на Pacman!"
+
+# sync is a command, so it should not be translated
+#: MaintenanceBar#25
+msgctxt "MaintenanceBar#25"
+msgid "Running sync..."
+msgstr "Извршување на sync..."
+
+#: MaintenanceBar#26
+msgctxt "MaintenanceBar#26"
+msgid "Operation Completed Successfully!"
+msgstr "Операцијата е успешно завршена!"
+
+# Sync is always the command
+#: MaintenanceBar#27
+msgctxt "MaintenanceBar#27"
+msgid "Sync was successfully executed!!"
+msgstr "Sync беше успешно извршена!!"
+
+# Sync is always the command
+#: MaintenanceBar#28
+msgctxt "MaintenanceBar#28"
+msgid "Sync could not be executed!"
+msgstr "Sync не можеше да биде извршена!"
+
+# Sync is always the command
+#: MaintenanceBar#29
+msgctxt "MaintenanceBar#29"
+msgid "Sync could not be executed!!"
+msgstr "Sync не можеше да биде извршена!!"
+
+#: MaintenanceBar#30
+msgid "Maintenance Actions"
+msgstr "Опции за одржување"
+
+#: NewsViewer#1
+msgctxt "NewsViewer#1"
+msgid "Please wait, fetching items..."
+msgstr "Ве молиме почекајте, симнувам ставки..."
+
+#: NewsViewer#2
+msgctxt "NewsViewer#2"
+msgid "Mark as Read"
+msgstr "Означи како прочитано"
+
+#: NewsViewer#3
+msgid "Mark as Unread"
+msgstr "Означи како непрочитано"
+
+#: NewsViewer#4
+msgctxt "NewsViewer#4"
+msgid "Error"
+msgstr "Грешка"
+
+#: NewsViewer#5
+msgid "Could not fetch the RSS feed! Error reported was:"
+msgstr "Не можеше да се симне RSS доводот! Пријавената грешка е:"
+
+# Size is in Gib
+#: PackageProperties#1
+msgid "%1 GiB"
+msgstr "%1 GiB"
+
+# Size is in MiB
+#: PackageProperties#2
+msgid "%1 MiB"
+msgstr "%1 MiB"
+
+# Size is in KiB
+#: PackageProperties#3
+msgid "%1 KiB"
+msgstr "%1 KiB"
+
+# Size is in Bytes
+#: PackageProperties#4
+msgid "%1 Bytes"
+msgstr "%1 Бајти"
+
+#: PackageProperties#5
+msgid "Shaman - %1 properties"
+msgstr "Shaman - %1 својства"
+
+# Stands for: Not Available
+#: PackageProperties#6
+msgid "N/A"
+msgstr "Не е достапно"
+
+#: PackageProperties#7
+msgid "Changelog not available for this package"
+msgstr "Записникот на промени не е достапен за овој пакет"
+
+#: QObject#1
+msgid "Whoa, that's co&ol!"
+msgstr "Вау, тоа е зак&он!"
+
+#: QObject#2
+msgctxt "QObject#2"
+msgid "Ok"
+msgstr "Во ред"
+
+#: QObject#3
+msgid "O&k"
+msgstr "Во &ред"
+
+#: QObject#4
+msgid "&Yes"
+msgstr "&Да"
+
+#: QObject#5
+msgid "&No"
+msgstr "&Не"
+
+#: QObject#6
+msgid "Do not &show this Again"
+msgstr "Не го &покажувај ова повторно"
+
+#: QObject#7
+msgid "C&ancel"
+msgstr "О&ткажи"
+
+#: QObject#8
+msgctxt "QObject#8"
+msgid "Shaman"
+msgstr "Shaman"
+
+#: QObject#9
+msgid ""
+"Shaman could not switch to root.\n"
+"Probably you have not set the SUID bit to it.\n"
+"You can do that by issuing as root\n"
+"chown root shaman && chmod u+s shaman.\n"
+"Note that this is safe, please read Shaman wiki\n"
+"for more details."
+msgstr ""
+"Shaman не можеше да се префрли во root.\n"
+"Веројатно не сте го поставиле SUID делот.\n"
+"Тоа можете да го направите со извршување како root на\n"
+"chown root shaman && chmod u+s shaman.\n"
+"Запаметете дека ова е безбедно, ве молиме \n"
+"прочитајте го викито на Shaman за детали. "
+
+#: QObject#10
+msgid ""
+"There was a problem while testing libalpm.\n"
+"Maybe another application has a lock on it."
+msgstr ""
+"Имаше проблем при тестирање на libalpm.\n"
+"Можеби некоја друга апликација го користи."
+
+# Hey! If you are reading this, first of all thanks for helping us in making Shaman better. There are not many comments unless where needed, since all the strings are pretty self-explanatory. You will see a lot of HTML in some cases: do not let that scare you, but please edit text only. Editing HTML tags too may break our layout, so be careful. A good practice could be copying the whole string, and then translating just what's outside the tags, usually just a few words. If you have any doubts, or if you just want to drop us a line, there goes our email addresses:
+# Dario: drf54321@gmail.com
+# Lukas: l.appelhans@gmx.de
+# Thanks again, and enjoy your translation!
+#: QObject#11
+msgctxt "QObject#11"
+msgid "Shaman"
+msgstr "Shaman"
+
+#: QObject#12
+msgid ""
+"Your settings file seems unwritable.\n"
+"Please check permissions on it."
+msgstr ""
+"На вашите датотеки со поставки не може да се запише.\n"
+"Ве молиме проверете ги нивните дозволи."
+
+#: QObject#13
+msgctxt "QObject#13"
+msgid "Please Wait..."
+msgstr "Ве молиме почекајте..."
+
+#: QObject#14
+msgid ""
+"Shaman can not be started as root.\n"
+"Please restart it as unprivileged user."
+msgstr ""
+"Shaman не може да се изврши како root.\n"
+"Ве молиме извршете го како непривилегиран корисник."
+
+#: QObject#15
+msgid ""
+"You have started Shaman as root.\n"
+"It is advised to start it as unprivileged user.\n"
+"Shaman will ask you for root password when needed."
+msgstr ""
+"Го извршивте Shaman како root.\n"
+"Препорачано е да го извршите како непривилегиран корисник.\n"
+"Shaman ќе ве праша за root лозинката кога ќе биде потребно."
+
+#: QObject#16
+msgid ""
+"Pacman is not updated.\n"
+"Shaman needs libalpm >= 2.1.0 to run.\n"
+"Yours is %1. Please update Pacman."
+msgstr ""
+"Pacman не е ажуриран.\n"
+"Shaman има потреба од libalpm >= 2.1.0 за да работи\n"
+"Вашиот е %1. Ве молиме ажурирајте ги Pacman."
+
+#: QObject#17
+msgid "Loading Databases..."
+msgstr "Вчитување на датабазите..."
+
+#: QObject#18
+msgid "Loading Packages..."
+msgstr "Вчитување на пакетите"
+
+#: QObject#19
+msgid "Starting up Shaman..."
+msgstr "Подигање на Shaman..."
+
+#: QObject#20
+msgid ""
+"It looks like another copy of Shaman is running.\n"
+"You can only run one copy of Shaman at a time."
+msgstr ""
+
+#: QueueDialog#1
+msgid "<br><b> * Validating Transaction</b><br>"
+msgstr "<br><b> * Валидација на трансакцијата</b><br>"
+
+#: QueueDialog#2
+msgid "Validating Dependencies..."
+msgstr "Валидација на зависностите..."
+
+#: QueueDialog#3
+msgid "Checking for Conflicts..."
+msgstr "Проверување за конфликти..."
+
+#: QueueDialog#4
+msgid "Resolving Dependencies..."
+msgstr "Решавање на зависности..."
+
+#: QueueDialog#5
+msgid "Looking for Inter-Conflicts..."
+msgstr "Барање на внатрешни конфликти..."
+
+#: QueueDialog#6
+msgid "<br><b> * Package Installation Started</b><br>"
+msgstr "<br><b> * Инсталација на пакетот започна</b><br>"
+
+#: QueueDialog#7
+msgid "Installing %1..."
+msgstr "Инсталирање на %1..."
+
+#: QueueDialog#8
+msgid "%1 (%2) installed successfully!"
+msgstr "%1 (%2) инсталирани успешно!"
+
+#: QueueDialog#9
+msgid "<br><b> * Package Removal Started</b><br>"
+msgstr "<br><b> * Отстранување на пакети започна</b><br>"
+
+#: QueueDialog#10
+msgid "Removing %1..."
+msgstr "Отстранувам %1..."
+
+#: QueueDialog#11
+msgid "%1 (%2) removed successfully!"
+msgstr "%1 (%2) отстранет успешно!"
+
+#: QueueDialog#12
+msgid "<br><b> * Package Upgrading Started</b><br>"
+msgstr "<br><b> * Надградба на пакети започна</b><br>"
+
+#: QueueDialog#13
+msgid "Upgrading %1..."
+msgstr "Надградувам %1..."
+
+#: QueueDialog#14
+msgid "Upgraded %1 successfully (%2 -> %3)"
+msgstr "Надградив %1 успешно (%2 -> %3)"
+
+#: QueueDialog#15
+msgid "<br><b> * Queue Processing Started</b><br>"
+msgstr "<br><b> * Обработка на редицата започна</b><br>"
+
+#: QueueDialog#16
+msgid "Checking package integrity..."
+msgstr "Проверување на интегритетот на пакетот..."
+
+#: QueueDialog#17
+msgid "Checking delta integrity..."
+msgstr "Проверување на delta интегритет..."
+
+#: QueueDialog#18
+msgid "Applying deltas..."
+msgstr "Применување на delta-и..."
+
+#: QueueDialog#19
+msgid "Generating %1 with %2... "
+msgstr "Генерирање на %1 со %2..."
+
+#: QueueDialog#20
+msgid "Success!"
+msgstr "Успешно!"
+
+#: QueueDialog#21
+msgid "Failed!"
+msgstr "Неуспешно!"
+
+#: QueueDialog#22
+msgid "<br><b> * Package Downloading Started</b><br>"
+msgstr "<br><b> * Симнување на пакетот започна</b><br>"
+
+#: QueueDialog#23
+msgid "Starting downloading packages from %1..."
+msgstr "Започнување со симнување на пакети од %1..."
+
+# You just have to translate 'remaining' here. Leave everything else as it is.
+#: QueueDialog#24
+msgid "%p% (%1 KB/s, %4:%5:%6 remaining)"
+msgstr "%p% (%1 KB/s, %4:%5:%6 останато)"
+
+#: QueueDialog#25
+msgid "Downloading %1... (%2 MB of %3 MB)"
+msgstr "Симнувам %1... (%2 MB of %3 MB)"
+
+#: QueueDialog#26
+msgid "Downloading %1... (%2 KB of %3 KB)"
+msgstr "Симнувам %1... (%2 KB of %3 KB)"
+
+#: QueueDialog#27
+msgid "Queue processed, please wait..."
+msgstr "Редицата е обработена, ве молиме почекајте..."
+
+#: QueueDialog#28
+msgid "Queue processing failed!"
+msgstr "Обработување на редицата не успеа!"
+
+#: QueueDialog#29
+msgid "Queue processed successfully!"
+msgstr "Редицата е обработена успешно!"
+
+#: QueueDialog#30
+msgctxt "QueueDialog#30"
+msgid "Close"
+msgstr "Затвори"
+
+#: QueueDialog#31
+msgid "Unexpected Error. Shaman might be corrupted."
+msgstr "Неочекувана грешка. Shaman може да е расипан."
+
+#: QueueDialog#32
+msgid "Executing %1 scriptlet for %2..."
+msgstr "Извршување на %1 scriptlet за %2..."
+
+#: QueueDialog#33
+msgid "Extracting Scriptlet from package failed!!"
+msgstr "Екстрактирање на Scriptlet од пакетот неуспеа!!"
+
+#: QueueDialog#34
+msgid "Package %1 does not have %2 scriptlet"
+msgstr "Пакетот %1 не содржи %2 scriptlet"
+
+#: QueueDialog#35
+msgid "Scriptlet processed successfully!"
+msgstr "Scriptlet-от е обработен успешно!"
+
+#: QueueDialog#36
+msgid "Error processing Scriptlet!!"
+msgstr "Грешка во обработувањето на Scriptlet-от!!"
+
+#: QueueDialog#37
+msgctxt "QueueDialog#37"
+msgid "Queue Processing"
+msgstr "Обработување на редица"
+
+#: QueueDialog#38
+msgid ""
+"Would you like to abort Queue Processing?\n"
+"This may damage your system."
+msgstr ""
+"Дали сакате да го откажете обработувањето на редицата?\n"
+"Ова може да го оштети вашиот систем."
+
+#: QueueDialog#39
+msgid "There has been an error while preparing the transaction.\n"
+msgstr "Имаше грешка при подготвувањето на трансакцијата.\n"
+
+#: QueueDialog#40
+msgid "There has been an error while committing the transaction.\n"
+msgstr "Имаше грешка при предавањето на трансакцијата.\n"
+
+#: QueueReadyDialog#1
+msgid "Review Queue"
+msgstr "Прегледај ја редицата"
+
+#: QueueReadyDialog#2
+msgctxt "QueueReadyDialog#2"
+msgid "Turn off PC when Queue is done"
+msgstr "Исклучи го компјутерот кога редицата ќе заврши"
+
+#: QueueReadyDialog#3
+msgid "Process in Tray"
+msgstr "Обработи во лента"
+
+#: QueueReadyDialog#4
+msgid "Keep Queue Dialog Open after the Queue is finished"
+msgstr "Задржи го дијалогот за редицата откако редицата ќе заврши"
+
+#: QueueReadyDialog#5
+msgctxt "QueueReadyDialog#5"
+"QueueReadyDialog#5"
+msgid "Show packages..."
+msgstr "Прикажи пакети..."
+
+#: QueueReadyDialog#6
+msgctxt "QueueReadyDialog#6"
+msgid "Packages In Queue"
+msgstr "Пакети во редица"
+
+#: QueueReadyDialog#7
+msgctxt "QueueReadyDialog#7"
+msgid "Cancel"
+msgstr "Откажи"
+
+#: QueueReadyDialog#8
+msgid "Process"
+msgstr "Обработи"
+
+#: QueueReadyDialog#9
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Review Queue</span></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">p, "
+"li { white-space: pre-wrap; }</style></head><body style=\" font-family:'Sans "
+"Serif'; font-size:10pt; font-weight:400; font-style:normal;\"><p style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Прегледај "
+"ја редицата</span></p></body></html>"
+
+#: QueueReadyDialog#10
+msgctxt "QueueReadyDialog#10"
+msgid "Force Queue Processing"
+msgstr "Присили обработка на редицата"
+
+#: ReviewQueueDialog#1
+msgctxt "ReviewQueueDialog#1"
+msgid "Install"
+msgstr "Инсталирај"
+
+#: ReviewQueueDialog#2
+msgctxt "ReviewQueueDialog#2"
+msgid "To be Installed"
+msgstr "За инсталација"
+
+#: ReviewQueueDialog#3
+msgctxt "ReviewQueueDialog#3"
+msgid "Upgrade"
+msgstr "Надгради"
+
+#: ReviewQueueDialog#4
+msgctxt "ReviewQueueDialog#4"
+msgid "To be Upgraded"
+msgstr "За надградба"
+
+#: ReviewQueueDialog#5
+msgctxt "ReviewQueueDialog#5"
+msgid "Uninstall"
+msgstr "Отстрани"
+
+#: ReviewQueueDialog#6
+msgid "To be Removed"
+msgstr "За отстранување"
+
+#: ReviewQueueDialog#7
+msgctxt "ReviewQueueDialog#7"
+msgid "Complete Uninstall"
+msgstr "Целосно отстранување"
+
+#: ReviewQueueDialog#8
+msgid "Your Queue is about to be processed. You are going to:<br />"
+msgstr "Вашата редица ќе биде обработени. Вие ќе:<br />"
+
+#: ReviewQueueDialog#9
+msgid "Do you wish to continue?"
+msgstr "Дали сакате да продолжите?"
+
+#: ReviewQueueDialog#10
+msgid "Remove <b>%n package(s)</b><br />"
+msgstr ""
+"\n"
+"            \n"
+"            \n"
+"            \n"
+"        "
+
+#: ReviewQueueDialog#11
+msgid "Install/Upgrade <b>%n package(s)</b><br />"
+msgstr ""
+"\n"
+"            \n"
+"            \n"
+"            \n"
+"        "
+
+#: ShamanStatusBar#1
+msgid "%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages"
+msgstr ""
+"%1 Достапни пакети, %2 инсталирани пакети, %3 пакети достапни за надградба"
+
+#: ShamanStatusBar#2
+msgid "%1 will be used"
+msgstr "%1 ќе бидат искористени"
+
+#: ShamanStatusBar#3
+msgid "%1 will be freed"
+msgstr "%1 ќе бидат ослободени"
+
+#: ShamanStatusBar#4
+msgid "%1 to be Installed, %2 to be Removed"
+msgstr "%1 за инсталација, %2 за отстранување"
+
+#: ShamanTrayIcon#1
+msgctxt "ShamanTrayIcon#1"
+msgid "Update Database"
+msgstr "Ажурирај ја датабазата"
+
+#: ShamanTrayIcon#2
+msgctxt "ShamanTrayIcon#2"
+msgid "Upgrade System"
+msgstr "Надгради систем"
+
+#: ShamanTrayIcon#3
+msgctxt "ShamanTrayIcon#3"
+msgid "Process Queue"
+msgstr "Обработи ја редицата"
+
+#: ShamanTrayIcon#4
+msgid "Settings"
+msgstr "Поставувања"
+
+#: ShamanTrayIcon#5
+msgctxt "ShamanTrayIcon#5"
+msgid "Quit"
+msgstr "Исклучи"
+
+#: ShamanTrayIcon#6
+msgid "Shaman - Idle"
+msgstr "Shaman - Во мирување"
+
+#: ShamanTrayIcon#7
+msgid "Shaman - Processing"
+msgstr "Shaman - Обработување"
+
+#: ShamanTrayIcon#8
+msgid "Shaman - Idle (Upgrades Available)"
+msgstr "Shaman - Во мирување (Надградби се достапни)"
+
+#: ShamanTrayIcon#9
+msgctxt "ShamanTrayIcon#9"
+msgid "System Upgrade"
+msgstr "Надградба на системот"
+
+#: ShamanTrayIcon#10
+msgid "New News Available"
+msgstr "Нови вести се достапни"
+
+#: ShamanTrayIcon#11
+msgid ""
+"There are new news available.\n"
+"Click here to review them."
+msgstr ""
+"Нови вести се достапни.\n"
+"Кликнете овде за да ги прегледате"
+
+#: ShamanTrayIcon#12
+msgid "Failed Fetching News"
+msgstr "Превземањето на вести не успеа"
+
+#: ShamanTrayIcon#13
+msgid ""
+"An error occourred while fetching news!\n"
+"Click here to open the News Dialog for more details."
+msgstr ""
+"Се случи грешка при превземањетона вести!\n"
+"Кликнете овде за да го отворите диалогот за вести за повеќе детали."
+
+#: ShamanTrayIcon#14
+msgid ""
+"Upgradeable package(s): %n.\n"
+"Click here to upgrade your System."
+msgstr ""
+"\n"
+"            \n"
+"            \n"
+"            \n"
+"        "
+
+#: SysUpgradeDialog#1
+msgctxt "SysUpgradeDialog#1"
+msgid "To be Upgraded"
+msgstr "За надградба"
+
+#: SysUpgradeDialog#2
+msgid ""
+"<b>Upgradeable package(s): %n</b> You can either<br> upgrade immediately or "
+"add it to the current Queue<br> and process it later."
+msgstr ""
+"\n"
+"            \n"
+"            \n"
+"            \n"
+"        "
+
+#: aboutDialog#1
+msgid "About Shaman"
+msgstr "За Shaman"
+
+#: aboutDialog#2
+msgid "About"
+msgstr "За"
+
+#: aboutDialog#3
+msgid "Authors"
+msgstr "Автори"
+
+#: aboutDialog#4
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Dario Freddi</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Developer</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Lukas Appelhans</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Developer</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">p, "
+"li { white-space: pre-wrap; }</style></head><body style=\" font-family:'Sans "
+"Serif'; font-size:10pt; font-weight:400; font-style:normal;\"><p style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Dario "
+"Freddi</span></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\">Развивач</p><p style=\"-qt-paragraph-type:empty; margin-top:0px; "
+"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
+"text-indent:0px;\"></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
+"style=\" font-weight:600;\">Lukas Appelhans</span></p><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px; font-weight:600;\"><span style=\" font-"
+"weight:400;\">Развивач</span></p><p style=\"-qt-paragraph-type:empty; margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\"></p></body></html>"
+
+#: aboutDialog#5
+msgid "Thanks To"
+msgstr "Благодариме на"
+
+#: aboutDialog#6
+msgid "Visit &Website..."
+msgstr "Посети го  &Вебсајтот..."
+
+#. (obsolete)
+#: aboutDialog#7
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span "
+"style=\" font-size:10pt;\">Shaman has received a lot of help from a lot of "
+"people, and it is also thanks to them if Shaman has seen the light. If we "
+"forgot to add you here, let us know.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Names are in alphabetical "
+"order, because even the smallest contribution has been important to us.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\">The KDEmod "
+"Community</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Help, Testing, Support, everything started from "
+"here. If there was no KDEmod, probably</span> <span style=\" font-"
+"weight:400;\">there would be no Shaman</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Giannis Antoniou</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Greek Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Carlos Berroteran</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Spanish Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Sander De Voogdt</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Dutch Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Jacques Disner</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">French Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Jan Dupal</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Czech Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Stefano Giro</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Testing and Suggestions</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Georg Grabler</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Author of the Proxy patch, some help on the code "
+"and more.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Michael Knights</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Artwork creator, his icon "
+"proposal lies now in Arxin, but his splashscreen is in here ;)</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Till Luge</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Heavy tester, thanks!</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Rodrigo Mazak</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Brazilian Translator, and "
+"gave the name Shaman</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\">Jan "
+"Mette</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">German Translation and "
+"KDEmod Developer, also the creator of the Icon</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Atilla Ontas</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Turkish Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Martin Sandsmark</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Our hoster, and maintainer "
+"of Trac.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Johannes Schriewer</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">KDEmod Developer, and also some help on the "
+"code.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Xiang Yixiang</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Chinese Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Anton Gritsay</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Russian Translator and "
+"Patches related to Translations</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Bartek Iwaniec</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Polish Translator</span></p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\"><html><head><meta name=\"qrichtext\" content=\"1\" /><style "
+"type=\"text/css\">p, li { white-space: pre-wrap; }</style></head><body style=\" "
+"font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-"
+"style:normal;\"><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
+"size:9pt;\"><span style=\" font-size:10pt;\">Shaman доби многу помош од многу "
+"луѓе, и благодарение на нив Shaman стана сериозен проект . Доколку сме ве "
+"заборавиле, јавете ни.</span></p><p style=\" margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\">Имињата се по азбучен ред, бидејќи го цениме и најмалиот "
+"придонес.</p><p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px; font-weight:600;\"></p><p style=\" margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px; font-weight:600;\">KDEmod Заедницата</p><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px; font-weight:600;\"><span style=\" font-"
+"weight:400;\">Помош, Тестирање, Подршка, се почна од таму. Без KDEmod, "
+"веројатно</span> <span style=\" font-weight:400;\">Shaman не би "
+"постоел</span></p><p style=\"-qt-paragraph-type:empty; margin-top:0px; "
+"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
+"text-indent:0px;\"></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
+"style=\" font-weight:600;\">Giannis Antoniou</span></p><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\">Грчки превод</p><p style=\"-qt-paragraph-"
+"type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"></p><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Carlos "
+"Berroteran</span></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Шпански "
+"превод</p><p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
+"style=\" font-weight:600;\">Sander De Voogdt</span></p><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\">Холандски превод</p><p style=\"-qt-paragraph-"
+"type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"></p><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Jacques "
+"Disner</span></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Француски "
+"превод</p><p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
+"style=\" font-weight:600;\">Jan Dupal</span></p><p style=\" margin-top:0px; "
+"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
+"text-indent:0px;\">Чешки превод</p><p style=\"-qt-paragraph-type:empty; "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px;\"></p><p style=\" margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"><span style=\" font-weight:600;\">Stefano Giro</span></p><p "
+"style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Тестирање и предлози</span></p><p style=\"-qt-"
+"paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; "
+"margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p><p style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Georg "
+"Grabler</span></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
+"weight:600;\"><span style=\" font-weight:400;\">Автор на закрпата за Proxy, "
+"придонесувач на дел од кодот  и повеќе.</span></p><p style=\"-qt-paragraph-"
+"type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"></p><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Michael "
+"Knights</span></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Автор на "
+"иконите, неговите идеи за икони ќе бидат во Arxin, но неговиот поздравен "
+"екран е веќе тука ;)</p><p style=\"-qt-paragraph-type:empty; margin-top:0px; "
+"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
+"text-indent:0px;\"></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
+"style=\" font-weight:600;\">Till Luge</span></p><p style=\" margin-top:0px; "
+"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
+"text-indent:0px; font-weight:600;\"><span style=\" font-weight:400;\">Вреден "
+"тестер, благодариме!</span></p><p style=\"-qt-paragraph-type:empty; margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\"></p><p style=\" margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"><span style=\" font-weight:600;\">Rodrigo Mazak</span></p><p "
+"style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Бразилски превод, и автор "
+"на името Shaman</p><p style=\"-qt-paragraph-type:empty; margin-top:0px; "
+"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
+"text-indent:0px; font-weight:600;\"></p><p style=\" margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px; font-weight:600;\">Jan Mette</p><p style=\" margin-top:0px; "
+"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
+"text-indent:0px;\">Германски превод и KDEmod развивач, и авторот на "
+"иконата</p><p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
+"style=\" font-weight:600;\">Atilla Ontas</span></p><p style=\" margin-top:0px; "
+"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
+"text-indent:0px;\">Турски превод</p><p style=\"-qt-paragraph-type:empty; "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px;\"></p><p style=\" margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"><span style=\" font-weight:600;\">Martin Sandsmark</span></p><p "
+"style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Нашиот хостинг провајдер, и "
+"одржувач на Trac системот</p><p style=\"-qt-paragraph-type:empty; margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\"></p><p style=\" margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"><span style=\" font-weight:600;\">Johannes Schriewer</span></p><p "
+"style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">KDEmod развивач, и придонесувач на дел од "
+"кодот.</span></p><p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
+"style=\" font-weight:600;\">Xiang Yixiang</span></p><p style=\" margin-top:0px; "
+"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
+"text-indent:0px;\">Кинески превод</p><p style=\"-qt-paragraph-type:empty; "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px;\"></p><p style=\" margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"><span style=\" font-weight:600;\">Anton Gritsay</span></p><p "
+"style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Руски превод и придонесувач "
+"на закрпи за превод</p><p style=\"-qt-paragraph-type:empty; margin-top:0px; "
+"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
+"text-indent:0px;\"></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
+"style=\" font-weight:600;\">Bartek Iwaniec</span></p><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px; font-weight:600;\"><span style=\" font-"
+"weight:400;\">Полски превод</span></p></body></html>"
+
+#: aboutDialog#8
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span "
+"style=\" font-size:10pt;\">Shaman has received a lot of help from a lot of "
+"people, and it is also thanks to them if Shaman has seen the light. If we "
+"forgot to add you here, let us know.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Names are in alphabetical "
+"order, because even the smallest contribution has been important to us.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\">The KDEmod "
+"Community</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Help, Testing, Support, everything started from "
+"here. If there was no KDEmod, probably</span> <span style=\" font-"
+"weight:400;\">there would be no Shaman</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Giannis Antoniou</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Greek Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Carlos Berroteran</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Spanish Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Sander De Voogdt</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Dutch Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Jacques Disner</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">French Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Jan Dupal</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Czech Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Stefano Giro</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Testing and Suggestions</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Georg Grabler</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Author of the Proxy patch, some help on the code "
+"and more.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Michael Knights</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Artwork creator, his icon "
+"proposal lies now in Arxin, but his splashscreen is in here ;)</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Till Luge</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Heavy tester, thanks!</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Rodrigo Mazak</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Brazilian Translator, and "
+"gave the name Shaman</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\">Jan "
+"Mette</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">German Translation and "
+"KDEmod Developer, also the creator of the Icon</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Atilla Ontas</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Turkish Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Martin Sandsmark</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Our hoster, and maintainer "
+"of Trac.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Johannes Schriewer</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">KDEmod Developer, and also some help on the "
+"code.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Xiang Yixiang</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Chinese Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Anton Gritsay</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Russian Translator and "
+"Patches related to Translations</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Bartek Iwaniec</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Polish Translator</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Marko Doda</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Macedonian Translator</span></p></body></html>"
+msgstr ""
+
+#: authDialog#1
+msgid "Root Password Required"
+msgstr "Потребна е Root лозинка"
+
+#: authDialog#2
+msgid ""
+"Shaman needs root privileges to perform this action.\n"
+"Please enter in the field below the root password to continue."
+msgstr ""
+"Потребни се root привилегии за Shaman да ја изврши оваа акција.\n"
+"Ве молиме во полето доле внесете ја root лозинката за да продолжите."
+
+#: authDialog#3
+msgid "Never ask for this anymore"
+msgstr "Не прашувај веќе за лозинка"
+
+#: authDialog#4
+msgctxt "authDialog#4"
+msgid "Ok"
+msgstr "Во ред"
+
+#: authDialog#5
+msgid "Return"
+msgstr "Врати"
+
+#: authDialog#6
+msgctxt "authDialog#6"
+msgid "Cancel"
+msgstr "Откажи"
+
+#: authDialog#7
+msgid "Backspace"
+msgstr "Назад"
+
+#: buildingDialog#1
+msgid "Shaman - Building Packages"
+msgstr "Shaman - Создавање на пакети"
+
+#: buildingDialog#2
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:10pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Building Packages...</span></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">p, "
+"li { white-space: pre-wrap; }</style></head><body style=\" font-"
+"family:'Liberation Sans'; font-size:10pt; font-weight:400; font-"
+"style:normal;\"><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
+"style=\" font-weight:600;\">Создавање на пакети...</span></p></body></html>"
+
+#: buildingDialog#3
+msgctxt "buildingDialog#3"
+msgid "Abort"
+msgstr "Откажи"
+
+#: buildingDialog#4
+msgid "Reduce To Tray"
+msgstr "Спушти во лента"
+
+#: dbUpdateDialog#1
+msgctxt "dbUpdateDialog#1"
+msgid "Database Update"
+msgstr "Ажурирање на датабазата"
+
+#: dbUpdateDialog#2
+msgid "Update Database.."
+msgstr "Ажурирај ја датабазата.."
+
+#: editPBDialog#1
+msgid "Editing PKGBUILD"
+msgstr "Уредување на PKGBUILD"
+
+#: editPBDialog#2
+msgid "Editing PKGBUILD of:"
+msgstr "Уредување на PKGBUILD за:"
+
+#: editPBDialog#3
+msgid "Save"
+msgstr "Зачувај"
+
+#: editPBDialog#4
+msgid "Undo"
+msgstr "Врати"
+
+#: editPBDialog#5
+msgid "Redo"
+msgstr "Повтори"
+
+#: editPBDialog#6
+msgctxt "editPBDialog#6"
+msgid "Ok"
+msgstr "Во ред"
+
+#: editPBDialog#7
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Edit PKGBUILD</span></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">p, "
+"li { white-space: pre-wrap; }</style></head><body style=\" font-family:'Sans "
+"Serif'; font-size:10pt; font-weight:400; font-style:normal;\"><p style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Уреди "
+"PKGBUILD</span></p></body></html>"
+
+#: logViewer#1
+msgid "Shaman - Log Viewer"
+msgstr "Shaman - Прегледувач на записници"
+
+#: logViewer#2
+msgid "Show Only Logs From"
+msgstr "Прикажи само записници од"
+
+#: logViewer#3
+msgid "Show Only Logs Until"
+msgstr "Прикажи само записници до"
+
+#: logViewer#4
+msgid "Filter"
+msgstr "Филтер"
+
+#: logViewer#5
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Liberation Sans'; font-size:9pt;\"></p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\"><html><head><meta name=\"qrichtext\" content=\"1\" /><style "
+"type=\"text/css\">p, li { white-space: pre-wrap; }</style></head><body style=\" "
+"font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-"
+"style:normal;\"><p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px; font-family:'Liberation Sans'; font-"
+"size:9pt;\"></p></body></html>"
+
+#: logViewer#6
+msgid "Refresh View"
+msgstr "Освежи го прегледот"
+
+# close the dialog
+#: logViewer#7
+msgctxt "logViewer#7"
+msgid "Close"
+msgstr "Затвори"
+
+#: logViewer#8
+msgid "dd/MM/yyyy"
+msgstr ""
+
+#: newsDialog#1
+msgid "Arch Linux News"
+msgstr "Arch Linux вести"
+
+#: newsDialog#2
+msgid "News-Title"
+msgstr "Вести-Наслов"
+
+#: newsDialog#3
+msgid "Link"
+msgstr "Врска"
+
+#: newsDialog#4
+msgid "status"
+msgstr "статус"
+
+#: newsDialog#5
+msgctxt "newsDialog#5"
+msgid "Mark as Read"
+msgstr "Означи како прочитано"
+
+#: newsDialog#6
+msgid "Open in Browser"
+msgstr "Отвори во прелистувач"
+
+#: newsDialog#7
+msgid "Refresh"
+msgstr "Освежи"
+
+# close the dialog
+#: newsDialog#8
+msgctxt "newsDialog#8"
+msgid "Close"
+msgstr "Затвори"
+
+#: pkgProperties#1
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
+"size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Package Information</span></p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\"><html><head><meta name=\"qrichtext\" content=\"1\" /><style "
+"type=\"text/css\">p, li { white-space: pre-wrap; }</style></head><body style=\" "
+"font-family:'Bitstream Vera Sans'; font-size:10pt; font-weight:400; font-"
+"style:normal;\"><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
+"style=\" font-weight:600;\">Информација за пакетот</span></p></body></html>"
+
+#: pkgProperties#2
+msgctxt "pkgProperties#2"
+msgid "Package Information"
+msgstr "Информација за пакетот"
+
+#: pkgProperties#3
+msgid "Installed:"
+msgstr "Инсталирано"
+
+#: pkgProperties#4
+msgid "Description:"
+msgstr "Опис:"
+
+#: pkgProperties#5
+msgid "Upgradeable"
+msgstr "Надградливи"
+
+#: pkgProperties#6
+msgid "Build Date:"
+msgstr "Датум на создавање:"
+
+#: pkgProperties#7
+msgid "Provides:"
+msgstr "Обезбедува:"
+
+#: pkgProperties#8
+msgid "Install Date:"
+msgstr "Дата на инсталација:"
+
+#: pkgProperties#9
+msgid "Packager:"
+msgstr "Автор на пакетот:"
+
+#: pkgProperties#10
+msgid "Size:"
+msgstr "Големина:"
+
+#: pkgProperties#11
+msgid "Has a Scriptlet"
+msgstr "Содржи Scriptlet"
+
+#: pkgProperties#12
+msgid "Version:"
+msgstr "Верзија:"
+
+#: pkgProperties#13
+msgid "Changelog"
+msgstr "Записник на промени"
+
+#: pkgProperties#14
+msgid "Files"
+msgstr "Датотеки"
+
+#: pkgProperties#15
+msgctxt "pkgProperties#15"
+msgid "1"
+msgstr "1"
+
+#: pkgProperties#16
+msgid "Dependencies"
+msgstr "Зависности"
+
+#: pkgProperties#17
+msgid "Depends on"
+msgstr "Зависи од"
+
+#: pkgProperties#18
+msgid "Is Required by"
+msgstr "Е зависност на:"
+
+#: pkgProperties#19
+msgid "Actions Performed"
+msgstr "Извршени акции"
+
+#: pkgProperties#20
+msgctxt "pkgProperties#20"
+msgid "Ok"
+msgstr "Во ред"
+
+#: reviewBuildingDialog#1
+msgid "Review Building Queue"
+msgstr "Прегледај ја редицата за создавање на пакет"
+
+#: reviewBuildingDialog#2
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:10pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans "
+"Serif';\"><span style=\" font-weight:600;\">Build Queue From "
+"Source</span></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">p, "
+"li { white-space: pre-wrap; }</style></head><body style=\" font-"
+"family:'Liberation Sans'; font-size:10pt; font-weight:400; font-"
+"style:normal;\"><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
+"family:'Sans Serif';\"><span style=\" font-weight:600;\">Создади пакети во "
+"редица од изворен код</span></p></body></html>"
+
+#: reviewBuildingDialog#3
+msgid "Process All Dependencies from Binary First (advised)"
+msgstr "Обработи ги сите зависности од бинарни пакети прво(препорачано)"
+
+#: reviewBuildingDialog#4
+msgid "This is useful if you want to review compiler's output"
+msgstr "Ова е корисно доколку сакате да го прегледате излезот од компајлерот"
+
+#: reviewBuildingDialog#5
+msgid "Do not install immediately when building is finished"
+msgstr "Ве инсталирај веднаш откако создавањето на пакет ќе заврши"
+
+#: reviewBuildingDialog#6
+msgctxt "reviewBuildingDialog#6"
+msgid "Turn off PC when Queue is done"
+msgstr "Исклучи го компјутерот кога редицата ќе заврши"
+
+#: reviewBuildingDialog#7
+msgctxt "reviewBuildingDialog#7"
+msgid "Show packages..."
+msgstr "Прикажи пакети"
+
+#: reviewBuildingDialog#8
+msgctxt "reviewBuildingDialog#8"
+msgid "Packages In Queue"
+msgstr "Пакети во редица"
+
+#: reviewBuildingDialog#9
+msgctxt "reviewBuildingDialog#9"
+msgid "Abort"
+msgstr "Откажи"
+
+#: reviewBuildingDialog#10
+msgid "Process From Binary"
+msgstr "Обработи од бинарни пакети"
+
+#: reviewBuildingDialog#11
+msgid "Review PKGBUILDs"
+msgstr "Прегледај PKGBUILD-ови"
+
+#: reviewBuildingDialog#12
+msgid "Process From Source"
+msgstr "Обработи од изворен код"
+
+#: transactionDialog#1
+msgid "Processing Queue..."
+msgstr "Обработување на редицата..."
+
+#: transactionDialog#2
+msgid "Check transaction validity"
+msgstr "Проверка на валидноста на трансакцијата"
+
+#: transactionDialog#3
+msgid "Download Packages"
+msgstr "Симнување на пакетите"
+
+#: transactionDialog#4
+msgid "Process queue"
+msgstr "Обработка на редицата"
+
+#: transactionDialog#5
+msgid "Cleanup"
+msgstr "Чистење"
+
+#: transactionDialog#6
+msgctxt "transactionDialog#6"
+msgid "More Details..."
+msgstr "Повеќе детали..."
+
+#: transactionDialog#7
+msgctxt "transactionDialog#7"
+msgid "Abort"
+msgstr "Откажи"
+
+#: transactionDialog#8
+msgctxt "transactionDialog#8"
+msgid "Please Wait..."
+msgstr "Ве молиме почекајте..."
+
+#: transactionDialog#9
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Process Queue</span></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">p, "
+"li { white-space: pre-wrap; }</style></head><body style=\" font-family:'Sans "
+"Serif'; font-size:10pt; font-weight:400; font-style:normal;\"><p style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Обработка "
+"на редицата</span></p></body></html>"
+
+#: upgradeDialog#1
+msgctxt "upgradeDialog#1"
+msgid "System Upgrade"
+msgstr "Надградба на системот"
+
+#: upgradeDialog#2
+msgid "Remember my choice"
+msgstr "Запамети го мојот избор"
+
+#: upgradeDialog#3
+msgctxt "upgradeDialog#3"
+msgid "Abort"
+msgstr "Откажи"
+
+#: upgradeDialog#4
+msgctxt "upgradeDialog#4"
+msgid "Show packages..."
+msgstr "Прикажи пакети..."
+
+#: upgradeDialog#5
+msgid "Add to Queue"
+msgstr "Додади на редицата"
+
+#: upgradeDialog#6
+msgid "Upgrade Now"
+msgstr "Надгради сега"
+
+#: upgradeDialog#7
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">System-Upgrade</span></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">p, "
+"li { white-space: pre-wrap; }</style></head><body style=\" font-family:'Sans "
+"Serif'; font-size:10pt; font-weight:400; font-style:normal;\"><p style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Надградба "
+"на системот</span></p></body></html>"
+
+#: upgradeDialog#8
+msgid "Packages to Upgrade"
+msgstr "Пакети за надградба"
+
+#: upgradeDialog#9
+msgctxt "upgradeDialog#9"
+msgid "Force Queue Processing"
+msgstr "Присили обработка на редицата"

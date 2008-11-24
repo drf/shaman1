@@ -1,0 +1,4555 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-11-24 21:55+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 1.2.0\n"
+
+#. (obsolete)
+#: #1
+msgctxt "#1"
+msgid "Please wait, fetching items..."
+msgstr ""
+"Παρακαλώ περιμένετε, γίνεται \n"
+"λήψη των αντικειμένων..."
+
+#. (obsolete)
+#: AlpmHandler#1
+msgid ": requires "
+msgstr ": απαιτεί"
+
+#. (obsolete)
+#: AlpmHandler#2
+msgid ": conflicts with "
+msgstr ": είναι σε διένεξη με το"
+
+#. (obsolete)
+#: AlpmHandler#3
+msgid "%1 exists in both '%2' and '%3'"
+msgstr "Το %1 υπάρχει τόσο στο '%2' όσο και στο '%3'"
+
+#. (obsolete)
+#: AlpmHandler#4
+msgid ": %1 exists in filesystem"
+msgstr ": το %1 υπάρχει ήδη στον δίσκο"
+
+#. (obsolete)
+#: AlpmHandler#5
+msgid "Alpm did not give further details."
+msgstr "Το Alpm δεν έδωσε περαιτέρω πληροφορίες."
+
+#: BuildingDialog#1
+msgctxt "BuildingDialog#1"
+msgid "Error"
+msgstr "Σφάλμα"
+
+#: BuildingDialog#2
+msgid ""
+"Would you like to abort building?.\n"
+"All Process will be lost."
+msgstr ""
+"Θέλετε να ακυρώσετε το χτίσιμο;\n"
+"Όλη η διεργασία θα χαθεί."
+
+#: BuildingDialog#3
+msgid "<br><br><b>Building Process Aborted by the User. Building Failed.</b>"
+msgstr ""
+"<br><br><b>Η διεργασία χτισίματος ακυρώθηκε απ'τον χρήστη. Το χτίσιμο "
+"απέτυχε.</b>"
+
+#: BuildingDialog#4
+msgid "Updating ABS Tree..."
+msgstr "Ενημέρωση του καταλόγου ABS..."
+
+#: BuildingDialog#5
+msgid "<b>Starting ABS Tree Update...</b><br><br>"
+msgstr "<b>Έναρξη ενημέρωσης του καταλόγου ABS...</b><br><br>"
+
+#: BuildingDialog#6
+msgid "<br><br><b>ABS Tree Was Successfully Updated!</b>"
+msgstr "<br><br><b>Ο κατάλογος ABS ενημερώθηκε με επιτυχία!</b>"
+
+#: BuildingDialog#7
+msgid "ABS Update"
+msgstr "Ενημέρωση ABS"
+
+#: BuildingDialog#8
+msgid "Your ABS Tree was updated!"
+msgstr "Ο κατάλογος ABS ενημερώθηκε!"
+
+#: BuildingDialog#9
+msgid "<b>Building %1 failed!!</b><br><br>"
+msgstr "<b>Το χτίσιμο του πακέτου %1 απέτυχε!</b><br><br>"
+
+#: BuildingDialog#10
+msgid "<b>%1 was built successfully!!</b><br><br>"
+msgstr "<b>Το πακέτο %1 χτίστηκε με επιτυχία!</b><br><br>"
+
+#: BuildingDialog#11
+msgid "Processing Package %1 of %2..."
+msgstr "Επεξεργασία πακέτου %1 από %2..."
+
+#: BuildingDialog#12
+msgid "Building %1..."
+msgstr "Χτίσιμο του %1..."
+
+#: BuildingDialog#13
+msgid "<b>Building %1...</b><br><br>"
+msgstr "<b>Χτίσιμο του %1...</b><br><br>"
+
+#: BuildingDialog#14
+msgid "<b>Building operation has started.</b><br><br>"
+msgstr "<b>Η διεργασία χτισίματος ξεκίνησε.</b><br><br>"
+
+#: BuildingDialog#15
+msgid "<b>Could not set up the environment correctly for %1!!</b><br><br>"
+msgstr "<b>Το στήσιμο του περιβάλλοντος δεν ήταν δυνατό για το %1!!</b><br><br>"
+
+#: BuildingDialog#16
+msgid "Could not update the ABS Tree!"
+msgstr "Η ενημέρωση του ABS καταλόγου ήταν αδύνατη."
+
+#: BuildingHandler#1
+msgctxt "BuildingHandler#1"
+msgid ""
+"You need to have ABS installed to use Shaman's\n"
+"building feature. Do you want to install it now?"
+msgstr ""
+"Πρέπει να έχετε εγκατεστημένο το ABS για να μπορείτε\n"
+"να χτίσετε πακέτα με το Shaman. Εγκατάσταση τώρα;"
+
+#: BuildingHandler#2
+msgctxt "BuildingHandler#2"
+msgid "Error"
+msgstr "Σφάλμα"
+
+#: BuildingHandler#3
+msgctxt "BuildingHandler#3"
+msgid ""
+"You can not remove packages when processing\n"
+"your queue from Source"
+msgstr ""
+"Δεν μπορείτε να αφαιρέσετε πακέτα όταν γίνεται\n"
+"επεξεργασία της ουράς από την Πηγή"
+
+#: BuildingHandler#4
+msgctxt "BuildingHandler#4"
+msgid ""
+"Some of your packages do not belong to Arch\n"
+"Linux's official repository. Shaman is able to\n"
+"build packages from official sources only."
+msgstr ""
+"Κάποια από τα πακέτα σας δεν ανήκουν στα επίσημα\n"
+"repositories του Arch Linux. Το Shaman μπορεί να χτίσει\n"
+"πακέτα μόνο από τις επίσημες πηγές."
+
+#. (obsolete)
+#: BuildingHandler#5
+msgctxt "BuildingHandler#5"
+msgid ""
+"You are about to install <b>%1 package</b> from source. Building from "
+"source<br>can give some advantages, however is very slow.<br>If you are not "
+"sure about that, you would probably prefer to process<br>your queue from "
+"binary files. Before you continue, you are advised to<br>review your "
+"configuration to improve your building performance."
+msgstr ""
+"Πρόκειται να εγκαταστήσετε <b>%1 πακέτο</b> από την πηγή. Το χτίσιμο πακέτων "
+"από την πηγή<br>έχει κάποια πλεονεκτήματα, όμως είναι εξαιρετικά "
+"αργό.<br>Αν δεν είστε σίγουρος, θα ήταν καλύτερο να επεξεργαστείτε<br>την "
+"ουρά από έτοιμα πακέτα. Πριν συνεχίσετε, προτείνεται να<br>κοιτάξετε τις "
+"ρυθμίσεις σας ώστε να αυξήσετε την επίδοση του χτισίματος."
+
+#. (obsolete)
+#: BuildingHandler#6
+msgctxt "BuildingHandler#6"
+msgid ""
+"You are about to install <b>%1 packages</b> from source. Building from "
+"source<br>can give some advantages, however is very slow.<br>If you are not "
+"sure about that, you would probably prefer to process<br>your queue from "
+"binary files. Before you continue, you are advised to<br>review your "
+"configuration to improve your building performance."
+msgstr ""
+"Πρόκειται να εγκαταστήσετε <b>%1 πακέτα</b> από την πηγή. Το χτίσιμο πακέτων "
+"από την πηγή<br>έχει κάποια πλεονεκτήματα, όμως είναι εξαιρετικά "
+"αργό.<br>Αν δεν είστε σίγουρος, θα ήταν καλύτερο να επεξεργαστείτε<br>την "
+"ουρά από έτοιμα πακέτα. Πριν συνεχίσετε, προτείνεται να<br>κοιτάξετε τις "
+"ρυθμίσεις σας ώστε να αυξήσετε την επίδοση του χτισίματος."
+
+#: BuildingHandler#7
+msgctxt "BuildingHandler#7"
+msgid "To be Installed"
+msgstr "Προς Εγκατάσταση"
+
+#: BuildingHandler#8
+msgctxt "BuildingHandler#8"
+msgid "To be Upgraded"
+msgstr "Προς Αναβάθμιση"
+
+#: BuildingHandler#9
+msgctxt "BuildingHandler#9"
+msgid "Package Building"
+msgstr "Χτίσιμο Πακέτου"
+
+#: BuildingHandler#10
+msgctxt "BuildingHandler#10"
+msgid "Your Packages failed to build!"
+msgstr "Το χτίσιμο των πακέτων σας απέτυχε!"
+
+#: BuildingHandler#11
+msgctxt "BuildingHandler#11"
+msgid ""
+"Your packages Failed to Build.\n"
+"Look at the output for more details."
+msgstr ""
+"Το χτίσιμο των πακέτων σας απέτυχε.\n"
+"Κοιτάξτε τα μηνύματα εξόδου για λεπτομέρειες."
+
+#: BuildingHandler#12
+msgctxt "BuildingHandler#12"
+msgid "Close"
+msgstr "Κλείσιμο"
+
+#: BuildingHandler#13
+msgctxt "BuildingHandler#13"
+msgid "Building Packages Failed!!"
+msgstr "Το χτίσιμο των πακέτων σας απέτυχε!!"
+
+#. (obsolete)
+#: BuildingHandler#14
+msgctxt "BuildingHandler#14"
+msgid "Shaman - Idle"
+msgstr "Shaman - Αδράνεια"
+
+#: BuildingHandler#15
+msgctxt "BuildingHandler#15"
+msgid ""
+"Some packages failed to build.\n"
+"Do you want to proceed anyway?"
+msgstr ""
+"Κάποια πακέτα απέτυχαν να χτιστούν.\n"
+"Θέλετε να συνεχίσετε;"
+
+#: BuildingHandler#16
+msgctxt "BuildingHandler#16"
+msgid "Install Built Packages"
+msgstr "Εγκατάσταση Χτισμένων Πακέτων"
+
+#: BuildingHandler#17
+msgctxt "BuildingHandler#17"
+msgid "Close Without Installing"
+msgstr "Κλείσιμο χωρίς εγκατάσταση"
+
+#: BuildingHandler#18
+msgctxt "BuildingHandler#18"
+msgid "Packages Built Successfully!"
+msgstr "Τα πακέτα χτίστηκαν με επιτυχία!"
+
+#: BuildingHandler#19
+msgctxt "BuildingHandler#19"
+msgid ""
+"Your Packages have been built successfully, and are ready to be installed"
+msgstr "Τα πακέτα σας χτίστηκαν με επιτυχία και είναι έτοιμα για εγκατάσταση"
+
+#. (obsolete)
+#: BuildingHandler#20
+msgctxt "BuildingHandler#20"
+msgid "Shaman - Processing"
+msgstr "Shaman - Επεξεργασία"
+
+#: BuildingHandler#21
+#, fuzzy
+msgid ""
+"You are about to install <b>%n package(s)</b> from source. Building from "
+"source<br>can give some advantages, however is very slow.<br>If you are not "
+"sure about that, you would probably prefer to process<br>your queue from "
+"binary files. Before you continue, you are advised to<br>review your "
+"configuration to improve your building performance."
+msgstr ""
+"\n"
+"            \n"
+"            \n"
+"        "
+
+#. (obsolete)
+#: CallBacks#1
+msgid ""
+"%1 requires installing %2 from IgnorePkg/IgnoreGroup.\n"
+" Install anyway?"
+msgstr ""
+"Το πακέτο %1 απαιτεί την εγκατάσταση του πακέτου %2 από το "
+"IgnorePkg/IgnoreGroup.\n"
+"Συνέχεια εγκατάστασης;"
+
+#. (obsolete)
+#: CallBacks#2
+msgid ""
+"%1 is in IgnorePkg/IgnoreGroup.\n"
+" Install anyway?"
+msgstr ""
+"Το πακέτο %1 είναι στη λίστα IgnorePkg/IgnoreGroup.\n"
+"Συνέχεια εγκατάστασης;"
+
+#. (obsolete)
+#: CallBacks#3
+msgid ""
+"%1 is designated as a HoldPkg.\n"
+" Remove anyway?"
+msgstr ""
+"Το πακέτο %1 είναι μαρκαρισμένο ως HoldPkg.\n"
+"Συνέχεια αφαίρεσης;"
+
+#. (obsolete)
+#: CallBacks#4
+msgid "Replace %1 with %2/%3?"
+msgstr "Αντικατάσταση του πακέτου %1 με %2/%3;"
+
+#. (obsolete)
+#: CallBacks#5
+msgid ""
+"%1 conflicts with %2.\n"
+"Remove %3?"
+msgstr ""
+"Το πακέτο %1 δημιουργεί διένεξη με το %2\n"
+"Αφαίρεση του %3;"
+
+#. (obsolete)
+#: CallBacks#6
+msgid ""
+"%1-%2: local version is newer.\n"
+"Upgrade anyway?"
+msgstr ""
+"%1-%2: η τοπική έκδοση είναι νεώτερη.\n"
+"Συνέχεια αναβάθμισης;"
+
+#. (obsolete)
+#: CallBacks#7
+msgid ""
+"File %s is corrupted.\n"
+"Do you want to delete it?"
+msgstr ""
+"Το αρχείο %s είναι κατεστραμένο.\n"
+"Θέλετε να το διαγράψετε;"
+
+#. (obsolete)
+#: CallBacks#8
+msgid ""
+"File %1 is corrupted.\n"
+"Do you want to delete it?"
+msgstr ""
+"Το αρχείο %1 είναι κατεστραμένο.\n"
+"Θέλετε να το διαγράψετε?"
+
+#: ConfigDialog#1
+msgid "Shaman - Configuration"
+msgstr "Shaman - Ρυθμίσεις"
+
+#: ConfigDialog#2
+msgid "Favourite Actions"
+msgstr "Αγαπημένες Ενέργειες"
+
+#: ConfigDialog#3
+msgid "When Upgrading System:"
+msgstr "Όταν Αναβαθμίζετε το Σύστημα:"
+
+#: ConfigDialog#4
+msgid "Upgrade Immediately"
+msgstr "Αναβαθμίστε Άμεσα"
+
+#: ConfigDialog#5
+msgid "Add Upgradeable Packages To Queue"
+msgstr "Προσθήκη αναβαθμίσιμων πακέτων στην Ουρά"
+
+#: ConfigDialog#6
+msgid "Ask"
+msgstr "Ερώτηση"
+
+#: ConfigDialog#7
+msgid "When Processing Queue"
+msgstr "Όταν επεξεργάζεστε την Ουρά"
+
+#: ConfigDialog#8
+msgid "Keep application running in System Tray only"
+msgstr "Εμφάνιση εφαρμογής μόνο στο System Tray"
+
+#: ConfigDialog#9
+msgid "GUI Startup"
+msgstr "Εκκίνηση του GUI"
+
+#: ConfigDialog#10
+msgid "Start in the System Tray"
+msgstr "Εκκίνηση στο System Tray"
+
+#: ConfigDialog#11
+msgid "When Application is in System Tray only"
+msgstr "Όταν η εφαρμογή εμφανίζεται μόνο στο System Tray"
+
+#: ConfigDialog#12
+msgid "Update Database every"
+msgstr "Ανανέωση της Βάσης Δεδομένων κάθε"
+
+#. (obsolete)
+#: ConfigDialog#13
+msgid "minutes"
+msgstr "λεπτά"
+
+#: ConfigDialog#14
+msgid "If upgrades are available:"
+msgstr "Εάν υπάρχουν αναβαθμίσεις:"
+
+#: ConfigDialog#15
+msgid "Just Notify"
+msgstr "Μόνο Ειδοποίηση"
+
+#: ConfigDialog#16
+msgid "Notify and add them to Queue"
+msgstr "Ειδοποίηση και προσθήκη στην Ουρά"
+
+#: ConfigDialog#17
+msgid "Maintenance"
+msgstr "Συντήρηση"
+
+#: ConfigDialog#18
+msgid "Checkable Options"
+msgstr "Διαθέσιμες Επιλογές"
+
+#: ConfigDialog#19
+msgid "Use Active FTP"
+msgstr "Χρήση Ενεργού FTP"
+
+#: ConfigDialog#20
+msgid "Use Deltas (needs xdelta to be installed)"
+msgstr "Χρήση Deltas (χρειάζεται να είναι εγκατεστημένο το xdelta)"
+
+#: ConfigDialog#21
+msgid "Advanced Options"
+msgstr "Προχωρημένες Επιλογές"
+
+#: ConfigDialog#22
+msgid "HoldPkgs:"
+msgstr "HoldPkgs:"
+
+#: ConfigDialog#23
+msgid "IgnorePkgs:"
+msgstr "IgnorePkgs:"
+
+#: ConfigDialog#24
+msgid "IgnoreGroups:"
+msgstr "IgnoreGroups:"
+
+#: ConfigDialog#25
+msgid "NoUpgrade:"
+msgstr "NoUpgrade:"
+
+#: ConfigDialog#26
+msgid "NoExtract:"
+msgstr "NoExtract:"
+
+#: ConfigDialog#27
+msgid "XFerCommand: (example: /path/to/command %u) Blank for Default"
+msgstr ""
+"XFerCommand: (παράδειγμα: /path/to/command %u) Κενό για χρήση Προεπιλογής"
+
+#: ConfigDialog#28
+msgid "Arch Linux Official Repositories"
+msgstr "Επίσημα Repositories του Arch Linux"
+
+#. (obsolete)
+#: ConfigDialog#29
+msgid ""
+"Here you can choose what repositories to use between Arch Linux's official "
+"ones.\n"
+"Please note that packages from Unstable and Testing may break your system."
+msgstr ""
+"Εδώ μπορείτε να επιλέξετε ποια repositories να χρησιμοποιούνται, από τα "
+"επίσημα του Arch Linux.\n"
+"Σημειώστε ότι τα πακέτα από το Unstable και το Testing μπορεί να σπάσουν το "
+"σύστημά σας."
+
+#: ConfigDialog#30
+msgid "Server"
+msgstr "Server"
+
+#: ConfigDialog#31
+msgid "Mirror:"
+msgstr "Mirror:"
+
+#: ConfigDialog#32
+msgid "Add Mirror"
+msgstr "Προσθήκη Mirror"
+
+#: ConfigDialog#33
+msgid "KDEMod Repositories"
+msgstr "Repositories του KDEMod"
+
+#. (obsolete)
+#: ConfigDialog#34
+msgid ""
+"KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an \n"
+"improved Qt build, compatible with Arch Linux standard Qt's, an improved "
+"theme,\n"
+"and lots of addons, KDEMod is the best way to taste the ease and the power\n"
+"of KDE with the simplicity and the power of Arch."
+msgstr ""
+"Το KDEMod είναι μια βελτιωμένη έκδοση του KDE αποκλειστικά για το Arch "
+"Linux. \n"
+"Περιέχει μια βελτιωμένη έκδοση της Qt, συμβατή με τη στάνταρ έκδοση που "
+"δίνει το \n"
+"Arch Linux, βελτιωμένο θέμα εμφάνισης και πολλές άλλες προσθήκες. Το KDEMod "
+"είναι\n"
+"ο καλύτερος τρόπος για να γευτείτε την ευκολία και τη δύναμη του KDE "
+"ακολουθώντας \n"
+"την απλότητα και τη δύναμη του Arch."
+
+#: ConfigDialog#35
+msgid "KDEMod 3 Repository"
+msgstr "Repository του KDEMod 3"
+
+#. (obsolete)
+#: ConfigDialog#36
+msgid "KDEMod 4 Repository (Unstable, testers only)"
+msgstr "Repository του KDEMod 4 (Ασταθές, μόνο για δοκιμή)"
+
+#: ConfigDialog#37
+msgid "Third-Party Repositories"
+msgstr "Άλλα Repositories"
+
+#. (obsolete)
+#: ConfigDialog#38
+msgid ""
+"You can extend your packages choice by adding other repositories. Third-"
+"Party \n"
+"Repositories act just as normal ones, and will be accessible through both "
+"Shaman\n"
+"and Pacman."
+msgstr ""
+"Μπορείτε να επεκτείνετε τα διαθέσιμα πακέτα προσθέτωντας άλλα repositories. "
+"Τα\n"
+"Repositories τρίτων λειτουργούν όπως τα επίσημα και είναι διαθέσιμα τόσο από "
+"το Shaman\n"
+"όσο και απ'το Pacman."
+
+#: ConfigDialog#39
+msgctxt "ConfigDialog#39"
+msgid "Repository"
+msgstr "Repository"
+
+#: ConfigDialog#40
+msgid "Add New Repository"
+msgstr "Προσθήκη νέου Repository"
+
+#: ConfigDialog#41
+msgid "Edit Repository"
+msgstr "Επεξεργασία Repository"
+
+#: ConfigDialog#42
+msgid "Remove Repository"
+msgstr "Αφαίρεση Repository"
+
+#: ConfigDialog#43
+msgid "Preferences"
+msgstr "Επιλογές"
+
+#. (obsolete)
+#: ConfigDialog#44
+msgid "Process all dependencies and queue from source first (recommended)"
+msgstr ""
+"Επεξεργασία όλων των εξαρτήσεων και ουρών πρώτα από την πηγή (προτείνεται)"
+
+#: ConfigDialog#45
+msgid "Review Building output before installing"
+msgstr "Ανασκόπιση του Χτισίματος πριν την εγκατάσταση"
+
+#: ConfigDialog#46
+msgid "ABS Configuration"
+msgstr "Ρύθμιση του ABS"
+
+#: ConfigDialog#47
+msgid "Use supfiles that match your current repositories"
+msgstr "Χρήση supfiles που ταιριάζουν με τα repositories"
+
+#: ConfigDialog#48
+msgid "Define supfiles manually"
+msgstr "Καθορισμός supfiles χειροκίνητα"
+
+#: ConfigDialog#49
+msgid "Makepkg Configuration"
+msgstr "Ρύθμιση του  Makepkg"
+
+#: ConfigDialog#50
+msgid "CFlags"
+msgstr "CFlags"
+
+#: ConfigDialog#51
+msgid "CXXFlags"
+msgstr "CXXFlags"
+
+#: ConfigDialog#52
+msgid "BuildEnv"
+msgstr "BuildEnv"
+
+#: ConfigDialog#53
+msgid "Options"
+msgstr "Επιλογές"
+
+#: ConfigDialog#54
+msgid "Doc_Dirs"
+msgstr "Doc_Dirs"
+
+#: ConfigDialog#55
+msgid "Build Environment"
+msgstr "Περιβάλλον Χτισίματος"
+
+#: ConfigDialog#56
+msgid "Building Path"
+msgstr "Διαδρομή Χτισίματος"
+
+#: ConfigDialog#57
+msgid "Remove installed makedepends after build"
+msgstr "Αφαίρεση των εξαρτήσεων χτισίματος μετά το χτίσιμο"
+
+#: ConfigDialog#58
+msgid "Clean Build Environment after installation"
+msgstr "Καθαρισμός του Περιβάλλοντος Χτισίματος μετά την εγκατάσταση"
+
+#: ConfigDialog#59
+msgid "General"
+msgstr "Γενικά"
+
+#: ConfigDialog#60
+msgctxt "ConfigDialog#60"
+msgid "Clean Unused Databases"
+msgstr "Καθαρισμός αχρησιμοποίητων Βάσεων Δεδομένων"
+
+#: ConfigDialog#61
+msgctxt "ConfigDialog#61"
+msgid "Clean Cache"
+msgstr "Καθαρισμός της Cache"
+
+#: ConfigDialog#62
+msgctxt "ConfigDialog#62"
+msgid "Empty Cache"
+msgstr "Άδειασμα της Cache"
+
+#: ConfigDialog#63
+msgctxt "ConfigDialog#63"
+msgid "Optimize Pacman Database"
+msgstr "Βελτιστοποίηση Βάσεως Δεδομένων του Pacman"
+
+#: ConfigDialog#64
+msgctxt "ConfigDialog#64"
+msgid "Clean All Building Environments"
+msgstr "Καθαρισμός όλων των Περιβάλλοντων Χτισίματος"
+
+#: ConfigDialog#65
+msgctxt "ConfigDialog#65"
+msgid "Repositories"
+msgstr "Repositories"
+
+#: ConfigDialog#66
+msgid "Pacman"
+msgstr "Pacman"
+
+#: ConfigDialog#67
+msgid "ABS"
+msgstr "ABS"
+
+#: ConfigDialog#68
+msgid "Enter Here the Repository's Name"
+msgstr "Εισάγετε το όνομα του Repository"
+
+#: ConfigDialog#69
+msgid "Enter Here the Repository's Server"
+msgstr "Εισάγετε τη διεύθυνση του Repository"
+
+#: ConfigDialog#70
+msgctxt "ConfigDialog#70"
+msgid "Cleaning up unused Databases..."
+msgstr "Καθαρισμός αχρησιμοποίητων Βάσεων Δεδομένων..."
+
+#: ConfigDialog#71
+msgctxt "ConfigDialog#71"
+msgid "Cleaning up Cache..."
+msgstr "Καθαρισμός της Cache..."
+
+#: ConfigDialog#72
+msgctxt "ConfigDialog#72"
+msgid "Deleting Cache..."
+msgstr "Διαγραφή της Cache..."
+
+#: ConfigDialog#73
+msgctxt "ConfigDialog#73"
+msgid "Cleaning up building Environments..."
+msgstr "Εκκαθάριση των περιβάλλοντων χτισίματος..."
+
+#: ConfigDialog#74
+msgctxt "ConfigDialog#74"
+msgid "Cleaning up Unused Databases Failed!"
+msgstr "Ο καθαρισμός των Αχρησιμοποίητων Βάσεων Δεδομένων Απέτυχε!"
+
+#: ConfigDialog#75
+msgctxt "ConfigDialog#75"
+msgid "Cleaning up Cache Failed!"
+msgstr "Ο καθαρισμός της Cache Απέτυχε!"
+
+#: ConfigDialog#76
+msgctxt "ConfigDialog#76"
+msgid "Deleting Cache Failed!"
+msgstr "Η Διαγραφή της Cache Απέτυχε!"
+
+#: ConfigDialog#77
+msgctxt "ConfigDialog#77"
+msgid "Could not clean Build Environments!!"
+msgstr "Η εκκαθάριση του Περιβάλλοντος Χτισίματος απέτυχε!!"
+
+#: ConfigDialog#78
+msgctxt "ConfigDialog#78"
+msgid "Unused Databases Cleaned up successfully!"
+msgstr ""
+"Η εκκαθάριση των Αχρησιμοποίητων Βάσεων Δεδομένων\n"
+"έγινε με επιτυχία!"
+
+#: ConfigDialog#79
+msgctxt "ConfigDialog#79"
+msgid "Cache Cleaned Up Successfully!"
+msgstr "Η εκκαθάριση της Cache έγινε με επιτυχία!"
+
+#: ConfigDialog#80
+msgctxt "ConfigDialog#80"
+msgid "Cache Successfully Deleted!"
+msgstr "Η διαγραφή της Cache έγινε με επιτυχία!"
+
+#: ConfigDialog#81
+msgctxt "ConfigDialog#81"
+msgid "Build Environments Successfully Cleaned!"
+msgstr "Τα Περιβάλλοντα Χτισίματος καθαρίστικαν με επιτυχία!"
+
+#. (obsolete)
+#: ConfigDialog#82
+msgid "Build Environments Successfully Cleaned!!"
+msgstr "Τα Περιβάλλοντα Χτισίματος καθαρίστικαν με επιτυχία!!"
+
+#: ConfigDialog#83
+msgid "Settings Changed"
+msgstr "Οι ρυθμίσεις άλλαξαν"
+
+#: ConfigDialog#84
+msgid ""
+"Your repositories have changed.\n"
+"Do you want to Update Your Database?"
+msgstr ""
+"Η λίστα των repositories άλλαξε.\n"
+"Θέλετε να ανανεώσετε τη Βάση Δεδομένων;"
+
+# Obviously keep the example as it is ;)
+#: ConfigDialog#85
+msgid ""
+"Mirror Format is incorrect. Your mirror should look like this:\n"
+"http://mirror.org/$repo/os/i686"
+msgstr ""
+"Ο τύπος του mirror είναι λανθασμένος. Ο σωστός τύπος συντάσσεται ως εξής:\n"
+"http://mirror.org/$repo/os/i686"
+
+# mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.
+#: ConfigDialog#86
+msgid ""
+"Your Mirror was successfully added!\n"
+"It is now available in mirrorlist."
+msgstr ""
+"Η προσθήκη του mirror έγινε με επιτυχία!\n"
+"Βρίσκεται διαθέσιμο στο αρχείο /etc/pacman.d/mirrorlist."
+
+#: ConfigDialog#87
+msgctxt "ConfigDialog#87"
+msgid "Pacman Database Optimized Successfully!"
+msgstr ""
+"Η βελτιστοποίηση της Βάσης Δεδομένων του\n"
+"Pacman πραγματοποιήθηκε με επιτυχία!"
+
+#: ConfigDialog#88
+msgctxt "ConfigDialog#88"
+msgid "Could not Optimize Pacman Database!"
+msgstr ""
+"Η βελτιστοποίηση της Βάσης Δεδομένων\n"
+"του Pacman δεν ήταν δυνατή!"
+
+#: ConfigDialog#89
+msgctxt "ConfigDialog#89"
+msgid "Operation Completed Successfully!"
+msgstr "Η διεργασία πραγματοποιήθηκε με επιτυχία!"
+
+# Sync is always the command
+#: ConfigDialog#90
+msgctxt "ConfigDialog#90"
+msgid "Sync was successfully executed!!"
+msgstr "Η εντολή Sync εκτελέστηκε με επιτυχία!!"
+
+# Sync is always the command
+#: ConfigDialog#91
+msgctxt "ConfigDialog#91"
+msgid "Sync could not be executed!"
+msgstr "Η εντολή Sync δεν μπόρεσε να εκτελεστεί!"
+
+# Sync is always the command
+#: ConfigDialog#92
+msgctxt "ConfigDialog#92"
+msgid "Sync could not be executed!!"
+msgstr "Η εντολή Sync δεν μπόρεσε να εκτελεστεί!!"
+
+#: ConfigDialog#93
+msgid "Process Selected"
+msgstr "Επεξεργασία Επιλογής"
+
+#: ConfigDialog#94
+msgctxt "ConfigDialog#94"
+msgid "Optimizing Pacman Database..."
+msgstr "Βελτιστοποίηση της Βάσης Δεδομένων του Pacman..."
+
+# Waiting for a user action
+#: ConfigDialog#95
+msgid "Waiting"
+msgstr "Αναμονή"
+
+#. (obsolete)
+#: ConfigDialog#96
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Liberation "
+"Sans'; font-size:9pt;\">Shaman Manteinance.</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Liberation "
+"Sans'; font-size:9pt;\">Please choose an action from the Drop-Down "
+"Menu.</p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">p, "
+"li { white-space: pre-wrap; }</style></head><body style=\" font-family:'Sans "
+"Serif'; font-size:10pt; font-weight:400; font-style:normal;\"><p style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px; font-family:'Liberation Sans'; font-"
+"size:9pt;\">Συντήρηση του Shaman .</p><p style=\" margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px; font-family:'Liberation Sans'; font-size:9pt;\">Επιλέξτε μια "
+"λειτουργία από το μενού επιλογών.</p></body></html>"
+
+# Do not translate
+#: ConfigDialog#97
+msgid "Core"
+msgstr "Core"
+
+# Do not translate
+#: ConfigDialog#98
+msgid "Extra"
+msgstr "Extra"
+
+# Do not translate
+#: ConfigDialog#99
+msgid "Community"
+msgstr "Community"
+
+# Do not translate
+#: ConfigDialog#100
+msgid "Testing"
+msgstr "Testing"
+
+# Do not translate
+#. (obsolete)
+#: ConfigDialog#101
+msgid "Unstable"
+msgstr "Unstable"
+
+# sync is a command, so it should not be translated
+#: ConfigDialog#102
+msgctxt "ConfigDialog#102"
+msgid "Running sync..."
+msgstr "Εκτέλεση του sync..."
+
+#: ConfigDialog#103
+msgid "Show Splashscreen"
+msgstr "Εμφάνιση Εικόνας Εκκίνησης"
+
+#: ConfigDialog#104
+msgid "Process all dependencies and queue from binary first (recommended)"
+msgstr ""
+"Επεξεργασία όλων των εξαρτήσεων και ουρών πρώτα από έτοιμα πακέτα "
+"(προτείνεται)"
+
+#: ConfigDialog#105
+msgid "Advanced"
+msgstr "Προχωρημένες"
+
+#: ConfigDialog#106
+msgid "Use SysLog"
+msgstr "Χρήση SysLog"
+
+#: ConfigDialog#107
+msgid "Log File:"
+msgstr "Αρχείο Log:"
+
+# As in "minutes"
+#: ConfigDialog#108
+msgid "min"
+msgstr "λεπτά"
+
+#: ConfigDialog#109
+msgid "Show tray notification Windows"
+msgstr "Εμφάνιση παραθύρων ειδοποίησης στο tray"
+
+#: ConfigDialog#110
+msgid "Use a proxy-server"
+msgstr "Χρήση proxy-server"
+
+#: ConfigDialog#111
+msgid "IP:"
+msgstr "IP:"
+
+#: ConfigDialog#112
+msgid "Port:"
+msgstr "Port:"
+
+#: ConfigDialog#113
+msgid "HTTP Proxy"
+msgstr "HTTP Proxy"
+
+#: ConfigDialog#114
+msgid "FTP Proxy"
+msgstr "FTP Proxy"
+
+#: ConfigDialog#115
+msgid "Use Shaman RSS Capabilities"
+msgstr "Χρήση λειτουργιών RSS του Shaman"
+
+#: ConfigDialog#116
+msgid "Update RSS Feed Every"
+msgstr "Ανανέωση του RSS κάθε"
+
+#: ConfigDialog#117
+msgid "Notify upon new items"
+msgstr "Ειδοποίηση για νέα αντικείμενα"
+
+#: ConfigDialog#118
+msgid ""
+"Check if there is an unread news about a package in Queue before processing "
+"it"
+msgstr "Έλεγχος για αδιάβαστα νέα των πακέτων ουράς πριν αυτά επεξεργαστούν"
+
+#: ConfigDialog#119
+msgctxt "ConfigDialog#119"
+msgid "Ok"
+msgstr "Ok"
+
+#: ConfigDialog#120
+msgctxt "ConfigDialog#120"
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+#. (obsolete)
+#: ConfigDialog#121
+msgid "KDEMod 3 Testing Repository"
+msgstr "KDEMod 3 Testing Repository"
+
+#: ConfigDialog#122
+msgid "Interface"
+msgstr "Περιβάλλον"
+
+#: ConfigDialog#123
+msgid "Start Shaman Automatically on X Startup"
+msgstr "Αυτόματη εκκίνηση του Shaman όταν ξεκινάει ο Χ"
+
+#: ConfigDialog#124
+msgid "Forbid starting Shaman as root"
+msgstr "Απαγόρευση εκκίνησης του Shaman ως root"
+
+#: ConfigDialog#125
+msgid "Saving Configuration"
+msgstr "Αποθήκευση ρυθμίσεων"
+
+#: ConfigDialog#126
+msgid "Unable to save Pacman configuration!"
+msgstr "Η αποθήκευση ρυθμίσεων του Pacman ήταν αδύνατη!"
+
+# Obviously keep the example as it is ;)
+#: ConfigDialog#127
+msgid ""
+"Mirror Format is incorrect. Your mirror should look like this:\n"
+"http://mirror.org/$repo/$arch"
+msgstr ""
+"Η σύνταξη του mirror είναι λανθασμένη. Η σωστή σύνταξη είναι:\n"
+"http://mirror.org/$repo/$arch"
+
+# mirrorlist here means /etc/pacman.d/kdemodmirrorlist, so it should not be translated.
+#: ConfigDialog#128
+msgid ""
+"Your Mirror was successfully added!\n"
+"It is now available in kdemodmirrorlist."
+msgstr ""
+"Η προσθήκη του mirror έγινε με επιτυχία!\n"
+"Πλέον είναι διαθέσιμο στο kdemodmirrorlist."
+
+#: ConfigDialog#129
+msgid ""
+"Some of your changes have not been applied,\n"
+"since alpm needs to be released.\n"
+"You need to restart Shaman to make them effective."
+msgstr ""
+"Κάποιες αλλαγές δεν εφαρμόστηκαν, καθότι\n"
+"το alpm χρειάζεται να ελευθερωθεί.\n"
+"Πρέπει να επανεκκινήσετε το Shaman ώστε να εφαρμοστούν."
+
+#. (obsolete)
+#: ConfigDialog#130
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
+"size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Liberation "
+"Sans'; font-size:9pt;\">Shaman Manteinance.</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Liberation "
+"Sans'; font-size:9pt;\">Please choose an action from the Drop-Down "
+"Menu.</p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\"><html><head><meta name=\"qrichtext\" content=\"1\" /><style "
+"type=\"text/css\">p, li { white-space: pre-wrap; }</style></head><body style=\" "
+"font-family:'Bitstream Vera Sans'; font-size:10pt; font-weight:400; font-"
+"style:normal;\"><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
+"family:'Liberation Sans'; font-size:9pt;\">Συντήρηση του Shaman.</p><p "
+"style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Liberation "
+"Sans'; font-size:9pt;\">Παρακαλώ επιλέξτε μια ενέργεια από το μενού "
+"επιλογών.</p></body></html>"
+
+#: ConfigDialog#131
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Liberation "
+"Sans'; font-size:9pt;\">Shaman Manteinance.</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Liberation "
+"Sans'; font-size:9pt;\">Please choose an action from the Drop-Down "
+"Menu.</p></body></html>"
+msgstr ""
+
+#: ConfigDialog#132
+msgid "RSync Server:"
+msgstr ""
+
+#: ConfigDialog#133
+msgid "Update Database at"
+msgstr ""
+
+#: ConfigDialog#134
+msgid "Use Animated Tray Icon"
+msgstr ""
+
+#: ConfigDialog#135
+#, fuzzy
+msgid "KDEMod 4 Repository"
+msgstr "Repository του KDEMod 3 {4 ?}"
+
+#: ConfigDialog#136
+msgid "KDEMod 4 Extragear Repository"
+msgstr ""
+
+#: ConfigDialog#137
+msgid "KDEMod 4 Playground Repository"
+msgstr ""
+
+#: ConfigDialog#138
+#, fuzzy
+msgid "KDEMod 4 Testing Repository"
+msgstr "KDEMod 3 Testing Repository {4 ?}"
+
+#: ConfigDialog#139
+msgid "KDEMod 4 Unstable Repository (Testers only!)"
+msgstr ""
+
+#: ConfigDialog#140
+msgid ""
+"Here you can choose what repositories to use between Arch Linux's official "
+"ones. Please note that packages from Unstable and Testing may break your "
+"system."
+msgstr ""
+
+#: ConfigDialog#141
+msgid ""
+"KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
+"improved Qt build, compatible with Arch Linux standard Qt's, an improved "
+"theme, and lots of addons, KDEMod is the best way to taste the ease and the "
+"power of KDE with the simplicity and the power of Arch."
+msgstr ""
+
+#: ConfigDialog#142
+msgid ""
+"You can extend your packages choice by adding other repositories. Third-"
+"Party Repositories act just as normal ones, and will be accessible through "
+"both Shaman and Pacman."
+msgstr ""
+
+#: ConfigDialog#143
+msgid "Use the following language:"
+msgstr ""
+
+#: ConfigDialog#144
+msgid "Disable Tray Icon"
+msgstr ""
+
+#: EditPBuild#1
+msgid "Saving"
+msgstr "Αποθήκευση"
+
+#: EditPBuild#2
+msgid ""
+"You modified this PKGBUILD.\n"
+"Do you want to save it?"
+msgstr ""
+"Επεξεργαστήκατε το PKGBUILD.\n"
+"Θέλετε να το αποθηκεύσετε;"
+
+#: LocalPackage#1
+msgid "Install Package from File"
+msgstr ""
+
+#: LocalPackage#2
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Bitstream Vera "
+"Sans';\"><span style=\" font-weight:600;\">Local Package "
+"Installation</span></p></body></html>"
+msgstr ""
+
+#: LocalPackage#3
+msgid "Show..."
+msgstr ""
+
+#: LocalPackage#4
+#, fuzzy
+msgctxt "LocalPackage#4"
+msgid "More Details..."
+msgstr "Περισσότερες λεπτομέρειες..."
+
+#: LocalPackage#5
+#, fuzzy
+msgctxt "LocalPackage#5"
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+#: LocalPackage#6
+msgid "Install Package"
+msgstr ""
+
+#: LocalPackageDialog#1
+msgid "Package is not installed"
+msgstr ""
+
+#: LocalPackageDialog#2
+msgid "Version %1 of this package is already installed"
+msgstr ""
+
+#: LocalPackageDialog#3
+msgid "All dependencies are satisfied"
+msgstr ""
+
+#: LocalPackageDialog#4
+#, fuzzy
+msgid "%n package(s) will be installed as dependencies"
+msgstr ""
+"\n"
+"            \n"
+"            \n"
+"        "
+
+#: MainWindow#1
+msgctxt "MainWindow#1"
+msgid "Shaman"
+msgstr "Shaman"
+
+#: MainWindow#2
+msgid "All packages"
+msgstr "Όλα τα πακέτα"
+
+#: MainWindow#3
+msgid "Installed packages"
+msgstr "Εγκατεστημένα πακέτα"
+
+#: MainWindow#4
+msgid "Not installed packages"
+msgstr "Μη εγκατεστημένα πακέτα"
+
+#: MainWindow#5
+msgid "Upgradeable packages"
+msgstr "Αναβαθμίσιμα πακέτα"
+
+#: MainWindow#6
+msgid "Packages in Queue"
+msgstr "Πακέτα στην Ουρά"
+
+#: MainWindow#7
+msgid "Status"
+msgstr "Κατάσταση"
+
+#: MainWindow#8
+msgctxt "MainWindow#8"
+msgid "Name"
+msgstr "Όνομα"
+
+#: MainWindow#9
+msgid "Action"
+msgstr "Ενέργεια"
+
+#: MainWindow#10
+msgid "Version"
+msgstr "Έκδοση"
+
+#: MainWindow#11
+msgid "Size"
+msgstr "Μέγεθος"
+
+#: MainWindow#12
+msgctxt "MainWindow#12"
+msgid "Repository"
+msgstr "Repository"
+
+#: MainWindow#13
+msgid "Groups"
+msgstr "Ομάδα"
+
+#: MainWindow#14
+msgid "Description"
+msgstr "Περιγραφή"
+
+#: MainWindow#15
+msgid "Action-Text"
+msgstr "Κείμενο Ενέργειας"
+
+#: MainWindow#16
+msgctxt "MainWindow#16"
+msgid "Repositories"
+msgstr "Repositories"
+
+#: MainWindow#17
+msgid "Package Groups"
+msgstr "Ομάδες πακέτων"
+
+#: MainWindow#18
+msgctxt "MainWindow#18"
+msgid "Package Information"
+msgstr "Πληροφορίες πακέτου"
+
+#: MainWindow#19
+msgid "Install selected package"
+msgstr "Εγκατάσταση επιλεγμένων πακέτων"
+
+#. (obsolete)
+#: MainWindow#20
+msgid "Mark for Installation"
+msgstr "Επιλογή για εγκατάσταση"
+
+#: MainWindow#21
+msgid "Remove selected package"
+msgstr "Αφαίρεση επιλεγμένου πακέτου"
+
+#. (obsolete)
+#: MainWindow#22
+msgid "Mark for Removal"
+msgstr "Επιλογή για αφαίρεση"
+
+#: MainWindow#23
+msgid "Complete Remove selected package (pacman -Rcs)"
+msgstr "Οριστική διαγραφή επιλεγμένων πακέτων (pacman -Rcs)"
+
+#. (obsolete)
+#: MainWindow#24
+msgid "Mark for complete removal"
+msgstr "Επιλογή για οριστική διαγραφή"
+
+#: MainWindow#25
+msgid "Cancel action for selected package"
+msgstr "Ακύρωση ενέργειας για το επιλεγμένο πακέτο"
+
+#. (obsolete)
+#: MainWindow#26
+msgid "Cancel action"
+msgstr "Ακύρωση ενέργειας"
+
+#. (obsolete)
+#: MainWindow#27
+msgctxt "MainWindow#27"
+msgid "Files"
+msgstr "Αρχεία"
+
+#: MainWindow#28
+msgctxt "MainWindow#28"
+msgid "1"
+msgstr "1"
+
+#. (obsolete)
+#: MainWindow#29
+msgctxt "MainWindow#29"
+msgid "Dependencies"
+msgstr "Εξαρτήσεις"
+
+#. (obsolete)
+#: MainWindow#30
+msgid "File"
+msgstr "Αρχείο"
+
+#. (obsolete)
+#: MainWindow#31
+msgid "Help"
+msgstr "Βοήθεια"
+
+#. (obsolete)
+#: MainWindow#32
+msgid "Actions"
+msgstr "Ενέργειες"
+
+#: MainWindow#33
+msgid "Build and Install from Source"
+msgstr "Χτίσιμο και εγκατάσταση από πηγαίο κώδικα"
+
+#: MainWindow#34
+msgid "Quick Actions"
+msgstr "Γρήγορες Ενέργειες"
+
+#. (obsolete)
+#: MainWindow#35
+msgid "Package Repositories"
+msgstr "Repositories πακέτων"
+
+#: MainWindow#36
+msgid "Settings..."
+msgstr "Ρυθμίσεις..."
+
+#: MainWindow#37
+msgid "About..."
+msgstr "Περί..."
+
+#: MainWindow#38
+msgctxt "MainWindow#38"
+msgid "Update Database"
+msgstr "Ανανέωση Βάσης Δεδομένων"
+
+#: MainWindow#39
+msgctxt "MainWindow#39"
+msgid "Upgrade System"
+msgstr "Αναβάθμιση Συστήματος"
+
+#: MainWindow#40
+msgid "Install Package From File"
+msgstr "Εγκατάσταση πακέτου από αρχείο"
+
+#: MainWindow#41
+msgid "Update ABS Tree"
+msgstr "Ανανέωση Καταλόγου ABS"
+
+#: MainWindow#42
+msgid "Build and Install Queue"
+msgstr "Χτίσιμο και Εγκατάσταση Ουράς"
+
+#. (obsolete)
+#: MainWindow#43
+msgctxt "MainWindow#43"
+msgid "Quit"
+msgstr "Έξοδος"
+
+#: MainWindow#44
+msgctxt "MainWindow#44"
+msgid "Process Queue"
+msgstr "Επεξεργασία Ουράς"
+
+#: MainWindow#45
+msgid "Cancel all actions"
+msgstr "Ακύρωση όλων των ενεργειών"
+
+#. (obsolete)
+#: MainWindow#46
+msgctxt "MainWindow#46"
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+#. (obsolete)
+#: MainWindow#47
+msgctxt "MainWindow#47"
+msgid "Shaman - Idle"
+msgstr "Shaman - Αδράνεια"
+
+#: MainWindow#48
+msgid ""
+"Shaman will keep running in the system tray.\n"
+"To close it, click Quit in the file menu or in the tray icon context menu.\n"
+"While in the System Tray, Shaman will update your Databases\n"
+"at a regular interval and notify you about available upgrades.\n"
+"You can change this behaviour in Settings."
+msgstr ""
+"Το Shaman θα συνεχίσει να τρέχει στο system tray.\n"
+"Για να το κλείσετε, πατήστε Έξοδος στο μενού του προγράμματος ή του system "
+"tray.\n"
+"Όσο βρίσκεται στο System Tray, το Shaman θα ανανεώνει τις Βάσεις Δεδομένων "
+"σας\n"
+"ανά τακτά χρονικά διαστήματα και θα σας ειδοποιεί για τυχόν διαθέσιμες "
+"αναβαθμίσεις.\n"
+"Μπορείτε να αλλάξετε αυτή τη συμπεριφορά στις Ρυθμίσεις."
+
+#: MainWindow#49
+msgid "Shaman - Reducing To Tray"
+msgstr "Shaman - Κλείσιμο στο Tray"
+
+#: MainWindow#50
+msgctxt "MainWindow#50"
+msgid "Upgrade"
+msgstr "Αναβάθμιση"
+
+#. (obsolete)
+#: MainWindow#51
+msgctxt "MainWindow#51"
+msgid "Shaman - Idle (Upgrades Available)"
+msgstr "Shaman - Αδράνεια (Διαθέσιμες Αναβαθμίσεις)"
+
+#: MainWindow#52
+msgctxt "MainWindow#52"
+msgid "System Upgrade"
+msgstr "Αναβάθμιση Συστήματος"
+
+#. (obsolete)
+#: MainWindow#53
+msgctxt "MainWindow#53"
+msgid ""
+"There is %1 upgradeable package.\n"
+"Click here to upgrade your System."
+msgstr ""
+"Υπάρχει %1 διαθέσιμη αναβάθμιση.\n"
+"Κάντε click για να αναβαθμίσετε το Σύστημα."
+
+#. (obsolete)
+#: MainWindow#54
+msgctxt "MainWindow#54"
+msgid ""
+"There are %1 upgradeable packages.\n"
+"Click here to upgrade your System."
+msgstr ""
+"Υπάρχουν %1 διαθέσιμες αναβαθμίσεις.\n"
+"Κάντε click για να αναβαθμίσετε το Σύστημα."
+
+#: MainWindow#55
+msgid "All Repositories"
+msgstr "Όλα τα Repositories"
+
+#: MainWindow#56
+msgid "Local Packages"
+msgstr "Τοπικά πακέτα"
+
+#: MainWindow#57
+msgid "All Groups"
+msgstr "Όλες οι Ομάδες"
+
+#. (obsolete)
+#: MainWindow#58
+msgid "Mark for Reinstallation"
+msgstr "Επιλογή για Επανεγκατάσταση"
+
+#: MainWindow#59
+msgctxt "MainWindow#59"
+msgid "Install"
+msgstr "Εγκατάσταση"
+
+#: MainWindow#60
+msgctxt "MainWindow#60"
+msgid "Uninstall"
+msgstr "Απεγκατάσταση"
+
+#: MainWindow#61
+msgctxt "MainWindow#61"
+msgid "Complete Uninstall"
+msgstr "Ολική Απεγκατάσταση"
+
+#: MainWindow#62
+msgid "Status: "
+msgstr "Κατάσταση:"
+
+#: MainWindow#63
+msgid "Installed"
+msgstr "Εγκατεστημένα"
+
+#: MainWindow#64
+msgid "Not installed"
+msgstr "Μη Εγκατεστημένα"
+
+#: MainWindow#65
+msgid "Action: "
+msgstr "Ενέργεια:"
+
+#. (obsolete)
+#: MainWindow#66
+msgctxt "MainWindow#66"
+msgid "Shaman - Processing"
+msgstr "Shaman - Επεξεργασία"
+
+#: MainWindow#67
+msgctxt "MainWindow#67"
+msgid "Error"
+msgstr "Σφάλμα"
+
+#: MainWindow#68
+msgid ""
+"One or more Databases could not be updated.\n"
+"Last error reported was:\n"
+"%1"
+msgstr ""
+"Μια ή περισσότερες Βάσεις Δεδομένων δεν μπόρεσαν\n"
+"να ανανεωθούν. Η τελευταία αναφορά σφάλματος ήταν:\n"
+"%1"
+
+#: MainWindow#69
+msgctxt "MainWindow#69"
+msgid "Database Update"
+msgstr "Ανανέωση Βάσης Δεδομένων"
+
+#: MainWindow#70
+msgid "Databases Updated Successfully"
+msgstr "Οι Βάσεις Δεδομένων ανανεώθηκαν με επιτυχία"
+
+#: MainWindow#71
+msgid "Mark for Upgrade"
+msgstr "Επιλογή για Αναβάθμιση"
+
+#. (obsolete)
+#: MainWindow#72
+msgid "Cancel Action"
+msgstr "Ακύρωση Ενέργειας"
+
+#: MainWindow#73
+msgid "Mark all for installation"
+msgstr "Επιλογή όλων για εγκατάσταση"
+
+#: MainWindow#74
+msgid "Mark all for reinstallation"
+msgstr "Επιλογή όλων για επανεγκατάσταση"
+
+#: MainWindow#75
+msgid "Mark all for removal"
+msgstr "Επιλογή όλων για αφαίρεση"
+
+#: MainWindow#76
+msgid "Your system is up to date!"
+msgstr "Το σύστημα είναι ενημερωμένο!"
+
+#: MainWindow#77
+msgctxt "MainWindow#77"
+msgid "Queue Processing"
+msgstr "Επεξεργασία Ουράς"
+
+#: MainWindow#78
+msgid ""
+"Your Queue is being processed.\n"
+"Please wait."
+msgstr ""
+"Η ουρά επεξεργάζεται.\n"
+"Παρακαλώ περιμένετε."
+
+#: MainWindow#79
+msgid "Queue Processed"
+msgstr "Η Ουρά επεξεργάστηκε"
+
+#: MainWindow#80
+msgid "Your Queue was successfully processed!"
+msgstr "Η επεξεργασία της Ουράς έγινε με επιτυχία!"
+
+#: MainWindow#81
+msgid "Your Queue was successfully processed!!"
+msgstr "Η επεξεργασία της Ουράς έγινε με επιτυχία!!"
+
+#. (obsolete)
+#: MainWindow#82
+msgctxt "MainWindow#82"
+msgid "To be Installed"
+msgstr "Προς Εγκατάσταση"
+
+#. (obsolete)
+#: MainWindow#83
+msgctxt "MainWindow#83"
+msgid "To be Upgraded"
+msgstr "Προς Αναβάθμιση"
+
+#. (obsolete)
+#: MainWindow#84
+msgctxt "MainWindow#84"
+msgid "To be Removed"
+msgstr "Προς Αφαίρεση"
+
+#. (obsolete)
+#: MainWindow#85
+msgctxt "MainWindow#85"
+msgid "Your Queue is about to be processed. You are going to:<br />"
+msgstr "Η ουρά είναι έτοιμη να επεξεργαστεί. Πρόκειται να:<br/>"
+
+#. (obsolete)
+#: MainWindow#86
+msgctxt "MainWindow#86"
+msgid "Remove <b>%1 package</b><br />"
+msgstr "Αφαίρεση <b>%1 πακέτου</b><br/>"
+
+#. (obsolete)
+#: MainWindow#87
+msgctxt "MainWindow#87"
+msgid "Remove <b>%1 packages</b><br />"
+msgstr "Αφαίρεση <b>%1 πακέτων</b><br />"
+
+#. (obsolete)
+#: MainWindow#88
+msgctxt "MainWindow#88"
+msgid "Install/Upgrade <b>%1 package</b><br />"
+msgstr "Εγκατάσταση/Αναβάθμιση <b>%1 πακέτου</b><br />"
+
+#. (obsolete)
+#: MainWindow#89
+msgctxt "MainWindow#89"
+msgid "Install/Upgrade <b>%1 packages</b><br />"
+msgstr "Εγκατάσταση/Αναβάθμιση <b>%1 πακέτων</b><br />"
+
+#. (obsolete)
+#: MainWindow#90
+msgctxt "MainWindow#90"
+msgid "Do you wish to continue?"
+msgstr "Θέλετε να συνεχίσετε;"
+
+#: MainWindow#91
+msgid "Install a Package"
+msgstr "Εγκατάσταση Πακέτου"
+
+#: MainWindow#92
+msgid "Arch Linux Packages (*.pkg.tar.gz)"
+msgstr "Πακέτα του Arch Linux (*.pkg.tar.gz)"
+
+#: MainWindow#93
+msgid ""
+"%1 does not seem\n"
+"a valid package"
+msgstr ""
+"Το πακέτο %1 δεν\n"
+"είναι έγκυρο"
+
+#. (obsolete)
+#: MainWindow#94
+msgctxt "MainWindow#94"
+msgid ""
+"You need to have ABS installed to use Shaman's\n"
+"building feature. Do you want to install it now?"
+msgstr ""
+"Πρέπει να έχετε εγκατεστημένο το ABS για να μπορείτε\n"
+"να χτίσετε πακέτα με το Shaman. Εγκατάσταση τώρα;"
+
+#. (obsolete)
+#: MainWindow#95
+msgctxt "MainWindow#95"
+msgid ""
+"You can not remove packages when processing\n"
+"your queue from Source"
+msgstr ""
+"Δεν μπορείτε να αφαιρέσετε πακέτα όταν γίνεται\n"
+"επεξεργασία της ουράς από την Πηγή"
+
+#. (obsolete)
+#: MainWindow#96
+msgctxt "MainWindow#96"
+msgid ""
+"Some of your packages do not belong to Arch\n"
+"Linux's official repository. Shaman is able to\n"
+"build packages from official sources only."
+msgstr ""
+"Κάποια από τα πακέτα σας δεν ανήκουν στα επίσημα\n"
+"repositories του Arch Linux. Το Shaman μπορεί να χτίσει\n"
+"πακέτα μόνο από τις επίσημες πηγές."
+
+#. (obsolete)
+#: MainWindow#97
+msgctxt "MainWindow#97"
+msgid ""
+"You are about to install <b>%1 package</b> from source. Building from "
+"source<br>can give some advantages, however is very slow.<br>If you are not "
+"sure about that, you would probably prefer to process<br>your queue from "
+"binary files. Before you continue, you are advised to<br>review your "
+"configuration to improve your building performance."
+msgstr ""
+"Πρόκειται να εγκαταστήσετε <b>%1 πακέτο</b> από την πηγή. Το χτίσιμο πακέτων "
+"από την πηγή<br>έχει κάποια πλεονεκτήματα, όμως είναι εξαιρετικά "
+"αργό.<br>Αν δεν είστε σίγουρος, θα ήταν καλύτερο να επεξεργαστείτε<br>την "
+"ουρά από έτοιμα πακέτα. Πριν συνεχίσετε, προτείνεται να<br>κοιτάξετε τις "
+"ρυθμίσεις σας ώστε να αυξήσετε την επίδοση του χτισίματος."
+
+#. (obsolete)
+#: MainWindow#98
+msgctxt "MainWindow#98"
+msgid ""
+"You are about to install <b>%1 packages</b> from source. Building from "
+"source<br>can give some advantages, however is very slow.<br>If you are not "
+"sure about that, you would probably prefer to process<br>your queue from "
+"binary files. Before you continue, you are advised to<br>review your "
+"configuration to improve your building performance."
+msgstr ""
+"Πρόκειται να εγκαταστήσετε <b>%1 πακέτα</b> από την πηγή. Το χτίσιμο πακέτων "
+"από την πηγή<br>έχει κάποια πλεονεκτήματα, όμως είναι εξαιρετικά "
+"αργό.<br>Αν δεν είστε σίγουρος, θα ήταν καλύτερο να επεξεργαστείτε<br>την "
+"ουρά από έτοιμα πακέτα. Πριν συνεχίσετε, προτείνεται να<br>κοιτάξετε τις "
+"ρυθμίσεις σας ώστε να αυξήσετε την επίδοση του χτισίματος."
+
+#. (obsolete)
+#: MainWindow#99
+msgctxt "MainWindow#99"
+msgid "Package Building"
+msgstr "Χτίσιμο Πακέτου"
+
+#. (obsolete)
+#: MainWindow#100
+msgctxt "MainWindow#100"
+msgid "Your Packages failed to build!"
+msgstr "Το χτίσιμο των πακέτων σας απέτυχε!"
+
+#. (obsolete)
+#: MainWindow#101
+msgctxt "MainWindow#101"
+msgid ""
+"Your packages Failed to Build.\n"
+"Look at the output for more details."
+msgstr ""
+"Το χτίσιμο των πακέτων σας απέτυχε.\n"
+"Κοιτάξτε τα μηνύματα εξόδου για λεπτομέρειες."
+
+#. (obsolete)
+#: MainWindow#102
+msgctxt "MainWindow#102"
+msgid "Close"
+msgstr "Κλείσιμο"
+
+#. (obsolete)
+#: MainWindow#103
+msgctxt "MainWindow#103"
+msgid "Building Packages Failed!!"
+msgstr "Το χτίσιμο των πακέτων σας απέτυχε!!"
+
+#. (obsolete)
+#: MainWindow#104
+msgctxt "MainWindow#104"
+msgid ""
+"Some packages failed to build.\n"
+"Do you want to proceed anyway?"
+msgstr ""
+"Κάποια πακέτα απέτυχαν να χτιστούν.\n"
+"Θέλετε να συνεχίσετε;"
+
+#. (obsolete)
+#: MainWindow#105
+msgctxt "MainWindow#105"
+msgid "Install Built Packages"
+msgstr "Εγκατάσταση Χτισμένων Πακέτων"
+
+#. (obsolete)
+#: MainWindow#106
+msgctxt "MainWindow#106"
+msgid "Close Without Installing"
+msgstr "Κλείσιμο χωρίς εγκατάσταση"
+
+#. (obsolete)
+#: MainWindow#107
+msgctxt "MainWindow#107"
+msgid "Packages Built Successfully!"
+msgstr "Τα πακέτα χτίστηκαν με επιτυχία!"
+
+#. (obsolete)
+#: MainWindow#108
+msgctxt "MainWindow#108"
+msgid ""
+"Your Packages have been built successfully, and are ready to be installed"
+msgstr "Τα πακέτα σας χτίστηκαν με επιτυχία και είναι έτοιμα για εγκατάσταση"
+
+# Size is in Gib
+#. (obsolete)
+#: MainWindow#109
+msgctxt "MainWindow#109"
+msgid "%1 GiB"
+msgstr "%1 GiB\n"
+
+# Size is in MiB
+#. (obsolete)
+#: MainWindow#110
+msgctxt "MainWindow#110"
+msgid "%1 MiB"
+msgstr "%1 MiB"
+
+# Size is in KiB
+#. (obsolete)
+#: MainWindow#111
+msgctxt "MainWindow#111"
+msgid "%1 KiB"
+msgstr "%1 KiB"
+
+# Size is in Bytes
+#. (obsolete)
+#: MainWindow#112
+msgctxt "MainWindow#112"
+msgid "%1 Bytes"
+msgstr "%1 Bytes"
+
+# Quit the application
+#: MainWindow#113
+msgctxt "MainWindow#113"
+msgid "Quit"
+msgstr "Έξοδος"
+
+#. (obsolete)
+#: MainWindow#114
+msgctxt "MainWindow#114"
+msgid "Do not show this Again"
+msgstr "Να μην εμφανιστεί ξανά"
+
+#: MainWindow#115
+msgid "Pacman Update"
+msgstr "Ανανέωση του Pacman"
+
+#: MainWindow#116
+msgid ""
+"Pacman can be upgraded. It is advised to process it alone\n"
+"to avoid version conflicts.\n"
+"Do you want to Upgrade Pacman now?"
+msgstr ""
+"Το Pacman μπορεί να αναβαθμιστεί. Προτείνεται να αναβαθμιστεί\n"
+"πρώτο για να αποφευχθεί διένεξη εκδόσεων.\n"
+"Θέλετε να αναβαθμίσετε το Pacman τώρα;"
+
+#: MainWindow#117
+msgid "Shaman Update"
+msgstr "Ανανέωση του Shaman"
+
+#: MainWindow#118
+msgid ""
+"Shaman can be upgraded. It is advised to process it alone\n"
+"to avoid version conflicts.\n"
+"Do you want to Upgrade Shaman now?"
+msgstr ""
+"Το Shaman μπορεί να αναβαθμιστεί. Προτείνεται να αναβαθμιστεί\n"
+"πρώτο για να αποφευχθεί διένεξη εκδόσεων.\n"
+"Θέλετε να αναβαθμίσετε το Shaman τώρα;"
+
+#: MainWindow#119
+msgid "Restart required"
+msgstr "Απαιτείται επανεκκίνηση"
+
+#: MainWindow#120
+msgid ""
+"Pacman or Shaman was updated. Shaman will now quit,\n"
+"please restart it to use the new version"
+msgstr ""
+"Το Pacman ή το Shaman αναβαθμίστηκε. Το Shaman θα κλείσει,\n"
+"παρακαλώ επανεκκινήστε το για να χρησιμοποιήσετε τη νέα έκδοση"
+
+#. (obsolete)
+#: MainWindow#121
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">A libalpm frontend in Qt</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">License: GPLv2+</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Libalpm Version: v.%1</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Dario Freddi "
+"&lt;drf54321@yahoo.it&gt;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Lukas Appelhans "
+"&lt;l.appelhans@gmx.de&gt;</p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Ένα frontend του libalpm γραμμένο σε Qt</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Άδεια: GPLv2+</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Έκδοση του Libalpm: "
+"v.%1</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Dario Freddi "
+"&lt;drf54321@yahoo.it&gt;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Lukas Appelhans "
+"&lt;l.appelhans@gmx.de&gt;</p></body></html>"
+
+#. (obsolete)
+#: MainWindow#122
+msgid "Library Question"
+msgstr "Ερώτηση Βιβλιοθήκης"
+
+#: MainWindow#123
+msgid "Local Version: "
+msgstr "Τοπική Έκδοση:"
+
+#: MainWindow#124
+msgid "Version in the Repository: "
+msgstr "Έκδοση στο Repository:"
+
+#. (obsolete)
+#: MainWindow#125
+msgid ""
+"One or more errors occourred, your Queue\n"
+"was not successfully processed"
+msgstr ""
+"Εμφανίστηκε ένα τουλάχιστον σφάλμα, η Ουρά\n"
+"δεν επεξεργάστηκε με επιτυχία"
+
+#. (obsolete)
+#: MainWindow#126
+msgid "Esc"
+msgstr "Esc"
+
+#: MainWindow#127
+msgid "News Alert"
+msgstr "Ειδοποίηση Νέων"
+
+#: MainWindow#128
+msgid ""
+"There is an unread news about %1.\n"
+"Do you want to read it?"
+msgstr ""
+"Υπάρχει ένα αδιάβαστο μήνυμα για το %1.\n"
+"Θέλετε να το διαβάσετε;"
+
+#: MainWindow#129
+msgid ""
+"Your Kernel has been updated.\n"
+"Please restart your PC soon to load the new Kernel."
+msgstr ""
+"Έγινε αναβάθμιση του Kernel.\n"
+"Επανεκκινήστε τον Η/Υ ώστε να φορτωθεί ο νέος Kernel."
+
+#. (obsolete)
+#: MainWindow#130
+msgid "Tools"
+msgstr "Εργαλεία"
+
+#: MainWindow#131
+msgid "Read News"
+msgstr "Ανάγνωση Νέων"
+
+#: MainWindow#132
+msgid "View Log"
+msgstr "Εμφάνιση Log"
+
+#: MainWindow#133
+msgid ""
+"One or more errors occurred, your Queue\n"
+"was not successfully processed"
+msgstr ""
+"Εμφανίστηκαν ένα ή περισσότερα σφάλματα,\n"
+"η Ουρά δεν επεξεργάστηκε με επιτυχία"
+
+#: MainWindow#134
+msgid "One or more databases failed to update!"
+msgstr ""
+"Μία ή περισσότερες βάσεις δεδομένων\n"
+"απέτυχαν να ανανεωθούν!"
+
+#: MainWindow#135
+msgid "Error Processing Queue!!"
+msgstr "Σφάλμα κατά την επεξεργασία της Ουράς!!!"
+
+# The name of the Package
+#. (obsolete)
+#: MainWindow#136
+msgctxt "MainWindow#136"
+msgid "Name"
+msgstr "Όνομα"
+
+#: MainWindow#137
+msgid ""
+"A package providing %1 is already installed.\n"
+"Do you want to install %1 anyway?"
+msgstr ""
+
+#: MainWindow#138
+msgid "&File"
+msgstr ""
+
+#: MainWindow#139
+msgid "&Help"
+msgstr ""
+
+#: MainWindow#140
+msgid "&Actions"
+msgstr ""
+
+#: MainWindow#141
+msgid "&Tools"
+msgstr ""
+
+#: MainWindow#142
+msgid "Re&positories"
+msgstr ""
+
+#: MainWindow#143
+msgid "Package &Groups"
+msgstr ""
+
+#: MainWindow#144
+msgid "Mark for &Installation"
+msgstr ""
+
+#: MainWindow#145
+msgid "Mark for &Removal"
+msgstr ""
+
+#: MainWindow#146
+msgid "Mark for complete re&moval"
+msgstr ""
+
+#: MainWindow#147
+msgid "Package I&nformation"
+msgstr ""
+
+#: MainWindow#148
+msgid "File&s"
+msgstr ""
+
+#: MainWindow#149
+msgid "&Dependencies"
+msgstr ""
+
+#: MainWindow#150
+msgid "Mark for Re&installation"
+msgstr ""
+
+#: MainWindow#151
+msgid "&Cancel Action"
+msgstr ""
+
+#: MainWindow#152
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">A libalpm frontend in Qt</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">License: GPLv2+</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Libalpm Version: v.%1</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Dario Freddi "
+"&lt;drf@kdemod.ath.cx&gt;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Lukas Appelhans "
+"&lt;boom1992@kdemod.ath.cx&gt;</p></body></html>"
+msgstr ""
+
+# Name of the Package
+#. (obsolete)
+#: MainWindow#153
+msgctxt "MainWindow#153"
+msgid "Name"
+msgstr "Όνομα"
+
+# Exit Shaman Shortcut
+#: MainWindow#154
+msgid "Ctrl+Q"
+msgstr ""
+
+#: MainWindow#155
+msgid "Name and Description"
+msgstr ""
+
+#: MaintenanceBar#1
+msgid "Please choose an action to start maintenance..."
+msgstr ""
+
+#: MaintenanceBar#2
+#, fuzzy
+msgctxt "MaintenanceBar#2"
+msgid "Clean Unused Databases"
+msgstr "Καθαρισμός αχρησιμοποίητων Βάσεων Δεδομένων"
+
+#: MaintenanceBar#3
+#, fuzzy
+msgctxt "MaintenanceBar#3"
+msgid "Clean Cache"
+msgstr "Καθαρισμός της Cache"
+
+#: MaintenanceBar#4
+#, fuzzy
+msgctxt "MaintenanceBar#4"
+msgid "Empty Cache"
+msgstr "Άδειασμα της Cache"
+
+#: MaintenanceBar#5
+#, fuzzy
+msgctxt "MaintenanceBar#5"
+msgid "Optimize Pacman Database"
+msgstr "Βελτιστοποίηση Βάσεως Δεδομένων του Pacman"
+
+#: MaintenanceBar#6
+#, fuzzy
+msgctxt "MaintenanceBar#6"
+msgid "Clean All Building Environments"
+msgstr "Καθαρισμός όλων των Περιβάλλοντων Χτισίματος"
+
+#: MaintenanceBar#7
+#, fuzzy
+msgctxt "MaintenanceBar#7"
+msgid "Cleaning up unused Databases..."
+msgstr "Καθαρισμός αχρησιμοποίητων Βάσεων Δεδομένων..."
+
+#: MaintenanceBar#8
+#, fuzzy
+msgctxt "MaintenanceBar#8"
+msgid "Cleaning up Cache..."
+msgstr "Καθαρισμός της Cache..."
+
+#: MaintenanceBar#9
+#, fuzzy
+msgctxt "MaintenanceBar#9"
+msgid "Deleting Cache..."
+msgstr "Διαγραφή της Cache..."
+
+#: MaintenanceBar#10
+#, fuzzy
+msgctxt "MaintenanceBar#10"
+msgid "Optimizing Pacman Database..."
+msgstr "Βελτιστοποίηση της Βάσης Δεδομένων του Pacman..."
+
+#: MaintenanceBar#11
+#, fuzzy
+msgctxt "MaintenanceBar#11"
+msgid "Cleaning up building Environments..."
+msgstr "Εκκαθάριση των περιβάλλοντων χτισίματος..."
+
+#: MaintenanceBar#12
+#, fuzzy
+msgctxt "MaintenanceBar#12"
+msgid "Abort"
+msgstr "Ακύρωση"
+
+#: MaintenanceBar#13
+msgid "System Maintenance"
+msgstr ""
+
+#: MaintenanceBar#14
+#, fuzzy
+msgctxt "MaintenanceBar#14"
+msgid "Unused Databases Cleaned up successfully!"
+msgstr ""
+"Η εκκαθάριση των Αχρησιμοποίητων Βάσεων Δεδομένων\n"
+"έγινε με επιτυχία!"
+
+#: MaintenanceBar#15
+#, fuzzy
+msgctxt "MaintenanceBar#15"
+msgid "Cache Cleaned Up Successfully!"
+msgstr "Η εκκαθάριση της Cache έγινε με επιτυχία!"
+
+#: MaintenanceBar#16
+#, fuzzy
+msgctxt "MaintenanceBar#16"
+msgid "Cache Successfully Deleted!"
+msgstr "Η διαγραφή της Cache έγινε με επιτυχία!"
+
+#: MaintenanceBar#17
+#, fuzzy
+msgctxt "MaintenanceBar#17"
+msgid "Build Environments Successfully Cleaned!"
+msgstr "Τα Περιβάλλοντα Χτισίματος καθαρίστικαν με επιτυχία!"
+
+#: MaintenanceBar#18
+#, fuzzy
+msgctxt "MaintenanceBar#18"
+msgid "Close"
+msgstr "Κλείσιμο"
+
+#: MaintenanceBar#19
+#, fuzzy
+msgctxt "MaintenanceBar#19"
+msgid "Cleaning up Unused Databases Failed!"
+msgstr "Ο καθαρισμός των Αχρησιμοποίητων Βάσεων Δεδομένων Απέτυχε!"
+
+#: MaintenanceBar#20
+#, fuzzy
+msgctxt "MaintenanceBar#20"
+msgid "Cleaning up Cache Failed!"
+msgstr "Ο καθαρισμός της Cache Απέτυχε!"
+
+#: MaintenanceBar#21
+#, fuzzy
+msgctxt "MaintenanceBar#21"
+msgid "Deleting Cache Failed!"
+msgstr "Η Διαγραφή της Cache Απέτυχε!"
+
+#: MaintenanceBar#22
+#, fuzzy
+msgctxt "MaintenanceBar#22"
+msgid "Could not clean Build Environments!!"
+msgstr "Η εκκαθάριση του Περιβάλλοντος Χτισίματος απέτυχε!!"
+
+#: MaintenanceBar#23
+#, fuzzy
+msgctxt "MaintenanceBar#23"
+msgid "Pacman Database Optimized Successfully!"
+msgstr ""
+"Η βελτιστοποίηση της Βάσης Δεδομένων του\n"
+"Pacman πραγματοποιήθηκε με επιτυχία!"
+
+#: MaintenanceBar#24
+#, fuzzy
+msgctxt "MaintenanceBar#24"
+msgid "Could not Optimize Pacman Database!"
+msgstr ""
+"Η βελτιστοποίηση της Βάσης Δεδομένων\n"
+"του Pacman δεν ήταν δυνατή!"
+
+# sync is a command, so it should not be translated
+#: MaintenanceBar#25
+#, fuzzy
+msgctxt "MaintenanceBar#25"
+msgid "Running sync..."
+msgstr "Εκτέλεση του sync..."
+
+#: MaintenanceBar#26
+#, fuzzy
+msgctxt "MaintenanceBar#26"
+msgid "Operation Completed Successfully!"
+msgstr "Η διεργασία πραγματοποιήθηκε με επιτυχία!"
+
+# Sync is always the command
+#: MaintenanceBar#27
+#, fuzzy
+msgctxt "MaintenanceBar#27"
+msgid "Sync was successfully executed!!"
+msgstr "Η εντολή Sync εκτελέστηκε με επιτυχία!!"
+
+# Sync is always the command
+#: MaintenanceBar#28
+#, fuzzy
+msgctxt "MaintenanceBar#28"
+msgid "Sync could not be executed!"
+msgstr "Η εντολή Sync δεν μπόρεσε να εκτελεστεί!"
+
+# Sync is always the command
+#: MaintenanceBar#29
+#, fuzzy
+msgctxt "MaintenanceBar#29"
+msgid "Sync could not be executed!!"
+msgstr "Η εντολή Sync δεν μπόρεσε να εκτελεστεί!!"
+
+#: MaintenanceBar#30
+msgid "Maintenance Actions"
+msgstr ""
+
+#: NewsViewer#1
+msgctxt "NewsViewer#1"
+msgid "Please wait, fetching items..."
+msgstr ""
+"Παρακαλώ περιμένετε, γίνεται \n"
+"λήψη των αντικειμένων..."
+
+#: NewsViewer#2
+msgctxt "NewsViewer#2"
+msgid "Mark as Read"
+msgstr "Μαρκάρισμα ως Διαβασμένο"
+
+#: NewsViewer#3
+msgid "Mark as Unread"
+msgstr "Μαρκάρισμα ως Αδιάβαστο"
+
+#: NewsViewer#4
+msgctxt "NewsViewer#4"
+msgid "Error"
+msgstr "Σφάλμα"
+
+#: NewsViewer#5
+msgid "Could not fetch the RSS feed! Error reported was:"
+msgstr "Αδύνατη η λήψη του RSS feed! Το σφάλμα ήταν:"
+
+# Size is in Gib
+#: PackageProperties#1
+msgctxt "PackageProperties#1"
+msgid "%1 GiB"
+msgstr "%1 GiB"
+
+# Size is in MiB
+#: PackageProperties#2
+msgctxt "PackageProperties#2"
+msgid "%1 MiB"
+msgstr "%1 MiB"
+
+# Size is in KiB
+#: PackageProperties#3
+msgctxt "PackageProperties#3"
+msgid "%1 KiB"
+msgstr "%1 KiB"
+
+# Size is in Bytes
+#: PackageProperties#4
+msgctxt "PackageProperties#4"
+msgid "%1 Bytes"
+msgstr "%1 Bytes"
+
+#: PackageProperties#5
+msgid "Shaman - %1 properties"
+msgstr "Shaman - %1 ιδιότητες"
+
+# Stands for: Not Available
+#: PackageProperties#6
+msgid "N/A"
+msgstr "N/A"
+
+#: PackageProperties#7
+msgid "Changelog not available for this package"
+msgstr "Το changelog δεν είναι διαθέσιμο γι'αυτό το πακέτο"
+
+#. (obsolete)
+#: QObject#1
+msgid ""
+"You have to be root to run Shaman.\n"
+"Please restart it with root privileges."
+msgstr ""
+"Για να τρέξετε το Shaman πρέπει να είστε ο root.\n"
+"Παρκαλώ επανεκκινήστε το με δικαιώματα root."
+
+#: QObject#2
+msgctxt "QObject#2"
+msgid "Shaman"
+msgstr "Shaman"
+
+#: QObject#3
+msgid ""
+"There was a problem while testing libalpm.\n"
+"Maybe another application has a lock on it."
+msgstr ""
+"Υπήρξε ένα πρόβλημα κατά την δοκιμή του libalpm.\n"
+"Ίσως κάποια άλλη εφαρμογή το χρησιμοποιεί."
+
+# Hey! If you are reading this, first of all thanks for helping us in making Shaman better. There are not many comments unless where needed, since all the strings are pretty self-explanatory. You will see a lot of HTML in some cases: do not let that scare you, but please edit text only. Editing HTML tags too may break our layout, so be careful. A good practice could be copying the whole string, and then translating just what's outside the tags, usually just a few words. If you have any doubts, or if you just want to drop us a line, there goes our email addresses:
+# Dario: drf54321@gmail.com
+# Lukas: l.appelhans@gmx.de
+# Thanks again, and enjoy your translation!
+#: QObject#4
+msgctxt "QObject#4"
+msgid "Shaman"
+msgstr "Shaman"
+
+#: QObject#5
+msgid ""
+"Pacman is not updated.\n"
+"Shaman needs libalpm >= 2.1.0 to run.\n"
+"Yours is %1. Please update Pacman."
+msgstr ""
+"Το Pacman δεν βρίσκεται στην τελευταία έκδοση.\n"
+"Το Shaman χρειάζεται το libalpm, έκδοση >= 2.1.0 για να τρέξει.\n"
+"Η έκδοσή σας είναι η %1. Παρακαλώ αναβαθμίστε το Pacman."
+
+#: QObject#6
+msgctxt "QObject#6"
+msgid "Please Wait..."
+msgstr "Παρακαλώ Περιμένετε..."
+
+#: QObject#7
+msgid "Loading Databases..."
+msgstr "Φόρτωση Βάσεων Δεδομένων..."
+
+#: QObject#8
+msgid "Loading Packages..."
+msgstr "Φόρτωση Πακέτων..."
+
+#: QObject#9
+msgid "Starting up Shaman..."
+msgstr "Εκκίνηση του Shaman..."
+
+#: QObject#10
+msgid ""
+"Your settings file seems unwritable.\n"
+"Please check permissions on it."
+msgstr ""
+"Το αρχείο ρυθμίσεων είναι μη εγγράψιμο.\n"
+"Ελέγξτε τα δικαιώματα του."
+
+#: QObject#11
+msgid ""
+"You have started Shaman as root.\n"
+"It is advised to start it as unprivileged user.\n"
+"Shaman will ask you for root password when needed."
+msgstr ""
+"Εκκινήσατε το Shaman ως root.\n"
+"Προτείνεται να το εκκινήσετε ως κανονικός χρήστης.\n"
+"Το Shaman θα σας ρωτήσει για τον κωδικό του root όταν χρειαστεί."
+
+#: QObject#12
+msgctxt "QObject#12"
+msgid "Ok"
+msgstr "Ok"
+
+#. (obsolete)
+#: QObject#13
+msgid "Yes"
+msgstr "Ναι"
+
+#. (obsolete)
+#: QObject#14
+msgid "No"
+msgstr "Όχι"
+
+#: QObject#15
+#, fuzzy
+msgid ""
+"It looks like another copy of Shaman is running.\n"
+"You can only run one copy of Shaman at a time."
+msgstr ""
+"Το Shaman φαίνεται να είναι ήδη ανοιχτό.\n"
+"Δεν μπορείτε να το ανοίξετε δεύτερη φορά."
+
+#: QObject#16
+msgid ""
+"Shaman can not be started as root.\n"
+"Please restart it as unprivileged user."
+msgstr ""
+"Το Shaman δεν μπορεί να ξεκινήσει ως root.\n"
+"Παρακαλώ επανεκκινήστε το ως απλός χρήστης."
+
+#: QObject#17
+msgid ""
+"Shaman could not switch to root.\n"
+"Probably you have not set the SUID bit to it.\n"
+"You can do that by issuing as root\n"
+"chown root shaman && chmod u+s shaman.\n"
+"Note that this is safe, please read Shaman wiki\n"
+"for more details."
+msgstr ""
+"Το Shaman δεν μπόρεσε να αλλάξει σε root.\n"
+"Πιθανότατα δεν του έχετε θέσει το SUID bit.\n"
+"Μπορείτε να το κάνετε, δίνοντας ως root τηνς εντολή\n"
+"chown root shaman && chmod u+s shaman.\n"
+"Η ενέργεια αυτή είναι ασφαλής, παρακαλώ δείτε\n"
+"το Shaman Wiki για λεπτομέρειες."
+
+#. (obsolete)
+#: QObject#18
+msgctxt "QObject#18"
+msgid "Do not show this Again"
+msgstr "Να μην εμφανιστεί ξανά"
+
+#: QObject#19
+msgid "O&k"
+msgstr ""
+
+#: QObject#20
+msgid "&Yes"
+msgstr ""
+
+#: QObject#21
+msgid "&No"
+msgstr ""
+
+#: QObject#22
+msgid "Do not &show this Again"
+msgstr ""
+
+#: QObject#23
+msgid "C&ancel"
+msgstr ""
+
+#: QObject#24
+msgid "Whoa, that's co&ol!"
+msgstr ""
+
+#: QueueDialog#1
+msgid "<br><b> * Validating Transaction</b><br>"
+msgstr "<br><b> * Έλεγχος Συναλλαγής</b><br>"
+
+#: QueueDialog#2
+msgid "Validating Dependencies..."
+msgstr "Έλεγχος εξαρτήσεων..."
+
+#: QueueDialog#3
+msgid "Checking for Conflicts..."
+msgstr "Έλεγχος για διενέξεις..."
+
+#: QueueDialog#4
+msgid "Resolving Dependencies..."
+msgstr "Επίλυση Εξαρτήσεων..."
+
+#: QueueDialog#5
+msgid "Looking for Inter-Conflicts..."
+msgstr "Έλεγχος για διενέξεις..."
+
+#: QueueDialog#6
+msgid "<br><b> * Package Installation Started</b><br>"
+msgstr "<br><b> * Η Εγκατάσταση του Πακέτου ξεκίνησε</b><br>"
+
+#: QueueDialog#7
+msgid "Installing %1..."
+msgstr "Εγκατάσταση του %1..."
+
+#: QueueDialog#8
+msgid "%1 (%2) installed successfully!"
+msgstr "Το %1 (%2) εγκαταστάθηκε με επιτυχία!"
+
+#: QueueDialog#9
+msgid "<br><b> * Package Removal Started</b><br>"
+msgstr "<br><b> * Η Αφαίρεση του Πακέτου ξεκίνησε</b><br>"
+
+#: QueueDialog#10
+msgid "Removing %1..."
+msgstr "Αφαίρεση του %1..."
+
+#: QueueDialog#11
+msgid "%1 (%2) removed successfully!"
+msgstr "Το %1 (%2) αφαιρέθηκε με επιτυχία!"
+
+#: QueueDialog#12
+msgid "<br><b> * Package Upgrading Started</b><br>"
+msgstr "<br><b> * Η Αναβάθμιση του Πακέτου ξεκίνησε</b><br>"
+
+#: QueueDialog#13
+msgid "Upgrading %1..."
+msgstr "Αναβάθμιση του %1..."
+
+#: QueueDialog#14
+msgid "Upgraded %1 successfully (%2 -> %3)"
+msgstr "Το πακέτο %1 αναβαθμίστηκε με επιτυχία (%2 -> %3)"
+
+#: QueueDialog#15
+msgid "<br><b> * Queue Processing Started</b><br>"
+msgstr "<br><b> * Η Επεξεργασία της Ουράς ξεκίνησε</b><br>"
+
+#: QueueDialog#16
+msgid "Checking package integrity..."
+msgstr "Έλεγχος ακεραιότητας πακέτου..."
+
+#: QueueDialog#17
+msgid "Checking delta integrity..."
+msgstr "Έλεγχος ακεραιότητας delta..."
+
+#: QueueDialog#18
+msgid "Applying deltas..."
+msgstr "Εφαρμογή των deltas..."
+
+#: QueueDialog#19
+msgid "Generating %1 with %2... "
+msgstr "Παραγωγή %1 με %2..."
+
+#: QueueDialog#20
+msgid "Success!"
+msgstr "Επιτυχία!"
+
+#: QueueDialog#21
+msgid "Failed!"
+msgstr "Απέτυχε!"
+
+#: QueueDialog#22
+msgid "<br><b> * Package Downloading Started</b><br>"
+msgstr "<br><b> * Το κατέβασμα πακέτων ξεκίνησε</b><br>"
+
+#: QueueDialog#23
+msgid "Starting downloading packages from %1..."
+msgstr "Έναρξη κατεβάσματος πακέτων από %1..."
+
+# You just have to translate 'remaining' here. Leave everything else as it is.
+#: QueueDialog#24
+msgid "%p% (%1 KB/s, %4:%5:%6 remaining)"
+msgstr "%p% (%1 KB/s, %4:%5:%6 απομένουν)"
+
+#: QueueDialog#25
+msgid "Downloading %1... (%2 MB of %3 MB)"
+msgstr "Κατέβασμα του %1... (%2 MB of %3 MB)"
+
+#: QueueDialog#26
+msgid "Downloading %1... (%2 KB of %3 KB)"
+msgstr "Κατέβασμα του %1... (%2 KB of %3 KB)"
+
+#: QueueDialog#27
+msgid "Queue processed, please wait..."
+msgstr "Η Ουρά επεξεργάστηκε, παρακαλώ περιμένετε..."
+
+#. (obsolete)
+#: QueueDialog#28
+msgid "Executing pre_install scriptlet..."
+msgstr "Εκτέλεση του pre_install scriptlet..."
+
+#. (obsolete)
+#: QueueDialog#29
+msgid "Executing pre_upgrade scriptlet..."
+msgstr "Εκτέλεση του pre_upgrade scriptlet..."
+
+#. (obsolete)
+#: QueueDialog#30
+msgid "Executing pre_remove scriptlet..."
+msgstr "Εκτέλεση του pre_remove scriptlet..."
+
+#. (obsolete)
+#: QueueDialog#31
+msgid "Executing post_install scriptlet..."
+msgstr "Εκτέλεση του post_install scriptlet..."
+
+#. (obsolete)
+#: QueueDialog#32
+msgid "Executing post_upgrade scriptlet..."
+msgstr "Εκτέλεση του post_upgrade scriptlet..."
+
+#. (obsolete)
+#: QueueDialog#33
+msgid "Executing post_remove scriptlet..."
+msgstr "Εκτέλεση του post_remove scriptlet..."
+
+#: QueueDialog#34
+msgid "Unexpected Error. Shaman might be corrupted."
+msgstr "Μη αναμενώμενο σφάλμα. Το Shaman ίσως να είναι κατεστραμμένο."
+
+#: QueueDialog#35
+msgid "Extracting Scriptlet from package failed!!"
+msgstr "Η εξαγωγή του Scriptlet από το πακέτο απέτυχε!!"
+
+#: QueueDialog#36
+msgid "Scriptlet processed successfully!"
+msgstr "Το Scriptlet επεξεργάστηκε με επιτυχία!"
+
+#. (obsolete)
+#: QueueDialog#37
+msgid "Scriptlet not found in this stage, or error processing it!"
+msgstr ""
+"To Scriptlet δεν βρέθηκε σε αυτό το στάδιο ή υπήρξε σφάλμα \n"
+"κατά την επεξεργασία του!"
+
+#: QueueDialog#38
+msgid "Executing %1 scriptlet for %2..."
+msgstr "Εκτέλεση %1 scriptlet για %2..."
+
+#: QueueDialog#39
+msgid "Package %1 does not have %2 scriptlet"
+msgstr "Το πακέτο %1 δεν έχει το %2 scriptlet"
+
+#: QueueDialog#40
+msgid "Error processing Scriptlet!!"
+msgstr "Σφάλμα κατά την επεξεργασία του Scriptlet!!"
+
+#: QueueDialog#41
+msgctxt "QueueDialog#41"
+msgid "Queue Processing"
+msgstr "Επεξεργασία Ουράς"
+
+#: QueueDialog#42
+msgid "There has been an error while preparing the transaction.\n"
+msgstr "Εμφανίστηκε ένα σφάλμα κατά την προετοιμασία της εργασίας."
+
+#: QueueDialog#43
+msgid "There has been an error while committing the transaction.\n"
+msgstr "Εμφανίστηκε ένα σφάλμα κατά την εκτέλεση της εργασίας."
+
+#: QueueDialog#44
+msgid "Queue processing failed!"
+msgstr "Η επεξεργασία της Ουράς απέτυχε!"
+
+#: QueueDialog#45
+msgid "Queue processed successfully!"
+msgstr "Η Ουρά επεξεργάστηκε με επιτυχία!"
+
+#: QueueDialog#46
+msgctxt "QueueDialog#46"
+msgid "Close"
+msgstr "Κλείσιμο"
+
+#: QueueDialog#47
+msgid ""
+"Would you like to abort Queue Processing?\n"
+"This may damage your system."
+msgstr ""
+"Θέλετε να ακυρώσετε την επεξεργασία της Ουράς;\n"
+"Αυτό μπορεί να καταστρέψει το σύστημά σας."
+
+#. (obsolete)
+#: QueueDialog#48
+msgctxt "QueueDialog#48"
+msgid "Ok"
+msgstr "Ok"
+
+#: QueueReadyDialog#1
+msgid "Review Queue"
+msgstr "Επισκόπηση της Ουράς"
+
+#: QueueReadyDialog#2
+msgctxt "QueueReadyDialog#2"
+msgid "Turn off PC when Queue is done"
+msgstr "Κλείσιμο του Η/Υ όταν τελειώσει η Ουρά"
+
+#: QueueReadyDialog#3
+msgid "Process in Tray"
+msgstr "Επεξεργασία στο Tray"
+
+#: QueueReadyDialog#4
+msgctxt "QueueReadyDialog#4"
+msgid "Show packages..."
+msgstr "Εμφάνιση πακέτων..."
+
+#: QueueReadyDialog#5
+msgctxt "QueueReadyDialog#5"
+msgid "Packages In Queue"
+msgstr "Πακέτα στην Ουρά"
+
+#: QueueReadyDialog#6
+msgctxt "QueueReadyDialog#6"
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+#: QueueReadyDialog#7
+msgid "Process"
+msgstr "Επεξεργασία"
+
+#: QueueReadyDialog#8
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Review Queue</span></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Επισκόπηση Ουράς</span></p></body></html>"
+
+#: QueueReadyDialog#9
+msgid "Keep Queue Dialog Open after the Queue is finished"
+msgstr "Να μείνει το παράθυρο της Ουράς ανοιχτό μετά την επεξεργασία της"
+
+#: QueueReadyDialog#10
+msgctxt "QueueReadyDialog#10"
+msgid "Force Queue Processing"
+msgstr ""
+
+#: ReviewQueueDialog#1
+msgctxt "ReviewQueueDialog#1"
+msgid "Install"
+msgstr "Εγκατάσταση"
+
+#: ReviewQueueDialog#2
+msgctxt "ReviewQueueDialog#2"
+msgid "To be Installed"
+msgstr "Προς Εγκατάσταση"
+
+#: ReviewQueueDialog#3
+msgctxt "ReviewQueueDialog#3"
+msgid "Upgrade"
+msgstr "Αναβάθμιση"
+
+#: ReviewQueueDialog#4
+msgctxt "ReviewQueueDialog#4"
+msgid "To be Upgraded"
+msgstr "Προς Αναβάθμιση"
+
+#: ReviewQueueDialog#5
+msgctxt "ReviewQueueDialog#5"
+msgid "Uninstall"
+msgstr "Απεγκατάσταση"
+
+#: ReviewQueueDialog#6
+msgctxt "ReviewQueueDialog#6"
+msgid "To be Removed"
+msgstr "Προς Αφαίρεση"
+
+#: ReviewQueueDialog#7
+msgctxt "ReviewQueueDialog#7"
+msgid "Complete Uninstall"
+msgstr "Ολική Απεγκατάσταση"
+
+#: ReviewQueueDialog#8
+msgctxt "ReviewQueueDialog#8"
+msgid "Your Queue is about to be processed. You are going to:<br />"
+msgstr "Η ουρά είναι έτοιμη να επεξεργαστεί. Πρόκειται να:<br/>"
+
+#. (obsolete)
+#: ReviewQueueDialog#9
+msgctxt "ReviewQueueDialog#9"
+msgid "Remove <b>%1 package</b><br />"
+msgstr "Αφαίρεση <b>%1 πακέτου</b><br/>"
+
+#. (obsolete)
+#: ReviewQueueDialog#10
+msgctxt "ReviewQueueDialog#10"
+msgid "Remove <b>%1 packages</b><br />"
+msgstr "Αφαίρεση <b>%1 πακέτων</b><br />"
+
+#. (obsolete)
+#: ReviewQueueDialog#11
+msgctxt "ReviewQueueDialog#11"
+msgid "Install/Upgrade <b>%1 package</b><br />"
+msgstr "Εγκατάσταση/Αναβάθμιση <b>%1 πακέτου</b><br />"
+
+#. (obsolete)
+#: ReviewQueueDialog#12
+msgctxt "ReviewQueueDialog#12"
+msgid "Install/Upgrade <b>%1 packages</b><br />"
+msgstr "Εγκατάσταση/Αναβάθμιση <b>%1 πακέτων</b><br />"
+
+#: ReviewQueueDialog#13
+msgctxt "ReviewQueueDialog#13"
+msgid "Do you wish to continue?"
+msgstr "Θέλετε να συνεχίσετε;"
+
+#: ReviewQueueDialog#14
+#, fuzzy
+msgid "Remove <b>%n package(s)</b><br />"
+msgstr ""
+"\n"
+"            \n"
+"            \n"
+"        "
+
+#: ReviewQueueDialog#15
+#, fuzzy
+msgid "Install/Upgrade <b>%n package(s)</b><br />"
+msgstr ""
+"\n"
+"            \n"
+"            \n"
+"        "
+
+#: ShamanStatusBar#1
+msgid "%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages"
+msgstr "%1 Διαθέσιμα Πακέτα, %2 Εγκατεστημένα, %3 Αναβαθμίσιμα"
+
+#: ShamanStatusBar#2
+msgid "%1 will be used"
+msgstr ""
+
+#: ShamanStatusBar#3
+msgid "%1 will be freed"
+msgstr ""
+
+#: ShamanStatusBar#4
+msgid "%1 to be Installed, %2 to be Removed"
+msgstr ""
+
+#: ShamanTrayIcon#1
+msgctxt "ShamanTrayIcon#1"
+msgid "Update Database"
+msgstr "Ανανέωση Βάσης Δεδομένων"
+
+#: ShamanTrayIcon#2
+msgctxt "ShamanTrayIcon#2"
+msgid "Upgrade System"
+msgstr "Αναβάθμιση Συστήματος"
+
+#: ShamanTrayIcon#3
+msgctxt "ShamanTrayIcon#3"
+msgid "Process Queue"
+msgstr "Επεξεργασία Ουράς"
+
+#: ShamanTrayIcon#4
+msgctxt "ShamanTrayIcon#4"
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+#: ShamanTrayIcon#5
+msgctxt "ShamanTrayIcon#5"
+msgid "Quit"
+msgstr "Έξοδος"
+
+#: ShamanTrayIcon#6
+msgctxt "ShamanTrayIcon#6"
+msgid "Shaman - Idle"
+msgstr "Shaman - Αδράνεια"
+
+#: ShamanTrayIcon#7
+msgctxt "ShamanTrayIcon#7"
+msgid "Shaman - Processing"
+msgstr "Shaman - Επεξεργασία"
+
+#: ShamanTrayIcon#8
+msgctxt "ShamanTrayIcon#8"
+msgid "Shaman - Idle (Upgrades Available)"
+msgstr "Shaman - Αδράνεια (Διαθέσιμες Αναβαθμίσεις)"
+
+#: ShamanTrayIcon#9
+msgctxt "ShamanTrayIcon#9"
+msgid "System Upgrade"
+msgstr "Αναβάθμιση Συστήματος"
+
+#. (obsolete)
+#: ShamanTrayIcon#10
+msgctxt "ShamanTrayIcon#10"
+msgid ""
+"There is %1 upgradeable package.\n"
+"Click here to upgrade your System."
+msgstr ""
+"Υπάρχει %1 διαθέσιμη αναβάθμιση.\n"
+"Κάντε click για να αναβαθμίσετε το Σύστημα."
+
+#. (obsolete)
+#: ShamanTrayIcon#11
+msgctxt "ShamanTrayIcon#11"
+msgid ""
+"There are %1 upgradeable packages.\n"
+"Click here to upgrade your System."
+msgstr ""
+"Υπάρχουν %1 διαθέσιμες αναβαθμίσεις.\n"
+"Κάντε click για να αναβαθμίσετε το Σύστημα."
+
+#: ShamanTrayIcon#12
+msgid "New News Available"
+msgstr "Νέα νέα διαθέσιμα"
+
+#: ShamanTrayIcon#13
+msgid ""
+"There are new news available.\n"
+"Click here to review them."
+msgstr ""
+"Νέα νέα διαθέσιμα.\n"
+"Κάντε click εδώ για να τα δείτε."
+
+#: ShamanTrayIcon#14
+msgid "Failed Fetching News"
+msgstr "Αποτυχία Λήψης Νέων"
+
+#: ShamanTrayIcon#15
+msgid ""
+"An error occourred while fetching news!\n"
+"Click here to open the News Dialog for more details."
+msgstr ""
+"Παρουσιάστηκε σφάλμα κατά την λήψη των νέων!\n"
+"Κάντε click εδώ για να δείτε περισσότερες λεπτομέρειες."
+
+#: ShamanTrayIcon#16
+#, fuzzy
+msgid ""
+"Upgradeable package(s): %n.\n"
+"Click here to upgrade your System."
+msgstr ""
+"\n"
+"            \n"
+"            \n"
+"        "
+
+#. (obsolete)
+#: SysUpgradeDialog#1
+msgid ""
+"There is <b>%1 upgradeable package</b>. You can either<br> upgrade "
+"immediately or add it to the current Queue<br> and process it later."
+msgstr ""
+"Υπάρχει <b>%1 αναβαθμίσιμο πακέτο</b>. Μπορείτε είτε να<br> το αναβαθμίσετε "
+"άμεσα, είτε να το προσθέσετε στην Ουρά<br> και να το επεξεργαστείτε "
+"αργότερα."
+
+#. (obsolete)
+#: SysUpgradeDialog#2
+msgid ""
+"There are <b>%1 upgradeable packages</b>. You can either<br> upgrade "
+"immediately or add them to the current Queue<br> and process them later."
+msgstr ""
+"Υπάρχουν <b>%1 αναβαθμίσιμα πακέτα</b>. Μπορείτε είτε να<br> τα αναβαθμίσετε "
+"άμεσα, είτε να τα προσθέσετε στην Ουρά<br> και να τα επεξεργαστείτε "
+"αργότερα."
+
+#: SysUpgradeDialog#3
+msgctxt "SysUpgradeDialog#3"
+msgid "To be Upgraded"
+msgstr "Προς Αναβάθμιση"
+
+#: SysUpgradeDialog#4
+#, fuzzy
+msgid ""
+"<b>Upgradeable package(s): %n</b> You can either<br> upgrade immediately or "
+"add it to the current Queue<br> and process it later."
+msgstr ""
+"\n"
+"            \n"
+"            \n"
+"        "
+
+#: aboutDialog#1
+msgid "About Shaman"
+msgstr "Περί Shaman"
+
+#: aboutDialog#2
+msgid "About"
+msgstr "Περί"
+
+#. (obsolete)
+#: aboutDialog#3
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">A libalpm frontend in Qt</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">License: GPLv2+</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Dario Freddi "
+"&lt;drf54321@yahoo.it&gt;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Lukas Appelhans "
+"&lt;l.appelhans@gmx.de&gt;</p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Ένα frontent του libalpm γραμμένο σε Qt</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Άδεια: GPLv2+</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Dario Freddi "
+"&lt;drf54321@yahoo.it&gt;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Lukas Appelhans "
+"&lt;l.appelhans@gmx.de&gt;</p></body></html>"
+
+#: aboutDialog#4
+msgid "Authors"
+msgstr "Δημιουργοί"
+
+#: aboutDialog#5
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Dario Freddi</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Developer</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Lukas Appelhans</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Developer</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Dario Freddi</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Ανάπτυξη</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Lukas Appelhans</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Ανάπτυξη</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p></body></html>"
+
+#: aboutDialog#6
+msgid "Thanks To"
+msgstr "Ευχαριστίες στους"
+
+#. (obsolete)
+#: aboutDialog#7
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:9pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><span "
+"style=\" font-size:14pt; font-weight:600;\">Shaman 1.0 Alpha (revision "
+"336)</span></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:9pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><span "
+"style=\" font-size:14pt; font-weight:600;\">Shaman 1.0 Alpha (revision "
+"336)</span></p></body></html>"
+
+#. (obsolete)
+#: aboutDialog#8
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:9pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Sans Serif'; font-size:10pt;\">Shaman has received a lot of help from "
+"a lot of people, and it is also thanks to them if Shaman has seen the "
+"light. If we forgot to add you here, let us know.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt; font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt; font-weight:600;\">Jan Mette</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">German Translation and KDEMod-Developer</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">Johannes "
+"Schriewer</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-"
+"weight:600;\"><span style=\" font-weight:400;\">KDEMod Developer, and also some "
+"help on the code.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt; font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">uzbirglones</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">Brazilian Translator, and gave the name Shaman</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">Martin Sandsmark</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">Our hoster, and maintainer of Trac.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">mutlu_inek</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt; font-weight:600;\"><span style=\" font-weight:400;\">Heavy "
+"tester, thanks!</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">KDEMod Community</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt; font-weight:600;\"><span style=\" font-weight:400;\">Help, "
+"Testing, Support, everything started from here.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">FenDanT</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">French Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">XanK</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">Spanish Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">augegr</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">Greek Translator</p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:9pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Sans Serif'; font-size:10pt;\">Το Shaman έχει δεχτεί βοήθεια από "
+"πολλά άτομα, και είναι και χάρη σ'αυτούς το ότι το Shaman δημιουργήθηκε. Εάν "
+"ξεχάσαμε να σας προσθέσουμε εδώ, παρακαλώ ειδοποιήστε μας.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt; font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt; font-weight:600;\">Jan Mette</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">Γερμανική μετάφραση καθώς και ανάπτυξη του KDEMod.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">Johannes "
+"Schriewer</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-"
+"weight:600;\"><span style=\" font-weight:400;\">Ανάπτυξη του KDEMod, και "
+"βοήθεια με τον κώδικα.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt; font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">uzbirglones</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">Βραζιλιάνικη μετάφραση, και έδωσε το όνομα Shaman στο "
+"πρόγραμμα.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">Martin Sandsmark</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">Υπεύθυνος φιλοξενίας και συντήρησης του Trac.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">mutlu_inek</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt; font-weight:600;\"><span style=\" font-weight:400;\">Σημαντικός "
+"δοκιμαστής, ευχαριστώ!</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">Η Κοινότητα του "
+"KDEMod</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt; font-weight:600;\"><span style=\" font-weight:400;\">Βοήθεια, "
+"Δοκιμή, Υποστήριξη, τα πάντα ξεκίνησαν από εδώ.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">FenDanT</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">Γαλλική Μετάφραση</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">XanK</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">Ισπανική Μετάφραση</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">augegr</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">Ελληνική Μετάφραση</p></body></html>"
+
+#. (obsolete)
+#: aboutDialog#9
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:9pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><span "
+"style=\" font-size:14pt; font-weight:600;\">Shaman 1.0 Alpha (revision "
+"450)</span></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:9pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><span "
+"style=\" font-size:14pt; font-weight:600;\">Shaman 1.0 Alpha (revision "
+"450)</span></p></body></html> "
+
+#. (obsolete)
+#: aboutDialog#10
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:9pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Sans Serif'; font-size:10pt;\">Shaman has received a lot of help from "
+"a lot of people, and it is also thanks to them if Shaman has seen the "
+"light. If we forgot to add you here, let us know.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt; font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt; font-weight:600;\">Jan Mette</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">German Translation and KDEMod-Developer</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">Johannes "
+"Schriewer</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-"
+"weight:600;\"><span style=\" font-weight:400;\">KDEMod Developer, and also some "
+"help on the code.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt; font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">Rodrigo Mazak</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">Brazilian Translator, and gave the name Shaman</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">Martin Sandsmark</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">Our hoster, and maintainer of Trac.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">Till Luge</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt; font-weight:600;\"><span style=\" font-weight:400;\">Heavy "
+"tester, thanks!</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">KDEMod Community</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt; font-weight:600;\"><span style=\" font-weight:400;\">Help, "
+"Testing, Support, everything started from here.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">Jacques Disner</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">French Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">XanK</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">Spanish Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">Giannis Antoniou</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">Greek Translator</p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:9pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Sans Serif'; font-size:10pt;\">Το Shaman δέχτηκε μεγάλη βοήθεια από "
+"πολλούς ανθρώπους, και είναι και χάρη σ'αυτούς το ότι το Shaman "
+"δημιουργήθηκε. Εάν ξεχάσαμε να σας προσθέσουμε εδώ, παρακαλούμε ειδοποιήστε "
+"μας.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt; font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt; font-weight:600;\">Jan Mette</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">Γερνανική Μετάφραση και ανάπτυξη του KDEMod</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">Johannes "
+"Schriewer</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-"
+"weight:600;\"><span style=\" font-weight:400;\">Ανάπτυξη KDEMod, καθώς επίσης "
+"και συνεισφορά κώδικα.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt; font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">Rodrigo Mazak</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">Βραζιλιάνικη Μετάφραση, επίσης έδωσε το όνομα Shaman</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">Martin Sandsmark</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">Υπεύθυνος φιλοξενίας καθώς επίσης και συντηρητής του "
+"trac.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">Till Luge</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt; font-weight:600;\"><span style=\" font-weight:400;\">Μεγάλη "
+"βοήθεια στις δοκιμές, ευχαριστούμε!</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">Η Κοινότητα του "
+"KDEMod</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt; font-weight:600;\"><span style=\" font-weight:400;\">Βοήθεια, "
+"δοκιμές, υποστήριξη, τα πάντα ξεκίνησαν εδώ.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">Jacques Disner</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">Γαλλική Μετάφραση</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">XanK</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">Ισπανική Μετάφραση</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">Giannis Antoniou</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">Ελληνική Μετάφραση</p></body></html>"
+
+#. (obsolete)
+#: aboutDialog#11
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Shaman 1.0 Beta (revision 651)</span></p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Shaman 1.0 Beta (revision 651)</span></p></body></html>"
+
+#. (obsolete)
+#: aboutDialog#12
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span "
+"style=\" font-size:10pt;\">Shaman has received a lot of help from a lot of "
+"people, and it is also thanks to them if Shaman has seen the light. If we "
+"forgot to add you here, let us know.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Names are in alphabetical "
+"order, because even the smallest contribution has been important to us.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\">The KDEMod "
+"Community</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Help, Testing, Support, everything started from "
+"here. If there was no KDEMod, probably</span> <span style=\" font-"
+"weight:400;\">there would be no Shaman</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Giannis Antoniou</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Greek Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Carlos Berroteran</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Spanish Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Jacques Disner</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">French Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Georg Grabler</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Author of the Proxy patch, some help on the code "
+"and more.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Michael Knights</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Artwork creator, his icon "
+"proposal lies now in Arxin, but his splashscreen is in here ;)</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Till Luge</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Heavy tester, thanks!</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Rodrigo Mazak</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Brazilian Translator, and "
+"gave the name Shaman</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\">Jan "
+"Mette</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">German Translation and "
+"KDEMod-Developer, also the creator of the Icon</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Atilla Ontas</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Turkish Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Martin Sandsmark</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Our hoster, and maintainer "
+"of Trac.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Johannes Schriewer</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">KDEMod Developer, and also some help on the "
+"code.</span></p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span "
+"style=\" font-size:10pt;\">Το Shaman δέχτηκε μεγάλη βοήθεια από πολλούς "
+"ανθρώπους και είναι και χάρη σ'αυτούς το ότι είδε το φως. Εάν ξεχάσαμε να "
+"σας προσθέσουμε εδώ, παρακαλώ ειδοποιήστε μας.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Τα ονόματα είναι με "
+"αλφαβητική σειρά, γιατί ακόμη και η μικρότερη συνεισφορά είναι σημαντική για "
+"εμάς.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\">Η "
+"Κοινότητα του KDEMod</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Βοήθεια, δοκιμές, υποστήριξη, τα πάντα ξεκίνησαν "
+"εδώ. Εάν δεν υπήρχε το KDEMod, πιθανότατα</span> <span style=\" font-"
+"weight:400;\">δεν θα υπήρχε και το Shaman</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Giannis Antoniou</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Ελληνική Μετάφραση</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Carlos Berroteran</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Ισπανική Μετάφραση</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Jacques Disner</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Γαλλική Μετάφραση</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Georg Grabler</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Έγραψε το patch για το Proxy, βοήθεια με τον "
+"κώδικα και άλλα.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Michael Knights</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Δημιουργός γραφικών, η "
+"πρότασή του για το εικονίδιο βρίσκεται τώρα στο Arxin, αλλά η εικόνα "
+"εκκίνησης είναι εδώ ;)</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Till Luge</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Πολλές δοκιμές, ευχαριστώ!</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Rodrigo Mazak</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Βραζιλιάνικη Μετάφραση, "
+"επίσης έδωσε το όνομα Shaman</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\">Jan "
+"Mette</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Γερμανική Μετάφραση,  "
+"προγραμματιστής του KDEMod και δημιουργός του εικονιδίου</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Atilla Ontas</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Τούρκικη Μετάφραση</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Martin Sandsmark</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Υπεύθυνος hosting και "
+"συντήρησης του  Trac.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Johannes Schriewer</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Προγραμματιστής του KDEMod και βοήθεια με τον "
+"κώδικα.</span></p></body></html>"
+
+#: aboutDialog#13
+msgid "Visit &Website..."
+msgstr ""
+
+#. (obsolete)
+#: aboutDialog#14
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Shaman 1.0 Beta (revision 721)</span></p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Shaman 1.0 Beta (revision 651)</span></p></body></html> {3C?} "
+"{4.0/?} {3.?} {40/?} {1\"?} {10p?} {400;?} {0p?} {0p?} {0p?} {0p?} {0;?} "
+"{0p?} {600;?} {1.0 ?} {721)?}"
+
+#: aboutDialog#15
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span "
+"style=\" font-size:10pt;\">Shaman has received a lot of help from a lot of "
+"people, and it is also thanks to them if Shaman has seen the light. If we "
+"forgot to add you here, let us know.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Names are in alphabetical "
+"order, because even the smallest contribution has been important to us.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\">The KDEmod "
+"Community</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Help, Testing, Support, everything started from "
+"here. If there was no KDEmod, probably</span> <span style=\" font-"
+"weight:400;\">there would be no Shaman</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Giannis Antoniou</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Greek Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Carlos Berroteran</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Spanish Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Sander De Voogdt</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Dutch Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Jacques Disner</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">French Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Jan Dupal</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Czech Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Stefano Giro</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Testing and Suggestions</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Georg Grabler</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Author of the Proxy patch, some help on the code "
+"and more.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Michael Knights</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Artwork creator, his icon "
+"proposal lies now in Arxin, but his splashscreen is in here ;)</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Till Luge</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Heavy tester, thanks!</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Rodrigo Mazak</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Brazilian Translator, and "
+"gave the name Shaman</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\">Jan "
+"Mette</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">German Translation and "
+"KDEmod Developer, also the creator of the Icon</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Atilla Ontas</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Turkish Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Martin Sandsmark</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Our hoster, and maintainer "
+"of Trac.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Johannes Schriewer</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">KDEmod Developer, and also some help on the "
+"code.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Xiang Yixiang</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Chinese Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Anton Gritsay</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Russian Translator and "
+"Patches related to Translations</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Bartek Iwaniec</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Polish Translator</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Marko Doda</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Macedonian Translator</span></p></body></html>"
+msgstr ""
+
+#: authDialog#1
+msgid "Root Password Required"
+msgstr "Απαιτείτε ο κωδικός του root"
+
+#: authDialog#2
+msgid ""
+"Shaman needs root privileges to perform this action.\n"
+"Please enter in the field below the root password to continue."
+msgstr ""
+"Το Shaman χρειάζεται δικαιώματα root για να συνεχίσει.\n"
+"Παρακαλώ εισάγετε τον κωδικό του root για να συνεχίσετε."
+
+#: authDialog#3
+msgid "Never ask for this anymore"
+msgstr "Να μην ξαναγίνει ερώτηση γι'αυτό"
+
+#: authDialog#4
+msgctxt "authDialog#4"
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+#: authDialog#5
+msgctxt "authDialog#5"
+msgid "Ok"
+msgstr "Ok"
+
+#: authDialog#6
+msgid "Backspace"
+msgstr "Backspace"
+
+#: authDialog#7
+msgid "Return"
+msgstr "Return"
+
+#: buildingDialog#1
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:10pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Building Packages...</span></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:10pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Χτίσιμο Πακέτων...</span></p></body></html>"
+
+#: buildingDialog#2
+msgctxt "buildingDialog#2"
+msgid "Abort"
+msgstr "Ακύρωση"
+
+#: buildingDialog#3
+msgid "Reduce To Tray"
+msgstr "Κλείσιμο στο Tray"
+
+#: buildingDialog#4
+msgid "Shaman - Building Packages"
+msgstr "Shaman - Χτίσιμο Πακέτων"
+
+#: dbUpdateDialog#1
+msgctxt "dbUpdateDialog#1"
+msgid "Database Update"
+msgstr "Ανανέωση Βάσης Δεδομένων"
+
+#: dbUpdateDialog#2
+msgid "Update Database.."
+msgstr "Ανανέωση Βάσης Δεδομένων.."
+
+#: editPBDialog#1
+msgid "Editing PKGBUILD"
+msgstr "Επεξεργασία του PKGBUILD"
+
+#: editPBDialog#2
+msgid "Editing PKGBUILD of:"
+msgstr ""
+"Επεξεργασία του PKGBUILD\n"
+"του πακέτου:"
+
+#: editPBDialog#3
+msgid "Save"
+msgstr "Αποθήκευση"
+
+#: editPBDialog#4
+msgid "Undo"
+msgstr "Αναίρεση"
+
+#: editPBDialog#5
+msgid "Redo"
+msgstr "Επανάληψη"
+
+#: editPBDialog#6
+msgctxt "editPBDialog#6"
+msgid "Ok"
+msgstr "Ok"
+
+#: editPBDialog#7
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Edit PKGBUILD</span></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Επεξεργασία του  PKGBUILD</span></p></body></html>"
+
+#: logViewer#1
+msgid "Shaman - Log Viewer"
+msgstr "Shaman - Προβολή Log"
+
+#: logViewer#2
+msgid "Show Only Logs From"
+msgstr "Εμφάνιση Logs μόνο από"
+
+#: logViewer#3
+msgid "Show Only Logs Until"
+msgstr "Εμφάνιση Logs μόνο μέχρι"
+
+#: logViewer#4
+msgid "Filter"
+msgstr "Φίλτρο"
+
+#: logViewer#5
+msgid "Refresh View"
+msgstr "Ανανέωση Προβολής"
+
+#. (obsolete)
+#: logViewer#6
+msgctxt "logViewer#6"
+msgid "Close"
+msgstr "Κλείσιμο"
+
+#: logViewer#7
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Liberation Sans'; font-size:9pt;\"></p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Liberation Sans'; font-size:9pt;\"></p></body></html>"
+
+# close the dialog
+#: logViewer#8
+msgctxt "logViewer#8"
+msgid "Close"
+msgstr "Κλείσιμο"
+
+#: logViewer#9
+msgid "dd/MM/yyyy"
+msgstr ""
+
+#: newsDialog#1
+msgid "Arch Linux News"
+msgstr "Νέα του Arch Linux"
+
+#: newsDialog#2
+msgid "Link"
+msgstr "Σύνδεσμος"
+
+#: newsDialog#3
+msgid "status"
+msgstr "κατάσταση"
+
+#: newsDialog#4
+msgctxt "newsDialog#4"
+msgid "Mark as Read"
+msgstr "Μαρκάρισμα ως Διαβασμένο"
+
+#: newsDialog#5
+msgid "Open in Browser"
+msgstr "Άνοιγμα στον Browser"
+
+#: newsDialog#6
+msgid "Refresh"
+msgstr "Ανανέωση"
+
+#. (obsolete)
+#: newsDialog#7
+msgctxt "newsDialog#7"
+msgid "Close"
+msgstr "Κλείσιμο"
+
+#: newsDialog#8
+msgid "News-Title"
+msgstr "Νέα-Τίτλος"
+
+# close the dialog
+#: newsDialog#9
+msgctxt "newsDialog#9"
+msgid "Close"
+msgstr "Κλείσιμο"
+
+#: pkgProperties#1
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
+"size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Package Information</span></p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
+"size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Πληροφορίες Πακέτου</span></p></body></html>"
+
+#: pkgProperties#2
+msgctxt "pkgProperties#2"
+msgid "Package Information"
+msgstr "Πληροφορίες πακέτου"
+
+#: pkgProperties#3
+msgid "Installed:"
+msgstr "Εγκατεστημένα:"
+
+#: pkgProperties#4
+msgid "Description:"
+msgstr "Περιγραφή:"
+
+#: pkgProperties#5
+msgid "Upgradeable"
+msgstr "Αναβαθμίσιμα:"
+
+#: pkgProperties#6
+msgid "Build Date:"
+msgstr "Ημ/νία χτισίματος:"
+
+#: pkgProperties#7
+msgid "Provides:"
+msgstr "Παρέχει:"
+
+#: pkgProperties#8
+msgid "Install Date:"
+msgstr "Ημ/νία εγκατάστασης:"
+
+#: pkgProperties#9
+msgid "Packager:"
+msgstr "Υπεύθυνος:"
+
+#: pkgProperties#10
+msgid "Size:"
+msgstr "Μέγεθος:"
+
+#: pkgProperties#11
+msgid "Has a Scriptlet"
+msgstr "Έχει Scriptlet"
+
+#: pkgProperties#12
+msgid "Version:"
+msgstr "Έκδοση:"
+
+#: pkgProperties#13
+msgid "Changelog"
+msgstr "Changelog"
+
+#: pkgProperties#14
+msgctxt "pkgProperties#14"
+msgid "Files"
+msgstr "Αρχεία"
+
+#: pkgProperties#15
+msgctxt "pkgProperties#15"
+msgid "1"
+msgstr "1"
+
+#: pkgProperties#16
+msgctxt "pkgProperties#16"
+msgid "Dependencies"
+msgstr "Εξαρτήσεις"
+
+#: pkgProperties#17
+msgid "Depends on"
+msgstr "Εξαρτάται απ'το"
+
+#: pkgProperties#18
+msgid "Is Required by"
+msgstr "Χρειάζεται απ'το"
+
+#: pkgProperties#19
+msgid "Actions Performed"
+msgstr "Ενέργειες που Εκτελέστηκαν"
+
+#: pkgProperties#20
+msgctxt "pkgProperties#20"
+msgid "Ok"
+msgstr "Ok"
+
+#: reviewBuildingDialog#1
+msgid "Review Building Queue"
+msgstr "Επισκόπιση Ουράς Χτισίματος"
+
+#: reviewBuildingDialog#2
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:10pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans "
+"Serif';\"><span style=\" font-weight:600;\">Build Queue From "
+"Source</span></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:10pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans "
+"Serif';\"><span style=\" font-weight:600;\">Χτίσιμο Ουράς από την "
+"Πηγή</span></p></body></html>"
+
+#: reviewBuildingDialog#3
+msgid "Process All Dependencies from Binary First (advised)"
+msgstr ""
+"Επεξεργασία όλων των Εξαρτήσεων από έτοιμα\n"
+"πακέτα πρώτα (προτείνεται)"
+
+#: reviewBuildingDialog#4
+msgid "This is useful if you want to review compiler's output"
+msgstr "Αυτό είναι χρήσιμο για επισκόπιση των μηνυμάτων του compiler"
+
+#: reviewBuildingDialog#5
+msgctxt "reviewBuildingDialog#5"
+msgid "Turn off PC when Queue is done"
+msgstr "Κλείσιμο του Η/Υ όταν τελειώσει η Ουρά"
+
+#: reviewBuildingDialog#6
+msgctxt "reviewBuildingDialog#6"
+msgid "Show packages..."
+msgstr "Εμφάνιση πακέτων..."
+
+#: reviewBuildingDialog#7
+msgctxt "reviewBuildingDialog#7"
+msgid "Packages In Queue"
+msgstr "Πακέτα στην Ουρά"
+
+#: reviewBuildingDialog#8
+msgctxt "reviewBuildingDialog#8"
+msgid "Abort"
+msgstr "Ακύρωση"
+
+#: reviewBuildingDialog#9
+msgid "Process From Binary"
+msgstr "Επεξεργασία από Έτοιμα πακέτα"
+
+#: reviewBuildingDialog#10
+msgid "Review PKGBUILDs"
+msgstr "Επισκόπιση των PKGBUILDs"
+
+#: reviewBuildingDialog#11
+msgid "Process From Source"
+msgstr "Επεξεργασία από την Πηγή"
+
+#: reviewBuildingDialog#12
+msgid "Do not install immediately when building is finished"
+msgstr "Να μην γίνει εγκατάσταση αμέσως μετά το χτίσιμο"
+
+#: transactionDialog#1
+msgid "Processing Queue..."
+msgstr "Επεξεργασία Ουράς..."
+
+#: transactionDialog#2
+msgid "Check transaction validity"
+msgstr "Έλεγχος Εγκυρότητας Συναλλαγής"
+
+#: transactionDialog#3
+msgid "Download Packages"
+msgstr "Κατέβασμα Πακέτων"
+
+#: transactionDialog#4
+msgid "Process queue"
+msgstr "Επεξεργασία Ουράς"
+
+#: transactionDialog#5
+msgid "Cleanup"
+msgstr "Καθαρισμός"
+
+#: transactionDialog#6
+msgctxt "transactionDialog#6"
+msgid "More Details..."
+msgstr "Περισσότερες λεπτομέρειες..."
+
+#: transactionDialog#7
+msgctxt "transactionDialog#7"
+msgid "Abort"
+msgstr "Ακύρωση"
+
+#: transactionDialog#8
+msgctxt "transactionDialog#8"
+msgid "Please Wait..."
+msgstr "Παρακαλώ Περιμένετε..."
+
+#: transactionDialog#9
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Process Queue</span></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Επεξεργασία Ουράς</span></p></body></html>"
+
+#: upgradeDialog#1
+msgctxt "upgradeDialog#1"
+msgid "System Upgrade"
+msgstr "Αναβάθμιση Συστήματος"
+
+#: upgradeDialog#2
+msgid "Remember my choice"
+msgstr "Αποθήκευση της επιλογής μου"
+
+#: upgradeDialog#3
+msgctxt "upgradeDialog#3"
+msgid "Abort"
+msgstr "Ακύρωση"
+
+#: upgradeDialog#4
+msgid "Add to Queue"
+msgstr "Προσθήκη στην Ουρά"
+
+#: upgradeDialog#5
+msgid "Upgrade Now"
+msgstr "Αναβάθμιση Τώρα"
+
+#: upgradeDialog#6
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">System-Upgrade</span></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Αναβάθμιση Συστήματος</span></p></body></html>"
+
+#: upgradeDialog#7
+msgid "Packages to Upgrade"
+msgstr "Πακέτα προς Αναβάθμιση"
+
+#: upgradeDialog#8
+msgctxt "upgradeDialog#8"
+msgid "Show packages..."
+msgstr "Εμφάνιση πακέτων..."
+
+#: upgradeDialog#9
+msgctxt "upgradeDialog#9"
+msgid "Force Queue Processing"
+msgstr ""

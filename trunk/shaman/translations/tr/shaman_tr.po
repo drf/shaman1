@@ -1,0 +1,3871 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-11-24 21:55+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 1.2.0\n"
+
+#. (obsolete)
+#: #1
+msgctxt "#1"
+msgid "Please wait, fetching items..."
+msgstr "Lütfen bekleyin, getiriliyor..."
+
+#. (obsolete)
+#: AlpmHandler#1
+msgid ": requires "
+msgstr ": gerektirir"
+
+#. (obsolete)
+#: AlpmHandler#2
+msgid ": conflicts with "
+msgstr ": çakışır"
+
+#. (obsolete)
+#: AlpmHandler#3
+msgid "Alpm did not give further details."
+msgstr "Alpm daha fazla ayrıntı vermedi."
+
+#. (obsolete)
+#: AlpmHandler#4
+msgid "%1 exists in both '%2' and '%3'"
+msgstr "%1 hem '%2' hem de '%3' içinde bulunuyor"
+
+#. (obsolete)
+#: AlpmHandler#5
+msgid ": %1 exists in filesystem"
+msgstr ": %1 dosya sisteminde mevcut"
+
+#: BuildingDialog#1
+msgctxt "BuildingDialog#1"
+msgid "Error"
+msgstr "Hata"
+
+#: BuildingDialog#2
+msgid ""
+"Would you like to abort building?.\n"
+"All Process will be lost."
+msgstr ""
+"Derlemeyi iptal etmek ister msiniz?.\n"
+"Tüm işlem kaybedilecek."
+
+#: BuildingDialog#3
+msgid "<br><br><b>Building Process Aborted by the User. Building Failed.</b>"
+msgstr ""
+"<br><br><b>Derleme işlemi kullanıcı tarafından iptal edildi.Derleme "
+"başarısız.</b>"
+
+#: BuildingDialog#4
+msgid "Updating ABS Tree..."
+msgstr "ABS Ağacı güncelleniyor..."
+
+#: BuildingDialog#5
+msgid "<b>Starting ABS Tree Update...</b><br><br>"
+msgstr "<br>ABS Ağacı güncellemesi başlıyor...</b><br><br>"
+
+#: BuildingDialog#6
+msgid "<br><br><b>ABS Tree Was Successfully Updated!</b>"
+msgstr "<br><br><br>ABS Ağacı Başarıyla Güncellendi!</br>"
+
+#: BuildingDialog#7
+msgid "ABS Update"
+msgstr "ABS Güncellemesi"
+
+#: BuildingDialog#8
+msgid "Your ABS Tree was updated!"
+msgstr "ABS Ağacınız Güncellendi!"
+
+#: BuildingDialog#9
+msgid "<b>Building %1 failed!!</b><br><br>"
+msgstr "<br>%1 derlemesi başarısız!!</br><br><br>"
+
+#: BuildingDialog#10
+msgid "<b>%1 was built successfully!!</b><br><br>"
+msgstr "<b>%1 başarıyla derlendi!!</b><b><b>"
+
+#: BuildingDialog#11
+msgid "Processing Package %1 of %2..."
+msgstr "Paket %2 nin %1'i işleniyor..."
+
+#: BuildingDialog#12
+msgid "Building %1..."
+msgstr "%1 Derleniyor..."
+
+#: BuildingDialog#13
+msgid "<b>Could not set up the environment correctly for %1!!</b><br><br>"
+msgstr "<b>%1 için yapısallıklar doğru kurulamıyor!!</b><b><b>"
+
+#: BuildingDialog#14
+msgid "<b>Building %1...</b><br><br>"
+msgstr "<b>%1 derleniyor...</b><b><b>"
+
+#: BuildingDialog#15
+msgid "<b>Building operation has started.</b><br><br>"
+msgstr "<b>Derleme işlemi başladı.</b><b><b>"
+
+#: BuildingDialog#16
+msgid "Could not update the ABS Tree!"
+msgstr "ABS Ağacı güncellenemiyor!"
+
+#: BuildingHandler#1
+msgid ""
+"You need to have ABS installed to use Shaman's\n"
+"building feature. Do you want to install it now?"
+msgstr ""
+"Shaman'ın derleme özelliğini kullanabilmek için\n"
+"sisteminizde ABS yüklü olmalı.Yüklensin mi?"
+
+#: BuildingHandler#2
+msgctxt "BuildingHandler#2"
+msgid "Error"
+msgstr "Hata"
+
+#: BuildingHandler#3
+msgid ""
+"You can not remove packages when processing\n"
+"your queue from Source"
+msgstr "Kaynak sıra işlenirken paket kaldıramazsınız"
+
+#: BuildingHandler#4
+msgid ""
+"Some of your packages do not belong to Arch\n"
+"Linux's official repository. Shaman is able to\n"
+"build packages from official sources only."
+msgstr ""
+"Bazı paketleriniz Arch Linux'un resmi depolarına ait\n"
+"değil. Shaman sadece resmi kaynaktan gelen paketleri\n"
+"derleyebilir."
+
+#. (obsolete)
+#: BuildingHandler#5
+msgid ""
+"You are about to install <b>%1 package</b> from source. Building from "
+"source<br>can give some advantages, however is very slow.<br>If you are not "
+"sure about that, you would probably prefer to process<br>your queue from "
+"binary files. Before you continue, you are advised to<br>review your "
+"configuration to improve your building performance."
+msgstr ""
+"<b>%1 paketini</b> kaynaktan yüklemek üzeresiniz. Kaynaktan<b>derlemek bazı "
+"artılar getirebilir, ancak çok yavaştır.<b>Bunun hakkında emin değilseniz, "
+"ikili dosyalardan işleminizi gerçekleştirmeniz<b>en iyisi olacaktır. Devam "
+"etmeden önce,<b> derleme verimliliğini arttırmak için yapılandırmanızı "
+"gözden geçirmeniz önerilir."
+
+#. (obsolete)
+#: BuildingHandler#6
+msgid ""
+"You are about to install <b>%1 packages</b> from source. Building from "
+"source<br>can give some advantages, however is very slow.<br>If you are not "
+"sure about that, you would probably prefer to process<br>your queue from "
+"binary files. Before you continue, you are advised to<br>review your "
+"configuration to improve your building performance."
+msgstr ""
+"<b>%1 paketlerini</b> kaynaktan yüklemek üzeresiniz. Kaynaktan<b>derlemek "
+"bazı artılar getirebilir, ancak çok yavaştır.<b>Bunun hakkında emin "
+"değilseniz, ikili dosyalardan işleminizi gerçekleştirmeniz<b>en iyisi "
+"olacaktır. Devam etmeden önce,<b> derleme verimliliğini arttırmak için "
+"yapılandırmanızı gözden geçirmeniz önerilir."
+
+#: BuildingHandler#7
+msgctxt "BuildingHandler#7"
+msgid "To be Installed"
+msgstr "Yüklenecek"
+
+#: BuildingHandler#8
+msgctxt "BuildingHandler#8"
+msgid "To be Upgraded"
+msgstr "Yükseltilecek"
+
+#: BuildingHandler#9
+msgid "Package Building"
+msgstr "Paket Derleme"
+
+#: BuildingHandler#10
+msgid "Your Packages failed to build!"
+msgstr "Paketinizin derlenmesi başarısız!"
+
+#: BuildingHandler#11
+msgid ""
+"Your packages Failed to Build.\n"
+"Look at the output for more details."
+msgstr ""
+"Paketlerinizin derlenmesi başarısız oldu.\n"
+"Ayrıntılar için çıktılara göz atın."
+
+#: BuildingHandler#12
+msgctxt "BuildingHandler#12"
+msgid "Close"
+msgstr "Kapat"
+
+#: BuildingHandler#13
+msgid "Building Packages Failed!!"
+msgstr "Paketlerin Derlenmesi Başarısız!!"
+
+#: BuildingHandler#14
+msgid ""
+"Some packages failed to build.\n"
+"Do you want to proceed anyway?"
+msgstr ""
+"Bazı paketlerin derlenmesi başarısız oldu.\n"
+"Yine de devam etmek istiyor musunuz?"
+
+#: BuildingHandler#15
+msgid "Install Built Packages"
+msgstr "Derlenmiş Paketleri Yükle"
+
+#: BuildingHandler#16
+msgid "Close Without Installing"
+msgstr "Yüklemeden Kapat"
+
+#: BuildingHandler#17
+msgid "Packages Built Successfully!"
+msgstr "Paketler Başarıyla Derlendi!"
+
+#: BuildingHandler#18
+msgid ""
+"Your Packages have been built successfully, and are ready to be installed"
+msgstr "Paketlerininz başarıyla derlendi ve yüklenmeye hazır"
+
+#: BuildingHandler#19
+msgid ""
+"You are about to install <b>%n package(s)</b> from source. Building from "
+"source<br>can give some advantages, however is very slow.<br>If you are not "
+"sure about that, you would probably prefer to process<br>your queue from "
+"binary files. Before you continue, you are advised to<br>review your "
+"configuration to improve your building performance."
+msgstr ""
+"\n"
+"            \n"
+"            \n"
+"        "
+
+#. (obsolete)
+#: CallBacks#1
+msgid ""
+"%1 requires installing %2 from IgnorePkg/IgnoreGroup.\n"
+" Install anyway?"
+msgstr ""
+"%1, IgnorePkg/IgnoreGroup içinden %2'nin yüklenmesini gerektiriyor.\n"
+" Yine de yüklensin mi?"
+
+#. (obsolete)
+#: CallBacks#2
+msgid ""
+"%1 is in IgnorePkg/IgnoreGroup.\n"
+" Install anyway?"
+msgstr ""
+"%1, IgnorePkg/IgnoreGroup içinde yer alıyor.\n"
+" Yine de yüklensin mi?"
+
+#. (obsolete)
+#: CallBacks#3
+msgid ""
+"%1 is designated as a HoldPkg.\n"
+" Remove anyway?"
+msgstr ""
+"%1, HoldPkg olarak ayarlanmış.\n"
+" Yine de kaldırılsın mı?"
+
+#. (obsolete)
+#: CallBacks#4
+msgid "Replace %1 with %2/%3?"
+msgstr "%1, %2/%3 ile değiştirilsin mi?"
+
+#. (obsolete)
+#: CallBacks#5
+msgid ""
+"%1 conflicts with %2.\n"
+"Remove %3?"
+msgstr ""
+"%1, %2 ile çakışıyor.\n"
+"%3 kaldırılsın mı?"
+
+#. (obsolete)
+#: CallBacks#6
+msgid ""
+"%1-%2: local version is newer.\n"
+"Upgrade anyway?"
+msgstr ""
+"%1-%2: yerel sürüm daha yeni.\n"
+"Yine de güncellensin mi?"
+
+#. (obsolete)
+#: CallBacks#7
+msgid ""
+"File %1 is corrupted.\n"
+"Do you want to delete it?"
+msgstr ""
+"%1 dosyası bozuk.\n"
+"Silmek ister msiniz?"
+
+#: ConfigDialog#1
+msgid "General"
+msgstr "Genel"
+
+#: ConfigDialog#2
+msgctxt "ConfigDialog#2"
+msgid "Clean Unused Databases"
+msgstr "Kullanılmayan Veritabanlarını Temizle"
+
+#: ConfigDialog#3
+msgctxt "ConfigDialog#3"
+msgid "Clean Cache"
+msgstr "Cache'yi Temizle"
+
+#: ConfigDialog#4
+msgctxt "ConfigDialog#4"
+msgid "Empty Cache"
+msgstr "Cache'yi Boşalt"
+
+#: ConfigDialog#5
+msgctxt "ConfigDialog#5"
+msgid "Optimize Pacman Database"
+msgstr "Pacman Veritabanını İyileştir"
+
+#: ConfigDialog#6
+msgctxt "ConfigDialog#6"
+msgid "Clean All Building Environments"
+msgstr "Tüm Derleme Ortamlarını Temizle"
+
+#: ConfigDialog#7
+msgctxt "ConfigDialog#7"
+msgid "Repositories"
+msgstr "Depolar"
+
+#: ConfigDialog#8
+msgid "Pacman"
+msgstr "Pacman"
+
+#: ConfigDialog#9
+msgid "ABS"
+msgstr "ABS"
+
+#: ConfigDialog#10
+msgid "Enter Here the Repository's Name"
+msgstr "Deponun Adını Buraya Yazın"
+
+#: ConfigDialog#11
+msgid "Enter Here the Repository's Server"
+msgstr "Deponun Sunucusunu Buraya Yazın"
+
+#: ConfigDialog#12
+msgctxt "ConfigDialog#12"
+msgid "Cleaning up unused Databases..."
+msgstr "Kullanılmayan Veritabanları temizleniyor..."
+
+#: ConfigDialog#13
+msgctxt "ConfigDialog#13"
+msgid "Cleaning up Cache..."
+msgstr "Cache Temizleniyor..."
+
+#: ConfigDialog#14
+msgctxt "ConfigDialog#14"
+msgid "Deleting Cache..."
+msgstr "Cache Siliniyor..."
+
+#: ConfigDialog#15
+msgctxt "ConfigDialog#15"
+msgid "Optimizing Pacman Database..."
+msgstr "Pacman Veritabanı İyileştiriliyor..."
+
+#: ConfigDialog#16
+msgctxt "ConfigDialog#16"
+msgid "Cleaning up building Environments..."
+msgstr "Derleme Ortamları temizleniyor..."
+
+#: ConfigDialog#17
+msgctxt "ConfigDialog#17"
+msgid "Cleaning up Unused Databases Failed!"
+msgstr "Kullanılmayan Veritabanlarını Silme Başarısız!"
+
+#: ConfigDialog#18
+msgctxt "ConfigDialog#18"
+msgid "Cleaning up Cache Failed!"
+msgstr "Cache Temizleme Başarısız!"
+
+#: ConfigDialog#19
+msgctxt "ConfigDialog#19"
+msgid "Deleting Cache Failed!"
+msgstr "Cache Silme Başarısız!"
+
+#: ConfigDialog#20
+msgctxt "ConfigDialog#20"
+msgid "Could not clean Build Environments!!"
+msgstr "Derleme Ortamları Temizlenemiyor!"
+
+#: ConfigDialog#21
+msgctxt "ConfigDialog#21"
+msgid "Unused Databases Cleaned up successfully!"
+msgstr "Kullanılmayan Veritabanları başarıyla Temizlendi!"
+
+#: ConfigDialog#22
+msgctxt "ConfigDialog#22"
+msgid "Cache Cleaned Up Successfully!"
+msgstr "Cache Başarıyla Temizlendi!"
+
+#: ConfigDialog#23
+msgctxt "ConfigDialog#23"
+msgid "Cache Successfully Deleted!"
+msgstr "Cache Başarıyla Silindi!"
+
+#: ConfigDialog#24
+msgctxt "ConfigDialog#24"
+msgid "Build Environments Successfully Cleaned!"
+msgstr "Derleme Ortamları Başarıyla Temizlendi!"
+
+#: ConfigDialog#25
+msgid "Settings Changed"
+msgstr "Ayarlar Değişti"
+
+#: ConfigDialog#26
+msgid ""
+"Your repositories have changed.\n"
+"Do you want to Update Your Database?"
+msgstr ""
+"Veritabanlarınız değişti.\n"
+"Veritabanını güncellemek ister misiniz?"
+
+#: ConfigDialog#27
+msgid "Add Mirror"
+msgstr "Yansı Ekle"
+
+# Obviously keep the example as it is ;)
+#: ConfigDialog#28
+msgid ""
+"Mirror Format is incorrect. Your mirror should look like this:\n"
+"http://mirror.org/$repo/os/i686"
+msgstr ""
+"Yansı biçimi yanlış.Yansı şöyle olmalı:\n"
+"http://mirror.org/$repo/os/i686"
+
+# mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.
+#: ConfigDialog#29
+msgid ""
+"Your Mirror was successfully added!\n"
+"It is now available in mirrorlist."
+msgstr ""
+"Yansı başarıyla eklendi!\n"
+"Artık mirrorlist için yerini aldı."
+
+#: ConfigDialog#30
+msgctxt "ConfigDialog#30"
+msgid "Pacman Database Optimized Successfully!"
+msgstr "Pacman Veritabanı başarıyla İyileştirildi!"
+
+#: ConfigDialog#31
+msgctxt "ConfigDialog#31"
+msgid "Could not Optimize Pacman Database!"
+msgstr "Pacman Veritabanı iyileştirilemiyor!"
+
+# sync is a command, so it should not be translated
+#: ConfigDialog#32
+msgctxt "ConfigDialog#32"
+msgid "Running sync..."
+msgstr "sync çalıştırılıyor..."
+
+#: ConfigDialog#33
+msgctxt "ConfigDialog#33"
+msgid "Operation Completed Successfully!"
+msgstr "İşlem Başarıyla Tamamlandı!"
+
+# Sync is always the command
+#: ConfigDialog#34
+msgctxt "ConfigDialog#34"
+msgid "Sync was successfully executed!!"
+msgstr "Sync başarıyla çalıştırıldı!!"
+
+# Sync is always the command
+#: ConfigDialog#35
+msgctxt "ConfigDialog#35"
+msgid "Sync could not be executed!"
+msgstr "Sync çalıştırılamıyor!"
+
+# Sync is always the command
+#: ConfigDialog#36
+msgctxt "ConfigDialog#36"
+msgid "Sync could not be executed!!"
+msgstr "Sync çalıştırılamıyor!"
+
+#: ConfigDialog#37
+msgid "Shaman - Configuration"
+msgstr "Shaman - Yapılandırma"
+
+#: ConfigDialog#38
+msgid "Favourite Actions"
+msgstr "Sık Kullanılan Eylemler"
+
+#: ConfigDialog#39
+msgid "When Upgrading System:"
+msgstr "Sistem Yükseltilirken:"
+
+#: ConfigDialog#40
+msgid "Upgrade Immediately"
+msgstr "Derhal Yükselt"
+
+#: ConfigDialog#41
+msgid "Add Upgradeable Packages To Queue"
+msgstr "Yükseltilebilir Paketleri Sıraya Ekle"
+
+#: ConfigDialog#42
+msgid "Ask"
+msgstr "Sor"
+
+#: ConfigDialog#43
+msgid "When Processing Queue"
+msgstr "Sıra İşlenirken"
+
+#: ConfigDialog#44
+msgid "Keep application running in System Tray only"
+msgstr "Yazılımı sadece Sistem Çubuğunda çalıştır"
+
+#: ConfigDialog#45
+msgid "GUI Startup"
+msgstr "ARAYÜZ Başlangıcı"
+
+#: ConfigDialog#46
+msgid "Start in the System Tray"
+msgstr "Sistem Çubuğunda başlat"
+
+#: ConfigDialog#47
+msgid "Show Splashscreen"
+msgstr "Karşılama Ekranı Göster"
+
+#: ConfigDialog#48
+msgid "When Application is in System Tray only"
+msgstr "Yazılım Sadece Sistem Çubuğundayken"
+
+#: ConfigDialog#49
+msgid "Update Database every"
+msgstr "Veritabanını şu kadar sürede bir güncelle"
+
+#: ConfigDialog#50
+msgid "If upgrades are available:"
+msgstr "Yükseltmeler varsa:"
+
+#: ConfigDialog#51
+msgid "Just Notify"
+msgstr "Sadece Uyar"
+
+#: ConfigDialog#52
+msgid "Notify and add them to Queue"
+msgstr "Uyar ve Sıraya ekle"
+
+#: ConfigDialog#53
+msgid "Maintenance"
+msgstr "Bakım"
+
+#: ConfigDialog#54
+msgid "Process Selected"
+msgstr "Seçilen İşlem"
+
+# Waiting for a user action
+#: ConfigDialog#55
+msgid "Waiting"
+msgstr "Kullanıcı Bekleniyor"
+
+#: ConfigDialog#56
+msgid "Checkable Options"
+msgstr "Uygulanabilir Seçenekler"
+
+#: ConfigDialog#57
+msgid "Use Active FTP"
+msgstr "Aktif FTP Kullan"
+
+#: ConfigDialog#58
+msgid "Use Deltas (needs xdelta to be installed)"
+msgstr "Delta Kullan (xdelta'nın yüklü olması gerekir)"
+
+#: ConfigDialog#59
+msgid "Advanced Options"
+msgstr "Gelişmiş Seçenekler"
+
+#: ConfigDialog#60
+msgid "HoldPkgs:"
+msgstr "HoldPkgs:"
+
+#: ConfigDialog#61
+msgid "IgnorePkgs:"
+msgstr "IgnorePkgs:"
+
+#: ConfigDialog#62
+msgid "IgnoreGroups:"
+msgstr "IgnoreGroups:"
+
+#: ConfigDialog#63
+msgid "NoUpgrade:"
+msgstr "NoUpgrade:"
+
+#: ConfigDialog#64
+msgid "NoExtract:"
+msgstr "NoExtract:"
+
+#: ConfigDialog#65
+msgid "XFerCommand: (example: /path/to/command %u) Blank for Default"
+msgstr "XFerCommand: (örnek: /path/to/command %u) Varsayılan için boş bırakın"
+
+#: ConfigDialog#66
+msgid "Arch Linux Official Repositories"
+msgstr "Arch Linux Resmi Depoları"
+
+#. (obsolete)
+#: ConfigDialog#67
+msgid ""
+"Here you can choose what repositories to use between Arch Linux's official "
+"ones.\n"
+"Please note that packages from Unstable and Testing may break your system."
+msgstr ""
+"Arch Linux'un resmi depoları arasından hangilerini kullanacağınızı buradan "
+"seçebilirsiniz.\n"
+"Lütfen Unstable ve Testing depolarının sisteminize zarar verebileceğini "
+"unutmayın."
+
+# Do not translate
+#: ConfigDialog#68
+msgid "Core"
+msgstr ""
+
+# Do not translate
+#: ConfigDialog#69
+msgid "Extra"
+msgstr ""
+
+# Do not translate
+#: ConfigDialog#70
+msgid "Community"
+msgstr ""
+
+# Do not translate
+#: ConfigDialog#71
+msgid "Testing"
+msgstr ""
+
+#: ConfigDialog#72
+msgid "Server"
+msgstr "Sunucu"
+
+#: ConfigDialog#73
+msgid "Mirror:"
+msgstr "Yansı:"
+
+#: ConfigDialog#74
+msgid "KDEMod Repositories"
+msgstr "KDEMod Depoları"
+
+#. (obsolete)
+#: ConfigDialog#75
+msgid ""
+"KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an \n"
+"improved Qt build, compatible with Arch Linux standard Qt's, an improved "
+"theme,\n"
+"and lots of addons, KDEMod is the best way to taste the ease and the power\n"
+"of KDE with the simplicity and the power of Arch."
+msgstr ""
+"KDEMod, KDE'nin gelişmiş bir sürümü olup Arch Linux'a özeldir.Sizlere \n"
+"Arch Linux standar Qt'leri ile uyumlu geliştirilmiş bir Qt yapısı, gelişmiş "
+"bir tema \n"
+"ve bir çok ek özellk sunar. KdeMod, Arch'ın gücü ve basitliği ile KDE'nin "
+"kolaylığını\n"
+"birleştiren yeni bir ortam sunar."
+
+#: ConfigDialog#76
+msgid "KDEMod 3 Repository"
+msgstr "KDEMod 3 Deposu"
+
+#. (obsolete)
+#: ConfigDialog#77
+msgid "KDEMod 4 Repository (Unstable, testers only)"
+msgstr "KDEMod 4 Deposu (Dengesiz, test için)"
+
+#: ConfigDialog#78
+msgid "Third-Party Repositories"
+msgstr "Üçüncü Kısım Depolar"
+
+#. (obsolete)
+#: ConfigDialog#79
+msgid ""
+"You can extend your packages choice by adding other repositories. Third-"
+"Party \n"
+"Repositories act just as normal ones, and will be accessible through both "
+"Shaman\n"
+"and Pacman."
+msgstr ""
+"Paket seçeneklerinizi başka depolar da ekleyerekk genişletebilirsiniz. "
+"Üçüncü\n"
+"Kısım Depoları normal depolar gibi çalışır ve hem Shaman hem de Pacman \n"
+"tarafından kullanılır."
+
+#: ConfigDialog#80
+msgctxt "ConfigDialog#80"
+msgid "Repository"
+msgstr "Depo"
+
+#: ConfigDialog#81
+msgid "Add New Repository"
+msgstr "Yeni Depo Ekle"
+
+#: ConfigDialog#82
+msgid "Edit Repository"
+msgstr "Depoyu Düzenle"
+
+#: ConfigDialog#83
+msgid "Remove Repository"
+msgstr "Depoyu Kaldır"
+
+#: ConfigDialog#84
+msgid "Preferences"
+msgstr "Seçenekler"
+
+#: ConfigDialog#85
+msgid "Process all dependencies and queue from binary first (recommended)"
+msgstr "Bütün bağımlılıkları ve sırayı öncelikle ikililerden işle (önerilen)"
+
+#: ConfigDialog#86
+msgid "Review Building output before installing"
+msgstr "Yüklemeden önce Derleme çıktısını incele"
+
+#: ConfigDialog#87
+msgid "ABS Configuration"
+msgstr "ABS Yapılandırması"
+
+#: ConfigDialog#88
+msgid "Use supfiles that match your current repositories"
+msgstr "Geçerli depolarla eşleşen supdosyaları kullan"
+
+#: ConfigDialog#89
+msgid "Define supfiles manually"
+msgstr "Supdosyalarını elle tanımla"
+
+#: ConfigDialog#90
+msgid "Makepkg Configuration"
+msgstr "Makepkg Yapılandırması"
+
+#: ConfigDialog#91
+msgid "CFlags"
+msgstr "CFlags"
+
+#: ConfigDialog#92
+msgid "CXXFlags"
+msgstr "CXXFlags"
+
+#: ConfigDialog#93
+msgid "BuildEnv"
+msgstr "BuildEnv"
+
+#: ConfigDialog#94
+msgid "Options"
+msgstr "Seçenekler"
+
+#: ConfigDialog#95
+msgid "Doc_Dirs"
+msgstr "Doc_Dirs"
+
+#: ConfigDialog#96
+msgid "Build Environment"
+msgstr "Derleme Ortamı"
+
+#: ConfigDialog#97
+msgid "Building Path"
+msgstr "Derleme Yolu"
+
+#: ConfigDialog#98
+msgid "Remove installed makedepends after build"
+msgstr "Yüklenmiş derleme bağımlılıklarını derleme işleminden sonra kaldır"
+
+#: ConfigDialog#99
+msgid "Clean Build Environment after installation"
+msgstr "Yüklemeden sonra derleme ortamını temizle"
+
+#: ConfigDialog#100
+msgid "Advanced"
+msgstr "Gelişmiş"
+
+#. (obsolete)
+#: ConfigDialog#101
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:9pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Shaman Manteinance.</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Please choose an action "
+"from the Drop-Down Menu.</p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">p, "
+"li { white-space: pre-wrap; }</style></head><body style=\" font-"
+"family:'Liberation Sans'; font-size:9pt; font-weight:400; font-"
+"style:normal;\"><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Shaman "
+"Bakım.</p><p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; "
+"margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Lütfen Menüden bir "
+"Eylem Seçin.</p></body></html>"
+
+# As in "minutes"
+#: ConfigDialog#102
+msgid "min"
+msgstr "dk"
+
+#: ConfigDialog#103
+msgid "Show tray notification Windows"
+msgstr "Sistem Çubuğu Bilgi Pencereleri Göster"
+
+#: ConfigDialog#104
+msgid "Use a proxy-server"
+msgstr "Bir proksi-sunucusu kullan"
+
+#: ConfigDialog#105
+msgid "IP:"
+msgstr "IP:"
+
+#: ConfigDialog#106
+msgid "Port:"
+msgstr "Port:"
+
+#: ConfigDialog#107
+msgid "HTTP Proxy"
+msgstr "HTTP Proksi"
+
+#: ConfigDialog#108
+msgid "FTP Proxy"
+msgstr "FTP Proksi"
+
+#: ConfigDialog#109
+msgid "Use Shaman RSS Capabilities"
+msgstr "Shaman'ın RSS Yeteneklerini Kullan"
+
+#: ConfigDialog#110
+msgid "Update RSS Feed Every"
+msgstr "RSS Beslemesini şu kadar sürede bi güncelle"
+
+#: ConfigDialog#111
+msgid "Notify upon new items"
+msgstr "Yeni haberlerde uyar"
+
+#: ConfigDialog#112
+msgid ""
+"Check if there is an unread news about a package in Queue before processing "
+"it"
+msgstr ""
+"Sıradaki bir paket hakkında, sıra işlenmeden önce, okunmamış bir haber olup "
+"olmadığını denetle"
+
+#: ConfigDialog#113
+msgid "Use SysLog"
+msgstr "SysLog Kullan"
+
+#: ConfigDialog#114
+msgid "Log File:"
+msgstr "Kayıt Dosyası:"
+
+#: ConfigDialog#115
+msgctxt "ConfigDialog#115"
+msgid "Ok"
+msgstr "Tamam"
+
+#: ConfigDialog#116
+msgctxt "ConfigDialog#116"
+msgid "Cancel"
+msgstr "İptal"
+
+#. (obsolete)
+#: ConfigDialog#117
+msgid "KDEMod 3 Testing Repository"
+msgstr "KDEMod 3 Testing Deposu"
+
+#: ConfigDialog#118
+msgid "Interface"
+msgstr "Arayüz"
+
+#: ConfigDialog#119
+msgid "Start Shaman Automatically on X Startup"
+msgstr "Shaman'ı otomatik olarak X başlangıcında çaılştır"
+
+#: ConfigDialog#120
+msgid "Forbid starting Shaman as root"
+msgstr "Shaman'ın kök yetkileriyle çalışmasını yasakla"
+
+#: ConfigDialog#121
+msgid "Saving Configuration"
+msgstr "Yapılandırma Kaydediliyor"
+
+#: ConfigDialog#122
+msgid "Unable to save Pacman configuration!"
+msgstr "Pacman yapılandırması kaydedilemiyor!"
+
+# Obviously keep the example as it is ;)
+#: ConfigDialog#123
+msgid ""
+"Mirror Format is incorrect. Your mirror should look like this:\n"
+"http://mirror.org/$repo/$arch"
+msgstr "Yansı biçimi yanlış.Yansı şöyle olmalı:http://mirror.org/$repo/$arch"
+
+# mirrorlist here means /etc/pacman.d/kdemodmirrorlist, so it should not be translated.
+#: ConfigDialog#124
+msgid ""
+"Your Mirror was successfully added!\n"
+"It is now available in kdemodmirrorlist."
+msgstr "Yansı başarıyla eklendi!Artık kdemodmirrorlist için yerini aldı."
+
+#: ConfigDialog#125
+msgid ""
+"Some of your changes have not been applied,\n"
+"since alpm needs to be released.\n"
+"You need to restart Shaman to make them effective."
+msgstr ""
+"Bazı değşiklikleriniz uygulanamadı.\n"
+"Çünkü alpm'in serbest kalması gerekiyor.\n"
+"Shaman'ı yeniden başlatmanız gerekiyor."
+
+#. (obsolete)
+#: ConfigDialog#126
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
+"size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Liberation "
+"Sans'; font-size:9pt;\">Shaman Manteinance.</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Liberation "
+"Sans'; font-size:9pt;\">Please choose an action from the Drop-Down "
+"Menu.</p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\"><html><head><meta name=\"qrichtext\" content=\"1\" /><style "
+"type=\"text/css\">p, li { white-space: pre-wrap; }</style></head><body style=\" "
+"font-family:'Bitstream Vera Sans'; font-size:10pt; font-weight:400; font-"
+"style:normal;\"><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
+"family:'Liberation Sans'; font-size:9pt;\">Shaman Manteinance.</p><p style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px; font-family:'Liberation Sans'; font-"
+"size:9pt;\">Lütfen Menüden Bir Eylem Seçin.</p></body></html>"
+
+#: ConfigDialog#127
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Liberation "
+"Sans'; font-size:9pt;\">Shaman Manteinance.</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Liberation "
+"Sans'; font-size:9pt;\">Please choose an action from the Drop-Down "
+"Menu.</p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\"><html><head><meta name=\"qrichtext\" content=\"1\" /><style "
+"type=\"text/css\">p, li { white-space: pre-wrap; }</style></head><body style=\" "
+"font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-"
+"style:normal;\"><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
+"family:'Liberation Sans'; font-size:9pt;\">Shaman Bakım.</p><p style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px; font-family:'Liberation Sans'; font-"
+"size:9pt;\">Lütfen menüden bir eylem seçin.</p></body></html>"
+
+#: ConfigDialog#128
+msgid "RSync Server:"
+msgstr "RSync Sunucusu:"
+
+#: ConfigDialog#129
+msgid "Update Database at"
+msgstr "Veritabanını güncelle"
+
+#: ConfigDialog#130
+msgid "Use Animated Tray Icon"
+msgstr "Hareketli sistem çubuğu simgesi kullan"
+
+#: ConfigDialog#131
+msgid "KDEMod 4 Repository"
+msgstr "KDEMod 4 Deposu"
+
+#: ConfigDialog#132
+msgid "KDEMod 4 Extragear Repository"
+msgstr "KDEMod 4 Extragear Deposu"
+
+#: ConfigDialog#133
+msgid "KDEMod 4 Playground Repository"
+msgstr "KDEMod 4 Playground Deposu"
+
+#: ConfigDialog#134
+msgid "KDEMod 4 Testing Repository"
+msgstr "KDEMod 4 Testing Deposu"
+
+#: ConfigDialog#135
+msgid "KDEMod 4 Unstable Repository (Testers only!)"
+msgstr "KDEMod 4 Unstable Deposu (Sadece denemek isteyenler için)"
+
+#: ConfigDialog#136
+msgid ""
+"Here you can choose what repositories to use between Arch Linux's official "
+"ones. Please note that packages from Unstable and Testing may break your "
+"system."
+msgstr ""
+"Burada Arh Linux' un resmi depolarından birini seçebilirsiniz. Lütfen, "
+"Unstable ve Testing depolarından gelen paketlerin sisteminizi bozabileceğini "
+"unutmayın."
+
+#: ConfigDialog#137
+msgid ""
+"KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
+"improved Qt build, compatible with Arch Linux standard Qt's, an improved "
+"theme, and lots of addons, KDEMod is the best way to taste the ease and the "
+"power of KDE with the simplicity and the power of Arch."
+msgstr ""
+"KDEMod, KDE' nin geliştirilmiş bir sürümü olup sadece Arch' a özeldir. Arch "
+"Linux standart Qt paketi ile uyumlu geliştirilmiş bir Qt paketi, gelişmiş "
+"bir tema ve daha fazla eklenti sunar. KDEMod, Arch' ın basitlik ve gücüyle "
+"birlikte KDE' nin güç ve tadını en iyi şekilde deneyimleme yoludur."
+
+#: ConfigDialog#138
+msgid ""
+"You can extend your packages choice by adding other repositories. Third-"
+"Party Repositories act just as normal ones, and will be accessible through "
+"both Shaman and Pacman."
+msgstr ""
+"Paket seçimlerinizi diğer depoları ekleyerek arttırabilirsiniz. Üçüncü-Kişi "
+"Depolarına normal depolar gibi Shaman ve Pacman aracılığıyla ulaşılabilir."
+
+#: ConfigDialog#139
+msgid "Use the following language:"
+msgstr "Şu dili kullan:"
+
+#: ConfigDialog#140
+msgid "Disable Tray Icon"
+msgstr "Sistem tablası simgesini devredışı bırak"
+
+#: EditPBuild#1
+msgid "Saving"
+msgstr "Kaydediliyor"
+
+#: EditPBuild#2
+msgid ""
+"You modified this PKGBUILD.\n"
+"Do you want to save it?"
+msgstr ""
+"Bu PKGBUILD'i değiştirdiniz.\n"
+"Kaydetmek ister misiniz?"
+
+#: LocalPackage#1
+msgid "Install Package from File"
+msgstr "Paketi dosyadan kur"
+
+#: LocalPackage#2
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Bitstream Vera "
+"Sans';\"><span style=\" font-weight:600;\">Local Package "
+"Installation</span></p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\"><html><head><meta name=\"qrichtext\" content=\"1\" /><style "
+"type=\"text/css\">p, li { white-space: pre-wrap; }</style></head><body style=\" "
+"font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-"
+"style:normal;\"><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
+"family:'Bitstream Vera Sans';\"><span style=\" font-weight:600;\">Yerel Paket "
+"Kurulumu</span></p></body></html>"
+
+#: LocalPackage#3
+msgid "Show..."
+msgstr "Göster..."
+
+#: LocalPackage#4
+msgctxt "LocalPackage#4"
+msgid "More Details..."
+msgstr "Daha Fazla Bilgi..."
+
+#: LocalPackage#5
+msgctxt "LocalPackage#5"
+msgid "Cancel"
+msgstr "İptal"
+
+#: LocalPackage#6
+msgid "Install Package"
+msgstr "Paketi Kur"
+
+#: LocalPackageDialog#1
+msgid "Package is not installed"
+msgstr "Paket kurulu değil"
+
+#: LocalPackageDialog#2
+msgid "Version %1 of this package is already installed"
+msgstr "Bu paketin %1 sürümü zaten kurulu"
+
+#: LocalPackageDialog#3
+msgid "All dependencies are satisfied"
+msgstr "Bütün bağımlılıklar sağlandı"
+
+#: LocalPackageDialog#4
+msgid "%n package(s) will be installed as dependencies"
+msgstr ""
+"\n"
+"            \n"
+"            \n"
+"        "
+
+#: MainWindow#1
+msgctxt "MainWindow#1"
+msgid "Name"
+msgstr "Ad"
+
+#: MainWindow#2
+msgid "Description"
+msgstr "Tanım"
+
+#: MainWindow#3
+msgid ""
+"Shaman will keep running in the system tray.\n"
+"To close it, click Quit in the file menu or in the tray icon context menu.\n"
+"While in the System Tray, Shaman will update your Databases\n"
+"at a regular interval and notify you about available upgrades.\n"
+"You can change this behaviour in Settings."
+msgstr ""
+"Shaman sistem çubuğunda çalışmaya devam edecek.\n"
+"Kapatmak için ya dosya menüsünden ya da sistem çubuğu menüsünden\n"
+"Çıkış'ı tıklayın.\n"
+"Sistem çubuğundayken Shaman, düzenli aralıklarla Veritabanlarını günceller\n"
+" ve sizi güncellemeler hakkında bilgilendirir.Bu davranışı ayarlardan "
+"değiştirebilirsiniz."
+
+#. (obsolete)
+#: MainWindow#4
+msgctxt "MainWindow#4"
+msgid "Do not show this Again"
+msgstr "Bunu Tekrar Gösterme"
+
+#: MainWindow#5
+msgid "Shaman - Reducing To Tray"
+msgstr "Shaman - Sistemçubuğuna yerleşiyor"
+
+#: MainWindow#6
+msgctxt "MainWindow#6"
+msgid "Upgrade"
+msgstr "Yükselt"
+
+#: MainWindow#7
+msgctxt "MainWindow#7"
+msgid "Repositories"
+msgstr "Depolar"
+
+#: MainWindow#8
+msgid "All Repositories"
+msgstr "Bütün Depolar"
+
+#: MainWindow#9
+msgid "Local Packages"
+msgstr "Yerel Paketler"
+
+#: MainWindow#10
+msgid "Package Groups"
+msgstr "Paket Grupları"
+
+#: MainWindow#11
+msgid "All Groups"
+msgstr "Bütün Gruplar"
+
+#: MainWindow#12
+msgid "Installed packages"
+msgstr "Yüklü Paketler"
+
+#: MainWindow#13
+msgid "Not installed packages"
+msgstr "Yüklenmemiş Paketler"
+
+#: MainWindow#14
+msgid "Upgradeable packages"
+msgstr "Yükseltilebilir paketler"
+
+#: MainWindow#15
+msgid "Packages in Queue"
+msgstr "Sıradaki Paketler"
+
+#. (obsolete)
+#: MainWindow#16
+msgid "Mark for Reinstallation"
+msgstr "Yeniden Yükleme için İşaretle"
+
+#. (obsolete)
+#: MainWindow#17
+msgid "Mark for Installation"
+msgstr "Yükleme için İşaretle"
+
+#: MainWindow#18
+msgctxt "MainWindow#18"
+msgid "Install"
+msgstr "Yükle"
+
+#: MainWindow#19
+msgctxt "MainWindow#19"
+msgid "Uninstall"
+msgstr "Kaldır"
+
+#: MainWindow#20
+msgctxt "MainWindow#20"
+msgid "Complete Uninstall"
+msgstr "Tam Kaldırma"
+
+#: MainWindow#21
+msgid "Status: "
+msgstr "Durum: "
+
+#: MainWindow#22
+msgid "Installed"
+msgstr "Yüklü"
+
+#: MainWindow#23
+msgid "Not installed"
+msgstr "Yüklenmemiş"
+
+#: MainWindow#24
+msgid "Local Version: "
+msgstr "Yerel Sürüm: "
+
+#: MainWindow#25
+msgid "Version in the Repository: "
+msgstr "Depodaki Sürüm: "
+
+#: MainWindow#26
+msgid "Action: "
+msgstr "Eylem: "
+
+#: MainWindow#27
+msgctxt "MainWindow#27"
+msgid "Error"
+msgstr "Hata"
+
+#: MainWindow#28
+msgid ""
+"One or more Databases could not be updated.\n"
+"Last error reported was:\n"
+"%1"
+msgstr ""
+"Bir veya birkaç Veritabanı güncellenemiyor.\n"
+"Raporlanan son hata şuydu:\n"
+"%1"
+
+#: MainWindow#29
+msgctxt "MainWindow#29"
+msgid "Database Update"
+msgstr "Veritabanı Güncelleme"
+
+#: MainWindow#30
+msgid "Databases Updated Successfully"
+msgstr "Veritabanı Başarıyla Güncellendi"
+
+#: MainWindow#31
+msgid "Pacman Update"
+msgstr "Pacman Güncelleme"
+
+#: MainWindow#32
+msgid ""
+"Pacman can be upgraded. It is advised to process it alone\n"
+"to avoid version conflicts.\n"
+"Do you want to Upgrade Pacman now?"
+msgstr ""
+"Pacman yükseltilebilir durumda.Bu işlemi çakışmalardan korunmak\n"
+"için tek başına yapmanız önerilir.\n"
+"Şimdi Pacman'ı Yükseltmek ister misiniz?"
+
+#: MainWindow#33
+msgid "Shaman Update"
+msgstr "Shaman Güncelleme"
+
+#: MainWindow#34
+msgid ""
+"Shaman can be upgraded. It is advised to process it alone\n"
+"to avoid version conflicts.\n"
+"Do you want to Upgrade Shaman now?"
+msgstr ""
+"Shaman yükseltilebilir durumda.Bu işlemi çakışmalardan korunmak\n"
+"için tek başına yapmanız önerilir.\n"
+"Şimdi Shaman'ı Yükseltmek ister misiniz?"
+
+#. (obsolete)
+#: MainWindow#35
+msgid "Mark for Removal"
+msgstr "Kaldırma için İşaretle"
+
+#: MainWindow#36
+msgid "Mark for Upgrade"
+msgstr "Yükseltme için İşaretle"
+
+#. (obsolete)
+#: MainWindow#37
+msgid "Cancel Action"
+msgstr "Eylemi İptal Et"
+
+#: MainWindow#38
+msgid "Mark all for installation"
+msgstr "Tümünü yükleme için İşaretle"
+
+#: MainWindow#39
+msgid "Mark all for reinstallation"
+msgstr "Tümünü yeniden yükleme için İşaretle"
+
+#: MainWindow#40
+msgid "Mark all for removal"
+msgstr "Tümünü Kaldırma için İşaretle"
+
+#: MainWindow#41
+msgid "Cancel all actions"
+msgstr "Tüm eylemleri iptal et"
+
+#: MainWindow#42
+msgctxt "MainWindow#42"
+msgid "System Upgrade"
+msgstr "Sistem Yükseltme"
+
+#: MainWindow#43
+msgid "Your system is up to date!"
+msgstr "Sisteminiz güncel!"
+
+#: MainWindow#44
+msgctxt "MainWindow#44"
+msgid "Queue Processing"
+msgstr "Sıra İşleniyor"
+
+#: MainWindow#45
+msgid ""
+"Your Queue is being processed.\n"
+"Please wait."
+msgstr ""
+"Sıra işleniyor.\n"
+"Lütfen bekleyin."
+
+#: MainWindow#46
+msgid "Queue Processed"
+msgstr "Sıra işlendi"
+
+#. (obsolete)
+#: MainWindow#47
+msgid ""
+"One or more errors occourred, your Queue\n"
+"was not successfully processed"
+msgstr ""
+"Bir vaya daha fazla hata oluştu;Sıra\n"
+"başarıyla işlenemedi"
+
+#: MainWindow#48
+msgid "Restart required"
+msgstr "Yeniden Başlatma gerekiyor"
+
+#: MainWindow#49
+msgid ""
+"Pacman or Shaman was updated. Shaman will now quit,\n"
+"please restart it to use the new version"
+msgstr ""
+"Pacman veya Shaman güncellendi.Shaman kapanacak.\n"
+"Yeni sürümü kullanmak için lütfen Shamanı yeniden başlatın"
+
+#: MainWindow#50
+msgid ""
+"Your Kernel has been updated.\n"
+"Please restart your PC soon to load the new Kernel."
+msgstr ""
+"Kernel güncellendi.\n"
+"Yeni kerneli kullanmak için lütfen bilgisayarınızı\n"
+"yeniden başlatın."
+
+#: MainWindow#51
+msgid "Your Queue was successfully processed!"
+msgstr "Sıra başarıyla işlendi!"
+
+#: MainWindow#52
+msgid "Your Queue was successfully processed!!"
+msgstr "Sıra başarıyla işlendi!"
+
+#: MainWindow#53
+msgid "Install a Package"
+msgstr "Bir Paket yükle"
+
+#: MainWindow#54
+msgid "Arch Linux Packages (*.pkg.tar.gz)"
+msgstr "Arch Linux Paketleri (*.pkg.tar.gz)"
+
+#: MainWindow#55
+msgid ""
+"%1 does not seem\n"
+"a valid package"
+msgstr ""
+"%1 geçerli bir paket\n"
+"değil"
+
+#. (obsolete)
+#: MainWindow#56
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">A libalpm frontend in Qt</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">License: GPLv2+</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Libalpm Version: v.%1</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Dario Freddi "
+"&lt;drf54321@yahoo.it&gt;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Lukas Appelhans "
+"&lt;l.appelhans@gmx.de&gt;</p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">p, "
+"li { white-space: pre-wrap; }</style></head><body style=\" font-family:'Sans "
+"Serif'; font-size:10pt; font-weight:400; font-style:normal;\"><p style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">A libalpm "
+"frontend in Qt</span></p><p style=\"-qt-paragraph-type:empty; margin-top:0px; "
+"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
+"text-indent:0px; font-weight:600;\"></p><p style=\" margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\">Lisans: GPLv2+</p><p style=\" margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\">Libalpm Sürümü: v.%1</p><p style=\"-qt-paragraph-type:empty; "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px;\"></p><p style=\" margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\">(C) 2008 Dario Freddi &lt;drf54321@yahoo.it&gt;</p><p style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px;\">(C) 2008 Lukas Appelhans "
+"&lt;l.appelhans@gmx.de&gt;</p></body></html>"
+
+# Size is in Gib
+#. (obsolete)
+#: MainWindow#57
+msgctxt "MainWindow#57"
+msgid "%1 GiB"
+msgstr "%1 GB"
+
+# Size is in MiB
+#. (obsolete)
+#: MainWindow#58
+msgctxt "MainWindow#58"
+msgid "%1 MiB"
+msgstr "%1 MB"
+
+# Size is in KiB
+#. (obsolete)
+#: MainWindow#59
+msgctxt "MainWindow#59"
+msgid "%1 KiB"
+msgstr "%1 KB"
+
+# Size is in Bytes
+#. (obsolete)
+#: MainWindow#60
+msgctxt "MainWindow#60"
+msgid "%1 Bytes"
+msgstr "%1 Bayt"
+
+#. (obsolete)
+#: MainWindow#61
+msgid "Library Question"
+msgstr "Kütüphane Sorusu"
+
+#: MainWindow#62
+msgctxt "MainWindow#62"
+msgid "Shaman"
+msgstr "Shaman"
+
+#: MainWindow#63
+msgid "All packages"
+msgstr "Bütün Paketler"
+
+#: MainWindow#64
+msgid "Status"
+msgstr "Durum"
+
+#: MainWindow#65
+msgid "Action"
+msgstr "Eylem"
+
+#: MainWindow#66
+msgid "Version"
+msgstr "Sürüm"
+
+#: MainWindow#67
+msgid "Size"
+msgstr "Boyut"
+
+#: MainWindow#68
+msgctxt "MainWindow#68"
+msgid "Repository"
+msgstr "Depo"
+
+#: MainWindow#69
+msgid "Groups"
+msgstr "Gruplar"
+
+#: MainWindow#70
+msgid "Action-Text"
+msgstr "Eylem-Metni"
+
+#: MainWindow#71
+msgctxt "MainWindow#71"
+msgid "Package Information"
+msgstr "Paket Bilgisi"
+
+#: MainWindow#72
+msgid "Install selected package"
+msgstr "Seçili paketi yükle"
+
+#: MainWindow#73
+msgid "Remove selected package"
+msgstr "Seçili paketi kaldır"
+
+#: MainWindow#74
+msgid "Complete Remove selected package (pacman -Rcs)"
+msgstr "Seçili paketi Tamamen Kaldır (pacman -Rcs)"
+
+#. (obsolete)
+#: MainWindow#75
+msgid "Mark for complete removal"
+msgstr "Tam kaldırma için işaretle"
+
+#: MainWindow#76
+msgid "Cancel action for selected package"
+msgstr "Seçili paket eylemini iptal et"
+
+#. (obsolete)
+#: MainWindow#77
+msgid "Cancel action"
+msgstr "Eylemi iptal et"
+
+#. (obsolete)
+#: MainWindow#78
+msgctxt "MainWindow#78"
+msgid "Files"
+msgstr "Dosyalar"
+
+#: MainWindow#79
+msgctxt "MainWindow#79"
+msgid "1"
+msgstr "1"
+
+#. (obsolete)
+#: MainWindow#80
+msgctxt "MainWindow#80"
+msgid "Dependencies"
+msgstr "Bağımlılıklar"
+
+#. (obsolete)
+#: MainWindow#81
+msgid "File"
+msgstr "Dosya"
+
+#. (obsolete)
+#: MainWindow#82
+msgid "Help"
+msgstr "Yardım"
+
+#. (obsolete)
+#: MainWindow#83
+msgid "Actions"
+msgstr "Eylemler"
+
+#: MainWindow#84
+msgid "Build and Install from Source"
+msgstr "Kaynaktan Derle ve Yükle"
+
+#: MainWindow#85
+msgid "Quick Actions"
+msgstr "Hızlı Eylemler"
+
+#. (obsolete)
+#: MainWindow#86
+msgid "Package Repositories"
+msgstr "Paket Depoları"
+
+#: MainWindow#87
+msgid "Settings..."
+msgstr "Ayarlar..."
+
+#: MainWindow#88
+msgid "About..."
+msgstr "Hakkında..."
+
+#: MainWindow#89
+msgctxt "MainWindow#89"
+msgid "Update Database"
+msgstr "Veritabanını Güncelle"
+
+#: MainWindow#90
+msgctxt "MainWindow#90"
+msgid "Upgrade System"
+msgstr "Sistemi Yükselt"
+
+#: MainWindow#91
+msgid "Install Package From File"
+msgstr "Paketi Dosyadan Yükle"
+
+#: MainWindow#92
+msgid "Update ABS Tree"
+msgstr "ABS Ağacını Güncelle"
+
+#: MainWindow#93
+msgid "Build and Install Queue"
+msgstr "Sırayı Derle ve Yükle"
+
+# Quit the application
+#: MainWindow#94
+msgctxt "MainWindow#94"
+msgid "Quit"
+msgstr "Çıkış"
+
+#: MainWindow#95
+msgctxt "MainWindow#95"
+msgid "Process Queue"
+msgstr "Sırayı İşle"
+
+#. (obsolete)
+#: MainWindow#96
+msgid "Esc"
+msgstr "Esc"
+
+#: MainWindow#97
+msgid "News Alert"
+msgstr "Haber Alarmı"
+
+#: MainWindow#98
+msgid ""
+"There is an unread news about %1.\n"
+"Do you want to read it?"
+msgstr ""
+"%1 hakkında okunmamış haberler var.\n"
+"Okumak ister misiniz?"
+
+#: MainWindow#99
+msgid "Read News"
+msgstr "Haberleri Oku"
+
+#. (obsolete)
+#: MainWindow#100
+msgid "Tools"
+msgstr "Araçlar"
+
+#: MainWindow#101
+msgid "View Log"
+msgstr "Kayıtları Oku"
+
+#: MainWindow#102
+msgid ""
+"One or more errors occurred, your Queue\n"
+"was not successfully processed"
+msgstr ""
+"Bir vaya daha fazla hata oluştu;Sıra\n"
+"başarıyla işlenemedi"
+
+#: MainWindow#103
+msgid "One or more databases failed to update!"
+msgstr "Bir veya bir kaç veritabanının güncellenmesi başarısız!"
+
+#: MainWindow#104
+msgid "Error Processing Queue!!"
+msgstr "Sıra işlemede hata!"
+
+# The name of the Package
+#. (obsolete)
+#: MainWindow#105
+msgctxt "MainWindow#105"
+msgid "Name"
+msgstr "Ad"
+
+#: MainWindow#106
+msgid ""
+"A package providing %1 is already installed.\n"
+"Do you want to install %1 anyway?"
+msgstr ""
+"%1 özelliğini sunan bir pakaet zaten yüklü.\n"
+"%1 paketini yine de yüklemek istiyor musunuz?"
+
+#: MainWindow#107
+msgid "&File"
+msgstr "&Dosya"
+
+#: MainWindow#108
+msgid "&Help"
+msgstr "&Yardım"
+
+#: MainWindow#109
+msgid "&Actions"
+msgstr "&Eylemler"
+
+#: MainWindow#110
+msgid "&Tools"
+msgstr "&Araçlar"
+
+#: MainWindow#111
+msgid "Re&positories"
+msgstr "De&polar"
+
+#: MainWindow#112
+msgid "Package &Groups"
+msgstr "Paket &Grupları"
+
+#: MainWindow#113
+msgid "Mark for &Installation"
+msgstr "&Yükleme için işaretle"
+
+#: MainWindow#114
+msgid "Mark for &Removal"
+msgstr "&Kaldırma için işaretle"
+
+#: MainWindow#115
+msgid "Mark for complete re&moval"
+msgstr "&Tamamen kaldırma için işaretle"
+
+#: MainWindow#116
+msgid "Package I&nformation"
+msgstr "Paket B&ilgisi"
+
+#: MainWindow#117
+msgid "File&s"
+msgstr "Dosya&lar"
+
+#: MainWindow#118
+msgid "&Dependencies"
+msgstr "&Bağımlılıklar"
+
+#: MainWindow#119
+msgid "Mark for Re&installation"
+msgstr "Yeniden&yükleme için işaretle"
+
+#: MainWindow#120
+msgid "&Cancel Action"
+msgstr "&Eylemi İptal Et"
+
+#: MainWindow#121
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">A libalpm frontend in Qt</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">License: GPLv2+</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Libalpm Version: v.%1</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Dario Freddi "
+"&lt;drf@kdemod.ath.cx&gt;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Lukas Appelhans "
+"&lt;boom1992@kdemod.ath.cx&gt;</p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">p, "
+"li { white-space: pre-wrap; }</style></head><body style=\" font-family:'Sans "
+"Serif'; font-size:10pt; font-weight:400; font-style:normal;\"><p style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Qt "
+"üzerinde bir libalpm ön yüzü</span></p><p style=\"-qt-paragraph-type:empty; "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px; font-weight:600;\"></p><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\">Lisans: GPLv2+</p><p style=\" margin-top:0px; "
+"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
+"text-indent:0px;\">Libalpm Sürümü: v.%1</p><p style=\"-qt-paragraph-"
+"type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"></p><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\">(C) 2008 Dario Freddi "
+"&lt;drf@kdemod.ath.cx&gt;</p><p style=\" margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">(C) "
+"2008 Lukas Appelhans &lt;boom1992@kdemod.ath.cx&gt;</p></body></html>"
+
+# Name of the Package
+#. (obsolete)
+#: MainWindow#122
+msgctxt "MainWindow#122"
+msgid "Name"
+msgstr "Ad"
+
+# Exit Shaman Shortcut
+#: MainWindow#123
+msgid "Ctrl+Q"
+msgstr "Ctrl+Q"
+
+#: MainWindow#124
+msgid "Name and Description"
+msgstr "İsim ve Açıklama"
+
+#: MaintenanceBar#1
+msgid "Please choose an action to start maintenance..."
+msgstr "Bakımı başlatmak için bir eylem seçin..."
+
+#: MaintenanceBar#2
+msgctxt "MaintenanceBar#2"
+msgid "Clean Unused Databases"
+msgstr "Kullanılmayan Veritabanlarını Temizle"
+
+#: MaintenanceBar#3
+msgctxt "MaintenanceBar#3"
+msgid "Clean Cache"
+msgstr "Ön belleği Temizle"
+
+#: MaintenanceBar#4
+msgctxt "MaintenanceBar#4"
+msgid "Empty Cache"
+msgstr "Ön belleğii Boşalt"
+
+#: MaintenanceBar#5
+msgctxt "MaintenanceBar#5"
+msgid "Optimize Pacman Database"
+msgstr "Pacman Veritabanını İyileştir"
+
+#: MaintenanceBar#6
+msgctxt "MaintenanceBar#6"
+msgid "Clean All Building Environments"
+msgstr "Tüm Derleme Ortamlarını Temizle"
+
+#: MaintenanceBar#7
+msgctxt "MaintenanceBar#7"
+msgid "Cleaning up unused Databases..."
+msgstr "Kullanılmayan Veritabanları temizleniyor..."
+
+#: MaintenanceBar#8
+msgctxt "MaintenanceBar#8"
+msgid "Cleaning up Cache..."
+msgstr "Ön bellek Temizleniyor..."
+
+#: MaintenanceBar#9
+msgctxt "MaintenanceBar#9"
+msgid "Deleting Cache..."
+msgstr "Ön bellek Siliniyor..."
+
+#: MaintenanceBar#10
+msgctxt "MaintenanceBar#10"
+msgid "Optimizing Pacman Database..."
+msgstr "Pacman Veritabanı İyileştiriliyor..."
+
+#: MaintenanceBar#11
+msgctxt "MaintenanceBar#11"
+msgid "Cleaning up building Environments..."
+msgstr "Derleme Ortamları temizleniyor..."
+
+#: MaintenanceBar#12
+msgctxt "MaintenanceBar#12"
+msgid "Abort"
+msgstr "İptal"
+
+#: MaintenanceBar#13
+msgid "System Maintenance"
+msgstr "Sistem Bakımı"
+
+#: MaintenanceBar#14
+msgctxt "MaintenanceBar#14"
+msgid "Unused Databases Cleaned up successfully!"
+msgstr "Kullanılmayan Veritabanları başarıyla Temizlendi!"
+
+#: MaintenanceBar#15
+msgctxt "MaintenanceBar#15"
+msgid "Cache Cleaned Up Successfully!"
+msgstr "Ön bellek Başarıyla Temizlendi!"
+
+#: MaintenanceBar#16
+msgctxt "MaintenanceBar#16"
+msgid "Cache Successfully Deleted!"
+msgstr "Ön bellek Başarıyla Silindi!"
+
+#: MaintenanceBar#17
+msgctxt "MaintenanceBar#17"
+msgid "Build Environments Successfully Cleaned!"
+msgstr "Derleme Ortamları Başarıyla Temizlendi!"
+
+#: MaintenanceBar#18
+msgctxt "MaintenanceBar#18"
+msgid "Close"
+msgstr "Kapat"
+
+#: MaintenanceBar#19
+msgctxt "MaintenanceBar#19"
+msgid "Cleaning up Unused Databases Failed!"
+msgstr "Kullanılmayan Veritabanlarını Silme Başarısız!"
+
+#: MaintenanceBar#20
+msgctxt "MaintenanceBar#20"
+msgid "Cleaning up Cache Failed!"
+msgstr "Ön bellek Temizleme Başarısız!"
+
+#: MaintenanceBar#21
+msgctxt "MaintenanceBar#21"
+msgid "Deleting Cache Failed!"
+msgstr "Ön bellek Silme Başarısız!"
+
+#: MaintenanceBar#22
+msgctxt "MaintenanceBar#22"
+msgid "Could not clean Build Environments!!"
+msgstr "Derleme Ortamları Temizlenemiyor!"
+
+#: MaintenanceBar#23
+msgctxt "MaintenanceBar#23"
+msgid "Pacman Database Optimized Successfully!"
+msgstr "Pacman Veritabanı başarıyla İyileştirildi!"
+
+#: MaintenanceBar#24
+msgctxt "MaintenanceBar#24"
+msgid "Could not Optimize Pacman Database!"
+msgstr "Pacman Veritabanı iyileştirilemiyor!"
+
+# sync is a command, so it should not be translated
+#: MaintenanceBar#25
+msgctxt "MaintenanceBar#25"
+msgid "Running sync..."
+msgstr "sync çalıştırılıyor..."
+
+#: MaintenanceBar#26
+msgctxt "MaintenanceBar#26"
+msgid "Operation Completed Successfully!"
+msgstr "İşlem Başarıyla Tamamlandı!"
+
+# Sync is always the command
+#: MaintenanceBar#27
+msgctxt "MaintenanceBar#27"
+msgid "Sync was successfully executed!!"
+msgstr "Sync başarıyla çalıştırıldı!!"
+
+# Sync is always the command
+#: MaintenanceBar#28
+msgctxt "MaintenanceBar#28"
+msgid "Sync could not be executed!"
+msgstr "Sync çalıştırılamıyor!"
+
+# Sync is always the command
+#: MaintenanceBar#29
+msgctxt "MaintenanceBar#29"
+msgid "Sync could not be executed!!"
+msgstr "Sync çalıştırılamıyor!"
+
+#: MaintenanceBar#30
+msgid "Maintenance Actions"
+msgstr "Bakım Eylemleri"
+
+#: NewsViewer#1
+msgctxt "NewsViewer#1"
+msgid "Please wait, fetching items..."
+msgstr "Lütfen bekleyin, getiriliyor..."
+
+#: NewsViewer#2
+msgctxt "NewsViewer#2"
+msgid "Mark as Read"
+msgstr "Okunmuş olarak işaretle"
+
+#: NewsViewer#3
+msgid "Mark as Unread"
+msgstr "Okunmamış olarak işaretle"
+
+#: NewsViewer#4
+msgctxt "NewsViewer#4"
+msgid "Error"
+msgstr "Hata"
+
+#: NewsViewer#5
+msgid "Could not fetch the RSS feed! Error reported was:"
+msgstr "RSS Beslemesi alınamıyor! Raporlanan hata:"
+
+# Size is in Gib
+#: PackageProperties#1
+msgctxt "PackageProperties#1"
+msgid "%1 GiB"
+msgstr "%1 GB"
+
+# Size is in MiB
+#: PackageProperties#2
+msgctxt "PackageProperties#2"
+msgid "%1 MiB"
+msgstr "%1 MB"
+
+# Size is in KiB
+#: PackageProperties#3
+msgctxt "PackageProperties#3"
+msgid "%1 KiB"
+msgstr "%1 KB"
+
+# Size is in Bytes
+#: PackageProperties#4
+msgctxt "PackageProperties#4"
+msgid "%1 Bytes"
+msgstr "%1 Bayt"
+
+#: PackageProperties#5
+msgid "Shaman - %1 properties"
+msgstr "Shaman - %1 özellikleri"
+
+# Stands for: Not Available
+#: PackageProperties#6
+msgid "N/A"
+msgstr "N/A"
+
+#: PackageProperties#7
+msgid "Changelog not available for this package"
+msgstr "Bu paket için changelog yok"
+
+# Hey! If you are reading this, first of all thanks for helping us in making Shaman better. There are not many comments unless where needed, since all the strings are pretty self-explanatory. You will see a lot of HTML in some cases: do not let that scare you, but please edit text only. Editing HTML tags too may break our layout, so be careful. A good practice could be copying the whole string, and then translating just what's outside the tags, usually just a few words. If you have any doubts, or if you just want to drop us a line, there goes our email addresses:
+# Dario: drf54321@gmail.com
+# Lukas: l.appelhans@gmx.de
+# Thanks again, and enjoy your translation!
+#: QObject#1
+msgctxt "QObject#1"
+msgid "Shaman"
+msgstr "Shaman"
+
+#. (obsolete)
+#: QObject#2
+msgid ""
+"You have to be root to run Shaman.\n"
+"Please restart it with root privileges."
+msgstr ""
+"Shaman'ı çalıştırmak için root hakları gerekli\n"
+"Lütfen root haklarıyla başlatın."
+
+#: QObject#3
+msgctxt "QObject#3"
+msgid "Shaman"
+msgstr "Shaman"
+
+#: QObject#4
+msgid ""
+"There was a problem while testing libalpm.\n"
+"Maybe another application has a lock on it."
+msgstr ""
+"libalpm denenirken bir hata oluştu.\n"
+"Başka bir uygulama kilitlemiş olabilir."
+
+#: QObject#5
+msgid ""
+"Pacman is not updated.\n"
+"Shaman needs libalpm >= 2.1.0 to run.\n"
+"Yours is %1. Please update Pacman."
+msgstr ""
+"Pacman güncellenmedi.\n"
+"Shaman libalpm >= 2.1.0 gerektirir.\n"
+"Sizinki %1. Lütfen Pacman'ı güncelleyin."
+
+#: QObject#6
+msgctxt "QObject#6"
+msgid "Please Wait..."
+msgstr "Lütfen Bekleyin..."
+
+#: QObject#7
+msgid "Loading Databases..."
+msgstr "Veritabanı Yükleniyor..."
+
+#: QObject#8
+msgid "Loading Packages..."
+msgstr "Paketler Yükleniyor..."
+
+#: QObject#9
+msgid "Starting up Shaman..."
+msgstr "Shaman Başlatılıyor..."
+
+#: QObject#10
+msgid ""
+"Your settings file seems unwritable.\n"
+"Please check permissions on it."
+msgstr ""
+"Ayarlarınız yazılamaz görünüyor.\n"
+"Lütfen izinlerini kontrol edin."
+
+#: QObject#11
+msgid ""
+"You have started Shaman as root.\n"
+"It is advised to start it as unprivileged user.\n"
+"Shaman will ask you for root password when needed."
+msgstr ""
+"Shaman'ı kök yetkileriyle başlattınız.\n"
+"Ytekisiz kullanıcı olarak çalıştırılması önerilir.\n"
+"Gerektiğinde Shaman kök parolanızı soracaktır."
+
+#: QObject#12
+msgctxt "QObject#12"
+msgid "Ok"
+msgstr "Tamam"
+
+#. (obsolete)
+#: QObject#13
+msgid "Yes"
+msgstr "Evet"
+
+#. (obsolete)
+#: QObject#14
+msgid "No"
+msgstr "Hayır"
+
+#: QObject#15
+msgid ""
+"It looks like another copy of Shaman is running.\n"
+"You can only run one copy of Shaman at a time."
+msgstr ""
+"Shaman'ın diğer bir kopyası çalışıyor.\n"
+"Bir seferde sadece bir Shaman kopyası çalıştırabilirsiniz."
+
+#: QObject#16
+msgid ""
+"Shaman can not be started as root.\n"
+"Please restart it as unprivileged user."
+msgstr ""
+"Shaman kök yetkisiyle çalıştırılamaz.\n"
+"Lütfen yetkisiz kullanıcı olarak başlatın."
+
+#: QObject#17
+msgid ""
+"Shaman could not switch to root.\n"
+"Probably you have not set the SUID bit to it.\n"
+"You can do that by issuing as root\n"
+"chown root shaman && chmod u+s shaman.\n"
+"Note that this is safe, please read Shaman wiki\n"
+"for more details."
+msgstr ""
+"Shaman kök tekisine kilitlenemiyor.\n"
+"Muhtemelen SUID bit'i ayarlamamışsınız.\n"
+"Bunu root yetkisiyle chown root shaman &&\n"
+" chmod u+s shaman komutuyla gerçekleştirebilirsiniz.\n"
+"Bu, güvenlidir.Daha fazla bilgi için Shaman wiki sayfalarını\n"
+"okuyabilirsiniz."
+
+#. (obsolete)
+#: QObject#18
+msgctxt "QObject#18"
+msgid "Do not show this Again"
+msgstr "Bunu Tekrar Gösterme"
+
+#: QObject#19
+msgid "O&k"
+msgstr "Ta&mam"
+
+#: QObject#20
+msgid "&Yes"
+msgstr "&Evet"
+
+#: QObject#21
+msgid "&No"
+msgstr "&Hayır"
+
+#: QObject#22
+msgid "Do not &show this Again"
+msgstr "Bunu bir daha &Gösterme"
+
+#: QObject#23
+msgid "C&ancel"
+msgstr "İ&ptal"
+
+#: QObject#24
+msgid "Whoa, that's co&ol!"
+msgstr "Ha ha ha, bu iyi&ydi!"
+
+#: QueueDialog#1
+msgid "<br><b> * Validating Transaction</b><br>"
+msgstr "<br><b> * İşlem Onaylanıyor</b><br>"
+
+#: QueueDialog#2
+msgid "Validating Dependencies..."
+msgstr "Bağımlılıklar Onaylanıyor..."
+
+#: QueueDialog#3
+msgid "Checking for Conflicts..."
+msgstr "Çakışmalar Denetleniyor..."
+
+#: QueueDialog#4
+msgid "Resolving Dependencies..."
+msgstr "Bağımlılıklar Çözümleniyor..."
+
+#: QueueDialog#5
+msgid "Looking for Inter-Conflicts..."
+msgstr "İç-Çakışmalar aranıyor..."
+
+#: QueueDialog#6
+msgid "<br><b> * Package Installation Started</b><br>"
+msgstr "<br><b> * Paket Yükleme Başladı</b><br>"
+
+#: QueueDialog#7
+msgid "Installing %1..."
+msgstr "%1 Yükleniyor..."
+
+#: QueueDialog#8
+msgid "%1 (%2) installed successfully!"
+msgstr "%1 (%2) başarıyla yüklendi!"
+
+#: QueueDialog#9
+msgid "<br><b> * Package Removal Started</b><br>"
+msgstr "<br><b> * Paket Kaldırma Başladı</b><br>"
+
+#: QueueDialog#10
+msgid "Removing %1..."
+msgstr "%1 Kaldırılıyor..."
+
+#: QueueDialog#11
+msgid "%1 (%2) removed successfully!"
+msgstr "%1 (%2) başarıyla kaldırıldı!"
+
+#: QueueDialog#12
+msgid "<br><b> * Package Upgrading Started</b><br>"
+msgstr "<br><b> * Paket Yükseltme Başladı</b><br>"
+
+#: QueueDialog#13
+msgid "Upgrading %1..."
+msgstr "%1 Yükseltiliyor..."
+
+#: QueueDialog#14
+msgid "Upgraded %1 successfully (%2 -> %3)"
+msgstr "%1 başarıyla yükseltildi (%2 -> %3)"
+
+#: QueueDialog#15
+msgid "<br><b> * Queue Processing Started</b><br>"
+msgstr "<br><b> * Sıra İşleme Başladı</b><br>"
+
+#: QueueDialog#16
+msgid "Checking package integrity..."
+msgstr "Paket içeriği denetlenyior..."
+
+#: QueueDialog#17
+msgid "Checking delta integrity..."
+msgstr "Delta içeriği denetleniyor..."
+
+#: QueueDialog#18
+msgid "Applying deltas..."
+msgstr "Delta uygulanıyor..."
+
+#: QueueDialog#19
+msgid "Generating %1 with %2... "
+msgstr "%1, %2 ile üretiliyor... "
+
+#: QueueDialog#20
+msgid "Success!"
+msgstr "Başarılı!"
+
+#: QueueDialog#21
+msgid "Failed!"
+msgstr "Başarısız!"
+
+#: QueueDialog#22
+msgid "<br><b> * Package Downloading Started</b><br>"
+msgstr "<br><b> * Paket İndirme Başladı</b><br>"
+
+#: QueueDialog#23
+msgid "Starting downloading packages from %1..."
+msgstr "Paketlerin %1 deposundan indirilmesine başlanıyor..."
+
+# You just have to translate 'remaining' here. Leave everything else as it is.
+#: QueueDialog#24
+msgid "%p% (%1 KB/s, %4:%5:%6 remaining)"
+msgstr "%p% (%1 KB/s, %4:%5:%6 kaldı)"
+
+#: QueueDialog#25
+msgid "Downloading %1... (%2 MB of %3 MB)"
+msgstr "%1 İndiriliyor... (%2 MB / %3 MB)"
+
+#: QueueDialog#26
+msgid "Downloading %1... (%2 KB of %3 KB)"
+msgstr "%1 İndiriliyor... (%2 KB / %3 KB)"
+
+#: QueueDialog#27
+msgid "Queue processed, please wait..."
+msgstr "Sıra işlendi, lütfen bekleyin..."
+
+#: QueueDialog#28
+msgid "Queue processing failed!"
+msgstr "Sıra işleme başarısız!"
+
+#: QueueDialog#29
+msgid "Queue processed successfully!"
+msgstr "Sıra başarıyla işlendi!"
+
+#: QueueDialog#30
+msgctxt "QueueDialog#30"
+msgid "Close"
+msgstr "Kapat"
+
+#: QueueDialog#31
+msgid "Unexpected Error. Shaman might be corrupted."
+msgstr "Beklenmeyen Hata. Shaman bozulmuş olabilir."
+
+#: QueueDialog#32
+msgid "Executing %1 scriptlet for %2..."
+msgstr "%1 betiği %2 için çalıştırılıyor..."
+
+#: QueueDialog#33
+msgid "Extracting Scriptlet from package failed!!"
+msgstr "Paketten betik ayıklama başarısız!"
+
+#: QueueDialog#34
+msgid "Package %1 does not have %2 scriptlet"
+msgstr "%1 paketi %2 betiği içermiyor"
+
+#: QueueDialog#35
+msgid "Scriptlet processed successfully!"
+msgstr "Betik başarıyla işlendi!"
+
+#: QueueDialog#36
+msgid "Error processing Scriptlet!!"
+msgstr "Betik işlemede hata!!"
+
+#: QueueDialog#37
+msgctxt "QueueDialog#37"
+msgid "Queue Processing"
+msgstr "Sıra İşleme"
+
+#: QueueDialog#38
+msgid ""
+"Would you like to abort Queue Processing?\n"
+"This may damage your system."
+msgstr ""
+"Sıra İşlemeyi iptal etmek ister misiniz?\n"
+"Bu sisteminize zarar verebilir."
+
+#: QueueDialog#39
+msgid "There has been an error while preparing the transaction.\n"
+msgstr "İşleme hazırlanılırken bir hata oluştu.\n"
+
+#: QueueDialog#40
+msgid "There has been an error while committing the transaction.\n"
+msgstr "İşlem gerçekleştirilirken bir hata oluştu.\n"
+
+#. (obsolete)
+#: QueueDialog#41
+msgctxt "QueueDialog#41"
+msgid "Ok"
+msgstr "Tamam"
+
+#: QueueReadyDialog#1
+msgid "Review Queue"
+msgstr "Sırayı Gözden Geçir"
+
+#: QueueReadyDialog#2
+msgctxt "QueueReadyDialog#2"
+msgid "Turn off PC when Queue is done"
+msgstr "Sıra tamamlandıktan sonra bilgisayarı kapat"
+
+#: QueueReadyDialog#3
+msgid "Process in Tray"
+msgstr "Sistem Çubuğunda çalıştır"
+
+#: QueueReadyDialog#4
+msgid "Keep Queue Dialog Open after the Queue is finished"
+msgstr "Sıra bittikten sonra da Sıra Penceresini açık tut"
+
+#: QueueReadyDialog#5
+msgctxt "QueueReadyDialog#5"
+"QueueReadyDialog#5"
+msgid "Show packages..."
+msgstr "Paketleri Göster..."
+
+#: QueueReadyDialog#6
+msgctxt "QueueReadyDialog#6"
+msgid "Packages In Queue"
+msgstr "Sıradaki Paketler"
+
+#: QueueReadyDialog#7
+msgctxt "QueueReadyDialog#7"
+msgid "Cancel"
+msgstr "İptal"
+
+#: QueueReadyDialog#8
+msgid "Process"
+msgstr "İşlem"
+
+#: QueueReadyDialog#9
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Review Queue</span></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">(new "
+"line)p, li { white-space: pre-wrap; }(new line)</style></head><body style=\" "
+"font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-"
+"style:normal;\">(new line)<p style=\" margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"><span style=\" font-weight:600;\">Sırayı Gözden "
+"Geçir</span></p></body></html>"
+
+#: QueueReadyDialog#10
+msgctxt "QueueReadyDialog#10"
+msgid "Force Queue Processing"
+msgstr "Sıra işlemeye zorla"
+
+#: ReviewQueueDialog#1
+msgctxt "ReviewQueueDialog#1"
+msgid "Install"
+msgstr "Yükle"
+
+#: ReviewQueueDialog#2
+msgctxt "ReviewQueueDialog#2"
+msgid "To be Installed"
+msgstr "Yüklenecek"
+
+#: ReviewQueueDialog#3
+msgctxt "ReviewQueueDialog#3"
+msgid "Upgrade"
+msgstr "Yükselt"
+
+#: ReviewQueueDialog#4
+msgctxt "ReviewQueueDialog#4"
+msgid "To be Upgraded"
+msgstr "Yükseltilecek"
+
+#: ReviewQueueDialog#5
+msgctxt "ReviewQueueDialog#5"
+msgid "Uninstall"
+msgstr "Kaldır"
+
+#: ReviewQueueDialog#6
+msgid "To be Removed"
+msgstr "Kaldırılacak"
+
+#: ReviewQueueDialog#7
+msgctxt "ReviewQueueDialog#7"
+msgid "Complete Uninstall"
+msgstr "Tam Kaldırma"
+
+#: ReviewQueueDialog#8
+msgid "Your Queue is about to be processed. You are going to:<br />"
+msgstr "Sıranız işlenmek üzere.Yaplacaklar:<br />"
+
+#. (obsolete)
+#: ReviewQueueDialog#9
+msgid "Remove <b>%1 package</b><br />"
+msgstr "<b>%1 paketini</b>Kaldır<br />"
+
+#. (obsolete)
+#: ReviewQueueDialog#10
+msgid "Remove <b>%1 packages</b><br />"
+msgstr "<b>%1 paketlerini</b>Kaldır<br />"
+
+#. (obsolete)
+#: ReviewQueueDialog#11
+msgid "Install/Upgrade <b>%1 package</b><br />"
+msgstr "<b>%1 paketini</b>Yükle/Yükselt<br />"
+
+#. (obsolete)
+#: ReviewQueueDialog#12
+msgid "Install/Upgrade <b>%1 packages</b><br />"
+msgstr "<b>%1 paketlerini</b>Yükle/Yükselt<br />"
+
+#: ReviewQueueDialog#13
+msgid "Do you wish to continue?"
+msgstr "Devam etmek istiyor musunuz?"
+
+#. (obsolete)
+#: ReviewQueueDialog#14
+msgid "<b>%1</b> will be used"
+msgstr "<b>%1</b> kullanılacak"
+
+#. (obsolete)
+#: ReviewQueueDialog#15
+msgid "<b>%1</b> will be freed"
+msgstr "<b>%1</b> alan boşalacak"
+
+#: ReviewQueueDialog#16
+msgid "Remove <b>%n package(s)</b><br />"
+msgstr ""
+"\n"
+"            \n"
+"            \n"
+"        "
+
+#: ReviewQueueDialog#17
+msgid "Install/Upgrade <b>%n package(s)</b><br />"
+msgstr ""
+"\n"
+"            \n"
+"            \n"
+"        "
+
+#: ShamanStatusBar#1
+msgid "%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages"
+msgstr "Toplam %1 Paket, Yüklü %2 Paket, Yükseltilebilir %3 Paket"
+
+#: ShamanStatusBar#2
+msgid "%1 will be used"
+msgstr "%1 kullanılacak"
+
+#: ShamanStatusBar#3
+msgid "%1 will be freed"
+msgstr "%1 boşalacak"
+
+#: ShamanStatusBar#4
+msgid "%1 to be Installed, %2 to be Removed"
+msgstr "%1 yüklenecek, %2 Kaldırılacak"
+
+#: ShamanTrayIcon#1
+msgctxt "ShamanTrayIcon#1"
+msgid "Update Database"
+msgstr "Veritabanını Güncelle"
+
+#: ShamanTrayIcon#2
+msgctxt "ShamanTrayIcon#2"
+msgid "Upgrade System"
+msgstr "Sistemi Yükselt"
+
+#: ShamanTrayIcon#3
+msgctxt "ShamanTrayIcon#3"
+msgid "Process Queue"
+msgstr "Sırayı İşle"
+
+#: ShamanTrayIcon#4
+msgid "Settings"
+msgstr "Ayarlar"
+
+#: ShamanTrayIcon#5
+msgctxt "ShamanTrayIcon#5"
+msgid "Quit"
+msgstr "Çıkış"
+
+#: ShamanTrayIcon#6
+msgid "Shaman - Idle"
+msgstr "Shaman - Boşta"
+
+#: ShamanTrayIcon#7
+msgid "Shaman - Processing"
+msgstr "Shaman - İşleniyor"
+
+#: ShamanTrayIcon#8
+msgid "Shaman - Idle (Upgrades Available)"
+msgstr "Shaman - Boşta (Yükseltmeler Var)"
+
+#: ShamanTrayIcon#9
+msgctxt "ShamanTrayIcon#9"
+msgid "System Upgrade"
+msgstr "Sistem Yükseltme"
+
+#. (obsolete)
+#: ShamanTrayIcon#10
+msgid ""
+"There is %1 upgradeable package.\n"
+"Click here to upgrade your System."
+msgstr ""
+"%1 adet yükseltilebilir paket var.\n"
+"Sisteminizi yükseltmek için buraya tıklayın."
+
+#. (obsolete)
+#: ShamanTrayIcon#11
+msgid ""
+"There are %1 upgradeable packages.\n"
+"Click here to upgrade your System."
+msgstr ""
+"%1 adet yükseltilebilir paket var.\n"
+"Sisteminizi yükseltmek için buraya tıklayın."
+
+#: ShamanTrayIcon#12
+msgid "New News Available"
+msgstr "Yeni Haberler Var"
+
+#: ShamanTrayIcon#13
+msgid ""
+"There are new news available.\n"
+"Click here to review them."
+msgstr ""
+"Yeni haberler var.\n"
+"İncelemek için buraya tıklayın."
+
+#: ShamanTrayIcon#14
+msgid "Failed Fetching News"
+msgstr "Haberleri Alma Başarısız"
+
+#: ShamanTrayIcon#15
+msgid ""
+"An error occourred while fetching news!\n"
+"Click here to open the News Dialog for more details."
+msgstr ""
+"Haberler alınırken bir sorun oluştu!\n"
+"Daha fazla bilgi için buraya tıklayarak Haberler Penceresini açın."
+
+#: ShamanTrayIcon#16
+msgid ""
+"Upgradeable package(s): %n.\n"
+"Click here to upgrade your System."
+msgstr ""
+"\n"
+"            \n"
+"            \n"
+"        "
+
+#. (obsolete)
+#: SysUpgradeDialog#1
+msgid ""
+"There is <b>%1 upgradeable package</b>. You can either<br> upgrade "
+"immediately or add it to the current Queue<br> and process it later."
+msgstr ""
+"<b> %1 adet yükseltilebilir paket</b> var.Ya <b>hemen yükseltebilir ya da "
+"sıraya ekleyerek</b> daha sonra yükseltebilirsiniz."
+
+#. (obsolete)
+#: SysUpgradeDialog#2
+msgid ""
+"There are <b>%1 upgradeable packages</b>. You can either<br> upgrade "
+"immediately or add them to the current Queue<br> and process them later."
+msgstr ""
+"<b> %1 adet yükseltilebilir paket</b> var.Ya <b>hemen yükseltebilir ya da "
+"sıraya ekleyerek</b> daha sonra yükseltebilirsiniz."
+
+#: SysUpgradeDialog#3
+msgctxt "SysUpgradeDialog#3"
+msgid "To be Upgraded"
+msgstr "Yükseltilecek"
+
+#: SysUpgradeDialog#4
+msgid ""
+"<b>Upgradeable package(s): %n</b> You can either<br> upgrade immediately or "
+"add it to the current Queue<br> and process it later."
+msgstr ""
+"\n"
+"            \n"
+"            \n"
+"        "
+
+#: aboutDialog#1
+msgid "About Shaman"
+msgstr "Shaman Hakkında"
+
+#. (obsolete)
+#: aboutDialog#2
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Shaman 1.0 Alpha (revision 450)</span></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">(new "
+"line)p, li { white-space: pre-wrap; }(new line)</style></head><body style=\" "
+"font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-"
+"style:normal;\">(new line)<p style=\" margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"><span style=\" font-weight:600;\">Shaman 1.0 Alpha (revision "
+"450)</span></p></body></html>"
+
+#: aboutDialog#3
+msgid "About"
+msgstr "Hakkında"
+
+#: aboutDialog#4
+msgid "Authors"
+msgstr "Yazarlar"
+
+#: aboutDialog#5
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Dario Freddi</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Developer</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Lukas Appelhans</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Developer</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">p, "
+"li { white-space: pre-wrap; }</style></head><body style=\" font-family:'Sans "
+"Serif'; font-size:10pt; font-weight:400; font-style:normal;\"><p style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Dario "
+"Freddi</span></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\">Geliştirici</p><p style=\"-qt-paragraph-type:empty; margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\"></p><p style=\" margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"><span style=\" font-weight:600;\">Lukas Appelhans</span></p><p "
+"style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Geliştirici</span></p><p style=\"-qt-paragraph-"
+"type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>"
+
+#: aboutDialog#6
+msgid "Thanks To"
+msgstr "Teşekkür"
+
+#. (obsolete)
+#: aboutDialog#7
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:9pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Sans Serif'; font-size:10pt;\">Shaman has received a lot of help from "
+"a lot of people, and it is also thanks to them if Shaman has seen the "
+"light. If we forgot to add you here, let us know.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">Names are in alphabetical order, because even the smallest "
+"contribution has been important to us.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt; font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt; font-weight:600;\">The KDEMod Community</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt; font-weight:600;\"><span style=\" font-weight:400;\">Help, "
+"Testing, Support, everything started from here. If there was no KDEMod, "
+"probably</span> <span style=\" font-weight:400;\">there would be no "
+"Shaman</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">Giannis Antoniou</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">Greek Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">Carlos "
+"Berroteran</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">Spanish Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">Jacques Disner</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">French Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">Georg Grabler</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt; font-weight:600;\"><span style=\" font-weight:400;\">Author of "
+"the Proxy patch, some help on the code and more.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">Michael Knights</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">Artwork creator, his icon proposal lies now in Arxin, but "
+"his splashscreen is in here ;)</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">Till Luge</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt; font-weight:600;\"><span style=\" font-weight:400;\">Heavy "
+"tester, thanks!</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">Rodrigo Mazak</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">Brazilian Translator, and gave the name Shaman</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt; font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt; font-weight:600;\">Jan Mette</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">German Translation and KDEMod-Developer, also the creator "
+"of the Icon</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">Martin Sandsmark</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">Our hoster, and maintainer of Trac.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"><span style=\" font-weight:600;\">Johannes "
+"Schriewer</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-"
+"weight:600;\"><span style=\" font-weight:400;\">KDEMod Developer, and also some "
+"help on the code.</span></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">p, "
+"li { white-space: pre-wrap; }</style></head><body style=\" font-"
+"family:'Liberation Sans'; font-size:9pt; font-weight:400; font-"
+"style:normal;\"><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
+"style=\" font-family:'Sans Serif'; font-size:10pt;\">Shaman has received a lot "
+"of help from a lot of people, and it is also thanks to them if Shaman has "
+"seen the light. If we forgot to add you here, let us know.</span></p><p "
+"style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">Names are in alphabetical order, because even the smallest "
+"contribution has been important to us.</p><p style=\"-qt-paragraph-"
+"type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt; font-weight:600;\"></p><p style=\" margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px; font-family:'Sans Serif'; font-size:10pt; font-weight:600;\">The "
+"KDEMod Community</p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
+"family:'Sans Serif'; font-size:10pt; font-weight:600;\"><span style=\" font-"
+"weight:400;\">Help, Testing, Support, everything started from here. If there "
+"was no KDEMod, probably</span> <span style=\" font-weight:400;\">there would "
+"be no Shaman</span></p><p style=\"-qt-paragraph-type:empty; margin-top:0px; "
+"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
+"text-indent:0px; font-family:'Sans Serif'; font-size:10pt;\"></p><p style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px; font-family:'Sans Serif'; font-"
+"size:10pt;\"><span style=\" font-weight:600;\">Giannis Antoniou</span></p><p "
+"style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">Greek Translator</p><p style=\"-qt-paragraph-type:empty; "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px; font-family:'Sans Serif'; font-"
+"size:10pt;\"></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
+"family:'Sans Serif'; font-size:10pt;\"><span style=\" font-weight:600;\">Carlos "
+"Berroteran</span></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
+"family:'Sans Serif'; font-size:10pt;\">Spanish Translator</p><p style=\"-qt-"
+"paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; "
+"margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans "
+"Serif'; font-size:10pt;\"></p><p style=\" margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"><span style=\" font-"
+"weight:600;\">Jacques Disner</span></p><p style=\" margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px; font-family:'Sans Serif'; font-size:10pt;\">French "
+"Translator</p><p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px; font-family:'Sans Serif'; font-size:10pt;\"></p><p style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px; font-family:'Sans Serif'; font-"
+"size:10pt;\"><span style=\" font-weight:600;\">Georg Grabler</span></p><p "
+"style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt; font-weight:600;\"><span style=\" font-weight:400;\">Author of "
+"the Proxy patch, some help on the code and more.</span></p><p style=\"-qt-"
+"paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; "
+"margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans "
+"Serif'; font-size:10pt;\"></p><p style=\" margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\"><span style=\" font-"
+"weight:600;\">Michael Knights</span></p><p style=\" margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px; font-family:'Sans Serif'; font-size:10pt;\">Artwork creator, his "
+"icon proposal lies now in Arxin, but his splashscreen is in here ;)</p><p "
+"style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
+"family:'Sans Serif'; font-size:10pt;\"></p><p style=\" margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px; font-family:'Sans Serif'; font-size:10pt;\"><span style=\" font-"
+"weight:600;\">Till Luge</span></p><p style=\" margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px; font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:600;\"><span style=\" font-weight:400;\">Heavy tester, "
+"thanks!</span></p><p style=\"-qt-paragraph-type:empty; margin-top:0px; "
+"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
+"text-indent:0px; font-family:'Sans Serif'; font-size:10pt;\"></p><p style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px; font-family:'Sans Serif'; font-"
+"size:10pt;\"><span style=\" font-weight:600;\">Rodrigo Mazak</span></p><p "
+"style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\">Brazilian Translator, and gave the name Shaman</p><p style"
+"=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
+"family:'Sans Serif'; font-size:10pt; font-weight:600;\"></p><p style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px; font-family:'Sans Serif'; font-size:10pt; "
+"font-weight:600;\">Jan Mette</p><p style=\" margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Sans Serif'; font-size:10pt;\">German Translation and KDEMod-"
+"Developer, also the creator of the Icon</p><p style=\"-qt-paragraph-"
+"type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; "
+"font-size:10pt;\"></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
+"family:'Sans Serif'; font-size:10pt;\"><span style=\" font-weight:600;\">Martin "
+"Sandsmark</span></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
+"family:'Sans Serif'; font-size:10pt;\">Our hoster, and maintainer of "
+"Trac.</p><p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px; font-family:'Sans Serif'; font-size:10pt;\"></p><p style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px; font-family:'Sans Serif'; font-"
+"size:10pt;\"><span style=\" font-weight:600;\">Johannes Schriewer</span></p><p "
+"style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-"
+"weight:600;\"><span style=\" font-weight:400;\">KDEMod Developer, and also some "
+"help on the code.</span></p></body></html>"
+
+#. (obsolete)
+#: aboutDialog#8
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-size:10pt; font-weight:400; font-"
+"style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Shaman 1.0 Alpha (revision 552)</span></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">p, "
+"li { white-space: pre-wrap; }</style></head><body style=\" font-size:10pt; "
+"font-weight:400; font-style:normal;\"><p style=\" margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"><span style=\" font-weight:600;\">Shaman 1.0 Alpha (revision "
+"552)</span></p></body></html>"
+
+#. (obsolete)
+#: aboutDialog#9
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Shaman 1.0 Beta (revision 651)</span></p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\"><html><head><meta name=\"qrichtext\" content=\"1\" /><style "
+"type=\"text/css\">p, li { white-space: pre-wrap; }</style></head><body style=\" "
+"font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-"
+"style:normal;\"><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
+"style=\" font-weight:600;\">Shaman 1.0 Beta (revision "
+"651)</span></p></body></html>"
+
+#: aboutDialog#10
+msgid "Visit &Website..."
+msgstr "&Web sitemizi ziyaret edin..."
+
+#. (obsolete)
+#: aboutDialog#11
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Shaman 1.0 Beta (revision 721)</span></p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\"><html><head><meta name=\"qrichtext\" content=\"1\" /><style "
+"type=\"text/css\">p, li { white-space: pre-wrap; }</style></head><body style=\" "
+"font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-"
+"style:normal;\"><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
+"style=\" font-weight:600;\">Shaman 1.0 Beta (revision "
+"651)</span></p></body></html> {3C?} {4.0/?} {3.?} {40/?} {1\"?} {10p?} "
+"{400;?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {600;?} {1.0 ?} {721)?}"
+
+#: aboutDialog#12
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span "
+"style=\" font-size:10pt;\">Shaman has received a lot of help from a lot of "
+"people, and it is also thanks to them if Shaman has seen the light. If we "
+"forgot to add you here, let us know.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Names are in alphabetical "
+"order, because even the smallest contribution has been important to us.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\">The KDEmod "
+"Community</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Help, Testing, Support, everything started from "
+"here. If there was no KDEmod, probably</span> <span style=\" font-"
+"weight:400;\">there would be no Shaman</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Giannis Antoniou</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Greek Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Carlos Berroteran</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Spanish Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Sander De Voogdt</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Dutch Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Jacques Disner</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">French Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Jan Dupal</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Czech Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Stefano Giro</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Testing and Suggestions</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Georg Grabler</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Author of the Proxy patch, some help on the code "
+"and more.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Michael Knights</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Artwork creator, his icon "
+"proposal lies now in Arxin, but his splashscreen is in here ;)</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Till Luge</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Heavy tester, thanks!</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Rodrigo Mazak</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Brazilian Translator, and "
+"gave the name Shaman</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\">Jan "
+"Mette</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">German Translation and "
+"KDEmod Developer, also the creator of the Icon</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Atilla Ontas</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Turkish Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Martin Sandsmark</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Our hoster, and maintainer "
+"of Trac.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Johannes Schriewer</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">KDEmod Developer, and also some help on the "
+"code.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Xiang Yixiang</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Chinese Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Anton Gritsay</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Russian Translator and "
+"Patches related to Translations</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Bartek Iwaniec</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Polish Translator</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Marko Doda</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Macedonian Translator</span></p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\"><html><head><meta name=\"qrichtext\" content=\"1\" /><style "
+"type=\"text/css\">p, li { white-space: pre-wrap; }</style></head><body style=\" "
+"font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-"
+"style:normal;\"><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
+"size:9pt;\"><span style=\" font-size:10pt;\">Shaman birçok kişiden sayısız "
+"yardım almıştır. Shaman ışığı görebildiyse bu, hepsinin sayesinde oldu. "
+"Teşekkürler. Sizi burada anmayı unutmuşsak lütfen bize "
+"bildirin.</span></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">İsimler "
+"alfabetik sıradadır; çünkü en ufak katkı bile bizim için önemlidir.</p><p "
+"style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
+"weight:600;\"></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
+"weight:600;\">KDEmod Topluluğu</p><p style=\" margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px; font-weight:600;\"><span style=\" font-weight:400;\">Yaardım, "
+"deneme, destek; işte hepsi burada başladı. KDEMod olmasaydı "
+"muhtemelen,</span> <span style=\" font-weight:400;\">Shaman da "
+"olmayacaktı.</span></p><p style=\"-qt-paragraph-type:empty; margin-top:0px; "
+"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
+"text-indent:0px;\"></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
+"style=\" font-weight:600;\">Giannis Antoniou</span></p><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\">Yunanca Çevirmeni</p><p style=\"-qt-paragraph-"
+"type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"></p><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Carlos "
+"Berroteran</span></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">İspanyolca "
+"Çevirmeni</p><p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
+"style=\" font-weight:600;\">Sander De Voogdt</span></p><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\">Felemenkçe Çevirmeni</p><p style=\"-qt-paragraph-"
+"type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"></p><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Jacques "
+"Disner</span></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Fransızca "
+"Çevirmeni</p><p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
+"style=\" font-weight:600;\">Jan Dupal</span></p><p style=\" margin-top:0px; "
+"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
+"text-indent:0px;\">Çekçe Çevirmeni</p><p style=\"-qt-paragraph-type:empty; "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px;\"></p><p style=\" margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"><span style=\" font-weight:600;\">Stefano Giro</span></p><p "
+"style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Deneme ve Öneriler</span></p><p style=\"-qt-"
+"paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; "
+"margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p><p style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Georg "
+"Grabler</span></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
+"weight:600;\"><span style=\" font-weight:400;\">Vekil sunucu yamasının yazarı, "
+"kodlamada ve daha fazlasında yardım.</span></p><p style=\"-qt-paragraph-"
+"type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"></p><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Michael "
+"Knights</span></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Sanat "
+"çalışmaları, simge önerisi şimdi Arxin' de ama açılış ekranı burada ;)</p><p "
+"style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p><p "
+"style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Till Luge</span></p><p style=\" margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px; font-weight:600;\"><span style=\" font-weight:400;\">Ağır denemeci, "
+"teşekkürler!</span></p><p style=\"-qt-paragraph-type:empty; margin-top:0px; "
+"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
+"text-indent:0px;\"></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
+"style=\" font-weight:600;\">Rodrigo Mazak</span></p><p style=\" margin-top:0px; "
+"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
+"text-indent:0px;\">Brezilya Portekizcesi Çevirmeni ve bu uygulamaya adını "
+"verdi.</p><p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px; font-weight:600;\"></p><p style=\" margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px; font-weight:600;\">Jan Mette</p><p style=\" margin-top:0px; "
+"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
+"text-indent:0px;\">Almanca Çevirmeni ve KDEmod Geliştiricisi, ayrıca Simge' "
+"yi yapan kişi.</p><p style=\"-qt-paragraph-type:empty; margin-top:0px; "
+"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
+"text-indent:0px;\"></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
+"style=\" font-weight:600;\">Atilla Ontas</span></p><p style=\" margin-top:0px; "
+"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
+"text-indent:0px;\">Türkçe Çevirmeni</p><p style=\"-qt-paragraph-type:empty; "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px;\"></p><p style=\" margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"><span style=\" font-weight:600;\">Martin Sandsmark</span></p><p "
+"style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Sunucumuz ve Trac "
+"işletmecisi.</p><p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
+"style=\" font-weight:600;\">Johannes Schriewer</span></p><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px; font-weight:600;\"><span style=\" font-"
+"weight:400;\">KDEmod Geliştiricisi ve kodlamaya yardımcı.</span></p><p style"
+"=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p><p "
+"style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Xiang Yixiang</span></p><p style=\" margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\">Çince Çevirmeni</p><p style=\"-qt-paragraph-type:empty; margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\"></p><p style=\" margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"><span style=\" font-weight:600;\">Anton Gritsay</span></p><p "
+"style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Rusça Çevirmeni ve "
+"çeviriler üzerine yamalar</p><p style=\"-qt-paragraph-type:empty; margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\"></p><p style=\" margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"><span style=\" font-weight:600;\">Bartek Iwaniec</span></p><p "
+"style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Lehçe Çevirmeni</span></p><p style=\"-qt-paragraph-"
+"type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"></p><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Marko "
+"Doda</span></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
+"weight:600;\"><span style=\" font-weight:400;\">Makedonca "
+"Çevirmeni</span></p></body></html>"
+
+#: authDialog#1
+msgid "Root Password Required"
+msgstr "Kök Parolası Gerekli"
+
+#: authDialog#2
+msgid ""
+"Shaman needs root privileges to perform this action.\n"
+"Please enter in the field below the root password to continue."
+msgstr ""
+"Shaman'ın bu işlemi gerçekleştirebilmesi için kök yetkileri gerekli.\n"
+"Lütfen aşağıya kök parolanızı giriniz."
+
+#: authDialog#3
+msgid "Never ask for this anymore"
+msgstr "Bunu bir daha sorma"
+
+#: authDialog#4
+msgctxt "authDialog#4"
+msgid "Cancel"
+msgstr "İptal"
+
+#: authDialog#5
+msgctxt "authDialog#5"
+msgid "Ok"
+msgstr "Tamam"
+
+#: authDialog#6
+msgid "Backspace"
+msgstr "Geri"
+
+#: authDialog#7
+msgid "Return"
+msgstr "Dönüş"
+
+#: buildingDialog#1
+msgid "Shaman - Building Packages"
+msgstr "Shaman-Paketleri Derliyor"
+
+#: buildingDialog#2
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:10pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Building Packages...</span></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">p, "
+"li { white-space: pre-wrap; }</style></head><body style=\" font-"
+"family:'Liberation Sans'; font-size:10pt; font-weight:400; font-"
+"style:normal;\"><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
+"style=\" font-weight:600;\">Paketler Derleniyor...</span></p></body></html>"
+
+#: buildingDialog#3
+msgctxt "buildingDialog#3"
+msgid "Abort"
+msgstr "İptal"
+
+#: buildingDialog#4
+msgid "Reduce To Tray"
+msgstr "Sistem Çubuğuna Küçült"
+
+#: dbUpdateDialog#1
+msgctxt "dbUpdateDialog#1"
+msgid "Database Update"
+msgstr "Veri Tabanı Güncelleme"
+
+#: dbUpdateDialog#2
+msgid "Update Database.."
+msgstr "Veri Tabanını Güncelle.."
+
+#: editPBDialog#1
+msgid "Editing PKGBUILD"
+msgstr "PKGBUILD düzenleniyor"
+
+#: editPBDialog#2
+msgid "Editing PKGBUILD of:"
+msgstr "Şunun PKGBUILD'i düzenleniyor:"
+
+#: editPBDialog#3
+msgid "Save"
+msgstr "Kaydet"
+
+#: editPBDialog#4
+msgid "Undo"
+msgstr "Geri Al"
+
+#: editPBDialog#5
+msgid "Redo"
+msgstr "İleri Al"
+
+#: editPBDialog#6
+msgctxt "editPBDialog#6"
+msgid "Ok"
+msgstr "Tamam"
+
+#: editPBDialog#7
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Edit PKGBUILD</span></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">p, "
+"li { white-space: pre-wrap; }</style></head><body style=\" font-family:'Sans "
+"Serif'; font-size:10pt; font-weight:400; font-style:normal;\"><p style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">PKGBUILD "
+"Düzenle</span></p></body></html>"
+
+#: logViewer#1
+msgid "Shaman - Log Viewer"
+msgstr "Shaman - Kayıt Göstericisi"
+
+#: logViewer#2
+msgid "Show Only Logs From"
+msgstr "Sadece Şu Kayıtları Göster"
+
+#: logViewer#3
+msgid "Show Only Logs Until"
+msgstr "Sadece Şuna Kadar Olan Kayıtları Göster"
+
+#: logViewer#4
+msgid "Refresh View"
+msgstr "Görünümü Tazele"
+
+#. (obsolete)
+#: logViewer#5
+msgctxt "logViewer#5"
+msgid "Close"
+msgstr "Kapat"
+
+#: logViewer#6
+msgid "Filter"
+msgstr "Süzgeç"
+
+#. (obsolete)
+#: logViewer#7
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Liberation Sans';\"></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">p, "
+"li { white-space: pre-wrap; }</style></head><body style=\" font-family:'Sans "
+"Serif'; font-size:9pt; font-weight:400; font-style:normal;\"><p style=\"-qt-"
+"paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; "
+"margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
+"family:'Liberation Sans';\"></p></body></html>"
+
+#: logViewer#8
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Liberation Sans'; font-size:9pt;\"></p></body></html>"
+msgstr ""
+
+# close the dialog
+#: logViewer#9
+msgctxt "logViewer#9"
+msgid "Close"
+msgstr "Kapat"
+
+#: logViewer#10
+msgid "dd/MM/yyyy"
+msgstr "dd/MM/yyyy"
+
+#: newsDialog#1
+msgid "Arch Linux News"
+msgstr "Arch Linux Haberler"
+
+#. (obsolete)
+#: newsDialog#2
+msgid "Title"
+msgstr "Başlık"
+
+#: newsDialog#3
+msgid "Link"
+msgstr "Bağlantı"
+
+#: newsDialog#4
+msgid "status"
+msgstr "durum"
+
+#: newsDialog#5
+msgctxt "newsDialog#5"
+msgid "Mark as Read"
+msgstr "Okunmuş olarak İşaretle"
+
+#: newsDialog#6
+msgid "Open in Browser"
+msgstr "Tarayıcıda Aç"
+
+#: newsDialog#7
+msgid "Refresh"
+msgstr "Tazele"
+
+#. (obsolete)
+#: newsDialog#8
+msgctxt "newsDialog#8"
+msgid "Close"
+msgstr "Kapat"
+
+#: newsDialog#9
+msgid "News-Title"
+msgstr "Haber- Başlık"
+
+# close the dialog
+#: newsDialog#10
+msgctxt "newsDialog#10"
+msgid "Close"
+msgstr "Kapat"
+
+#: pkgProperties#1
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
+"size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Package Information</span></p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\"><html><head><meta name=\"qrichtext\" content=\"1\" /><style "
+"type=\"text/css\">p, li { white-space: pre-wrap; }</style></head><body style=\" "
+"font-family:'Bitstream Vera Sans'; font-size:10pt; font-weight:400; font-"
+"style:normal;\"><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
+"style=\" font-weight:600;\">Paket Bilgisi</span></p></body></html>"
+
+#: pkgProperties#2
+msgctxt "pkgProperties#2"
+msgid "Package Information"
+msgstr "Paket Bilgisi"
+
+#: pkgProperties#3
+msgid "Installed:"
+msgstr "Yüklü:"
+
+#: pkgProperties#4
+msgid "Description:"
+msgstr "Tanım:"
+
+#: pkgProperties#5
+msgid "Upgradeable"
+msgstr "Yükseltilebilir"
+
+#: pkgProperties#6
+msgid "Build Date:"
+msgstr "Derlenme Tarihi:"
+
+#: pkgProperties#7
+msgid "Provides:"
+msgstr "Sunar:"
+
+#: pkgProperties#8
+msgid "Install Date:"
+msgstr "Yüklenme Tarihi:"
+
+#: pkgProperties#9
+msgid "Packager:"
+msgstr "Paketleyici:"
+
+#: pkgProperties#10
+msgid "Size:"
+msgstr "Boyut:"
+
+#: pkgProperties#11
+msgid "Has a Scriptlet"
+msgstr "Betiği Var"
+
+#: pkgProperties#12
+msgid "Version:"
+msgstr "Sürüm:"
+
+#: pkgProperties#13
+msgid "Changelog"
+msgstr ""
+
+#: pkgProperties#14
+msgctxt "pkgProperties#14"
+msgid "Files"
+msgstr "Dosyalar"
+
+#: pkgProperties#15
+msgctxt "pkgProperties#15"
+msgid "1"
+msgstr "1"
+
+#: pkgProperties#16
+msgctxt "pkgProperties#16"
+msgid "Dependencies"
+msgstr "Bağımlılıklar"
+
+#: pkgProperties#17
+msgid "Depends on"
+msgstr "Bağımlı"
+
+#: pkgProperties#18
+msgid "Is Required by"
+msgstr "Gerektirir"
+
+#: pkgProperties#19
+msgid "Actions Performed"
+msgstr "Gerçekleştirilen Eylemler"
+
+#: pkgProperties#20
+msgctxt "pkgProperties#20"
+msgid "Ok"
+msgstr "Tamam"
+
+#: reviewBuildingDialog#1
+msgid "Review Building Queue"
+msgstr "Derleme Sırasını Gözden Geçir"
+
+#: reviewBuildingDialog#2
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:10pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans "
+"Serif';\"><span style=\" font-weight:600;\">Build Queue From "
+"Source</span></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">p, "
+"li { white-space: pre-wrap; }</style></head><body style=\" font-"
+"family:'Liberation Sans'; font-size:10pt; font-weight:400; font-"
+"style:normal;\"><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
+"family:'Sans Serif';\"><span style=\" font-weight:600;\">Kaynaktan Derleme "
+"Sırası</span></p></body></html>"
+
+#: reviewBuildingDialog#3
+msgid "Process All Dependencies from Binary First (advised)"
+msgstr "Bütün Bağımlılıkları Önce İkili Paketlerden İşle (Önerilen)"
+
+#: reviewBuildingDialog#4
+msgid "This is useful if you want to review compiler's output"
+msgstr "Derleyici çıktısını incelemek için bu yararlıdır"
+
+#: reviewBuildingDialog#5
+msgid "Do not install immediately when building is finished"
+msgstr "Derleme bittikten sonra hemen yükleme"
+
+#: reviewBuildingDialog#6
+msgctxt "reviewBuildingDialog#6"
+msgid "Turn off PC when Queue is done"
+msgstr "Sıra tamamlanınca bilgisayarı kapat"
+
+#: reviewBuildingDialog#7
+msgctxt "reviewBuildingDialog#7"
+msgid "Show packages..."
+msgstr "Paketleri göster..."
+
+#: reviewBuildingDialog#8
+msgctxt "reviewBuildingDialog#8"
+msgid "Packages In Queue"
+msgstr "Sıradaki Paketler"
+
+#: reviewBuildingDialog#9
+msgctxt "reviewBuildingDialog#9"
+msgid "Abort"
+msgstr "İptal"
+
+#: reviewBuildingDialog#10
+msgid "Process From Binary"
+msgstr "İkili Paketten İşle"
+
+#: reviewBuildingDialog#11
+msgid "Review PKGBUILDs"
+msgstr "PKGBUILD'leri gözden geçir"
+
+#: reviewBuildingDialog#12
+msgid "Process From Source"
+msgstr "Kaynaktan İşle"
+
+#: transactionDialog#1
+msgid "Processing Queue..."
+msgstr "Sıra İşleniyor..."
+
+#: transactionDialog#2
+msgid "Check transaction validity"
+msgstr "Onay geçerliliğini denetle"
+
+#: transactionDialog#3
+msgid "Download Packages"
+msgstr "Paketleri İndir"
+
+#: transactionDialog#4
+msgid "Process queue"
+msgstr "Sırayı İşle"
+
+#: transactionDialog#5
+msgid "Cleanup"
+msgstr "Temizleme"
+
+#: transactionDialog#6
+msgctxt "transactionDialog#6"
+msgid "More Details..."
+msgstr "Daha Fazla Bilgi..."
+
+#: transactionDialog#7
+msgctxt "transactionDialog#7"
+msgid "Abort"
+msgstr "İptal"
+
+#: transactionDialog#8
+msgctxt "transactionDialog#8"
+msgid "Please Wait..."
+msgstr "Lütfen Bekleyin..."
+
+#: transactionDialog#9
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Process Queue</span></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">p, "
+"li { white-space: pre-wrap; }</style></head><body style=\" font-family:'Sans "
+"Serif'; font-size:10pt; font-weight:400; font-style:normal;\"><p style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Sırayı "
+"İşle</span></p></body></html>"
+
+#: upgradeDialog#1
+msgctxt "upgradeDialog#1"
+msgid "System Upgrade"
+msgstr "Sistem Yükseltme"
+
+#: upgradeDialog#2
+msgid "Remember my choice"
+msgstr "Seçimimi hatırla"
+
+#: upgradeDialog#3
+msgctxt "upgradeDialog#3"
+msgid "Abort"
+msgstr "İptal"
+
+#: upgradeDialog#4
+msgctxt "upgradeDialog#4"
+msgid "Show packages..."
+msgstr "Paketleri göster..."
+
+#: upgradeDialog#5
+msgid "Add to Queue"
+msgstr "Sıraya ekle"
+
+#: upgradeDialog#6
+msgid "Upgrade Now"
+msgstr "Şimdi Yükselt"
+
+#: upgradeDialog#7
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">System-Upgrade</span></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">p, "
+"li { white-space: pre-wrap; }</style></head><body style=\" font-family:'Sans "
+"Serif'; font-size:10pt; font-weight:400; font-style:normal;\"><p style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Sistem "
+"Yükseltme</span></p></body></html>"
+
+#: upgradeDialog#8
+msgid "Packages to Upgrade"
+msgstr "Yükseltilecek Paketler"
+
+#: upgradeDialog#9
+msgctxt "upgradeDialog#9"
+msgid "Force Queue Processing"
+msgstr "Sıra İşlemeyi Zorla"
