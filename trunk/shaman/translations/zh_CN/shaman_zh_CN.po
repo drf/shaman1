@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-24 21:55+0200\n"
+"POT-Creation-Date: 2008-11-24 22:12+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,7 +13,8 @@ msgstr ""
 "X-Generator: Translate Toolkit 1.2.0\n"
 
 #. (obsolete)
-#: #1
+#: 
+        #1
 msgctxt "#1"
 msgid "Please wait, fetching items..."
 msgstr "请等待， 正在抓取项目..."
@@ -250,6 +251,7 @@ msgid "Shaman - Processing"
 msgstr "Shaman - 处理"
 
 #: BuildingHandler#21
+#, fuzzy
 msgid ""
 "You are about to install <b>%n package(s)</b> from source. Building from "
 "source<br>can give some advantages, however is very slow.<br>If you are not "
@@ -1176,6 +1178,7 @@ msgid "All dependencies are satisfied"
 msgstr "所有的依赖关系已满足"
 
 #: LocalPackageDialog#4
+#, fuzzy
 msgid "%n package(s) will be installed as dependencies"
 msgstr ""
 "\n"
@@ -2827,6 +2830,7 @@ msgid "<b>%1</b> will be freed"
 msgstr " <b>%1</b>将被释放"
 
 #: ReviewQueueDialog#16
+#, fuzzy
 msgid "Remove <b>%n package(s)</b><br />"
 msgstr ""
 "\n"
@@ -2834,6 +2838,7 @@ msgstr ""
 "        "
 
 #: ReviewQueueDialog#17
+#, fuzzy
 msgid "Install/Upgrade <b>%n package(s)</b><br />"
 msgstr ""
 "\n"
@@ -2946,6 +2951,7 @@ msgstr ""
 "点击这里打开新闻对话框获取更多细节。"
 
 #: ShamanTrayIcon#16
+#, fuzzy
 msgid ""
 "Upgradeable package(s): %n.\n"
 "Click here to upgrade your System."
@@ -2981,6 +2987,7 @@ msgid ""
 msgstr "有 <b>%1 个可更新的软件包</b>. 您可以<br> 立即更新或者添加至当前队列<br> 稍后处理它。"
 
 #: SysUpgradeDialog#5
+#, fuzzy
 msgid ""
 "<b>Upgradeable package(s): %n</b> You can either<br> upgrade immediately or "
 "add it to the current Queue<br> and process it later."
@@ -4410,6 +4417,7 @@ msgstr ""
 "style=\" font-weight:400;\">波兰语翻译者</span></p></body></html>"
 
 #: aboutDialog#17
+#, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -4594,6 +4602,8 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
 "style=\" font-weight:400;\">Macedonian Translator</span></p></body></html>"
 msgstr ""
+"\n"
+"            "
 
 #: authDialog#1
 msgid "Root Password Required"

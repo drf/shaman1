@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-24 21:55+0200\n"
+"POT-Creation-Date: 2008-11-24 22:12+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,7 +13,8 @@ msgstr ""
 "X-Generator: Translate Toolkit 1.2.0\n"
 
 #. (obsolete)
-#: #1
+#: 
+        #1
 msgctxt "#1"
 msgid "Please wait, fetching items..."
 msgstr "Lütfen bekleyin, getiriliyor..."
@@ -234,6 +235,7 @@ msgid ""
 msgstr "Paketlerininz başarıyla derlendi ve yüklenmeye hazır"
 
 #: BuildingHandler#19
+#, fuzzy
 msgid ""
 "You are about to install <b>%n package(s)</b> from source. Building from "
 "source<br>can give some advantages, however is very slow.<br>If you are not "
@@ -242,7 +244,6 @@ msgid ""
 "configuration to improve your building performance."
 msgstr ""
 "\n"
-"            \n"
 "            \n"
 "        "
 
@@ -628,23 +629,35 @@ msgstr ""
 
 # Do not translate
 #: ConfigDialog#68
+#, fuzzy
 msgid "Core"
 msgstr ""
+"\n"
+"            "
 
 # Do not translate
 #: ConfigDialog#69
+#, fuzzy
 msgid "Extra"
 msgstr ""
+"\n"
+"            "
 
 # Do not translate
 #: ConfigDialog#70
+#, fuzzy
 msgid "Community"
 msgstr ""
+"\n"
+"            "
 
 # Do not translate
 #: ConfigDialog#71
+#, fuzzy
 msgid "Testing"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#72
 msgid "Server"
@@ -1119,10 +1132,10 @@ msgid "All dependencies are satisfied"
 msgstr "Bütün bağımlılıklar sağlandı"
 
 #: LocalPackageDialog#4
+#, fuzzy
 msgid "%n package(s) will be installed as dependencies"
 msgstr ""
 "\n"
-"            \n"
 "            \n"
 "        "
 
@@ -2497,18 +2510,18 @@ msgid "<b>%1</b> will be freed"
 msgstr "<b>%1</b> alan boşalacak"
 
 #: ReviewQueueDialog#16
+#, fuzzy
 msgid "Remove <b>%n package(s)</b><br />"
 msgstr ""
 "\n"
 "            \n"
-"            \n"
 "        "
 
 #: ReviewQueueDialog#17
+#, fuzzy
 msgid "Install/Upgrade <b>%n package(s)</b><br />"
 msgstr ""
 "\n"
-"            \n"
 "            \n"
 "        "
 
@@ -2612,12 +2625,12 @@ msgstr ""
 "Daha fazla bilgi için buraya tıklayarak Haberler Penceresini açın."
 
 #: ShamanTrayIcon#16
+#, fuzzy
 msgid ""
 "Upgradeable package(s): %n.\n"
 "Click here to upgrade your System."
 msgstr ""
 "\n"
-"            \n"
 "            \n"
 "        "
 
@@ -2645,12 +2658,12 @@ msgid "To be Upgraded"
 msgstr "Yükseltilecek"
 
 #: SysUpgradeDialog#4
+#, fuzzy
 msgid ""
 "<b>Upgradeable package(s): %n</b> You can either<br> upgrade immediately or "
 "add it to the current Queue<br> and process it later."
 msgstr ""
 "\n"
-"            \n"
 "            \n"
 "        "
 
@@ -3529,6 +3542,7 @@ msgstr ""
 "family:'Liberation Sans';\"></p></body></html>"
 
 #: logViewer#8
+#, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -3540,6 +3554,8 @@ msgid ""
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
 "font-family:'Liberation Sans'; font-size:9pt;\"></p></body></html>"
 msgstr ""
+"\n"
+"            "
 
 # close the dialog
 #: logViewer#9
@@ -3663,8 +3679,11 @@ msgid "Version:"
 msgstr "Sürüm:"
 
 #: pkgProperties#13
+#, fuzzy
 msgid "Changelog"
 msgstr ""
+"\n"
+"            "
 
 #: pkgProperties#14
 msgctxt "pkgProperties#14"

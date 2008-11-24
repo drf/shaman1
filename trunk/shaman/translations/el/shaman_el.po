@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-24 21:55+0200\n"
+"POT-Creation-Date: 2008-11-24 22:12+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,7 +13,8 @@ msgstr ""
 "X-Generator: Translate Toolkit 1.2.0\n"
 
 #. (obsolete)
-#: #1
+#: 
+        #1
 msgctxt "#1"
 msgid "Please wait, fetching items..."
 msgstr ""
@@ -273,7 +274,6 @@ msgid ""
 "configuration to improve your building performance."
 msgstr ""
 "\n"
-"            \n"
 "            \n"
 "        "
 
@@ -1035,6 +1035,7 @@ msgstr ""
 "επιλογών.</p></body></html>"
 
 #: ConfigDialog#131
+#, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -1050,18 +1051,29 @@ msgid ""
 "Sans'; font-size:9pt;\">Please choose an action from the Drop-Down "
 "Menu.</p></body></html>"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#132
+#, fuzzy
 msgid "RSync Server:"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#133
+#, fuzzy
 msgid "Update Database at"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#134
+#, fuzzy
 msgid "Use Animated Tray Icon"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#135
 #, fuzzy
@@ -1069,12 +1081,18 @@ msgid "KDEMod 4 Repository"
 msgstr "Repository του KDEMod 3 {4 ?}"
 
 #: ConfigDialog#136
+#, fuzzy
 msgid "KDEMod 4 Extragear Repository"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#137
+#, fuzzy
 msgid "KDEMod 4 Playground Repository"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#138
 #, fuzzy
@@ -1082,38 +1100,56 @@ msgid "KDEMod 4 Testing Repository"
 msgstr "KDEMod 3 Testing Repository {4 ?}"
 
 #: ConfigDialog#139
+#, fuzzy
 msgid "KDEMod 4 Unstable Repository (Testers only!)"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#140
+#, fuzzy
 msgid ""
 "Here you can choose what repositories to use between Arch Linux's official "
 "ones. Please note that packages from Unstable and Testing may break your "
 "system."
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#141
+#, fuzzy
 msgid ""
 "KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
 "improved Qt build, compatible with Arch Linux standard Qt's, an improved "
 "theme, and lots of addons, KDEMod is the best way to taste the ease and the "
 "power of KDE with the simplicity and the power of Arch."
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#142
+#, fuzzy
 msgid ""
 "You can extend your packages choice by adding other repositories. Third-"
 "Party Repositories act just as normal ones, and will be accessible through "
 "both Shaman and Pacman."
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#143
+#, fuzzy
 msgid "Use the following language:"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#144
+#, fuzzy
 msgid "Disable Tray Icon"
 msgstr ""
+"\n"
+"            "
 
 #: EditPBuild#1
 msgid "Saving"
@@ -1128,10 +1164,14 @@ msgstr ""
 "Θέλετε να το αποθηκεύσετε;"
 
 #: LocalPackage#1
+#, fuzzy
 msgid "Install Package from File"
 msgstr ""
+"\n"
+"            "
 
 #: LocalPackage#2
+#, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -1144,10 +1184,15 @@ msgid ""
 "Sans';\"><span style=\" font-weight:600;\">Local Package "
 "Installation</span></p></body></html>"
 msgstr ""
+"\n"
+"            "
 
 #: LocalPackage#3
+#, fuzzy
 msgid "Show..."
 msgstr ""
+"\n"
+"            "
 
 #: LocalPackage#4
 #, fuzzy
@@ -1162,27 +1207,38 @@ msgid "Cancel"
 msgstr "Ακύρωση"
 
 #: LocalPackage#6
+#, fuzzy
 msgid "Install Package"
 msgstr ""
+"\n"
+"            "
 
 #: LocalPackageDialog#1
+#, fuzzy
 msgid "Package is not installed"
 msgstr ""
+"\n"
+"            "
 
 #: LocalPackageDialog#2
+#, fuzzy
 msgid "Version %1 of this package is already installed"
 msgstr ""
+"\n"
+"            "
 
 #: LocalPackageDialog#3
+#, fuzzy
 msgid "All dependencies are satisfied"
 msgstr ""
+"\n"
+"            "
 
 #: LocalPackageDialog#4
 #, fuzzy
 msgid "%n package(s) will be installed as dependencies"
 msgstr ""
 "\n"
-"            \n"
 "            \n"
 "        "
 
@@ -2007,68 +2063,114 @@ msgid "Name"
 msgstr "Όνομα"
 
 #: MainWindow#137
+#, fuzzy
 msgid ""
 "A package providing %1 is already installed.\n"
 "Do you want to install %1 anyway?"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#138
+#, fuzzy
 msgid "&File"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#139
+#, fuzzy
 msgid "&Help"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#140
+#, fuzzy
 msgid "&Actions"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#141
+#, fuzzy
 msgid "&Tools"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#142
+#, fuzzy
 msgid "Re&positories"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#143
+#, fuzzy
 msgid "Package &Groups"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#144
+#, fuzzy
 msgid "Mark for &Installation"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#145
+#, fuzzy
 msgid "Mark for &Removal"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#146
+#, fuzzy
 msgid "Mark for complete re&moval"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#147
+#, fuzzy
 msgid "Package I&nformation"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#148
+#, fuzzy
 msgid "File&s"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#149
+#, fuzzy
 msgid "&Dependencies"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#150
+#, fuzzy
 msgid "Mark for Re&installation"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#151
+#, fuzzy
 msgid "&Cancel Action"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#152
+#, fuzzy
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -2094,6 +2196,8 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Lukas Appelhans "
 "&lt;boom1992@kdemod.ath.cx&gt;</p></body></html>"
 msgstr ""
+"\n"
+"            "
 
 # Name of the Package
 #. (obsolete)
@@ -2104,16 +2208,25 @@ msgstr "Όνομα"
 
 # Exit Shaman Shortcut
 #: MainWindow#154
+#, fuzzy
 msgid "Ctrl+Q"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#155
+#, fuzzy
 msgid "Name and Description"
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#1
+#, fuzzy
 msgid "Please choose an action to start maintenance..."
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#2
 #, fuzzy
@@ -2182,8 +2295,11 @@ msgid "Abort"
 msgstr "Ακύρωση"
 
 #: MaintenanceBar#13
+#, fuzzy
 msgid "System Maintenance"
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#14
 #, fuzzy
@@ -2292,8 +2408,11 @@ msgid "Sync could not be executed!!"
 msgstr "Η εντολή Sync δεν μπόρεσε να εκτελεστεί!!"
 
 #: MaintenanceBar#30
+#, fuzzy
 msgid "Maintenance Actions"
 msgstr ""
+"\n"
+"            "
 
 #: NewsViewer#1
 msgctxt "NewsViewer#1"
@@ -2488,28 +2607,46 @@ msgid "Do not show this Again"
 msgstr "Να μην εμφανιστεί ξανά"
 
 #: QObject#19
+#, fuzzy
 msgid "O&k"
 msgstr ""
+"\n"
+"            "
 
 #: QObject#20
+#, fuzzy
 msgid "&Yes"
 msgstr ""
+"\n"
+"            "
 
 #: QObject#21
+#, fuzzy
 msgid "&No"
 msgstr ""
+"\n"
+"            "
 
 #: QObject#22
+#, fuzzy
 msgid "Do not &show this Again"
 msgstr ""
+"\n"
+"            "
 
 #: QObject#23
+#, fuzzy
 msgid "C&ancel"
 msgstr ""
+"\n"
+"            "
 
 #: QObject#24
+#, fuzzy
 msgid "Whoa, that's co&ol!"
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#1
 msgid "<br><b> * Validating Transaction</b><br>"
@@ -2776,9 +2913,12 @@ msgid "Keep Queue Dialog Open after the Queue is finished"
 msgstr "Να μείνει το παράθυρο της Ουράς ανοιχτό μετά την επεξεργασία της"
 
 #: QueueReadyDialog#10
+#, fuzzy
 msgctxt "QueueReadyDialog#10"
 msgid "Force Queue Processing"
 msgstr ""
+"\n"
+"            "
 
 #: ReviewQueueDialog#1
 msgctxt "ReviewQueueDialog#1"
@@ -2855,7 +2995,6 @@ msgid "Remove <b>%n package(s)</b><br />"
 msgstr ""
 "\n"
 "            \n"
-"            \n"
 "        "
 
 #: ReviewQueueDialog#15
@@ -2864,7 +3003,6 @@ msgid "Install/Upgrade <b>%n package(s)</b><br />"
 msgstr ""
 "\n"
 "            \n"
-"            \n"
 "        "
 
 #: ShamanStatusBar#1
@@ -2872,16 +3010,25 @@ msgid "%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages"
 msgstr "%1 Διαθέσιμα Πακέτα, %2 Εγκατεστημένα, %3 Αναβαθμίσιμα"
 
 #: ShamanStatusBar#2
+#, fuzzy
 msgid "%1 will be used"
 msgstr ""
+"\n"
+"            "
 
 #: ShamanStatusBar#3
+#, fuzzy
 msgid "%1 will be freed"
 msgstr ""
+"\n"
+"            "
 
 #: ShamanStatusBar#4
+#, fuzzy
 msgid "%1 to be Installed, %2 to be Removed"
 msgstr ""
+"\n"
+"            "
 
 #: ShamanTrayIcon#1
 msgctxt "ShamanTrayIcon#1"
@@ -2980,7 +3127,6 @@ msgid ""
 msgstr ""
 "\n"
 "            \n"
-"            \n"
 "        "
 
 #. (obsolete)
@@ -3015,7 +3161,6 @@ msgid ""
 "add it to the current Queue<br> and process it later."
 msgstr ""
 "\n"
-"            \n"
 "            \n"
 "        "
 
@@ -3842,8 +3987,11 @@ msgstr ""
 "κώδικα.</span></p></body></html>"
 
 #: aboutDialog#13
+#, fuzzy
 msgid "Visit &Website..."
 msgstr ""
+"\n"
+"            "
 
 #. (obsolete)
 #: aboutDialog#14
@@ -3871,6 +4019,7 @@ msgstr ""
 "{0p?} {600;?} {1.0 ?} {721)?}"
 
 #: aboutDialog#15
+#, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -4055,6 +4204,8 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
 "style=\" font-weight:400;\">Macedonian Translator</span></p></body></html>"
 msgstr ""
+"\n"
+"            "
 
 #: authDialog#1
 msgid "Root Password Required"
@@ -4230,8 +4381,11 @@ msgid "Close"
 msgstr "Κλείσιμο"
 
 #: logViewer#9
+#, fuzzy
 msgid "dd/MM/yyyy"
 msgstr ""
+"\n"
+"            "
 
 #: newsDialog#1
 msgid "Arch Linux News"
@@ -4550,6 +4704,9 @@ msgid "Show packages..."
 msgstr "Εμφάνιση πακέτων..."
 
 #: upgradeDialog#9
+#, fuzzy
 msgctxt "upgradeDialog#9"
 msgid "Force Queue Processing"
 msgstr ""
+"\n"
+"            "

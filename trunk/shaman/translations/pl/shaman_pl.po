@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-24 21:55+0200\n"
+"POT-Creation-Date: 2008-11-24 22:12+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,7 +13,8 @@ msgstr ""
 "X-Generator: Translate Toolkit 1.2.0\n"
 
 #. (obsolete)
-#: #1
+#: 
+        #1
 msgctxt "#1"
 msgid "Please wait, fetching items..."
 msgstr "Proszę czekać, pobieranie plików..."
@@ -236,6 +237,7 @@ msgid ""
 msgstr "Twoje pakiety zostały pomyślnie zbudowane i są gotowe do instalacji"
 
 #: BuildingHandler#19
+#, fuzzy
 msgid ""
 "You are about to install <b>%n package(s)</b> from source. Building from "
 "source<br>can give some advantages, however is very slow.<br>If you are not "
@@ -244,8 +246,6 @@ msgid ""
 "configuration to improve your building performance."
 msgstr ""
 "\n"
-"            \n"
-"            \n"
 "            \n"
 "        "
 
@@ -1088,11 +1088,10 @@ msgid "All dependencies are satisfied"
 msgstr "Wszystkie zależności są spełnione"
 
 #: LocalPackageDialog#4
+#, fuzzy
 msgid "%n package(s) will be installed as dependencies"
 msgstr ""
 "\n"
-"            \n"
-"            \n"
 "            \n"
 "        "
 
@@ -1847,9 +1846,12 @@ msgstr "Dziennik zmian niedostepny dla tego pakietu"
 # Lukas: l.appelhans@gmx.de
 # Thanks again, and enjoy your translation!
 #: QObject#1
+#, fuzzy
 msgctxt "QObject#1"
 msgid "Shaman"
 msgstr ""
+"\n"
+"            "
 
 #: QObject#2
 msgctxt "QObject#2"
@@ -2268,20 +2270,18 @@ msgid "<b>%1</b> will be freed"
 msgstr "<b>%1</b> zostanie zwolnione"
 
 #: ReviewQueueDialog#16
+#, fuzzy
 msgid "Remove <b>%n package(s)</b><br />"
 msgstr ""
 "\n"
 "            \n"
-"            \n"
-"            \n"
 "        "
 
 #: ReviewQueueDialog#17
+#, fuzzy
 msgid "Install/Upgrade <b>%n package(s)</b><br />"
 msgstr ""
 "\n"
-"            \n"
-"            \n"
 "            \n"
 "        "
 
@@ -2387,13 +2387,12 @@ msgstr ""
 "szczegółów."
 
 #: ShamanTrayIcon#16
+#, fuzzy
 msgid ""
 "Upgradeable package(s): %n.\n"
 "Click here to upgrade your System."
 msgstr ""
 "\n"
-"            \n"
-"            \n"
 "            \n"
 "        "
 
@@ -2421,13 +2420,12 @@ msgid "To be Upgraded"
 msgstr "Do aktualizacji"
 
 #: SysUpgradeDialog#4
+#, fuzzy
 msgid ""
 "<b>Upgradeable package(s): %n</b> You can either<br> upgrade immediately or "
 "add it to the current Queue<br> and process it later."
 msgstr ""
 "\n"
-"            \n"
-"            \n"
 "            \n"
 "        "
 
@@ -2782,6 +2780,7 @@ msgstr ""
 "text-indent:0px;\">Chińskie tłumaczenie</p></body></html>"
 
 #: aboutDialog#8
+#, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -2966,6 +2965,8 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
 "style=\" font-weight:400;\">Macedonian Translator</span></p></body></html>"
 msgstr ""
+"\n"
+"            "
 
 #: authDialog#1
 msgid "Root Password Required"

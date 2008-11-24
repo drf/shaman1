@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-24 21:55+0200\n"
+"POT-Creation-Date: 2008-11-24 22:12+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,7 +13,8 @@ msgstr ""
 "X-Generator: Translate Toolkit 1.2.0\n"
 
 #. (obsolete)
-#: #1
+#: 
+        #1
 msgctxt "#1"
 msgid "Please wait, fetching items..."
 msgstr "Vennligst vent, henter elementer..."
@@ -245,7 +246,6 @@ msgid ""
 "configuration to improve your building performance."
 msgstr ""
 "\n"
-"            \n"
 "            \n"
 "        "
 
@@ -960,12 +960,18 @@ msgid "KDEMod 4 Repository"
 msgstr "Pakkearkiv for KDEMod 3 {4 ?}"
 
 #: ConfigDialog#131
+#, fuzzy
 msgid "KDEMod 4 Extragear Repository"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#132
+#, fuzzy
 msgid "KDEMod 4 Playground Repository"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#133
 #, fuzzy
@@ -973,38 +979,56 @@ msgid "KDEMod 4 Testing Repository"
 msgstr "Pakkearkiv for KDEMod 3 Testing {4 ?}"
 
 #: ConfigDialog#134
+#, fuzzy
 msgid "KDEMod 4 Unstable Repository (Testers only!)"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#135
+#, fuzzy
 msgid ""
 "Here you can choose what repositories to use between Arch Linux's official "
 "ones. Please note that packages from Unstable and Testing may break your "
 "system."
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#136
+#, fuzzy
 msgid ""
 "KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
 "improved Qt build, compatible with Arch Linux standard Qt's, an improved "
 "theme, and lots of addons, KDEMod is the best way to taste the ease and the "
 "power of KDE with the simplicity and the power of Arch."
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#137
+#, fuzzy
 msgid ""
 "You can extend your packages choice by adding other repositories. Third-"
 "Party Repositories act just as normal ones, and will be accessible through "
 "both Shaman and Pacman."
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#138
+#, fuzzy
 msgid "Use the following language:"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#139
+#, fuzzy
 msgid "Disable Tray Icon"
 msgstr ""
+"\n"
+"            "
 
 #: EditPBuild#1
 msgid "Saving"
@@ -1019,10 +1043,14 @@ msgstr ""
 "Ønsker du å lagre den?"
 
 #: LocalPackage#1
+#, fuzzy
 msgid "Install Package from File"
 msgstr ""
+"\n"
+"            "
 
 #: LocalPackage#2
+#, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -1035,10 +1063,15 @@ msgid ""
 "Sans';\"><span style=\" font-weight:600;\">Local Package "
 "Installation</span></p></body></html>"
 msgstr ""
+"\n"
+"            "
 
 #: LocalPackage#3
+#, fuzzy
 msgid "Show..."
 msgstr ""
+"\n"
+"            "
 
 #: LocalPackage#4
 #, fuzzy
@@ -1053,27 +1086,38 @@ msgid "Cancel"
 msgstr "Avbryt"
 
 #: LocalPackage#6
+#, fuzzy
 msgid "Install Package"
 msgstr ""
+"\n"
+"            "
 
 #: LocalPackageDialog#1
+#, fuzzy
 msgid "Package is not installed"
 msgstr ""
+"\n"
+"            "
 
 #: LocalPackageDialog#2
+#, fuzzy
 msgid "Version %1 of this package is already installed"
 msgstr ""
+"\n"
+"            "
 
 #: LocalPackageDialog#3
+#, fuzzy
 msgid "All dependencies are satisfied"
 msgstr ""
+"\n"
+"            "
 
 #: LocalPackageDialog#4
 #, fuzzy
 msgid "%n package(s) will be installed as dependencies"
 msgstr ""
 "\n"
-"            \n"
 "            \n"
 "        "
 
@@ -1607,16 +1651,25 @@ msgstr "Vis logg"
 
 # Exit Shaman Shortcut
 #: MainWindow#102
+#, fuzzy
 msgid "Ctrl+Q"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#103
+#, fuzzy
 msgid "Name and Description"
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#1
+#, fuzzy
 msgid "Please choose an action to start maintenance..."
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#2
 #, fuzzy
@@ -1685,8 +1738,11 @@ msgid "Abort"
 msgstr "Avbryt"
 
 #: MaintenanceBar#13
+#, fuzzy
 msgid "System Maintenance"
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#14
 #, fuzzy
@@ -1789,8 +1845,11 @@ msgid "Sync could not be executed!!"
 msgstr "Kunne ikke utføre sync!"
 
 #: MaintenanceBar#30
+#, fuzzy
 msgid "Maintenance Actions"
 msgstr ""
+"\n"
+"            "
 
 #: NewsViewer#1
 msgctxt "NewsViewer#1"
@@ -2281,7 +2340,6 @@ msgid "Remove <b>%n package(s)</b><br />"
 msgstr ""
 "\n"
 "            \n"
-"            \n"
 "        "
 
 #: ReviewQueueDialog#17
@@ -2289,7 +2347,6 @@ msgstr ""
 msgid "Install/Upgrade <b>%n package(s)</b><br />"
 msgstr ""
 "\n"
-"            \n"
 "            \n"
 "        "
 
@@ -2400,7 +2457,6 @@ msgid ""
 msgstr ""
 "\n"
 "            \n"
-"            \n"
 "        "
 
 #. (obsolete)
@@ -2435,7 +2491,6 @@ msgid ""
 "add it to the current Queue<br> and process it later."
 msgstr ""
 "\n"
-"            \n"
 "            \n"
 "        "
 
@@ -2773,6 +2828,7 @@ msgid "Visit &Website..."
 msgstr "Besøk &hjemmesiden..."
 
 #: aboutDialog#8
+#, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -2957,6 +3013,8 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
 "style=\" font-weight:400;\">Macedonian Translator</span></p></body></html>"
 msgstr ""
+"\n"
+"            "
 
 #: authDialog#1
 msgid "Root Password Required"
@@ -3121,8 +3179,11 @@ msgid "Close"
 msgstr "Lukk"
 
 #: logViewer#8
+#, fuzzy
 msgid "dd/MM/yyyy"
 msgstr ""
+"\n"
+"            "
 
 #: newsDialog#1
 msgid "Arch Linux News"

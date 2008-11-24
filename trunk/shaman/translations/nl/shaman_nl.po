@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-24 21:55+0200\n"
+"POT-Creation-Date: 2008-11-24 22:12+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,7 +13,8 @@ msgstr ""
 "X-Generator: Translate Toolkit 1.2.0\n"
 
 #. (obsolete)
-#: #1
+#: 
+        #1
 msgctxt "#1"
 msgid "Please wait, fetching items..."
 msgstr "Even geduld, items worden opgehaald..."
@@ -235,6 +236,7 @@ msgid ""
 msgstr "Uw pakketten zijn succesvol gebouwd en kunnen geïnstalleerd worden"
 
 #: BuildingHandler#19
+#, fuzzy
 msgid ""
 "You are about to install <b>%n package(s)</b> from source. Building from "
 "source<br>can give some advantages, however is very slow.<br>If you are not "
@@ -243,7 +245,6 @@ msgid ""
 "configuration to improve your building performance."
 msgstr ""
 "\n"
-"            \n"
 "            \n"
 "        "
 
@@ -1086,10 +1087,10 @@ msgid "All dependencies are satisfied"
 msgstr "Alle afhankelijkheden zijn nagekomen"
 
 #: LocalPackageDialog#4
+#, fuzzy
 msgid "%n package(s) will be installed as dependencies"
 msgstr ""
 "\n"
-"            \n"
 "            \n"
 "        "
 
@@ -2267,18 +2268,18 @@ msgid "Do you wish to continue?"
 msgstr "Wilt u verder gaan?"
 
 #: ReviewQueueDialog#16
+#, fuzzy
 msgid "Remove <b>%n package(s)</b><br />"
 msgstr ""
 "\n"
 "            \n"
-"            \n"
 "        "
 
 #: ReviewQueueDialog#17
+#, fuzzy
 msgid "Install/Upgrade <b>%n package(s)</b><br />"
 msgstr ""
 "\n"
-"            \n"
 "            \n"
 "        "
 
@@ -2384,12 +2385,12 @@ msgstr ""
 "Klik hier voor meer details."
 
 #: ShamanTrayIcon#16
+#, fuzzy
 msgid ""
 "Upgradeable package(s): %n.\n"
 "Click here to upgrade your System."
 msgstr ""
 "\n"
-"            \n"
 "            \n"
 "        "
 
@@ -2418,12 +2419,12 @@ msgid "To be Upgraded"
 msgstr "Bij te werken"
 
 #: SysUpgradeDialog#4
+#, fuzzy
 msgid ""
 "<b>Upgradeable package(s): %n</b> You can either<br> upgrade immediately or "
 "add it to the current Queue<br> and process it later."
 msgstr ""
 "\n"
-"            \n"
 "            \n"
 "        "
 

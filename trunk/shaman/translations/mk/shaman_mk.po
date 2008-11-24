@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-24 21:55+0200\n"
+"POT-Creation-Date: 2008-11-24 22:12+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,7 +13,8 @@ msgstr ""
 "X-Generator: Translate Toolkit 1.2.0\n"
 
 #. (obsolete)
-#: #1
+#: 
+        #1
 msgctxt "#1"
 msgid "Please wait, fetching items..."
 msgstr "Ве молиме почекајте, симнувам ставки..."
@@ -71,8 +72,11 @@ msgid "<b>Starting ABS Tree Update...</b><br><br>"
 msgstr "<b>Започнувам со надградба на ABS дрвото...</b><br><br>"
 
 #: BuildingDialog#6
+#, fuzzy
 msgid "<br><br><b>ABS Tree Was Successfully Updated!</b>"
 msgstr ""
+"\n"
+"            "
 
 #: BuildingDialog#7
 msgid "ABS Update"
@@ -206,6 +210,7 @@ msgid ""
 msgstr "Вашите пакети се создадени, и можете да ги инсталирате"
 
 #: BuildingHandler#17
+#, fuzzy
 msgid ""
 "You are about to install <b>%n package(s)</b> from source. Building from "
 "source<br>can give some advantages, however is very slow.<br>If you are not "
@@ -214,8 +219,6 @@ msgid ""
 "configuration to improve your building performance."
 msgstr ""
 "\n"
-"            \n"
-"            \n"
 "            \n"
 "        "
 
@@ -933,34 +936,49 @@ msgid "KDEMod 4 Unstable Repository (Testers only!)"
 msgstr "KDEMod 4 Unstable репозитар (само за тестери)"
 
 #: ConfigDialog#133
+#, fuzzy
 msgid ""
 "Here you can choose what repositories to use between Arch Linux's official "
 "ones. Please note that packages from Unstable and Testing may break your "
 "system."
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#134
+#, fuzzy
 msgid ""
 "KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
 "improved Qt build, compatible with Arch Linux standard Qt's, an improved "
 "theme, and lots of addons, KDEMod is the best way to taste the ease and the "
 "power of KDE with the simplicity and the power of Arch."
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#135
+#, fuzzy
 msgid ""
 "You can extend your packages choice by adding other repositories. Third-"
 "Party Repositories act just as normal ones, and will be accessible through "
 "both Shaman and Pacman."
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#136
+#, fuzzy
 msgid "Use the following language:"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#137
+#, fuzzy
 msgid "Disable Tray Icon"
 msgstr ""
+"\n"
+"            "
 
 #: EditPBuild#1
 msgid "Saving"
@@ -1031,11 +1049,10 @@ msgid "All dependencies are satisfied"
 msgstr "Сите зависности се задоволени"
 
 #: LocalPackageDialog#4
+#, fuzzy
 msgid "%n package(s) will be installed as dependencies"
 msgstr ""
 "\n"
-"            \n"
-"            \n"
 "            \n"
 "        "
 
@@ -1893,10 +1910,13 @@ msgid "Starting up Shaman..."
 msgstr "Подигање на Shaman..."
 
 #: QObject#20
+#, fuzzy
 msgid ""
 "It looks like another copy of Shaman is running.\n"
 "You can only run one copy of Shaman at a time."
 msgstr ""
+"\n"
+"            "
 
 #: QueueDialog#1
 msgid "<br><b> * Validating Transaction</b><br>"
@@ -2167,20 +2187,18 @@ msgid "Do you wish to continue?"
 msgstr "Дали сакате да продолжите?"
 
 #: ReviewQueueDialog#10
+#, fuzzy
 msgid "Remove <b>%n package(s)</b><br />"
 msgstr ""
 "\n"
 "            \n"
-"            \n"
-"            \n"
 "        "
 
 #: ReviewQueueDialog#11
+#, fuzzy
 msgid "Install/Upgrade <b>%n package(s)</b><br />"
 msgstr ""
 "\n"
-"            \n"
-"            \n"
 "            \n"
 "        "
 
@@ -2267,13 +2285,12 @@ msgstr ""
 "Кликнете овде за да го отворите диалогот за вести за повеќе детали."
 
 #: ShamanTrayIcon#14
+#, fuzzy
 msgid ""
 "Upgradeable package(s): %n.\n"
 "Click here to upgrade your System."
 msgstr ""
 "\n"
-"            \n"
-"            \n"
 "            \n"
 "        "
 
@@ -2283,13 +2300,12 @@ msgid "To be Upgraded"
 msgstr "За надградба"
 
 #: SysUpgradeDialog#2
+#, fuzzy
 msgid ""
 "<b>Upgradeable package(s): %n</b> You can either<br> upgrade immediately or "
 "add it to the current Queue<br> and process it later."
 msgstr ""
 "\n"
-"            \n"
-"            \n"
 "            \n"
 "        "
 
@@ -2672,6 +2688,7 @@ msgstr ""
 "weight:400;\">Полски превод</span></p></body></html>"
 
 #: aboutDialog#8
+#, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -2856,6 +2873,8 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
 "style=\" font-weight:400;\">Macedonian Translator</span></p></body></html>"
 msgstr ""
+"\n"
+"            "
 
 #: authDialog#1
 msgid "Root Password Required"
@@ -3020,8 +3039,11 @@ msgid "Close"
 msgstr "Затвори"
 
 #: logViewer#8
+#, fuzzy
 msgid "dd/MM/yyyy"
 msgstr ""
+"\n"
+"            "
 
 #: newsDialog#1
 msgid "Arch Linux News"

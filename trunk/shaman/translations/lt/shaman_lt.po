@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-24 21:55+0200\n"
+"POT-Creation-Date: 2008-11-24 22:12+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,7 +13,8 @@ msgstr ""
 "X-Generator: Translate Toolkit 1.2.0\n"
 
 #. (obsolete)
-#: #1
+#: 
+        #1
 msgctxt "#1"
 msgid "Please wait, fetching items..."
 msgstr "Prašome palaukti, gaunama..."
@@ -242,8 +243,6 @@ msgid ""
 "configuration to improve your building performance."
 msgstr ""
 "\n"
-"            \n"
-"            \n"
 "            \n"
 "        "
 
@@ -695,23 +694,35 @@ msgstr ""
 
 # Do not translate
 #: ConfigDialog#74
+#, fuzzy
 msgid "Core"
 msgstr ""
+"\n"
+"            "
 
 # Do not translate
 #: ConfigDialog#75
+#, fuzzy
 msgid "Extra"
 msgstr ""
+"\n"
+"            "
 
 # Do not translate
 #: ConfigDialog#76
+#, fuzzy
 msgid "Community"
 msgstr ""
+"\n"
+"            "
 
 # Do not translate
 #: ConfigDialog#77
+#, fuzzy
 msgid "Testing"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#78
 msgid "Server"
@@ -822,24 +833,36 @@ msgid "Makepkg Configuration"
 msgstr "Makepkg nustatymai"
 
 #: ConfigDialog#99
+#, fuzzy
 msgid "CFlags"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#100
+#, fuzzy
 msgid "CXXFlags"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#101
+#, fuzzy
 msgid "BuildEnv"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#102
 msgid "Options"
 msgstr "Nustatymai"
 
 #: ConfigDialog#103
+#, fuzzy
 msgid "Doc_Dirs"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#104
 msgid "Build Environment"
@@ -867,8 +890,11 @@ msgstr "Atnaujinti duomenų bazę visada"
 
 # As in "minutes"
 #: ConfigDialog#110
+#, fuzzy
 msgid "min"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#111
 msgid "Show tray notification Windows"
@@ -951,12 +977,18 @@ msgid "KDEMod 4 Repository"
 msgstr "KDEMod 3 saugykla {4 ?}"
 
 #: ConfigDialog#130
+#, fuzzy
 msgid "KDEMod 4 Extragear Repository"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#131
+#, fuzzy
 msgid "KDEMod 4 Playground Repository"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#132
 #, fuzzy
@@ -964,38 +996,56 @@ msgid "KDEMod 4 Testing Repository"
 msgstr "KDEMod 3 bandomoji saugykla {4 ?}"
 
 #: ConfigDialog#133
+#, fuzzy
 msgid "KDEMod 4 Unstable Repository (Testers only!)"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#134
+#, fuzzy
 msgid ""
 "Here you can choose what repositories to use between Arch Linux's official "
 "ones. Please note that packages from Unstable and Testing may break your "
 "system."
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#135
+#, fuzzy
 msgid ""
 "KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
 "improved Qt build, compatible with Arch Linux standard Qt's, an improved "
 "theme, and lots of addons, KDEMod is the best way to taste the ease and the "
 "power of KDE with the simplicity and the power of Arch."
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#136
+#, fuzzy
 msgid ""
 "You can extend your packages choice by adding other repositories. Third-"
 "Party Repositories act just as normal ones, and will be accessible through "
 "both Shaman and Pacman."
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#137
+#, fuzzy
 msgid "Use the following language:"
 msgstr ""
+"\n"
+"            "
 
 #: ConfigDialog#138
+#, fuzzy
 msgid "Disable Tray Icon"
 msgstr ""
+"\n"
+"            "
 
 #: EditPBuild#1
 msgid "Saving"
@@ -1008,10 +1058,14 @@ msgid ""
 msgstr "Jūs redagavote PKGBUILD. Ar norite išsaugoti?"
 
 #: LocalPackage#1
+#, fuzzy
 msgid "Install Package from File"
 msgstr ""
+"\n"
+"            "
 
 #: LocalPackage#2
+#, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -1024,10 +1078,15 @@ msgid ""
 "Sans';\"><span style=\" font-weight:600;\">Local Package "
 "Installation</span></p></body></html>"
 msgstr ""
+"\n"
+"            "
 
 #: LocalPackage#3
+#, fuzzy
 msgid "Show..."
 msgstr ""
+"\n"
+"            "
 
 #: LocalPackage#4
 #, fuzzy
@@ -1042,28 +1101,38 @@ msgid "Cancel"
 msgstr "Atšaukti"
 
 #: LocalPackage#6
+#, fuzzy
 msgid "Install Package"
 msgstr ""
+"\n"
+"            "
 
 #: LocalPackageDialog#1
+#, fuzzy
 msgid "Package is not installed"
 msgstr ""
+"\n"
+"            "
 
 #: LocalPackageDialog#2
+#, fuzzy
 msgid "Version %1 of this package is already installed"
 msgstr ""
+"\n"
+"            "
 
 #: LocalPackageDialog#3
+#, fuzzy
 msgid "All dependencies are satisfied"
 msgstr ""
+"\n"
+"            "
 
 #: LocalPackageDialog#4
 #, fuzzy
 msgid "%n package(s) will be installed as dependencies"
 msgstr ""
 "\n"
-"            \n"
-"            \n"
 "            \n"
 "        "
 
@@ -1078,8 +1147,11 @@ msgstr "Apibūdinimas"
 
 # Exit Shaman Shortcut
 #: MainWindow#3
+#, fuzzy
 msgid "Ctrl+Q"
 msgstr ""
+"\n"
+"            "
 
 #: MainWindow#4
 msgid "Shaman - Reducing To Tray"
@@ -1380,6 +1452,7 @@ msgid ""
 msgstr "%1 neteisingas paketas"
 
 #: MainWindow#63
+#, fuzzy
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -1405,6 +1478,8 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Lukas Appelhans "
 "&lt;boom1992@kdemod.ath.cx&gt;</p></body></html>"
 msgstr ""
+"\n"
+"            "
 
 #. (obsolete)
 #: MainWindow#64
@@ -1570,12 +1645,18 @@ msgid "View Log"
 msgstr "Žiūrėti žurnalą"
 
 #: MainWindow#102
+#, fuzzy
 msgid "Name and Description"
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#1
+#, fuzzy
 msgid "Please choose an action to start maintenance..."
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#2
 #, fuzzy
@@ -1638,16 +1719,22 @@ msgid "Cleaning up building Environments..."
 msgstr "Išvalomos statymo aplinkos..."
 
 #: MaintenanceBar#12
+#, fuzzy
 msgctxt "MaintenanceBar#12"
 "MaintenanceBar#12"
 "MaintenanceBar#12"
 "MaintenanceBar#12"
 msgid "Abort"
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#13
+#, fuzzy
 msgid "System Maintenance"
 msgstr ""
+"\n"
+"            "
 
 #: MaintenanceBar#14
 #, fuzzy
@@ -1750,8 +1837,11 @@ msgid "Sync could not be executed!!"
 msgstr "Sync negalėjo būti atlikta!!"
 
 #: MaintenanceBar#30
+#, fuzzy
 msgid "Maintenance Actions"
 msgstr ""
+"\n"
+"            "
 
 #: NewsViewer#1
 msgctxt "NewsViewer#1"
@@ -1778,18 +1868,27 @@ msgstr "Negalima gauti RSS įrašų! Pranešta klaida:"
 
 # Size is in Gib
 #: PackageProperties#1
+#, fuzzy
 msgid "%1 GiB"
 msgstr ""
+"\n"
+"            "
 
 # Size is in MiB
 #: PackageProperties#2
+#, fuzzy
 msgid "%1 MiB"
 msgstr ""
+"\n"
+"            "
 
 # Size is in KiB
 #: PackageProperties#3
+#, fuzzy
 msgid "%1 KiB"
 msgstr ""
+"\n"
+"            "
 
 # Size is in Bytes
 #: PackageProperties#4
@@ -1802,8 +1901,11 @@ msgstr "Shaman - %1 nustatymai"
 
 # Stands for: Not Available
 #: PackageProperties#6
+#, fuzzy
 msgid "N/A"
 msgstr ""
+"\n"
+"            "
 
 #: PackageProperties#7
 msgid "Changelog not available for this package"
@@ -2240,8 +2342,6 @@ msgid "Remove <b>%n package(s)</b><br />"
 msgstr ""
 "\n"
 "            \n"
-"            \n"
-"            \n"
 "        "
 
 #: ReviewQueueDialog#17
@@ -2249,8 +2349,6 @@ msgstr ""
 msgid "Install/Upgrade <b>%n package(s)</b><br />"
 msgstr ""
 "\n"
-"            \n"
-"            \n"
 "            \n"
 "        "
 
@@ -2361,8 +2459,6 @@ msgid ""
 msgstr ""
 "\n"
 "            \n"
-"            \n"
-"            \n"
 "        "
 
 #. (obsolete)
@@ -2395,8 +2491,6 @@ msgid ""
 "add it to the current Queue<br> and process it later."
 msgstr ""
 "\n"
-"            \n"
-"            \n"
 "            \n"
 "        "
 
@@ -2756,6 +2850,7 @@ msgid "Visit &Website..."
 msgstr "Apsilankykite &tinklapyje..."
 
 #: aboutDialog#8
+#, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -2940,6 +3035,8 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
 "style=\" font-weight:400;\">Macedonian Translator</span></p></body></html>"
 msgstr ""
+"\n"
+"            "
 
 #: authDialog#1
 msgid "Root Password Required"
@@ -3074,6 +3171,7 @@ msgid "Filter"
 msgstr "Filtras"
 
 #: logViewer#5
+#, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -3085,6 +3183,8 @@ msgid ""
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
 "font-family:'Liberation Sans'; font-size:9pt;\"></p></body></html>"
 msgstr ""
+"\n"
+"            "
 
 #: logViewer#6
 msgid "Refresh View"
@@ -3097,8 +3197,11 @@ msgid "Close"
 msgstr "Uždaryti"
 
 #: logViewer#8
+#, fuzzy
 msgid "dd/MM/yyyy"
 msgstr ""
+"\n"
+"            "
 
 #: newsDialog#1
 msgid "Arch Linux News"
@@ -3136,6 +3239,7 @@ msgid "Close"
 msgstr "Uždaryti"
 
 #: pkgProperties#1
+#, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -3147,6 +3251,8 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Package Information</span></p></body></html>"
 msgstr ""
+"\n"
+"            "
 
 #: pkgProperties#2
 msgctxt "pkgProperties#2"
@@ -3202,9 +3308,12 @@ msgid "Files"
 msgstr "Failai"
 
 #: pkgProperties#15
+#, fuzzy
 msgctxt "pkgProperties#15"
 msgid "1"
 msgstr ""
+"\n"
+"            "
 
 #: pkgProperties#16
 msgid "Dependencies"
