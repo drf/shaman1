@@ -102,7 +102,7 @@ void LocalPackageDialog::goInstall()
 {
     Backend::instance()->clearQueue();
 
-    Backend::instance()->addItemToQueue(new QueueItem(filename, QueueItem::FromFile));
+    Backend::instance()->addItemToQueue(filename, QueueItem::FromFile);
 
     emit queueReady();
 

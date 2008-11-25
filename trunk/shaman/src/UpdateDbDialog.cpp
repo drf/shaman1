@@ -22,6 +22,8 @@
 
 #include <aqpm/Backend.h>
 
+#include <QDebug>
+
 using namespace std;
 using namespace Aqpm;
 
@@ -48,6 +50,8 @@ UpdateDbDialog::~UpdateDbDialog()
 
 void UpdateDbDialog::updateLabel( const QString &repo, int action )
 {
+    qDebug() << "Signal received";
+
     /* Ok, you need to read createWidget first.
      * When we are here, first of all we obtain the current label,
      * that is at the index pointed by actionDone.
@@ -139,8 +143,9 @@ void UpdateDbDialog::updateDlBar( char *c, int bytedone, int bytetotal, int spee
 void UpdateDbDialog::doAction()
 {
     updatedRepos.clear();
-    Backend::instance()->updateDatabase();
     connect( Backend::instance(), SIGNAL( transactionReleased() ), this, SLOT( scopeEnded() ) );
+    Backend::instance()->updateDatabase();
+    qDebug() << "Dialog released";
 }
 
 void UpdateDbDialog::scopeEnded()
@@ -155,6 +160,8 @@ void UpdateDbDialog::scopeEnded()
 
 void UpdateDbDialog::createWidgets( const QStringList &list )
 {
+    qDebug() << "Creating Widgets:" << list;
+
     /* This is (cronologically) the first function called, and it is triggered
      * from a signal coming from AlpmHandler, that gives us the list of the
      * Databases that we are going to sync, already ordered.

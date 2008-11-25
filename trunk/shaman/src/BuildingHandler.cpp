@@ -171,13 +171,13 @@ void BuildingHandler::validateSourceQueue()
 
 
     foreach( QTreeWidgetItem *itm, mWin->getInstallPackagesInWidgetQueue() ) {
-        Backend::instance()->addItemToQueue(new QueueItem(itm->text(1), QueueItem::Sync));
+        Backend::instance()->addItemToQueue(itm->text(1), QueueItem::Sync);
         QTreeWidgetItem *itmL = revBuildUi->treeWidget->findItems( tr( "To be Installed" ), Qt::MatchExactly, 0 ).first();
         new QTreeWidgetItem( itmL, QStringList( itm->text( 1 ) ) );
     }
 
     foreach( QTreeWidgetItem *itm, mWin->getUpgradePackagesInWidgetQueue() ) {
-        Backend::instance()->addItemToQueue(new QueueItem(itm->text(1), QueueItem::Sync));
+        Backend::instance()->addItemToQueue(itm->text(1), QueueItem::Sync);
         QTreeWidgetItem *itmL = revBuildUi->treeWidget->findItems( tr( "To be Upgraded" ), Qt::MatchExactly, 0 ).first();
         new QTreeWidgetItem( itmL, QStringList( itm->text( 1 ) ) );
     }
@@ -345,7 +345,7 @@ void BuildingHandler::processBuiltPackages()
              */
 
             foreach( const QString &rmv, installedMakeDepends )
-            Backend::instance()->addItemToQueue(new QueueItem(rmv, QueueItem::Remove));
+            Backend::instance()->addItemToQueue(rmv, QueueItem::Remove);
         }
 
         /* If some packages failed to build and we installed them from binary
@@ -362,13 +362,13 @@ void BuildingHandler::processBuiltPackages()
                 }
 
                 if ( !found )
-                    Backend::instance()->addItemToQueue(new QueueItem(rmv, QueueItem::Remove));
+                    Backend::instance()->addItemToQueue(rmv, QueueItem::Remove);
             }
         }
     }
 
     foreach( const QString &pac, buildTargets ) {
-        Backend::instance()->addItemToQueue(new QueueItem(pac, QueueItem::FromFile));
+        Backend::instance()->addItemToQueue(pac, QueueItem::FromFile);
     }
 
     installedMakeDepends.clear();
@@ -438,11 +438,11 @@ void BuildingHandler::processBuildWizard()
         installedBinaryPkgs = binaryList;
 
         foreach( const QString &syn, binaryList ) {
-            Backend::instance()->addItemToQueue(new QueueItem(syn, QueueItem::Sync));
+            Backend::instance()->addItemToQueue(syn, QueueItem::Sync);
         }
 
         foreach( const QString &syn, depsList ) {
-            Backend::instance()->addItemToQueue(new QueueItem(syn, QueueItem::Sync));
+            Backend::instance()->addItemToQueue(syn, QueueItem::Sync);
         }
 
         queueDl = new QueueDialog( mWin );
