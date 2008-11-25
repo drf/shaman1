@@ -110,7 +110,7 @@ void QueueDialog::startProcessing( bool force )
 
     Backend::instance()->processQueue(flags);
 
-    connect( Backend::instance(), SIGNAL( operationSuccessful() ), SLOT( cleanup() ) );
+    connect( Backend::instance(), SIGNAL( operationFinished(bool) ), SLOT( cleanup(bool) ) );
 }
 
 void QueueDialog::changeStatus( pmtransevt_t event, void *data1, void *data2 )
@@ -403,7 +403,7 @@ void QueueDialog::startProcess()
              SLOT( updateProgressBar( pmtransprog_t, char*, int, int, int ) ) );
 }
 
-void QueueDialog::cleanup()
+void QueueDialog::cleanup(bool success)
 {
     QMutexLocker lock( Backend::instance()->backendMutex() );
     disconnect( Backend::instance(), SIGNAL( streamTransProgress( pmtransprog_t, char*, int, int, int ) ), 0, 0 );
@@ -414,11 +414,11 @@ void QueueDialog::cleanup()
 
     qApp->processEvents();
 
-    emit terminated( errors );
+    emit terminated( errors && !success );
 
     cleanUpLabel->setPixmap( QIcon( ":/Icons/icons/dialog-ok-apply.png" ).pixmap( 22 ) );
 
-    if ( errors ) {
+    if ( errors || !success ) {
         actionDetail->setText( QString( tr( "Queue processing failed!" ) ) );
         textEdit->append( QString( "<br><b> * " + tr( "Queue processing failed!" ) + "</b>" ) );
     } else {
@@ -739,7 +739,7 @@ void QueueDialog::abortTransaction()
 
         qDebug() << "Transaction interrupted";
 
-        cleanup();
+        cleanup(false);
 
         break;
     case QMessageBox::No:

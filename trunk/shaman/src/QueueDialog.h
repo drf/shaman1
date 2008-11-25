@@ -52,7 +52,7 @@ class QueueDialog : public QDialog, private Ui::transactionDialog
                                 int howmany, int remain );
         void startDownload();
         void startProcess();
-        void cleanup();
+        void cleanup(bool success);
 
         void handlePreparingError( const QString &msg );
         void handleCommittingError( const QString &msg );
