@@ -4,6 +4,7 @@ qt4_add_dbus_adaptor(shaman_adaptor_SRCS ../dbus/org.archlinux.shaman.xml MainWi
 SET(shaman_SRCS ${shaman_adaptor_SRCS}
     main.cpp
     MainWindow.cpp
+    Shaman.cpp
 #    AlpmHandler.cpp
     BuildingDialog.cpp
 #    callbacks.cpp
@@ -32,6 +33,7 @@ SET(shaman_SRCS ${shaman_adaptor_SRCS}
 
 SET(shaman_MOC_HDRS
     MainWindow.h
+    Shaman.h
 #    AlpmHandler.h
     BuildingDialog.h
 #    callbacks.h

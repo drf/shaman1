@@ -366,14 +366,14 @@ void MainWindow::quitApp()
 
     settings->deleteLater();
 
-    emit aboutToQuit();
+    QCoreApplication::quit();
 }
 
 void MainWindow::closeEvent( QCloseEvent *evt )
 {
     if ( !trayicon ) {
         evt->accept();
-        emit aboutToQuit();
+        QCoreApplication::quit();
     }
 
 
