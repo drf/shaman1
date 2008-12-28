@@ -5,6 +5,7 @@ set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules")
 
 include(FindQt4)
 include(FindSharedMimeInfo)
+include(FindPkgConfig)
 
 configure_file(config.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config.h )
 
@@ -26,6 +27,10 @@ SET(QT_MIN_VERSION "4.4.0")
 
 FIND_PACKAGE(Qt4 REQUIRED)
 FIND_PACKAGE(Alpm REQUIRED)
+pkg_check_modules(AQPM aqpm)
+if(AQPM_FOUND)
+	MESSAGE("Aqpm Found")
+endif(AQPM_FOUND)
 FIND_PACKAGE(LibArchive REQUIRED)
 
 #optional packages

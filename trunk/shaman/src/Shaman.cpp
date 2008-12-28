@@ -63,17 +63,7 @@ void Shaman::startShaman()
     // Let's fire up aqpm
     Backend::instance()->setUpAlpm();
 
-    if ( !Backend::instance()->testLibrary() ) {
-        Authenticator ath;
-
-        if ( !ath.switchToRoot() ) {
-            ShamanDialog::popupDialog( QObject::tr( "Shaman" ), QObject::tr( "Shaman could not"
-                    " switch to root.\nProbably you have not set the SUID bit to it.\nYou can do that by "
-                    "issuing as root\nchown root shaman && chmod u+s shaman.\nNote that this is safe, please "
-                    "read Shaman wiki\nfor more details." ), NULL, ShamanProperties::ErrorDialog );
-            QCoreApplication::exit(1);
-        }
-
+    if ( !QFile::exists("/var/lib/pacman/db.lck") ) {
         ShamanDialog::popupDialog( QObject::tr( "Shaman" ), QObject::tr( "There was a problem"
                 " while testing libalpm.\nMaybe another application has a lock on it." ), NULL,
                 ShamanProperties::ErrorDialog );
@@ -121,9 +111,9 @@ void Shaman::startShaman()
     qDebug() << ">> Our website is @ http://shaman.iskrembilen.com/ , join in!!";
     qDebug() << ">> You can also find a bugtracker in the website, please use it.";
     qDebug() << ">> ";
-    qDebug() << ">>    Have you found a bug? Help us solving it faster! Please read";
-    qDebug() << ">>    http://shaman.iskrembilen.com/trac/wiki/Debugging_Shaman";
-    qDebug() << ">>    and please follow these steps to report bugs effectively!";
+    qDebug() << ">> Have you found a bug? Help us solving it faster! Please read";
+    qDebug() << ">> http://shaman.iskrembilen.com/trac/wiki/Debugging_Shaman";
+    qDebug() << ">> and please follow these steps to report bugs effectively!";
     qDebug() << ">>";
     qDebug() << ">> Starting Up Shaman...";
     qDebug() << "";
@@ -166,8 +156,8 @@ void Shaman::startShaman()
     struct utsname un;
 
     uname( &un );
-    snprintf( agent, 100, "shaman/" SHAMAN_VERSION " (%s %s) libalpm/%s",
-            un.sysname, un.machine, Backend::instance()->getAlpmVersion().toAscii().data() );
+    snprintf(agent, 100, "shaman/%s (%s %s) libalpm/%s", SHAMAN_VERSION,
+             un.sysname, un.machine, Backend::instance()->getAlpmVersion().toUtf8().data());
     setenv( "HTTP_USER_AGENT", agent, 0 );
 
     qDebug() << "User agent is:" << qgetenv( "HTTP_USER_AGENT" );
