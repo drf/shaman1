@@ -24,6 +24,7 @@
 #include <iostream>
 #include "ui_dbUpdateDialog.h"
 
+#include <QObject>
 #include <QDialog>
 
 class UpdateDbDialog : public QDialog, private Ui::dbUpdateDialog

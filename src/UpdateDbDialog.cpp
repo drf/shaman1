@@ -143,7 +143,7 @@ void UpdateDbDialog::updateDlBar( char *c, int bytedone, int bytetotal, int spee
 void UpdateDbDialog::doAction()
 {
     updatedRepos.clear();
-    connect( Backend::instance(), SIGNAL( transactionReleased() ), this, SLOT( scopeEnded() ) );
+    connect( Backend::instance(), SIGNAL( operationFinished(bool) ), this, SLOT( scopeEnded() ) );
     Backend::instance()->updateDatabase();
     qDebug() << "Dialog released";
 }
