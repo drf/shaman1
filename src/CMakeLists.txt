@@ -30,31 +30,6 @@ SET(shaman_SRCS ${shaman_adaptor_SRCS}
     LocalPackageDialog.cpp
 )
 
-SET(shaman_MOC_HDRS
-    MainWindow.h
-    Shaman.h
-#    AlpmHandler.h
-    BuildingDialog.h
-#    callbacks.h
-    configDialog.h
-    EditPBuild.h
-    QueueDialog.h
-    SysUpgradeDialog.h
-    UpdateDbDialog.h
-    BuildingHandler.h
-    kanimatedsystemtrayicon.h
-    ShamanTrayIcon.h
-    ReviewQueueDialog.h
-    ArchLinuxNewsReader.h
-    NewsViewer.h
-    LogViewer.h
-    ShamanStatusBar.h
-    PackageProperties.h
-    MaintenanceBar.h
-    LocalPackageDialog.h
-#    ShamanTreeWidgetItem.h
-)
-
 SET(shaman_UIS
     ../ui/MainWindow.ui
     ../ui/aboutDialog.ui
@@ -76,15 +51,13 @@ SET(shaman_RESOUCES
     ../ui/shaman.qrc
 )
 
-QT4_WRAP_CPP(shaman_MOC_SRCS ${shaman_MOC_HDRS})
 QT4_ADD_RESOURCES (qtsourceview_RC_SRCS  ${shaman_RESOUCES})
 QT4_WRAP_UI(shaman_UIS_H ${shaman_UIS})
 QT4_AUTOMOC(${shaman_SRCS})
 
-ADD_EXECUTABLE(shaman
+AUTOMOC4_ADD_EXECUTABLE(shaman
     ${shaman_SRCS}
     ${shaman_UIS_H}
-    ${shaman_MOC_SRCS}
     ${qtsourceview_RC_SRCS}
 )
 

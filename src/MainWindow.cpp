@@ -32,7 +32,6 @@
 #include "BuildingHandler.h"
 #include "ShamanTrayIcon.h"
 #include "ui_aboutDialog.h"
-#include "ui_authDialog.h"
 #include "shamanadaptor.h"
 #include "ReviewQueueDialog.h"
 #include "ArchLinuxNewsReader.h"
