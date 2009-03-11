@@ -276,13 +276,18 @@ MainWindow::MainWindow( QMainWindow *parent )
     connect(actionUpdate_Database, SIGNAL(activated()), this, SLOT(doDbUpdate()));
     toolBar->addAction(actionUpdate_Database);
 
+    PolkitQt::Action *actionProcess_Queue = new PolkitQt::Action("org.chakraproject.aqpm.processqueue", this);
+    actionProcess_Queue->setText("Process Queue");
+    connect(actionProcess_Queue, SIGNAL(triggered(bool)), actionProcess_Queue, SLOT(activate()));
+    connect(actionProcess_Queue, SIGNAL(activated()), this, SLOT(widgetQueueToAlpmQueue()));
+    toolBar->addAction(actionProcess_Queue);
+
     connect( Backend::instance(), SIGNAL( questionStreamed( const QString& ) ), this,
              SLOT( streamTransQuestion( const QString& ) ) );
     connect( pkgsViewWG, SIGNAL( customContextMenuRequested( const QPoint & ) ),
              SLOT( showPkgsViewContextMenu() ) );
     connect( repoList, SIGNAL( customContextMenuRequested( const QPoint & ) ),
              SLOT( showRepoViewContextMenu() ) );
-    connect( actionProcess_Queue, SIGNAL( triggered() ), SLOT( widgetQueueToAlpmQueue() ) );
     connect( switchToRepo, SIGNAL( clicked() ), SLOT( populateRepoColumn() ) );
     connect( switchToGrps, SIGNAL( clicked() ), SLOT( populateGrpsColumn() ) );
     connect( removeButton, SIGNAL( clicked() ), SLOT( removePackage() ) );
@@ -1610,6 +1615,7 @@ void MainWindow::processQueue()
      */
 
     qDebug() << "Queue Dialog started";
+    qDebug() << Backend::instance()->queue().count();
 
     queueDl = new QueueDialog( this );
 

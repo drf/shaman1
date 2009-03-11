@@ -525,7 +525,6 @@
     </widget>
     <addaction name="actionUpgrade_System" />
     <addaction name="separator" />
-    <addaction name="actionProcess_Queue" />
     <addaction name="actionInstall_Package_From_File" />
     <addaction name="separator" />
     <addaction name="menuInstall_and_Build_from_Source" />
@@ -561,7 +560,6 @@
     <bool>false</bool>
    </attribute>
    <addaction name="actionUpgrade_System" />
-   <addaction name="actionProcess_Queue" />
    <addaction name="separator" />
    <addaction name="actionCancel_all_actions" />
    <addaction name="separator" />
@@ -635,15 +633,6 @@
    </property>
    <property name="text" >
     <string comment="Quit the application" >Quit</string>
-   </property>
-  </action>
-  <action name="actionProcess_Queue" >
-   <property name="icon" >
-    <iconset resource="shaman.qrc" >
-     <normaloff>:/Icons/icons/dialog-ok-apply.png</normaloff>:/Icons/icons/dialog-ok-apply.png</iconset>
-   </property>
-   <property name="text" >
-    <string>Process Queue</string>
    </property>
   </action>
   <action name="actionCancel_all_actions" >
