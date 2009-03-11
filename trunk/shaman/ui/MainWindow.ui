@@ -496,7 +496,7 @@
      <x>0</x>
      <y>0</y>
      <width>1195</width>
-     <height>27</height>
+     <height>23</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile" >
@@ -523,7 +523,6 @@
      <addaction name="separator" />
      <addaction name="actionBuild_and_Install_Selected" />
     </widget>
-    <addaction name="actionUpdate_Database" />
     <addaction name="actionUpgrade_System" />
     <addaction name="separator" />
     <addaction name="actionProcess_Queue" />
@@ -561,7 +560,6 @@
    <attribute name="toolBarBreak" >
     <bool>false</bool>
    </attribute>
-   <addaction name="actionUpdate_Database" />
    <addaction name="actionUpgrade_System" />
    <addaction name="actionProcess_Queue" />
    <addaction name="separator" />
@@ -589,15 +587,6 @@
    </property>
    <property name="text" >
     <string>About...</string>
-   </property>
-  </action>
-  <action name="actionUpdate_Database" >
-   <property name="icon" >
-    <iconset resource="shaman.qrc" >
-     <normaloff>:/Icons/icons/view-refresh.png</normaloff>:/Icons/icons/view-refresh.png</iconset>
-   </property>
-   <property name="text" >
-    <string>Update Database</string>
    </property>
   </action>
   <action name="actionUpgrade_System" >

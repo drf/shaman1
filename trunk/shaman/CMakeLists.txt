@@ -6,6 +6,7 @@ set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules")
 include(FindQt4)
 include(FindSharedMimeInfo)
 include(FindPkgConfig)
+include(FindPolkitQt)
 
 configure_file(config.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config.h )
 
@@ -32,6 +33,9 @@ if(AQPM_FOUND)
 	MESSAGE("Aqpm Found")
 endif(AQPM_FOUND)
 FIND_PACKAGE(LibArchive REQUIRED)
+FIND_PACKAGE(PolkitQt REQUIRED)
+pkg_check_modules (POLKIT polkit>=0.8 REQUIRED)
+pkg_check_modules (POLKITDBUS polkit-dbus>=0.8 REQUIRED)
 
 #optional packages
 FIND_PACKAGE(KDE4)
@@ -49,6 +53,8 @@ INCLUDE_DIRECTORIES(
     ${CMAKE_CURRENT_BINARY_DIR}
     ${CMAKE_CURRENT_BINARY_DIR}/src
     ${CMAKE_SOURCE_DIR}/src
+    ${POLKITQT_INCLUDE_DIR}
+    ${POLKIT_INCLUDE_DIRS}
 )
 
 CONFIGURE_FILE(

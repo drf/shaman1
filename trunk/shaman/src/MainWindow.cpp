@@ -73,6 +73,8 @@
 #include <QStandardItemModel>
 #include <QSortFilterProxyModel>
 
+#include <Action>
+
 using namespace Aqpm;
 
 // Thread Definition
@@ -269,9 +271,14 @@ MainWindow::MainWindow( QMainWindow *parent )
     nameDescBox->addItem( tr( "Description" ) );
     nameDescBox->addItem( tr( "Name and Description" ) );
 
+    PolkitQt::Action *actionUpdate_Database = new PolkitQt::Action("org.chakraproject.aqpm.updatedatabase", this);
+    actionUpdate_Database->setText("Update Database");
+    connect(actionUpdate_Database, SIGNAL(triggered(bool)), actionUpdate_Database, SLOT(activate()));
+    connect(actionUpdate_Database, SIGNAL(activated()), this, SLOT(doDbUpdate()));
+    toolBar->addAction(actionUpdate_Database);
+
     connect( Backend::instance(), SIGNAL( questionStreamed( const QString& ) ), this,
              SLOT( streamTransQuestion( const QString& ) ) );
-    connect( actionUpdate_Database, SIGNAL( triggered() ), SLOT( doDbUpdate() ) );
     connect( pkgsViewWG, SIGNAL( customContextMenuRequested( const QPoint & ) ),
              SLOT( showPkgsViewContextMenu() ) );
     connect( repoList, SIGNAL( customContextMenuRequested( const QPoint & ) ),
