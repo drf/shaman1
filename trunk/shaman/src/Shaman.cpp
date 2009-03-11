@@ -20,7 +20,6 @@
 
 #include "Shaman.h"
 
-#include "Authenticator.h"
 #include "MainWindow.h"
 #include "ShamanDialog.h"
 

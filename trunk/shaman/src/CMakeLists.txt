@@ -95,7 +95,7 @@ TARGET_LINK_LIBRARIES(shaman
     ${QT_QTNETWORK_LIBRARY}
     ${ALPM_LIBS}
     ${LIBARCHIVE_LIBS}
-    -lpam
+    ${POLKITQT_LIBRARIES}
     -laqpm
 )
 

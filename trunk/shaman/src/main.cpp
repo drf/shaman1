@@ -22,7 +22,6 @@
 
 #include "Shaman.h"
 #include "ShamanDialog.h"
-#include "Authenticator.h"
 
 #include <config.h>
 

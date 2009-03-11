@@ -33,8 +33,7 @@
 #include <QPushButton>
 
 MaintenanceBar::MaintenanceBar( QWidget *parent )
-        : QToolBar( parent ),
-        ath( new Authenticator( this ) )
+        : QToolBar( parent )
 {
     setObjectName( "MaintenanceBar" );
 
@@ -119,7 +118,8 @@ void MaintenanceBar::performAction()
     case 5:
         openDialog();
 
-        mantProc = new RootProcess();
+        /*mantProc = new RootProcess();
+
 
         connect( mantProc, SIGNAL( readyReadStandardError() ), SLOT( mantProgress() ) );
         connect( mantProc, SIGNAL( finished( int, QProcess::ExitStatus ) ), SLOT( cleanProc( int, QProcess::ExitStatus ) ) );
@@ -133,7 +133,7 @@ void MaintenanceBar::performAction()
 
         mantProc->start( "pacman-optimize" );
 
-        ath->switchToStdUsr();
+        ath->switchToStdUsr();*/
         break;
 
     case 6:
@@ -281,7 +281,7 @@ void MaintenanceBar::cleanProc( int eC, QProcess::ExitStatus eS )
         alpm_logaction( QString( tr( "Could not Optimize Pacman Database!" ) + QChar( '\n' ) ).toUtf8().data() );
     }
 
-    mantProc->deleteLater();
+    /*mantProc->deleteLater();
 
     mantDetails->moveCursor( QTextCursor::End );
 
@@ -305,7 +305,7 @@ void MaintenanceBar::cleanProc( int eC, QProcess::ExitStatus eS )
 
     mantDetails->moveCursor( QTextCursor::End );
 
-    mantProc->deleteLater();
+    mantProc->deleteLater();*/
 
     m_button->setText( QString( tr( "Close" ) ) );
     m_button->setIcon( QPixmap( ":/Icons/icons/dialog-ok-apply.png" ) );
@@ -322,9 +322,9 @@ void MaintenanceBar::cleanProc( int eC, QProcess::ExitStatus eS )
 
 void MaintenanceBar::mantProgress()
 {
-    mantProc->setReadChannel( QProcess::StandardError );
+    /*mantProc->setReadChannel( QProcess::StandardError );
     QString str = QString::fromLocal8Bit( mantProc->readLine( 1024 ) );
     mantDetails->append( QString( "<b><i>" + str + "</b></i>" ) );
     qDebug() << str;
-    mantDetails->moveCursor( QTextCursor::End );
+    mantDetails->moveCursor( QTextCursor::End );*/
 }

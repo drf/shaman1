@@ -109,7 +109,7 @@ bool EditPBuild::saveFile( const QString &name )
 
     absSource.append( "PKGBUILD" );
 
-    ath.switchToRoot();
+    //ath.switchToRoot();
 
     QFile file( absSource );
 
@@ -123,7 +123,7 @@ bool EditPBuild::saveFile( const QString &name )
 
     file.close();
 
-    ath.switchToStdUsr();
+    //ath.switchToStdUsr();
 
     needsSaving = false;
 

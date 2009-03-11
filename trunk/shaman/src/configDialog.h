@@ -97,7 +97,6 @@ class ConfigDialog : public QDialog, public Ui::ConfigDialog
     private:
         QPointer<QDialog> addDialog;
         QPointer<CleanThread> cTh;
-        QPointer<RootProcess> mantProc;
         bool upDb;
 };
 

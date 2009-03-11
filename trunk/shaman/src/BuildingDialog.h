@@ -65,7 +65,6 @@ class BuildingDialog : public QDialog, public Ui::buildingDialog, private ABSHan
         void nullifyPointer();
 
     private:
-        QPointer<RootProcess> ABSProc;
         QPointer<QProcess> MakePkgProc;
         QStringList buildQueue;
         QStringList builtPaths;

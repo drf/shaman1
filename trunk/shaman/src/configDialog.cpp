@@ -45,8 +45,7 @@ using namespace Aqpm;
 
 ConfigDialog::ConfigDialog( QWidget *parent )
         : QDialog( parent ),
-        upDb( false ),
-        ath( new Authenticator( this ) )
+        upDb( false )
 {
     setupUi( this );
     setupGeneral();
@@ -635,7 +634,7 @@ void ConfigDialog::performManteinanceAction()
         connect( cTh, SIGNAL( finished() ), SLOT( cleanThread() ) );
         cTh->start();
     } else if ( !mantActionBox->currentText().compare( QString( tr( "Optimize Pacman Database" ) ) ) ) {
-        mantProc = new RootProcess();
+        /*mantProc = new RootProcess();
 
         connect( mantProc, SIGNAL( readyReadStandardError() ), SLOT( mantProgress() ) );
         connect( mantProc, SIGNAL( finished( int, QProcess::ExitStatus ) ), SLOT( cleanProc( int, QProcess::ExitStatus ) ) );
@@ -645,7 +644,7 @@ void ConfigDialog::performManteinanceAction()
 
         qDebug() << "Starting the process";
 
-        mantProc->start( "pacman-optimize" );
+        mantProc->start( "pacman-optimize" );*/
 
     } else if ( !mantActionBox->currentText().compare( QString( tr( "Clean All Building Environments" ) ) ) ) {
         cTh = new CleanThread( 3 );
@@ -1240,11 +1239,11 @@ void ConfigDialog::cleanThread()
 
 void ConfigDialog::mantProgress()
 {
-    mantProc->setReadChannel( QProcess::StandardError );
+/*    mantProc->setReadChannel( QProcess::StandardError );
     QString str = QString::fromLocal8Bit( mantProc->readLine( 1024 ) );
     mantDetails->append( QString( "<b><i>" + str + "</b></i>" ) );
     qDebug() << str;
-    mantDetails->moveCursor( QTextCursor::End );
+    mantDetails->moveCursor( QTextCursor::End );*/
 }
 
 void ConfigDialog::cleanProc( int eC, QProcess::ExitStatus eS )
@@ -1261,14 +1260,14 @@ void ConfigDialog::cleanProc( int eC, QProcess::ExitStatus eS )
         alpm_logaction( QString( tr( "Could not Optimize Pacman Database!" ) + QChar( '\n' ) ).toUtf8().data() );
     }
 
-    mantProc->deleteLater();
+    //mantProc->deleteLater();
 
     mantDetails->moveCursor( QTextCursor::End );
 
     statusLabel->setText( QString( tr( "Running sync...", "sync is a command, so it should not be translated" ) ) );
     mantDetails->append( QString( tr( "Running sync...", "sync is a command, so it should not be translated" ) ) );
 
-    mantProc = new RootProcess();
+    /*mantProc = new RootProcess();
 
     if ( mantProc->execute( "sync" ) == 0 ) {
         statusLabel->setText( QString( tr( "Operation Completed Successfully!" ) ) );
@@ -1281,7 +1280,7 @@ void ConfigDialog::cleanProc( int eC, QProcess::ExitStatus eS )
 
     mantDetails->moveCursor( QTextCursor::End );
 
-    mantProc->deleteLater();
+    mantProc->deleteLater();*/
 
     mantProcessButton->setEnabled( true );
 }

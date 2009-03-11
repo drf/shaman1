@@ -36,9 +36,7 @@ using namespace Aqpm;
 
 BuildingDialog::BuildingDialog( QWidget *parent )
         : QDialog( parent ),
-        ABSProc(),
-        MakePkgProc(),
-        ath( new Authenticator( this ) )
+        MakePkgProc()
 {
     setupUi( this );
     setWindowModality( Qt::ApplicationModal );
@@ -63,14 +61,14 @@ void BuildingDialog::abortProcess()
             MakePkgProc->deleteLater();
             progressEdit->append( QString( tr( "<br><br><b>Building Process Aborted by the User. Building Failed.</b>" ) ) );
         }
-        if ( ABSProc ) {
+        /*if ( ABSProc ) {
             disconnect( ABSProc, SIGNAL( readyReadStandardOutput() ), this, SLOT( writeLineProgress() ) );
             disconnect( ABSProc, SIGNAL( readyReadStandardError() ), this, SLOT( writeLineProgressErr() ) );
             disconnect( ABSProc, 0, 0, 0 );
             ABSProc->kill();
             ABSProc->deleteLater();
             progressEdit->append( QString( tr( "<br><br><b>Building Process Aborted by the User. Building Failed.</b>" ) ) );
-        }
+        }*/
         emit finishedBuilding( 2, builtPaths );
         break;
     case QMessageBox::No:
@@ -83,7 +81,7 @@ void BuildingDialog::abortProcess()
 
 void BuildingDialog::updateABSTree()
 {
-    ABSProc = new RootProcess( this );
+    /*ABSProc = new RootProcess( this );
     connect( ABSProc, SIGNAL( readyReadStandardOutput() ), SLOT( writeLineProgress() ) );
     connect( ABSProc, SIGNAL( finished( int, QProcess::ExitStatus ) ), SLOT( finishedUpdateABSTree( int, QProcess::ExitStatus ) ) );
 
@@ -98,12 +96,12 @@ void BuildingDialog::updateABSTree()
 
     ath->switchToStdUsr();
 
-    progressEdit->moveCursor( QTextCursor::End );
+    progressEdit->moveCursor( QTextCursor::End );*/
 }
 
 void BuildingDialog::writeLineProgress()
 {
-    if ( ABSProc->readChannel() == QProcess::StandardError )
+    /*if ( ABSProc->readChannel() == QProcess::StandardError )
         progressEdit->append( QString() );
 
     ABSProc->setReadChannel( QProcess::StandardOutput );
@@ -120,12 +118,12 @@ void BuildingDialog::writeLineProgress()
 
     progressEdit->insertHtml( view );
 
-    progressEdit->moveCursor( QTextCursor::End );
+    progressEdit->moveCursor( QTextCursor::End );*/
 }
 
 void BuildingDialog::writeLineProgressErr()
 {
-    if ( ABSProc->readChannel() == QProcess::StandardOutput )
+    /*if ( ABSProc->readChannel() == QProcess::StandardOutput )
         progressEdit->append( QString() );
 
     ABSProc->setReadChannel( QProcess::StandardError );
@@ -142,7 +140,7 @@ void BuildingDialog::writeLineProgressErr()
 
     progressEdit->insertHtml( "<b><i>" + view + "</i></b>" );
 
-    progressEdit->moveCursor( QTextCursor::End );
+    progressEdit->moveCursor( QTextCursor::End );*/
 }
 
 void BuildingDialog::writeLineProgressMk()
@@ -193,7 +191,7 @@ void BuildingDialog::finishedUpdateABSTree( int ecode, QProcess::ExitStatus esta
 {
     Q_UNUSED( estat );
 
-    ABSProc->deleteLater();
+    //ABSProc->deleteLater();
 
     if ( ecode == 0 ) {
         progressEdit->append( QString( tr( "<br><br><b>ABS Tree Was Successfully Updated!</b>" ) ) );

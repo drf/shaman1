@@ -21,7 +21,6 @@
 #include "QueueDialog.h"
 
 #include "ShamanDialog.h"
-#include "Authenticator.h"
 #include "ui_transactionDialog.h"
 
 #include <aqpm/Backend.h>
@@ -149,31 +148,8 @@ void QueueDialog::changeStatus( pmtransevt_t event, void *data1, void *data2 )
         actionDetail->setText( QString( tr( "Installing %1..." ) ).arg( alpm_pkg_get_name(( pmpkg_t * )data1 ) ) );
         textEdit->append( QString( tr( "Installing %1..." ) ).arg( alpm_pkg_get_name(( pmpkg_t * )data1 ) ) );
 
-        if ( !alpm_pkg_has_scriptlet(( pmpkg_t * )data1 ) )
-            qDebug() << "No scriptlet for package " << alpm_pkg_get_name(( pmpkg_t * )data1 );
-        else {
-            QString p1Name( alpm_pkg_get_name(( pmpkg_t * )data1 ) );
-            QString p1Ver( alpm_pkg_get_version(( pmpkg_t * )data1 ) );
-            QString pArch( alpm_pkg_get_arch(( pmpkg_t * )data1 ) );
-
-
-
-            runScriptlet( 0, p1Name, p1Ver, pArch, "" );
-        }
         break;
     case PM_TRANS_EVT_ADD_DONE:
-        if ( !alpm_pkg_has_scriptlet(( pmpkg_t * )data1 ) )
-            qDebug() << "No scriptlet for package " << alpm_pkg_get_name(( pmpkg_t * )data1 );
-        else {
-            QString p1Name( alpm_pkg_get_name(( pmpkg_t * )data1 ) );
-            QString p1Ver( alpm_pkg_get_version(( pmpkg_t * )data1 ) );
-            QString pArch( alpm_pkg_get_arch(( pmpkg_t * )data1 ) );
-
-
-
-            runScriptlet( 3, p1Name, p1Ver, pArch, "" );
-        }
-
         addTxt = QString( tr( "%1 (%2) installed successfully!" ) ).arg(
                      alpm_pkg_get_name(( pmpkg_t * )data1 ) ).arg( alpm_pkg_get_version(( pmpkg_t * )data1 ) );
         actionDetail->setText( addTxt );
@@ -190,32 +166,8 @@ void QueueDialog::changeStatus( pmtransevt_t event, void *data1, void *data2 )
         }
         actionDetail->setText( QString( tr( "Removing %1..." ) ).arg( alpm_pkg_get_name(( pmpkg_t * )data1 ) ) );
         textEdit->append( QString( tr( "Removing %1..." ) ).arg( alpm_pkg_get_name(( pmpkg_t * )data1 ) ) );
-
-        if ( !alpm_pkg_has_scriptlet(( pmpkg_t * )data1 ) )
-            qDebug() << "No scriptlet for package " << alpm_pkg_get_name(( pmpkg_t * )data1 );
-        else {
-            QString p1Name( alpm_pkg_get_name(( pmpkg_t * )data1 ) );
-            QString p1Ver( alpm_pkg_get_version(( pmpkg_t * )data1 ) );
-            QString pArch( alpm_pkg_get_arch(( pmpkg_t * )data1 ) );
-
-
-
-            runScriptlet( 2, p1Name, p1Ver, pArch, "" );
-        }
         break;
     case PM_TRANS_EVT_REMOVE_DONE:
-        if ( !alpm_pkg_has_scriptlet(( pmpkg_t * )data1 ) )
-            qDebug() << "No scriptlet for package " << alpm_pkg_get_name(( pmpkg_t * )data1 );
-        else {
-            QString p1Name( alpm_pkg_get_name(( pmpkg_t * )data1 ) );
-            QString p1Ver( alpm_pkg_get_version(( pmpkg_t * )data1 ) );
-            QString pArch( alpm_pkg_get_arch(( pmpkg_t * )data1 ) );
-
-
-
-            runScriptlet( 5, p1Name, p1Ver, pArch, "" );
-        }
-
         remTxt = QString( tr( "%1 (%2) removed successfully!" ) ).
                  arg( alpm_pkg_get_name(( pmpkg_t * )data1 ) ).arg( alpm_pkg_get_version(( pmpkg_t * )data1 ) );
 
@@ -232,33 +184,8 @@ void QueueDialog::changeStatus( pmtransevt_t event, void *data1, void *data2 )
         }
         actionDetail->setText( QString( tr( "Upgrading %1..." ) ).arg( alpm_pkg_get_name(( pmpkg_t * )data1 ) ) );
         textEdit->append( QString( tr( "Upgrading %1..." ) ).arg( alpm_pkg_get_name(( pmpkg_t * )data1 ) ) );
-
-        if ( !alpm_pkg_has_scriptlet(( pmpkg_t * )data1 ) )
-            qDebug() << "No scriptlet for package " << alpm_pkg_get_name(( pmpkg_t * )data1 );
-        else {
-
-            QString p1Name( alpm_pkg_get_name(( pmpkg_t * )data1 ) );
-            QString p1Ver( alpm_pkg_get_version(( pmpkg_t * )data1 ) );
-            QString pArch( alpm_pkg_get_arch(( pmpkg_t * )data1 ) );
-
-
-
-            runScriptlet( 1, p1Name, p1Ver, pArch, "" );
-        }
         break;
     case PM_TRANS_EVT_UPGRADE_DONE:
-        if ( !alpm_pkg_has_scriptlet(( pmpkg_t * )data1 ) )
-            qDebug() << "No scriptlet for package " << alpm_pkg_get_name(( pmpkg_t * )data1 );
-        else {
-
-            QString p1Name( alpm_pkg_get_name(( pmpkg_t * )data1 ) );
-            QString p1Ver( alpm_pkg_get_version(( pmpkg_t * )data1 ) );
-            QString pArch( alpm_pkg_get_arch(( pmpkg_t * )data1 ) );
-            QString p2Ver( alpm_pkg_get_version(( pmpkg_t * )data2 ) );
-
-            runScriptlet( 4, p1Name, p1Ver, pArch, p2Ver );
-        }
-
         upgTxt = QString( tr( "Upgraded %1 successfully (%2 -> %3)" ) ).arg(
                      ( char * )alpm_pkg_get_name(( pmpkg_t * )data1 ) ).arg(( char * )alpm_pkg_get_version(( pmpkg_t * )data2 ) ).
                  arg(( char * )alpm_pkg_get_version(( pmpkg_t * )data1 ) );
@@ -320,11 +247,9 @@ void QueueDialog::changeStatus( pmtransevt_t event, void *data1, void *data2 )
         break;
     }
 
-    if ( !isScriptletRunning() ) {
-        Backend::instance()->backendWCond()->wakeAll();
-        qDebug() << "Releasing Queue Lock";
-    } else
-        qDebug() << "Waiting for the scriptlet";
+    Backend::instance()->backendWCond()->wakeAll();
+    qDebug() << "Releasing Queue Lock";
+
 }
 
 void QueueDialog::updateProgressBar( char *c, int bytedone, int bytetotal, int speed,
@@ -436,291 +361,6 @@ void QueueDialog::cleanup(bool success)
     }
 
     settings->deleteLater();
-}
-
-bool QueueDialog::runScriptlet( int action, const QString &p1N, const QString &p1V,
-                                const QString &pA, const QString &p2V )
-{
-    QString realAct;
-
-    switch ( action ) {
-    case 0:
-        realAct = "pre_install";
-        break;
-    case 1:
-        realAct = "pre_upgrade";
-        break;
-    case 2:
-        realAct = "pre_remove";
-        break;
-    case 3:
-        realAct = "post_install";
-        break;
-    case 4:
-        realAct = "post_upgrade";
-        break;
-    case 5:
-        realAct = "post_remove";
-        break;
-    default:
-        qDebug() << "Action invalid!!! What the hell??";
-        textEdit->append( QString( tr( "Unexpected Error. Shaman might be corrupted." ) ) );
-        actionDetail->setText( QString( tr( "Unexpected Error. Shaman might be corrupted." ) ) );
-        return false;
-        break;
-    }
-
-    qDebug() << "Executing" << realAct << "scriptlet for package " << p1N;
-    textEdit->append( QString( tr( "Executing %1 scriptlet for %2..." ) ).arg( realAct ).arg( p1N ) );
-    actionDetail->setText( QString( tr( "Executing %1 scriptlet for %2..." ) ).arg( realAct ).arg( p1N ) );
-
-    /* Ok, libalpm docet here. */
-
-    int clean_tmpdir = 0;
-
-    QString tmpdir( "/tmp/alpm_XXXXXX" );
-
-    if ( mkdtemp( tmpdir.toUtf8().data() ) == NULL ) {
-        return false;
-    } else
-        clean_tmpdir = 1;
-
-    QString scriptfn( tmpdir );
-    scriptfn.append( "/.INSTALL" );
-
-    QString pkgpath( "/var/cache/pacman/pkg/" );
-    pkgpath.append( p1N );
-    pkgpath.append( "-" );
-    pkgpath.append( p1V );
-
-    if ( pA.compare( "i686" ) && pA.compare( "x86_64" ) ) {
-        QString strtmp = pkgpath;
-        QString strtmp64 = pkgpath;
-        strtmp.append( "-i686.pkg.tar.gz" );
-        strtmp64.append( "-x86_64.pkg.tar.gz" );
-        if ( QFile::exists( strtmp ) )
-            pkgpath.append( "-i686" );
-        else if ( QFile::exists( strtmp64 ) )
-            pkgpath.append( "-x86_64" );
-    } else {
-        QString strtmp = pkgpath;
-        strtmp.append( "-" );
-        strtmp.append( pA );
-        strtmp.append( ".pkg.tar.gz" );
-
-        if ( QFile::exists( strtmp ) ) {
-            pkgpath.append( "-" );
-            pkgpath.append( pA );
-        }
-    }
-
-    pkgpath.append( ".pkg.tar.gz" );
-
-    qDebug() << "Extracting:" << pkgpath;
-
-    if ( !unpackPkg( pkgpath, tmpdir, QString( ".INSTALL" ) ) ) {
-        /* Ok then, nothing to do. */
-        qDebug() << "Couldn't extract package! Executing Scriptlet failed.";
-        textEdit->append( QString( tr( "Extracting Scriptlet from package failed!!" ) ) );
-        actionDetail->setText( QString( tr( "Extracting Scriptlet from package failed!!" ) ) );
-        return false;
-    }
-
-    qDebug() << "Ok, running the scriptlet...";
-
-    if ( !checkScriptlet( scriptfn, realAct ) ) {
-        qDebug() << p1N << "doesn't have" << realAct << "scriptlet";
-        textEdit->append( QString( tr( "Package %1 does not have %2 scriptlet" ) ).arg( p1N ).arg( realAct ) );
-        actionDetail->setText( QString( tr( "Package %1 does not have %2 scriptlet" ) ).arg( p1N ).arg( realAct ) );
-        return true;
-    }
-
-    QString cmdline;
-
-    if ( action != 4 )
-        cmdline = QString( ". %1; %2 %3" ).arg( scriptfn ).arg( realAct ).arg( p1V );
-    else
-        cmdline = QString( ". %1; %2 %3 %4" ).arg( scriptfn ).arg( realAct ).arg( p1V ).
-                  arg( p2V );
-
-    cwd = QDir::currentPath();
-
-    chdir( "/" );
-
-    proc = new RootProcess( this );
-    connect( proc, SIGNAL( readyReadStandardOutput() ), SLOT( writeLineProgress() ) );
-    connect( proc, SIGNAL( readyReadStandardError() ), SLOT( writeLineProgressErr() ) );
-    connect( proc, SIGNAL( finished( int, QProcess::ExitStatus ) ), SLOT( finishedScriptletRunning( int, QProcess::ExitStatus ) ) );
-
-    qApp->processEvents();
-
-    proc->setWorkingDirectory( "/" );
-
-    qDebug() << "Scriptlet commandline is:" << cmdline;
-
-    scrRun = true;
-
-    proc->start( "sh", QStringList() << "-c" << cmdline );
-
-    return true;
-}
-
-bool QueueDialog::unpackPkg( const QString &pathToPkg, const QString &pathToEx, const QString &file )
-{
-    /* This is a copy-paste from util.c */
-
-    mode_t oldmask;
-    struct archive *_archive;
-    struct archive_entry *entry;
-    char expath[4096];
-
-    if (( _archive = archive_read_new() ) == NULL ) {
-        return false;
-    }
-
-    archive_read_support_compression_all( _archive );
-    archive_read_support_format_all( _archive );
-
-    if ( archive_read_open_filename( _archive, pathToPkg.toUtf8().data(), ARCHIVE_DEFAULT_BYTES_PER_BLOCK ) != ARCHIVE_OK ) {
-        return false;
-    }
-
-    oldmask = umask( 0022 );
-
-    while ( archive_read_next_header( _archive, &entry ) == ARCHIVE_OK ) {
-        const struct stat *st;
-        const char *entryname; /* the name of the file in the archive */
-
-        st = archive_entry_stat( entry );
-        entryname = archive_entry_pathname( entry );
-
-        if ( S_ISREG( st->st_mode ) )
-            archive_entry_set_mode( entry, 0644 );
-        else if ( S_ISDIR( st->st_mode ) )
-            archive_entry_set_mode( entry, 0755 );
-
-        if ( file.toUtf8().data() && strcmp( file.toUtf8().data(), entryname ) ) {
-            if ( archive_read_data_skip( _archive ) != ARCHIVE_OK ) {
-                umask( oldmask );
-                archive_read_finish( _archive );
-                qDebug() << "Skipping Data Failed";
-                return false;
-            }
-
-            continue;
-        }
-
-        snprintf( expath, PATH_MAX, "%s/%s", pathToEx.toUtf8().data(), entryname );
-        archive_entry_set_pathname( entry, expath );
-
-        int readret = archive_read_extract( _archive, entry, 0 );
-        if ( readret == ARCHIVE_WARN ) {
-            /* operation succeeded but a non-critical error was encountered */
-            qDebug() << "Warning extracting " << entryname << " (" << archive_error_string( _archive ) << ")";
-        } else if ( readret != ARCHIVE_OK ) {
-            qDebug() << "Could not extract " << entryname << " (" << archive_error_string( _archive ) << ")";
-            umask( oldmask );
-            archive_read_finish( _archive );
-            return false;
-        }
-
-        if ( file.toUtf8().data() )
-            break;
-    }
-
-    umask( oldmask );
-    archive_read_finish( _archive );
-    return true;
-}
-
-void QueueDialog::finishedScriptletRunning( int eC, QProcess::ExitStatus eS )
-{
-    Q_UNUSED( eS );
-
-    if ( eC == 0 ) {
-        qDebug() << "Scriptlet Run successfully!!";
-        textEdit->append( QString( tr( "Scriptlet processed successfully!" ) ) );
-        actionDetail->setText( QString( tr( "Scriptlet processed successfully!" ) ) );
-    } else {
-        qDebug() << "Scriptlet Error!!";
-        textEdit->append( QString( tr( "Error processing Scriptlet!!" ) ) );
-        actionDetail->setText( QString( tr( "Error processing Scriptlet!!" ) ) );
-    }
-
-    chdir( cwd.toUtf8().data() );
-
-    proc->deleteLater();
-
-    //aHandle->rmrf( "/tmp/alpm_XXXXXX" );
-
-    scrRun = false;
-
-    Backend::instance()->backendWCond()->wakeAll();
-}
-
-void QueueDialog::writeLineProgress()
-{
-    if ( proc->readChannel() != QProcess::StandardOutput )
-        proc->setReadChannel( QProcess::StandardOutput );
-
-    while ( !proc->atEnd() ) {
-        QString view = QString::fromLocal8Bit( proc->readLine( 1024 ) );
-
-        qDebug() << view;
-
-        textEdit->append( view.remove( QChar( '\n' ) ) );
-
-        if ( !view.endsWith( QChar( '\n' ) ) )
-            view.append( QChar( '\n' ) );
-
-        alpm_logaction( view.toUtf8().data() );
-
-        textEdit->moveCursor( QTextCursor::End );
-    }
-}
-
-void QueueDialog::writeLineProgressErr()
-{
-    if ( proc->readChannel() != QProcess::StandardError )
-        proc->setReadChannel( QProcess::StandardError );
-
-    while ( !proc->atEnd() ) {
-        QString view = QString::fromLocal8Bit( proc->readLine( 1024 ) );
-
-        qDebug() << view;
-
-        textEdit->append( view.remove( QChar( '\n' ) ) );
-
-        if ( !view.endsWith( QChar( '\n' ) ) )
-            view.append( QChar( '\n' ) );
-
-        alpm_logaction( view.toUtf8().data() );
-
-        textEdit->moveCursor( QTextCursor::End );
-    }
-}
-
-bool QueueDialog::isScriptletRunning()
-{
-    return scrRun;
-}
-
-bool QueueDialog::checkScriptlet( const QString &path, const QString &action )
-{
-    QFile fp( path );
-
-    if ( !fp.open( QIODevice::ReadOnly | QIODevice::Text ) )
-        return false;
-
-    QTextStream in( &fp );
-
-    if ( in.readAll().contains( action ) ) {
-        fp.close();
-        return true;
-    } else {
-        fp.close();
-        return false;
-    }
 }
 
 void QueueDialog::abortTransaction()

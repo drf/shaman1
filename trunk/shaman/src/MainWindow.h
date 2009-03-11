@@ -166,7 +166,6 @@ class MainWindow : public QMainWindow, public Ui::MainWindow
         void reinstallAllRepoPackages();
         void removeAllRepoPackages();
         void cancelAllRepoActions();
-        void showAuthDialog( int count );
         void settingsClosed();
         void openUrl();
         void triggerEditTimer();

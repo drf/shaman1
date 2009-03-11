@@ -37,14 +37,11 @@ class QueueDialog : public QDialog, private Ui::transactionDialog
         explicit QueueDialog( QWidget *parent = 0 );
         ~QueueDialog();
         void startProcessing( bool force );
-        bool isScriptletRunning();
 
     public slots:
         void abortTransaction();
 
     private slots:
-        void writeLineProgress();
-        void writeLineProgressErr();
 
         void updateProgressBar( char *c, int bytedone, int bytetotal, int speed,
                                 int listdone, int listtotal, int speedtotal );
@@ -61,21 +58,11 @@ class QueueDialog : public QDialog, private Ui::transactionDialog
 
         void changeStatus( pmtransevt_t event, void *data1, void *data2 );
 
-        void finishedScriptletRunning( int eC, QProcess::ExitStatus eS );
-
         void adjust( bool tgld );
 
     signals:
         void terminated( bool errors );
         void streamTransactionProgress( int percent );
-
-    private:
-        bool runScriptlet( int action, const QString &p1N, const QString &p1V,
-                           const QString &pA, const QString &p2V );
-
-        bool unpackPkg( const QString &pathToPkg, const QString &pathToEx, const QString &file );
-        bool checkScriptlet( const QString &path, const QString &action );
-
     private:
         RootProcess *proc;
         int status;

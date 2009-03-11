@@ -55,7 +55,6 @@ class MaintenanceBar : public QToolBar
     private:
         QPointer<QAction> m_comboBox;
         CleanThread *cTh;
-        RootProcess *mantProc;
 
         QPointer<QLabel> statusLabel;
         QPointer<QTextEdit> mantDetails;
