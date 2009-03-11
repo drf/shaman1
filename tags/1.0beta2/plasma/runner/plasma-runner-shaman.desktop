@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Package Manager Runner
-X-KDE-ServiceTypes=Plasma/Runner
-Type=Service
-X-KDE-Library=krunner_shaman
-X-Plasma-RunnerName=Shaman
-X-Plasma-RunnerPhase=first

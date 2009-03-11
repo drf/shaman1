@@ -1,9 +1,0 @@
-<RCC>
-    <qresource prefix="/Icons" >
-        <file>icons/shaman/animation_source/anim06.png</file>
-        <file>icons/shaman/shaman-32.png</file>
-        <file>icons/shaman/shaman-system-is-up-to-date-32.png</file>
-        <file>icons/shaman/shaman-updates-available-32.png</file>
-        <file>icons/shaman/shaman-yellow-icon-32.png</file>
-    </qresource>
-</RCC>
