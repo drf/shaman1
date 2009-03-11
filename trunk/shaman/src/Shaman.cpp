@@ -63,6 +63,9 @@ void Shaman::startShaman()
     // Let's fire up aqpm
     Backend::instance()->setUpAlpm();
 
+    // We manage polkit auth on our own
+    Backend::instance()->setShouldHandleAuthorization(false);
+
     if ( !QFile::exists("/var/lib/pacman/db.lck") ) {
         ShamanDialog::popupDialog( QObject::tr( "Shaman" ), QObject::tr( "There was a problem"
                 " while testing libalpm.\nMaybe another application has a lock on it." ), NULL,

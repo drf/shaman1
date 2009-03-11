@@ -23,7 +23,6 @@
 
 #include <iostream>
 #include "ABSHandler.h"
-#include "Authenticator.h"
 #include "ui_buildingDialog.h"
 
 #include <QProcess>
@@ -74,7 +73,6 @@ class BuildingDialog : public QDialog, public Ui::buildingDialog, private ABSHan
         bool failed;
         bool allFailed;
         bool waitProcessing;
-        QPointer<Authenticator> ath;
 
 };
 

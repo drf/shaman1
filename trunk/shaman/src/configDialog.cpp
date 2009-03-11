@@ -645,11 +645,8 @@ void ConfigDialog::performManteinanceAction()
 
         qDebug() << "Starting the process";
 
-        ath->switchToRoot();
-
         mantProc->start( "pacman-optimize" );
 
-        ath->switchToStdUsr();
     } else if ( !mantActionBox->currentText().compare( QString( tr( "Clean All Building Environments" ) ) ) ) {
         cTh = new CleanThread( 3 );
 
@@ -762,7 +759,7 @@ void ConfigDialog::saveConfiguration()
 
     emit setProxy();
 
-    if ( !ath->switchToRoot() ) {
+    if ( true ) {
         ShamanDialog::popupDialog( tr( "Saving Configuration" ), tr( "Unable to save Pacman configuration!" ),
                                    this, ShamanProperties::ErrorDialog );
 
@@ -1007,8 +1004,6 @@ void ConfigDialog::saveConfiguration()
         QFile::remove( "/etc/xdg/autostart/shaman.desktop" );
     }
 
-    ath->switchToRoot();
-
     if ( useMatchSupRadio->isChecked() ) {
         /* We need to generate a SUPFILES containing our current repos
          * then.
@@ -1042,8 +1037,6 @@ void ConfigDialog::saveConfiguration()
 
     /* Last, but not least, commit changes to makepkg.conf */
 
-    ath->switchToRoot();
-
     if ( CFlagEdit->isModified() )
         ConfigurationParser::instance()->editMakepkgSection( "cflags", CFlagEdit->text() );
 
@@ -1058,8 +1051,6 @@ void ConfigDialog::saveConfiguration()
 
     if ( docDirsEdit->isModified() )
         ConfigurationParser::instance()->editMakepkgSection( "docdirs", docDirsEdit->text() );
-
-    ath->switchToStdUsr();
 
     if ( restartNeeded )
         ShamanDialog::popupDialogDontShow( tr( "Saving Configuration" ), tr( "Some of your changes have not been applied,\n"
@@ -1166,8 +1157,6 @@ void ConfigDialog::addMirror()
     QString toInsert( "Server=" );
     toInsert.append( mirror );
 
-    ath->switchToRoot();
-
     QFile::copy( "/etc/pacman.conf", QString( "/etc/pacman.conf.bak." ).append( QDate::currentDate().toString( "ddMMyyyy" ) ) );
     QFile::copy( "/etc/makepkg.conf", QString( "/etc/makepkg.conf.bak." ).append( QDate::currentDate().toString( "ddMMyyyy" ) ) );
     QFile::copy( "/etc/abs.conf", QString( "/etc/abs.conf.bak." ).append( QDate::currentDate().toString( "ddMMyyyy" ) ) );
@@ -1179,8 +1168,6 @@ void ConfigDialog::addMirror()
     file.write( "\n", 1 );
 
     file.close();
-
-    ath->switchToStdUsr();
 
     mirrorBox->addItem( mirror );
 
@@ -1224,16 +1211,12 @@ void ConfigDialog::addKDEModMirror()
     else
         return;
 
-    ath->switchToRoot();
-
     file.open( QIODevice::Append | QIODevice::Text );
 
     file.write( toInsert.toUtf8().data(), toInsert.length() );
     file.write( "\n", 1 );
 
     file.close();
-
-    ath->switchToStdUsr();
 
     KDEModMirrorBox->addItem( mirror );
 
@@ -1287,8 +1270,6 @@ void ConfigDialog::cleanProc( int eC, QProcess::ExitStatus eS )
 
     mantProc = new RootProcess();
 
-    ath->switchToRoot();
-
     if ( mantProc->execute( "sync" ) == 0 ) {
         statusLabel->setText( QString( tr( "Operation Completed Successfully!" ) ) );
         mantDetails->append( QString( tr( "Sync was successfully executed!!", "Sync is always the command" ) ) );
@@ -1297,8 +1278,6 @@ void ConfigDialog::cleanProc( int eC, QProcess::ExitStatus eS )
         statusLabel->setText( QString( tr( "Sync could not be executed!", "Sync is always the command" ) ) );
         mantDetails->append( QString( tr( "Sync could not be executed!!", "Sync is always the command" ) ) );
     }
-
-    ath->switchToStdUsr();
 
     mantDetails->moveCursor( QTextCursor::End );
 

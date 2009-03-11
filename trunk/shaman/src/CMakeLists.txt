@@ -22,7 +22,6 @@ SET(shaman_SRCS ${shaman_adaptor_SRCS}
     ArchLinuxNewsReader.cpp
     NewsViewer.cpp
     LogViewer.cpp
-    Authenticator.cpp
     ShamanDialog.cpp
     ShamanStatusBar.cpp
     PackageProperties.cpp
@@ -49,7 +48,6 @@ SET(shaman_MOC_HDRS
     ArchLinuxNewsReader.h
     NewsViewer.h
     LogViewer.h
-    Authenticator.h
     ShamanStatusBar.h
     PackageProperties.h
     MaintenanceBar.h
@@ -70,7 +68,6 @@ SET(shaman_UIS
     ../ui/upgradeDialog.ui
     ../ui/newsDialog.ui
     ../ui/logViewer.ui
-    ../ui/authDialog.ui
     ../ui/pkgProperties.ui
     ../ui/fromFileDialog.ui
 )

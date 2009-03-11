@@ -38,7 +38,6 @@
 #include "ArchLinuxNewsReader.h"
 #include "NewsViewer.h"
 #include "LogViewer.h"
-#include "Authenticator.h"
 #include "ShamanDialog.h"
 #include "ShamanStatusBar.h"
 #include "PackageProperties.h"
@@ -73,9 +72,6 @@
 #include <QUrl>
 #include <QStandardItemModel>
 #include <QSortFilterProxyModel>
-
-extern Authenticator_Callback athCback;
-extern struct pam_response *reply;
 
 using namespace Aqpm;
 
@@ -304,7 +300,6 @@ MainWindow::MainWindow( QMainWindow *parent )
              SIGNAL( streamDbUpdatingStatus( const QString&, int ) ) );
     connect( Backend::instance(), SIGNAL( streamTransDlProg( const QString&, int, int, int, int ) ),
              SIGNAL( streamTransDlProg( const QString&, int, int, int, int ) ) );
-    connect( &athCback, SIGNAL( passwordRequired( int ) ), SLOT( showAuthDialog( int ) ) );
     connect( Backend::instance(), SIGNAL( transactionStarted() ), SIGNAL( transactionStarted() ) );
     connect( Backend::instance(), SIGNAL( transactionReleased() ), SIGNAL( transactionReleased() ) );
 
@@ -2107,70 +2102,6 @@ void MainWindow::openLogViewer()
         lView->show();
     } else
         lView->show();
-}
-
-void MainWindow::showAuthDialog( int count )
-{
-    qDebug() << "Starting Auth Dialog";
-
-    Ui::authDialog aUi;
-    QDialog *dlog = new QDialog( this );
-
-    dlog->setModal( true );
-
-    aUi.setupUi( dlog );
-
-    // Let's Hide out other dialogs
-
-    foreach( QObject *ent, children() ) {
-        QDialog *edl = qobject_cast<QDialog *>( ent );
-        if ( edl != 0 )
-            edl->hide();
-    }
-
-    if ( dlog->exec() == QDialog::Accepted ) {
-        pam_response tmp;
-        tmp.resp_retcode = 0;
-
-        qDebug() << "Allocating Memory";
-        char *str = ( char * ) malloc( strlen( aUi.lineEdit->text().toUtf8().data() ) * sizeof( char ) );
-        qDebug() << "Memory allocated, copying string...";
-
-        if ( str == NULL )
-            qDebug() << "Segfault in 3, 2, 1...";
-
-        strcpy( str, aUi.lineEdit->text().toUtf8().data() );
-        qDebug() << "String copied";
-
-        tmp.resp = str;
-
-        qDebug() << "Inserting Reply";
-        reply[count] = tmp;
-        qDebug() << "Reply inserted";
-    } else {
-        free( reply );
-        qDebug() << "Reply freed, aborting...";
-        reply = NULL;
-    }
-
-    QSettings *settings = new QSettings();
-
-    if ( aUi.checkBox->isChecked() )
-        settings->setValue( "askedforkeeping", true );
-
-    settings->deleteLater();
-
-    dlog->deleteLater();
-
-    // Ok, let's show back again hidden dialogs
-
-    foreach( QObject *ent, children() ) {
-        QDialog *dlog = qobject_cast<QDialog *>( ent );
-        if ( dlog != 0 )
-            dlog->show();
-    }
-
-    Backend::instance()->backendWCond()->wakeAll();
 }
 
 void MainWindow::showInfoDialog()

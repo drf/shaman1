@@ -25,8 +25,6 @@
 #include <QPointer>
 #include <QProcess>
 
-#include "Authenticator.h"
-
 class QAction;
 class AlpmHandler;
 class RootProcess;
@@ -63,8 +61,6 @@ class MaintenanceBar : public QToolBar
         QPointer<QTextEdit> mantDetails;
         QPointer<QDialog> m_dialog;
         QPointer<QPushButton> m_button;
-
-        QPointer<Authenticator> ath;
 };
 
 #endif /* MAINTENANCEBAR_H */

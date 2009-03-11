@@ -22,7 +22,6 @@
 #define CONFIGDIALOG_H
 
 #include "ui_configDialog.h"
-#include "Authenticator.h"
 #include <QThread>
 #include <QProcess>
 #include <QPointer>
@@ -100,7 +99,6 @@ class ConfigDialog : public QDialog, public Ui::ConfigDialog
         QPointer<CleanThread> cTh;
         QPointer<RootProcess> mantProc;
         bool upDb;
-        QPointer<Authenticator> ath;
 };
 
 #endif /*CONFIGDIALOG_H*/
