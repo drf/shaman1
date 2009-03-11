@@ -34,6 +34,7 @@ if(AQPM_FOUND)
 endif(AQPM_FOUND)
 FIND_PACKAGE(LibArchive REQUIRED)
 FIND_PACKAGE(PolkitQt REQUIRED)
+FIND_PACKAGE(Automoc4 REQUIRED)
 pkg_check_modules (POLKIT polkit>=0.8 REQUIRED)
 pkg_check_modules (POLKITDBUS polkit-dbus>=0.8 REQUIRED)
 
