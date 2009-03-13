@@ -95,8 +95,8 @@ class MainWindow : public QMainWindow, public Ui::MainWindow
         void upgradesAvailable();
         void actionStatusChanged( const QString &name );
         void streamDbUpdatingStatus( const QString &repo, int action );
-        void streamTransDlProg( const QString &filename, int singlePercent, int singleSpeed,
-                                int totalPercent, int totalSpeed );
+        void streamTransDlProg(const QString &c, int bytedone, int bytetotal, int speed,
+                               int listdone, int listtotal, int speedtotal);
         void streamTransactionProgress( int percent );
         void buildingStarted();
         void buildingFinished();

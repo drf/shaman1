@@ -48,19 +48,18 @@ using namespace Aqpm;
 
 QueueDialog::QueueDialog( QWidget *parent )
         : QDialog( parent ),
-        scrRun( false ),
         errors( false )
 {
     setupUi( this );
     textEdit->hide();
     setWindowModality( Qt::WindowModal );
 
-    connect( Backend::instance(), SIGNAL( streamTransEvent( pmtransevt_t, void*, void* ) ),
-             SLOT( changeStatus( pmtransevt_t, void*, void* ) ) );
+    connect( Backend::instance(), SIGNAL( streamTransEvent( int, void*, void* ) ),
+             SLOT( changeStatus( int, void*, void* ) ) );
     connect( Backend::instance(), SIGNAL( logMsgStreamed( const QString& ) ),
              SLOT( handleAlpmMessage( const QString& ) ) );
-    connect( Backend::instance(), SIGNAL( streamTransDlProg( char*, int, int, int, int, int, int ) ),
-             SLOT( updateProgressBar( char*, int, int, int, int, int, int ) ) );
+    connect( Backend::instance(), SIGNAL( streamTransDlProg( const QString&, int, int, int, int, int, int ) ),
+             SLOT( updateProgressBar( const QString&, int, int, int, int, int, int ) ) );
     /*connect( aHandle, SIGNAL( preparingTransactionError( const QString& ) ),
              SLOT( handlePreparingError( const QString& ) ) );
     connect( aHandle, SIGNAL( committingTransactionError( const QString& ) ),
@@ -112,9 +111,9 @@ void QueueDialog::startProcessing( bool force )
     connect( Backend::instance(), SIGNAL( operationFinished(bool) ), SLOT( cleanup(bool) ) );
 }
 
-void QueueDialog::changeStatus( pmtransevt_t event, void *data1, void *data2 )
+void QueueDialog::changeStatus( int evt, void *data1, void *data2 )
 {
-    QMutexLocker lock( Backend::instance()->backendMutex() );
+    pmtransevt_t event = (pmtransevt_t)evt;
 
     qDebug() << "Entering Queue Lock, with event " << event;
 
@@ -247,12 +246,9 @@ void QueueDialog::changeStatus( pmtransevt_t event, void *data1, void *data2 )
         break;
     }
 
-    Backend::instance()->backendWCond()->wakeAll();
-    qDebug() << "Releasing Queue Lock";
-
 }
 
-void QueueDialog::updateProgressBar( char *c, int bytedone, int bytetotal, int speed,
+void QueueDialog::updateProgressBar( const QString &c, int bytedone, int bytetotal, int speed,
                                      int listdone, int listtotal, int speedtotal )
 {
     double bt = bytetotal / 1024;
@@ -286,12 +282,13 @@ void QueueDialog::updateProgressBar( char *c, int bytedone, int bytetotal, int s
                                arg( c ).arg( bd, 0, 'f', 0 ).arg( bt, 0, 'f', 0 ) );
 }
 
-void QueueDialog::updateProgressBar( pmtransprog_t event, char *pkgname, int percent,
+void QueueDialog::updateProgressBar( int evt, const QString &pkgname, int percent,
                                      int howmany, int remain )
 {
     Q_UNUSED( pkgname );
-    Q_UNUSED( event );
-    Q_UNUSED( percent );
+    Q_UNUSED( evt );
+
+    qDebug() << "Got it: it's " << pkgname << " at percentage " << percent;
 
     if ( progressBar->value() != remain ) {
         progressBar->setFormat( "%p%" );
@@ -324,20 +321,24 @@ void QueueDialog::startProcess()
     processLabel->setPixmap( QIcon( ":/Icons/icons/edit-redo.png" ).pixmap( 22 ) );
 
     disconnect( Backend::instance(), SIGNAL( streamTransDlProg( char*, int, int, int, int, int, int ) ), 0, 0 );
-    connect( Backend::instance(), SIGNAL( streamTransProgress( pmtransprog_t, char*, int, int, int ) ),
-             SLOT( updateProgressBar( pmtransprog_t, char*, int, int, int ) ) );
+    connect( Backend::instance(), SIGNAL( streamTransProgress( int, const QString&, int, int, int ) ),
+             SLOT( updateProgressBar( int, const QString&, int, int, int ) ) );
 }
 
 void QueueDialog::cleanup(bool success)
 {
-    QMutexLocker lock( Backend::instance()->backendMutex() );
-    disconnect( Backend::instance(), SIGNAL( streamTransProgress( pmtransprog_t, char*, int, int, int ) ), 0, 0 );
+    disconnect( Backend::instance(), SIGNAL( streamTransProgress( int, const QString&, int, int, int ) ), 0, 0 );
+    disconnect( Backend::instance(), SIGNAL( streamTransEvent( int, void*, void* ) ), 0, 0);
+    disconnect( Backend::instance(), SIGNAL( logMsgStreamed( const QString& ) ), 0, 0);
+    disconnect( Backend::instance(), SIGNAL( streamTransDlProg( const QString&, int, int, int, int, int, int ) ), 0, 0);
+    /*connect( aHandle, SIGNAL( preparingTransactionError( const QString& ) ),
+                 SLOT( handlePreparingError( const QString& ) ) );
+        connect( aHandle, SIGNAL( committingTransactionError( const QString& ) ),
+                 SLOT( handleCommittingError( const QString& ) ) );*/
     processLabel->setPixmap( QIcon( ":/Icons/icons/dialog-ok-apply.png" ).pixmap( 22 ) );
     cleanUpLabel->setPixmap( QIcon( ":/Icons/icons/edit-redo.png" ).pixmap( 22 ) );
 
     actionDetail->setText( QString( tr( "Queue processed, please wait..." ) ) );
-
-    qApp->processEvents();
 
     emit terminated( errors && !success );
 

@@ -307,10 +307,6 @@ MainWindow::MainWindow( QMainWindow *parent )
     connect( actionCancel_all_actions, SIGNAL( triggered() ), SLOT( cancelAllActions() ) );
     connect( actionReadNews, SIGNAL( triggered() ), SLOT( openNewsDialog() ) );
     connect( actionViewLog, SIGNAL( triggered() ), SLOT( openLogViewer() ) );
-    connect( Backend::instance(), SIGNAL( dbStatusChanged( const QString&, int ) ),
-             SIGNAL( streamDbUpdatingStatus( const QString&, int ) ) );
-    connect( Backend::instance(), SIGNAL( streamTransDlProg( const QString&, int, int, int, int ) ),
-             SIGNAL( streamTransDlProg( const QString&, int, int, int, int ) ) );
     connect( Backend::instance(), SIGNAL( transactionStarted() ), SIGNAL( transactionStarted() ) );
     connect( Backend::instance(), SIGNAL( transactionReleased() ), SIGNAL( transactionReleased() ) );
 
