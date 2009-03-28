@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-24 22:17+0200\n"
+"POT-Creation-Date: 2009-03-28 15:54+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.1.1\n"
+"X-Generator: Translate Toolkit 1.3.0\n"
 
 #. (obsolete)
 #: AlpmHandler#1
@@ -38,6 +38,7 @@ msgid "Alpm did not give further details."
 msgstr "Alpm не предоставляет более подробной информации."
 
 #: BuildingDialog#1
+msgctxt "BuildingDialog#1"
 msgid "Error"
 msgstr "Ошибка"
 
@@ -53,10 +54,12 @@ msgstr ""
 msgid "<br><br><b>Building Process Aborted by the User. Building Failed.</b>"
 msgstr "<br><br><b>Сборка была отменена пользователем.</b>"
 
+#. (obsolete)
 #: BuildingDialog#4
 msgid "Updating ABS Tree..."
 msgstr "Обновление дерева ABS..."
 
+#. (obsolete)
 #: BuildingDialog#5
 msgid "<b>Starting ABS Tree Update...</b><br><br>"
 msgstr "<b>Запуск обновления дерева ABS...</b><br><br>"
@@ -114,6 +117,7 @@ msgstr ""
 "в Shaman, необходима ABS. Установить ее?"
 
 #: BuildingHandler#2
+msgctxt "BuildingHandler#2"
 msgid "Error"
 msgstr "Ошибка"
 
@@ -167,10 +171,12 @@ msgstr ""
 "конфигурацию, чтобы улучшить производительность процесса сборки."
 
 #: BuildingHandler#7
+msgctxt "BuildingHandler#7"
 msgid "To be Installed"
 msgstr "Будет установлено"
 
 #: BuildingHandler#8
+msgctxt "BuildingHandler#8"
 msgid "To be Upgraded"
 msgstr "Будет обновлено"
 
@@ -191,6 +197,7 @@ msgstr ""
 "вывод для более подробной информации."
 
 #: BuildingHandler#12
+msgctxt "BuildingHandler#12"
 msgid "Close"
 msgstr "Закрыть"
 
@@ -470,6 +477,7 @@ msgstr ""
 "Shaman и для Pacman."
 
 #: ConfigDialog#37
+msgctxt "ConfigDialog#37"
 msgid "Repository"
 msgstr "Репозиторий"
 
@@ -550,26 +558,32 @@ msgid "General"
 msgstr "Общие"
 
 #: ConfigDialog#57
+msgctxt "ConfigDialog#57"
 msgid "Clean Unused Databases"
 msgstr "Очистить неиспользуемые базы данных"
 
 #: ConfigDialog#58
+msgctxt "ConfigDialog#58"
 msgid "Clean Cache"
 msgstr "Очистить кэш"
 
 #: ConfigDialog#59
+msgctxt "ConfigDialog#59"
 msgid "Empty Cache"
 msgstr "Удалить все из кэша"
 
 #: ConfigDialog#60
+msgctxt "ConfigDialog#60"
 msgid "Optimize Pacman Database"
 msgstr "Оптимизировать базу данных Pacman"
 
 #: ConfigDialog#61
+msgctxt "ConfigDialog#61"
 msgid "Clean All Building Environments"
 msgstr "Очистить все среды сборки"
 
 #: ConfigDialog#62
+msgctxt "ConfigDialog#62"
 msgid "Repositories"
 msgstr "Репозитории"
 
@@ -590,50 +604,62 @@ msgid "Enter Here the Repository's Server"
 msgstr "Введите сервер репозитория"
 
 #: ConfigDialog#67
+msgctxt "ConfigDialog#67"
 msgid "Cleaning up unused Databases..."
 msgstr "Очистка неиспользуемых баз данных..."
 
 #: ConfigDialog#68
+msgctxt "ConfigDialog#68"
 msgid "Cleaning up Cache..."
 msgstr "Очистка кэша..."
 
 #: ConfigDialog#69
+msgctxt "ConfigDialog#69"
 msgid "Deleting Cache..."
 msgstr "Удаление содержимого кэша..."
 
 #: ConfigDialog#70
+msgctxt "ConfigDialog#70"
 msgid "Cleaning up building Environments..."
 msgstr "Очистка сред сборки..."
 
 #: ConfigDialog#71
+msgctxt "ConfigDialog#71"
 msgid "Cleaning up Unused Databases Failed!"
 msgstr "Не удалось очистить неиспользуемые базы данных!"
 
 #: ConfigDialog#72
+msgctxt "ConfigDialog#72"
 msgid "Cleaning up Cache Failed!"
 msgstr "Не удалось очистить кэш!"
 
 #: ConfigDialog#73
+msgctxt "ConfigDialog#73"
 msgid "Deleting Cache Failed!"
 msgstr "Не удалось удалить содержимое кэша!"
 
 #: ConfigDialog#74
+msgctxt "ConfigDialog#74"
 msgid "Could not clean Build Environments!!"
 msgstr "Не удалось очистить среды сборки!"
 
 #: ConfigDialog#75
+msgctxt "ConfigDialog#75"
 msgid "Unused Databases Cleaned up successfully!"
 msgstr "Неиспользованные базы данных очищены успешно!"
 
 #: ConfigDialog#76
+msgctxt "ConfigDialog#76"
 msgid "Cache Cleaned Up Successfully!"
 msgstr "Кэш очищен успешно!"
 
 #: ConfigDialog#77
+msgctxt "ConfigDialog#77"
 msgid "Cache Successfully Deleted!"
 msgstr "Содержимое кэша успешно удалено!"
 
 #: ConfigDialog#78
+msgctxt "ConfigDialog#78"
 msgid "Build Environments Successfully Cleaned!"
 msgstr "Среды сборки успешно очищены!"
 
@@ -668,29 +694,39 @@ msgstr ""
 "Теперь оно доступно в mirrorlist."
 
 #: ConfigDialog#83
+msgctxt "ConfigDialog#83"
 msgid "Pacman Database Optimized Successfully!"
 msgstr "База данных Pacman успешно оптимизирована!"
 
 #: ConfigDialog#84
+msgctxt "ConfigDialog#84"
 msgid "Could not Optimize Pacman Database!"
 msgstr "Не удалось оптимизировать базу данных Pacman!"
 
+#. (obsolete)
 #: ConfigDialog#85
+msgctxt "ConfigDialog#85"
 msgid "Operation Completed Successfully!"
 msgstr "Операция успешно завершена!"
 
 # Sync is always the command
+#. (obsolete)
 #: ConfigDialog#86
+msgctxt "ConfigDialog#86"
 msgid "Sync was successfully executed!!"
 msgstr "Sync завершен успешно!!"
 
 # Sync is always the command
+#. (obsolete)
 #: ConfigDialog#87
+msgctxt "ConfigDialog#87"
 msgid "Sync could not be executed!"
 msgstr "Не удалось выполнить Sync!"
 
 # Sync is always the command
+#. (obsolete)
 #: ConfigDialog#88
+msgctxt "ConfigDialog#88"
 msgid "Sync could not be executed!!"
 msgstr "Не удалось выполнить Sync!"
 
@@ -698,7 +734,9 @@ msgstr "Не удалось выполнить Sync!"
 msgid "Process Selected"
 msgstr "Выполнить выбранное"
 
+#. (obsolete)
 #: ConfigDialog#90
+msgctxt "ConfigDialog#90"
 msgid "Optimizing Pacman Database..."
 msgstr "Оптимизация базы данных Pacman..."
 
@@ -741,6 +779,7 @@ msgstr ""
 
 # sync is a command, so it should not be translated
 #: ConfigDialog#96
+msgctxt "ConfigDialog#96"
 msgid "Running sync..."
 msgstr "Выполнение sync..."
 
@@ -815,10 +854,12 @@ msgid "Log File:"
 msgstr "Файл журнала:"
 
 #: ConfigDialog#113
+msgctxt "ConfigDialog#113"
 msgid "Ok"
 msgstr "Ok"
 
 #: ConfigDialog#114
+msgctxt "ConfigDialog#114"
 msgid "Cancel"
 msgstr "Отмена"
 
@@ -1021,11 +1062,13 @@ msgstr ""
 
 #: LocalPackage#4
 #, fuzzy
+msgctxt "LocalPackage#4"
 msgid "More Details..."
 msgstr "Подробно..."
 
 #: LocalPackage#5
 #, fuzzy
+msgctxt "LocalPackage#5"
 msgid "Cancel"
 msgstr "Отмена"
 
@@ -1066,6 +1109,7 @@ msgstr ""
 "        "
 
 #: MainWindow#1
+msgctxt "MainWindow#1"
 msgid "Shaman"
 msgstr "Shaman"
 
@@ -1094,6 +1138,7 @@ msgid "Status"
 msgstr "Статус"
 
 #: MainWindow#8
+msgctxt "MainWindow#8"
 msgid "Name"
 msgstr "Название"
 
@@ -1110,6 +1155,7 @@ msgid "Size"
 msgstr "Размер"
 
 #: MainWindow#12
+msgctxt "MainWindow#12"
 msgid "Repository"
 msgstr "Репозиторий"
 
@@ -1129,6 +1175,7 @@ msgstr ""
 "            "
 
 #: MainWindow#16
+msgctxt "MainWindow#16"
 msgid "Repositories"
 msgstr "Репозитории"
 
@@ -1137,6 +1184,7 @@ msgid "Package Groups"
 msgstr "Группы пакетов"
 
 #: MainWindow#18
+msgctxt "MainWindow#18"
 msgid "Package Information"
 msgstr "Информация о пакете"
 
@@ -1157,6 +1205,7 @@ msgid "Cancel action for selected package"
 msgstr "Отменить действие для выбранного пакета"
 
 #: MainWindow#23
+msgctxt "MainWindow#23"
 msgid "1"
 msgstr "1"
 
@@ -1176,11 +1225,14 @@ msgstr "Настройки..."
 msgid "About..."
 msgstr "О программе..."
 
+#. (obsolete)
 #: MainWindow#28
+msgctxt "MainWindow#28"
 msgid "Update Database"
 msgstr "Обновить базу данных"
 
 #: MainWindow#29
+msgctxt "MainWindow#29"
 msgid "Upgrade System"
 msgstr "Обновить систему"
 
@@ -1196,7 +1248,9 @@ msgstr "Обновить дерево ABS"
 msgid "Build and Install Queue"
 msgstr "Собрать устанавливаемые пакеты"
 
+#. (obsolete)
 #: MainWindow#33
+msgctxt "MainWindow#33"
 msgid "Process Queue"
 msgstr "Выполнить очередь"
 
@@ -1223,10 +1277,13 @@ msgid "Shaman - Reducing To Tray"
 msgstr "Shaman - сворачивание в область уведомлений"
 
 #: MainWindow#37
+msgctxt "MainWindow#37"
 msgid "Upgrade"
 msgstr "Обновить"
 
 #: MainWindow#38
+msgctxt "MainWindow#38"
+"MainWindow#38"
 msgid "System Upgrade"
 msgstr "Обновить систему"
 
@@ -1243,14 +1300,17 @@ msgid "All Groups"
 msgstr "Все группы"
 
 #: MainWindow#42
+msgctxt "MainWindow#42"
 msgid "Install"
 msgstr "Установить"
 
 #: MainWindow#43
+msgctxt "MainWindow#43"
 msgid "Uninstall"
 msgstr "Удалить"
 
 #: MainWindow#44
+msgctxt "MainWindow#44"
 msgid "Complete Uninstall"
 msgstr "Удалить полностью"
 
@@ -1271,6 +1331,7 @@ msgid "Action: "
 msgstr "Действие:"
 
 #: MainWindow#49
+msgctxt "MainWindow#49"
 msgid "Error"
 msgstr "Ошибка"
 
@@ -1285,6 +1346,7 @@ msgstr ""
 "%1"
 
 #: MainWindow#51
+msgctxt "MainWindow#51"
 msgid "Database Update"
 msgstr "Обновление базы данных"
 
@@ -1313,6 +1375,7 @@ msgid "Your system is up to date!"
 msgstr "Система в актуальном состоянии!"
 
 #: MainWindow#58
+msgctxt "MainWindow#58"
 msgid "Queue Processing"
 msgstr "Обработка очереди"
 
@@ -1354,6 +1417,7 @@ msgstr ""
 
 # Quit the application
 #: MainWindow#66
+msgctxt "MainWindow#66"
 msgid "Quit"
 msgstr "Выйти"
 
@@ -1572,6 +1636,7 @@ msgstr ""
 # Name of the Package
 #. (obsolete)
 #: MainWindow#101
+msgctxt "MainWindow#101"
 msgid "Name"
 msgstr "Название"
 
@@ -1599,56 +1664,67 @@ msgstr ""
 
 #: MaintenanceBar#2
 #, fuzzy
+msgctxt "MaintenanceBar#2"
 msgid "Clean Unused Databases"
 msgstr "Очистить неиспользуемые базы данных"
 
 #: MaintenanceBar#3
 #, fuzzy
+msgctxt "MaintenanceBar#3"
 msgid "Clean Cache"
 msgstr "Очистить кэш"
 
 #: MaintenanceBar#4
 #, fuzzy
+msgctxt "MaintenanceBar#4"
 msgid "Empty Cache"
 msgstr "Удалить все из кэша"
 
 #: MaintenanceBar#5
 #, fuzzy
+msgctxt "MaintenanceBar#5"
 msgid "Optimize Pacman Database"
 msgstr "Оптимизировать базу данных Pacman"
 
 #: MaintenanceBar#6
 #, fuzzy
+msgctxt "MaintenanceBar#6"
 msgid "Clean All Building Environments"
 msgstr "Очистить все среды сборки"
 
 #: MaintenanceBar#7
 #, fuzzy
+msgctxt "MaintenanceBar#7"
 msgid "Cleaning up unused Databases..."
 msgstr "Очистка неиспользуемых баз данных..."
 
 #: MaintenanceBar#8
 #, fuzzy
+msgctxt "MaintenanceBar#8"
 msgid "Cleaning up Cache..."
 msgstr "Очистка кэша..."
 
 #: MaintenanceBar#9
 #, fuzzy
+msgctxt "MaintenanceBar#9"
 msgid "Deleting Cache..."
 msgstr "Удаление содержимого кэша..."
 
+#. (obsolete)
 #: MaintenanceBar#10
-#, fuzzy
+msgctxt "MaintenanceBar#10"
 msgid "Optimizing Pacman Database..."
 msgstr "Оптимизация базы данных Pacman..."
 
 #: MaintenanceBar#11
 #, fuzzy
+msgctxt "MaintenanceBar#11"
 msgid "Cleaning up building Environments..."
 msgstr "Очистка сред сборки..."
 
 #: MaintenanceBar#12
 #, fuzzy
+msgctxt "MaintenanceBar#12"
 msgid "Abort"
 msgstr "Отменить"
 
@@ -1661,85 +1737,101 @@ msgstr ""
 
 #: MaintenanceBar#14
 #, fuzzy
+msgctxt "MaintenanceBar#14"
 msgid "Unused Databases Cleaned up successfully!"
 msgstr "Неиспользованные базы данных очищены успешно!"
 
 #: MaintenanceBar#15
 #, fuzzy
+msgctxt "MaintenanceBar#15"
 msgid "Cache Cleaned Up Successfully!"
 msgstr "Кэш очищен успешно!"
 
 #: MaintenanceBar#16
 #, fuzzy
+msgctxt "MaintenanceBar#16"
 msgid "Cache Successfully Deleted!"
 msgstr "Содержимое кэша успешно удалено!"
 
 #: MaintenanceBar#17
 #, fuzzy
+msgctxt "MaintenanceBar#17"
 msgid "Build Environments Successfully Cleaned!"
 msgstr "Среды сборки успешно очищены!"
 
 #: MaintenanceBar#18
 #, fuzzy
+msgctxt "MaintenanceBar#18"
 msgid "Close"
 msgstr "Закрыть"
 
 #: MaintenanceBar#19
 #, fuzzy
+msgctxt "MaintenanceBar#19"
 msgid "Cleaning up Unused Databases Failed!"
 msgstr "Не удалось очистить неиспользуемые базы данных!"
 
 #: MaintenanceBar#20
 #, fuzzy
+msgctxt "MaintenanceBar#20"
 msgid "Cleaning up Cache Failed!"
 msgstr "Не удалось очистить кэш!"
 
 #: MaintenanceBar#21
 #, fuzzy
+msgctxt "MaintenanceBar#21"
 msgid "Deleting Cache Failed!"
 msgstr "Не удалось удалить содержимое кэша!"
 
 #: MaintenanceBar#22
 #, fuzzy
+msgctxt "MaintenanceBar#22"
 msgid "Could not clean Build Environments!!"
 msgstr "Не удалось очистить среды сборки!"
 
 #: MaintenanceBar#23
 #, fuzzy
+msgctxt "MaintenanceBar#23"
 msgid "Pacman Database Optimized Successfully!"
 msgstr "База данных Pacman успешно оптимизирована!"
 
 #: MaintenanceBar#24
 #, fuzzy
+msgctxt "MaintenanceBar#24"
 msgid "Could not Optimize Pacman Database!"
 msgstr "Не удалось оптимизировать базу данных Pacman!"
 
 # sync is a command, so it should not be translated
+#. (obsolete)
 #: MaintenanceBar#25
-#, fuzzy
+msgctxt "MaintenanceBar#25"
 msgid "Running sync..."
 msgstr "Выполнение sync..."
 
+#. (obsolete)
 #: MaintenanceBar#26
-#, fuzzy
+msgctxt "MaintenanceBar#26"
 msgid "Operation Completed Successfully!"
 msgstr "Операция успешно завершена!"
 
 # Sync is always the command
+#. (obsolete)
 #: MaintenanceBar#27
-#, fuzzy
+msgctxt "MaintenanceBar#27"
 msgid "Sync was successfully executed!!"
 msgstr "Sync завершен успешно!!"
 
 # Sync is always the command
+#. (obsolete)
 #: MaintenanceBar#28
-#, fuzzy
+msgctxt "MaintenanceBar#28"
 msgid "Sync could not be executed!"
 msgstr "Не удалось выполнить Sync!"
 
 # Sync is always the command
+#. (obsolete)
 #: MaintenanceBar#29
-#, fuzzy
+msgctxt "MaintenanceBar#29"
 msgid "Sync could not be executed!!"
 msgstr "Не удалось выполнить Sync!"
 
@@ -1755,6 +1847,7 @@ msgid "Please wait, fetching items..."
 msgstr "Подождите, загрузка сообщений..."
 
 #: NewsViewer#2
+msgctxt "NewsViewer#2"
 msgid "Mark as Read"
 msgstr "Отметить как прочитанное"
 
@@ -1763,6 +1856,7 @@ msgid "Mark as Unread"
 msgstr "Отметить как не прочитанное"
 
 #: NewsViewer#4
+msgctxt "NewsViewer#4"
 msgid "Error"
 msgstr "Ошибка"
 
@@ -1804,6 +1898,7 @@ msgid "Changelog not available for this package"
 msgstr "Список изменений для этого пакета недоступен"
 
 #: QObject#1
+msgctxt "QObject#1"
 msgid "Shaman"
 msgstr "Shaman"
 
@@ -1820,6 +1915,7 @@ msgstr ""
 # Lukas: l.appelhans@gmx.de
 # Thanks again, and enjoy your translation!
 #: QObject#3
+msgctxt "QObject#3"
 msgid "Shaman"
 msgstr "Shaman"
 
@@ -1835,6 +1931,7 @@ msgstr ""
 "обновите Pacman."
 
 #: QObject#5
+msgctxt "QObject#5"
 msgid "Please Wait..."
 msgstr "Пожалуйста, подождите..."
 
@@ -1869,6 +1966,7 @@ msgstr ""
 "Shaman спросит пароль пользователя root, когда он понадобится."
 
 #: QObject#11
+msgctxt "QObject#11"
 msgid "Ok"
 msgstr "Ok"
 
@@ -1889,6 +1987,7 @@ msgstr ""
 "Shaman не может быть запущен от имени root.\n"
 "Пожалуйста, запустите его от имени обычного пользователя."
 
+#. (obsolete)
 #: QObject#14
 msgid ""
 "Shaman could not switch to root.\n"
@@ -2039,31 +2138,38 @@ msgstr "Скачивается %1... (%2 Кб из %3 Кб)"
 msgid "Queue processed, please wait..."
 msgstr "Очередь обработана, пожалуйста, подождите..."
 
+#. (obsolete)
 #: QueueDialog#28
 msgid "Unexpected Error. Shaman might be corrupted."
 msgstr "Непредвиденная ошибка. Возможно, Shaman поврежден."
 
+#. (obsolete)
 #: QueueDialog#29
 msgid "Extracting Scriptlet from package failed!!"
 msgstr "Не удалось извлечь из пакета установочные скрипты!!"
 
+#. (obsolete)
 #: QueueDialog#30
 msgid "Scriptlet processed successfully!"
 msgstr "Установочные скрипты обработаны успешно!"
 
+#. (obsolete)
 #: QueueDialog#31
 msgid "Executing %1 scriptlet for %2..."
 msgstr "Выполнение скрипта %1 для %2..."
 
+#. (obsolete)
 #: QueueDialog#32
 msgid "Package %1 does not have %2 scriptlet"
 msgstr "Пакет %1 не содержит скрипта %2"
 
+#. (obsolete)
 #: QueueDialog#33
 msgid "Error processing Scriptlet!!"
 msgstr "Ошибка обработки установочного скрипта!"
 
 #: QueueDialog#34
+msgctxt "QueueDialog#34"
 msgid "Queue Processing"
 msgstr "Выполнение очереди"
 
@@ -2084,6 +2190,7 @@ msgstr ""
 "Ваша система может быть повреждена."
 
 #: QueueDialog#38
+msgctxt "QueueDialog#38"
 msgid "Close"
 msgstr "Закрыть"
 
@@ -2100,6 +2207,7 @@ msgid "Review Queue"
 msgstr "Проверить очередь"
 
 #: QueueReadyDialog#2
+msgctxt "QueueReadyDialog#2"
 msgid "Turn off PC when Queue is done"
 msgstr "Выключить компьютер по завершению выполнения"
 
@@ -2108,14 +2216,17 @@ msgid "Process in Tray"
 msgstr "Выполнять в свернутом виде"
 
 #: QueueReadyDialog#4
+msgctxt "QueueReadyDialog#4"
 msgid "Show packages..."
 msgstr "Показать пакеты..."
 
 #: QueueReadyDialog#5
+msgctxt "QueueReadyDialog#5"
 msgid "Packages In Queue"
 msgstr "Пакеты в очереди"
 
 #: QueueReadyDialog#6
+msgctxt "QueueReadyDialog#6"
 msgid "Cancel"
 msgstr "Отмена"
 
@@ -2147,26 +2258,32 @@ msgid "Keep Queue Dialog Open after the Queue is finished"
 msgstr "Оставить окно очереди открытым после завершения выполнения"
 
 #: QueueReadyDialog#10
+msgctxt "QueueReadyDialog#10"
 msgid "Force Queue Processing"
 msgstr "Форсировать выполнение очереди"
 
 #: ReviewQueueDialog#1
+msgctxt "ReviewQueueDialog#1"
 msgid "Install"
 msgstr "Установить"
 
 #: ReviewQueueDialog#2
+msgctxt "ReviewQueueDialog#2"
 msgid "To be Installed"
 msgstr "Будет установлено"
 
 #: ReviewQueueDialog#3
+msgctxt "ReviewQueueDialog#3"
 msgid "Upgrade"
 msgstr "Обновить"
 
 #: ReviewQueueDialog#4
+msgctxt "ReviewQueueDialog#4"
 msgid "To be Upgraded"
 msgstr "Будет обновлено"
 
 #: ReviewQueueDialog#5
+msgctxt "ReviewQueueDialog#5"
 msgid "Uninstall"
 msgstr "Удалить"
 
@@ -2175,6 +2292,7 @@ msgid "To be Removed"
 msgstr "Будет удалено"
 
 #: ReviewQueueDialog#7
+msgctxt "ReviewQueueDialog#7"
 msgid "Complete Uninstall"
 msgstr "Будет полностью удалено"
 
@@ -2249,14 +2367,17 @@ msgid "%1 to be Installed, %2 to be Removed"
 msgstr "Будет установлено: %1, удалено: %2"
 
 #: ShamanTrayIcon#1
+msgctxt "ShamanTrayIcon#1"
 msgid "Update Database"
 msgstr "Обновить базу данных"
 
 #: ShamanTrayIcon#2
+msgctxt "ShamanTrayIcon#2"
 msgid "Upgrade System"
 msgstr "Обновить систему"
 
 #: ShamanTrayIcon#3
+msgctxt "ShamanTrayIcon#3"
 msgid "Process Queue"
 msgstr "Выполнить очередь"
 
@@ -2265,6 +2386,7 @@ msgid "Settings"
 msgstr "Настройки"
 
 #: ShamanTrayIcon#5
+msgctxt "ShamanTrayIcon#5"
 msgid "Quit"
 msgstr "Выйти"
 
@@ -2281,6 +2403,7 @@ msgid "Shaman - Idle (Upgrades Available)"
 msgstr "Shaman - бездействие (доступны обновления)"
 
 #: ShamanTrayIcon#9
+msgctxt "ShamanTrayIcon#9"
 msgid "System Upgrade"
 msgstr "Обновление системы"
 
@@ -2355,6 +2478,7 @@ msgstr ""
 "незамедлительно, или добавить в очередь<br>и обработать ее позднее."
 
 #: SysUpgradeDialog#3
+msgctxt "SysUpgradeDialog#3"
 msgid "To be Upgraded"
 msgstr "Будет обновлено"
 
@@ -2964,10 +3088,12 @@ msgid "Never ask for this anymore"
 msgstr "Не спрашивать больше"
 
 #: authDialog#4
+msgctxt "authDialog#4"
 msgid "Cancel"
 msgstr "Отмена"
 
 #: authDialog#5
+msgctxt "authDialog#5"
 msgid "Ok"
 msgstr "Ok"
 
@@ -2998,6 +3124,7 @@ msgstr ""
 "weight:600;\">Сборка пакетов...</span></p></body></html>"
 
 #: buildingDialog#2
+msgctxt "buildingDialog#2"
 msgid "Abort"
 msgstr "Отменить"
 
@@ -3010,6 +3137,7 @@ msgid "Shaman - Building Packages"
 msgstr "Shaman - Сборка пакетов"
 
 #: dbUpdateDialog#1
+msgctxt "dbUpdateDialog#1"
 msgid "Database Update"
 msgstr "Обновление базы данных"
 
@@ -3038,6 +3166,7 @@ msgid "Redo"
 msgstr "Вернуть последнее изменение"
 
 #: editPBDialog#6
+msgctxt "editPBDialog#6"
 msgid "Ok"
 msgstr "Ok"
 
@@ -3102,6 +3231,7 @@ msgstr ""
 
 # close the dialog
 #: logViewer#7
+msgctxt "logViewer#7"
 msgid "Close"
 msgstr "Закрыть"
 
@@ -3125,6 +3255,7 @@ msgid "status"
 msgstr "статус"
 
 #: newsDialog#4
+msgctxt "newsDialog#4"
 msgid "Mark as Read"
 msgstr "Отметить, как прочитанное"
 
@@ -3142,6 +3273,7 @@ msgstr "Заголовок новости"
 
 # close the dialog
 #: newsDialog#8
+msgctxt "newsDialog#8"
 msgid "Close"
 msgstr "Закрыть"
 
@@ -3166,6 +3298,7 @@ msgstr ""
 "style=\" font-weight:600;\">Информация о пакете</span></p></body></html>"
 
 #: pkgProperties#2
+msgctxt "pkgProperties#2"
 msgid "Package Information"
 msgstr "Информация о пакете"
 
@@ -3218,6 +3351,7 @@ msgid "Files"
 msgstr "Файлы"
 
 #: pkgProperties#15
+msgctxt "pkgProperties#15"
 msgid "1"
 msgstr "1"
 
@@ -3238,6 +3372,7 @@ msgid "Actions Performed"
 msgstr "Предпринятое действие"
 
 #: pkgProperties#20
+msgctxt "pkgProperties#20"
 msgid "Ok"
 msgstr "Ok"
 
@@ -3274,18 +3409,22 @@ msgid "This is useful if you want to review compiler's output"
 msgstr "Это полезно, если Вы хотите просматривать вывод компилятора"
 
 #: reviewBuildingDialog#5
+msgctxt "reviewBuildingDialog#5"
 msgid "Turn off PC when Queue is done"
 msgstr "Выключить компьютер по завершению выполнения"
 
 #: reviewBuildingDialog#6
+msgctxt "reviewBuildingDialog#6"
 msgid "Show packages..."
 msgstr "Показать пакеты..."
 
 #: reviewBuildingDialog#7
+msgctxt "reviewBuildingDialog#7"
 msgid "Packages In Queue"
 msgstr "Пакеты в очереди"
 
 #: reviewBuildingDialog#8
+msgctxt "reviewBuildingDialog#8"
 msgid "Abort"
 msgstr "Отменить"
 
@@ -3327,14 +3466,17 @@ msgid "Cleanup"
 msgstr "Очистка"
 
 #: transactionDialog#6
+msgctxt "transactionDialog#6"
 msgid "More Details..."
 msgstr "Подробно..."
 
 #: transactionDialog#7
+msgctxt "transactionDialog#7"
 msgid "Abort"
 msgstr "Отменить"
 
 #: transactionDialog#8
+msgctxt "transactionDialog#8"
 msgid "Please Wait..."
 msgstr "Пожалуйста, подождите..."
 
@@ -3357,6 +3499,7 @@ msgstr ""
 "weight:600;\">Выполнить очередь</span></p></body></html>"
 
 #: upgradeDialog#1
+msgctxt "upgradeDialog#1"
 msgid "System Upgrade"
 msgstr "Обновить систему"
 
@@ -3365,6 +3508,7 @@ msgid "Remember my choice"
 msgstr "Запомнить выбор"
 
 #: upgradeDialog#3
+msgctxt "upgradeDialog#3"
 msgid "Abort"
 msgstr "Отменить"
 
@@ -3399,9 +3543,11 @@ msgid "Packages to Upgrade"
 msgstr "Обновляемые пакеты"
 
 #: upgradeDialog#8
+msgctxt "upgradeDialog#8"
 msgid "Show packages..."
 msgstr "Показать пакеты..."
 
 #: upgradeDialog#9
+msgctxt "upgradeDialog#9"
 msgid "Force Queue Processing"
 msgstr "Форсировать выполнение очереди"

@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-24 22:17+0200\n"
+"POT-Creation-Date: 2009-03-28 15:54+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.1.1\n"
+"X-Generator: Translate Toolkit 1.3.0\n"
 
 #. (obsolete)
 #: AlpmHandler#1
@@ -38,6 +38,7 @@ msgid ": %1 exists in filesystem"
 msgstr ": %1 bestaat al op het bestandssysteem"
 
 #: BuildingDialog#1
+msgctxt "BuildingDialog#1"
 msgid "Error"
 msgstr "Fout"
 
@@ -54,10 +55,12 @@ msgid "<br><br><b>Building Process Aborted by the User. Building Failed.</b>"
 msgstr ""
 "<br><br><b>Pakketbouw afgesloten door gebruiker. Pakketbouw mislukt.</b>"
 
+#. (obsolete)
 #: BuildingDialog#4
 msgid "Updating ABS Tree..."
 msgstr "ABS-lijst wordt bijgewerkt..."
 
+#. (obsolete)
 #: BuildingDialog#5
 msgid "<b>Starting ABS Tree Update...</b><br><br>"
 msgstr "<b>Beginnen met bijgwerken van ABS-lijst...</b><br><br>"
@@ -107,6 +110,7 @@ msgid "<b>Building operation has started.</b><br><br>"
 msgstr "<b>Begonnen met bouwen van pakket.</b><br><br>"
 
 #: BuildingHandler#1
+msgctxt "BuildingHandler#1"
 msgid "Error"
 msgstr "Fout"
 
@@ -167,10 +171,12 @@ msgstr ""
 "te bekijken zodat pakketbouw sneller verloopt."
 
 #: BuildingHandler#7
+msgctxt "BuildingHandler#7"
 msgid "To be Installed"
 msgstr "Te installeren"
 
 #: BuildingHandler#8
+msgctxt "BuildingHandler#8"
 msgid "To be Upgraded"
 msgstr "Bij te werken"
 
@@ -191,6 +197,7 @@ msgstr ""
 "Bekijk de uitvoer voor meer details."
 
 #: BuildingHandler#12
+msgctxt "BuildingHandler#12"
 msgid "Close"
 msgstr "Sluiten"
 
@@ -300,26 +307,32 @@ msgid "General"
 msgstr "Algemeen"
 
 #: ConfigDialog#2
+msgctxt "ConfigDialog#2"
 msgid "Clean Unused Databases"
 msgstr "Niet-gebruikte databases opruimen"
 
 #: ConfigDialog#3
+msgctxt "ConfigDialog#3"
 msgid "Clean Cache"
 msgstr "Cache opruimen"
 
 #: ConfigDialog#4
+msgctxt "ConfigDialog#4"
 msgid "Empty Cache"
 msgstr "Cache leegmaken"
 
 #: ConfigDialog#5
+msgctxt "ConfigDialog#5"
 msgid "Optimize Pacman Database"
 msgstr "Pacman-database optimaliseren"
 
 #: ConfigDialog#6
+msgctxt "ConfigDialog#6"
 msgid "Clean All Building Environments"
 msgstr "Alle bouwomgevingen opruimen"
 
 #: ConfigDialog#7
+msgctxt "ConfigDialog#7"
 msgid "Repositories"
 msgstr "Repositories"
 
@@ -344,62 +357,78 @@ msgid "Enter Here the Repository's Server"
 msgstr "Voer hier het server-adres van de repository in"
 
 #: ConfigDialog#13
+msgctxt "ConfigDialog#13"
 msgid "Ok"
 msgstr "OK"
 
 #: ConfigDialog#14
+msgctxt "ConfigDialog#14"
 msgid "Cancel"
 msgstr "Annuleren"
 
 #: ConfigDialog#15
+msgctxt "ConfigDialog#15"
 msgid "Cleaning up unused Databases..."
 msgstr "Bezig met opruimen van ongebruikte databases..."
 
 #: ConfigDialog#16
+msgctxt "ConfigDialog#16"
 msgid "Cleaning up Cache..."
 msgstr "Cache wordt opgeruimd..."
 
 #: ConfigDialog#17
+msgctxt "ConfigDialog#17"
 msgid "Deleting Cache..."
 msgstr "Cache wordt verwijderd..."
 
+#. (obsolete)
 #: ConfigDialog#18
+msgctxt "ConfigDialog#18"
 msgid "Optimizing Pacman Database..."
 msgstr "Pacman-database wordt geoptimaliseerd..."
 
 #: ConfigDialog#19
+msgctxt "ConfigDialog#19"
 msgid "Cleaning up building Environments..."
 msgstr "Bouwomgevingen worden opgeruimd..."
 
 #: ConfigDialog#20
+msgctxt "ConfigDialog#20"
 msgid "Cleaning up Unused Databases Failed!"
 msgstr "Opruimen van ongebruikte databases mislukt."
 
 #: ConfigDialog#21
+msgctxt "ConfigDialog#21"
 msgid "Cleaning up Cache Failed!"
 msgstr "Opruimen van de cache is mislukt."
 
 #: ConfigDialog#22
+msgctxt "ConfigDialog#22"
 msgid "Deleting Cache Failed!"
 msgstr "Verwijderen van cache is mislukt!"
 
 #: ConfigDialog#23
+msgctxt "ConfigDialog#23"
 msgid "Could not clean Build Environments!!"
 msgstr "Kon de bouwomgevingen niet opruimen."
 
 #: ConfigDialog#24
+msgctxt "ConfigDialog#24"
 msgid "Unused Databases Cleaned up successfully!"
 msgstr "Ongebruikte databases succesvol opgeruimd."
 
 #: ConfigDialog#25
+msgctxt "ConfigDialog#25"
 msgid "Cache Cleaned Up Successfully!"
 msgstr "Cache succesvol opgeruimd."
 
 #: ConfigDialog#26
+msgctxt "ConfigDialog#26"
 msgid "Cache Successfully Deleted!"
 msgstr "Cache succesvol verwijderd."
 
 #: ConfigDialog#27
+msgctxt "ConfigDialog#27"
 msgid "Build Environments Successfully Cleaned!"
 msgstr "Bouwomgevingen succesvol opgeruimd."
 
@@ -474,34 +503,45 @@ msgstr ""
 "Het is nu beschikbaar in kdemodmirrorlist."
 
 #: ConfigDialog#38
+msgctxt "ConfigDialog#38"
 msgid "Pacman Database Optimized Successfully!"
 msgstr "De Pacman-database is succesvol geoptimaliseerd."
 
 #: ConfigDialog#39
+msgctxt "ConfigDialog#39"
 msgid "Could not Optimize Pacman Database!"
 msgstr "Kon de Pacman-database niet optimaliseren."
 
 # sync is a command, so it should not be translated
 #: ConfigDialog#40
+msgctxt "ConfigDialog#40"
 msgid "Running sync..."
 msgstr "sync wordt uitgevoerd..."
 
+#. (obsolete)
 #: ConfigDialog#41
+msgctxt "ConfigDialog#41"
 msgid "Operation Completed Successfully!"
 msgstr "Operatie succesvol uitgevoerd."
 
 # Sync is always the command
+#. (obsolete)
 #: ConfigDialog#42
+msgctxt "ConfigDialog#42"
 msgid "Sync was successfully executed!!"
 msgstr "sync is succesvol uitgevoerd."
 
 # Sync is always the command
+#. (obsolete)
 #: ConfigDialog#43
+msgctxt "ConfigDialog#43"
 msgid "Sync could not be executed!"
 msgstr "sync kon niet uitgevoerd worden."
 
 # Sync is always the command
+#. (obsolete)
 #: ConfigDialog#44
+msgctxt "ConfigDialog#44"
 msgid "Sync could not be executed!!"
 msgstr "sync kon niet uitgevoerd worden."
 
@@ -743,6 +783,7 @@ msgstr ""
 "als Pacman."
 
 #: ConfigDialog#88
+msgctxt "ConfigDialog#88"
 msgid "Repository"
 msgstr "Repository"
 
@@ -1020,10 +1061,12 @@ msgid "Show..."
 msgstr "Tonen..."
 
 #: LocalPackage#4
+msgctxt "LocalPackage#4"
 msgid "More Details..."
 msgstr "Meer details..."
 
 #: LocalPackage#5
+msgctxt "LocalPackage#5"
 msgid "Cancel"
 msgstr "Annuleren"
 
@@ -1052,6 +1095,7 @@ msgstr ""
 "        "
 
 #: MainWindow#1
+msgctxt "MainWindow#1"
 msgid "Name"
 msgstr "Naam"
 
@@ -1084,6 +1128,7 @@ msgstr ""
 "U kunt dit gedrag wijzigen in Instellingen."
 
 #: MainWindow#6
+msgctxt "MainWindow#6"
 msgid "Repositories"
 msgstr "Repositories"
 
@@ -1128,14 +1173,17 @@ msgid "Mark for &Installation"
 msgstr "Markeren voor &installatie"
 
 #: MainWindow#17
+msgctxt "MainWindow#17"
 msgid "Install"
 msgstr "Installeren"
 
 #: MainWindow#18
+msgctxt "MainWindow#18"
 msgid "Uninstall"
 msgstr "Installatie ongedaan maken"
 
 #: MainWindow#19
+msgctxt "MainWindow#19"
 msgid "Complete Uninstall"
 msgstr "Installatie volledig verwijderen"
 
@@ -1164,6 +1212,7 @@ msgid "Action: "
 msgstr "Actie: "
 
 #: MainWindow#26
+msgctxt "MainWindow#26"
 msgid "Error"
 msgstr "Fout"
 
@@ -1178,6 +1227,7 @@ msgstr ""
 "%1"
 
 #: MainWindow#28
+msgctxt "MainWindow#28"
 msgid "Database Update"
 msgstr "Database update"
 
@@ -1230,6 +1280,7 @@ msgid "&Cancel Action"
 msgstr "&Handeling annuleren"
 
 #: MainWindow#38
+msgctxt "MainWindow#38"
 msgid "Package Information"
 msgstr "Pakketinformatie"
 
@@ -1250,6 +1301,7 @@ msgid "Cancel all actions"
 msgstr "Alle handelingen annuleren"
 
 #: MainWindow#43
+msgctxt "MainWindow#43"
 msgid "Shaman"
 msgstr "Shaman"
 
@@ -1262,6 +1314,7 @@ msgstr ""
 "Wilt u %1 toch installeren?"
 
 #: MainWindow#45
+msgctxt "MainWindow#45"
 msgid "System Upgrade"
 msgstr "Systeem bijwerken"
 
@@ -1282,10 +1335,12 @@ msgstr ""
 "Wilt u het lezen?"
 
 #: MainWindow#49
+msgctxt "MainWindow#49"
 msgid "Upgrade"
 msgstr "Bijwerken"
 
 #: MainWindow#50
+msgctxt "MainWindow#50"
 msgid "Queue Processing"
 msgstr "Wachtrij wordt verwerkt"
 
@@ -1422,6 +1477,7 @@ msgstr "Status"
 # Name of the Package
 #. (obsolete)
 #: MainWindow#67
+msgctxt "MainWindow#67"
 msgid "Name"
 msgstr "Naam"
 
@@ -1438,6 +1494,7 @@ msgid "Size"
 msgstr "Grootte"
 
 #: MainWindow#71
+msgctxt "MainWindow#71"
 msgid "Repository"
 msgstr "Repository"
 
@@ -1486,6 +1543,7 @@ msgid "File&s"
 msgstr "Be&standen"
 
 #: MainWindow#83
+msgctxt "MainWindow#83"
 msgid "1"
 msgstr "1"
 
@@ -1526,11 +1584,14 @@ msgstr "Instellingen..."
 msgid "About..."
 msgstr "Over..."
 
+#. (obsolete)
 #: MainWindow#93
+msgctxt "MainWindow#93"
 msgid "Update Database"
 msgstr "Database bijwerken"
 
 #: MainWindow#94
+msgctxt "MainWindow#94"
 msgid "Upgrade System"
 msgstr "Systeem bijwerken"
 
@@ -1548,10 +1609,13 @@ msgstr "Wachtrij bouwen en installeren"
 
 # Quit the application
 #: MainWindow#98
+msgctxt "MainWindow#98"
 msgid "Quit"
 msgstr "Afsluiten"
 
+#. (obsolete)
 #: MainWindow#99
+msgctxt "MainWindow#99"
 msgid "Process Queue"
 msgstr "Wachtrij verwerken"
 
@@ -1577,46 +1641,58 @@ msgid "Please choose an action to start maintenance..."
 msgstr "Kies een handeling om het onderhoud te starten..."
 
 #: MaintenanceBar#2
+msgctxt "MaintenanceBar#2"
 msgid "Clean Unused Databases"
 msgstr "Niet-gebruikte databases opruimen"
 
 #: MaintenanceBar#3
+msgctxt "MaintenanceBar#3"
 msgid "Clean Cache"
 msgstr "Cache opruimen"
 
 #: MaintenanceBar#4
+msgctxt "MaintenanceBar#4"
 msgid "Empty Cache"
 msgstr "Cache leegmaken"
 
 #: MaintenanceBar#5
+msgctxt "MaintenanceBar#5"
 msgid "Optimize Pacman Database"
 msgstr "Pacman-database optimaliseren"
 
 #: MaintenanceBar#6
+msgctxt "MaintenanceBar#6"
 msgid "Clean All Building Environments"
 msgstr "Alle bouwomgevingen opruimen"
 
 #: MaintenanceBar#7
+msgctxt "MaintenanceBar#7"
 msgid "Cleaning up unused Databases..."
 msgstr "Ongebruikte databases worden opgeruimd..."
 
 #: MaintenanceBar#8
+msgctxt "MaintenanceBar#8"
 msgid "Cleaning up Cache..."
 msgstr "Cache wordt opgeruimd..."
 
 #: MaintenanceBar#9
+msgctxt "MaintenanceBar#9"
 msgid "Deleting Cache..."
 msgstr "Cache wordt verwijderd..."
 
+#. (obsolete)
 #: MaintenanceBar#10
+msgctxt "MaintenanceBar#10"
 msgid "Optimizing Pacman Database..."
 msgstr "Pacman-database wordt geoptimaliseerd..."
 
 #: MaintenanceBar#11
+msgctxt "MaintenanceBar#11"
 msgid "Cleaning up building Environments..."
 msgstr "Bouwomgevingen worden opgeruimd..."
 
 #: MaintenanceBar#12
+msgctxt "MaintenanceBar#12"
 msgid "Abort"
 msgstr "Afbreken"
 
@@ -1625,70 +1701,91 @@ msgid "System Maintenance"
 msgstr "Systeemonderhoud"
 
 #: MaintenanceBar#14
+msgctxt "MaintenanceBar#14"
 msgid "Unused Databases Cleaned up successfully!"
 msgstr "Ongebruikte databases succesvol opgeruimd."
 
 #: MaintenanceBar#15
+msgctxt "MaintenanceBar#15"
 msgid "Cache Cleaned Up Successfully!"
 msgstr "Cache succesvol opgeruimd."
 
 #: MaintenanceBar#16
+msgctxt "MaintenanceBar#16"
 msgid "Cache Successfully Deleted!"
 msgstr "Cache succesvol verwijderd."
 
 #: MaintenanceBar#17
+msgctxt "MaintenanceBar#17"
 msgid "Build Environments Successfully Cleaned!"
 msgstr "Ontwikkelomgevingen succesvol opgeruimd."
 
 #: MaintenanceBar#18
+msgctxt "MaintenanceBar#18"
 msgid "Close"
 msgstr "Sluiten"
 
 #: MaintenanceBar#19
+msgctxt "MaintenanceBar#19"
 msgid "Cleaning up Unused Databases Failed!"
 msgstr "Opruimen van ongebruikte databases mislukt."
 
 #: MaintenanceBar#20
+msgctxt "MaintenanceBar#20"
 msgid "Cleaning up Cache Failed!"
 msgstr "Opruimen van cache mislukt."
 
 #: MaintenanceBar#21
+msgctxt "MaintenanceBar#21"
 msgid "Deleting Cache Failed!"
 msgstr "Verwijderen van cache mislukt."
 
 #: MaintenanceBar#22
+msgctxt "MaintenanceBar#22"
 msgid "Could not clean Build Environments!!"
 msgstr "Kon bouwomgevingen niet opruimen."
 
 #: MaintenanceBar#23
+msgctxt "MaintenanceBar#23"
 msgid "Pacman Database Optimized Successfully!"
 msgstr "Pacman-database succesvol geoptimaliseerd."
 
 #: MaintenanceBar#24
+msgctxt "MaintenanceBar#24"
 msgid "Could not Optimize Pacman Database!"
 msgstr "Kon Pacman-database niet optimaliseren."
 
 # sync is a command, so it should not be translated
+#. (obsolete)
 #: MaintenanceBar#25
+msgctxt "MaintenanceBar#25"
 msgid "Running sync..."
 msgstr "sync wordt uitgevoerd..."
 
+#. (obsolete)
 #: MaintenanceBar#26
+msgctxt "MaintenanceBar#26"
 msgid "Operation Completed Successfully!"
 msgstr "Handeling succesvol uitgevoerd."
 
 # Sync is always the command
+#. (obsolete)
 #: MaintenanceBar#27
+msgctxt "MaintenanceBar#27"
 msgid "Sync was successfully executed!!"
 msgstr "sync is succesvol uitgevoerd."
 
 # Sync is always the command
+#. (obsolete)
 #: MaintenanceBar#28
+msgctxt "MaintenanceBar#28"
 msgid "Sync could not be executed!"
 msgstr "sync kon niet worden uitgevoerd."
 
 # Sync is always the command
+#. (obsolete)
 #: MaintenanceBar#29
+msgctxt "MaintenanceBar#29"
 msgid "Sync could not be executed!!"
 msgstr "sync kon niet worden uitgevoerd."
 
@@ -1701,6 +1798,7 @@ msgid "Please wait, fetching items..."
 msgstr "Even geduld, items worden opgehaald..."
 
 #: NewsViewer#2
+msgctxt "NewsViewer#2"
 msgid "Mark as Read"
 msgstr "Markeer als gelezen"
 
@@ -1709,6 +1807,7 @@ msgid "Mark as Unread"
 msgstr "Markeer als ongelezen"
 
 #: NewsViewer#4
+msgctxt "NewsViewer#4"
 msgid "Error"
 msgstr "Fout"
 
@@ -1754,6 +1853,7 @@ msgid "Whoa, that's co&ol!"
 msgstr "Whoa, that's co&ol!"
 
 #: QObject#2
+msgctxt "QObject#2"
 msgid "Ok"
 msgstr "OK"
 
@@ -1778,6 +1878,7 @@ msgid "C&ancel"
 msgstr "&Annuleren"
 
 #: QObject#8
+msgctxt "QObject#8"
 msgid "Shaman"
 msgstr "Shaman"
 
@@ -1789,6 +1890,7 @@ msgstr ""
 "Een andere instantie van Shaman draait al.\n"
 "U kan maar een instantie van Shaman tegelijkertijd draaien."
 
+#. (obsolete)
 #: QObject#10
 msgid ""
 "Shaman could not switch to root.\n"
@@ -1818,6 +1920,7 @@ msgstr ""
 # Lukas: l.appelhans@gmx.de
 # Thanks again, and enjoy your translation!
 #: QObject#12
+msgctxt "QObject#12"
 msgid "Shaman"
 msgstr "Shaman"
 
@@ -1830,6 +1933,7 @@ msgstr ""
 "Bekijk de permissies van het configuratiebestand."
 
 #: QObject#14
+msgctxt "QObject#14"
 msgid "Please Wait..."
 msgstr "Even geduld a.u.b..."
 
@@ -1991,34 +2095,42 @@ msgid "Queue processed successfully!"
 msgstr "Wachtrij succesvol verwerkt."
 
 #: QueueDialog#30
+msgctxt "QueueDialog#30"
 msgid "Close"
 msgstr "Sluiten"
 
+#. (obsolete)
 #: QueueDialog#31
 msgid "Unexpected Error. Shaman might be corrupted."
 msgstr "Onverwachte fout. Shaman is misschien beschadigd."
 
+#. (obsolete)
 #: QueueDialog#32
 msgid "Executing %1 scriptlet for %2..."
 msgstr "Scriplet van %1 uitvoeren voor %2..."
 
+#. (obsolete)
 #: QueueDialog#33
 msgid "Extracting Scriptlet from package failed!!"
 msgstr "Uitpakken van scriplet uit pakket mislukt."
 
+#. (obsolete)
 #: QueueDialog#34
 msgid "Package %1 does not have %2 scriptlet"
 msgstr "Pakket %1 bevat geen %2 scriplet"
 
+#. (obsolete)
 #: QueueDialog#35
 msgid "Scriptlet processed successfully!"
 msgstr "Scriplet succesvol verwerkt."
 
+#. (obsolete)
 #: QueueDialog#36
 msgid "Error processing Scriptlet!!"
 msgstr "Fout bij verwerking scriplet."
 
 #: QueueDialog#37
+msgctxt "QueueDialog#37"
 msgid "Queue Processing"
 msgstr "Wachtrij wordt verwerkt"
 
@@ -2043,10 +2155,12 @@ msgid "Review Queue"
 msgstr "Wachtrij bekijken"
 
 #: QueueReadyDialog#2
+msgctxt "QueueReadyDialog#2"
 msgid "Force Queue Processing"
 msgstr "Verwerking wachtrij forceren"
 
 #: QueueReadyDialog#3
+msgctxt "QueueReadyDialog#3"
 msgid "Turn off PC when Queue is done"
 msgstr "PC afsluiten wanneer wachtrij is verwerkt"
 
@@ -2059,14 +2173,17 @@ msgid "Keep Queue Dialog Open after the Queue is finished"
 msgstr "Wachtrijvenster openhouden na verwerking"
 
 #: QueueReadyDialog#6
+msgctxt "QueueReadyDialog#6"
 msgid "Show packages..."
 msgstr "Pakketten tonen..."
 
 #: QueueReadyDialog#7
+msgctxt "QueueReadyDialog#7"
 msgid "Packages In Queue"
 msgstr "Pakketten in wachtrij"
 
 #: QueueReadyDialog#8
+msgctxt "QueueReadyDialog#8"
 msgid "Cancel"
 msgstr "Annuleren"
 
@@ -2093,22 +2210,27 @@ msgstr ""
 "weight:600;\">Wachtrij bekijken</span></p></body></html>"
 
 #: ReviewQueueDialog#1
+msgctxt "ReviewQueueDialog#1"
 msgid "Install"
 msgstr "Installeren"
 
 #: ReviewQueueDialog#2
+msgctxt "ReviewQueueDialog#2"
 msgid "To be Installed"
 msgstr "Te installeren"
 
 #: ReviewQueueDialog#3
+msgctxt "ReviewQueueDialog#3"
 msgid "Upgrade"
 msgstr "Bijwerken"
 
 #: ReviewQueueDialog#4
+msgctxt "ReviewQueueDialog#4"
 msgid "To be Upgraded"
 msgstr "Bij te werken"
 
 #: ReviewQueueDialog#5
+msgctxt "ReviewQueueDialog#5"
 msgid "Uninstall"
 msgstr "Installatie ongedaan maken"
 
@@ -2117,6 +2239,7 @@ msgid "To be Removed"
 msgstr "Te verwijderen"
 
 #: ReviewQueueDialog#7
+msgctxt "ReviewQueueDialog#7"
 msgid "Complete Uninstall"
 msgstr "Installatie volledig verwijderen"
 
@@ -2193,14 +2316,17 @@ msgid "%1 to be Installed, %2 to be Removed"
 msgstr "%1 te installeren, %2 te verwijderen"
 
 #: ShamanTrayIcon#1
+msgctxt "ShamanTrayIcon#1"
 msgid "Update Database"
 msgstr "Database bijwerken"
 
 #: ShamanTrayIcon#2
+msgctxt "ShamanTrayIcon#2"
 msgid "Upgrade System"
 msgstr "Systeem bijwerken"
 
 #: ShamanTrayIcon#3
+msgctxt "ShamanTrayIcon#3"
 msgid "Process Queue"
 msgstr "Wachtrij verwerken"
 
@@ -2209,6 +2335,7 @@ msgid "Settings"
 msgstr "Instellingen"
 
 #: ShamanTrayIcon#5
+msgctxt "ShamanTrayIcon#5"
 msgid "Quit"
 msgstr "Afsluiten"
 
@@ -2225,6 +2352,7 @@ msgid "Shaman - Idle (Upgrades Available)"
 msgstr "Shaman - Niet actief (upgrades beschikbaar)"
 
 #: ShamanTrayIcon#9
+msgctxt "ShamanTrayIcon#9"
 msgid "System Upgrade"
 msgstr "Systeem bijwerken"
 
@@ -2300,6 +2428,7 @@ msgstr ""
 "verwerken."
 
 #: SysUpgradeDialog#3
+msgctxt "SysUpgradeDialog#3"
 msgid "To be Upgraded"
 msgstr "Bij te werken"
 
@@ -2726,6 +2855,7 @@ msgid "Never ask for this anymore"
 msgstr "Niet opnieuw vragen"
 
 #: authDialog#4
+msgctxt "authDialog#4"
 msgid "Ok"
 msgstr "OK"
 
@@ -2734,6 +2864,7 @@ msgid "Return"
 msgstr "Enter"
 
 #: authDialog#6
+msgctxt "authDialog#6"
 msgid "Cancel"
 msgstr "Annuleren"
 
@@ -2764,6 +2895,7 @@ msgstr ""
 "weight:600;\">Pakketten worden gebouwd...</span></p></body></html>"
 
 #: buildingDialog#3
+msgctxt "buildingDialog#3"
 msgid "Abort"
 msgstr "Afbreken"
 
@@ -2772,6 +2904,7 @@ msgid "Reduce To Tray"
 msgstr "In systeemvak plaatsen"
 
 #: dbUpdateDialog#1
+msgctxt "dbUpdateDialog#1"
 msgid "Database Update"
 msgstr "Database update"
 
@@ -2800,6 +2933,7 @@ msgid "Redo"
 msgstr "Opnieuw"
 
 #: editPBDialog#6
+msgctxt "editPBDialog#6"
 msgid "Ok"
 msgstr "OK"
 
@@ -2864,6 +2998,7 @@ msgstr "Weergave vernieuwen"
 
 # close the dialog
 #: logViewer#7
+msgctxt "logViewer#7"
 msgid "Close"
 msgstr "Sluiten"
 
@@ -2888,6 +3023,7 @@ msgid "status"
 msgstr "Status"
 
 #: newsDialog#5
+msgctxt "newsDialog#5"
 msgid "Mark as Read"
 msgstr "Markeren als gelezen"
 
@@ -2901,6 +3037,7 @@ msgstr "Vernieuwen"
 
 # close the dialog
 #: newsDialog#8
+msgctxt "newsDialog#8"
 msgid "Close"
 msgstr "Sluiten"
 
@@ -2927,6 +3064,7 @@ msgstr ""
 "weight:600;\">Pakketinformatie</span></p></body></html>"
 
 #: pkgProperties#2
+msgctxt "pkgProperties#2"
 msgid "Package Information"
 msgstr "Pakketinformatie"
 
@@ -2979,6 +3117,7 @@ msgid "Files"
 msgstr "Bestanden"
 
 #: pkgProperties#15
+msgctxt "pkgProperties#15"
 msgid "1"
 msgstr "1"
 
@@ -2999,6 +3138,7 @@ msgid "Actions Performed"
 msgstr "Uitgevoerde acties"
 
 #: pkgProperties#20
+msgctxt "pkgProperties#20"
 msgid "Ok"
 msgstr "OK"
 
@@ -3039,18 +3179,22 @@ msgid "Do not install immediately when building is finished"
 msgstr "Niet meteen installeren na bouwen"
 
 #: reviewBuildingDialog#6
+msgctxt "reviewBuildingDialog#6"
 msgid "Turn off PC when Queue is done"
 msgstr "PC uitschakelen wanneer wachtrij is verwerkt"
 
 #: reviewBuildingDialog#7
+msgctxt "reviewBuildingDialog#7"
 msgid "Show packages..."
 msgstr "Pakketten tonen..."
 
 #: reviewBuildingDialog#8
+msgctxt "reviewBuildingDialog#8"
 msgid "Packages In Queue"
 msgstr "Paketten in de wachtrij"
 
 #: reviewBuildingDialog#9
+msgctxt "reviewBuildingDialog#9"
 msgid "Abort"
 msgstr "Afbreken"
 
@@ -3087,14 +3231,17 @@ msgid "Cleanup"
 msgstr "Opruiming"
 
 #: transactionDialog#6
+msgctxt "transactionDialog#6"
 msgid "More Details..."
 msgstr "Meer details..."
 
 #: transactionDialog#7
+msgctxt "transactionDialog#7"
 msgid "Abort"
 msgstr "Afbreken"
 
 #: transactionDialog#8
+msgctxt "transactionDialog#8"
 msgid "Please Wait..."
 msgstr "Even geduld a.u.b..."
 
@@ -3117,10 +3264,12 @@ msgstr ""
 "weight:600;\">Wachtrij verwerken</span></p></body></html>"
 
 #: upgradeDialog#1
+msgctxt "upgradeDialog#1"
 msgid "System Upgrade"
 msgstr "Systeem bijwerken"
 
 #: upgradeDialog#2
+msgctxt "upgradeDialog#2"
 msgid "Force Queue Processing"
 msgstr "Verwerking wachtrij forceren"
 
@@ -3129,10 +3278,12 @@ msgid "Remember my choice"
 msgstr "Mijn keuze onthouden"
 
 #: upgradeDialog#4
+msgctxt "upgradeDialog#4"
 msgid "Abort"
 msgstr "Afbreken"
 
 #: upgradeDialog#5
+msgctxt "upgradeDialog#5"
 msgid "Show packages..."
 msgstr "Pakketten tonen..."
 

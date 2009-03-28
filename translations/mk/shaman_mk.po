@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-24 22:17+0200\n"
+"POT-Creation-Date: 2009-03-28 15:54+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.1.1\n"
+"X-Generator: Translate Toolkit 1.3.0\n"
 
 #. (obsolete)
 #: AlpmHandler#1
@@ -38,6 +38,7 @@ msgid ": %1 exists in filesystem"
 msgstr ": %1 постои во податочниот систем"
 
 #: BuildingDialog#1
+msgctxt "BuildingDialog#1"
 msgid "Error"
 msgstr "Грешка"
 
@@ -55,10 +56,12 @@ msgstr ""
 "<br><br><b>Создавањето на пакет е прекинато од корисникот. Создавањето на "
 "пакет не успеа.</b>"
 
+#. (obsolete)
 #: BuildingDialog#4
 msgid "Updating ABS Tree..."
 msgstr "Надргадување на ABS дрвото..."
 
+#. (obsolete)
 #: BuildingDialog#5
 msgid "<b>Starting ABS Tree Update...</b><br><br>"
 msgstr "<b>Започнувам со надградба на ABS дрвото...</b><br><br>"
@@ -111,6 +114,7 @@ msgid "<b>Building operation has started.</b><br><br>"
 msgstr "<b>Операцијата за создавање на пакет започна.</b><br><br>"
 
 #: BuildingHandler#1
+msgctxt "BuildingHandler#1"
 msgid "Error"
 msgstr "Грешка"
 
@@ -141,10 +145,12 @@ msgstr ""
 "пакети само од официјални извори."
 
 #: BuildingHandler#5
+msgctxt "BuildingHandler#5"
 msgid "To be Installed"
 msgstr "За инсталација"
 
 #: BuildingHandler#6
+msgctxt "BuildingHandler#6"
 msgid "To be Upgraded"
 msgstr "За надградба"
 
@@ -165,6 +171,7 @@ msgstr ""
 "Погледнете го излезот за повеќе детали."
 
 #: BuildingHandler#10
+msgctxt "BuildingHandler#10"
 msgid "Close"
 msgstr "Затвори"
 
@@ -272,26 +279,32 @@ msgid "General"
 msgstr "Генерално"
 
 #: ConfigDialog#2
+msgctxt "ConfigDialog#2"
 msgid "Clean Unused Databases"
 msgstr "Исчисти некористени датабази"
 
 #: ConfigDialog#3
+msgctxt "ConfigDialog#3"
 msgid "Clean Cache"
 msgstr "Исчисти го кешот"
 
 #: ConfigDialog#4
+msgctxt "ConfigDialog#4"
 msgid "Empty Cache"
 msgstr "Испразни го кешот"
 
 #: ConfigDialog#5
+msgctxt "ConfigDialog#5"
 msgid "Optimize Pacman Database"
 msgstr "Оптимизирај ја датабазата на Pacman"
 
 #: ConfigDialog#6
+msgctxt "ConfigDialog#6"
 msgid "Clean All Building Environments"
 msgstr "Исчистете ги сите околини за создавање на пакети"
 
 #: ConfigDialog#7
+msgctxt "ConfigDialog#7"
 msgid "Repositories"
 msgstr "Репозитари"
 
@@ -316,62 +329,78 @@ msgid "Enter Here the Repository's Server"
 msgstr "Внесете го серверот на репозитарот"
 
 #: ConfigDialog#13
+msgctxt "ConfigDialog#13"
 msgid "Ok"
 msgstr "Во ред"
 
 #: ConfigDialog#14
+msgctxt "ConfigDialog#14"
 msgid "Cancel"
 msgstr "Откажи"
 
 #: ConfigDialog#15
+msgctxt "ConfigDialog#15"
 msgid "Cleaning up unused Databases..."
 msgstr "Чистење на некористени датабази..."
 
 #: ConfigDialog#16
+msgctxt "ConfigDialog#16"
 msgid "Cleaning up Cache..."
 msgstr "Чистење на кешот..."
 
 #: ConfigDialog#17
+msgctxt "ConfigDialog#17"
 msgid "Deleting Cache..."
 msgstr "Бришење на кешот..."
 
+#. (obsolete)
 #: ConfigDialog#18
+msgctxt "ConfigDialog#18"
 msgid "Optimizing Pacman Database..."
 msgstr "Оптимизирање на датабазата на Pacman..."
 
 #: ConfigDialog#19
+msgctxt "ConfigDialog#19"
 msgid "Cleaning up building Environments..."
 msgstr "Чистење на околините за создавање на пакети..."
 
 #: ConfigDialog#20
+msgctxt "ConfigDialog#20"
 msgid "Cleaning up Unused Databases Failed!"
 msgstr "Чистењето на некористените датабази не успеа!"
 
 #: ConfigDialog#21
+msgctxt "ConfigDialog#21"
 msgid "Cleaning up Cache Failed!"
 msgstr "Чистењето на кешот не успеа!"
 
 #: ConfigDialog#22
+msgctxt "ConfigDialog#22"
 msgid "Deleting Cache Failed!"
 msgstr "Бришењето на кешот не успеа!"
 
 #: ConfigDialog#23
+msgctxt "ConfigDialog#23"
 msgid "Could not clean Build Environments!!"
 msgstr "Не можеше да се исчистат околините за создавање на пакети!!"
 
 #: ConfigDialog#24
+msgctxt "ConfigDialog#24"
 msgid "Unused Databases Cleaned up successfully!"
 msgstr "Некористените датабази се исчистени успешно!"
 
 #: ConfigDialog#25
+msgctxt "ConfigDialog#25"
 msgid "Cache Cleaned Up Successfully!"
 msgstr "Кешот е исчистен успешно!"
 
 #: ConfigDialog#26
+msgctxt "ConfigDialog#26"
 msgid "Cache Successfully Deleted!"
 msgstr "Кешот е избришан успешно!"
 
 #: ConfigDialog#27
+msgctxt "ConfigDialog#27"
 msgid "Build Environments Successfully Cleaned!"
 msgstr "Околините за создавање на пакети се успешно исчистени!"
 
@@ -446,34 +475,45 @@ msgstr ""
 "сега е достапно во kdemodmirrorlist."
 
 #: ConfigDialog#38
+msgctxt "ConfigDialog#38"
 msgid "Pacman Database Optimized Successfully!"
 msgstr "Датабазата на Pacman беше оптимизирана успешно!"
 
 #: ConfigDialog#39
+msgctxt "ConfigDialog#39"
 msgid "Could not Optimize Pacman Database!"
 msgstr "не можеше да се оптимизира датабазата на Pacman!"
 
 # sync is a command, so it should not be translated
 #: ConfigDialog#40
+msgctxt "ConfigDialog#40"
 msgid "Running sync..."
 msgstr "Извршување на sync..."
 
+#. (obsolete)
 #: ConfigDialog#41
+msgctxt "ConfigDialog#41"
 msgid "Operation Completed Successfully!"
 msgstr "Операцијата е успешно завршена!"
 
 # Sync is always the command
+#. (obsolete)
 #: ConfigDialog#42
+msgctxt "ConfigDialog#42"
 msgid "Sync was successfully executed!!"
 msgstr "Sync беше успешно извршена!!"
 
 # Sync is always the command
+#. (obsolete)
 #: ConfigDialog#43
+msgctxt "ConfigDialog#43"
 msgid "Sync could not be executed!"
 msgstr "Sync не можеше да биде извршена!"
 
 # Sync is always the command
+#. (obsolete)
 #: ConfigDialog#44
+msgctxt "ConfigDialog#44"
 msgid "Sync could not be executed!!"
 msgstr "Sync не можеше да биде извршена!!"
 
@@ -701,6 +741,7 @@ msgstr ""
 "и од Shaman и од Pacman."
 
 #: ConfigDialog#86
+msgctxt "ConfigDialog#86"
 msgid "Repository"
 msgstr "Репозитар"
 
@@ -982,10 +1023,12 @@ msgid "Show..."
 msgstr "Прикажи..."
 
 #: LocalPackage#4
+msgctxt "LocalPackage#4"
 msgid "More Details..."
 msgstr "Повеќе детали..."
 
 #: LocalPackage#5
+msgctxt "LocalPackage#5"
 msgid "Cancel"
 msgstr "Откажи"
 
@@ -1046,6 +1089,7 @@ msgstr ""
 "Можете да го промените ова однесување во Поставувања."
 
 #: MainWindow#6
+msgctxt "MainWindow#6"
 msgid "Repositories"
 msgstr "Репозитари"
 
@@ -1090,14 +1134,17 @@ msgid "Mark for &Installation"
 msgstr "Обележи за &инсталација"
 
 #: MainWindow#17
+msgctxt "MainWindow#17"
 msgid "Install"
 msgstr "Инсталирај"
 
 #: MainWindow#18
+msgctxt "MainWindow#18"
 msgid "Uninstall"
 msgstr "Отстрани"
 
 #: MainWindow#19
+msgctxt "MainWindow#19"
 msgid "Complete Uninstall"
 msgstr "Целосно отстранување"
 
@@ -1126,6 +1173,7 @@ msgid "Action: "
 msgstr "Акција:"
 
 #: MainWindow#26
+msgctxt "MainWindow#26"
 msgid "Error"
 msgstr "Грешка"
 
@@ -1140,6 +1188,7 @@ msgstr ""
 "%1"
 
 #: MainWindow#28
+msgctxt "MainWindow#28"
 msgid "Database Update"
 msgstr "Ажурирање на датабазата"
 
@@ -1192,6 +1241,7 @@ msgid "&Cancel Action"
 msgstr "&Откажи ја акцијата"
 
 #: MainWindow#38
+msgctxt "MainWindow#38"
 msgid "Package Information"
 msgstr "Информација за пакетот"
 
@@ -1212,6 +1262,7 @@ msgid "Cancel all actions"
 msgstr "Откажи ги сите акции"
 
 #: MainWindow#43
+msgctxt "MainWindow#43"
 msgid "Shaman"
 msgstr "Shaman"
 
@@ -1224,6 +1275,7 @@ msgstr ""
 "Дали сакате да го инсталирате %1 во секој случај?"
 
 #: MainWindow#45
+msgctxt "MainWindow#45"
 msgid "System Upgrade"
 msgstr "Надградба на системот"
 
@@ -1244,10 +1296,12 @@ msgstr ""
 "Дали сакате да ја прочитате?"
 
 #: MainWindow#49
+msgctxt "MainWindow#49"
 msgid "Upgrade"
 msgstr "Надгради"
 
 #: MainWindow#50
+msgctxt "MainWindow#50"
 msgid "Queue Processing"
 msgstr "Обработување на редица"
 
@@ -1389,6 +1443,7 @@ msgid "Size"
 msgstr "Големина"
 
 #: MainWindow#70
+msgctxt "MainWindow#70"
 msgid "Repository"
 msgstr "Репозитар"
 
@@ -1437,6 +1492,7 @@ msgid "File&s"
 msgstr "Датоте&ки"
 
 #: MainWindow#82
+msgctxt "MainWindow#82"
 msgid "1"
 msgstr "1"
 
@@ -1476,11 +1532,14 @@ msgstr "Поставувања..."
 msgid "About..."
 msgstr "За..."
 
+#. (obsolete)
 #: MainWindow#92
+msgctxt "MainWindow#92"
 msgid "Update Database"
 msgstr "Ажурирај ја датабазата"
 
 #: MainWindow#93
+msgctxt "MainWindow#93"
 msgid "Upgrade System"
 msgstr "Надгради систем"
 
@@ -1498,10 +1557,13 @@ msgstr "Создади и инсталирај пакет"
 
 # Quit the application
 #: MainWindow#97
+msgctxt "MainWindow#97"
 msgid "Quit"
 msgstr "Исклучи"
 
+#. (obsolete)
 #: MainWindow#98
+msgctxt "MainWindow#98"
 msgid "Process Queue"
 msgstr "Обработи ја редицата"
 
@@ -1527,46 +1589,58 @@ msgid "Please choose an action to start maintenance..."
 msgstr "Ве молиме одберете акција за да започнете со одржување..."
 
 #: MaintenanceBar#2
+msgctxt "MaintenanceBar#2"
 msgid "Clean Unused Databases"
 msgstr "Исчисти некористени датабази"
 
 #: MaintenanceBar#3
+msgctxt "MaintenanceBar#3"
 msgid "Clean Cache"
 msgstr "Исчисти го кешот"
 
 #: MaintenanceBar#4
+msgctxt "MaintenanceBar#4"
 msgid "Empty Cache"
 msgstr "Испразни го кешот"
 
 #: MaintenanceBar#5
+msgctxt "MaintenanceBar#5"
 msgid "Optimize Pacman Database"
 msgstr "Оптимизирај ја датабазата на Pacman"
 
 #: MaintenanceBar#6
+msgctxt "MaintenanceBar#6"
 msgid "Clean All Building Environments"
 msgstr "Исчистете ги сите околини за создавање на пакети"
 
 #: MaintenanceBar#7
+msgctxt "MaintenanceBar#7"
 msgid "Cleaning up unused Databases..."
 msgstr "Чистење на некористени датабази..."
 
 #: MaintenanceBar#8
+msgctxt "MaintenanceBar#8"
 msgid "Cleaning up Cache..."
 msgstr "Чистење на кешот..."
 
 #: MaintenanceBar#9
+msgctxt "MaintenanceBar#9"
 msgid "Deleting Cache..."
 msgstr "Бришење на кешот..."
 
+#. (obsolete)
 #: MaintenanceBar#10
+msgctxt "MaintenanceBar#10"
 msgid "Optimizing Pacman Database..."
 msgstr "Оптимизирање на датабазата на Pacman..."
 
 #: MaintenanceBar#11
+msgctxt "MaintenanceBar#11"
 msgid "Cleaning up building Environments..."
 msgstr "Чистење на околините за создавање на пакети..."
 
 #: MaintenanceBar#12
+msgctxt "MaintenanceBar#12"
 msgid "Abort"
 msgstr "Откажи"
 
@@ -1575,70 +1649,91 @@ msgid "System Maintenance"
 msgstr "Одржување на системот"
 
 #: MaintenanceBar#14
+msgctxt "MaintenanceBar#14"
 msgid "Unused Databases Cleaned up successfully!"
 msgstr "Некористените датабази се исчистени успешно!"
 
 #: MaintenanceBar#15
+msgctxt "MaintenanceBar#15"
 msgid "Cache Cleaned Up Successfully!"
 msgstr "Кешот е исчистен успешно!"
 
 #: MaintenanceBar#16
+msgctxt "MaintenanceBar#16"
 msgid "Cache Successfully Deleted!"
 msgstr "Кешот е избришан успешно!"
 
 #: MaintenanceBar#17
+msgctxt "MaintenanceBar#17"
 msgid "Build Environments Successfully Cleaned!"
 msgstr "Околините за создавање на пакети се успешно исчистени!"
 
 #: MaintenanceBar#18
+msgctxt "MaintenanceBar#18"
 msgid "Close"
 msgstr "Затвори"
 
 #: MaintenanceBar#19
+msgctxt "MaintenanceBar#19"
 msgid "Cleaning up Unused Databases Failed!"
 msgstr "Чистењето на некористените датабази не успеа!"
 
 #: MaintenanceBar#20
+msgctxt "MaintenanceBar#20"
 msgid "Cleaning up Cache Failed!"
 msgstr "Чистењето на кешот не успеа!"
 
 #: MaintenanceBar#21
+msgctxt "MaintenanceBar#21"
 msgid "Deleting Cache Failed!"
 msgstr "Бришењето на кешот не успеа!"
 
 #: MaintenanceBar#22
+msgctxt "MaintenanceBar#22"
 msgid "Could not clean Build Environments!!"
 msgstr "Не можеше да се исчистат околините за создавање на пакети!!"
 
 #: MaintenanceBar#23
+msgctxt "MaintenanceBar#23"
 msgid "Pacman Database Optimized Successfully!"
 msgstr "Датабазата на Pacman беше оптимизирана успешно!"
 
 #: MaintenanceBar#24
+msgctxt "MaintenanceBar#24"
 msgid "Could not Optimize Pacman Database!"
 msgstr "не можеше да се оптимизира датабазата на Pacman!"
 
 # sync is a command, so it should not be translated
+#. (obsolete)
 #: MaintenanceBar#25
+msgctxt "MaintenanceBar#25"
 msgid "Running sync..."
 msgstr "Извршување на sync..."
 
+#. (obsolete)
 #: MaintenanceBar#26
+msgctxt "MaintenanceBar#26"
 msgid "Operation Completed Successfully!"
 msgstr "Операцијата е успешно завршена!"
 
 # Sync is always the command
+#. (obsolete)
 #: MaintenanceBar#27
+msgctxt "MaintenanceBar#27"
 msgid "Sync was successfully executed!!"
 msgstr "Sync беше успешно извршена!!"
 
 # Sync is always the command
+#. (obsolete)
 #: MaintenanceBar#28
+msgctxt "MaintenanceBar#28"
 msgid "Sync could not be executed!"
 msgstr "Sync не можеше да биде извршена!"
 
 # Sync is always the command
+#. (obsolete)
 #: MaintenanceBar#29
+msgctxt "MaintenanceBar#29"
 msgid "Sync could not be executed!!"
 msgstr "Sync не можеше да биде извршена!!"
 
@@ -1651,6 +1746,7 @@ msgid "Please wait, fetching items..."
 msgstr "Ве молиме почекајте, симнувам ставки..."
 
 #: NewsViewer#2
+msgctxt "NewsViewer#2"
 msgid "Mark as Read"
 msgstr "Означи како прочитано"
 
@@ -1659,6 +1755,7 @@ msgid "Mark as Unread"
 msgstr "Означи како непрочитано"
 
 #: NewsViewer#4
+msgctxt "NewsViewer#4"
 msgid "Error"
 msgstr "Грешка"
 
@@ -1704,6 +1801,7 @@ msgid "Whoa, that's co&ol!"
 msgstr "Вау, тоа е зак&он!"
 
 #: QObject#2
+msgctxt "QObject#2"
 msgid "Ok"
 msgstr "Во ред"
 
@@ -1728,9 +1826,11 @@ msgid "C&ancel"
 msgstr "О&ткажи"
 
 #: QObject#8
+msgctxt "QObject#8"
 msgid "Shaman"
 msgstr "Shaman"
 
+#. (obsolete)
 #: QObject#9
 msgid ""
 "Shaman could not switch to root.\n"
@@ -1760,6 +1860,7 @@ msgstr ""
 # Lukas: l.appelhans@gmx.de
 # Thanks again, and enjoy your translation!
 #: QObject#11
+msgctxt "QObject#11"
 msgid "Shaman"
 msgstr "Shaman"
 
@@ -1772,6 +1873,7 @@ msgstr ""
 "Ве молиме проверете ги нивните дозволи."
 
 #: QObject#13
+msgctxt "QObject#13"
 msgid "Please Wait..."
 msgstr "Ве молиме почекајте..."
 
@@ -1942,34 +2044,42 @@ msgid "Queue processed successfully!"
 msgstr "Редицата е обработена успешно!"
 
 #: QueueDialog#30
+msgctxt "QueueDialog#30"
 msgid "Close"
 msgstr "Затвори"
 
+#. (obsolete)
 #: QueueDialog#31
 msgid "Unexpected Error. Shaman might be corrupted."
 msgstr "Неочекувана грешка. Shaman може да е расипан."
 
+#. (obsolete)
 #: QueueDialog#32
 msgid "Executing %1 scriptlet for %2..."
 msgstr "Извршување на %1 scriptlet за %2..."
 
+#. (obsolete)
 #: QueueDialog#33
 msgid "Extracting Scriptlet from package failed!!"
 msgstr "Екстрактирање на Scriptlet од пакетот неуспеа!!"
 
+#. (obsolete)
 #: QueueDialog#34
 msgid "Package %1 does not have %2 scriptlet"
 msgstr "Пакетот %1 не содржи %2 scriptlet"
 
+#. (obsolete)
 #: QueueDialog#35
 msgid "Scriptlet processed successfully!"
 msgstr "Scriptlet-от е обработен успешно!"
 
+#. (obsolete)
 #: QueueDialog#36
 msgid "Error processing Scriptlet!!"
 msgstr "Грешка во обработувањето на Scriptlet-от!!"
 
 #: QueueDialog#37
+msgctxt "QueueDialog#37"
 msgid "Queue Processing"
 msgstr "Обработување на редица"
 
@@ -1994,6 +2104,7 @@ msgid "Review Queue"
 msgstr "Прегледај ја редицата"
 
 #: QueueReadyDialog#2
+msgctxt "QueueReadyDialog#2"
 msgid "Turn off PC when Queue is done"
 msgstr "Исклучи го компјутерот кога редицата ќе заврши"
 
@@ -2006,14 +2117,18 @@ msgid "Keep Queue Dialog Open after the Queue is finished"
 msgstr "Задржи го дијалогот за редицата откако редицата ќе заврши"
 
 #: QueueReadyDialog#5
+msgctxt "QueueReadyDialog#5"
+"QueueReadyDialog#5"
 msgid "Show packages..."
 msgstr "Прикажи пакети..."
 
 #: QueueReadyDialog#6
+msgctxt "QueueReadyDialog#6"
 msgid "Packages In Queue"
 msgstr "Пакети во редица"
 
 #: QueueReadyDialog#7
+msgctxt "QueueReadyDialog#7"
 msgid "Cancel"
 msgstr "Откажи"
 
@@ -2039,26 +2154,32 @@ msgstr ""
 "ја редицата</span></p></body></html>"
 
 #: QueueReadyDialog#10
+msgctxt "QueueReadyDialog#10"
 msgid "Force Queue Processing"
 msgstr "Присили обработка на редицата"
 
 #: ReviewQueueDialog#1
+msgctxt "ReviewQueueDialog#1"
 msgid "Install"
 msgstr "Инсталирај"
 
 #: ReviewQueueDialog#2
+msgctxt "ReviewQueueDialog#2"
 msgid "To be Installed"
 msgstr "За инсталација"
 
 #: ReviewQueueDialog#3
+msgctxt "ReviewQueueDialog#3"
 msgid "Upgrade"
 msgstr "Надгради"
 
 #: ReviewQueueDialog#4
+msgctxt "ReviewQueueDialog#4"
 msgid "To be Upgraded"
 msgstr "За надградба"
 
 #: ReviewQueueDialog#5
+msgctxt "ReviewQueueDialog#5"
 msgid "Uninstall"
 msgstr "Отстрани"
 
@@ -2067,6 +2188,7 @@ msgid "To be Removed"
 msgstr "За отстранување"
 
 #: ReviewQueueDialog#7
+msgctxt "ReviewQueueDialog#7"
 msgid "Complete Uninstall"
 msgstr "Целосно отстранување"
 
@@ -2112,14 +2234,17 @@ msgid "%1 to be Installed, %2 to be Removed"
 msgstr "%1 за инсталација, %2 за отстранување"
 
 #: ShamanTrayIcon#1
+msgctxt "ShamanTrayIcon#1"
 msgid "Update Database"
 msgstr "Ажурирај ја датабазата"
 
 #: ShamanTrayIcon#2
+msgctxt "ShamanTrayIcon#2"
 msgid "Upgrade System"
 msgstr "Надгради систем"
 
 #: ShamanTrayIcon#3
+msgctxt "ShamanTrayIcon#3"
 msgid "Process Queue"
 msgstr "Обработи ја редицата"
 
@@ -2128,6 +2253,7 @@ msgid "Settings"
 msgstr "Поставувања"
 
 #: ShamanTrayIcon#5
+msgctxt "ShamanTrayIcon#5"
 msgid "Quit"
 msgstr "Исклучи"
 
@@ -2144,6 +2270,7 @@ msgid "Shaman - Idle (Upgrades Available)"
 msgstr "Shaman - Во мирување (Надградби се достапни)"
 
 #: ShamanTrayIcon#9
+msgctxt "ShamanTrayIcon#9"
 msgid "System Upgrade"
 msgstr "Надградба на системот"
 
@@ -2182,6 +2309,7 @@ msgstr ""
 "        "
 
 #: SysUpgradeDialog#1
+msgctxt "SysUpgradeDialog#1"
 msgid "To be Upgraded"
 msgstr "За надградба"
 
@@ -2779,6 +2907,7 @@ msgid "Never ask for this anymore"
 msgstr "Не прашувај веќе за лозинка"
 
 #: authDialog#4
+msgctxt "authDialog#4"
 msgid "Ok"
 msgstr "Во ред"
 
@@ -2787,6 +2916,7 @@ msgid "Return"
 msgstr "Врати"
 
 #: authDialog#6
+msgctxt "authDialog#6"
 msgid "Cancel"
 msgstr "Откажи"
 
@@ -2816,6 +2946,7 @@ msgstr ""
 "style=\" font-weight:600;\">Создавање на пакети...</span></p></body></html>"
 
 #: buildingDialog#3
+msgctxt "buildingDialog#3"
 msgid "Abort"
 msgstr "Откажи"
 
@@ -2824,6 +2955,7 @@ msgid "Reduce To Tray"
 msgstr "Спушти во лента"
 
 #: dbUpdateDialog#1
+msgctxt "dbUpdateDialog#1"
 msgid "Database Update"
 msgstr "Ажурирање на датабазата"
 
@@ -2852,6 +2984,7 @@ msgid "Redo"
 msgstr "Повтори"
 
 #: editPBDialog#6
+msgctxt "editPBDialog#6"
 msgid "Ok"
 msgstr "Во ред"
 
@@ -2915,6 +3048,7 @@ msgstr "Освежи го прегледот"
 
 # close the dialog
 #: logViewer#7
+msgctxt "logViewer#7"
 msgid "Close"
 msgstr "Затвори"
 
@@ -2942,6 +3076,7 @@ msgid "status"
 msgstr "статус"
 
 #: newsDialog#5
+msgctxt "newsDialog#5"
 msgid "Mark as Read"
 msgstr "Означи како прочитано"
 
@@ -2955,6 +3090,7 @@ msgstr "Освежи"
 
 # close the dialog
 #: newsDialog#8
+msgctxt "newsDialog#8"
 msgid "Close"
 msgstr "Затвори"
 
@@ -2979,6 +3115,7 @@ msgstr ""
 "style=\" font-weight:600;\">Информација за пакетот</span></p></body></html>"
 
 #: pkgProperties#2
+msgctxt "pkgProperties#2"
 msgid "Package Information"
 msgstr "Информација за пакетот"
 
@@ -3031,6 +3168,7 @@ msgid "Files"
 msgstr "Датотеки"
 
 #: pkgProperties#15
+msgctxt "pkgProperties#15"
 msgid "1"
 msgstr "1"
 
@@ -3051,6 +3189,7 @@ msgid "Actions Performed"
 msgstr "Извршени акции"
 
 #: pkgProperties#20
+msgctxt "pkgProperties#20"
 msgid "Ok"
 msgstr "Во ред"
 
@@ -3090,18 +3229,22 @@ msgid "Do not install immediately when building is finished"
 msgstr "Ве инсталирај веднаш откако создавањето на пакет ќе заврши"
 
 #: reviewBuildingDialog#6
+msgctxt "reviewBuildingDialog#6"
 msgid "Turn off PC when Queue is done"
 msgstr "Исклучи го компјутерот кога редицата ќе заврши"
 
 #: reviewBuildingDialog#7
+msgctxt "reviewBuildingDialog#7"
 msgid "Show packages..."
 msgstr "Прикажи пакети"
 
 #: reviewBuildingDialog#8
+msgctxt "reviewBuildingDialog#8"
 msgid "Packages In Queue"
 msgstr "Пакети во редица"
 
 #: reviewBuildingDialog#9
+msgctxt "reviewBuildingDialog#9"
 msgid "Abort"
 msgstr "Откажи"
 
@@ -3138,14 +3281,17 @@ msgid "Cleanup"
 msgstr "Чистење"
 
 #: transactionDialog#6
+msgctxt "transactionDialog#6"
 msgid "More Details..."
 msgstr "Повеќе детали..."
 
 #: transactionDialog#7
+msgctxt "transactionDialog#7"
 msgid "Abort"
 msgstr "Откажи"
 
 #: transactionDialog#8
+msgctxt "transactionDialog#8"
 msgid "Please Wait..."
 msgstr "Ве молиме почекајте..."
 
@@ -3167,6 +3313,7 @@ msgstr ""
 "на редицата</span></p></body></html>"
 
 #: upgradeDialog#1
+msgctxt "upgradeDialog#1"
 msgid "System Upgrade"
 msgstr "Надградба на системот"
 
@@ -3175,10 +3322,12 @@ msgid "Remember my choice"
 msgstr "Запамети го мојот избор"
 
 #: upgradeDialog#3
+msgctxt "upgradeDialog#3"
 msgid "Abort"
 msgstr "Откажи"
 
 #: upgradeDialog#4
+msgctxt "upgradeDialog#4"
 msgid "Show packages..."
 msgstr "Прикажи пакети..."
 
@@ -3212,5 +3361,6 @@ msgid "Packages to Upgrade"
 msgstr "Пакети за надградба"
 
 #: upgradeDialog#9
+msgctxt "upgradeDialog#9"
 msgid "Force Queue Processing"
 msgstr "Присили обработка на редицата"

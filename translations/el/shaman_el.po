@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-24 22:17+0200\n"
+"POT-Creation-Date: 2009-03-28 15:53+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.1.1\n"
+"X-Generator: Translate Toolkit 1.3.0\n"
 
 #. (obsolete)
 #: AlpmHandler#1
@@ -38,6 +38,7 @@ msgid "Alpm did not give further details."
 msgstr "Το Alpm δεν έδωσε περαιτέρω πληροφορίες."
 
 #: BuildingDialog#1
+msgctxt "BuildingDialog#1"
 msgid "Error"
 msgstr "Σφάλμα"
 
@@ -55,10 +56,12 @@ msgstr ""
 "<br><br><b>Η διεργασία χτισίματος ακυρώθηκε απ'τον χρήστη. Το χτίσιμο "
 "απέτυχε.</b>"
 
+#. (obsolete)
 #: BuildingDialog#4
 msgid "Updating ABS Tree..."
 msgstr "Ενημέρωση του καταλόγου ABS..."
 
+#. (obsolete)
 #: BuildingDialog#5
 msgid "<b>Starting ABS Tree Update...</b><br><br>"
 msgstr "<b>Έναρξη ενημέρωσης του καταλόγου ABS...</b><br><br>"
@@ -108,6 +111,7 @@ msgid "Could not update the ABS Tree!"
 msgstr "Η ενημέρωση του ABS καταλόγου ήταν αδύνατη."
 
 #: BuildingHandler#1
+msgctxt "BuildingHandler#1"
 msgid ""
 "You need to have ABS installed to use Shaman's\n"
 "building feature. Do you want to install it now?"
@@ -116,10 +120,12 @@ msgstr ""
 "να χτίσετε πακέτα με το Shaman. Εγκατάσταση τώρα;"
 
 #: BuildingHandler#2
+msgctxt "BuildingHandler#2"
 msgid "Error"
 msgstr "Σφάλμα"
 
 #: BuildingHandler#3
+msgctxt "BuildingHandler#3"
 msgid ""
 "You can not remove packages when processing\n"
 "your queue from Source"
@@ -128,6 +134,7 @@ msgstr ""
 "επεξεργασία της ουράς από την Πηγή"
 
 #: BuildingHandler#4
+msgctxt "BuildingHandler#4"
 msgid ""
 "Some of your packages do not belong to Arch\n"
 "Linux's official repository. Shaman is able to\n"
@@ -139,6 +146,7 @@ msgstr ""
 
 #. (obsolete)
 #: BuildingHandler#5
+msgctxt "BuildingHandler#5"
 msgid ""
 "You are about to install <b>%1 package</b> from source. Building from "
 "source<br>can give some advantages, however is very slow.<br>If you are not "
@@ -154,6 +162,7 @@ msgstr ""
 
 #. (obsolete)
 #: BuildingHandler#6
+msgctxt "BuildingHandler#6"
 msgid ""
 "You are about to install <b>%1 packages</b> from source. Building from "
 "source<br>can give some advantages, however is very slow.<br>If you are not "
@@ -168,22 +177,27 @@ msgstr ""
 "ρυθμίσεις σας ώστε να αυξήσετε την επίδοση του χτισίματος."
 
 #: BuildingHandler#7
+msgctxt "BuildingHandler#7"
 msgid "To be Installed"
 msgstr "Προς Εγκατάσταση"
 
 #: BuildingHandler#8
+msgctxt "BuildingHandler#8"
 msgid "To be Upgraded"
 msgstr "Προς Αναβάθμιση"
 
 #: BuildingHandler#9
+msgctxt "BuildingHandler#9"
 msgid "Package Building"
 msgstr "Χτίσιμο Πακέτου"
 
 #: BuildingHandler#10
+msgctxt "BuildingHandler#10"
 msgid "Your Packages failed to build!"
 msgstr "Το χτίσιμο των πακέτων σας απέτυχε!"
 
 #: BuildingHandler#11
+msgctxt "BuildingHandler#11"
 msgid ""
 "Your packages Failed to Build.\n"
 "Look at the output for more details."
@@ -192,19 +206,23 @@ msgstr ""
 "Κοιτάξτε τα μηνύματα εξόδου για λεπτομέρειες."
 
 #: BuildingHandler#12
+msgctxt "BuildingHandler#12"
 msgid "Close"
 msgstr "Κλείσιμο"
 
 #: BuildingHandler#13
+msgctxt "BuildingHandler#13"
 msgid "Building Packages Failed!!"
 msgstr "Το χτίσιμο των πακέτων σας απέτυχε!!"
 
 #. (obsolete)
 #: BuildingHandler#14
+msgctxt "BuildingHandler#14"
 msgid "Shaman - Idle"
 msgstr "Shaman - Αδράνεια"
 
 #: BuildingHandler#15
+msgctxt "BuildingHandler#15"
 msgid ""
 "Some packages failed to build.\n"
 "Do you want to proceed anyway?"
@@ -213,24 +231,29 @@ msgstr ""
 "Θέλετε να συνεχίσετε;"
 
 #: BuildingHandler#16
+msgctxt "BuildingHandler#16"
 msgid "Install Built Packages"
 msgstr "Εγκατάσταση Χτισμένων Πακέτων"
 
 #: BuildingHandler#17
+msgctxt "BuildingHandler#17"
 msgid "Close Without Installing"
 msgstr "Κλείσιμο χωρίς εγκατάσταση"
 
 #: BuildingHandler#18
+msgctxt "BuildingHandler#18"
 msgid "Packages Built Successfully!"
 msgstr "Τα πακέτα χτίστηκαν με επιτυχία!"
 
 #: BuildingHandler#19
+msgctxt "BuildingHandler#19"
 msgid ""
 "Your Packages have been built successfully, and are ready to be installed"
 msgstr "Τα πακέτα σας χτίστηκαν με επιτυχία και είναι έτοιμα για εγκατάσταση"
 
 #. (obsolete)
 #: BuildingHandler#20
+msgctxt "BuildingHandler#20"
 msgid "Shaman - Processing"
 msgstr "Shaman - Επεξεργασία"
 
@@ -506,6 +529,7 @@ msgstr ""
 "όσο και απ'το Pacman."
 
 #: ConfigDialog#39
+msgctxt "ConfigDialog#39"
 msgid "Repository"
 msgstr "Repository"
 
@@ -592,26 +616,32 @@ msgid "General"
 msgstr "Γενικά"
 
 #: ConfigDialog#60
+msgctxt "ConfigDialog#60"
 msgid "Clean Unused Databases"
 msgstr "Καθαρισμός αχρησιμοποίητων Βάσεων Δεδομένων"
 
 #: ConfigDialog#61
+msgctxt "ConfigDialog#61"
 msgid "Clean Cache"
 msgstr "Καθαρισμός της Cache"
 
 #: ConfigDialog#62
+msgctxt "ConfigDialog#62"
 msgid "Empty Cache"
 msgstr "Άδειασμα της Cache"
 
 #: ConfigDialog#63
+msgctxt "ConfigDialog#63"
 msgid "Optimize Pacman Database"
 msgstr "Βελτιστοποίηση Βάσεως Δεδομένων του Pacman"
 
 #: ConfigDialog#64
+msgctxt "ConfigDialog#64"
 msgid "Clean All Building Environments"
 msgstr "Καθαρισμός όλων των Περιβάλλοντων Χτισίματος"
 
 #: ConfigDialog#65
+msgctxt "ConfigDialog#65"
 msgid "Repositories"
 msgstr "Repositories"
 
@@ -632,52 +662,64 @@ msgid "Enter Here the Repository's Server"
 msgstr "Εισάγετε τη διεύθυνση του Repository"
 
 #: ConfigDialog#70
+msgctxt "ConfigDialog#70"
 msgid "Cleaning up unused Databases..."
 msgstr "Καθαρισμός αχρησιμοποίητων Βάσεων Δεδομένων..."
 
 #: ConfigDialog#71
+msgctxt "ConfigDialog#71"
 msgid "Cleaning up Cache..."
 msgstr "Καθαρισμός της Cache..."
 
 #: ConfigDialog#72
+msgctxt "ConfigDialog#72"
 msgid "Deleting Cache..."
 msgstr "Διαγραφή της Cache..."
 
 #: ConfigDialog#73
+msgctxt "ConfigDialog#73"
 msgid "Cleaning up building Environments..."
 msgstr "Εκκαθάριση των περιβάλλοντων χτισίματος..."
 
 #: ConfigDialog#74
+msgctxt "ConfigDialog#74"
 msgid "Cleaning up Unused Databases Failed!"
 msgstr "Ο καθαρισμός των Αχρησιμοποίητων Βάσεων Δεδομένων Απέτυχε!"
 
 #: ConfigDialog#75
+msgctxt "ConfigDialog#75"
 msgid "Cleaning up Cache Failed!"
 msgstr "Ο καθαρισμός της Cache Απέτυχε!"
 
 #: ConfigDialog#76
+msgctxt "ConfigDialog#76"
 msgid "Deleting Cache Failed!"
 msgstr "Η Διαγραφή της Cache Απέτυχε!"
 
 #: ConfigDialog#77
+msgctxt "ConfigDialog#77"
 msgid "Could not clean Build Environments!!"
 msgstr "Η εκκαθάριση του Περιβάλλοντος Χτισίματος απέτυχε!!"
 
 #: ConfigDialog#78
+msgctxt "ConfigDialog#78"
 msgid "Unused Databases Cleaned up successfully!"
 msgstr ""
 "Η εκκαθάριση των Αχρησιμοποίητων Βάσεων Δεδομένων\n"
 "έγινε με επιτυχία!"
 
 #: ConfigDialog#79
+msgctxt "ConfigDialog#79"
 msgid "Cache Cleaned Up Successfully!"
 msgstr "Η εκκαθάριση της Cache έγινε με επιτυχία!"
 
 #: ConfigDialog#80
+msgctxt "ConfigDialog#80"
 msgid "Cache Successfully Deleted!"
 msgstr "Η διαγραφή της Cache έγινε με επιτυχία!"
 
 #: ConfigDialog#81
+msgctxt "ConfigDialog#81"
 msgid "Build Environments Successfully Cleaned!"
 msgstr "Τα Περιβάλλοντα Χτισίματος καθαρίστικαν με επιτυχία!"
 
@@ -717,33 +759,43 @@ msgstr ""
 "Βρίσκεται διαθέσιμο στο αρχείο /etc/pacman.d/mirrorlist."
 
 #: ConfigDialog#87
+msgctxt "ConfigDialog#87"
 msgid "Pacman Database Optimized Successfully!"
 msgstr ""
 "Η βελτιστοποίηση της Βάσης Δεδομένων του\n"
 "Pacman πραγματοποιήθηκε με επιτυχία!"
 
 #: ConfigDialog#88
+msgctxt "ConfigDialog#88"
 msgid "Could not Optimize Pacman Database!"
 msgstr ""
 "Η βελτιστοποίηση της Βάσης Δεδομένων\n"
 "του Pacman δεν ήταν δυνατή!"
 
+#. (obsolete)
 #: ConfigDialog#89
+msgctxt "ConfigDialog#89"
 msgid "Operation Completed Successfully!"
 msgstr "Η διεργασία πραγματοποιήθηκε με επιτυχία!"
 
 # Sync is always the command
+#. (obsolete)
 #: ConfigDialog#90
+msgctxt "ConfigDialog#90"
 msgid "Sync was successfully executed!!"
 msgstr "Η εντολή Sync εκτελέστηκε με επιτυχία!!"
 
 # Sync is always the command
+#. (obsolete)
 #: ConfigDialog#91
+msgctxt "ConfigDialog#91"
 msgid "Sync could not be executed!"
 msgstr "Η εντολή Sync δεν μπόρεσε να εκτελεστεί!"
 
 # Sync is always the command
+#. (obsolete)
 #: ConfigDialog#92
+msgctxt "ConfigDialog#92"
 msgid "Sync could not be executed!!"
 msgstr "Η εντολή Sync δεν μπόρεσε να εκτελεστεί!!"
 
@@ -751,7 +803,9 @@ msgstr "Η εντολή Sync δεν μπόρεσε να εκτελεστεί!!"
 msgid "Process Selected"
 msgstr "Επεξεργασία Επιλογής"
 
+#. (obsolete)
 #: ConfigDialog#94
+msgctxt "ConfigDialog#94"
 msgid "Optimizing Pacman Database..."
 msgstr "Βελτιστοποίηση της Βάσης Δεδομένων του Pacman..."
 
@@ -813,6 +867,7 @@ msgstr "Unstable"
 
 # sync is a command, so it should not be translated
 #: ConfigDialog#102
+msgctxt "ConfigDialog#102"
 msgid "Running sync..."
 msgstr "Εκτέλεση του sync..."
 
@@ -886,10 +941,12 @@ msgid ""
 msgstr "Έλεγχος για αδιάβαστα νέα των πακέτων ουράς πριν αυτά επεξεργαστούν"
 
 #: ConfigDialog#119
+msgctxt "ConfigDialog#119"
 msgid "Ok"
 msgstr "Ok"
 
 #: ConfigDialog#120
+msgctxt "ConfigDialog#120"
 msgid "Cancel"
 msgstr "Ακύρωση"
 
@@ -1137,11 +1194,13 @@ msgstr ""
 
 #: LocalPackage#4
 #, fuzzy
+msgctxt "LocalPackage#4"
 msgid "More Details..."
 msgstr "Περισσότερες λεπτομέρειες..."
 
 #: LocalPackage#5
 #, fuzzy
+msgctxt "LocalPackage#5"
 msgid "Cancel"
 msgstr "Ακύρωση"
 
@@ -1182,6 +1241,7 @@ msgstr ""
 "        "
 
 #: MainWindow#1
+msgctxt "MainWindow#1"
 msgid "Shaman"
 msgstr "Shaman"
 
@@ -1210,6 +1270,7 @@ msgid "Status"
 msgstr "Κατάσταση"
 
 #: MainWindow#8
+msgctxt "MainWindow#8"
 msgid "Name"
 msgstr "Όνομα"
 
@@ -1226,6 +1287,7 @@ msgid "Size"
 msgstr "Μέγεθος"
 
 #: MainWindow#12
+msgctxt "MainWindow#12"
 msgid "Repository"
 msgstr "Repository"
 
@@ -1242,6 +1304,7 @@ msgid "Action-Text"
 msgstr "Κείμενο Ενέργειας"
 
 #: MainWindow#16
+msgctxt "MainWindow#16"
 msgid "Repositories"
 msgstr "Repositories"
 
@@ -1250,6 +1313,7 @@ msgid "Package Groups"
 msgstr "Ομάδες πακέτων"
 
 #: MainWindow#18
+msgctxt "MainWindow#18"
 msgid "Package Information"
 msgstr "Πληροφορίες πακέτου"
 
@@ -1291,15 +1355,18 @@ msgstr "Ακύρωση ενέργειας"
 
 #. (obsolete)
 #: MainWindow#27
+msgctxt "MainWindow#27"
 msgid "Files"
 msgstr "Αρχεία"
 
 #: MainWindow#28
+msgctxt "MainWindow#28"
 msgid "1"
 msgstr "1"
 
 #. (obsolete)
 #: MainWindow#29
+msgctxt "MainWindow#29"
 msgid "Dependencies"
 msgstr "Εξαρτήσεις"
 
@@ -1339,11 +1406,14 @@ msgstr "Ρυθμίσεις..."
 msgid "About..."
 msgstr "Περί..."
 
+#. (obsolete)
 #: MainWindow#38
+msgctxt "MainWindow#38"
 msgid "Update Database"
 msgstr "Ανανέωση Βάσης Δεδομένων"
 
 #: MainWindow#39
+msgctxt "MainWindow#39"
 msgid "Upgrade System"
 msgstr "Αναβάθμιση Συστήματος"
 
@@ -1361,10 +1431,13 @@ msgstr "Χτίσιμο και Εγκατάσταση Ουράς"
 
 #. (obsolete)
 #: MainWindow#43
+msgctxt "MainWindow#43"
 msgid "Quit"
 msgstr "Έξοδος"
 
+#. (obsolete)
 #: MainWindow#44
+msgctxt "MainWindow#44"
 msgid "Process Queue"
 msgstr "Επεξεργασία Ουράς"
 
@@ -1374,11 +1447,13 @@ msgstr "Ακύρωση όλων των ενεργειών"
 
 #. (obsolete)
 #: MainWindow#46
+msgctxt "MainWindow#46"
 msgid "Settings"
 msgstr "Ρυθμίσεις"
 
 #. (obsolete)
 #: MainWindow#47
+msgctxt "MainWindow#47"
 msgid "Shaman - Idle"
 msgstr "Shaman - Αδράνεια"
 
@@ -1404,20 +1479,24 @@ msgid "Shaman - Reducing To Tray"
 msgstr "Shaman - Κλείσιμο στο Tray"
 
 #: MainWindow#50
+msgctxt "MainWindow#50"
 msgid "Upgrade"
 msgstr "Αναβάθμιση"
 
 #. (obsolete)
 #: MainWindow#51
+msgctxt "MainWindow#51"
 msgid "Shaman - Idle (Upgrades Available)"
 msgstr "Shaman - Αδράνεια (Διαθέσιμες Αναβαθμίσεις)"
 
 #: MainWindow#52
+msgctxt "MainWindow#52"
 msgid "System Upgrade"
 msgstr "Αναβάθμιση Συστήματος"
 
 #. (obsolete)
 #: MainWindow#53
+msgctxt "MainWindow#53"
 msgid ""
 "There is %1 upgradeable package.\n"
 "Click here to upgrade your System."
@@ -1427,6 +1506,7 @@ msgstr ""
 
 #. (obsolete)
 #: MainWindow#54
+msgctxt "MainWindow#54"
 msgid ""
 "There are %1 upgradeable packages.\n"
 "Click here to upgrade your System."
@@ -1452,14 +1532,17 @@ msgid "Mark for Reinstallation"
 msgstr "Επιλογή για Επανεγκατάσταση"
 
 #: MainWindow#59
+msgctxt "MainWindow#59"
 msgid "Install"
 msgstr "Εγκατάσταση"
 
 #: MainWindow#60
+msgctxt "MainWindow#60"
 msgid "Uninstall"
 msgstr "Απεγκατάσταση"
 
 #: MainWindow#61
+msgctxt "MainWindow#61"
 msgid "Complete Uninstall"
 msgstr "Ολική Απεγκατάσταση"
 
@@ -1481,10 +1564,12 @@ msgstr "Ενέργεια:"
 
 #. (obsolete)
 #: MainWindow#66
+msgctxt "MainWindow#66"
 msgid "Shaman - Processing"
 msgstr "Shaman - Επεξεργασία"
 
 #: MainWindow#67
+msgctxt "MainWindow#67"
 msgid "Error"
 msgstr "Σφάλμα"
 
@@ -1499,6 +1584,7 @@ msgstr ""
 "%1"
 
 #: MainWindow#69
+msgctxt "MainWindow#69"
 msgid "Database Update"
 msgstr "Ανανέωση Βάσης Δεδομένων"
 
@@ -1532,6 +1618,7 @@ msgid "Your system is up to date!"
 msgstr "Το σύστημα είναι ενημερωμένο!"
 
 #: MainWindow#77
+msgctxt "MainWindow#77"
 msgid "Queue Processing"
 msgstr "Επεξεργασία Ουράς"
 
@@ -1557,46 +1644,55 @@ msgstr "Η επεξεργασία της Ουράς έγινε με επιτυχ
 
 #. (obsolete)
 #: MainWindow#82
+msgctxt "MainWindow#82"
 msgid "To be Installed"
 msgstr "Προς Εγκατάσταση"
 
 #. (obsolete)
 #: MainWindow#83
+msgctxt "MainWindow#83"
 msgid "To be Upgraded"
 msgstr "Προς Αναβάθμιση"
 
 #. (obsolete)
 #: MainWindow#84
+msgctxt "MainWindow#84"
 msgid "To be Removed"
 msgstr "Προς Αφαίρεση"
 
 #. (obsolete)
 #: MainWindow#85
+msgctxt "MainWindow#85"
 msgid "Your Queue is about to be processed. You are going to:<br />"
 msgstr "Η ουρά είναι έτοιμη να επεξεργαστεί. Πρόκειται να:<br/>"
 
 #. (obsolete)
 #: MainWindow#86
+msgctxt "MainWindow#86"
 msgid "Remove <b>%1 package</b><br />"
 msgstr "Αφαίρεση <b>%1 πακέτου</b><br/>"
 
 #. (obsolete)
 #: MainWindow#87
+msgctxt "MainWindow#87"
 msgid "Remove <b>%1 packages</b><br />"
 msgstr "Αφαίρεση <b>%1 πακέτων</b><br />"
 
 #. (obsolete)
 #: MainWindow#88
+msgctxt "MainWindow#88"
 msgid "Install/Upgrade <b>%1 package</b><br />"
 msgstr "Εγκατάσταση/Αναβάθμιση <b>%1 πακέτου</b><br />"
 
 #. (obsolete)
 #: MainWindow#89
+msgctxt "MainWindow#89"
 msgid "Install/Upgrade <b>%1 packages</b><br />"
 msgstr "Εγκατάσταση/Αναβάθμιση <b>%1 πακέτων</b><br />"
 
 #. (obsolete)
 #: MainWindow#90
+msgctxt "MainWindow#90"
 msgid "Do you wish to continue?"
 msgstr "Θέλετε να συνεχίσετε;"
 
@@ -1618,6 +1714,7 @@ msgstr ""
 
 #. (obsolete)
 #: MainWindow#94
+msgctxt "MainWindow#94"
 msgid ""
 "You need to have ABS installed to use Shaman's\n"
 "building feature. Do you want to install it now?"
@@ -1627,6 +1724,7 @@ msgstr ""
 
 #. (obsolete)
 #: MainWindow#95
+msgctxt "MainWindow#95"
 msgid ""
 "You can not remove packages when processing\n"
 "your queue from Source"
@@ -1636,6 +1734,7 @@ msgstr ""
 
 #. (obsolete)
 #: MainWindow#96
+msgctxt "MainWindow#96"
 msgid ""
 "Some of your packages do not belong to Arch\n"
 "Linux's official repository. Shaman is able to\n"
@@ -1647,6 +1746,7 @@ msgstr ""
 
 #. (obsolete)
 #: MainWindow#97
+msgctxt "MainWindow#97"
 msgid ""
 "You are about to install <b>%1 package</b> from source. Building from "
 "source<br>can give some advantages, however is very slow.<br>If you are not "
@@ -1662,6 +1762,7 @@ msgstr ""
 
 #. (obsolete)
 #: MainWindow#98
+msgctxt "MainWindow#98"
 msgid ""
 "You are about to install <b>%1 packages</b> from source. Building from "
 "source<br>can give some advantages, however is very slow.<br>If you are not "
@@ -1677,16 +1778,19 @@ msgstr ""
 
 #. (obsolete)
 #: MainWindow#99
+msgctxt "MainWindow#99"
 msgid "Package Building"
 msgstr "Χτίσιμο Πακέτου"
 
 #. (obsolete)
 #: MainWindow#100
+msgctxt "MainWindow#100"
 msgid "Your Packages failed to build!"
 msgstr "Το χτίσιμο των πακέτων σας απέτυχε!"
 
 #. (obsolete)
 #: MainWindow#101
+msgctxt "MainWindow#101"
 msgid ""
 "Your packages Failed to Build.\n"
 "Look at the output for more details."
@@ -1696,16 +1800,19 @@ msgstr ""
 
 #. (obsolete)
 #: MainWindow#102
+msgctxt "MainWindow#102"
 msgid "Close"
 msgstr "Κλείσιμο"
 
 #. (obsolete)
 #: MainWindow#103
+msgctxt "MainWindow#103"
 msgid "Building Packages Failed!!"
 msgstr "Το χτίσιμο των πακέτων σας απέτυχε!!"
 
 #. (obsolete)
 #: MainWindow#104
+msgctxt "MainWindow#104"
 msgid ""
 "Some packages failed to build.\n"
 "Do you want to proceed anyway?"
@@ -1715,21 +1822,25 @@ msgstr ""
 
 #. (obsolete)
 #: MainWindow#105
+msgctxt "MainWindow#105"
 msgid "Install Built Packages"
 msgstr "Εγκατάσταση Χτισμένων Πακέτων"
 
 #. (obsolete)
 #: MainWindow#106
+msgctxt "MainWindow#106"
 msgid "Close Without Installing"
 msgstr "Κλείσιμο χωρίς εγκατάσταση"
 
 #. (obsolete)
 #: MainWindow#107
+msgctxt "MainWindow#107"
 msgid "Packages Built Successfully!"
 msgstr "Τα πακέτα χτίστηκαν με επιτυχία!"
 
 #. (obsolete)
 #: MainWindow#108
+msgctxt "MainWindow#108"
 msgid ""
 "Your Packages have been built successfully, and are ready to be installed"
 msgstr "Τα πακέτα σας χτίστηκαν με επιτυχία και είναι έτοιμα για εγκατάσταση"
@@ -1737,34 +1848,40 @@ msgstr "Τα πακέτα σας χτίστηκαν με επιτυχία και
 # Size is in Gib
 #. (obsolete)
 #: MainWindow#109
+msgctxt "MainWindow#109"
 msgid "%1 GiB"
 msgstr "%1 GiB\n"
 
 # Size is in MiB
 #. (obsolete)
 #: MainWindow#110
+msgctxt "MainWindow#110"
 msgid "%1 MiB"
 msgstr "%1 MiB"
 
 # Size is in KiB
 #. (obsolete)
 #: MainWindow#111
+msgctxt "MainWindow#111"
 msgid "%1 KiB"
 msgstr "%1 KiB"
 
 # Size is in Bytes
 #. (obsolete)
 #: MainWindow#112
+msgctxt "MainWindow#112"
 msgid "%1 Bytes"
 msgstr "%1 Bytes"
 
 # Quit the application
 #: MainWindow#113
+msgctxt "MainWindow#113"
 msgid "Quit"
 msgstr "Έξοδος"
 
 #. (obsolete)
 #: MainWindow#114
+msgctxt "MainWindow#114"
 msgid "Do not show this Again"
 msgstr "Να μην εμφανιστεί ξανά"
 
@@ -1848,8 +1965,8 @@ msgstr ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">Άδεια: GPLv2+</p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Έκδοση του Libalpm: "
-"v.%1</p>\n"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Έκδοση του Libalpm: v.%"
+"1</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
 "indent:0px;\"></p>\n"
@@ -1941,6 +2058,7 @@ msgstr "Σφάλμα κατά την επεξεργασία της Ουράς!!!
 # The name of the Package
 #. (obsolete)
 #: MainWindow#136
+msgctxt "MainWindow#136"
 msgid "Name"
 msgstr "Όνομα"
 
@@ -2084,6 +2202,7 @@ msgstr ""
 # Name of the Package
 #. (obsolete)
 #: MainWindow#153
+msgctxt "MainWindow#153"
 msgid "Name"
 msgstr "Όνομα"
 
@@ -2111,56 +2230,67 @@ msgstr ""
 
 #: MaintenanceBar#2
 #, fuzzy
+msgctxt "MaintenanceBar#2"
 msgid "Clean Unused Databases"
 msgstr "Καθαρισμός αχρησιμοποίητων Βάσεων Δεδομένων"
 
 #: MaintenanceBar#3
 #, fuzzy
+msgctxt "MaintenanceBar#3"
 msgid "Clean Cache"
 msgstr "Καθαρισμός της Cache"
 
 #: MaintenanceBar#4
 #, fuzzy
+msgctxt "MaintenanceBar#4"
 msgid "Empty Cache"
 msgstr "Άδειασμα της Cache"
 
 #: MaintenanceBar#5
 #, fuzzy
+msgctxt "MaintenanceBar#5"
 msgid "Optimize Pacman Database"
 msgstr "Βελτιστοποίηση Βάσεως Δεδομένων του Pacman"
 
 #: MaintenanceBar#6
 #, fuzzy
+msgctxt "MaintenanceBar#6"
 msgid "Clean All Building Environments"
 msgstr "Καθαρισμός όλων των Περιβάλλοντων Χτισίματος"
 
 #: MaintenanceBar#7
 #, fuzzy
+msgctxt "MaintenanceBar#7"
 msgid "Cleaning up unused Databases..."
 msgstr "Καθαρισμός αχρησιμοποίητων Βάσεων Δεδομένων..."
 
 #: MaintenanceBar#8
 #, fuzzy
+msgctxt "MaintenanceBar#8"
 msgid "Cleaning up Cache..."
 msgstr "Καθαρισμός της Cache..."
 
 #: MaintenanceBar#9
 #, fuzzy
+msgctxt "MaintenanceBar#9"
 msgid "Deleting Cache..."
 msgstr "Διαγραφή της Cache..."
 
+#. (obsolete)
 #: MaintenanceBar#10
-#, fuzzy
+msgctxt "MaintenanceBar#10"
 msgid "Optimizing Pacman Database..."
 msgstr "Βελτιστοποίηση της Βάσης Δεδομένων του Pacman..."
 
 #: MaintenanceBar#11
 #, fuzzy
+msgctxt "MaintenanceBar#11"
 msgid "Cleaning up building Environments..."
 msgstr "Εκκαθάριση των περιβάλλοντων χτισίματος..."
 
 #: MaintenanceBar#12
 #, fuzzy
+msgctxt "MaintenanceBar#12"
 msgid "Abort"
 msgstr "Ακύρωση"
 
@@ -2173,6 +2303,7 @@ msgstr ""
 
 #: MaintenanceBar#14
 #, fuzzy
+msgctxt "MaintenanceBar#14"
 msgid "Unused Databases Cleaned up successfully!"
 msgstr ""
 "Η εκκαθάριση των Αχρησιμοποίητων Βάσεων Δεδομένων\n"
@@ -2180,46 +2311,55 @@ msgstr ""
 
 #: MaintenanceBar#15
 #, fuzzy
+msgctxt "MaintenanceBar#15"
 msgid "Cache Cleaned Up Successfully!"
 msgstr "Η εκκαθάριση της Cache έγινε με επιτυχία!"
 
 #: MaintenanceBar#16
 #, fuzzy
+msgctxt "MaintenanceBar#16"
 msgid "Cache Successfully Deleted!"
 msgstr "Η διαγραφή της Cache έγινε με επιτυχία!"
 
 #: MaintenanceBar#17
 #, fuzzy
+msgctxt "MaintenanceBar#17"
 msgid "Build Environments Successfully Cleaned!"
 msgstr "Τα Περιβάλλοντα Χτισίματος καθαρίστικαν με επιτυχία!"
 
 #: MaintenanceBar#18
 #, fuzzy
+msgctxt "MaintenanceBar#18"
 msgid "Close"
 msgstr "Κλείσιμο"
 
 #: MaintenanceBar#19
 #, fuzzy
+msgctxt "MaintenanceBar#19"
 msgid "Cleaning up Unused Databases Failed!"
 msgstr "Ο καθαρισμός των Αχρησιμοποίητων Βάσεων Δεδομένων Απέτυχε!"
 
 #: MaintenanceBar#20
 #, fuzzy
+msgctxt "MaintenanceBar#20"
 msgid "Cleaning up Cache Failed!"
 msgstr "Ο καθαρισμός της Cache Απέτυχε!"
 
 #: MaintenanceBar#21
 #, fuzzy
+msgctxt "MaintenanceBar#21"
 msgid "Deleting Cache Failed!"
 msgstr "Η Διαγραφή της Cache Απέτυχε!"
 
 #: MaintenanceBar#22
 #, fuzzy
+msgctxt "MaintenanceBar#22"
 msgid "Could not clean Build Environments!!"
 msgstr "Η εκκαθάριση του Περιβάλλοντος Χτισίματος απέτυχε!!"
 
 #: MaintenanceBar#23
 #, fuzzy
+msgctxt "MaintenanceBar#23"
 msgid "Pacman Database Optimized Successfully!"
 msgstr ""
 "Η βελτιστοποίηση της Βάσης Δεδομένων του\n"
@@ -2227,37 +2367,43 @@ msgstr ""
 
 #: MaintenanceBar#24
 #, fuzzy
+msgctxt "MaintenanceBar#24"
 msgid "Could not Optimize Pacman Database!"
 msgstr ""
 "Η βελτιστοποίηση της Βάσης Δεδομένων\n"
 "του Pacman δεν ήταν δυνατή!"
 
 # sync is a command, so it should not be translated
+#. (obsolete)
 #: MaintenanceBar#25
-#, fuzzy
+msgctxt "MaintenanceBar#25"
 msgid "Running sync..."
 msgstr "Εκτέλεση του sync..."
 
+#. (obsolete)
 #: MaintenanceBar#26
-#, fuzzy
+msgctxt "MaintenanceBar#26"
 msgid "Operation Completed Successfully!"
 msgstr "Η διεργασία πραγματοποιήθηκε με επιτυχία!"
 
 # Sync is always the command
+#. (obsolete)
 #: MaintenanceBar#27
-#, fuzzy
+msgctxt "MaintenanceBar#27"
 msgid "Sync was successfully executed!!"
 msgstr "Η εντολή Sync εκτελέστηκε με επιτυχία!!"
 
 # Sync is always the command
+#. (obsolete)
 #: MaintenanceBar#28
-#, fuzzy
+msgctxt "MaintenanceBar#28"
 msgid "Sync could not be executed!"
 msgstr "Η εντολή Sync δεν μπόρεσε να εκτελεστεί!"
 
 # Sync is always the command
+#. (obsolete)
 #: MaintenanceBar#29
-#, fuzzy
+msgctxt "MaintenanceBar#29"
 msgid "Sync could not be executed!!"
 msgstr "Η εντολή Sync δεν μπόρεσε να εκτελεστεί!!"
 
@@ -2275,6 +2421,7 @@ msgstr ""
 "λήψη των αντικειμένων..."
 
 #: NewsViewer#2
+msgctxt "NewsViewer#2"
 msgid "Mark as Read"
 msgstr "Μαρκάρισμα ως Διαβασμένο"
 
@@ -2283,6 +2430,7 @@ msgid "Mark as Unread"
 msgstr "Μαρκάρισμα ως Αδιάβαστο"
 
 #: NewsViewer#4
+msgctxt "NewsViewer#4"
 msgid "Error"
 msgstr "Σφάλμα"
 
@@ -2292,21 +2440,25 @@ msgstr "Αδύνατη η λήψη του RSS feed! Το σφάλμα ήταν:"
 
 # Size is in Gib
 #: PackageProperties#1
+msgctxt "PackageProperties#1"
 msgid "%1 GiB"
 msgstr "%1 GiB"
 
 # Size is in MiB
 #: PackageProperties#2
+msgctxt "PackageProperties#2"
 msgid "%1 MiB"
 msgstr "%1 MiB"
 
 # Size is in KiB
 #: PackageProperties#3
+msgctxt "PackageProperties#3"
 msgid "%1 KiB"
 msgstr "%1 KiB"
 
 # Size is in Bytes
 #: PackageProperties#4
+msgctxt "PackageProperties#4"
 msgid "%1 Bytes"
 msgstr "%1 Bytes"
 
@@ -2333,6 +2485,7 @@ msgstr ""
 "Παρκαλώ επανεκκινήστε το με δικαιώματα root."
 
 #: QObject#2
+msgctxt "QObject#2"
 msgid "Shaman"
 msgstr "Shaman"
 
@@ -2349,6 +2502,7 @@ msgstr ""
 # Lukas: l.appelhans@gmx.de
 # Thanks again, and enjoy your translation!
 #: QObject#4
+msgctxt "QObject#4"
 msgid "Shaman"
 msgstr "Shaman"
 
@@ -2363,6 +2517,7 @@ msgstr ""
 "Η έκδοσή σας είναι η %1. Παρακαλώ αναβαθμίστε το Pacman."
 
 #: QObject#6
+msgctxt "QObject#6"
 msgid "Please Wait..."
 msgstr "Παρακαλώ Περιμένετε..."
 
@@ -2397,6 +2552,7 @@ msgstr ""
 "Το Shaman θα σας ρωτήσει για τον κωδικό του root όταν χρειαστεί."
 
 #: QObject#12
+msgctxt "QObject#12"
 msgid "Ok"
 msgstr "Ok"
 
@@ -2427,6 +2583,7 @@ msgstr ""
 "Το Shaman δεν μπορεί να ξεκινήσει ως root.\n"
 "Παρακαλώ επανεκκινήστε το ως απλός χρήστης."
 
+#. (obsolete)
 #: QObject#17
 msgid ""
 "Shaman could not switch to root.\n"
@@ -2445,6 +2602,7 @@ msgstr ""
 
 #. (obsolete)
 #: QObject#18
+msgctxt "QObject#18"
 msgid "Do not show this Again"
 msgstr "Να μην εμφανιστεί ξανά"
 
@@ -2629,14 +2787,17 @@ msgstr "Εκτέλεση του post_upgrade scriptlet..."
 msgid "Executing post_remove scriptlet..."
 msgstr "Εκτέλεση του post_remove scriptlet..."
 
+#. (obsolete)
 #: QueueDialog#34
 msgid "Unexpected Error. Shaman might be corrupted."
 msgstr "Μη αναμενώμενο σφάλμα. Το Shaman ίσως να είναι κατεστραμμένο."
 
+#. (obsolete)
 #: QueueDialog#35
 msgid "Extracting Scriptlet from package failed!!"
 msgstr "Η εξαγωγή του Scriptlet από το πακέτο απέτυχε!!"
 
+#. (obsolete)
 #: QueueDialog#36
 msgid "Scriptlet processed successfully!"
 msgstr "Το Scriptlet επεξεργάστηκε με επιτυχία!"
@@ -2648,19 +2809,23 @@ msgstr ""
 "To Scriptlet δεν βρέθηκε σε αυτό το στάδιο ή υπήρξε σφάλμα \n"
 "κατά την επεξεργασία του!"
 
+#. (obsolete)
 #: QueueDialog#38
 msgid "Executing %1 scriptlet for %2..."
 msgstr "Εκτέλεση %1 scriptlet για %2..."
 
+#. (obsolete)
 #: QueueDialog#39
 msgid "Package %1 does not have %2 scriptlet"
 msgstr "Το πακέτο %1 δεν έχει το %2 scriptlet"
 
+#. (obsolete)
 #: QueueDialog#40
 msgid "Error processing Scriptlet!!"
 msgstr "Σφάλμα κατά την επεξεργασία του Scriptlet!!"
 
 #: QueueDialog#41
+msgctxt "QueueDialog#41"
 msgid "Queue Processing"
 msgstr "Επεξεργασία Ουράς"
 
@@ -2681,6 +2846,7 @@ msgid "Queue processed successfully!"
 msgstr "Η Ουρά επεξεργάστηκε με επιτυχία!"
 
 #: QueueDialog#46
+msgctxt "QueueDialog#46"
 msgid "Close"
 msgstr "Κλείσιμο"
 
@@ -2694,6 +2860,7 @@ msgstr ""
 
 #. (obsolete)
 #: QueueDialog#48
+msgctxt "QueueDialog#48"
 msgid "Ok"
 msgstr "Ok"
 
@@ -2702,6 +2869,7 @@ msgid "Review Queue"
 msgstr "Επισκόπηση της Ουράς"
 
 #: QueueReadyDialog#2
+msgctxt "QueueReadyDialog#2"
 msgid "Turn off PC when Queue is done"
 msgstr "Κλείσιμο του Η/Υ όταν τελειώσει η Ουρά"
 
@@ -2710,14 +2878,17 @@ msgid "Process in Tray"
 msgstr "Επεξεργασία στο Tray"
 
 #: QueueReadyDialog#4
+msgctxt "QueueReadyDialog#4"
 msgid "Show packages..."
 msgstr "Εμφάνιση πακέτων..."
 
 #: QueueReadyDialog#5
+msgctxt "QueueReadyDialog#5"
 msgid "Packages In Queue"
 msgstr "Πακέτα στην Ουρά"
 
 #: QueueReadyDialog#6
+msgctxt "QueueReadyDialog#6"
 msgid "Cancel"
 msgstr "Ακύρωση"
 
@@ -2749,64 +2920,78 @@ msgstr "Να μείνει το παράθυρο της Ουράς ανοιχτό
 
 #: QueueReadyDialog#10
 #, fuzzy
+msgctxt "QueueReadyDialog#10"
 msgid "Force Queue Processing"
 msgstr ""
 "\n"
 "            "
 
 #: ReviewQueueDialog#1
+msgctxt "ReviewQueueDialog#1"
 msgid "Install"
 msgstr "Εγκατάσταση"
 
 #: ReviewQueueDialog#2
+msgctxt "ReviewQueueDialog#2"
 msgid "To be Installed"
 msgstr "Προς Εγκατάσταση"
 
 #: ReviewQueueDialog#3
+msgctxt "ReviewQueueDialog#3"
 msgid "Upgrade"
 msgstr "Αναβάθμιση"
 
 #: ReviewQueueDialog#4
+msgctxt "ReviewQueueDialog#4"
 msgid "To be Upgraded"
 msgstr "Προς Αναβάθμιση"
 
 #: ReviewQueueDialog#5
+msgctxt "ReviewQueueDialog#5"
 msgid "Uninstall"
 msgstr "Απεγκατάσταση"
 
 #: ReviewQueueDialog#6
+msgctxt "ReviewQueueDialog#6"
 msgid "To be Removed"
 msgstr "Προς Αφαίρεση"
 
 #: ReviewQueueDialog#7
+msgctxt "ReviewQueueDialog#7"
 msgid "Complete Uninstall"
 msgstr "Ολική Απεγκατάσταση"
 
 #: ReviewQueueDialog#8
+msgctxt "ReviewQueueDialog#8"
 msgid "Your Queue is about to be processed. You are going to:<br />"
 msgstr "Η ουρά είναι έτοιμη να επεξεργαστεί. Πρόκειται να:<br/>"
 
 #. (obsolete)
 #: ReviewQueueDialog#9
+msgctxt "ReviewQueueDialog#9"
 msgid "Remove <b>%1 package</b><br />"
 msgstr "Αφαίρεση <b>%1 πακέτου</b><br/>"
 
 #. (obsolete)
 #: ReviewQueueDialog#10
+msgctxt "ReviewQueueDialog#10"
 msgid "Remove <b>%1 packages</b><br />"
 msgstr "Αφαίρεση <b>%1 πακέτων</b><br />"
 
 #. (obsolete)
 #: ReviewQueueDialog#11
+msgctxt "ReviewQueueDialog#11"
 msgid "Install/Upgrade <b>%1 package</b><br />"
 msgstr "Εγκατάσταση/Αναβάθμιση <b>%1 πακέτου</b><br />"
 
 #. (obsolete)
 #: ReviewQueueDialog#12
+msgctxt "ReviewQueueDialog#12"
 msgid "Install/Upgrade <b>%1 packages</b><br />"
 msgstr "Εγκατάσταση/Αναβάθμιση <b>%1 πακέτων</b><br />"
 
 #: ReviewQueueDialog#13
+msgctxt "ReviewQueueDialog#13"
 msgid "Do you wish to continue?"
 msgstr "Θέλετε να συνεχίσετε;"
 
@@ -2852,43 +3037,53 @@ msgstr ""
 "            "
 
 #: ShamanTrayIcon#1
+msgctxt "ShamanTrayIcon#1"
 msgid "Update Database"
 msgstr "Ανανέωση Βάσης Δεδομένων"
 
 #: ShamanTrayIcon#2
+msgctxt "ShamanTrayIcon#2"
 msgid "Upgrade System"
 msgstr "Αναβάθμιση Συστήματος"
 
 #: ShamanTrayIcon#3
+msgctxt "ShamanTrayIcon#3"
 msgid "Process Queue"
 msgstr "Επεξεργασία Ουράς"
 
 #: ShamanTrayIcon#4
+msgctxt "ShamanTrayIcon#4"
 msgid "Settings"
 msgstr "Ρυθμίσεις"
 
 #: ShamanTrayIcon#5
+msgctxt "ShamanTrayIcon#5"
 msgid "Quit"
 msgstr "Έξοδος"
 
 #: ShamanTrayIcon#6
+msgctxt "ShamanTrayIcon#6"
 msgid "Shaman - Idle"
 msgstr "Shaman - Αδράνεια"
 
 #: ShamanTrayIcon#7
+msgctxt "ShamanTrayIcon#7"
 msgid "Shaman - Processing"
 msgstr "Shaman - Επεξεργασία"
 
 #: ShamanTrayIcon#8
+msgctxt "ShamanTrayIcon#8"
 msgid "Shaman - Idle (Upgrades Available)"
 msgstr "Shaman - Αδράνεια (Διαθέσιμες Αναβαθμίσεις)"
 
 #: ShamanTrayIcon#9
+msgctxt "ShamanTrayIcon#9"
 msgid "System Upgrade"
 msgstr "Αναβάθμιση Συστήματος"
 
 #. (obsolete)
 #: ShamanTrayIcon#10
+msgctxt "ShamanTrayIcon#10"
 msgid ""
 "There is %1 upgradeable package.\n"
 "Click here to upgrade your System."
@@ -2898,6 +3093,7 @@ msgstr ""
 
 #. (obsolete)
 #: ShamanTrayIcon#11
+msgctxt "ShamanTrayIcon#11"
 msgid ""
 "There are %1 upgradeable packages.\n"
 "Click here to upgrade your System."
@@ -2960,6 +3156,7 @@ msgstr ""
 "αργότερα."
 
 #: SysUpgradeDialog#3
+msgctxt "SysUpgradeDialog#3"
 msgid "To be Upgraded"
 msgstr "Προς Αναβάθμιση"
 
@@ -4033,10 +4230,12 @@ msgid "Never ask for this anymore"
 msgstr "Να μην ξαναγίνει ερώτηση γι'αυτό"
 
 #: authDialog#4
+msgctxt "authDialog#4"
 msgid "Cancel"
 msgstr "Ακύρωση"
 
 #: authDialog#5
+msgctxt "authDialog#5"
 msgid "Ok"
 msgstr "Ok"
 
@@ -4067,6 +4266,7 @@ msgstr ""
 "weight:600;\">Χτίσιμο Πακέτων...</span></p></body></html>"
 
 #: buildingDialog#2
+msgctxt "buildingDialog#2"
 msgid "Abort"
 msgstr "Ακύρωση"
 
@@ -4079,6 +4279,7 @@ msgid "Shaman - Building Packages"
 msgstr "Shaman - Χτίσιμο Πακέτων"
 
 #: dbUpdateDialog#1
+msgctxt "dbUpdateDialog#1"
 msgid "Database Update"
 msgstr "Ανανέωση Βάσης Δεδομένων"
 
@@ -4109,6 +4310,7 @@ msgid "Redo"
 msgstr "Επανάληψη"
 
 #: editPBDialog#6
+msgctxt "editPBDialog#6"
 msgid "Ok"
 msgstr "Ok"
 
@@ -4152,6 +4354,7 @@ msgstr "Ανανέωση Προβολής"
 
 #. (obsolete)
 #: logViewer#6
+msgctxt "logViewer#6"
 msgid "Close"
 msgstr "Κλείσιμο"
 
@@ -4179,6 +4382,7 @@ msgstr ""
 
 # close the dialog
 #: logViewer#8
+msgctxt "logViewer#8"
 msgid "Close"
 msgstr "Κλείσιμο"
 
@@ -4202,6 +4406,7 @@ msgid "status"
 msgstr "κατάσταση"
 
 #: newsDialog#4
+msgctxt "newsDialog#4"
 msgid "Mark as Read"
 msgstr "Μαρκάρισμα ως Διαβασμένο"
 
@@ -4215,6 +4420,7 @@ msgstr "Ανανέωση"
 
 #. (obsolete)
 #: newsDialog#7
+msgctxt "newsDialog#7"
 msgid "Close"
 msgstr "Κλείσιμο"
 
@@ -4224,6 +4430,7 @@ msgstr "Νέα-Τίτλος"
 
 # close the dialog
 #: newsDialog#9
+msgctxt "newsDialog#9"
 msgid "Close"
 msgstr "Κλείσιμο"
 
@@ -4250,6 +4457,7 @@ msgstr ""
 "weight:600;\">Πληροφορίες Πακέτου</span></p></body></html>"
 
 #: pkgProperties#2
+msgctxt "pkgProperties#2"
 msgid "Package Information"
 msgstr "Πληροφορίες πακέτου"
 
@@ -4298,14 +4506,17 @@ msgid "Changelog"
 msgstr "Changelog"
 
 #: pkgProperties#14
+msgctxt "pkgProperties#14"
 msgid "Files"
 msgstr "Αρχεία"
 
 #: pkgProperties#15
+msgctxt "pkgProperties#15"
 msgid "1"
 msgstr "1"
 
 #: pkgProperties#16
+msgctxt "pkgProperties#16"
 msgid "Dependencies"
 msgstr "Εξαρτήσεις"
 
@@ -4322,6 +4533,7 @@ msgid "Actions Performed"
 msgstr "Ενέργειες που Εκτελέστηκαν"
 
 #: pkgProperties#20
+msgctxt "pkgProperties#20"
 msgid "Ok"
 msgstr "Ok"
 
@@ -4360,18 +4572,22 @@ msgid "This is useful if you want to review compiler's output"
 msgstr "Αυτό είναι χρήσιμο για επισκόπιση των μηνυμάτων του compiler"
 
 #: reviewBuildingDialog#5
+msgctxt "reviewBuildingDialog#5"
 msgid "Turn off PC when Queue is done"
 msgstr "Κλείσιμο του Η/Υ όταν τελειώσει η Ουρά"
 
 #: reviewBuildingDialog#6
+msgctxt "reviewBuildingDialog#6"
 msgid "Show packages..."
 msgstr "Εμφάνιση πακέτων..."
 
 #: reviewBuildingDialog#7
+msgctxt "reviewBuildingDialog#7"
 msgid "Packages In Queue"
 msgstr "Πακέτα στην Ουρά"
 
 #: reviewBuildingDialog#8
+msgctxt "reviewBuildingDialog#8"
 msgid "Abort"
 msgstr "Ακύρωση"
 
@@ -4412,14 +4628,17 @@ msgid "Cleanup"
 msgstr "Καθαρισμός"
 
 #: transactionDialog#6
+msgctxt "transactionDialog#6"
 msgid "More Details..."
 msgstr "Περισσότερες λεπτομέρειες..."
 
 #: transactionDialog#7
+msgctxt "transactionDialog#7"
 msgid "Abort"
 msgstr "Ακύρωση"
 
 #: transactionDialog#8
+msgctxt "transactionDialog#8"
 msgid "Please Wait..."
 msgstr "Παρακαλώ Περιμένετε..."
 
@@ -4442,6 +4661,7 @@ msgstr ""
 "weight:600;\">Επεξεργασία Ουράς</span></p></body></html>"
 
 #: upgradeDialog#1
+msgctxt "upgradeDialog#1"
 msgid "System Upgrade"
 msgstr "Αναβάθμιση Συστήματος"
 
@@ -4450,6 +4670,7 @@ msgid "Remember my choice"
 msgstr "Αποθήκευση της επιλογής μου"
 
 #: upgradeDialog#3
+msgctxt "upgradeDialog#3"
 msgid "Abort"
 msgstr "Ακύρωση"
 
@@ -4484,11 +4705,13 @@ msgid "Packages to Upgrade"
 msgstr "Πακέτα προς Αναβάθμιση"
 
 #: upgradeDialog#8
+msgctxt "upgradeDialog#8"
 msgid "Show packages..."
 msgstr "Εμφάνιση πακέτων..."
 
 #: upgradeDialog#9
 #, fuzzy
+msgctxt "upgradeDialog#9"
 msgid "Force Queue Processing"
 msgstr ""
 "\n"

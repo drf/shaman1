@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-24 22:17+0200\n"
+"POT-Creation-Date: 2009-03-28 15:54+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.1.1\n"
+"X-Generator: Translate Toolkit 1.3.0\n"
 
 #. (obsolete)
 #: AlpmHandler#1
@@ -38,6 +38,7 @@ msgid "Alpm did not give further details."
 msgstr "Alpm nepředal další informace."
 
 #: BuildingDialog#1
+msgctxt "BuildingDialog#1"
 msgid "Error"
 msgstr "Chyba"
 
@@ -53,10 +54,12 @@ msgstr ""
 msgid "<br><br><b>Building Process Aborted by the User. Building Failed.</b>"
 msgstr "<br><br><b>Sestavování přerušeno uživatelem. Sestavování selhalo.</b>"
 
+#. (obsolete)
 #: BuildingDialog#4
 msgid "Updating ABS Tree..."
 msgstr "Aktualizace ABS stromu..."
 
+#. (obsolete)
 #: BuildingDialog#5
 msgid "<b>Starting ABS Tree Update...</b><br><br>"
 msgstr "<b>Začíná aktualizace ABS stromu...</b><br><br>"
@@ -106,6 +109,7 @@ msgid "Could not update the ABS Tree!"
 msgstr "Nebylo možné aktualizovat ABS strom!"
 
 #: BuildingHandler#1
+msgctxt "BuildingHandler#1"
 msgid ""
 "You need to have ABS installed to use Shaman's\n"
 "building feature. Do you want to install it now?"
@@ -114,16 +118,19 @@ msgstr ""
 "sestavování. Chcete nainstalovat ABS?"
 
 #: BuildingHandler#2
+msgctxt "BuildingHandler#2"
 msgid "Error"
 msgstr "Chyba"
 
 #: BuildingHandler#3
+msgctxt "BuildingHandler#3"
 msgid ""
 "You can not remove packages when processing\n"
 "your queue from Source"
 msgstr "Nemůžete odstranit balíček při zpracovavání zdroje"
 
 #: BuildingHandler#4
+msgctxt "BuildingHandler#4"
 msgid ""
 "Some of your packages do not belong to Arch\n"
 "Linux's official repository. Shaman is able to\n"
@@ -135,6 +142,7 @@ msgstr ""
 
 #. (obsolete)
 #: BuildingHandler#5
+msgctxt "BuildingHandler#5"
 msgid ""
 "You are about to install <b>%1 package</b> from source. Building from "
 "source<br>can give some advantages, however is very slow.<br>If you are not "
@@ -150,6 +158,7 @@ msgstr ""
 
 #. (obsolete)
 #: BuildingHandler#6
+msgctxt "BuildingHandler#6"
 msgid ""
 "You are about to install <b>%1 packages</b> from source. Building from "
 "source<br>can give some advantages, however is very slow.<br>If you are not "
@@ -164,22 +173,30 @@ msgstr ""
 "sesstavení."
 
 #: BuildingHandler#7
+msgctxt "BuildingHandler#7"
+"BuildingHandler#7"
 msgid "To be Installed"
 msgstr "K instalaci"
 
 #: BuildingHandler#8
+msgctxt "BuildingHandler#8"
+"BuildingHandler#8"
+"BuildingHandler#8"
 msgid "To be Upgraded"
 msgstr "K atualizaci"
 
 #: BuildingHandler#9
+msgctxt "BuildingHandler#9"
 msgid "Package Building"
 msgstr "Sestavování balíčku"
 
 #: BuildingHandler#10
+msgctxt "BuildingHandler#10"
 msgid "Your Packages failed to build!"
 msgstr "Sestavování balíčku selhalo!!"
 
 #: BuildingHandler#11
+msgctxt "BuildingHandler#11"
 msgid ""
 "Your packages Failed to Build.\n"
 "Look at the output for more details."
@@ -188,19 +205,24 @@ msgstr ""
 "Další detaily najdete ve výstupu."
 
 #: BuildingHandler#12
+msgctxt "BuildingHandler#12"
+"BuildingHandler#12"
 msgid "Close"
 msgstr "Zavřít"
 
 #: BuildingHandler#13
+msgctxt "BuildingHandler#13"
 msgid "Building Packages Failed!!"
 msgstr "Sestavování balíčků selhalo!!"
 
 #. (obsolete)
 #: BuildingHandler#14
+msgctxt "BuildingHandler#14"
 msgid "Shaman - Idle"
 msgstr "Shaman - untätig"
 
 #: BuildingHandler#15
+msgctxt "BuildingHandler#15"
 msgid ""
 "Some packages failed to build.\n"
 "Do you want to proceed anyway?"
@@ -209,24 +231,29 @@ msgstr ""
 "selhalo. Chcete přesto pokračovat?"
 
 #: BuildingHandler#16
+msgctxt "BuildingHandler#16"
 msgid "Install Built Packages"
 msgstr "Instalovat sestavené balíčky"
 
 #: BuildingHandler#17
+msgctxt "BuildingHandler#17"
 msgid "Close Without Installing"
 msgstr "Zavřít bez instalace"
 
 #: BuildingHandler#18
+msgctxt "BuildingHandler#18"
 msgid "Packages Built Successfully!"
 msgstr "Balíčky byly úspěšně sestaveny!"
 
 #: BuildingHandler#19
+msgctxt "BuildingHandler#19"
 msgid ""
 "Your Packages have been built successfully, and are ready to be installed"
 msgstr "Baličky byly úspěšně sestaveny a jsou připraveny k instalaci"
 
 #. (obsolete)
 #: BuildingHandler#20
+msgctxt "BuildingHandler#20"
 msgid "Shaman - Processing"
 msgstr "Shaman - Arbeite"
 
@@ -491,6 +518,7 @@ msgstr ""
 "jako obyčejné repozitáře a jsou přístupné z aplikací Shaman i Pacman."
 
 #: ConfigDialog#39
+msgctxt "ConfigDialog#39"
 msgid "Repository"
 msgstr "Repozitáře"
 
@@ -576,26 +604,32 @@ msgid "General"
 msgstr "Obecné"
 
 #: ConfigDialog#60
+msgctxt "ConfigDialog#60"
 msgid "Clean Unused Databases"
 msgstr "Vyčistit nepoužívané databáze"
 
 #: ConfigDialog#61
+msgctxt "ConfigDialog#61"
 msgid "Clean Cache"
 msgstr "Vyčistit cache"
 
 #: ConfigDialog#62
+msgctxt "ConfigDialog#62"
 msgid "Empty Cache"
 msgstr "Vyprázdnit cache"
 
 #: ConfigDialog#63
+msgctxt "ConfigDialog#63"
 msgid "Optimize Pacman Database"
 msgstr "Optimalizovat databáze aplikace Pacman"
 
 #: ConfigDialog#64
+msgctxt "ConfigDialog#64"
 msgid "Clean All Building Environments"
 msgstr "Vyčistit všechny sestavovací prostředí"
 
 #: ConfigDialog#65
+msgctxt "ConfigDialog#65"
 msgid "Repositories"
 msgstr "Repozitáře"
 
@@ -616,50 +650,62 @@ msgid "Enter Here the Repository's Server"
 msgstr "Vložte adresu repozitáře"
 
 #: ConfigDialog#70
+msgctxt "ConfigDialog#70"
 msgid "Cleaning up unused Databases..."
 msgstr "Čistím nepoužívané databáze..."
 
 #: ConfigDialog#71
+msgctxt "ConfigDialog#71"
 msgid "Cleaning up Cache..."
 msgstr "Čistím cache..."
 
 #: ConfigDialog#72
+msgctxt "ConfigDialog#72"
 msgid "Deleting Cache..."
 msgstr "Mažu cache..."
 
 #: ConfigDialog#73
+msgctxt "ConfigDialog#73"
 msgid "Cleaning up building Environments..."
 msgstr "Čistím sestavovací prostředí..."
 
 #: ConfigDialog#74
+msgctxt "ConfigDialog#74"
 msgid "Cleaning up Unused Databases Failed!"
 msgstr "Čištění nepoužívaných databází selhalo!"
 
 #: ConfigDialog#75
+msgctxt "ConfigDialog#75"
 msgid "Cleaning up Cache Failed!"
 msgstr "Čištění cache selhalo!"
 
 #: ConfigDialog#76
+msgctxt "ConfigDialog#76"
 msgid "Deleting Cache Failed!"
 msgstr "Mazaní cache selhalo!"
 
 #: ConfigDialog#77
+msgctxt "ConfigDialog#77"
 msgid "Could not clean Build Environments!!"
 msgstr "Čištění nepoužívaných databází selhalo!!"
 
 #: ConfigDialog#78
+msgctxt "ConfigDialog#78"
 msgid "Unused Databases Cleaned up successfully!"
 msgstr "Nepoužívané databáze úspěšně vyčištěny!"
 
 #: ConfigDialog#79
+msgctxt "ConfigDialog#79"
 msgid "Cache Cleaned Up Successfully!"
 msgstr "Cache úspěšně vyčištěna!"
 
 #: ConfigDialog#80
+msgctxt "ConfigDialog#80"
 msgid "Cache Successfully Deleted!"
 msgstr "Cache úspěšně smazána!"
 
 #: ConfigDialog#81
+msgctxt "ConfigDialog#81"
 msgid "Build Environments Successfully Cleaned!"
 msgstr "Sestavovací prostředí úspěšně vyčištěno!"
 
@@ -699,29 +745,39 @@ msgstr ""
 "Nyní je k dispozici v /etc/pacman.d/mirrorlist ."
 
 #: ConfigDialog#87
+msgctxt "ConfigDialog#87"
 msgid "Pacman Database Optimized Successfully!"
 msgstr "Databáze aplikace Pacman byla úspěšně aktualizována!"
 
 #: ConfigDialog#88
+msgctxt "ConfigDialog#88"
 msgid "Could not Optimize Pacman Database!"
 msgstr "Nebylo možné optimalizovat databáze aplikace Pacman!"
 
+#. (obsolete)
 #: ConfigDialog#89
+msgctxt "ConfigDialog#89"
 msgid "Operation Completed Successfully!"
 msgstr "Operace úspěšně dokončena!"
 
 # Sync is always the command
+#. (obsolete)
 #: ConfigDialog#90
+msgctxt "ConfigDialog#90"
 msgid "Sync was successfully executed!!"
 msgstr "Příkaz sync byl úspěšně vykonán!!"
 
 # Sync is always the command
+#. (obsolete)
 #: ConfigDialog#91
+msgctxt "ConfigDialog#91"
 msgid "Sync could not be executed!"
 msgstr "Příkaz sync nemohl být vykonán!"
 
 # Sync is always the command
+#. (obsolete)
 #: ConfigDialog#92
+msgctxt "ConfigDialog#92"
 msgid "Sync could not be executed!!"
 msgstr "Příkaz sync nemohl být vykonán!"
 
@@ -729,7 +785,9 @@ msgstr "Příkaz sync nemohl být vykonán!"
 msgid "Process Selected"
 msgstr "Spustit údržbu"
 
+#. (obsolete)
 #: ConfigDialog#94
+msgctxt "ConfigDialog#94"
 msgid "Optimizing Pacman Database..."
 msgstr "Probíhá optimalizace databáze aplikace Pacman..."
 
@@ -798,6 +856,7 @@ msgstr ""
 
 # sync is a command, so it should not be translated
 #: ConfigDialog#101
+msgctxt "ConfigDialog#101"
 msgid "Running sync..."
 msgstr "Probíhá příkaz sync..."
 
@@ -871,10 +930,12 @@ msgid "Log File:"
 msgstr "Soubor log:"
 
 #: ConfigDialog#118
+msgctxt "ConfigDialog#118"
 msgid "Ok"
 msgstr "Ok"
 
 #: ConfigDialog#119
+msgctxt "ConfigDialog#119"
 msgid "Cancel"
 msgstr "Zrušit"
 
@@ -1072,10 +1133,12 @@ msgid "Show..."
 msgstr "Zobrazit..."
 
 #: LocalPackage#4
+msgctxt "LocalPackage#4"
 msgid "More Details..."
 msgstr "Více detailů..."
 
 #: LocalPackage#5
+msgctxt "LocalPackage#5"
 msgid "Cancel"
 msgstr "Zrušit"
 
@@ -1104,6 +1167,7 @@ msgstr ""
 "        "
 
 #: MainWindow#1
+msgctxt "MainWindow#1"
 msgid "Shaman"
 msgstr "Shaman"
 
@@ -1132,6 +1196,8 @@ msgid "Status"
 msgstr "Stav"
 
 #: MainWindow#8
+msgctxt "MainWindow#8"
+"MainWindow#8"
 msgid "Name"
 msgstr "Jméno"
 
@@ -1148,6 +1214,7 @@ msgid "Size"
 msgstr "Velikost"
 
 #: MainWindow#12
+msgctxt "MainWindow#12"
 msgid "Repository"
 msgstr "Repozitář"
 
@@ -1164,6 +1231,7 @@ msgid "Action-Text"
 msgstr "Text akce"
 
 #: MainWindow#16
+msgctxt "MainWindow#16"
 msgid "Repositories"
 msgstr "Repozitáře"
 
@@ -1172,6 +1240,7 @@ msgid "Package Groups"
 msgstr "Skupiny balíčků"
 
 #: MainWindow#18
+msgctxt "MainWindow#18"
 msgid "Package Information"
 msgstr "Informace o balíčku"
 
@@ -1213,15 +1282,18 @@ msgstr "Vorgang abbrechen"
 
 #. (obsolete)
 #: MainWindow#27
+msgctxt "MainWindow#27"
 msgid "Files"
 msgstr "Dateien"
 
 #: MainWindow#28
+msgctxt "MainWindow#28"
 msgid "1"
 msgstr "1"
 
 #. (obsolete)
 #: MainWindow#29
+msgctxt "MainWindow#29"
 msgid "Dependencies"
 msgstr "Abhängigkeiten"
 
@@ -1261,11 +1333,14 @@ msgstr "Nastavení..."
 msgid "About..."
 msgstr "O programu..."
 
+#. (obsolete)
 #: MainWindow#38
+msgctxt "MainWindow#38"
 msgid "Update Database"
 msgstr "Aktualizovat databáze"
 
 #: MainWindow#39
+msgctxt "MainWindow#39"
 msgid "Upgrade System"
 msgstr "Aktualizovat systém"
 
@@ -1283,10 +1358,14 @@ msgstr "Fronta sestavení a instalace"
 
 #. (obsolete)
 #: MainWindow#43
+msgctxt "MainWindow#43"
+"MainWindow#43"
 msgid "Quit"
 msgstr "Beenden"
 
+#. (obsolete)
 #: MainWindow#44
+msgctxt "MainWindow#44"
 msgid "Process Queue"
 msgstr "Fronta procesů"
 
@@ -1296,11 +1375,13 @@ msgstr "Zrušit všechny akce"
 
 #. (obsolete)
 #: MainWindow#46
+msgctxt "MainWindow#46"
 msgid "Settings"
 msgstr "Einstellungen"
 
 #. (obsolete)
 #: MainWindow#47
+msgctxt "MainWindow#47"
 msgid "Shaman - Idle"
 msgstr "Shaman - untätig"
 
@@ -1324,20 +1405,24 @@ msgid "Shaman - Reducing To Tray"
 msgstr "Shaman - Minimalizace do systémové části panelu"
 
 #: MainWindow#50
+msgctxt "MainWindow#50"
 msgid "Upgrade"
 msgstr "Aktualizace"
 
 #. (obsolete)
 #: MainWindow#51
+msgctxt "MainWindow#51"
 msgid "Shaman - Idle (Upgrades Available)"
 msgstr "Shaman - untätig (Aktualisierungen verfügbar)"
 
 #: MainWindow#52
+msgctxt "MainWindow#52"
 msgid "System Upgrade"
 msgstr "Aktualizace systému"
 
 #. (obsolete)
 #: MainWindow#53
+msgctxt "MainWindow#53"
 msgid ""
 "There is %1 upgradeable package.\n"
 "Click here to upgrade your System."
@@ -1348,6 +1433,7 @@ msgstr ""
 
 #. (obsolete)
 #: MainWindow#54
+msgctxt "MainWindow#54"
 msgid ""
 "There are %1 upgradeable packages.\n"
 "Click here to upgrade your System."
@@ -1374,14 +1460,17 @@ msgid "Mark for Reinstallation"
 msgstr "Für Neuinstallation vormerken"
 
 #: MainWindow#59
+msgctxt "MainWindow#59"
 msgid "Install"
 msgstr "Instalovat"
 
 #: MainWindow#60
+msgctxt "MainWindow#60"
 msgid "Uninstall"
 msgstr "Odebrat"
 
 #: MainWindow#61
+msgctxt "MainWindow#61"
 msgid "Complete Uninstall"
 msgstr "Kompletně odebrat"
 
@@ -1403,10 +1492,12 @@ msgstr "Akce:"
 
 #. (obsolete)
 #: MainWindow#66
+msgctxt "MainWindow#66"
 msgid "Shaman - Processing"
 msgstr "Shaman - Arbeite"
 
 #: MainWindow#67
+msgctxt "MainWindow#67"
 msgid "Error"
 msgstr "Chyba"
 
@@ -1421,6 +1512,7 @@ msgstr ""
 "%1"
 
 #: MainWindow#69
+msgctxt "MainWindow#69"
 msgid "Database Update"
 msgstr "Aktualizace databáze"
 
@@ -1454,6 +1546,7 @@ msgid "Your system is up to date!"
 msgstr "Váš systém je aktuální!"
 
 #: MainWindow#77
+msgctxt "MainWindow#77"
 msgid "Queue Processing"
 msgstr "Zpracovávání fronty"
 
@@ -1479,46 +1572,55 @@ msgstr "Fronta byla úspěšně zpracována!"
 
 #. (obsolete)
 #: MainWindow#82
+msgctxt "MainWindow#82"
 msgid "To be Installed"
 msgstr "Wird installiert"
 
 #. (obsolete)
 #: MainWindow#83
+msgctxt "MainWindow#83"
 msgid "To be Upgraded"
 msgstr "Wird aktualisiert"
 
 #. (obsolete)
 #: MainWindow#84
+msgctxt "MainWindow#84"
 msgid "To be Removed"
 msgstr "Wird entfernt"
 
 #. (obsolete)
 #: MainWindow#85
+msgctxt "MainWindow#85"
 msgid "Your Queue is about to be processed. You are going to:<br />"
 msgstr "Die Warteschlange wird nun verarbeitet. Es werden:<br />"
 
 #. (obsolete)
 #: MainWindow#86
+msgctxt "MainWindow#86"
 msgid "Remove <b>%1 package</b><br />"
 msgstr "<b>%1 Paket</b> entfernt</b><br />"
 
 #. (obsolete)
 #: MainWindow#87
+msgctxt "MainWindow#87"
 msgid "Remove <b>%1 packages</b><br />"
 msgstr "<b>%1 Pakete</b> entfernt</b><br />"
 
 #. (obsolete)
 #: MainWindow#88
+msgctxt "MainWindow#88"
 msgid "Install/Upgrade <b>%1 package</b><br />"
 msgstr "<b>%1 Paket</b> installiert/aktualisiert<br />"
 
 #. (obsolete)
 #: MainWindow#89
+msgctxt "MainWindow#89"
 msgid "Install/Upgrade <b>%1 packages</b><br />"
 msgstr "<b>%1 Pakete</b> installiert/aktualisiert<br />"
 
 #. (obsolete)
 #: MainWindow#90
+msgctxt "MainWindow#90"
 msgid "Do you wish to continue?"
 msgstr "Soll der Vorgang fortgesetzt werden?"
 
@@ -1538,6 +1640,7 @@ msgstr "%1 není platný balíček"
 
 #. (obsolete)
 #: MainWindow#94
+msgctxt "MainWindow#94"
 msgid ""
 "You need to have ABS installed to use Shaman's\n"
 "building feature. Do you want to install it now?"
@@ -1547,6 +1650,7 @@ msgstr ""
 
 #. (obsolete)
 #: MainWindow#95
+msgctxt "MainWindow#95"
 msgid ""
 "You can not remove packages when processing\n"
 "your queue from Source"
@@ -1556,6 +1660,7 @@ msgstr ""
 
 #. (obsolete)
 #: MainWindow#96
+msgctxt "MainWindow#96"
 msgid ""
 "Some of your packages do not belong to Arch\n"
 "Linux's official repository. Shaman is able to\n"
@@ -1567,6 +1672,7 @@ msgstr ""
 
 #. (obsolete)
 #: MainWindow#97
+msgctxt "MainWindow#97"
 msgid ""
 "You are about to install <b>%1 package</b> from source. Building from "
 "source<br>can give some advantages, however is very slow.<br>If you are not "
@@ -1582,6 +1688,7 @@ msgstr ""
 
 #. (obsolete)
 #: MainWindow#98
+msgctxt "MainWindow#98"
 msgid ""
 "You are about to install <b>%1 packages</b> from source. Building from "
 "source<br>can give some advantages, however is very slow.<br>If you are not "
@@ -1597,16 +1704,19 @@ msgstr ""
 
 #. (obsolete)
 #: MainWindow#99
+msgctxt "MainWindow#99"
 msgid "Package Building"
 msgstr "Pakete bauen"
 
 #. (obsolete)
 #: MainWindow#100
+msgctxt "MainWindow#100"
 msgid "Your Packages failed to build!"
 msgstr "Das bauen der Pakete ist fehlgeschlagen!"
 
 #. (obsolete)
 #: MainWindow#101
+msgctxt "MainWindow#101"
 msgid ""
 "Your packages Failed to Build.\n"
 "Look at the output for more details."
@@ -1617,16 +1727,19 @@ msgstr ""
 
 #. (obsolete)
 #: MainWindow#102
+msgctxt "MainWindow#102"
 msgid "Close"
 msgstr "Schliessen"
 
 #. (obsolete)
 #: MainWindow#103
+msgctxt "MainWindow#103"
 msgid "Building Packages Failed!!"
 msgstr "Das Bauen der Pakete ist fehlgeschlagen!!"
 
 #. (obsolete)
 #: MainWindow#104
+msgctxt "MainWindow#104"
 msgid ""
 "Some packages failed to build.\n"
 "Do you want to proceed anyway?"
@@ -1637,21 +1750,25 @@ msgstr ""
 
 #. (obsolete)
 #: MainWindow#105
+msgctxt "MainWindow#105"
 msgid "Install Built Packages"
 msgstr "Gebaute Pakete installieren"
 
 #. (obsolete)
 #: MainWindow#106
+msgctxt "MainWindow#106"
 msgid "Close Without Installing"
 msgstr "Schliessen, ohne zu installieren"
 
 #. (obsolete)
 #: MainWindow#107
+msgctxt "MainWindow#107"
 msgid "Packages Built Successfully!"
 msgstr "Pakete wurden erfolgreicht gebaut!"
 
 #. (obsolete)
 #: MainWindow#108
+msgctxt "MainWindow#108"
 msgid ""
 "Your Packages have been built successfully, and are ready to be installed"
 msgstr "Die Pakete wurden erfolgreich gebaut und sind bereit zur installation"
@@ -1659,34 +1776,40 @@ msgstr "Die Pakete wurden erfolgreich gebaut und sind bereit zur installation"
 # Size is in Gib
 #. (obsolete)
 #: MainWindow#109
+msgctxt "MainWindow#109"
 msgid "%1 GiB"
 msgstr "%1 GB"
 
 # Size is in MiB
 #. (obsolete)
 #: MainWindow#110
+msgctxt "MainWindow#110"
 msgid "%1 MiB"
 msgstr "%1 MB"
 
 # Size is in KiB
 #. (obsolete)
 #: MainWindow#111
+msgctxt "MainWindow#111"
 msgid "%1 KiB"
 msgstr "%1 KB"
 
 # Size is in Bytes
 #. (obsolete)
 #: MainWindow#112
+msgctxt "MainWindow#112"
 msgid "%1 Bytes"
 msgstr "%1 Bytes"
 
 # Quit the application
 #: MainWindow#113
+msgctxt "MainWindow#113"
 msgid "Quit"
 msgstr "Ukončit"
 
 #. (obsolete)
 #: MainWindow#114
+msgctxt "MainWindow#114"
 msgid "Do not show this Again"
 msgstr "Nicht erneut anzeigen"
 
@@ -1856,6 +1979,7 @@ msgstr "Chyba při zpracovávání fronty!!"
 # The name of the Package
 #. (obsolete)
 #: MainWindow#135
+msgctxt "MainWindow#135"
 msgid "Name"
 msgstr "Name"
 
@@ -1972,6 +2096,7 @@ msgstr ""
 # Name of the Package
 #. (obsolete)
 #: MainWindow#152
+msgctxt "MainWindow#152"
 msgid "Name"
 msgstr "Jméno"
 
@@ -1989,46 +2114,58 @@ msgid "Please choose an action to start maintenance..."
 msgstr "Vyberte činnost pro započetí údržby..."
 
 #: MaintenanceBar#2
+msgctxt "MaintenanceBar#2"
 msgid "Clean Unused Databases"
 msgstr "Vyčistit nepoužívané databáze"
 
 #: MaintenanceBar#3
+msgctxt "MaintenanceBar#3"
 msgid "Clean Cache"
 msgstr "Vyčistit cache"
 
 #: MaintenanceBar#4
+msgctxt "MaintenanceBar#4"
 msgid "Empty Cache"
 msgstr "Vyprázdnit cache"
 
 #: MaintenanceBar#5
+msgctxt "MaintenanceBar#5"
 msgid "Optimize Pacman Database"
 msgstr "Optimalizovat databáze aplikace Pacman"
 
 #: MaintenanceBar#6
+msgctxt "MaintenanceBar#6"
 msgid "Clean All Building Environments"
 msgstr "Vyčistit všechny sestavovací prostředí"
 
 #: MaintenanceBar#7
+msgctxt "MaintenanceBar#7"
 msgid "Cleaning up unused Databases..."
 msgstr "Čistím nepoužívané databáze..."
 
 #: MaintenanceBar#8
+msgctxt "MaintenanceBar#8"
 msgid "Cleaning up Cache..."
 msgstr "Čistím cache..."
 
 #: MaintenanceBar#9
+msgctxt "MaintenanceBar#9"
 msgid "Deleting Cache..."
 msgstr "Mažu cache..."
 
+#. (obsolete)
 #: MaintenanceBar#10
+msgctxt "MaintenanceBar#10"
 msgid "Optimizing Pacman Database..."
 msgstr "Probíhá optimalizace databáze aplikace Pacman..."
 
 #: MaintenanceBar#11
+msgctxt "MaintenanceBar#11"
 msgid "Cleaning up building Environments..."
 msgstr "Čistím sestavovací prostředí..."
 
 #: MaintenanceBar#12
+msgctxt "MaintenanceBar#12"
 msgid "Abort"
 msgstr "Zrušit"
 
@@ -2037,70 +2174,91 @@ msgid "System Maintenance"
 msgstr "Údržba systému"
 
 #: MaintenanceBar#14
+msgctxt "MaintenanceBar#14"
 msgid "Unused Databases Cleaned up successfully!"
 msgstr "Nepoužívané databáze úspěšně vyčištěny!"
 
 #: MaintenanceBar#15
+msgctxt "MaintenanceBar#15"
 msgid "Cache Cleaned Up Successfully!"
 msgstr "Cache úspěšně vyčištěna!"
 
 #: MaintenanceBar#16
+msgctxt "MaintenanceBar#16"
 msgid "Cache Successfully Deleted!"
 msgstr "Cache úspěšně smazána!"
 
 #: MaintenanceBar#17
+msgctxt "MaintenanceBar#17"
 msgid "Build Environments Successfully Cleaned!"
 msgstr "Sestavovací prostředí úspěšně vyčištěno!"
 
 #: MaintenanceBar#18
+msgctxt "MaintenanceBar#18"
 msgid "Close"
 msgstr "Zavřít"
 
 #: MaintenanceBar#19
+msgctxt "MaintenanceBar#19"
 msgid "Cleaning up Unused Databases Failed!"
 msgstr "Čištění nepoužívaných databází selhalo!"
 
 #: MaintenanceBar#20
+msgctxt "MaintenanceBar#20"
 msgid "Cleaning up Cache Failed!"
 msgstr "Čištění cache selhalo!"
 
 #: MaintenanceBar#21
+msgctxt "MaintenanceBar#21"
 msgid "Deleting Cache Failed!"
 msgstr "Mazaní cache selhalo!"
 
 #: MaintenanceBar#22
+msgctxt "MaintenanceBar#22"
 msgid "Could not clean Build Environments!!"
 msgstr "Čištění nepoužívaných databází selhalo!!"
 
 #: MaintenanceBar#23
+msgctxt "MaintenanceBar#23"
 msgid "Pacman Database Optimized Successfully!"
 msgstr "Databáze aplikace Pacman byla úspěšně aktualizována!"
 
 #: MaintenanceBar#24
+msgctxt "MaintenanceBar#24"
 msgid "Could not Optimize Pacman Database!"
 msgstr "Nebylo možné optimalizovat databáze aplikace Pacman!"
 
 # sync is a command, so it should not be translated
+#. (obsolete)
 #: MaintenanceBar#25
+msgctxt "MaintenanceBar#25"
 msgid "Running sync..."
 msgstr "Probíhá příkaz sync..."
 
+#. (obsolete)
 #: MaintenanceBar#26
+msgctxt "MaintenanceBar#26"
 msgid "Operation Completed Successfully!"
 msgstr "Operace úspěšně dokončena!"
 
 # Sync is always the command
+#. (obsolete)
 #: MaintenanceBar#27
+msgctxt "MaintenanceBar#27"
 msgid "Sync was successfully executed!!"
 msgstr "Příkaz sync byl úspěšně vykonán!!"
 
 # Sync is always the command
+#. (obsolete)
 #: MaintenanceBar#28
+msgctxt "MaintenanceBar#28"
 msgid "Sync could not be executed!"
 msgstr "Příkaz sync nemohl být vykonán!"
 
 # Sync is always the command
+#. (obsolete)
 #: MaintenanceBar#29
+msgctxt "MaintenanceBar#29"
 msgid "Sync could not be executed!!"
 msgstr "Příkaz sync nemohl být vykonán!"
 
@@ -2113,6 +2271,7 @@ msgid "Please wait, fetching items..."
 msgstr "Čekejte prosím, získávám zprávy..."
 
 #: NewsViewer#2
+msgctxt "NewsViewer#2"
 msgid "Mark as Read"
 msgstr "Označit jako přečtěné"
 
@@ -2121,6 +2280,7 @@ msgid "Mark as Unread"
 msgstr "Označit jako nepřečtené"
 
 #: NewsViewer#4
+msgctxt "NewsViewer#4"
 msgid "Error"
 msgstr "Chyba"
 
@@ -2130,21 +2290,25 @@ msgstr "Nebylo možné získat zprávy RSS! Chyba:"
 
 # Size is in Gib
 #: PackageProperties#1
+msgctxt "PackageProperties#1"
 msgid "%1 GiB"
 msgstr "%1 GB"
 
 # Size is in MiB
 #: PackageProperties#2
+msgctxt "PackageProperties#2"
 msgid "%1 MiB"
 msgstr "%1 MB"
 
 # Size is in KiB
 #: PackageProperties#3
+msgctxt "PackageProperties#3"
 msgid "%1 KiB"
 msgstr "%1 KB"
 
 # Size is in Bytes
 #: PackageProperties#4
+msgctxt "PackageProperties#4"
 msgid "%1 Bytes"
 msgstr "%1 Bytů"
 
@@ -2171,6 +2335,7 @@ msgstr ""
 "ausgeführt werden."
 
 #: QObject#2
+msgctxt "QObject#2"
 msgid "Shaman"
 msgstr "Shaman"
 
@@ -2187,6 +2352,7 @@ msgstr ""
 # Lukas: l.appelhans@gmx.de
 # Thanks again, and enjoy your translation!
 #: QObject#4
+msgctxt "QObject#4"
 msgid "Shaman"
 msgstr "Shaman"
 
@@ -2201,6 +2367,7 @@ msgstr ""
 "Nynější verze je %1. Aktualizujte pposím Pacman."
 
 #: QObject#6
+msgctxt "QObject#6"
 msgid "Please Wait..."
 msgstr "Čekejte prosím...."
 
@@ -2235,6 +2402,7 @@ msgstr ""
 "Shaman vás požádá o root heslo pokud bude potřeba."
 
 #: QObject#12
+msgctxt "QObject#12"
 msgid "Ok"
 msgstr "Ok"
 
@@ -2247,6 +2415,7 @@ msgstr ""
 "pod uživaelem root. Spustě ho znovu jako\n"
 "obyčejný uživatel."
 
+#. (obsolete)
 #: QObject#14
 msgid ""
 "Shaman could not switch to root.\n"
@@ -2267,6 +2436,7 @@ msgstr ""
 
 #. (obsolete)
 #: QObject#15
+msgctxt "QObject#15"
 msgid "Do not show this Again"
 msgstr "Nicht erneut anzeigen"
 
@@ -2441,14 +2611,17 @@ msgstr "Führe post_upgrade Skript aus..."
 msgid "Executing post_remove scriptlet..."
 msgstr "Führe post_remove Skript aus..."
 
+#. (obsolete)
 #: QueueDialog#34
 msgid "Unexpected Error. Shaman might be corrupted."
 msgstr "Neučekávaná chyba. Shaman může být porušen."
 
+#. (obsolete)
 #: QueueDialog#35
 msgid "Extracting Scriptlet from package failed!!"
 msgstr "Rozbalování instalačních skriptů z balíčku selhalo!!"
 
+#. (obsolete)
 #: QueueDialog#36
 msgid "Scriptlet processed successfully!"
 msgstr "Instalační skript úspěšně dokončen!"
@@ -2458,19 +2631,23 @@ msgstr "Instalační skript úspěšně dokončen!"
 msgid "Scriptlet not found in this stage, or error processing it!"
 msgstr "Installationsskript nicht gefunden oder Fehler bei der Verarbeitung!"
 
+#. (obsolete)
 #: QueueDialog#38
 msgid "Executing %1 scriptlet for %2..."
 msgstr "Vykonávání %1 skriptu pro %2..."
 
+#. (obsolete)
 #: QueueDialog#39
 msgid "Package %1 does not have %2 scriptlet"
 msgstr "Belíček %1 nemá žádný %2 instalační skript"
 
+#. (obsolete)
 #: QueueDialog#40
 msgid "Error processing Scriptlet!!"
 msgstr "Chyba při vykonávání instalačního skriptu!!"
 
 #: QueueDialog#41
+msgctxt "QueueDialog#41"
 msgid "Queue Processing"
 msgstr "Zpracovávání fronty"
 
@@ -2491,6 +2668,7 @@ msgstr ""
 "Toto může poškodit váš systém."
 
 #: QueueDialog#45
+msgctxt "QueueDialog#45"
 msgid "Close"
 msgstr "Zavřít"
 
@@ -2504,6 +2682,7 @@ msgstr "Fronta byla úspěšně zpracována!"
 
 #. (obsolete)
 #: QueueDialog#48
+msgctxt "QueueDialog#48"
 msgid "Ok"
 msgstr "Ok"
 
@@ -2512,6 +2691,7 @@ msgid "Review Queue"
 msgstr "Přehled fronty"
 
 #: QueueReadyDialog#2
+msgctxt "QueueReadyDialog#2"
 msgid "Turn off PC when Queue is done"
 msgstr "Vypnout PC po vykonání fronty"
 
@@ -2520,14 +2700,17 @@ msgid "Process in Tray"
 msgstr "Minimalizovat do systémové části panelu"
 
 #: QueueReadyDialog#4
+msgctxt "QueueReadyDialog#4"
 msgid "Show packages..."
 msgstr "Zobrazit balíčky..."
 
 #: QueueReadyDialog#5
+msgctxt "QueueReadyDialog#5"
 msgid "Packages In Queue"
 msgstr "Balíčky ve frontě"
 
 #: QueueReadyDialog#6
+msgctxt "QueueReadyDialog#6"
 msgid "Cancel"
 msgstr "Zrušit"
 
@@ -2558,62 +2741,76 @@ msgid "Keep Queue Dialog Open after the Queue is finished"
 msgstr "Nechat zobrazený dialog vykonání pronty po jejím dokončení"
 
 #: QueueReadyDialog#10
+msgctxt "QueueReadyDialog#10"
 msgid "Force Queue Processing"
 msgstr "Vynucené zpracování fronty"
 
 #: ReviewQueueDialog#1
+msgctxt "ReviewQueueDialog#1"
 msgid "Install"
 msgstr "Instalovat"
 
 #: ReviewQueueDialog#2
+msgctxt "ReviewQueueDialog#2"
 msgid "To be Installed"
 msgstr "K intslaci"
 
 #: ReviewQueueDialog#3
+msgctxt "ReviewQueueDialog#3"
 msgid "Upgrade"
 msgstr "Aktualizovat"
 
 #: ReviewQueueDialog#4
+msgctxt "ReviewQueueDialog#4"
 msgid "To be Upgraded"
 msgstr "K aktualizaci"
 
 #: ReviewQueueDialog#5
+msgctxt "ReviewQueueDialog#5"
 msgid "Uninstall"
 msgstr "Odebrat"
 
 #: ReviewQueueDialog#6
+msgctxt "ReviewQueueDialog#6"
 msgid "To be Removed"
 msgstr "K odebrání"
 
 #: ReviewQueueDialog#7
+msgctxt "ReviewQueueDialog#7"
 msgid "Complete Uninstall"
 msgstr "Kompletně odebrat"
 
 #: ReviewQueueDialog#8
+msgctxt "ReviewQueueDialog#8"
 msgid "Your Queue is about to be processed. You are going to:<br />"
 msgstr "Fronta bude zpracována. Chystáte se:<br />"
 
 #. (obsolete)
 #: ReviewQueueDialog#9
+msgctxt "ReviewQueueDialog#9"
 msgid "Remove <b>%1 package</b><br />"
 msgstr "<b>%1 balíček</b> odstranit</b><br />"
 
 #. (obsolete)
 #: ReviewQueueDialog#10
+msgctxt "ReviewQueueDialog#10"
 msgid "Remove <b>%1 packages</b><br />"
 msgstr "<b>%1 balíčků</b> odstranit</b><br />"
 
 #. (obsolete)
 #: ReviewQueueDialog#11
+msgctxt "ReviewQueueDialog#11"
 msgid "Install/Upgrade <b>%1 package</b><br />"
 msgstr "<b>%1 balíček</b> instalovat/aktualizovat<br />"
 
 #. (obsolete)
 #: ReviewQueueDialog#12
+msgctxt "ReviewQueueDialog#12"
 msgid "Install/Upgrade <b>%1 packages</b><br />"
 msgstr "<b>%1 balíčků</b> instalovat/aktualizovat<br />"
 
 #: ReviewQueueDialog#13
+msgctxt "ReviewQueueDialog#13"
 msgid "Do you wish to continue?"
 msgstr "Přejete si pokračovat?"
 
@@ -2662,43 +2859,53 @@ msgid "%1 to be Installed, %2 to be Removed"
 msgstr "%1 k instalaci, %2 k odebrání"
 
 #: ShamanTrayIcon#1
+msgctxt "ShamanTrayIcon#1"
 msgid "Update Database"
 msgstr "Aktualizovat databáze"
 
 #: ShamanTrayIcon#2
+msgctxt "ShamanTrayIcon#2"
 msgid "Upgrade System"
 msgstr "Aktualizovat systém"
 
 #: ShamanTrayIcon#3
+msgctxt "ShamanTrayIcon#3"
 msgid "Process Queue"
 msgstr "Zpracovat frontu"
 
 #: ShamanTrayIcon#4
+msgctxt "ShamanTrayIcon#4"
 msgid "Settings"
 msgstr "Nastavení"
 
 #: ShamanTrayIcon#5
+msgctxt "ShamanTrayIcon#5"
 msgid "Quit"
 msgstr "Konec"
 
 #: ShamanTrayIcon#6
+msgctxt "ShamanTrayIcon#6"
 msgid "Shaman - Idle"
 msgstr "Shaman - nečinný"
 
 #: ShamanTrayIcon#7
+msgctxt "ShamanTrayIcon#7"
 msgid "Shaman - Processing"
 msgstr "Shaman - zpracovávání"
 
 #: ShamanTrayIcon#8
+msgctxt "ShamanTrayIcon#8"
 msgid "Shaman - Idle (Upgrades Available)"
 msgstr "Shaman - nečinný (aktualizace k dispozici)"
 
 #: ShamanTrayIcon#9
+msgctxt "ShamanTrayIcon#9"
 msgid "System Upgrade"
 msgstr "Aktualizace systému"
 
 #. (obsolete)
 #: ShamanTrayIcon#10
+msgctxt "ShamanTrayIcon#10"
 msgid ""
 "There is %1 upgradeable package.\n"
 "Click here to upgrade your System."
@@ -2708,6 +2915,7 @@ msgstr ""
 
 #. (obsolete)
 #: ShamanTrayIcon#11
+msgctxt "ShamanTrayIcon#11"
 msgid ""
 "There are %1 upgradeable packages.\n"
 "Click here to upgrade your System."
@@ -2768,6 +2976,7 @@ msgstr ""
 "ihned nebo je zařadit do fronty<br> a provést aktualizaci později."
 
 #: SysUpgradeDialog#3
+msgctxt "SysUpgradeDialog#3"
 msgid "To be Upgraded"
 msgstr "K atualizaci"
 
@@ -3536,10 +3745,12 @@ msgid "Never ask for this anymore"
 msgstr "Nikdy se neptat znovu"
 
 #: authDialog#4
+msgctxt "authDialog#4"
 msgid "Cancel"
 msgstr "Zrušit"
 
 #: authDialog#5
+msgctxt "authDialog#5"
 msgid "Ok"
 msgstr "Ok"
 
@@ -3570,6 +3781,7 @@ msgstr ""
 "weight:600;\">Sestavování balíčků...</span></p></body></html>"
 
 #: buildingDialog#2
+msgctxt "buildingDialog#2"
 msgid "Abort"
 msgstr "Zrušit"
 
@@ -3582,6 +3794,7 @@ msgid "Shaman - Building Packages"
 msgstr "Shaman - Sestavování balíčků"
 
 #: dbUpdateDialog#1
+msgctxt "dbUpdateDialog#1"
 msgid "Database Update"
 msgstr "Aktualizace databáze"
 
@@ -3610,6 +3823,7 @@ msgid "Redo"
 msgstr "Wiederherstellen"
 
 #: editPBDialog#6
+msgctxt "editPBDialog#6"
 msgid "Ok"
 msgstr "Ok"
 
@@ -3649,6 +3863,7 @@ msgstr "Obnovit"
 
 #. (obsolete)
 #: logViewer#5
+msgctxt "logViewer#5"
 msgid "Close"
 msgstr "Schliessen"
 
@@ -3674,6 +3889,7 @@ msgstr ""
 
 # close the dialog
 #: logViewer#8
+msgctxt "logViewer#8"
 msgid "Close"
 msgstr "Zavřít"
 
@@ -3694,6 +3910,7 @@ msgid "status"
 msgstr "Stav"
 
 #: newsDialog#4
+msgctxt "newsDialog#4"
 msgid "Mark as Read"
 msgstr "Označit jako přečtěné"
 
@@ -3707,6 +3924,7 @@ msgstr "Obnovit"
 
 #. (obsolete)
 #: newsDialog#7
+msgctxt "newsDialog#7"
 msgid "Close"
 msgstr "Schliessen"
 
@@ -3716,6 +3934,7 @@ msgstr "Titulek zpráv"
 
 # close the dialog
 #: newsDialog#9
+msgctxt "newsDialog#9"
 msgid "Close"
 msgstr "Zavřít"
 
@@ -3740,6 +3959,7 @@ msgstr ""
 "style=\" font-weight:600;\">Informace o balíčku</span></p></body></html>"
 
 #: pkgProperties#2
+msgctxt "pkgProperties#2"
 msgid "Package Information"
 msgstr "Informace o balíčku"
 
@@ -3788,14 +4008,17 @@ msgid "Changelog"
 msgstr "Přehled změn"
 
 #: pkgProperties#14
+msgctxt "pkgProperties#14"
 msgid "Files"
 msgstr "Soubory"
 
 #: pkgProperties#15
+msgctxt "pkgProperties#15"
 msgid "1"
 msgstr "1"
 
 #: pkgProperties#16
+msgctxt "pkgProperties#16"
 msgid "Dependencies"
 msgstr "Závislosti"
 
@@ -3812,6 +4035,7 @@ msgid "Actions Performed"
 msgstr "Vykonané akce"
 
 #: pkgProperties#20
+msgctxt "pkgProperties#20"
 msgid "Ok"
 msgstr "Ok"
 
@@ -3847,18 +4071,22 @@ msgid "This is useful if you want to review compiler's output"
 msgstr "Užitečné pokud chcete zkontrolovat výstup sestavení"
 
 #: reviewBuildingDialog#5
+msgctxt "reviewBuildingDialog#5"
 msgid "Turn off PC when Queue is done"
 msgstr "Vypnout PC po vykonání fronty"
 
 #: reviewBuildingDialog#6
+msgctxt "reviewBuildingDialog#6"
 msgid "Show packages..."
 msgstr "Zobrazit balíčky..."
 
 #: reviewBuildingDialog#7
+msgctxt "reviewBuildingDialog#7"
 msgid "Packages In Queue"
 msgstr "Baličky ve frontě"
 
 #: reviewBuildingDialog#8
+msgctxt "reviewBuildingDialog#8"
 msgid "Abort"
 msgstr "Zrušit"
 
@@ -3899,14 +4127,17 @@ msgid "Cleanup"
 msgstr "Čištění"
 
 #: transactionDialog#6
+msgctxt "transactionDialog#6"
 msgid "More Details..."
 msgstr "Více detailů..."
 
 #: transactionDialog#7
+msgctxt "transactionDialog#7"
 msgid "Abort"
 msgstr "Zrušit"
 
 #: transactionDialog#8
+msgctxt "transactionDialog#8"
 msgid "Please Wait..."
 msgstr "Čekejte prosím...."
 
@@ -3929,6 +4160,7 @@ msgstr ""
 "weight:600;\">Zpracování fronty</span></p></body></html>"
 
 #: upgradeDialog#1
+msgctxt "upgradeDialog#1"
 msgid "System Upgrade"
 msgstr "Aktualizace systému"
 
@@ -3937,6 +4169,7 @@ msgid "Remember my choice"
 msgstr "Zapamatovat volbu"
 
 #: upgradeDialog#3
+msgctxt "upgradeDialog#3"
 msgid "Abort"
 msgstr "Zrušit"
 
@@ -3971,9 +4204,11 @@ msgid "Packages to Upgrade"
 msgstr "Balíčky k aktualizaci"
 
 #: upgradeDialog#8
+msgctxt "upgradeDialog#8"
 msgid "Show packages..."
 msgstr "Zobrazit balíčky..."
 
 #: upgradeDialog#9
+msgctxt "upgradeDialog#9"
 msgid "Force Queue Processing"
 msgstr "Vynucené zpracování fronty"
