@@ -25,10 +25,6 @@
 #include "ui_transactionDialog.h"
 #include <alpm.h>
 
-#include <QProcess>
-
-class RootProcess;
-
 class QueueDialog : public QDialog, private Ui::transactionDialog
 {
         Q_OBJECT
@@ -43,9 +39,9 @@ class QueueDialog : public QDialog, private Ui::transactionDialog
 
     private slots:
 
-        void updateProgressBar( char *c, int bytedone, int bytetotal, int speed,
+        void updateProgressBar( const QString &c, int bytedone, int bytetotal, int speed,
                                 int listdone, int listtotal, int speedtotal );
-        void updateProgressBar( pmtransprog_t event, char *pkgname, int percent,
+        void updateProgressBar( int evt, const QString &pkgname, int percent,
                                 int howmany, int remain );
         void startDownload();
         void startProcess();
@@ -56,7 +52,7 @@ class QueueDialog : public QDialog, private Ui::transactionDialog
 
         void handleAlpmMessage( const QString &msg );
 
-        void changeStatus( pmtransevt_t event, void *data1, void *data2 );
+        void changeStatus( int evt, void *data1, void *data2 );
 
         void adjust( bool tgld );
 
@@ -64,10 +60,7 @@ class QueueDialog : public QDialog, private Ui::transactionDialog
         void terminated( bool errors );
         void streamTransactionProgress( int percent );
     private:
-        RootProcess *proc;
         int status;
-        QString cwd;
-        bool scrRun;
         bool errors;
 };
 
