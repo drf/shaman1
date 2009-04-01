@@ -18,7 +18,7 @@ All Process will be lost.</source>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="62"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Building Process Aborted by the User. Building Failed.&lt;/b&gt;</source>
-        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;ビルド作業はユーザーによって中止されました。ビルド作業は失敗です。&lt;/b&gt;</translation>
+        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;ビルド作業はユーザーによって中止されました。ビルド作業は失敗しました。&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="197"/>
@@ -1017,6 +1017,16 @@ p, li { white-space: pre-wrap; }
         <translation>名前と説明</translation>
     </message>
     <message>
+        <location filename="../src/MainWindow.cpp" line="274"/>
+        <source>Update Database</source>
+        <translation>データベースをアップデート</translation>
+    </message>
+    <message>
+        <location filename="../src/MainWindow.cpp" line="280"/>
+        <source>Process Queue</source>
+        <translation>プロセスを処理</translation>
+    </message>
+    <message>
         <location filename="../src/MainWindow.cpp" line="328"/>
         <source>Ctrl+Q</source>
         <comment>Exit Shaman Shortcut</comment>
@@ -1425,8 +1435,8 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;A libalpm frontend in Qt&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;License: GPLv2+&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Libalpm Version: v.%1&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;ライセンス: GPLv2+&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Libalpm バージョン: v.%1&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf@kdemod.ath.cx&amp;gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
@@ -1845,8 +1855,8 @@ p, li { white-space: pre-wrap; }
         <location filename="../src/Shaman.cpp" line="69"/>
         <source>There was a problem while testing libalpm.
 Maybe another application has a lock on it.</source>
-        <translation>libalpmをテストするには問題がある
-多分、他のアプリケーションがそれをロックしてる。</translation>
+        <translation>libalpmをテスト中にエラーが発生しました。
+恐らく、他のアプリケーションがlibalpmをロックしています。</translation>
     </message>
     <message>
         <location filename="../src/Shaman.cpp" line="79"/>
@@ -1940,8 +1950,7 @@ Shamanの起動にはlibalpmのバージョン2.1.0以降が必要です。
         <location filename="../src/main.cpp" line="267"/>
         <source>It looks like another copy of Shaman is running.
 You can only run one copy of Shaman at a time.</source>
-        <translation>Shamanが多重作動中のようです。
-Shamanは1個しか起動できません。</translation>
+        <translation>Shamanは1つしか起動できません。</translation>
     </message>
 </context>
 <context>
@@ -2243,7 +2252,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/ReviewQueueDialog.cpp" line="101"/>
         <source>Your Queue is about to be processed. You are going to:&lt;br /&gt;</source>
-        <translation>キューが処理されたようです、貴方は:&lt;br /&gt;</translation>
+        <translation>キューは処理されるところです。貴方は:&lt;br /&gt;</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/ReviewQueueDialog.cpp" line="104"/>
