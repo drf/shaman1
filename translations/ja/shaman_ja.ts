@@ -1,269 +1,193 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="1.1">
-<context>
-    <name>AlpmHandler</name>
-    <message>
-        <location filename="" line="0"/>
-        <source>: requires </source>
-        <translation type="obsolete">: бара</translation>
-    </message>
-    <message>
-        <location filename="" line="0"/>
-        <source>: conflicts with </source>
-        <translation type="obsolete">: е во конфликт со</translation>
-    </message>
-    <message>
-        <location filename="" line="0"/>
-        <source>Alpm did not give further details.</source>
-        <translation type="obsolete">Alpm не даде понатамошни детали.</translation>
-    </message>
-    <message>
-        <location filename="" line="0"/>
-        <source>%1 exists in both &apos;%2&apos; and &apos;%3&apos;</source>
-        <translation type="obsolete">%1 постои во &apos;%2&apos; и во &apos;%3&apos;</translation>
-    </message>
-    <message>
-        <location filename="" line="0"/>
-        <source>: %1 exists in filesystem</source>
-        <translation type="obsolete">: %1 постои во податочниот систем</translation>
-    </message>
-</context>
+<!DOCTYPE TS>
+<TS version="2.0" language="ja_JP">
 <context>
     <name>BuildingDialog</name>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="52"/>
         <source>Error</source>
-        <translation>Грешка</translation>
+        <translation>エラー</translation>
     </message>
     <message>
-        <location filename="../src/BuildingDialog.cpp" line="53"/>
+        <location filename="../src/BuildingDialog.cpp" line="52"/>
         <source>Would you like to abort building?.
 All Process will be lost.</source>
-        <translation>Дали сакате да го прекинете создавањето на пакетот?.
-Напредокот ќе биде изгубен</translation>
+        <translation>ビルド作業を中止しますか?
+この時、作業中のデータは失われます。</translation>
     </message>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="62"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Building Process Aborted by the User. Building Failed.&lt;/b&gt;</source>
-        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Создавањето на пакет е прекинато од корисникот. Создавањето на пакет не успеа.&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <location filename="" line="0"/>
-        <source>Updating ABS Tree...</source>
-        <translation type="obsolete">Надргадување на ABS дрвото...</translation>
-    </message>
-    <message>
-        <location filename="" line="0"/>
-        <source>&lt;b&gt;Starting ABS Tree Update...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Започнувам со надградба на ABS дрвото...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;ビルド作業はユーザーによって中止されました。ビルド作業は失敗しました。&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="197"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;ABS Tree Was Successfully Updated!&lt;/b&gt;</source>
-        <translation type="unfinished">
-            </translation>
+        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;ABSディレクトリ構造は正常に更新されました。&lt;/b&gt;</translation>
     </message>
     <message>
+        <location filename="../src/BuildingDialog.cpp" line="199"/>
         <location filename="../src/BuildingDialog.cpp" line="204"/>
         <source>ABS Update</source>
-        <translation>ABS Надградба</translation>
+        <translation>ABSアップデート</translation>
     </message>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="199"/>
         <source>Your ABS Tree was updated!</source>
-        <translation>Вашето ABS дрво е надградено!</translation>
+        <translation>あなたのABSディレクトリ構造は更新されました!</translation>
     </message>
     <message>
+        <location filename="../src/BuildingDialog.cpp" line="202"/>
         <location filename="../src/BuildingDialog.cpp" line="204"/>
         <source>Could not update the ABS Tree!</source>
-        <translation>Не можеше да се надгради ABS дрвото!</translation>
+        <translation>ABSディレクトリ構造を更新できません!</translation>
     </message>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="217"/>
         <source>&lt;b&gt;Building %1 failed!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;Создавањето на пакет %1 пропадна!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation>&lt;b&gt;%1のビルドに失敗しました!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="220"/>
         <source>&lt;b&gt;%1 was built successfully!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;%1 беше создаден успешно!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation>&lt;b&gt;%1のビルドに成功しました!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="272"/>
         <source>Processing Package %1 of %2...</source>
-        <translation>Процесирање на пакет %1 од %2...</translation>
+        <translation>パッケージを処理しています。 %1/%2...</translation>
     </message>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="273"/>
         <source>Building %1...</source>
-        <translation>Создавање на пакет %1...</translation>
+        <translation>ビルド中 %1...</translation>
     </message>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="278"/>
         <source>&lt;b&gt;Could not set up the environment correctly for %1!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;Не можеше да се воспостави околина за %1!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation>&lt;b&gt;%1のための環境をセットアップできませんでした。&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="300"/>
         <source>&lt;b&gt;Building %1...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;Создавање на пакет %1...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation>&lt;b&gt;ビルド中 %1...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../src/BuildingDialog.cpp" line="325"/>
         <source>&lt;b&gt;Building operation has started.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;Операцијата за создавање на пакет започна.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation>&lt;b&gt;ビルド作業を開始します。&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
 </context>
 <context>
     <name>BuildingHandler</name>
     <message>
+        <location filename="../src/BuildingHandler.cpp" line="53"/>
+        <location filename="../src/BuildingHandler.cpp" line="86"/>
+        <location filename="../src/BuildingHandler.cpp" line="112"/>
+        <location filename="../src/BuildingHandler.cpp" line="122"/>
+        <location filename="../src/BuildingHandler.cpp" line="275"/>
         <location filename="../src/BuildingHandler.cpp" line="289"/>
         <source>Error</source>
-        <translation>Грешка</translation>
+        <translation>エラー</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="87"/>
+        <location filename="../src/BuildingHandler.cpp" line="53"/>
+        <location filename="../src/BuildingHandler.cpp" line="86"/>
         <source>You need to have ABS installed to use Shaman&apos;s
 building feature. Do you want to install it now?</source>
-        <translation>Треба да имате ABS инсталирано за да ја користите опцијата на Shaman
-за создавање пакети. Дали сакате да ја инсталирате сега?</translation>
+        <translation>Shamanのビルド機能の使用にはABS(The Arch Build System)をインストールする必要があります。
+今すぐインストールしますか?</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="113"/>
+        <location filename="../src/BuildingHandler.cpp" line="112"/>
         <source>You can not remove packages when processing
 your queue from Source</source>
-        <translation>Не можете да отстранувате пакети додека се процесира
-листата за создавање пакети</translation>
+        <translation>供給元からのキューを処理している間、パッケージを削除することはできません</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="123"/>
+        <location filename="../src/BuildingHandler.cpp" line="122"/>
         <source>Some of your packages do not belong to Arch
 Linux&apos;s official repository. Shaman is able to
 build packages from official sources only.</source>
-        <translation>Некои од вашите пакети не припаѓаат на официјалните
-репозитари на ArchLinux. Shaman може да создава
-пакети само од официјални извори.</translation>
+        <translation>いくつかのパッケージはArch Linuxの公式リポジトリには含まれていません。
+Shamanは正式な供給元からのみパッケージをビルドできます。</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../src/BuildingHandler.cpp" line="156"/>
+        <source>You are about to install &lt;b&gt;%n package(s)&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
+        <translation>
+            <numerusform>貴方は今、提供元から&lt;b&gt;%n個のパッケージ&lt;/b&gt;をインストールしようとしています。&lt;br&gt;ソースからのビルドは幾つかの利点がありますが、&lt;b&gt;非常に遅い&lt;/b&gt;です。&lt;br&gt;この事について確信がないのなら、バイナリファイルからのインストールを選んでください。
+作業を続ける前に、ビルドパフォーマンス改善の為の設定を慎重に確認してください。</numerusform>
+        </translation>
     </message>
     <message>
+        <location filename="../src/BuildingHandler.cpp" line="164"/>
         <location filename="../src/BuildingHandler.cpp" line="175"/>
         <source>To be Installed</source>
-        <translation>За инсталација</translation>
+        <translation>インストール済み</translation>
     </message>
     <message>
+        <location filename="../src/BuildingHandler.cpp" line="168"/>
         <location filename="../src/BuildingHandler.cpp" line="181"/>
         <source>To be Upgraded</source>
-        <translation>За надградба</translation>
+        <translation>アップグレード済み</translation>
     </message>
     <message>
+        <location filename="../src/BuildingHandler.cpp" line="273"/>
         <location filename="../src/BuildingHandler.cpp" line="314"/>
         <source>Package Building</source>
-        <translation>Создавање на пакет</translation>
+        <translation>パッケージビルド</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="273"/>
         <source>Your Packages failed to build!</source>
-        <translation>Вашите пакети не можеа да се создадат!</translation>
+        <translation>パッケージのビルドに失敗しました!</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="276"/>
+        <location filename="../src/BuildingHandler.cpp" line="275"/>
         <source>Your packages Failed to Build.
 Look at the output for more details.</source>
-        <translation>Вашите пакети не можеа да се создадат.
-Погледнете го излезот за повеќе детали.</translation>
+        <translation>パッケージのビルドに失敗しました。
+出力を確認して詳細をご覧ください。</translation>
     </message>
     <message>
+        <location filename="../src/BuildingHandler.cpp" line="278"/>
         <location filename="../src/BuildingHandler.cpp" line="295"/>
         <source>Close</source>
-        <translation>Затвори</translation>
+        <translation>閉じる</translation>
     </message>
     <message>
+        <location filename="../src/BuildingHandler.cpp" line="281"/>
         <location filename="../src/BuildingHandler.cpp" line="286"/>
         <source>Building Packages Failed!!</source>
-        <translation>Создавањето на пакети не успеа!!</translation>
+        <translation>パッケージ群のビルドに失敗しました!!</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="290"/>
         <source>Some packages failed to build.
 Do you want to proceed anyway?</source>
-        <translation>Некои пакети не можеа да се создадат.
-Дали сакате да продолжите понатаму?</translation>
+        <translation>幾つかのパッケージのビルドに失敗しました。
+それでも作業を続行しますか?</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="309"/>
         <source>Install Built Packages</source>
-        <translation>Инсталирај создадени пакети</translation>
+        <translation>ビルドパッケージのインストール</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="310"/>
         <source>Close Without Installing</source>
-        <translation>Затвори без инсталација</translation>
+        <translation>インストールせずに閉じる</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="311"/>
         <source>Packages Built Successfully!</source>
-        <translation>Пакетите беа создадени успешно!</translation>
+        <translation>パッケージのビルドに成功しました!</translation>
     </message>
     <message>
-        <location filename="../src/BuildingHandler.cpp" line="315"/>
+        <location filename="../src/BuildingHandler.cpp" line="314"/>
         <source>Your Packages have been built successfully, and are ready to be installed</source>
-        <translation>Вашите пакети се создадени, и можете да ги инсталирате</translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../src/BuildingHandler.cpp" line="160"/>
-        <source>You are about to install &lt;b&gt;%n package(s)&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
-        <translation type="unfinished">
-            <numerusform>
-            </numerusform>
-        </translation>
-    </message>
-</context>
-<context>
-    <name>CallBacks</name>
-    <message>
-        <location filename="" line="0"/>
-        <source>%1 requires installing %2 from IgnorePkg/IgnoreGroup.
- Install anyway?</source>
-        <translation type="obsolete">%1 бара да се инсталира %2 од IgnorePkg/IgnoreGroup.
-Дали сакате да инсталирате?</translation>
-    </message>
-    <message>
-        <location filename="" line="0"/>
-        <source>%1 is in IgnorePkg/IgnoreGroup.
- Install anyway?</source>
-        <translation type="obsolete">%1 е во IgnorePkg/IgnoreGroup.
-Дали сакате да инсталирате?</translation>
-    </message>
-    <message>
-        <location filename="" line="0"/>
-        <source>%1 is designated as a HoldPkg.
- Remove anyway?</source>
-        <translation type="obsolete">%1 е означен како HoldPkg.
-Дали сакате да го отстраните?</translation>
-    </message>
-    <message>
-        <location filename="" line="0"/>
-        <source>Replace %1 with %2/%3?</source>
-        <translation type="obsolete">Заменете го %1 со %2/%3?</translation>
-    </message>
-    <message>
-        <location filename="" line="0"/>
-        <source>%1 conflicts with %2.
-Remove %3?</source>
-        <translation type="obsolete">%1 е во конфликт со %2. Отстранете го %3?</translation>
-    </message>
-    <message>
-        <location filename="" line="0"/>
-        <source>%1-%2: local version is newer.
-Upgrade anyway?</source>
-        <translation type="obsolete">%1-%2: локалната верзија е понова.
-Дали сакате да надградите?</translation>
-    </message>
-    <message>
-        <location filename="" line="0"/>
-        <source>File %1 is corrupted.
-Do you want to delete it?</source>
-        <translation type="obsolete">Датотеката %1 е неисправна.
-Дали сакате да ја избришете?</translation>
+        <translation>パッケージのビルドに成功し、インストールの準備が整いました</translation>
     </message>
 </context>
 <context>
@@ -271,37 +195,42 @@ Do you want to delete it?</source>
     <message>
         <location filename="../src/configDialog.cpp" line="118"/>
         <source>General</source>
-        <translation>Генерално</translation>
+        <translation>一般</translation>
     </message>
     <message>
+        <location filename="../src/configDialog.cpp" line="120"/>
         <location filename="../src/configDialog.cpp" line="606"/>
         <source>Clean Unused Databases</source>
-        <translation>Исчисти некористени датабази</translation>
+        <translation>使われていないデータベースを消去</translation>
     </message>
     <message>
+        <location filename="../src/configDialog.cpp" line="120"/>
         <location filename="../src/configDialog.cpp" line="616"/>
         <source>Clean Cache</source>
-        <translation>Исчисти го кешот</translation>
+        <translation>キャッシュの消去</translation>
     </message>
     <message>
+        <location filename="../src/configDialog.cpp" line="121"/>
         <location filename="../src/configDialog.cpp" line="626"/>
         <source>Empty Cache</source>
-        <translation>Испразни го кешот</translation>
+        <translation>空のキャッシュ</translation>
     </message>
     <message>
+        <location filename="../src/configDialog.cpp" line="121"/>
         <location filename="../src/configDialog.cpp" line="636"/>
         <source>Optimize Pacman Database</source>
-        <translation>Оптимизирај ја датабазата на Pacman</translation>
+        <translation>Pacmanデータベースの最適化</translation>
     </message>
     <message>
+        <location filename="../src/configDialog.cpp" line="121"/>
         <location filename="../src/configDialog.cpp" line="649"/>
         <source>Clean All Building Environments</source>
-        <translation>Исчистете ги сите околини за создавање на пакети</translation>
+        <translation>全てのビルド環境を消去</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="179"/>
         <source>Repositories</source>
-        <translation>Репозитари</translation>
+        <translation>リポジトリ</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="303"/>
@@ -316,270 +245,284 @@ Do you want to delete it?</source>
     <message>
         <location filename="../src/configDialog.cpp" line="411"/>
         <source>Advanced</source>
-        <translation>Напредно</translation>
+        <translation>上級者向け</translation>
     </message>
     <message>
+        <location filename="../src/configDialog.cpp" line="498"/>
         <location filename="../src/configDialog.cpp" line="545"/>
         <source>Enter Here the Repository&apos;s Name</source>
-        <translation>Внесете го името на репозитарот</translation>
+        <translation>リポジトリ名を入力</translation>
     </message>
     <message>
+        <location filename="../src/configDialog.cpp" line="500"/>
         <location filename="../src/configDialog.cpp" line="547"/>
         <source>Enter Here the Repository&apos;s Server</source>
-        <translation>Внесете го серверот на репозитарот</translation>
+        <translation>リポジトリ・サーバを入力</translation>
     </message>
     <message>
+        <location filename="../src/configDialog.cpp" line="507"/>
+        <location filename="../src/configDialog.cpp" line="554"/>
         <location filename="../ui/configDialog.ui" line="1238"/>
         <source>Ok</source>
-        <translation>Во ред</translation>
+        <translation>OK</translation>
     </message>
     <message>
+        <location filename="../src/configDialog.cpp" line="509"/>
+        <location filename="../src/configDialog.cpp" line="556"/>
         <location filename="../ui/configDialog.ui" line="1255"/>
         <source>Cancel</source>
-        <translation>Откажи</translation>
+        <translation>キャンセル</translation>
     </message>
     <message>
+        <location filename="../src/configDialog.cpp" line="609"/>
         <location filename="../src/configDialog.cpp" line="610"/>
         <source>Cleaning up unused Databases...</source>
-        <translation>Чистење на некористени датабази...</translation>
+        <translation>使われていないデータベースをクリーンアップしています...</translation>
     </message>
     <message>
+        <location filename="../src/configDialog.cpp" line="619"/>
         <location filename="../src/configDialog.cpp" line="620"/>
         <source>Cleaning up Cache...</source>
-        <translation>Чистење на кешот...</translation>
+        <translation>キャッシュをクリーンアップしています...</translation>
     </message>
     <message>
+        <location filename="../src/configDialog.cpp" line="629"/>
         <location filename="../src/configDialog.cpp" line="630"/>
         <source>Deleting Cache...</source>
-        <translation>Бришење на кешот...</translation>
+        <translation>キャッシュを削除しています...</translation>
     </message>
     <message>
-        <location filename="" line="0"/>
-        <source>Optimizing Pacman Database...</source>
-        <translation type="obsolete">Оптимизирање на датабазата на Pacman...</translation>
-    </message>
-    <message>
+        <location filename="../src/configDialog.cpp" line="652"/>
         <location filename="../src/configDialog.cpp" line="653"/>
         <source>Cleaning up building Environments...</source>
-        <translation>Чистење на околините за создавање на пакети...</translation>
+        <translation>ビルド環境をクリーンアップしています...</translation>
     </message>
     <message>
+        <location filename="../src/configDialog.cpp" line="668"/>
         <location filename="../src/configDialog.cpp" line="669"/>
         <source>Cleaning up Unused Databases Failed!</source>
-        <translation>Чистењето на некористените датабази не успеа!</translation>
+        <translation>使われていないデータベースのクリーンアップに失敗しました!</translation>
     </message>
     <message>
+        <location filename="../src/configDialog.cpp" line="673"/>
         <location filename="../src/configDialog.cpp" line="674"/>
         <source>Cleaning up Cache Failed!</source>
-        <translation>Чистењето на кешот не успеа!</translation>
+        <translation>キャッシュのクリーンアップに失敗しました!</translation>
     </message>
     <message>
+        <location filename="../src/configDialog.cpp" line="678"/>
         <location filename="../src/configDialog.cpp" line="679"/>
         <source>Deleting Cache Failed!</source>
-        <translation>Бришењето на кешот не успеа!</translation>
+        <translation>キャッシュのクリーンアップに失敗しました!</translation>
     </message>
     <message>
+        <location filename="../src/configDialog.cpp" line="683"/>
         <location filename="../src/configDialog.cpp" line="684"/>
         <source>Could not clean Build Environments!!</source>
-        <translation>Не можеше да се исчистат околините за создавање на пакети!!</translation>
+        <translation>ビルド環境のクリーンアップに失敗しました!</translation>
     </message>
     <message>
+        <location filename="../src/configDialog.cpp" line="697"/>
+        <location filename="../src/configDialog.cpp" line="698"/>
         <location filename="../src/configDialog.cpp" line="699"/>
         <source>Unused Databases Cleaned up successfully!</source>
-        <translation>Некористените датабази се исчистени успешно!</translation>
+        <translation>使われていないデータベースのクリーンアップに成功しました!</translation>
     </message>
     <message>
+        <location filename="../src/configDialog.cpp" line="703"/>
+        <location filename="../src/configDialog.cpp" line="704"/>
         <location filename="../src/configDialog.cpp" line="705"/>
         <source>Cache Cleaned Up Successfully!</source>
-        <translation>Кешот е исчистен успешно!</translation>
+        <translation>キャッシュのクリーンアップに成功しました!</translation>
     </message>
     <message>
+        <location filename="../src/configDialog.cpp" line="709"/>
+        <location filename="../src/configDialog.cpp" line="710"/>
         <location filename="../src/configDialog.cpp" line="711"/>
         <source>Cache Successfully Deleted!</source>
-        <translation>Кешот е избришан успешно!</translation>
+        <translation>キャッシュは正常に削除されました!</translation>
     </message>
     <message>
+        <location filename="../src/configDialog.cpp" line="715"/>
+        <location filename="../src/configDialog.cpp" line="716"/>
         <location filename="../src/configDialog.cpp" line="717"/>
         <source>Build Environments Successfully Cleaned!</source>
-        <translation>Околините за создавање на пакети се успешно исчистени!</translation>
+        <translation>ビルド環境は正常にクリーンされました!</translation>
     </message>
     <message>
+        <location filename="../src/configDialog.cpp" line="762"/>
         <location filename="../src/configDialog.cpp" line="1055"/>
         <source>Saving Configuration</source>
-        <translation>Зачувување на конфигурацијата</translation>
+        <translation>設定を保存</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="762"/>
         <source>Unable to save Pacman configuration!</source>
-        <translation>Не можеше да се зачува конфигурацијата за Pacman!</translation>
+        <translation>Pacmanの設定を保存できません!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1056"/>
+        <location filename="../src/configDialog.cpp" line="1055"/>
         <source>Some of your changes have not been applied,
 since alpm needs to be released.
 You need to restart Shaman to make them effective.</source>
-        <translation>Некои од вашите промени не беа применети,
-бидејќи alpm треба да се ослободи.
-Треба да го рестартирате Shaman за да имаат ефект.</translation>
+        <translation>alpmのリリースが必要になってから幾つかの変更点が適用されていません。
+効果を適用するにはShamanを再起動させる必要があります。</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="1064"/>
         <source>Settings Changed</source>
-        <translation>Поставувањата се изменети</translation>
+        <translation>設定が変更されています</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="1065"/>
         <source>Your repositories have changed.
 Do you want to Update Your Database?</source>
-        <translation>Вашите репозитари се сменија.
-Дали сакате да ја ажурирате вашата датабаза?</translation>
+        <translation>リポジトリが変更されています。
+データベースをアップデートしますか?</translation>
     </message>
     <message>
+        <location filename="../src/configDialog.cpp" line="1149"/>
+        <location filename="../src/configDialog.cpp" line="1173"/>
+        <location filename="../src/configDialog.cpp" line="1190"/>
+        <location filename="../src/configDialog.cpp" line="1222"/>
+        <location filename="../ui/configDialog.ui" line="536"/>
         <location filename="../ui/configDialog.ui" line="676"/>
         <source>Add Mirror</source>
-        <translation>Додај огледало</translation>
+        <translation>ミラーを追加</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1151"/>
+        <location filename="../src/configDialog.cpp" line="1149"/>
         <source>Mirror Format is incorrect. Your mirror should look like this:
 http://mirror.org/$repo/os/i686</source>
         <comment>Obviously keep the example as it is ;)</comment>
-        <translation>Форматот на огледалото е неточен. Вашето огледало треба да изгледа овака:
-http://mirror.org/$repo/$arch</translation>
+        <translation>ミラーフォーマットが無効です。ミラーのフォーマットは以下のようにする必要があります:
+http://mirror.org/$repo/os/i686</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1176"/>
+        <location filename="../src/configDialog.cpp" line="1174"/>
         <source>Your Mirror was successfully added!
 It is now available in mirrorlist.</source>
         <comment>mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.</comment>
-        <translation>Вашето огледало беше успешно додадено!
-сега е достапно во mirrorlist.</translation>
+        <translation>ミラーは正常に追加されました。
+mirrorlistは利用可能です。</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1192"/>
+        <location filename="../src/configDialog.cpp" line="1190"/>
         <source>Mirror Format is incorrect. Your mirror should look like this:
 http://mirror.org/$repo/$arch</source>
         <comment>Obviously keep the example as it is ;)</comment>
-        <translation>Форматот на огледалото е неточен. Вашето огледало треба да изгледа овака:
+        <translation>ミラーフォーマットが無効です。ミラーのフォーマットは以下のようにする必要があります:
 http://mirror.org/$repo/$arch</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1225"/>
+        <location filename="../src/configDialog.cpp" line="1223"/>
         <source>Your Mirror was successfully added!
 It is now available in kdemodmirrorlist.</source>
         <comment>mirrorlist here means /etc/pacman.d/kdemodmirrorlist, so it should not be translated.</comment>
-        <translation>Вашето огледало беше успешно додадено!
-сега е достапно во kdemodmirrorlist.</translation>
+        <translation>ミラーは正常に追加されました!
+kdemodmirrorlistは利用可能です。</translation>
     </message>
     <message>
+        <location filename="../src/configDialog.cpp" line="1254"/>
+        <location filename="../src/configDialog.cpp" line="1255"/>
         <location filename="../src/configDialog.cpp" line="1256"/>
         <source>Pacman Database Optimized Successfully!</source>
-        <translation>Датабазата на Pacman беше оптимизирана успешно!</translation>
+        <translation>Pacmanデータベースの最適化に成功しました!</translation>
     </message>
     <message>
+        <location filename="../src/configDialog.cpp" line="1258"/>
+        <location filename="../src/configDialog.cpp" line="1259"/>
         <location filename="../src/configDialog.cpp" line="1260"/>
         <source>Could not Optimize Pacman Database!</source>
-        <translation>не можеше да се оптимизира датабазата на Pacman!</translation>
+        <translation>Pacmanデータベースを最適化できませんでした!</translation>
     </message>
     <message>
+        <location filename="../src/configDialog.cpp" line="1267"/>
         <location filename="../src/configDialog.cpp" line="1268"/>
         <source>Running sync...</source>
         <comment>sync is a command, so it should not be translated</comment>
-        <translation>Извршување на sync...</translation>
-    </message>
-    <message>
-        <location filename="" line="0"/>
-        <source>Operation Completed Successfully!</source>
-        <translation type="obsolete">Операцијата е успешно завршена!</translation>
-    </message>
-    <message>
-        <location filename="" line="0"/>
-        <source>Sync was successfully executed!!</source>
-        <comment>Sync is always the command</comment>
-        <translation type="obsolete">Sync беше успешно извршена!!</translation>
-    </message>
-    <message>
-        <location filename="" line="0"/>
-        <source>Sync could not be executed!</source>
-        <comment>Sync is always the command</comment>
-        <translation type="obsolete">Sync не можеше да биде извршена!</translation>
-    </message>
-    <message>
-        <location filename="" line="0"/>
-        <source>Sync could not be executed!!</source>
-        <comment>Sync is always the command</comment>
-        <translation type="obsolete">Sync не можеше да биде извршена!!</translation>
+        <translation>syncを起動しています...</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="13"/>
         <source>Shaman - Configuration</source>
-        <translation>Shaman - конфигурација</translation>
+        <translation>Shaman - 設定</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="79"/>
         <source>Favourite Actions</source>
-        <translation>Омилени акции</translation>
+        <translation>よく使うアクション</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="88"/>
         <source>When Upgrading System:</source>
-        <translation>Кога се надградува системот:</translation>
+        <translation>システムをアップグレードする時:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="97"/>
         <source>Upgrade Immediately</source>
-        <translation>Надргради веднаш</translation>
+        <translation>すぐにアップグレードする</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="104"/>
         <source>Add Upgradeable Packages To Queue</source>
-        <translation>Додади надградливи пакети во редицата</translation>
+        <translation>キューにアップグレードパッケージを追加する</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="111"/>
         <source>Ask</source>
-        <translation>Прашај</translation>
+        <translation>確認ダイアログを表示</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="127"/>
         <source>When Processing Queue</source>
-        <translation>Кога се обработува редицата</translation>
+        <translation>キューの処理中</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="134"/>
         <source>Keep application running in System Tray only</source>
-        <translation>Задржи ја апликацијата да работи само во системска лента</translation>
+        <translation>システムトレイにアプリケーションを格納する</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="144"/>
         <source>GUI Startup</source>
-        <translation>Стартување на GUI</translation>
+        <translation>GUI起動時</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="150"/>
         <source>Start in the System Tray</source>
-        <translation>Стартувај во системската лента</translation>
+        <translation>システムトレイ中で開始</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="157"/>
         <source>Show Splashscreen</source>
-        <translation>Прикажи поздравен екран</translation>
+        <translation>スプラッシュスクリーンを表示</translation>
+    </message>
+    <message>
+        <location filename="../ui/configDialog.ui" line="164"/>
+        <source>Use the following language:</source>
+        <translation>使用言語:</translation>
+    </message>
+    <message>
+        <location filename="../ui/configDialog.ui" line="181"/>
+        <source>Disable Tray Icon</source>
+        <translation>トレイアイコン無効</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="191"/>
         <source>Maintenance</source>
-        <translation>Одржување</translation>
+        <translation>メンテナンス</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="210"/>
         <source>Process Selected</source>
-        <translation>Обработи ги одбраните</translation>
+        <translation>選択された項目を実行</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="238"/>
         <source>Waiting</source>
         <comment>Waiting for a user action</comment>
-        <translation>Исчекувам</translation>
+        <translation>待機中</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="256"/>
@@ -589,79 +532,83 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Одржување на Shaman.&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Ве молиме одберете акција од паѓачкото мени.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Shaman メンテナンス&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;ドロップダウンメニューからアクションを選択してください。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="283"/>
         <source>Checkable Options</source>
-        <translation>Опции за чекирање</translation>
+        <translation>チェック可能なオプション</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="289"/>
         <source>Use Active FTP</source>
-        <translation>Користи активен FTP</translation>
+        <translation>アクティブなFTPを使う</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="296"/>
         <source>Use Deltas (needs xdelta to be installed)</source>
-        <translation>Користи Delta-и (потребно е да биде инсталирано xdelta)</translation>
+        <translation>差分を使用(xdeltaがインストールされている必要があります。)</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="303"/>
         <source>Use SysLog</source>
-        <translation>Користи SysLog</translation>
+        <translation>システムログを使用</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="313"/>
         <source>Advanced Options</source>
-        <translation>Напредни опции</translation>
+        <translation>上級者向けオプション</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="323"/>
         <source>HoldPkgs:</source>
-        <translation>HoldPkgs:</translation>
+        <translation>保持しているパッケージ:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="333"/>
         <source>IgnorePkgs:</source>
-        <translation>IgnorePkgs:</translation>
+        <translation>無視するパッケージ:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="343"/>
         <source>IgnoreGroups:</source>
-        <translation>IgnoreGroups:</translation>
+        <translation>無視するグループ:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="353"/>
         <source>NoUpgrade:</source>
-        <translation>NoUpgrade:</translation>
+        <translation>アップグレードしない:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="363"/>
         <source>NoExtract:</source>
-        <translation>NoExtract:</translation>
+        <translation>解凍しない:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="373"/>
         <source>Log File:</source>
-        <translation>Записничка датотека:</translation>
+        <translation>ログファイル:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="387"/>
         <source>XFerCommand: (example: /path/to/command %u) Blank for Default</source>
-        <translation>XFerCommand: ( пример: /патека/до/команда %u) Празно за предефинирано</translation>
+        <translation>XFerCommand:(ex:/path/to/command %u) 通常は空にしておいてね</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="425"/>
         <source>Arch Linux Official Repositories</source>
-        <translation>Официјални репозитари на Arch Linux</translation>
+        <translation>Arch Linuxのオフィシャルリポジトリ</translation>
     </message>
     <message>
-        <location filename="" line="0"/>
-        <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones.
-Please note that packages from Unstable and Testing may break your system.</source>
-        <translation type="obsolete">Овде можете да изберете кои официјални репозитари на Arch Linux да ги користите.
-Запомнете дека пакетите од Unstable и Testing можат да го расипат вашиот систем. </translation>
+        <location filename="../ui/configDialog.ui" line="457"/>
+        <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones. Please note that packages from Unstable and Testing may break your system.</source>
+        <translation>ここではArch Linuxの公式リポジトリとの間で使うためのリポジトリ群を選択できます。
+テスト版・不安定版からのパッケージは貴方のシステムに悪い影響を齎す事に注意して下さい。</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="472"/>
@@ -688,115 +635,127 @@ Please note that packages from Unstable and Testing may break your system.</sour
         <translation>Testing</translation>
     </message>
     <message>
-        <location filename="" line="0"/>
-        <source>Unstable</source>
-        <comment>Do not translate</comment>
-        <translation type="obsolete">Unstable</translation>
-    </message>
-    <message>
+        <location filename="../ui/configDialog.ui" line="515"/>
+        <location filename="../ui/configDialog.ui" line="655"/>
         <location filename="../ui/configDialog.ui" line="732"/>
         <source>Server</source>
-        <translation>Сервер</translation>
+        <translation>Server</translation>
     </message>
     <message>
+        <location filename="../ui/configDialog.ui" line="521"/>
         <location filename="../ui/configDialog.ui" line="661"/>
         <source>Mirror:</source>
-        <translation>Огледало:</translation>
+        <translation>ミラー:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="555"/>
         <source>KDEMod Repositories</source>
-        <translation>KDEMod репозитари</translation>
+        <translation>KDEModリポジトリ群</translation>
     </message>
     <message>
-        <location filename="" line="0"/>
-        <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an 
-improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme,
-and lots of addons, KDEMod is the best way to taste the ease and the power
-of KDE with the simplicity and the power of Arch.</source>
-        <translation type="obsolete">KDEMod е подобрена верзија на KDE, само за Arch Linux. Со подобрен Qt,
-компатибилен со стандардниот Qt на Arch Linux, подобрена тема и многѕ додатоци,
-KDEMod е најдобриот начин да ја вкусите леснотијата и силата на 
-KDE со едноставноста и силата на Arch.</translation>
+        <location filename="../ui/configDialog.ui" line="585"/>
+        <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme, and lots of addons, KDEMod is the best way to taste the ease and the power of KDE with the simplicity and the power of Arch.</source>
+        <translation>KDEModはKDEをArch Linux用に改良したバージョンです。特徴として、Qtビルドの改良、ArchLinuxが提供する標準のQtとの互換性、改良されたテーマ、そして、大量のアドオン群で、KDEModは手軽に、かつ簡単にKDEの力を、そして、Archの力を体験するための最良の手段です。</translation>
+    </message>
+    <message>
+        <location filename="../ui/configDialog.ui" line="600"/>
+        <source>KDEMod 4 Repository</source>
+        <translation>KDEMod 4 リポジトリ</translation>
+    </message>
+    <message>
+        <location filename="../ui/configDialog.ui" line="607"/>
+        <source>KDEMod 4 Extragear Repository</source>
+        <translation>KDEMod 4 Extragear リポジトリ</translation>
+    </message>
+    <message>
+        <location filename="../ui/configDialog.ui" line="614"/>
+        <source>KDEMod 4 Playground Repository</source>
+        <translation>KDEMod 4 Playground リポジトリ</translation>
+    </message>
+    <message>
+        <location filename="../ui/configDialog.ui" line="621"/>
+        <source>KDEMod 4 Testing Repository</source>
+        <translation>KDEMod 4 Testing リポジトリ</translation>
+    </message>
+    <message>
+        <location filename="../ui/configDialog.ui" line="628"/>
+        <source>KDEMod 4 Unstable Repository (Testers only!)</source>
+        <translation>KDEMod 4 Unstable リポジトリ(注:テスター専用!)</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="635"/>
         <source>KDEMod 3 Repository</source>
-        <translation>KDEMod 3 репозитар</translation>
+        <translation>KDEMod 3 リポジトリ</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="695"/>
         <source>Third-Party Repositories</source>
-        <translation>Неофицијални репозитари</translation>
+        <translation>サードパーティーリポジトリ</translation>
     </message>
     <message>
-        <location filename="" line="0"/>
-        <source>You can extend your packages choice by adding other repositories. Third-Party 
-Repositories act just as normal ones, and will be accessible through both Shaman
-and Pacman.</source>
-        <translation type="obsolete">Можете да го проширите изборот на вашите пакети со додавање на други репозитари. Неофицијални
-репозитари се однесуваат исто како официјални, и ќе бидат достапни 
-и од Shaman и од Pacman.</translation>
+        <location filename="../ui/configDialog.ui" line="707"/>
+        <source>You can extend your packages choice by adding other repositories. Third-Party Repositories act just as normal ones, and will be accessible through both Shaman and Pacman.</source>
+        <translation>貴方はパッケージの選択を追加している他のリポジトリへ拡張できます。サードパーティーによるリポジトリは通常のものと同様に振る舞い、また、PacmanとShamanの相互運用を可能にします。</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="727"/>
         <source>Repository</source>
-        <translation>Репозитар</translation>
+        <translation>リポジトリ</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="755"/>
         <source>Add New Repository</source>
-        <translation>Додај нов репозитар</translation>
+        <translation>新しいリポジトリを追加</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="766"/>
         <source>Edit Repository</source>
-        <translation>Уреди репозитар</translation>
+        <translation>リポジトリを編集</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="777"/>
         <source>Remove Repository</source>
-        <translation>Отстрани репозитар</translation>
+        <translation>リポジトリを削除</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="800"/>
         <source>Preferences</source>
-        <translation>Преференции</translation>
+        <translation>環境設定</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="806"/>
         <source>Process all dependencies and queue from binary first (recommended)</source>
-        <translation>Обработи ги сите зависности и прво обработи од бинарни пакети (recommended)</translation>
+        <translation>全ての依存関係とバイナリからのキューを最初に処理する (推奨)</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="813"/>
         <source>Review Building output before installing</source>
-        <translation>Прегледај го излезот од создавањето на пакет пред инсталирање</translation>
+        <translation>インストールを行う前にビルド出力を評価する</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="823"/>
         <source>ABS Configuration</source>
-        <translation>Конфигурација на ABS</translation>
+        <translation>ABSの設定</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="829"/>
         <source>Use supfiles that match your current repositories</source>
-        <translation>Користи supfiles кои одговараат на вашите сегашни репозитари</translation>
+        <translation>現在のリポジトリ群にマッチするsupfilesを使う</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="836"/>
         <source>Define supfiles manually</source>
-        <translation>Дефинирај supfiles рачно</translation>
+        <translation>手動でsupfilesを定義する</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="846"/>
         <source>RSync Server:</source>
-        <translation>RSync сервер:</translation>
+        <translation>RSyncサーバー:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="859"/>
         <source>Makepkg Configuration</source>
-        <translation>Конфигурација Makepkg</translation>
+        <translation>Makepkgの設定</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="865"/>
@@ -816,7 +775,7 @@ and Pacman.</source>
     <message>
         <location filename="../ui/configDialog.ui" line="895"/>
         <source>Options</source>
-        <translation>Опции</translation>
+        <translation>オプション</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="905"/>
@@ -826,198 +785,147 @@ and Pacman.</source>
     <message>
         <location filename="../ui/configDialog.ui" line="918"/>
         <source>Build Environment</source>
-        <translation>Околина за создавање на пакети</translation>
+        <translation>ビルド環境</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="924"/>
         <source>Building Path</source>
-        <translation>Патека за создавање на пакети</translation>
+        <translation>ビルドパス</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="934"/>
         <source>Remove installed makedepends after build</source>
-        <translation>Отстрани ги инсталираните зависности за создавање кога пакетот ќе се создаде</translation>
+        <translation>ビルド後、インストールされたmakedependsを削除する</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="941"/>
         <source>Clean Build Environment after installation</source>
-        <translation>Исчисти ја околината за создавање на пакети по инсталација</translation>
+        <translation>インストール後、ビルド環境をクリーンする</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="955"/>
         <source>When Application is in System Tray only</source>
-        <translation>Кога апликацијата е во системска лента</translation>
+        <translation>アプリケーションがシステムトレイ中にある時</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="961"/>
         <source>Update Database every</source>
-        <translation>Ажурирај ја датабазата секои</translation>
+        <translation>データベースを次の頻度でアップデートする</translation>
     </message>
     <message>
+        <location filename="../ui/configDialog.ui" line="971"/>
         <location filename="../ui/configDialog.ui" line="1135"/>
         <source>min</source>
         <comment>As in &quot;minutes&quot;</comment>
-        <translation>мин</translation>
+        <translation>分</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="978"/>
         <source>Show tray notification Windows</source>
-        <translation>Покажи прозорци за известување од системска лента</translation>
+        <translation>Windowsのように通知トレイを表示する</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="988"/>
         <source>If upgrades are available:</source>
-        <translation>Доколку надградби се достапни:</translation>
+        <translation>アップグレードが利用可能なら:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="995"/>
         <source>Just Notify</source>
-        <translation>Само извести</translation>
+        <translation>通知するだけ</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1002"/>
         <source>Notify and add them to Queue</source>
-        <translation>Извести и додади ги во редица</translation>
+        <translation>通知し、キューに入れる</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1009"/>
         <source>Update Database at</source>
-        <translation>Ажурирај ја датабазата во</translation>
+        <translation>データベースを次の時間にアップデートする</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1022"/>
         <source>Use a proxy-server</source>
-        <translation>Користи прокси сервер</translation>
+        <translation>プロクシサーバーを使用する</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1034"/>
         <source>IP:</source>
-        <translation>IP:</translation>
+        <translation>IPアドレス:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1057"/>
         <source>Port:</source>
-        <translation>Порта:</translation>
+        <translation>ポート番号:</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1099"/>
         <source>HTTP Proxy</source>
-        <translation>HTTP Прокси</translation>
+        <translation>HTTPプロクシ</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1106"/>
         <source>FTP Proxy</source>
-        <translation>FTP Прокси</translation>
+        <translation>FTPプロクシ</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1116"/>
         <source>Use Shaman RSS Capabilities</source>
-        <translation>Користи ги RSS можностите на Shaman</translation>
+        <translation>Shaman RSS機能を使う</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1128"/>
         <source>Update RSS Feed Every</source>
-        <translation>Ажурирај го RSS доводот секои</translation>
+        <translation>次の頻度でRSSフィードをアップデートする</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1142"/>
         <source>Notify upon new items</source>
-        <translation>Извести при нови вести</translation>
+        <translation>新しいアイテム上に通知する</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1149"/>
         <source>Check if there is an unread news about a package in Queue before processing it</source>
-        <translation>Провери дали има непрочитана вест за пакет во редицата пред да се обработи</translation>
+        <translation>キューにあるパッケージに関する未読ニュースがあるかどうか作業を行う前にチェックする</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1185"/>
         <source>Interface</source>
-        <translation>Интерфејс</translation>
-    </message>
-    <message>
-        <location filename="../ui/configDialog.ui" line="1198"/>
-        <source>Start Shaman Automatically on X Startup</source>
-        <translation>Стартувај го Shaman автоматски при стартувањето на X</translation>
-    </message>
-    <message>
-        <location filename="../ui/configDialog.ui" line="1205"/>
-        <source>Forbid starting Shaman as root</source>
-        <translation>Забрани стартување на Shaman како root</translation>
+        <translation>インターフェイス</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="1191"/>
         <source>Use Animated Tray Icon</source>
-        <translation>Користи анимирана икона во лента</translation>
+        <translation>アニメーションするトレイアイコンを使用する</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="600"/>
-        <source>KDEMod 4 Repository</source>
-        <translation>KDEMod 4 репозитар</translation>
+        <location filename="../ui/configDialog.ui" line="1198"/>
+        <source>Start Shaman Automatically on X Startup</source>
+        <translation>X起動時にShamanも自動的に起動する</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="607"/>
-        <source>KDEMod 4 Extragear Repository</source>
-        <translation>KDEMod 4 Extragear репозитар</translation>
-    </message>
-    <message>
-        <location filename="../ui/configDialog.ui" line="614"/>
-        <source>KDEMod 4 Playground Repository</source>
-        <translation>KDEMod 4 Playground репозитар</translation>
-    </message>
-    <message>
-        <location filename="../ui/configDialog.ui" line="621"/>
-        <source>KDEMod 4 Testing Repository</source>
-        <translation>KDEMod 4 Testing репозитар</translation>
-    </message>
-    <message>
-        <location filename="../ui/configDialog.ui" line="628"/>
-        <source>KDEMod 4 Unstable Repository (Testers only!)</source>
-        <translation>KDEMod 4 Unstable репозитар (само за тестери)</translation>
-    </message>
-    <message>
-        <location filename="../ui/configDialog.ui" line="457"/>
-        <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones. Please note that packages from Unstable and Testing may break your system.</source>
-        <translation type="unfinished">
-            </translation>
-    </message>
-    <message>
-        <location filename="../ui/configDialog.ui" line="585"/>
-        <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme, and lots of addons, KDEMod is the best way to taste the ease and the power of KDE with the simplicity and the power of Arch.</source>
-        <translation type="unfinished">
-            </translation>
-    </message>
-    <message>
-        <location filename="../ui/configDialog.ui" line="707"/>
-        <source>You can extend your packages choice by adding other repositories. Third-Party Repositories act just as normal ones, and will be accessible through both Shaman and Pacman.</source>
-        <translation type="unfinished">
-            </translation>
-    </message>
-    <message>
-        <location filename="../ui/configDialog.ui" line="164"/>
-        <source>Use the following language:</source>
-        <translation type="unfinished">
-            </translation>
-    </message>
-    <message>
-        <location filename="../ui/configDialog.ui" line="181"/>
-        <source>Disable Tray Icon</source>
-        <translation type="unfinished">
-            </translation>
+        <location filename="../ui/configDialog.ui" line="1205"/>
+        <source>Forbid starting Shaman as root</source>
+        <translatorcomment>I wanna know why not recommend starting shaman as root...</translatorcomment>
+        <translation>ルートとしてのShamanの起動を禁止する</translation>
     </message>
 </context>
 <context>
     <name>EditPBuild</name>
     <message>
+        <location filename="../src/EditPBuild.cpp" line="58"/>
         <location filename="../src/EditPBuild.cpp" line="141"/>
         <source>Saving</source>
-        <translation>Зачувувам</translation>
+        <translation>保存中</translation>
     </message>
     <message>
-        <location filename="../src/EditPBuild.cpp" line="142"/>
+        <location filename="../src/EditPBuild.cpp" line="58"/>
+        <location filename="../src/EditPBuild.cpp" line="141"/>
         <source>You modified this PKGBUILD.
 Do you want to save it?</source>
-        <translation>го модифициравте овој PKGBUILD.
-Дали сакате да го зачувате?</translation>
+        <translation>PKGBUILDは変更されています。
+保存しますか?</translation>
     </message>
 </context>
 <context>
@@ -1025,7 +933,7 @@ Do you want to save it?</source>
     <message>
         <location filename="../ui/fromFileDialog.ui" line="13"/>
         <source>Install Package from File</source>
-        <translation>Инсталирај пакет од датотека</translation>
+        <translation>ファイルからパッケージをインストール</translation>
     </message>
     <message>
         <location filename="../ui/fromFileDialog.ui" line="38"/>
@@ -1034,27 +942,31 @@ Do you want to save it?</source>
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Bitstream Vera Sans&apos;;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Local Package Installation&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Bitstream Vera Sans&apos;;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Инсталација на локален пакет&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Bitstream Vera Sans&apos;;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ローカルパッケージのインストール&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/fromFileDialog.ui" line="151"/>
         <source>Show...</source>
-        <translation>Прикажи...</translation>
+        <translation>表示...</translation>
     </message>
     <message>
         <location filename="../ui/fromFileDialog.ui" line="172"/>
         <source>More Details...</source>
-        <translation>Повеќе детали...</translation>
+        <translation>詳細...</translation>
     </message>
     <message>
         <location filename="../ui/fromFileDialog.ui" line="196"/>
         <source>Cancel</source>
-        <translation>Откажи</translation>
+        <translation>キャンセル</translation>
     </message>
     <message>
         <location filename="../ui/fromFileDialog.ui" line="207"/>
         <source>Install Package</source>
-        <translation>Инсталирај пакет</translation>
+        <translation>パッケージをインストール</translation>
     </message>
 </context>
 <context>
@@ -1062,374 +974,452 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/LocalPackageDialog.cpp" line="61"/>
         <source>Package is not installed</source>
-        <translation>Пакетот не е инсталиран</translation>
+        <translation>パッケージはインストールされません</translation>
     </message>
     <message>
         <location filename="../src/LocalPackageDialog.cpp" line="64"/>
         <source>Version %1 of this package is already installed</source>
-        <translation>Верзијата %1 на овој пакет е веќе инсталирана</translation>
+        <translation>バージョン%1のこのパッケージは既にインストールされています</translation>
     </message>
     <message>
         <location filename="../src/LocalPackageDialog.cpp" line="76"/>
         <source>All dependencies are satisfied</source>
-        <translation>Сите зависности се задоволени</translation>
+        <translation>確定している全ての依存関係</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/LocalPackageDialog.cpp" line="79"/>
         <source>%n package(s) will be installed as dependencies</source>
-        <translation type="unfinished">
-            <numerusform>
-            </numerusform>
+        <translation>
+            <numerusform>%n個のパッケージは依存関係解決の為にインストールされます</numerusform>
         </translation>
     </message>
 </context>
 <context>
     <name>MainWindow</name>
     <message>
+        <location filename="../src/MainWindow.cpp" line="269"/>
+        <location filename="../src/MainWindow.cpp" line="613"/>
         <location filename="../ui/MainWindow.ui" line="149"/>
         <source>Name</source>
-        <translation>Име</translation>
+        <translation>名前</translation>
     </message>
     <message>
+        <location filename="../src/MainWindow.cpp" line="270"/>
+        <location filename="../src/MainWindow.cpp" line="617"/>
         <location filename="../ui/MainWindow.ui" line="179"/>
         <source>Description</source>
-        <translation>Опис</translation>
+        <translation>説明</translation>
     </message>
     <message>
-        <location filename="" line="0"/>
-        <source>Esc</source>
-        <translation type="obsolete">Esc</translation>
+        <location filename="../src/MainWindow.cpp" line="271"/>
+        <location filename="../src/MainWindow.cpp" line="621"/>
+        <source>Name and Description</source>
+        <translation>名前と説明</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="386"/>
+        <location filename="../src/MainWindow.cpp" line="274"/>
+        <source>Update Database</source>
+        <translation>データベースをアップデート</translation>
+    </message>
+    <message>
+        <location filename="../src/MainWindow.cpp" line="280"/>
+        <source>Process Queue</source>
+        <translation>プロセスを処理</translation>
+    </message>
+    <message>
+        <location filename="../src/MainWindow.cpp" line="328"/>
+        <source>Ctrl+Q</source>
+        <comment>Exit Shaman Shortcut</comment>
+        <translation>Ctrl+Q</translation>
+    </message>
+    <message>
+        <location filename="../src/MainWindow.cpp" line="382"/>
         <source>Shaman - Reducing To Tray</source>
-        <translation>Shaman - спуштање  во лента</translation>
+        <translation>Shaman - トレイモード</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="392"/>
+        <location filename="../src/MainWindow.cpp" line="383"/>
         <source>Shaman will keep running in the system tray.
 To close it, click Quit in the file menu or in the tray icon context menu.
 While in the System Tray, Shaman will update your Databases
 at a regular interval and notify you about available upgrades.
 You can change this behaviour in Settings.</source>
-        <translation>Shaman ќе остане да работи во системската лента.
-За да го затворите, кликнете исклучи во Датотека менито или во менито на иконата во системска лента.
-Додека е во системска лента, Shaman ќе ги ажурира вашите датабази 
-на регуларен интервал и ќе ве извести за достапни надградби.
-Можете да го промените ова однесување во Поставувања.</translation>
+        <translation>Shamanはタスクトレイに常駐します。
+之を閉じるには、ファイルメニューから「終了」をクリックするか、トレイアイコンのコンテキストメニューから終了させてください。
+システムトレイに常駐している間、Shamanはデータベースを一定間隔でアップデートし、アップグレードがあるなら通知します。
+この挙動は設定から変更可能です。</translation>
     </message>
     <message>
+        <location filename="../src/MainWindow.cpp" line="481"/>
         <location filename="../ui/MainWindow.ui" line="203"/>
         <source>Repositories</source>
-        <translation>Репозитари</translation>
+        <translation>リポジトリ</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="555"/>
+        <location filename="../src/MainWindow.cpp" line="488"/>
+        <location filename="../src/MainWindow.cpp" line="548"/>
+        <location filename="../src/MainWindow.cpp" line="551"/>
         <source>All Repositories</source>
-        <translation>Сите репозитари</translation>
+        <translation>全てのリポジトリ</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="558"/>
+        <location filename="../src/MainWindow.cpp" line="500"/>
+        <location filename="../src/MainWindow.cpp" line="554"/>
         <source>Local Packages</source>
-        <translation>Локални пакети</translation>
+        <translation>ローカルパッケージ</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="515"/>
+        <location filename="../src/MainWindow.cpp" line="511"/>
         <source>Package Groups</source>
-        <translation>Групи на пакети</translation>
+        <translation>パッケージグループ</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1135"/>
+        <location filename="../src/MainWindow.cpp" line="526"/>
+        <location filename="../src/MainWindow.cpp" line="549"/>
+        <location filename="../src/MainWindow.cpp" line="1060"/>
+        <location filename="../src/MainWindow.cpp" line="1084"/>
+        <location filename="../src/MainWindow.cpp" line="1109"/>
+        <location filename="../src/MainWindow.cpp" line="1131"/>
         <source>All Groups</source>
-        <translation>Сите групи</translation>
+        <translation>全てのグループ</translation>
     </message>
     <message>
+        <location filename="../src/MainWindow.cpp" line="578"/>
         <location filename="../ui/MainWindow.ui" line="58"/>
         <source>Installed packages</source>
-        <translation>Инсталирани пакети</translation>
+        <translation>インストールされたパッケージ</translation>
     </message>
     <message>
+        <location filename="../src/MainWindow.cpp" line="586"/>
         <location filename="../ui/MainWindow.ui" line="63"/>
         <source>Not installed packages</source>
-        <translation>Не инсталирани пакети</translation>
+        <translation>インストールされていないパッケージ</translation>
     </message>
     <message>
+        <location filename="../src/MainWindow.cpp" line="593"/>
         <location filename="../ui/MainWindow.ui" line="68"/>
         <source>Upgradeable packages</source>
-        <translation>Надградливи пакети</translation>
+        <translation>アップグレード可能なパッケージ</translation>
     </message>
     <message>
+        <location filename="../src/MainWindow.cpp" line="601"/>
         <location filename="../ui/MainWindow.ui" line="73"/>
         <source>Packages in Queue</source>
-        <translation>Пакети во редица</translation>
+        <translation>キュー中のパッケージ</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1003"/>
+        <location filename="../src/MainWindow.cpp" line="689"/>
+        <location filename="../src/MainWindow.cpp" line="991"/>
+        <location filename="../src/MainWindow.cpp" line="999"/>
         <source>Mark for Re&amp;installation</source>
-        <translation>Обележи за ре&amp;инсталација</translation>
+        <translation>再&amp;インストール要件としてマーク</translation>
     </message>
     <message>
+        <location filename="../src/MainWindow.cpp" line="697"/>
+        <location filename="../src/MainWindow.cpp" line="970"/>
         <location filename="../ui/MainWindow.ui" line="316"/>
         <source>Mark for &amp;Installation</source>
-        <translation>Обележи за &amp;инсталација</translation>
+        <translation>&amp;インストール要件としてマーク</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2026"/>
+        <location filename="../src/MainWindow.cpp" line="704"/>
+        <location filename="../src/MainWindow.cpp" line="1007"/>
+        <location filename="../src/MainWindow.cpp" line="1218"/>
+        <location filename="../src/MainWindow.cpp" line="1221"/>
+        <location filename="../src/MainWindow.cpp" line="1256"/>
+        <location filename="../src/MainWindow.cpp" line="1259"/>
+        <location filename="../src/MainWindow.cpp" line="1797"/>
+        <location filename="../src/MainWindow.cpp" line="2022"/>
         <source>Install</source>
-        <translation>Инсталирај</translation>
+        <translation>インストール</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2036"/>
+        <location filename="../src/MainWindow.cpp" line="706"/>
+        <location filename="../src/MainWindow.cpp" line="1009"/>
+        <location filename="../src/MainWindow.cpp" line="1309"/>
+        <location filename="../src/MainWindow.cpp" line="1312"/>
+        <location filename="../src/MainWindow.cpp" line="1795"/>
+        <location filename="../src/MainWindow.cpp" line="2032"/>
         <source>Uninstall</source>
-        <translation>Отстрани</translation>
+        <translation>アンインストール</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2037"/>
+        <location filename="../src/MainWindow.cpp" line="708"/>
+        <location filename="../src/MainWindow.cpp" line="1336"/>
+        <location filename="../src/MainWindow.cpp" line="1796"/>
+        <location filename="../src/MainWindow.cpp" line="2033"/>
         <source>Complete Uninstall</source>
-        <translation>Целосно отстранување</translation>
+        <translation>インストール完了</translation>
+    </message>
+    <message>
+        <location filename="../src/MainWindow.cpp" line="761"/>
+        <source>Status: </source>
+        <translation>状態:</translation>
+    </message>
+    <message>
+        <location filename="../src/MainWindow.cpp" line="763"/>
+        <source>Installed</source>
+        <translation>インストールされている</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="765"/>
-        <source>Status: </source>
-        <translation>Статус:</translation>
+        <source>Not installed</source>
+        <translation>インストールされていない</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="767"/>
-        <source>Installed</source>
-        <translation>Инсталирано</translation>
-    </message>
-    <message>
-        <location filename="../src/MainWindow.cpp" line="769"/>
-        <source>Not installed</source>
-        <translation>Не е инсталирано</translation>
+        <source>Local Version: </source>
+        <translation>ローカルバージョン:</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="771"/>
-        <source>Local Version: </source>
-        <translation>Локална верзија:</translation>
-    </message>
-    <message>
-        <location filename="../src/MainWindow.cpp" line="775"/>
         <source>Version in the Repository: </source>
-        <translation>Верзија за репозитарот:</translation>
+        <translation>リポジトリにあるバージョン:</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="780"/>
+        <location filename="../src/MainWindow.cpp" line="776"/>
         <source>Action: </source>
-        <translation>Акција:</translation>
+        <translation>アクション:</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1892"/>
+        <location filename="../src/MainWindow.cpp" line="870"/>
+        <location filename="../src/MainWindow.cpp" line="1888"/>
         <source>Error</source>
-        <translation>Грешка</translation>
+        <translation>エラー</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="880"/>
+        <location filename="../src/MainWindow.cpp" line="870"/>
+        <location filename="../src/MainWindow.cpp" line="875"/>
         <source>One or more Databases could not be updated.
 Last error reported was:
 %1</source>
-        <translation>Една или повеќе датабази не можеше да биде надградена.
-Последната грешка пријавена беше:
+        <translation>少なくとも一つ以上のデータベースがアップデートできませんでした。
+最後のエラー通知:
 %1</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="890"/>
+        <location filename="../src/MainWindow.cpp" line="875"/>
+        <location filename="../src/MainWindow.cpp" line="886"/>
         <source>Database Update</source>
-        <translation>Ажурирање на датабазата</translation>
+        <translation>データベースのアップデート</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="883"/>
+        <location filename="../src/MainWindow.cpp" line="879"/>
         <source>One or more databases failed to update!</source>
-        <translation>Една или повеќе датабази не успеа да се ажурира!</translation>
+        <translation>少なくとも一つ以上のデータベースのアップデートに失敗しました!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="893"/>
+        <location filename="../src/MainWindow.cpp" line="887"/>
+        <location filename="../src/MainWindow.cpp" line="889"/>
         <source>Databases Updated Successfully</source>
-        <translation>Датабазите се ажурирани успешно</translation>
+        <translation>データベースのアップデートに成功</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1450"/>
+        <location filename="../src/MainWindow.cpp" line="900"/>
+        <location filename="../src/MainWindow.cpp" line="1446"/>
         <source>Pacman Update</source>
-        <translation>Ажурирање на Pacman</translation>
+        <translation>Pacmanのアップデート</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1452"/>
+        <location filename="../src/MainWindow.cpp" line="901"/>
+        <location filename="../src/MainWindow.cpp" line="1446"/>
         <source>Pacman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Pacman now?</source>
-        <translation>Shaman може да се надгради. Препорачано е да го обработите само
-него за да избегнете конфликти со верзии.
-Дали сакате да го надградите Shaman сега?</translation>
+        <translation>Pacmanはアップグレード可能です。この通知は、バージョン衝突の解消の為のみに知らされました。
+Pacmanを今すぐアップグレードしますか?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1469"/>
+        <location filename="../src/MainWindow.cpp" line="923"/>
+        <location filename="../src/MainWindow.cpp" line="1465"/>
         <source>Shaman Update</source>
-        <translation>Ажурирање на Shaman</translation>
+        <translation>Shamanアップデート</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1471"/>
+        <location filename="../src/MainWindow.cpp" line="924"/>
+        <location filename="../src/MainWindow.cpp" line="1465"/>
         <source>Shaman can be upgraded. It is advised to process it alone
 to avoid version conflicts.
 Do you want to Upgrade Shaman now?</source>
-        <translation>Shaman може да се надгради. Препорачано е да го обработите само
-него за да избегнете конфликти со верзии.
-Дали сакате да го надградите Shaman сега?</translation>
+        <translation>Shamanはアップデート可能です。この通知はバージョン衝突回避のためだけに通知されました。
+今すぐShamanをアップデートしますか?</translation>
     </message>
     <message>
+        <location filename="../src/MainWindow.cpp" line="973"/>
         <location filename="../ui/MainWindow.ui" line="336"/>
         <source>Mark for &amp;Removal</source>
-        <translation>Обележи за &amp;отстранување</translation>
+        <translation>&amp;削除要件としてマーク</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="980"/>
+        <location filename="../src/MainWindow.cpp" line="976"/>
         <source>Mark for Upgrade</source>
-        <translation>Обележи за надградба</translation>
+        <translation>アップグレード要件としてマーク</translation>
     </message>
     <message>
+        <location filename="../src/MainWindow.cpp" line="979"/>
         <location filename="../ui/MainWindow.ui" line="376"/>
         <source>&amp;Cancel Action</source>
-        <translation>&amp;Откажи ја акцијата</translation>
+        <translation>アクションを&amp;キャンセル</translation>
     </message>
     <message>
+        <location filename="../src/MainWindow.cpp" line="985"/>
         <location filename="../ui/MainWindow.ui" line="280"/>
         <source>Package Information</source>
-        <translation>Информација за пакетот</translation>
+        <translation>パッケージ情報</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1030"/>
+        <location filename="../src/MainWindow.cpp" line="1026"/>
         <source>Mark all for installation</source>
-        <translation>Обележи ги сите за инсталација</translation>
+        <translation>全てインストール要件としてマーク</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1033"/>
+        <location filename="../src/MainWindow.cpp" line="1029"/>
         <source>Mark all for reinstallation</source>
-        <translation>Обележи ги сите за реинсталација</translation>
+        <translation>全て再インストール要件としてマーク</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1036"/>
+        <location filename="../src/MainWindow.cpp" line="1032"/>
         <source>Mark all for removal</source>
-        <translation>Обележи ги сите за отстранување</translation>
+        <translation>全て削除要件としてマーク</translation>
     </message>
     <message>
+        <location filename="../src/MainWindow.cpp" line="1035"/>
         <location filename="../ui/MainWindow.ui" line="644"/>
         <source>Cancel all actions</source>
-        <translation>Откажи ги сите акции</translation>
+        <translation>全てのアクションをキャンセル</translation>
     </message>
     <message>
+        <location filename="../src/MainWindow.cpp" line="1159"/>
         <location filename="../ui/MainWindow.ui" line="13"/>
         <source>Shaman</source>
         <translation>Shaman</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1165"/>
+        <location filename="../src/MainWindow.cpp" line="1160"/>
         <source>A package providing %1 is already installed.
 Do you want to install %1 anyway?</source>
-        <translation>Пакет кој го обезбедува %1 е веќе инсталиран.
-Дали сакате да го инсталирате %1 во секој случај?</translation>
+        <translation>%1を提供しているパッケージは既にインストールされています。
+それでも%1をインストールしますか?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1430"/>
+        <location filename="../src/MainWindow.cpp" line="1424"/>
+        <location filename="../src/MainWindow.cpp" line="1426"/>
         <source>System Upgrade</source>
-        <translation>Надградба на системот</translation>
+        <translation>システムアップグレード</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1434"/>
+        <location filename="../src/MainWindow.cpp" line="1424"/>
+        <location filename="../src/MainWindow.cpp" line="1426"/>
+        <location filename="../src/MainWindow.cpp" line="1430"/>
         <source>Your system is up to date!</source>
-        <translation>Вашиот систем е ажуриран!</translation>
+        <translation>システムは最新です!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1779"/>
+        <location filename="../src/MainWindow.cpp" line="1505"/>
+        <location filename="../src/MainWindow.cpp" line="1775"/>
         <source>News Alert</source>
-        <translation>Предупредување за вести</translation>
+        <translation>ニュースアラート</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1781"/>
+        <location filename="../src/MainWindow.cpp" line="1506"/>
+        <location filename="../src/MainWindow.cpp" line="1776"/>
         <source>There is an unread news about %1.
 Do you want to read it?</source>
-        <translation>Има непрочитана вест за %1.
-Дали сакате да ја прочитате?</translation>
+        <translation>%1に関する未読ニュースがあります。
+読みますか?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="2031"/>
+        <location filename="../src/MainWindow.cpp" line="1561"/>
+        <location filename="../src/MainWindow.cpp" line="1592"/>
+        <location filename="../src/MainWindow.cpp" line="1798"/>
+        <location filename="../src/MainWindow.cpp" line="2027"/>
         <source>Upgrade</source>
-        <translation>Надгради</translation>
+        <translation>アップグレード</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1630"/>
+        <location filename="../src/MainWindow.cpp" line="1626"/>
         <source>Queue Processing</source>
-        <translation>Обработување на редица</translation>
+        <translation>キューの処理中</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1631"/>
+        <location filename="../src/MainWindow.cpp" line="1627"/>
         <source>Your Queue is being processed.
 Please wait.</source>
-        <translation>Вашата редица се обработува.
-Ве молиме почекајте</translation>
+        <translation>キューの処理中です。
+しばらくお待ち下さい。</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1731"/>
+        <location filename="../src/MainWindow.cpp" line="1671"/>
+        <location filename="../src/MainWindow.cpp" line="1675"/>
+        <location filename="../src/MainWindow.cpp" line="1725"/>
+        <location filename="../src/MainWindow.cpp" line="1727"/>
         <source>Queue Processed</source>
-        <translation>Редицата е обработена</translation>
+        <translation>キューの処理</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1681"/>
+        <location filename="../src/MainWindow.cpp" line="1672"/>
+        <location filename="../src/MainWindow.cpp" line="1676"/>
         <source>One or more errors occurred, your Queue
 was not successfully processed</source>
-        <translation>Една или повеќе грешки се појавија, вашата редица 
-не беше успешно обработена</translation>
+        <translation>少なくとも一つ以上のエラーが発生し、キューが正常に処理されませんでした</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1683"/>
+        <location filename="../src/MainWindow.cpp" line="1679"/>
         <source>Error Processing Queue!!</source>
-        <translation>Грешка во обработувањето на редицата!!</translation>
+        <translation>キューの処理中にエラー!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1719"/>
+        <location filename="../src/MainWindow.cpp" line="1687"/>
+        <location filename="../src/MainWindow.cpp" line="1696"/>
+        <location filename="../src/MainWindow.cpp" line="1706"/>
+        <location filename="../src/MainWindow.cpp" line="1715"/>
         <source>Restart required</source>
-        <translation>Потребно е рестартирање</translation>
+        <translation>再起動の要求</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1712"/>
+        <location filename="../src/MainWindow.cpp" line="1688"/>
+        <location filename="../src/MainWindow.cpp" line="1697"/>
+        <location filename="../src/MainWindow.cpp" line="1707"/>
         <source>Pacman or Shaman was updated. Shaman will now quit,
 please restart it to use the new version</source>
-        <translation>Pacman или Shaman е надграден. Shaman ќе се исклучи,
-ве молиме вклучете го повторно за да ја користите новата верзија</translation>
+        <translation>PacmanとShamanはアップデートされました。Shamanを一度終了しますが、新しいバージョンを使用する際は手動で再度、起動して下さい</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1720"/>
+        <location filename="../src/MainWindow.cpp" line="1715"/>
         <source>Your Kernel has been updated.
 Please restart your PC soon to load the new Kernel.</source>
-        <translation>Вашето јардо беше ажурирано.
-Ве молиме рестартирајте го вашиот компјутер за са го вчитате новото јадро.</translation>
+        <translation>カーネルのアップデートが完了しました。
+新しいカーネルをロードするため、今すぐコンピュータを再起動して下さい。</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1729"/>
+        <location filename="../src/MainWindow.cpp" line="1725"/>
         <source>Your Queue was successfully processed!</source>
-        <translation>Вашата редица е успешно обработена!</translation>
+        <translation>キューは正常に処理されました!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1734"/>
+        <location filename="../src/MainWindow.cpp" line="1728"/>
+        <location filename="../src/MainWindow.cpp" line="1730"/>
         <source>Your Queue was successfully processed!!</source>
-        <translation>Вашата редица е успешно обработена!!</translation>
+        <translation>キューは正常に処理されました!!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1878"/>
+        <location filename="../src/MainWindow.cpp" line="1874"/>
         <source>Install a Package</source>
-        <translation>Инсталирај пакет</translation>
+        <translation>パッケージのインストール</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1878"/>
+        <location filename="../src/MainWindow.cpp" line="1874"/>
         <source>Arch Linux Packages (*.pkg.tar.gz)</source>
-        <translation>Пакети за Arch Linux (*.pkg.tar.gz)</translation>
+        <translation>Arch Linux パッケージ(*.pkg.tar.gz)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1892"/>
+        <location filename="../src/MainWindow.cpp" line="1888"/>
         <source>%1 does not seem
 a valid package</source>
-        <translation>%1 не изгледа како валиден пакет</translation>
+        <translation>%1は有効なパッケージではないようです</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1940"/>
+        <location filename="../src/MainWindow.cpp" line="1915"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -1440,361 +1430,332 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf@kdemod.ath.cx&amp;gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;libalpm фронтенд напишан во Qt&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Лиценца: GPLv2+&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Libalpm верзија: v.%1&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="" line="0"/>
-        <source>Library Question</source>
-        <translation type="obsolete">Прашање од библиотека</translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;A libalpm frontend in Qt&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;ライセンス: GPLv2+&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Libalpm バージョン: v.%1&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf@kdemod.ath.cx&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="53"/>
         <source>All packages</source>
-        <translation>Сите пакети</translation>
+        <translation>全てのパッケージ</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="144"/>
         <source>Status</source>
-        <translation>Статус</translation>
+        <translation>状態</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="154"/>
         <source>Action</source>
-        <translation>Акција</translation>
+        <translation>アクション</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="159"/>
         <source>Version</source>
-        <translation>Верзија</translation>
+        <translation>バージョン</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="164"/>
         <source>Size</source>
-        <translation>Големина</translation>
+        <translation>サイズ</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="169"/>
         <source>Repository</source>
-        <translation>Репозитар</translation>
+        <translation>リポジトリ</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="174"/>
         <source>Groups</source>
-        <translation>Групи</translation>
+        <translation>グループ</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="184"/>
         <source>Action-Text</source>
-        <translation>Action-Text</translation>
+        <translation>アクションテキスト</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="231"/>
         <source>Re&amp;positories</source>
-        <translation>Ре&amp;позитари</translation>
+        <translation>リ&amp;ポジトリ</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="254"/>
         <source>Package &amp;Groups</source>
-        <translation>&amp;Групи на пакети</translation>
+        <translation>パッケージ&amp;グループ</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="313"/>
         <source>Install selected package</source>
-        <translation>Инсталирај избран пакет</translation>
+        <translation>選択されたパッケージをインストール</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="333"/>
         <source>Remove selected package</source>
-        <translation>Отстрани избрани пакети</translation>
+        <translation>選択されたパッケージを削除</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="353"/>
         <source>Complete Remove selected package (pacman -Rcs)</source>
-        <translation>Целосно острани ги избраните пакет (pacman -Rcs)</translation>
+        <translation>選択されたパッケージを完全に削除(pacman -Rs)</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="356"/>
         <source>Mark for complete re&amp;moval</source>
-        <translation>Обележи за целосно от&amp;странување</translation>
+        <translation>完全に削&amp;除する項目としてマーク</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="373"/>
         <source>Cancel action for selected package</source>
-        <translation>Откажи ја акцијата за избраниот пакет</translation>
+        <translation>選択されたパッケージに対するアクションを取り消し</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="415"/>
         <source>Package I&amp;nformation</source>
-        <translation>И&amp;нформација за пакетот</translation>
+        <translation>パッケージに関する情&amp;報</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="451"/>
         <source>File&amp;s</source>
-        <translation>Датоте&amp;ки</translation>
+        <translation>ファイ&amp;ル</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="462"/>
         <source>1</source>
-        <translation>1</translation>
+        <translation>一</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="471"/>
         <source>&amp;Dependencies</source>
-        <translation>&amp;Зависности</translation>
+        <translation>&amp;依存関係</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="504"/>
         <source>&amp;File</source>
-        <translation>&amp;Датотека</translation>
+        <translation>&amp;ファイル</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="510"/>
         <source>&amp;Help</source>
-        <translation>&amp;Помош</translation>
+        <translation>&amp;ヘルプ</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="516"/>
         <source>&amp;Actions</source>
-        <translation>&amp;Акции</translation>
+        <translation>&amp;アクション</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="520"/>
         <source>Build and Install from Source</source>
-        <translation>Создади и инсталирај од изворен код</translation>
+        <translation>提供元からビルドし、インストール</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="534"/>
         <source>&amp;Tools</source>
-        <translation>&amp;Алати</translation>
+        <translation>&amp;ツール</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="551"/>
         <source>Quick Actions</source>
-        <translation>Брзи акции</translation>
+        <translation>クイックアクション</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="578"/>
         <source>Settings...</source>
-        <translation>Поставувања...</translation>
+        <translation>設定...</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="587"/>
         <source>About...</source>
-        <translation>За...</translation>
-    </message>
-    <message>
-        <location filename="" line="0"/>
-        <source>Update Database</source>
-        <translation type="obsolete">Ажурирај ја датабазата</translation>
+        <translation>このソフトウェアについて...</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="596"/>
         <source>Upgrade System</source>
-        <translation>Надгради систем</translation>
+        <translation>システムをアップグレード</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="605"/>
         <source>Install Package From File</source>
-        <translation>Инсталирај пакет од датотека</translation>
+        <translation>パッケージをファイルからインストール</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="617"/>
         <source>Update ABS Tree</source>
-        <translation>Ажурирај го ABS дрвото</translation>
+        <translation>ABSディレクトリ構造をアップデートする</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="626"/>
         <source>Build and Install Queue</source>
-        <translation>Создади и инсталирај пакет</translation>
+        <translation>キューをビルドし、インストール</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="635"/>
         <source>Quit</source>
         <comment>Quit the application</comment>
-        <translation>Исклучи</translation>
-    </message>
-    <message>
-        <location filename="" line="0"/>
-        <source>Process Queue</source>
-        <translation type="obsolete">Обработи ја редицата</translation>
+        <translation>終了</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="653"/>
         <source>Read News</source>
-        <translation>Прочитај вести</translation>
+        <translation>ニュースを読む</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="662"/>
         <source>View Log</source>
-        <translation>Прегледај записник</translation>
-    </message>
-    <message>
-        <location filename="../src/MainWindow.cpp" line="332"/>
-        <source>Ctrl+Q</source>
-        <comment>Exit Shaman Shortcut</comment>
-        <translation>Ctrl+Q</translation>
-    </message>
-    <message>
-        <location filename="../src/MainWindow.cpp" line="625"/>
-        <source>Name and Description</source>
-        <translation>Име и опис</translation>
+        <translation>ログを見る</translation>
     </message>
 </context>
 <context>
     <name>MaintenanceBar</name>
     <message>
+        <location filename="../src/MaintenanceBar.cpp" line="40"/>
+        <source>Maintenance Actions</source>
+        <translation>メンテナンスアクション</translation>
+    </message>
+    <message>
         <location filename="../src/MaintenanceBar.cpp" line="44"/>
         <source>Please choose an action to start maintenance...</source>
-        <translation>Ве молиме одберете акција за да започнете со одржување...</translation>
+        <translation>メンテナンスを開始するためのアクションを選択してください...</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="46"/>
         <source>Clean Unused Databases</source>
-        <translation>Исчисти некористени датабази</translation>
+        <translation>使われていないデータベースを消去</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="47"/>
         <source>Clean Cache</source>
-        <translation>Исчисти го кешот</translation>
+        <translation>キャッシュを消去</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="48"/>
         <source>Empty Cache</source>
-        <translation>Испразни го кешот</translation>
+        <translation>キャッシュを空に</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="49"/>
         <source>Optimize Pacman Database</source>
-        <translation>Оптимизирај ја датабазата на Pacman</translation>
+        <translation>Pacmanデータベースを最適化</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="50"/>
         <source>Clean All Building Environments</source>
-        <translation>Исчистете ги сите околини за создавање на пакети</translation>
+        <translation>全てのビルド関係の消去</translation>
     </message>
     <message>
+        <location filename="../src/MaintenanceBar.cpp" line="81"/>
         <location filename="../src/MaintenanceBar.cpp" line="82"/>
         <source>Cleaning up unused Databases...</source>
-        <translation>Чистење на некористени датабази...</translation>
+        <translation>使われていないデータベースを消去しています...</translation>
     </message>
     <message>
+        <location filename="../src/MaintenanceBar.cpp" line="95"/>
         <location filename="../src/MaintenanceBar.cpp" line="96"/>
         <source>Cleaning up Cache...</source>
-        <translation>Чистење на кешот...</translation>
+        <translation>キャッシュを消去しています...</translation>
     </message>
     <message>
+        <location filename="../src/MaintenanceBar.cpp" line="109"/>
         <location filename="../src/MaintenanceBar.cpp" line="110"/>
         <source>Deleting Cache...</source>
-        <translation>Бришење на кешот...</translation>
+        <translation>キャッシュを削除しています...</translation>
     </message>
     <message>
-        <location filename="" line="0"/>
-        <source>Optimizing Pacman Database...</source>
-        <translation type="obsolete">Оптимизирање на датабазата на Pacman...</translation>
-    </message>
-    <message>
+        <location filename="../src/MaintenanceBar.cpp" line="144"/>
         <location filename="../src/MaintenanceBar.cpp" line="145"/>
         <source>Cleaning up building Environments...</source>
-        <translation>Чистење на околините за создавање на пакети...</translation>
+        <translation>ビルド環境をクリーニング中...</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="171"/>
         <source>Abort</source>
-        <translation>Откажи</translation>
+        <translation>中止</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="184"/>
         <source>System Maintenance</source>
-        <translation>Одржување на системот</translation>
+        <translation>システムメンテナンス</translation>
     </message>
     <message>
+        <location filename="../src/MaintenanceBar.cpp" line="192"/>
+        <location filename="../src/MaintenanceBar.cpp" line="193"/>
         <location filename="../src/MaintenanceBar.cpp" line="194"/>
         <source>Unused Databases Cleaned up successfully!</source>
-        <translation>Некористените датабази се исчистени успешно!</translation>
+        <translation>使われていないデータベースのクリーニングアップに成功!</translation>
     </message>
     <message>
+        <location filename="../src/MaintenanceBar.cpp" line="198"/>
+        <location filename="../src/MaintenanceBar.cpp" line="199"/>
         <location filename="../src/MaintenanceBar.cpp" line="200"/>
         <source>Cache Cleaned Up Successfully!</source>
-        <translation>Кешот е исчистен успешно!</translation>
+        <translation>キャッシュの消去に成功!</translation>
     </message>
     <message>
+        <location filename="../src/MaintenanceBar.cpp" line="204"/>
+        <location filename="../src/MaintenanceBar.cpp" line="205"/>
         <location filename="../src/MaintenanceBar.cpp" line="206"/>
         <source>Cache Successfully Deleted!</source>
-        <translation>Кешот е избришан успешно!</translation>
+        <translation>キャッシュは正常に削除されました!</translation>
     </message>
     <message>
+        <location filename="../src/MaintenanceBar.cpp" line="210"/>
+        <location filename="../src/MaintenanceBar.cpp" line="211"/>
         <location filename="../src/MaintenanceBar.cpp" line="212"/>
         <source>Build Environments Successfully Cleaned!</source>
-        <translation>Околините за создавање на пакети се успешно исчистени!</translation>
+        <translation>ビルド環境は正常に消去されました!</translation>
     </message>
     <message>
+        <location filename="../src/MaintenanceBar.cpp" line="218"/>
+        <location filename="../src/MaintenanceBar.cpp" line="257"/>
         <location filename="../src/MaintenanceBar.cpp" line="310"/>
         <source>Close</source>
-        <translation>Затвори</translation>
+        <translation>閉じる</translation>
     </message>
     <message>
+        <location filename="../src/MaintenanceBar.cpp" line="235"/>
         <location filename="../src/MaintenanceBar.cpp" line="236"/>
         <source>Cleaning up Unused Databases Failed!</source>
-        <translation>Чистењето на некористените датабази не успеа!</translation>
+        <translation>使われていないデータベースの消去に失敗!</translation>
     </message>
     <message>
+        <location filename="../src/MaintenanceBar.cpp" line="240"/>
         <location filename="../src/MaintenanceBar.cpp" line="241"/>
         <source>Cleaning up Cache Failed!</source>
-        <translation>Чистењето на кешот не успеа!</translation>
+        <translation>キャッシュの消去に失敗!</translation>
     </message>
     <message>
+        <location filename="../src/MaintenanceBar.cpp" line="245"/>
         <location filename="../src/MaintenanceBar.cpp" line="246"/>
         <source>Deleting Cache Failed!</source>
-        <translation>Бришењето на кешот не успеа!</translation>
+        <translation>キャッシュの削除に失敗!</translation>
     </message>
     <message>
+        <location filename="../src/MaintenanceBar.cpp" line="250"/>
         <location filename="../src/MaintenanceBar.cpp" line="251"/>
         <source>Could not clean Build Environments!!</source>
-        <translation>Не можеше да се исчистат околините за создавање на пакети!!</translation>
+        <translation>ビルド環境をクリーンアップできませんでした!</translation>
     </message>
     <message>
+        <location filename="../src/MaintenanceBar.cpp" line="275"/>
+        <location filename="../src/MaintenanceBar.cpp" line="276"/>
         <location filename="../src/MaintenanceBar.cpp" line="277"/>
         <source>Pacman Database Optimized Successfully!</source>
-        <translation>Датабазата на Pacman беше оптимизирана успешно!</translation>
+        <translation>Pacmanデータベースの最適化に成功!</translation>
     </message>
     <message>
+        <location filename="../src/MaintenanceBar.cpp" line="279"/>
+        <location filename="../src/MaintenanceBar.cpp" line="280"/>
         <location filename="../src/MaintenanceBar.cpp" line="281"/>
         <source>Could not Optimize Pacman Database!</source>
-        <translation>не можеше да се оптимизира датабазата на Pacman!</translation>
-    </message>
-    <message>
-        <location filename="" line="0"/>
-        <source>Running sync...</source>
-        <comment>sync is a command, so it should not be translated</comment>
-        <translation type="obsolete">Извршување на sync...</translation>
-    </message>
-    <message>
-        <location filename="" line="0"/>
-        <source>Operation Completed Successfully!</source>
-        <translation type="obsolete">Операцијата е успешно завршена!</translation>
-    </message>
-    <message>
-        <location filename="" line="0"/>
-        <source>Sync was successfully executed!!</source>
-        <comment>Sync is always the command</comment>
-        <translation type="obsolete">Sync беше успешно извршена!!</translation>
-    </message>
-    <message>
-        <location filename="" line="0"/>
-        <source>Sync could not be executed!</source>
-        <comment>Sync is always the command</comment>
-        <translation type="obsolete">Sync не можеше да биде извршена!</translation>
-    </message>
-    <message>
-        <location filename="" line="0"/>
-        <source>Sync could not be executed!!</source>
-        <comment>Sync is always the command</comment>
-        <translation type="obsolete">Sync не можеше да биде извршена!!</translation>
-    </message>
-    <message>
-        <location filename="../src/MaintenanceBar.cpp" line="40"/>
-        <source>Maintenance Actions</source>
-        <translation>Опции за одржување</translation>
+        <translation>Pacmanデータベースの最適化に失敗しました!</translation>
     </message>
 </context>
 <context>
@@ -1802,27 +1763,27 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/NewsViewer.cpp" line="47"/>
         <source>Please wait, fetching items...</source>
-        <translation>Ве молиме почекајте, симнувам ставки...</translation>
+        <translation>項目を読み込み中です。しばらくお待ち下さい...</translation>
     </message>
     <message>
         <location filename="../src/NewsViewer.cpp" line="117"/>
         <source>Mark as Read</source>
-        <translation>Означи како прочитано</translation>
+        <translation>既読としてマーク</translation>
     </message>
     <message>
         <location filename="../src/NewsViewer.cpp" line="119"/>
         <source>Mark as Unread</source>
-        <translation>Означи како непрочитано</translation>
+        <translation>未読としてマーク</translation>
     </message>
     <message>
         <location filename="../src/NewsViewer.cpp" line="175"/>
         <source>Error</source>
-        <translation>Грешка</translation>
+        <translation>エラー</translation>
     </message>
     <message>
-        <location filename="../src/NewsViewer.cpp" line="176"/>
+        <location filename="../src/NewsViewer.cpp" line="175"/>
         <source>Could not fetch the RSS feed! Error reported was:</source>
-        <translation>Не можеше да се симне RSS доводот! Пријавената грешка е:</translation>
+        <translation>RSSフィードを読み込めませんでした。エラーレポートは:</translation>
     </message>
 </context>
 <context>
@@ -1831,7 +1792,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../src/PackageProperties.cpp" line="49"/>
         <source>%1 GiB</source>
         <comment>Size is in Gib</comment>
-        <translation>%1 GiB</translation>
+        <translation>%1 Gib</translation>
     </message>
     <message>
         <location filename="../src/PackageProperties.cpp" line="51"/>
@@ -1849,366 +1810,340 @@ p, li { white-space: pre-wrap; }
         <location filename="../src/PackageProperties.cpp" line="55"/>
         <source>%1 Bytes</source>
         <comment>Size is in Bytes</comment>
-        <translation>%1 Бајти</translation>
+        <translation>%1 Bytes</translation>
     </message>
     <message>
         <location filename="../src/PackageProperties.cpp" line="75"/>
         <source>Shaman - %1 properties</source>
-        <translation>Shaman - %1 својства</translation>
+        <translation>Shaman - %1 プロパティ</translation>
     </message>
     <message>
         <location filename="../src/PackageProperties.cpp" line="96"/>
         <source>N/A</source>
         <comment>Stands for: Not Available</comment>
-        <translation>Не е достапно</translation>
+        <translation>利用不可</translation>
     </message>
     <message>
         <location filename="../src/PackageProperties.cpp" line="203"/>
         <source>Changelog not available for this package</source>
-        <translation>Записникот на промени не е достапен за овој пакет</translation>
+        <translation>このパッケージに於ける変更ログはありません</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1954"/>
+        <location filename="../src/MainWindow.cpp" line="1950"/>
         <source>Whoa, that&apos;s co&amp;ol!</source>
-        <translation>Вау, тоа е зак&amp;он!</translation>
+        <translation>ワオ、&amp;素晴らしい!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="446"/>
+        <location filename="../src/QueueDialog.cpp" line="410"/>
+        <location filename="../src/QueueDialog.cpp" line="447"/>
         <source>Ok</source>
-        <translation>Во ред</translation>
+        <translation>OK</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="59"/>
-        <source>O&amp;k</source>
-        <translation>Во &amp;ред</translation>
-    </message>
-    <message>
-        <location filename="../src/ShamanDialog.cpp" line="136"/>
-        <source>&amp;Yes</source>
-        <translation>&amp;Да</translation>
-    </message>
-    <message>
-        <location filename="../src/ShamanDialog.cpp" line="138"/>
-        <source>&amp;No</source>
-        <translation>&amp;Не</translation>
-    </message>
-    <message>
-        <location filename="../src/ShamanDialog.cpp" line="214"/>
-        <source>Do not &amp;show this Again</source>
-        <translation>Не го &amp;покажувај ова повторно</translation>
-    </message>
-    <message>
-        <location filename="../src/configDialog.cpp" line="60"/>
-        <source>C&amp;ancel</source>
-        <translation>О&amp;ткажи</translation>
-    </message>
-    <message>
+        <location filename="../src/Shaman.cpp" line="69"/>
+        <location filename="../src/Shaman.cpp" line="131"/>
+        <location filename="../src/Shaman.cpp" line="140"/>
+        <location filename="../src/Shaman.cpp" line="150"/>
         <location filename="../src/main.cpp" line="266"/>
         <source>Shaman</source>
         <translation>Shaman</translation>
     </message>
     <message>
-        <location filename="" line="0"/>
-        <source>Shaman could not switch to root.
-Probably you have not set the SUID bit to it.
-You can do that by issuing as root
-chown root shaman &amp;&amp; chmod u+s shaman.
-Note that this is safe, please read Shaman wiki
-for more details.</source>
-        <translation type="obsolete">Shaman не можеше да се префрли во root.
-Веројатно не сте го поставиле SUID делот.
-Тоа можете да го направите со извршување како root на
-chown root shaman &amp;&amp; chmod u+s shaman.
-Запаметете дека ова е безбедно, ве молиме 
-прочитајте го викито на Shaman за детали. </translation>
-    </message>
-    <message>
-        <location filename="../src/Shaman.cpp" line="70"/>
+        <location filename="../src/Shaman.cpp" line="69"/>
         <source>There was a problem while testing libalpm.
 Maybe another application has a lock on it.</source>
-        <translation>Имаше проблем при тестирање на libalpm.
-Можеби некоја друга апликација го користи.</translation>
+        <translation>libalpmをテスト中にエラーが発生しました。
+恐らく、他のアプリケーションがlibalpmをロックしています。</translation>
     </message>
     <message>
-        <location filename="../src/Shaman.cpp" line="87"/>
+        <location filename="../src/Shaman.cpp" line="79"/>
         <source>Shaman</source>
         <comment>Hey! If you are reading this, first of all thanks for helping us in making Shaman better. There are not many comments unless where needed, since all the strings are pretty self-explanatory. You will see a lot of HTML in some cases: do not let that scare you, but please edit text only. Editing HTML tags too may break our layout, so be careful. A good practice could be copying the whole string, and then translating just what&apos;s outside the tags, usually just a few words. If you have any doubts, or if you just want to drop us a line, there goes our email addresses:
 Dario: drf54321@gmail.com
 Lukas: l.appelhans@gmx.de
 Thanks again, and enjoy your translation!</comment>
+        <translatorcomment>OK,I&apos;ll enjoy my translation!</translatorcomment>
         <translation>Shaman</translation>
     </message>
     <message>
         <location filename="../src/Shaman.cpp" line="88"/>
         <source>Your settings file seems unwritable.
 Please check permissions on it.</source>
-        <translation>На вашите датотеки со поставки не може да се запише.
-Ве молиме проверете ги нивните дозволи.</translation>
+        <translation>書き込み不可能な設定のようです。
+パーミッションをチェックして下さい。</translation>
     </message>
     <message>
         <location filename="../src/Shaman.cpp" line="126"/>
         <source>Please Wait...</source>
-        <translation>Ве молиме почекајте...</translation>
+        <translation>しばらくお待ち下さい...</translation>
     </message>
     <message>
-        <location filename="../src/Shaman.cpp" line="133"/>
+        <location filename="../src/Shaman.cpp" line="132"/>
         <source>Shaman can not be started as root.
 Please restart it as unprivileged user.</source>
-        <translation>Shaman не може да се изврши како root.
-Ве молиме извршете го како непривилегиран корисник.</translation>
+        <translation>Shamanをルート権限で起動することはできません。
+ルート権を持っていないユーザで起動して下さい。</translation>
     </message>
     <message>
-        <location filename="../src/Shaman.cpp" line="142"/>
+        <location filename="../src/Shaman.cpp" line="141"/>
         <source>You have started Shaman as root.
 It is advised to start it as unprivileged user.
 Shaman will ask you for root password when needed.</source>
-        <translation>Го извршивте Shaman како root.
-Препорачано е да го извршите како непривилегиран корисник.
-Shaman ќе ве праша за root лозинката кога ќе биде потребно.</translation>
+        <translation>ルートとしてShamanを起動しています。
+Shamanは必要時にルートパスワードを要求するため、非root権ユーザーで起動することをお勧めします。</translation>
     </message>
     <message>
-        <location filename="../src/Shaman.cpp" line="151"/>
+        <location filename="../src/Shaman.cpp" line="150"/>
         <source>Pacman is not updated.
 Shaman needs libalpm &gt;= 2.1.0 to run.
 Yours is %1. Please update Pacman.</source>
-        <translation>Pacman не е ажуриран.
-Shaman има потреба од libalpm &gt;= 2.1.0 за да работи
-Вашиот е %1. Ве молиме ажурирајте ги Pacman.</translation>
+        <translation>Pacmanはアップデートされません。
+Shamanの起動にはlibalpmのバージョン2.1.0以降が必要です。
+貴方のバージョンは%1です。Pacmanをアップデートして下さい。</translation>
     </message>
     <message>
         <location filename="../src/Shaman.cpp" line="200"/>
         <source>Loading Databases...</source>
-        <translation>Вчитување на датабазите...</translation>
+        <translation>データベースのロード中...</translation>
     </message>
     <message>
         <location filename="../src/Shaman.cpp" line="206"/>
         <source>Loading Packages...</source>
-        <translation>Вчитување на пакетите</translation>
+        <translation>パッケージのロード中...</translation>
     </message>
     <message>
         <location filename="../src/Shaman.cpp" line="212"/>
         <source>Starting up Shaman...</source>
-        <translation>Подигање на Shaman...</translation>
+        <translation>Shamanを開始しています...</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="268"/>
+        <location filename="../src/ShamanDialog.cpp" line="80"/>
+        <location filename="../src/ShamanDialog.cpp" line="218"/>
+        <location filename="../src/configDialog.cpp" line="59"/>
+        <source>O&amp;k</source>
+        <translation>O&amp;K</translation>
+    </message>
+    <message>
+        <location filename="../src/ShamanDialog.cpp" line="136"/>
+        <source>&amp;Yes</source>
+        <translation>&amp;はい</translation>
+    </message>
+    <message>
+        <location filename="../src/ShamanDialog.cpp" line="138"/>
+        <source>&amp;No</source>
+        <translation>&amp;いいえ</translation>
+    </message>
+    <message>
+        <location filename="../src/ShamanDialog.cpp" line="214"/>
+        <source>Do not &amp;show this Again</source>
+        <translation>二度とメッセージを&amp;表示しない</translation>
+    </message>
+    <message>
+        <location filename="../src/configDialog.cpp" line="60"/>
+        <source>C&amp;ancel</source>
+        <translation>キ&amp;ャンセル</translation>
+    </message>
+    <message>
+        <location filename="../src/main.cpp" line="267"/>
         <source>It looks like another copy of Shaman is running.
 You can only run one copy of Shaman at a time.</source>
-        <translation type="unfinished">
-            </translation>
+        <translation>Shamanは1つしか起動できません。</translation>
     </message>
 </context>
 <context>
     <name>QueueDialog</name>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="74"/>
+        <location filename="../src/QueueDialog.cpp" line="73"/>
         <source>&lt;br&gt;&lt;b&gt; * Validating Transaction&lt;/b&gt;&lt;br&gt;</source>
-        <translation>&lt;br&gt;&lt;b&gt; * Валидација на трансакцијата&lt;/b&gt;&lt;br&gt;</translation>
+        <translation>&lt;br&gt;&lt;b&gt; * トランザクションの検証中&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="128"/>
+        <location filename="../src/QueueDialog.cpp" line="126"/>
+        <location filename="../src/QueueDialog.cpp" line="127"/>
         <source>Validating Dependencies...</source>
-        <translation>Валидација на зависностите...</translation>
+        <translation>依存関係の検証中...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="132"/>
+        <location filename="../src/QueueDialog.cpp" line="130"/>
+        <location filename="../src/QueueDialog.cpp" line="131"/>
         <source>Checking for Conflicts...</source>
-        <translation>Проверување за конфликти...</translation>
+        <translation>重複をチェック中...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="136"/>
+        <location filename="../src/QueueDialog.cpp" line="134"/>
+        <location filename="../src/QueueDialog.cpp" line="135"/>
         <source>Resolving Dependencies...</source>
-        <translation>Решавање на зависности...</translation>
+        <translation>依存関係の解消中...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="140"/>
+        <location filename="../src/QueueDialog.cpp" line="138"/>
+        <location filename="../src/QueueDialog.cpp" line="139"/>
         <source>Looking for Inter-Conflicts...</source>
-        <translation>Барање на внатрешни конфликти...</translation>
+        <translation>競合を探しています...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="145"/>
+        <location filename="../src/QueueDialog.cpp" line="144"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Installation Started&lt;/b&gt;&lt;br&gt;</source>
-        <translation>&lt;br&gt;&lt;b&gt; * Инсталација на пакетот започна&lt;/b&gt;&lt;br&gt;</translation>
+        <translation>&lt;br&gt;&lt;b&gt; * パッケージのインストールを開始</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="149"/>
+        <location filename="../src/QueueDialog.cpp" line="147"/>
+        <location filename="../src/QueueDialog.cpp" line="148"/>
         <source>Installing %1...</source>
-        <translation>Инсталирање на %1...</translation>
+        <translation>インストール中:%1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="153"/>
+        <location filename="../src/QueueDialog.cpp" line="152"/>
         <source>%1 (%2) installed successfully!</source>
-        <translation>%1 (%2) инсталирани успешно!</translation>
+        <translation>%1(%2)のインストールに成功!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="164"/>
+        <location filename="../src/QueueDialog.cpp" line="163"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Removal Started&lt;/b&gt;&lt;br&gt;</source>
-        <translation>&lt;br&gt;&lt;b&gt; * Отстранување на пакети започна&lt;/b&gt;&lt;br&gt;</translation>
+        <translation>&lt;br&gt;&lt;b&gt; * パッケージの削除を開始&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="168"/>
+        <location filename="../src/QueueDialog.cpp" line="166"/>
+        <location filename="../src/QueueDialog.cpp" line="167"/>
         <source>Removing %1...</source>
-        <translation>Отстранувам %1...</translation>
+        <translation>削除中:%1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="171"/>
+        <location filename="../src/QueueDialog.cpp" line="170"/>
         <source>%1 (%2) removed successfully!</source>
-        <translation>%1 (%2) отстранет успешно!</translation>
+        <translation>%1 (%2)の削除に成功!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="182"/>
+        <location filename="../src/QueueDialog.cpp" line="181"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Upgrading Started&lt;/b&gt;&lt;br&gt;</source>
-        <translation>&lt;br&gt;&lt;b&gt; * Надградба на пакети започна&lt;/b&gt;&lt;br&gt;</translation>
+        <translation>&lt;br&gt;&lt;b&gt; * パッケージのアップグレードを開始&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="186"/>
+        <location filename="../src/QueueDialog.cpp" line="184"/>
+        <location filename="../src/QueueDialog.cpp" line="185"/>
         <source>Upgrading %1...</source>
-        <translation>Надградувам %1...</translation>
+        <translation>アップグレード中 %1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="189"/>
+        <location filename="../src/QueueDialog.cpp" line="188"/>
         <source>Upgraded %1 successfully (%2 -&gt; %3)</source>
-        <translation>Надградив %1 успешно (%2 -&gt; %3)</translation>
+        <translation>%1のアップデートに成功(%2-&gt;%3)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="202"/>
+        <location filename="../src/QueueDialog.cpp" line="201"/>
         <source>&lt;br&gt;&lt;b&gt; * Queue Processing Started&lt;/b&gt;&lt;br&gt;</source>
-        <translation>&lt;br&gt;&lt;b&gt; * Обработка на редицата започна&lt;/b&gt;&lt;br&gt;</translation>
+        <translation>&lt;br&gt;&lt;b&gt; * キューの処理を開始&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="206"/>
+        <location filename="../src/QueueDialog.cpp" line="204"/>
+        <location filename="../src/QueueDialog.cpp" line="205"/>
         <source>Checking package integrity...</source>
-        <translation>Проверување на интегритетот на пакетот...</translation>
+        <translation>パッケージの整合性をチェック中...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="210"/>
+        <location filename="../src/QueueDialog.cpp" line="208"/>
+        <location filename="../src/QueueDialog.cpp" line="209"/>
         <source>Checking delta integrity...</source>
-        <translation>Проверување на delta интегритет...</translation>
+        <translation>差分の整合性をチェック中...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="213"/>
+        <location filename="../src/QueueDialog.cpp" line="212"/>
         <source>Applying deltas...</source>
-        <translation>Применување на delta-и...</translation>
+        <translation>デルタの適用中...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="216"/>
+        <location filename="../src/QueueDialog.cpp" line="215"/>
         <source>Generating %1 with %2... </source>
-        <translation>Генерирање на %1 со %2...</translation>
+        <translation>%2による%1を作成中...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="220"/>
+        <location filename="../src/QueueDialog.cpp" line="219"/>
         <source>Success!</source>
-        <translation>Успешно!</translation>
+        <translation>成功!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="223"/>
+        <location filename="../src/QueueDialog.cpp" line="222"/>
         <source>Failed!</source>
-        <translation>Неуспешно!</translation>
+        <translation>失敗!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="232"/>
+        <location filename="../src/QueueDialog.cpp" line="231"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Downloading Started&lt;/b&gt;&lt;br&gt;</source>
-        <translation>&lt;br&gt;&lt;b&gt; * Симнување на пакетот започна&lt;/b&gt;&lt;br&gt;</translation>
+        <translation>&lt;br&gt;&lt;b&gt; * パッケージのダウンロードを開始&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="236"/>
+        <location filename="../src/QueueDialog.cpp" line="234"/>
+        <location filename="../src/QueueDialog.cpp" line="235"/>
         <source>Starting downloading packages from %1...</source>
-        <translation>Започнување со симнување на пакети од %1...</translation>
+        <translation>%1からパッケージのダウンロードを開始...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="274"/>
+        <location filename="../src/QueueDialog.cpp" line="269"/>
         <source>%p% (%1 KB/s, %4:%5:%6 remaining)</source>
         <comment>You just have to translate &apos;remaining&apos; here. Leave everything else as it is.</comment>
-        <translation>%p% (%1 KB/s, %4:%5:%6 останато)</translation>
+        <translation>%p% (%1 KB/s, 残り時間:%4:%5:%6)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="282"/>
+        <location filename="../src/QueueDialog.cpp" line="278"/>
         <source>Downloading %1... (%2 MB of %3 MB)</source>
-        <translation>Симнувам %1... (%2 MB of %3 MB)</translation>
+        <translation>ダウンロード中:%1... (%2 MB of %3 MB)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="285"/>
+        <location filename="../src/QueueDialog.cpp" line="281"/>
         <source>Downloading %1... (%2 KB of %3 KB)</source>
-        <translation>Симнувам %1... (%2 KB of %3 KB)</translation>
+        <translation>ダウンロード中:%1... (%2 KB of %3 KB)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="338"/>
+        <location filename="../src/QueueDialog.cpp" line="341"/>
         <source>Queue processed, please wait...</source>
-        <translation>Редицата е обработена, ве молиме почекајте...</translation>
+        <translation>キューを処理中です。しばらくお待ち下さい...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="348"/>
+        <location filename="../src/QueueDialog.cpp" line="349"/>
         <source>Queue processing failed!</source>
-        <translation>Обработување на редицата не успеа!</translation>
+        <translation>キューの処理に失敗!</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="351"/>
+        <location filename="../src/QueueDialog.cpp" line="352"/>
         <source>Queue processed successfully!</source>
-        <translation>Редицата е обработена успешно!</translation>
+        <translation>キューの処理に成功!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="358"/>
+        <location filename="../src/QueueDialog.cpp" line="359"/>
         <source>Close</source>
-        <translation>Затвори</translation>
-    </message>
-    <message>
-        <location filename="" line="0"/>
-        <source>Unexpected Error. Shaman might be corrupted.</source>
-        <translation type="obsolete">Неочекувана грешка. Shaman може да е расипан.</translation>
-    </message>
-    <message>
-        <location filename="" line="0"/>
-        <source>Executing %1 scriptlet for %2...</source>
-        <translation type="obsolete">Извршување на %1 scriptlet за %2...</translation>
-    </message>
-    <message>
-        <location filename="" line="0"/>
-        <source>Extracting Scriptlet from package failed!!</source>
-        <translation type="obsolete">Екстрактирање на Scriptlet од пакетот неуспеа!!</translation>
-    </message>
-    <message>
-        <location filename="" line="0"/>
-        <source>Package %1 does not have %2 scriptlet</source>
-        <translation type="obsolete">Пакетот %1 не содржи %2 scriptlet</translation>
-    </message>
-    <message>
-        <location filename="" line="0"/>
-        <source>Scriptlet processed successfully!</source>
-        <translation type="obsolete">Scriptlet-от е обработен успешно!</translation>
-    </message>
-    <message>
-        <location filename="" line="0"/>
-        <source>Error processing Scriptlet!!</source>
-        <translation type="obsolete">Грешка во обработувањето на Scriptlet-от!!</translation>
-    </message>
-    <message>
-        <location filename="../src/QueueDialog.cpp" line="454"/>
-        <source>Queue Processing</source>
-        <translation>Обработување на редица</translation>
+        <translation>閉じる</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="369"/>
+        <location filename="../src/QueueDialog.cpp" line="418"/>
+        <location filename="../src/QueueDialog.cpp" line="455"/>
+        <source>Queue Processing</source>
+        <translation>キューを処理中</translation>
+    </message>
+    <message>
+        <location filename="../src/QueueDialog.cpp" line="370"/>
         <source>Would you like to abort Queue Processing?
 This may damage your system.</source>
-        <translation>Дали сакате да го откажете обработувањето на редицата?
-Ова може да го оштети вашиот систем.</translation>
+        <translation>キューの処理を中止しますか?
+中止するとシステムにダメージを与える可能性があります。</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="404"/>
         <source>There has been an error while preparing the transaction.
 </source>
-        <translation>Имаше грешка при подготвувањето на трансакцијата.
+        <translation>トランザクションの準備中にエラーが発生しました。
 </translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="441"/>
         <source>There has been an error while committing the transaction.
 </source>
-        <translation>Имаше грешка при предавањето на трансакцијата.
-</translation>
+        <translation>トランザクションのコミット中にエラーが発生しました。</translation>
     </message>
 </context>
 <context>
@@ -2216,42 +2151,47 @@ This may damage your system.</source>
     <message>
         <location filename="../ui/reviewQueueDialog.ui" line="13"/>
         <source>Review Queue</source>
-        <translation>Прегледај ја редицата</translation>
+        <translation>キューレビュー</translation>
+    </message>
+    <message>
+        <location filename="../ui/reviewQueueDialog.ui" line="32"/>
+        <source>Force Queue Processing</source>
+        <translation>強制的にキューを処理する</translation>
     </message>
     <message>
         <location filename="../ui/reviewQueueDialog.ui" line="39"/>
         <source>Turn off PC when Queue is done</source>
-        <translation>Исклучи го компјутерот кога редицата ќе заврши</translation>
+        <translation>キューの処理が完了後、PCをシャットダウンする</translation>
     </message>
     <message>
         <location filename="../ui/reviewQueueDialog.ui" line="46"/>
         <source>Process in Tray</source>
-        <translation>Обработи во лента</translation>
+        <translation>タスクトレイで作業する</translation>
     </message>
     <message>
         <location filename="../ui/reviewQueueDialog.ui" line="53"/>
         <source>Keep Queue Dialog Open after the Queue is finished</source>
-        <translation>Задржи го дијалогот за редицата откако редицата ќе заврши</translation>
+        <translation>キューの処理が完了してもこのダイアログを閉じない</translation>
     </message>
     <message>
         <location filename="../ui/reviewQueueDialog.ui" line="62"/>
         <source>Show packages...</source>
-        <translation>Прикажи пакети...</translation>
+        <translation>パッケージを見る...</translation>
     </message>
     <message>
         <location filename="../ui/reviewQueueDialog.ui" line="92"/>
         <source>Packages In Queue</source>
-        <translation>Пакети во редица</translation>
+        <translation>キュー中のパッケージ</translation>
     </message>
     <message>
         <location filename="../ui/reviewQueueDialog.ui" line="102"/>
         <source>Cancel</source>
-        <translation>Откажи</translation>
+        <translation>キャンセル</translation>
     </message>
     <message>
         <location filename="../ui/reviewQueueDialog.ui" line="126"/>
         <source>Process</source>
-        <translation>Обработи</translation>
+        <translation>開始</translation>
     </message>
     <message>
         <location filename="../ui/reviewQueueDialog.ui" line="156"/>
@@ -2259,99 +2199,102 @@ This may damage your system.</source>
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Review Queue&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Прегледај ја редицата&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../ui/reviewQueueDialog.ui" line="32"/>
-        <source>Force Queue Processing</source>
-        <translation>Присили обработка на редицата</translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;キューレビュー&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
     <name>ReviewQueueDialog</name>
     <message>
+        <location filename="../src/ReviewQueueDialog.cpp" line="42"/>
         <location filename="../src/ReviewQueueDialog.cpp" line="56"/>
         <source>Install</source>
-        <translation>Инсталирај</translation>
+        <translation>インストール</translation>
     </message>
     <message>
+        <location filename="../src/ReviewQueueDialog.cpp" line="43"/>
         <location filename="../src/ReviewQueueDialog.cpp" line="59"/>
         <source>To be Installed</source>
-        <translation>За инсталација</translation>
+        <translation>インストールするもの</translation>
     </message>
     <message>
+        <location filename="../src/ReviewQueueDialog.cpp" line="46"/>
         <location filename="../src/ReviewQueueDialog.cpp" line="64"/>
         <source>Upgrade</source>
-        <translation>Надгради</translation>
+        <translation>アップグレード</translation>
     </message>
     <message>
+        <location filename="../src/ReviewQueueDialog.cpp" line="47"/>
         <location filename="../src/ReviewQueueDialog.cpp" line="67"/>
         <source>To be Upgraded</source>
-        <translation>За надградба</translation>
+        <translation>アップグレードする</translation>
     </message>
     <message>
+        <location filename="../src/ReviewQueueDialog.cpp" line="50"/>
         <location filename="../src/ReviewQueueDialog.cpp" line="72"/>
         <source>Uninstall</source>
-        <translation>Отстрани</translation>
+        <translation>アンインストール</translation>
     </message>
     <message>
+        <location filename="../src/ReviewQueueDialog.cpp" line="51"/>
+        <location filename="../src/ReviewQueueDialog.cpp" line="75"/>
         <location filename="../src/ReviewQueueDialog.cpp" line="83"/>
         <source>To be Removed</source>
-        <translation>За отстранување</translation>
+        <translation>削除するもの</translation>
     </message>
     <message>
         <location filename="../src/ReviewQueueDialog.cpp" line="80"/>
         <source>Complete Uninstall</source>
-        <translation>Целосно отстранување</translation>
+        <translation>完全にアンインストール</translation>
     </message>
     <message>
-        <location filename="../src/ReviewQueueDialog.cpp" line="102"/>
+        <location filename="../src/ReviewQueueDialog.cpp" line="101"/>
         <source>Your Queue is about to be processed. You are going to:&lt;br /&gt;</source>
-        <translation>Вашата редица ќе биде обработени. Вие ќе:&lt;br /&gt;</translation>
-    </message>
-    <message>
-        <location filename="../src/ReviewQueueDialog.cpp" line="107"/>
-        <source>Do you wish to continue?</source>
-        <translation>Дали сакате да продолжите?</translation>
+        <translation>キューは処理されるところです。貴方は:&lt;br /&gt;</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/ReviewQueueDialog.cpp" line="104"/>
         <source>Remove &lt;b&gt;%n package(s)&lt;/b&gt;&lt;br /&gt;</source>
-        <translation type="unfinished">
-            <numerusform>
-            </numerusform>
+        <translation>
+            <numerusform>&lt;b&gt;%n個のパッケージ&lt;/b&gt;を削除&lt;br /&gt;</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../src/ReviewQueueDialog.cpp" line="106"/>
         <source>Install/Upgrade &lt;b&gt;%n package(s)&lt;/b&gt;&lt;br /&gt;</source>
-        <translation type="unfinished">
-            <numerusform>
-            </numerusform>
+        <translation>
+            <numerusform>&lt;b&gt;%n個のパッケージ&lt;/b&gt;をインストール/アップグレード&lt;br /&gt;</numerusform>
         </translation>
+    </message>
+    <message>
+        <location filename="../src/ReviewQueueDialog.cpp" line="107"/>
+        <source>Do you wish to continue?</source>
+        <translation>続行しますか?</translation>
     </message>
 </context>
 <context>
     <name>ShamanStatusBar</name>
     <message>
-        <location filename="../src/ShamanStatusBar.cpp" line="84"/>
+        <location filename="../src/ShamanStatusBar.cpp" line="83"/>
         <source>%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages</source>
-        <translation>%1 Достапни пакети, %2 инсталирани пакети, %3 пакети достапни за надградба</translation>
+        <translation>%1個の利用可能なパッケージ、%2個のインストール済みパッケージ、%3個のアップグレード可能なパッケージ</translation>
     </message>
     <message>
         <location filename="../src/ShamanStatusBar.cpp" line="109"/>
         <source>%1 will be used</source>
-        <translation>%1 ќе бидат искористени</translation>
+        <translation>使用予定:%1</translation>
     </message>
     <message>
         <location filename="../src/ShamanStatusBar.cpp" line="114"/>
         <source>%1 will be freed</source>
-        <translation>%1 ќе бидат ослободени</translation>
+        <translation>解放予定:%1</translation>
     </message>
     <message>
         <location filename="../src/ShamanStatusBar.cpp" line="119"/>
         <source>%1 to be Installed, %2 to be Removed</source>
-        <translation>%1 за инсталација, %2 за отстранување</translation>
+        <translation>%1項目がインストールされ、%2項目が削除される</translation>
     </message>
 </context>
 <context>
@@ -2359,96 +2302,95 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/ShamanTrayIcon.cpp" line="48"/>
         <source>Update Database</source>
-        <translation>Ажурирај ја датабазата</translation>
+        <translation>データベースをアップデート</translation>
     </message>
     <message>
         <location filename="../src/ShamanTrayIcon.cpp" line="52"/>
         <source>Upgrade System</source>
-        <translation>Надгради систем</translation>
+        <translation>システムをアップデート</translation>
     </message>
     <message>
         <location filename="../src/ShamanTrayIcon.cpp" line="56"/>
         <source>Process Queue</source>
-        <translation>Обработи ја редицата</translation>
+        <translation>プロセスを処理</translation>
     </message>
     <message>
         <location filename="../src/ShamanTrayIcon.cpp" line="61"/>
         <source>Settings</source>
-        <translation>Поставувања</translation>
+        <translation>設定</translation>
     </message>
     <message>
         <location filename="../src/ShamanTrayIcon.cpp" line="66"/>
         <source>Quit</source>
-        <translation>Исклучи</translation>
+        <translation>終了</translation>
     </message>
     <message>
         <location filename="../src/ShamanTrayIcon.cpp" line="111"/>
         <source>Shaman - Idle</source>
-        <translation>Shaman - Во мирување</translation>
+        <translation>Shaman - アイドル状態</translation>
     </message>
     <message>
         <location filename="../src/ShamanTrayIcon.cpp" line="123"/>
         <source>Shaman - Processing</source>
-        <translation>Shaman - Обработување</translation>
+        <translation>Shaman - 処理中</translation>
     </message>
     <message>
         <location filename="../src/ShamanTrayIcon.cpp" line="128"/>
         <source>Shaman - Idle (Upgrades Available)</source>
-        <translation>Shaman - Во мирување (Надградби се достапни)</translation>
+        <translation>Shaman - アイドル状態(更新が利用可能です)</translation>
     </message>
     <message>
         <location filename="../src/ShamanTrayIcon.cpp" line="132"/>
         <source>System Upgrade</source>
-        <translation>Надградба на системот</translation>
+        <translation>システムアップグレード</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../src/ShamanTrayIcon.cpp" line="132"/>
+        <source>Upgradeable package(s): %n.
+Click here to upgrade your System.</source>
+        <translation>
+            <numerusform>アップグレード可能なパッケージ数:%n。
+システムをアップグレードするにはここをクリックして下さい。</numerusform>
+        </translation>
     </message>
     <message>
         <location filename="../src/ShamanTrayIcon.cpp" line="242"/>
         <source>New News Available</source>
-        <translation>Нови вести се достапни</translation>
+        <translation>新しいニュースが利用可能です</translation>
     </message>
     <message>
-        <location filename="../src/ShamanTrayIcon.cpp" line="243"/>
+        <location filename="../src/ShamanTrayIcon.cpp" line="242"/>
         <source>There are new news available.
 Click here to review them.</source>
-        <translation>Нови вести се достапни.
-Кликнете овде за да ги прегледате</translation>
+        <translation>新しいニュースが利用可能です。
+読むにはここをクリックして下さい。</translation>
     </message>
     <message>
         <location filename="../src/ShamanTrayIcon.cpp" line="258"/>
         <source>Failed Fetching News</source>
-        <translation>Превземањето на вести не успеа</translation>
+        <translation>ニュースの読み込みに失敗</translation>
     </message>
     <message>
-        <location filename="../src/ShamanTrayIcon.cpp" line="259"/>
+        <location filename="../src/ShamanTrayIcon.cpp" line="258"/>
         <source>An error occourred while fetching news!
 Click here to open the News Dialog for more details.</source>
-        <translation>Се случи грешка при превземањетона вести!
-Кликнете овде за да го отворите диалогот за вести за повеќе детали.</translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../src/ShamanTrayIcon.cpp" line="133"/>
-        <source>Upgradeable package(s): %n.
-Click here to upgrade your System.</source>
-        <translation type="unfinished">
-            <numerusform>
-            </numerusform>
-        </translation>
+        <translation>ニュースの読み込み中にエラーが発生しました!
+詳細を見るにはここをクリックして下さい。</translation>
     </message>
 </context>
 <context>
     <name>SysUpgradeDialog</name>
+    <message numerus="yes">
+        <location filename="../src/SysUpgradeDialog.cpp" line="64"/>
+        <source>&lt;b&gt;Upgradeable package(s): %n&lt;/b&gt; You can either&lt;br&gt; upgrade immediately or add it to the current Queue&lt;br&gt; and process it later.</source>
+        <translation>
+            <numerusform>&lt;b&gt;アップグレード可能なパッケージ数: %n&lt;/b&gt;&lt;br /&gt;あなたはシステムを今すぐアップグレードするか、キューに含め、後で処理することができます。</numerusform>
+        </translation>
+    </message>
     <message>
         <location filename="../src/SysUpgradeDialog.cpp" line="69"/>
         <source>To be Upgraded</source>
-        <translation>За надградба</translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../src/SysUpgradeDialog.cpp" line="67"/>
-        <source>&lt;b&gt;Upgradeable package(s): %n&lt;/b&gt; You can either&lt;br&gt; upgrade immediately or add it to the current Queue&lt;br&gt; and process it later.</source>
-        <translation type="unfinished">
-            <numerusform>
-            </numerusform>
-        </translation>
+        <translation>アップグレードする</translation>
     </message>
 </context>
 <context>
@@ -2456,17 +2398,17 @@ Click here to upgrade your System.</source>
     <message>
         <location filename="../ui/aboutDialog.ui" line="13"/>
         <source>About Shaman</source>
-        <translation>За Shaman</translation>
+        <translation>Shamanについて</translation>
     </message>
     <message>
         <location filename="../ui/aboutDialog.ui" line="88"/>
         <source>About</source>
-        <translation>За</translation>
+        <translation>About</translation>
     </message>
     <message>
         <location filename="../ui/aboutDialog.ui" line="106"/>
         <source>Authors</source>
-        <translation>Автори</translation>
+        <translation>作者</translation>
     </message>
     <message>
         <location filename="../ui/aboutDialog.ui" line="116"/>
@@ -2479,81 +2421,20 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Lukas Appelhans&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Developer&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dario Freddi&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Развивач&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Lukas Appelhans&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Развивач&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dario Freddi&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;開発者&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Lukas Appelhans&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;開発者&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/aboutDialog.ui" line="132"/>
         <source>Thanks To</source>
-        <translation>Благодариме на</translation>
-    </message>
-    <message>
-        <location filename="../ui/aboutDialog.ui" line="223"/>
-        <source>Visit &amp;Website...</source>
-        <translation>Посети го  &amp;Вебсајтот...</translation>
-    </message>
-    <message>
-        <location filename="" line="0"/>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Shaman has received a lot of help from a lot of people, and it is also thanks to them if Shaman has seen the light. If we forgot to add you here, let us know.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Names are in alphabetical order, because even the smallest contribution has been important to us.&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;The KDEmod Community&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Help, Testing, Support, everything started from here. If there was no KDEmod, probably&lt;/span&gt; &lt;span style=&quot; font-weight:400;&quot;&gt;there would be no Shaman&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Giannis Antoniou&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Greek Translator&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Carlos Berroteran&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Spanish Translator&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Sander De Voogdt&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Dutch Translator&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Jacques Disner&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;French Translator&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Jan Dupal&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Czech Translator&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Stefano Giro&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Testing and Suggestions&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Georg Grabler&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Author of the Proxy patch, some help on the code and more.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Michael Knights&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Artwork creator, his icon proposal lies now in Arxin, but his splashscreen is in here ;)&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Till Luge&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Heavy tester, thanks!&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Rodrigo Mazak&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Brazilian Translator, and gave the name Shaman&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;Jan Mette&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;German Translation and KDEmod Developer, also the creator of the Icon&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Atilla Ontas&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Turkish Translator&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Martin Sandsmark&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Our hoster, and maintainer of Trac.&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Johannes Schriewer&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;KDEmod Developer, and also some help on the code.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Xiang Yixiang&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Chinese Translator&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Anton Gritsay&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Russian Translator and Patches related to Translations&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Bartek Iwaniec&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Polish Translator&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Shaman доби многу помош од многу луѓе, и благодарение на нив Shaman стана сериозен проект . Доколку сме ве заборавиле, јавете ни.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Имињата се по азбучен ред, бидејќи го цениме и најмалиот придонес.&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;KDEmod Заедницата&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Помош, Тестирање, Подршка, се почна од таму. Без KDEmod, веројатно&lt;/span&gt; &lt;span style=&quot; font-weight:400;&quot;&gt;Shaman не би постоел&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Giannis Antoniou&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Грчки превод&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Carlos Berroteran&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Шпански превод&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Sander De Voogdt&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Холандски превод&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Jacques Disner&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Француски превод&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Jan Dupal&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Чешки превод&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Stefano Giro&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Тестирање и предлози&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Georg Grabler&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Автор на закрпата за Proxy, придонесувач на дел од кодот  и повеќе.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Michael Knights&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Автор на иконите, неговите идеи за икони ќе бидат во Arxin, но неговиот поздравен екран е веќе тука ;)&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Till Luge&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Вреден тестер, благодариме!&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Rodrigo Mazak&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Бразилски превод, и автор на името Shaman&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;Jan Mette&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Германски превод и KDEmod развивач, и авторот на иконата&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Atilla Ontas&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Турски превод&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Martin Sandsmark&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Нашиот хостинг провајдер, и одржувач на Trac системот&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Johannes Schriewer&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;KDEmod развивач, и придонесувач на дел од кодот.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Xiang Yixiang&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Кинески превод&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Anton Gritsay&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Руски превод и придонесувач на закрпи за превод&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Bartek Iwaniec&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Полски превод&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>スペシャルサンクス</translation>
     </message>
     <message>
         <location filename="../ui/aboutDialog.ui" line="148"/>
@@ -2620,8 +2501,76 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Marko Doda&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Macedonian Translator&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">
-            </translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Shamanは多くの人々の手助けを受け、また、手助けを行って下さった方々に感謝します。もし、この中にリストされていない協力者がいる場合は、私たちにお知らせ下さい。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;小さな功績であっても私たちにとって重要であると考えている為、私たちはアルファベット順に並べかえています。&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;The KDEmod コミュニティ&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;手助け、テスト、サポート、全てはここから始まっています。もし、KDEmodが存在していないのなら、多分、&lt;/span&gt; &lt;span style=&quot; font-weight:400;&quot;&gt;今のShamanは無かったかもしれません。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Giannis Antoniou&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;翻訳(ギリシャ語)&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Carlos Berroteran&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;翻訳(スペイン語)&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Sander De Voogdt&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;翻訳(オランダ語)&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Jacques Disner&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;翻訳(フランス語)&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Jan Dupal&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;翻訳(チェコ語)&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Stefano Giro&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;テストと提案&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Georg Grabler&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;プロクシパッチの作成とコード等に対するいくつかの手助け&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Michael Knights&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;アートワークの作成。彼のアイコンはArxinに派生していますが、スプラッシュスクリーンはここにあります;)&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Till Luge&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;大規模なテスト 有難う!&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Rodrigo Mazak&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;翻訳(ブラジル語)と「Shaman」の命名者&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;Jan Mette&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;翻訳(ドイツ語)とKDEmodの開発、アイコンの作成&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Atilla Ontas&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;翻訳(トルコ語)&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Martin Sandsmark&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;ホストとメンテナンス&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Johannes Schriewer&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;KDEmodの開発とコードの手助け&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Xiang Yixiang&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;翻訳(中国語)&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Anton Gritsay&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;翻訳(ロシア語)と言語関係のパッチ当て&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Bartek Iwaniec&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;翻訳(ポーランド語)&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Marko Doda&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;翻訳(マケドニア語)&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Hiroaki Yamamoto&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;翻訳(日本語)&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../ui/aboutDialog.ui" line="223"/>
+        <source>Visit &amp;Website...</source>
+        <translation>&amp;サイトを訪れる...</translation>
     </message>
 </context>
 <context>
@@ -2629,39 +2578,39 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/authDialog.ui" line="13"/>
         <source>Root Password Required</source>
-        <translation>Потребна е Root лозинка</translation>
+        <translation>ルートパスワード要求</translation>
     </message>
     <message>
         <location filename="../ui/authDialog.ui" line="37"/>
         <source>Shaman needs root privileges to perform this action.
 Please enter in the field below the root password to continue.</source>
-        <translation>Потребни се root привилегии за Shaman да ја изврши оваа акција.
-Ве молиме во полето доле внесете ја root лозинката за да продолжите.</translation>
+        <translation>このアクションを実行するにはroot権限が必要です。
+続けるにはrootパスワードを入力して下さい。</translation>
     </message>
     <message>
         <location filename="../ui/authDialog.ui" line="60"/>
         <source>Never ask for this anymore</source>
-        <translation>Не прашувај веќе за лозинка</translation>
+        <translation>今後、この質問をしない</translation>
     </message>
     <message>
         <location filename="../ui/authDialog.ui" line="80"/>
         <source>Ok</source>
-        <translation>Во ред</translation>
+        <translation>OK</translation>
     </message>
     <message>
         <location filename="../ui/authDialog.ui" line="87"/>
         <source>Return</source>
-        <translation>Врати</translation>
+        <translation>Enter</translation>
     </message>
     <message>
         <location filename="../ui/authDialog.ui" line="94"/>
         <source>Cancel</source>
-        <translation>Откажи</translation>
+        <translation>キャンセル</translation>
     </message>
     <message>
         <location filename="../ui/authDialog.ui" line="101"/>
         <source>Backspace</source>
-        <translation>Назад</translation>
+        <translation>Backspace</translation>
     </message>
 </context>
 <context>
@@ -2669,7 +2618,7 @@ Please enter in the field below the root password to continue.</source>
     <message>
         <location filename="../ui/buildingDialog.ui" line="13"/>
         <source>Shaman - Building Packages</source>
-        <translation>Shaman - Создавање на пакети</translation>
+        <translation>Shaman - パッケージをビルド中</translation>
     </message>
     <message>
         <location filename="../ui/buildingDialog.ui" line="403"/>
@@ -2677,17 +2626,20 @@ Please enter in the field below the root password to continue.</source>
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Building Packages...&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Создавање на пакети...&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;パッケージをビルド中...&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/buildingDialog.ui" line="467"/>
         <source>Abort</source>
-        <translation>Откажи</translation>
+        <translation>中止</translation>
     </message>
     <message>
         <location filename="../ui/buildingDialog.ui" line="490"/>
         <source>Reduce To Tray</source>
-        <translation>Спушти во лента</translation>
+        <translation>トレイに格納</translation>
     </message>
 </context>
 <context>
@@ -2695,12 +2647,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/dbUpdateDialog.ui" line="13"/>
         <source>Database Update</source>
-        <translation>Ажурирање на датабазата</translation>
+        <translation>データベースのアップデート</translation>
     </message>
     <message>
         <location filename="../ui/dbUpdateDialog.ui" line="401"/>
         <source>Update Database..</source>
-        <translation>Ажурирај ја датабазата..</translation>
+        <translation>データベースをアップデート..</translation>
     </message>
 </context>
 <context>
@@ -2708,32 +2660,32 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/editPBDialog.ui" line="13"/>
         <source>Editing PKGBUILD</source>
-        <translation>Уредување на PKGBUILD</translation>
+        <translation>PKGBUILDの編集</translation>
     </message>
     <message>
         <location filename="../ui/editPBDialog.ui" line="26"/>
         <source>Editing PKGBUILD of:</source>
-        <translation>Уредување на PKGBUILD за:</translation>
+        <translation>編集元:</translation>
     </message>
     <message>
         <location filename="../ui/editPBDialog.ui" line="40"/>
         <source>Save</source>
-        <translation>Зачувај</translation>
+        <translation>保存</translation>
     </message>
     <message>
         <location filename="../ui/editPBDialog.ui" line="63"/>
         <source>Undo</source>
-        <translation>Врати</translation>
+        <translation>元に戻す</translation>
     </message>
     <message>
         <location filename="../ui/editPBDialog.ui" line="73"/>
         <source>Redo</source>
-        <translation>Повтори</translation>
+        <translation>やり直し</translation>
     </message>
     <message>
         <location filename="../ui/editPBDialog.ui" line="110"/>
         <source>Ok</source>
-        <translation>Во ред</translation>
+        <translation>OK</translation>
     </message>
     <message>
         <location filename="../ui/editPBDialog.ui" line="133"/>
@@ -2741,7 +2693,10 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Edit PKGBUILD&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Уреди PKGBUILD&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;PKGBUILDを編集&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -2749,22 +2704,28 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/logViewer.ui" line="13"/>
         <source>Shaman - Log Viewer</source>
-        <translation>Shaman - Прегледувач на записници</translation>
+        <translation>Shaman - ログビュワー</translation>
     </message>
     <message>
         <location filename="../ui/logViewer.ui" line="23"/>
         <source>Show Only Logs From</source>
-        <translation>Прикажи само записници од</translation>
+        <translation>次の日付から後のみ表示</translation>
+    </message>
+    <message>
+        <location filename="../ui/logViewer.ui" line="35"/>
+        <location filename="../ui/logViewer.ui" line="66"/>
+        <source>dd/MM/yyyy</source>
+        <translation>yyyy/MM/dd</translation>
     </message>
     <message>
         <location filename="../ui/logViewer.ui" line="54"/>
         <source>Show Only Logs Until</source>
-        <translation>Прикажи само записници до</translation>
+        <translation>次の日付まで表示</translation>
     </message>
     <message>
         <location filename="../ui/logViewer.ui" line="79"/>
         <source>Filter</source>
-        <translation>Филтер</translation>
+        <translation>フィルター</translation>
     </message>
     <message>
         <location filename="../ui/logViewer.ui" line="109"/>
@@ -2773,24 +2734,27 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translatorcomment>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translatorcomment>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/logViewer.ui" line="139"/>
         <source>Refresh View</source>
-        <translation>Освежи го прегледот</translation>
+        <translation>ビューの更新</translation>
     </message>
     <message>
         <location filename="../ui/logViewer.ui" line="156"/>
         <source>Close</source>
         <comment>close the dialog</comment>
-        <translation>Затвори</translation>
-    </message>
-    <message>
-        <location filename="../ui/logViewer.ui" line="66"/>
-        <source>dd/MM/yyyy</source>
-        <translation type="unfinished">
-            </translation>
+        <translation>閉じる</translation>
     </message>
 </context>
 <context>
@@ -2798,43 +2762,43 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/newsDialog.ui" line="13"/>
         <source>Arch Linux News</source>
-        <translation>Arch Linux вести</translation>
+        <translation>Arch Linux ニュース</translation>
     </message>
     <message>
         <location filename="../ui/newsDialog.ui" line="43"/>
         <source>News-Title</source>
-        <translation>Вести-Наслов</translation>
+        <translation>ニュースタイトル</translation>
     </message>
     <message>
         <location filename="../ui/newsDialog.ui" line="52"/>
         <source>Link</source>
-        <translation>Врска</translation>
+        <translation>リンク</translation>
     </message>
     <message>
         <location filename="../ui/newsDialog.ui" line="61"/>
         <source>status</source>
-        <translation>статус</translation>
+        <translation>状態</translation>
     </message>
     <message>
         <location filename="../ui/newsDialog.ui" line="81"/>
         <source>Mark as Read</source>
-        <translation>Означи како прочитано</translation>
+        <translation>既読に設定</translation>
     </message>
     <message>
         <location filename="../ui/newsDialog.ui" line="92"/>
         <source>Open in Browser</source>
-        <translation>Отвори во прелистувач</translation>
+        <translation>ブラウザで開く</translation>
     </message>
     <message>
         <location filename="../ui/newsDialog.ui" line="103"/>
         <source>Refresh</source>
-        <translation>Освежи</translation>
+        <translation>更新</translation>
     </message>
     <message>
         <location filename="../ui/newsDialog.ui" line="127"/>
         <source>Close</source>
         <comment>close the dialog</comment>
-        <translation>Затвори</translation>
+        <translation>閉じる</translation>
     </message>
 </context>
 <context>
@@ -2846,102 +2810,106 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Bitstream Vera Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Package Information&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Bitstream Vera Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Информација за пакетот&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Bitstream Vera Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;パッケージインフォメーション&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="100"/>
         <source>Package Information</source>
-        <translation>Информација за пакетот</translation>
+        <translation>情報</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="106"/>
         <source>Installed:</source>
-        <translation>Инсталирано</translation>
+        <translation>インストールされているか:</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="113"/>
         <source>Description:</source>
-        <translation>Опис:</translation>
+        <translation>説明:</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="120"/>
         <source>Upgradeable</source>
-        <translation>Надградливи</translation>
+        <translation>アップグレード可能</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="146"/>
         <source>Build Date:</source>
-        <translation>Датум на создавање:</translation>
+        <translation>ビルドされた日:</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="166"/>
         <source>Provides:</source>
-        <translation>Обезбедува:</translation>
+        <translation>提供:</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="173"/>
         <source>Install Date:</source>
-        <translation>Дата на инсталација:</translation>
+        <translation>インストールした日:</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="183"/>
         <source>Packager:</source>
-        <translation>Автор на пакетот:</translation>
+        <translation>担当者:</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="190"/>
         <source>Size:</source>
-        <translation>Големина:</translation>
+        <translation>サイズ:</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="197"/>
         <source>Has a Scriptlet</source>
-        <translation>Содржи Scriptlet</translation>
+        <translation>Scriptの一種かどうか</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="274"/>
         <source>Version:</source>
-        <translation>Верзија:</translation>
+        <translation>バージョン:</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="290"/>
         <source>Changelog</source>
-        <translation>Записник на промени</translation>
+        <translation>変更点</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="318"/>
         <source>Files</source>
-        <translation>Датотеки</translation>
+        <translation>ファイル</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="325"/>
         <source>1</source>
-        <translation>1</translation>
+        <translation>一</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="342"/>
         <source>Dependencies</source>
-        <translation>Зависности</translation>
+        <translation>依存関係</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="348"/>
         <source>Depends on</source>
-        <translation>Зависи од</translation>
+        <translation>このパッケージが依存しているもの</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="355"/>
         <source>Is Required by</source>
-        <translation>Е зависност на:</translation>
+        <translation>このパッケージに依存しているもの</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="377"/>
         <source>Actions Performed</source>
-        <translation>Извршени акции</translation>
+        <translation>挙動ログ</translation>
     </message>
     <message>
         <location filename="../ui/pkgProperties.ui" line="415"/>
         <source>Ok</source>
-        <translation>Во ред</translation>
+        <translation>OK</translation>
     </message>
 </context>
 <context>
@@ -2949,7 +2917,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="13"/>
         <source>Review Building Queue</source>
-        <translation>Прегледај ја редицата за создавање на пакет</translation>
+        <translation>ビルド中のキューのレビュー</translation>
     </message>
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="40"/>
@@ -2957,57 +2925,60 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Build Queue From Source&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Создади пакети во редица од изворен код&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ソースからキューをビルド&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="85"/>
         <source>Process All Dependencies from Binary First (advised)</source>
-        <translation>Обработи ги сите зависности од бинарни пакети прво(препорачано)</translation>
+        <translation>最初に全ての依存関係をバイナリから処理する (注意して下さい)</translation>
     </message>
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="95"/>
         <source>This is useful if you want to review compiler&apos;s output</source>
-        <translation>Ова е корисно доколку сакате да го прегледате излезот од компајлерот</translation>
+        <translation>コンパイラからの出力を表示する</translation>
     </message>
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="98"/>
         <source>Do not install immediately when building is finished</source>
-        <translation>Ве инсталирај веднаш откако создавањето на пакет ќе заврши</translation>
+        <translation>ビルド完了後、すぐにインストールしない</translation>
     </message>
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="108"/>
         <source>Turn off PC when Queue is done</source>
-        <translation>Исклучи го компјутерот кога редицата ќе заврши</translation>
+        <translation>キューの処理が完了したら、PCの電源を切る</translation>
     </message>
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="117"/>
         <source>Show packages...</source>
-        <translation>Прикажи пакети</translation>
+        <translation>パッケージを見る...</translation>
     </message>
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="147"/>
         <source>Packages In Queue</source>
-        <translation>Пакети во редица</translation>
+        <translation>キュー中のパッケージ</translation>
     </message>
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="157"/>
         <source>Abort</source>
-        <translation>Откажи</translation>
+        <translation>中止</translation>
     </message>
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="168"/>
         <source>Process From Binary</source>
-        <translation>Обработи од бинарни пакети</translation>
+        <translation>バイナリから処理</translation>
     </message>
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="192"/>
         <source>Review PKGBUILDs</source>
-        <translation>Прегледај PKGBUILD-ови</translation>
+        <translation>PKGBUILDsを表示</translation>
     </message>
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="203"/>
         <source>Process From Source</source>
-        <translation>Обработи од изворен код</translation>
+        <translation>ソースから処理</translation>
     </message>
 </context>
 <context>
@@ -3015,42 +2986,42 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/transactionDialog.ui" line="13"/>
         <source>Processing Queue...</source>
-        <translation>Обработување на редицата...</translation>
+        <translation>キューの処理中...</translation>
     </message>
     <message>
         <location filename="../ui/transactionDialog.ui" line="25"/>
         <source>Check transaction validity</source>
-        <translation>Проверка на валидноста на трансакцијата</translation>
+        <translation>トランザクションの有効性の確認</translation>
     </message>
     <message>
         <location filename="../ui/transactionDialog.ui" line="32"/>
         <source>Download Packages</source>
-        <translation>Симнување на пакетите</translation>
+        <translation>パッケージのダウンロード</translation>
     </message>
     <message>
         <location filename="../ui/transactionDialog.ui" line="39"/>
         <source>Process queue</source>
-        <translation>Обработка на редицата</translation>
+        <translation>キューの処理</translation>
     </message>
     <message>
         <location filename="../ui/transactionDialog.ui" line="46"/>
         <source>Cleanup</source>
-        <translation>Чистење</translation>
+        <translation>クリーンアップ</translation>
     </message>
     <message>
         <location filename="../ui/transactionDialog.ui" line="138"/>
         <source>More Details...</source>
-        <translation>Повеќе детали...</translation>
+        <translation>詳細...</translation>
     </message>
     <message>
         <location filename="../ui/transactionDialog.ui" line="168"/>
         <source>Abort</source>
-        <translation>Откажи</translation>
+        <translation>中止</translation>
     </message>
     <message>
         <location filename="../ui/transactionDialog.ui" line="187"/>
         <source>Please Wait...</source>
-        <translation>Ве молиме почекајте...</translation>
+        <translation>しばらくお待ち下さい...</translation>
     </message>
     <message>
         <location filename="../ui/transactionDialog.ui" line="218"/>
@@ -3058,7 +3029,10 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Process Queue&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Обработка на редицата&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;キューの処理&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -3066,32 +3040,37 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/upgradeDialog.ui" line="13"/>
         <source>System Upgrade</source>
-        <translation>Надградба на системот</translation>
+        <translation>システムの更新</translation>
+    </message>
+    <message>
+        <location filename="../ui/upgradeDialog.ui" line="61"/>
+        <source>Force Queue Processing</source>
+        <translation>強制的にキューを処理する</translation>
     </message>
     <message>
         <location filename="../ui/upgradeDialog.ui" line="68"/>
         <source>Remember my choice</source>
-        <translation>Запамети го мојот избор</translation>
+        <translation>この選択を記憶する</translation>
     </message>
     <message>
         <location filename="../ui/upgradeDialog.ui" line="79"/>
         <source>Abort</source>
-        <translation>Откажи</translation>
+        <translation>中止</translation>
     </message>
     <message>
         <location filename="../ui/upgradeDialog.ui" line="103"/>
         <source>Show packages...</source>
-        <translation>Прикажи пакети...</translation>
+        <translation>パッケージを見る...</translation>
     </message>
     <message>
         <location filename="../ui/upgradeDialog.ui" line="120"/>
         <source>Add to Queue</source>
-        <translation>Додади на редицата</translation>
+        <translation>キューに追加</translation>
     </message>
     <message>
         <location filename="../ui/upgradeDialog.ui" line="131"/>
         <source>Upgrade Now</source>
-        <translation>Надгради сега</translation>
+        <translation>今すぐアップグレード</translation>
     </message>
     <message>
         <location filename="../ui/upgradeDialog.ui" line="153"/>
@@ -3099,17 +3078,15 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;System-Upgrade&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Надградба на системот&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;システムの更新&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/upgradeDialog.ui" line="192"/>
         <source>Packages to Upgrade</source>
-        <translation>Пакети за надградба</translation>
-    </message>
-    <message>
-        <location filename="../ui/upgradeDialog.ui" line="61"/>
-        <source>Force Queue Processing</source>
-        <translation>Присили обработка на редицата</translation>
+        <translation>アップグレードするパッケージ</translation>
     </message>
 </context>
 </TS>

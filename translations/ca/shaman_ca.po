@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-28 15:54+0200\n"
+"POT-Creation-Date: 2009-04-01 23:59+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,158 +13,98 @@ msgstr ""
 "X-Generator: Translate Toolkit 1.3.0\n"
 
 #: BuildingDialog#1
-#, fuzzy
 msgctxt "BuildingDialog#1"
 msgid "Error"
-msgstr ""
-"\n"
-"            "
+msgstr "Error"
 
 #: BuildingDialog#2
-#, fuzzy
 msgid ""
 "Would you like to abort building?.\n"
 "All Process will be lost."
 msgstr ""
-"\n"
-"            "
+"Desitja cancel·lar la contrucció?\n"
+"Es perdràn tots el processos."
 
 #: BuildingDialog#3
-#, fuzzy
 msgid "<br><br><b>Building Process Aborted by the User. Building Failed.</b>"
-msgstr ""
-"\n"
-"            "
+msgstr "<br><br><b>Procés de contrucció cancel·lat per l'usuari.</b>"
 
-#. (obsolete)
 #: BuildingDialog#4
-msgid "Updating ABS Tree..."
-msgstr ""
-"\n"
-"            "
+msgid "<br><br><b>ABS Tree Was Successfully Updated!</b>"
+msgstr "<br><br><b>L'Arbre ABS s'ha actualitzat correctament!</b>"
 
-#. (obsolete)
 #: BuildingDialog#5
-msgid "<b>Starting ABS Tree Update...</b><br><br>"
-msgstr ""
-"\n"
-"            "
+msgid "ABS Update"
+msgstr "Actualitzar ABS"
 
 #: BuildingDialog#6
-#, fuzzy
-msgid "<br><br><b>ABS Tree Was Successfully Updated!</b>"
-msgstr ""
-"\n"
-"            "
+msgid "Your ABS Tree was updated!"
+msgstr "L'Arbre ABS s'ha actualitzat!"
 
 #: BuildingDialog#7
-#, fuzzy
-msgid "ABS Update"
-msgstr ""
-"\n"
-"            "
+msgid "Could not update the ABS Tree!"
+msgstr "No s'ha pogut actualitzar l'arbre ABS!"
 
 #: BuildingDialog#8
-#, fuzzy
-msgid "Your ABS Tree was updated!"
-msgstr ""
-"\n"
-"            "
+msgid "<b>Building %1 failed!!</b><br><br>"
+msgstr "<br><br><b>Procés de contrucció de %1 fallit.</b>"
 
 #: BuildingDialog#9
-#, fuzzy
-msgid "Could not update the ABS Tree!"
-msgstr ""
-"\n"
-"            "
+msgid "<b>%1 was built successfully!!</b><br><br>"
+msgstr "<b>%1 s'ha construït correctament!!</b><br><br>"
 
 #: BuildingDialog#10
-#, fuzzy
-msgid "<b>Building %1 failed!!</b><br><br>"
-msgstr ""
-"\n"
-"            "
+msgid "Processing Package %1 of %2..."
+msgstr "Processant el paquet %1 de %2..."
 
 #: BuildingDialog#11
-#, fuzzy
-msgid "<b>%1 was built successfully!!</b><br><br>"
-msgstr ""
-"\n"
-"            "
+msgid "Building %1..."
+msgstr "Construïnt %1..."
 
 #: BuildingDialog#12
-#, fuzzy
-msgid "Processing Package %1 of %2..."
-msgstr ""
-"\n"
-"            "
+msgid "<b>Could not set up the environment correctly for %1!!</b><br><br>"
+msgstr "<b>No es pot arranjar un entorn correcte per %1!!</b><br><br>"
 
 #: BuildingDialog#13
-#, fuzzy
-msgid "Building %1..."
-msgstr ""
-"\n"
-"            "
+msgid "<b>Building %1...</b><br><br>"
+msgstr "<b>Construïnt %1...</b><br><br>"
 
 #: BuildingDialog#14
-#, fuzzy
-msgid "<b>Could not set up the environment correctly for %1!!</b><br><br>"
-msgstr ""
-"\n"
-"            "
-
-#: BuildingDialog#15
-#, fuzzy
-msgid "<b>Building %1...</b><br><br>"
-msgstr ""
-"\n"
-"            "
-
-#: BuildingDialog#16
-#, fuzzy
 msgid "<b>Building operation has started.</b><br><br>"
-msgstr ""
-"\n"
-"            "
+msgstr "<b>S'ha començat la construcció.</b><br><br>"
 
 #: BuildingHandler#1
-#, fuzzy
 msgctxt "BuildingHandler#1"
 msgid "Error"
-msgstr ""
-"\n"
-"            "
+msgstr "Error"
 
 #: BuildingHandler#2
-#, fuzzy
 msgid ""
 "You need to have ABS installed to use Shaman's\n"
 "building feature. Do you want to install it now?"
 msgstr ""
-"\n"
-"            "
+"Necessita tenir ABS instal·lat per poder construïr\n"
+"paquets amb Shaman. Desitja instal·lar-lo ara ?"
 
 #: BuildingHandler#3
-#, fuzzy
 msgid ""
 "You can not remove packages when processing\n"
 "your queue from Source"
 msgstr ""
-"\n"
-"            "
+"No es poden desinstal·lar paquets quan la pila\n"
+"s'està processant desde la font"
 
 #: BuildingHandler#4
-#, fuzzy
 msgid ""
 "Some of your packages do not belong to Arch\n"
 "Linux's official repository. Shaman is able to\n"
 "build packages from official sources only."
 msgstr ""
-"\n"
-"            "
+"Alguns dels seus paquets no corresponen al\n"
+"repository oficial d'Arch Linux. Shaman només\n"
+"pot construïr paquets desde fonts oficials."
 
 #: BuildingHandler#5
-#, fuzzy
 msgid ""
 "You are about to install <b>%n package(s)</b> from source. Building from "
 "source<br>can give some advantages, however is very slow.<br>If you are not "
@@ -174,558 +114,345 @@ msgid ""
 msgstr ""
 "\n"
 "            \n"
+"            \n"
 "        "
 
 #: BuildingHandler#6
-#, fuzzy
 msgctxt "BuildingHandler#6"
 msgid "To be Installed"
-msgstr ""
-"\n"
-"            "
+msgstr "Per instal·lar"
 
 #: BuildingHandler#7
-#, fuzzy
 msgctxt "BuildingHandler#7"
 msgid "To be Upgraded"
-msgstr ""
-"\n"
-"            "
+msgstr "Per actualitzar"
 
 #: BuildingHandler#8
-#, fuzzy
 msgid "Package Building"
-msgstr ""
-"\n"
-"            "
+msgstr "Contruïnt paquets"
 
 #: BuildingHandler#9
-#, fuzzy
 msgid "Your Packages failed to build!"
-msgstr ""
-"\n"
-"            "
+msgstr "La construcció dels paquets a fallat!"
 
 #: BuildingHandler#10
-#, fuzzy
 msgid ""
 "Your packages Failed to Build.\n"
 "Look at the output for more details."
 msgstr ""
-"\n"
-"            "
+"La construcció dels paquets a fallat!\n"
+"Miri la sortida per més detalls."
 
 #: BuildingHandler#11
-#, fuzzy
 msgctxt "BuildingHandler#11"
 msgid "Close"
-msgstr ""
-"\n"
-"            "
+msgstr "Tancar"
 
 #: BuildingHandler#12
-#, fuzzy
 msgid "Building Packages Failed!!"
-msgstr ""
-"\n"
-"            "
+msgstr "La construcció dels paquets a fallat!"
 
 #: BuildingHandler#13
-#, fuzzy
 msgid ""
 "Some packages failed to build.\n"
 "Do you want to proceed anyway?"
 msgstr ""
-"\n"
-"            "
+"La construcció d'alguns paquets a fallat.\n"
+"Desitjar continuar igualment?"
 
 #: BuildingHandler#14
-#, fuzzy
 msgid "Install Built Packages"
-msgstr ""
-"\n"
-"            "
+msgstr "Instal·lar paquets contruïts"
 
 #: BuildingHandler#15
-#, fuzzy
 msgid "Close Without Installing"
-msgstr ""
-"\n"
-"            "
+msgstr "Tancar sense instal·lar"
 
 #: BuildingHandler#16
-#, fuzzy
 msgid "Packages Built Successfully!"
-msgstr ""
-"\n"
-"            "
+msgstr "Paquets construïts correctament!"
 
 #: BuildingHandler#17
-#, fuzzy
 msgid ""
 "Your Packages have been built successfully, and are ready to be installed"
 msgstr ""
-"\n"
-"            "
+"S'han construït els paquets correctament i están llestos per instal·lar-los"
 
 #: ConfigDialog#1
-#, fuzzy
 msgid "General"
-msgstr ""
-"\n"
-"            "
+msgstr "General"
 
 #: ConfigDialog#2
-#, fuzzy
 msgctxt "ConfigDialog#2"
 msgid "Clean Unused Databases"
-msgstr ""
-"\n"
-"            "
+msgstr "Netejar bases de dades no utilitzades"
 
 #: ConfigDialog#3
-#, fuzzy
 msgctxt "ConfigDialog#3"
 msgid "Clean Cache"
-msgstr ""
-"\n"
-"            "
+msgstr "Netejar la cache"
 
 #: ConfigDialog#4
-#, fuzzy
 msgctxt "ConfigDialog#4"
 msgid "Empty Cache"
-msgstr ""
-"\n"
-"            "
+msgstr "Buidar la cache"
 
 #: ConfigDialog#5
-#, fuzzy
 msgctxt "ConfigDialog#5"
 msgid "Optimize Pacman Database"
-msgstr ""
-"\n"
-"            "
+msgstr "Optimitzar bases de dades de Pacman"
 
 #: ConfigDialog#6
-#, fuzzy
 msgctxt "ConfigDialog#6"
 msgid "Clean All Building Environments"
-msgstr ""
-"\n"
-"            "
+msgstr "Netejar els entorns de construcció"
 
 #: ConfigDialog#7
-#, fuzzy
 msgctxt "ConfigDialog#7"
 msgid "Repositories"
-msgstr ""
-"\n"
-"            "
+msgstr "Repositoris"
 
 #: ConfigDialog#8
-#, fuzzy
 msgid "Pacman"
-msgstr ""
-"\n"
-"            "
+msgstr "Pacman"
 
 #: ConfigDialog#9
-#, fuzzy
 msgid "ABS"
-msgstr ""
-"\n"
-"            "
+msgstr "ABS"
 
 #: ConfigDialog#10
-#, fuzzy
 msgid "Advanced"
-msgstr ""
-"\n"
-"            "
+msgstr "Avançat"
 
 #: ConfigDialog#11
-#, fuzzy
 msgid "Enter Here the Repository's Name"
-msgstr ""
-"\n"
-"            "
+msgstr "Escrigui aqui el nom del repositori"
 
 #: ConfigDialog#12
-#, fuzzy
 msgid "Enter Here the Repository's Server"
-msgstr ""
-"\n"
-"            "
+msgstr "Escrigui aqui el servidor del repositori"
 
 #: ConfigDialog#13
-#, fuzzy
 msgctxt "ConfigDialog#13"
 msgid "Ok"
-msgstr ""
-"\n"
-"            "
+msgstr "Bé"
 
 #: ConfigDialog#14
-#, fuzzy
 msgctxt "ConfigDialog#14"
 msgid "Cancel"
-msgstr ""
-"\n"
-"            "
+msgstr "Cancel·lar"
 
 #: ConfigDialog#15
-#, fuzzy
 msgctxt "ConfigDialog#15"
 msgid "Cleaning up unused Databases..."
-msgstr ""
-"\n"
-"            "
+msgstr "Netejant bases de dades no utilitzades..."
 
 #: ConfigDialog#16
-#, fuzzy
 msgctxt "ConfigDialog#16"
 msgid "Cleaning up Cache..."
-msgstr ""
-"\n"
-"            "
+msgstr "Netejant la cache..."
 
 #: ConfigDialog#17
-#, fuzzy
 msgctxt "ConfigDialog#17"
 msgid "Deleting Cache..."
-msgstr ""
-"\n"
-"            "
+msgstr "Esborrant la cache..."
 
-#. (obsolete)
 #: ConfigDialog#18
 msgctxt "ConfigDialog#18"
-msgid "Optimizing Pacman Database..."
-msgstr ""
-"\n"
-"            "
+msgid "Cleaning up building Environments..."
+msgstr "Netejant els entorns de construcció..."
 
 #: ConfigDialog#19
-#, fuzzy
 msgctxt "ConfigDialog#19"
-msgid "Cleaning up building Environments..."
-msgstr ""
-"\n"
-"            "
+msgid "Cleaning up Unused Databases Failed!"
+msgstr "Ha fallat la neteja de bases de dades no utilitzades!"
 
 #: ConfigDialog#20
-#, fuzzy
 msgctxt "ConfigDialog#20"
-msgid "Cleaning up Unused Databases Failed!"
-msgstr ""
-"\n"
-"            "
+msgid "Cleaning up Cache Failed!"
+msgstr "Ha fallat la neteja de la cache!"
 
 #: ConfigDialog#21
-#, fuzzy
 msgctxt "ConfigDialog#21"
-msgid "Cleaning up Cache Failed!"
-msgstr ""
-"\n"
-"            "
+msgid "Deleting Cache Failed!"
+msgstr "No s'ha esborrat la cache!"
 
 #: ConfigDialog#22
-#, fuzzy
 msgctxt "ConfigDialog#22"
-msgid "Deleting Cache Failed!"
-msgstr ""
-"\n"
-"            "
+msgid "Could not clean Build Environments!!"
+msgstr "No es poder netejar els entorns de construcció!!"
 
 #: ConfigDialog#23
-#, fuzzy
 msgctxt "ConfigDialog#23"
-msgid "Could not clean Build Environments!!"
-msgstr ""
-"\n"
-"            "
+msgid "Unused Databases Cleaned up successfully!"
+msgstr "S'han netejat les bases de dades no utilitzades!"
 
 #: ConfigDialog#24
-#, fuzzy
 msgctxt "ConfigDialog#24"
-msgid "Unused Databases Cleaned up successfully!"
-msgstr ""
-"\n"
-"            "
+msgid "Cache Cleaned Up Successfully!"
+msgstr "S'ha netejat la cache!"
 
 #: ConfigDialog#25
-#, fuzzy
 msgctxt "ConfigDialog#25"
-msgid "Cache Cleaned Up Successfully!"
-msgstr ""
-"\n"
-"            "
+msgid "Cache Successfully Deleted!"
+msgstr "S'ha esborrat la cache!"
 
 #: ConfigDialog#26
-#, fuzzy
 msgctxt "ConfigDialog#26"
-msgid "Cache Successfully Deleted!"
-msgstr ""
-"\n"
-"            "
+msgid "Build Environments Successfully Cleaned!"
+msgstr "S'ha netejat els entorns de construcció!"
 
 #: ConfigDialog#27
-#, fuzzy
-msgctxt "ConfigDialog#27"
-msgid "Build Environments Successfully Cleaned!"
-msgstr ""
-"\n"
-"            "
+msgid "Saving Configuration"
+msgstr "Desant arranjaments"
 
 #: ConfigDialog#28
-#, fuzzy
-msgid "Saving Configuration"
-msgstr ""
-"\n"
-"            "
+msgid "Unable to save Pacman configuration!"
+msgstr "No es poden desar els arranjaments de Pacman!"
 
 #: ConfigDialog#29
-#, fuzzy
-msgid "Unable to save Pacman configuration!"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#30
-#, fuzzy
 msgid ""
 "Some of your changes have not been applied,\n"
 "since alpm needs to be released.\n"
 "You need to restart Shaman to make them effective."
 msgstr ""
-"\n"
-"            "
+"Alguns canvis no s'han pogut aplicar,\n"
+"perque alpm s'ha de tancar.\n"
+"Torni a obrir Shaman per fer-los efectius."
+
+#: ConfigDialog#30
+msgid "Settings Changed"
+msgstr "Arranjaments canviats"
 
 #: ConfigDialog#31
-#, fuzzy
-msgid "Settings Changed"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#32
-#, fuzzy
 msgid ""
 "Your repositories have changed.\n"
 "Do you want to Update Your Database?"
 msgstr ""
-"\n"
-"            "
+"Els repositoris han canviat.\n"
+"Desitja actualitzar les bases de dades?"
 
-#: ConfigDialog#33
-#, fuzzy
+#: ConfigDialog#32
 msgid "Add Mirror"
-msgstr ""
-"\n"
-"            "
+msgstr "Afegir mirror"
 
 # Obviously keep the example as it is ;)
-#: ConfigDialog#34
-#, fuzzy
+#: ConfigDialog#33
 msgid ""
 "Mirror Format is incorrect. Your mirror should look like this:\n"
 "http://mirror.org/$repo/os/i686"
 msgstr ""
-"\n"
-"            "
+"El format del mirror no es correcte. S'ha de veure així:\n"
+"http://mirror.org/$repo/os/i686"
 
 # mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.
-#: ConfigDialog#35
-#, fuzzy
+#: ConfigDialog#34
 msgid ""
 "Your Mirror was successfully added!\n"
 "It is now available in mirrorlist."
 msgstr ""
-"\n"
-"            "
+"S'ha afegit el mirror correctament!\n"
+"Està disponible a mirrorlist."
 
 # Obviously keep the example as it is ;)
-#: ConfigDialog#36
-#, fuzzy
+#: ConfigDialog#35
 msgid ""
 "Mirror Format is incorrect. Your mirror should look like this:\n"
 "http://mirror.org/$repo/$arch"
 msgstr ""
-"\n"
-"            "
+"El format del mirror no es correcte. S'ha de veure així:\n"
+"http://mirror.org/$repo/$arch"
 
 # mirrorlist here means /etc/pacman.d/kdemodmirrorlist, so it should not be translated.
-#: ConfigDialog#37
-#, fuzzy
+#: ConfigDialog#36
 msgid ""
 "Your Mirror was successfully added!\n"
 "It is now available in kdemodmirrorlist."
 msgstr ""
-"\n"
-"            "
+"S'ha afegit el mirror correctament!\n"
+"Està disponible a kdemodmirrorlist."
+
+#: ConfigDialog#37
+msgctxt "ConfigDialog#37"
+msgid "Pacman Database Optimized Successfully!"
+msgstr "La base de dades s'ha optimitzat correctament!"
 
 #: ConfigDialog#38
-#, fuzzy
 msgctxt "ConfigDialog#38"
-msgid "Pacman Database Optimized Successfully!"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#39
-#, fuzzy
-msgctxt "ConfigDialog#39"
 msgid "Could not Optimize Pacman Database!"
-msgstr ""
-"\n"
-"            "
+msgstr "No s'ha pogut optimitzat la base de dades!"
 
 # sync is a command, so it should not be translated
-#: ConfigDialog#40
-#, fuzzy
-msgctxt "ConfigDialog#40"
+#: ConfigDialog#39
 msgid "Running sync..."
-msgstr ""
-"\n"
-"            "
+msgstr "Llançant sync..."
 
-#. (obsolete)
+#: ConfigDialog#40
+msgid "Shaman - Configuration"
+msgstr "Shaman - Arranjaments"
+
 #: ConfigDialog#41
-msgctxt "ConfigDialog#41"
-msgid "Operation Completed Successfully!"
-msgstr ""
-"\n"
-"            "
+msgid "Favourite Actions"
+msgstr "Accións preferides"
 
-# Sync is always the command
-#. (obsolete)
 #: ConfigDialog#42
-msgctxt "ConfigDialog#42"
-msgid "Sync was successfully executed!!"
-msgstr ""
-"\n"
-"            "
+msgid "When Upgrading System:"
+msgstr "Quan s'actualtizará el sistema:"
 
-# Sync is always the command
-#. (obsolete)
 #: ConfigDialog#43
-msgctxt "ConfigDialog#43"
-msgid "Sync could not be executed!"
-msgstr ""
-"\n"
-"            "
+msgid "Upgrade Immediately"
+msgstr "Actualitzar inmediatament"
 
-# Sync is always the command
-#. (obsolete)
 #: ConfigDialog#44
-msgctxt "ConfigDialog#44"
-msgid "Sync could not be executed!!"
-msgstr ""
-"\n"
-"            "
+msgid "Add Upgradeable Packages To Queue"
+msgstr "Afegir paquets actualitzables a la pila"
 
 #: ConfigDialog#45
-#, fuzzy
-msgid "Shaman - Configuration"
-msgstr ""
-"\n"
-"            "
+msgid "Ask"
+msgstr "Preguntar"
 
 #: ConfigDialog#46
-#, fuzzy
-msgid "Favourite Actions"
-msgstr ""
-"\n"
-"            "
+msgid "When Processing Queue"
+msgstr "Quan es processi la pila"
 
 #: ConfigDialog#47
-#, fuzzy
-msgid "When Upgrading System:"
-msgstr ""
-"\n"
-"            "
+msgid "Keep application running in System Tray only"
+msgstr "Mantenir l'aplicació a la safata del sistema"
 
 #: ConfigDialog#48
-#, fuzzy
-msgid "Upgrade Immediately"
-msgstr ""
-"\n"
-"            "
+msgid "GUI Startup"
+msgstr "Inici del GUI"
 
 #: ConfigDialog#49
-#, fuzzy
-msgid "Add Upgradeable Packages To Queue"
-msgstr ""
-"\n"
-"            "
+msgid "Start in the System Tray"
+msgstr "Començar a la safata"
 
 #: ConfigDialog#50
-#, fuzzy
-msgid "Ask"
-msgstr ""
-"\n"
-"            "
+msgid "Show Splashscreen"
+msgstr "Veure pantalla de benvinguda"
 
 #: ConfigDialog#51
-#, fuzzy
-msgid "When Processing Queue"
-msgstr ""
-"\n"
-"            "
+msgid "Use the following language:"
+msgstr "Fer servir el següent idioma:"
 
 #: ConfigDialog#52
-#, fuzzy
-msgid "Keep application running in System Tray only"
-msgstr ""
-"\n"
-"            "
+msgid "Disable Tray Icon"
+msgstr "Desactivar icona de la safata"
 
 #: ConfigDialog#53
-#, fuzzy
-msgid "GUI Startup"
-msgstr ""
-"\n"
-"            "
+msgid "Maintenance"
+msgstr "Manteniment"
 
 #: ConfigDialog#54
-#, fuzzy
-msgid "Start in the System Tray"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#55
-#, fuzzy
-msgid "Show Splashscreen"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#56
-#, fuzzy
-msgid "Maintenance"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#57
-#, fuzzy
 msgid "Process Selected"
-msgstr ""
-"\n"
-"            "
+msgstr "Procés seleccionat"
 
 # Waiting for a user action
-#: ConfigDialog#58
-#, fuzzy
+#: ConfigDialog#55
 msgid "Waiting"
-msgstr ""
-"\n"
-"            "
+msgstr "Esperant"
 
-#: ConfigDialog#59
-#, fuzzy
+#: ConfigDialog#56
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -741,570 +468,354 @@ msgid ""
 "Sans'; font-size:9pt;\">Please choose an action from the Drop-Down "
 "Menu.</p></body></html>"
 msgstr ""
-"\n"
-"            "
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\"><html><head><meta name=\"qrichtext\" content=\"1\" /><style "
+"type=\"text/css\">p, li { white-space: pre-wrap; }</style></head><body style=\" "
+"font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-"
+"style:normal;\"><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
+"family:'Liberation Sans'; font-size:9pt;\">Manteniment de Shaman.</p><p "
+"style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Liberation "
+"Sans'; font-size:9pt;\">Seleccioni una opció del menú "
+"desplegable.</p></body></html>"
+
+#: ConfigDialog#57
+msgid "Checkable Options"
+msgstr "Opcións clicables"
+
+#: ConfigDialog#58
+msgid "Use Active FTP"
+msgstr "Fer servir FTP actiu"
+
+#: ConfigDialog#59
+msgid "Use Deltas (needs xdelta to be installed)"
+msgstr "Fer servir Deltas (s'ha de tenir xdelta instal·lat)"
 
 #: ConfigDialog#60
-#, fuzzy
-msgid "Checkable Options"
-msgstr ""
-"\n"
-"            "
+msgid "Use SysLog"
+msgstr "Fer servir SysLog"
 
 #: ConfigDialog#61
-#, fuzzy
-msgid "Use Active FTP"
-msgstr ""
-"\n"
-"            "
+msgid "Advanced Options"
+msgstr "Opcións avançades"
 
 #: ConfigDialog#62
-#, fuzzy
-msgid "Use Deltas (needs xdelta to be installed)"
-msgstr ""
-"\n"
-"            "
+msgid "HoldPkgs:"
+msgstr "HoldPkgs:"
 
 #: ConfigDialog#63
-#, fuzzy
-msgid "Use SysLog"
-msgstr ""
-"\n"
-"            "
+msgid "IgnorePkgs:"
+msgstr "IgnorePkgs:"
 
 #: ConfigDialog#64
-#, fuzzy
-msgid "Advanced Options"
-msgstr ""
-"\n"
-"            "
+msgid "IgnoreGroups:"
+msgstr "IgnoreGroups:"
 
 #: ConfigDialog#65
-#, fuzzy
-msgid "HoldPkgs:"
-msgstr ""
-"\n"
-"            "
+msgid "NoUpgrade:"
+msgstr "NoUpgrade:"
 
 #: ConfigDialog#66
-#, fuzzy
-msgid "IgnorePkgs:"
-msgstr ""
-"\n"
-"            "
+msgid "NoExtract:"
+msgstr "NoExtract:"
 
 #: ConfigDialog#67
-#, fuzzy
-msgid "IgnoreGroups:"
-msgstr ""
-"\n"
-"            "
+msgid "Log File:"
+msgstr "Arxiu de registre:"
 
 #: ConfigDialog#68
-#, fuzzy
-msgid "NoUpgrade:"
-msgstr ""
-"\n"
-"            "
+msgid "XFerCommand: (example: /path/to/command %u) Blank for Default"
+msgstr "XFerCommand: (exemple: /path/to/command %u) en blanc per defecte"
 
 #: ConfigDialog#69
-#, fuzzy
-msgid "NoExtract:"
-msgstr ""
-"\n"
-"            "
+msgid "Arch Linux Official Repositories"
+msgstr "Repositoris oficials Arch Linux"
 
 #: ConfigDialog#70
-#, fuzzy
-msgid "Log File:"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#71
-#, fuzzy
-msgid "XFerCommand: (example: /path/to/command %u) Blank for Default"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#72
-#, fuzzy
-msgid "Arch Linux Official Repositories"
-msgstr ""
-"\n"
-"            "
-
-# Do not translate
-#: ConfigDialog#73
-#, fuzzy
-msgid "Core"
-msgstr ""
-"\n"
-"            "
-
-# Do not translate
-#: ConfigDialog#74
-#, fuzzy
-msgid "Extra"
-msgstr ""
-"\n"
-"            "
-
-# Do not translate
-#: ConfigDialog#75
-#, fuzzy
-msgid "Community"
-msgstr ""
-"\n"
-"            "
-
-# Do not translate
-#: ConfigDialog#76
-#, fuzzy
-msgid "Testing"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#77
-#, fuzzy
-msgid "Server"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#78
-#, fuzzy
-msgid "Mirror:"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#79
-#, fuzzy
-msgid "KDEMod Repositories"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#80
-#, fuzzy
-msgid "KDEMod 4 Repository"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#81
-#, fuzzy
-msgid "KDEMod 4 Extragear Repository"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#82
-#, fuzzy
-msgid "KDEMod 4 Playground Repository"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#83
-#, fuzzy
-msgid "KDEMod 4 Testing Repository"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#84
-#, fuzzy
-msgid "KDEMod 4 Unstable Repository (Testers only!)"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#85
-#, fuzzy
-msgid "KDEMod 3 Repository"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#86
-#, fuzzy
-msgid "Third-Party Repositories"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#87
-#, fuzzy
-msgctxt "ConfigDialog#87"
-msgid "Repository"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#88
-#, fuzzy
-msgid "Add New Repository"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#89
-#, fuzzy
-msgid "Edit Repository"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#90
-#, fuzzy
-msgid "Remove Repository"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#91
-#, fuzzy
-msgid "Preferences"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#92
-#, fuzzy
-msgid "Process all dependencies and queue from binary first (recommended)"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#93
-#, fuzzy
-msgid "Review Building output before installing"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#94
-#, fuzzy
-msgid "ABS Configuration"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#95
-#, fuzzy
-msgid "Use supfiles that match your current repositories"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#96
-#, fuzzy
-msgid "Define supfiles manually"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#97
-#, fuzzy
-msgid "RSync Server:"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#98
-#, fuzzy
-msgid "Makepkg Configuration"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#99
-#, fuzzy
-msgid "CFlags"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#100
-#, fuzzy
-msgid "CXXFlags"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#101
-#, fuzzy
-msgid "BuildEnv"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#102
-#, fuzzy
-msgid "Options"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#103
-#, fuzzy
-msgid "Doc_Dirs"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#104
-#, fuzzy
-msgid "Build Environment"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#105
-#, fuzzy
-msgid "Building Path"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#106
-#, fuzzy
-msgid "Remove installed makedepends after build"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#107
-#, fuzzy
-msgid "Clean Build Environment after installation"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#108
-#, fuzzy
-msgid "When Application is in System Tray only"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#109
-#, fuzzy
-msgid "Update Database every"
-msgstr ""
-"\n"
-"            "
-
-# As in "minutes"
-#: ConfigDialog#110
-#, fuzzy
-msgid "min"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#111
-#, fuzzy
-msgid "Show tray notification Windows"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#112
-#, fuzzy
-msgid "If upgrades are available:"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#113
-#, fuzzy
-msgid "Just Notify"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#114
-#, fuzzy
-msgid "Notify and add them to Queue"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#115
-#, fuzzy
-msgid "Update Database at"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#116
-#, fuzzy
-msgid "Use a proxy-server"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#117
-#, fuzzy
-msgid "IP:"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#118
-#, fuzzy
-msgid "Port:"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#119
-#, fuzzy
-msgid "HTTP Proxy"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#120
-#, fuzzy
-msgid "FTP Proxy"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#121
-#, fuzzy
-msgid "Use Shaman RSS Capabilities"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#122
-#, fuzzy
-msgid "Update RSS Feed Every"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#123
-#, fuzzy
-msgid "Notify upon new items"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#124
-#, fuzzy
-msgid ""
-"Check if there is an unread news about a package in Queue before processing "
-"it"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#125
-#, fuzzy
-msgid "Interface"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#126
-#, fuzzy
-msgid "Use Animated Tray Icon"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#127
-#, fuzzy
-msgid "Start Shaman Automatically on X Startup"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#128
-#, fuzzy
-msgid "Forbid starting Shaman as root"
-msgstr ""
-"\n"
-"            "
-
-#: ConfigDialog#129
-#, fuzzy
 msgid ""
 "Here you can choose what repositories to use between Arch Linux's official "
 "ones. Please note that packages from Unstable and Testing may break your "
 "system."
 msgstr ""
-"\n"
-"            "
+"Aqui pot escollir quins del repositoris oficials d'Arch Linux vol fer "
+"servir. Els repositoris Unstable i Testing no són del tot segurs i poden "
+"espatllar el seu sistema."
 
-#: ConfigDialog#130
-#, fuzzy
+# Do not translate
+#: ConfigDialog#71
+msgid "Core"
+msgstr "Core"
+
+# Do not translate
+#: ConfigDialog#72
+msgid "Extra"
+msgstr "Extra"
+
+# Do not translate
+#: ConfigDialog#73
+msgid "Community"
+msgstr "Community"
+
+# Do not translate
+#: ConfigDialog#74
+msgid "Testing"
+msgstr "Testing"
+
+#: ConfigDialog#75
+msgid "Server"
+msgstr "Servidor"
+
+#: ConfigDialog#76
+msgid "Mirror:"
+msgstr "Mirror:"
+
+#: ConfigDialog#77
+msgid "KDEMod Repositories"
+msgstr "Repositoris KDEMod"
+
+#: ConfigDialog#78
 msgid ""
 "KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
 "improved Qt build, compatible with Arch Linux standard Qt's, an improved "
 "theme, and lots of addons, KDEMod is the best way to taste the ease and the "
 "power of KDE with the simplicity and the power of Arch."
 msgstr ""
-"\n"
-"            "
+"KDEMod es una versió  millorada de KDE, exclusiva d'Arch Linux. Ofereix una "
+"construcció Qt millorada, compatible amb el Qt d'Arch Linux, un tema "
+"millorat i molts afegits,KDEMod és la millor manera de tastar la facilitat i "
+"la potència de KDE amb la simplicitat i la potència d'Arch Linux."
 
-#: ConfigDialog#131
-#, fuzzy
+#: ConfigDialog#79
+msgid "KDEMod 4 Repository"
+msgstr "Repositori KDEMod 4"
+
+#: ConfigDialog#80
+msgid "KDEMod 4 Extragear Repository"
+msgstr "Repositori KDEMod 4 Extragear"
+
+#: ConfigDialog#81
+msgid "KDEMod 4 Playground Repository"
+msgstr "Repositori KDEMod 4 Playground"
+
+#: ConfigDialog#82
+msgid "KDEMod 4 Testing Repository"
+msgstr "Repositori KDEMod 4 Testing"
+
+#: ConfigDialog#83
+msgid "KDEMod 4 Unstable Repository (Testers only!)"
+msgstr "Repositori KDEMod 4 Unstable (només testers!)"
+
+#: ConfigDialog#84
+msgid "KDEMod 3 Repository"
+msgstr "Repositori KDEMod 3"
+
+#: ConfigDialog#85
+msgid "Third-Party Repositories"
+msgstr "Repositoris de tercers"
+
+#: ConfigDialog#86
 msgid ""
 "You can extend your packages choice by adding other repositories. Third-"
 "Party Repositories act just as normal ones, and will be accessible through "
 "both Shaman and Pacman."
 msgstr ""
-"\n"
-"            "
+"Pot ampliar l'oferta de paquets afegint altres repositoris. Els repositoris "
+"de tercers funcionen igual que els altres i serán accesibles desde Pacman i "
+"Shaman."
 
-#: ConfigDialog#132
-#, fuzzy
-msgid "Use the following language:"
-msgstr ""
-"\n"
-"            "
+#: ConfigDialog#87
+msgctxt "ConfigDialog#87"
+msgid "Repository"
+msgstr "Repositori"
 
-#: ConfigDialog#133
-#, fuzzy
-msgid "Disable Tray Icon"
+#: ConfigDialog#88
+msgid "Add New Repository"
+msgstr "Afegir repositori nou"
+
+#: ConfigDialog#89
+msgid "Edit Repository"
+msgstr "Modificar repositori"
+
+#: ConfigDialog#90
+msgid "Remove Repository"
+msgstr "Esborrar repositori"
+
+#: ConfigDialog#91
+msgid "Preferences"
+msgstr "Arranjaments"
+
+#: ConfigDialog#92
+msgid "Process all dependencies and queue from binary first (recommended)"
 msgstr ""
-"\n"
-"            "
+"Processar totes les dependències i la pila primer desde binaris (recomanat) "
+
+#: ConfigDialog#93
+msgid "Review Building output before installing"
+msgstr "Revisar la sortida del contrustor abans d'instal·lar"
+
+#: ConfigDialog#94
+msgid "ABS Configuration"
+msgstr "Configuració ABS"
+
+#: ConfigDialog#95
+msgid "Use supfiles that match your current repositories"
+msgstr "Fer servir supfiles que coïncideixin amb els repositoris actuals"
+
+#: ConfigDialog#96
+msgid "Define supfiles manually"
+msgstr "Definir supfiles manualment"
+
+#: ConfigDialog#97
+msgid "RSync Server:"
+msgstr "Servidor RSync:"
+
+#: ConfigDialog#98
+msgid "Makepkg Configuration"
+msgstr "Configuració Makepkg"
+
+#: ConfigDialog#99
+msgid "CFlags"
+msgstr "CFlags"
+
+#: ConfigDialog#100
+msgid "CXXFlags"
+msgstr "CXXFlags"
+
+#: ConfigDialog#101
+msgid "BuildEnv"
+msgstr "BuildEnv"
+
+#: ConfigDialog#102
+msgid "Options"
+msgstr "Opcións"
+
+#: ConfigDialog#103
+msgid "Doc_Dirs"
+msgstr "Doc_Dirs"
+
+#: ConfigDialog#104
+msgid "Build Environment"
+msgstr "Entorn de construcció"
+
+#: ConfigDialog#105
+msgid "Building Path"
+msgstr "Adreça de construcció"
+
+#: ConfigDialog#106
+msgid "Remove installed makedepends after build"
+msgstr "Esborrar makedepends instal·lats després de contruïr"
+
+#: ConfigDialog#107
+msgid "Clean Build Environment after installation"
+msgstr "Netejar entorns de contrucció després d'instal·lar"
+
+#: ConfigDialog#108
+msgid "When Application is in System Tray only"
+msgstr "Només quan l'aplicació sigui a la safata"
+
+#: ConfigDialog#109
+msgid "Update Database every"
+msgstr "Actualitzar bade de dades cada"
+
+# As in "minutes"
+#: ConfigDialog#110
+msgid "min"
+msgstr "min"
+
+#: ConfigDialog#111
+msgid "Show tray notification Windows"
+msgstr "Veure finestres de notificació"
+
+#: ConfigDialog#112
+msgid "If upgrades are available:"
+msgstr "Si hi ha actualitzacions:"
+
+#: ConfigDialog#113
+msgid "Just Notify"
+msgstr "Només notificar"
+
+#: ConfigDialog#114
+msgid "Notify and add them to Queue"
+msgstr "Notificar i afegirles a la pila"
+
+#: ConfigDialog#115
+msgid "Update Database at"
+msgstr "Actualitzar base de dades a les"
+
+#: ConfigDialog#116
+msgid "Use a proxy-server"
+msgstr "Fer servir servidor proxy"
+
+#: ConfigDialog#117
+msgid "IP:"
+msgstr "IP:"
+
+#: ConfigDialog#118
+msgid "Port:"
+msgstr "Port:"
+
+#: ConfigDialog#119
+msgid "HTTP Proxy"
+msgstr "HTTP Proxy"
+
+#: ConfigDialog#120
+msgid "FTP Proxy"
+msgstr "FTP Proxy"
+
+#: ConfigDialog#121
+msgid "Use Shaman RSS Capabilities"
+msgstr "Fer servir RSS"
+
+#: ConfigDialog#122
+msgid "Update RSS Feed Every"
+msgstr "Actualitzar RSS cada"
+
+#: ConfigDialog#123
+msgid "Notify upon new items"
+msgstr "Notificar nous articles"
+
+#: ConfigDialog#124
+msgid ""
+"Check if there is an unread news about a package in Queue before processing "
+"it"
+msgstr ""
+"Comprovar les notícies sense llegir d'un paquet a la pila abans de "
+"processarlo"
+
+#: ConfigDialog#125
+msgid "Interface"
+msgstr "Interface"
+
+#: ConfigDialog#126
+msgid "Use Animated Tray Icon"
+msgstr "Animar la icona de la safata"
+
+#: ConfigDialog#127
+msgid "Start Shaman Automatically on X Startup"
+msgstr "Llançar Shaman automàticament a l'inici"
+
+#: ConfigDialog#128
+msgid "Forbid starting Shaman as root"
+msgstr "Prohibir a Shaman començar com Root"
 
 #: EditPBuild#1
-#, fuzzy
 msgid "Saving"
-msgstr ""
-"\n"
-"            "
+msgstr "Desant"
 
 #: EditPBuild#2
-#, fuzzy
 msgid ""
 "You modified this PKGBUILD.\n"
 "Do you want to save it?"
 msgstr ""
-"\n"
-"            "
+"S'ha modificat aquest PKGBUILD.\n"
+"Desitja desar-ho?"
 
 #: LocalPackage#1
-#, fuzzy
 msgid "Install Package from File"
-msgstr ""
-"\n"
-"            "
+msgstr "Instal·lar paquet desde fitxer"
 
 #: LocalPackage#2
-#, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -1317,99 +828,75 @@ msgid ""
 "Sans';\"><span style=\" font-weight:600;\">Local Package "
 "Installation</span></p></body></html>"
 msgstr ""
-"\n"
-"            "
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\"><html><head><meta name=\"qrichtext\" content=\"1\" /><style "
+"type=\"text/css\">p, li { white-space: pre-wrap; }</style></head><body style=\" "
+"font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-"
+"style:normal;\"><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
+"family:'Bitstream Vera Sans';\"><span style=\" font-weight:600;\">Instal·lació "
+"de paquet local</span></p></body></html>"
 
 #: LocalPackage#3
-#, fuzzy
 msgid "Show..."
-msgstr ""
-"\n"
-"            "
+msgstr "Veure..."
 
 #: LocalPackage#4
-#, fuzzy
 msgctxt "LocalPackage#4"
 msgid "More Details..."
-msgstr ""
-"\n"
-"            "
+msgstr "Més detalls..."
 
 #: LocalPackage#5
-#, fuzzy
 msgctxt "LocalPackage#5"
 msgid "Cancel"
-msgstr ""
-"\n"
-"            "
+msgstr "Cancel·lar"
 
 #: LocalPackage#6
-#, fuzzy
 msgid "Install Package"
-msgstr ""
-"\n"
-"            "
+msgstr "Instal·lar paquet"
 
 #: LocalPackageDialog#1
-#, fuzzy
 msgid "Package is not installed"
-msgstr ""
-"\n"
-"            "
+msgstr "Paquet no instal·lat"
 
 #: LocalPackageDialog#2
-#, fuzzy
 msgid "Version %1 of this package is already installed"
-msgstr ""
-"\n"
-"            "
+msgstr "La versió %1 d'aquest paquet està instal·lada"
 
 #: LocalPackageDialog#3
-#, fuzzy
 msgid "All dependencies are satisfied"
-msgstr ""
-"\n"
-"            "
+msgstr "S'han satisfet totes les dependències"
 
 #: LocalPackageDialog#4
-#, fuzzy
 msgid "%n package(s) will be installed as dependencies"
 msgstr ""
 "\n"
 "            \n"
+"            \n"
 "        "
 
 #: MainWindow#1
-#, fuzzy
 msgid "Name"
-msgstr ""
-"\n"
-"            "
+msgstr "Nom"
 
 #: MainWindow#2
-#, fuzzy
 msgid "Description"
-msgstr ""
-"\n"
-"            "
+msgstr "Descripció"
+
+#: MainWindow#3
+msgid "Name and Description"
+msgstr "Nom i descripció"
 
 # Exit Shaman Shortcut
-#: MainWindow#3
-#, fuzzy
-msgid "Ctrl+Q"
-msgstr ""
-"\n"
-"            "
-
 #: MainWindow#4
-#, fuzzy
-msgid "Shaman - Reducing To Tray"
-msgstr ""
-"\n"
-"            "
+msgid "Ctrl+Q"
+msgstr "Ctrl+Q"
 
 #: MainWindow#5
-#, fuzzy
+msgid "Shaman - Reducing To Tray"
+msgstr "Shaman - Reduïnt a la Safata"
+
+#: MainWindow#6
 msgid ""
 "Shaman will keep running in the system tray.\n"
 "To close it, click Quit in the file menu or in the tray icon context menu.\n"
@@ -1417,444 +904,300 @@ msgid ""
 "at a regular interval and notify you about available upgrades.\n"
 "You can change this behaviour in Settings."
 msgstr ""
-"\n"
-"            "
-
-#: MainWindow#6
-#, fuzzy
-msgctxt "MainWindow#6"
-msgid "Repositories"
-msgstr ""
-"\n"
-"            "
+"Shaman romandrà obert a la safata del sistema.\n"
+"Per tancarlo, faci clic a Sortir al menú Fitxer o al menú contextual de la "
+"icona de la safata.\n"
+"Mentre sigui a la safata, Shaman actualitzará les seves bases de dades\n"
+"a intervals de temps regulars i li notificará les actualitzacións "
+"disponibles.\n"
+"Pot cambiar el comportament a Opcións."
 
 #: MainWindow#7
-#, fuzzy
-msgid "All Repositories"
-msgstr ""
-"\n"
-"            "
+msgctxt "MainWindow#7"
+msgid "Repositories"
+msgstr "Repositoris"
 
 #: MainWindow#8
-#, fuzzy
-msgid "Local Packages"
-msgstr ""
-"\n"
-"            "
+msgid "All Repositories"
+msgstr "Tots els repositoris"
 
 #: MainWindow#9
-#, fuzzy
-msgid "Package Groups"
-msgstr ""
-"\n"
-"            "
+msgid "Local Packages"
+msgstr "Paquets locals"
 
 #: MainWindow#10
-#, fuzzy
-msgid "All Groups"
-msgstr ""
-"\n"
-"            "
+msgid "Package Groups"
+msgstr "Grups de paquets"
 
 #: MainWindow#11
-#, fuzzy
-msgid "Installed packages"
-msgstr ""
-"\n"
-"            "
+msgid "All Groups"
+msgstr "Tots els grups"
 
 #: MainWindow#12
-#, fuzzy
-msgid "Not installed packages"
-msgstr ""
-"\n"
-"            "
+msgid "Installed packages"
+msgstr "Paquets instal·lats"
 
 #: MainWindow#13
-#, fuzzy
-msgid "Upgradeable packages"
-msgstr ""
-"\n"
-"            "
+msgid "Not installed packages"
+msgstr "Paquets no instal·lats"
 
 #: MainWindow#14
-#, fuzzy
-msgid "Packages in Queue"
-msgstr ""
-"\n"
-"            "
+msgid "Upgradeable packages"
+msgstr "Paquets actualitzables"
 
 #: MainWindow#15
-#, fuzzy
-msgid "Mark for Re&installation"
-msgstr ""
-"\n"
-"            "
+msgid "Packages in Queue"
+msgstr "Paquets a la pila"
 
 #: MainWindow#16
-#, fuzzy
-msgid "Mark for &Installation"
-msgstr ""
-"\n"
-"            "
+msgid "Mark for Re&installation"
+msgstr "Marcar per re&instal·lar"
 
 #: MainWindow#17
-#, fuzzy
-msgctxt "MainWindow#17"
-msgid "Install"
-msgstr ""
-"\n"
-"            "
+msgid "Mark for &Installation"
+msgstr "Marcar per &instal·lar"
 
 #: MainWindow#18
-#, fuzzy
 msgctxt "MainWindow#18"
-msgid "Uninstall"
-msgstr ""
-"\n"
-"            "
+msgid "Install"
+msgstr "Instal·lar"
 
 #: MainWindow#19
-#, fuzzy
 msgctxt "MainWindow#19"
-msgid "Complete Uninstall"
-msgstr ""
-"\n"
-"            "
+msgid "Uninstall"
+msgstr "Desinstal·lar"
 
 #: MainWindow#20
-#, fuzzy
-msgid "Status: "
-msgstr ""
-"\n"
-"            "
+msgctxt "MainWindow#20"
+msgid "Complete Uninstall"
+msgstr "Desinstal·lar completament"
 
 #: MainWindow#21
-#, fuzzy
-msgid "Installed"
-msgstr ""
-"\n"
-"            "
+msgid "Status: "
+msgstr "Estat:"
 
 #: MainWindow#22
-#, fuzzy
-msgid "Not installed"
-msgstr ""
-"\n"
-"            "
+msgid "Installed"
+msgstr "Instal·lat"
 
 #: MainWindow#23
-#, fuzzy
-msgid "Local Version: "
-msgstr ""
-"\n"
-"            "
+msgid "Not installed"
+msgstr "No instal·lat"
 
 #: MainWindow#24
-#, fuzzy
-msgid "Version in the Repository: "
-msgstr ""
-"\n"
-"            "
+msgid "Local Version: "
+msgstr "Versió local:"
 
 #: MainWindow#25
-#, fuzzy
-msgid "Action: "
-msgstr ""
-"\n"
-"            "
+msgid "Version in the Repository: "
+msgstr "Versió al repositori:"
 
 #: MainWindow#26
-#, fuzzy
-msgctxt "MainWindow#26"
-msgid "Error"
-msgstr ""
-"\n"
-"            "
+msgid "Action: "
+msgstr "Acció:"
 
 #: MainWindow#27
-#, fuzzy
+msgctxt "MainWindow#27"
+msgid "Error"
+msgstr "Error"
+
+#: MainWindow#28
 msgid ""
 "One or more Databases could not be updated.\n"
 "Last error reported was:\n"
 "%1"
 msgstr ""
-"\n"
-"            "
-
-#: MainWindow#28
-#, fuzzy
-msgctxt "MainWindow#28"
-msgid "Database Update"
-msgstr ""
-"\n"
-"            "
+"Una o més bases de dades no es poden actualitzar.\n"
+"L'últim error rebut es:\n"
+"%1"
 
 #: MainWindow#29
-#, fuzzy
-msgid "One or more databases failed to update!"
-msgstr ""
-"\n"
-"            "
+msgctxt "MainWindow#29"
+msgid "Database Update"
+msgstr "Actualitzar bases de dades"
 
 #: MainWindow#30
-#, fuzzy
-msgid "Databases Updated Successfully"
-msgstr ""
-"\n"
-"            "
+msgid "One or more databases failed to update!"
+msgstr "Una o més bases de dades no s'han pogut actualitzar!"
 
 #: MainWindow#31
-#, fuzzy
-msgid "Pacman Update"
-msgstr ""
-"\n"
-"            "
+msgid "Databases Updated Successfully"
+msgstr "Les bases de dades s'han actualitzat correctament"
 
 #: MainWindow#32
-#, fuzzy
+msgid "Pacman Update"
+msgstr "Actualitzar Pacman"
+
+#: MainWindow#33
 msgid ""
 "Pacman can be upgraded. It is advised to process it alone\n"
 "to avoid version conflicts.\n"
 "Do you want to Upgrade Pacman now?"
 msgstr ""
-"\n"
-"            "
-
-#: MainWindow#33
-#, fuzzy
-msgid "Shaman Update"
-msgstr ""
-"\n"
-"            "
+"Pacman es pot actualitzar. Es més segur actualitzarlo￼\n"
+"individualment per evitar conflictes de versions.￼\n"
+"Desitja actualitzar Pacman ara?"
 
 #: MainWindow#34
-#, fuzzy
+msgid "Shaman Update"
+msgstr "Actualitzar Shaman"
+
+#: MainWindow#35
 msgid ""
 "Shaman can be upgraded. It is advised to process it alone\n"
 "to avoid version conflicts.\n"
 "Do you want to Upgrade Shaman now?"
 msgstr ""
-"\n"
-"            "
-
-#: MainWindow#35
-#, fuzzy
-msgid "Mark for &Removal"
-msgstr ""
-"\n"
-"            "
+"Shaman es pot actualitzar. Es més segur actualitzarlo\n"
+"individualment per evitar conflictes de versions.￼\n"
+"Desitja actualitzar Shaman ara?"
 
 #: MainWindow#36
-#, fuzzy
-msgid "Mark for Upgrade"
-msgstr ""
-"\n"
-"            "
+msgid "Mark for &Removal"
+msgstr "Marca&r per desinstal·lar"
 
 #: MainWindow#37
-#, fuzzy
-msgid "&Cancel Action"
-msgstr ""
-"\n"
-"            "
+msgid "Mark for Upgrade"
+msgstr "Marcar per actualitzar"
 
 #: MainWindow#38
-#, fuzzy
-msgctxt "MainWindow#38"
-msgid "Package Information"
-msgstr ""
-"\n"
-"            "
+msgid "&Cancel Action"
+msgstr "&Cancel·lar acció"
 
 #: MainWindow#39
-#, fuzzy
-msgid "Mark all for installation"
-msgstr ""
-"\n"
-"            "
+msgctxt "MainWindow#39"
+msgid "Package Information"
+msgstr "Informació del paquet"
 
 #: MainWindow#40
-#, fuzzy
-msgid "Mark all for reinstallation"
-msgstr ""
-"\n"
-"            "
+msgid "Mark all for installation"
+msgstr "Marcar tots per instal·lar"
 
 #: MainWindow#41
-#, fuzzy
-msgid "Mark all for removal"
-msgstr ""
-"\n"
-"            "
+msgid "Mark all for reinstallation"
+msgstr "Marcar tots per reinstal·lar"
 
 #: MainWindow#42
-#, fuzzy
-msgid "Cancel all actions"
-msgstr ""
-"\n"
-"            "
+msgid "Mark all for removal"
+msgstr "Marcar tots per desinstal·lar"
 
 #: MainWindow#43
-#, fuzzy
-msgctxt "MainWindow#43"
-msgid "Shaman"
-msgstr ""
-"\n"
-"            "
+msgid "Cancel all actions"
+msgstr "Cancel·lar-ho tot"
 
 #: MainWindow#44
-#, fuzzy
+msgctxt "MainWindow#44"
+msgid "Shaman"
+msgstr "Shaman"
+
+#: MainWindow#45
 msgid ""
 "A package providing %1 is already installed.\n"
 "Do you want to install %1 anyway?"
 msgstr ""
-"\n"
-"            "
-
-#: MainWindow#45
-#, fuzzy
-msgctxt "MainWindow#45"
-msgid "System Upgrade"
-msgstr ""
-"\n"
-"            "
+"Hi ha instal·lat un paquet que proveeix %1.\n"
+"Desitja instal·lar %1 igualment?"
 
 #: MainWindow#46
-#, fuzzy
-msgid "Your system is up to date!"
-msgstr ""
-"\n"
-"            "
+msgctxt "MainWindow#46"
+msgid "System Upgrade"
+msgstr "Actualització del  sistema"
 
 #: MainWindow#47
-#, fuzzy
-msgid "News Alert"
-msgstr ""
-"\n"
-"            "
+msgid "Your system is up to date!"
+msgstr "El seu sistema està actualitzat!"
 
 #: MainWindow#48
-#, fuzzy
+msgid "News Alert"
+msgstr "Alertes de notícies"
+
+#: MainWindow#49
 msgid ""
 "There is an unread news about %1.\n"
 "Do you want to read it?"
 msgstr ""
-"\n"
-"            "
-
-#: MainWindow#49
-#, fuzzy
-msgctxt "MainWindow#49"
-msgid "Upgrade"
-msgstr ""
-"\n"
-"            "
+"Hi ha una notícia sense llegir quant a %1.\n"
+"Desitja llegir-la?"
 
 #: MainWindow#50
-#, fuzzy
 msgctxt "MainWindow#50"
-msgid "Queue Processing"
-msgstr ""
-"\n"
-"            "
+msgid "Upgrade"
+msgstr "Actualització"
 
 #: MainWindow#51
-#, fuzzy
+msgctxt "MainWindow#51"
+msgid "Queue Processing"
+msgstr "Processant la pila"
+
+#: MainWindow#52
 msgid ""
 "Your Queue is being processed.\n"
 "Please wait."
 msgstr ""
-"\n"
-"            "
-
-#: MainWindow#52
-#, fuzzy
-msgid "Queue Processed"
-msgstr ""
-"\n"
-"            "
+"S'està processant la pila\n"
+"Si us plau, esperi."
 
 #: MainWindow#53
-#, fuzzy
+msgid "Queue Processed"
+msgstr "Pila processada"
+
+#: MainWindow#54
 msgid ""
 "One or more errors occurred, your Queue\n"
 "was not successfully processed"
 msgstr ""
-"\n"
-"            "
-
-#: MainWindow#54
-#, fuzzy
-msgid "Error Processing Queue!!"
-msgstr ""
-"\n"
-"            "
+"Hi ha hagut un o més error, la seva pila\n"
+"no s'ha processat correctament"
 
 #: MainWindow#55
-#, fuzzy
-msgid "Restart required"
-msgstr ""
-"\n"
-"            "
+msgid "Error Processing Queue!!"
+msgstr "Error processant la pila!!"
 
 #: MainWindow#56
-#, fuzzy
+msgid "Restart required"
+msgstr "Es necessari reiniciar"
+
+#: MainWindow#57
 msgid ""
 "Pacman or Shaman was updated. Shaman will now quit,\n"
 "please restart it to use the new version"
 msgstr ""
-"\n"
-"            "
+"Pacman o Shaman s'han actualitzar. Shaman es tancará,\n"
+"si us plau, torni'l a obrir per fer servir la nova versió"
 
-#: MainWindow#57
-#, fuzzy
+#: MainWindow#58
 msgid ""
 "Your Kernel has been updated.\n"
 "Please restart your PC soon to load the new Kernel."
 msgstr ""
-"\n"
-"            "
-
-#: MainWindow#58
-#, fuzzy
-msgid "Your Queue was successfully processed!"
-msgstr ""
-"\n"
-"            "
+"S'ha acctualitzar el seu Kernel.\n"
+"El PC s'ha de reiniciar  per carregar el nou Kernel."
 
 #: MainWindow#59
-#, fuzzy
-msgid "Your Queue was successfully processed!!"
-msgstr ""
-"\n"
-"            "
+msgid "Your Queue was successfully processed!"
+msgstr "La pila s'ha processat correctament!"
 
 #: MainWindow#60
-#, fuzzy
-msgid "Install a Package"
-msgstr ""
-"\n"
-"            "
+msgid "Your Queue was successfully processed!!"
+msgstr "La pila s'ha processat correctament!"
 
 #: MainWindow#61
-#, fuzzy
-msgid "Arch Linux Packages (*.pkg.tar.gz)"
-msgstr ""
-"\n"
-"            "
+msgid "Install a Package"
+msgstr "Instal·lar un paquet"
 
 #: MainWindow#62
-#, fuzzy
+msgid "Arch Linux Packages (*.pkg.tar.gz)"
+msgstr "Paquets d'Ach Linux (*.pkg.tar.gz)"
+
+#: MainWindow#63
 msgid ""
 "%1 does not seem\n"
 "a valid package"
 msgstr ""
-"\n"
-"            "
+"%1 no sembla ser\n"
+"un paquet vàlid"
 
-#: MainWindow#63
-#, fuzzy
+#: MainWindow#64
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -1880,1130 +1223,636 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Lukas Appelhans "
 "&lt;boom1992@kdemod.ath.cx&gt;</p></body></html>"
 msgstr ""
-"\n"
-"            "
-
-#: MainWindow#64
-#, fuzzy
-msgid "All packages"
-msgstr ""
-"\n"
-"            "
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">p, "
+"li { white-space: pre-wrap; }</style></head><body style=\" font-family:'Sans "
+"Serif'; font-size:10pt; font-weight:400; font-style:normal;\"><p style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Un "
+"frontend de libpalm en Qt</span></p><p style=\"-qt-paragraph-type:empty; "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px; font-weight:600;\"></p><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\">Llicència: GPLv2+</p><p style=\" margin-top:0px; "
+"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
+"text-indent:0px;\">Versió de Libpalm: v.%1</p><p style=\"-qt-paragraph-"
+"type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"></p><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\">(C) 2008 Dario Freddi "
+"&lt;drf@kdemod.ath.cx&gt;</p><p style=\" margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">(C) "
+"2008 Lukas Appelhans &lt;boom1992@kdemod.ath.cx&gt;</p></body></html>"
 
 #: MainWindow#65
-#, fuzzy
-msgid "Status"
-msgstr ""
-"\n"
-"            "
+msgid "All packages"
+msgstr "Tots els paquets"
 
 #: MainWindow#66
-#, fuzzy
-msgid "Action"
-msgstr ""
-"\n"
-"            "
+msgid "Status"
+msgstr "Estat"
 
 #: MainWindow#67
-#, fuzzy
-msgid "Version"
-msgstr ""
-"\n"
-"            "
+msgid "Action"
+msgstr "Acció"
 
 #: MainWindow#68
-#, fuzzy
-msgid "Size"
-msgstr ""
-"\n"
-"            "
+msgid "Version"
+msgstr "Versió"
 
 #: MainWindow#69
-#, fuzzy
-msgctxt "MainWindow#69"
-msgid "Repository"
-msgstr ""
-"\n"
-"            "
+msgid "Size"
+msgstr "Tamany"
 
 #: MainWindow#70
-#, fuzzy
-msgid "Groups"
-msgstr ""
-"\n"
-"            "
+msgctxt "MainWindow#70"
+msgid "Repository"
+msgstr "Repositori"
 
 #: MainWindow#71
-#, fuzzy
-msgid "Action-Text"
-msgstr ""
-"\n"
-"            "
+msgid "Groups"
+msgstr "Grups"
 
 #: MainWindow#72
-#, fuzzy
-msgid "Re&positories"
-msgstr ""
-"\n"
-"            "
+msgid "Action-Text"
+msgstr "Text d'acció"
 
 #: MainWindow#73
-#, fuzzy
-msgid "Package &Groups"
-msgstr ""
-"\n"
-"            "
+msgid "Re&positories"
+msgstr "Re&positoris"
 
 #: MainWindow#74
-#, fuzzy
-msgid "Install selected package"
-msgstr ""
-"\n"
-"            "
+msgid "Package &Groups"
+msgstr "&Grups de paquets"
 
 #: MainWindow#75
-#, fuzzy
-msgid "Remove selected package"
-msgstr ""
-"\n"
-"            "
+msgid "Install selected package"
+msgstr "Instal·lar paquet seleccionat"
 
 #: MainWindow#76
-#, fuzzy
-msgid "Complete Remove selected package (pacman -Rcs)"
-msgstr ""
-"\n"
-"            "
+msgid "Remove selected package"
+msgstr "Desinstal·lar paquet seleccionat"
 
 #: MainWindow#77
-#, fuzzy
-msgid "Mark for complete re&moval"
-msgstr ""
-"\n"
-"            "
+msgid "Complete Remove selected package (pacman -Rcs)"
+msgstr "Desisntal·lar completament el paquet seleccionat (pacman -Rcs)"
 
 #: MainWindow#78
-#, fuzzy
-msgid "Cancel action for selected package"
-msgstr ""
-"\n"
-"            "
+msgid "Mark for complete re&moval"
+msgstr "Marcar per desinstal·lar co&mpletament"
 
 #: MainWindow#79
-#, fuzzy
-msgid "Package I&nformation"
-msgstr ""
-"\n"
-"            "
+msgid "Cancel action for selected package"
+msgstr "Cancel·lar acció del paquet seleccionat"
 
 #: MainWindow#80
-#, fuzzy
-msgid "File&s"
-msgstr ""
-"\n"
-"            "
+msgid "Package I&nformation"
+msgstr "I&nformació del paquet"
 
 #: MainWindow#81
-#, fuzzy
-msgctxt "MainWindow#81"
-msgid "1"
-msgstr ""
-"\n"
-"            "
+msgid "File&s"
+msgstr "Fitxer&s"
 
 #: MainWindow#82
-#, fuzzy
-msgid "&Dependencies"
-msgstr ""
-"\n"
-"            "
+msgctxt "MainWindow#82"
+msgid "1"
+msgstr "1"
 
 #: MainWindow#83
-#, fuzzy
-msgid "&File"
-msgstr ""
-"\n"
-"            "
+msgid "&Dependencies"
+msgstr "&Dependències"
 
 #: MainWindow#84
-#, fuzzy
-msgid "&Help"
-msgstr ""
-"\n"
-"            "
+msgid "&File"
+msgstr "&Fitxer"
 
 #: MainWindow#85
-#, fuzzy
-msgid "&Actions"
-msgstr ""
-"\n"
-"            "
+msgid "&Help"
+msgstr "A&juda"
 
 #: MainWindow#86
-#, fuzzy
-msgid "Build and Install from Source"
-msgstr ""
-"\n"
-"            "
+msgid "&Actions"
+msgstr "&Accións"
 
 #: MainWindow#87
-#, fuzzy
-msgid "&Tools"
-msgstr ""
-"\n"
-"            "
+msgid "Build and Install from Source"
+msgstr "Contruir i instal·lar desde la font"
 
 #: MainWindow#88
-#, fuzzy
-msgid "Quick Actions"
-msgstr ""
-"\n"
-"            "
+msgid "&Tools"
+msgstr "&Eïnes"
 
 #: MainWindow#89
-#, fuzzy
-msgid "Settings..."
-msgstr ""
-"\n"
-"            "
+msgid "Quick Actions"
+msgstr "Accións ràpides"
 
 #: MainWindow#90
-#, fuzzy
-msgid "About..."
-msgstr ""
-"\n"
-"            "
+msgid "Settings..."
+msgstr "Arranjaments..."
 
-#. (obsolete)
 #: MainWindow#91
-msgctxt "MainWindow#91"
-msgid "Update Database"
-msgstr ""
-"\n"
-"            "
+msgid "About..."
+msgstr "Quant a..."
 
 #: MainWindow#92
-#, fuzzy
 msgctxt "MainWindow#92"
 msgid "Upgrade System"
-msgstr ""
-"\n"
-"            "
+msgstr "Actualitzar sistema"
 
 #: MainWindow#93
-#, fuzzy
 msgid "Install Package From File"
-msgstr ""
-"\n"
-"            "
+msgstr "Instal·lar paquet desde fitxer"
 
 #: MainWindow#94
-#, fuzzy
 msgid "Update ABS Tree"
-msgstr ""
-"\n"
-"            "
+msgstr "Actualtitzar arbre ABS"
 
 #: MainWindow#95
-#, fuzzy
 msgid "Build and Install Queue"
-msgstr ""
-"\n"
-"            "
+msgstr "Construir i instal·lar la pila"
 
 # Quit the application
 #: MainWindow#96
-#, fuzzy
 msgctxt "MainWindow#96"
 msgid "Quit"
-msgstr ""
-"\n"
-"            "
+msgstr "Sortir"
 
-#. (obsolete)
 #: MainWindow#97
-msgctxt "MainWindow#97"
-msgid "Process Queue"
-msgstr ""
-"\n"
-"            "
+msgid "Read News"
+msgstr "Llegir notícies"
 
 #: MainWindow#98
-#, fuzzy
-msgid "Read News"
-msgstr ""
-"\n"
-"            "
-
-#: MainWindow#99
-#, fuzzy
 msgid "View Log"
-msgstr ""
-"\n"
-"            "
-
-#: MainWindow#100
-#, fuzzy
-msgid "Name and Description"
-msgstr ""
-"\n"
-"            "
+msgstr "Veure registre"
 
 #: MaintenanceBar#1
-#, fuzzy
-msgid "Please choose an action to start maintenance..."
-msgstr ""
-"\n"
-"            "
+msgid "Maintenance Actions"
+msgstr "Accións de manteniment"
 
 #: MaintenanceBar#2
-#, fuzzy
-msgctxt "MaintenanceBar#2"
-msgid "Clean Unused Databases"
-msgstr ""
-"\n"
-"            "
+msgid "Please choose an action to start maintenance..."
+msgstr "Seleccioni una opció per començar manteniment..."
 
 #: MaintenanceBar#3
-#, fuzzy
 msgctxt "MaintenanceBar#3"
-msgid "Clean Cache"
-msgstr ""
-"\n"
-"            "
+msgid "Clean Unused Databases"
+msgstr "Netejar bases de dades no utilitzades"
 
 #: MaintenanceBar#4
-#, fuzzy
 msgctxt "MaintenanceBar#4"
-msgid "Empty Cache"
-msgstr ""
-"\n"
-"            "
+msgid "Clean Cache"
+msgstr "Netejar la cache"
 
 #: MaintenanceBar#5
-#, fuzzy
 msgctxt "MaintenanceBar#5"
-msgid "Optimize Pacman Database"
-msgstr ""
-"\n"
-"            "
+msgid "Empty Cache"
+msgstr "Buidar la cache"
 
 #: MaintenanceBar#6
-#, fuzzy
 msgctxt "MaintenanceBar#6"
-msgid "Clean All Building Environments"
-msgstr ""
-"\n"
-"            "
+msgid "Optimize Pacman Database"
+msgstr "Optimitzar bases de dades de Pacman"
 
 #: MaintenanceBar#7
-#, fuzzy
 msgctxt "MaintenanceBar#7"
-msgid "Cleaning up unused Databases..."
-msgstr ""
-"\n"
-"            "
+msgid "Clean All Building Environments"
+msgstr "Netejar els entorns de construcció"
 
 #: MaintenanceBar#8
-#, fuzzy
 msgctxt "MaintenanceBar#8"
-msgid "Cleaning up Cache..."
-msgstr ""
-"\n"
-"            "
+msgid "Cleaning up unused Databases..."
+msgstr "Netejant bases de dades no utilitzades..."
 
 #: MaintenanceBar#9
-#, fuzzy
 msgctxt "MaintenanceBar#9"
-msgid "Deleting Cache..."
-msgstr ""
-"\n"
-"            "
+msgid "Cleaning up Cache..."
+msgstr "Netejant la cache..."
 
-#. (obsolete)
 #: MaintenanceBar#10
 msgctxt "MaintenanceBar#10"
-msgid "Optimizing Pacman Database..."
-msgstr ""
-"\n"
-"            "
+msgid "Deleting Cache..."
+msgstr "Esborrant la cache..."
 
 #: MaintenanceBar#11
-#, fuzzy
 msgctxt "MaintenanceBar#11"
 msgid "Cleaning up building Environments..."
-msgstr ""
-"\n"
-"            "
+msgstr "Netejant els entorns de construcció..."
 
 #: MaintenanceBar#12
-#, fuzzy
 msgctxt "MaintenanceBar#12"
 msgid "Abort"
-msgstr ""
-"\n"
-"            "
+msgstr "Cancel·lar"
 
 #: MaintenanceBar#13
-#, fuzzy
 msgid "System Maintenance"
-msgstr ""
-"\n"
-"            "
+msgstr "Manteniment del sistema"
 
 #: MaintenanceBar#14
-#, fuzzy
 msgctxt "MaintenanceBar#14"
 msgid "Unused Databases Cleaned up successfully!"
-msgstr ""
-"\n"
-"            "
+msgstr "S'han netejat les bases de dades no utilitzades!"
 
 #: MaintenanceBar#15
-#, fuzzy
 msgctxt "MaintenanceBar#15"
 msgid "Cache Cleaned Up Successfully!"
-msgstr ""
-"\n"
-"            "
+msgstr "S'ha netejat la cache!"
 
 #: MaintenanceBar#16
-#, fuzzy
 msgctxt "MaintenanceBar#16"
 msgid "Cache Successfully Deleted!"
-msgstr ""
-"\n"
-"            "
+msgstr "S'ha esborrat la cache!"
 
 #: MaintenanceBar#17
-#, fuzzy
 msgctxt "MaintenanceBar#17"
 msgid "Build Environments Successfully Cleaned!"
-msgstr ""
-"\n"
-"            "
+msgstr "S'ha netejat els entorns de construcció!"
 
 #: MaintenanceBar#18
-#, fuzzy
 msgctxt "MaintenanceBar#18"
 msgid "Close"
-msgstr ""
-"\n"
-"            "
+msgstr "Tancar"
 
 #: MaintenanceBar#19
-#, fuzzy
 msgctxt "MaintenanceBar#19"
 msgid "Cleaning up Unused Databases Failed!"
-msgstr ""
-"\n"
-"            "
+msgstr "Ha fallat la neteja de bases de dades no utilitzades!"
 
 #: MaintenanceBar#20
-#, fuzzy
 msgctxt "MaintenanceBar#20"
 msgid "Cleaning up Cache Failed!"
-msgstr ""
-"\n"
-"            "
+msgstr "Ha fallat la neteja de la cache!"
 
 #: MaintenanceBar#21
-#, fuzzy
 msgctxt "MaintenanceBar#21"
 msgid "Deleting Cache Failed!"
-msgstr ""
-"\n"
-"            "
+msgstr "No s'ha esborrat la cache!"
 
 #: MaintenanceBar#22
-#, fuzzy
 msgctxt "MaintenanceBar#22"
 msgid "Could not clean Build Environments!!"
-msgstr ""
-"\n"
-"            "
+msgstr "No es poder netejar els entorns de construcció!!"
 
 #: MaintenanceBar#23
-#, fuzzy
 msgctxt "MaintenanceBar#23"
 msgid "Pacman Database Optimized Successfully!"
-msgstr ""
-"\n"
-"            "
+msgstr "Les bases de dades s'han actualitzat correctament!"
 
 #: MaintenanceBar#24
-#, fuzzy
 msgctxt "MaintenanceBar#24"
 msgid "Could not Optimize Pacman Database!"
-msgstr ""
-"\n"
-"            "
-
-# sync is a command, so it should not be translated
-#. (obsolete)
-#: MaintenanceBar#25
-msgctxt "MaintenanceBar#25"
-msgid "Running sync..."
-msgstr ""
-"\n"
-"            "
-
-#. (obsolete)
-#: MaintenanceBar#26
-msgctxt "MaintenanceBar#26"
-msgid "Operation Completed Successfully!"
-msgstr ""
-"\n"
-"            "
-
-# Sync is always the command
-#. (obsolete)
-#: MaintenanceBar#27
-msgctxt "MaintenanceBar#27"
-msgid "Sync was successfully executed!!"
-msgstr ""
-"\n"
-"            "
-
-# Sync is always the command
-#. (obsolete)
-#: MaintenanceBar#28
-msgctxt "MaintenanceBar#28"
-msgid "Sync could not be executed!"
-msgstr ""
-"\n"
-"            "
-
-# Sync is always the command
-#. (obsolete)
-#: MaintenanceBar#29
-msgctxt "MaintenanceBar#29"
-msgid "Sync could not be executed!!"
-msgstr ""
-"\n"
-"            "
-
-#: MaintenanceBar#30
-#, fuzzy
-msgid "Maintenance Actions"
-msgstr ""
-"\n"
-"            "
+msgstr "No s'ha pogut optimitzat la base de dades!"
 
 #: NewsViewer#1
-#, fuzzy
 msgid "Please wait, fetching items..."
-msgstr ""
-"\n"
-"            "
+msgstr "Esperi, descarregant elements..."
 
 #: NewsViewer#2
-#, fuzzy
 msgctxt "NewsViewer#2"
 msgid "Mark as Read"
-msgstr ""
-"\n"
-"            "
+msgstr "Marcar com llegit"
 
 #: NewsViewer#3
-#, fuzzy
 msgid "Mark as Unread"
-msgstr ""
-"\n"
-"            "
+msgstr "Marcar com no llegit"
 
 #: NewsViewer#4
-#, fuzzy
 msgctxt "NewsViewer#4"
 msgid "Error"
-msgstr ""
-"\n"
-"            "
+msgstr "Error"
 
 #: NewsViewer#5
-#, fuzzy
 msgid "Could not fetch the RSS feed! Error reported was:"
-msgstr ""
-"\n"
-"            "
+msgstr "No es pot descarregar el RSS! El error reportat es:"
 
 # Size is in Gib
 #: PackageProperties#1
-#, fuzzy
 msgid "%1 GiB"
-msgstr ""
-"\n"
-"            "
+msgstr "%1 GiB"
 
 # Size is in MiB
 #: PackageProperties#2
-#, fuzzy
 msgid "%1 MiB"
-msgstr ""
-"\n"
-"            "
+msgstr "%1 MiB"
 
 # Size is in KiB
 #: PackageProperties#3
-#, fuzzy
 msgid "%1 KiB"
-msgstr ""
-"\n"
-"            "
+msgstr "%1 KiB"
 
 # Size is in Bytes
 #: PackageProperties#4
-#, fuzzy
 msgid "%1 Bytes"
-msgstr ""
-"\n"
-"            "
+msgstr "%1 Bytes"
 
 #: PackageProperties#5
-#, fuzzy
 msgid "Shaman - %1 properties"
-msgstr ""
-"\n"
-"            "
+msgstr "Shaman - %1 propietats"
 
 # Stands for: Not Available
 #: PackageProperties#6
-#, fuzzy
 msgid "N/A"
-msgstr ""
-"\n"
-"            "
+msgstr "N/A"
 
 #: PackageProperties#7
-#, fuzzy
 msgid "Changelog not available for this package"
-msgstr ""
-"\n"
-"            "
+msgstr "Changelog no disponible per aquest paquet"
 
 #: QObject#1
-#, fuzzy
 msgid "Whoa, that's co&ol!"
-msgstr ""
-"\n"
-"            "
+msgstr "&Oooh que bé!"
 
 #: QObject#2
-#, fuzzy
 msgctxt "QObject#2"
 msgid "Ok"
-msgstr ""
-"\n"
-"            "
+msgstr "Bé"
 
 #: QObject#3
-#, fuzzy
-msgid "O&k"
-msgstr ""
-"\n"
-"            "
+msgctxt "QObject#3"
+msgid "Shaman"
+msgstr "Shaman"
 
 #: QObject#4
-#, fuzzy
-msgid "&Yes"
-msgstr ""
-"\n"
-"            "
-
-#: QObject#5
-#, fuzzy
-msgid "&No"
-msgstr ""
-"\n"
-"            "
-
-#: QObject#6
-#, fuzzy
-msgid "Do not &show this Again"
-msgstr ""
-"\n"
-"            "
-
-#: QObject#7
-#, fuzzy
-msgid "C&ancel"
-msgstr ""
-"\n"
-"            "
-
-#: QObject#8
-#, fuzzy
-msgctxt "QObject#8"
-msgid "Shaman"
-msgstr ""
-"\n"
-"            "
-
-#. (obsolete)
-#: QObject#9
-msgid ""
-"Shaman could not switch to root.\n"
-"Probably you have not set the SUID bit to it.\n"
-"You can do that by issuing as root\n"
-"chown root shaman && chmod u+s shaman.\n"
-"Note that this is safe, please read Shaman wiki\n"
-"for more details."
-msgstr ""
-"\n"
-"            "
-
-#: QObject#10
-#, fuzzy
 msgid ""
 "There was a problem while testing libalpm.\n"
 "Maybe another application has a lock on it."
 msgstr ""
-"\n"
-"            "
+"Hi ha hagut un problema amb libalpm.\n"
+"Potser alguna aplicació l'ha bloquejat."
 
 # Hey! If you are reading this, first of all thanks for helping us in making Shaman better. There are not many comments unless where needed, since all the strings are pretty self-explanatory. You will see a lot of HTML in some cases: do not let that scare you, but please edit text only. Editing HTML tags too may break our layout, so be careful. A good practice could be copying the whole string, and then translating just what's outside the tags, usually just a few words. If you have any doubts, or if you just want to drop us a line, there goes our email addresses:
 # Dario: drf54321@gmail.com
 # Lukas: l.appelhans@gmx.de
 # Thanks again, and enjoy your translation!
-#: QObject#11
-#, fuzzy
-msgctxt "QObject#11"
+#: QObject#5
+msgctxt "QObject#5"
 msgid "Shaman"
-msgstr ""
-"\n"
-"            "
+msgstr "Shaman"
 
-#: QObject#12
-#, fuzzy
+#: QObject#6
 msgid ""
 "Your settings file seems unwritable.\n"
 "Please check permissions on it."
 msgstr ""
-"\n"
-"            "
+"El fitxer d'arranjaments no es pot escriure.\n"
+"Revisi els permisos d'aquest fitxer."
 
-#: QObject#13
-#, fuzzy
-msgctxt "QObject#13"
+#: QObject#7
+msgctxt "QObject#7"
 msgid "Please Wait..."
-msgstr ""
-"\n"
-"            "
+msgstr "Si us plau, esperi..."
 
-#: QObject#14
-#, fuzzy
+#: QObject#8
 msgid ""
 "Shaman can not be started as root.\n"
 "Please restart it as unprivileged user."
 msgstr ""
-"\n"
-"            "
+"Shaman no s'ha de llançar com root.\n"
+"Torni'l a llançar com usuari sense privilegis."
 
-#: QObject#15
-#, fuzzy
+#: QObject#9
 msgid ""
 "You have started Shaman as root.\n"
 "It is advised to start it as unprivileged user.\n"
 "Shaman will ask you for root password when needed."
 msgstr ""
-"\n"
-"            "
+"Ha llançat Shaman com a root.\n"
+"Es millor llançar-lo com usuari sense privilegis.\n"
+"Se li preguntará la contrasenya quan faci falta."
 
-#: QObject#16
-#, fuzzy
+#: QObject#10
 msgid ""
 "Pacman is not updated.\n"
 "Shaman needs libalpm >= 2.1.0 to run.\n"
 "Yours is %1. Please update Pacman."
 msgstr ""
-"\n"
-"            "
+"Pacman no està actualitzat.\n"
+"Shaman necessita libalpm >=2.1.0 per funcionar.\n"
+"La seva es %1. Si us plau actualitzi Pacman."
+
+#: QObject#11
+msgid "Loading Databases..."
+msgstr "Carregant bases de dades..."
+
+#: QObject#12
+msgid "Loading Packages..."
+msgstr "Carregant paquets..."
+
+#: QObject#13
+msgid "Starting up Shaman..."
+msgstr "Llançant Shaman..."
+
+#: QObject#14
+msgid "O&k"
+msgstr "B&é"
+
+#: QObject#15
+msgid "&Yes"
+msgstr "&Si"
+
+#: QObject#16
+msgid "&No"
+msgstr "&No"
 
 #: QObject#17
-#, fuzzy
-msgid "Loading Databases..."
-msgstr ""
-"\n"
-"            "
+msgid "Do not &show this Again"
+msgstr "No tornar a veure ai&xò"
 
 #: QObject#18
-#, fuzzy
-msgid "Loading Packages..."
-msgstr ""
-"\n"
-"            "
+msgid "C&ancel"
+msgstr "C&ancel·lar"
 
 #: QObject#19
-#, fuzzy
-msgid "Starting up Shaman..."
-msgstr ""
-"\n"
-"            "
-
-#: QObject#20
-#, fuzzy
 msgid ""
 "It looks like another copy of Shaman is running.\n"
 "You can only run one copy of Shaman at a time."
 msgstr ""
-"\n"
-"            "
+"Una altra còpia de Shaman està oberta.\n"
+"Nomès pot correr una còpia de Shaman alhora."
 
 #: QueueDialog#1
-#, fuzzy
 msgid "<br><b> * Validating Transaction</b><br>"
-msgstr ""
-"\n"
-"            "
+msgstr "<br><b> * Validant transacció</b><br>"
 
 #: QueueDialog#2
-#, fuzzy
 msgid "Validating Dependencies..."
-msgstr ""
-"\n"
-"            "
+msgstr "Validant dependències..."
 
 #: QueueDialog#3
-#, fuzzy
 msgid "Checking for Conflicts..."
-msgstr ""
-"\n"
-"            "
+msgstr "Comprovant conflictes..."
 
 #: QueueDialog#4
-#, fuzzy
 msgid "Resolving Dependencies..."
-msgstr ""
-"\n"
-"            "
+msgstr "Resolució de dependències..."
 
 #: QueueDialog#5
-#, fuzzy
 msgid "Looking for Inter-Conflicts..."
-msgstr ""
-"\n"
-"            "
+msgstr "Buscant conflictes interns..."
 
 #: QueueDialog#6
-#, fuzzy
 msgid "<br><b> * Package Installation Started</b><br>"
-msgstr ""
-"\n"
-"            "
+msgstr "<br><b> * Iniciant instal·lació de paquets</b><br>"
 
 #: QueueDialog#7
-#, fuzzy
 msgid "Installing %1..."
-msgstr ""
-"\n"
-"            "
+msgstr "Instal·lant %1..."
 
 #: QueueDialog#8
-#, fuzzy
 msgid "%1 (%2) installed successfully!"
-msgstr ""
-"\n"
-"            "
+msgstr "%1 (%2) instal·lat correctament!"
 
 #: QueueDialog#9
-#, fuzzy
 msgid "<br><b> * Package Removal Started</b><br>"
-msgstr ""
-"\n"
-"            "
+msgstr "<br><b> * Iniciant desinstal·lació de paquets</b><br>"
 
 #: QueueDialog#10
-#, fuzzy
 msgid "Removing %1..."
-msgstr ""
-"\n"
-"            "
+msgstr "Desinstal·lant %1..."
 
 #: QueueDialog#11
-#, fuzzy
 msgid "%1 (%2) removed successfully!"
-msgstr ""
-"\n"
-"            "
+msgstr "%1 (%2) Desinstal·lat correctament!"
 
 #: QueueDialog#12
-#, fuzzy
 msgid "<br><b> * Package Upgrading Started</b><br>"
-msgstr ""
-"\n"
-"            "
+msgstr "<br><b> * Iniciant actualització de paquets</b><br>"
 
 #: QueueDialog#13
-#, fuzzy
 msgid "Upgrading %1..."
-msgstr ""
-"\n"
-"            "
+msgstr "Actualitzant %1..."
 
 #: QueueDialog#14
-#, fuzzy
 msgid "Upgraded %1 successfully (%2 -> %3)"
-msgstr ""
-"\n"
-"            "
+msgstr "%1 actualitzat correctament! (%2 -> %3)"
 
 #: QueueDialog#15
-#, fuzzy
 msgid "<br><b> * Queue Processing Started</b><br>"
-msgstr ""
-"\n"
-"            "
+msgstr "<br><b> * Processant la pila</b><br>"
 
 #: QueueDialog#16
-#, fuzzy
 msgid "Checking package integrity..."
-msgstr ""
-"\n"
-"            "
+msgstr "Comprovant integritat dels paquets..."
 
 #: QueueDialog#17
-#, fuzzy
 msgid "Checking delta integrity..."
-msgstr ""
-"\n"
-"            "
+msgstr "Comprovant integritat delta..."
 
 #: QueueDialog#18
-#, fuzzy
 msgid "Applying deltas..."
-msgstr ""
-"\n"
-"            "
+msgstr "Aplicant deltas..."
 
 #: QueueDialog#19
-#, fuzzy
 msgid "Generating %1 with %2... "
-msgstr ""
-"\n"
-"            "
+msgstr "Generant %1 amb %2..."
 
 #: QueueDialog#20
-#, fuzzy
 msgid "Success!"
-msgstr ""
-"\n"
-"            "
+msgstr "Fet!"
 
 #: QueueDialog#21
-#, fuzzy
 msgid "Failed!"
-msgstr ""
-"\n"
-"            "
+msgstr "Fallat!"
 
 #: QueueDialog#22
-#, fuzzy
 msgid "<br><b> * Package Downloading Started</b><br>"
-msgstr ""
-"\n"
-"            "
+msgstr "<br><b> * Iniciant descàrrega de paquets</b><br>"
 
 #: QueueDialog#23
-#, fuzzy
 msgid "Starting downloading packages from %1..."
-msgstr ""
-"\n"
-"            "
+msgstr "Iniciant descàrrega de paquets desde %1..."
 
 # You just have to translate 'remaining' here. Leave everything else as it is.
 #: QueueDialog#24
-#, fuzzy
 msgid "%p% (%1 KB/s, %4:%5:%6 remaining)"
-msgstr ""
-"\n"
-"            "
+msgstr "%p% (%1 KB/s, %4:%5:%6 restant)"
 
 #: QueueDialog#25
-#, fuzzy
 msgid "Downloading %1... (%2 MB of %3 MB)"
-msgstr ""
-"\n"
-"            "
+msgstr "Descarregant %1... (%2 MB de %3 MB)"
 
 #: QueueDialog#26
-#, fuzzy
 msgid "Downloading %1... (%2 KB of %3 KB)"
-msgstr ""
-"\n"
-"            "
+msgstr "Descarregant %1... (%2 KB de %3 KB)"
 
 #: QueueDialog#27
-#, fuzzy
 msgid "Queue processed, please wait..."
-msgstr ""
-"\n"
-"            "
+msgstr "Pila processada, esperi...."
 
 #: QueueDialog#28
-#, fuzzy
 msgid "Queue processing failed!"
-msgstr ""
-"\n"
-"            "
+msgstr "Error processant la pila!!"
 
 #: QueueDialog#29
-#, fuzzy
 msgid "Queue processed successfully!"
-msgstr ""
-"\n"
-"            "
+msgstr "La pila s'ha processat correctament!"
 
 #: QueueDialog#30
-#, fuzzy
 msgctxt "QueueDialog#30"
 msgid "Close"
-msgstr ""
-"\n"
-"            "
+msgstr "Tancar"
 
-#. (obsolete)
 #: QueueDialog#31
-msgid "Unexpected Error. Shaman might be corrupted."
-msgstr ""
-"\n"
-"            "
-
-#. (obsolete)
-#: QueueDialog#32
-msgid "Executing %1 scriptlet for %2..."
-msgstr ""
-"\n"
-"            "
-
-#. (obsolete)
-#: QueueDialog#33
-msgid "Extracting Scriptlet from package failed!!"
-msgstr ""
-"\n"
-"            "
-
-#. (obsolete)
-#: QueueDialog#34
-msgid "Package %1 does not have %2 scriptlet"
-msgstr ""
-"\n"
-"            "
-
-#. (obsolete)
-#: QueueDialog#35
-msgid "Scriptlet processed successfully!"
-msgstr ""
-"\n"
-"            "
-
-#. (obsolete)
-#: QueueDialog#36
-msgid "Error processing Scriptlet!!"
-msgstr ""
-"\n"
-"            "
-
-#: QueueDialog#37
-#, fuzzy
-msgctxt "QueueDialog#37"
+msgctxt "QueueDialog#31"
 msgid "Queue Processing"
-msgstr ""
-"\n"
-"            "
+msgstr "Processar la pila"
 
-#: QueueDialog#38
-#, fuzzy
+#: QueueDialog#32
 msgid ""
 "Would you like to abort Queue Processing?\n"
 "This may damage your system."
 msgstr ""
-"\n"
-"            "
+"Desitja cancel·lar el processat de la pila?\n"
+"Això pot espatllar el seu sistema."
 
-#: QueueDialog#39
-#, fuzzy
+#: QueueDialog#33
 msgid "There has been an error while preparing the transaction.\n"
-msgstr ""
-"\n"
-"            "
+msgstr "Hi ha hagut un error preparant la transacció.\n"
 
-#: QueueDialog#40
-#, fuzzy
+#: QueueDialog#34
 msgid "There has been an error while committing the transaction.\n"
-msgstr ""
-"\n"
-"            "
+msgstr "Hi ha hagut un error durant la transacció.\n"
 
 #: QueueReadyDialog#1
-#, fuzzy
 msgid "Review Queue"
-msgstr ""
-"\n"
-"            "
+msgstr "Revisar pila"
 
 #: QueueReadyDialog#2
-#, fuzzy
 msgctxt "QueueReadyDialog#2"
 msgid "Force Queue Processing"
-msgstr ""
-"\n"
-"            "
+msgstr "Forçar el processat de la pila"
 
 #: QueueReadyDialog#3
-#, fuzzy
 msgctxt "QueueReadyDialog#3"
 msgid "Turn off PC when Queue is done"
-msgstr ""
-"\n"
-"            "
+msgstr "Apagar el PC quan la pila s'acabi"
 
 #: QueueReadyDialog#4
-#, fuzzy
 msgid "Process in Tray"
-msgstr ""
-"\n"
-"            "
+msgstr "Processar a la safata"
 
 #: QueueReadyDialog#5
-#, fuzzy
 msgid "Keep Queue Dialog Open after the Queue is finished"
-msgstr ""
-"\n"
-"            "
+msgstr "Mantenir oberta la finestra quan s'acabi la pila"
 
 #: QueueReadyDialog#6
-#, fuzzy
 msgctxt "QueueReadyDialog#6"
 msgid "Show packages..."
-msgstr ""
-"\n"
-"            "
+msgstr "Veure paquets..."
 
 #: QueueReadyDialog#7
-#, fuzzy
 msgctxt "QueueReadyDialog#7"
 msgid "Packages In Queue"
-msgstr ""
-"\n"
-"            "
+msgstr "Paquets a la pila"
 
 #: QueueReadyDialog#8
-#, fuzzy
 msgctxt "QueueReadyDialog#8"
 msgid "Cancel"
-msgstr ""
-"\n"
-"            "
+msgstr "Cancel·lar"
 
 #: QueueReadyDialog#9
-#, fuzzy
 msgid "Process"
-msgstr ""
-"\n"
-"            "
+msgstr "Processar"
 
 #: QueueReadyDialog#10
-#, fuzzy
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -3013,273 +1862,189 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Review Queue</span></p></body></html>"
 msgstr ""
-"\n"
-"            "
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">p, "
+"li { white-space: pre-wrap; }</style></head><body style=\" font-family:'Sans "
+"Serif'; font-size:10pt; font-weight:400; font-style:normal;\"><p style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Revisar "
+"pila</span></p></body></html>"
 
 #: ReviewQueueDialog#1
-#, fuzzy
 msgctxt "ReviewQueueDialog#1"
 msgid "Install"
-msgstr ""
-"\n"
-"            "
+msgstr "Instal·lar"
 
 #: ReviewQueueDialog#2
-#, fuzzy
 msgctxt "ReviewQueueDialog#2"
 msgid "To be Installed"
-msgstr ""
-"\n"
-"            "
+msgstr "Per instal·lar"
 
 #: ReviewQueueDialog#3
-#, fuzzy
 msgctxt "ReviewQueueDialog#3"
 msgid "Upgrade"
-msgstr ""
-"\n"
-"            "
+msgstr "Actualitzar"
 
 #: ReviewQueueDialog#4
-#, fuzzy
 msgctxt "ReviewQueueDialog#4"
 msgid "To be Upgraded"
-msgstr ""
-"\n"
-"            "
+msgstr "Per actualitzar"
 
 #: ReviewQueueDialog#5
-#, fuzzy
 msgctxt "ReviewQueueDialog#5"
 msgid "Uninstall"
-msgstr ""
-"\n"
-"            "
+msgstr "Desinstal·lar"
 
 #: ReviewQueueDialog#6
-#, fuzzy
 msgid "To be Removed"
-msgstr ""
-"\n"
-"            "
+msgstr "Per desinstal·lar"
 
 #: ReviewQueueDialog#7
-#, fuzzy
 msgctxt "ReviewQueueDialog#7"
 msgid "Complete Uninstall"
-msgstr ""
-"\n"
-"            "
+msgstr "Desinstal·lar completament"
 
 #: ReviewQueueDialog#8
-#, fuzzy
 msgid "Your Queue is about to be processed. You are going to:<br />"
-msgstr ""
-"\n"
-"            "
+msgstr "S'està processant la pila. A continuació:<br />"
 
 #: ReviewQueueDialog#9
-#, fuzzy
 msgid "Remove <b>%n package(s)</b><br />"
 msgstr ""
 "\n"
 "            \n"
+"            \n"
 "        "
 
 #: ReviewQueueDialog#10
-#, fuzzy
 msgid "Install/Upgrade <b>%n package(s)</b><br />"
 msgstr ""
 "\n"
 "            \n"
+"            \n"
 "        "
 
 #: ReviewQueueDialog#11
-#, fuzzy
 msgid "Do you wish to continue?"
-msgstr ""
-"\n"
-"            "
+msgstr "Desitja continuar?"
 
 #: ShamanStatusBar#1
-#, fuzzy
 msgid "%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages"
 msgstr ""
-"\n"
-"            "
+"%1 Paquets disponilbes, %2 Paquets instal·lats, %3 Paquets actualitzables"
 
 #: ShamanStatusBar#2
-#, fuzzy
 msgid "%1 will be used"
-msgstr ""
-"\n"
-"            "
+msgstr "%1 es fará servir"
 
 #: ShamanStatusBar#3
-#, fuzzy
 msgid "%1 will be freed"
-msgstr ""
-"\n"
-"            "
+msgstr "%1 s'alliberarà"
 
 #: ShamanStatusBar#4
-#, fuzzy
 msgid "%1 to be Installed, %2 to be Removed"
-msgstr ""
-"\n"
-"            "
+msgstr "%1 per instal·lar, %2 per desinstal·lar"
 
 #: ShamanTrayIcon#1
-#, fuzzy
-msgctxt "ShamanTrayIcon#1"
 msgid "Update Database"
-msgstr ""
-"\n"
-"            "
+msgstr "Actualitzar base de dades"
 
 #: ShamanTrayIcon#2
-#, fuzzy
 msgctxt "ShamanTrayIcon#2"
 msgid "Upgrade System"
-msgstr ""
-"\n"
-"            "
+msgstr "Actualitzar sistema"
 
 #: ShamanTrayIcon#3
-#, fuzzy
-msgctxt "ShamanTrayIcon#3"
 msgid "Process Queue"
-msgstr ""
-"\n"
-"            "
+msgstr "Processar la pila"
 
 #: ShamanTrayIcon#4
-#, fuzzy
 msgid "Settings"
-msgstr ""
-"\n"
-"            "
+msgstr "Arranjaments"
 
 #: ShamanTrayIcon#5
-#, fuzzy
 msgctxt "ShamanTrayIcon#5"
 msgid "Quit"
-msgstr ""
-"\n"
-"            "
+msgstr "Sortir"
 
 #: ShamanTrayIcon#6
-#, fuzzy
 msgid "Shaman - Idle"
-msgstr ""
-"\n"
-"            "
+msgstr "Shaman - Preparat"
 
 #: ShamanTrayIcon#7
-#, fuzzy
 msgid "Shaman - Processing"
-msgstr ""
-"\n"
-"            "
+msgstr "Shaman - Processant"
 
 #: ShamanTrayIcon#8
-#, fuzzy
 msgid "Shaman - Idle (Upgrades Available)"
-msgstr ""
-"\n"
-"            "
+msgstr "Shaman - Preparat (Hi ha actualitzacions disponibles)"
 
 #: ShamanTrayIcon#9
-#, fuzzy
 msgctxt "ShamanTrayIcon#9"
 msgid "System Upgrade"
-msgstr ""
-"\n"
-"            "
+msgstr "Actualització del  sistema"
 
 #: ShamanTrayIcon#10
-#, fuzzy
 msgid ""
 "Upgradeable package(s): %n.\n"
 "Click here to upgrade your System."
 msgstr ""
 "\n"
 "            \n"
+"            \n"
 "        "
 
 #: ShamanTrayIcon#11
-#, fuzzy
 msgid "New News Available"
-msgstr ""
-"\n"
-"            "
+msgstr "Hi ha notícies noves"
 
 #: ShamanTrayIcon#12
-#, fuzzy
 msgid ""
 "There are new news available.\n"
 "Click here to review them."
 msgstr ""
-"\n"
-"            "
+"Hi ha notícies noves.\n"
+"Faci clic aquí per veure-les."
 
 #: ShamanTrayIcon#13
-#, fuzzy
 msgid "Failed Fetching News"
-msgstr ""
-"\n"
-"            "
+msgstr "Error al descarregar notícies"
 
 #: ShamanTrayIcon#14
-#, fuzzy
 msgid ""
 "An error occourred while fetching news!\n"
 "Click here to open the News Dialog for more details."
 msgstr ""
-"\n"
-"            "
+"Hi ha hagut un error al descarregar les notícies!\n"
+"Obri la finestra de les notícies per més detalls."
 
 #: SysUpgradeDialog#1
-#, fuzzy
 msgid ""
 "<b>Upgradeable package(s): %n</b> You can either<br> upgrade immediately or "
 "add it to the current Queue<br> and process it later."
 msgstr ""
 "\n"
 "            \n"
+"            \n"
 "        "
 
 #: SysUpgradeDialog#2
-#, fuzzy
 msgctxt "SysUpgradeDialog#2"
 msgid "To be Upgraded"
-msgstr ""
-"\n"
-"            "
+msgstr "Per actualitzar"
 
 #: aboutDialog#1
-#, fuzzy
 msgid "About Shaman"
-msgstr ""
-"\n"
-"            "
+msgstr "Quant a Shaman"
 
 #: aboutDialog#2
-#, fuzzy
 msgid "About"
-msgstr ""
-"\n"
-"            "
+msgstr "Quant a"
 
 #: aboutDialog#3
-#, fuzzy
 msgid "Authors"
-msgstr ""
-"\n"
-"            "
+msgstr "Autors"
 
 #: aboutDialog#4
-#, fuzzy
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -3303,25 +2068,29 @@ msgid ""
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
 "indent:0px;\"></p></body></html>"
 msgstr ""
-"\n"
-"            "
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">p, "
+"li { white-space: pre-wrap; }</style></head><body style=\" font-family:'Sans "
+"Serif'; font-size:10pt; font-weight:400; font-style:normal;\"><p style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Dario "
+"Freddi</span></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\">Desenvolupador</p><p style=\"-qt-paragraph-type:empty; margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\"></p><p style=\" margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"><span style=\" font-weight:600;\">Lukas Appelhans</span></p><p "
+"style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Desenvolupador</span></p><p style=\"-qt-paragraph-"
+"type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"></p></body></html>"
 
 #: aboutDialog#5
-#, fuzzy
 msgid "Thanks To"
-msgstr ""
-"\n"
-"            "
+msgstr "Gràcies a"
 
 #: aboutDialog#6
-#, fuzzy
-msgid "Visit &Website..."
-msgstr ""
-"\n"
-"            "
-
-#: aboutDialog#7
-#, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -3506,71 +2275,50 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
 "style=\" font-weight:400;\">Macedonian Translator</span></p></body></html>"
 msgstr ""
-"\n"
-"            "
+
+#: aboutDialog#7
+msgid "Visit &Website..."
+msgstr "Visitar &Web..."
 
 #: authDialog#1
-#, fuzzy
 msgid "Root Password Required"
-msgstr ""
-"\n"
-"            "
+msgstr "Es necessària la contrasenya de Root"
 
 #: authDialog#2
-#, fuzzy
 msgid ""
 "Shaman needs root privileges to perform this action.\n"
 "Please enter in the field below the root password to continue."
 msgstr ""
-"\n"
-"            "
+"Shaman necessita privilegis de Root per dur a terme aquesta acció.\n"
+"Si us plau escrigui a l'espai de baix la contrasenya per continuar."
 
 #: authDialog#3
-#, fuzzy
 msgid "Never ask for this anymore"
-msgstr ""
-"\n"
-"            "
+msgstr "No tornarme a preguntar"
 
 #: authDialog#4
-#, fuzzy
 msgctxt "authDialog#4"
 msgid "Ok"
-msgstr ""
-"\n"
-"            "
+msgstr "Bé"
 
 #: authDialog#5
-#, fuzzy
 msgid "Return"
-msgstr ""
-"\n"
-"            "
+msgstr "Tornar"
 
 #: authDialog#6
-#, fuzzy
 msgctxt "authDialog#6"
 msgid "Cancel"
-msgstr ""
-"\n"
-"            "
+msgstr "Cancel·lar"
 
 #: authDialog#7
-#, fuzzy
 msgid "Backspace"
-msgstr ""
-"\n"
-"            "
+msgstr "Retrocès"
 
 #: buildingDialog#1
-#, fuzzy
 msgid "Shaman - Building Packages"
-msgstr ""
-"\n"
-"            "
+msgstr "Shaman -Construïnt paquets"
 
 #: buildingDialog#2
-#, fuzzy
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -3580,84 +2328,57 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Building Packages...</span></p></body></html>"
 msgstr ""
-"\n"
-"            "
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">p, "
+"li { white-space: pre-wrap; }</style></head><body style=\" font-"
+"family:'Liberation Sans'; font-size:10pt; font-weight:400; font-"
+"style:normal;\"><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
+"style=\" font-weight:600;\">Construïnt paquets...</span></p></body></html>"
 
 #: buildingDialog#3
-#, fuzzy
 msgctxt "buildingDialog#3"
 msgid "Abort"
-msgstr ""
-"\n"
-"            "
+msgstr "Cancel·lar"
 
 #: buildingDialog#4
-#, fuzzy
 msgid "Reduce To Tray"
-msgstr ""
-"\n"
-"            "
+msgstr "Reduir a la Safata"
 
 #: dbUpdateDialog#1
-#, fuzzy
 msgctxt "dbUpdateDialog#1"
 msgid "Database Update"
-msgstr ""
-"\n"
-"            "
+msgstr "Actualitzar base de dades"
 
 #: dbUpdateDialog#2
-#, fuzzy
 msgid "Update Database.."
-msgstr ""
-"\n"
-"            "
+msgstr "Actualitzar base de dades..."
 
 #: editPBDialog#1
-#, fuzzy
 msgid "Editing PKGBUILD"
-msgstr ""
-"\n"
-"            "
+msgstr "Modificar PKGBUILD"
 
 #: editPBDialog#2
-#, fuzzy
 msgid "Editing PKGBUILD of:"
-msgstr ""
-"\n"
-"            "
+msgstr "Modificar PKGBUILD de:"
 
 #: editPBDialog#3
-#, fuzzy
 msgid "Save"
-msgstr ""
-"\n"
-"            "
+msgstr "Desar"
 
 #: editPBDialog#4
-#, fuzzy
 msgid "Undo"
-msgstr ""
-"\n"
-"            "
+msgstr "Desfer"
 
 #: editPBDialog#5
-#, fuzzy
 msgid "Redo"
-msgstr ""
-"\n"
-"            "
+msgstr "Refer"
 
 #: editPBDialog#6
-#, fuzzy
 msgctxt "editPBDialog#6"
 msgid "Ok"
-msgstr ""
-"\n"
-"            "
+msgstr "Bé"
 
 #: editPBDialog#7
-#, fuzzy
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -3667,39 +2388,34 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Edit PKGBUILD</span></p></body></html>"
 msgstr ""
-"\n"
-"            "
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">p, "
+"li { white-space: pre-wrap; }</style></head><body style=\" font-family:'Sans "
+"Serif'; font-size:10pt; font-weight:400; font-style:normal;\"><p style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Modificar "
+"PKGBUILD</span></p></body></html>"
 
 #: logViewer#1
-#, fuzzy
 msgid "Shaman - Log Viewer"
-msgstr ""
-"\n"
-"            "
+msgstr "Shaman - Visor del registre"
 
 #: logViewer#2
-#, fuzzy
 msgid "Show Only Logs From"
-msgstr ""
-"\n"
-"            "
+msgstr "Veure registres només desde"
 
 #: logViewer#3
-#, fuzzy
-msgid "Show Only Logs Until"
-msgstr ""
-"\n"
-"            "
+msgid "dd/MM/yyyy"
+msgstr "dd/MM/aaaa"
 
 #: logViewer#4
-#, fuzzy
-msgid "Filter"
-msgstr ""
-"\n"
-"            "
+msgid "Show Only Logs Until"
+msgstr "Veure registres només fins a"
 
 #: logViewer#5
-#, fuzzy
+msgid "Filter"
+msgstr "Filtre"
+
+#: logViewer#6
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -3711,93 +2427,61 @@ msgid ""
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
 "font-family:'Liberation Sans'; font-size:9pt;\"></p></body></html>"
 msgstr ""
-"\n"
-"            "
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\"><html><head><meta name=\"qrichtext\" content=\"1\" /><style "
+"type=\"text/css\">p, li { white-space: pre-wrap; }</style></head><body style=\" "
+"font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-"
+"style:normal;\"><p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px; font-family:'Liberation Sans'; font-"
+"size:9pt;\"></p></body></html>"
 
-#: logViewer#6
-#, fuzzy
+#: logViewer#7
 msgid "Refresh View"
-msgstr ""
-"\n"
-"            "
+msgstr "Recarregar vista"
 
 # close the dialog
-#: logViewer#7
-#, fuzzy
-msgctxt "logViewer#7"
-msgid "Close"
-msgstr ""
-"\n"
-"            "
-
 #: logViewer#8
-#, fuzzy
-msgid "dd/MM/yyyy"
-msgstr ""
-"\n"
-"            "
+msgctxt "logViewer#8"
+msgid "Close"
+msgstr "Tancar"
 
 #: newsDialog#1
-#, fuzzy
 msgid "Arch Linux News"
-msgstr ""
-"\n"
-"            "
+msgstr "Notícies d'Arch Linux"
 
 #: newsDialog#2
-#, fuzzy
 msgid "News-Title"
-msgstr ""
-"\n"
-"            "
+msgstr "Títol de la notícia"
 
 #: newsDialog#3
-#, fuzzy
 msgid "Link"
-msgstr ""
-"\n"
-"            "
+msgstr "Link"
 
 #: newsDialog#4
-#, fuzzy
 msgid "status"
-msgstr ""
-"\n"
-"            "
+msgstr "estat"
 
 #: newsDialog#5
-#, fuzzy
 msgctxt "newsDialog#5"
 msgid "Mark as Read"
-msgstr ""
-"\n"
-"            "
+msgstr "Marcar com llegit"
 
 #: newsDialog#6
-#, fuzzy
 msgid "Open in Browser"
-msgstr ""
-"\n"
-"            "
+msgstr "Obrir a l'explorador"
 
 #: newsDialog#7
-#, fuzzy
 msgid "Refresh"
-msgstr ""
-"\n"
-"            "
+msgstr "Recarregar"
 
 # close the dialog
 #: newsDialog#8
-#, fuzzy
 msgctxt "newsDialog#8"
 msgid "Close"
-msgstr ""
-"\n"
-"            "
+msgstr "Tancar"
 
 #: pkgProperties#1
-#, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -3809,154 +2493,98 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Package Information</span></p></body></html>"
 msgstr ""
-"\n"
-"            "
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\"><html><head><meta name=\"qrichtext\" content=\"1\" /><style "
+"type=\"text/css\">p, li { white-space: pre-wrap; }</style></head><body style=\" "
+"font-family:'Bitstream Vera Sans'; font-size:10pt; font-weight:400; font-"
+"style:normal;\"><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
+"style=\" font-weight:600;\">Informació del paquet</span></p></body></html>"
 
 #: pkgProperties#2
-#, fuzzy
 msgctxt "pkgProperties#2"
 msgid "Package Information"
-msgstr ""
-"\n"
-"            "
+msgstr "Informació del paquet"
 
 #: pkgProperties#3
-#, fuzzy
 msgid "Installed:"
-msgstr ""
-"\n"
-"            "
+msgstr "Instal·lat:"
 
 #: pkgProperties#4
-#, fuzzy
 msgid "Description:"
-msgstr ""
-"\n"
-"            "
+msgstr "Descripció:"
 
 #: pkgProperties#5
-#, fuzzy
 msgid "Upgradeable"
-msgstr ""
-"\n"
-"            "
+msgstr "Actualitzable"
 
 #: pkgProperties#6
-#, fuzzy
 msgid "Build Date:"
-msgstr ""
-"\n"
-"            "
+msgstr "Data de construcció"
 
 #: pkgProperties#7
-#, fuzzy
 msgid "Provides:"
-msgstr ""
-"\n"
-"            "
+msgstr "Proveeix:"
 
 #: pkgProperties#8
-#, fuzzy
 msgid "Install Date:"
-msgstr ""
-"\n"
-"            "
+msgstr "Data d'instal·lació:"
 
 #: pkgProperties#9
-#, fuzzy
 msgid "Packager:"
-msgstr ""
-"\n"
-"            "
+msgstr "Empaquetador:"
 
 #: pkgProperties#10
-#, fuzzy
 msgid "Size:"
-msgstr ""
-"\n"
-"            "
+msgstr "Tamany:"
 
 #: pkgProperties#11
-#, fuzzy
 msgid "Has a Scriptlet"
-msgstr ""
-"\n"
-"            "
+msgstr "Inclueix Scriplet"
 
 #: pkgProperties#12
-#, fuzzy
 msgid "Version:"
-msgstr ""
-"\n"
-"            "
+msgstr "Versió:"
 
 #: pkgProperties#13
-#, fuzzy
 msgid "Changelog"
-msgstr ""
-"\n"
-"            "
+msgstr "Changelog"
 
 #: pkgProperties#14
-#, fuzzy
 msgid "Files"
-msgstr ""
-"\n"
-"            "
+msgstr "Fitxers"
 
 #: pkgProperties#15
-#, fuzzy
 msgctxt "pkgProperties#15"
 msgid "1"
-msgstr ""
-"\n"
-"            "
+msgstr "1"
 
 #: pkgProperties#16
-#, fuzzy
 msgid "Dependencies"
-msgstr ""
-"\n"
-"            "
+msgstr "Dependències"
 
 #: pkgProperties#17
-#, fuzzy
 msgid "Depends on"
-msgstr ""
-"\n"
-"            "
+msgstr "Depend de"
 
 #: pkgProperties#18
-#, fuzzy
 msgid "Is Required by"
-msgstr ""
-"\n"
-"            "
+msgstr "Es requerit per"
 
 #: pkgProperties#19
-#, fuzzy
 msgid "Actions Performed"
-msgstr ""
-"\n"
-"            "
+msgstr "Accións realitzades"
 
 #: pkgProperties#20
-#, fuzzy
 msgctxt "pkgProperties#20"
 msgid "Ok"
-msgstr ""
-"\n"
-"            "
+msgstr "Bé"
 
 #: reviewBuildingDialog#1
-#, fuzzy
 msgid "Review Building Queue"
-msgstr ""
-"\n"
-"            "
+msgstr "Revisar pila de construcció"
 
 #: reviewBuildingDialog#2
-#, fuzzy
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -3967,144 +2595,94 @@ msgid ""
 "Serif';\"><span style=\" font-weight:600;\">Build Queue From "
 "Source</span></p></body></html>"
 msgstr ""
-"\n"
-"            "
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">p, "
+"li { white-space: pre-wrap; }</style></head><body style=\" font-"
+"family:'Liberation Sans'; font-size:10pt; font-weight:400; font-"
+"style:normal;\"><p style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
+"family:'Sans Serif';\"><span style=\" font-weight:600;\">Contruïnt pila desde "
+"la font</span></p></body></html>"
 
 #: reviewBuildingDialog#3
-#, fuzzy
 msgid "Process All Dependencies from Binary First (advised)"
-msgstr ""
-"\n"
-"            "
+msgstr "Processar totes les dependències primer desde binaris (recomanat) "
 
 #: reviewBuildingDialog#4
-#, fuzzy
 msgid "This is useful if you want to review compiler's output"
-msgstr ""
-"\n"
-"            "
+msgstr "Això es útil si vol revisar la sortida del compilador"
 
 #: reviewBuildingDialog#5
-#, fuzzy
 msgid "Do not install immediately when building is finished"
-msgstr ""
-"\n"
-"            "
+msgstr "No instal·lar quan s'acabi de contruïr"
 
 #: reviewBuildingDialog#6
-#, fuzzy
 msgctxt "reviewBuildingDialog#6"
 msgid "Turn off PC when Queue is done"
-msgstr ""
-"\n"
-"            "
+msgstr "Apagar el PC quan la pila s'acabi"
 
 #: reviewBuildingDialog#7
-#, fuzzy
 msgctxt "reviewBuildingDialog#7"
 msgid "Show packages..."
-msgstr ""
-"\n"
-"            "
+msgstr "Veure paquets..."
 
 #: reviewBuildingDialog#8
-#, fuzzy
 msgctxt "reviewBuildingDialog#8"
 msgid "Packages In Queue"
-msgstr ""
-"\n"
-"            "
+msgstr "Paquets a la pila"
 
 #: reviewBuildingDialog#9
-#, fuzzy
 msgctxt "reviewBuildingDialog#9"
 msgid "Abort"
-msgstr ""
-"\n"
-"            "
+msgstr "Cancel·lar"
 
 #: reviewBuildingDialog#10
-#, fuzzy
 msgid "Process From Binary"
-msgstr ""
-"\n"
-"            "
+msgstr "Processant desde binaris"
 
 #: reviewBuildingDialog#11
-#, fuzzy
 msgid "Review PKGBUILDs"
-msgstr ""
-"\n"
-"            "
+msgstr "Revisar PKGBUILDs"
 
 #: reviewBuildingDialog#12
-#, fuzzy
 msgid "Process From Source"
-msgstr ""
-"\n"
-"            "
+msgstr "Processar desde la font"
 
 #: transactionDialog#1
-#, fuzzy
 msgid "Processing Queue..."
-msgstr ""
-"\n"
-"            "
+msgstr "Processant la pila..."
 
 #: transactionDialog#2
-#, fuzzy
 msgid "Check transaction validity"
-msgstr ""
-"\n"
-"            "
+msgstr "Comprovant validessa de la transacció"
 
 #: transactionDialog#3
-#, fuzzy
 msgid "Download Packages"
-msgstr ""
-"\n"
-"            "
+msgstr "Descarregar paquets"
 
 #: transactionDialog#4
-#, fuzzy
 msgid "Process queue"
-msgstr ""
-"\n"
-"            "
+msgstr "Processar la pila"
 
 #: transactionDialog#5
-#, fuzzy
 msgid "Cleanup"
-msgstr ""
-"\n"
-"            "
+msgstr "Netejar"
 
 #: transactionDialog#6
-#, fuzzy
 msgctxt "transactionDialog#6"
 msgid "More Details..."
-msgstr ""
-"\n"
-"            "
+msgstr "Més detalls..."
 
 #: transactionDialog#7
-#, fuzzy
 msgctxt "transactionDialog#7"
 msgid "Abort"
-msgstr ""
-"\n"
-"            "
+msgstr "Cancel·lar"
 
 #: transactionDialog#8
-#, fuzzy
 msgctxt "transactionDialog#8"
 msgid "Please Wait..."
-msgstr ""
-"\n"
-"            "
+msgstr "Si us plau, esperi..."
 
 #: transactionDialog#9
-#, fuzzy
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -4114,64 +2692,46 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Process Queue</span></p></body></html>"
 msgstr ""
-"\n"
-"            "
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">p, "
+"li { white-space: pre-wrap; }</style></head><body style=\" font-family:'Sans "
+"Serif'; font-size:10pt; font-weight:400; font-style:normal;\"><p style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Processar "
+"pila</span></p></body></html>"
 
 #: upgradeDialog#1
-#, fuzzy
 msgctxt "upgradeDialog#1"
 msgid "System Upgrade"
-msgstr ""
-"\n"
-"            "
+msgstr "Actualització del  sistema"
 
 #: upgradeDialog#2
-#, fuzzy
 msgctxt "upgradeDialog#2"
 msgid "Force Queue Processing"
-msgstr ""
-"\n"
-"            "
+msgstr "Forçar el processat de la pila"
 
 #: upgradeDialog#3
-#, fuzzy
 msgid "Remember my choice"
-msgstr ""
-"\n"
-"            "
+msgstr "Recordar la meva tría"
 
 #: upgradeDialog#4
-#, fuzzy
 msgctxt "upgradeDialog#4"
 msgid "Abort"
-msgstr ""
-"\n"
-"            "
+msgstr "Cancel·lar"
 
 #: upgradeDialog#5
-#, fuzzy
 msgctxt "upgradeDialog#5"
 msgid "Show packages..."
-msgstr ""
-"\n"
-"            "
+msgstr "Veure paquets..."
 
 #: upgradeDialog#6
-#, fuzzy
 msgid "Add to Queue"
-msgstr ""
-"\n"
-"            "
+msgstr "Afegir a la pila"
 
 #: upgradeDialog#7
-#, fuzzy
 msgid "Upgrade Now"
-msgstr ""
-"\n"
-"            "
+msgstr "Actualitzar ara"
 
 #: upgradeDialog#8
-#, fuzzy
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -4181,12 +2741,13 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">System-Upgrade</span></p></body></html>"
 msgstr ""
-"\n"
-"            "
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">p, "
+"li { white-space: pre-wrap; }</style></head><body style=\" font-family:'Sans "
+"Serif'; font-size:10pt; font-weight:400; font-style:normal;\"><p style=\" "
+"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+"block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Actualitzar sistema</span></p></body></html>"
 
 #: upgradeDialog#9
-#, fuzzy
 msgid "Packages to Upgrade"
-msgstr ""
-"\n"
-"            "
+msgstr "Paquets per actualitzar"

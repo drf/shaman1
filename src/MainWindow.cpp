@@ -271,13 +271,13 @@ MainWindow::MainWindow( QMainWindow *parent )
     nameDescBox->addItem( tr( "Name and Description" ) );
 
     PolkitQt::Action *actionUpdate_Database = new PolkitQt::Action("org.chakraproject.aqpm.updatedatabase", this);
-    actionUpdate_Database->setText("Update Database");
+    actionUpdate_Database->setText( tr("Update Database") );
     connect(actionUpdate_Database, SIGNAL(triggered(bool)), actionUpdate_Database, SLOT(activate()));
     connect(actionUpdate_Database, SIGNAL(activated()), this, SLOT(doDbUpdate()));
     toolBar->addAction(actionUpdate_Database);
 
     PolkitQt::Action *actionProcess_Queue = new PolkitQt::Action("org.chakraproject.aqpm.processqueue", this);
-    actionProcess_Queue->setText("Process Queue");
+    actionProcess_Queue->setText( tr("Process Queue") );
     connect(actionProcess_Queue, SIGNAL(triggered(bool)), actionProcess_Queue, SLOT(activate()));
     connect(actionProcess_Queue, SIGNAL(activated()), this, SLOT(widgetQueueToAlpmQueue()));
     toolBar->addAction(actionProcess_Queue);
