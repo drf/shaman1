@@ -2035,7 +2035,7 @@ QList<QTreeWidgetItem *> MainWindow::getRemovePackagesInWidgetQueue()
 
 bool MainWindow::packageExists( const QString &pkg )
 {
-    if ( pkgsViewWG->findItems( pkg, Qt::MatchExactly | Qt::CaseInsensitive, 1 ).isEmpty() )
+    if ( pkgsViewWG->findItems( pkg, Qt::MatchExactly, 1 ).isEmpty() )
         return false;
     else
         return true;
@@ -2049,7 +2049,7 @@ ShamanTrayIcon *MainWindow::getTrayIcon()
 void MainWindow::removePackageFromView( const QString &pkgname )
 {
     int index = pkgsViewWG->indexOfTopLevelItem( pkgsViewWG->findItems( pkgname, Qt::MatchExactly
-                | Qt::CaseInsensitive, 1 ).first() );
+                , 1 ).first() );
 
     delete pkgsViewWG->takeTopLevelItem( index );
 }
