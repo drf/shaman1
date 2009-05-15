@@ -40,7 +40,7 @@ class QueueDialog : public QDialog, private Ui::transactionDialog
     private slots:
 
         void updateProgressBar( const QString &c, int bytedone, int bytetotal, int speed,
-                                int listdone, int listtotal, int speedtotal );
+                                int listdone, int listtotal );
         void updateProgressBar( int evt, const QString &pkgname, int percent,
                                 int howmany, int remain );
         void startDownload();

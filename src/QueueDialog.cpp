@@ -25,7 +25,6 @@
 
 #include <aqpm/Backend.h>
 
-#include <iostream>
 #include <alpm.h>
 #include <QMutex>
 #include <QMutexLocker>
@@ -37,11 +36,7 @@
 #include <QDialogButtonBox>
 #include <QMessageBox>
 #include <QSettings>
-#include <fcntl.h>
-
-/* libarchive */
-#include <archive.h>
-#include <archive_entry.h>
+#include <QTime>
 
 using namespace std;
 using namespace Aqpm;
@@ -58,8 +53,8 @@ QueueDialog::QueueDialog( QWidget *parent )
              SLOT( changeStatus( int, void*, void* ) ) );
     connect( Backend::instance(), SIGNAL( logMsgStreamed( const QString& ) ),
              SLOT( handleAlpmMessage( const QString& ) ) );
-    connect( Backend::instance(), SIGNAL( streamTransDlProg( const QString&, int, int, int, int, int, int ) ),
-             SLOT( updateProgressBar( const QString&, int, int, int, int, int, int ) ) );
+    connect( Backend::instance(), SIGNAL( streamDlProg( const QString&, int, int, int, int, int ) ),
+             SLOT( updateProgressBar( const QString&, int, int, int, int, int ) ) );
     /*connect( aHandle, SIGNAL( preparingTransactionError( const QString& ) ),
              SLOT( handlePreparingError( const QString& ) ) );
     connect( aHandle, SIGNAL( committingTransactionError( const QString& ) ),
@@ -249,27 +244,22 @@ void QueueDialog::changeStatus( int evt, void *data1, void *data2 )
 }
 
 void QueueDialog::updateProgressBar( const QString &c, int bytedone, int bytetotal, int speed,
-                                     int listdone, int listtotal, int speedtotal )
+                                     int listdone, int listtotal )
 {
     double bt = bytetotal / 1024;
     double bd = bytedone / 1024;
 
-    unsigned int eta_h = 0, eta_m = 0, eta_s = 0;
+    QTime remaining(0,0,0);
 
-    if ( speedtotal == 0 )
+    if ( speed == 0 ) {
         return;
+    }
 
-    eta_s = ( listtotal - listdone ) / ( speedtotal * 1024.0 );
+    remaining.addSecs(( listtotal - listdone ) / ( speed * 1024.0 ));
 
-    eta_h = eta_s / 3600;
-    eta_s -= eta_h * 3600;
-    eta_m = eta_s / 60;
-    eta_s -= eta_m * 60;
-
-    progressBar->setFormat( QString( tr( "%p% (%1 KB/s, %4:%5:%6 remaining)", "You just have to "
+    progressBar->setFormat( QString( tr( "%p% (%1 KB/s, %2 remaining)", "You just have to "
                                          "translate 'remaining' here. Leave everything else as it is." ) ).
-                            arg( speed ).arg(( int )eta_h, 2, 10, QChar( '0' ) ).arg(( int )eta_m, 2, 10, QChar( '0' ) ).
-                            arg(( int )eta_s, 2, 10, QChar( '0' ) ) );
+                            arg( speed ).arg(remaining.toString()) );
     progressBar->setRange( 0, listtotal );
     progressBar->setValue( listdone );
 
@@ -320,7 +310,7 @@ void QueueDialog::startProcess()
     dlLabel->setPixmap( QIcon( ":/Icons/icons/dialog-ok-apply.png" ).pixmap( 22 ) );
     processLabel->setPixmap( QIcon( ":/Icons/icons/edit-redo.png" ).pixmap( 22 ) );
 
-    disconnect( Backend::instance(), SIGNAL( streamTransDlProg( char*, int, int, int, int, int, int ) ), 0, 0 );
+    disconnect( Backend::instance(), SIGNAL( streamDlProg( QString&, int, int, int, int, int ) ), 0, 0 );
     connect( Backend::instance(), SIGNAL( streamTransProgress( int, const QString&, int, int, int ) ),
              SLOT( updateProgressBar( int, const QString&, int, int, int ) ) );
 }
@@ -425,7 +415,6 @@ void QueueDialog::handlePreparingError( const QString &msg )
     errors = true;
 
     qDebug() << "Streaming Awakening to Error Thread";
-    Backend::instance()->backendWCond()->wakeAll();
 }
 
 void QueueDialog::handleCommittingError( const QString &msg )
@@ -462,7 +451,6 @@ void QueueDialog::handleCommittingError( const QString &msg )
     errors = true;
 
     qDebug() << "Streaming Awakening to Error Thread";
-    Backend::instance()->backendWCond()->wakeAll();
 }
 
 void QueueDialog::handleAlpmMessage( const QString &msg )

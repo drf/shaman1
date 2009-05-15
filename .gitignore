@@ -11,3 +11,4 @@ ui_*
 *.prefs
 *.pending
 *.stats
+*.user

@@ -1971,21 +1971,18 @@ void MainWindow::startTrayTimer()
 
 void MainWindow::streamTransQuestion( const QString &msg )
 {
-    /*switch ( ShamanDialog::popupQuestionDialog( QString( tr( "Library Question" ) ), msg, this ) ) {
+    switch ( ShamanDialog::popupQuestionDialog( QString( tr( "Library Question" ) ), msg, this ) ) {
     case QMessageBox::Yes:
-        CbackReference.answer = 1;
+        Backend::instance()->setAnswer(1);
         break;
     case QMessageBox::No:
-        CbackReference.answer = 0;
+        Backend::instance()->setAnswer(0);
         break;
     default:
         // should never be reached
+        Backend::instance()->setAnswer(-1);
         break;
     }
-
-    qDebug() << "Waking Alpm Thread";
-
-    wCond.wakeAll();*/
 }
 
 void MainWindow::updateABSTree()

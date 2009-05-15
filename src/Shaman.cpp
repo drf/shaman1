@@ -127,20 +127,12 @@ void Shaman::startShaman()
     }
 
     if ( getuid() == 0 ) {
-        if ( settings->value( "gui/noroot" ).toBool() ) {
-            ShamanDialog::popupDialog( QObject::tr( "Shaman" ),
-                    QObject::tr( "Shaman can not be started as root.\nPlease restart it as "
-                            "unprivileged user." ), NULL,
-                            ShamanProperties::ErrorDialog );
+        ShamanDialog::popupDialog( QObject::tr( "Shaman" ),
+                QObject::tr( "Shaman can not be started as root. Please restart it as "
+                        "unprivileged user." ), NULL,
+                        ShamanProperties::ErrorDialog );
 
-            QCoreApplication::exit(1);
-        }
-
-
-        ShamanDialog::popupDialogDontShow( QObject::tr( "Shaman" ),
-                QObject::tr( "You have started Shaman as root.\nIt is advised to start it as unprivileged user.\n"
-                        "Shaman will ask you for root password when needed." ), "gui/rootwarning", NULL,
-                        ShamanProperties::WarningDialog );
+        QCoreApplication::exit(1);
     }
 
     QString alversion( Backend::instance()->getAlpmVersion() );
@@ -158,8 +150,8 @@ void Shaman::startShaman()
     struct utsname un;
 
     uname( &un );
-    snprintf(agent, 100, "shaman/%s (%s %s) libalpm/%s", SHAMAN_VERSION,
-             un.sysname, un.machine, Backend::instance()->getAlpmVersion().toUtf8().data());
+    snprintf(agent, 100, "shaman/%s (%s %s) aqpm/%s", SHAMAN_VERSION,
+             un.sysname, un.machine, Backend::version().toUtf8().data());
     setenv( "HTTP_USER_AGENT", agent, 0 );
 
     qDebug() << "User agent is:" << qgetenv( "HTTP_USER_AGENT" );
@@ -185,9 +177,10 @@ void Shaman::startShaman()
     }
 
     if ( settings->value( "absbuilding/buildpath" ).toString() == 0 || !settings->contains( "absbuilding/buildpath" ) ||
-            settings->value( "absbuilding/buildpath" ).toString() == "/" )
+            settings->value( "absbuilding/buildpath" ).toString() == "/" ) {
         // This can be dangerous, so set it properly
         settings->setValue( "absbuilding/buildpath", "/var/shaman/builds" );
+    }
 
     m_mainwin = new MainWindow();
 

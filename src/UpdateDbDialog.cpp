@@ -40,8 +40,8 @@ UpdateDbDialog::UpdateDbDialog( QWidget *parent )
     connect( Backend::instance(), SIGNAL( dbStatusChanged( const QString&, int ) ),
              SLOT( updateLabel( const QString&, int ) ) );
     connect( Backend::instance(), SIGNAL( dbQty( const QStringList& ) ), SLOT( createWidgets( const QStringList& ) ) );
-    connect( Backend::instance(), SIGNAL( streamTransDlProg( char*, int, int, int, int, int, int ) ),
-             SLOT( updateDlBar( char*, int, int, int, int, int, int ) ) );
+    connect( Backend::instance(), SIGNAL( streamDlProg( QString&, int, int, int, int, int ) ),
+             SLOT( updateDlBar() ) );
 }
 
 UpdateDbDialog::~UpdateDbDialog()
@@ -123,17 +123,8 @@ void UpdateDbDialog::updateTotalProg()
         emit pBar( actd / totalAction );
 }
 
-void UpdateDbDialog::updateDlBar( char *c, int bytedone, int bytetotal, int speed,
-                                  int i, int j, int k )
+void UpdateDbDialog::updateDlBar()
 {
-    Q_UNUSED( c )
-    Q_UNUSED( i )
-    Q_UNUSED( j )
-    Q_UNUSED( k )
-    Q_UNUSED( speed );
-    Q_UNUSED( bytedone );
-    Q_UNUSED( bytetotal );
-
     QLabel *toInsert = labelList.at( actionDone );
 
     // The database is being downloaded.

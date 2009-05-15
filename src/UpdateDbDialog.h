@@ -49,8 +49,7 @@ class UpdateDbDialog : public QDialog, private Ui::dbUpdateDialog
         void updateTotalProg();
         void setUpdated( const QString &dbname );
         void scopeEnded();
-        void updateDlBar( char *c, int bytedone, int bytetotal, int speed,
-                          int i, int j, int k );
+        void updateDlBar();
 
     signals:
         void killMe();
