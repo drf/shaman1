@@ -314,14 +314,14 @@ void ConfigDialog::setupPacman()
     alpm_list_t *tmp;
     QString tmpStr;
 
-    tmp = alpm_option_get_holdpkgs();
+    /*tmp = alpm_option_get_holdpkgs();
     while ( tmp != NULL ) {
         tmpStr.append(( char * )alpm_list_getdata( tmp ) );
         tmpStr.append( " " );
         tmp = alpm_list_next( tmp );
     }
     holdPkgLine->setText( tmpStr );
-    tmpStr = "";
+    tmpStr = "";*/
 
     tmp = alpm_option_get_ignorepkgs();
     while ( tmp != NULL ) {
