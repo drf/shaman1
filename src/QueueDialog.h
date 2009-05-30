@@ -52,7 +52,7 @@ class QueueDialog : public QDialog, private Ui::transactionDialog
 
         void handleAlpmMessage( const QString &msg );
 
-        void changeStatus( int evt, void *data1, void *data2 );
+        void changeStatus( int evt, QVariantMap args );
 
         void adjust( bool tgld );
 

@@ -129,7 +129,7 @@ class MainWindow : public QMainWindow, public Ui::MainWindow
         void queueProcessingEnded( bool errors );
         void widgetQueueToAlpmQueue();
         void getPackageFromFile();
-        void streamTransQuestion( const QString &msg );
+        void streamTransQuestion(int event, QVariantMap args);
         void cancelAllActions();
         void processQueue();
         void updateABSTree();

@@ -47,6 +47,7 @@
 #include <config.h>
 
 #include <aqpm/Backend.h>
+#include <aqpm/Globals.h>
 
 #include <iostream>
 #include <alpm.h>
@@ -282,8 +283,8 @@ MainWindow::MainWindow( QMainWindow *parent )
     connect(actionProcess_Queue, SIGNAL(activated()), this, SLOT(widgetQueueToAlpmQueue()));
     toolBar->addAction(actionProcess_Queue);
 
-    connect( Backend::instance(), SIGNAL( questionStreamed( const QString& ) ), this,
-             SLOT( streamTransQuestion( const QString& ) ) );
+    connect( Backend::instance(), SIGNAL( streamTransQuestion( int,QVariantMap ) ), this,
+             SLOT( streamTransQuestion( int,QVariantMap ) ) );
     connect( pkgsViewWG, SIGNAL( customContextMenuRequested( const QPoint & ) ),
              SLOT( showPkgsViewContextMenu() ) );
     connect( repoList, SIGNAL( customContextMenuRequested( const QPoint & ) ),
@@ -1969,9 +1970,39 @@ void MainWindow::startTrayTimer()
     emit startTimer();
 }
 
-void MainWindow::streamTransQuestion( const QString &msg )
+void MainWindow::streamTransQuestion( int event, QVariantMap args )
 {
-    switch ( ShamanDialog::popupQuestionDialog( QString( tr( "Library Question" ) ), msg, this ) ) {
+    QString message;
+
+    switch ((Aqpm::Globals::TransactionQuestion) event) {
+    case Aqpm::Globals::IgnorePackage:
+        if (args.contains("SecondPackage")) {
+            message = QString(tr("%1 requires installing %2 from IgnorePkg/IgnoreGroup.\n Install anyway?"))
+                      .arg(args["FirstPackage"].toString()).arg(args["SecondPackage"].toString());
+        } else {
+            message = QString(tr("%1 is in IgnorePkg/IgnoreGroup.\n Install anyway?")).arg(args["FirstPackage"].toString());
+        }
+        break;
+    case Aqpm::Globals::ReplacePackage:
+        message = QString(tr("Replace %1 with %2/%3?")).arg(args["OldPackage"].toString())
+                  .arg(args["NewPackageRepo"].toString()).arg(args["NewPackage"].toString());
+        break;
+    case Aqpm::Globals::PackageConflict:
+        message = QString(tr("%1 conflicts with %2.\nRemove %2?")).arg(args["OldPackage"].toString())
+                  .arg(args["NewPackage"].toString());
+        break;
+    case Aqpm::Globals::NewerLocalPackage:
+        message = QString(tr("%1-%2: local version is newer.\nUpgrade anyway?")).arg(args["PackageName"].toString()).
+                  arg(args["PackageVersion"].toString());
+        break;
+    case Aqpm::Globals::CorruptedPackage:
+        message = QString(tr("File %1 is corrupted.\nDo you want to delete it?")).arg(args["Filename"].toString());
+        break;
+    default:
+        break;
+    }
+
+    switch ( ShamanDialog::popupQuestionDialog( QString( tr( "Transaction Question" ) ), message, this ) ) {
     case QMessageBox::Yes:
         Backend::instance()->setAnswer(1);
         break;

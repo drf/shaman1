@@ -24,6 +24,7 @@
 #include "ui_transactionDialog.h"
 
 #include <aqpm/Backend.h>
+#include <aqpm/Globals.h>
 
 #include <alpm.h>
 #include <QMutex>
@@ -49,8 +50,8 @@ QueueDialog::QueueDialog( QWidget *parent )
     textEdit->hide();
     setWindowModality( Qt::WindowModal );
 
-    connect( Backend::instance(), SIGNAL( streamTransEvent( int, void*, void* ) ),
-             SLOT( changeStatus( int, void*, void* ) ) );
+    connect( Backend::instance(), SIGNAL( streamTransEvent( int, QVariantMap ) ),
+             SLOT( changeStatus( int, QVariantMap ) ) );
     connect( Backend::instance(), SIGNAL( logMsgStreamed( const QString& ) ),
              SLOT( handleAlpmMessage( const QString& ) ) );
     connect( Backend::instance(), SIGNAL( streamDlProg( const QString&, int, int, int, int, int ) ),
@@ -106,83 +107,80 @@ void QueueDialog::startProcessing( bool force )
     connect( Backend::instance(), SIGNAL( operationFinished(bool) ), SLOT( cleanup(bool) ) );
 }
 
-void QueueDialog::changeStatus( int evt, void *data1, void *data2 )
+void QueueDialog::changeStatus( int event, QVariantMap args )
 {
-    pmtransevt_t event = (pmtransevt_t)evt;
-
     qDebug() << "Entering Queue Lock, with event " << event;
 
     QString upgTxt;
     QString addTxt;
     QString remTxt;
 
-    switch ( event ) {
-    case PM_TRANS_EVT_CHECKDEPS_START:
+    switch ( (Aqpm::Globals::TransactionEvent) event ) {
+    case Aqpm::Globals::CheckDepsStart:
         actionDetail->setText( QString( tr( "Validating Dependencies..." ) ) );
         textEdit->append( QString( tr( "Validating Dependencies..." ) ) );
         break;
-    case PM_TRANS_EVT_FILECONFLICTS_START:
+    case Aqpm::Globals::FileConflictsStart:
         actionDetail->setText( QString( tr( "Checking for Conflicts..." ) ) );
         textEdit->append( QString( tr( "Checking for Conflicts..." ) ) );
         break;
-    case PM_TRANS_EVT_RESOLVEDEPS_START:
+    case Aqpm::Globals::ResolveDepsStart:
         actionDetail->setText( QString( tr( "Resolving Dependencies..." ) ) );
         textEdit->append( QString( tr( "Resolving Dependencies..." ) ) );
         break;
-    case PM_TRANS_EVT_INTERCONFLICTS_START:
+    case Aqpm::Globals::InterConflictsStart:
         actionDetail->setText( QString( tr( "Looking for Inter-Conflicts..." ) ) );
         textEdit->append( QString( tr( "Looking for Inter-Conflicts..." ) ) );
         break;
-    case PM_TRANS_EVT_ADD_START:
+    case Aqpm::Globals::AddStart:
         if ( status != 2 ) {
             status = 2;
             textEdit->append( QString( tr( "<br><b> * Package Installation Started</b><br>" ) ) );
             startProcess();
         }
-        actionDetail->setText( QString( tr( "Installing %1..." ) ).arg( alpm_pkg_get_name(( pmpkg_t * )data1 ) ) );
-        textEdit->append( QString( tr( "Installing %1..." ) ).arg( alpm_pkg_get_name(( pmpkg_t * )data1 ) ) );
+        actionDetail->setText( QString( tr( "Installing %1..." ) ).arg( args["PackageName"].toString() ) );
+        textEdit->append( QString( tr( "Installing %1..." ) ).arg( args["PackageName"].toString() ) );
 
         break;
-    case PM_TRANS_EVT_ADD_DONE:
+    case Aqpm::Globals::AddDone:
         addTxt = QString( tr( "%1 (%2) installed successfully!" ) ).arg(
-                     alpm_pkg_get_name(( pmpkg_t * )data1 ) ).arg( alpm_pkg_get_version(( pmpkg_t * )data1 ) );
+                     args["PackageName"].toString() ).arg( args["PackageVersion"].toString() );
         actionDetail->setText( addTxt );
         textEdit->append( addTxt );
         addTxt.append( QChar( '\n' ) );
         alpm_logaction( addTxt.toUtf8().data() );
 
         break;
-    case PM_TRANS_EVT_REMOVE_START:
+    case Aqpm::Globals::RemoveStart:
         if ( status != 2 ) {
             status = 2;
             textEdit->append( QString( tr( "<br><b> * Package Removal Started</b><br>" ) ) );
             startProcess();
         }
-        actionDetail->setText( QString( tr( "Removing %1..." ) ).arg( alpm_pkg_get_name(( pmpkg_t * )data1 ) ) );
-        textEdit->append( QString( tr( "Removing %1..." ) ).arg( alpm_pkg_get_name(( pmpkg_t * )data1 ) ) );
+        actionDetail->setText( QString( tr( "Removing %1..." ) ).arg( args["PackageName"].toString() ) );
+        textEdit->append( QString( tr( "Removing %1..." ) ).arg( args["PackageName"].toString() ) );
         break;
-    case PM_TRANS_EVT_REMOVE_DONE:
+    case Aqpm::Globals::RemoveDone:
         remTxt = QString( tr( "%1 (%2) removed successfully!" ) ).
-                 arg( alpm_pkg_get_name(( pmpkg_t * )data1 ) ).arg( alpm_pkg_get_version(( pmpkg_t * )data1 ) );
+                 arg( args["PackageName"].toString() ).arg( args["PackageVersion"].toString() );
 
         actionDetail->setText( remTxt );
         textEdit->append( remTxt );
         remTxt.append( QChar( '\n' ) );
         alpm_logaction( remTxt.toUtf8().data() );
         break;
-    case PM_TRANS_EVT_UPGRADE_START:
+    case Aqpm::Globals::UpgradeStart:
         if ( status != 2 ) {
             status = 2;
             textEdit->append( QString( tr( "<br><b> * Package Upgrading Started</b><br>" ) ) );
             startProcess();
         }
-        actionDetail->setText( QString( tr( "Upgrading %1..." ) ).arg( alpm_pkg_get_name(( pmpkg_t * )data1 ) ) );
-        textEdit->append( QString( tr( "Upgrading %1..." ) ).arg( alpm_pkg_get_name(( pmpkg_t * )data1 ) ) );
+        actionDetail->setText( QString( tr( "Upgrading %1..." ) ).arg( args["PackageName"].toString() ) );
+        textEdit->append( QString( tr( "Upgrading %1..." ) ).arg( args["PackageName"].toString() ) );
         break;
-    case PM_TRANS_EVT_UPGRADE_DONE:
-        upgTxt = QString( tr( "Upgraded %1 successfully (%2 -> %3)" ) ).arg(
-                     ( char * )alpm_pkg_get_name(( pmpkg_t * )data1 ) ).arg(( char * )alpm_pkg_get_version(( pmpkg_t * )data2 ) ).
-                 arg(( char * )alpm_pkg_get_version(( pmpkg_t * )data1 ) );
+    case Aqpm::Globals::UpgradeDone:
+        upgTxt = QString( tr( "Upgraded %1 successfully (%2 -> %3)" ) ).arg(args["PackageName"].toString())
+                 .arg(args["OldVersion"].toString()).arg(args["NewVersion"].toString() );
 
         actionDetail->setText( upgTxt );
         textEdit->append( upgTxt );
@@ -190,7 +188,7 @@ void QueueDialog::changeStatus( int evt, void *data1, void *data2 )
         alpm_logaction( upgTxt.toUtf8().data() );
 
         break;
-    case PM_TRANS_EVT_INTEGRITY_START:
+    case Aqpm::Globals::IntegrityStart:
         if ( status != 2 ) {
             status = 2;
             textEdit->append( QString( tr( "<br><b> * Queue Processing Started</b><br>" ) ) );
@@ -199,45 +197,38 @@ void QueueDialog::changeStatus( int evt, void *data1, void *data2 )
         actionDetail->setText( QString( tr( "Checking package integrity..." ) ) );
         textEdit->append( QString( tr( "Checking package integrity..." ) ) );
         break;
-    case PM_TRANS_EVT_DELTA_INTEGRITY_START:
+    case Aqpm::Globals::DeltaIntegrityStart:
         actionDetail->setText( QString( tr( "Checking delta integrity..." ) ) );
         textEdit->append( QString( tr( "Checking delta integrity..." ) ) );
         break;
-    case PM_TRANS_EVT_DELTA_PATCHES_START:
+    case Aqpm::Globals::DeltaPatchesStart:
         actionDetail->setText( QString( tr( "Applying deltas..." ) ) );
         break;
-    case PM_TRANS_EVT_DELTA_PATCH_START:
-        actionDetail->setText( QString( tr( "Generating %1 with %2... " ) ).arg(( char * )data1 ).
-                               arg(( char * )data2 ) );
+    case Aqpm::Globals::DeltaPatchStart:
+        actionDetail->setText( QString( tr( "Generating %1 with %2... " ) ).arg(args["From"].toString()).
+                               arg(args["To"].toString()) );
         break;
-    case PM_TRANS_EVT_DELTA_PATCH_DONE:
+    case Aqpm::Globals::DeltaPatchDone:
         actionDetail->setText( QString( tr( "Success!" ) ) );
         break;
-    case PM_TRANS_EVT_DELTA_PATCH_FAILED:
+    case Aqpm::Globals::DeltaPatchFailed:
         actionDetail->setText( QString( tr( "Failed!" ) ) );
         break;
-    case PM_TRANS_EVT_SCRIPTLET_INFO:
-        actionDetail->setText( QString( "%s" ).arg(( char* )data1 ) );
-        textEdit->append( QString( "%s" ).arg(( char* )data1 ) );
+    case Aqpm::Globals::ScriptletInfo:
+        actionDetail->setText( QString( "%s" ).arg(args["Text"].toString()) );
+        textEdit->append( QString( "%s" ).arg(args["Text"].toString()));
         break;
-    case PM_TRANS_EVT_RETRIEVE_START:
+    case Aqpm::Globals::RetrieveStart:
         if ( status != 1 ) {
             status = 1;
             textEdit->append( QString( tr( "<br><b> * Package Downloading Started</b><br>" ) ) );
             startDownload();
         }
-        actionDetail->setText( QString( tr( "Starting downloading packages from %1..." ) ).arg(( char* )data1 ) );
-        textEdit->append( QString( tr( "Starting downloading packages from %1..." ) ).arg(( char* )data1 ) );
+        actionDetail->setText( QString( tr( "Starting downloading packages from %1..." ) ).arg(args["Repo"].toString()));
+        textEdit->append( QString( tr( "Starting downloading packages from %1..." ) ).arg(args["Repo"].toString()));
         break;
         /* all the simple done events, with fallthrough for each */
-    case PM_TRANS_EVT_FILECONFLICTS_DONE:
-        //case PM_TRANS_EVT_EXTRACT_DONE:
-    case PM_TRANS_EVT_CHECKDEPS_DONE:
-    case PM_TRANS_EVT_RESOLVEDEPS_DONE:
-    case PM_TRANS_EVT_INTERCONFLICTS_DONE:
-    case PM_TRANS_EVT_INTEGRITY_DONE:
-    case PM_TRANS_EVT_DELTA_INTEGRITY_DONE:
-    case PM_TRANS_EVT_DELTA_PATCHES_DONE:
+    default:
         break;
     }
 
@@ -318,7 +309,7 @@ void QueueDialog::startProcess()
 void QueueDialog::cleanup(bool success)
 {
     disconnect( Backend::instance(), SIGNAL( streamTransProgress( int, const QString&, int, int, int ) ), 0, 0 );
-    disconnect( Backend::instance(), SIGNAL( streamTransEvent( int, void*, void* ) ), 0, 0);
+    disconnect( Backend::instance(), SIGNAL( streamTransEvent( int, QVariantMap ) ), 0, 0);
     disconnect( Backend::instance(), SIGNAL( logMsgStreamed( const QString& ) ), 0, 0);
     disconnect( Backend::instance(), SIGNAL( streamTransDlProg( const QString&, int, int, int, int, int, int ) ), 0, 0);
     /*connect( aHandle, SIGNAL( preparingTransactionError( const QString& ) ),
