@@ -266,7 +266,6 @@ void QueueDialog::updateProgressBar( const QString &c, int bytedone, int bytetot
 void QueueDialog::updateProgressBar( int evt, const QString &pkgname, int percent,
                                      int howmany, int remain )
 {
-    Q_UNUSED( pkgname );
     Q_UNUSED( evt );
 
     qDebug() << "Got it: it's " << pkgname << " at percentage " << percent;
@@ -301,7 +300,7 @@ void QueueDialog::startProcess()
     dlLabel->setPixmap( QIcon( ":/Icons/icons/dialog-ok-apply.png" ).pixmap( 22 ) );
     processLabel->setPixmap( QIcon( ":/Icons/icons/edit-redo.png" ).pixmap( 22 ) );
 
-    disconnect( Backend::instance(), SIGNAL( streamDlProg( QString&, int, int, int, int, int ) ), 0, 0 );
+    disconnect( Backend::instance(), SIGNAL(streamDlProg( const QString&, int, int, int, int, int )), 0, 0 );
     connect( Backend::instance(), SIGNAL( streamTransProgress( int, const QString&, int, int, int ) ),
              SLOT( updateProgressBar( int, const QString&, int, int, int ) ) );
 }
@@ -311,7 +310,7 @@ void QueueDialog::cleanup(bool success)
     disconnect( Backend::instance(), SIGNAL( streamTransProgress( int, const QString&, int, int, int ) ), 0, 0 );
     disconnect( Backend::instance(), SIGNAL( streamTransEvent( int, QVariantMap ) ), 0, 0);
     disconnect( Backend::instance(), SIGNAL( logMsgStreamed( const QString& ) ), 0, 0);
-    disconnect( Backend::instance(), SIGNAL( streamTransDlProg( const QString&, int, int, int, int, int, int ) ), 0, 0);
+    disconnect( Backend::instance(), SIGNAL(streamDlProg( const QString&, int, int, int, int, int )), 0, 0);
     /*connect( aHandle, SIGNAL( preparingTransactionError( const QString& ) ),
                  SLOT( handlePreparingError( const QString& ) ) );
         connect( aHandle, SIGNAL( committingTransactionError( const QString& ) ),
