@@ -97,7 +97,6 @@ void QueueDialog::startProcessing( bool force )
     QList<pmtransflag_t> flags;
 
     flags.append(PM_TRANS_FLAG_ALLDEPS);
-    flags.append(PM_TRANS_FLAG_NOSCRIPTLET);
     if (force) {
         flags.append(PM_TRANS_FLAG_FORCE);
     }
@@ -215,8 +214,8 @@ void QueueDialog::changeStatus( int event, QVariantMap args )
         actionDetail->setText( QString( tr( "Failed!" ) ) );
         break;
     case Aqpm::Globals::ScriptletInfo:
-        actionDetail->setText( QString( "%s" ).arg(args["Text"].toString()) );
-        textEdit->append( QString( "%s" ).arg(args["Text"].toString()));
+        actionDetail->setText(QString(tr("Running package scripts...")));
+        textEdit->append(QString("%1").arg(args["Text"].toString().remove('\n')));
         break;
     case Aqpm::Globals::RetrieveStart:
         if ( status != 1 ) {
