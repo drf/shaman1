@@ -920,7 +920,7 @@ void MainWindow::finishDbUpdate()
         }
 
 
-    } else if ( list.contains( "shaman" ) || list.contains( "kdemod4-shaman" ) ) {
+    } else if ( list.contains( "shaman" ) || list.contains( "kdemod-shaman" ) ) {
         switch ( ShamanDialog::popupQuestionDialog( QString( tr( "Shaman Update" ) ),
                  QString( tr( "Shaman can be upgraded. "
                               "It is advised to process it alone\nto avoid version conflicts.\n"
@@ -933,8 +933,8 @@ void MainWindow::finishDbUpdate()
 
             cancelAllActions();
 
-            if ( list.contains( "kdemod4-shaman" ) )
-                reinstallPackage( "kdemod4-shaman" );
+            if ( list.contains( "kdemod-shaman" ) )
+                reinstallPackage( "kdemod-shaman" );
             else
                 reinstallPackage( "shaman" );
 
