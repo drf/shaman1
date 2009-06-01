@@ -308,10 +308,7 @@ void QueueDialog::cleanup(bool success)
     disconnect( Backend::instance(), SIGNAL( streamTransEvent( int, QVariantMap ) ), 0, 0);
     disconnect( Backend::instance(), SIGNAL( logMsgStreamed( const QString& ) ), 0, 0);
     disconnect( Backend::instance(), SIGNAL(streamDlProg( const QString&, int, int, int, int, int )), 0, 0);
-    /*connect( aHandle, SIGNAL( preparingTransactionError( const QString& ) ),
-                 SLOT( handlePreparingError( const QString& ) ) );
-        connect( aHandle, SIGNAL( committingTransactionError( const QString& ) ),
-                 SLOT( handleCommittingError( const QString& ) ) );*/
+    disconnect(Backend::instance(), SIGNAL(errorOccurred(Errors,QVariantMap)));
     processLabel->setPixmap( QIcon( ":/Icons/icons/dialog-ok-apply.png" ).pixmap( 22 ) );
     cleanUpLabel->setPixmap( QIcon( ":/Icons/icons/edit-redo.png" ).pixmap( 22 ) );
 
