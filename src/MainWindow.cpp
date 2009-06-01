@@ -290,8 +290,8 @@ MainWindow::MainWindow( QMainWindow *parent )
     connect(actionSystem_Upgrade, SIGNAL(triggered(bool)), this, SLOT(fullSysUpgrade()));
     toolBar->addAction(actionSystem_Upgrade);
 
-    connect( Backend::instance(), SIGNAL( streamTransQuestion( int,QVariantMap ) ), this,
-             SLOT( streamTransQuestion( int,QVariantMap ) ) );
+    connect( Backend::instance(), SIGNAL( streamTransQuestion( Aqpm::Globals::TransactionQuestion,QVariantMap ) ), this,
+             SLOT( streamTransQuestion( Aqpm::Globals::TransactionQuestion,QVariantMap ) ) );
     connect( pkgsViewWG, SIGNAL( customContextMenuRequested( const QPoint & ) ),
              SLOT( showPkgsViewContextMenu() ) );
     connect( repoList, SIGNAL( customContextMenuRequested( const QPoint & ) ),
@@ -1983,11 +1983,11 @@ void MainWindow::startTrayTimer()
     emit startTimer();
 }
 
-void MainWindow::streamTransQuestion( int event, QVariantMap args )
+void MainWindow::streamTransQuestion( Aqpm::Globals::TransactionQuestion event, QVariantMap args )
 {
     QString message;
 
-    switch ((Aqpm::Globals::TransactionQuestion) event) {
+    switch (event) {
     case Aqpm::Globals::IgnorePackage:
         if (args.contains("SecondPackage")) {
             message = QString(tr("%1 requires installing %2 from IgnorePkg/IgnoreGroup.\n Install anyway?"))

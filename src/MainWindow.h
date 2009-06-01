@@ -21,12 +21,12 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <iostream>
 #include <QWidget>
-#include <alpm.h>
 #include <alpm_list.h>
 #include "ui_MainWindow.h"
 #include "kanimatedsystemtrayicon.h"
+
+#include <aqpm/Globals.h>
 
 #include <QThread>
 #include <QPointer>
@@ -129,7 +129,7 @@ class MainWindow : public QMainWindow, public Ui::MainWindow
         void queueProcessingEnded( bool errors );
         void widgetQueueToAlpmQueue();
         void getPackageFromFile();
-        void streamTransQuestion(int event, QVariantMap args);
+        void streamTransQuestion(Aqpm::Globals::TransactionQuestion event, QVariantMap args);
         void cancelAllActions();
         void processQueue();
         void updateABSTree();

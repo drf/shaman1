@@ -23,6 +23,8 @@
 
 #include "ui_transactionDialog.h"
 
+#include <aqpm/Globals.h>
+
 class QueueDialog : public QDialog, private Ui::transactionDialog
 {
         Q_OBJECT
@@ -41,7 +43,7 @@ class QueueDialog : public QDialog, private Ui::transactionDialog
 
         void updateProgressBar( const QString &c, int bytedone, int bytetotal, int speed,
                                 int listdone, int listtotal );
-        void updateProgressBar( int evt, const QString &pkgname, int percent,
+        void updateProgressBar( Aqpm::Globals::TransactionProgress evt, const QString &pkgname, int percent,
                                 int howmany, int remain );
         void startDownload();
         void startProcess();
@@ -49,7 +51,7 @@ class QueueDialog : public QDialog, private Ui::transactionDialog
 
         void handleAlpmMessage( const QString &msg );
 
-        void changeStatus( int evt, QVariantMap args );
+        void changeStatus( Aqpm::Globals::TransactionEvent evt, QVariantMap args );
 
         void adjust( bool tgld );
 

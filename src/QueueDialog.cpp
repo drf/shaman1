@@ -42,8 +42,8 @@ QueueDialog::QueueDialog( QWidget *parent )
     textEdit->hide();
     setWindowModality( Qt::WindowModal );
 
-    connect( Backend::instance(), SIGNAL( streamTransEvent( int, QVariantMap ) ),
-             SLOT( changeStatus( int, QVariantMap ) ) );
+    connect( Backend::instance(), SIGNAL( streamTransEvent( Aqpm::Globals::TransactionEvent, QVariantMap ) ),
+             SLOT( changeStatus( Aqpm::Globals::TransactionEvent, QVariantMap ) ) );
     connect( Backend::instance(), SIGNAL(logMessageStreamed(QString)),
              this, SLOT(handleAlpmMessage(QString)));
     connect( Backend::instance(), SIGNAL( streamDlProg( const QString&, int, int, int, int, int ) ),
@@ -114,7 +114,7 @@ void QueueDialog::showCurrentTransaction()
     connect( Backend::instance(), SIGNAL( operationFinished(bool) ), SLOT( cleanup(bool) ) );
 }
 
-void QueueDialog::changeStatus( int event, QVariantMap args )
+void QueueDialog::changeStatus( Aqpm::Globals::TransactionEvent event, QVariantMap args )
 {
     qDebug() << "Entering Queue Lock, with event " << event;
 
@@ -122,7 +122,7 @@ void QueueDialog::changeStatus( int event, QVariantMap args )
     QString addTxt;
     QString remTxt;
 
-    switch ( (Aqpm::Globals::TransactionEvent) event ) {
+    switch ( event ) {
     case Aqpm::Globals::CheckDepsStart:
         actionDetail->setText( QString( tr( "Validating Dependencies..." ) ) );
         textEdit->append( QString( tr( "Validating Dependencies..." ) ) );
@@ -272,7 +272,7 @@ void QueueDialog::updateProgressBar( const QString &c, int bytedone, int bytetot
                                arg( c ).arg( bd, 0, 'f', 0 ).arg( bt, 0, 'f', 0 ) );
 }
 
-void QueueDialog::updateProgressBar( int evt, const QString &pkgname, int percent,
+void QueueDialog::updateProgressBar( Aqpm::Globals::TransactionProgress evt, const QString &pkgname, int percent,
                                      int howmany, int remain )
 {
     Q_UNUSED( evt );
@@ -310,8 +310,10 @@ void QueueDialog::startProcess()
     processLabel->setPixmap( QIcon( ":/Icons/icons/edit-redo.png" ).pixmap( 22 ) );
 
     disconnect( Backend::instance(), SIGNAL(streamDlProg( const QString&, int, int, int, int, int )), 0, 0 );
-    connect( Backend::instance(), SIGNAL( streamTransProgress( int, const QString&, int, int, int ) ),
-             SLOT( updateProgressBar( int, const QString&, int, int, int ) ) );
+    connect( Backend::instance(),
+             SIGNAL( streamTransProgress( Aqpm::Globals::TransactionEvent, const QString&, int, int, int ) ),
+             this,
+             SLOT( updateProgressBar( Aqpm::Globals::TransactionEvent, const QString&, int, int, int ) ) );
 }
 
 void QueueDialog::cleanup(bool success)
