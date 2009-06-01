@@ -50,7 +50,7 @@ QueueDialog::QueueDialog( QWidget *parent )
     connect( Backend::instance(), SIGNAL( streamDlProg( const QString&, int, int, int, int, int ) ),
              SLOT( updateProgressBar( const QString&, int, int, int, int, int ) ) );
     connect( Backend::instance(), SIGNAL(errorOccurred(Aqpm::Globals::Errors,QVariantMap)),
-             this, SLOT(handleError(Aqpm::Globals:Errors,QVariantMap)));
+             this, SLOT(handleError(Aqpm::Globals::Errors,QVariantMap)));
     connect( abortTr, SIGNAL( clicked() ), SLOT( abortTransaction() ) );
     connect( showDetails, SIGNAL( toggled( bool ) ), SLOT( adjust( bool ) ) );
 
@@ -299,7 +299,7 @@ void QueueDialog::cleanup(bool success)
     disconnect( Backend::instance(), SIGNAL( streamTransEvent( int, QVariantMap ) ), 0, 0);
     disconnect( Backend::instance(), SIGNAL(logMessageStreamed(QString)), 0, 0);
     disconnect( Backend::instance(), SIGNAL(streamDlProg( const QString&, int, int, int, int, int )), 0, 0);
-    disconnect(Backend::instance(), SIGNAL(errorOccurred(Errors,QVariantMap)));
+    disconnect(Backend::instance(), SIGNAL(errorOccurred(Aqpm::Globals::Errors,QVariantMap)));
     processLabel->setPixmap( QIcon( ":/Icons/icons/dialog-ok-apply.png" ).pixmap( 22 ) );
     cleanUpLabel->setPixmap( QIcon( ":/Icons/icons/edit-redo.png" ).pixmap( 22 ) );
 
