@@ -74,6 +74,7 @@
 #include <QSortFilterProxyModel>
 
 #include <Action>
+#include <Auth>
 
 using namespace Aqpm;
 
@@ -282,6 +283,11 @@ MainWindow::MainWindow( QMainWindow *parent )
     connect(actionProcess_Queue, SIGNAL(triggered(bool)), actionProcess_Queue, SLOT(activate()));
     connect(actionProcess_Queue, SIGNAL(activated()), this, SLOT(widgetQueueToAlpmQueue()));
     toolBar->addAction(actionProcess_Queue);
+
+    PolkitQt::Action *actionSystem_Upgrade = new PolkitQt::Action("org.chakraproject.aqpm.systemupgrade", this);
+    actionSystem_Upgrade->setText( tr("System Upgrade") );
+    connect(actionSystem_Upgrade, SIGNAL(triggered(bool)), this, SLOT(fullSysUpgrade()));
+    toolBar->addAction(actionSystem_Upgrade);
 
     connect( Backend::instance(), SIGNAL( streamTransQuestion( int,QVariantMap ) ), this,
              SLOT( streamTransQuestion( int,QVariantMap ) ) );
@@ -1572,6 +1578,8 @@ void MainWindow::addUpgradeableToQueue()
 
 void MainWindow::fullSysUpgrade()
 {
+    PolkitQt::Auth::computeAndObtainAuth("org.chakraproject.aqpm.updatedatabase");
+
     dbdialog = new UpdateDbDialog( this );
     dbActive = true;
 
@@ -1642,9 +1650,10 @@ void MainWindow::processQueue()
     if ( upDl ) {
         upDl->deleteLater();
         force = upDl->force();
+        queueDl->startUpgrading(force);
+    } else {
+        queueDl->startProcessing( force );
     }
-
-    queueDl->startProcessing( force );
 
     emit actionStatusChanged( "queueProcessingStarted" );
 

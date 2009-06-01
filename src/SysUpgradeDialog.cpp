@@ -28,6 +28,8 @@
 #include <QSettings>
 #include <QDebug>
 
+#include <ActionButton>
+
 using namespace Aqpm;
 
 SysUpgradeDialog::SysUpgradeDialog( QWidget *parent )
@@ -77,9 +79,13 @@ void SysUpgradeDialog::init()
 
         itm->setExpanded( true );
 
+        PolkitQt::ActionButton *start_Upgrade = new PolkitQt::ActionButton(goUpgrading, "org.chakraproject.aqpm.systemupgrade", this);
+        start_Upgrade->setText( tr("System Upgrade") );
+        connect(start_Upgrade, SIGNAL(clicked(QAbstractButton*,bool)), start_Upgrade, SLOT(activate()));
+        connect(start_Upgrade, SIGNAL(activated()), this, SLOT(initSysUpgrade()));
+
         connect( abortButton, SIGNAL( clicked() ), SLOT( abort() ) );
         connect( addToQueue, SIGNAL( clicked() ), SLOT( addPkg() ) );
-        connect( goUpgrading, SIGNAL( clicked() ), SLOT( initSysUpgrade() ) );
         connect( showPackages, SIGNAL( toggled( bool ) ), SLOT( adjust( bool ) ) );
 
         //treeWidget->hide();
@@ -114,8 +120,6 @@ void SysUpgradeDialog::initSysUpgrade()
 
     if ( checkBox->isChecked() )
         settings->setValue( "gui/actionupgrade", "upgrade" );
-
-    Backend::instance()->fullSystemUpgrade();
 
     qDebug() << "Upgrade signal sent";
 

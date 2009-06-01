@@ -32,9 +32,11 @@ class QueueDialog : public QDialog, private Ui::transactionDialog
         explicit QueueDialog( QWidget *parent = 0 );
         ~QueueDialog();
         void startProcessing( bool force );
+        void startUpgrading(bool force);
 
     public slots:
         void abortTransaction();
+        void showCurrentTransaction();
 
     private slots:
 

@@ -97,6 +97,26 @@ void QueueDialog::startProcessing( bool force )
     connect( Backend::instance(), SIGNAL( operationFinished(bool) ), SLOT( cleanup(bool) ) );
 }
 
+void QueueDialog::startUpgrading(bool force)
+{
+    QList<pmtransflag_t> flags;
+
+    flags.append(PM_TRANS_FLAG_ALLDEPS);
+
+    if (force) {
+        flags.append(PM_TRANS_FLAG_FORCE);
+    }
+
+    Backend::instance()->fullSystemUpgrade(flags);
+
+    connect( Backend::instance(), SIGNAL( operationFinished(bool) ), SLOT( cleanup(bool) ) );
+}
+
+void QueueDialog::showCurrentTransaction()
+{
+    connect( Backend::instance(), SIGNAL( operationFinished(bool) ), SLOT( cleanup(bool) ) );
+}
+
 void QueueDialog::changeStatus( int event, QVariantMap args )
 {
     qDebug() << "Entering Queue Lock, with event " << event;
@@ -224,9 +244,9 @@ void QueueDialog::changeStatus( int event, QVariantMap args )
 void QueueDialog::updateProgressBar( const QString &c, int bytedone, int bytetotal, int speed,
                                      int listdone, int listtotal )
 {
-    double bt = bytetotal / 1024;
-    double bd = bytedone / 1024;
-    double spd = speed / 1024;
+    double bt = (float)bytetotal / 1024.0;
+    double bd = (float)bytedone / 1024.0;
+    double spd = (float)speed / 1024.0;
 
     QTime remaining(0,0,0);
 
@@ -234,11 +254,15 @@ void QueueDialog::updateProgressBar( const QString &c, int bytedone, int bytetot
         return;
     }
 
-    remaining.addSecs((listtotal - listdone) / (speed));
+    int rsecs = (int)((listtotal - listdone) / (speed));
+
+    qDebug() << rsecs;
+
+    remaining.addSecs(rsecs);
 
     progressBar->setFormat( QString( tr( "%p% (%1 KB/s, %2 remaining)", "You just have to "
                                          "translate 'remaining' here. Leave everything else as it is." ) ).
-                            arg( spd, 0, 'f', 1 ).arg(remaining.toString()) );
+                            arg( spd, 0, 'f', 1 ).arg(remaining.toString("hh:mm:ss")) );
     progressBar->setRange( 0, listtotal );
     progressBar->setValue( listdone );
 
