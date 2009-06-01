@@ -21,9 +21,8 @@
 #ifndef QUEUEDIALOG_H
 #define QUEUEDIALOG_H
 
-#include <iostream>
 #include "ui_transactionDialog.h"
-#include <alpm.h>
+#include <aqpm/Backend.h>
 
 class QueueDialog : public QDialog, private Ui::transactionDialog
 {
@@ -47,8 +46,7 @@ class QueueDialog : public QDialog, private Ui::transactionDialog
         void startProcess();
         void cleanup(bool success);
 
-        void handlePreparingError( const QString &msg );
-        void handleCommittingError( const QString &msg );
+        void handleError(Aqpm::Backend::Errors code, const QVariantMap &args);
 
         void handleAlpmMessage( const QString &msg );
 

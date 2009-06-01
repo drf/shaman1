@@ -56,10 +56,8 @@ QueueDialog::QueueDialog( QWidget *parent )
              SLOT( handleAlpmMessage( const QString& ) ) );
     connect( Backend::instance(), SIGNAL( streamDlProg( const QString&, int, int, int, int, int ) ),
              SLOT( updateProgressBar( const QString&, int, int, int, int, int ) ) );
-    /*connect( aHandle, SIGNAL( preparingTransactionError( const QString& ) ),
-             SLOT( handlePreparingError( const QString& ) ) );
-    connect( aHandle, SIGNAL( committingTransactionError( const QString& ) ),
-             SLOT( handleCommittingError( const QString& ) ) );*/
+    connect( Backend::instance(), SIGNAL(errorOccurred(Aqpm::Backend::Errors, QVariantMap)),
+             SLOT(handleError(Aqpm::Backend::Errors, QVariantMap)));
     connect( abortTr, SIGNAL( clicked() ), SLOT( abortTransaction() ) );
     connect( showDetails, SIGNAL( toggled( bool ) ), SLOT( adjust( bool ) ) );
 
@@ -370,18 +368,48 @@ void QueueDialog::abortTransaction()
     }
 }
 
-void QueueDialog::handlePreparingError( const QString &msg )
+void QueueDialog::handleError(Aqpm::Backend::Errors code, const QVariantMap &args)
 {
-    qDebug() << "Creating Preparing Error";
+    qDebug() << "Creating Error Dialog";
 
     QDialog *dlog = new QDialog( this );
     QLabel *lbl = new QLabel( dlog );
-    QTextEdit *txtEd = new QTextEdit( msg, dlog );
+    QTextEdit *txtEd = new QTextEdit(dlog);
     QDialogButtonBox *but = new QDialogButtonBox( dlog );
     QVBoxLayout *lay = new QVBoxLayout();
+    QString detailedMessage;
+    QString shortMessage;
 
-    lbl->setText( QString( tr( "There has been an error"
-                               " while preparing the transaction.\n" ) + QString::fromLocal8Bit( alpm_strerrorlast() ) ) );
+    if (code & Aqpm::Backend::PrepareError) {
+        shortMessage = tr("There has been an error while preparing the transaction.");
+
+        if (code & Aqpm::Backend::UnsatisfiedDependencies) {
+            detailedMessage = tr("Some dependencies can not be satisfied");
+            detailedMessage.append("\n\n");
+
+            foreach (QString ent, args["UnsatisfiedDeps"].toMap().keys()) {
+                detailedMessage.append(tr("%1: requires %2").arg(ent)
+                                       .arg(args["UnsatisfiedDeps"].toMap()[ent].toString()));
+                detailedMessage.append('\n');
+            }
+        } else if (code & Aqpm::Backend::UnsatisfiedDependencies) {
+            detailedMessage = tr("Some dependencies create a conflict with already installed packages");
+            detailedMessage.append("\n\n");
+
+            foreach (QString ent, args["ConflictingDeps"].toMap().keys()) {
+                detailedMessage.append(tr("%1: conflicts with %2").arg(ent)
+                                       .arg(args["ConflictingDeps"].toMap()[ent].toString()));
+                detailedMessage.append('\n');
+            }
+        } else {
+            detailedMessage = tr("No further details were given. Last error string was:");
+            detailedMessage.append("\n\n");
+            detailedMessage.append(args["ErrorString"].toString());
+        }
+    }
+
+    lbl->setText(shortMessage);
+    txtEd->setText(detailedMessage);
 
     txtEd->setReadOnly( true );
 
@@ -400,46 +428,6 @@ void QueueDialog::handlePreparingError( const QString &msg )
     connect( but, SIGNAL( accepted() ), dlog, SLOT( accept() ) );
 
     dlog->exec();
-
-    errors = true;
-
-    qDebug() << "Streaming Awakening to Error Thread";
-}
-
-void QueueDialog::handleCommittingError( const QString &msg )
-{
-    qDebug() << "Creating Committing Error";
-
-    QDialog *dlog = new QDialog( this );
-    QLabel *lbl = new QLabel( dlog );
-    QTextEdit *txtEd = new QTextEdit( msg, dlog );
-    QDialogButtonBox *but = new QDialogButtonBox( dlog );
-    QVBoxLayout *lay = new QVBoxLayout();
-
-    lbl->setText( QString( tr( "There has been an error"
-                               " while committing the transaction.\n" ) + QString::fromLocal8Bit( alpm_strerrorlast() ) ) );
-
-    txtEd->setReadOnly( true );
-
-    QPushButton *okb = but->addButton( QDialogButtonBox::Ok );
-    okb->setText( QObject::tr( "Ok" ) );
-    okb->setIcon( QIcon( ":/Icons/icons/dialog-ok-apply.png" ) );
-
-    lay->addWidget( lbl );
-    lay->addWidget( txtEd );
-    lay->addWidget( but );
-
-    dlog->setLayout( lay );
-    dlog->setWindowTitle( QString( tr( "Queue Processing" ) ) );
-    dlog->setWindowModality( Qt::ApplicationModal );
-
-    connect( but, SIGNAL( accepted() ), dlog, SLOT( accept() ) );
-
-    dlog->exec();
-
-    errors = true;
-
-    qDebug() << "Streaming Awakening to Error Thread";
 }
 
 void QueueDialog::handleAlpmMessage( const QString &msg )
