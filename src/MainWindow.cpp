@@ -43,6 +43,7 @@
 #include "ShamanTreeWidgetItem.h"
 #include "MaintenanceBar.h"
 #include "LocalPackageDialog.h"
+#include "ErrorHandler.h"
 
 #include <config.h>
 
@@ -316,6 +317,9 @@ MainWindow::MainWindow( QMainWindow *parent )
     connect( actionViewLog, SIGNAL( triggered() ), SLOT( openLogViewer() ) );
     connect( Backend::instance(), SIGNAL( transactionStarted() ), SIGNAL( transactionStarted() ) );
     connect( Backend::instance(), SIGNAL( transactionReleased() ), SIGNAL( transactionReleased() ) );
+
+    connect( Backend::instance(), SIGNAL(errorOccurred(Aqpm::Globals::Errors,QVariantMap)),
+             new ErrorHandler(this), SLOT(spawnErrorDialog(Aqpm::Globals::Errors,QVariantMap)));
 
     completeRemoveButton->setEnabled( false ); // Until it works...
 

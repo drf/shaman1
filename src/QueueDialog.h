@@ -22,7 +22,6 @@
 #define QUEUEDIALOG_H
 
 #include "ui_transactionDialog.h"
-#include <aqpm/Globals.h>
 
 class QueueDialog : public QDialog, private Ui::transactionDialog
 {
@@ -47,8 +46,6 @@ class QueueDialog : public QDialog, private Ui::transactionDialog
         void startDownload();
         void startProcess();
         void cleanup(bool success);
-
-        void handleError(Aqpm::Globals::Errors code, const QVariantMap &args);
 
         void handleAlpmMessage( const QString &msg );
 

@@ -5,11 +5,8 @@ SET(shaman_SRCS ${shaman_adaptor_SRCS}
     main.cpp
     MainWindow.cpp
     Shaman.cpp
-#    AlpmHandler.cpp
     BuildingDialog.cpp
-#    callbacks.cpp
     configDialog.cpp
-#    ConfigurationParser.cpp
     EditPBuild.cpp
     QueueDialog.cpp
     SysUpgradeDialog.cpp
@@ -28,6 +25,7 @@ SET(shaman_SRCS ${shaman_adaptor_SRCS}
     ShamanTreeWidgetItem.cpp
     MaintenanceBar.cpp
     LocalPackageDialog.cpp
+    ErrorHandler.cpp
 )
 
 SET(shaman_UIS
