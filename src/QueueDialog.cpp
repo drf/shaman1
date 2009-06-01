@@ -409,22 +409,31 @@ void QueueDialog::handleError(Aqpm::Backend::Errors code, const QVariantMap &arg
     } else if (code & Aqpm::Backend::CommitError) {
         shortMessage = tr("There has been an error while committing the transaction.");
 
-        if (code & Aqpm::Backend::UnsatisfiedDependencies) {
-            detailedMessage = tr("Some dependencies can not be satisfied");
+        if (code & Aqpm::Backend::FileConflictTarget) {
+            detailedMessage = tr("Some files in the packages being processed are conflicting");
             detailedMessage.append("\n\n");
 
-            foreach (QString ent, args["UnsatisfiedDeps"].toMap().keys()) {
-                detailedMessage.append(tr("%1: requires %2").arg(ent)
-                                       .arg(args["UnsatisfiedDeps"].toMap()[ent].toString()));
+            foreach (QString ent, args["ConflictingTargets"].toMap().keys()) {
+                detailedMessage.append(tr("%1 exists in both '%2' and '%3'").arg(ent)
+                                       .arg(args["ConflictingTargets"].toMap()[ent].toStringList().at(0))
+                                       .arg(args["ConflictingTargets"].toMap()[ent].toStringList().at(1)));
                 detailedMessage.append('\n');
             }
-        } else if (code & Aqpm::Backend::UnsatisfiedDependencies) {
-            detailedMessage = tr("Some dependencies create a conflict with already installed packages");
+        } else if (code & Aqpm::Backend::FileConflictFilesystem) {
+            detailedMessage = tr("Some files in the packages being processed conflict with the local filesystem");
             detailedMessage.append("\n\n");
 
-            foreach (QString ent, args["ConflictingDeps"].toMap().keys()) {
-                detailedMessage.append(tr("%1: conflicts with %2").arg(ent)
-                                       .arg(args["ConflictingDeps"].toMap()[ent].toString()));
+            foreach (QString ent, args["ConflictingFiles"].toMap().keys()) {
+                detailedMessage.append(tr("%1: %2 exists in the filesystem").arg(ent)
+                                       .arg(args["ConflictingFiles"].toMap()[ent].toString()));
+                detailedMessage.append('\n');
+            }
+        } else if (code & Aqpm::Backend::CorruptedFile) {
+            detailedMessage = tr("Some downloaded packages are corrupted or invalid");
+            detailedMessage.append("\n\n");
+
+            foreach (QString ent, args["Filenames"].toStringList()) {
+                detailedMessage.append(tr("%1 is invalid or corrupted").arg(ent));
                 detailedMessage.append('\n');
             }
         } else {
@@ -432,6 +441,11 @@ void QueueDialog::handleError(Aqpm::Backend::Errors code, const QVariantMap &arg
             detailedMessage.append("\n\n");
             detailedMessage.append(args["ErrorString"].toString());
         }
+    } else if (code & Aqpm::Backend::AddTargetError) {
+        shortMessage = tr("There has been an error while adding a target.");
+
+        detailedMessage = tr("This is probably an internal Shaman error. Please report it to help "
+                             "the developers solving it");
     }
 
     lbl->setText(shortMessage);
@@ -448,7 +462,7 @@ void QueueDialog::handleError(Aqpm::Backend::Errors code, const QVariantMap &arg
     lay->addWidget( but );
 
     dlog->setLayout( lay );
-    dlog->setWindowTitle( QString( tr( "Queue Processing" ) ) );
+    dlog->setWindowTitle(QString(tr("Error processing queue")));
     dlog->setWindowModality( Qt::ApplicationModal );
 
     connect( but, SIGNAL( accepted() ), dlog, SLOT( accept() ) );
