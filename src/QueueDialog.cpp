@@ -26,18 +26,11 @@
 #include <aqpm/Backend.h>
 #include <aqpm/Globals.h>
 
-#include <alpm.h>
-#include <QMutex>
-#include <QMutexLocker>
 #include <QDebug>
-#include <QProcess>
-#include <QFile>
-#include <QDir>
-#include <QWaitCondition>
 #include <QDialogButtonBox>
 #include <QMessageBox>
-#include <QSettings>
 #include <QTime>
+#include <QSettings>
 
 using namespace std;
 using namespace Aqpm;
@@ -52,12 +45,12 @@ QueueDialog::QueueDialog( QWidget *parent )
 
     connect( Backend::instance(), SIGNAL( streamTransEvent( int, QVariantMap ) ),
              SLOT( changeStatus( int, QVariantMap ) ) );
-    connect( Backend::instance(), SIGNAL( logMsgStreamed( const QString& ) ),
-             SLOT( handleAlpmMessage( const QString& ) ) );
+    connect( Backend::instance(), SIGNAL(logMessageStreamed(QString)),
+             this, SLOT(handleAlpmMessage(QString)));
     connect( Backend::instance(), SIGNAL( streamDlProg( const QString&, int, int, int, int, int ) ),
              SLOT( updateProgressBar( const QString&, int, int, int, int, int ) ) );
-    connect( Backend::instance(), SIGNAL(errorOccurred(Aqpm::Backend::Errors, QVariantMap)),
-             SLOT(handleError(Aqpm::Backend::Errors, QVariantMap)));
+    connect( Backend::instance(), SIGNAL(errorOccurred(Aqpm::Globals::Errors,QVariantMap)),
+             this, SLOT(handleError(Aqpm::Globals:Errors,QVariantMap)));
     connect( abortTr, SIGNAL( clicked() ), SLOT( abortTransaction() ) );
     connect( showDetails, SIGNAL( toggled( bool ) ), SLOT( adjust( bool ) ) );
 
@@ -145,7 +138,6 @@ void QueueDialog::changeStatus( int event, QVariantMap args )
         actionDetail->setText( addTxt );
         textEdit->append( addTxt );
         addTxt.append( QChar( '\n' ) );
-        alpm_logaction( addTxt.toUtf8().data() );
 
         break;
     case Aqpm::Globals::RemoveStart:
@@ -164,7 +156,6 @@ void QueueDialog::changeStatus( int event, QVariantMap args )
         actionDetail->setText( remTxt );
         textEdit->append( remTxt );
         remTxt.append( QChar( '\n' ) );
-        alpm_logaction( remTxt.toUtf8().data() );
         break;
     case Aqpm::Globals::UpgradeStart:
         if ( status != 2 ) {
@@ -182,7 +173,6 @@ void QueueDialog::changeStatus( int event, QVariantMap args )
         actionDetail->setText( upgTxt );
         textEdit->append( upgTxt );
         upgTxt.append( QChar( '\n' ) );
-        alpm_logaction( upgTxt.toUtf8().data() );
 
         break;
     case Aqpm::Globals::IntegrityStart:
@@ -236,6 +226,7 @@ void QueueDialog::updateProgressBar( const QString &c, int bytedone, int bytetot
 {
     double bt = bytetotal / 1024;
     double bd = bytedone / 1024;
+    double spd = speed / 1024;
 
     QTime remaining(0,0,0);
 
@@ -243,11 +234,11 @@ void QueueDialog::updateProgressBar( const QString &c, int bytedone, int bytetot
         return;
     }
 
-    remaining.addSecs(( listtotal - listdone ) / ( speed * 1024.0 ));
+    remaining.addSecs((listtotal - listdone) / (speed));
 
     progressBar->setFormat( QString( tr( "%p% (%1 KB/s, %2 remaining)", "You just have to "
                                          "translate 'remaining' here. Leave everything else as it is." ) ).
-                            arg( speed ).arg(remaining.toString()) );
+                            arg( spd, 0, 'f', 1 ).arg(remaining.toString()) );
     progressBar->setRange( 0, listtotal );
     progressBar->setValue( listdone );
 
@@ -306,7 +297,7 @@ void QueueDialog::cleanup(bool success)
 {
     disconnect( Backend::instance(), SIGNAL( streamTransProgress( int, const QString&, int, int, int ) ), 0, 0 );
     disconnect( Backend::instance(), SIGNAL( streamTransEvent( int, QVariantMap ) ), 0, 0);
-    disconnect( Backend::instance(), SIGNAL( logMsgStreamed( const QString& ) ), 0, 0);
+    disconnect( Backend::instance(), SIGNAL(logMessageStreamed(QString)), 0, 0);
     disconnect( Backend::instance(), SIGNAL(streamDlProg( const QString&, int, int, int, int, int )), 0, 0);
     disconnect(Backend::instance(), SIGNAL(errorOccurred(Errors,QVariantMap)));
     processLabel->setPixmap( QIcon( ":/Icons/icons/dialog-ok-apply.png" ).pixmap( 22 ) );
@@ -365,7 +356,7 @@ void QueueDialog::abortTransaction()
     }
 }
 
-void QueueDialog::handleError(Aqpm::Backend::Errors code, const QVariantMap &args)
+void QueueDialog::handleError(Aqpm::Globals::Errors code, const QVariantMap &args)
 {
     qDebug() << "Creating Error Dialog";
 
@@ -377,10 +368,10 @@ void QueueDialog::handleError(Aqpm::Backend::Errors code, const QVariantMap &arg
     QString detailedMessage;
     QString shortMessage;
 
-    if (code & Aqpm::Backend::PrepareError) {
+    if (code & Aqpm::Globals::PrepareError) {
         shortMessage = tr("There has been an error while preparing the transaction.");
 
-        if (code & Aqpm::Backend::UnsatisfiedDependencies) {
+        if (code & Aqpm::Globals::UnsatisfiedDependencies) {
             detailedMessage = tr("Some dependencies can not be satisfied");
             detailedMessage.append("\n\n");
 
@@ -389,7 +380,7 @@ void QueueDialog::handleError(Aqpm::Backend::Errors code, const QVariantMap &arg
                                        .arg(args["UnsatisfiedDeps"].toMap()[ent].toString()));
                 detailedMessage.append('\n');
             }
-        } else if (code & Aqpm::Backend::UnsatisfiedDependencies) {
+        } else if (code & Aqpm::Globals::UnsatisfiedDependencies) {
             detailedMessage = tr("Some dependencies create a conflict with already installed packages");
             detailedMessage.append("\n\n");
 
@@ -403,10 +394,10 @@ void QueueDialog::handleError(Aqpm::Backend::Errors code, const QVariantMap &arg
             detailedMessage.append("\n\n");
             detailedMessage.append(args["ErrorString"].toString());
         }
-    } else if (code & Aqpm::Backend::CommitError) {
+    } else if (code & Aqpm::Globals::CommitError) {
         shortMessage = tr("There has been an error while committing the transaction.");
 
-        if (code & Aqpm::Backend::FileConflictTarget) {
+        if (code & Aqpm::Globals::FileConflictTarget) {
             detailedMessage = tr("Some files in the packages being processed are conflicting");
             detailedMessage.append("\n\n");
 
@@ -416,7 +407,7 @@ void QueueDialog::handleError(Aqpm::Backend::Errors code, const QVariantMap &arg
                                        .arg(args["ConflictingTargets"].toMap()[ent].toStringList().at(1)));
                 detailedMessage.append('\n');
             }
-        } else if (code & Aqpm::Backend::FileConflictFilesystem) {
+        } else if (code & Aqpm::Globals::FileConflictFilesystem) {
             detailedMessage = tr("Some files in the packages being processed conflict with the local filesystem");
             detailedMessage.append("\n\n");
 
@@ -425,7 +416,7 @@ void QueueDialog::handleError(Aqpm::Backend::Errors code, const QVariantMap &arg
                                        .arg(args["ConflictingFiles"].toMap()[ent].toString()));
                 detailedMessage.append('\n');
             }
-        } else if (code & Aqpm::Backend::CorruptedFile) {
+        } else if (code & Aqpm::Globals::CorruptedFile) {
             detailedMessage = tr("Some downloaded packages are corrupted or invalid");
             detailedMessage.append("\n\n");
 
@@ -438,7 +429,7 @@ void QueueDialog::handleError(Aqpm::Backend::Errors code, const QVariantMap &arg
             detailedMessage.append("\n\n");
             detailedMessage.append(args["ErrorString"].toString());
         }
-    } else if (code & Aqpm::Backend::AddTargetError) {
+    } else if (code & Aqpm::Globals::AddTargetError) {
         shortMessage = tr("There has been an error while adding a target.");
 
         detailedMessage = tr("This is probably an internal Shaman error. Please report it to help "

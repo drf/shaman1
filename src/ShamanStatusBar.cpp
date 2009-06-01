@@ -81,8 +81,8 @@ void ShamanStatusBar::clearStBarAction()
 void ShamanStatusBar::updateStatusBar()
 {
     QString text = QString( tr( "%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages" )
-                            .arg( Backend::instance()->countPackages( Backend::AllPackages ) )
-                            .arg( Backend::instance()->countPackages( Backend::InstalledPackages ) )
+                            .arg( Backend::instance()->countPackages( Globals::AllPackages ) )
+                            .arg( Backend::instance()->countPackages( Globals::InstalledPackages ) )
                             .arg( Backend::instance()->getUpgradeablePackagesAsStringList().count() ) );
 
     text.append( ' ' );

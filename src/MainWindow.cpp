@@ -92,7 +92,7 @@ QList<QTreeWidgetItem *> CreateItemsThread::getResult()
 void CreateItemsThread::run()
 {
     int count = 0;
-    int totalPkgs = Backend::instance()->countPackages( Backend::AllPackages );
+    int totalPkgs = Backend::instance()->countPackages( Globals::AllPackages );
     QList<QTreeWidgetItem *> itmLst;
     alpm_list_t *currentpkgs;
 
