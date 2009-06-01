@@ -406,6 +406,32 @@ void QueueDialog::handleError(Aqpm::Backend::Errors code, const QVariantMap &arg
             detailedMessage.append("\n\n");
             detailedMessage.append(args["ErrorString"].toString());
         }
+    } else if (code & Aqpm::Backend::CommitError) {
+        shortMessage = tr("There has been an error while committing the transaction.");
+
+        if (code & Aqpm::Backend::UnsatisfiedDependencies) {
+            detailedMessage = tr("Some dependencies can not be satisfied");
+            detailedMessage.append("\n\n");
+
+            foreach (QString ent, args["UnsatisfiedDeps"].toMap().keys()) {
+                detailedMessage.append(tr("%1: requires %2").arg(ent)
+                                       .arg(args["UnsatisfiedDeps"].toMap()[ent].toString()));
+                detailedMessage.append('\n');
+            }
+        } else if (code & Aqpm::Backend::UnsatisfiedDependencies) {
+            detailedMessage = tr("Some dependencies create a conflict with already installed packages");
+            detailedMessage.append("\n\n");
+
+            foreach (QString ent, args["ConflictingDeps"].toMap().keys()) {
+                detailedMessage.append(tr("%1: conflicts with %2").arg(ent)
+                                       .arg(args["ConflictingDeps"].toMap()[ent].toString()));
+                detailedMessage.append('\n');
+            }
+        } else {
+            detailedMessage = tr("No further details were given. Last error string was:");
+            detailedMessage.append("\n\n");
+            detailedMessage.append(args["ErrorString"].toString());
+        }
     }
 
     lbl->setText(shortMessage);
