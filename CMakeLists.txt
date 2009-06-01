@@ -79,7 +79,7 @@ endif(NOT PLASMA_ONLY)
 if(NOT NO_PLASMA)
 
 	if (PLASMA_FOUND)
-    		add_subdirectory(plasma)
+#    		add_subdirectory(plasma)
 	else (PLASMA_FOUND)
 		message("Plasma not found, plasma components won't be built")
 	endif(PLASMA_FOUND)
