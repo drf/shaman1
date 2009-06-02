@@ -64,29 +64,29 @@ void UpdateDbDialog::updateLabel( const QString &repo, int action )
      */
 
     switch ( action ) {
-    case Backend::Checking:
+    case Globals::Checking:
         // The Database is being checked
         toInsert->setPixmap( QIcon( ":/Icons/icons/edit-redo.png" ).pixmap( 22 ) );
         break;
-    case Backend::Downloading:
+    case Globals::Downloading:
         // The Database is being downloaded (Outdated, see updateDlBar instead)
         toInsert->setPixmap( QIcon( ":/Icons/icons/view-refresh.png" ).pixmap( 22 ) );
         break;
-    case Backend::Updating:
+    case Globals::Updating:
         // The Database is being installed (this action is usually so quick that this icon is not even shown)
         toInsert->setPixmap( QIcon( ":/Icons/icons/edit-redo.png" ).pixmap( 22 ) );
         break;
-    case Backend::Updated:
+    case Globals::Updated:
         toInsert->setPixmap( QIcon( ":/Icons/icons/dialog-ok-apply.png" ).pixmap( 22 ) );
         setUpdated(repo);
         updateTotalProg();
         break;
-    case Backend::Unchanged:
+    case Globals::Unchanged:
         // The Database has been processed successfully
         toInsert->setPixmap( QIcon( ":/Icons/icons/dialog-ok-apply.png" ).pixmap( 22 ) );
         updateTotalProg();
         break;
-    case Backend::DatabaseError:
+    case Globals::DatabaseError:
         // There was an error updating the database
         toInsert->setPixmap( QIcon( ":/Icons/icons/edit-delete.png" ).pixmap( 22 ) );
         updateTotalProg();
