@@ -29,6 +29,9 @@
 /* Defines the Install Prefix */
 #define INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}"
 
+/* KDE4 Integration */
+#cmakedefine KDE4_INTEGRATION 1
+
 /* Defines the Version */
 
 #define SHAMAN_VERSION "1.2.0-alpha1"

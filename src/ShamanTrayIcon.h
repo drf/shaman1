@@ -54,6 +54,7 @@ class ShamanTrayIcon : public KAnimatedSystemTrayIcon
         void newNewsAvailable();
         void newsFetchingFailed();
         void resetTimerAt();
+        void showMessage(const QString & title, const QString & message, MessageIcon icon = Information, int millisecondsTimeoutHint = 10000);
 
     private slots:
         void transactionStarted();

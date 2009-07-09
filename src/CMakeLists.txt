@@ -70,5 +70,9 @@ TARGET_LINK_LIBRARIES(shaman
     aqpm
 )
 
+if (KDE4_INTEGRATION)
+target_link_libraries(shaman ${KDE4_KDECORE_LIBS} ${KDE4_KDEUI_LIBS})
+endif (KDE4_INTEGRATION)
+
 INSTALL(CODE "MESSAGE(\"Installing Shaman executable...\")")
 INSTALL(TARGETS shaman DESTINATION bin)

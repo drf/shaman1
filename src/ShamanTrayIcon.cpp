@@ -28,6 +28,12 @@
 #include <QTime>
 #include <QDebug>
 
+#include "config.h"
+
+#ifdef KDE4_INTEGRATION
+#include <knotification.h>
+#endif
+
 using namespace Aqpm;
 
 ShamanTrayIcon::ShamanTrayIcon( MainWindow *mW )
@@ -358,4 +364,13 @@ void ShamanTrayIcon::timerAtElapsed()
      */
 
     emit startDbUpdate();
+}
+
+void ShamanTrayIcon::showMessage(const QString &title, const QString &message, MessageIcon icon, int millisecondsTimeoutHint)
+{
+#ifndef KDE4_INTEGRATION
+    KAnimatedSystemTrayIcon::showMessage(title, message, icon, millisecondsTimeoutHint);
+#else
+    KNotification::event(KNotification::Notification, message);
+#endif
 }

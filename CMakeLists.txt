@@ -8,6 +8,10 @@ include(FindSharedMimeInfo)
 include(FindPkgConfig)
 include(FindPolkitQt)
 
+if (KDE4_INTEGRATION)
+find_package(KDE4)
+endif (KDE4_INTEGRATION)
+
 configure_file(config.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config.h )
 
 MACRO (MACRO_OPTIONAL_FIND_PACKAGE _name )
