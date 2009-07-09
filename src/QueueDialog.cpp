@@ -245,17 +245,13 @@ void QueueDialog::updateProgressBar( const QString &c, int bytedone, int bytetot
     double bd = (float)bytedone / 1024.0;
     double spd = (float)speed / 1024.0;
 
-    QTime remaining(0,0,0);
-
     if ( speed == 0 ) {
         return;
     }
 
     int rsecs = (int)((listtotal - listdone) / (speed));
 
-    qDebug() << rsecs;
-
-    remaining.addSecs(rsecs);
+    QTime remaining = QTime().addSecs(rsecs);
 
     progressBar->setFormat( QString( tr( "%p% (%1 KB/s, %2 remaining)", "You just have to "
                                          "translate 'remaining' here. Leave everything else as it is." ) ).
@@ -311,15 +307,15 @@ void QueueDialog::startProcess()
 
     disconnect( Backend::instance(), SIGNAL(streamDlProg( const QString&, int, int, int, int, int )), 0, 0 );
     connect( Backend::instance(),
-             SIGNAL( streamTransProgress( Aqpm::Globals::TransactionEvent, const QString&, int, int, int ) ),
+             SIGNAL( streamTransProgress( Aqpm::Globals::TransactionProgress, const QString&, int, int, int ) ),
              this,
-             SLOT( updateProgressBar( Aqpm::Globals::TransactionEvent, const QString&, int, int, int ) ) );
+             SLOT( updateProgressBar( Aqpm::Globals::TransactionProgress, const QString&, int, int, int ) ) );
 }
 
 void QueueDialog::cleanup(bool success)
 {
-    disconnect( Backend::instance(), SIGNAL( streamTransProgress( int, const QString&, int, int, int ) ), 0, 0 );
-    disconnect( Backend::instance(), SIGNAL( streamTransEvent( int, QVariantMap ) ), 0, 0);
+    disconnect( Backend::instance(), SIGNAL( streamTransProgress( Aqpm::Globals::TransactionProgress, const QString&, int, int, int ) ), 0, 0 );
+    disconnect( Backend::instance(), SIGNAL( streamTransEvent( Aqpm::Globals::TransactionEvent, QVariantMap ) ), 0, 0);
     disconnect( Backend::instance(), SIGNAL(logMessageStreamed(QString)), 0, 0);
     disconnect( Backend::instance(), SIGNAL(streamDlProg( const QString&, int, int, int, int, int )), 0, 0);
     processLabel->setPixmap( QIcon( ":/Icons/icons/dialog-ok-apply.png" ).pixmap( 22 ) );

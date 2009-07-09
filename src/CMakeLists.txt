@@ -67,7 +67,7 @@ TARGET_LINK_LIBRARIES(shaman
     ${ALPM_LIBS}
     ${LIBARCHIVE_LIBS}
     ${POLKITQT_LIBRARIES}
-    -laqpm
+    aqpm
 )
 
 INSTALL(CODE "MESSAGE(\"Installing Shaman executable...\")")

@@ -1217,14 +1217,15 @@ void MainWindow::installPackage( const QString &package, const QString &repo )
 
     QTreeWidgetItem *item;
 
-    if ( repo.isEmpty() )
+    if ( repo.isEmpty() ) {
         item = pkgsViewWG->findItems( package, ( Qt::MatchFlags )Qt::MatchExactly, 1 ).first();
-    else {
+    } else {
         item = NULL;
 
         foreach( QTreeWidgetItem *ent, pkgsViewWG->findItems( package, ( Qt::MatchFlags )Qt::MatchExactly, 1 ) ) {
-            if ( ent->text( 5 ) == repo )
+            if ( ent->text( 5 ) == repo ) {
                 item = ent;
+            }
         }
 
         if ( !item )
@@ -1233,12 +1234,13 @@ void MainWindow::installPackage( const QString &package, const QString &repo )
 
     qDebug() << item->text( 1 );
 
-    if ( Backend::instance()->isProviderInstalled( package ) )
+    if ( Backend::instance()->isProviderInstalled( package ) ) {
         return;
+    }
 
-    if ( item->text( 8 ) == tr( "Install" ) || Backend::instance()->isInstalled( item->data(0, Qt::UserRole + 1).value<Package>()) )
+    if ( item->text( 8 ) == tr( "Install" ) || Backend::instance()->isInstalled( item->data(0, Qt::UserRole + 1).value<Package>()) ) {
         return;
-    else {
+    } else {
         item->setText( 8, tr( "Install" ) );
         item->setIcon( 2, QIcon( ":/Icons/icons/list-add.png" ) );
     }
@@ -1246,6 +1248,7 @@ void MainWindow::installPackage( const QString &package, const QString &repo )
 
 
     foreach( const Package &dep, Backend::instance()->getPackageDependencies( item->data(0, Qt::UserRole + 1).value<Package>() ) ) {
+        qDebug() << "Found dep" << dep.name();
         installPackage( dep.name() );
     }
 }
