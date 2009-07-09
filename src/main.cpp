@@ -42,6 +42,12 @@
 #include <signal.h>
 #include <alpm.h>
 
+#ifdef KDE4_INTEGRATION
+#include <kuniqueapplication.h>
+#include <kcmdlineargs.h>
+#include <kaboutdata.h>
+#endif
+
 using namespace Aqpm;
 
 static void cleanup( int signum )
@@ -134,11 +140,33 @@ void noDebugOutput( QtMsgType type, const char *msg )
 
 int main( int argc, char **argv )
 {
+#ifndef KDE4_INTEGRATION
     QApplication app( argc, argv, QApplication::GuiClient );
 
     QCoreApplication::setOrganizationName( "shaman" );
     QCoreApplication::setOrganizationDomain( "shaman.iskrembilen.com" );
     QCoreApplication::setApplicationName( "shaman" );
+#else
+    printf("Spawning KApplication\n");
+
+    KAboutData aboutData("shaman", 0, ki18n("Shaman"), SHAMAN_VERSION,
+                         ki18n("A Package Manager for Arch Linux"),
+                         KAboutData::License_GPL,
+                         ki18n("(C) 2008, Shaman Development Team"),
+                         ki18n("<a href=\"mailto:shaman@chakra-project.org\">shaman@chakra-project.org</a>"));
+    aboutData.addAuthor(ki18n("Dario Freddi"), ki18n("Maintainer"), "drf54321@gmail.com");
+    aboutData.addAuthor(ki18n("Lukas Appelhans"), ki18n("Maintainer"), "l.appelhans@gmx.de");
+
+    KCmdLineArgs::init(argc, argv, &aboutData);
+
+    if (!KUniqueApplication::start()) {
+        fprintf(stderr, "Shaman is already running!\n");
+        return 0;
+    }
+
+    KUniqueApplication app;
+    app.disableSessionManagement();
+#endif
 
     app.setQuitOnLastWindowClosed( false );
 
