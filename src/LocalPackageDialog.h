@@ -23,7 +23,7 @@
 
 #include "ui_fromFileDialog.h"
 
-#include <alpm.h>
+#include <aqpm/Backend.h>
 
 #include <QDialog>
 
@@ -35,7 +35,7 @@ class LocalPackageDialog : public QDialog, private Ui::LocalPackage
         explicit LocalPackageDialog( QWidget *parent = 0 );
         virtual ~LocalPackageDialog();
 
-        void loadPackage( pmpkg_t *pkg, const QString &fname );
+        void loadPackage( const Aqpm::Package &pkg, const QString &fname );
 
     private slots:
         void adjust( bool tgld );
@@ -47,7 +47,7 @@ class LocalPackageDialog : public QDialog, private Ui::LocalPackage
         void queueReady();
 
     private:
-        pmpkg_t *package;
+        Aqpm::Package package;
         QString filename;
 
 };

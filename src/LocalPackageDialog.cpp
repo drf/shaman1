@@ -42,7 +42,7 @@ LocalPackageDialog::~LocalPackageDialog()
 {
 }
 
-void LocalPackageDialog::loadPackage( pmpkg_t *pkg, const QString &fname )
+void LocalPackageDialog::loadPackage(const Package &pkg, const QString &fname )
 {
     package = pkg;
     filename = fname;
@@ -52,24 +52,25 @@ void LocalPackageDialog::loadPackage( pmpkg_t *pkg, const QString &fname )
                                  "p, li { white-space: pre-wrap; }"
                                  "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;\">"
                                  "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">"
-                                 "<span style=\" font-size:11pt; font-weight:600;\">" ) + alpm_pkg_get_name( package ) + " ("  + alpm_pkg_get_version( package )
+                                 "<span style=\" font-size:11pt; font-weight:600;\">" ) + package.name() + " ("  + package.version()
                         + ")</span></p></body></html>" );
 
-    descLabel->setText( QString( alpm_pkg_get_desc( package ) ) );
+    descLabel->setText(package.desc());
 
     if ( !Backend::instance()->isInstalled( package ) ) {
         statusLabel->setText( tr( "Package is not installed" ) );
 
     } else {
         statusLabel->setText( QString( tr( "Version %1 of this package is already installed" ) )
-                              .arg( Backend::instance()->getPackageVersion( alpm_pkg_get_name( package ), "local" ) ) );
+                              .arg(package.version()));
     }
 
     QStringList deps;
 
-    foreach( const QString &ent, Backend::instance()->getPackageDependencies( package ) ) {
-        if ( !Backend::instance()->isInstalled( ent ) )
-            deps.append( ent );
+    foreach( const Package &ent, Backend::instance()->getPackageDependencies( package ) ) {
+        if ( !Backend::instance()->isInstalled( ent ) ) {
+            deps.append( ent.name() );
+        }
     }
 
     if ( deps.isEmpty() ) {

@@ -89,20 +89,20 @@ void PackageProperties::populateInfoWidget()
     else
         installedLabel->setPixmap( QPixmap( ":/Icons/icons/edit-delete.png" ) );
 
-    if ( Backend::instance()->getUpgradeablePackagesAsStringList().contains( pName ) )
+    if ( Backend::instance()->getUpgradeablePackages().contains(curPkg) )
         upgradeableLabel->setPixmap( QPixmap( ":/Icons/icons/dialog-ok-apply.png" ) );
     else
         upgradeableLabel->setPixmap( QPixmap( ":/Icons/icons/edit-delete.png" ) );
 
-    if ( alpm_pkg_has_scriptlet( curPkg ) )
+    if ( alpm_pkg_has_scriptlet( curPkg.alpmPackage() ) )
         scriptletLabel->setPixmap( QPixmap( ":/Icons/icons/dialog-ok-apply.png" ) );
     else
         scriptletLabel->setPixmap( QPixmap( ":/Icons/icons/edit-delete.png" ) );
 
-    descriptionLabel->setText( alpm_pkg_get_desc( curPkg ) );
-    versionLabel->setText( alpm_pkg_get_version( curPkg ) );
+    descriptionLabel->setText( curPkg.desc() );
+    versionLabel->setText( curPkg.version() );
 
-    time_t now = alpm_pkg_get_builddate( curPkg );
+    time_t now = alpm_pkg_get_builddate( curPkg.alpmPackage() );
     struct tm *ts = gmtime( &now );
     strftime( buf, sizeof( buf ), "%Y-%m-%d %H:%M:%S", ts );
     QString bDate( buf );
@@ -112,7 +112,7 @@ void PackageProperties::populateInfoWidget()
     else
         builddateLabel->setText( buf );
 
-    now = alpm_pkg_get_installdate( curPkg );
+    now = alpm_pkg_get_installdate( curPkg.alpmPackage() );
     ts = gmtime( &now );
     strftime( buf, sizeof( buf ), "%Y-%m-%d %H:%M:%S", ts );
     QString iDate( buf );
@@ -122,14 +122,14 @@ void PackageProperties::populateInfoWidget()
     else
         installdateLabel->setText( buf );
 
-    QString packager( alpm_pkg_get_packager( curPkg ) );
+    QString packager( curPkg.packager());
 
     if ( packager.isEmpty() )
         packagerLabel->setText( notAvailable );
     else
-        packagerLabel->setText( alpm_pkg_get_packager( curPkg ) );
+        packagerLabel->setText( packager );
 
-    sizeLabel->setText( formatSize( alpm_pkg_get_size( curPkg ) ) );
+    sizeLabel->setText( formatSize(curPkg.size()) );
     providesWidget->addItems( Backend::instance()->getProviders( curPkg ) );
 }
 
@@ -171,15 +171,13 @@ void PackageProperties::populateFileWidget()
 void PackageProperties::populateDepsWidget()
 {
     dependsWidget->clear();
-    foreach( const QString &dep, Backend::instance()->getPackageDependencies( curPkg ) ) {
-        if ( !dep.isEmpty() )
-            dependsWidget->addItem( dep );
+    foreach( const Package &dep, Backend::instance()->getPackageDependencies( curPkg ) ) {
+            dependsWidget->addItem( dep.name() );
     }
 
     requiredWidget->clear();
-    foreach( const QString &dep, Backend::instance()->getDependenciesOnPackage( curPkg ) ) {
-        if ( !dep.isEmpty() )
-            requiredWidget->addItem( dep );
+    foreach( const Package &dep, Backend::instance()->getDependenciesOnPackage( curPkg ) ) {
+            requiredWidget->addItem( dep.name() );
     }
 }
 
@@ -188,20 +186,20 @@ void PackageProperties::populateChangelogWidget()
     void *fp = NULL;
     QString text;
 
-    if (( fp = alpm_pkg_changelog_open( curPkg ) ) == NULL ) {
+    if (( fp = alpm_pkg_changelog_open( curPkg.alpmPackage() ) ) == NULL ) {
         changeLogEdit->setText( QString( tr( "Changelog not available for this package" ) ) );
     } else {
         /* allocate a buffer to get the changelog back in chunks */
         char buf[CLBUF_SIZE];
         int ret = 0;
-        while (( ret = alpm_pkg_changelog_read( buf, CLBUF_SIZE, curPkg, fp ) ) ) {
+        while (( ret = alpm_pkg_changelog_read( buf, CLBUF_SIZE, curPkg.alpmPackage(), fp ) ) ) {
             if ( ret < CLBUF_SIZE ) {
                 /* if we hit the end of the file, we need to add a null terminator */
                 *( buf + ret ) = '\0';
             }
             text.append( buf );
         }
-        alpm_pkg_changelog_close( curPkg, fp );
+        alpm_pkg_changelog_close( curPkg.alpmPackage(), fp );
         changeLogEdit->setText( text );
     }
 }
@@ -225,7 +223,7 @@ void PackageProperties::populateLogWidget()
     fp.close();
 
     QString toShow;
-    QString pkgName( pName );
+    QString pkgName(curPkg.name());
 
     foreach( const QString &ent, contents ) {
         if ( !ent.contains( pkgName, Qt::CaseInsensitive ) )
