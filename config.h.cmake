@@ -31,7 +31,7 @@
 
 /* Defines the Version */
 
-#define SHAMAN_VERSION "1.1.0"
+#define SHAMAN_VERSION "1.2.0-alpha1"
 #define SHAMAN_CODENAME "Splitage"
 
 /* Defines the Revision */
