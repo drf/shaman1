@@ -1,0 +1,27 @@
+[Global]
+Name=Shaman
+
+IconName=preferences-system-power-management
+Comment=Package Manager
+
+Version=1
+
+[Context/warningnot]
+Name=Warning
+
+Comment=Used for warning notifications
+
+
+[Context/stdnot]
+Name=Notification
+
+Comment=Used for standard notifications
+
+[Event/standardevt]
+Name=Generic Notification
+Comment=A generic event
+Contexts=warningnot
+Sound=KDE-Sys-Warning.ogg
+Action=Sound|Popup
+
+

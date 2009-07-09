@@ -32,6 +32,7 @@
 
 #ifdef KDE4_INTEGRATION
 #include <knotification.h>
+#include <kicon.h>
 #endif
 
 using namespace Aqpm;
@@ -371,6 +372,6 @@ void ShamanTrayIcon::showMessage(const QString &title, const QString &message, M
 #ifndef KDE4_INTEGRATION
     KAnimatedSystemTrayIcon::showMessage(title, message, icon, millisecondsTimeoutHint);
 #else
-    KNotification::event(KNotification::Notification, message);
+    KNotification::event("standardevt", message, KIcon("dialog-ok-apply").pixmap(20, 20), 0);
 #endif
 }
