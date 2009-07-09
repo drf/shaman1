@@ -543,7 +543,7 @@
    <addaction name="menuTools" />
    <addaction name="menuHelp" />
   </widget>
-  <widget class="QToolBar" name="toolBar" >
+  <widget class="QToolBar" name="mToolBar" >
    <property name="acceptDrops" >
     <bool>true</bool>
    </property>

@@ -198,9 +198,12 @@ void CreateItemsThread::run()
 // MainWindow Definition
 
 MainWindow::MainWindow( QMainWindow *parent )
+#ifndef KDE4_INTEGRATION
         : QMainWindow( parent ),
+#else
+        : KMainWindow(parent),
+#endif
         queueDl(),
-        currentpkgs( 0 ),
         dbdialog(),
         upDl(),
         configDialog(),
@@ -264,18 +267,18 @@ MainWindow::MainWindow( QMainWindow *parent )
     actionUpdate_Database->setText( tr("Update Database") );
     connect(actionUpdate_Database, SIGNAL(triggered(bool)), actionUpdate_Database, SLOT(activate()));
     connect(actionUpdate_Database, SIGNAL(activated()), this, SLOT(doDbUpdate()));
-    toolBar->addAction(actionUpdate_Database);
+    mToolBar->addAction(actionUpdate_Database);
 
     PolkitQt::Action *actionProcess_Queue = new PolkitQt::Action("org.chakraproject.aqpm.processqueue", this);
     actionProcess_Queue->setText( tr("Process Queue") );
     connect(actionProcess_Queue, SIGNAL(triggered(bool)), actionProcess_Queue, SLOT(activate()));
     connect(actionProcess_Queue, SIGNAL(activated()), this, SLOT(widgetQueueToAlpmQueue()));
-    toolBar->addAction(actionProcess_Queue);
+    mToolBar->addAction(actionProcess_Queue);
 
     PolkitQt::Action *actionSystem_Upgrade = new PolkitQt::Action("org.chakraproject.aqpm.systemupgrade", this);
     actionSystem_Upgrade->setText( tr("System Upgrade") );
     connect(actionSystem_Upgrade, SIGNAL(triggered(bool)), this, SLOT(fullSysUpgrade()));
-    toolBar->addAction(actionSystem_Upgrade);
+    mToolBar->addAction(actionSystem_Upgrade);
 
     connect( Backend::instance(), SIGNAL( streamTransQuestion( Aqpm::Globals::TransactionQuestion,QVariantMap ) ), this,
              SLOT( streamTransQuestion( Aqpm::Globals::TransactionQuestion,QVariantMap ) ) );

@@ -22,9 +22,16 @@
 #define MAINWINDOW_H
 
 #include <QWidget>
-#include <alpm_list.h>
 #include "ui_MainWindow.h"
 #include "kanimatedsystemtrayicon.h"
+
+#include <config.h>
+
+#ifdef KDE4_INTEGRATION
+#include <kmainwindow.h>
+#else
+#include <QMainWindow>
+#endif
 
 #include <aqpm/Globals.h>
 
@@ -32,7 +39,6 @@
 #include <QPointer>
 #include <QLabel>
 #include <QDialog>
-#include <QMainWindow>
 
 class UpdateDbDialog;
 class SysUpgradeDialog;
@@ -69,7 +75,11 @@ class CreateItemsThread : public QThread
         QList<QTreeWidgetItem *> retlist;
 };
 
+#ifndef KDE4_INTEGRATION
 class MainWindow : public QMainWindow, public Ui::MainWindow
+#else
+class MainWindow : public KMainWindow, public Ui::MainWindow
+#endif
 {
         Q_OBJECT
 
@@ -179,7 +189,6 @@ class MainWindow : public QMainWindow, public Ui::MainWindow
         QueueDialog *queueDl;
 
     private:
-        alpm_list_t *currentpkgs;
         QPointer<UpdateDbDialog> dbdialog;
         QPointer<SysUpgradeDialog> upDl;
         QPointer<ConfigDialog> configDialog;
