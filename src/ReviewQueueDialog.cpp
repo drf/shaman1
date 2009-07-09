@@ -55,7 +55,7 @@ ReviewQueueDialog::ReviewQueueDialog( MainWindow *parent )
 
     foreach( QTreeWidgetItem *itm, parent->pkgsViewWG->findItems( tr( "Install" ), Qt::MatchExactly, 8 ) ) {
         Backend::instance()->addItemToQueue(QString(itm->text(5) + '/' + itm->text(1)), QueueItem::Sync);
-        addSize += Backend::instance()->getPackageSize( itm->text( 1 ), itm->text( 5 ) );
+        addSize += Backend::instance()->getPackage( itm->text( 1 ), itm->text( 5 ) ).size();
         QTreeWidgetItem *itmL = treeWidget->findItems( tr( "To be Installed" ), Qt::MatchExactly, 0 ).first();
         new QTreeWidgetItem( itmL, QStringList( itm->text( 1 ) ) );
         itmL->setExpanded( true );
@@ -63,7 +63,7 @@ ReviewQueueDialog::ReviewQueueDialog( MainWindow *parent )
 
     foreach( QTreeWidgetItem *itm, parent->pkgsViewWG->findItems( tr( "Upgrade" ), Qt::MatchExactly, 8 ) ) {
         Backend::instance()->addItemToQueue(QString(itm->text(5) + '/' + itm->text(1)), QueueItem::Sync);
-        addSize += Backend::instance()->getPackageSize( itm->text( 1 ), itm->text( 5 ) );
+        addSize += Backend::instance()->getPackage( itm->text( 1 ), itm->text( 5 ) ).size();
         QTreeWidgetItem *itmL = treeWidget->findItems( tr( "To be Upgraded" ), Qt::MatchExactly, 0 ).first();
         new QTreeWidgetItem( itmL, QStringList( itm->text( 1 ) ) );
         itmL->setExpanded( true );
@@ -71,7 +71,7 @@ ReviewQueueDialog::ReviewQueueDialog( MainWindow *parent )
 
     foreach( QTreeWidgetItem *itm, parent->pkgsViewWG->findItems( tr( "Uninstall" ), Qt::MatchExactly, 8 ) ) {
         Backend::instance()->addItemToQueue(QString(itm->text(1)), QueueItem::Remove);
-        removeSize += Backend::instance()->getPackageSize( itm->text( 1 ), itm->text( 5 ) );
+        removeSize += Backend::instance()->getPackage( itm->text( 1 ), itm->text( 5 ) ).size();
         QTreeWidgetItem *itmL = treeWidget->findItems( tr( "To be Removed" ), Qt::MatchExactly, 0 ).first();
         new QTreeWidgetItem( itmL, QStringList( itm->text( 1 ) ) );
         itmL->setExpanded( true );
@@ -79,7 +79,7 @@ ReviewQueueDialog::ReviewQueueDialog( MainWindow *parent )
 
     foreach( QTreeWidgetItem *itm, parent->pkgsViewWG->findItems( tr( "Complete Uninstall" ), Qt::MatchExactly, 8 ) ) {
         Backend::instance()->addItemToQueue(QString(itm->text(1)), QueueItem::Remove);
-        removeSize += Backend::instance()->getPackageSize( itm->text( 1 ), itm->text( 5 ) );
+        removeSize += Backend::instance()->getPackage( itm->text( 1 ), itm->text( 5 ) ).size();
         QTreeWidgetItem *itmL = treeWidget->findItems( tr( "To be Removed" ), Qt::MatchExactly, 0 ).first();
         new QTreeWidgetItem( itmL, QStringList( itm->text( 1 ) ) );
         itmL->setExpanded( true );

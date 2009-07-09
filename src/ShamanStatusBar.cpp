@@ -83,7 +83,7 @@ void ShamanStatusBar::updateStatusBar()
     QString text = QString( tr( "%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages" )
                             .arg( Backend::instance()->countPackages( Globals::AllPackages ) )
                             .arg( Backend::instance()->countPackages( Globals::InstalledPackages ) )
-                            .arg( Backend::instance()->getUpgradeablePackagesAsStringList().count() ) );
+                            .arg( Backend::instance()->getUpgradeablePackages().count() ) );
 
     text.append( ' ' );
 
@@ -95,12 +95,12 @@ void ShamanStatusBar::updateStatusBar()
     QList<QTreeWidgetItem *> addList = mWin->getInstallPackagesInWidgetQueue() + mWin->getUpgradePackagesInWidgetQueue();
 
     foreach( QTreeWidgetItem *itm, addList )
-    addSize += Backend::instance()->getPackageSize( itm->text( 1 ), itm->text( 5 ) );
+    addSize += Backend::instance()->getPackage( itm->text( 1 ), itm->text( 5 ) ).size();
 
     QList<QTreeWidgetItem *> removeList = mWin->getRemovePackagesInWidgetQueue();
 
     foreach( QTreeWidgetItem *itm, removeList )
-    removeSize += Backend::instance()->getPackageSize( itm->text( 1 ), itm->text( 5 ) );
+    removeSize += Backend::instance()->getPackage( itm->text( 1 ), itm->text( 5 ) ).size();
 
     QString spaceToDo;
 

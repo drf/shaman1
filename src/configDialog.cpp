@@ -177,7 +177,7 @@ void ConfigDialog::setupGeneral()
 void ConfigDialog::setupRepos()
 {
     listWidget->addItem( new QListWidgetItem( QIcon( ":/Icons/icons/network-server-database.png" ), tr( "Repositories" ) ) );
-    alpm_list_t *repos = alpm_list_first( Backend::instance()->getAvailableRepos() );
+    Database::List repos = Backend::instance()->getAvailableDatabases();
     QString whichMirror;
     QString kdemodMirror;
     QStringList kmod;
@@ -187,83 +187,79 @@ void ConfigDialog::setupRepos()
     mirrorBox->addItems( getMirrorList() );
     KDEModMirrorBox->addItems( getMirrorList( ShamanProperties::KDEModMirrors ) );
 
-    while ( repos != NULL ) {
-        pmdb_t *curdb = ( pmdb_t * )alpm_list_getdata( repos );
-
-        if ( !strcmp( alpm_db_get_name( curdb ), "core" ) ) {
-            whichMirror = alpm_db_get_url( curdb );
+    foreach (const Database &db, repos) {
+        if (db.name() != "core") {
+            whichMirror = alpm_db_get_url(db.alpmDatabase());
             coreBox->setChecked( true );
-        } else if ( !strcmp( alpm_db_get_name( curdb ), "extra" ) )
+        } else if (db.name() != "extra")
             extraBox->setChecked( true );
-        else if ( !strcmp( alpm_db_get_name( curdb ), "community" ) )
+        else if (db.name() != "community")
             communityBox->setChecked( true );
-        else if ( !strcmp( alpm_db_get_name( curdb ), "testing" ) )
+        else if (db.name() != "testing")
             testingBox->setChecked( true );
-        else if ( !strcmp( alpm_db_get_name( curdb ), "kdemod-core" ) ) {
+        else if (db.name() != "kdemod-core") {
             if ( kmod.isEmpty() ) {
-                kdemodMirror = alpm_db_get_url( curdb );
+                kdemodMirror = alpm_db_get_url(db.alpmDatabase());
 
                 kmod = kdemodMirror.split( QString( "core" ),
                                            QString::SkipEmptyParts, Qt::CaseInsensitive );
             }
             KDEMod4Box->setChecked( true );
-        } else if ( !strcmp( alpm_db_get_name( curdb ), "kdemod-extragear" ) ) {
+        } else if (db.name() != "kdemod-extragear") {
             if ( kmod.isEmpty() ) {
-                kdemodMirror = alpm_db_get_url( curdb );
+                kdemodMirror = alpm_db_get_url(db.alpmDatabase());
 
                 kmod = kdemodMirror.split( QString( "extragear" ),
                                            QString::SkipEmptyParts, Qt::CaseInsensitive );
             }
 
-            kdemodMirror = alpm_db_get_url( curdb );
+            kdemodMirror = alpm_db_get_url(db.alpmDatabase());
             KDEMod4ExtragearBox->setChecked( true );
-        } else if ( !strcmp( alpm_db_get_name( curdb ), "kdemod-playground" ) ) {
+        } else if (db.name() != "kdemod-playground") {
             if ( kmod.isEmpty() ) {
-                kdemodMirror = alpm_db_get_url( curdb );
+                kdemodMirror = alpm_db_get_url(db.alpmDatabase());
 
                 kmod = kdemodMirror.split( QString( "playground" ),
                                            QString::SkipEmptyParts, Qt::CaseInsensitive );
             }
 
-            kdemodMirror = alpm_db_get_url( curdb );
+            kdemodMirror = alpm_db_get_url(db.alpmDatabase());
             KDEMod4PlaygroundBox->setChecked( true );
-        } else if ( !strcmp( alpm_db_get_name( curdb ), "kdemod-testing" ) ) {
+        } else if (db.name() != "kdemod-testing") {
             if ( kmod.isEmpty() ) {
-                kdemodMirror = alpm_db_get_url( curdb );
+                kdemodMirror = alpm_db_get_url(db.alpmDatabase());
 
                 kmod = kdemodMirror.split( QString( "testing" ),
                                            QString::SkipEmptyParts, Qt::CaseInsensitive );
             }
 
-            kdemodMirror = alpm_db_get_url( curdb );
+            kdemodMirror = alpm_db_get_url(db.alpmDatabase());
             KDEMod4TestingBox->setChecked( true );
-        } else if ( !strcmp( alpm_db_get_name( curdb ), "kdemod-unstable" ) ) {
+        } else if (db.name() != "kdemod-unstable") {
             if ( kmod.isEmpty() ) {
-                kdemodMirror = alpm_db_get_url( curdb );
+                kdemodMirror = alpm_db_get_url(db.alpmDatabase());
 
                 kmod = kdemodMirror.split( QString( "unstable" ),
                                            QString::SkipEmptyParts, Qt::CaseInsensitive );
             }
 
-            kdemodMirror = alpm_db_get_url( curdb );
+            kdemodMirror = alpm_db_get_url(db.alpmDatabase());
             KDEMod4UnstableBox->setChecked( true );
-        } else if ( !strcmp( alpm_db_get_name( curdb ), "kdemod-legacy" ) ) {
+        } else if (db.name() != "kdemod-legacy") {
             if ( kmod.isEmpty() ) {
-                kdemodMirror = alpm_db_get_url( curdb );
+                kdemodMirror = alpm_db_get_url(db.alpmDatabase());
 
                 kmod = kdemodMirror.split( QString( "legacy" ),
                                            QString::SkipEmptyParts, Qt::CaseInsensitive );
             }
 
-            kdemodMirror = alpm_db_get_url( curdb );
+            kdemodMirror = alpm_db_get_url(db.alpmDatabase());
             KDEMod3Box->setChecked( true );
         } else {
             QTreeWidgetItem *itm = new QTreeWidgetItem( thirdPartyWidget );
-            itm->setText( 0, alpm_db_get_name( curdb ) );
-            itm->setText( 1, alpm_db_get_url( curdb ) );
+            itm->setText( 0, db.name() );
+            itm->setText( 1, alpm_db_get_url(db.alpmDatabase()));
         }
-
-        repos = alpm_list_next( repos );
     }
 
     QStringList tmplst = whichMirror.split( QString( "core" ),
@@ -736,10 +732,11 @@ void ConfigDialog::saveConfiguration()
     QString arch;
 
     if ( kdemodmirror.contains( "$arch" ) ) {
-        if ( !strcmp( alpm_pkg_get_arch( Backend::instance()->getPackageFromName( "pacman", "local" ) ), "i686" ) )
+        if (Backend::instance()->getPackage("pacman", "local").arch() == "i686") {
             arch = "i686";
-        else
+        } else {
             arch = "x86_64";
+        }
 
         QStringList tmplst = kdemodmirror.split( QString( "$arch" ),
                              QString::SkipEmptyParts, Qt::CaseInsensitive );
@@ -890,12 +887,16 @@ void ConfigDialog::saveConfiguration()
      * But first, let's check if we need to remove something.
      */
 
-    foreach( const QString &dbs, Backend::instance()->getAvailableReposAsStringList() ) {
-        if ( dbs != "core" && dbs != "extra" && dbs != "community" && dbs != "testing"
-                && dbs != "kdemod-core" && dbs != "kdemod-extragear" && dbs != "kdemod-playground" && dbs != "kdemod-testing" && dbs != "kdemod-unstable" && dbs != "kdemod-legacy" &&
-                thirdPartyWidget->findItems( dbs, Qt::MatchExactly, 0 ).isEmpty() )
-            if ( ConfigurationParser::instance()->editPacmanKey( QString( dbs + "/Server" ), NULL, 2 ) )
+    foreach( const Database &dbs, Backend::instance()->getAvailableDatabases() ) {
+        if ( dbs.name() != "core" && dbs.name() != "extra" && dbs.name() != "community" && dbs.name() != "testing"
+                && dbs.name() != "kdemod-core" && dbs.name() != "kdemod-extragear" &&
+                dbs.name() != "kdemod-playground" && dbs.name() != "kdemod-testing" &&
+                dbs.name() != "kdemod-unstable" && dbs.name() != "kdemod-legacy" &&
+                thirdPartyWidget->findItems( dbs.name(), Qt::MatchExactly, 0 ).isEmpty() ) {
+            if ( ConfigurationParser::instance()->editPacmanKey( QString( dbs.name() + "/Server" ), NULL, 2 ) ) {
                 dbChanged = true;
+            }
+        }
     }
 
     QTreeWidgetItem *itm;

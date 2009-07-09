@@ -49,7 +49,7 @@ BuildingHandler::~BuildingHandler()
 
 void BuildingHandler::updateABSTree()
 {
-    if ( !Backend::instance()->isInstalled( "abs" ) ) {
+    if ( !Backend::instance()->isInstalled(Backend::instance()->getPackage("abs", QString())) ) {
         switch ( ShamanDialog::popupQuestionDialog( QString( tr( "Error" ) ), QString( tr( "You need to have ABS "
                  "installed to use Shaman's\nbuilding feature. Do you want to install it now?" ) ), mWin ) ) {
         case QMessageBox::Yes:
@@ -82,7 +82,7 @@ void BuildingHandler::updateABSTree()
 
 void BuildingHandler::validateSourceQueue()
 {
-    if ( !Backend::instance()->isInstalled( "abs" ) ) {
+    if ( !Backend::instance()->isInstalled(Backend::instance()->getPackage("abs", QString())) ) {
         switch ( ShamanDialog::popupQuestionDialog( QString( tr( "Error" ) ), QString( tr( "You need to have ABS "
                  "installed to use Shaman's\nbuilding feature. Do you want to install it now?" ) ), mWin ) ) {
         case QMessageBox::Yes:
@@ -402,7 +402,7 @@ void BuildingHandler::processBuildWizard()
 
     foreach( const QString &pkg, pkgList ) {
         foreach( const QString &mkdp, ABSHandler::getMakeDepends( pkg ) ) {
-            if ( !Backend::instance()->isInstalled( mkdp ) && !pkgList.contains( mkdp, Qt::CaseInsensitive ) )
+            if ( !Backend::instance()->isInstalled(Backend::instance()->getPackage(mkdp, QString())) && !pkgList.contains( mkdp, Qt::CaseInsensitive ) )
                 //Add to binary queue
             {
                 qDebug() << "Makedepend is missing: " << mkdp;
@@ -410,7 +410,7 @@ void BuildingHandler::processBuildWizard()
             }
         }
 
-        if ( !Backend::instance()->isInstalled( pkg ) )
+        if ( !Backend::instance()->isInstalled( Backend::instance()->getPackage(pkg, QString()) ) )
             //Add to binary queue
         {
             qDebug() << "Package is not installed: " << pkg << ", installing it from binary first.";

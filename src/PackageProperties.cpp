@@ -57,28 +57,17 @@ QString PackageProperties::formatSize( unsigned long size )
     return s;
 }
 
-void PackageProperties::setPackage( pmpkg_t *pkg, bool forceGiven )
+void PackageProperties::setPackage(const Package &pkg, bool forceGiven )
 {
     curPkg = pkg;
 
     // We can throw a lot more info if the package is local, let's check.
-    if ( forceGiven && curPkg == NULL )
-        return;
-    else if (( Backend::instance()->isInstalled( curPkg ) || curPkg == NULL ) && !forceGiven ) {
+    if (Backend::instance()->isInstalled( curPkg ) && !forceGiven) {
         qDebug() << "Getting info from local database";
-        curPkg = Backend::instance()->getPackageFromName( pName, "local" );
+        curPkg = Backend::instance()->getPackage(pkg.name(), "local");
     }
 
-    if ( pName.isEmpty() )
-        pName = alpm_pkg_get_name( curPkg );
-
-    setWindowTitle( QString( tr( "Shaman - %1 properties" ) ).arg( pName ) );
-}
-
-void PackageProperties::setPackage( const QString &pkgname )
-{
-    pName = pkgname;
-    setPackage( Backend::instance()->getPackageFromName( pkgname, Backend::instance()->getPackageRepo( pkgname ) ) );
+    setWindowTitle( QString( tr( "Shaman - %1 properties" ) ).arg(pkg.name()));
 }
 
 void PackageProperties::reloadPkgInfo()

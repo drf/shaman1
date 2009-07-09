@@ -23,7 +23,7 @@
 
 #include "ui_pkgProperties.h"
 
-#include <alpm.h>
+#include <aqpm/Backend.h>
 
 #include <QDialog>
 
@@ -35,13 +35,11 @@ class PackageProperties : public QDialog, private Ui::pkgProperties
         explicit PackageProperties( QWidget *parent = 0 );
         virtual ~PackageProperties();
 
-        void setPackage( const QString &pkgname );
-
         void reloadPkgInfo();
 
         static QString formatSize( unsigned long size );
 
-        void setPackage( pmpkg_t *pkg, bool forceGiven = false );
+        void setPackage(const Aqpm::Package &pkg, bool forceGiven = false );
 
     private:
 
@@ -53,8 +51,7 @@ class PackageProperties : public QDialog, private Ui::pkgProperties
         void populateChangelogWidget();
 
     private:
-        pmpkg_t *curPkg;
-        QString pName;
+        Aqpm::Package curPkg;
 };
 
 #endif /*PACKAGEPROPERTIES_H*/

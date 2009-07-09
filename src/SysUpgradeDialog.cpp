@@ -55,11 +55,11 @@ void SysUpgradeDialog::init()
     else if ( settings->value( "gui/actionupgrade" ).toString() == "upgrade" ) {
         initSysUpgrade();
     } else {
-        QStringList data;
+        Package::List data;
 
         setWindowModality( Qt::ApplicationModal );
 
-        data = Backend::instance()->getUpgradeablePackagesAsStringList();
+        data = Backend::instance()->getUpgradeablePackages();
 
         int n = data.size();
 
@@ -71,10 +71,10 @@ void SysUpgradeDialog::init()
         QTreeWidgetItem *itm = new QTreeWidgetItem( treeWidget, QStringList( tr( "To be Upgraded" ) ) );
         treeWidget->addTopLevelItem( itm );
 
-        foreach( const QString &pkg, Backend::instance()->getUpgradeablePackagesAsStringList() ) {
-            new QTreeWidgetItem( itm, QStringList() << QString( pkg + " (" +
-                                 Backend::instance()->getPackageVersion( pkg, "local" ) + "-->" +
-                                 Backend::instance()->getPackageVersion( pkg, Backend::instance()->getPackageRepo( pkg, true ) ) + QChar( ')' ) ) );
+        foreach( const Package &pkg, Backend::instance()->getUpgradeablePackages() ) {
+            new QTreeWidgetItem( itm, QStringList() << QString( pkg.name() + " (" +
+                                 Backend::instance()->getPackage(pkg.name(), "local").version() + "-->" +
+                                 pkg.version() + QChar( ')' ) ) );
         }
 
         itm->setExpanded( true );

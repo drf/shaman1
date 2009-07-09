@@ -34,10 +34,11 @@ ShamanTrayIcon::ShamanTrayIcon( MainWindow *mW )
         : KAnimatedSystemTrayIcon( mW ),
         mainWin( mW )
 {
-    if ( Backend::instance()->getUpgradeablePackagesAsStringList().isEmpty() )
+    if ( Backend::instance()->getUpgradeablePackages().isEmpty() ) {
         changeIconStatus( ShamanIcon::IdleIcon );
-    else
+    } else {
         changeIconStatus( ShamanIcon::UpgradesAvailableIcon );
+    }
 
     show();
 
@@ -122,7 +123,7 @@ void ShamanTrayIcon::changeIconStatus( ShamanIcon::IconStatus status )
 
         setToolTip( QString( tr( "Shaman - Processing" ) ) );
     } else {
-        QStringList upgrds = Backend::instance()->getUpgradeablePackagesAsStringList();
+        Package::List upgrds = Backend::instance()->getUpgradeablePackages();
         stopMovie();
         setIcon( QIcon( ":/Icons/icons/shaman/shaman-updates-available-32.png" ) );
         setToolTip( QString( tr( "Shaman - Idle (Upgrades Available)" ) ) );
@@ -153,10 +154,11 @@ void ShamanTrayIcon::transactionReleased()
 {
     enableTrayActions();
 
-    if ( Backend::instance()->getUpgradeablePackagesAsStringList().isEmpty() )
+    if ( Backend::instance()->getUpgradeablePackages().isEmpty() ) {
         changeIconStatus( ShamanIcon::IdleIcon );
-    else
+    } else {
         changeIconStatus( ShamanIcon::UpgradesAvailableIcon );
+    }
 }
 
 void ShamanTrayIcon::enableTrayActions()
