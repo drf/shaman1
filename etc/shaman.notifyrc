@@ -1,7 +1,7 @@
 [Global]
 Name=Shaman
 
-IconName=preferences-system-power-management
+IconName=shaman-32
 Comment=Package Manager
 
 Version=1

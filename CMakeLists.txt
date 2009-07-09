@@ -92,11 +92,6 @@ else(NOT NO_PLASMA)
 	message("Plasma components disabled by the user, they won't be built")
 endif(NOT NO_PLASMA)
 
-if (KDE4_INTEGRATION)
-    install( FILES shaman.notifyrc DESTINATION ${DATA_INSTALL_DIR}/shaman )
-endif (KDE4_INTEGRATION)
-
-
 # verbose - on
 # SET(CMAKE_VERBOSE_MAKEFILE ON)
 

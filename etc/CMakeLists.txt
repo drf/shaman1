@@ -15,5 +15,9 @@ if(KDE4_FOUND)
 
 endif(KDE4_FOUND)
 
+if (KDE4_INTEGRATION)
+    install( FILES shaman.notifyrc DESTINATION ${DATA_INSTALL_DIR}/shaman )
+endif (KDE4_INTEGRATION)
+
 INSTALL(CODE "MESSAGE(\"Installing Miscellaneous Shaman Files...\")")
 INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/kdemodmirrorlist DESTINATION /etc/pacman.d)
