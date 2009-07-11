@@ -40,7 +40,7 @@ UpdateDbDialog::UpdateDbDialog( QWidget *parent )
     connect( Backend::instance(), SIGNAL( dbStatusChanged( const QString&, int ) ),
              SLOT( updateLabel( const QString&, int ) ) );
     connect( Backend::instance(), SIGNAL( dbQty( const QStringList& ) ), SLOT( createWidgets( const QStringList& ) ) );
-    connect( Backend::instance(), SIGNAL( streamDlProg( QString&, int, int, int, int, int ) ),
+    connect( Backend::instance(), SIGNAL( streamDlProg( const QString&, int, int, int, int, int ) ),
              SLOT( updateDlBar() ) );
 }
 
