@@ -115,7 +115,12 @@ void ShamanTrayIcon::changeIconStatus( ShamanIcon::IconStatus status )
 {
     if ( status == ShamanIcon::IdleIcon ) {
         stopMovie();
-        setIcon( QIcon( ":/Icons/icons/shaman/shaman-32.png" ) );
+        QIcon shamanIcon;
+        shamanIcon.addFile(":/Icons/icons/shaman/hi32-app-shaman.png");
+        shamanIcon.addFile(":/Icons/icons/shaman/hi48-app-shaman.png");
+        shamanIcon.addFile(":/Icons/icons/shaman/hi64-app-shaman.png");
+        shamanIcon.addFile(":/Icons/icons/shaman/hi128-app-shaman.png");
+        setIcon(shamanIcon);
         setToolTip( QString( tr( "Shaman - Idle" ) ) );
     } else if ( status == ShamanIcon::ProcessingIcon ) {
         QSettings *settings = new QSettings();

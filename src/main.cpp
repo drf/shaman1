@@ -39,6 +39,7 @@
 #include <QDebug>
 #include <QSplashScreen>
 #include <QtDBus>
+#include <QIcon>
 #include <signal.h>
 #include <alpm.h>
 
@@ -169,6 +170,12 @@ int main( int argc, char **argv )
 #endif
 
     app.setQuitOnLastWindowClosed( false );
+    QIcon shamanIcon;
+    shamanIcon.addFile(":/Icons/icons/shaman/hi32-app-shaman.png");
+    shamanIcon.addFile(":/Icons/icons/shaman/hi48-app-shaman.png");
+    shamanIcon.addFile(":/Icons/icons/shaman/hi64-app-shaman.png");
+    shamanIcon.addFile(":/Icons/icons/shaman/hi128-app-shaman.png");
+    app.setWindowIcon(shamanIcon);
 
     signal( SIGINT, cleanup );
     signal( SIGTERM, cleanup );
