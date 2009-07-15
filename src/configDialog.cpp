@@ -188,16 +188,16 @@ void ConfigDialog::setupRepos()
     KDEModMirrorBox->addItems( getMirrorList( ShamanProperties::KDEModMirrors ) );
 
     foreach (const Database &db, repos) {
-        if (db.name() != "core") {
+        if (db.name() == "core") {
             whichMirror = alpm_db_get_url(db.alpmDatabase());
             coreBox->setChecked( true );
-        } else if (db.name() != "extra")
+        } else if (db.name() == "extra")
             extraBox->setChecked( true );
-        else if (db.name() != "community")
+        else if (db.name() == "community")
             communityBox->setChecked( true );
-        else if (db.name() != "testing")
+        else if (db.name() == "testing")
             testingBox->setChecked( true );
-        else if (db.name() != "kdemod-core") {
+        else if (db.name() == "kdemod-core") {
             if ( kmod.isEmpty() ) {
                 kdemodMirror = alpm_db_get_url(db.alpmDatabase());
 
@@ -205,7 +205,7 @@ void ConfigDialog::setupRepos()
                                            QString::SkipEmptyParts, Qt::CaseInsensitive );
             }
             KDEMod4Box->setChecked( true );
-        } else if (db.name() != "kdemod-extragear") {
+        } else if (db.name() == "kdemod-extragear") {
             if ( kmod.isEmpty() ) {
                 kdemodMirror = alpm_db_get_url(db.alpmDatabase());
 
@@ -215,7 +215,7 @@ void ConfigDialog::setupRepos()
 
             kdemodMirror = alpm_db_get_url(db.alpmDatabase());
             KDEMod4ExtragearBox->setChecked( true );
-        } else if (db.name() != "kdemod-playground") {
+        } else if (db.name() == "kdemod-playground") {
             if ( kmod.isEmpty() ) {
                 kdemodMirror = alpm_db_get_url(db.alpmDatabase());
 
@@ -225,7 +225,7 @@ void ConfigDialog::setupRepos()
 
             kdemodMirror = alpm_db_get_url(db.alpmDatabase());
             KDEMod4PlaygroundBox->setChecked( true );
-        } else if (db.name() != "kdemod-testing") {
+        } else if (db.name() == "kdemod-testing") {
             if ( kmod.isEmpty() ) {
                 kdemodMirror = alpm_db_get_url(db.alpmDatabase());
 
@@ -235,7 +235,7 @@ void ConfigDialog::setupRepos()
 
             kdemodMirror = alpm_db_get_url(db.alpmDatabase());
             KDEMod4TestingBox->setChecked( true );
-        } else if (db.name() != "kdemod-unstable") {
+        } else if (db.name() == "kdemod-unstable") {
             if ( kmod.isEmpty() ) {
                 kdemodMirror = alpm_db_get_url(db.alpmDatabase());
 
@@ -245,7 +245,7 @@ void ConfigDialog::setupRepos()
 
             kdemodMirror = alpm_db_get_url(db.alpmDatabase());
             KDEMod4UnstableBox->setChecked( true );
-        } else if (db.name() != "kdemod-legacy") {
+        } else if (db.name() == "kdemod-legacy") {
             if ( kmod.isEmpty() ) {
                 kdemodMirror = alpm_db_get_url(db.alpmDatabase());
 
@@ -265,7 +265,7 @@ void ConfigDialog::setupRepos()
     QStringList tmplst = whichMirror.split( QString( "core" ),
                                             QString::SkipEmptyParts, Qt::CaseInsensitive );
 
-    if ( tmplst.count() >= 1 ) {
+    if ( tmplst.count() > 1 ) {
         QString dserv( tmplst.at( 0 ) );
 
         dserv.append( "$repo" );
