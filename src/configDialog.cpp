@@ -26,6 +26,7 @@
 #include "ShamanDialog.h"
 
 #include <aqpm/Backend.h>
+#include <aqpm/Configuration.h>
 #include <aqpm/ConfigurationParser.h>
 
 #include <config.h>
@@ -755,132 +756,49 @@ void ConfigDialog::saveConfiguration()
 
     emit setProxy();
 
-    if ( true ) {
-        ShamanDialog::popupDialog( tr( "Saving Configuration" ), tr( "Unable to save Pacman configuration!" ),
-                                   this, ShamanProperties::ErrorDialog );
+    QHash<QCheckBox*, QString> repos;
 
-        return;
-    }
+    repos.insert(coreBox, "core");
+    repos.insert(extraBox, "extra");
+    repos.insert(testingBox, "testing");
+    repos.insert(communityBox, "community");
 
-    if ( coreBox->isChecked() ) {
-        if ( !ConfigurationParser::instance()->editPacmanKey( "core/Server", mirror, 0 ) ) {
-            if ( ConfigurationParser::instance()->editPacmanKey( "core/Server", mirror, 1 ) )
+    foreach (QCheckBox *c, repos.keys()) {
+        if ( c->isChecked() ) {
+            if (!Configuration::instance()->exists(QString("%1/Server").arg(repos[c]), mirror)) {
+                Configuration::instance()->setValue(QString("%1/Server").arg(repos[c]), mirror);
                 dbChanged = true;
+            }
         } else {
-            dbChanged = true;
-            ConfigurationParser::instance()->editPacmanKey( "core/Include", NULL, 2 );
+            if (Configuration::instance()->exists(QString("%1/Server").arg(repos[c]), mirror)) {
+                Configuration::instance()->remove(repos[c]);
+                dbChanged = true;
+            }
         }
-    } else {
-        if ( ConfigurationParser::instance()->editPacmanKey( "core/Server", NULL, 2 ) )
-            dbChanged = true;
-        if ( ConfigurationParser::instance()->editPacmanKey( "core/Include", NULL, 2 ) )
-            dbChanged = true;
     }
 
-    if ( extraBox->isChecked() ) {
-        if ( !ConfigurationParser::instance()->editPacmanKey( "extra/Server", mirror, 0 ) ) {
-            if ( ConfigurationParser::instance()->editPacmanKey( "extra/Server", mirror, 1 ) )
+    repos.clear();
+
+    repos.insert(KDEMod4Box, "kdemod-core");
+    repos.insert(KDEMod4ExtragearBox, "kdemod-extragear");
+    repos.insert(KDEMod4PlaygroundBox, "kdemod-playground");
+    repos.insert(KDEMod4TestingBox, "kdemod-testing");
+    repos.insert(KDEMod4UnstableBox, "kdemod-unstable");
+    repos.insert(KDEMod3Box, "kdemod-legacy");
+
+    foreach (QCheckBox *c, repos.keys()) {
+        if ( c->isChecked() ) {
+            if (!Configuration::instance()->exists(QString("%1/Server").arg(repos[c]), kdemodmirror)) {
+                Configuration::instance()->setValue(QString("%1/Server").arg(repos[c]), kdemodmirror);
                 dbChanged = true;
+            }
         } else {
-            dbChanged = true;
-            ConfigurationParser::instance()->editPacmanKey( "extra/Include", NULL, 2 );
+            if (Configuration::instance()->exists(QString("%1/Server").arg(repos[c]), kdemodmirror)) {
+                Configuration::instance()->remove(repos[c]);
+                dbChanged = true;
+            }
         }
-    } else {
-        if ( ConfigurationParser::instance()->editPacmanKey( "extra/Server", NULL, 2 ) )
-            dbChanged = true;
-        if ( ConfigurationParser::instance()->editPacmanKey( "extra/Include", NULL, 2 ) )
-            dbChanged = true;
     }
-
-    if ( communityBox->isChecked() ) {
-        if ( !ConfigurationParser::instance()->editPacmanKey( "community/Server", mirror, 0 ) ) {
-            if ( ConfigurationParser::instance()->editPacmanKey( "community/Server", mirror, 1 ) )
-                dbChanged = true;
-        } else {
-            dbChanged = true;
-            ConfigurationParser::instance()->editPacmanKey( "community/Include", NULL, 2 );
-        }
-    } else {
-        if ( ConfigurationParser::instance()->editPacmanKey( "community/Server", NULL, 2 ) )
-            dbChanged = true;
-        if ( ConfigurationParser::instance()->editPacmanKey( "community/Include", NULL, 2 ) )
-            dbChanged = true;
-    }
-
-    if ( testingBox->isChecked() ) {
-        if ( !ConfigurationParser::instance()->editPacmanKey( "testing/Server", mirror, 0 ) ) {
-            if ( ConfigurationParser::instance()->editPacmanKey( "testing/Server", mirror, 1 ) )
-                dbChanged = true;
-        } else {
-            dbChanged = true;
-            ConfigurationParser::instance()->editPacmanKey( "testing/Include", NULL, 2 );
-        }
-    } else {
-        if ( ConfigurationParser::instance()->editPacmanKey( "testing/Server", NULL, 2 ) )
-            dbChanged = true;
-        if ( ConfigurationParser::instance()->editPacmanKey( "testing/Include", NULL, 2 ) )
-            dbChanged = true;
-    }
-
-    if ( KDEMod4Box->isChecked() ) {
-        if ( !ConfigurationParser::instance()->editPacmanKey( "kdemod-core/Server", kdemodmirror, 0 ) ) {
-            if ( ConfigurationParser::instance()->editPacmanKey( "kdemod-core/Server", kdemodmirror, 1 ) )
-                dbChanged = true;
-        } else
-            dbChanged = true;
-    } else
-        if ( ConfigurationParser::instance()->editPacmanKey( "kdemod-core/Server", NULL, 2 ) )
-            dbChanged = true;
-
-    if ( KDEMod4ExtragearBox->isChecked() ) {
-        if ( !ConfigurationParser::instance()->editPacmanKey( "kdemod-extragear/Server", kdemodmirror, 0 ) ) {
-            if ( ConfigurationParser::instance()->editPacmanKey( "kdemod-extragear/Server", kdemodmirror, 1 ) )
-                dbChanged = true;
-        } else
-            dbChanged = true;
-    } else
-        if ( ConfigurationParser::instance()->editPacmanKey( "kdemod-extragear/Server", NULL, 2 ) )
-            dbChanged = true;
-
-    if ( KDEMod4PlaygroundBox->isChecked() ) {
-        if ( !ConfigurationParser::instance()->editPacmanKey( "kdemod-playground/Server", kdemodmirror, 0 ) ) {
-            if ( ConfigurationParser::instance()->editPacmanKey( "kdemod-playground/Server", kdemodmirror, 1 ) )
-                dbChanged = true;
-        } else
-            dbChanged = true;
-    } else
-        if ( ConfigurationParser::instance()->editPacmanKey( "kdemod-playground/Server", NULL, 2 ) )
-            dbChanged = true;
-
-    if ( KDEMod4TestingBox->isChecked() ) {
-        if ( !ConfigurationParser::instance()->editPacmanKey( "kdemod-testing/Server", kdemodmirror, 0 ) ) {
-            if ( ConfigurationParser::instance()->editPacmanKey( "kdemod-testing/Server", kdemodmirror, 1 ) )
-                dbChanged = true;
-        } else
-            dbChanged = true;
-    } else
-        if ( ConfigurationParser::instance()->editPacmanKey( "kdemod-testing/Server", NULL, 2 ) )
-            dbChanged = true;
-
-    if ( KDEMod4UnstableBox->isChecked() ) {
-        if ( !ConfigurationParser::instance()->editPacmanKey( "kdemod-unstable/Server", kdemodmirror, 0 ) ) {
-            if ( ConfigurationParser::instance()->editPacmanKey( "kdemod-unstable/Server", kdemodmirror, 1 ) )
-                dbChanged = true;
-        } else
-            dbChanged = true;
-    } else
-        if ( ConfigurationParser::instance()->editPacmanKey( "kdemod-unstable/Server", NULL, 2 ) )
-            dbChanged = true;
-
-    if ( KDEMod3Box->isChecked() ) {
-        if ( !ConfigurationParser::instance()->editPacmanKey( "kdemod-legacy/Server", kdemodmirror, 0 ) ) {
-            if ( ConfigurationParser::instance()->editPacmanKey( "kdemod-legacy/Server", kdemodmirror, 1 ) )
-                dbChanged = true;
-        } else
-            dbChanged = true;
-    } else
-        if ( ConfigurationParser::instance()->editPacmanKey( "kdemod-legacy/Server", NULL, 2 ) )
-            dbChanged = true;
 
     /* Whew, now with the third party elements. We also take the
      * chance to free them, for the sake of memory.
@@ -893,9 +811,8 @@ void ConfigDialog::saveConfiguration()
                 dbs.name() != "kdemod-playground" && dbs.name() != "kdemod-testing" &&
                 dbs.name() != "kdemod-unstable" && dbs.name() != "kdemod-legacy" &&
                 thirdPartyWidget->findItems( dbs.name(), Qt::MatchExactly, 0 ).isEmpty() ) {
-            if ( ConfigurationParser::instance()->editPacmanKey( QString( dbs.name() + "/Server" ), NULL, 2 ) ) {
-                dbChanged = true;
-            }
+            Configuration::instance()->remove(dbs.name());
+            dbChanged = true;
         }
     }
 
@@ -904,84 +821,34 @@ void ConfigDialog::saveConfiguration()
     while (( itm = thirdPartyWidget->takeTopLevelItem( 0 ) ) != NULL ) {
         QString tName( itm->text( 0 ) );
 
-        tName.append( "/Server" );
+        tName.append("/Server");
 
-        if ( !ConfigurationParser::instance()->editPacmanKey( tName, itm->text( 1 ), 0 ) ) {
-            if ( ConfigurationParser::instance()->editPacmanKey( tName, itm->text( 1 ), 1 ) )
-                dbChanged = true;
-        } else
+        if (!Configuration::instance()->exists(tName, itm->text( 1 ))) {
+            Configuration::instance()->setValue(tName, itm->text( 1 ));
             dbChanged = true;
+        }
 
         delete( itm );
     }
 
     /* Well done, let's start committing changes to pacman's options */
-    if ( noPassiveFtpBox->isChecked() )
-        ConfigurationParser::instance()->editPacmanKey( "options/NoPassiveFtp", "", 0 );
-    else
-        ConfigurationParser::instance()->editPacmanKey( "options/NoPassiveFtp", NULL, 2 );
+    Configuration::instance()->setOrUnset(noPassiveFtpBox->isChecked(), "options/NoPassiveFtp");
+    Configuration::instance()->setOrUnset(sysLogBox->isChecked(), "options/UseSyslog");
 
-    if ( sysLogBox->isChecked() )
-        ConfigurationParser::instance()->editPacmanKey( "options/UseSyslog", "", 0 );
-    else
-        ConfigurationParser::instance()->editPacmanKey( "options/UseSyslog", NULL, 2 );
+    QHash<QLineEdit*, QString> opts;
 
-    if ( holdPkgLine->isModified() ) {
-        if ( holdPkgLine->text().isEmpty() )
-            ConfigurationParser::instance()->editPacmanKey( "options/HoldPkg", NULL, 2 );
-        else
-            if ( !ConfigurationParser::instance()->editPacmanKey( "options/HoldPkg", holdPkgLine->text(), 0 ) )
-                ConfigurationParser::instance()->editPacmanKey( "options/HoldPkg", holdPkgLine->text(), 1 );
-    }
+    opts.insert(holdPkgLine, "HoldPkg");
+    opts.insert(ignorePkgLine, "IgnorePkg");
+    opts.insert(ignoreGrpsLine, "IgnoreGroup");
+    opts.insert(noUpgradeLine, "NoUpgrade");
+    opts.insert(noExtractLine, "NoExtract");
+    opts.insert(xFerCommandLine, "XferCommand");
+    opts.insert(logFileLine, "LogFile");
 
-    if ( ignorePkgLine->isModified() ) {
-        if ( ignorePkgLine->text().isEmpty() )
-            ConfigurationParser::instance()->editPacmanKey( "options/IgnorePkg", NULL, 2 );
-        else
-            if ( !ConfigurationParser::instance()->editPacmanKey( "options/IgnorePkg", ignorePkgLine->text(), 0 ) )
-                ConfigurationParser::instance()->editPacmanKey( "options/IgnorePkg", ignorePkgLine->text(), 1 );
-    }
-
-    if ( ignoreGrpsLine->isModified() ) {
-        if ( ignoreGrpsLine->text().isEmpty() )
-            ConfigurationParser::instance()->editPacmanKey( "options/IgnoreGroup", NULL, 2 );
-        else
-            if ( !ConfigurationParser::instance()->editPacmanKey( "options/IgnoreGroup", ignoreGrpsLine->text(), 0 ) )
-                ConfigurationParser::instance()->editPacmanKey( "options/IgnoreGroup", ignoreGrpsLine->text(), 1 );
-    }
-
-    if ( noUpgradeLine->isModified() ) {
-        if ( noUpgradeLine->text().isEmpty() )
-            ConfigurationParser::instance()->editPacmanKey( "options/NoUpgrade", NULL, 2 );
-        else
-            if ( !ConfigurationParser::instance()->editPacmanKey( "options/NoUpgrade", noUpgradeLine->text(), 0 ) )
-                ConfigurationParser::instance()->editPacmanKey( "options/NoUpgrade", noUpgradeLine->text(), 1 );
-    }
-
-    if ( noExtractLine->isModified() ) {
-        if ( noExtractLine->text().isEmpty() )
-            ConfigurationParser::instance()->editPacmanKey( "options/NoExtract", NULL, 2 );
-        else
-            if ( !ConfigurationParser::instance()->editPacmanKey( "options/NoExtract", noExtractLine->text(), 0 ) )
-                ConfigurationParser::instance()->editPacmanKey( "options/NoExtract", noExtractLine->text(), 1 );
-    }
-
-    if ( xFerCommandLine->isModified() ) {
-        if ( xFerCommandLine->text().isEmpty() )
-            ConfigurationParser::instance()->editPacmanKey( "options/XferCommand", QString(), 2 );
-        else
-            if ( !ConfigurationParser::instance()->editPacmanKey( "options/XferCommand", xFerCommandLine->text(), 0 ) )
-                ConfigurationParser::instance()->editPacmanKey( "options/XferCommand", xFerCommandLine->text(), 1 );
-    }
-
-    if ( logFileLine->isModified() ) {
-        restartNeeded = true;
-
-        if ( logFileLine->text().isEmpty() )
-            ConfigurationParser::instance()->editPacmanKey( "options/LogFile", QString(), 2 );
-        else
-            if ( !ConfigurationParser::instance()->editPacmanKey( "options/LogFile", logFileLine->text(), 0 ) )
-                ConfigurationParser::instance()->editPacmanKey( "options/LogFile", logFileLine->text(), 1 );
+    foreach (QLineEdit *l, opts.keys()) {
+        if (l->isModified()) {
+            Configuration::instance()->setValue(QString("options/%1").arg(opts[l]), l->text());
+        }
     }
 
     /* Ok, saving finished, commit changes to Alpm now */
@@ -1004,12 +871,12 @@ void ConfigDialog::saveConfiguration()
         QFile::remove( "/etc/xdg/autostart/shaman.desktop" );
     }
 
-    if ( useMatchSupRadio->isChecked() ) {
+    /*if ( useMatchSupRadio->isChecked() ) {
         /* We need to generate a SUPFILES containing our current repos
          * then.
          */
 
-        QString supfiles;
+      /*  QString supfiles;
 
         supfiles.append( coreBox->isChecked() ? "core" : "!core" );
         supfiles.append( " " );
@@ -1027,7 +894,7 @@ void ConfigDialog::saveConfiguration()
     } else {
         /* Ok, we just have to put the supfiles into abs.conf
          */
-
+/*
         if ( supEdit->isModified() )
             ConfigurationParser::instance()->editABSSection( "repos", supEdit->text() );
     }
@@ -1037,7 +904,7 @@ void ConfigDialog::saveConfiguration()
 
     /* Last, but not least, commit changes to makepkg.conf */
 
-    if ( CFlagEdit->isModified() )
+  /*  if ( CFlagEdit->isModified() )
         ConfigurationParser::instance()->editMakepkgSection( "cflags", CFlagEdit->text() );
 
     if ( CXXFlagEdit->isModified() )
@@ -1051,6 +918,7 @@ void ConfigDialog::saveConfiguration()
 
     if ( docDirsEdit->isModified() )
         ConfigurationParser::instance()->editMakepkgSection( "docdirs", docDirsEdit->text() );
+*/
 
     if ( restartNeeded )
         ShamanDialog::popupDialogDontShow( tr( "Saving Configuration" ), tr( "Some of your changes have not been applied,\n"

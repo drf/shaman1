@@ -260,12 +260,15 @@ void QueueDialog::updateProgressBar( const QString &c, int bytedone, int bytetot
     progressBar->setValue( listdone );
 
 
-    if ( bytetotal > 2048000 )
+    if ( bytetotal > 2048000 ) {
         actionDetail->setText( QString( tr( "Downloading %1... (%2 MB of %3 MB)" ) ).
-                               arg( c ).arg( bd / 1024, 0, 'f', 2 ).arg( bt / 1024, 0, 'f', 2 ) );
-    else
+                               arg(c.split('-').at(c.split('-').count() - 1)).
+                               arg( bd / 1024, 0, 'f', 2 ).arg( bt / 1024, 0, 'f', 2 ) );
+    } else {
         actionDetail->setText( QString( tr( "Downloading %1... (%2 KB of %3 KB)" ) ).
-                               arg( c ).arg( bd, 0, 'f', 0 ).arg( bt, 0, 'f', 0 ) );
+                               arg(c.split('-').at(c.split('-').count() - 1)).
+                               arg( bd, 0, 'f', 0 ).arg( bt, 0, 'f', 0 ) );
+    }
 }
 
 void QueueDialog::updateProgressBar( Aqpm::Globals::TransactionProgress evt, const QString &pkgname, int percent,
