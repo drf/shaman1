@@ -262,11 +262,11 @@ void QueueDialog::updateProgressBar( const QString &c, int bytedone, int bytetot
 
     if ( bytetotal > 2048000 ) {
         actionDetail->setText( QString( tr( "Downloading %1... (%2 MB of %3 MB)" ) ).
-                               arg(c.split('-').at(c.split('-').count() - 1)).
+                               arg(c.left(c.lastIndexOf('-'))).
                                arg( bd / 1024, 0, 'f', 2 ).arg( bt / 1024, 0, 'f', 2 ) );
     } else {
         actionDetail->setText( QString( tr( "Downloading %1... (%2 KB of %3 KB)" ) ).
-                               arg(c.split('-').at(c.split('-').count() - 1)).
+                               arg(c.left(c.lastIndexOf('-'))).
                                arg( bd, 0, 'f', 0 ).arg( bt, 0, 'f', 0 ) );
     }
 }
