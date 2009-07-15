@@ -876,12 +876,12 @@ void ConfigDialog::saveConfiguration()
         QFile::remove( "/etc/xdg/autostart/shaman.desktop" );
     }
 
-    Configuration::instance()->saveConfigurationAsync();
-    /*    ShamanDialog::popupDialog(tr("Error saving configuration"),
+    if (!Configuration::instance()->saveConfiguration()) {
+        ShamanDialog::popupDialog(tr("Error saving configuration"),
                                   tr("There was an error while saving the configuration. "
                                      "This is probably due to an internal error or you being not "
                                      "authorized to perform the operation"), this, ShamanProperties::ErrorDialog);
-    }*/
+    }
 
     /*if ( useMatchSupRadio->isChecked() ) {
         /* We need to generate a SUPFILES containing our current repos
