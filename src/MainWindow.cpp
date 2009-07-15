@@ -1972,6 +1972,7 @@ void MainWindow::startTrayTimer()
 void MainWindow::streamTransQuestion( Aqpm::Globals::TransactionQuestion event, QVariantMap args )
 {
     QString message;
+    qDebug() << "Got a question";
 
     switch (event) {
     case Aqpm::Globals::IgnorePackage:
@@ -1989,6 +1990,13 @@ void MainWindow::streamTransQuestion( Aqpm::Globals::TransactionQuestion event, 
     case Aqpm::Globals::PackageConflict:
         message = QString(tr("%1 conflicts with %2.\nRemove %2?")).arg(args["OldPackage"].toString())
                   .arg(args["NewPackage"].toString());
+        break;
+    case Aqpm::Globals::UnresolvedDependencies:
+        message = tr("The following package(s) cannot be upgraded due to "
+                     "unresolvable dependencies:"
+                     "\n%1\n\n"
+                     "Do you want to skip the above package(s) for this upgrade?",
+                     "", args["Packages"].toStringList().count()).arg(args["Packages"].toStringList().join(", "));
         break;
     case Aqpm::Globals::NewerLocalPackage:
         message = QString(tr("%1-%2: local version is newer.\nUpgrade anyway?")).arg(args["PackageName"].toString()).
