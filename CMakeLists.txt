@@ -150,7 +150,7 @@ macro (SHAMAN_INSTALL_ICONS _defaultpath )
       endif( _theme_GROUP)
    endforeach (_current_ICON)
 
-   kde4_update_iconcache()
+   shaman_update_iconcache()
 
 endmacro (SHAMAN_INSTALL_ICONS)
 
