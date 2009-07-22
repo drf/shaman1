@@ -51,60 +51,60 @@
 
 using namespace Aqpm;
 
-static void cleanup( int signum )
+static void cleanup(int signum)
 {
-    if ( signum == SIGSEGV ) {
+    if (signum == SIGSEGV) {
         /* write a log message and write to stderr */
         qCritical() << "Segmentation Fault! We are sorry. You probably found a bug! And you can help us solving it!";
         qCritical() << "Please report it to our bugtracker ( http://shaman.iskrembilen.com/trac ), including: when it crashed,";
         qCritical() << "Terminal output, and possibly a backtrace (use gdb for that)";
-        exit( signum );
-    } else if (( signum == SIGINT ) ) {
-        printf( "\n" );
+        exit(signum);
+    } else if ((signum == SIGINT)) {
+        printf("\n");
 
         qCritical() << "Caught Interrupt Signal";
 
-        if ( alpm_trans_interrupt() == 0 )
+        if (alpm_trans_interrupt() == 0)
             /* a transaction is being interrupted, don't exit Shaman yet. */
             return;
 
         /* no committing transaction, we can release it now and then exit pacman */
         alpm_trans_release();
 
-        qCritical( "Shaman was terminated and all Alpm Transactions interrupted and released." );
+        qCritical("Shaman was terminated and all Alpm Transactions interrupted and released.");
         /* output a newline to be sure we clear any line we may be on */
-        printf( "\n" );
+        printf("\n");
     }
 
     /* free alpm library resources */
-    if ( alpm_release() == -1 ) {
-        qCritical() << QString::fromLocal8Bit( alpm_strerrorlast() );
+    if (alpm_release() == -1) {
+        qCritical() << QString::fromLocal8Bit(alpm_strerrorlast());
     }
 
-    exit( signum );
+    exit(signum);
 }
 
-void stdDebugOutput( QtMsgType type, const char *msg )
+void stdDebugOutput(QtMsgType type, const char *msg)
 {
     QString rmsg;
 
-    switch ( type ) {
+    switch (type) {
     case QtDebugMsg:
-        fprintf( stderr, "%s\n", msg );
+        fprintf(stderr, "%s\n", msg);
         break;
     case QtWarningMsg:
         rmsg = msg;
 
-        if ( rmsg.contains( "QPixmap" ) )
+        if (rmsg.contains("QPixmap"))
             return;
 
-        fprintf( stderr, "Shaman/%s - Warning: %s\n", SHAMAN_VERSION, msg );
+        fprintf(stderr, "Shaman/%s - Warning: %s\n", SHAMAN_VERSION, msg);
         break;
     case QtCriticalMsg:
-        fprintf( stderr, "Shaman/%s - Critical: %s\n", SHAMAN_VERSION, msg );
+        fprintf(stderr, "Shaman/%s - Critical: %s\n", SHAMAN_VERSION, msg);
         break;
     case QtFatalMsg:
-        fprintf( stderr, "Shaman/%s - Fatal: %s\n", SHAMAN_VERSION, msg );
+        fprintf(stderr, "Shaman/%s - Fatal: %s\n", SHAMAN_VERSION, msg);
         abort();
         break;
     default:
@@ -112,26 +112,26 @@ void stdDebugOutput( QtMsgType type, const char *msg )
     }
 }
 
-void noDebugOutput( QtMsgType type, const char *msg )
+void noDebugOutput(QtMsgType type, const char *msg)
 {
     QString rmsg;
 
-    switch ( type ) {
+    switch (type) {
     case QtDebugMsg:
         break;
     case QtWarningMsg:
         rmsg = msg;
 
-        if ( rmsg.contains( "QPixmap" ) )
+        if (rmsg.contains("QPixmap"))
             return;
 
-        fprintf( stderr, "Shaman/%s - Warning: %s\n", SHAMAN_VERSION, msg );
+        fprintf(stderr, "Shaman/%s - Warning: %s\n", SHAMAN_VERSION, msg);
         break;
     case QtCriticalMsg:
-        fprintf( stderr, "Shaman/%s - Critical: %s\n", SHAMAN_VERSION, msg );
+        fprintf(stderr, "Shaman/%s - Critical: %s\n", SHAMAN_VERSION, msg);
         break;
     case QtFatalMsg:
-        fprintf( stderr, "Shaman/%s - Fatal: %s\n", SHAMAN_VERSION, msg );
+        fprintf(stderr, "Shaman/%s - Fatal: %s\n", SHAMAN_VERSION, msg);
         abort();
         break;
     default:
@@ -139,14 +139,14 @@ void noDebugOutput( QtMsgType type, const char *msg )
     }
 }
 
-int main( int argc, char **argv )
+int main(int argc, char **argv)
 {
 #ifndef KDE4_INTEGRATION
-    QApplication app( argc, argv, QApplication::GuiClient );
+    QApplication app(argc, argv, QApplication::GuiClient);
 
-    QCoreApplication::setOrganizationName( "shaman" );
-    QCoreApplication::setOrganizationDomain( "shaman.iskrembilen.com" );
-    QCoreApplication::setApplicationName( "shaman" );
+    QCoreApplication::setOrganizationName("shaman");
+    QCoreApplication::setOrganizationDomain("shaman.iskrembilen.com");
+    QCoreApplication::setApplicationName("shaman");
 #else
     printf("Spawning KApplication\n");
 
@@ -169,7 +169,7 @@ int main( int argc, char **argv )
     app.disableSessionManagement();
 #endif
 
-    app.setQuitOnLastWindowClosed( false );
+    app.setQuitOnLastWindowClosed(false);
     QIcon shamanIcon;
     shamanIcon.addFile(":/Icons/icons/shaman/hi32-app-shaman.png");
     shamanIcon.addFile(":/Icons/icons/shaman/hi48-app-shaman.png");
@@ -177,95 +177,95 @@ int main( int argc, char **argv )
     shamanIcon.addFile(":/Icons/icons/shaman/hi128-app-shaman.png");
     app.setWindowIcon(shamanIcon);
 
-    signal( SIGINT, cleanup );
-    signal( SIGTERM, cleanup );
-    signal( SIGSEGV, cleanup );
+    signal(SIGINT, cleanup);
+    signal(SIGTERM, cleanup);
+    signal(SIGSEGV, cleanup);
 
     QStringList arguments = app.arguments();
 
-    if ( arguments.contains( "--help" ) || arguments.contains( "-h" ) ) {
-        printf( "\n" );
-        printf( "Shaman: A libalpm frontend in Qt4\n" );
-        printf( "Command Line Options:\n\n" );
-        printf( "  -h, --help                   shows this help and exits\n\n" );
-        printf( "  -v, --version                shows Shaman version and exits\n" );
-        printf( "      --qt-version             shows version of the Qt toolkit installed on the system\n"
-                "                               and version of the Qt toolkit Shaman was compiled against and exits\n\n" );
-        printf( "      --no-i18n                disables translations\n" );
-        printf( "      --force-i18n=locale      forces Shaman to use locale as language\n" );
-        printf( "      --no-splashscreen        does not show the splashscreen\n\n" );
-        printf( "      --start-in-window        shows main window on startup\n" );
-        printf( "      --start-in-tray          starts Shaman in the system tray\n\n" );
-        printf( "      --clear-settings         clears all Shaman settings and starts Shaman\n" );
-        printf( "      --no-debugging-output    does not show debugging output in the terminal\n" );
-        printf( "\n" );
-        return( EXIT_SUCCESS );
+    if (arguments.contains("--help") || arguments.contains("-h")) {
+        printf("\n");
+        printf("Shaman: A libalpm frontend in Qt4\n");
+        printf("Command Line Options:\n\n");
+        printf("  -h, --help                   shows this help and exits\n\n");
+        printf("  -v, --version                shows Shaman version and exits\n");
+        printf("      --qt-version             shows version of the Qt toolkit installed on the system\n"
+               "                               and version of the Qt toolkit Shaman was compiled against and exits\n\n");
+        printf("      --no-i18n                disables translations\n");
+        printf("      --force-i18n=locale      forces Shaman to use locale as language\n");
+        printf("      --no-splashscreen        does not show the splashscreen\n\n");
+        printf("      --start-in-window        shows main window on startup\n");
+        printf("      --start-in-tray          starts Shaman in the system tray\n\n");
+        printf("      --clear-settings         clears all Shaman settings and starts Shaman\n");
+        printf("      --no-debugging-output    does not show debugging output in the terminal\n");
+        printf("\n");
+        return(EXIT_SUCCESS);
     }
 
-    if ( arguments.contains( "--version" ) || arguments.contains( "-v" ) ) {
-        printf( "\n" );
-        printf( "Shaman is version %s, built from revision %s", SHAMAN_VERSION, SHAMAN_REVISION );
-        printf( "\n" );
-        printf( "\n" );
-        return( EXIT_SUCCESS );
+    if (arguments.contains("--version") || arguments.contains("-v")) {
+        printf("\n");
+        printf("Shaman is version %s, built from revision %s", SHAMAN_VERSION, SHAMAN_REVISION);
+        printf("\n");
+        printf("\n");
+        return(EXIT_SUCCESS);
     }
 
-    if ( arguments.contains( "--qt-version" ) ) {
-        printf( "\n" );
-        printf( "This System is running Qt Version %s\n", qVersion() );
-        printf( "Shaman was compiled against Qt Version %s\n", QT_VERSION_STR );
-        printf( "\n" );
-        printf( "\n" );
-        return( EXIT_SUCCESS );
+    if (arguments.contains("--qt-version")) {
+        printf("\n");
+        printf("This System is running Qt Version %s\n", qVersion());
+        printf("Shaman was compiled against Qt Version %s\n", QT_VERSION_STR);
+        printf("\n");
+        printf("\n");
+        return(EXIT_SUCCESS);
     }
 
-    if ( arguments.contains( "--you-suck" ) ) {
-        printf( "\n\nOh, really?\n" );
-        return( 0 );
+    if (arguments.contains("--you-suck")) {
+        printf("\n\nOh, really?\n");
+        return(0);
     }
-    if ( arguments.contains( "--ya-rly" ) ) {
-        printf( "\n\nHonestly, you DO suck more than me\n" );
-        return( 0 );
+    if (arguments.contains("--ya-rly")) {
+        printf("\n\nHonestly, you DO suck more than me\n");
+        return(0);
     }
-    if ( arguments.contains( "--well-actually-not" ) ) {
-        printf( "\n\nNo, you are a sucker. Get away from here and go kill yourself. Bitch.\n" );
-        return( 0 );
+    if (arguments.contains("--well-actually-not")) {
+        printf("\n\nNo, you are a sucker. Get away from here and go kill yourself. Bitch.\n");
+        return(0);
     }
 
-    if ( arguments.contains( "--no-debugging-output" ) )
-        qInstallMsgHandler( noDebugOutput );
+    if (arguments.contains("--no-debugging-output"))
+        qInstallMsgHandler(noDebugOutput);
     else
-        qInstallMsgHandler( stdDebugOutput );
+        qInstallMsgHandler(stdDebugOutput);
 
     QTranslator translator;
 
-    if ( !arguments.contains( "--no-i18n" ) ) {
+    if (!arguments.contains("--no-i18n")) {
         QString locale;
         QSettings *settings = new QSettings();
 
-        if ( settings->value( "gui/language" ).toString().isEmpty() ) {
+        if (settings->value("gui/language").toString().isEmpty()) {
             locale = QLocale::system().name();
         } else {
-            locale = settings->value( "gui/language" ).toString();
+            locale = settings->value("gui/language").toString();
         }
 
         settings->deleteLater();
 
-        foreach( const QString &ent, arguments ) {
-            if ( ent.contains( "--force-i18n=" ) ) {
-                locale = ent.split( '=' ).at( 1 );
+        foreach(const QString &ent, arguments) {
+            if (ent.contains("--force-i18n=")) {
+                locale = ent.split('=').at(1);
             }
         }
 
         qDebug() << "Translations are enabled.";
-        QString trpath( QString( "shaman_" ) + locale );
+        QString trpath(QString("shaman_") + locale);
 
         QString filePath = INSTALL_PREFIX;
-        filePath.append( "/share/shaman/translations/" );
+        filePath.append("/share/shaman/translations/");
 
-        if ( !translator.load( trpath ) )
-            if ( !translator.load( trpath, filePath ) )
-                if ( !translator.load( trpath, "translations/" ) )
+        if (!translator.load(trpath))
+            if (!translator.load(trpath, filePath))
+                if (!translator.load(trpath, "translations/"))
                     qDebug() << "Could not find a translation for this locale.";
                 else
                     qDebug() << "Loading translations from" << "translations/";
@@ -274,35 +274,35 @@ int main( int argc, char **argv )
         else
             qDebug() << "Loading translations from" << '.';
 
-        app.installTranslator( &translator );
+        app.installTranslator(&translator);
     } else {
         qWarning() << "Translations are Disabled on user request.";
     }
 
     QDBusConnection testconn = QDBusConnection::systemBus();
-    if ( testconn.interface()->isServiceRegistered( "org.archlinux.shaman" ) ) {
-        foreach( const QString &ent, arguments ) {
+    if (testconn.interface()->isServiceRegistered("org.archlinux.shaman")) {
+        foreach(const QString &ent, arguments) {
             QString path = ent;
 
-            if ( path.contains( "pkg.tar.gz" ) ) {
-                if ( !path.startsWith( QChar('/') ) ) {
-                    path.prepend( QString ( QDir::currentPath() + QChar( '/' ) ) );
+            if (path.contains("pkg.tar.gz")) {
+                if (!path.startsWith(QChar('/'))) {
+                    path.prepend(QString(QDir::currentPath() + QChar('/')));
                 }
 
-                QDBusMessage msg = QDBusMessage::createMethodCall( "org.archlinux.shaman", "/Shaman",
-                                   "org.archlinux.shaman", "installPackageFromFile" );
+                QDBusMessage msg = QDBusMessage::createMethodCall("org.archlinux.shaman", "/Shaman",
+                                   "org.archlinux.shaman", "installPackageFromFile");
                 msg << path;
-                testconn.call( msg );
+                testconn.call(msg);
 
-                return( 0 );
+                return(0);
             }
         }
 
-        ShamanDialog::popupDialog( QObject::tr( "Shaman" ),
-                                   QObject::tr( "It looks like another copy of Shaman is running.\nYou can only run "
-                                                "one copy of Shaman at a time." ), NULL, ShamanProperties::ErrorDialog );
+        ShamanDialog::popupDialog(QObject::tr("Shaman"),
+                                  QObject::tr("It looks like another copy of Shaman is running.\nYou can only run "
+                                              "one copy of Shaman at a time."), NULL, ShamanProperties::ErrorDialog);
 
-        return( 1 );
+        return(1);
     }
 
     Shaman *shaman = new Shaman(arguments);

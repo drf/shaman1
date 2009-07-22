@@ -43,47 +43,47 @@ typedef struct arNws ArchNews;
 
 class ArchLinuxNewsReader : public QObject
 {
-        Q_OBJECT
+    Q_OBJECT
 
-    public:
-        ArchLinuxNewsReader();
-        virtual ~ArchLinuxNewsReader();
+public:
+    ArchLinuxNewsReader();
+    virtual ~ArchLinuxNewsReader();
 
-        QList<ArchLinuxNews::ArchNews> getAllEntries();
-        void setUpdateInterval();
+    QList<ArchLinuxNews::ArchNews> getAllEntries();
+    void setUpdateInterval();
 
-        QStringList getEntriesNames();
-        bool isEntryRead( const QString &title );
+    QStringList getEntriesNames();
+    bool isEntryRead(const QString &title);
 
-        QString getHttpError();
+    QString getHttpError();
 
-        bool checkUnreadNewsOnPkg( const QString &pkgname );
+    bool checkUnreadNewsOnPkg(const QString &pkgname);
 
-    public slots:
-        void fetch();
-        void finished( int id, bool error );
-        void readData( const QHttpResponseHeader & );
-        void markAsRead( const QString &name, bool status );
+public slots:
+    void fetch();
+    void finished(int id, bool error);
+    void readData(const QHttpResponseHeader &);
+    void markAsRead(const QString &name, bool status);
 
-    signals:
-        void fetchingFailed();
-        void newItems();
-        void fetchingStarted();
-        void fetchingFinished();
+signals:
+    void fetchingFailed();
+    void newItems();
+    void fetchingStarted();
+    void fetchingFinished();
 
-    private:
-        void parseXml();
+private:
+    void parseXml();
 
-        QString titleString;
-        QString linkString;
-        QString currentTag;
+    QString titleString;
+    QString linkString;
+    QString currentTag;
 
-        QXmlStreamReader xml;
-        QPointer<QHttp> http;
-        QPointer<QTimer> timer;
-        QList<ArchLinuxNews::ArchNews> entries;
+    QXmlStreamReader xml;
+    QPointer<QHttp> http;
+    QPointer<QTimer> timer;
+    QList<ArchLinuxNews::ArchNews> entries;
 
-        int connectionId;
+    int connectionId;
 };
 
 #endif /*ARCHLINUXNEWSREADER_H*/

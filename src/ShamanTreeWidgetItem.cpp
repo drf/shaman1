@@ -29,14 +29,14 @@ ShamanTreeWidgetItem::~ShamanTreeWidgetItem()
 {
 }
 
-bool ShamanTreeWidgetItem::operator<( const QTreeWidgetItem &other ) const
+bool ShamanTreeWidgetItem::operator<(const QTreeWidgetItem &other) const
 {
     int column = treeWidget() ? treeWidget()->sortColumn() : 0;
 
-    if ( column == 4 )
-        return data( column, Qt::UserRole ).toInt() < other.data( column, Qt::UserRole ).toInt();
-    else if ( column == 0 )
-        return data( column, Qt::UserRole ).toInt() < other.data( column, Qt::UserRole ).toInt();
+    if (column == 4)
+        return data(column, Qt::UserRole).toInt() < other.data(column, Qt::UserRole).toInt();
+    else if (column == 0)
+        return data(column, Qt::UserRole).toInt() < other.data(column, Qt::UserRole).toInt();
     else
-        return text( column ) < other.text( column );
+        return text(column) < other.text(column);
 }

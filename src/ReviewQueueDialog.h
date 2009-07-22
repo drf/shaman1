@@ -28,23 +28,23 @@
 
 class ReviewQueueDialog : public QDialog, private Ui::QueueReadyDialog
 {
-        Q_OBJECT
+    Q_OBJECT
 
-    public:
-        ReviewQueueDialog( MainWindow *parent );
-        virtual ~ReviewQueueDialog();
-        bool isInTray();
-        bool isTurnOff();
-        bool force();
+public:
+    ReviewQueueDialog(MainWindow *parent);
+    virtual ~ReviewQueueDialog();
+    bool isInTray();
+    bool isTurnOff();
+    bool force();
 
-    public slots:
-        void processQueue();
+public slots:
+    void processQueue();
 
-    private slots:
-        void adjust( bool tgld );
+private slots:
+    void adjust(bool tgld);
 
-    signals:
-        void goProcess();
+signals:
+    void goProcess();
 
 };
 

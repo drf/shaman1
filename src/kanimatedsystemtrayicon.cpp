@@ -22,27 +22,27 @@
 
 class KAnimatedSystemTrayIcon::Private
 {
-    public:
-        Private( const QString& m ) {
-            movie = new QMovie( m );
-        }
+public:
+    Private(const QString& m) {
+        movie = new QMovie(m);
+    }
 
-        Private( QMovie * m = 0 ) {
-            movie = m;
-        }
+    Private(QMovie * m = 0) {
+        movie = m;
+    }
 
-        ~Private() {
-            delete movie;
-        }
+    ~Private() {
+        delete movie;
+    }
 
-        QMovie * movie;
+    QMovie * movie;
 };
 
-KAnimatedSystemTrayIcon::KAnimatedSystemTrayIcon( QWidget *parent )
-        : QSystemTrayIcon( 0 )
+KAnimatedSystemTrayIcon::KAnimatedSystemTrayIcon(QWidget *parent)
+        : QSystemTrayIcon(0)
 {
-    Q_UNUSED( parent );
-    d = new Private( 0 );
+    Q_UNUSED(parent);
+    d = new Private(0);
 }
 
 KAnimatedSystemTrayIcon::~KAnimatedSystemTrayIcon()
@@ -50,7 +50,7 @@ KAnimatedSystemTrayIcon::~KAnimatedSystemTrayIcon()
     delete d;
 }
 
-void KAnimatedSystemTrayIcon::setMovie( QMovie* m )
+void KAnimatedSystemTrayIcon::setMovie(QMovie* m)
 {
     delete d->movie;
     d->movie = m;
@@ -63,26 +63,26 @@ const QMovie * KAnimatedSystemTrayIcon::movie() const
 
 void KAnimatedSystemTrayIcon::startMovie()
 {
-    if ( d->movie ) {
-        connect( d->movie, SIGNAL( frameChanged( int ) ), this, SLOT( slotNewFrame() ) );
-        d->movie->setCacheMode( QMovie::CacheAll );
+    if (d->movie) {
+        connect(d->movie, SIGNAL(frameChanged(int)), this, SLOT(slotNewFrame()));
+        d->movie->setCacheMode(QMovie::CacheAll);
         d->movie->start();
     }
 }
 
 void KAnimatedSystemTrayIcon::stopMovie()
 {
-    if ( d->movie ) {
+    if (d->movie) {
         d->movie->stop();
     }
 }
 
 bool KAnimatedSystemTrayIcon::isPlaying() const
 {
-    if ( !d->movie )
+    if (!d->movie)
         return false;
 
-    if ( d->movie->state() == QMovie::Running )
+    if (d->movie->state() == QMovie::Running)
         return true;
     else
         return false;
@@ -90,5 +90,5 @@ bool KAnimatedSystemTrayIcon::isPlaying() const
 
 void KAnimatedSystemTrayIcon::slotNewFrame()
 {
-    setIcon( QIcon( d->movie->currentPixmap() ) );
+    setIcon(QIcon(d->movie->currentPixmap()));
 }

@@ -27,24 +27,24 @@ class ArchLinuxNewsReader;
 
 class NewsViewer : public QDialog, private Ui::newsDialog
 {
-        Q_OBJECT
+    Q_OBJECT
 
-    public:
-        explicit NewsViewer( ArchLinuxNewsReader *nR, QWidget *parent = 0 );
-        virtual ~NewsViewer();
+public:
+    explicit NewsViewer(ArchLinuxNewsReader *nR, QWidget *parent = 0);
+    virtual ~NewsViewer();
 
-    public slots:
+public slots:
 
-        void populateView();
-        void markAsRead();
-        void openInBrowser();
-        void refreshView();
-        void itemChanged();
-        void fetching();
-        void fetchingError();
+    void populateView();
+    void markAsRead();
+    void openInBrowser();
+    void refreshView();
+    void itemChanged();
+    void fetching();
+    void fetchingError();
 
-    private:
-        ArchLinuxNewsReader *newsHandler;
+private:
+    ArchLinuxNewsReader *newsHandler;
 };
 
 #endif /*NEWSVIEWER_H*/

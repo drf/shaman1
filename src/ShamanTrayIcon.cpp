@@ -37,14 +37,14 @@
 
 using namespace Aqpm;
 
-ShamanTrayIcon::ShamanTrayIcon( MainWindow *mW )
-        : KAnimatedSystemTrayIcon( mW ),
-        mainWin( mW )
+ShamanTrayIcon::ShamanTrayIcon(MainWindow *mW)
+        : KAnimatedSystemTrayIcon(mW),
+        mainWin(mW)
 {
-    if ( Backend::instance()->getUpgradeablePackages().isEmpty() ) {
-        changeIconStatus( ShamanIcon::IdleIcon );
+    if (Backend::instance()->getUpgradeablePackages().isEmpty()) {
+        changeIconStatus(ShamanIcon::IdleIcon);
     } else {
-        changeIconStatus( ShamanIcon::UpgradesAvailableIcon );
+        changeIconStatus(ShamanIcon::UpgradesAvailableIcon);
     }
 
     show();
@@ -53,36 +53,36 @@ ShamanTrayIcon::ShamanTrayIcon( MainWindow *mW )
 
     QMenu *systrayMenu = new QMenu();
 
-    QAction *updateDBAction = systrayMenu->addAction( QIcon( ":/Icons/icons/view-refresh.png" ), tr( "Update Database" ) );
-    connect( updateDBAction, SIGNAL( triggered() ), mainWin, SLOT( doDbUpdate() ) );
-    systrayAct.append( updateDBAction );
+    QAction *updateDBAction = systrayMenu->addAction(QIcon(":/Icons/icons/view-refresh.png"), tr("Update Database"));
+    connect(updateDBAction, SIGNAL(triggered()), mainWin, SLOT(doDbUpdate()));
+    systrayAct.append(updateDBAction);
 
-    QAction *upgradeAction = systrayMenu->addAction( QIcon( ":/Icons/icons/system-software-update.png" ), tr( "Upgrade System" ) );
-    connect( upgradeAction, SIGNAL( triggered() ), mainWin, SLOT( fullSysUpgrade() ) );
-    systrayAct.append( upgradeAction );
+    QAction *upgradeAction = systrayMenu->addAction(QIcon(":/Icons/icons/system-software-update.png"), tr("Upgrade System"));
+    connect(upgradeAction, SIGNAL(triggered()), mainWin, SLOT(fullSysUpgrade()));
+    systrayAct.append(upgradeAction);
 
-    QAction *queueAction = systrayMenu->addAction( QIcon( ":/Icons/icons/dialog-ok-apply.png" ), tr( "Process Queue" ) );
-    connect( queueAction, SIGNAL( triggered() ), mainWin, SLOT( widgetQueueToAlpmQueue() ) );
-    systrayAct.append( queueAction );
+    QAction *queueAction = systrayMenu->addAction(QIcon(":/Icons/icons/dialog-ok-apply.png"), tr("Process Queue"));
+    connect(queueAction, SIGNAL(triggered()), mainWin, SLOT(widgetQueueToAlpmQueue()));
+    systrayAct.append(queueAction);
     systrayMenu->addSeparator();
 
-    QAction *settingsAction = systrayMenu->addAction( QIcon( ":/Icons/icons/preferences-system.png" ), tr( "Settings" ) );
-    connect( settingsAction, SIGNAL( triggered() ), mainWin, SLOT( showSettings() ) );
-    systrayAct.append( settingsAction );
+    QAction *settingsAction = systrayMenu->addAction(QIcon(":/Icons/icons/preferences-system.png"), tr("Settings"));
+    connect(settingsAction, SIGNAL(triggered()), mainWin, SLOT(showSettings()));
+    systrayAct.append(settingsAction);
     systrayMenu->addSeparator();
 
-    QAction *closeAction = systrayMenu->addAction( QIcon( ":/Icons/icons/application-exit.png" ), tr( "Quit" ) );
-    connect( closeAction, SIGNAL( triggered() ), mainWin, SLOT( quitApp() ) );
-    systrayAct.append( closeAction );
+    QAction *closeAction = systrayMenu->addAction(QIcon(":/Icons/icons/application-exit.png"), tr("Quit"));
+    connect(closeAction, SIGNAL(triggered()), mainWin, SLOT(quitApp()));
+    systrayAct.append(closeAction);
 
     //Add actions here ;)
-    setContextMenu( systrayMenu );
+    setContextMenu(systrayMenu);
 
-    connect( Backend::instance(), SIGNAL( transactionStarted() ), SLOT( transactionStarted() ) );
-    connect( Backend::instance(), SIGNAL( transactionReleased() ), SLOT( transactionReleased() ) );
+    connect(Backend::instance(), SIGNAL(transactionStarted()), SLOT(transactionStarted()));
+    connect(Backend::instance(), SIGNAL(transactionReleased()), SLOT(transactionReleased()));
 
-    connect( mainWin, SIGNAL( buildingStarted() ), SLOT( transactionStarted() ) );
-    connect( mainWin, SIGNAL( buildingFinished() ), SLOT( transactionReleased() ) );
+    connect(mainWin, SIGNAL(buildingStarted()), SLOT(transactionStarted()));
+    connect(mainWin, SIGNAL(buildingFinished()), SLOT(transactionReleased()));
 
     QSettings *settings = new QSettings();
 
@@ -102,7 +102,7 @@ void ShamanTrayIcon::dbUpdateTray()
      * this cycle, and see you next time.
      */
 
-    if ( Backend::instance()->isOnTransaction() )
+    if (Backend::instance()->isOnTransaction())
         return;
 
     /* Ok, let's silently perform a Db Update.
@@ -111,9 +111,9 @@ void ShamanTrayIcon::dbUpdateTray()
     emit startDbUpdate();
 }
 
-void ShamanTrayIcon::changeIconStatus( ShamanIcon::IconStatus status )
+void ShamanTrayIcon::changeIconStatus(ShamanIcon::IconStatus status)
 {
-    if ( status == ShamanIcon::IdleIcon ) {
+    if (status == ShamanIcon::IdleIcon) {
         stopMovie();
         QIcon shamanIcon;
         shamanIcon.addFile(":/Icons/icons/shaman/hi32-app-shaman.png");
@@ -121,34 +121,34 @@ void ShamanTrayIcon::changeIconStatus( ShamanIcon::IconStatus status )
         shamanIcon.addFile(":/Icons/icons/shaman/hi64-app-shaman.png");
         shamanIcon.addFile(":/Icons/icons/shaman/hi128-app-shaman.png");
         setIcon(shamanIcon);
-        setToolTip( QString( tr( "Shaman - Idle" ) ) );
-    } else if ( status == ShamanIcon::ProcessingIcon ) {
+        setToolTip(QString(tr("Shaman - Idle")));
+    } else if (status == ShamanIcon::ProcessingIcon) {
         QSettings *settings = new QSettings();
 
-        if ( settings->value( "trayicon/useanimatedicon", true ).toBool() ) {
-            setMovie( new QMovie( ":/Icons/icons/shaman/shaman-animation.mng" ) );
+        if (settings->value("trayicon/useanimatedicon", true).toBool()) {
+            setMovie(new QMovie(":/Icons/icons/shaman/shaman-animation.mng"));
             startMovie();
         } else
-            setIcon( QIcon( ":/Icons/icons/shaman/shaman-yellow-icon-32.png" ) );
+            setIcon(QIcon(":/Icons/icons/shaman/shaman-yellow-icon-32.png"));
 
         settings->deleteLater();
 
-        setToolTip( QString( tr( "Shaman - Processing" ) ) );
+        setToolTip(QString(tr("Shaman - Processing")));
     } else {
         Package::List upgrds = Backend::instance()->getUpgradeablePackages();
         stopMovie();
-        setIcon( QIcon( ":/Icons/icons/shaman/shaman-updates-available-32.png" ) );
-        setToolTip( QString( tr( "Shaman - Idle (Upgrades Available)" ) ) );
+        setIcon(QIcon(":/Icons/icons/shaman/shaman-updates-available-32.png"));
+        setToolTip(QString(tr("Shaman - Idle (Upgrades Available)")));
 
         QSettings *settings = new QSettings();
-        if ( settings->value( "scheduledUpdate/updateDbShowNotify" ).toBool() ) {
-            showMessage( QString( tr( "System Upgrade" ) ), QString( tr( "Upgradeable package(s): %n.\n"
-                         "Click here to upgrade your System.", "", upgrds.size() ) ) );
-            disconnect( this, SIGNAL( messageClicked() ), 0, 0 );
-            connect( this, SIGNAL( messageClicked() ), SIGNAL( upgradePkgs() ) );
-            QTimer::singleShot( 10000, this, SLOT( disconnectBaloon() ) );
+        if (settings->value("scheduledUpdate/updateDbShowNotify").toBool()) {
+            showMessage(QString(tr("System Upgrade")), QString(tr("Upgradeable package(s): %n.\n"
+                        "Click here to upgrade your System.", "", upgrds.size())));
+            disconnect(this, SIGNAL(messageClicked()), 0, 0);
+            connect(this, SIGNAL(messageClicked()), SIGNAL(upgradePkgs()));
+            QTimer::singleShot(10000, this, SLOT(disconnectBaloon()));
         }
-        if ( settings->value( "scheduledUpdate/addupgradestoqueue" ).toBool() )
+        if (settings->value("scheduledUpdate/addupgradestoqueue").toBool())
             mainWin->addUpgradeableToQueue();
 
         settings->deleteLater();
@@ -159,42 +159,42 @@ void ShamanTrayIcon::transactionStarted()
 {
     disableTrayActions();
 
-    changeIconStatus( ShamanIcon::ProcessingIcon );
+    changeIconStatus(ShamanIcon::ProcessingIcon);
 }
 
 void ShamanTrayIcon::transactionReleased()
 {
     enableTrayActions();
 
-    if ( Backend::instance()->getUpgradeablePackages().isEmpty() ) {
-        changeIconStatus( ShamanIcon::IdleIcon );
+    if (Backend::instance()->getUpgradeablePackages().isEmpty()) {
+        changeIconStatus(ShamanIcon::IdleIcon);
     } else {
-        changeIconStatus( ShamanIcon::UpgradesAvailableIcon );
+        changeIconStatus(ShamanIcon::UpgradesAvailableIcon);
     }
 }
 
 void ShamanTrayIcon::enableTrayActions()
 {
-    foreach( QAction *act, systrayAct )
-    act->setEnabled( true );
+    foreach(QAction *act, systrayAct)
+    act->setEnabled(true);
 }
 
 void ShamanTrayIcon::disableTrayActions()
 {
-    foreach( QAction *act, systrayAct )
-    act->setEnabled( false );
+    foreach(QAction *act, systrayAct)
+    act->setEnabled(false);
 }
 
 void ShamanTrayIcon::startTimer()
 {
     enableTimer();
 
-    if ( !trayUpDb )
+    if (!trayUpDb)
         return;
 
     QSettings *settings = new QSettings();
 
-    if ( settings->value( "scheduledUpdate/enabled" ).toBool() == true )
+    if (settings->value("scheduledUpdate/enabled").toBool() == true)
         trayUpDb->start();
 
     settings->deleteLater();
@@ -204,12 +204,12 @@ void ShamanTrayIcon::stopTimer()
 {
     enableTimer();
 
-    if ( !trayUpDb )
+    if (!trayUpDb)
         return;
 
     QSettings *settings = new QSettings();
 
-    if ( settings->value( "scheduledUpdate/enabled" ).toBool() == true )
+    if (settings->value("scheduledUpdate/enabled").toBool() == true)
         trayUpDb->stop();
 
     settings->deleteLater();
@@ -220,22 +220,22 @@ void ShamanTrayIcon::changeTimerInterval()
 {
     enableTimer();
 
-    if ( !trayUpDb )
+    if (!trayUpDb)
         return;
 
     QSettings *settings = new QSettings();
 
-    if ( settings->value( "scheduledUpdate/enabled" ).toBool() ) {
-        if ( trayUpDb == NULL )
-            trayUpDb = new QTimer( this );
+    if (settings->value("scheduledUpdate/enabled").toBool()) {
+        if (trayUpDb == NULL)
+            trayUpDb = new QTimer(this);
         else
-            disconnect( trayUpDb, 0, 0, 0 );
+            disconnect(trayUpDb, 0, 0, 0);
 
-        trayUpDb->setInterval( settings->value( "scheduledUpdate/interval", 10 ).toInt() * 60000 );
+        trayUpDb->setInterval(settings->value("scheduledUpdate/interval", 10).toInt() * 60000);
 
-        connect( trayUpDb, SIGNAL( timeout() ), SLOT( dbUpdateTray() ) );
+        connect(trayUpDb, SIGNAL(timeout()), SLOT(dbUpdateTray()));
     } else {
-        if ( trayUpDb != NULL ) {
+        if (trayUpDb != NULL) {
             trayUpDb->deleteLater();
             trayUpDb = NULL;
         }
@@ -248,53 +248,53 @@ void ShamanTrayIcon::newNewsAvailable()
 {
     QSettings *settings = new QSettings();
 
-    if ( !settings->value( "newsreader/userss" ).toBool() || !settings->value( "newsreader/notifynew" ).toBool() ) {
+    if (!settings->value("newsreader/userss").toBool() || !settings->value("newsreader/notifynew").toBool()) {
         settings->deleteLater();
         return;
     }
 
-    showMessage( QString( tr( "New News Available" ) ), QString( tr( "There are new news available.\n"
-                 "Click here to review them." ) ) );
-    disconnect( this, SIGNAL( messageClicked() ), 0, 0 );
-    connect( this, SIGNAL( messageClicked() ), mainWin, SLOT( openNewsDialog() ) );
-    QTimer::singleShot( 10000, this, SLOT( disconnectBaloon() ) );
+    showMessage(QString(tr("New News Available")), QString(tr("There are new news available.\n"
+                "Click here to review them.")));
+    disconnect(this, SIGNAL(messageClicked()), 0, 0);
+    connect(this, SIGNAL(messageClicked()), mainWin, SLOT(openNewsDialog()));
+    QTimer::singleShot(10000, this, SLOT(disconnectBaloon()));
 }
 
 void ShamanTrayIcon::newsFetchingFailed()
 {
     QSettings *settings = new QSettings();
 
-    if ( !settings->value( "newsreader/userss" ).toBool() ) {
+    if (!settings->value("newsreader/userss").toBool()) {
         settings->deleteLater();
         return;
     }
 
-    showMessage( QString( tr( "Failed Fetching News" ) ), QString( tr( "An error occourred while fetching news!\n"
-                 "Click here to open the News Dialog for more details." ) ) );
-    disconnect( this, SIGNAL( messageClicked() ), 0, 0 );
-    connect( this, SIGNAL( messageClicked() ), mainWin, SLOT( openNewsDialog() ) );
-    QTimer::singleShot( 10000, this, SLOT( disconnectBaloon() ) );
+    showMessage(QString(tr("Failed Fetching News")), QString(tr("An error occourred while fetching news!\n"
+                "Click here to open the News Dialog for more details.")));
+    disconnect(this, SIGNAL(messageClicked()), 0, 0);
+    connect(this, SIGNAL(messageClicked()), mainWin, SLOT(openNewsDialog()));
+    QTimer::singleShot(10000, this, SLOT(disconnectBaloon()));
 }
 
 void ShamanTrayIcon::disconnectBaloon()
 {
-    disconnect( this, SIGNAL( messageClicked() ), 0, 0 );
+    disconnect(this, SIGNAL(messageClicked()), 0, 0);
 }
 
 void ShamanTrayIcon::enableTimer()
 {
     QSettings *settings = new QSettings();
 
-    if ( settings->value( "scheduledUpdate/enabled" ).toBool() ) {
-        if ( trayUpDb )
+    if (settings->value("scheduledUpdate/enabled").toBool()) {
+        if (trayUpDb)
             return;
 
-        trayUpDb = new QTimer( this ); /* Oh yeah :) */
-        trayUpDb->setInterval( settings->value( "scheduledUpdate/interval", 10 ).toInt() * 60000 );
+        trayUpDb = new QTimer(this);   /* Oh yeah :) */
+        trayUpDb->setInterval(settings->value("scheduledUpdate/interval", 10).toInt() * 60000);
 
-        connect( trayUpDb, SIGNAL( timeout() ), SLOT( dbUpdateTray() ) );
+        connect(trayUpDb, SIGNAL(timeout()), SLOT(dbUpdateTray()));
     } else {
-        if ( trayUpDb )
+        if (trayUpDb)
             trayUpDb->deleteLater();
     }
 
@@ -305,15 +305,15 @@ void ShamanTrayIcon::enableTimerAt()
 {
     QSettings *settings = new QSettings();
 
-    if ( settings->value( "scheduledUpdate/enabledat" ).toBool() ) {
-        if ( trayUpDbAt )
+    if (settings->value("scheduledUpdate/enabledat").toBool()) {
+        if (trayUpDbAt)
             return;
 
-        trayUpDbAt = new QTimer( this ); /* Oh yeah :) */
+        trayUpDbAt = new QTimer(this);   /* Oh yeah :) */
 
-        connect( trayUpDb, SIGNAL( timeout() ), SLOT( timerAtElapsed() ) );
+        connect(trayUpDb, SIGNAL(timeout()), SLOT(timerAtElapsed()));
     } else {
-        if ( trayUpDbAt )
+        if (trayUpDbAt)
             trayUpDbAt->deleteLater();
     }
 
@@ -324,25 +324,25 @@ void ShamanTrayIcon::resetTimerAt()
 {
     enableTimerAt();
 
-    if ( !trayUpDbAt )
+    if (!trayUpDbAt)
         return;
 
     trayUpDbAt->stop();
 
     QSettings *settings = new QSettings();
 
-    QTime time = settings->value( "scheduledUpdate/updatetime" ).toTime();
+    QTime time = settings->value("scheduledUpdate/updatetime").toTime();
 
     int interval;
 
-    if ( QTime::currentTime().msecsTo( time ) < 0 )
-        interval = 86400000 + QTime::currentTime().msecsTo( time );
+    if (QTime::currentTime().msecsTo(time) < 0)
+        interval = 86400000 + QTime::currentTime().msecsTo(time);
     else
-        interval = QTime::currentTime().msecsTo( time );
+        interval = QTime::currentTime().msecsTo(time);
 
     qDebug() << interval << "to elapse";
 
-    trayUpDbAt->setInterval( interval );
+    trayUpDbAt->setInterval(interval);
 
     trayUpDbAt->start();
 
@@ -355,14 +355,14 @@ void ShamanTrayIcon::timerAtElapsed()
      * this cycle, and see you next time.
      */
 
-    if ( Backend::instance()->isOnTransaction() )
+    if (Backend::instance()->isOnTransaction())
         return;
 
     /* Set back the timer */
 
     trayUpDbAt->stop();
 
-    trayUpDbAt->setInterval( 86400000 );
+    trayUpDbAt->setInterval(86400000);
 
     trayUpDbAt->start();
 

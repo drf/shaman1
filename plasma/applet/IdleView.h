@@ -39,34 +39,34 @@ class KCompletion;
 
 class IdleView : public AbstractView
 {
-        Q_OBJECT
+    Q_OBJECT
 
-    public:
-        IdleView( Plasma::Applet *parent, QDBusConnection dbs );
-        virtual ~IdleView();
+public:
+    IdleView(Plasma::Applet *parent, QDBusConnection dbs);
+    virtual ~IdleView();
 
-        void installPackageFromFile( const QString &filename );
+    void installPackageFromFile(const QString &filename);
 
-    private slots:
-        void updateDatabase();
-        void upgradeSystem();
-        void installPackage();
-        void removePackage();
-        void showContextMenu();
+private slots:
+    void updateDatabase();
+    void upgradeSystem();
+    void installPackage();
+    void removePackage();
+    void showContextMenu();
 
 
-    private:
-        QDBusConnection m_dbus;
-        QGraphicsLinearLayout *m_layout;
-        KLineEdit *m_packageLineEdit;
-        Plasma::Icon *m_updateDatabaseIcon;
-        Plasma::Icon *m_upgradeSystemIcon;
-        QGraphicsLinearLayout *m_actionsLayout;
-        Plasma::Icon *m_actionIcon;
-        QGraphicsLinearLayout *m_lineLayout;
-        QGraphicsProxyWidget *m_lineEdit;
-        KMenu *m_contextMenu;
-        KCompletion *m_completion;
+private:
+    QDBusConnection m_dbus;
+    QGraphicsLinearLayout *m_layout;
+    KLineEdit *m_packageLineEdit;
+    Plasma::Icon *m_updateDatabaseIcon;
+    Plasma::Icon *m_upgradeSystemIcon;
+    QGraphicsLinearLayout *m_actionsLayout;
+    Plasma::Icon *m_actionIcon;
+    QGraphicsLinearLayout *m_lineLayout;
+    QGraphicsProxyWidget *m_lineEdit;
+    KMenu *m_contextMenu;
+    KCompletion *m_completion;
 };
 
 #endif /*IDLEVIEW_H*/

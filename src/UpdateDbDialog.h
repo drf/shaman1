@@ -29,42 +29,42 @@
 
 class UpdateDbDialog : public QDialog, private Ui::dbUpdateDialog
 {
-        Q_OBJECT
+    Q_OBJECT
 
-    public:
-        explicit UpdateDbDialog( QWidget *parent = 0 );
-        ~UpdateDbDialog();
+public:
+    explicit UpdateDbDialog(QWidget *parent = 0);
+    ~UpdateDbDialog();
 
-        bool dbHasBeenUpdated();
-        bool anyErrors();
+    bool dbHasBeenUpdated();
+    bool anyErrors();
 
-    public slots:
-        void doAction();
-        QStringList getUpdatedRepos();
+public slots:
+    void doAction();
+    QStringList getUpdatedRepos();
 
-    private slots:
-        void updateLabel( const QString &repo, int action );
-        //void updateDlProg(float bytetotal, float bytedled, float speed);
-        void createWidgets( const QStringList &list );
-        void updateTotalProg();
-        void setUpdated( const QString &dbname );
-        void scopeEnded();
-        void updateDlBar();
+private slots:
+    void updateLabel(const QString &repo, int action);
+    //void updateDlProg(float bytetotal, float bytedled, float speed);
+    void createWidgets(const QStringList &list);
+    void updateTotalProg();
+    void setUpdated(const QString &dbname);
+    void scopeEnded();
+    void updateDlBar();
 
-    signals:
-        void killMe();
-        void updateRepo( const QString &dbname );
-        void pBar( int val );
+signals:
+    void killMe();
+    void updateRepo(const QString &dbname);
+    void pBar(int val);
 
-    private:
-        int currentAction;
-        char *currentRepo;
-        int actionDone;
-        int totalAction;
-        bool updated;
-        bool errorsOccourred;
-        QList<QLabel *> labelList;
-        QStringList updatedRepos;
+private:
+    int currentAction;
+    char *currentRepo;
+    int actionDone;
+    int totalAction;
+    bool updated;
+    bool errorsOccourred;
+    QList<QLabel *> labelList;
+    QStringList updatedRepos;
 
 };
 

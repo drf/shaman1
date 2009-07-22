@@ -45,13 +45,13 @@
 #define MARGIN 20
 #define SPACING 30
 
-ShamanApplet::ShamanApplet( QObject *parent, const QVariantList &args )
-        : Plasma::Applet( parent, args ),
-        m_dbus( QDBusConnection::systemBus() )
+ShamanApplet::ShamanApplet(QObject *parent, const QVariantList &args)
+        : Plasma::Applet(parent, args),
+        m_dbus(QDBusConnection::systemBus())
 {
-    setHasConfigurationInterface( false );
-    setAspectRatioMode( Plasma::IgnoreAspectRatio );
-    setBackgroundHints( Applet::DefaultBackground );
+    setHasConfigurationInterface(false);
+    setAspectRatioMode(Plasma::IgnoreAspectRatio);
+    setBackgroundHints(Applet::DefaultBackground);
 
     //connect(Plasma::Theme::defaultTheme(), SIGNAL(themeChanged()), this, SLOT(themeRefresh()));
 }
@@ -65,34 +65,34 @@ ShamanApplet::~ShamanApplet()
 
 void ShamanApplet::init()
 {
-    setSizePolicy( QSizePolicy( QSizePolicy::Expanding, QSizePolicy::Expanding ) );
+    setSizePolicy(QSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding));
 
     m_layout = new QGraphicsLinearLayout();
-    m_layout->setSpacing( SPACING );
-    m_layout->setOrientation( Qt::Vertical );
+    m_layout->setSpacing(SPACING);
+    m_layout->setOrientation(Qt::Vertical);
 
     /*m_form = new QGraphicsWidget(this);
     m_form->setContentsMargins(MARGIN, TOP_MARGIN, MARGIN, MARGIN);
     m_form->setLayout(m_layout);*/
 
-    if ( formFactor() == Plasma::Vertical || formFactor() == Plasma::Horizontal ) {
-        m_layout->setContentsMargins( 0, 0, 0, 0 );
-        setBackgroundHints( NoBackground );
+    if (formFactor() == Plasma::Vertical || formFactor() == Plasma::Horizontal) {
+        m_layout->setContentsMargins(0, 0, 0, 0);
+        setBackgroundHints(NoBackground);
     } else {
-        m_layout->setContentsMargins( MARGIN, TOP_MARGIN, MARGIN, MARGIN );
-        setMinimumSize( QSize( 300, 300 ) );
+        m_layout->setContentsMargins(MARGIN, TOP_MARGIN, MARGIN, MARGIN);
+        setMinimumSize(QSize(300, 300));
     }
-    setLayout( m_layout );
+    setLayout(m_layout);
 
-    m_engine = dataEngine( "shaman" );
+    m_engine = dataEngine("shaman");
 
-    if ( m_engine ) {
-        m_engine->connectSource( "Shaman", this );
-        m_engine->setProperty( "refreshTime", 2000 );
+    if (m_engine) {
+        m_engine->connectSource("Shaman", this);
+        m_engine->setProperty("refreshTime", 2000);
     } else
         kDebug() << "Shaman Engine could not be loaded";
 
-    setAcceptDrops( true );
+    setAcceptDrops(true);
 }
 
 /*QSizeF ShamanApplet::contentSizeHint() const
@@ -109,56 +109,56 @@ void ShamanApplet::constraintsEvent(Plasma::Constraints constraints)
     }
 }*/
 
-void ShamanApplet::dataUpdated( const QString &source, const Plasma::DataEngine::Data &data )
+void ShamanApplet::dataUpdated(const QString &source, const Plasma::DataEngine::Data &data)
 {
     kDebug() << "called";
 
-    Q_UNUSED( source )
+    Q_UNUSED(source)
 
-    if ( data["error"].toBool() && !m_error ) {
+    if (data["error"].toBool() && !m_error) {
         m_errorMessage = data["errorMessage"].toString();
-        loadView( ShamanApplet::ErrorViewType );
-    } else if ( !data["error"].toBool() ) {
-        if ( data["onTransaction"].toBool() && data["transactionStatus"].toString() != "idle" ) {
+        loadView(ShamanApplet::ErrorViewType);
+    } else if (!data["error"].toBool()) {
+        if (data["onTransaction"].toBool() && data["transactionStatus"].toString() != "idle") {
             kDebug() << "Is on transaction";
-            loadView( ShamanApplet::TransactionType );
+            loadView(ShamanApplet::TransactionType);
 
-            emit status( data["transactionStatus"].toString() );
+            emit status(data["transactionStatus"].toString());
 
-            if ( data["onDownloading"].toBool() )
-                emit dlProgress( data["CurrentItemProcessed"].toString(),
-                                 data["TotalDlPercent"].toInt(),
-                                 data["TotalDlSpeed"].toInt() );
+            if (data["onDownloading"].toBool())
+                emit dlProgress(data["CurrentItemProcessed"].toString(),
+                                data["TotalDlPercent"].toInt(),
+                                data["TotalDlSpeed"].toInt());
             else
-                emit transProgress( data["transactionPercent"].toInt() );
+                emit transProgress(data["transactionPercent"].toInt());
         } else
-            loadView( ShamanApplet::IdleType );
+            loadView(ShamanApplet::IdleType);
     }
 
     m_error = data["error"].toBool();
 }
 
-void ShamanApplet::loadView( uint type )
+void ShamanApplet::loadView(uint type)
 {
-    if ( type != m_viewType ) {
-        if ( m_view ) {
+    if (type != m_viewType) {
+        if (m_view) {
             kDebug() << "Deleting old view";
             delete m_view;
         }
 
         kDebug() << "Creating new View";
 
-        switch ( type ) {
+        switch (type) {
         case ShamanApplet::ErrorViewType :
-            m_view = new ErrorView( this, m_errorMessage );
+            m_view = new ErrorView(this, m_errorMessage);
             break;
         case ShamanApplet::TransactionType :
-            m_view = new TransactionView( this, m_dbus );
+            m_view = new TransactionView(this, m_dbus);
             break;
         case ShamanApplet::IdleType :
 
         default:
-            m_view = new IdleView( this, m_dbus );
+            m_view = new IdleView(this, m_dbus);
             break;
         }
 
@@ -174,24 +174,24 @@ void ShamanApplet::loadView( uint type )
     }
 }
 
-void ShamanApplet::dropEvent( QGraphicsSceneDragDropEvent *event )
+void ShamanApplet::dropEvent(QGraphicsSceneDragDropEvent *event)
 {
     kDebug() << "Drop happened";
 
-    IdleView *idleview = qobject_cast<IdleView *>( m_view );
+    IdleView *idleview = qobject_cast<IdleView *>(m_view);
 
-    if ( !idleview ) {
+    if (!idleview) {
         event->ignore();
         return;
     }
 
-    if ( KUrl::List::canDecode( event->mimeData() ) ) {
-        const KUrl::List urls = KUrl::List::fromMimeData( event->mimeData() );
-        if ( urls.count() > 0 ) {
+    if (KUrl::List::canDecode(event->mimeData())) {
+        const KUrl::List urls = KUrl::List::fromMimeData(event->mimeData());
+        if (urls.count() > 0) {
             event->accept();
 
-            foreach( const KUrl& url, urls ) {
-                idleview->installPackageFromFile( url.path() );
+            foreach(const KUrl& url, urls) {
+                idleview->installPackageFromFile(url.path());
             }
         }
     }

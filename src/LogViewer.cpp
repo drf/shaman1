@@ -25,18 +25,18 @@
 #include <QDate>
 #include "alpm.h"
 
-LogViewer::LogViewer( QWidget *parent )
-        : QDialog( parent )
+LogViewer::LogViewer(QWidget *parent)
+        : QDialog(parent)
 {
-    setupUi( this );
+    setupUi(this);
 
     loadLog();
     refreshView();
 
-    connect( refreshButton, SIGNAL( clicked() ), SLOT( refreshView() ) );
-    connect( searchLine, SIGNAL( textChanged( QString ) ), SLOT( refreshView() ) );
+    connect(refreshButton, SIGNAL(clicked()), SLOT(refreshView()));
+    connect(searchLine, SIGNAL(textChanged(QString)), SLOT(refreshView()));
 
-    setAttribute( Qt::WA_DeleteOnClose );
+    setAttribute(Qt::WA_DeleteOnClose);
 }
 
 LogViewer::~LogViewer()
@@ -45,29 +45,29 @@ LogViewer::~LogViewer()
 
 void LogViewer::loadLog()
 {
-    QFile fp( alpm_option_get_logfile() );
+    QFile fp(alpm_option_get_logfile());
 
     contents.clear();
 
-    if ( !fp.open( QIODevice::ReadOnly | QIODevice::Text ) )
+    if (!fp.open(QIODevice::ReadOnly | QIODevice::Text))
         return;
 
-    QTextStream in( &fp );
+    QTextStream in(&fp);
 
-    while ( !in.atEnd() ) {
+    while (!in.atEnd()) {
         QString line = in.readLine();
-        contents.append( line );
+        contents.append(line);
     }
 
     fp.close();
 
-    dateFrom->setDate( QDate( contents.at( 0 ).mid( 1, 4 ).toInt(),
-                              contents.at( 0 ).mid( 6, 2 ).toInt(),
-                              contents.at( 0 ).mid( 9, 2 ).toInt() ) );
+    dateFrom->setDate(QDate(contents.at(0).mid(1, 4).toInt(),
+                            contents.at(0).mid(6, 2).toInt(),
+                            contents.at(0).mid(9, 2).toInt()));
 
-    dateUntil->setDate( QDate( contents.at( contents.size() - 1 ).mid( 1, 4 ).toInt(),
-                               contents.at( contents.size() - 1 ).mid( 6, 2 ).toInt(),
-                               contents.at( contents.size() - 1 ).mid( 9, 2 ).toInt() ) );
+    dateUntil->setDate(QDate(contents.at(contents.size() - 1).mid(1, 4).toInt(),
+                             contents.at(contents.size() - 1).mid(6, 2).toInt(),
+                             contents.at(contents.size() - 1).mid(9, 2).toInt()));
 
 }
 
@@ -75,37 +75,37 @@ void LogViewer::refreshView()
 {
     QString toShow;
 
-    refreshButton->setEnabled( false );
+    refreshButton->setEnabled(false);
 
     qApp->processEvents();
 
     textEdit->clear();
 
-    foreach( const QString &ent, contents ) {
-        if ( dateFromBox->isChecked() ) {
-            QDate lineDate( ent.mid( 1, 4 ).toInt(), ent.mid( 6, 2 ).toInt(), ent.mid( 9, 2 ).toInt() );
+    foreach(const QString &ent, contents) {
+        if (dateFromBox->isChecked()) {
+            QDate lineDate(ent.mid(1, 4).toInt(), ent.mid(6, 2).toInt(), ent.mid(9, 2).toInt());
 
-            if ( lineDate < dateFrom->date() )
+            if (lineDate < dateFrom->date())
                 continue;
         }
 
-        if ( dateTilBox->isChecked() ) {
-            QDate lineDate( ent.mid( 1, 4 ).toInt(), ent.mid( 6, 2 ).toInt(), ent.mid( 9, 2 ).toInt() );
+        if (dateTilBox->isChecked()) {
+            QDate lineDate(ent.mid(1, 4).toInt(), ent.mid(6, 2).toInt(), ent.mid(9, 2).toInt());
 
-            if ( lineDate > dateUntil->date() )
+            if (lineDate > dateUntil->date())
                 continue;
         }
 
-        if ( !searchLine->text().isEmpty() )
-            if ( !ent.contains( searchLine->text() ) )
+        if (!searchLine->text().isEmpty())
+            if (!ent.contains(searchLine->text()))
                 continue;
 
-        toShow.append( ent + QChar( '\n' ) );
+        toShow.append(ent + QChar('\n'));
     }
 
-    textEdit->setText( toShow );
+    textEdit->setText(toShow);
 
-    textEdit->moveCursor( QTextCursor::End );
+    textEdit->moveCursor(QTextCursor::End);
 
-    refreshButton->setEnabled( true );
+    refreshButton->setEnabled(true);
 }

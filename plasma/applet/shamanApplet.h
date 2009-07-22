@@ -42,49 +42,49 @@ class AbstractView;
 
 class ShamanApplet : public Plasma::Applet
 {
-        Q_OBJECT
+    Q_OBJECT
 
-    public:
-        enum ViewType {
-            ErrorViewType = 1,
-            IdleType = 2,
-            TransactionType = 3
-        };
+public:
+    enum ViewType {
+        ErrorViewType = 1,
+        IdleType = 2,
+        TransactionType = 3
+    };
 
-        ShamanApplet( QObject *parent, const QVariantList &args );
-        ~ShamanApplet();
+    ShamanApplet(QObject *parent, const QVariantList &args);
+    ~ShamanApplet();
 
-        void init();
+    void init();
 
-        //QSizeF contentSizeHint() const;
-        //void constraintsEvent(Plasma::Constraints constraints);
+    //QSizeF contentSizeHint() const;
+    //void constraintsEvent(Plasma::Constraints constraints);
 
-    public slots:
-        void dataUpdated( const QString &name, const Plasma::DataEngine::Data &data );
+public slots:
+    void dataUpdated(const QString &name, const Plasma::DataEngine::Data &data);
 
-    private:
-        void loadView( uint type );
+private:
+    void loadView(uint type);
 
-    protected:
-        void dropEvent( QGraphicsSceneDragDropEvent *event );
+protected:
+    void dropEvent(QGraphicsSceneDragDropEvent *event);
 
-    signals:
-        void status( const QString &status );
-        void dlProgress( const QString &filename, int totalPercent, int totalSpeed );
-        void transProgress( int percent );
+signals:
+    void status(const QString &status);
+    void dlProgress(const QString &filename, int totalPercent, int totalSpeed);
+    void transProgress(int percent);
 
-    private:
-        //Plasma::Svg *m_theme;
-        Plasma::DataEngine *m_engine;
-        QGraphicsLinearLayout *m_layout;
-        QGraphicsWidget *m_form;
-        QDBusConnection m_dbus;
-        QPointer<AbstractView> m_view;
-        QString m_errorMessage;
-        bool m_error;
-        uint m_viewType;
+private:
+    //Plasma::Svg *m_theme;
+    Plasma::DataEngine *m_engine;
+    QGraphicsLinearLayout *m_layout;
+    QGraphicsWidget *m_form;
+    QDBusConnection m_dbus;
+    QPointer<AbstractView> m_view;
+    QString m_errorMessage;
+    bool m_error;
+    uint m_viewType;
 };
 
-K_EXPORT_PLASMA_APPLET( shaman, ShamanApplet )
+K_EXPORT_PLASMA_APPLET(shaman, ShamanApplet)
 
 #endif

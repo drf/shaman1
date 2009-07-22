@@ -27,26 +27,26 @@
 
 class ShamanRunner : public Plasma::AbstractRunner
 {
-        Q_OBJECT
-    public:
-        ShamanRunner( QObject *parent, const QVariantList &args );
-        ~ShamanRunner();
+    Q_OBJECT
+public:
+    ShamanRunner(QObject *parent, const QVariantList &args);
+    ~ShamanRunner();
 
-        void match( Plasma::RunnerContext &context );
-        void run( const Plasma::RunnerContext &context, const Plasma::QueryMatch &action );
+    void match(Plasma::RunnerContext &context);
+    void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action);
 
-    private slots:
-        void executeAction();
+private slots:
+    void executeAction();
 
-    private:
-        void startShaman();
+private:
+    void startShaman();
 
-    private:
-        QStringList words;
-        QString execTerm;
-        QDBusConnection dbus;
+private:
+    QStringList words;
+    QString execTerm;
+    QDBusConnection dbus;
 };
 
-K_EXPORT_PLASMA_RUNNER( shaman, ShamanRunner );
+K_EXPORT_PLASMA_RUNNER(shaman, ShamanRunner);
 
 #endif

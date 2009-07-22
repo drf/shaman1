@@ -29,18 +29,18 @@ class Shaman : public QObject
 {
     Q_OBJECT
 
-    public:
-        explicit Shaman(const QStringList &a);
-        virtual ~Shaman();
+public:
+    explicit Shaman(const QStringList &a);
+    virtual ~Shaman();
 
-    public slots:
-        void init();
+public slots:
+    void init();
 
-        void startShaman();
+    void startShaman();
 
-    private:
-        QStringList m_arguments;
-        MainWindow *m_mainwin;
+private:
+    QStringList m_arguments;
+    MainWindow *m_mainwin;
 };
 
 #endif /* SHAMAN_H */

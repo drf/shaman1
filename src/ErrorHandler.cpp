@@ -59,7 +59,7 @@ void ErrorHandler::spawnErrorDialog(Aqpm::Globals::Errors code, const QVariantMa
             detailedMessage = tr("Some dependencies can not be satisfied");
             detailedMessage.append("\n\n");
 
-            foreach (QString ent, args["UnsatisfiedDeps"].toMap().keys()) {
+            foreach(QString ent, args["UnsatisfiedDeps"].toMap().keys()) {
                 detailedMessage.append(tr("%1: requires %2").arg(ent)
                                        .arg(args["UnsatisfiedDeps"].toMap()[ent].toString()));
                 detailedMessage.append('\n');
@@ -68,7 +68,7 @@ void ErrorHandler::spawnErrorDialog(Aqpm::Globals::Errors code, const QVariantMa
             detailedMessage = tr("Some dependencies create a conflict with already installed packages");
             detailedMessage.append("\n\n");
 
-            foreach (QString ent, args["ConflictingDeps"].toMap().keys()) {
+            foreach(QString ent, args["ConflictingDeps"].toMap().keys()) {
                 detailedMessage.append(tr("%1: conflicts with %2").arg(ent)
                                        .arg(args["ConflictingDeps"].toMap()[ent].toString()));
                 detailedMessage.append('\n');
@@ -85,7 +85,7 @@ void ErrorHandler::spawnErrorDialog(Aqpm::Globals::Errors code, const QVariantMa
             detailedMessage = tr("Some files in the packages being processed are conflicting");
             detailedMessage.append("\n\n");
 
-            foreach (QString ent, args["ConflictingTargets"].toMap().keys()) {
+            foreach(QString ent, args["ConflictingTargets"].toMap().keys()) {
                 detailedMessage.append(tr("%1 exists in both '%2' and '%3'").arg(ent)
                                        .arg(args["ConflictingTargets"].toMap()[ent].toStringList().at(0))
                                        .arg(args["ConflictingTargets"].toMap()[ent].toStringList().at(1)));
@@ -95,7 +95,7 @@ void ErrorHandler::spawnErrorDialog(Aqpm::Globals::Errors code, const QVariantMa
             detailedMessage = tr("Some files in the packages being processed conflict with the local filesystem");
             detailedMessage.append("\n\n");
 
-            foreach (QString ent, args["ConflictingFiles"].toMap().keys()) {
+            foreach(QString ent, args["ConflictingFiles"].toMap().keys()) {
                 detailedMessage.append(tr("%1: %2 exists in the filesystem").arg(ent)
                                        .arg(args["ConflictingFiles"].toMap()[ent].toString()));
                 detailedMessage.append('\n');
@@ -104,7 +104,7 @@ void ErrorHandler::spawnErrorDialog(Aqpm::Globals::Errors code, const QVariantMa
             detailedMessage = tr("Some downloaded packages are corrupted or invalid");
             detailedMessage.append("\n\n");
 
-            foreach (QString ent, args["Filenames"].toStringList()) {
+            foreach(QString ent, args["Filenames"].toStringList()) {
                 detailedMessage.append(tr("%1 is invalid or corrupted").arg(ent));
                 detailedMessage.append('\n');
             }
@@ -135,21 +135,21 @@ void ErrorHandler::spawnErrorDialog(Aqpm::Globals::Errors code, const QVariantMa
     lbl->setText(shortMessage);
     txtEd->setText(detailedMessage);
 
-    txtEd->setReadOnly( true );
+    txtEd->setReadOnly(true);
 
-    QPushButton *okb = but->addButton( QDialogButtonBox::Ok );
-    okb->setText( QObject::tr( "Ok" ) );
-    okb->setIcon( QIcon( ":/Icons/icons/dialog-ok-apply.png" ) );
+    QPushButton *okb = but->addButton(QDialogButtonBox::Ok);
+    okb->setText(QObject::tr("Ok"));
+    okb->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
 
-    lay->addWidget( lbl );
-    lay->addWidget( txtEd );
-    lay->addWidget( but );
+    lay->addWidget(lbl);
+    lay->addWidget(txtEd);
+    lay->addWidget(but);
 
-    dlog->setLayout( lay );
+    dlog->setLayout(lay);
     dlog->setWindowTitle(QString(tr("Error occurred")));
-    dlog->setWindowModality( Qt::ApplicationModal );
+    dlog->setWindowModality(Qt::ApplicationModal);
 
-    connect( but, SIGNAL( accepted() ), dlog, SLOT( accept() ) );
+    connect(but, SIGNAL(accepted()), dlog, SLOT(accept()));
 
     dlog->exec();
 

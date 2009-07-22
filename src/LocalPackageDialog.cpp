@@ -26,73 +26,73 @@
 
 using namespace Aqpm;
 
-LocalPackageDialog::LocalPackageDialog( QWidget *parent )
-        : QDialog( parent )
+LocalPackageDialog::LocalPackageDialog(QWidget *parent)
+        : QDialog(parent)
 {
-    setupUi( this );
-    setWindowModality( Qt::ApplicationModal );
+    setupUi(this);
+    setWindowModality(Qt::ApplicationModal);
 
-    connect( installButton, SIGNAL( clicked() ), SLOT( goInstall() ) );
-    connect( cancelButton, SIGNAL( clicked() ), SLOT( deleteLater() ) );
-    connect( detailsButton, SIGNAL( clicked() ), SLOT( showDetails() ) );
-    connect( showButton, SIGNAL( toggled( bool ) ), SLOT( adjust( bool ) ) );
+    connect(installButton, SIGNAL(clicked()), SLOT(goInstall()));
+    connect(cancelButton, SIGNAL(clicked()), SLOT(deleteLater()));
+    connect(detailsButton, SIGNAL(clicked()), SLOT(showDetails()));
+    connect(showButton, SIGNAL(toggled(bool)), SLOT(adjust(bool)));
 }
 
 LocalPackageDialog::~LocalPackageDialog()
 {
 }
 
-void LocalPackageDialog::loadPackage(const Package &pkg, const QString &fname )
+void LocalPackageDialog::loadPackage(const Package &pkg, const QString &fname)
 {
     package = pkg;
     filename = fname;
 
-    nameLabel->setText( QString( "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">"
-                                 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">"
-                                 "p, li { white-space: pre-wrap; }"
-                                 "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;\">"
-                                 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">"
-                                 "<span style=\" font-size:11pt; font-weight:600;\">" ) + package.name() + " ("  + package.version()
-                        + ")</span></p></body></html>" );
+    nameLabel->setText(QString("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">"
+                               "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">"
+                               "p, li { white-space: pre-wrap; }"
+                               "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;\">"
+                               "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">"
+                               "<span style=\" font-size:11pt; font-weight:600;\">") + package.name() + " ("  + package.version()
+                       + ")</span></p></body></html>");
 
     descLabel->setText(package.desc());
 
-    if ( !Backend::instance()->isInstalled( package ) ) {
-        statusLabel->setText( tr( "Package is not installed" ) );
+    if (!Backend::instance()->isInstalled(package)) {
+        statusLabel->setText(tr("Package is not installed"));
 
     } else {
-        statusLabel->setText( QString( tr( "Version %1 of this package is already installed" ) )
-                              .arg(package.version()));
+        statusLabel->setText(QString(tr("Version %1 of this package is already installed"))
+                             .arg(package.version()));
     }
 
     QStringList deps;
 
-    foreach( const Package &ent, Backend::instance()->getPackageDependencies( package ) ) {
-        if ( !Backend::instance()->isInstalled( ent ) ) {
-            deps.append( ent.name() );
+    foreach(const Package &ent, Backend::instance()->getPackageDependencies(package)) {
+        if (!Backend::instance()->isInstalled(ent)) {
+            deps.append(ent.name());
         }
     }
 
-    if ( deps.isEmpty() ) {
-        depsLabel->setText( tr( "All dependencies are satisfied" ) );
-        showButton->setVisible( false );
+    if (deps.isEmpty()) {
+        depsLabel->setText(tr("All dependencies are satisfied"));
+        showButton->setVisible(false);
     } else {
-        depsLabel->setText( QString( tr( "%n package(s) will be installed as dependencies", "", deps.count() ) ) );
-        showButton->setVisible( true );
-        showButton->setChecked( false );
+        depsLabel->setText(QString(tr("%n package(s) will be installed as dependencies", "", deps.count())));
+        showButton->setVisible(true);
+        showButton->setChecked(false);
 
         listWidget->clear();
-        listWidget->addItems( deps );
+        listWidget->addItems(deps);
     }
 
-    adjust( false );
+    adjust(false);
 }
 
 void LocalPackageDialog::showDetails()
 {
-    PackageProperties *pkgProp = new PackageProperties( this );
+    PackageProperties *pkgProp = new PackageProperties(this);
 
-    pkgProp->setPackage( package, true );
+    pkgProp->setPackage(package, true);
 
     pkgProp->reloadPkgInfo();
 
@@ -110,9 +110,9 @@ void LocalPackageDialog::goInstall()
     deleteLater();
 }
 
-void LocalPackageDialog::adjust( bool tgld )
+void LocalPackageDialog::adjust(bool tgld)
 {
-    if ( tgld )
+    if (tgld)
         listWidget->show();
     else {
         listWidget->hide();

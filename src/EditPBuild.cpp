@@ -26,21 +26,21 @@
 #include <QMessageBox>
 #include <QCloseEvent>
 
-EditPBuild::EditPBuild( const QStringList &tg, QWidget *parent )
-        : QDialog( parent ),
-        targets( tg )
+EditPBuild::EditPBuild(const QStringList &tg, QWidget *parent)
+        : QDialog(parent),
+        targets(tg)
 {
-    setupUi( this );
-    setWindowModality( Qt::ApplicationModal );
+    setupUi(this);
+    setWindowModality(Qt::ApplicationModal);
 
-    packagesBox->addItems( targets );
+    packagesBox->addItems(targets);
     needsSaving = false;
-    loadFile( packagesBox->currentText() );
+    loadFile(packagesBox->currentText());
 
-    connect( packagesBox, SIGNAL( currentIndexChanged( const QString& ) ), SLOT( loadFile( const QString& ) ) );
-    connect( PBEdit, SIGNAL( textChanged() ), SLOT( hasBeenModified() ) );
-    connect( closeButton, SIGNAL( clicked() ), SLOT( close() ) );
-    connect( saveButton, SIGNAL( clicked() ), SLOT( saveFile() ) );
+    connect(packagesBox, SIGNAL(currentIndexChanged(const QString&)), SLOT(loadFile(const QString&)));
+    connect(PBEdit, SIGNAL(textChanged()), SLOT(hasBeenModified()));
+    connect(closeButton, SIGNAL(clicked()), SLOT(close()));
+    connect(saveButton, SIGNAL(clicked()), SLOT(saveFile()));
 }
 
 EditPBuild::~EditPBuild()
@@ -52,13 +52,13 @@ void EditPBuild::hasBeenModified()
     needsSaving = true;
 }
 
-bool EditPBuild::loadFile( const QString &name )
+bool EditPBuild::loadFile(const QString &name)
 {
-    if ( needsSaving ) {
-        switch ( ShamanDialog::popupQuestionDialog( QString( tr( "Saving" ) ), QString( tr( "You modified this PKGBUILD.\n"
-                 "Do you want to save it?" ) ), this, ShamanProperties::WarningDialog ) ) {
+    if (needsSaving) {
+        switch (ShamanDialog::popupQuestionDialog(QString(tr("Saving")), QString(tr("You modified this PKGBUILD.\n"
+                "Do you want to save it?")), this, ShamanProperties::WarningDialog)) {
         case QMessageBox::Yes:
-            saveFile( lastItem );
+            saveFile(lastItem);
             break;
         case QMessageBox::No:
             break;
@@ -70,22 +70,22 @@ bool EditPBuild::loadFile( const QString &name )
 
     lastItem = packagesBox->currentText();
 
-    QString absSource( getABSPath( name ) );
+    QString absSource(getABSPath(name));
 
-    if ( absSource.isEmpty() )
+    if (absSource.isEmpty())
         return false;
 
-    if ( !absSource.endsWith( QChar( '/' ) ) )
-        absSource.append( QChar( '/' ) );
+    if (!absSource.endsWith(QChar('/')))
+        absSource.append(QChar('/'));
 
-    absSource.append( "PKGBUILD" );
+    absSource.append("PKGBUILD");
 
-    QFile file( absSource );
+    QFile file(absSource);
 
-    if ( !file.open( QIODevice::ReadOnly | QIODevice::Text ) )
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
         return false;
 
-    PBEdit->setPlainText( file.readAll() );
+    PBEdit->setPlainText(file.readAll());
 
     file.close();
 
@@ -94,31 +94,31 @@ bool EditPBuild::loadFile( const QString &name )
     return true;
 }
 
-bool EditPBuild::saveFile( const QString &name )
+bool EditPBuild::saveFile(const QString &name)
 {
-    QDir absDir( "/var/abs" );
-    absDir.setFilter( QDir::Dirs | QDir::NoDotAndDotDot | QDir::NoSymLinks );
+    QDir absDir("/var/abs");
+    absDir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot | QDir::NoSymLinks);
 
-    QString absSource( getABSPath( name ) );
+    QString absSource(getABSPath(name));
 
-    if ( absSource.isEmpty() )
+    if (absSource.isEmpty())
         return false;
 
-    if ( !absSource.endsWith( QChar( '/' ) ) )
-        absSource.append( QChar( '/' ) );
+    if (!absSource.endsWith(QChar('/')))
+        absSource.append(QChar('/'));
 
-    absSource.append( "PKGBUILD" );
+    absSource.append("PKGBUILD");
 
     //ath.switchToRoot();
 
-    QFile file( absSource );
+    QFile file(absSource);
 
     file.remove();
 
-    if ( !file.open( QIODevice::ReadWrite | QIODevice::Text ) )
+    if (!file.open(QIODevice::ReadWrite | QIODevice::Text))
         return false;
 
-    if ( file.write( PBEdit->toPlainText().toAscii() ) == -1 )
+    if (file.write(PBEdit->toPlainText().toAscii()) == -1)
         return false;
 
     file.close();
@@ -132,16 +132,16 @@ bool EditPBuild::saveFile( const QString &name )
 
 bool EditPBuild::saveFile()
 {
-    return saveFile( packagesBox->currentText() );
+    return saveFile(packagesBox->currentText());
 }
 
-void EditPBuild::closeEvent( QCloseEvent *evt )
+void EditPBuild::closeEvent(QCloseEvent *evt)
 {
-    if ( needsSaving ) {
-        switch ( ShamanDialog::popupQuestionDialog( QString( tr( "Saving" ) ), QString( tr( "You modified this PKGBUILD.\n"
-                 "Do you want to save it?" ) ), this, ShamanProperties::WarningDialog ) ) {
+    if (needsSaving) {
+        switch (ShamanDialog::popupQuestionDialog(QString(tr("Saving")), QString(tr("You modified this PKGBUILD.\n"
+                "Do you want to save it?")), this, ShamanProperties::WarningDialog)) {
         case QMessageBox::Yes:
-            saveFile( lastItem );
+            saveFile(lastItem);
             break;
         case QMessageBox::No:
             break;

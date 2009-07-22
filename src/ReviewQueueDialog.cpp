@@ -30,64 +30,64 @@
 
 using namespace Aqpm;
 
-ReviewQueueDialog::ReviewQueueDialog( MainWindow *parent )
-        : QDialog( parent )
+ReviewQueueDialog::ReviewQueueDialog(MainWindow *parent)
+        : QDialog(parent)
 {
     int totalSize = 0;
     int removeSize = 0;
     int addSize = 0;
 
-    setupUi( this );
+    setupUi(this);
 
-    if ( !parent->pkgsViewWG->findItems( tr( "Install" ), Qt::MatchExactly, 8 ).isEmpty() ) {
-        QTreeWidgetItem *itm = new QTreeWidgetItem( treeWidget, QStringList( tr( "To be Installed" ) ) );
-        treeWidget->addTopLevelItem( itm );
+    if (!parent->pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 8).isEmpty()) {
+        QTreeWidgetItem *itm = new QTreeWidgetItem(treeWidget, QStringList(tr("To be Installed")));
+        treeWidget->addTopLevelItem(itm);
     }
-    if ( !parent->pkgsViewWG->findItems( tr( "Upgrade" ), Qt::MatchExactly, 8 ).isEmpty() ) {
-        QTreeWidgetItem *itm = new QTreeWidgetItem( treeWidget, QStringList( tr( "To be Upgraded" ) ) );
-        treeWidget->addTopLevelItem( itm );
+    if (!parent->pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 8).isEmpty()) {
+        QTreeWidgetItem *itm = new QTreeWidgetItem(treeWidget, QStringList(tr("To be Upgraded")));
+        treeWidget->addTopLevelItem(itm);
     }
-    if ( !parent->pkgsViewWG->findItems( tr( "Uninstall" ), Qt::MatchExactly, 8 ).isEmpty() ) {
-        QTreeWidgetItem *itm = new QTreeWidgetItem( treeWidget, QStringList( tr( "To be Removed" ) ) );
-        treeWidget->addTopLevelItem( itm );
+    if (!parent->pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 8).isEmpty()) {
+        QTreeWidgetItem *itm = new QTreeWidgetItem(treeWidget, QStringList(tr("To be Removed")));
+        treeWidget->addTopLevelItem(itm);
     }
 
 
-    foreach( QTreeWidgetItem *itm, parent->pkgsViewWG->findItems( tr( "Install" ), Qt::MatchExactly, 8 ) ) {
+    foreach(QTreeWidgetItem *itm, parent->pkgsViewWG->findItems(tr("Install"), Qt::MatchExactly, 8)) {
         Backend::instance()->addItemToQueue(QString(itm->text(5) + '/' + itm->text(1)), QueueItem::Sync);
-        addSize += Backend::instance()->getPackage( itm->text( 1 ), itm->text( 5 ) ).size();
-        QTreeWidgetItem *itmL = treeWidget->findItems( tr( "To be Installed" ), Qt::MatchExactly, 0 ).first();
-        new QTreeWidgetItem( itmL, QStringList( itm->text( 1 ) ) );
-        itmL->setExpanded( true );
+        addSize += Backend::instance()->getPackage(itm->text(1), itm->text(5)).size();
+        QTreeWidgetItem *itmL = treeWidget->findItems(tr("To be Installed"), Qt::MatchExactly, 0).first();
+        new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
+        itmL->setExpanded(true);
     }
 
-    foreach( QTreeWidgetItem *itm, parent->pkgsViewWG->findItems( tr( "Upgrade" ), Qt::MatchExactly, 8 ) ) {
+    foreach(QTreeWidgetItem *itm, parent->pkgsViewWG->findItems(tr("Upgrade"), Qt::MatchExactly, 8)) {
         Backend::instance()->addItemToQueue(QString(itm->text(5) + '/' + itm->text(1)), QueueItem::Sync);
-        addSize += Backend::instance()->getPackage( itm->text( 1 ), itm->text( 5 ) ).size();
-        QTreeWidgetItem *itmL = treeWidget->findItems( tr( "To be Upgraded" ), Qt::MatchExactly, 0 ).first();
-        new QTreeWidgetItem( itmL, QStringList( itm->text( 1 ) ) );
-        itmL->setExpanded( true );
+        addSize += Backend::instance()->getPackage(itm->text(1), itm->text(5)).size();
+        QTreeWidgetItem *itmL = treeWidget->findItems(tr("To be Upgraded"), Qt::MatchExactly, 0).first();
+        new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
+        itmL->setExpanded(true);
     }
 
-    foreach( QTreeWidgetItem *itm, parent->pkgsViewWG->findItems( tr( "Uninstall" ), Qt::MatchExactly, 8 ) ) {
+    foreach(QTreeWidgetItem *itm, parent->pkgsViewWG->findItems(tr("Uninstall"), Qt::MatchExactly, 8)) {
         Backend::instance()->addItemToQueue(QString(itm->text(1)), QueueItem::Remove);
-        removeSize += Backend::instance()->getPackage( itm->text( 1 ), itm->text( 5 ) ).size();
-        QTreeWidgetItem *itmL = treeWidget->findItems( tr( "To be Removed" ), Qt::MatchExactly, 0 ).first();
-        new QTreeWidgetItem( itmL, QStringList( itm->text( 1 ) ) );
-        itmL->setExpanded( true );
+        removeSize += Backend::instance()->getPackage(itm->text(1), itm->text(5)).size();
+        QTreeWidgetItem *itmL = treeWidget->findItems(tr("To be Removed"), Qt::MatchExactly, 0).first();
+        new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
+        itmL->setExpanded(true);
     }
 
-    foreach( QTreeWidgetItem *itm, parent->pkgsViewWG->findItems( tr( "Complete Uninstall" ), Qt::MatchExactly, 8 ) ) {
+    foreach(QTreeWidgetItem *itm, parent->pkgsViewWG->findItems(tr("Complete Uninstall"), Qt::MatchExactly, 8)) {
         Backend::instance()->addItemToQueue(QString(itm->text(1)), QueueItem::Remove);
-        removeSize += Backend::instance()->getPackage( itm->text( 1 ), itm->text( 5 ) ).size();
-        QTreeWidgetItem *itmL = treeWidget->findItems( tr( "To be Removed" ), Qt::MatchExactly, 0 ).first();
-        new QTreeWidgetItem( itmL, QStringList( itm->text( 1 ) ) );
-        itmL->setExpanded( true );
+        removeSize += Backend::instance()->getPackage(itm->text(1), itm->text(5)).size();
+        QTreeWidgetItem *itmL = treeWidget->findItems(tr("To be Removed"), Qt::MatchExactly, 0).first();
+        new QTreeWidgetItem(itmL, QStringList(itm->text(1)));
+        itmL->setExpanded(true);
     }
 
     bool spaceToDo;
 
-    if ( addSize > removeSize ) {
+    if (addSize > removeSize) {
         spaceToDo = true;
         totalSize = addSize - removeSize;
     } else {
@@ -95,33 +95,33 @@ ReviewQueueDialog::ReviewQueueDialog( MainWindow *parent )
         totalSize = removeSize - addSize;
     }
 
-    QString sizeToShow( PackageProperties::formatSize( totalSize ) );
+    QString sizeToShow(PackageProperties::formatSize(totalSize));
 
     QString toShow;
-    toShow.append( QString( tr( "Your Queue is about to be processed. "
-                                "You are going to:<br />" ) ) );
+    toShow.append(QString(tr("Your Queue is about to be processed. "
+                             "You are going to:<br />")));
     int n = 0;//BackendInstance::instance()->getNumberOfTargets( 1 );
-    toShow.append( QString( tr( "Remove <b>%n package(s)</b><br />", "", n ) ) );
+    toShow.append(QString(tr("Remove <b>%n package(s)</b><br />", "", n)));
     int k = 1;//BackendInstance::instance()->getNumberOfTargets( 0 );
-    toShow.append( QString( tr( "Install/Upgrade <b>%n package(s)</b><br />", "", k ) ) );
-    toShow.append( tr( "Do you wish to continue?" ) );
+    toShow.append(QString(tr("Install/Upgrade <b>%n package(s)</b><br />", "", k)));
+    toShow.append(tr("Do you wish to continue?"));
 
-    queueInfo->setText( toShow );
+    queueInfo->setText(toShow);
 
-    setWindowModality( Qt::ApplicationModal );
+    setWindowModality(Qt::ApplicationModal);
     treeWidget->hide();
     adjustSize();
 
     QSettings *settings = new QSettings();
 
-    if ( settings->value( "gui/keepqueuedialogopen", true ).toBool() )
-        keepOpenBox->setChecked( true );
+    if (settings->value("gui/keepqueuedialogopen", true).toBool())
+        keepOpenBox->setChecked(true);
 
     settings->deleteLater();
 
-    connect( processButton, SIGNAL( clicked() ), SLOT( processQueue() ) );
-    connect( cancelButton, SIGNAL( clicked() ), SLOT( deleteLater() ) );
-    connect( showPackages, SIGNAL( toggled( bool ) ), SLOT( adjust( bool ) ) );
+    connect(processButton, SIGNAL(clicked()), SLOT(processQueue()));
+    connect(cancelButton, SIGNAL(clicked()), SLOT(deleteLater()));
+    connect(showPackages, SIGNAL(toggled(bool)), SLOT(adjust(bool)));
 }
 
 ReviewQueueDialog::~ReviewQueueDialog()
@@ -132,10 +132,10 @@ void ReviewQueueDialog::processQueue()
 {
     QSettings *settings = new QSettings();
 
-    if ( keepOpenBox->isChecked() )
-        settings->setValue( "gui/keepqueuedialogopen", true );
+    if (keepOpenBox->isChecked())
+        settings->setValue("gui/keepqueuedialogopen", true);
     else
-        settings->setValue( "gui/keepqueuedialogopen", false );
+        settings->setValue("gui/keepqueuedialogopen", false);
 
     settings->deleteLater();
 
@@ -157,13 +157,13 @@ bool ReviewQueueDialog::force()
     return forceBox->isChecked();
 }
 
-void ReviewQueueDialog::adjust( bool tgld )
+void ReviewQueueDialog::adjust(bool tgld)
 {
-    if ( tgld )
+    if (tgld)
         treeWidget->show();
     else {
         treeWidget->hide();
-        resize( minimumSize() );
+        resize(minimumSize());
     }
 
     adjustSize();

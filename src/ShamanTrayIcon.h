@@ -39,42 +39,42 @@ enum IconStatus {
 
 class ShamanTrayIcon : public KAnimatedSystemTrayIcon
 {
-        Q_OBJECT
+    Q_OBJECT
 
-    public:
-        explicit ShamanTrayIcon( MainWindow *mW);
-        virtual ~ShamanTrayIcon();
+public:
+    explicit ShamanTrayIcon(MainWindow *mW);
+    virtual ~ShamanTrayIcon();
 
-    public slots:
-        void changeIconStatus( ShamanIcon::IconStatus status );
-        void dbUpdateTray();
-        void startTimer();
-        void stopTimer();
-        void changeTimerInterval();
-        void newNewsAvailable();
-        void newsFetchingFailed();
-        void resetTimerAt();
-        void showMessage(const QString & title, const QString & message, MessageIcon icon = Information, int millisecondsTimeoutHint = 10000);
+public slots:
+    void changeIconStatus(ShamanIcon::IconStatus status);
+    void dbUpdateTray();
+    void startTimer();
+    void stopTimer();
+    void changeTimerInterval();
+    void newNewsAvailable();
+    void newsFetchingFailed();
+    void resetTimerAt();
+    void showMessage(const QString & title, const QString & message, MessageIcon icon = Information, int millisecondsTimeoutHint = 10000);
 
-    private slots:
-        void transactionStarted();
-        void transactionReleased();
-        void enableTrayActions();
-        void disableTrayActions();
-        void disconnectBaloon();
-        void timerAtElapsed();
-        void enableTimer();
-        void enableTimerAt();
+private slots:
+    void transactionStarted();
+    void transactionReleased();
+    void enableTrayActions();
+    void disableTrayActions();
+    void disconnectBaloon();
+    void timerAtElapsed();
+    void enableTimer();
+    void enableTimerAt();
 
-    signals:
-        void startDbUpdate();
-        void upgradePkgs();
+signals:
+    void startDbUpdate();
+    void upgradePkgs();
 
-    private:
-        MainWindow *mainWin;
-        QPointer<QTimer> trayUpDb;
-        QPointer<QTimer> trayUpDbAt;
-        QList<QAction *> systrayAct;
+private:
+    MainWindow *mainWin;
+    QPointer<QTimer> trayUpDb;
+    QPointer<QTimer> trayUpDbAt;
+    QList<QAction *> systrayAct;
 
 };
 

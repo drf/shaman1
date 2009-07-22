@@ -38,24 +38,24 @@ class QLabel;
 
 class TransactionView : public AbstractView
 {
-        Q_OBJECT
+    Q_OBJECT
 
-    public:
-        TransactionView( Plasma::Applet *parent, QDBusConnection dbs );
-        virtual ~TransactionView();
+public:
+    TransactionView(Plasma::Applet *parent, QDBusConnection dbs);
+    virtual ~TransactionView();
 
-    private slots:
-        void status( const QString &status );
-        void dlProgress( const QString &filename, int totalPercent, int totalSpeed );
-        void transProgress( int percent );
+private slots:
+    void status(const QString &status);
+    void dlProgress(const QString &filename, int totalPercent, int totalSpeed);
+    void transProgress(int percent);
 
-    private:
-        QDBusConnection m_dbus;
-        QGraphicsLinearLayout *m_layout;
-        QProgressBar *m_progressBarWidget;
-        QLabel *m_statusLabelWidget;
-        QGraphicsProxyWidget *m_statusLabel;
-        QGraphicsProxyWidget *m_progressBar;
+private:
+    QDBusConnection m_dbus;
+    QGraphicsLinearLayout *m_layout;
+    QProgressBar *m_progressBarWidget;
+    QLabel *m_statusLabelWidget;
+    QGraphicsProxyWidget *m_statusLabel;
+    QGraphicsProxyWidget *m_progressBar;
 };
 
 #endif /*TRANSACTIONVIEW_H*/

@@ -32,46 +32,46 @@ class ABSHandler;
 
 class BuildingDialog : public QDialog, public Ui::buildingDialog, private ABSHandler
 {
-        Q_OBJECT
+    Q_OBJECT
 
-    public:
-        explicit BuildingDialog( QWidget *parent = 0 );
-        virtual ~BuildingDialog();
+public:
+    explicit BuildingDialog(QWidget *parent = 0);
+    virtual ~BuildingDialog();
 
-        void initBuildingQueue();
-        void addBuildingQueueItem( const QString &item );
-        void processBuildingQueue();
-        void waitBeforeProcess( bool yn );
-        bool reviewOutputFirst();
+    void initBuildingQueue();
+    void addBuildingQueueItem(const QString &item);
+    void processBuildingQueue();
+    void waitBeforeProcess(bool yn);
+    bool reviewOutputFirst();
 
-    public slots:
-        void updateABSTree();
-        void writeLineProgress();
-        void writeLineProgressErr();
-        void writeLineProgressMk();
-        void writeLineProgressErrMk();
-        void finishedUpdateABSTree( int ecode, QProcess::ExitStatus estat );
-        void finishedBuildingAction( int ecode, QProcess::ExitStatus estat );
-        void abortProcess();
+public slots:
+    void updateABSTree();
+    void writeLineProgress();
+    void writeLineProgressErr();
+    void writeLineProgressMk();
+    void writeLineProgressErrMk();
+    void finishedUpdateABSTree(int ecode, QProcess::ExitStatus estat);
+    void finishedBuildingAction(int ecode, QProcess::ExitStatus estat);
+    void abortProcess();
 
-    protected:
-        void closeEvent( QCloseEvent *evt );
+protected:
+    void closeEvent(QCloseEvent *evt);
 
-    private:
-        void processCurrentQueueItem();
+private:
+    void processCurrentQueueItem();
 
-    signals:
-        void finishedBuilding( int failurelevel, const QStringList &bp );
-        void nullifyPointer();
+signals:
+    void finishedBuilding(int failurelevel, const QStringList &bp);
+    void nullifyPointer();
 
-    private:
-        QPointer<QProcess> MakePkgProc;
-        QStringList buildQueue;
-        QStringList builtPaths;
-        int currentItem;
-        bool failed;
-        bool allFailed;
-        bool waitProcessing;
+private:
+    QPointer<QProcess> MakePkgProc;
+    QStringList buildQueue;
+    QStringList builtPaths;
+    int currentItem;
+    bool failed;
+    bool allFailed;
+    bool waitProcessing;
 
 };
 

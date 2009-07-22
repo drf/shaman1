@@ -27,40 +27,40 @@
 
 class QueueDialog : public QDialog, private Ui::transactionDialog
 {
-        Q_OBJECT
+    Q_OBJECT
 
-    public:
-        explicit QueueDialog( QWidget *parent = 0 );
-        ~QueueDialog();
-        void startProcessing( bool force );
-        void startUpgrading(bool force);
+public:
+    explicit QueueDialog(QWidget *parent = 0);
+    ~QueueDialog();
+    void startProcessing(bool force);
+    void startUpgrading(bool force);
 
-    public slots:
-        void abortTransaction();
-        void showCurrentTransaction();
+public slots:
+    void abortTransaction();
+    void showCurrentTransaction();
 
-    private slots:
+private slots:
 
-        void updateProgressBar( const QString &c, int bytedone, int bytetotal, int speed,
-                                int listdone, int listtotal );
-        void updateProgressBar( Aqpm::Globals::TransactionProgress evt, const QString &pkgname, int percent,
-                                int howmany, int remain );
-        void startDownload();
-        void startProcess();
-        void cleanup(bool success);
+    void updateProgressBar(const QString &c, int bytedone, int bytetotal, int speed,
+                           int listdone, int listtotal);
+    void updateProgressBar(Aqpm::Globals::TransactionProgress evt, const QString &pkgname, int percent,
+                           int howmany, int remain);
+    void startDownload();
+    void startProcess();
+    void cleanup(bool success);
 
-        void handleAlpmMessage( const QString &msg );
+    void handleAlpmMessage(const QString &msg);
 
-        void changeStatus( Aqpm::Globals::TransactionEvent evt, QVariantMap args );
+    void changeStatus(Aqpm::Globals::TransactionEvent evt, QVariantMap args);
 
-        void adjust( bool tgld );
+    void adjust(bool tgld);
 
-    signals:
-        void terminated( bool errors );
-        void streamTransactionProgress( int percent );
-    private:
-        int status;
-        bool errors;
+signals:
+    void terminated(bool errors);
+    void streamTransactionProgress(int percent);
+private:
+    int status;
+    bool errors;
 };
 
 #endif /*QUEUEDIALOG_H*/

@@ -27,14 +27,14 @@
 
 class AbstractView : public QObject
 {
-        Q_OBJECT
+    Q_OBJECT
 
-    public:
-        AbstractView( Plasma::Applet *parent );
-        virtual ~AbstractView();
+public:
+    AbstractView(Plasma::Applet *parent);
+    virtual ~AbstractView();
 
-    private:
-        Plasma::Applet *m_applet;
+private:
+    Plasma::Applet *m_applet;
 };
 
 #endif /*ABSTRACTVIEW_H*/

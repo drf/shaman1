@@ -38,66 +38,66 @@ enum MirrorType {
 
 class CleanThread : public QThread
 {
-        Q_OBJECT
+    Q_OBJECT
 
-    public:
-        CleanThread( int act );
-        void run();
+public:
+    CleanThread(int act);
+    void run();
 
-    signals:
-        void success( int act );
-        void failure( int act );
+signals:
+    void success(int act);
+    void failure(int act);
 
-    private:
-        int action;
+private:
+    int action;
 };
 
 
 class ConfigDialog : public QDialog, public Ui::ConfigDialog
 {
 
-        Q_OBJECT
+    Q_OBJECT
 
-    public:
-        explicit ConfigDialog( QWidget *parent = 0 );
-        ~ConfigDialog();
-        bool doDbUpdate();
+public:
+    explicit ConfigDialog(QWidget *parent = 0);
+    ~ConfigDialog();
+    bool doDbUpdate();
 
-    signals:
-        void setProxy();
+signals:
+    void setProxy();
 
-    private slots:
-        void changeWidget( int position );
-        void openAddDialog();
-        void openEditDialog();
-        void removeThirdParty();
-        void performManteinanceAction();
-        void cleanProc( int eC, QProcess::ExitStatus eS );
-        void mantProgress();
-        void showSuccess( int act );
-        void showFailure( int act );
-        void cleanThread();
-        void saveConfiguration();
-        void addMirror();
-        void addKDEModMirror();
-        void obfuscateSupfiles( bool state );
-        void obfuscateDBUpdate( bool state );
-        void obfuscateDBUpdateAt( bool state );
-        void obfuscateRSSUpdate( bool state );
+private slots:
+    void changeWidget(int position);
+    void openAddDialog();
+    void openEditDialog();
+    void removeThirdParty();
+    void performManteinanceAction();
+    void cleanProc(int eC, QProcess::ExitStatus eS);
+    void mantProgress();
+    void showSuccess(int act);
+    void showFailure(int act);
+    void cleanThread();
+    void saveConfiguration();
+    void addMirror();
+    void addKDEModMirror();
+    void obfuscateSupfiles(bool state);
+    void obfuscateDBUpdate(bool state);
+    void obfuscateDBUpdateAt(bool state);
+    void obfuscateRSSUpdate(bool state);
 
-    private:
-        void setupRepos();
-        void setupGeneral();
-        void setupPacman();
-        void setupABS();
-        void setupAdvanced();
-        void saveSettings();
-        QStringList getMirrorList( ShamanProperties::MirrorType type = ShamanProperties::OfficialMirrors );
+private:
+    void setupRepos();
+    void setupGeneral();
+    void setupPacman();
+    void setupABS();
+    void setupAdvanced();
+    void saveSettings();
+    QStringList getMirrorList(ShamanProperties::MirrorType type = ShamanProperties::OfficialMirrors);
 
-    private:
-        QPointer<QDialog> addDialog;
-        QPointer<CleanThread> cTh;
-        bool upDb;
+private:
+    QPointer<QDialog> addDialog;
+    QPointer<CleanThread> cTh;
+    bool upDb;
 };
 
 #endif /*CONFIGDIALOG_H*/

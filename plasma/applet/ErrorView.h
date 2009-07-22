@@ -34,20 +34,20 @@ class QGraphicsProxyWidget;
 
 class ErrorView : public AbstractView
 {
-        Q_OBJECT
+    Q_OBJECT
 
-    public:
-        ErrorView( Plasma::Applet *parent, const QString &message );
-        virtual ~ErrorView();
+public:
+    ErrorView(Plasma::Applet *parent, const QString &message);
+    virtual ~ErrorView();
 
-    private slots:
-        void launchShaman();
+private slots:
+    void launchShaman();
 
-    private:
-        QGraphicsLinearLayout *m_layout;
-        QGraphicsProxyWidget *m_proxyErrorLabel;
-        QGraphicsProxyWidget *m_proxyLaunchButton;
-        Plasma::Icon *m_icon;
+private:
+    QGraphicsLinearLayout *m_layout;
+    QGraphicsProxyWidget *m_proxyErrorLabel;
+    QGraphicsProxyWidget *m_proxyLaunchButton;
+    Plasma::Icon *m_icon;
 };
 
 #endif /*ERRORVIEW_H*/

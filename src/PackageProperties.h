@@ -29,29 +29,29 @@
 
 class PackageProperties : public QDialog, private Ui::pkgProperties
 {
-        Q_OBJECT
+    Q_OBJECT
 
-    public:
-        explicit PackageProperties( QWidget *parent = 0 );
-        virtual ~PackageProperties();
+public:
+    explicit PackageProperties(QWidget *parent = 0);
+    virtual ~PackageProperties();
 
-        void reloadPkgInfo();
+    void reloadPkgInfo();
 
-        static QString formatSize( unsigned long size );
+    static QString formatSize(unsigned long size);
 
-        void setPackage(const Aqpm::Package &pkg, bool forceGiven = false );
+    void setPackage(const Aqpm::Package &pkg, bool forceGiven = false);
 
-    private:
+private:
 
-        void populateFileWidget();
-        void populateDepsWidget();
-        void populateRequiredWidget();
-        void populateInfoWidget();
-        void populateLogWidget();
-        void populateChangelogWidget();
+    void populateFileWidget();
+    void populateDepsWidget();
+    void populateRequiredWidget();
+    void populateInfoWidget();
+    void populateLogWidget();
+    void populateChangelogWidget();
 
-    private:
-        Aqpm::Package curPkg;
+private:
+    Aqpm::Package curPkg;
 };
 
 #endif /*PACKAGEPROPERTIES_H*/

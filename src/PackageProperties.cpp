@@ -31,43 +31,43 @@
 
 using namespace Aqpm;
 
-PackageProperties::PackageProperties( QWidget *parent )
-        : QDialog( parent )
+PackageProperties::PackageProperties(QWidget *parent)
+        : QDialog(parent)
 {
-    setupUi( this );
-    setAttribute( Qt::WA_DeleteOnClose );
+    setupUi(this);
+    setAttribute(Qt::WA_DeleteOnClose);
 }
 
 PackageProperties::~PackageProperties()
 {
 }
 
-QString PackageProperties::formatSize( unsigned long size )
+QString PackageProperties::formatSize(unsigned long size)
 {
     QString s;
-    if ( size > 1024 * 1024 * 1024 )
-        s = tr( "%1 GiB", "Size is in Gib" ).arg(( double ) size / ( 1024 * 1024 * 1024 ), 0, 'f', 2 );
-    else if ( size > 1024 * 1024 )
-        s = tr( "%1 MiB", "Size is in MiB" ).arg(( double ) size / ( 1024 * 1024 ), 0, 'f', 2 );
-    else if ( size > 1024 )
-        s = tr( "%1 KiB", "Size is in KiB" ).arg( size / 1024 );
+    if (size > 1024 * 1024 * 1024)
+        s = tr("%1 GiB", "Size is in Gib").arg((double) size / (1024 * 1024 * 1024), 0, 'f', 2);
+    else if (size > 1024 * 1024)
+        s = tr("%1 MiB", "Size is in MiB").arg((double) size / (1024 * 1024), 0, 'f', 2);
+    else if (size > 1024)
+        s = tr("%1 KiB", "Size is in KiB").arg(size / 1024);
     else
-        s = tr( "%1 Bytes", "Size is in Bytes" ).arg( size );
+        s = tr("%1 Bytes", "Size is in Bytes").arg(size);
 
     return s;
 }
 
-void PackageProperties::setPackage(const Package &pkg, bool forceGiven )
+void PackageProperties::setPackage(const Package &pkg, bool forceGiven)
 {
     curPkg = pkg;
 
     // We can throw a lot more info if the package is local, let's check.
-    if (Backend::instance()->isInstalled( curPkg ) && !forceGiven) {
+    if (Backend::instance()->isInstalled(curPkg) && !forceGiven) {
         qDebug() << "Getting info from local database";
         curPkg = Backend::instance()->getPackage(pkg.name(), "local");
     }
 
-    setWindowTitle( QString( tr( "Shaman - %1 properties" ) ).arg(pkg.name()));
+    setWindowTitle(QString(tr("Shaman - %1 properties")).arg(pkg.name()));
 }
 
 void PackageProperties::reloadPkgInfo()
@@ -82,86 +82,86 @@ void PackageProperties::reloadPkgInfo()
 void PackageProperties::populateInfoWidget()
 {
     char buf[80];
-    QString notAvailable( QString( tr( "N/A", "Stands for: Not Available" ) ) );
+    QString notAvailable(QString(tr("N/A", "Stands for: Not Available")));
 
-    if ( Backend::instance()->isInstalled( curPkg ) )
-        installedLabel->setPixmap( QPixmap( ":/Icons/icons/dialog-ok-apply.png" ) );
+    if (Backend::instance()->isInstalled(curPkg))
+        installedLabel->setPixmap(QPixmap(":/Icons/icons/dialog-ok-apply.png"));
     else
-        installedLabel->setPixmap( QPixmap( ":/Icons/icons/edit-delete.png" ) );
+        installedLabel->setPixmap(QPixmap(":/Icons/icons/edit-delete.png"));
 
-    if ( Backend::instance()->getUpgradeablePackages().contains(curPkg) )
-        upgradeableLabel->setPixmap( QPixmap( ":/Icons/icons/dialog-ok-apply.png" ) );
+    if (Backend::instance()->getUpgradeablePackages().contains(curPkg))
+        upgradeableLabel->setPixmap(QPixmap(":/Icons/icons/dialog-ok-apply.png"));
     else
-        upgradeableLabel->setPixmap( QPixmap( ":/Icons/icons/edit-delete.png" ) );
+        upgradeableLabel->setPixmap(QPixmap(":/Icons/icons/edit-delete.png"));
 
-    if ( alpm_pkg_has_scriptlet( curPkg.alpmPackage() ) )
-        scriptletLabel->setPixmap( QPixmap( ":/Icons/icons/dialog-ok-apply.png" ) );
+    if (alpm_pkg_has_scriptlet(curPkg.alpmPackage()))
+        scriptletLabel->setPixmap(QPixmap(":/Icons/icons/dialog-ok-apply.png"));
     else
-        scriptletLabel->setPixmap( QPixmap( ":/Icons/icons/edit-delete.png" ) );
+        scriptletLabel->setPixmap(QPixmap(":/Icons/icons/edit-delete.png"));
 
-    descriptionLabel->setText( curPkg.desc() );
-    versionLabel->setText( curPkg.version() );
+    descriptionLabel->setText(curPkg.desc());
+    versionLabel->setText(curPkg.version());
 
-    time_t now = alpm_pkg_get_builddate( curPkg.alpmPackage() );
-    struct tm *ts = gmtime( &now );
-    strftime( buf, sizeof( buf ), "%Y-%m-%d %H:%M:%S", ts );
-    QString bDate( buf );
-    if ( bDate.startsWith( "1970" ) )
+    time_t now = alpm_pkg_get_builddate(curPkg.alpmPackage());
+    struct tm *ts = gmtime(&now);
+    strftime(buf, sizeof(buf), "%Y-%m-%d %H:%M:%S", ts);
+    QString bDate(buf);
+    if (bDate.startsWith("1970"))
         // LOL @ The Epoch
-        builddateLabel->setText( notAvailable );
+        builddateLabel->setText(notAvailable);
     else
-        builddateLabel->setText( buf );
+        builddateLabel->setText(buf);
 
-    now = alpm_pkg_get_installdate( curPkg.alpmPackage() );
-    ts = gmtime( &now );
-    strftime( buf, sizeof( buf ), "%Y-%m-%d %H:%M:%S", ts );
-    QString iDate( buf );
-    if ( iDate.startsWith( "1970" ) )
+    now = alpm_pkg_get_installdate(curPkg.alpmPackage());
+    ts = gmtime(&now);
+    strftime(buf, sizeof(buf), "%Y-%m-%d %H:%M:%S", ts);
+    QString iDate(buf);
+    if (iDate.startsWith("1970"))
         // LOL @ The Epoch
-        installdateLabel->setText( notAvailable );
+        installdateLabel->setText(notAvailable);
     else
-        installdateLabel->setText( buf );
+        installdateLabel->setText(buf);
 
-    QString packager( curPkg.packager());
+    QString packager(curPkg.packager());
 
-    if ( packager.isEmpty() )
-        packagerLabel->setText( notAvailable );
+    if (packager.isEmpty())
+        packagerLabel->setText(notAvailable);
     else
-        packagerLabel->setText( packager );
+        packagerLabel->setText(packager);
 
-    sizeLabel->setText( formatSize(curPkg.size()) );
-    providesWidget->addItems( Backend::instance()->getProviders( curPkg ) );
+    sizeLabel->setText(formatSize(curPkg.size()));
+    providesWidget->addItems(Backend::instance()->getProviders(curPkg));
 }
 
 void PackageProperties::populateFileWidget()
 {
     treeWidget->clear();
     treeWidget->header()->hide();
-    QStringList files = Backend::instance()->getPackageFiles( curPkg );
-    foreach( const QString &file, files ) {
-        QStringList splitted = file.split( QChar( '/' ) );
+    QStringList files = Backend::instance()->getPackageFiles(curPkg);
+    foreach(const QString &file, files) {
+        QStringList splitted = file.split(QChar('/'));
         QTreeWidgetItem *parentItem = 0;
-        foreach( const QString &spl, splitted ) {
-            if ( spl.isEmpty() )
+        foreach(const QString &spl, splitted) {
+            if (spl.isEmpty())
                 continue;
-            if ( parentItem ) {
+            if (parentItem) {
                 bool there = false;
                 int j = parentItem->childCount();
-                for ( int i = 0;i != j; i++ ) {
-                    if ( parentItem->child( i )->text( 0 ) == spl ) {
+                for (int i = 0; i != j; i++) {
+                    if (parentItem->child(i)->text(0) == spl) {
                         there = true;
-                        parentItem = parentItem->child( i );
+                        parentItem = parentItem->child(i);
                         continue;
                     }
                 }
-                if ( !there )
-                    parentItem->addChild( new QTreeWidgetItem( parentItem, ( QStringList ) spl ) );
+                if (!there)
+                    parentItem->addChild(new QTreeWidgetItem(parentItem, (QStringList) spl));
             } else {
-                QList<QTreeWidgetItem*> list = treeWidget->findItems( spl, Qt::MatchExactly );
-                if ( !list.isEmpty() ) {
+                QList<QTreeWidgetItem*> list = treeWidget->findItems(spl, Qt::MatchExactly);
+                if (!list.isEmpty()) {
                     parentItem = list.first();
                 } else {
-                    treeWidget->insertTopLevelItem( 0, new QTreeWidgetItem( treeWidget, ( QStringList ) spl ) );
+                    treeWidget->insertTopLevelItem(0, new QTreeWidgetItem(treeWidget, (QStringList) spl));
                 }
             }
         }
@@ -171,13 +171,13 @@ void PackageProperties::populateFileWidget()
 void PackageProperties::populateDepsWidget()
 {
     dependsWidget->clear();
-    foreach( const Package &dep, Backend::instance()->getPackageDependencies( curPkg ) ) {
-            dependsWidget->addItem( dep.name() );
+    foreach(const Package &dep, Backend::instance()->getPackageDependencies(curPkg)) {
+        dependsWidget->addItem(dep.name());
     }
 
     requiredWidget->clear();
-    foreach( const Package &dep, Backend::instance()->getDependenciesOnPackage( curPkg ) ) {
-            requiredWidget->addItem( dep.name() );
+    foreach(const Package &dep, Backend::instance()->getDependenciesOnPackage(curPkg)) {
+        requiredWidget->addItem(dep.name());
     }
 }
 
@@ -186,38 +186,38 @@ void PackageProperties::populateChangelogWidget()
     void *fp = NULL;
     QString text;
 
-    if (( fp = alpm_pkg_changelog_open( curPkg.alpmPackage() ) ) == NULL ) {
-        changeLogEdit->setText( QString( tr( "Changelog not available for this package" ) ) );
+    if ((fp = alpm_pkg_changelog_open(curPkg.alpmPackage())) == NULL) {
+        changeLogEdit->setText(QString(tr("Changelog not available for this package")));
     } else {
         /* allocate a buffer to get the changelog back in chunks */
         char buf[CLBUF_SIZE];
         int ret = 0;
-        while (( ret = alpm_pkg_changelog_read( buf, CLBUF_SIZE, curPkg.alpmPackage(), fp ) ) ) {
-            if ( ret < CLBUF_SIZE ) {
+        while ((ret = alpm_pkg_changelog_read(buf, CLBUF_SIZE, curPkg.alpmPackage(), fp))) {
+            if (ret < CLBUF_SIZE) {
                 /* if we hit the end of the file, we need to add a null terminator */
-                *( buf + ret ) = '\0';
+                *(buf + ret) = '\0';
             }
-            text.append( buf );
+            text.append(buf);
         }
-        alpm_pkg_changelog_close( curPkg.alpmPackage(), fp );
-        changeLogEdit->setText( text );
+        alpm_pkg_changelog_close(curPkg.alpmPackage(), fp);
+        changeLogEdit->setText(text);
     }
 }
 
 void PackageProperties::populateLogWidget()
 {
-    QFile fp( alpm_option_get_logfile() );
+    QFile fp(alpm_option_get_logfile());
 
     QStringList contents;
 
-    if ( !fp.open( QIODevice::ReadOnly | QIODevice::Text ) )
+    if (!fp.open(QIODevice::ReadOnly | QIODevice::Text))
         return;
 
-    QTextStream in( &fp );
+    QTextStream in(&fp);
 
-    while ( !in.atEnd() ) {
+    while (!in.atEnd()) {
         QString line = in.readLine();
-        contents.append( line );
+        contents.append(line);
     }
 
     fp.close();
@@ -225,13 +225,13 @@ void PackageProperties::populateLogWidget()
     QString toShow;
     QString pkgName(curPkg.name());
 
-    foreach( const QString &ent, contents ) {
-        if ( !ent.contains( pkgName, Qt::CaseInsensitive ) )
+    foreach(const QString &ent, contents) {
+        if (!ent.contains(pkgName, Qt::CaseInsensitive))
             continue;
 
-        toShow.append( ent + QChar( '\n' ) );
+        toShow.append(ent + QChar('\n'));
     }
 
-    logEdit->setText( toShow );
+    logEdit->setText(toShow);
 }
 

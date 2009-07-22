@@ -31,29 +31,29 @@
 
 class ShamanStatusBar : public QStatusBar
 {
-        Q_OBJECT
+    Q_OBJECT
 
-    public:
-        explicit ShamanStatusBar( MainWindow *parent = 0 );
-        virtual ~ShamanStatusBar();
+public:
+    explicit ShamanStatusBar(MainWindow *parent = 0);
+    virtual ~ShamanStatusBar();
 
-    public Q_SLOTS:
-        void showStBarAction( const QString &text, const QPixmap &pixmap, int timeout = 10 );
-        void clearStBarAction();
-        void updateStatusBar();
-        void startProgressBar();
-        void stopProgressBar();
-        void updateProgressBar( int percentage );
+public Q_SLOTS:
+    void showStBarAction(const QString &text, const QPixmap &pixmap, int timeout = 10);
+    void clearStBarAction();
+    void updateStatusBar();
+    void startProgressBar();
+    void stopProgressBar();
+    void updateProgressBar(int percentage);
 
-    private:
-        void setUpStatusBar();
+private:
+    void setUpStatusBar();
 
-    private:
-        MainWindow *mWin;
+private:
+    MainWindow *mWin;
 
-        QPointer<QLabel> stBarImage;
-        QPointer<QLabel> stBarText;
-        QPointer<QProgressBar> stBarProg;
+    QPointer<QLabel> stBarImage;
+    QPointer<QLabel> stBarText;
+    QPointer<QProgressBar> stBarProg;
 };
 
 #endif /*SHAMANSTATUSBAR_H*/

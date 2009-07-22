@@ -26,30 +26,30 @@
 class ABSHandler
 {
 
-        /* This class is an abstraction to the Arch Build System.
-         * There are not so many methods, anyway it can search for
-         * a package in the ABS path, and set up and clean up
-         * local building environments. It can also get some useful
-         * information about PKGBUILDs. It is a stripped parsed, just
-         * to suit our needs.
-         *
-         * Some of its functions are static, it is ridiculous to inherit a
-         * class or create an object just to pick a path, so getMakeDepends
-         * and getABSPath are static.
-         */
+    /* This class is an abstraction to the Arch Build System.
+     * There are not so many methods, anyway it can search for
+     * a package in the ABS path, and set up and clean up
+     * local building environments. It can also get some useful
+     * information about PKGBUILDs. It is a stripped parsed, just
+     * to suit our needs.
+     *
+     * Some of its functions are static, it is ridiculous to inherit a
+     * class or create an object just to pick a path, so getMakeDepends
+     * and getABSPath are static.
+     */
 
-    public:
-        ABSHandler();
-        virtual ~ABSHandler();
+public:
+    ABSHandler();
+    virtual ~ABSHandler();
 
-        static QString getABSPath( const QString &package );
-        bool setUpBuildingEnvironment( const QString &package );
-        bool cleanBuildingEnvironment( const QString &package );
-        bool cleanAllBuildingEnvironments();
-        static QStringList getMakeDepends( const QString &package );
+    static QString getABSPath(const QString &package);
+    bool setUpBuildingEnvironment(const QString &package);
+    bool cleanBuildingEnvironment(const QString &package);
+    bool cleanAllBuildingEnvironments();
+    static QStringList getMakeDepends(const QString &package);
 
-    private:
-        int rmrf( const char *path );
+private:
+    int rmrf(const char *path);
 
 };
 

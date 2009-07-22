@@ -25,20 +25,20 @@
 
 class LogViewer : public QDialog, private Ui::logViewer
 {
-        Q_OBJECT
+    Q_OBJECT
 
-    public:
-        explicit LogViewer( QWidget *parent = 0 );
-        virtual ~LogViewer();
+public:
+    explicit LogViewer(QWidget *parent = 0);
+    virtual ~LogViewer();
 
-    public slots:
-        void refreshView();
+public slots:
+    void refreshView();
 
-    private:
-        void loadLog();
+private:
+    void loadLog();
 
-    private:
-        QStringList contents;
+private:
+    QStringList contents;
 };
 
 #endif /*LOGVIEWER_H*/
