@@ -51,8 +51,7 @@ void SysUpgradeDialog::init()
 
     if ( settings->value( "gui/actionupgrade" ).toString() == "add" ) {
         addPkg();
-    }
-    else if ( settings->value( "gui/actionupgrade" ).toString() == "upgrade" ) {
+    } else if ( settings->value( "gui/actionupgrade" ).toString() == "upgrade" ) {
         initSysUpgrade();
     } else {
         Package::List data;
@@ -61,7 +60,7 @@ void SysUpgradeDialog::init()
 
         data = Backend::instance()->getUpgradeablePackages();
 
-        int n = data.size();
+        int n = data.count();
 
         upgradeMessage->setText( QString( tr( "<b>Upgradeable package(s): %n</b> "
                                               "You can either<br> upgrade "

@@ -29,6 +29,12 @@
 #include <QCheckBox>
 #include <QBoxLayout>
 
+#include <config.h>
+
+#ifdef KDE4_INTEGRATION
+#include <kmessagebox.h>
+#endif
+
 ShamanDialog::ShamanDialog()
 {
 }
@@ -48,6 +54,7 @@ void ShamanDialog::popupDialog( const QString &title, const QString &text, QWidg
         }
     }
 
+#ifndef KDE4_INTEGRATION
     QMessageBox *message;
 
     if ( parent == NULL )
@@ -84,6 +91,25 @@ void ShamanDialog::popupDialog( const QString &title, const QString &text, QWidg
 
     message->deleteLater();
 
+#else
+    switch ( dtype ) {
+    case ShamanProperties::InformationDialog:
+    case ShamanProperties::SuccessDialog:
+    case ShamanProperties::OtherDialog:
+        KMessageBox::information(parent, text, title);
+        break;
+    case ShamanProperties::ErrorDialog:
+        KMessageBox::error(parent, text, title);
+        break;
+    case ShamanProperties::WarningDialog:
+        KMessageBox::sorry(parent, text, title);
+        break;
+    default:
+        break;
+    }
+
+#endif
+
     if ( parent != NULL ) {
         foreach( QObject *ent, parent->children() ) {
             QDialog *dlog = qobject_cast<QDialog *>( ent );
@@ -106,6 +132,7 @@ int ShamanDialog::popupQuestionDialog( const QString &title, const QString &text
         }
     }
 
+#ifndef KDE4_INTEGRATION
     QMessageBox *msgBox = new QMessageBox( parent );
 
     switch ( dtype ) {
@@ -152,6 +179,24 @@ int ShamanDialog::popupQuestionDialog( const QString &title, const QString &text
         retval = QMessageBox::No;
 
     msgBox->deleteLater();
+#else
+    switch ( dtype ) {
+    case ShamanProperties::InformationDialog:
+    case ShamanProperties::SuccessDialog:
+    case ShamanProperties::OtherDialog:
+        retval = KMessageBox::questionYesNo(parent, text, title);
+        break;
+    case ShamanProperties::ErrorDialog:
+        retval = KMessageBox::warningContinueCancel(parent, text, title);
+        break;
+    case ShamanProperties::WarningDialog:
+        retval = KMessageBox::warningYesNo(parent, text, title);
+        break;
+    default:
+        retval = QMessageBox::No;
+        break;
+    }
+#endif
 
     if ( parent != NULL ) {
         foreach( QObject *ent, parent->children() ) {
@@ -167,6 +212,7 @@ int ShamanDialog::popupQuestionDialog( const QString &title, const QString &text
 void ShamanDialog::popupDialogDontShow( const QString &title, const QString &text, const QString &keyname,
                                         QWidget *parent, ShamanProperties::DialogType dtype )
 {
+#ifndef KDE4_INTEGRATION
     QSettings *settings = new QSettings();
 
     if ( !settings->value( keyname, false ).toBool() ) {
@@ -245,4 +291,23 @@ void ShamanDialog::popupDialogDontShow( const QString &title, const QString &tex
     }
 
     settings->deleteLater();
+
+#else
+    switch ( dtype ) {
+    case ShamanProperties::InformationDialog:
+    case ShamanProperties::SuccessDialog:
+    case ShamanProperties::OtherDialog:
+        KMessageBox::information(parent, text, title, keyname);
+        break;
+    case ShamanProperties::ErrorDialog:
+        KMessageBox::error(parent, text, title);
+        break;
+    case ShamanProperties::WarningDialog:
+        KMessageBox::sorry(parent, text, title);
+        break;
+    default:
+        break;
+    }
+
+#endif
 }

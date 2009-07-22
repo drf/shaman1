@@ -3,14 +3,18 @@ PROJECT(shaman)
 CMAKE_MINIMUM_REQUIRED(VERSION 2.4.0)
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules")
 
+if (KDE4_INTEGRATION)
+find_package(KDE4 REQUIRED)
+
+include (MacroLibrary)
+include (FindPackageHandleStandardArgs)
+include (KDE4Defaults)
+endif (KDE4_INTEGRATION)
+
 include(FindQt4)
 include(FindSharedMimeInfo)
 include(FindPkgConfig)
 include(FindPolkitQt)
-
-if (KDE4_INTEGRATION)
-find_package(KDE4)
-endif (KDE4_INTEGRATION)
 
 configure_file(config.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config.h )
 
@@ -169,10 +173,6 @@ FIND_PACKAGE(Automoc4 REQUIRED)
 pkg_check_modules (POLKIT polkit>=0.8 REQUIRED)
 pkg_check_modules (POLKITDBUS polkit-dbus>=0.8 REQUIRED)
 
-#optional packages
-FIND_PACKAGE(KDE4)
-FIND_PACKAGE(Plasma)
-
 INCLUDE(${QT_USE_FILE})
 
 SET(QT_USE_QTXML)
@@ -188,6 +188,8 @@ INCLUDE_DIRECTORIES(
     ${POLKITQT_INCLUDE_DIR}
     ${POLKIT_INCLUDE_DIRS}
 )
+
+add_definitions (${QT_DEFINITIONS} ${QT_QTDBUS_DEFINITIONS} ${KDE4_DEFINITIONS})
 
 CONFIGURE_FILE(
        "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules/cmake_uninstall.cmake.in"

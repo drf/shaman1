@@ -1413,20 +1413,18 @@ void MainWindow::startUpgrading()
     if ( list.isEmpty() ) {
         emit systemIsUpToDate();
 
-        if ( dbdialog ) {
-            if ( dbdialog->isVisible() )
-                /* Display a simple ShamanDialog::popup saying the system is up-to-date. */
-                ShamanDialog::popupDialog( tr( "System Upgrade" ), tr( "Your system is up to date!" ), this );
-            else if ( trayicon )
-                trayicon->showMessage( QString( tr( "System Upgrade" ) ), QString( tr( "Your system is up to date!" ) ) );
-
+        if (isVisible()) {
+            ShamanDialog::popupDialog( tr( "System Upgrade" ), tr( "Your system is up to date!" ), this );
+        } else {
+            trayicon->showMessage( QString( tr( "System Upgrade" ) ), QString( tr( "Your system is up to date!" ) ) );
         }
 
         stBar->showStBarAction( QString( tr( "Your system is up to date!" ) ), QPixmap( ":/Icons/icons/dialog-ok-apply.png" ) );
 
         qDebug() << "System is up to date";
-    } else
+    } else {
         upgrade( list );
+    }
 
     if ( dbdialog ) {
         dbdialog->deleteLater();
@@ -1568,20 +1566,7 @@ void MainWindow::addUpgradeableToQueue()
 
 void MainWindow::fullSysUpgrade()
 {
-    PolkitQt::Auth::computeAndObtainAuth("org.chakraproject.aqpm.updatedatabase");
-
-    dbdialog = new UpdateDbDialog( this );
-    dbActive = true;
-
-    if ( isVisible() )
-        dbdialog->show();
-
-    stBar->startProgressBar();
-
-    connect( dbdialog, SIGNAL( killMe() ), this, SLOT( startUpgrading() ) );
-    connect( dbdialog, SIGNAL( pBar( int ) ), stBar, SLOT( updateProgressBar( int ) ) );
-
-    dbdialog->doAction();
+    startUpgrading();
 }
 
 void MainWindow::upgradePackage()

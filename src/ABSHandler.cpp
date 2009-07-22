@@ -25,6 +25,7 @@
 #include <QSettings>
 #include <dirent.h>
 #include <errno.h>
+#include <unistd.h>
 
 ABSHandler::ABSHandler()
 {
