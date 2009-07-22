@@ -1,7 +1,8 @@
-<ui version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>ConfigDialog</class>
- <widget class="QDialog" name="ConfigDialog" >
-  <property name="geometry" >
+ <widget class="QDialog" name="ConfigDialog">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
@@ -9,128 +10,128 @@
     <height>662</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>Shaman - Configuration</string>
   </property>
-  <property name="windowIcon" >
-   <iconset resource="shaman.qrc" >
+  <property name="windowIcon">
+   <iconset>
     <normaloff>:/Icons/icons/shaman/shaman-system-is-up-to-date-32.png</normaloff>:/Icons/icons/shaman/shaman-system-is-up-to-date-32.png</iconset>
   </property>
-  <layout class="QGridLayout" >
-   <item row="0" column="0" >
-    <widget class="QListWidget" name="listWidget" >
-     <property name="sizePolicy" >
-      <sizepolicy vsizetype="Minimum" hsizetype="Fixed" >
+  <layout class="QGridLayout">
+   <item row="0" column="0">
+    <widget class="QListWidget" name="listWidget">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
      </property>
-     <property name="maximumSize" >
+     <property name="maximumSize">
       <size>
        <width>120</width>
        <height>16777215</height>
       </size>
      </property>
-     <property name="horizontalScrollBarPolicy" >
+     <property name="horizontalScrollBarPolicy">
       <enum>Qt::ScrollBarAlwaysOff</enum>
      </property>
-     <property name="dragDropMode" >
+     <property name="dragDropMode">
       <enum>QAbstractItemView::NoDragDrop</enum>
      </property>
-     <property name="selectionBehavior" >
+     <property name="selectionBehavior">
       <enum>QAbstractItemView::SelectRows</enum>
      </property>
-     <property name="movement" >
+     <property name="movement">
       <enum>QListView::Static</enum>
      </property>
-     <property name="isWrapping" stdset="0" >
+     <property name="isWrapping" stdset="0">
       <bool>true</bool>
      </property>
-     <property name="layoutMode" >
+     <property name="layoutMode">
       <enum>QListView::SinglePass</enum>
      </property>
-     <property name="spacing" >
+     <property name="spacing">
       <number>12</number>
      </property>
-     <property name="viewMode" >
+     <property name="viewMode">
       <enum>QListView::IconMode</enum>
      </property>
-     <property name="uniformItemSizes" >
+     <property name="uniformItemSizes">
       <bool>true</bool>
      </property>
     </widget>
    </item>
-   <item row="0" column="1" colspan="3" >
-    <widget class="QStackedWidget" name="stackedWidget" >
-     <property name="sizePolicy" >
-      <sizepolicy vsizetype="Minimum" hsizetype="Minimum" >
+   <item row="0" column="1" colspan="3">
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
      </property>
-     <property name="currentIndex" >
+     <property name="currentIndex">
       <number>0</number>
      </property>
-     <widget class="QWidget" name="Seite" >
-      <layout class="QVBoxLayout" >
+     <widget class="QWidget" name="Seite">
+      <layout class="QVBoxLayout">
        <item>
-        <widget class="QGroupBox" name="groupBox_5" >
-         <property name="title" >
+        <widget class="QGroupBox" name="groupBox_5">
+         <property name="title">
           <string>Favourite Actions</string>
          </property>
-         <property name="alignment" >
+         <property name="alignment">
           <set>Qt::AlignLeading</set>
          </property>
-         <layout class="QGridLayout" >
-          <item row="0" column="0" >
-           <widget class="QLabel" name="label_7" >
-            <property name="text" >
+         <layout class="QGridLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_7">
+            <property name="text">
              <string>When Upgrading System:</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="0" >
-           <layout class="QHBoxLayout" >
+          <item row="1" column="0">
+           <layout class="QHBoxLayout">
             <item>
-             <widget class="QRadioButton" name="upNowRadio" >
-              <property name="text" >
+             <widget class="QRadioButton" name="upNowRadio">
+              <property name="text">
                <string>Upgrade Immediately</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QRadioButton" name="addUpRadio" >
-              <property name="text" >
+             <widget class="QRadioButton" name="addUpRadio">
+              <property name="text">
                <string>Add Upgradeable Packages To Queue</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QRadioButton" name="askUpRadio" >
-              <property name="text" >
+             <widget class="QRadioButton" name="askUpRadio">
+              <property name="text">
                <string>Ask</string>
               </property>
              </widget>
             </item>
            </layout>
           </item>
-          <item row="2" column="0" >
-           <widget class="Line" name="line" >
-            <property name="orientation" >
+          <item row="2" column="0">
+           <widget class="Line" name="line">
+            <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
            </widget>
           </item>
-          <item row="3" column="0" >
-           <widget class="QLabel" name="label_8" >
-            <property name="text" >
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_8">
+            <property name="text">
              <string>When Processing Queue</string>
             </property>
            </widget>
           </item>
-          <item row="4" column="0" >
-           <widget class="QCheckBox" name="keepQueueTrayBox" >
-            <property name="text" >
+          <item row="4" column="0">
+           <widget class="QCheckBox" name="keepQueueTrayBox">
+            <property name="text">
              <string>Keep application running in System Tray only</string>
             </property>
            </widget>
@@ -139,35 +140,35 @@
         </widget>
        </item>
        <item>
-        <widget class="QGroupBox" name="groupBox_6" >
-         <property name="title" >
+        <widget class="QGroupBox" name="groupBox_6">
+         <property name="title">
           <string>GUI Startup</string>
          </property>
-         <layout class="QFormLayout" name="formLayout" >
-          <item row="1" column="0" >
-           <widget class="QCheckBox" name="startTrayBox" >
-            <property name="text" >
+         <layout class="QFormLayout" name="formLayout">
+          <item row="1" column="0">
+           <widget class="QCheckBox" name="startTrayBox">
+            <property name="text">
              <string>Start in the System Tray</string>
             </property>
            </widget>
           </item>
-          <item row="2" column="0" >
-           <widget class="QCheckBox" name="splashScreenBox" >
-            <property name="text" >
+          <item row="2" column="0">
+           <widget class="QCheckBox" name="splashScreenBox">
+            <property name="text">
              <string>Show Splashscreen</string>
             </property>
            </widget>
           </item>
-          <item row="3" column="0" >
-           <widget class="QLabel" name="label_22" >
-            <property name="text" >
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_22">
+            <property name="text">
              <string>Use the following language:</string>
             </property>
            </widget>
           </item>
-          <item row="3" column="1" >
-           <widget class="QComboBox" name="languageCombo" >
-            <property name="maximumSize" >
+          <item row="3" column="1">
+           <widget class="QComboBox" name="languageCombo">
+            <property name="maximumSize">
              <size>
               <width>100</width>
               <height>16777215</height>
@@ -175,9 +176,9 @@
             </property>
            </widget>
           </item>
-          <item row="0" column="0" >
-           <widget class="QCheckBox" name="disableTray" >
-            <property name="text" >
+          <item row="0" column="0">
+           <widget class="QCheckBox" name="disableTray">
+            <property name="text">
              <string>Disable Tray Icon</string>
             </property>
            </widget>
@@ -186,41 +187,41 @@
         </widget>
        </item>
        <item>
-        <widget class="QGroupBox" name="groupBox" >
-         <property name="title" >
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
           <string>Maintenance</string>
          </property>
-         <layout class="QGridLayout" >
-          <item row="0" column="0" >
-           <layout class="QVBoxLayout" >
+         <layout class="QGridLayout">
+          <item row="0" column="0">
+           <layout class="QVBoxLayout">
             <item>
-             <layout class="QHBoxLayout" >
+             <layout class="QHBoxLayout">
               <item>
-               <widget class="QComboBox" name="mantActionBox" />
+               <widget class="QComboBox" name="mantActionBox"/>
               </item>
               <item>
-               <widget class="QPushButton" name="mantProcessButton" >
-                <property name="sizePolicy" >
-                 <sizepolicy vsizetype="Fixed" hsizetype="Maximum" >
+               <widget class="QPushButton" name="mantProcessButton">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
-                <property name="text" >
+                <property name="text">
                  <string>Process Selected</string>
                 </property>
-                <property name="icon" >
-                 <iconset resource="shaman.qrc" >
+                <property name="icon">
+                 <iconset>
                   <normaloff>:/Icons/icons/dialog-ok-apply.png</normaloff>:/Icons/icons/dialog-ok-apply.png</iconset>
                 </property>
                </widget>
               </item>
               <item>
                <spacer>
-                <property name="orientation" >
+                <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
-                <property name="sizeHint" stdset="0" >
+                <property name="sizeHint" stdset="0">
                  <size>
                   <width>40</width>
                   <height>20</height>
@@ -231,13 +232,13 @@
              </layout>
             </item>
             <item>
-             <layout class="QHBoxLayout" >
+             <layout class="QHBoxLayout">
               <item>
-               <widget class="QLabel" name="statusLabel" >
-                <property name="text" >
-                 <string comment="Waiting for a user action" >Waiting</string>
+               <widget class="QLabel" name="statusLabel">
+                <property name="text">
+                 <string comment="Waiting for a user action">Waiting</string>
                 </property>
-                <property name="alignment" >
+                <property name="alignment">
                  <set>Qt::AlignCenter</set>
                 </property>
                </widget>
@@ -245,20 +246,20 @@
              </layout>
             </item>
             <item>
-             <widget class="QTextEdit" name="mantDetails" >
-              <property name="sizePolicy" >
-               <sizepolicy vsizetype="Maximum" hsizetype="Preferred" >
+             <widget class="QTextEdit" name="mantDetails">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
-              <property name="html" >
-               <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
-&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+              <property name="html">
+               <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Liberation Sans'; font-size:9pt;">Shaman Manteinance.&lt;/p>
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Liberation Sans'; font-size:9pt;">Please choose an action from the Drop-Down Menu.&lt;/p>&lt;/body>&lt;/html></string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Liberation Serif'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Liberation Sans'; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Liberation Sans'; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
             </item>
@@ -269,37 +270,37 @@ p, li { white-space: pre-wrap; }
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="Seite_2" >
-      <layout class="QGridLayout" >
-       <item row="0" column="0" >
-        <widget class="QGroupBox" name="groupBox_2" >
-         <property name="sizePolicy" >
-          <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+     <widget class="QWidget" name="Seite_2">
+      <layout class="QGridLayout">
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="groupBox_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
-         <property name="title" >
+         <property name="title">
           <string>Checkable Options</string>
          </property>
-         <layout class="QGridLayout" >
-          <item row="0" column="0" >
-           <widget class="QCheckBox" name="noPassiveFtpBox" >
-            <property name="text" >
+         <layout class="QGridLayout">
+          <item row="0" column="0">
+           <widget class="QCheckBox" name="noPassiveFtpBox">
+            <property name="text">
              <string>Use Active FTP</string>
             </property>
            </widget>
           </item>
-          <item row="2" column="0" >
-           <widget class="QCheckBox" name="useDeltaBox" >
-            <property name="text" >
+          <item row="2" column="0">
+           <widget class="QCheckBox" name="useDeltaBox">
+            <property name="text">
              <string>Use Deltas (needs xdelta to be installed)</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="0" >
-           <widget class="QCheckBox" name="sysLogBox" >
-            <property name="text" >
+          <item row="1" column="0">
+           <widget class="QCheckBox" name="sysLogBox">
+            <property name="text">
              <string>Use SysLog</string>
             </property>
            </widget>
@@ -307,89 +308,89 @@ p, li { white-space: pre-wrap; }
          </layout>
         </widget>
        </item>
-       <item row="1" column="0" >
-        <widget class="QGroupBox" name="groupBox_3" >
-         <property name="title" >
+       <item row="1" column="0">
+        <widget class="QGroupBox" name="groupBox_3">
+         <property name="title">
           <string>Advanced Options</string>
          </property>
-         <layout class="QGridLayout" >
-          <item row="0" column="0" >
-           <layout class="QVBoxLayout" >
+         <layout class="QGridLayout">
+          <item row="0" column="0">
+           <layout class="QVBoxLayout">
             <item>
-             <layout class="QGridLayout" >
-              <item row="0" column="0" >
-               <widget class="QLabel" name="label" >
-                <property name="text" >
+             <layout class="QGridLayout">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label">
+                <property name="text">
                  <string>HoldPkgs:</string>
                 </property>
                </widget>
               </item>
-              <item row="0" column="1" >
-               <widget class="QLineEdit" name="holdPkgLine" />
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="holdPkgLine"/>
               </item>
-              <item row="1" column="0" >
-               <widget class="QLabel" name="label_2" >
-                <property name="text" >
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_2">
+                <property name="text">
                  <string>IgnorePkgs:</string>
                 </property>
                </widget>
               </item>
-              <item row="1" column="1" >
-               <widget class="QLineEdit" name="ignorePkgLine" />
+              <item row="1" column="1">
+               <widget class="QLineEdit" name="ignorePkgLine"/>
               </item>
-              <item row="2" column="0" >
-               <widget class="QLabel" name="label_3" >
-                <property name="text" >
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_3">
+                <property name="text">
                  <string>IgnoreGroups:</string>
                 </property>
                </widget>
               </item>
-              <item row="2" column="1" >
-               <widget class="QLineEdit" name="ignoreGrpsLine" />
+              <item row="2" column="1">
+               <widget class="QLineEdit" name="ignoreGrpsLine"/>
               </item>
-              <item row="3" column="0" >
-               <widget class="QLabel" name="label_4" >
-                <property name="text" >
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_4">
+                <property name="text">
                  <string>NoUpgrade:</string>
                 </property>
                </widget>
               </item>
-              <item row="3" column="1" >
-               <widget class="QLineEdit" name="noUpgradeLine" />
+              <item row="3" column="1">
+               <widget class="QLineEdit" name="noUpgradeLine"/>
               </item>
-              <item row="4" column="0" >
-               <widget class="QLabel" name="label_5" >
-                <property name="text" >
+              <item row="4" column="0">
+               <widget class="QLabel" name="label_5">
+                <property name="text">
                  <string>NoExtract:</string>
                 </property>
                </widget>
               </item>
-              <item row="4" column="1" >
-               <widget class="QLineEdit" name="noExtractLine" />
+              <item row="4" column="1">
+               <widget class="QLineEdit" name="noExtractLine"/>
               </item>
-              <item row="5" column="0" >
-               <widget class="QLabel" name="label_20" >
-                <property name="text" >
+              <item row="5" column="0">
+               <widget class="QLabel" name="label_20">
+                <property name="text">
                  <string>Log File:</string>
                 </property>
                </widget>
               </item>
-              <item row="5" column="1" >
-               <widget class="QLineEdit" name="logFileLine" />
+              <item row="5" column="1">
+               <widget class="QLineEdit" name="logFileLine"/>
               </item>
              </layout>
             </item>
             <item>
-             <layout class="QVBoxLayout" >
+             <layout class="QVBoxLayout">
               <item>
-               <widget class="QLabel" name="label_6" >
-                <property name="text" >
+               <widget class="QLabel" name="label_6">
+                <property name="text">
                  <string>XFerCommand: (example: /path/to/command %u) Blank for Default</string>
                 </property>
                </widget>
               </item>
               <item>
-               <widget class="QLineEdit" name="xFerCommandLine" />
+               <widget class="QLineEdit" name="xFerCommandLine"/>
               </item>
              </layout>
             </item>
@@ -398,12 +399,12 @@ p, li { white-space: pre-wrap; }
          </layout>
         </widget>
        </item>
-       <item row="2" column="0" >
+       <item row="2" column="0">
         <spacer>
-         <property name="orientation" >
+         <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
-         <property name="sizeHint" stdset="0" >
+         <property name="sizeHint" stdset="0">
           <size>
            <width>20</width>
            <height>40</height>
@@ -413,53 +414,53 @@ p, li { white-space: pre-wrap; }
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="page" >
-      <layout class="QGridLayout" >
-       <item row="1" column="0" >
-        <widget class="QTabWidget" name="repoTab" >
-         <property name="currentIndex" >
+     <widget class="QWidget" name="page">
+      <layout class="QGridLayout">
+       <item row="1" column="0">
+        <widget class="QTabWidget" name="repoTab">
+         <property name="currentIndex">
           <number>0</number>
          </property>
-         <widget class="QWidget" name="officialTab" >
-          <attribute name="title" >
-           <string>Arch Linux Official Repositories</string>
-          </attribute>
-          <attribute name="icon" >
-           <iconset resource="shaman.qrc" >
+         <widget class="QWidget" name="officialTab">
+          <attribute name="icon">
+           <iconset>
             <normaloff>:/Icons/icons/archlinux-icon-crystal-32.svg</normaloff>:/Icons/icons/archlinux-icon-crystal-32.svg</iconset>
           </attribute>
-          <layout class="QGridLayout" >
-           <item row="0" column="0" >
-            <layout class="QVBoxLayout" >
+          <attribute name="title">
+           <string>Arch Linux Official Repositories</string>
+          </attribute>
+          <layout class="QGridLayout">
+           <item row="0" column="0">
+            <layout class="QVBoxLayout">
              <item>
-              <layout class="QVBoxLayout" >
+              <layout class="QVBoxLayout">
                <item>
-                <layout class="QHBoxLayout" >
+                <layout class="QHBoxLayout">
                  <item>
-                  <widget class="QLabel" name="label_18" >
-                   <property name="maximumSize" >
+                  <widget class="QLabel" name="label_18">
+                   <property name="maximumSize">
                     <size>
                      <width>150</width>
                      <height>16777215</height>
                     </size>
                    </property>
-                   <property name="text" >
+                   <property name="text">
                     <string/>
                    </property>
-                   <property name="pixmap" >
-                    <pixmap resource="shaman.qrc" >:/Icons/icons/archlinux-icon-crystal-32.svg</pixmap>
+                   <property name="pixmap">
+                    <pixmap>:/Icons/icons/archlinux-icon-crystal-32.svg</pixmap>
                    </property>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLabel" name="officialLabel" >
-                   <property name="text" >
+                  <widget class="QLabel" name="officialLabel">
+                   <property name="text">
                     <string>Here you can choose what repositories to use between Arch Linux's official ones. Please note that packages from Unstable and Testing may break your system.</string>
                    </property>
-                   <property name="scaledContents" >
+                   <property name="scaledContents">
                     <bool>true</bool>
                    </property>
-                   <property name="wordWrap" >
+                   <property name="wordWrap">
                     <bool>true</bool>
                    </property>
                   </widget>
@@ -467,39 +468,39 @@ p, li { white-space: pre-wrap; }
                 </layout>
                </item>
                <item>
-                <widget class="QCheckBox" name="coreBox" >
-                 <property name="text" >
-                  <string comment="Do not translate" >Core</string>
+                <widget class="QCheckBox" name="coreBox">
+                 <property name="text">
+                  <string comment="Do not translate">Core</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QCheckBox" name="extraBox" >
-                 <property name="text" >
-                  <string comment="Do not translate" >Extra</string>
+                <widget class="QCheckBox" name="extraBox">
+                 <property name="text">
+                  <string comment="Do not translate">Extra</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QCheckBox" name="communityBox" >
-                 <property name="text" >
-                  <string comment="Do not translate" >Community</string>
+                <widget class="QCheckBox" name="communityBox">
+                 <property name="text">
+                  <string comment="Do not translate">Community</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QCheckBox" name="testingBox" >
-                 <property name="text" >
-                  <string comment="Do not translate" >Testing</string>
+                <widget class="QCheckBox" name="testingBox">
+                 <property name="text">
+                  <string comment="Do not translate">Testing</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <spacer>
-                 <property name="orientation" >
+                 <property name="orientation">
                   <enum>Qt::Vertical</enum>
                  </property>
-                 <property name="sizeHint" stdset="0" >
+                 <property name="sizeHint" stdset="0">
                   <size>
                    <width>20</width>
                    <height>40</height>
@@ -510,33 +511,33 @@ p, li { white-space: pre-wrap; }
               </layout>
              </item>
              <item>
-              <widget class="QGroupBox" name="groupBox_4" >
-               <property name="title" >
+              <widget class="QGroupBox" name="groupBox_4">
+               <property name="title">
                 <string>Server</string>
                </property>
-               <layout class="QGridLayout" >
-                <item row="0" column="0" >
-                 <widget class="QLabel" name="mirrorLabel" >
-                  <property name="text" >
+               <layout class="QGridLayout">
+                <item row="0" column="0">
+                 <widget class="QLabel" name="mirrorLabel">
+                  <property name="text">
                    <string>Mirror:</string>
                   </property>
                  </widget>
                 </item>
-                <item row="0" column="1" >
-                 <widget class="QComboBox" name="mirrorBox" />
+                <item row="0" column="1">
+                 <widget class="QComboBox" name="mirrorBox"/>
                 </item>
-                <item row="2" column="1" >
-                 <layout class="QHBoxLayout" >
+                <item row="2" column="1">
+                 <layout class="QHBoxLayout">
                   <item>
-                   <widget class="QLineEdit" name="addMirrorLine" />
+                   <widget class="QLineEdit" name="addMirrorLine"/>
                   </item>
                   <item>
-                   <widget class="QPushButton" name="addMirrorButton" >
-                    <property name="text" >
+                   <widget class="QPushButton" name="addMirrorButton">
+                    <property name="text">
                      <string>Add Mirror</string>
                     </property>
-                    <property name="icon" >
-                     <iconset resource="shaman.qrc" >
+                    <property name="icon">
+                     <iconset>
                       <normaloff>:/Icons/icons/list-add.png</normaloff>:/Icons/icons/list-add.png</iconset>
                     </property>
                    </widget>
@@ -550,44 +551,44 @@ p, li { white-space: pre-wrap; }
            </item>
           </layout>
          </widget>
-         <widget class="QWidget" name="KDEModTab" >
-          <attribute name="title" >
-           <string>KDEMod Repositories</string>
-          </attribute>
-          <attribute name="icon" >
-           <iconset resource="shaman.qrc" >
+         <widget class="QWidget" name="KDEModTab">
+          <attribute name="icon">
+           <iconset>
             <normaloff>:/Icons/icons/archlinux-mods-kdemod.svg</normaloff>:/Icons/icons/archlinux-mods-kdemod.svg</iconset>
           </attribute>
-          <layout class="QVBoxLayout" >
+          <attribute name="title">
+           <string>KDEMod Repositories</string>
+          </attribute>
+          <layout class="QVBoxLayout">
            <item>
-            <layout class="QVBoxLayout" >
+            <layout class="QVBoxLayout">
              <item>
-              <layout class="QHBoxLayout" >
+              <layout class="QHBoxLayout">
                <item>
-                <widget class="QLabel" name="label_15" >
-                 <property name="maximumSize" >
+                <widget class="QLabel" name="label_15">
+                 <property name="maximumSize">
                   <size>
                    <width>150</width>
                    <height>16777215</height>
                   </size>
                  </property>
-                 <property name="text" >
+                 <property name="text">
                   <string/>
                  </property>
-                 <property name="pixmap" >
-                  <pixmap resource="shaman.qrc" >:/Icons/icons/archlinux-mods-kdemod.svg</pixmap>
+                 <property name="pixmap">
+                  <pixmap>:/Icons/icons/archlinux-mods-kdemod.svg</pixmap>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QLabel" name="KDEModLabel" >
-                 <property name="text" >
+                <widget class="QLabel" name="KDEModLabel">
+                 <property name="text">
                   <string>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an improved Qt build, compatible with Arch Linux standard Qt's, an improved theme, and lots of addons, KDEMod is the best way to taste the ease and the power of KDE with the simplicity and the power of Arch.</string>
                  </property>
-                 <property name="scaledContents" >
+                 <property name="scaledContents">
                   <bool>true</bool>
                  </property>
-                 <property name="wordWrap" >
+                 <property name="wordWrap">
                   <bool>true</bool>
                  </property>
                 </widget>
@@ -595,53 +596,53 @@ p, li { white-space: pre-wrap; }
               </layout>
              </item>
              <item>
-              <widget class="QCheckBox" name="KDEMod4Box" >
-               <property name="text" >
+              <widget class="QCheckBox" name="KDEMod4Box">
+               <property name="text">
                 <string>KDEMod 4 Repository</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QCheckBox" name="KDEMod4ExtragearBox" >
-               <property name="text" >
+              <widget class="QCheckBox" name="KDEMod4ExtragearBox">
+               <property name="text">
                 <string>KDEMod 4 Extragear Repository</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QCheckBox" name="KDEMod4PlaygroundBox" >
-               <property name="text" >
+              <widget class="QCheckBox" name="KDEMod4PlaygroundBox">
+               <property name="text">
                 <string>KDEMod 4 Playground Repository</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QCheckBox" name="KDEMod4TestingBox" >
-               <property name="text" >
+              <widget class="QCheckBox" name="KDEMod4TestingBox">
+               <property name="text">
                 <string>KDEMod 4 Testing Repository</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QCheckBox" name="KDEMod4UnstableBox" >
-               <property name="text" >
+              <widget class="QCheckBox" name="KDEMod4UnstableBox">
+               <property name="text">
                 <string>KDEMod 4 Unstable Repository (Testers only!)</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QCheckBox" name="KDEMod3Box" >
-               <property name="text" >
+              <widget class="QCheckBox" name="KDEMod3Box">
+               <property name="text">
                 <string>KDEMod 3 Repository</string>
                </property>
               </widget>
              </item>
              <item>
               <spacer>
-               <property name="orientation" >
+               <property name="orientation">
                 <enum>Qt::Vertical</enum>
                </property>
-               <property name="sizeHint" stdset="0" >
+               <property name="sizeHint" stdset="0">
                 <size>
                  <width>20</width>
                  <height>40</height>
@@ -650,33 +651,33 @@ p, li { white-space: pre-wrap; }
               </spacer>
              </item>
              <item>
-              <widget class="QGroupBox" name="groupBox_13" >
-               <property name="title" >
+              <widget class="QGroupBox" name="groupBox_13">
+               <property name="title">
                 <string>Server</string>
                </property>
-               <layout class="QGridLayout" >
-                <item row="0" column="0" >
-                 <widget class="QLabel" name="mirrorLabel_2" >
-                  <property name="text" >
+               <layout class="QGridLayout">
+                <item row="0" column="0">
+                 <widget class="QLabel" name="mirrorLabel_2">
+                  <property name="text">
                    <string>Mirror:</string>
                   </property>
                  </widget>
                 </item>
-                <item row="0" column="1" >
-                 <widget class="QComboBox" name="KDEModMirrorBox" />
+                <item row="0" column="1">
+                 <widget class="QComboBox" name="KDEModMirrorBox"/>
                 </item>
-                <item row="2" column="1" >
-                 <layout class="QHBoxLayout" >
+                <item row="2" column="1">
+                 <layout class="QHBoxLayout">
                   <item>
-                   <widget class="QLineEdit" name="addKDEModMirrorLine" />
+                   <widget class="QLineEdit" name="addKDEModMirrorLine"/>
                   </item>
                   <item>
-                   <widget class="QPushButton" name="addKDEModMirrorButton" >
-                    <property name="text" >
+                   <widget class="QPushButton" name="addKDEModMirrorButton">
+                    <property name="text">
                      <string>Add Mirror</string>
                     </property>
-                    <property name="icon" >
-                     <iconset resource="shaman.qrc" >
+                    <property name="icon">
+                     <iconset>
                       <normaloff>:/Icons/icons/list-add.png</normaloff>:/Icons/icons/list-add.png</iconset>
                     </property>
                    </widget>
@@ -690,58 +691,58 @@ p, li { white-space: pre-wrap; }
            </item>
           </layout>
          </widget>
-         <widget class="QWidget" name="thirdPartyTab" >
-          <attribute name="title" >
-           <string>Third-Party Repositories</string>
-          </attribute>
-          <attribute name="icon" >
-           <iconset resource="shaman.qrc" >
+         <widget class="QWidget" name="thirdPartyTab">
+          <attribute name="icon">
+           <iconset>
             <normaloff>:/Icons/icons/network-server-database.png</normaloff>:/Icons/icons/network-server-database.png</iconset>
           </attribute>
-          <layout class="QGridLayout" >
-           <item row="0" column="0" >
-            <layout class="QVBoxLayout" >
+          <attribute name="title">
+           <string>Third-Party Repositories</string>
+          </attribute>
+          <layout class="QGridLayout">
+           <item row="0" column="0">
+            <layout class="QVBoxLayout">
              <item>
-              <widget class="QLabel" name="thirdPartyLabel" >
-               <property name="text" >
+              <widget class="QLabel" name="thirdPartyLabel">
+               <property name="text">
                 <string>You can extend your packages choice by adding other repositories. Third-Party Repositories act just as normal ones, and will be accessible through both Shaman and Pacman.</string>
                </property>
-               <property name="scaledContents" >
+               <property name="scaledContents">
                 <bool>true</bool>
                </property>
-               <property name="wordWrap" >
+               <property name="wordWrap">
                 <bool>true</bool>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QTreeWidget" name="thirdPartyWidget" >
-               <property name="indentation" >
+              <widget class="QTreeWidget" name="thirdPartyWidget">
+               <property name="indentation">
                 <number>0</number>
                </property>
-               <property name="itemsExpandable" >
+               <property name="itemsExpandable">
                 <bool>false</bool>
                </property>
                <column>
-                <property name="text" >
+                <property name="text">
                  <string>Repository</string>
                 </property>
                </column>
                <column>
-                <property name="text" >
+                <property name="text">
                  <string>Server</string>
                 </property>
                </column>
               </widget>
              </item>
              <item>
-              <layout class="QHBoxLayout" >
+              <layout class="QHBoxLayout">
                <item>
                 <spacer>
-                 <property name="orientation" >
+                 <property name="orientation">
                   <enum>Qt::Horizontal</enum>
                  </property>
-                 <property name="sizeHint" stdset="0" >
+                 <property name="sizeHint" stdset="0">
                   <size>
                    <width>71</width>
                    <height>20</height>
@@ -750,34 +751,34 @@ p, li { white-space: pre-wrap; }
                 </spacer>
                </item>
                <item>
-                <widget class="QPushButton" name="addThirdPartyButton" >
-                 <property name="text" >
+                <widget class="QPushButton" name="addThirdPartyButton">
+                 <property name="text">
                   <string>Add New Repository</string>
                  </property>
-                 <property name="icon" >
-                  <iconset resource="shaman.qrc" >
+                 <property name="icon">
+                  <iconset>
                    <normaloff>:/Icons/icons/list-add.png</normaloff>:/Icons/icons/list-add.png</iconset>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QPushButton" name="editThirdPartyButton" >
-                 <property name="text" >
+                <widget class="QPushButton" name="editThirdPartyButton">
+                 <property name="text">
                   <string>Edit Repository</string>
                  </property>
-                 <property name="icon" >
-                  <iconset resource="shaman.qrc" >
+                 <property name="icon">
+                  <iconset>
                    <normaloff>:/Icons/icons/draw-text.png</normaloff>:/Icons/icons/draw-text.png</iconset>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QPushButton" name="removeThirdPartyButton" >
-                 <property name="text" >
+                <widget class="QPushButton" name="removeThirdPartyButton">
+                 <property name="text">
                   <string>Remove Repository</string>
                  </property>
-                 <property name="icon" >
-                  <iconset resource="shaman.qrc" >
+                 <property name="icon">
+                  <iconset>
                    <normaloff>:/Icons/icons/list-remove.png</normaloff>:/Icons/icons/list-remove.png</iconset>
                  </property>
                 </widget>
@@ -792,24 +793,24 @@ p, li { white-space: pre-wrap; }
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="Seite_3" >
-      <layout class="QGridLayout" >
-       <item row="0" column="0" >
-        <widget class="QGroupBox" name="groupBox_9" >
-         <property name="title" >
+     <widget class="QWidget" name="Seite_3">
+      <layout class="QGridLayout">
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="groupBox_9">
+         <property name="title">
           <string>Preferences</string>
          </property>
-         <layout class="QGridLayout" >
-          <item row="0" column="0" >
-           <widget class="QCheckBox" name="makeDepsSourceBox" >
-            <property name="text" >
+         <layout class="QGridLayout">
+          <item row="0" column="0">
+           <widget class="QCheckBox" name="makeDepsSourceBox">
+            <property name="text">
              <string>Process all dependencies and queue from binary first (recommended)</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="0" >
-           <widget class="QCheckBox" name="reviewBuildOutBox" >
-            <property name="text" >
+          <item row="1" column="0">
+           <widget class="QCheckBox" name="reviewBuildOutBox">
+            <property name="text">
              <string>Review Building output before installing</string>
             </property>
            </widget>
@@ -817,127 +818,127 @@ p, li { white-space: pre-wrap; }
          </layout>
         </widget>
        </item>
-       <item row="1" column="0" >
-        <widget class="QGroupBox" name="groupBox_7" >
-         <property name="title" >
+       <item row="1" column="0">
+        <widget class="QGroupBox" name="groupBox_7">
+         <property name="title">
           <string>ABS Configuration</string>
          </property>
-         <layout class="QGridLayout" >
-          <item row="0" column="0" colspan="3" >
-           <widget class="QRadioButton" name="useMatchSupRadio" >
-            <property name="text" >
+         <layout class="QGridLayout">
+          <item row="0" column="0" colspan="3">
+           <widget class="QRadioButton" name="useMatchSupRadio">
+            <property name="text">
              <string>Use supfiles that match your current repositories</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="0" colspan="2" >
-           <widget class="QRadioButton" name="useCustomSupRadio" >
-            <property name="text" >
+          <item row="1" column="0" colspan="2">
+           <widget class="QRadioButton" name="useCustomSupRadio">
+            <property name="text">
              <string>Define supfiles manually</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="2" >
-           <widget class="QLineEdit" name="supEdit" />
+          <item row="1" column="2">
+           <widget class="QLineEdit" name="supEdit"/>
           </item>
-          <item row="2" column="0" >
-           <widget class="QLabel" name="label_21" >
-            <property name="text" >
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_21">
+            <property name="text">
              <string>RSync Server:</string>
             </property>
            </widget>
           </item>
-          <item row="2" column="1" colspan="2" >
-           <widget class="QLineEdit" name="rsyncServerEdit" />
+          <item row="2" column="1" colspan="2">
+           <widget class="QLineEdit" name="rsyncServerEdit"/>
           </item>
          </layout>
         </widget>
        </item>
-       <item row="2" column="0" >
-        <widget class="QGroupBox" name="groupBox_8" >
-         <property name="title" >
+       <item row="2" column="0">
+        <widget class="QGroupBox" name="groupBox_8">
+         <property name="title">
           <string>Makepkg Configuration</string>
          </property>
-         <layout class="QGridLayout" >
-          <item row="0" column="0" >
-           <widget class="QLabel" name="label_9" >
-            <property name="text" >
+         <layout class="QGridLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_9">
+            <property name="text">
              <string>CFlags</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="1" >
-           <widget class="QLineEdit" name="CFlagEdit" />
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="CFlagEdit"/>
           </item>
-          <item row="1" column="0" >
-           <widget class="QLabel" name="label_10" >
-            <property name="text" >
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_10">
+            <property name="text">
              <string>CXXFlags</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="1" >
-           <widget class="QLineEdit" name="CXXFlagEdit" />
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="CXXFlagEdit"/>
           </item>
-          <item row="2" column="0" >
-           <widget class="QLabel" name="label_11" >
-            <property name="text" >
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_11">
+            <property name="text">
              <string>BuildEnv</string>
             </property>
            </widget>
           </item>
-          <item row="2" column="1" >
-           <widget class="QLineEdit" name="buildEnvEdit" />
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="buildEnvEdit"/>
           </item>
-          <item row="3" column="0" >
-           <widget class="QLabel" name="label_12" >
-            <property name="text" >
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_12">
+            <property name="text">
              <string>Options</string>
             </property>
            </widget>
           </item>
-          <item row="3" column="1" >
-           <widget class="QLineEdit" name="optionsMkPkgEdit" />
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="optionsMkPkgEdit"/>
           </item>
-          <item row="4" column="0" >
-           <widget class="QLabel" name="label_13" >
-            <property name="text" >
+          <item row="4" column="0">
+           <widget class="QLabel" name="label_13">
+            <property name="text">
              <string>Doc_Dirs</string>
             </property>
            </widget>
           </item>
-          <item row="4" column="1" >
-           <widget class="QLineEdit" name="docDirsEdit" />
+          <item row="4" column="1">
+           <widget class="QLineEdit" name="docDirsEdit"/>
           </item>
          </layout>
         </widget>
        </item>
-       <item row="3" column="0" >
-        <widget class="QGroupBox" name="groupBox_10" >
-         <property name="title" >
+       <item row="3" column="0">
+        <widget class="QGroupBox" name="groupBox_10">
+         <property name="title">
           <string>Build Environment</string>
          </property>
-         <layout class="QGridLayout" >
-          <item row="0" column="0" >
-           <widget class="QLabel" name="label_14" >
-            <property name="text" >
+         <layout class="QGridLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_14">
+            <property name="text">
              <string>Building Path</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="1" >
-           <widget class="QLineEdit" name="buildPathEdit" />
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="buildPathEdit"/>
           </item>
-          <item row="1" column="0" colspan="2" >
-           <widget class="QCheckBox" name="cleanMakeDepsBox" >
-            <property name="text" >
+          <item row="1" column="0" colspan="2">
+           <widget class="QCheckBox" name="cleanMakeDepsBox">
+            <property name="text">
              <string>Remove installed makedepends after build</string>
             </property>
            </widget>
           </item>
-          <item row="2" column="0" colspan="2" >
-           <widget class="QCheckBox" name="cleanBuildEnvBox" >
-            <property name="text" >
+          <item row="2" column="0" colspan="2">
+           <widget class="QCheckBox" name="cleanBuildEnvBox">
+            <property name="text">
              <string>Clean Build Environment after installation</string>
             </property>
            </widget>
@@ -947,103 +948,103 @@ p, li { white-space: pre-wrap; }
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="page_2" >
-      <layout class="QGridLayout" >
-       <item row="0" column="0" >
-        <widget class="QGroupBox" name="groupBox_11" >
-         <property name="title" >
+     <widget class="QWidget" name="page_2">
+      <layout class="QGridLayout">
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="groupBox_11">
+         <property name="title">
           <string>When Application is in System Tray only</string>
          </property>
-         <layout class="QGridLayout" >
-          <item row="0" column="0" colspan="2" >
-           <widget class="QCheckBox" name="updateDbTrayBox" >
-            <property name="text" >
+         <layout class="QGridLayout">
+          <item row="0" column="0" colspan="2">
+           <widget class="QCheckBox" name="updateDbTrayBox">
+            <property name="text">
              <string>Update Database every</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="2" >
-           <widget class="QSpinBox" name="minutesSpin" >
-            <property name="enabled" >
+          <item row="0" column="2">
+           <widget class="QSpinBox" name="minutesSpin">
+            <property name="enabled">
              <bool>true</bool>
             </property>
-            <property name="suffix" >
-             <string comment="As in &quot;minutes&quot;" >min</string>
+            <property name="suffix">
+             <string comment="As in &quot;minutes&quot;">min</string>
             </property>
            </widget>
           </item>
-          <item row="2" column="0" colspan="3" >
-           <widget class="QCheckBox" name="updateDbShowNotify" >
-            <property name="text" >
+          <item row="2" column="0" colspan="3">
+           <widget class="QCheckBox" name="updateDbShowNotify">
+            <property name="text">
              <string>Show tray notification Windows</string>
             </property>
-            <property name="checked" >
+            <property name="checked">
              <bool>false</bool>
             </property>
            </widget>
           </item>
-          <item row="3" column="0" >
-           <widget class="QLabel" name="label_17" >
-            <property name="text" >
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_17">
+            <property name="text">
              <string>If upgrades are available:</string>
             </property>
            </widget>
           </item>
-          <item row="3" column="1" colspan="2" >
-           <widget class="QRadioButton" name="upNotifyRadio" >
-            <property name="text" >
+          <item row="3" column="1" colspan="2">
+           <widget class="QRadioButton" name="upNotifyRadio">
+            <property name="text">
              <string>Just Notify</string>
             </property>
            </widget>
           </item>
-          <item row="3" column="3" >
-           <widget class="QRadioButton" name="upNotifyAddRadio" >
-            <property name="text" >
+          <item row="3" column="3">
+           <widget class="QRadioButton" name="upNotifyAddRadio">
+            <property name="text">
              <string>Notify and add them to Queue</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="0" colspan="2" >
-           <widget class="QCheckBox" name="updateDbTrayAtBox" >
-            <property name="text" >
+          <item row="1" column="0" colspan="2">
+           <widget class="QCheckBox" name="updateDbTrayAtBox">
+            <property name="text">
              <string>Update Database at</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="2" >
-           <widget class="QTimeEdit" name="schedTimeEdit" />
+          <item row="1" column="2">
+           <widget class="QTimeEdit" name="schedTimeEdit"/>
           </item>
          </layout>
         </widget>
        </item>
-       <item row="1" column="0" >
-        <widget class="QGroupBox" name="proxyGroup" >
-         <property name="title" >
+       <item row="1" column="0">
+        <widget class="QGroupBox" name="proxyGroup">
+         <property name="title">
           <string>Use a proxy-server</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>true</bool>
          </property>
-         <property name="checked" >
+         <property name="checked">
           <bool>false</bool>
          </property>
-         <layout class="QGridLayout" >
-          <item row="0" column="0" >
-           <widget class="QLabel" name="label_16" >
-            <property name="text" >
+         <layout class="QGridLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_16">
+            <property name="text">
              <string>IP:</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="1" >
-           <widget class="QLineEdit" name="proxyServer" >
-            <property name="sizePolicy" >
-             <sizepolicy vsizetype="Fixed" hsizetype="MinimumExpanding" >
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="proxyServer">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
-            <property name="minimumSize" >
+            <property name="minimumSize">
              <size>
               <width>0</width>
               <height>0</height>
@@ -1051,28 +1052,28 @@ p, li { white-space: pre-wrap; }
             </property>
            </widget>
           </item>
-          <item row="0" column="2" >
-           <widget class="QLabel" name="label_19" >
-            <property name="text" >
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_19">
+            <property name="text">
              <string>Port:</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="3" >
-           <widget class="QLineEdit" name="proxyPort" >
-            <property name="sizePolicy" >
-             <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+          <item row="0" column="3">
+           <widget class="QLineEdit" name="proxyPort">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
-            <property name="minimumSize" >
+            <property name="minimumSize">
              <size>
               <width>40</width>
               <height>0</height>
              </size>
             </property>
-            <property name="maximumSize" >
+            <property name="maximumSize">
              <size>
               <width>40</width>
               <height>16777215</height>
@@ -1080,12 +1081,12 @@ p, li { white-space: pre-wrap; }
             </property>
            </widget>
           </item>
-          <item row="0" column="4" >
+          <item row="0" column="4">
            <spacer>
-            <property name="orientation" >
+            <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
-            <property name="sizeHint" stdset="0" >
+            <property name="sizeHint" stdset="0">
              <size>
               <width>191</width>
               <height>20</height>
@@ -1093,16 +1094,16 @@ p, li { white-space: pre-wrap; }
             </property>
            </spacer>
           </item>
-          <item row="1" column="0" colspan="2" >
-           <widget class="QCheckBox" name="httpProxyBox" >
-            <property name="text" >
+          <item row="1" column="0" colspan="2">
+           <widget class="QCheckBox" name="httpProxyBox">
+            <property name="text">
              <string>HTTP Proxy</string>
             </property>
            </widget>
           </item>
-          <item row="2" column="0" colspan="2" >
-           <widget class="QCheckBox" name="ftpProxyBox" >
-            <property name="text" >
+          <item row="2" column="0" colspan="2">
+           <widget class="QCheckBox" name="ftpProxyBox">
+            <property name="text">
              <string>FTP Proxy</string>
             </property>
            </widget>
@@ -1110,52 +1111,52 @@ p, li { white-space: pre-wrap; }
          </layout>
         </widget>
        </item>
-       <item row="2" column="0" >
-        <widget class="QGroupBox" name="useRSSBox" >
-         <property name="title" >
+       <item row="2" column="0">
+        <widget class="QGroupBox" name="useRSSBox">
+         <property name="title">
           <string>Use Shaman RSS Capabilities</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>true</bool>
          </property>
-         <property name="checked" >
+         <property name="checked">
           <bool>false</bool>
          </property>
-         <layout class="QGridLayout" >
-          <item row="0" column="0" >
-           <widget class="QCheckBox" name="updateRSSBox" >
-            <property name="text" >
+         <layout class="QGridLayout">
+          <item row="0" column="0">
+           <widget class="QCheckBox" name="updateRSSBox">
+            <property name="text">
              <string>Update RSS Feed Every</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="1" >
-           <widget class="QSpinBox" name="updateRSSSpin" >
-            <property name="suffix" >
-             <string comment="As in &quot;minutes&quot;" >min</string>
+          <item row="0" column="1">
+           <widget class="QSpinBox" name="updateRSSSpin">
+            <property name="suffix">
+             <string comment="As in &quot;minutes&quot;">min</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="0" >
-           <widget class="QCheckBox" name="notifyRSSBox" >
-            <property name="text" >
+          <item row="1" column="0">
+           <widget class="QCheckBox" name="notifyRSSBox">
+            <property name="text">
              <string>Notify upon new items</string>
             </property>
            </widget>
           </item>
-          <item row="2" column="0" colspan="3" >
-           <widget class="QCheckBox" name="notifyQueueRSSBox" >
-            <property name="text" >
+          <item row="2" column="0" colspan="3">
+           <widget class="QCheckBox" name="notifyQueueRSSBox">
+            <property name="text">
              <string>Check if there is an unread news about a package in Queue before processing it</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="2" >
+          <item row="0" column="2">
            <spacer>
-            <property name="orientation" >
+            <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
-            <property name="sizeHint" stdset="0" >
+            <property name="sizeHint" stdset="0">
              <size>
               <width>40</width>
               <height>20</height>
@@ -1166,12 +1167,12 @@ p, li { white-space: pre-wrap; }
          </layout>
         </widget>
        </item>
-       <item row="4" column="0" >
+       <item row="4" column="0">
         <spacer>
-         <property name="orientation" >
+         <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
-         <property name="sizeHint" stdset="0" >
+         <property name="sizeHint" stdset="0">
           <size>
            <width>20</width>
            <height>40</height>
@@ -1179,29 +1180,29 @@ p, li { white-space: pre-wrap; }
          </property>
         </spacer>
        </item>
-       <item row="3" column="0" >
-        <widget class="QGroupBox" name="groupBox_12" >
-         <property name="title" >
+       <item row="3" column="0">
+        <widget class="QGroupBox" name="groupBox_12">
+         <property name="title">
           <string>Interface</string>
          </property>
-         <layout class="QVBoxLayout" >
+         <layout class="QVBoxLayout">
           <item>
-           <widget class="QCheckBox" name="useAnimatedBox" >
-            <property name="text" >
+           <widget class="QCheckBox" name="useAnimatedBox">
+            <property name="text">
              <string>Use Animated Tray Icon</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QCheckBox" name="autoStartBox" >
-            <property name="text" >
+           <widget class="QCheckBox" name="autoStartBox">
+            <property name="text">
              <string>Start Shaman Automatically on X Startup</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QCheckBox" name="noRootBox" >
-            <property name="text" >
+           <widget class="QCheckBox" name="noRootBox">
+            <property name="text">
              <string>Forbid starting Shaman as root</string>
             </property>
            </widget>
@@ -1213,12 +1214,12 @@ p, li { white-space: pre-wrap; }
      </widget>
     </widget>
    </item>
-   <item row="1" column="0" colspan="2" >
+   <item row="1" column="0" colspan="2">
     <spacer>
-     <property name="orientation" >
+     <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
-     <property name="sizeHint" stdset="0" >
+     <property name="sizeHint" stdset="0">
       <size>
        <width>40</width>
        <height>20</height>
@@ -1226,45 +1227,43 @@ p, li { white-space: pre-wrap; }
      </property>
     </spacer>
    </item>
-   <item row="1" column="2" >
-    <widget class="QPushButton" name="okButton" >
-     <property name="sizePolicy" >
-      <sizepolicy vsizetype="Fixed" hsizetype="Maximum" >
+   <item row="1" column="2">
+    <widget class="QPushButton" name="okButton">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
      </property>
-     <property name="text" >
+     <property name="text">
       <string>Ok</string>
      </property>
-     <property name="icon" >
-      <iconset resource="shaman.qrc" >
+     <property name="icon">
+      <iconset>
        <normaloff>:/Icons/icons/dialog-ok-apply.png</normaloff>:/Icons/icons/dialog-ok-apply.png</iconset>
      </property>
     </widget>
    </item>
-   <item row="1" column="3" >
-    <widget class="QPushButton" name="cancelButton" >
-     <property name="sizePolicy" >
-      <sizepolicy vsizetype="Fixed" hsizetype="Maximum" >
+   <item row="1" column="3">
+    <widget class="QPushButton" name="cancelButton">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
      </property>
-     <property name="text" >
+     <property name="text">
       <string>Cancel</string>
      </property>
-     <property name="icon" >
-      <iconset resource="shaman.qrc" >
+     <property name="icon">
+      <iconset>
        <normaloff>:/Icons/icons/dialog-cancel.png</normaloff>:/Icons/icons/dialog-cancel.png</iconset>
      </property>
     </widget>
    </item>
   </layout>
  </widget>
- <resources>
-  <include location="shaman.qrc" />
- </resources>
+ <resources/>
  <connections>
   <connection>
    <sender>cancelButton</sender>
@@ -1272,27 +1271,11 @@ p, li { white-space: pre-wrap; }
    <receiver>ConfigDialog</receiver>
    <slot>reject()</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>667</x>
      <y>585</y>
     </hint>
-    <hint type="destinationlabel" >
-     <x>405</x>
-     <y>302</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>okButton</sender>
-   <signal>clicked()</signal>
-   <receiver>ConfigDialog</receiver>
-   <slot>accept()</slot>
-   <hints>
-    <hint type="sourcelabel" >
-     <x>765</x>
-     <y>585</y>
-    </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>405</x>
      <y>302</y>
     </hint>

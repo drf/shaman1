@@ -42,6 +42,8 @@
 #include <QDebug>
 #include <QTime>
 
+#include <ActionButton>
+
 using namespace Aqpm;
 
 ConfigDialog::ConfigDialog( QWidget *parent )
@@ -57,8 +59,11 @@ ConfigDialog::ConfigDialog( QWidget *parent )
     connect( listWidget, SIGNAL( currentRowChanged( int ) ), this, SLOT( changeWidget( int ) ) );
     connect( this, SIGNAL( accepted() ), SLOT( saveConfiguration() ) );
     setModal( true );
-    okButton->setText( QObject::tr( "O&k" ) );
-    cancelButton->setText( QObject::tr( "C&ancel" ) );
+    PolkitQt::ActionButton *but = new PolkitQt::ActionButton(okButton, "org.chakraproject.aqpm.saveconfiguration", this);
+    connect(but, SIGNAL(clicked(QAbstractButton*)), but, SLOT(activate()));
+    connect(but, SIGNAL(activated()), this, SLOT(accept()));
+    but->setText(QObject::tr("O&k"));
+    cancelButton->setText(QObject::tr("C&ancel"));
 }
 
 ConfigDialog::~ConfigDialog()
@@ -869,6 +874,13 @@ void ConfigDialog::saveConfiguration()
             QFile::copy( "/usr/share/applications/shaman.desktop", "/etc/xdg/autostart/shaman.desktop" );
     } else {
         QFile::remove( "/etc/xdg/autostart/shaman.desktop" );
+    }
+
+    if (!Configuration::instance()->saveConfiguration()) {
+        ShamanDialog::popupDialog(tr("Error saving configuration"),
+                                  tr("There was an error while saving the configuration. "
+                                     "This is probably due to an internal error or you being not "
+                                     "authorized to perform the operation"), this, ShamanProperties::ErrorDialog);
     }
 
     /*if ( useMatchSupRadio->isChecked() ) {
