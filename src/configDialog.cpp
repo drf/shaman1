@@ -73,7 +73,7 @@ ConfigDialog::~ConfigDialog()
 
 void ConfigDialog::setupGeneral()
 {
-    listWidget->insertItem(0, new QListWidgetItem(QIcon(":/Icons/icons/shaman/shaman-22.png"), tr("General")));        //FIXME: Replace icon
+    listWidget->insertItem(0, new QListWidgetItem(QIcon(":/Icons/icons/shaman/hi32-app-shaman.png"), tr("General")));
 
     mantActionBox->addItems(QStringList() << QString(tr("Clean Unused Databases")) << QString(tr("Clean Cache")) <<
                             QString(tr("Empty Cache")) << QString(tr("Optimize Pacman Database")) << QString(tr("Clean All Building Environments")));
