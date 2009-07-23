@@ -361,7 +361,6 @@ void ConfigDialog::setupPacman()
     noExtractLine->setText(tmpStr);
     tmpStr = "";
 
-    xFerCommandLine->setText((char *)alpm_option_get_xfercommand());
     logFileLine->setText((char *)alpm_option_get_logfile());
     tmpStr = "";
 
@@ -847,7 +846,6 @@ void ConfigDialog::saveConfiguration()
     opts.insert(ignoreGrpsLine, "IgnoreGroup");
     opts.insert(noUpgradeLine, "NoUpgrade");
     opts.insert(noExtractLine, "NoExtract");
-    opts.insert(xFerCommandLine, "XferCommand");
     opts.insert(logFileLine, "LogFile");
 
     foreach(QLineEdit *l, opts.keys()) {

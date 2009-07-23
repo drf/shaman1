@@ -24,6 +24,8 @@
 
 #include "PackageProperties.h"
 
+#include <ActionButton>
+
 using namespace Aqpm;
 
 LocalPackageDialog::LocalPackageDialog(QWidget *parent)
@@ -32,6 +34,12 @@ LocalPackageDialog::LocalPackageDialog(QWidget *parent)
     setupUi(this);
     setWindowModality(Qt::ApplicationModal);
 
+    PolkitQt::ActionButton *start_Install = new PolkitQt::ActionButton(installButton,
+                                                                       "org.chakraproject.aqpm.processqueue",
+                                                                       this);
+    start_Install->setText(tr("Install Package"));
+    connect(start_Install, SIGNAL(clicked(QAbstractButton*, bool)), start_Install, SLOT(activate()));
+    connect(start_Install, SIGNAL(activated()), this, SLOT(goInstall()));
     connect(installButton, SIGNAL(clicked()), SLOT(goInstall()));
     connect(cancelButton, SIGNAL(clicked()), SLOT(deleteLater()));
     connect(detailsButton, SIGNAL(clicked()), SLOT(showDetails()));
