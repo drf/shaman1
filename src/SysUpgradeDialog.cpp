@@ -80,6 +80,7 @@ void SysUpgradeDialog::init()
 
         PolkitQt::ActionButton *start_Upgrade = new PolkitQt::ActionButton(goUpgrading, "org.chakraproject.aqpm.systemupgrade", this);
         start_Upgrade->setText(tr("System Upgrade"));
+        start_Upgrade->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
         connect(start_Upgrade, SIGNAL(clicked(QAbstractButton*, bool)), start_Upgrade, SLOT(activate()));
         connect(start_Upgrade, SIGNAL(activated()), this, SLOT(initSysUpgrade()));
 

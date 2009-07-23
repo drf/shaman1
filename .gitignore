@@ -12,3 +12,4 @@ ui_*
 *.pending
 *.stats
 *.user
+.directory

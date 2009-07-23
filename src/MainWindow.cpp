@@ -265,20 +265,19 @@ MainWindow::MainWindow(QMainWindow *parent)
 
     PolkitQt::Action *actionUpdate_Database = new PolkitQt::Action("org.chakraproject.aqpm.updatedatabase", this);
     actionUpdate_Database->setText(tr("Update Database"));
+    actionUpdate_Database->setIcon(QIcon(":/Icons/icons/view-refresh.png"));
     connect(actionUpdate_Database, SIGNAL(triggered(bool)), actionUpdate_Database, SLOT(activate()));
     connect(actionUpdate_Database, SIGNAL(activated()), this, SLOT(doDbUpdate()));
-    mToolBar->addAction(actionUpdate_Database);
+    mToolBar->insertAction(actionUpgrade_System, actionUpdate_Database);
+    menuActions->insertAction(actionUpgrade_System, actionUpdate_Database);
 
     PolkitQt::Action *actionProcess_Queue = new PolkitQt::Action("org.chakraproject.aqpm.processqueue", this);
     actionProcess_Queue->setText(tr("Process Queue"));
+    actionProcess_Queue->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
     connect(actionProcess_Queue, SIGNAL(triggered(bool)), actionProcess_Queue, SLOT(activate()));
     connect(actionProcess_Queue, SIGNAL(activated()), this, SLOT(widgetQueueToAlpmQueue()));
-    mToolBar->addAction(actionProcess_Queue);
-
-    PolkitQt::Action *actionSystem_Upgrade = new PolkitQt::Action("org.chakraproject.aqpm.systemupgrade", this);
-    actionSystem_Upgrade->setText(tr("System Upgrade"));
-    connect(actionSystem_Upgrade, SIGNAL(triggered(bool)), this, SLOT(fullSysUpgrade()));
-    mToolBar->addAction(actionSystem_Upgrade);
+    mToolBar->insertAction(actionUpgrade_System, actionProcess_Queue);
+    menuActions->insertAction(actionUpgrade_System, actionProcess_Queue);
 
     connect(Backend::instance(), SIGNAL(streamTransQuestion(Aqpm::Globals::TransactionQuestion, QVariantMap)), this,
             SLOT(streamTransQuestion(Aqpm::Globals::TransactionQuestion, QVariantMap)));
