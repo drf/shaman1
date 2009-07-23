@@ -57,6 +57,7 @@ private:
     QPointer<QTextEdit> mantDetails;
     QPointer<QDialog> m_dialog;
     QPointer<QPushButton> m_button;
+    int m_currentMaint;
 };
 
 #endif /* MAINTENANCEBAR_H */

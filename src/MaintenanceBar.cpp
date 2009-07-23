@@ -21,6 +21,7 @@
 #include "MaintenanceBar.h"
 
 #include <aqpm/Backend.h>
+#include <aqpm/Maintenance.h>
 
 #include "configDialog.h"
 
@@ -31,6 +32,8 @@
 #include <QLabel>
 #include <QVBoxLayout>
 #include <QPushButton>
+
+using namespace Aqpm;
 
 MaintenanceBar::MaintenanceBar(QWidget *parent)
         : QToolBar(parent)
@@ -76,78 +79,55 @@ void MaintenanceBar::performAction()
     case 2:
         openDialog();
 
-        cTh = new CleanThread(0);
+        m_currentMaint = 0;
 
         statusLabel->setText(QString(tr("Cleaning up unused Databases...")));
         mantDetails->append(QString(tr("Cleaning up unused Databases...")));
 
-        connect(cTh, SIGNAL(success(int)), SLOT(showSuccess(int)));
-        connect(cTh, SIGNAL(failure(int)), SLOT(showFailure(int)));
-        connect(cTh, SIGNAL(finished()), cTh, SLOT(deleteLater()));
-        cTh->start();
-        break;
+        Maintenance::instance()->performAction(Maintenance::CleanUnusedDatabases);
 
     case 3:
         openDialog();
 
-        cTh = new CleanThread(1);
+        m_currentMaint = 1;
 
         statusLabel->setText(QString(tr("Cleaning up Cache...")));
         mantDetails->append(QString(tr("Cleaning up Cache...")));
 
-        connect(cTh, SIGNAL(success(int)), SLOT(showSuccess(int)));
-        connect(cTh, SIGNAL(failure(int)), SLOT(showFailure(int)));
-        connect(cTh, SIGNAL(finished()), cTh, SLOT(deleteLater()));
-        cTh->start();
+        Maintenance::instance()->performAction(Maintenance::CleanCache);
         break;
 
     case 4:
         openDialog();
 
-        cTh = new CleanThread(2);
+        m_currentMaint = 2;
 
         statusLabel->setText(QString(tr("Deleting Cache...")));
         mantDetails->append(QString(tr("Deleting Cache...")));
 
-        connect(cTh, SIGNAL(success(int)), SLOT(showSuccess(int)));
-        connect(cTh, SIGNAL(failure(int)), SLOT(showFailure(int)));
-        connect(cTh, SIGNAL(finished()), cTh, SLOT(deleteLater()));
-        cTh->start();
+        Maintenance::instance()->performAction(Maintenance::EmptyCache);
         break;
 
     case 5:
         openDialog();
 
-        /*mantProc = new RootProcess();
-
-
-        connect( mantProc, SIGNAL( readyReadStandardError() ), SLOT( mantProgress() ) );
-        connect( mantProc, SIGNAL( finished( int, QProcess::ExitStatus ) ), SLOT( cleanProc( int, QProcess::ExitStatus ) ) );
+        m_currentMaint = 4;
 
         statusLabel->setText( QString( tr( "Optimizing Pacman Database..." ) ) );
         mantDetails->append( QString( tr( "Optimizing Pacman Database..." ) ) );
 
-        qDebug() << "Starting the process";
-
-        ath->switchToRoot();
-
-        mantProc->start( "pacman-optimize" );
-
-        ath->switchToStdUsr();*/
+        Maintenance::instance()->performAction(Maintenance::OptimizeDatabases);
         break;
 
     case 6:
         openDialog();
 
-        cTh = new CleanThread(3);
+        m_currentMaint = 3;
 
         statusLabel->setText(QString(tr("Cleaning up building Environments...")));
         mantDetails->append(QString(tr("Cleaning up building Environments...")));
 
-        connect(cTh, SIGNAL(success(int)), SLOT(showSuccess(int)));
-        connect(cTh, SIGNAL(failure(int)), SLOT(showFailure(int)));
-        connect(cTh, SIGNAL(finished()), cTh, SLOT(deleteLater()));
-        cTh->start();
+        Maintenance::instance()->performAction(Maintenance::CleanABS);
         break;
 
     default:
