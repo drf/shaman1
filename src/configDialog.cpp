@@ -70,55 +70,6 @@ ConfigDialog::~ConfigDialog()
 {
 }
 
-QStringList ConfigDialog::getMirrorList(ShamanProperties::MirrorType type)
-{
-    QFile file;
-
-    if (type == ShamanProperties::OfficialMirrors)
-        file.setFileName("/etc/pacman.d/mirrorlist");
-    else if (type == ShamanProperties::KDEModMirrors) {
-        if (QFile::exists("/etc/pacman.d/kdemodmirrorlist"))
-            file.setFileName("/etc/pacman.d/kdemodmirrorlist");
-        else if (QFile::exists("../etc/kdemodmirrorlist"))
-            file.setFileName("../etc/kdemodmirrorlist");
-        else if (QFile::exists("etc/kdemodmirrorlist"))
-            file.setFileName("etc/kdemodmirrorlist");
-        else if (QFile::exists("kdemodmirrorlist"))
-            file.setFileName("kdemodmirrorlist");
-        else
-            return QStringList();
-    }
-
-    QStringList retlist;
-
-    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
-        return retlist;
-
-    QTextStream in(&file);
-    while (!in.atEnd()) {
-        QString line = in.readLine();
-        if (line.startsWith('#'))
-            continue;
-
-        if (!line.contains("server", Qt::CaseInsensitive))
-            continue;
-
-        QStringList list(line.split('=', QString::SkipEmptyParts));
-        if (list.count() >= 1) {
-            QString serverN(list.at(1));
-
-            serverN.remove(QChar(' '), Qt::CaseInsensitive);
-
-            retlist.append(serverN);
-        }
-    }
-
-    file.close();
-
-    return retlist;
-
-}
-
 void ConfigDialog::setupGeneral()
 {
     listWidget->insertItem(0, new QListWidgetItem(QIcon(":/Icons/icons/shaman/shaman-22.png"), tr("General")));        //FIXME: Replace icon
@@ -190,8 +141,8 @@ void ConfigDialog::setupRepos()
 
     kmod.clear();
 
-    mirrorBox->addItems(getMirrorList());
-    KDEModMirrorBox->addItems(getMirrorList(ShamanProperties::KDEModMirrors));
+    mirrorBox->addItems(Configuration::instance()->getMirrorList(Configuration::ArchMirror));
+    KDEModMirrorBox->addItems(Configuration::instance()->getMirrorList(Configuration::KdemodMirror));
 
     foreach(const Database &db, repos) {
         if (db.name() == "core") {
@@ -774,7 +725,7 @@ void ConfigDialog::saveConfiguration()
                 dbChanged = true;
             }
         } else {
-            if (Configuration::instance()->exists(QString("%1/Server").arg(repos[c]), mirror)) {
+            if (Configuration::instance()->exists(QString("%1/Server").arg(repos[c]))) {
                 Configuration::instance()->remove(repos[c]);
                 dbChanged = true;
             }
@@ -797,7 +748,7 @@ void ConfigDialog::saveConfiguration()
                 dbChanged = true;
             }
         } else {
-            if (Configuration::instance()->exists(QString("%1/Server").arg(repos[c]), kdemodmirror)) {
+            if (Configuration::instance()->exists(QString("%1/Server").arg(repos[c]))) {
                 Configuration::instance()->remove(repos[c]);
                 dbChanged = true;
             }

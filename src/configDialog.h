@@ -26,16 +26,6 @@
 #include <QProcess>
 #include <QPointer>
 
-namespace ShamanProperties
-{
-
-enum MirrorType {
-    OfficialMirrors,
-    KDEModMirrors
-};
-
-}  // namespace ShamanProperties
-
 class CleanThread : public QThread
 {
     Q_OBJECT
@@ -92,7 +82,6 @@ private:
     void setupABS();
     void setupAdvanced();
     void saveSettings();
-    QStringList getMirrorList(ShamanProperties::MirrorType type = ShamanProperties::OfficialMirrors);
 
 private:
     QPointer<QDialog> addDialog;
