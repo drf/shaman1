@@ -185,33 +185,53 @@ void MaintenanceBar::openDialog()
     m_dialog->show();
 }
 
-void MaintenanceBar::showSuccess(int act)
+void MaintenanceBar::performed(bool success)
 {
-    switch (act) {
-    case 0:
-        statusLabel->setText(QString(tr("Unused Databases Cleaned up successfully!")));
-        mantDetails->append(QString(tr("Unused Databases Cleaned up successfully!")));
-        alpm_logaction(QString(tr("Unused Databases Cleaned up successfully!") + QChar('\n')).toUtf8().data());
-        break;
+    QString result;
 
+    switch (m_currentMaint) {
+    case 0:
+        if (success) {
+            result = tr("Unused Databases Cleaned up successfully!");
+        } else {
+            result = tr("Cleaning up Unused Databases Failed!");
+        }
+        break;
     case 1:
-        statusLabel->setText(QString(tr("Cache Cleaned Up Successfully!")));
-        mantDetails->append(QString(tr("Cache Cleaned Up Successfully!")));
-        alpm_logaction(QString(tr("Cache Cleaned Up Successfully!") + QChar('\n')).toUtf8().data());
+        if (success) {
+            result = tr("Cache Cleaned Up Successfully!");
+        } else {
+            result = tr("Cleaning up Cache Failed!");
+        }
         break;
 
     case 2:
-        statusLabel->setText(QString(tr("Cache Successfully Deleted!")));
-        mantDetails->append(QString(tr("Cache Successfully Deleted!")));
-        alpm_logaction(QString(tr("Cache Successfully Deleted!") + QChar('\n')).toUtf8().data());
+        if (success) {
+            result = tr("Cache Successfully Deleted!");
+        } else {
+            result = tr("Deleting Cache Failed!");
+        }
         break;
 
     case 3:
-        statusLabel->setText(QString(tr("Build Environments Successfully Cleaned!")));
-        mantDetails->append(QString(tr("Build Environments Successfully Cleaned!")));
-        alpm_logaction(QString(tr("Build Environments Successfully Cleaned!") + QChar('\n')).toUtf8().data());
+        if (success) {
+            result = tr("Build Environments Successfully Cleaned!");
+        } else {
+            result = tr("Could not clean Build Environments!!");
+        }
+        break;
+
+    case 4:
+        if (success) {
+            result = tr("Database optimized successfully!");
+        } else {
+            result = tr("Could not optimize database!");
+        }
         break;
     }
+
+    statusLabel->setText(result);
+    mantDetails->append(result);
 
     mantDetails->moveCursor(QTextCursor::End);
 
@@ -222,109 +242,15 @@ void MaintenanceBar::showSuccess(int act)
 
     QComboBox *box = qobject_cast<QComboBox*>(widgetForAction(m_comboBox));
 
-    if (box == 0)
+    if (box == 0) {
         return;
+    }
 
     box->setCurrentIndex(0);
 }
 
-void MaintenanceBar::showFailure(int act)
+void MaintenanceBar::mantProgress(const QString &progress)
 {
-    switch (act) {
-    case 0:
-        statusLabel->setText(QString(tr("Cleaning up Unused Databases Failed!")));
-        mantDetails->append(QString(tr("Cleaning up Unused Databases Failed!")));
-        break;
-
-    case 1:
-        statusLabel->setText(QString(tr("Cleaning up Cache Failed!")));
-        mantDetails->append(QString(tr("Cleaning up Cache Failed!")));
-        break;
-
-    case 2:
-        statusLabel->setText(QString(tr("Deleting Cache Failed!")));
-        mantDetails->append(QString(tr("Deleting Cache Failed!")));
-        break;
-
-    case 3:
-        statusLabel->setText(QString(tr("Could not clean Build Environments!!")));
-        mantDetails->append(QString(tr("Could not clean Build Environments!!")));
-        break;
-    }
-
-    mantDetails->moveCursor(QTextCursor::End);
-
-    m_button->setText(QString(tr("Close")));
-    m_button->setIcon(QPixmap(":/Icons/icons/dialog-ok-apply.png"));
-
-    connect(m_button, SIGNAL(clicked()), m_dialog, SLOT(deleteLater()));
-
-    QComboBox *box = qobject_cast<QComboBox*>(widgetForAction(m_comboBox));
-
-    if (box == 0)
-        return;
-
-    box->setCurrentIndex(0);
-}
-
-void MaintenanceBar::cleanProc(int eC, QProcess::ExitStatus eS)
-{
-    Q_UNUSED(eS);
-
-    if (eC == 0) {
-        statusLabel->setText(QString(tr("Pacman Database Optimized Successfully!")));
-        mantDetails->append(QString(tr("Pacman Database Optimized Successfully!")));
-        alpm_logaction(QString(tr("Pacman Database Optimized Successfully!") + QChar('\n')).toUtf8().data());
-    } else {
-        statusLabel->setText(QString(tr("Could not Optimize Pacman Database!")));
-        mantDetails->append(QString(tr("Could not Optimize Pacman Database!")));
-        alpm_logaction(QString(tr("Could not Optimize Pacman Database!") + QChar('\n')).toUtf8().data());
-    }
-
-    /*mantProc->deleteLater();
-
+    mantDetails->append(QString("<b><i>" + progress + "</b></i>"));
     mantDetails->moveCursor( QTextCursor::End );
-
-    statusLabel->setText( QString( tr( "Running sync...", "sync is a command, so it should not be translated" ) ) );
-    mantDetails->append( QString( tr( "Running sync...", "sync is a command, so it should not be translated" ) ) );
-
-    mantProc = new RootProcess();
-
-    ath->switchToRoot();
-
-    if ( mantProc->execute( "sync" ) == 0 ) {
-        statusLabel->setText( QString( tr( "Operation Completed Successfully!" ) ) );
-        mantDetails->append( QString( tr( "Sync was successfully executed!!", "Sync is always the command" ) ) );
-        mantDetails->append( QString( tr( "Operation Completed Successfully!" ) ) );
-    } else {
-        statusLabel->setText( QString( tr( "Sync could not be executed!", "Sync is always the command" ) ) );
-        mantDetails->append( QString( tr( "Sync could not be executed!!", "Sync is always the command" ) ) );
-    }
-
-    ath->switchToStdUsr();
-
-    mantDetails->moveCursor( QTextCursor::End );
-
-    mantProc->deleteLater();*/
-
-    m_button->setText(QString(tr("Close")));
-    m_button->setIcon(QPixmap(":/Icons/icons/dialog-ok-apply.png"));
-
-    connect(m_button, SIGNAL(clicked()), m_dialog, SLOT(deleteLater()));
-
-    QComboBox *box = qobject_cast<QComboBox*>(widgetForAction(m_comboBox));
-
-    if (box == 0)
-        return;
-
-    box->setCurrentIndex(0);
-}
-
-void MaintenanceBar::mantProgress()
-{
-    /*mantProc->setReadChannel( QProcess::StandardError );
-    QString str = QString::fromLocal8Bit( mantProc->readLine( 1024 ) );
-    mantDetails->append( QString( "<b><i>" + str + "</b></i>" ) );
-    qDebug() << str;
-    mantDetails->moveCursor( QTextCursor::End );*/
 }

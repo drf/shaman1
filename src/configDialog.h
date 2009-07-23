@@ -26,23 +26,6 @@
 #include <QProcess>
 #include <QPointer>
 
-class CleanThread : public QThread
-{
-    Q_OBJECT
-
-public:
-    CleanThread(int act);
-    void run();
-
-signals:
-    void success(int act);
-    void failure(int act);
-
-private:
-    int action;
-};
-
-
 class ConfigDialog : public QDialog, public Ui::ConfigDialog
 {
 
@@ -62,11 +45,8 @@ private slots:
     void openEditDialog();
     void removeThirdParty();
     void performManteinanceAction();
-    void cleanProc(int eC, QProcess::ExitStatus eS);
-    void mantProgress();
-    void showSuccess(int act);
-    void showFailure(int act);
-    void cleanThread();
+    void mantProgress(const QString &progress);
+    void maintenancePerformed(bool success);
     void saveConfiguration();
     void addMirror();
     void addKDEModMirror();
@@ -85,7 +65,7 @@ private:
 
 private:
     QPointer<QDialog> addDialog;
-    QPointer<CleanThread> cTh;
+    int m_currentMaint;
     bool upDb;
 };
 

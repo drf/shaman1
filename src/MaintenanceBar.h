@@ -46,15 +46,12 @@ private slots:
     void performAction();
     void openDialog();
 
-    void showSuccess(int act);
-    void showFailure(int act);
+    void performed(bool success);
 
-    void cleanProc(int eC, QProcess::ExitStatus eS);
-    void mantProgress();
+    void mantProgress(const QString &process);
 
 private:
     QPointer<QAction> m_comboBox;
-    CleanThread *cTh;
 
     QPointer<QLabel> statusLabel;
     QPointer<QTextEdit> mantDetails;

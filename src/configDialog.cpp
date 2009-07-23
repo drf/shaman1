@@ -28,6 +28,7 @@
 #include <aqpm/Backend.h>
 #include <aqpm/Configuration.h>
 #include <aqpm/ConfigurationParser.h>
+#include <aqpm/Maintenance.h>
 
 #include <config.h>
 
@@ -57,6 +58,8 @@ ConfigDialog::ConfigDialog(QWidget *parent)
     setupABS();
     setupAdvanced();
     connect(listWidget, SIGNAL(currentRowChanged(int)), this, SLOT(changeWidget(int)));
+    connect(Maintenance::instance(), SIGNAL(actionPerformed(bool)), this, SLOT(maintenancePerformed(bool)));
+    connect(Maintenance::instance(), SIGNAL(actionOutput(QString)), this, SLOT(mantProgress(QString)));
     connect(this, SIGNAL(accepted()), SLOT(saveConfiguration()));
     setModal(true);
     PolkitQt::ActionButton *but = new PolkitQt::ActionButton(okButton, "org.chakraproject.aqpm.saveconfiguration", this);
@@ -76,9 +79,15 @@ void ConfigDialog::setupGeneral()
     listWidget->insertItem(0, new QListWidgetItem(QIcon(":/Icons/icons/shaman/hi32-app-shaman.png"), tr("General")));
 
     mantActionBox->addItems(QStringList() << QString(tr("Clean Unused Databases")) << QString(tr("Clean Cache")) <<
-                            QString(tr("Empty Cache")) << QString(tr("Optimize Pacman Database")) << QString(tr("Clean All Building Environments")));
+                            QString(tr("Empty Cache")) << QString(tr("Optimize Pacman Database")) <<
+                            QString(tr("Clean All Building Environments")));
 
-    connect(mantProcessButton, SIGNAL(clicked()), SLOT(performManteinanceAction()));
+    PolkitQt::ActionButton *but = new PolkitQt::ActionButton(mantProcessButton, "org.chakraproject.aqpm.performmaintenance",
+                                                             this);
+    connect(but, SIGNAL(clicked(QAbstractButton*)), but, SLOT(activate()));
+    connect(but, SIGNAL(activated()), this, SLOT(performManteinanceAction()));
+    but->setText(tr("Process Selected"));
+    but->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
 
     /* Load values from our settings file, so easy this time. */
 
@@ -566,119 +575,92 @@ void ConfigDialog::performManteinanceAction()
     mantDetails->append(QString());
 
     if (!mantActionBox->currentText().compare(QString(tr("Clean Unused Databases")))) {
-        cTh = new CleanThread(0);
+        m_currentMaint = 0;
 
         statusLabel->setText(QString(tr("Cleaning up unused Databases...")));
         mantDetails->append(QString(tr("Cleaning up unused Databases...")));
 
-        connect(cTh, SIGNAL(success(int)), SLOT(showSuccess(int)));
-        connect(cTh, SIGNAL(failure(int)), SLOT(showFailure(int)));
-        connect(cTh, SIGNAL(finished()), SLOT(cleanThread()));
-        cTh->start();
+        Maintenance::instance()->performAction(Maintenance::CleanUnusedDatabases);
     } else if (!mantActionBox->currentText().compare(QString(tr("Clean Cache")))) {
-        cTh = new CleanThread(1);
+        m_currentMaint = 1;
 
         statusLabel->setText(QString(tr("Cleaning up Cache...")));
         mantDetails->append(QString(tr("Cleaning up Cache...")));
 
-        connect(cTh, SIGNAL(success(int)), SLOT(showSuccess(int)));
-        connect(cTh, SIGNAL(failure(int)), SLOT(showFailure(int)));
-        connect(cTh, SIGNAL(finished()), SLOT(cleanThread()));
-        cTh->start();
+        Maintenance::instance()->performAction(Maintenance::CleanCache);
     } else if (!mantActionBox->currentText().compare(QString(tr("Empty Cache")))) {
-        cTh = new CleanThread(2);
+        m_currentMaint = 2;
 
         statusLabel->setText(QString(tr("Deleting Cache...")));
         mantDetails->append(QString(tr("Deleting Cache...")));
 
-        connect(cTh, SIGNAL(success(int)), SLOT(showSuccess(int)));
-        connect(cTh, SIGNAL(failure(int)), SLOT(showFailure(int)));
-        connect(cTh, SIGNAL(finished()), SLOT(cleanThread()));
-        cTh->start();
+        Maintenance::instance()->performAction(Maintenance::EmptyCache);
     } else if (!mantActionBox->currentText().compare(QString(tr("Optimize Pacman Database")))) {
-        /*mantProc = new RootProcess();
-
-        connect( mantProc, SIGNAL( readyReadStandardError() ), SLOT( mantProgress() ) );
-        connect( mantProc, SIGNAL( finished( int, QProcess::ExitStatus ) ), SLOT( cleanProc( int, QProcess::ExitStatus ) ) );
-
+        m_currentMaint = 4;
+        
         statusLabel->setText( QString( tr( "Optimizing Pacman Database..." ) ) );
         mantDetails->append( QString( tr( "Optimizing Pacman Database..." ) ) );
 
-        qDebug() << "Starting the process";
-
-        mantProc->start( "pacman-optimize" );*/
-
+        Maintenance::instance()->performAction(Maintenance::OptimizeDatabases);
     } else if (!mantActionBox->currentText().compare(QString(tr("Clean All Building Environments")))) {
-        cTh = new CleanThread(3);
+        m_currentMaint = 3;
 
         statusLabel->setText(QString(tr("Cleaning up building Environments...")));
         mantDetails->append(QString(tr("Cleaning up building Environments...")));
 
-        connect(cTh, SIGNAL(success(int)), SLOT(showSuccess(int)));
-        connect(cTh, SIGNAL(failure(int)), SLOT(showFailure(int)));
-        connect(cTh, SIGNAL(finished()), SLOT(cleanThread()));
-        cTh->start();
+        Maintenance::instance()->performAction(Maintenance::CleanABS);
     }
 
     mantDetails->moveCursor(QTextCursor::End);
 }
 
-void ConfigDialog::showFailure(int act)
+void ConfigDialog::maintenancePerformed(bool success)
 {
-    switch (act) {
-    case 0:
-        statusLabel->setText(QString(tr("Cleaning up Unused Databases Failed!")));
-        mantDetails->append(QString(tr("Cleaning up Unused Databases Failed!")));
-        break;
+    QString result;
 
+    switch (m_currentMaint) {
+    case 0:
+        if (success) {
+            result = tr("Unused Databases Cleaned up successfully!");
+        } else {
+            result = tr("Cleaning up Unused Databases Failed!");
+        }
+        break;
     case 1:
-        statusLabel->setText(QString(tr("Cleaning up Cache Failed!")));
-        mantDetails->append(QString(tr("Cleaning up Cache Failed!")));
+        if (success) {
+            result = tr("Cache Cleaned Up Successfully!");
+        } else {
+            result = tr("Cleaning up Cache Failed!");
+        }
         break;
 
     case 2:
-        statusLabel->setText(QString(tr("Deleting Cache Failed!")));
-        mantDetails->append(QString(tr("Deleting Cache Failed!")));
+        if (success) {
+            result = tr("Cache Successfully Deleted!");
+        } else {
+            result = tr("Deleting Cache Failed!");
+        }
         break;
 
     case 3:
-        statusLabel->setText(QString(tr("Could not clean Build Environments!!")));
-        mantDetails->append(QString(tr("Could not clean Build Environments!!")));
+        if (success) {
+            result = tr("Build Environments Successfully Cleaned!");
+        } else {
+            result = tr("Could not clean Build Environments!!");
+        }
+        break;
+
+    case 4:
+        if (success) {
+            result = tr("Database optimized successfully!");
+        } else {
+            result = tr("Could not optimize database!");
+        }
         break;
     }
 
-    mantDetails->moveCursor(QTextCursor::End);
-
-    mantProcessButton->setEnabled(true);
-}
-
-void ConfigDialog::showSuccess(int act)
-{
-    switch (act) {
-    case 0:
-        statusLabel->setText(QString(tr("Unused Databases Cleaned up successfully!")));
-        mantDetails->append(QString(tr("Unused Databases Cleaned up successfully!")));
-        alpm_logaction(QString(tr("Unused Databases Cleaned up successfully!") + QChar('\n')).toUtf8().data());
-        break;
-
-    case 1:
-        statusLabel->setText(QString(tr("Cache Cleaned Up Successfully!")));
-        mantDetails->append(QString(tr("Cache Cleaned Up Successfully!")));
-        alpm_logaction(QString(tr("Cache Cleaned Up Successfully!") + QChar('\n')).toUtf8().data());
-        break;
-
-    case 2:
-        statusLabel->setText(QString(tr("Cache Successfully Deleted!")));
-        mantDetails->append(QString(tr("Cache Successfully Deleted!")));
-        alpm_logaction(QString(tr("Cache Successfully Deleted!") + QChar('\n')).toUtf8().data());
-        break;
-
-    case 3:
-        statusLabel->setText(QString(tr("Build Environments Successfully Cleaned!")));
-        mantDetails->append(QString(tr("Build Environments Successfully Cleaned!")));
-        alpm_logaction(QString(tr("Build Environments Successfully Cleaned!") + QChar('\n')).toUtf8().data());
-        break;
-    }
+    statusLabel->setText(result);
+    mantDetails->append(result);
 
     mantDetails->moveCursor(QTextCursor::End);
 
@@ -1050,106 +1032,10 @@ bool ConfigDialog::doDbUpdate()
     return upDb;
 }
 
-void ConfigDialog::cleanThread()
+void ConfigDialog::mantProgress(const QString &progress)
 {
-    cTh->deleteLater();
-}
-
-void ConfigDialog::mantProgress()
-{
-    /*    mantProc->setReadChannel( QProcess::StandardError );
-        QString str = QString::fromLocal8Bit( mantProc->readLine( 1024 ) );
-        mantDetails->append( QString( "<b><i>" + str + "</b></i>" ) );
-        qDebug() << str;
-        mantDetails->moveCursor( QTextCursor::End );*/
-}
-
-void ConfigDialog::cleanProc(int eC, QProcess::ExitStatus eS)
-{
-    Q_UNUSED(eS);
-
-    if (eC == 0) {
-        statusLabel->setText(QString(tr("Pacman Database Optimized Successfully!")));
-        mantDetails->append(QString(tr("Pacman Database Optimized Successfully!")));
-        alpm_logaction(QString(tr("Pacman Database Optimized Successfully!") + QChar('\n')).toUtf8().data());
-    } else {
-        statusLabel->setText(QString(tr("Could not Optimize Pacman Database!")));
-        mantDetails->append(QString(tr("Could not Optimize Pacman Database!")));
-        alpm_logaction(QString(tr("Could not Optimize Pacman Database!") + QChar('\n')).toUtf8().data());
-    }
-
-    //mantProc->deleteLater();
-
-    mantDetails->moveCursor(QTextCursor::End);
-
-    statusLabel->setText(QString(tr("Running sync...", "sync is a command, so it should not be translated")));
-    mantDetails->append(QString(tr("Running sync...", "sync is a command, so it should not be translated")));
-
-    /*mantProc = new RootProcess();
-
-    if ( mantProc->execute( "sync" ) == 0 ) {
-        statusLabel->setText( QString( tr( "Operation Completed Successfully!" ) ) );
-        mantDetails->append( QString( tr( "Sync was successfully executed!!", "Sync is always the command" ) ) );
-        mantDetails->append( QString( tr( "Operation Completed Successfully!" ) ) );
-    } else {
-        statusLabel->setText( QString( tr( "Sync could not be executed!", "Sync is always the command" ) ) );
-        mantDetails->append( QString( tr( "Sync could not be executed!!", "Sync is always the command" ) ) );
-    }
-
+    mantDetails->append(QString("<b><i>" + progress + "</b></i>"));
     mantDetails->moveCursor( QTextCursor::End );
-
-    mantProc->deleteLater();*/
-
-    mantProcessButton->setEnabled(true);
-}
-
-CleanThread::CleanThread(int act)
-        : action(act)
-{
-
-}
-
-void CleanThread::run()
-{
-    /*const char *dbpath = alpm_option_get_dbpath();
-    char newdbpath[4096];
-
-    switch ( action ) {
-    case 0:
-        if ( m_handler->cleanUnusedDb( dbpath ) ) {
-            sprintf( newdbpath, "%s%s", dbpath, "sync/" );
-            if ( m_handler->cleanUnusedDb( newdbpath ) )
-                emit success( action );
-            else
-                emit failure( action );
-        } else
-            emit failure( action );
-        break;
-
-    case 1:
-        if ( m_handler->cleanCache() )
-            emit success( action );
-        else
-            emit failure( action );
-        break;
-
-    case 2:
-        if ( m_handler->cleanCache( true ) )
-            emit success( action );
-        else
-            emit failure( action );
-        break;
-
-    case 3:
-        ABSHandler absH;
-
-        if ( absH.cleanAllBuildingEnvironments() )
-            emit success( action );
-        else
-            emit failure( action );
-        break;
-
-    }*/
 }
 
 void ConfigDialog::obfuscateDBUpdate(bool state)
