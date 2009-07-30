@@ -360,13 +360,7 @@ void QueueDialog::abortTransaction()
 
         qDebug() << "Interrupting transaction...";
 
-        //aHandle->interruptTransaction();
-
-        //cTh->terminate();
-
-        qDebug() << "Transaction interrupted";
-
-        cleanup(false);
+        Backend::instance()->interruptTransaction();
 
         break;
     case QMessageBox::No:
