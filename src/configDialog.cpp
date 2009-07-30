@@ -677,27 +677,13 @@ void ConfigDialog::saveConfiguration()
     mirror = mirror.remove(' ');
     kdemodmirror = kdemodmirror.remove(' ');
 
-    QString arch;
+    QProcess proc;
+    proc.start("arch");
+    proc.waitForFinished(20000);
 
-    if (kdemodmirror.contains("$arch")) {
-        if (Backend::instance()->getPackage("pacman", "local").arch() == "i686") {
-            arch = "i686";
-        } else {
-            arch = "x86_64";
-        }
+    QString arch = QString(proc.readAllStandardOutput()).remove('\n').remove(' ');
 
-        QStringList tmplst = kdemodmirror.split(QString("$arch"),
-                                                QString::SkipEmptyParts, Qt::CaseInsensitive);
-
-        QString dserv(tmplst.at(0));
-
-        dserv.append(arch);
-
-        if (tmplst.count() > 1)
-            dserv.append(tmplst.at(1));
-
-        kdemodmirror = dserv;
-    }
+    kdemodmirror.replace("$arch", arch);
 
     saveSettings();
 
