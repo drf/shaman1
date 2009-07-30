@@ -196,6 +196,12 @@ int ShamanDialog::popupQuestionDialog(const QString &title, const QString &text,
         retval = QMessageBox::No;
         break;
     }
+
+    if (retval == KMessageBox::Yes || retval == KMessageBox::Continue || retval == KMessageBox::Ok) {
+        retval = QMessageBox::Yes;
+    } else if (retval == KMessageBox::No || retval == KMessageBox::Cancel) {
+        retval = QMessageBox::No;
+    }
 #endif
 
     if (parent != NULL) {
