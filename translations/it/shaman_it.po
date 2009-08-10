@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-28 15:53+0200\n"
+"POT-Creation-Date: 2009-08-10 14:58+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -273,8 +273,7 @@ msgid ""
 "configuration to improve your building performance."
 msgstr ""
 "\n"
-"            \n"
-"        "
+"            "
 
 #. (obsolete)
 #: CallBacks#1
@@ -1220,8 +1219,7 @@ msgstr "Tutte le dipendenze sono soddisfatte"
 msgid "%n package(s) will be installed as dependencies"
 msgstr ""
 "\n"
-"            \n"
-"        "
+"            "
 
 #: MainWindow#1
 msgctxt "MainWindow#1"
@@ -2973,16 +2971,14 @@ msgstr "Saranno liberati <b>%1</b>"
 msgid "Remove <b>%n package(s)</b><br />"
 msgstr ""
 "\n"
-"            \n"
-"        "
+"            "
 
 #: ReviewQueueDialog#19
 #, fuzzy
 msgid "Install/Upgrade <b>%n package(s)</b><br />"
 msgstr ""
 "\n"
-"            \n"
-"        "
+"            "
 
 #: ShamanStatusBar#1
 msgctxt "ShamanStatusBar#1"
@@ -3099,8 +3095,7 @@ msgid ""
 "Click here to upgrade your System."
 msgstr ""
 "\n"
-"            \n"
-"        "
+"            "
 
 #. (obsolete)
 #: SysUpgradeDialog#1
@@ -3132,8 +3127,7 @@ msgid ""
 "add it to the current Queue<br> and process it later."
 msgstr ""
 "\n"
-"            \n"
-"        "
+"            "
 
 #: aboutDialog#1
 msgid "About Shaman"

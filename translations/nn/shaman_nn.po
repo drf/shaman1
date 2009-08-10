@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-28 15:54+0200\n"
+"POT-Creation-Date: 2009-08-10 14:59+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -173,8 +173,7 @@ msgid ""
 "configuration to improve your building performance."
 msgstr ""
 "\n"
-"            \n"
-"        "
+"            "
 
 #: BuildingHandler#6
 #, fuzzy
@@ -1376,8 +1375,7 @@ msgstr ""
 msgid "%n package(s) will be installed as dependencies"
 msgstr ""
 "\n"
-"            \n"
-"        "
+"            "
 
 #: MainWindow#1
 #, fuzzy
@@ -3083,16 +3081,14 @@ msgstr ""
 msgid "Remove <b>%n package(s)</b><br />"
 msgstr ""
 "\n"
-"            \n"
-"        "
+"            "
 
 #: ReviewQueueDialog#10
 #, fuzzy
 msgid "Install/Upgrade <b>%n package(s)</b><br />"
 msgstr ""
 "\n"
-"            \n"
-"        "
+"            "
 
 #: ReviewQueueDialog#11
 #, fuzzy
@@ -3204,8 +3200,7 @@ msgid ""
 "Click here to upgrade your System."
 msgstr ""
 "\n"
-"            \n"
-"        "
+"            "
 
 #: ShamanTrayIcon#11
 #, fuzzy
@@ -3246,8 +3241,7 @@ msgid ""
 "add it to the current Queue<br> and process it later."
 msgstr ""
 "\n"
-"            \n"
-"        "
+"            "
 
 #: SysUpgradeDialog#2
 #, fuzzy

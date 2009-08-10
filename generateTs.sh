@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for arg in "fr" "it" "de" "el" "pt_BR" "es" "pl" "tr" "zh_CN" "mk" "cs" "nb" "nl" "lt" "ru" "en" "nn" "no" "ca"
+for arg in "fr" "it" "de" "el" "pt_BR" "es" "pl" "tr" "zh_CN" "mk" "cs" "nb" "nl" "lt" "ru" "nn" "no" "ca"
 do
 	lupdate *.cxx src/* ui/* -ts translations/shaman_$arg.ts
 	mkdir translations/$arg
