@@ -63,7 +63,7 @@ void ErrorHandler::spawnErrorDialog(Aqpm::Globals::Errors code, const QVariantMa
                                    .arg(args["UnsatisfiedDeps"].toMap()[ent].toString()));
             detailedMessage.append('\n');
         }
-    } else if (code == Aqpm::Globals::UnsatisfiedDependencies) {
+    } else if (code == Aqpm::Globals::ConflictingDependencies) {
         shortMessage = tr("There has been an error while preparing the transaction.");
         detailedMessage = tr("Some dependencies create a conflict with already installed packages");
         detailedMessage.append("\n\n");
