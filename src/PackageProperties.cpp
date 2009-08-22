@@ -45,14 +45,15 @@ PackageProperties::~PackageProperties()
 QString PackageProperties::formatSize(unsigned long size)
 {
     QString s;
-    if (size > 1024 * 1024 * 1024)
+    if (size > 1024 * 1024 * 1024) {
         s = tr("%1 GiB", "Size is in Gib").arg((double) size / (1024 * 1024 * 1024), 0, 'f', 2);
-    else if (size > 1024 * 1024)
+    } else if (size > 1024 * 1024) {
         s = tr("%1 MiB", "Size is in MiB").arg((double) size / (1024 * 1024), 0, 'f', 2);
-    else if (size > 1024)
+    } else if (size > 1024) {
         s = tr("%1 KiB", "Size is in KiB").arg(size / 1024);
-    else
+    } else {
         s = tr("%1 Bytes", "Size is in Bytes").arg(size);
+    }
 
     return s;
 }
@@ -64,7 +65,12 @@ void PackageProperties::setPackage(const Package &pkg, bool forceGiven)
     // We can throw a lot more info if the package is local, let's check.
     if (Backend::instance()->isInstalled(curPkg) && !forceGiven) {
         qDebug() << "Getting info from local database";
-        curPkg = Backend::instance()->getPackage(pkg.name(), "local");
+        foreach (const Package &pck, Backend::instance()->getInstalledPackages()) {
+            if (pck.name() == pkg.name()) {
+                curPkg = pck;
+                break;
+            }
+        }
     }
 
     setWindowTitle(QString(tr("Shaman - %1 properties")).arg(pkg.name()));
