@@ -65,12 +65,7 @@ void PackageProperties::setPackage(const Package &pkg, bool forceGiven)
     // We can throw a lot more info if the package is local, let's check.
     if (Backend::instance()->isInstalled(curPkg) && !forceGiven) {
         qDebug() << "Getting info from local database";
-        foreach (const Package &pck, Backend::instance()->getInstalledPackages()) {
-            if (pck.name() == pkg.name()) {
-                curPkg = pck;
-                break;
-            }
-        }
+        curPkg = Backend::instance()->getPackage(pkg.name(), "local");
     }
 
     setWindowTitle(QString(tr("Shaman - %1 properties")).arg(pkg.name()));
