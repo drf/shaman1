@@ -215,7 +215,7 @@ pakiety jedynie z oficjalnych źródeł.</translation>
         <source>Your packages Failed to Build.
 Look at the output for more details.</source>
         <translation>Budowa Twojego pakietu nie powiodła się.
-Spójrz na wyjście procesu, aby dowiedzieć się więcej szczegółów.</translation>
+Sprawdź wyjście procesu, aby dowiedzieć się więcej szczegółów.</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="278"/>
@@ -429,7 +429,7 @@ Czy chcesz go usunąć?</translation>
         <location filename="../src/configDialog.cpp" line="601"/>
         <location filename="../src/configDialog.cpp" line="602"/>
         <source>Optimizing Pacman Database...</source>
-        <translation type="unfinished">Optymalizacja bazy danych Pacmana...</translation>
+        <translation>Optymalizacja bazy danych Pacmana...</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="608"/>
@@ -471,7 +471,7 @@ Czy chcesz go usunąć?</translation>
         <location filename="../src/configDialog.cpp" line="976"/>
         <location filename="../src/configDialog.cpp" line="1010"/>
         <source>There was an error while trying to add the mirror! This could be due also to your system policy preventing you from performing this action</source>
-        <translation type="unfinished"></translation>
+        <translation>Wystąpił błąd podczas próby dodawania serwera lustrzanego. Może to być spowodowane przez politykę systemu zapobiegającą wykonanie tej operacji</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="624"/>
@@ -508,24 +508,24 @@ Czy chcesz go usunąć?</translation>
     <message>
         <location filename="../src/configDialog.cpp" line="655"/>
         <source>Database optimized successfully!</source>
-        <translation type="unfinished"></translation>
+        <translation>Baza danych została pomyślnie zoptymalizowana!</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="657"/>
         <source>Could not optimize database!</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie udało się zoptymalizować bazy danych!</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="807"/>
         <location filename="../src/configDialog.cpp.orig" line="880"/>
         <source>Error saving configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Błąd podczas próby zapisania ustawień</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="808"/>
         <location filename="../src/configDialog.cpp.orig" line="881"/>
         <source>There was an error while saving the configuration. This is probably due to an internal error or you being not authorized to perform the operation</source>
-        <translation type="unfinished"></translation>
+        <translation>Wystąpił błąd podczas próby zapisania ustawień. Jest to prawdopodobnie spowodowane błędem wewnętrznym lub brakiem odpowiednich uprawnień do wykonania tej operacji</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="872"/>
@@ -680,7 +680,12 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Konserwacja&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Proszę wybrać działanie z listy&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="956"/>
@@ -897,7 +902,7 @@ jak i Pacmana.</translation>
     <message>
         <location filename="../ui/configDialog.ui" line="814"/>
         <source>Review Building output before installing</source>
-        <translation>Obejrzyj wyjście budowania pakietu przed instalacją</translation>
+        <translation>Wyświetl wyjście budowania pakietu, przed jego instalacją</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="824"/>
@@ -1164,12 +1169,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/configDialog.ui" line="458"/>
         <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones. Please note that packages from Unstable and Testing may break your system.</source>
-        <translation>Tutaj możesz wybrać repozytoria spośród oficjalnych dla Arch Linux. Proszę zwrócić uwagę, że pakiety z Unstable i Testing mogą uszkodzić Twój system.</translation>
+        <translation>Tutaj możesz wybrać repozytoria spośród oficjalnych dla Arch Linux. Pamiętaj, że pakiety z Unstable i Testing mogą uszkodzić Twój system.</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="586"/>
         <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme, and lots of addons, KDEMod is the best way to taste the ease and the power of KDE with the simplicity and the power of Arch.</source>
-        <translation>KDEMod to ulepszona wersja KDE, stworzona wyłącznie dla Arch Linux. Zawiera ona ulepszone Qt, kompatybilne ze standardowym Qt Arch Linux, ulepszony theme oraz wiele różnych dodatków. KDEMod to najlepszy sposób na skosztowanie wygody i potęgi KDE zachowując jednocześnie prostote i potęgę Arch&apos;a.</translation>
+        <translation>KDEMod to ulepszona wersja KDE, stworzona wyłącznie dla Arch Linux. Zawiera ona ulepszone Qt, kompatybilne ze standardowym Qt Arch Linux, ulepszony theme oraz wiele różnych dodatków. KDEMod to najlepszy sposób na skosztowanie wygody i potęgi KDE zachowując jednocześnie prostotę i potęgę Arch&apos;a.</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="708"/>
@@ -1216,31 +1221,31 @@ Czy chcesz go zapisać?</translation>
         <location filename="../src/ErrorHandler.cpp" line="77"/>
         <location filename="../src/ErrorHandler.cpp.orig" line="56"/>
         <source>There has been an error while preparing the transaction.</source>
-        <translation type="unfinished"></translation>
+        <translation>Miał miejsce błąd podczas przygotowywania transakcji.</translation>
     </message>
     <message>
         <location filename="../src/ErrorHandler.cpp" line="58"/>
         <location filename="../src/ErrorHandler.cpp.orig" line="59"/>
         <source>Some dependencies can not be satisfied</source>
-        <translation type="unfinished"></translation>
+        <translation>Niektóre zależności nie mogły zostać spełnione</translation>
     </message>
     <message>
         <location filename="../src/ErrorHandler.cpp" line="62"/>
         <location filename="../src/ErrorHandler.cpp.orig" line="63"/>
         <source>%1: requires %2</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: wymaga %2</translation>
     </message>
     <message>
         <location filename="../src/ErrorHandler.cpp" line="68"/>
         <location filename="../src/ErrorHandler.cpp.orig" line="68"/>
         <source>Some dependencies create a conflict with already installed packages</source>
-        <translation type="unfinished"></translation>
+        <translation>Niektóre zależności konfliktują z obecnie zainstalowanymi pakietami</translation>
     </message>
     <message>
         <location filename="../src/ErrorHandler.cpp" line="72"/>
         <location filename="../src/ErrorHandler.cpp.orig" line="72"/>
         <source>%1: conflicts with %2</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: konfliktuje z %2</translation>
     </message>
     <message>
         <location filename="../src/ErrorHandler.cpp" line="78"/>
@@ -1248,7 +1253,7 @@ Czy chcesz go zapisać?</translation>
         <location filename="../src/ErrorHandler.cpp.orig" line="77"/>
         <location filename="../src/ErrorHandler.cpp.orig" line="112"/>
         <source>No further details were given. Last error string was:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie uzyskano więcej szczegółów. Ostatni błąd:</translation>
     </message>
     <message>
         <location filename="../src/ErrorHandler.cpp" line="83"/>
@@ -1257,101 +1262,101 @@ Czy chcesz go zapisać?</translation>
         <location filename="../src/ErrorHandler.cpp" line="113"/>
         <location filename="../src/ErrorHandler.cpp.orig" line="82"/>
         <source>There has been an error while committing the transaction.</source>
-        <translation type="unfinished"></translation>
+        <translation>Miał miejsce błąd podczas zastosowywania transakcji.</translation>
     </message>
     <message>
         <location filename="../src/ErrorHandler.cpp" line="84"/>
         <location filename="../src/ErrorHandler.cpp.orig" line="85"/>
         <source>Some files in the packages being processed are conflicting</source>
-        <translation type="unfinished"></translation>
+        <translation>Niektóre pliki w przetwarzanych pakietach powodują konflikt</translation>
     </message>
     <message>
         <location filename="../src/ErrorHandler.cpp" line="88"/>
         <location filename="../src/ErrorHandler.cpp.orig" line="89"/>
         <source>%1 exists in both &apos;%2&apos; and &apos;%3&apos;</source>
-        <translation type="unfinished">%1 istnieje w &apos;%2&apos; i &apos;%3&apos;</translation>
+        <translation>%1 istnieje w &apos;%2&apos; i &apos;%3&apos;</translation>
     </message>
     <message>
         <location filename="../src/ErrorHandler.cpp" line="95"/>
         <location filename="../src/ErrorHandler.cpp.orig" line="95"/>
         <source>Some files in the packages being processed conflict with the local filesystem</source>
-        <translation type="unfinished"></translation>
+        <translation>Niektóre pliki w przetwarzanych pakietach powodują konflikt w lokalnym systemie plików</translation>
     </message>
     <message>
         <location filename="../src/ErrorHandler.cpp" line="99"/>
         <location filename="../src/ErrorHandler.cpp.orig" line="99"/>
         <source>%1: %2 exists in the filesystem</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: %2 istnieje w systemie plików</translation>
     </message>
     <message>
         <location filename="../src/ErrorHandler.cpp" line="105"/>
         <location filename="../src/ErrorHandler.cpp.orig" line="104"/>
         <source>Some downloaded packages are corrupted or invalid</source>
-        <translation type="unfinished"></translation>
+        <translation>Niektóre pobrane pakiety są uszkodzone lub błędne</translation>
     </message>
     <message>
         <location filename="../src/ErrorHandler.cpp" line="109"/>
         <location filename="../src/ErrorHandler.cpp.orig" line="108"/>
         <source>%1 is invalid or corrupted</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 jest uszkodzony lub błędny</translation>
     </message>
     <message>
         <location filename="../src/ErrorHandler.cpp" line="119"/>
         <location filename="../src/ErrorHandler.cpp.orig" line="117"/>
         <source>There has been an error while adding a target.</source>
-        <translation type="unfinished"></translation>
+        <translation>Wystąpił błąd podczas dodawania celu.</translation>
     </message>
     <message>
         <location filename="../src/ErrorHandler.cpp" line="121"/>
         <location filename="../src/ErrorHandler.cpp.orig" line="119"/>
         <source>This is probably an internal Shaman error. Please report it to help the developers solving it</source>
-        <translation type="unfinished"></translation>
+        <translation>To jest prawdopodobnie wewnętrzny błąd w Shamanie. Proszę, zgłoś go aby pomóc programistom w jego naprawieniu</translation>
     </message>
     <message>
         <location filename="../src/ErrorHandler.cpp" line="124"/>
         <location filename="../src/ErrorHandler.cpp.orig" line="122"/>
         <source>You seem not authorized to perform this operation</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie posiadasz uwierzytelnienia do wykonania tej operacji</translation>
     </message>
     <message>
         <location filename="../src/ErrorHandler.cpp" line="126"/>
         <location filename="../src/ErrorHandler.cpp.orig" line="124"/>
         <source>It looks like the system policy prevents you from doing this action, or you failed or refused to authenticate. Please contact your system administrator for further details</source>
-        <translation type="unfinished"></translation>
+        <translation>Wygląda na to, że polityka bezpieczeństwa systemu uniemożliwia Ci wykonanie tej operacji lub odmówiłeś autoryzacji. Proszę o skontaktowanie się z administratorem swojego systemu, aby dowiedzieć się dalszych szczegółów</translation>
     </message>
     <message>
         <location filename="../src/ErrorHandler.cpp" line="130"/>
         <location filename="../src/ErrorHandler.cpp.orig" line="128"/>
         <source>There was a problem initialiting Aqpm</source>
-        <translation type="unfinished"></translation>
+        <translation>Wystąpił błąd podczas uruchamiania Aqpm</translation>
     </message>
     <message>
         <location filename="../src/ErrorHandler.cpp" line="132"/>
         <location filename="../src/ErrorHandler.cpp.orig" line="130"/>
         <source>Aqpm, the library underneath Shaman, reported that it could not start a privileged operation. This is probably due to a bug in Shaman/Aqpm or to a misconfiguration of your system</source>
-        <translation type="unfinished"></translation>
+        <translation>Aqpm, biblioteka znajdująca sie wewnątrz Shamana, zgłosiła że nie udało się wykonać operacji. Jest to prawdopodobnie spowodowane błędem Shamana/Aqpm lub konfiguracji Twojego systemu</translation>
     </message>
     <message>
         <location filename="../src/ErrorHandler.cpp" line="136"/>
         <source>There was an error during the transaction</source>
-        <translation type="unfinished"></translation>
+        <translation>Miał miejsce błąd podczas transakcji</translation>
     </message>
     <message>
         <location filename="../src/ErrorHandler.cpp" line="138"/>
         <source>It looks like Aqpm&apos;s worker crashed or disappeared. This is probably an internal Shaman error. Please report it to help the developers solving it</source>
-        <translation type="unfinished"></translation>
+        <translation>Wygląda na to, że Aqpm worker uległ awarii. Jest to prawdopodobnie wewnętrzny błąd Shamana. Proszę, zgłoś go aby pomóc programistom w jego naprawieniu</translation>
     </message>
     <message>
         <location filename="../src/ErrorHandler.cpp" line="142"/>
         <location filename="../src/ErrorHandler.cpp" line="144"/>
         <source>The transaction was interrupted</source>
-        <translation type="unfinished"></translation>
+        <translation>Transakcja została przerwana</translation>
     </message>
     <message>
         <location filename="../src/ErrorHandler.cpp" line="161"/>
         <location filename="../src/ErrorHandler.cpp.orig" line="149"/>
         <source>Error occurred</source>
-        <translation type="unfinished"></translation>
+        <translation>Wystąpił błąd</translation>
     </message>
 </context>
 <context>
@@ -1396,7 +1401,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/LocalPackageDialog.cpp" line="40"/>
         <source>Install Package</source>
-        <translation type="unfinished">Zainstaluj pakiet</translation>
+        <translation>Zainstaluj pakiet</translation>
     </message>
     <message>
         <location filename="../src/LocalPackageDialog.cpp" line="69"/>
@@ -1865,7 +1870,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../src/MainWindow.cpp.orig" line="1965"/>
         <source>%1 requires installing %2 from IgnorePkg/IgnoreGroup.
  Install anyway?</source>
-        <translation type="unfinished">%1 wymaga instalacji %2 z IgnorePkg/IgnoreGroup
+        <translation>%1 wymaga instalacji %2 z IgnorePkg/IgnoreGroup
 Zainstalować mimo wszystko?</translation>
     </message>
     <message>
@@ -1873,21 +1878,22 @@ Zainstalować mimo wszystko?</translation>
         <location filename="../src/MainWindow.cpp.orig" line="1968"/>
         <source>%1 is in IgnorePkg/IgnoreGroup.
  Install anyway?</source>
-        <translation type="unfinished">%1 jest w IgnorePkg/IgnoreGroup.
+        <translation>%1 jest w IgnorePkg/IgnoreGroup.
 Zainstalować mimo wszystko?</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1971"/>
         <location filename="../src/MainWindow.cpp.orig" line="1972"/>
         <source>Replace %1 with %2/%3?</source>
-        <translation type="unfinished">Zastąpić %1 przez %2/%3?</translation>
+        <translation>Zastąpić %1 przez %2/%3?</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1975"/>
         <location filename="../src/MainWindow.cpp.orig" line="1976"/>
         <source>%1 conflicts with %2.
 Remove %2?</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 konfliktuje z %2.
+Usunąć %2?</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/MainWindow.cpp" line="1979"/>
@@ -1896,10 +1902,19 @@ Remove %2?</source>
 %1
 
 Do you want to skip the above package(s) for this upgrade?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Następujący pakiet nie mógł zostać zaktualizowany, ze względu na zależności niemożliwe do spełnienia:
+%1
+
+Czy chcesz pominąć aktualizację tego pakietu?</numerusform>
+            <numerusform>Następujące pakiety nie mogły zostać zaktualizowane, ze względu na zależności niemożliwe do spełnienia:
+%1
+
+Czy chcesz pominąć aktualizację tych pakietów?</numerusform>
+            <numerusform>Następujące pakiety nie mogły zostać zaktualizowane, ze względu na zależności niemożliwe do spełnienia:
+%1
+
+Czy chcesz pominąć aktualizację tych pakietów?</numerusform>
         </translation>
     </message>
     <message>
@@ -1907,7 +1922,7 @@ Do you want to skip the above package(s) for this upgrade?</source>
         <location filename="../src/MainWindow.cpp.orig" line="1987"/>
         <source>%1-%2: local version is newer.
 Upgrade anyway?</source>
-        <translation type="unfinished">%1-%2: lokalna wersja jest nowsza.
+        <translation>%1-%2: lokalna wersja jest nowsza.
 Zaktualizować mimo wszystko?</translation>
     </message>
     <message>
@@ -1915,14 +1930,14 @@ Zaktualizować mimo wszystko?</translation>
         <location filename="../src/MainWindow.cpp.orig" line="1991"/>
         <source>File %1 is corrupted.
 Do you want to delete it?</source>
-        <translation type="unfinished">Plik %1 jest uszkodzony.
+        <translation>Plik %1 jest uszkodzony.
 Czy chcesz go usunąć?</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1996"/>
         <location filename="../src/MainWindow.cpp.orig" line="1997"/>
         <source>Transaction Question</source>
-        <translation type="unfinished"></translation>
+        <translation>Transakcja</translation>
     </message>
     <message>
         <source>Library Question</source>
@@ -2031,7 +2046,7 @@ Czy chcesz go usunąć?</translation>
         <location filename="../src/MainWindow.cpp" line="267"/>
         <location filename="../src/MainWindow.cpp.orig" line="267"/>
         <source>Update Database</source>
-        <translation type="unfinished">Aktualizuj bazę danych</translation>
+        <translation>Aktualizuj bazę danych</translation>
     </message>
     <message>
         <location filename="../ui/MainWindow.ui" line="597"/>
@@ -2063,7 +2078,7 @@ Czy chcesz go usunąć?</translation>
         <location filename="../src/MainWindow.cpp" line="275"/>
         <location filename="../src/MainWindow.cpp.orig" line="273"/>
         <source>Process Queue</source>
-        <translation type="unfinished">Przetwórz kolejkę</translation>
+        <translation>Przetwórz kolejkę</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="1699"/>
@@ -2319,7 +2334,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../src/MaintenanceBar.cpp" line="116"/>
         <location filename="../src/MaintenanceBar.cpp" line="117"/>
         <source>Optimizing Pacman Database...</source>
-        <translation type="unfinished">Optymalizacja bazy danych Pacmana...</translation>
+        <translation>Optymalizacja bazy danych Pacmana...</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="127"/>
@@ -2376,12 +2391,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="206"/>
         <source>Database optimized successfully!</source>
-        <translation type="unfinished"></translation>
+        <translation>Baza danych została pomyślnie zoptymalizowana!</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="208"/>
         <source>Could not optimize database!</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie udało się zoptymalizować bazy danych!</translation>
     </message>
     <message>
         <location filename="../src/MaintenanceBar.cpp" line="218"/>
@@ -2599,7 +2614,7 @@ Twoja wersja to %1. Proszę o zaktualizowanie Pacmana.</translation>
         <location filename="../src/Shaman.cpp" line="131"/>
         <location filename="../src/Shaman.cpp.orig" line="131"/>
         <source>Shaman can not be started as root. Please restart it as unprivileged user.</source>
-        <translation type="unfinished"></translation>
+        <translation>Shaman nie może być uruchamiany z uprawnieniami roota. Proszę, uruchomić program ponownie jako zwykły użytkownik.</translation>
     </message>
     <message>
         <location filename="../src/Shaman.cpp" line="193"/>
@@ -2860,7 +2875,7 @@ po więcej informacji.</translation>
         <location filename="../src/QueueDialog.cpp" line="222"/>
         <location filename="../src/QueueDialog.cpp.orig" line="222"/>
         <source>Running package scripts...</source>
-        <translation type="unfinished"></translation>
+        <translation>Uruchamianie skryptów pakietu...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="228"/>
@@ -2966,7 +2981,7 @@ Może to spowodować uszkodzenie Twojego systemu.</translation>
         <location filename="../src/QueueDialog.cpp.orig" line="256"/>
         <source>%p% (%1 KB/s, %2 remaining)</source>
         <comment>You just have to translate &apos;remaining&apos; here. Leave everything else as it is.</comment>
-        <translation type="unfinished"></translation>
+        <translation>%p% (%1 KB/s, %2 pozostało)</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="337"/>
@@ -3306,7 +3321,7 @@ Kliknij tutaj aby zaktualizować swój system.</numerusform>
         <location filename="../src/SysUpgradeDialog.cpp" line="82"/>
         <location filename="../src/SysUpgradeDialog.cpp.orig" line="82"/>
         <source>System Upgrade</source>
-        <translation type="unfinished">Aktualizacja systemu</translation>
+        <translation>Aktualizacja systemu</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/SysUpgradeDialog.cpp" line="65"/>
@@ -3889,7 +3904,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="95"/>
         <source>This is useful if you want to review compiler&apos;s output</source>
-        <translation>Jest to użytecznie jeśli chcesz obejrzeć wyjście kompilatora</translation>
+        <translation>Jest to użytecznie jeśli chcesz sprawdzić wyjście kompilatora</translation>
     </message>
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="98"/>
