@@ -72,8 +72,8 @@ void SysUpgradeDialog::init()
 
         foreach(const Package &pkg, Backend::instance()->getUpgradeablePackages()) {
             new QTreeWidgetItem(itm, QStringList() << QString(pkg.name() + " (" +
-                                Backend::instance()->getPackage(pkg.name(), "local").version() + "-->" +
-                                pkg.version() + QChar(')')));
+                                Backend::instance()->getPackage(pkg.name(), "local").version() +
+                                "-->" + pkg.version() + QChar(')')));
         }
 
         itm->setExpanded(true);
