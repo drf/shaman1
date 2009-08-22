@@ -1914,10 +1914,10 @@ void MainWindow::showAboutDialog()
                                           " margin-left:0px; margin-right:0px; -qt-block-indent:0; "
                                           "text-indent:0px;\"></p>\n<p style=\" margin-top:0px; margin-bottom:0px;"
                                           " margin-left:0px; margin-right:0px; -qt-block-indent:0; "
-                                          "text-indent:0px;\">(C) 2008 Dario Freddi &lt;drf@kdemod.ath.cx&gt;</p>\n"
+                                          "text-indent:0px;\">(C) 2008-2009 Dario Freddi &lt;drf@chakra-project.org&gt;</p>\n"
                                           "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; "
                                           "margin-right:0px; -qt-block-indent:0; text-indent:0px;\">"
-                                          "(C) 2008 Lukas Appelhans &lt;boom1992@kdemod.ath.cx&gt;</p></body></html>"))
+                                          "(C) 2008 Lukas Appelhans &lt;boom1992@chakra-project.org&gt;</p></body></html>"))
                                .arg(Backend::instance()->getAlpmVersion()));
 
     ui.headerLabel->setText(QString("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" "
