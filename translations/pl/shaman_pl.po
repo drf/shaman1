@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-22 02:01+0200\n"
+"POT-Creation-Date: 2009-08-22 15:34+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1507,8 +1507,35 @@ msgstr ""
 "prawidłowym pakietem"
 
 #: MainWindow#49
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">A libalpm frontend in Qt</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">License: GPLv2+</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Libalpm Version: v.%1</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008-2009 Dario Freddi "
+"&lt;drf@chakra-project.org&gt;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Lukas Appelhans "
+"&lt;boom1992@chakra-project.org&gt;</p></body></html>"
+msgstr ""
+
+#: MainWindow#50
 #, fuzzy
-msgctxt "MainWindow#49"
+msgctxt "MainWindow#50"
 msgid ""
 "%1 requires installing %2 from IgnorePkg/IgnoreGroup.\n"
 " Install anyway?"
@@ -1516,9 +1543,9 @@ msgstr ""
 "%1 wymaga instalacji %2 z IgnorePkg/IgnoreGroup\n"
 "Zainstalować mimo wszystko?"
 
-#: MainWindow#50
+#: MainWindow#51
 #, fuzzy
-msgctxt "MainWindow#50"
+msgctxt "MainWindow#51"
 msgid ""
 "%1 is in IgnorePkg/IgnoreGroup.\n"
 " Install anyway?"
@@ -1526,19 +1553,19 @@ msgstr ""
 "%1 jest w IgnorePkg/IgnoreGroup.\n"
 "Zainstalować mimo wszystko?"
 
-#: MainWindow#51
+#: MainWindow#52
 #, fuzzy
-msgctxt "MainWindow#51"
+msgctxt "MainWindow#52"
 msgid "Replace %1 with %2/%3?"
 msgstr "Zastąpić %1 przez %2/%3?"
 
-#: MainWindow#52
+#: MainWindow#53
 msgid ""
 "%1 conflicts with %2.\n"
 "Remove %2?"
 msgstr ""
 
-#: MainWindow#53
+#: MainWindow#54
 #, fuzzy
 msgid ""
 "The following package(s) cannot be upgraded due to unresolvable "
@@ -1553,9 +1580,9 @@ msgstr ""
 "            \n"
 "        "
 
-#: MainWindow#54
+#: MainWindow#55
 #, fuzzy
-msgctxt "MainWindow#54"
+msgctxt "MainWindow#55"
 msgid ""
 "%1-%2: local version is newer.\n"
 "Upgrade anyway?"
@@ -1563,9 +1590,9 @@ msgstr ""
 "%1-%2: lokalna wersja jest nowsza.\n"
 "Zaktualizować mimo wszystko?"
 
-#: MainWindow#55
+#: MainWindow#56
 #, fuzzy
-msgctxt "MainWindow#55"
+msgctxt "MainWindow#56"
 msgid ""
 "File %1 is corrupted.\n"
 "Do you want to delete it?"
@@ -1573,131 +1600,131 @@ msgstr ""
 "Plik %1 jest uszkodzony.\n"
 "Czy chcesz go usunąć?"
 
-#: MainWindow#56
+#: MainWindow#57
 msgid "Transaction Question"
 msgstr ""
 
 #. (obsolete)
-#: MainWindow#57
+#: MainWindow#58
 msgid "Library Question"
 msgstr "Pytanie o bibliotekę"
 
-#: MainWindow#58
-msgctxt "MainWindow#58"
+#: MainWindow#59
+msgctxt "MainWindow#59"
 msgid "Shaman"
 msgstr "Shaman"
 
-#: MainWindow#59
+#: MainWindow#60
 msgid "All packages"
 msgstr "Wszystkie pakiety"
 
-#: MainWindow#60
+#: MainWindow#61
 msgid "Status"
 msgstr "Status"
 
-#: MainWindow#61
+#: MainWindow#62
 msgid "Action"
 msgstr "Działanie"
 
-#: MainWindow#62
+#: MainWindow#63
 msgid "Version"
 msgstr "Wersja"
 
-#: MainWindow#63
+#: MainWindow#64
 msgid "Size"
 msgstr "Rozmiar"
 
-#: MainWindow#64
-msgctxt "MainWindow#64"
+#: MainWindow#65
+msgctxt "MainWindow#65"
 msgid "Repository"
 msgstr "Repozytorium"
 
-#: MainWindow#65
+#: MainWindow#66
 msgid "Groups"
 msgstr "Grupy"
 
-#: MainWindow#66
+#: MainWindow#67
 msgid "Action-Text"
 msgstr "Text-działania"
 
-#: MainWindow#67
-msgctxt "MainWindow#67"
+#: MainWindow#68
+msgctxt "MainWindow#68"
 msgid "Package Information"
 msgstr "Informacje o pakiecie"
 
-#: MainWindow#68
+#: MainWindow#69
 msgid "Install selected package"
 msgstr "Zainstaluj wybrane pakiety"
 
-#: MainWindow#69
+#: MainWindow#70
 msgid "Remove selected package"
 msgstr "Usuń wybrane pakiety"
 
-#: MainWindow#70
+#: MainWindow#71
 msgid "Complete Remove selected package (pacman -Rcs)"
 msgstr "Całkowicie usuń wybrane pakiety (pacman -Rcs)"
 
-#: MainWindow#71
+#: MainWindow#72
 msgid "Cancel action for selected package"
 msgstr "Anuluj działanie dla wybranych pakietów"
 
-#: MainWindow#72
-msgctxt "MainWindow#72"
+#: MainWindow#73
+msgctxt "MainWindow#73"
 msgid "1"
 msgstr "1"
 
-#: MainWindow#73
+#: MainWindow#74
 msgid "Build and Install from Source"
 msgstr "Zbuduj i zainstaluj ze źródeł"
 
-#: MainWindow#74
+#: MainWindow#75
 msgid "Quick Actions"
 msgstr "Szybkie działania"
 
-#: MainWindow#75
+#: MainWindow#76
 msgid "Settings..."
 msgstr "Ustawienia..."
 
-#: MainWindow#76
+#: MainWindow#77
 msgid "About..."
 msgstr "O programie..."
 
-#: MainWindow#77
+#: MainWindow#78
 #, fuzzy
-msgctxt "MainWindow#77"
+msgctxt "MainWindow#78"
 msgid "Update Database"
 msgstr "Aktualizuj bazę danych"
 
-#: MainWindow#78
-msgctxt "MainWindow#78"
+#: MainWindow#79
+msgctxt "MainWindow#79"
 msgid "Upgrade System"
 msgstr "Aktualizuj system"
 
-#: MainWindow#79
+#: MainWindow#80
 msgid "Install Package From File"
 msgstr "Instaluj pakiet z pliku"
 
-#: MainWindow#80
+#: MainWindow#81
 msgid "Update ABS Tree"
 msgstr "Aktualizuj drzewo ABS"
 
-#: MainWindow#81
+#: MainWindow#82
 msgid "Build and Install Queue"
 msgstr "Zbuduj i zainstaluj pakiety z kolejki"
 
 # Quit the application
-#: MainWindow#82
-msgctxt "MainWindow#82"
+#: MainWindow#83
+msgctxt "MainWindow#83"
 msgid "Quit"
 msgstr "Zakończ"
 
-#: MainWindow#83
+#: MainWindow#84
 #, fuzzy
-msgctxt "MainWindow#83"
+msgctxt "MainWindow#84"
 msgid "Process Queue"
 msgstr "Przetwórz kolejkę"
 
-#: MainWindow#84
+#: MainWindow#85
 msgid ""
 "Your Kernel has been updated.\n"
 "Please restart your PC soon to load the new Kernel."
@@ -1706,15 +1733,15 @@ msgstr ""
 "Proszę zrestartować swój komputer, aby móc wczytać nowego Kernela."
 
 #. (obsolete)
-#: MainWindow#85
+#: MainWindow#86
 msgid "Esc"
 msgstr "Esc"
 
-#: MainWindow#86
+#: MainWindow#87
 msgid "News Alert"
 msgstr "News alarm"
 
-#: MainWindow#87
+#: MainWindow#88
 msgid ""
 "There is an unread news about %1.\n"
 "Do you want to read it?"
@@ -1722,15 +1749,15 @@ msgstr ""
 "Jest nieprzeczytany news o %1.\n"
 "Czy chcesz go przeczytać?"
 
-#: MainWindow#88
+#: MainWindow#89
 msgid "Read News"
 msgstr "Przeczytaj news"
 
-#: MainWindow#89
+#: MainWindow#90
 msgid "View Log"
 msgstr "Przejrzyj Log"
 
-#: MainWindow#90
+#: MainWindow#91
 msgid ""
 "One or more errors occurred, your Queue\n"
 "was not successfully processed"
@@ -1738,15 +1765,15 @@ msgstr ""
 "Wystąpił jeden lub więcej błędów, Twoja kolejka\n"
 "nie została pomyślnie przetworzona"
 
-#: MainWindow#91
+#: MainWindow#92
 msgid "One or more databases failed to update!"
 msgstr "Nie powiodła się aktualizacja jednej lub więcej baz danych!"
 
-#: MainWindow#92
+#: MainWindow#93
 msgid "Error Processing Queue!!"
 msgstr "Błąd podczas przetwarzania kolejki!!"
 
-#: MainWindow#93
+#: MainWindow#94
 msgid ""
 "A package providing %1 is already installed.\n"
 "Do you want to install %1 anyway?"
@@ -1754,63 +1781,63 @@ msgstr ""
 "Pakiet dostarczający %1 jest obecnie zainstalowany.\n"
 "Czy mimo wszystko chcesz zainstalować %1?"
 
-#: MainWindow#94
+#: MainWindow#95
 msgid "&File"
 msgstr "&Plik"
 
-#: MainWindow#95
+#: MainWindow#96
 msgid "&Help"
 msgstr "&Pomoc"
 
-#: MainWindow#96
+#: MainWindow#97
 msgid "&Actions"
 msgstr "&Działania"
 
-#: MainWindow#97
+#: MainWindow#98
 msgid "&Tools"
 msgstr "&Narzędzia"
 
-#: MainWindow#98
+#: MainWindow#99
 msgid "Re&positories"
 msgstr "Re&pozytoria"
 
-#: MainWindow#99
+#: MainWindow#100
 msgid "Package &Groups"
 msgstr "&Grupy pakietów"
 
-#: MainWindow#100
+#: MainWindow#101
 msgid "Mark for &Installation"
 msgstr "Oznacz do &instalacji"
 
-#: MainWindow#101
+#: MainWindow#102
 msgid "Mark for &Removal"
 msgstr "Oznacz do &usunięcia"
 
-#: MainWindow#102
+#: MainWindow#103
 msgid "Mark for complete re&moval"
 msgstr "Oznacz do całkowitego usu&nięcia"
 
-#: MainWindow#103
+#: MainWindow#104
 msgid "Package I&nformation"
 msgstr "Informacje o p&akiecie"
 
-#: MainWindow#104
+#: MainWindow#105
 msgid "File&s"
 msgstr "Plik&i"
 
-#: MainWindow#105
+#: MainWindow#106
 msgid "&Dependencies"
 msgstr "&Zależności"
 
-#: MainWindow#106
+#: MainWindow#107
 msgid "Mark for Re&installation"
 msgstr "Oznacz do re&instalacji"
 
-#: MainWindow#107
+#: MainWindow#108
 msgid "&Cancel Action"
 msgstr "&Anuluj działanie"
 
-#: MainWindow#108
+#: MainWindow#109
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -1858,17 +1885,17 @@ msgstr ""
 
 # Name of the Package
 #. (obsolete)
-#: MainWindow#109
-msgctxt "MainWindow#109"
+#: MainWindow#110
+msgctxt "MainWindow#110"
 msgid "Name"
 msgstr "Nazwa"
 
 # Exit Shaman Shortcut
-#: MainWindow#110
+#: MainWindow#111
 msgid "Ctrl+Q"
 msgstr "Ctrl+Q"
 
-#: MainWindow#111
+#: MainWindow#112
 msgid "Name and Description"
 msgstr "Nazwa i Opis"
 

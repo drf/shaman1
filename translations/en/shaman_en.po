@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-22 02:02+0200\n"
+"POT-Creation-Date: 2009-08-22 15:35+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1273,6 +1273,33 @@ msgid ""
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
 "indent:0px;\"></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008-2009 Dario Freddi "
+"&lt;drf@chakra-project.org&gt;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Lukas Appelhans "
+"&lt;boom1992@chakra-project.org&gt;</p></body></html>"
+msgstr ""
+
+#: MainWindow#67
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">A libalpm frontend in Qt</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">License: GPLv2+</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Libalpm Version: v.%1</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Dario Freddi "
 "&lt;drf@kdemod.ath.cx&gt;</p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
@@ -1280,29 +1307,29 @@ msgid ""
 "&lt;boom1992@kdemod.ath.cx&gt;</p></body></html>"
 msgstr ""
 
-#: MainWindow#67
+#: MainWindow#68
 msgid ""
 "%1 requires installing %2 from IgnorePkg/IgnoreGroup.\n"
 " Install anyway?"
 msgstr ""
 
-#: MainWindow#68
+#: MainWindow#69
 msgid ""
 "%1 is in IgnorePkg/IgnoreGroup.\n"
 " Install anyway?"
 msgstr ""
 
-#: MainWindow#69
+#: MainWindow#70
 msgid "Replace %1 with %2/%3?"
 msgstr ""
 
-#: MainWindow#70
+#: MainWindow#71
 msgid ""
 "%1 conflicts with %2.\n"
 "Remove %2?"
 msgstr ""
 
-#: MainWindow#71
+#: MainWindow#72
 #, fuzzy
 msgid ""
 "The following package(s) cannot be upgraded due to unresolvable "
@@ -1315,160 +1342,160 @@ msgstr ""
 "            \n"
 "        "
 
-#: MainWindow#72
+#: MainWindow#73
 msgid ""
 "%1-%2: local version is newer.\n"
 "Upgrade anyway?"
 msgstr ""
 
-#: MainWindow#73
+#: MainWindow#74
 msgid ""
 "File %1 is corrupted.\n"
 "Do you want to delete it?"
 msgstr ""
 
-#: MainWindow#74
+#: MainWindow#75
 msgid "Transaction Question"
 msgstr ""
 
-#: MainWindow#75
+#: MainWindow#76
 msgid "All packages"
 msgstr ""
 
-#: MainWindow#76
+#: MainWindow#77
 msgid "Status"
 msgstr ""
 
-#: MainWindow#77
+#: MainWindow#78
 msgid "Action"
 msgstr ""
 
-#: MainWindow#78
+#: MainWindow#79
 msgid "Version"
 msgstr ""
 
-#: MainWindow#79
+#: MainWindow#80
 msgid "Size"
 msgstr ""
 
-#: MainWindow#80
-msgctxt "MainWindow#80"
+#: MainWindow#81
+msgctxt "MainWindow#81"
 msgid "Repository"
 msgstr ""
 
-#: MainWindow#81
+#: MainWindow#82
 msgid "Groups"
 msgstr ""
 
-#: MainWindow#82
+#: MainWindow#83
 msgid "Action-Text"
 msgstr ""
 
-#: MainWindow#83
+#: MainWindow#84
 msgid "Re&positories"
 msgstr ""
 
-#: MainWindow#84
+#: MainWindow#85
 msgid "Package &Groups"
 msgstr ""
 
-#: MainWindow#85
+#: MainWindow#86
 msgid "Install selected package"
 msgstr ""
 
-#: MainWindow#86
+#: MainWindow#87
 msgid "Remove selected package"
 msgstr ""
 
-#: MainWindow#87
+#: MainWindow#88
 msgid "Complete Remove selected package (pacman -Rcs)"
 msgstr ""
 
-#: MainWindow#88
+#: MainWindow#89
 msgid "Mark for complete re&moval"
 msgstr ""
 
-#: MainWindow#89
+#: MainWindow#90
 msgid "Cancel action for selected package"
 msgstr ""
 
-#: MainWindow#90
+#: MainWindow#91
 msgid "Package I&nformation"
 msgstr ""
 
-#: MainWindow#91
+#: MainWindow#92
 msgid "File&s"
 msgstr ""
 
-#: MainWindow#92
-msgctxt "MainWindow#92"
+#: MainWindow#93
+msgctxt "MainWindow#93"
 msgid "1"
 msgstr ""
 
-#: MainWindow#93
+#: MainWindow#94
 msgid "&Dependencies"
 msgstr ""
 
-#: MainWindow#94
+#: MainWindow#95
 msgid "&File"
 msgstr ""
 
-#: MainWindow#95
+#: MainWindow#96
 msgid "&Help"
 msgstr ""
 
-#: MainWindow#96
+#: MainWindow#97
 msgid "&Actions"
 msgstr ""
 
-#: MainWindow#97
+#: MainWindow#98
 msgid "Build and Install from Source"
 msgstr ""
 
-#: MainWindow#98
+#: MainWindow#99
 msgid "&Tools"
 msgstr ""
 
-#: MainWindow#99
+#: MainWindow#100
 msgid "Quick Actions"
 msgstr ""
 
-#: MainWindow#100
+#: MainWindow#101
 msgid "Settings..."
 msgstr ""
 
-#: MainWindow#101
+#: MainWindow#102
 msgid "About..."
 msgstr ""
 
-#: MainWindow#102
-msgctxt "MainWindow#102"
+#: MainWindow#103
+msgctxt "MainWindow#103"
 msgid "Upgrade System"
 msgstr ""
 
-#: MainWindow#103
+#: MainWindow#104
 msgid "Install Package From File"
 msgstr ""
 
-#: MainWindow#104
+#: MainWindow#105
 msgid "Update ABS Tree"
 msgstr ""
 
-#: MainWindow#105
+#: MainWindow#106
 msgid "Build and Install Queue"
 msgstr ""
 
 # Quit the application
-#: MainWindow#106
-msgctxt "MainWindow#106"
+#: MainWindow#107
+msgctxt "MainWindow#107"
 msgid "Quit"
 msgstr ""
 
-#: MainWindow#107
+#: MainWindow#108
 msgid "Read News"
 msgstr ""
 
-#: MainWindow#108
+#: MainWindow#109
 msgid "View Log"
 msgstr ""
 
