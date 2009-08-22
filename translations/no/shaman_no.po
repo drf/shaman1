@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-22 01:35+0200\n"
+"POT-Creation-Date: 2009-08-22 02:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -173,7 +173,8 @@ msgid ""
 "configuration to improve your building performance."
 msgstr ""
 "\n"
-"            "
+"            \n"
+"        "
 
 #: BuildingHandler#6
 #, fuzzy
@@ -397,8 +398,8 @@ msgstr ""
 "\n"
 "            "
 
-#. (obsolete)
 #: ConfigDialog#18
+#, fuzzy
 msgctxt "ConfigDialog#18"
 msgid "Optimizing Pacman Database..."
 msgstr ""
@@ -484,8 +485,8 @@ msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#29
-#, fuzzy
 msgid "Unable to save Pacman configuration!"
 msgstr ""
 "\n"
@@ -737,8 +738,8 @@ msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#61
-#, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -1279,6 +1280,49 @@ msgstr ""
 "\n"
 "            "
 
+#: ConfigDialog#134
+msgctxt "ConfigDialog#134"
+msgid "Database optimized successfully!"
+msgstr ""
+
+#: ConfigDialog#135
+msgctxt "ConfigDialog#135"
+msgid "Could not optimize database!"
+msgstr ""
+
+#: ConfigDialog#136
+msgid "Error saving configuration"
+msgstr ""
+
+#: ConfigDialog#137
+msgid ""
+"There was an error while saving the configuration. This is probably due to "
+"an internal error or you being not authorized to perform the operation"
+msgstr ""
+
+#: ConfigDialog#138
+msgid ""
+"There was an error while trying to add the mirror! This could be due also to "
+"your system policy preventing you from performing this action"
+msgstr ""
+
+#: ConfigDialog#139
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Serif'; font-size:10pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Liberation Sans'; font-size:9pt;\">Shaman Manteinance.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Liberation Sans'; font-size:9pt;\">Please choose an action from the "
+"Drop-Down Menu.</span></p></body></html>"
+msgstr ""
+
 #: EditPBuild#1
 #, fuzzy
 msgid "Saving"
@@ -1294,6 +1338,110 @@ msgid ""
 msgstr ""
 "\n"
 "            "
+
+#: ErrorHandler#1
+msgid "There has been an error while preparing the transaction."
+msgstr ""
+
+#: ErrorHandler#2
+msgid "Some dependencies can not be satisfied"
+msgstr ""
+
+#: ErrorHandler#3
+msgid "%1: requires %2"
+msgstr ""
+
+#: ErrorHandler#4
+msgid "Some dependencies create a conflict with already installed packages"
+msgstr ""
+
+#: ErrorHandler#5
+msgid "%1: conflicts with %2"
+msgstr ""
+
+#: ErrorHandler#6
+msgid "No further details were given. Last error string was:"
+msgstr ""
+
+#: ErrorHandler#7
+msgid "There has been an error while committing the transaction."
+msgstr ""
+
+#: ErrorHandler#8
+msgid "Some files in the packages being processed are conflicting"
+msgstr ""
+
+#: ErrorHandler#9
+msgid "%1 exists in both '%2' and '%3'"
+msgstr ""
+
+#: ErrorHandler#10
+msgid ""
+"Some files in the packages being processed conflict with the local "
+"filesystem"
+msgstr ""
+
+#: ErrorHandler#11
+msgid "%1: %2 exists in the filesystem"
+msgstr ""
+
+#: ErrorHandler#12
+msgid "Some downloaded packages are corrupted or invalid"
+msgstr ""
+
+#: ErrorHandler#13
+msgid "%1 is invalid or corrupted"
+msgstr ""
+
+#: ErrorHandler#14
+msgid "There has been an error while adding a target."
+msgstr ""
+
+#: ErrorHandler#15
+msgid ""
+"This is probably an internal Shaman error. Please report it to help the "
+"developers solving it"
+msgstr ""
+
+#: ErrorHandler#16
+msgid "You seem not authorized to perform this operation"
+msgstr ""
+
+#: ErrorHandler#17
+msgid ""
+"It looks like the system policy prevents you from doing this action, or you "
+"failed or refused to authenticate. Please contact your system administrator "
+"for further details"
+msgstr ""
+
+#: ErrorHandler#18
+msgid "There was a problem initialiting Aqpm"
+msgstr ""
+
+#: ErrorHandler#19
+msgid ""
+"Aqpm, the library underneath Shaman, reported that it could not start a "
+"privileged operation. This is probably due to a bug in Shaman/Aqpm or to a "
+"misconfiguration of your system"
+msgstr ""
+
+#: ErrorHandler#20
+msgid "There was an error during the transaction"
+msgstr ""
+
+#: ErrorHandler#21
+msgid ""
+"It looks like Aqpm's worker crashed or disappeared. This is probably an "
+"internal Shaman error. Please report it to help the developers solving it"
+msgstr ""
+
+#: ErrorHandler#22
+msgid "The transaction was interrupted"
+msgstr ""
+
+#: ErrorHandler#23
+msgid "Error occurred"
+msgstr ""
 
 #: LocalPackage#1
 #, fuzzy
@@ -1344,6 +1492,7 @@ msgstr ""
 
 #: LocalPackage#6
 #, fuzzy
+msgctxt "LocalPackage#6"
 msgid "Install Package"
 msgstr ""
 "\n"
@@ -1373,6 +1522,15 @@ msgstr ""
 #: LocalPackageDialog#4
 #, fuzzy
 msgid "%n package(s) will be installed as dependencies"
+msgstr ""
+"\n"
+"            \n"
+"        "
+
+#: LocalPackageDialog#5
+#, fuzzy
+msgctxt "LocalPackageDialog#5"
+msgid "Install Package"
 msgstr ""
 "\n"
 "            "
@@ -2079,8 +2237,8 @@ msgstr ""
 "\n"
 "            "
 
-#. (obsolete)
 #: MainWindow#92
+#, fuzzy
 msgctxt "MainWindow#92"
 msgid "Update Database"
 msgstr ""
@@ -2125,8 +2283,8 @@ msgstr ""
 "\n"
 "            "
 
-#. (obsolete)
 #: MainWindow#98
+#, fuzzy
 msgctxt "MainWindow#98"
 msgid "Process Queue"
 msgstr ""
@@ -2146,6 +2304,57 @@ msgid "View Log"
 msgstr ""
 "\n"
 "            "
+
+#: MainWindow#101
+msgid ""
+"%1 requires installing %2 from IgnorePkg/IgnoreGroup.\n"
+" Install anyway?"
+msgstr ""
+
+#: MainWindow#102
+msgid ""
+"%1 is in IgnorePkg/IgnoreGroup.\n"
+" Install anyway?"
+msgstr ""
+
+#: MainWindow#103
+msgid "Replace %1 with %2/%3?"
+msgstr ""
+
+#: MainWindow#104
+msgid ""
+"%1 conflicts with %2.\n"
+"Remove %2?"
+msgstr ""
+
+#: MainWindow#105
+#, fuzzy
+msgid ""
+"The following package(s) cannot be upgraded due to unresolvable "
+"dependencies:\n"
+"%1\n"
+"\n"
+"Do you want to skip the above package(s) for this upgrade?"
+msgstr ""
+"\n"
+"            \n"
+"        "
+
+#: MainWindow#106
+msgid ""
+"%1-%2: local version is newer.\n"
+"Upgrade anyway?"
+msgstr ""
+
+#: MainWindow#107
+msgid ""
+"File %1 is corrupted.\n"
+"Do you want to delete it?"
+msgstr ""
+
+#: MainWindow#108
+msgid "Transaction Question"
+msgstr ""
 
 #: MaintenanceBar#1
 #, fuzzy
@@ -2225,8 +2434,8 @@ msgstr ""
 "\n"
 "            "
 
-#. (obsolete)
 #: MaintenanceBar#11
+#, fuzzy
 msgctxt "MaintenanceBar#11"
 msgid "Optimizing Pacman Database..."
 msgstr ""
@@ -2387,6 +2596,16 @@ msgid "Sync could not be executed!!"
 msgstr ""
 "\n"
 "            "
+
+#: MaintenanceBar#31
+msgctxt "MaintenanceBar#31"
+msgid "Database optimized successfully!"
+msgstr ""
+
+#: MaintenanceBar#32
+msgctxt "MaintenanceBar#32"
+msgid "Could not optimize database!"
+msgstr ""
 
 #: NewsViewer#1
 #, fuzzy
@@ -2597,8 +2816,8 @@ msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: QObject#15
-#, fuzzy
 msgid ""
 "Shaman can not be started as root.\n"
 "Please restart it as unprivileged user."
@@ -2606,8 +2825,8 @@ msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: QObject#16
-#, fuzzy
 msgid ""
 "You have started Shaman as root.\n"
 "It is advised to start it as unprivileged user.\n"
@@ -2646,6 +2865,11 @@ msgid "Starting up Shaman..."
 msgstr ""
 "\n"
 "            "
+
+#: QObject#21
+msgid ""
+"Shaman can not be started as root. Please restart it as unprivileged user."
+msgstr ""
 
 #: QueueDialog#1
 #, fuzzy
@@ -2809,8 +3033,8 @@ msgstr ""
 "            "
 
 # You just have to translate 'remaining' here. Leave everything else as it is.
+#. (obsolete)
 #: QueueDialog#24
-#, fuzzy
 msgid "%p% (%1 KB/s, %4:%5:%6 remaining)"
 msgstr ""
 "\n"
@@ -2918,19 +3142,28 @@ msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: QueueDialog#39
-#, fuzzy
 msgid "There has been an error while preparing the transaction.\n"
 msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: QueueDialog#40
-#, fuzzy
 msgid "There has been an error while committing the transaction.\n"
 msgstr ""
 "\n"
 "            "
+
+#: QueueDialog#41
+msgid "Running package scripts..."
+msgstr ""
+
+# You just have to translate 'remaining' here. Leave everything else as it is.
+#: QueueDialog#42
+msgid "%p% (%1 KB/s, %2 remaining)"
+msgstr ""
 
 #: QueueReadyDialog#1
 #, fuzzy
@@ -3081,14 +3314,16 @@ msgstr ""
 msgid "Remove <b>%n package(s)</b><br />"
 msgstr ""
 "\n"
-"            "
+"            \n"
+"        "
 
 #: ReviewQueueDialog#10
 #, fuzzy
 msgid "Install/Upgrade <b>%n package(s)</b><br />"
 msgstr ""
 "\n"
-"            "
+"            \n"
+"        "
 
 #: ReviewQueueDialog#11
 #, fuzzy
@@ -3200,7 +3435,8 @@ msgid ""
 "Click here to upgrade your System."
 msgstr ""
 "\n"
-"            "
+"            \n"
+"        "
 
 #: ShamanTrayIcon#11
 #, fuzzy
@@ -3241,12 +3477,21 @@ msgid ""
 "add it to the current Queue<br> and process it later."
 msgstr ""
 "\n"
-"            "
+"            \n"
+"        "
 
 #: SysUpgradeDialog#2
 #, fuzzy
 msgctxt "SysUpgradeDialog#2"
 msgid "To be Upgraded"
+msgstr ""
+"\n"
+"            "
+
+#: SysUpgradeDialog#3
+#, fuzzy
+msgctxt "SysUpgradeDialog#3"
+msgid "System Upgrade"
 msgstr ""
 "\n"
 "            "

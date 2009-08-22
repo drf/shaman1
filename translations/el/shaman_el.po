@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-22 01:34+0200\n"
+"POT-Creation-Date: 2009-08-22 02:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,6 +24,7 @@ msgstr ": είναι σε διένεξη με το"
 
 #. (obsolete)
 #: AlpmHandler#3
+msgctxt "AlpmHandler#3"
 msgid "%1 exists in both '%2' and '%3'"
 msgstr "Το %1 υπάρχει τόσο στο '%2' όσο και στο '%3'"
 
@@ -267,10 +268,12 @@ msgid ""
 "configuration to improve your building performance."
 msgstr ""
 "\n"
-"            "
+"            \n"
+"        "
 
 #. (obsolete)
 #: CallBacks#1
+msgctxt "CallBacks#1"
 msgid ""
 "%1 requires installing %2 from IgnorePkg/IgnoreGroup.\n"
 " Install anyway?"
@@ -281,6 +284,7 @@ msgstr ""
 
 #. (obsolete)
 #: CallBacks#2
+msgctxt "CallBacks#2"
 msgid ""
 "%1 is in IgnorePkg/IgnoreGroup.\n"
 " Install anyway?"
@@ -299,6 +303,7 @@ msgstr ""
 
 #. (obsolete)
 #: CallBacks#4
+msgctxt "CallBacks#4"
 msgid "Replace %1 with %2/%3?"
 msgstr "Αντικατάσταση του πακέτου %1 με %2/%3;"
 
@@ -313,6 +318,7 @@ msgstr ""
 
 #. (obsolete)
 #: CallBacks#6
+msgctxt "CallBacks#6"
 msgid ""
 "%1-%2: local version is newer.\n"
 "Upgrade anyway?"
@@ -331,6 +337,7 @@ msgstr ""
 
 #. (obsolete)
 #: CallBacks#8
+msgctxt "CallBacks#8"
 msgid ""
 "File %1 is corrupted.\n"
 "Do you want to delete it?"
@@ -802,8 +809,8 @@ msgstr "Η εντολή Sync δεν μπόρεσε να εκτελεστεί!!"
 msgid "Process Selected"
 msgstr "Επεξεργασία Επιλογής"
 
-#. (obsolete)
 #: ConfigDialog#94
+#, fuzzy
 msgctxt "ConfigDialog#94"
 msgid "Optimizing Pacman Database..."
 msgstr "Βελτιστοποίηση της Βάσης Δεδομένων του Pacman..."
@@ -970,6 +977,7 @@ msgstr "Απαγόρευση εκκίνησης του Shaman ως root"
 msgid "Saving Configuration"
 msgstr "Αποθήκευση ρυθμίσεων"
 
+#. (obsolete)
 #: ConfigDialog#126
 msgid "Unable to save Pacman configuration!"
 msgstr "Η αποθήκευση ρυθμίσεων του Pacman ήταν αδύνατη!"
@@ -1031,8 +1039,8 @@ msgstr ""
 "Sans'; font-size:9pt;\">Παρακαλώ επιλέξτε μια ενέργεια από το μενού "
 "επιλογών.</p></body></html>"
 
+#. (obsolete)
 #: ConfigDialog#131
-#, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -1148,6 +1156,49 @@ msgstr ""
 "\n"
 "            "
 
+#: ConfigDialog#145
+msgctxt "ConfigDialog#145"
+msgid "Database optimized successfully!"
+msgstr ""
+
+#: ConfigDialog#146
+msgctxt "ConfigDialog#146"
+msgid "Could not optimize database!"
+msgstr ""
+
+#: ConfigDialog#147
+msgid "Error saving configuration"
+msgstr ""
+
+#: ConfigDialog#148
+msgid ""
+"There was an error while saving the configuration. This is probably due to "
+"an internal error or you being not authorized to perform the operation"
+msgstr ""
+
+#: ConfigDialog#149
+msgid ""
+"There was an error while trying to add the mirror! This could be due also to "
+"your system policy preventing you from performing this action"
+msgstr ""
+
+#: ConfigDialog#150
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Serif'; font-size:10pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Liberation Sans'; font-size:9pt;\">Shaman Manteinance.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Liberation Sans'; font-size:9pt;\">Please choose an action from the "
+"Drop-Down Menu.</span></p></body></html>"
+msgstr ""
+
 #: EditPBuild#1
 msgid "Saving"
 msgstr "Αποθήκευση"
@@ -1159,6 +1210,112 @@ msgid ""
 msgstr ""
 "Επεξεργαστήκατε το PKGBUILD.\n"
 "Θέλετε να το αποθηκεύσετε;"
+
+#: ErrorHandler#1
+msgid "There has been an error while preparing the transaction."
+msgstr ""
+
+#: ErrorHandler#2
+msgid "Some dependencies can not be satisfied"
+msgstr ""
+
+#: ErrorHandler#3
+msgid "%1: requires %2"
+msgstr ""
+
+#: ErrorHandler#4
+msgid "Some dependencies create a conflict with already installed packages"
+msgstr ""
+
+#: ErrorHandler#5
+msgid "%1: conflicts with %2"
+msgstr ""
+
+#: ErrorHandler#6
+msgid "No further details were given. Last error string was:"
+msgstr ""
+
+#: ErrorHandler#7
+msgid "There has been an error while committing the transaction."
+msgstr ""
+
+#: ErrorHandler#8
+msgid "Some files in the packages being processed are conflicting"
+msgstr ""
+
+#: ErrorHandler#9
+#, fuzzy
+msgctxt "ErrorHandler#9"
+msgid "%1 exists in both '%2' and '%3'"
+msgstr "Το %1 υπάρχει τόσο στο '%2' όσο και στο '%3'"
+
+#: ErrorHandler#10
+msgid ""
+"Some files in the packages being processed conflict with the local "
+"filesystem"
+msgstr ""
+
+#: ErrorHandler#11
+msgid "%1: %2 exists in the filesystem"
+msgstr ""
+
+#: ErrorHandler#12
+msgid "Some downloaded packages are corrupted or invalid"
+msgstr ""
+
+#: ErrorHandler#13
+msgid "%1 is invalid or corrupted"
+msgstr ""
+
+#: ErrorHandler#14
+msgid "There has been an error while adding a target."
+msgstr ""
+
+#: ErrorHandler#15
+msgid ""
+"This is probably an internal Shaman error. Please report it to help the "
+"developers solving it"
+msgstr ""
+
+#: ErrorHandler#16
+msgid "You seem not authorized to perform this operation"
+msgstr ""
+
+#: ErrorHandler#17
+msgid ""
+"It looks like the system policy prevents you from doing this action, or you "
+"failed or refused to authenticate. Please contact your system administrator "
+"for further details"
+msgstr ""
+
+#: ErrorHandler#18
+msgid "There was a problem initialiting Aqpm"
+msgstr ""
+
+#: ErrorHandler#19
+msgid ""
+"Aqpm, the library underneath Shaman, reported that it could not start a "
+"privileged operation. This is probably due to a bug in Shaman/Aqpm or to a "
+"misconfiguration of your system"
+msgstr ""
+
+#: ErrorHandler#20
+msgid "There was an error during the transaction"
+msgstr ""
+
+#: ErrorHandler#21
+msgid ""
+"It looks like Aqpm's worker crashed or disappeared. This is probably an "
+"internal Shaman error. Please report it to help the developers solving it"
+msgstr ""
+
+#: ErrorHandler#22
+msgid "The transaction was interrupted"
+msgstr ""
+
+#: ErrorHandler#23
+msgid "Error occurred"
+msgstr ""
 
 #: LocalPackage#1
 #, fuzzy
@@ -1205,6 +1362,7 @@ msgstr "Ακύρωση"
 
 #: LocalPackage#6
 #, fuzzy
+msgctxt "LocalPackage#6"
 msgid "Install Package"
 msgstr ""
 "\n"
@@ -1234,6 +1392,15 @@ msgstr ""
 #: LocalPackageDialog#4
 #, fuzzy
 msgid "%n package(s) will be installed as dependencies"
+msgstr ""
+"\n"
+"            \n"
+"        "
+
+#: LocalPackageDialog#5
+#, fuzzy
+msgctxt "LocalPackageDialog#5"
+msgid "Install Package"
 msgstr ""
 "\n"
 "            "
@@ -1404,8 +1571,8 @@ msgstr "Ρυθμίσεις..."
 msgid "About..."
 msgstr "Περί..."
 
-#. (obsolete)
 #: MainWindow#38
+#, fuzzy
 msgctxt "MainWindow#38"
 msgid "Update Database"
 msgstr "Ανανέωση Βάσης Δεδομένων"
@@ -1433,8 +1600,8 @@ msgctxt "MainWindow#43"
 msgid "Quit"
 msgstr "Έξοδος"
 
-#. (obsolete)
 #: MainWindow#44
+#, fuzzy
 msgctxt "MainWindow#44"
 msgid "Process Queue"
 msgstr "Επεξεργασία Ουράς"
@@ -2219,6 +2386,76 @@ msgstr ""
 "\n"
 "            "
 
+#: MainWindow#156
+#, fuzzy
+msgctxt "MainWindow#156"
+msgid ""
+"%1 requires installing %2 from IgnorePkg/IgnoreGroup.\n"
+" Install anyway?"
+msgstr ""
+"Το πακέτο %1 απαιτεί την εγκατάσταση του πακέτου %2 από το "
+"IgnorePkg/IgnoreGroup.\n"
+"Συνέχεια εγκατάστασης;"
+
+#: MainWindow#157
+#, fuzzy
+msgctxt "MainWindow#157"
+msgid ""
+"%1 is in IgnorePkg/IgnoreGroup.\n"
+" Install anyway?"
+msgstr ""
+"Το πακέτο %1 είναι στη λίστα IgnorePkg/IgnoreGroup.\n"
+"Συνέχεια εγκατάστασης;"
+
+#: MainWindow#158
+#, fuzzy
+msgctxt "MainWindow#158"
+msgid "Replace %1 with %2/%3?"
+msgstr "Αντικατάσταση του πακέτου %1 με %2/%3;"
+
+#: MainWindow#159
+msgid ""
+"%1 conflicts with %2.\n"
+"Remove %2?"
+msgstr ""
+
+#: MainWindow#160
+#, fuzzy
+msgid ""
+"The following package(s) cannot be upgraded due to unresolvable "
+"dependencies:\n"
+"%1\n"
+"\n"
+"Do you want to skip the above package(s) for this upgrade?"
+msgstr ""
+"\n"
+"            \n"
+"        "
+
+#: MainWindow#161
+#, fuzzy
+msgctxt "MainWindow#161"
+msgid ""
+"%1-%2: local version is newer.\n"
+"Upgrade anyway?"
+msgstr ""
+"%1-%2: η τοπική έκδοση είναι νεώτερη.\n"
+"Συνέχεια αναβάθμισης;"
+
+#: MainWindow#162
+#, fuzzy
+msgctxt "MainWindow#162"
+msgid ""
+"File %1 is corrupted.\n"
+"Do you want to delete it?"
+msgstr ""
+"Το αρχείο %1 είναι κατεστραμένο.\n"
+"Θέλετε να το διαγράψετε?"
+
+#: MainWindow#163
+msgid "Transaction Question"
+msgstr ""
+
 #: MaintenanceBar#1
 #, fuzzy
 msgid "Please choose an action to start maintenance..."
@@ -2274,8 +2511,8 @@ msgctxt "MaintenanceBar#9"
 msgid "Deleting Cache..."
 msgstr "Διαγραφή της Cache..."
 
-#. (obsolete)
 #: MaintenanceBar#10
+#, fuzzy
 msgctxt "MaintenanceBar#10"
 msgid "Optimizing Pacman Database..."
 msgstr "Βελτιστοποίηση της Βάσης Δεδομένων του Pacman..."
@@ -2412,6 +2649,16 @@ msgstr ""
 "\n"
 "            "
 
+#: MaintenanceBar#31
+msgctxt "MaintenanceBar#31"
+msgid "Database optimized successfully!"
+msgstr ""
+
+#: MaintenanceBar#32
+msgctxt "MaintenanceBar#32"
+msgid "Could not optimize database!"
+msgstr ""
+
 #: NewsViewer#1
 msgid "Please wait, fetching items..."
 msgstr ""
@@ -2539,6 +2786,7 @@ msgstr ""
 "Το αρχείο ρυθμίσεων είναι μη εγγράψιμο.\n"
 "Ελέγξτε τα δικαιώματα του."
 
+#. (obsolete)
 #: QObject#11
 msgid ""
 "You have started Shaman as root.\n"
@@ -2573,6 +2821,7 @@ msgstr ""
 "Το Shaman φαίνεται να είναι ήδη ανοιχτό.\n"
 "Δεν μπορείτε να το ανοίξετε δεύτερη φορά."
 
+#. (obsolete)
 #: QObject#16
 msgid ""
 "Shaman can not be started as root.\n"
@@ -2645,6 +2894,11 @@ msgid "Whoa, that's co&ol!"
 msgstr ""
 "\n"
 "            "
+
+#: QObject#25
+msgid ""
+"Shaman can not be started as root. Please restart it as unprivileged user."
+msgstr ""
 
 #: QueueDialog#1
 msgid "<br><b> * Validating Transaction</b><br>"
@@ -2739,6 +2993,7 @@ msgid "Starting downloading packages from %1..."
 msgstr "Έναρξη κατεβάσματος πακέτων από %1..."
 
 # You just have to translate 'remaining' here. Leave everything else as it is.
+#. (obsolete)
 #: QueueDialog#24
 msgid "%p% (%1 KB/s, %4:%5:%6 remaining)"
 msgstr "%p% (%1 KB/s, %4:%5:%6 απομένουν)"
@@ -2827,10 +3082,12 @@ msgctxt "QueueDialog#41"
 msgid "Queue Processing"
 msgstr "Επεξεργασία Ουράς"
 
+#. (obsolete)
 #: QueueDialog#42
 msgid "There has been an error while preparing the transaction.\n"
 msgstr "Εμφανίστηκε ένα σφάλμα κατά την προετοιμασία της εργασίας."
 
+#. (obsolete)
 #: QueueDialog#43
 msgid "There has been an error while committing the transaction.\n"
 msgstr "Εμφανίστηκε ένα σφάλμα κατά την εκτέλεση της εργασίας."
@@ -2861,6 +3118,15 @@ msgstr ""
 msgctxt "QueueDialog#48"
 msgid "Ok"
 msgstr "Ok"
+
+#: QueueDialog#49
+msgid "Running package scripts..."
+msgstr ""
+
+# You just have to translate 'remaining' here. Leave everything else as it is.
+#: QueueDialog#50
+msgid "%p% (%1 KB/s, %2 remaining)"
+msgstr ""
 
 #: QueueReadyDialog#1
 msgid "Review Queue"
@@ -2998,14 +3264,16 @@ msgstr "Θέλετε να συνεχίσετε;"
 msgid "Remove <b>%n package(s)</b><br />"
 msgstr ""
 "\n"
-"            "
+"            \n"
+"        "
 
 #: ReviewQueueDialog#15
 #, fuzzy
 msgid "Install/Upgrade <b>%n package(s)</b><br />"
 msgstr ""
 "\n"
-"            "
+"            \n"
+"        "
 
 #: ShamanStatusBar#1
 msgid "%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages"
@@ -3128,7 +3396,8 @@ msgid ""
 "Click here to upgrade your System."
 msgstr ""
 "\n"
-"            "
+"            \n"
+"        "
 
 #. (obsolete)
 #: SysUpgradeDialog#1
@@ -3162,7 +3431,14 @@ msgid ""
 "add it to the current Queue<br> and process it later."
 msgstr ""
 "\n"
-"            "
+"            \n"
+"        "
+
+#: SysUpgradeDialog#5
+#, fuzzy
+msgctxt "SysUpgradeDialog#5"
+msgid "System Upgrade"
+msgstr "Αναβάθμιση Συστήματος"
 
 #: aboutDialog#1
 msgid "About Shaman"

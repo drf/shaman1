@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-22 01:34+0200\n"
+"POT-Creation-Date: 2009-08-22 02:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,6 +24,7 @@ msgstr ": 冲突 "
 
 #. (obsolete)
 #: AlpmHandler#3
+msgctxt "AlpmHandler#3"
 msgid "%1 exists in both '%2' and '%3'"
 msgstr "%1 同时存在 '%2' 和 '%3'"
 
@@ -250,6 +251,7 @@ msgid "Shaman - Processing"
 msgstr "Shaman - 处理"
 
 #: BuildingHandler#21
+#, fuzzy
 msgid ""
 "You are about to install <b>%n package(s)</b> from source. Building from "
 "source<br>can give some advantages, however is very slow.<br>If you are not "
@@ -257,11 +259,13 @@ msgid ""
 "binary files. Before you continue, you are advised to<br>review your "
 "configuration to improve your building performance."
 msgstr ""
-"您即将从源代码安装<b>%n软件包</b>。从源代码<br>编译您可以获得一些优势,不过速度比较慢。<br>如果您不确定，您可以偏向选择从二进制文件处理"
-"<br>您的队列。在您继续之前，建议您<br>查看您的配置来改善编译性能。        "
+"\n"
+"            \n"
+"        "
 
 #. (obsolete)
 #: CallBacks#1
+msgctxt "CallBacks#1"
 msgid ""
 "%1 requires installing %2 from IgnorePkg/IgnoreGroup.\n"
 " Install anyway?"
@@ -271,6 +275,7 @@ msgstr ""
 
 #. (obsolete)
 #: CallBacks#2
+msgctxt "CallBacks#2"
 msgid ""
 "%1 is in IgnorePkg/IgnoreGroup.\n"
 " Install anyway?"
@@ -289,6 +294,7 @@ msgstr ""
 
 #. (obsolete)
 #: CallBacks#4
+msgctxt "CallBacks#4"
 msgid "Replace %1 with %2/%3?"
 msgstr "替换 %1 用 %2/%3?"
 
@@ -303,6 +309,7 @@ msgstr ""
 
 #. (obsolete)
 #: CallBacks#6
+msgctxt "CallBacks#6"
 msgid ""
 "%1-%2: local version is newer.\n"
 "Upgrade anyway?"
@@ -321,6 +328,7 @@ msgstr ""
 
 #. (obsolete)
 #: CallBacks#8
+msgctxt "CallBacks#8"
 msgid ""
 "File %1 is corrupted.\n"
 "Do you want to delete it?"
@@ -771,8 +779,8 @@ msgstr "Sync 无法执行 !!"
 msgid "Process Selected"
 msgstr "处理"
 
-#. (obsolete)
 #: ConfigDialog#94
+#, fuzzy
 msgctxt "ConfigDialog#94"
 msgid "Optimizing Pacman Database..."
 msgstr "优化Pacman数据库..."
@@ -961,6 +969,7 @@ msgstr "禁止以root身份启动Shaman"
 msgid "Saving Configuration"
 msgstr "保存配置"
 
+#. (obsolete)
 #: ConfigDialog#127
 msgid "Unable to save Pacman configuration!"
 msgstr "无法保存Pacman配置!"
@@ -1023,6 +1032,7 @@ msgstr ""
 "right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Liberation "
 "Sans'; font-size:9pt;\">请从下拉菜单中选择一个操作。</p></body></html>"
 
+#. (obsolete)
 #: ConfigDialog#132
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
@@ -1116,6 +1126,49 @@ msgstr "使用下列语言:"
 msgid "Disable Tray Icon"
 msgstr "禁用托盘图标"
 
+#: ConfigDialog#146
+msgctxt "ConfigDialog#146"
+msgid "Database optimized successfully!"
+msgstr ""
+
+#: ConfigDialog#147
+msgctxt "ConfigDialog#147"
+msgid "Could not optimize database!"
+msgstr ""
+
+#: ConfigDialog#148
+msgid "Error saving configuration"
+msgstr ""
+
+#: ConfigDialog#149
+msgid ""
+"There was an error while saving the configuration. This is probably due to "
+"an internal error or you being not authorized to perform the operation"
+msgstr ""
+
+#: ConfigDialog#150
+msgid ""
+"There was an error while trying to add the mirror! This could be due also to "
+"your system policy preventing you from performing this action"
+msgstr ""
+
+#: ConfigDialog#151
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Serif'; font-size:10pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Liberation Sans'; font-size:9pt;\">Shaman Manteinance.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Liberation Sans'; font-size:9pt;\">Please choose an action from the "
+"Drop-Down Menu.</span></p></body></html>"
+msgstr ""
+
 #: EditPBuild#1
 msgid "Saving"
 msgstr "保存"
@@ -1127,6 +1180,112 @@ msgid ""
 msgstr ""
 "您修改了PKGBUILD，\n"
 "您想保存它吗?"
+
+#: ErrorHandler#1
+msgid "There has been an error while preparing the transaction."
+msgstr ""
+
+#: ErrorHandler#2
+msgid "Some dependencies can not be satisfied"
+msgstr ""
+
+#: ErrorHandler#3
+msgid "%1: requires %2"
+msgstr ""
+
+#: ErrorHandler#4
+msgid "Some dependencies create a conflict with already installed packages"
+msgstr ""
+
+#: ErrorHandler#5
+msgid "%1: conflicts with %2"
+msgstr ""
+
+#: ErrorHandler#6
+msgid "No further details were given. Last error string was:"
+msgstr ""
+
+#: ErrorHandler#7
+msgid "There has been an error while committing the transaction."
+msgstr ""
+
+#: ErrorHandler#8
+msgid "Some files in the packages being processed are conflicting"
+msgstr ""
+
+#: ErrorHandler#9
+#, fuzzy
+msgctxt "ErrorHandler#9"
+msgid "%1 exists in both '%2' and '%3'"
+msgstr "%1 同时存在 '%2' 和 '%3'"
+
+#: ErrorHandler#10
+msgid ""
+"Some files in the packages being processed conflict with the local "
+"filesystem"
+msgstr ""
+
+#: ErrorHandler#11
+msgid "%1: %2 exists in the filesystem"
+msgstr ""
+
+#: ErrorHandler#12
+msgid "Some downloaded packages are corrupted or invalid"
+msgstr ""
+
+#: ErrorHandler#13
+msgid "%1 is invalid or corrupted"
+msgstr ""
+
+#: ErrorHandler#14
+msgid "There has been an error while adding a target."
+msgstr ""
+
+#: ErrorHandler#15
+msgid ""
+"This is probably an internal Shaman error. Please report it to help the "
+"developers solving it"
+msgstr ""
+
+#: ErrorHandler#16
+msgid "You seem not authorized to perform this operation"
+msgstr ""
+
+#: ErrorHandler#17
+msgid ""
+"It looks like the system policy prevents you from doing this action, or you "
+"failed or refused to authenticate. Please contact your system administrator "
+"for further details"
+msgstr ""
+
+#: ErrorHandler#18
+msgid "There was a problem initialiting Aqpm"
+msgstr ""
+
+#: ErrorHandler#19
+msgid ""
+"Aqpm, the library underneath Shaman, reported that it could not start a "
+"privileged operation. This is probably due to a bug in Shaman/Aqpm or to a "
+"misconfiguration of your system"
+msgstr ""
+
+#: ErrorHandler#20
+msgid "There was an error during the transaction"
+msgstr ""
+
+#: ErrorHandler#21
+msgid ""
+"It looks like Aqpm's worker crashed or disappeared. This is probably an "
+"internal Shaman error. Please report it to help the developers solving it"
+msgstr ""
+
+#: ErrorHandler#22
+msgid "The transaction was interrupted"
+msgstr ""
+
+#: ErrorHandler#23
+msgid "Error occurred"
+msgstr ""
 
 #: LocalPackage#1
 msgid "Install Package from File"
@@ -1170,6 +1329,7 @@ msgid "Cancel"
 msgstr "取消"
 
 #: LocalPackage#6
+msgctxt "LocalPackage#6"
 msgid "Install Package"
 msgstr "安装软件包"
 
@@ -1186,8 +1346,18 @@ msgid "All dependencies are satisfied"
 msgstr "所有的依赖关系已满足"
 
 #: LocalPackageDialog#4
+#, fuzzy
 msgid "%n package(s) will be installed as dependencies"
-msgstr "%n软件包将作为依赖关系安装"
+msgstr ""
+"\n"
+"            \n"
+"        "
+
+#: LocalPackageDialog#5
+#, fuzzy
+msgctxt "LocalPackageDialog#5"
+msgid "Install Package"
+msgstr "安装软件包"
 
 #: MainWindow#1
 msgctxt "MainWindow#1"
@@ -1355,8 +1525,8 @@ msgstr "设置..."
 msgid "About..."
 msgstr "关于..."
 
-#. (obsolete)
 #: MainWindow#38
+#, fuzzy
 msgctxt "MainWindow#38"
 msgid "Update Database"
 msgstr "更新数据库"
@@ -1384,8 +1554,8 @@ msgctxt "MainWindow#43"
 msgid "Quit"
 msgstr "退出"
 
-#. (obsolete)
 #: MainWindow#44
+#, fuzzy
 msgctxt "MainWindow#44"
 msgid "Process Queue"
 msgstr "处理队列"
@@ -2127,6 +2297,75 @@ msgstr "Ctrl+Q"
 msgid "Name and Description"
 msgstr "名字和描述 "
 
+#: MainWindow#156
+#, fuzzy
+msgctxt "MainWindow#156"
+msgid ""
+"%1 requires installing %2 from IgnorePkg/IgnoreGroup.\n"
+" Install anyway?"
+msgstr ""
+"%1个需要安装 %2个 从 IgnorePkg/IgnoreGroup。\n"
+"无论如何安装吗?"
+
+#: MainWindow#157
+#, fuzzy
+msgctxt "MainWindow#157"
+msgid ""
+"%1 is in IgnorePkg/IgnoreGroup.\n"
+" Install anyway?"
+msgstr ""
+"%1 个位于 IgnorePkg/IgnoreGroup。\n"
+"无论如何安装吗?"
+
+#: MainWindow#158
+#, fuzzy
+msgctxt "MainWindow#158"
+msgid "Replace %1 with %2/%3?"
+msgstr "替换 %1 用 %2/%3?"
+
+#: MainWindow#159
+msgid ""
+"%1 conflicts with %2.\n"
+"Remove %2?"
+msgstr ""
+
+#: MainWindow#160
+#, fuzzy
+msgid ""
+"The following package(s) cannot be upgraded due to unresolvable "
+"dependencies:\n"
+"%1\n"
+"\n"
+"Do you want to skip the above package(s) for this upgrade?"
+msgstr ""
+"\n"
+"            \n"
+"        "
+
+#: MainWindow#161
+#, fuzzy
+msgctxt "MainWindow#161"
+msgid ""
+"%1-%2: local version is newer.\n"
+"Upgrade anyway?"
+msgstr ""
+"%1-%2: 本地版本比较新，\n"
+"无论如何安装吗 ?"
+
+#: MainWindow#162
+#, fuzzy
+msgctxt "MainWindow#162"
+msgid ""
+"File %1 is corrupted.\n"
+"Do you want to delete it?"
+msgstr ""
+"文件 %1 损坏,\n"
+"您想删除它吗?"
+
+#: MainWindow#163
+msgid "Transaction Question"
+msgstr ""
+
 #: MaintenanceBar#1
 msgid "Please choose an action to start maintenance..."
 msgstr "请选择操作来进行维护..."
@@ -2171,8 +2410,8 @@ msgctxt "MaintenanceBar#9"
 msgid "Deleting Cache..."
 msgstr "删除缓存..."
 
-#. (obsolete)
 #: MaintenanceBar#10
+#, fuzzy
 msgctxt "MaintenanceBar#10"
 msgid "Optimizing Pacman Database..."
 msgstr "优化Pacman数据库..."
@@ -2283,6 +2522,16 @@ msgstr "Sync 无法执行 !!"
 #: MaintenanceBar#30
 msgid "Maintenance Actions"
 msgstr "维护操作"
+
+#: MaintenanceBar#31
+msgctxt "MaintenanceBar#31"
+msgid "Database optimized successfully!"
+msgstr ""
+
+#: MaintenanceBar#32
+msgctxt "MaintenanceBar#32"
+msgid "Could not optimize database!"
+msgstr ""
 
 #: NewsViewer#1
 msgid "Please wait, fetching items..."
@@ -2424,6 +2673,7 @@ msgstr ""
 "您的设置文件好像不可读，\n"
 "请您检查它的权限。"
 
+#. (obsolete)
 #: QObject#14
 msgid ""
 "You have started Shaman as root.\n"
@@ -2442,6 +2692,7 @@ msgstr ""
 "看起来另外一个Shaman正在运行，\n"
 "您仅能够在同一时间内运行一个Shaman。"
 
+#. (obsolete)
 #: QObject#16
 msgid ""
 "Shaman can not be started as root.\n"
@@ -2496,6 +2747,11 @@ msgstr "取消(&C)"
 #: QObject#24
 msgid "Whoa, that's co&ol!"
 msgstr "哇,这么&酷!"
+
+#: QObject#25
+msgid ""
+"Shaman can not be started as root. Please restart it as unprivileged user."
+msgstr ""
 
 #: QueueDialog#1
 msgid "<br><b> * Validating Transaction</b><br>"
@@ -2590,6 +2846,7 @@ msgid "Starting downloading packages from %1..."
 msgstr "从%1开始下载软件包..."
 
 # You just have to translate 'remaining' here. Leave everything else as it is.
+#. (obsolete)
 #: QueueDialog#24
 msgid "%p% (%1 KB/s, %4:%5:%6 remaining)"
 msgstr "%p% (%1 KB/s, %4:%5:%6 剩余)"
@@ -2676,10 +2933,12 @@ msgctxt "QueueDialog#41"
 msgid "Queue Processing"
 msgstr "处理队列"
 
+#. (obsolete)
 #: QueueDialog#42
 msgid "There has been an error while preparing the transaction.\n"
 msgstr "准备事务时发生错误。\n"
 
+#. (obsolete)
 #: QueueDialog#43
 msgid "There has been an error while committing the transaction.\n"
 msgstr "提交事务时发生错误。\n"
@@ -2710,6 +2969,15 @@ msgstr ""
 msgctxt "QueueDialog#48"
 msgid "Ok"
 msgstr "确定"
+
+#: QueueDialog#49
+msgid "Running package scripts..."
+msgstr ""
+
+# You just have to translate 'remaining' here. Leave everything else as it is.
+#: QueueDialog#50
+msgid "%p% (%1 KB/s, %2 remaining)"
+msgstr ""
 
 #: QueueReadyDialog#1
 msgid "Review Queue"
@@ -2850,12 +3118,20 @@ msgid "<b>%1</b> will be freed"
 msgstr " <b>%1</b>将被释放"
 
 #: ReviewQueueDialog#16
+#, fuzzy
 msgid "Remove <b>%n package(s)</b><br />"
-msgstr "删除<b>%n软件包</b><br />"
+msgstr ""
+"\n"
+"            \n"
+"        "
 
 #: ReviewQueueDialog#17
+#, fuzzy
 msgid "Install/Upgrade <b>%n package(s)</b><br />"
-msgstr "安装/更新<b>%n软件包</b><br />"
+msgstr ""
+"\n"
+"            \n"
+"        "
 
 #: ShamanStatusBar#1
 msgid "%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages"
@@ -2963,12 +3239,14 @@ msgstr ""
 "点击这里打开新闻对话框获取更多细节。"
 
 #: ShamanTrayIcon#16
+#, fuzzy
 msgid ""
 "Upgradeable package(s): %n.\n"
 "Click here to upgrade your System."
 msgstr ""
-"更新软件包：%n。\n"
-"点击这里来更新您的系统。"
+"\n"
+"            \n"
+"        "
 
 #. (obsolete)
 #: SysUpgradeDialog#1
@@ -2997,10 +3275,20 @@ msgid ""
 msgstr "有 <b>%1 个可更新的软件包</b>。 您可以<br> 立即更新或者添加至当前队列<br> 稍后处理它。"
 
 #: SysUpgradeDialog#5
+#, fuzzy
 msgid ""
 "<b>Upgradeable package(s): %n</b> You can either<br> upgrade immediately or "
 "add it to the current Queue<br> and process it later."
-msgstr "<b>可更新的软件包：%n</b>您可以立即更新或者添加到当前队列稍后处理它。"
+msgstr ""
+"\n"
+"            \n"
+"        "
+
+#: SysUpgradeDialog#6
+#, fuzzy
+msgctxt "SysUpgradeDialog#6"
+msgid "System Upgrade"
+msgstr "更新系统"
 
 #: aboutDialog#1
 msgid "About Shaman"
