@@ -82,29 +82,22 @@ void QueueDialog::adjust(bool tgld)
 
 void QueueDialog::startProcessing(bool force)
 {
-    QList<pmtransflag_t> flags;
-
-    flags.append(PM_TRANS_FLAG_ALLDEPS);
     if (force) {
-        flags.append(PM_TRANS_FLAG_FORCE);
+        Backend::instance()->processQueue(Aqpm::Globals::AllDeps | Aqpm::Globals::Force);
+    } else {
+        Backend::instance()->processQueue(Aqpm::Globals::AllDeps);
     }
-
-    Backend::instance()->processQueue(flags);
 
     connect(Backend::instance(), SIGNAL(operationFinished(bool)), SLOT(cleanup(bool)));
 }
 
 void QueueDialog::startUpgrading(bool force)
 {
-    QList<pmtransflag_t> flags;
-
-    flags.append(PM_TRANS_FLAG_ALLDEPS);
-
     if (force) {
-        flags.append(PM_TRANS_FLAG_FORCE);
+        Backend::instance()->fullSystemUpgrade(Aqpm::Globals::AllDeps | Aqpm::Globals::Force);
+    } else {
+        Backend::instance()->fullSystemUpgrade(Aqpm::Globals::AllDeps);
     }
-
-    Backend::instance()->fullSystemUpgrade(flags);
 
     connect(Backend::instance(), SIGNAL(operationFinished(bool)), SLOT(cleanup(bool)));
 }
