@@ -37,7 +37,7 @@
         <location filename="../src/BuildingDialog.cpp.orig" line="52"/>
         <source>Would you like to abort building?.
 All Process will be lost.</source>
-        <translation>Czy chciałbyś przerwać budowanie?
+        <translation>Czy chciałbyś przerwać proces budowania?
 Cały postęp zostanie utracony.</translation>
     </message>
     <message>
@@ -231,7 +231,7 @@ Sprawdź wyjście procesu, aby dowiedzieć się więcej szczegółów.</translat
         <location filename="../src/BuildingHandler.cpp.orig" line="281"/>
         <location filename="../src/BuildingHandler.cpp.orig" line="286"/>
         <source>Building Packages Failed!!</source>
-        <translation>Budowa Twoich pakietów nie powiodła się!</translation>
+        <translation>Budowanie pakietów nie powiodło się!</translation>
     </message>
     <message>
         <location filename="../src/BuildingHandler.cpp" line="290"/>
@@ -1030,7 +1030,7 @@ jak i Pacmana.</translation>
     <message>
         <location filename="../ui/configDialog.ui" line="1150"/>
         <source>Check if there is an unread news about a package in Queue before processing it</source>
-        <translation>Sprawdź czy dostępny jest nieprzeczytany news o pakiecie z kolejki przed jej przetworzeniem</translation>
+        <translation>Sprawdź czy dostępny jest nieprzeczytany news o pakiecie z kolejki, przed jej przetworzeniem</translation>
     </message>
     <message>
         <location filename="../ui/configDialog.ui" line="304"/>
@@ -1316,13 +1316,13 @@ Czy chcesz go zapisać?</translation>
         <location filename="../src/ErrorHandler.cpp" line="124"/>
         <location filename="../src/ErrorHandler.cpp.orig" line="122"/>
         <source>You seem not authorized to perform this operation</source>
-        <translation>Nie posiadasz uwierzytelnienia do wykonania tej operacji</translation>
+        <translation>Nie posiadasz autoryzacji do wykonania tej operacji</translation>
     </message>
     <message>
         <location filename="../src/ErrorHandler.cpp" line="126"/>
         <location filename="../src/ErrorHandler.cpp.orig" line="124"/>
         <source>It looks like the system policy prevents you from doing this action, or you failed or refused to authenticate. Please contact your system administrator for further details</source>
-        <translation>Wygląda na to, że polityka bezpieczeństwa systemu uniemożliwia Ci wykonanie tej operacji lub odmówiłeś autoryzacji. Proszę o skontaktowanie się z administratorem swojego systemu, aby dowiedzieć się dalszych szczegółów</translation>
+        <translation>Wygląda na to, że polityka bezpieczeństwa systemu uniemożliwia Ci wykonanie tej operacji lub odmówiłeś autoryzacji lub autoryzacja nie przebiegła pomyślnie. Proszę o skontaktowanie się z administratorem swojego systemu, aby dowiedzieć się dalszych szczegółów</translation>
     </message>
     <message>
         <location filename="../src/ErrorHandler.cpp" line="130"/>
@@ -1463,7 +1463,7 @@ You can change this behaviour in Settings.</source>
         <translation>Shaman będzie w dalszym ciągu działał w tacce systemowej.
 Aby go zamknąć, kliknij Zamknij w menu Plik lub w menu kontekstowym ikony z tacki systemowej.
 Umieszczony w tacce systemowej, Shaman będzie aktualizował Twoje bazy danych
-w regularnych odstępach czasu oraz będzie Cie informował o dostępnych aktualizacjach.
+w regularnych odstępach czasu oraz będzie Cię informował o dostępnych aktualizacjach.
 Możesz zmienić to zachowanie w Ustawieniach.</translation>
     </message>
     <message>
@@ -1852,20 +1852,6 @@ a valid package</source>
 prawidłowym pakietem</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1899"/>
-        <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;A libalpm frontend in Qt&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;License: GPLv2+&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Libalpm Version: v.%1&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008-2009 Dario Freddi &amp;lt;drf@chakra-project.org&amp;gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@chakra-project.org&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/MainWindow.cpp" line="1964"/>
         <location filename="../src/MainWindow.cpp.orig" line="1965"/>
         <source>%1 requires installing %2 from IgnorePkg/IgnoreGroup.
@@ -2085,8 +2071,8 @@ Czy chcesz go usunąć?</translation>
         <location filename="../src/MainWindow.cpp.orig" line="1700"/>
         <source>Your Kernel has been updated.
 Please restart your PC soon to load the new Kernel.</source>
-        <translation>Twój Kernel został zaktualizowany.
-Proszę zrestartować swój komputer, aby móc wczytać nowego Kernela.</translation>
+        <translation>Kernel został zaktualizowany.
+Proszę zrestartować komputer, aby rozpocząc korzystanie z nowej wersji Kernela.</translation>
     </message>
     <message>
         <source>Esc</source>
@@ -2234,6 +2220,7 @@ Czy mimo wszystko chcesz zainstalować %1?</translation>
         <translation>&amp;Anuluj działanie</translation>
     </message>
     <message>
+        <location filename="../src/MainWindow.cpp" line="1899"/>
         <location filename="../src/MainWindow.cpp.orig" line="1900"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -2543,20 +2530,20 @@ p, li { white-space: pre-wrap; }
         <translation>%1 Bajty</translation>
     </message>
     <message>
-        <location filename="../src/PackageProperties.cpp" line="71"/>
+        <location filename="../src/PackageProperties.cpp" line="70"/>
         <location filename="../src/PackageProperties.cpp.orig" line="70"/>
         <source>Shaman - %1 properties</source>
         <translation>Shaman - %1 właściwości</translation>
     </message>
     <message>
-        <location filename="../src/PackageProperties.cpp" line="86"/>
+        <location filename="../src/PackageProperties.cpp" line="85"/>
         <location filename="../src/PackageProperties.cpp.orig" line="85"/>
         <source>N/A</source>
         <comment>Stands for: Not Available</comment>
         <translation>N/A</translation>
     </message>
     <message>
-        <location filename="../src/PackageProperties.cpp" line="191"/>
+        <location filename="../src/PackageProperties.cpp" line="190"/>
         <location filename="../src/PackageProperties.cpp.orig" line="190"/>
         <source>Changelog not available for this package</source>
         <translation>Dziennik zmian niedostepny dla tego pakietu</translation>
@@ -2592,7 +2579,7 @@ Thanks again, and enjoy your translation!</comment>
         <source>There was a problem while testing libalpm.
 Maybe another application has a lock on it.</source>
         <translation>Miał miejsce problem podczas testowania libalpm.
-Może inna aplikacja obecnie z niego korzysta.</translation>
+Możliwe, że inna aplikacja obecnie z niego korzysta.</translation>
     </message>
     <message>
         <location filename="../src/Shaman.cpp" line="142"/>
@@ -2845,13 +2832,13 @@ po więcej informacji.</translation>
         <location filename="../src/QueueDialog.cpp.orig" line="205"/>
         <location filename="../src/QueueDialog.cpp.orig" line="206"/>
         <source>Checking delta integrity...</source>
-        <translation>Sprawdzanie spójności delta...</translation>
+        <translation>Sprawdzanie spójności delt...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="209"/>
         <location filename="../src/QueueDialog.cpp.orig" line="209"/>
         <source>Applying deltas...</source>
-        <translation>Nanoszenie delt...</translation>
+        <translation>Zastosowywanie delt...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="212"/>
@@ -2869,13 +2856,13 @@ po więcej informacji.</translation>
         <location filename="../src/QueueDialog.cpp" line="219"/>
         <location filename="../src/QueueDialog.cpp.orig" line="219"/>
         <source>Failed!</source>
-        <translation>Klęska!</translation>
+        <translation>Nie powiodło się!</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="222"/>
         <location filename="../src/QueueDialog.cpp.orig" line="222"/>
         <source>Running package scripts...</source>
-        <translation>Uruchamianie skryptów pakietu...</translation>
+        <translation>Uruchamianie skryptów instalacyjnych pakietu...</translation>
     </message>
     <message>
         <location filename="../src/QueueDialog.cpp" line="228"/>
@@ -3002,7 +2989,7 @@ Może to spowodować uszkodzenie Twojego systemu.</translation>
     <message>
         <location filename="../ui/reviewQueueDialog.ui" line="39"/>
         <source>Turn off PC when Queue is done</source>
-        <translation>Wyłącz komputer, gdy kolejka zostanie ukończona</translation>
+        <translation>Wyłącz komputer, gdy kolejka zostanie przetworzona</translation>
     </message>
     <message>
         <location filename="../ui/reviewQueueDialog.ui" line="46"/>
@@ -3040,7 +3027,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/reviewQueueDialog.ui" line="53"/>
         <source>Keep Queue Dialog Open after the Queue is finished</source>
-        <translation>Pozostaw okno kolejki otwarte po ukończeniu kolejki</translation>
+        <translation>Pozostaw okno kolejki otwarte po jej przetworzeniu</translation>
     </message>
     <message>
         <location filename="../ui/reviewQueueDialog.ui" line="32"/>
@@ -3132,7 +3119,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../src/ReviewQueueDialog.cpp" line="107"/>
         <location filename="../src/ReviewQueueDialog.cpp.orig" line="107"/>
         <source>Do you wish to continue?</source>
-        <translation>Chcesz kontynuować?</translation>
+        <translation>Czy chcesz kontynuować?</translation>
     </message>
     <message>
         <source>&lt;b&gt;%1&lt;/b&gt; will be used</source>
@@ -3157,9 +3144,9 @@ p, li { white-space: pre-wrap; }
         <location filename="../src/ReviewQueueDialog.cpp.orig" line="106"/>
         <source>Install/Upgrade &lt;b&gt;%n package(s)&lt;/b&gt;&lt;br /&gt;</source>
         <translation>
-            <numerusform>Zainstaluj/Zaktualizuj &lt;b&gt; %n pakiet&lt;/b&gt;&lt;br /&gt;</numerusform>
-            <numerusform>Zainstaluj/Zaktualizuj &lt;b&gt; %n pakiety&lt;/b&gt;&lt;br /&gt;</numerusform>
-            <numerusform>Zainstaluj/Zaktualizuj &lt;b&gt; %n pakietów&lt;/b&gt;&lt;br /&gt;</numerusform>
+            <numerusform>Zainstalować/Zaktualizować &lt;b&gt; %n pakiet&lt;/b&gt;&lt;br /&gt;</numerusform>
+            <numerusform>Zainstalować/Zaktualizować  &lt;b&gt; %n pakiety&lt;/b&gt;&lt;br /&gt;</numerusform>
+            <numerusform>Zainstalować/Zaktualizować  &lt;b&gt; %n pakietów&lt;/b&gt;&lt;br /&gt;</numerusform>
         </translation>
     </message>
 </context>
@@ -3284,7 +3271,7 @@ Kliknij tutaj, aby je obejrzeć.</translation>
         <source>An error occourred while fetching news!
 Click here to open the News Dialog for more details.</source>
         <translation>Wystąpił błąd podczas pobierania newsów!
-Kliknij tutaj, aby otworzyc Okno Newsów dla uzyskania większej ilości szczegółów.</translation>
+Kliknij tutaj, aby otworzyc Okno Newsów dla uzyskania dalszych informacji.</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/ShamanTrayIcon.cpp" line="145"/>
@@ -3606,7 +3593,7 @@ Proszę o podanie hasła w polu poniżej, aby kontynuować.</translation>
     <message>
         <location filename="../ui/buildingDialog.ui" line="13"/>
         <source>Shaman - Building Packages</source>
-        <translation>Shaman - Budowa pakietów</translation>
+        <translation>Shaman - Budowanie pakietów</translation>
     </message>
     <message>
         <location filename="../ui/buildingDialog.ui" line="403"/>
@@ -3686,7 +3673,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/logViewer.ui" line="13"/>
         <source>Shaman - Log Viewer</source>
-        <translation>Shaman - Podgląd Logu</translation>
+        <translation>Shaman - Podgląd Logów</translation>
     </message>
     <message>
         <location filename="../ui/logViewer.ui" line="23"/>
@@ -3894,7 +3881,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Build Queue From Source&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Zbuduj kolejkę ze źródeł&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Przetwórz kolejkę ze źródeł&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="85"/>
@@ -3909,12 +3896,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="98"/>
         <source>Do not install immediately when building is finished</source>
-        <translation>Nie instaluj po zakończeniu budowania</translation>
+        <translation>Nie instaluj od razu po zakończeniu budowania pakietów</translation>
     </message>
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="108"/>
         <source>Turn off PC when Queue is done</source>
-        <translation>Wyłącz komputer, gdy kolejka zostanie ukończona</translation>
+        <translation>Wyłącz komputer, gdy kolejka zostanie przetworzona</translation>
     </message>
     <message>
         <location filename="../ui/reviewBuildingDialog.ui" line="117"/>
