@@ -27,8 +27,6 @@
 #include <QTextStream>
 #include <QDebug>
 
-#define CLBUF_SIZE 4096
-
 using namespace Aqpm;
 
 PackageProperties::PackageProperties(QWidget *parent)
@@ -90,38 +88,33 @@ void PackageProperties::populateInfoWidget()
     else
         installedLabel->setPixmap(QPixmap(":/Icons/icons/edit-delete.png"));
 
-    if (Backend::instance()->getUpgradeablePackages().contains(curPkg))
+    if (Backend::instance()->getUpgradeablePackages().contains(curPkg)) {
         upgradeableLabel->setPixmap(QPixmap(":/Icons/icons/dialog-ok-apply.png"));
-    else
+    } else {
         upgradeableLabel->setPixmap(QPixmap(":/Icons/icons/edit-delete.png"));
+    }
 
-    if (alpm_pkg_has_scriptlet(curPkg.alpmPackage()))
+    if (curPkg.hasScriptlet()) {
         scriptletLabel->setPixmap(QPixmap(":/Icons/icons/dialog-ok-apply.png"));
-    else
+    } else {
         scriptletLabel->setPixmap(QPixmap(":/Icons/icons/edit-delete.png"));
+    }
 
     descriptionLabel->setText(curPkg.desc());
     versionLabel->setText(curPkg.version());
 
-    time_t now = alpm_pkg_get_builddate(curPkg.alpmPackage());
-    struct tm *ts = gmtime(&now);
-    strftime(buf, sizeof(buf), "%Y-%m-%d %H:%M:%S", ts);
-    QString bDate(buf);
-    if (bDate.startsWith("1970"))
-        // LOL @ The Epoch
+    if (!curPkg.buildDate().isValid() || curPkg.buildDate().date().year() < 1980) {
         builddateLabel->setText(notAvailable);
-    else
-        builddateLabel->setText(buf);
+    } else {
+        builddateLabel->setText(curPkg.buildDate().toString(Qt::SystemLocaleLongDate));
+    }
 
-    now = alpm_pkg_get_installdate(curPkg.alpmPackage());
-    ts = gmtime(&now);
-    strftime(buf, sizeof(buf), "%Y-%m-%d %H:%M:%S", ts);
-    QString iDate(buf);
-    if (iDate.startsWith("1970"))
+    if (!curPkg.installDate().isValid() || curPkg.installDate().date().year() < 1980) {
         // LOL @ The Epoch
         installdateLabel->setText(notAvailable);
-    else
-        installdateLabel->setText(buf);
+    } else {
+        installdateLabel->setText(curPkg.installDate().toString(Qt::SystemLocaleLongDate));
+    }
 
     QString packager(curPkg.packager());
 
@@ -184,55 +177,17 @@ void PackageProperties::populateDepsWidget()
 
 void PackageProperties::populateChangelogWidget()
 {
-    void *fp = NULL;
-    QString text;
+    QString text = curPkg.retrieveChangelog();
 
-    if ((fp = alpm_pkg_changelog_open(curPkg.alpmPackage())) == NULL) {
-        changeLogEdit->setText(QString(tr("Changelog not available for this package")));
+    if (text.isEmpty()) {
+        changeLogEdit->setText(tr("Changelog not available for this package"));
     } else {
-        /* allocate a buffer to get the changelog back in chunks */
-        char buf[CLBUF_SIZE];
-        int ret = 0;
-        while ((ret = alpm_pkg_changelog_read(buf, CLBUF_SIZE, curPkg.alpmPackage(), fp))) {
-            if (ret < CLBUF_SIZE) {
-                /* if we hit the end of the file, we need to add a null terminator */
-                *(buf + ret) = '\0';
-            }
-            text.append(buf);
-        }
-        alpm_pkg_changelog_close(curPkg.alpmPackage(), fp);
         changeLogEdit->setText(text);
     }
 }
 
 void PackageProperties::populateLogWidget()
 {
-    QFile fp(alpm_option_get_logfile());
-
-    QStringList contents;
-
-    if (!fp.open(QIODevice::ReadOnly | QIODevice::Text))
-        return;
-
-    QTextStream in(&fp);
-
-    while (!in.atEnd()) {
-        QString line = in.readLine();
-        contents.append(line);
-    }
-
-    fp.close();
-
-    QString toShow;
-    QString pkgName(curPkg.name());
-
-    foreach(const QString &ent, contents) {
-        if (!ent.contains(pkgName, Qt::CaseInsensitive))
-            continue;
-
-        toShow.append(ent + QChar('\n'));
-    }
-
-    logEdit->setText(toShow);
+    logEdit->setText(curPkg.retrieveLoggedActions());
 }
 
