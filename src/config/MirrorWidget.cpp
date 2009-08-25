@@ -18,47 +18,37 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 
-#ifndef DATABASECONFIG_H
-#define DATABASECONFIG_H
+#include "MirrorWidget.h"
 
-#include <QVariantList>
+#include "ui_mirrorWidget.h"
 
-#include <config.h>
+MirrorWidget::MirrorWidget(Aqpm::Configuration::MirrorType type, QWidget *parent)
+        : QWidget(parent)
+        , m_ui(new Ui::MirrorWidget)
+        , m_type(type)
+{
+    m_ui->setupUi(this);
 
-namespace Ui {
-    class DatabaseConfig;
+    reloadMirrors();
+
+    connect(m_ui->deferButton, SIGNAL(clicked()), this, SIGNAL(defer()));
+    connect(m_ui->preferButton, SIGNAL(clicked()), this, SIGNAL(prefer()));
+    connect(m_ui->removeButton, SIGNAL(clicked()), this, SIGNAL(remove()));
 }
 
-class MirrorWidget;
-class ThirdPartyWidget;
-
-#ifndef KDE4_INTEGRATION
-#include <QWidget>
-
-class DatabaseConfig : public QWidget
-#else
-#include <kcmodule.h>
-
-class DatabaseConfig : public KCModule
-#endif
+void MirrorWidget::reloadMirrors()
 {
-    Q_OBJECT
+    m_ui->mirrorBox->clear();
 
-public:
-    DatabaseConfig(QWidget *parent, const QVariantList &args);
+    m_ui->mirrorBox->addItems(Aqpm::Configuration::instance()->getMirrorList(m_type));
+}
 
-    void load();
-    void save();
-    void defaults();
+QString MirrorWidget::mirror() const
+{
+    return m_ui->mirrorBox->currentText();
+}
 
-private:
-    void init();
-
-private:
-    Ui::DatabaseConfig *m_ui;
-    QList<MirrorWidget*> m_archMirrors;
-    QList<MirrorWidget*> m_kdemodMirrors;
-    QList<ThirdPartyWidget*> m_thirdParty;
-};
-
-#endif // DATABASECONFIG_H
+void MirrorWidget::setMirror(const QString &mirror)
+{
+    m_ui->mirrorBox->setCurrentIndex(m_ui->mirrorBox->findText(mirror));
+}

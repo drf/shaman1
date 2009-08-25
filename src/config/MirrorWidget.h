@@ -18,47 +18,37 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 
-#ifndef DATABASECONFIG_H
-#define DATABASECONFIG_H
+#ifndef MIRRORWIDGET_H
+#define MIRRORWIDGET_H
 
-#include <QVariantList>
-
-#include <config.h>
-
-namespace Ui {
-    class DatabaseConfig;
-}
-
-class MirrorWidget;
-class ThirdPartyWidget;
-
-#ifndef KDE4_INTEGRATION
 #include <QWidget>
 
-class DatabaseConfig : public QWidget
-#else
-#include <kcmodule.h>
+#include <aqpm/Configuration.h>
 
-class DatabaseConfig : public KCModule
-#endif
+namespace Ui {
+    class MirrorWidget;
+}
+
+class MirrorWidget : public QWidget
 {
     Q_OBJECT
 
 public:
-    DatabaseConfig(QWidget *parent, const QVariantList &args);
+    MirrorWidget(Aqpm::Configuration::MirrorType type, QWidget *parent = 0);
 
-    void load();
-    void save();
-    void defaults();
+    void reloadMirrors();
+    QString mirror() const;
+    void setMirror(const QString &mirror);
+
+Q_SIGNALS:
+    void mirrorSelectionChanged(const QString &mirror);
+    void prefer();
+    void defer();
+    void remove();
 
 private:
-    void init();
-
-private:
-    Ui::DatabaseConfig *m_ui;
-    QList<MirrorWidget*> m_archMirrors;
-    QList<MirrorWidget*> m_kdemodMirrors;
-    QList<ThirdPartyWidget*> m_thirdParty;
+    Ui::MirrorWidget *m_ui;
+    Aqpm::Configuration::MirrorType m_type;
 };
 
-#endif // DATABASECONFIG_H
+#endif // MIRRORWIDGET_H

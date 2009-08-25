@@ -20,6 +20,140 @@
 
 #include "DatabaseConfig.h"
 
-DatabaseConfig::DatabaseConfig()
+#include <aqpm/Backend.h>
+#include <aqpm/Configuration.h>
+
+#include "MirrorWidget.h"
+#include "ThirdPartyWidget.h"
+
+#include <ActionButton>
+
+#include "ui_databaseConfig.h"
+
+using namespace Aqpm;
+
+#ifdef KDE4_INTEGRATION
+#include <KPluginFactory>
+#include <KAboutData>
+#include <klocalizedstring.h>
+#include <KMessageBox>
+
+K_PLUGIN_FACTORY(DatabaseConfigFactory,
+                 registerPlugin<DatabaseConfig>();
+                )
+K_EXPORT_PLUGIN(DatabaseConfigFactory("kcmaqpmdatabaseconfig"))
+
+#endif
+
+DatabaseConfig::DatabaseConfig(QWidget *parent, const QVariantList &args)
+#ifndef KDE4_INTEGRATION
+        : QWidget(parent)
+#else
+        : KCModule(parent, args)
+#endif
+        , m_ui(new Ui::DatabaseConfig)
+{
+#ifdef KDE4_INTEGRATION
+    QLayout *layout = new QVBoxLayout(this);
+    layout->setMargin(0);
+
+    setButtons(Apply | Help);
+
+    KAboutData *about =
+        new KAboutData("kcmaqpmdatabaseconfig", "aqpmdatabaseconfig", ki18n("Aqpm Database Configuration"),
+                       "bla", ki18n("A configurator for Aqpm databases"),
+                       KAboutData::License_GPL, ki18n("(c), 2009 Dario Freddi"));
+
+    about->addAuthor(ki18n("Dario Freddi"), ki18n("Maintainer") , "drf@chakra-project.org",
+                     "http://drfav.wordpress.com");
+
+    setAboutData(about);
+
+    QWidget *widget = new QWidget(this);
+    m_ui->setupUi(widget);
+    layout->addWidget(widget);
+#else
+    m_ui->setupUi(this);
+#endif
+
+    init();
+    load();
+}
+
+void DatabaseConfig::init()
+{
+    PolkitQt::ActionButton *but = new PolkitQt::ActionButton(m_ui->addMirrorButton, "org.chakraproject.aqpm.addmirror", this);
+    connect(but, SIGNAL(clicked(QAbstractButton*)), but, SLOT(activate()));
+    connect(but, SIGNAL(activated()), this, SLOT(addMirror()));
+    but->setText(tr("Add Mirror"));
+    but->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
+
+    but = new PolkitQt::ActionButton(m_ui->addKDEModMirrorButton, "org.chakraproject.aqpm.addmirror", this);
+    connect(but, SIGNAL(clicked(QAbstractButton*)), but, SLOT(activate()));
+    connect(but, SIGNAL(activated()), this, SLOT(addKDEModMirror()));
+    but->setText(tr("Add Mirror"));
+    but->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
+}
+
+void DatabaseConfig::load()
+{
+    Database::List repos = Backend::instance()->getAvailableDatabases();
+
+    foreach (const Database &db, repos) {
+        if (db.name() == "core") {
+            m_ui->coreBox->setChecked(true);
+        } else if (db.name() == "extra")
+            m_ui->extraBox->setChecked(true);
+        else if (db.name() == "community")
+            m_ui->communityBox->setChecked(true);
+        else if (db.name() == "testing")
+            m_ui->testingBox->setChecked(true);
+        else if (db.name() == "kdemod-core") {
+            m_ui->KDEMod4Box->setChecked(true);
+        } else if (db.name() == "kdemod-extragear") {
+            m_ui->KDEMod4ExtragearBox->setChecked(true);
+        } else if (db.name() == "kdemod-playground") {
+            m_ui->KDEMod4PlaygroundBox->setChecked(true);
+        } else if (db.name() == "kdemod-testing") {
+            m_ui->KDEMod4TestingBox->setChecked(true);
+        } else if (db.name() == "kdemod-unstable") {
+            m_ui->KDEMod4UnstableBox->setChecked(true);
+        } else if (db.name() == "kdemod-legacy") {
+            m_ui->KDEMod3Box->setChecked(true);
+        }
+    }
+
+    // Now the servers
+    foreach (const QString &string, Configuration::instance()->serversForMirror("arch")) {
+        MirrorWidget *wg = new MirrorWidget(Configuration::ArchMirror);
+        wg->setMirror(string);
+
+        m_archMirrors.append(wg);
+        m_ui->archScrollArea->layout()->addWidget(wg);
+    }
+
+    foreach (const QString &string, Configuration::instance()->serversForMirror("kdemod")) {
+        MirrorWidget *wg = new MirrorWidget(Configuration::KdemodMirror);
+        wg->setMirror(string);
+
+        m_kdemodMirrors.append(wg);
+        m_ui->kdemodScrollArea->layout()->addWidget(wg);
+    }
+
+    // Now third parties
+    foreach (const QString &string, Configuration::instance()->mirrors(true)) {
+        ThirdPartyWidget *tp = new ThirdPartyWidget();
+        tp->setMirrorName(string);
+
+        m_thirdParty.append(tp);
+        m_ui->thirdPartyScrollArea->layout()->addWidget(tp);
+    }
+}
+
+void DatabaseConfig::save()
+{
+}
+
+void DatabaseConfig::defaults()
 {
 }

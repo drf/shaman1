@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>DatabaseConfig</class>
+ <widget class="QWidget" name="DatabaseConfig">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -17,7 +17,7 @@
    <item>
     <widget class="QTabWidget" name="repoTab">
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="officialTab">
       <attribute name="icon">
@@ -133,6 +133,21 @@
                  <height>289</height>
                 </rect>
                </property>
+               <layout class="QVBoxLayout" name="verticalLayout_6">
+                <item>
+                 <spacer name="verticalSpacer">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>278</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
               </widget>
              </widget>
             </item>
@@ -265,7 +280,7 @@
                <widget class="QLineEdit" name="addMirrorLine_2"/>
               </item>
               <item>
-               <widget class="QPushButton" name="addMirrorButton_2">
+               <widget class="QPushButton" name="addKDEModMirrorButton">
                 <property name="text">
                  <string>Add Mirror</string>
                 </property>
@@ -287,10 +302,25 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>350</width>
-                 <height>63</height>
+                 <width>572</width>
+                 <height>211</height>
                 </rect>
                </property>
+               <layout class="QVBoxLayout" name="verticalLayout_7">
+                <item>
+                 <spacer name="verticalSpacer_2">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>200</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
               </widget>
              </widget>
             </item>
@@ -350,7 +380,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QScrollArea" name="scrollArea">
+          <widget class="QScrollArea" name="thirdPartyScrollArea">
            <property name="widgetResizable">
             <bool>true</bool>
            </property>
@@ -359,10 +389,25 @@
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>368</width>
-              <height>335</height>
+              <width>590</width>
+              <height>470</height>
              </rect>
             </property>
+            <layout class="QVBoxLayout" name="verticalLayout_8">
+             <item>
+              <spacer name="verticalSpacer_3">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>459</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
            </widget>
           </widget>
          </item>

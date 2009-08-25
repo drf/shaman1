@@ -25,7 +25,7 @@
 #include "UpdateDbDialog.h"
 #include "SysUpgradeDialog.h"
 #include "QueueDialog.h"
-#include "configDialog.h"
+#include "config/DatabaseConfig.h"
 #include "BuildingDialog.h"
 #include "EditPBuild.h"
 #include "ABSHandler.h"
@@ -1796,19 +1796,13 @@ void MainWindow::widgetQueueToAlpmQueue()
 
 void MainWindow::showSettings()
 {
-    configDialog = new ConfigDialog(this);
-
-    connect(configDialog, SIGNAL(setProxy()), this, SLOT(setProxy()));
-
-    configDialog->show();
-
-    connect(configDialog, SIGNAL(accepted()), SLOT(settingsClosed()));
-    connect(configDialog, SIGNAL(rejected()), SLOT(settingsClosed()));
+    DatabaseConfig *dc = new DatabaseConfig(this, QVariantList());
+    dc->show();
 }
 
 void MainWindow::settingsClosed()
 {
-    qDebug() << "Closing Settings";
+    /*qDebug() << "Closing Settings";
 
     if (configDialog->result() == QDialog::Accepted) {
         populateRepoColumn();
@@ -1824,7 +1818,7 @@ void MainWindow::settingsClosed()
         newsReader->setUpdateInterval();
     }
 
-    configDialog->deleteLater();
+    configDialog->deleteLater();*/
 }
 
 void MainWindow::systrayActivated(QSystemTrayIcon::ActivationReason reason)

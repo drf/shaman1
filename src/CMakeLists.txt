@@ -1,12 +1,28 @@
 
 qt4_add_dbus_adaptor(shaman_adaptor_SRCS ../dbus/org.archlinux.shaman.xml MainWindow.h MainWindow)
 
-SET(shaman_SRCS ${shaman_adaptor_SRCS}
+add_subdirectory(config)
+
+
+SET(shaman_config_SRCS ${shaman_config_adaptor_SRCS}
+    config/DatabaseConfig.cpp
+    config/MirrorWidget.cpp
+    config/ServerWidget.cpp
+    config/ThirdPartyWidget.cpp
+)
+
+SET(shaman_config_UIS
+    config/databaseConfig.ui
+    config/mirrorWidget.ui
+    config/serverWidget.ui
+    config/thirdPartyWidget.ui
+)
+
+SET(shaman_SRCS ${shaman_adaptor_SRCS} ${shaman_config_SRCS}
     main.cpp
     MainWindow.cpp
     Shaman.cpp
     BuildingDialog.cpp
-    configDialog.cpp
     EditPBuild.cpp
     QueueDialog.cpp
     SysUpgradeDialog.cpp
@@ -28,11 +44,10 @@ SET(shaman_SRCS ${shaman_adaptor_SRCS}
     ErrorHandler.cpp
 )
 
-SET(shaman_UIS
+SET(shaman_UIS ${shaman_config_UIS}
     ../ui/MainWindow.ui
     ../ui/aboutDialog.ui
     ../ui/buildingDialog.ui
-    ../ui/configDialog.ui
     ../ui/dbUpdateDialog.ui
     ../ui/editPBDialog.ui
     ../ui/reviewBuildingDialog.ui
