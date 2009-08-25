@@ -2,7 +2,6 @@ SET(shaman_UIS
     MainWindow.ui
     aboutDialog.ui
     buildingDialog.ui
-    configDialog.ui
     dbUpdateDialog.ui
     editPBDialog.ui
     reviewBuildingDialog.ui
