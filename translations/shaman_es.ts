@@ -184,8 +184,7 @@ falló. ¿Quiere seguir de todas formas?</translation>
     <message numerus="yes">
         <source>You are about to install &lt;b&gt;%n package(s)&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
         <translation type="unfinished">
-            <numerusform>
-            </numerusform>
+            <numerusform>Estás a punto de instalar &lt;b&gt;%n paquete(s)&lt;/b&gt; desde la fuente. Compilar desde el codigo fuente puede dar algunas ventajas, sin embargo es muy lento.&lt;br&gt;Si no estás seguro, es probable que prefieren procesar paquetes binarios&lt;br&gt;ya compilados. Antes de continuar, le recomendamos que revise su&lt;br&gt;configuración para mejorar el rendimiento de la compilación.</numerusform>
         </translation>
     </message>
 </context>
@@ -638,7 +637,7 @@ Ahora está disponible en el archivo mirrorlist.</translation>
     </message>
     <message>
         <source>Optimizing Pacman Database...</source>
-        <translation type="unfinished">Optimizando la base de datos de Pacman...</translation>
+        <translation>Optimizando la base de datos de Pacman...</translation>
     </message>
     <message>
         <source>Waiting</source>
@@ -660,26 +659,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Core</source>
         <comment>Do not translate</comment>
-        <translation type="unfinished">
-            </translation>
+        <translation>Base</translation>
     </message>
     <message>
         <source>Extra</source>
         <comment>Do not translate</comment>
-        <translation type="unfinished">
-            </translation>
+        <translation>Extra</translation>
     </message>
     <message>
         <source>Community</source>
         <comment>Do not translate</comment>
-        <translation type="unfinished">
-            </translation>
+        <translation>Community</translation>
     </message>
     <message>
         <source>Testing</source>
         <comment>Do not translate</comment>
-        <translation type="unfinished">
-            </translation>
+        <translation>Testing</translation>
     </message>
     <message>
         <source>Running sync...</source>
@@ -837,71 +832,63 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>KDEMod 4 Repository</source>
-        <translation type="unfinished">Repositorio de KDEmod 3 {4 ?}</translation>
+        <translation>Repositorio de KDEmod 4</translation>
     </message>
     <message>
         <source>KDEMod 4 Extragear Repository</source>
-        <translation type="unfinished">
-            </translation>
+        <translation>KDEMod 4 Repositorio Extragear</translation>
     </message>
     <message>
         <source>KDEMod 4 Playground Repository</source>
-        <translation type="unfinished">
-            </translation>
+        <translation>KDEMod 4 Repositorio Playground</translation>
     </message>
     <message>
         <source>KDEMod 4 Testing Repository</source>
-        <translation type="unfinished">Repositorio de pruebas KDEmod 3 {4 ?}</translation>
+        <translation>Repositorio de pruebas KDEmod 4</translation>
     </message>
     <message>
         <source>KDEMod 4 Unstable Repository (Testers only!)</source>
-        <translation type="unfinished">
-            </translation>
+        <translation>KDEMod 4 Repositorio inestable (¡solo desarrolladores!)</translation>
     </message>
     <message>
         <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones. Please note that packages from Unstable and Testing may break your system.</source>
-        <translation type="unfinished">
-            </translation>
+        <translation>Aquí puede elegir qué repositorios oficial va a utilizar de Arch Linux. Tenga en cuenta que los paquetes inestables y en estado de pruebas pueden dañar el sistema.</translation>
     </message>
     <message>
         <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme, and lots of addons, KDEMod is the best way to taste the ease and the power of KDE with the simplicity and the power of Arch.</source>
-        <translation type="unfinished">
-            </translation>
+        <translation>KDEMod es una versión mejorada de KDE, exclusivo de Arch Linux. Ofreciendo una mejora de Qt, compatible con el Qt estándar de Arch Linux, una mejora de apariencia, y un montón de agregados, KDEMod es la mejor manera de probar la facilidad y el poder de KDE con la sencillez y la potencia de Arch.</translation>
     </message>
     <message>
         <source>You can extend your packages choice by adding other repositories. Third-Party Repositories act just as normal ones, and will be accessible through both Shaman and Pacman.</source>
-        <translation type="unfinished">
-            </translation>
+        <translation>Puede ampliar su lista de paquetes mediante la adición de otros repositorios. Los repositorios de terceros pueden actuar como las normales, y serán accesibles a través de Shaman y Pacman.</translation>
     </message>
     <message>
         <source>Use the following language:</source>
-        <translation type="unfinished">
-            </translation>
+        <translation>Utilizar el siguiente idioma:</translation>
     </message>
     <message>
         <source>Disable Tray Icon</source>
-        <translation type="unfinished">
-            </translation>
+        <translation>Deshabilitar icono de la bandeja</translation>
     </message>
     <message>
         <source>Database optimized successfully!</source>
-        <translation type="unfinished"></translation>
+        <translation>Base de datos optimizado con éxito!</translation>
     </message>
     <message>
         <source>Could not optimize database!</source>
-        <translation type="unfinished"></translation>
+        <translation>No se puede optimizar la base de datos!</translation>
     </message>
     <message>
         <source>Error saving configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Error al guardar la configuración</translation>
     </message>
     <message>
         <source>There was an error while saving the configuration. This is probably due to an internal error or you being not authorized to perform the operation</source>
-        <translation type="unfinished"></translation>
+        <translation>Se produjo un error al guardar la configuración. Esto es probablemente debido a la un error interno o no estar autorizado para realizar la operación</translation>
     </message>
     <message>
         <source>There was an error while trying to add the mirror! This could be due also to your system policy preventing you from performing this action</source>
-        <translation type="unfinished"></translation>
+        <translation>Hubo un error al intentar añadir la replica! Esto puede ser debido a problemas de permisos que le impide realizar esta acción</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -910,7 +897,12 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Por favor, elija una acción del Menú desplegable.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -930,103 +922,102 @@ Do you want to save it?</source>
     <name>ErrorHandler</name>
     <message>
         <source>There has been an error while preparing the transaction.</source>
-        <translation type="unfinished"></translation>
+        <translation>Se ha producido un error mientras se prepara la operación.</translation>
     </message>
     <message>
         <source>Some dependencies can not be satisfied</source>
-        <translation type="unfinished"></translation>
+        <translation>Algunas dependencias no pueden ser resueltas</translation>
     </message>
     <message>
         <source>%1: requires %2</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: requiere %2</translation>
     </message>
     <message>
         <source>Some dependencies create a conflict with already installed packages</source>
-        <translation type="unfinished"></translation>
+        <translation>Algunas dependencias crean un conflicto con los paquetes ya instalados</translation>
     </message>
     <message>
         <source>%1: conflicts with %2</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: conflictos con %2</translation>
     </message>
     <message>
         <source>No further details were given. Last error string was:</source>
-        <translation type="unfinished"></translation>
+        <translation>No se ofrecieron mayores detalles. El último error fue:</translation>
     </message>
     <message>
         <source>There has been an error while committing the transaction.</source>
-        <translation type="unfinished"></translation>
+        <translation>Se ha producido un error realizando la operación.</translation>
     </message>
     <message>
         <source>Some files in the packages being processed are conflicting</source>
-        <translation type="unfinished"></translation>
+        <translation>Algunos archivos de los paquetes que están siendo procesados están en conflicto</translation>
     </message>
     <message>
         <source>%1 exists in both &apos;%2&apos; and &apos;%3&apos;</source>
-        <translation type="unfinished">%1 existe tanto en &apos;%2&apos; como en &apos;%3&apos;</translation>
+        <translation>%1 existe tanto en &apos;%2&apos; como en &apos;%3&apos;</translation>
     </message>
     <message>
         <source>Some files in the packages being processed conflict with the local filesystem</source>
-        <translation type="unfinished"></translation>
+        <translation>Algunos archivos de los paquetes que están siendo procesados tienen conflictos con el sistema de ficheros local</translation>
     </message>
     <message>
         <source>%1: %2 exists in the filesystem</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: %2 existen en el sistema de ficheros</translation>
     </message>
     <message>
         <source>Some downloaded packages are corrupted or invalid</source>
-        <translation type="unfinished"></translation>
+        <translation>Algunos paquetes descargados están dañados o corruptos</translation>
     </message>
     <message>
         <source>%1 is invalid or corrupted</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 es invalido o corrupto</translation>
     </message>
     <message>
         <source>There has been an error while adding a target.</source>
-        <translation type="unfinished"></translation>
+        <translation>Se ha producido un error al agregar el paquete.</translation>
     </message>
     <message>
         <source>This is probably an internal Shaman error. Please report it to help the developers solving it</source>
-        <translation type="unfinished"></translation>
+        <translation>Esto es probablemente un error interno de Shaman. Por favor, informe éstopara ayudar a los los desarrolladores a solucionarlo.</translation>
     </message>
     <message>
         <source>You seem not authorized to perform this operation</source>
-        <translation type="unfinished"></translation>
+        <translation>No tienes autorización para realizar esta operación</translation>
     </message>
     <message>
         <source>It looks like the system policy prevents you from doing this action, or you failed or refused to authenticate. Please contact your system administrator for further details</source>
-        <translation type="unfinished"></translation>
+        <translation>Parece que la directiva del sistema le impide hacer esta acción, o si fallado la autentificación. Póngase en contacto con su administrador del sistema para más detalles</translation>
     </message>
     <message>
         <source>There was a problem initialiting Aqpm</source>
-        <translation type="unfinished"></translation>
+        <translation>Ha habido un problema iniciando Aqpm</translation>
     </message>
     <message>
         <source>Aqpm, the library underneath Shaman, reported that it could not start a privileged operation. This is probably due to a bug in Shaman/Aqpm or to a misconfiguration of your system</source>
-        <translation type="unfinished"></translation>
+        <translation>Aqpm, la biblioteca base de Shaman, informó que no podía iniciar una operación con privilegios. Esto es probablemente debido a un error en Chaman/Aqpm o una mala configuración de su sistema</translation>
     </message>
     <message>
         <source>There was an error during the transaction</source>
-        <translation type="unfinished"></translation>
+        <translation>Hubo un error durante la operación</translation>
     </message>
     <message>
         <source>It looks like Aqpm&apos;s worker crashed or disappeared. This is probably an internal Shaman error. Please report it to help the developers solving it</source>
-        <translation type="unfinished"></translation>
+        <translation>Parece que la aplicación Aqpm falló o murio. Esto es probablemente un error interno de Shaman. Por favor, informelo para ayudar a los desarrolladores en la solución de ésto</translation>
     </message>
     <message>
         <source>The transaction was interrupted</source>
-        <translation type="unfinished"></translation>
+        <translation>La operación fué interrumpida</translation>
     </message>
     <message>
         <source>Error occurred</source>
-        <translation type="unfinished"></translation>
+        <translation>Ocurrio un error</translation>
     </message>
 </context>
 <context>
     <name>LocalPackage</name>
     <message>
         <source>Install Package from File</source>
-        <translation type="unfinished">
-            </translation>
+        <translation>Instalar paquete de archivo</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -1034,56 +1025,52 @@ Do you want to save it?</source>
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Bitstream Vera Sans&apos;;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Local Package Installation&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">
-            </translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Bitstream Vera Sans&apos;;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Paquetes locales&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Show...</source>
-        <translation type="unfinished">
-            </translation>
+        <translation>Mostrar...</translation>
     </message>
     <message>
         <source>More Details...</source>
-        <translation type="unfinished">Más detalles...</translation>
+        <translation>Más detalles...</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished">Cancelar</translation>
+        <translation>Cancelar</translation>
     </message>
     <message>
         <source>Install Package</source>
-        <translation type="unfinished">
-            </translation>
+        <translation>Instalar paquete</translation>
     </message>
 </context>
 <context>
     <name>LocalPackageDialog</name>
     <message>
         <source>Package is not installed</source>
-        <translation type="unfinished">
-            </translation>
+        <translation>Paquete no está instalado</translation>
     </message>
     <message>
         <source>Version %1 of this package is already installed</source>
-        <translation type="unfinished">
-            </translation>
+        <translation>La version %1 de éste paquete está instalada</translation>
     </message>
     <message>
         <source>All dependencies are satisfied</source>
-        <translation type="unfinished">
-            </translation>
+        <translation>Todas las dependencias fueron resueltas</translation>
     </message>
     <message numerus="yes">
         <source>%n package(s) will be installed as dependencies</source>
         <translation type="unfinished">
-            <numerusform>
-            </numerusform>
+            <numerusform>%n paquete(s) será(n) instalado(s) como dependencias</numerusform>
         </translation>
     </message>
     <message>
         <source>Install Package</source>
-        <translation type="unfinished">
-            </translation>
+        <translation>Instalar paquete</translation>
     </message>
 </context>
 <context>
@@ -1238,7 +1225,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Update Database</source>
-        <translation type="unfinished">Actualizar base de datos</translation>
+        <translation>Actualizar base de datos</translation>
     </message>
     <message>
         <source>Upgrade System</source>
@@ -1262,7 +1249,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Process Queue</source>
-        <translation type="unfinished">Procesar tareas</translation>
+        <translation>Procesar tareas</translation>
     </message>
     <message>
         <source>Cancel all actions</source>
@@ -1379,8 +1366,7 @@ actualizar. El último error reportado fue:
     </message>
     <message>
         <source>Database Update</source>
-        <translation type="unfinished">
-            </translation>
+        <translation>Actualizar base de datos</translation>
     </message>
     <message>
         <source>Databases Updated Successfully</source>
@@ -1774,13 +1760,11 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Ctrl+Q</source>
         <comment>Exit Shaman Shortcut</comment>
-        <translation type="unfinished">
-            </translation>
+        <translation>Ctrl+Q</translation>
     </message>
     <message>
         <source>Name and Description</source>
-        <translation type="unfinished">
-            </translation>
+        <translation>Nombre y descripción</translation>
     </message>
     <message>
         <source>%1 requires installing %2 from IgnorePkg/IgnoreGroup.
@@ -1796,37 +1780,37 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Replace %1 with %2/%3?</source>
-        <translation type="unfinished">¿Quiere reemplazar %1 con %2/%3?</translation>
+        <translation>¿Quiere reemplazar %1 con %2/%3?</translation>
     </message>
     <message>
         <source>%1 conflicts with %2.
 Remove %2?</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 tiene conflictos con %2.
+Eliminar %2?</translation>
     </message>
-    <message numerus="yes">
+    <message>
         <source>The following package(s) cannot be upgraded due to unresolvable dependencies:
 %1
-
 Do you want to skip the above package(s) for this upgrade?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-        </translation>
+        <translation type="obsolete">El siguiente paquete (s) no puede ser actualizado debido a problemasde dependencias:
+%1
+¿Quieres omitir éste paquete(s) para ésta actualización?</translation>
     </message>
     <message>
         <source>%1-%2: local version is newer.
 Upgrade anyway?</source>
-        <translation type="unfinished">%1-%2: la versión local es más
+        <translation>%1-%2: la versión local es más
 nueva. ¿Actualizar de todas formas?</translation>
     </message>
     <message>
         <source>File %1 is corrupted.
 Do you want to delete it?</source>
-        <translation type="unfinished">El archivo %1 está corrupto.
+        <translation>El archivo %1 está corrupto.
 ¿Quiere borrarlo?</translation>
     </message>
     <message>
         <source>Transaction Question</source>
-        <translation type="unfinished"></translation>
+        <translation>Pregunta de transacción</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -1839,108 +1823,124 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008-2009 Dario Freddi &amp;lt;drf@chakra-project.org&amp;gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@chakra-project.org&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Un entorno grafico de libalpm escrito en QT &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Licencia: GPLv2+&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Version de libalpm: v.%1&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008-2009 Dario Freddi &amp;lt;drf@chakra-project.org&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@chakra-project.org&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message numerus="yes">
+        <source>The following package(s) cannot be upgraded due to unresolvable dependencies:
+%1
+
+Do you want to skip the above package(s) for this upgrade?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
     </message>
 </context>
 <context>
     <name>MaintenanceBar</name>
     <message>
         <source>Please choose an action to start maintenance...</source>
-        <translation type="unfinished">
-            </translation>
+        <translation>Por favor, elija una acción para iniciar el mantenimiento ...</translation>
     </message>
     <message>
         <source>Clean Unused Databases</source>
-        <translation type="unfinished">Limpiar las bases de datos sin usar</translation>
+        <translation>Limpiar las bases de datos sin usar</translation>
     </message>
     <message>
         <source>Clean Cache</source>
-        <translation type="unfinished">Limpiar el Cache</translation>
+        <translation>Limpiar la Cache</translation>
     </message>
     <message>
         <source>Empty Cache</source>
-        <translation type="unfinished">Vaciar el Cache</translation>
+        <translation>Vaciar la Cache</translation>
     </message>
     <message>
         <source>Optimize Pacman Database</source>
-        <translation type="unfinished">Optimizar la base de datos de Pacman</translation>
+        <translation>Optimizar la base de datos de Pacman</translation>
     </message>
     <message>
         <source>Clean All Building Environments</source>
-        <translation type="unfinished">Limpiar todos los entornos de compilación</translation>
+        <translation>Limpiar todos los entornos de compilación</translation>
     </message>
     <message>
         <source>Cleaning up unused Databases...</source>
-        <translation type="unfinished">Limpiando las bases de datos sin usar...</translation>
+        <translation>Limpiando las bases de datos sin usar...</translation>
     </message>
     <message>
         <source>Cleaning up Cache...</source>
-        <translation type="unfinished">Limpiando el cache...</translation>
+        <translation>Limpiando la cache...</translation>
     </message>
     <message>
         <source>Deleting Cache...</source>
-        <translation type="unfinished">Borrando el cache...</translation>
+        <translation>Borrando la cache...</translation>
     </message>
     <message>
         <source>Optimizing Pacman Database...</source>
-        <translation type="unfinished">Optimizando la base de datos de Pacman...</translation>
+        <translation>Optimizando la base de datos de Pacman...</translation>
     </message>
     <message>
         <source>Cleaning up building Environments...</source>
-        <translation type="unfinished">Limpiando entornos de compilación...</translation>
+        <translation>Limpiando entornos de compilación...</translation>
     </message>
     <message>
         <source>Abort</source>
-        <translation type="unfinished">Cancelar</translation>
+        <translation>Cancelar</translation>
     </message>
     <message>
         <source>System Maintenance</source>
-        <translation type="unfinished">
-            </translation>
+        <translation>Mantenimiento del Sistema</translation>
     </message>
     <message>
         <source>Unused Databases Cleaned up successfully!</source>
-        <translation type="unfinished">¡Las bases de datos sin usar fueron limpiadas satisfactoriamente!</translation>
+        <translation>¡Las bases de datos sin usar fueron limpiadas satisfactoriamente!</translation>
     </message>
     <message>
         <source>Cache Cleaned Up Successfully!</source>
-        <translation type="unfinished">¡El Cache fue limpiado satisf&lt;ctoriamente!</translation>
+        <translation>¡El Cache fue limpiado satisfactoriamente!</translation>
     </message>
     <message>
         <source>Cache Successfully Deleted!</source>
-        <translation type="unfinished">¡El cache se borró satisfactoriamente!</translation>
+        <translation>¡El cache se borró satisfactoriamente!</translation>
     </message>
     <message>
         <source>Build Environments Successfully Cleaned!</source>
-        <translation type="unfinished">¡Los entornos de compilación se limpiaron satisfactoriamente!</translation>
+        <translation>¡Los entornos de compilación se limpiaron satisfactoriamente!</translation>
     </message>
     <message>
         <source>Close</source>
-        <translation type="unfinished">Cerrar</translation>
+        <translation>Cerrar</translation>
     </message>
     <message>
         <source>Cleaning up Unused Databases Failed!</source>
-        <translation type="unfinished">¡La limpieza de bases de datos sin usar falló!</translation>
+        <translation>¡La limpieza de la bases de datos sin usar falló!</translation>
     </message>
     <message>
         <source>Cleaning up Cache Failed!</source>
-        <translation type="unfinished">¡La limpieza del cache falló!</translation>
+        <translation>¡La limpieza del cache falló!</translation>
     </message>
     <message>
         <source>Deleting Cache Failed!</source>
-        <translation type="unfinished">¡La eliminación del cache falló!</translation>
+        <translation>¡La eliminación del cache falló!</translation>
     </message>
     <message>
         <source>Could not clean Build Environments!!</source>
-        <translation type="unfinished">¡No se pudo limpiar los entornos de compilación!</translation>
+        <translation>¡No se pudo limpiar los entornos de compilación!</translation>
     </message>
     <message>
         <source>Pacman Database Optimized Successfully!</source>
-        <translation type="unfinished">¡La base de datos de pacman fue actualizada satisfactoriamente!</translation>
+        <translation>¡La base de datos de pacman fue actualizada satisfactoriamente!</translation>
     </message>
     <message>
         <source>Could not Optimize Pacman Database!</source>
-        <translation type="unfinished">¡No se pudo optimizar la base de datos de Pacman!</translation>
+        <translation>¡No se pudo optimizar la base de datos de Pacman!</translation>
     </message>
     <message>
         <source>Running sync...</source>
@@ -1968,16 +1968,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Maintenance Actions</source>
-        <translation type="unfinished">
-            </translation>
+        <translation>Acciones de mantenimiento</translation>
     </message>
     <message>
         <source>Database optimized successfully!</source>
-        <translation type="unfinished"></translation>
+        <translation>Base de datos optimizado con éxito!</translation>
     </message>
     <message>
         <source>Could not optimize database!</source>
-        <translation type="unfinished"></translation>
+        <translation>No se puede optimizar la base de datos!</translation>
     </message>
 </context>
 <context>
@@ -2122,7 +2121,7 @@ su clave root cuando sea necesario.</translation>
     <message>
         <source>It looks like another copy of Shaman is running.
 You can only run one copy of Shaman at a time.</source>
-        <translation type="unfinished">Parece que está iniciada otra instancia de
+        <translation>Parece que está iniciada otra instancia de
 Shaman. Solo puede tener una funcionando
 a la vez.</translation>
     </message>
@@ -2177,7 +2176,7 @@ de Shaman para más detalles.</translation>
     </message>
     <message>
         <source>Shaman can not be started as root. Please restart it as unprivileged user.</source>
-        <translation type="unfinished"></translation>
+        <translation>Shaman no puede ser inicializado como root. Por favor, reinicie como usuario sin privilegios.</translation>
     </message>
 </context>
 <context>
@@ -2383,12 +2382,12 @@ Esto puede dañar su sistema.</translation>
     </message>
     <message>
         <source>Running package scripts...</source>
-        <translation type="unfinished"></translation>
+        <translation>Ejecutando scripts de los paquetes ...</translation>
     </message>
     <message>
         <source>%p% (%1 KB/s, %2 remaining)</source>
         <comment>You just have to translate &apos;remaining&apos; here. Leave everything else as it is.</comment>
-        <translation type="unfinished"></translation>
+        <translation>%p% (%1 KB/s, %2 restante)</translation>
     </message>
 </context>
 <context>
@@ -2502,15 +2501,13 @@ p, li { white-space: pre-wrap; }
     <message numerus="yes">
         <source>Remove &lt;b&gt;%n package(s)&lt;/b&gt;&lt;br /&gt;</source>
         <translation type="unfinished">
-            <numerusform>
-            </numerusform>
+            <numerusform>Eliminar &lt;b&gt;%n paquete(s)&lt;/b&gt;&lt;br /&gt;</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <source>Install/Upgrade &lt;b&gt;%n package(s)&lt;/b&gt;&lt;br /&gt;</source>
         <translation type="unfinished">
-            <numerusform>
-            </numerusform>
+            <numerusform>Instalar/Actualizar &lt;b&gt;%n paquete(s)&lt;/b&gt;&lt;br /&gt;</numerusform>
         </translation>
     </message>
 </context>
@@ -2607,8 +2604,8 @@ Haga click aquí para más detalles.</translation>
         <source>Upgradeable package(s): %n.
 Click here to upgrade your System.</source>
         <translation type="unfinished">
-            <numerusform>
-            </numerusform>
+            <numerusform>Actualizar paquete(s): %n.
+Haga clic aquí para actualizar su sistema.</numerusform>
         </translation>
     </message>
 </context>
@@ -2629,13 +2626,12 @@ Click here to upgrade your System.</source>
     <message numerus="yes">
         <source>&lt;b&gt;Upgradeable package(s): %n&lt;/b&gt; You can either&lt;br&gt; upgrade immediately or add it to the current Queue&lt;br&gt; and process it later.</source>
         <translation type="unfinished">
-            <numerusform>
-            </numerusform>
+            <numerusform>&lt;b&gt;Paquete(s) actualizable(s): %n&lt;/b&gt;Usted puede&lt;br&gt;actualizar inmediatamente o añadirlo a la cola actual&lt;br&gt; y procesarlo más adelante.</numerusform>
         </translation>
     </message>
     <message>
         <source>System Upgrade</source>
-        <translation type="unfinished"></translation>
+        <translation>Actualización del sistema</translation>
     </message>
 </context>
 <context>
@@ -2901,7 +2897,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Marko Doda&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Macedonian Translator&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">
+        <translation>
             </translation>
     </message>
 </context>
@@ -3057,8 +3053,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>dd/MM/yyyy</source>
-        <translation type="unfinished">
-            </translation>
+        <translation>dd/MM/yyyy</translation>
     </message>
 </context>
 <context>

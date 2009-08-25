@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-22 15:34+0200\n"
+"POT-Creation-Date: 2009-08-25 11:09+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -795,7 +795,6 @@ msgid "Sync could not be executed!!"
 msgstr "¡No se pudo ejecutar sync!"
 
 #: ConfigDialog#94
-#, fuzzy
 msgctxt "ConfigDialog#94"
 msgid "Optimizing Pacman Database..."
 msgstr "Optimizando la base de datos de Pacman..."
@@ -834,35 +833,23 @@ msgstr ""
 
 # Do not translate
 #: ConfigDialog#97
-#, fuzzy
 msgid "Core"
-msgstr ""
-"\n"
-"            "
+msgstr "Base"
 
 # Do not translate
 #: ConfigDialog#98
-#, fuzzy
 msgid "Extra"
-msgstr ""
-"\n"
-"            "
+msgstr "Extra"
 
 # Do not translate
 #: ConfigDialog#99
-#, fuzzy
 msgid "Community"
-msgstr ""
-"\n"
-"            "
+msgstr "Community"
 
 # Do not translate
 #: ConfigDialog#100
-#, fuzzy
 msgid "Testing"
-msgstr ""
-"\n"
-"            "
+msgstr "Testing"
 
 # sync is a command, so it should not be translated
 #: ConfigDialog#101
@@ -1074,106 +1061,95 @@ msgid "Use Animated Tray Icon"
 msgstr "Usar ícono animado en la bandeja de sistema"
 
 #: ConfigDialog#134
-#, fuzzy
 msgid "KDEMod 4 Repository"
-msgstr "Repositorio de KDEmod 3 {4 ?}"
+msgstr "Repositorio de KDEmod 4"
 
 #: ConfigDialog#135
-#, fuzzy
 msgid "KDEMod 4 Extragear Repository"
-msgstr ""
-"\n"
-"            "
+msgstr "KDEMod 4 Repositorio Extragear"
 
 #: ConfigDialog#136
-#, fuzzy
 msgid "KDEMod 4 Playground Repository"
-msgstr ""
-"\n"
-"            "
+msgstr "KDEMod 4 Repositorio Playground"
 
 #: ConfigDialog#137
-#, fuzzy
 msgid "KDEMod 4 Testing Repository"
-msgstr "Repositorio de pruebas KDEmod 3 {4 ?}"
+msgstr "Repositorio de pruebas KDEmod 4"
 
 #: ConfigDialog#138
-#, fuzzy
 msgid "KDEMod 4 Unstable Repository (Testers only!)"
-msgstr ""
-"\n"
-"            "
+msgstr "KDEMod 4 Repositorio inestable (¡solo desarrolladores!)"
 
 #: ConfigDialog#139
-#, fuzzy
 msgid ""
 "Here you can choose what repositories to use between Arch Linux's official "
 "ones. Please note that packages from Unstable and Testing may break your "
 "system."
 msgstr ""
-"\n"
-"            "
+"Aquí puede elegir qué repositorios oficial va a utilizar de Arch Linux. "
+"Tenga en cuenta que los paquetes inestables y en estado de pruebas pueden "
+"dañar el sistema."
 
 #: ConfigDialog#140
-#, fuzzy
 msgid ""
 "KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
 "improved Qt build, compatible with Arch Linux standard Qt's, an improved "
 "theme, and lots of addons, KDEMod is the best way to taste the ease and the "
 "power of KDE with the simplicity and the power of Arch."
 msgstr ""
-"\n"
-"            "
+"KDEMod es una versión mejorada de KDE, exclusivo de Arch Linux. Ofreciendo "
+"una mejora de Qt, compatible con el Qt estándar de Arch Linux, una mejora de "
+"apariencia, y un montón de agregados, KDEMod es la mejor manera de probar "
+"la facilidad y el poder de KDE con la sencillez y la potencia de Arch."
 
 #: ConfigDialog#141
-#, fuzzy
 msgid ""
 "You can extend your packages choice by adding other repositories. Third-"
 "Party Repositories act just as normal ones, and will be accessible through "
 "both Shaman and Pacman."
 msgstr ""
-"\n"
-"            "
+"Puede ampliar su lista de paquetes mediante la adición de otros "
+"repositorios. Los repositorios de terceros pueden actuar como las normales, "
+"y serán accesibles a través de Shaman y Pacman."
 
 #: ConfigDialog#142
-#, fuzzy
 msgid "Use the following language:"
-msgstr ""
-"\n"
-"            "
+msgstr "Utilizar el siguiente idioma:"
 
 #: ConfigDialog#143
-#, fuzzy
 msgid "Disable Tray Icon"
-msgstr ""
-"\n"
-"            "
+msgstr "Deshabilitar icono de la bandeja"
 
 #: ConfigDialog#144
 msgctxt "ConfigDialog#144"
 msgid "Database optimized successfully!"
-msgstr ""
+msgstr "Base de datos optimizado con éxito!"
 
 #: ConfigDialog#145
 msgctxt "ConfigDialog#145"
 msgid "Could not optimize database!"
-msgstr ""
+msgstr "No se puede optimizar la base de datos!"
 
 #: ConfigDialog#146
 msgid "Error saving configuration"
-msgstr ""
+msgstr "Error al guardar la configuración"
 
 #: ConfigDialog#147
 msgid ""
 "There was an error while saving the configuration. This is probably due to "
 "an internal error or you being not authorized to perform the operation"
 msgstr ""
+"Se produjo un error al guardar la configuración. Esto es probablemente "
+"debido a la un error interno o no estar autorizado para realizar la "
+"operación"
 
 #: ConfigDialog#148
 msgid ""
 "There was an error while trying to add the mirror! This could be due also to "
 "your system policy preventing you from performing this action"
 msgstr ""
+"Hubo un error al intentar añadir la replica! Esto puede ser debido a "
+"problemas de permisos que le impide realizar esta acción"
 
 #: ConfigDialog#149
 msgid ""
@@ -1191,6 +1167,19 @@ msgid ""
 "family:'Liberation Sans'; font-size:9pt;\">Please choose an action from the "
 "Drop-Down Menu.</span></p></body></html>"
 msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Serif'; font-size:10pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Liberation Sans'; font-size:9pt;\">Shaman Manteinance.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Liberation Sans'; font-size:9pt;\">Por favor, elija una acción del "
+"Menú desplegable.</span></p></body></html>"
 
 #: EditPBuild#1
 msgid "Saving"
@@ -1206,38 +1195,39 @@ msgstr ""
 
 #: ErrorHandler#1
 msgid "There has been an error while preparing the transaction."
-msgstr ""
+msgstr "Se ha producido un error mientras se prepara la operación."
 
 #: ErrorHandler#2
 msgid "Some dependencies can not be satisfied"
-msgstr ""
+msgstr "Algunas dependencias no pueden ser resueltas"
 
 #: ErrorHandler#3
 msgid "%1: requires %2"
-msgstr ""
+msgstr "%1: requiere %2"
 
 #: ErrorHandler#4
 msgid "Some dependencies create a conflict with already installed packages"
-msgstr ""
+msgstr "Algunas dependencias crean un conflicto con los paquetes ya instalados"
 
 #: ErrorHandler#5
 msgid "%1: conflicts with %2"
-msgstr ""
+msgstr "%1: conflictos con %2"
 
 #: ErrorHandler#6
 msgid "No further details were given. Last error string was:"
-msgstr ""
+msgstr "No se ofrecieron mayores detalles. El último error fue:"
 
 #: ErrorHandler#7
 msgid "There has been an error while committing the transaction."
-msgstr ""
+msgstr "Se ha producido un error realizando la operación."
 
 #: ErrorHandler#8
 msgid "Some files in the packages being processed are conflicting"
 msgstr ""
+"Algunos archivos de los paquetes que están siendo procesados están en "
+"conflicto"
 
 #: ErrorHandler#9
-#, fuzzy
 msgctxt "ErrorHandler#9"
 msgid "%1 exists in both '%2' and '%3'"
 msgstr "%1 existe tanto en '%2' como en '%3'"
@@ -1247,32 +1237,36 @@ msgid ""
 "Some files in the packages being processed conflict with the local "
 "filesystem"
 msgstr ""
+"Algunos archivos de los paquetes que están siendo procesados tienen "
+"conflictos con el sistema de ficheros local"
 
 #: ErrorHandler#11
 msgid "%1: %2 exists in the filesystem"
-msgstr ""
+msgstr "%1: %2 existen en el sistema de ficheros"
 
 #: ErrorHandler#12
 msgid "Some downloaded packages are corrupted or invalid"
-msgstr ""
+msgstr "Algunos paquetes descargados están dañados o corruptos"
 
 #: ErrorHandler#13
 msgid "%1 is invalid or corrupted"
-msgstr ""
+msgstr "%1 es invalido o corrupto"
 
 #: ErrorHandler#14
 msgid "There has been an error while adding a target."
-msgstr ""
+msgstr "Se ha producido un error al agregar el paquete."
 
 #: ErrorHandler#15
 msgid ""
 "This is probably an internal Shaman error. Please report it to help the "
 "developers solving it"
 msgstr ""
+"Esto es probablemente un error interno de Shaman. Por favor, informe "
+"éstopara ayudar a los los desarrolladores a solucionarlo."
 
 #: ErrorHandler#16
 msgid "You seem not authorized to perform this operation"
-msgstr ""
+msgstr "No tienes autorización para realizar esta operación"
 
 #: ErrorHandler#17
 msgid ""
@@ -1280,10 +1274,13 @@ msgid ""
 "failed or refused to authenticate. Please contact your system administrator "
 "for further details"
 msgstr ""
+"Parece que la directiva del sistema le impide hacer esta acción, o si "
+"fallado la autentificación. Póngase en contacto con su administrador del "
+"sistema para más detalles"
 
 #: ErrorHandler#18
 msgid "There was a problem initialiting Aqpm"
-msgstr ""
+msgstr "Ha habido un problema iniciando Aqpm"
 
 #: ErrorHandler#19
 msgid ""
@@ -1291,34 +1288,36 @@ msgid ""
 "privileged operation. This is probably due to a bug in Shaman/Aqpm or to a "
 "misconfiguration of your system"
 msgstr ""
+"Aqpm, la biblioteca base de Shaman, informó que no podía iniciar una "
+"operación con privilegios. Esto es probablemente debido a un error en "
+"Chaman/Aqpm o una mala configuración de su sistema"
 
 #: ErrorHandler#20
 msgid "There was an error during the transaction"
-msgstr ""
+msgstr "Hubo un error durante la operación"
 
 #: ErrorHandler#21
 msgid ""
 "It looks like Aqpm's worker crashed or disappeared. This is probably an "
 "internal Shaman error. Please report it to help the developers solving it"
 msgstr ""
+"Parece que la aplicación Aqpm falló o murio. Esto es probablemente un error "
+"interno de Shaman. Por favor, informelo para ayudar a los desarrolladores en "
+"la solución de ésto"
 
 #: ErrorHandler#22
 msgid "The transaction was interrupted"
-msgstr ""
+msgstr "La operación fué interrumpida"
 
 #: ErrorHandler#23
 msgid "Error occurred"
-msgstr ""
+msgstr "Ocurrio un error"
 
 #: LocalPackage#1
-#, fuzzy
 msgid "Install Package from File"
-msgstr ""
-"\n"
-"            "
+msgstr "Instalar paquete de archivo"
 
 #: LocalPackage#2
-#, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -1331,56 +1330,47 @@ msgid ""
 "Sans';\"><span style=\" font-weight:600;\">Local Package "
 "Installation</span></p></body></html>"
 msgstr ""
-"\n"
-"            "
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Bitstream Vera "
+"Sans';\"><span style=\" font-weight:600;\">Paquetes "
+"locales</span></p></body></html>"
 
 #: LocalPackage#3
-#, fuzzy
 msgid "Show..."
-msgstr ""
-"\n"
-"            "
+msgstr "Mostrar..."
 
 #: LocalPackage#4
-#, fuzzy
 msgctxt "LocalPackage#4"
 msgid "More Details..."
 msgstr "Más detalles..."
 
 #: LocalPackage#5
-#, fuzzy
 msgctxt "LocalPackage#5"
 msgid "Cancel"
 msgstr "Cancelar"
 
 #: LocalPackage#6
-#, fuzzy
 msgctxt "LocalPackage#6"
 msgid "Install Package"
-msgstr ""
-"\n"
-"            "
+msgstr "Instalar paquete"
 
 #: LocalPackageDialog#1
-#, fuzzy
 msgid "Package is not installed"
-msgstr ""
-"\n"
-"            "
+msgstr "Paquete no está instalado"
 
 #: LocalPackageDialog#2
-#, fuzzy
 msgid "Version %1 of this package is already installed"
-msgstr ""
-"\n"
-"            "
+msgstr "La version %1 de éste paquete está instalada"
 
 #: LocalPackageDialog#3
-#, fuzzy
 msgid "All dependencies are satisfied"
-msgstr ""
-"\n"
-"            "
+msgstr "Todas las dependencias fueron resueltas"
 
 #: LocalPackageDialog#4
 #, fuzzy
@@ -1391,12 +1381,9 @@ msgstr ""
 "        "
 
 #: LocalPackageDialog#5
-#, fuzzy
 msgctxt "LocalPackageDialog#5"
 msgid "Install Package"
-msgstr ""
-"\n"
-"            "
+msgstr "Instalar paquete"
 
 #: MainWindow#1
 msgctxt "MainWindow#1"
@@ -1565,7 +1552,6 @@ msgid "About..."
 msgstr "Acerca de..."
 
 #: MainWindow#38
-#, fuzzy
 msgctxt "MainWindow#38"
 msgid "Update Database"
 msgstr "Actualizar base de datos"
@@ -1594,7 +1580,6 @@ msgid "Quit"
 msgstr "Salir"
 
 #: MainWindow#44
-#, fuzzy
 msgctxt "MainWindow#44"
 msgid "Process Queue"
 msgstr "Procesar tareas"
@@ -1740,12 +1725,9 @@ msgstr ""
 "%1"
 
 #: MainWindow#69
-#, fuzzy
 msgctxt "MainWindow#69"
 msgid "Database Update"
-msgstr ""
-"\n"
-"            "
+msgstr "Actualizar base de datos"
 
 #: MainWindow#70
 msgid "Databases Updated Successfully"
@@ -2323,18 +2305,12 @@ msgstr "Nombre"
 
 # Exit Shaman Shortcut
 #: MainWindow#152
-#, fuzzy
 msgid "Ctrl+Q"
-msgstr ""
-"\n"
-"            "
+msgstr "Ctrl+Q"
 
 #: MainWindow#153
-#, fuzzy
 msgid "Name and Description"
-msgstr ""
-"\n"
-"            "
+msgstr "Nombre y descripción"
 
 #: MainWindow#154
 #, fuzzy
@@ -2357,7 +2333,6 @@ msgstr ""
 " ¿Instalar de todas formas?"
 
 #: MainWindow#156
-#, fuzzy
 msgctxt "MainWindow#156"
 msgid "Replace %1 with %2/%3?"
 msgstr "¿Quiere reemplazar %1 con %2/%3?"
@@ -2367,22 +2342,23 @@ msgid ""
 "%1 conflicts with %2.\n"
 "Remove %2?"
 msgstr ""
+"%1 tiene conflictos con %2.\n"
+"Eliminar %2?"
 
+#. (obsolete)
 #: MainWindow#158
-#, fuzzy
 msgid ""
 "The following package(s) cannot be upgraded due to unresolvable "
 "dependencies:\n"
 "%1\n"
-"\n"
 "Do you want to skip the above package(s) for this upgrade?"
 msgstr ""
-"\n"
-"            \n"
-"        "
+"El siguiente paquete (s) no puede ser actualizado debido a problemasde "
+"dependencias:\n"
+"%1\n"
+"¿Quieres omitir éste paquete(s) para ésta actualización?"
 
 #: MainWindow#159
-#, fuzzy
 msgctxt "MainWindow#159"
 msgid ""
 "%1-%2: local version is newer.\n"
@@ -2392,7 +2368,6 @@ msgstr ""
 "nueva. ¿Actualizar de todas formas?"
 
 #: MainWindow#160
-#, fuzzy
 msgctxt "MainWindow#160"
 msgid ""
 "File %1 is corrupted.\n"
@@ -2403,7 +2378,7 @@ msgstr ""
 
 #: MainWindow#161
 msgid "Transaction Question"
-msgstr ""
+msgstr "Pregunta de transacción"
 
 #: MainWindow#162
 msgid ""
@@ -2431,149 +2406,158 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Lukas Appelhans "
 "&lt;boom1992@chakra-project.org&gt;</p></body></html>"
 msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Un entorno grafico de libalpm escrito en QT </span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Licencia: GPLv2+</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Version de libalpm: v.%"
+"1</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008-2009 Dario Freddi "
+"&lt;drf@chakra-project.org&gt;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Lukas Appelhans "
+"&lt;boom1992@chakra-project.org&gt;</p></body></html>"
 
-#: MaintenanceBar#1
+#: MainWindow#163
 #, fuzzy
-msgid "Please choose an action to start maintenance..."
+msgid ""
+"The following package(s) cannot be upgraded due to unresolvable "
+"dependencies:\n"
+"%1\n"
+"\n"
+"Do you want to skip the above package(s) for this upgrade?"
 msgstr ""
 "\n"
-"            "
+"            \n"
+"        "
+
+#: MaintenanceBar#1
+msgid "Please choose an action to start maintenance..."
+msgstr "Por favor, elija una acción para iniciar el mantenimiento ..."
 
 #: MaintenanceBar#2
-#, fuzzy
 msgctxt "MaintenanceBar#2"
 msgid "Clean Unused Databases"
 msgstr "Limpiar las bases de datos sin usar"
 
 #: MaintenanceBar#3
-#, fuzzy
 msgctxt "MaintenanceBar#3"
 msgid "Clean Cache"
-msgstr "Limpiar el Cache"
+msgstr "Limpiar la Cache"
 
 #: MaintenanceBar#4
-#, fuzzy
 msgctxt "MaintenanceBar#4"
 msgid "Empty Cache"
-msgstr "Vaciar el Cache"
+msgstr "Vaciar la Cache"
 
 #: MaintenanceBar#5
-#, fuzzy
 msgctxt "MaintenanceBar#5"
 msgid "Optimize Pacman Database"
 msgstr "Optimizar la base de datos de Pacman"
 
 #: MaintenanceBar#6
-#, fuzzy
 msgctxt "MaintenanceBar#6"
 msgid "Clean All Building Environments"
 msgstr "Limpiar todos los entornos de compilación"
 
 #: MaintenanceBar#7
-#, fuzzy
 msgctxt "MaintenanceBar#7"
 msgid "Cleaning up unused Databases..."
 msgstr "Limpiando las bases de datos sin usar..."
 
 #: MaintenanceBar#8
-#, fuzzy
 msgctxt "MaintenanceBar#8"
 msgid "Cleaning up Cache..."
-msgstr "Limpiando el cache..."
+msgstr "Limpiando la cache..."
 
 #: MaintenanceBar#9
-#, fuzzy
 msgctxt "MaintenanceBar#9"
 msgid "Deleting Cache..."
-msgstr "Borrando el cache..."
+msgstr "Borrando la cache..."
 
 #: MaintenanceBar#10
-#, fuzzy
 msgctxt "MaintenanceBar#10"
 msgid "Optimizing Pacman Database..."
 msgstr "Optimizando la base de datos de Pacman..."
 
 #: MaintenanceBar#11
-#, fuzzy
 msgctxt "MaintenanceBar#11"
 msgid "Cleaning up building Environments..."
 msgstr "Limpiando entornos de compilación..."
 
 #: MaintenanceBar#12
-#, fuzzy
 msgctxt "MaintenanceBar#12"
 msgid "Abort"
 msgstr "Cancelar"
 
 #: MaintenanceBar#13
-#, fuzzy
 msgid "System Maintenance"
-msgstr ""
-"\n"
-"            "
+msgstr "Mantenimiento del Sistema"
 
 #: MaintenanceBar#14
-#, fuzzy
 msgctxt "MaintenanceBar#14"
 msgid "Unused Databases Cleaned up successfully!"
 msgstr "¡Las bases de datos sin usar fueron limpiadas satisfactoriamente!"
 
 #: MaintenanceBar#15
-#, fuzzy
 msgctxt "MaintenanceBar#15"
 msgid "Cache Cleaned Up Successfully!"
-msgstr "¡El Cache fue limpiado satisf<ctoriamente!"
+msgstr "¡El Cache fue limpiado satisfactoriamente!"
 
 #: MaintenanceBar#16
-#, fuzzy
 msgctxt "MaintenanceBar#16"
 msgid "Cache Successfully Deleted!"
 msgstr "¡El cache se borró satisfactoriamente!"
 
 #: MaintenanceBar#17
-#, fuzzy
 msgctxt "MaintenanceBar#17"
 msgid "Build Environments Successfully Cleaned!"
 msgstr "¡Los entornos de compilación se limpiaron satisfactoriamente!"
 
 #: MaintenanceBar#18
-#, fuzzy
 msgctxt "MaintenanceBar#18"
 msgid "Close"
 msgstr "Cerrar"
 
 #: MaintenanceBar#19
-#, fuzzy
 msgctxt "MaintenanceBar#19"
 msgid "Cleaning up Unused Databases Failed!"
-msgstr "¡La limpieza de bases de datos sin usar falló!"
+msgstr "¡La limpieza de la bases de datos sin usar falló!"
 
 #: MaintenanceBar#20
-#, fuzzy
 msgctxt "MaintenanceBar#20"
 msgid "Cleaning up Cache Failed!"
 msgstr "¡La limpieza del cache falló!"
 
 #: MaintenanceBar#21
-#, fuzzy
 msgctxt "MaintenanceBar#21"
 msgid "Deleting Cache Failed!"
 msgstr "¡La eliminación del cache falló!"
 
 #: MaintenanceBar#22
-#, fuzzy
 msgctxt "MaintenanceBar#22"
 msgid "Could not clean Build Environments!!"
 msgstr "¡No se pudo limpiar los entornos de compilación!"
 
 #: MaintenanceBar#23
-#, fuzzy
 msgctxt "MaintenanceBar#23"
 msgid "Pacman Database Optimized Successfully!"
 msgstr "¡La base de datos de pacman fue actualizada satisfactoriamente!"
 
 #: MaintenanceBar#24
-#, fuzzy
 msgctxt "MaintenanceBar#24"
 msgid "Could not Optimize Pacman Database!"
 msgstr "¡No se pudo optimizar la base de datos de Pacman!"
@@ -2613,21 +2597,18 @@ msgid "Sync could not be executed!!"
 msgstr "¡No se pudo ejecutar sync!"
 
 #: MaintenanceBar#30
-#, fuzzy
 msgid "Maintenance Actions"
-msgstr ""
-"\n"
-"            "
+msgstr "Acciones de mantenimiento"
 
 #: MaintenanceBar#31
 msgctxt "MaintenanceBar#31"
 msgid "Database optimized successfully!"
-msgstr ""
+msgstr "Base de datos optimizado con éxito!"
 
 #: MaintenanceBar#32
 msgctxt "MaintenanceBar#32"
 msgid "Could not optimize database!"
-msgstr ""
+msgstr "No se puede optimizar la base de datos!"
 
 #: NewsViewer#1
 msgid "Please wait, fetching items..."
@@ -2785,7 +2766,6 @@ msgid "No"
 msgstr "No"
 
 #: QObject#15
-#, fuzzy
 msgid ""
 "It looks like another copy of Shaman is running.\n"
 "You can only run one copy of Shaman at a time."
@@ -2855,6 +2835,8 @@ msgstr "¡&Bien!"
 msgid ""
 "Shaman can not be started as root. Please restart it as unprivileged user."
 msgstr ""
+"Shaman no puede ser inicializado como root. Por favor, reinicie como usuario "
+"sin privilegios."
 
 #: QueueDialog#1
 msgid "<br><b> * Validating Transaction</b><br>"
@@ -3076,12 +3058,12 @@ msgstr "Ok"
 
 #: QueueDialog#49
 msgid "Running package scripts..."
-msgstr ""
+msgstr "Ejecutando scripts de los paquetes ..."
 
 # You just have to translate 'remaining' here. Leave everything else as it is.
 #: QueueDialog#50
 msgid "%p% (%1 KB/s, %2 remaining)"
-msgstr ""
+msgstr "%p% (%1 KB/s, %2 restante)"
 
 #: QueueReadyDialog#1
 msgid "Review Queue"
@@ -3389,7 +3371,7 @@ msgstr ""
 #: SysUpgradeDialog#5
 msgctxt "SysUpgradeDialog#5"
 msgid "System Upgrade"
-msgstr ""
+msgstr "Actualización del sistema"
 
 #: aboutDialog#1
 msgid "About Shaman"
@@ -4008,7 +3990,6 @@ msgstr ""
 "Chino.</p></body></html>"
 
 #: aboutDialog#12
-#, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -4369,11 +4350,8 @@ msgid "Close"
 msgstr "Cerrar"
 
 #: logViewer#9
-#, fuzzy
 msgid "dd/MM/yyyy"
-msgstr ""
-"\n"
-"            "
+msgstr "dd/MM/yyyy"
 
 #: newsDialog#1
 msgid "Arch Linux News"

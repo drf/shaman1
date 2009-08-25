@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-22 15:34+0200\n"
+"POT-Creation-Date: 2009-08-25 11:09+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,7 +48,7 @@ msgid ""
 "Would you like to abort building?.\n"
 "All Process will be lost."
 msgstr ""
-"Czy chciałbyś przerwać budowanie?\n"
+"Czy chciałbyś przerwać proces budowania?\n"
 "Cały postęp zostanie utracony."
 
 #: BuildingDialog#3
@@ -196,7 +196,7 @@ msgid ""
 "Look at the output for more details."
 msgstr ""
 "Budowa Twojego pakietu nie powiodła się.\n"
-"Spójrz na wyjście procesu, aby dowiedzieć się więcej szczegółów."
+"Sprawdź wyjście procesu, aby dowiedzieć się więcej szczegółów."
 
 #: BuildingHandler#12
 msgctxt "BuildingHandler#12"
@@ -205,7 +205,7 @@ msgstr "Zamknij"
 
 #: BuildingHandler#13
 msgid "Building Packages Failed!!"
-msgstr "Budowa Twoich pakietów nie powiodła się!"
+msgstr "Budowanie pakietów nie powiodło się!"
 
 #: BuildingHandler#14
 msgid ""
@@ -376,7 +376,6 @@ msgid "Deleting Cache..."
 msgstr "Usuwanie cache..."
 
 #: ConfigDialog#15
-#, fuzzy
 msgctxt "ConfigDialog#15"
 msgid "Optimizing Pacman Database..."
 msgstr "Optymalizacja bazy danych Pacmana..."
@@ -411,6 +410,8 @@ msgid ""
 "There was an error while trying to add the mirror! This could be due also to "
 "your system policy preventing you from performing this action"
 msgstr ""
+"Wystąpił błąd podczas próby dodawania serwera lustrzanego. Może to być "
+"spowodowane przez politykę systemu zapobiegającą wykonanie tej operacji"
 
 #: ConfigDialog#22
 msgctxt "ConfigDialog#22"
@@ -435,22 +436,25 @@ msgstr "Środowiska budowania oczyszczone pomyślnie!"
 #: ConfigDialog#26
 msgctxt "ConfigDialog#26"
 msgid "Database optimized successfully!"
-msgstr ""
+msgstr "Baza danych została pomyślnie zoptymalizowana!"
 
 #: ConfigDialog#27
 msgctxt "ConfigDialog#27"
 msgid "Could not optimize database!"
-msgstr ""
+msgstr "Nie udało się zoptymalizować bazy danych!"
 
 #: ConfigDialog#28
 msgid "Error saving configuration"
-msgstr ""
+msgstr "Błąd podczas próby zapisania ustawień"
 
 #: ConfigDialog#29
 msgid ""
 "There was an error while saving the configuration. This is probably due to "
 "an internal error or you being not authorized to perform the operation"
 msgstr ""
+"Wystąpił błąd podczas próby zapisania ustawień. Jest to prawdopodobnie "
+"spowodowane błędem wewnętrznym lub brakiem odpowiednich uprawnień do "
+"wykonania tej operacji"
 
 #: ConfigDialog#30
 msgid "Settings Changed"
@@ -590,6 +594,19 @@ msgid ""
 "family:'Liberation Sans'; font-size:9pt;\">Please choose an action from the "
 "Drop-Down Menu.</span></p></body></html>"
 msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Serif'; font-size:10pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Liberation Sans'; font-size:9pt;\">Konserwacja</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Liberation Sans'; font-size:9pt;\">Proszę wybrać działanie z "
+"listy</span></p></body></html>"
 
 #: ConfigDialog#54
 msgid "When Application is in System Tray only"
@@ -789,7 +806,7 @@ msgstr "Przetwórz wszystkie zależności najpierw z plików binarnych (zalecane
 
 #: ConfigDialog#93
 msgid "Review Building output before installing"
-msgstr "Obejrzyj wyjście budowania pakietu przed instalacją"
+msgstr "Wyświetl wyjście budowania pakietu, przed jego instalacją"
 
 #: ConfigDialog#94
 msgid "ABS Configuration"
@@ -895,8 +912,8 @@ msgid ""
 "Check if there is an unread news about a package in Queue before processing "
 "it"
 msgstr ""
-"Sprawdź czy dostępny jest nieprzeczytany news o pakiecie z kolejki przed jej "
-"przetworzeniem"
+"Sprawdź czy dostępny jest nieprzeczytany news o pakiecie z kolejki, przed "
+"jej przetworzeniem"
 
 #: ConfigDialog#119
 msgid "Use SysLog"
@@ -1037,8 +1054,8 @@ msgid ""
 "ones. Please note that packages from Unstable and Testing may break your "
 "system."
 msgstr ""
-"Tutaj możesz wybrać repozytoria spośród oficjalnych dla Arch Linux. Proszę "
-"zwrócić uwagę, że pakiety z Unstable i Testing mogą uszkodzić Twój system."
+"Tutaj możesz wybrać repozytoria spośród oficjalnych dla Arch Linux. "
+"Pamiętaj, że pakiety z Unstable i Testing mogą uszkodzić Twój system."
 
 #: ConfigDialog#142
 msgid ""
@@ -1050,7 +1067,7 @@ msgstr ""
 "KDEMod to ulepszona wersja KDE, stworzona wyłącznie dla Arch Linux. Zawiera "
 "ona ulepszone Qt, kompatybilne ze standardowym Qt Arch Linux, ulepszony "
 "theme oraz wiele różnych dodatków. KDEMod to najlepszy sposób na "
-"skosztowanie wygody i potęgi KDE zachowując jednocześnie prostote i potęgę "
+"skosztowanie wygody i potęgi KDE zachowując jednocześnie prostotę i potęgę "
 "Arch'a."
 
 #: ConfigDialog#143
@@ -1085,38 +1102,37 @@ msgstr ""
 
 #: ErrorHandler#1
 msgid "There has been an error while preparing the transaction."
-msgstr ""
+msgstr "Miał miejsce błąd podczas przygotowywania transakcji."
 
 #: ErrorHandler#2
 msgid "Some dependencies can not be satisfied"
-msgstr ""
+msgstr "Niektóre zależności nie mogły zostać spełnione"
 
 #: ErrorHandler#3
 msgid "%1: requires %2"
-msgstr ""
+msgstr "%1: wymaga %2"
 
 #: ErrorHandler#4
 msgid "Some dependencies create a conflict with already installed packages"
-msgstr ""
+msgstr "Niektóre zależności konfliktują z obecnie zainstalowanymi pakietami"
 
 #: ErrorHandler#5
 msgid "%1: conflicts with %2"
-msgstr ""
+msgstr "%1: konfliktuje z %2"
 
 #: ErrorHandler#6
 msgid "No further details were given. Last error string was:"
-msgstr ""
+msgstr "Nie uzyskano więcej szczegółów. Ostatni błąd:"
 
 #: ErrorHandler#7
 msgid "There has been an error while committing the transaction."
-msgstr ""
+msgstr "Miał miejsce błąd podczas zastosowywania transakcji."
 
 #: ErrorHandler#8
 msgid "Some files in the packages being processed are conflicting"
-msgstr ""
+msgstr "Niektóre pliki w przetwarzanych pakietach powodują konflikt"
 
 #: ErrorHandler#9
-#, fuzzy
 msgctxt "ErrorHandler#9"
 msgid "%1 exists in both '%2' and '%3'"
 msgstr "%1 istnieje w '%2' i '%3'"
@@ -1126,32 +1142,36 @@ msgid ""
 "Some files in the packages being processed conflict with the local "
 "filesystem"
 msgstr ""
+"Niektóre pliki w przetwarzanych pakietach powodują konflikt w lokalnym "
+"systemie plików"
 
 #: ErrorHandler#11
 msgid "%1: %2 exists in the filesystem"
-msgstr ""
+msgstr "%1: %2 istnieje w systemie plików"
 
 #: ErrorHandler#12
 msgid "Some downloaded packages are corrupted or invalid"
-msgstr ""
+msgstr "Niektóre pobrane pakiety są uszkodzone lub błędne"
 
 #: ErrorHandler#13
 msgid "%1 is invalid or corrupted"
-msgstr ""
+msgstr "%1 jest uszkodzony lub błędny"
 
 #: ErrorHandler#14
 msgid "There has been an error while adding a target."
-msgstr ""
+msgstr "Wystąpił błąd podczas dodawania celu."
 
 #: ErrorHandler#15
 msgid ""
 "This is probably an internal Shaman error. Please report it to help the "
 "developers solving it"
 msgstr ""
+"To jest prawdopodobnie wewnętrzny błąd w Shamanie. Proszę, zgłoś go aby "
+"pomóc programistom w jego naprawieniu"
 
 #: ErrorHandler#16
 msgid "You seem not authorized to perform this operation"
-msgstr ""
+msgstr "Nie posiadasz autoryzacji do wykonania tej operacji"
 
 #: ErrorHandler#17
 msgid ""
@@ -1159,10 +1179,14 @@ msgid ""
 "failed or refused to authenticate. Please contact your system administrator "
 "for further details"
 msgstr ""
+"Wygląda na to, że polityka bezpieczeństwa systemu uniemożliwia Ci wykonanie "
+"tej operacji lub odmówiłeś autoryzacji lub autoryzacja nie przebiegła "
+"pomyślnie. Proszę o skontaktowanie się z administratorem swojego systemu, "
+"aby dowiedzieć się dalszych szczegółów"
 
 #: ErrorHandler#18
 msgid "There was a problem initialiting Aqpm"
-msgstr ""
+msgstr "Wystąpił błąd podczas uruchamiania Aqpm"
 
 #: ErrorHandler#19
 msgid ""
@@ -1170,24 +1194,30 @@ msgid ""
 "privileged operation. This is probably due to a bug in Shaman/Aqpm or to a "
 "misconfiguration of your system"
 msgstr ""
+"Aqpm, biblioteka znajdująca sie wewnątrz Shamana, zgłosiła że nie udało się "
+"wykonać operacji. Jest to prawdopodobnie spowodowane błędem Shamana/Aqpm lub "
+"konfiguracji Twojego systemu"
 
 #: ErrorHandler#20
 msgid "There was an error during the transaction"
-msgstr ""
+msgstr "Miał miejsce błąd podczas transakcji"
 
 #: ErrorHandler#21
 msgid ""
 "It looks like Aqpm's worker crashed or disappeared. This is probably an "
 "internal Shaman error. Please report it to help the developers solving it"
 msgstr ""
+"Wygląda na to, że Aqpm worker uległ awarii. Jest to prawdopodobnie "
+"wewnętrzny błąd Shamana. Proszę, zgłoś go aby pomóc programistom w jego "
+"naprawieniu"
 
 #: ErrorHandler#22
 msgid "The transaction was interrupted"
-msgstr ""
+msgstr "Transakcja została przerwana"
 
 #: ErrorHandler#23
 msgid "Error occurred"
-msgstr ""
+msgstr "Wystąpił błąd"
 
 #: LocalPackage#1
 msgid "Install Package from File"
@@ -1235,7 +1265,6 @@ msgid "Install Package"
 msgstr "Zainstaluj pakiet"
 
 #: LocalPackageDialog#1
-#, fuzzy
 msgctxt "LocalPackageDialog#1"
 msgid "Install Package"
 msgstr "Zainstaluj pakiet"
@@ -1282,7 +1311,7 @@ msgstr ""
 "Aby go zamknąć, kliknij Zamknij w menu Plik lub w menu kontekstowym ikony z "
 "tacki systemowej.\n"
 "Umieszczony w tacce systemowej, Shaman będzie aktualizował Twoje bazy danych\n"
-"w regularnych odstępach czasu oraz będzie Cie informował o dostępnych "
+"w regularnych odstępach czasu oraz będzie Cię informował o dostępnych "
 "aktualizacjach.\n"
 "Możesz zmienić to zachowanie w Ustawieniach."
 
@@ -1534,7 +1563,6 @@ msgid ""
 msgstr ""
 
 #: MainWindow#50
-#, fuzzy
 msgctxt "MainWindow#50"
 msgid ""
 "%1 requires installing %2 from IgnorePkg/IgnoreGroup.\n"
@@ -1544,7 +1572,6 @@ msgstr ""
 "Zainstalować mimo wszystko?"
 
 #: MainWindow#51
-#, fuzzy
 msgctxt "MainWindow#51"
 msgid ""
 "%1 is in IgnorePkg/IgnoreGroup.\n"
@@ -1554,7 +1581,6 @@ msgstr ""
 "Zainstalować mimo wszystko?"
 
 #: MainWindow#52
-#, fuzzy
 msgctxt "MainWindow#52"
 msgid "Replace %1 with %2/%3?"
 msgstr "Zastąpić %1 przez %2/%3?"
@@ -1564,9 +1590,10 @@ msgid ""
 "%1 conflicts with %2.\n"
 "Remove %2?"
 msgstr ""
+"%1 konfliktuje z %2.\n"
+"Usunąć %2?"
 
 #: MainWindow#54
-#, fuzzy
 msgid ""
 "The following package(s) cannot be upgraded due to unresolvable "
 "dependencies:\n"
@@ -1581,7 +1608,6 @@ msgstr ""
 "        "
 
 #: MainWindow#55
-#, fuzzy
 msgctxt "MainWindow#55"
 msgid ""
 "%1-%2: local version is newer.\n"
@@ -1591,7 +1617,6 @@ msgstr ""
 "Zaktualizować mimo wszystko?"
 
 #: MainWindow#56
-#, fuzzy
 msgctxt "MainWindow#56"
 msgid ""
 "File %1 is corrupted.\n"
@@ -1602,7 +1627,7 @@ msgstr ""
 
 #: MainWindow#57
 msgid "Transaction Question"
-msgstr ""
+msgstr "Transakcja"
 
 #. (obsolete)
 #: MainWindow#58
@@ -1690,7 +1715,6 @@ msgid "About..."
 msgstr "O programie..."
 
 #: MainWindow#78
-#, fuzzy
 msgctxt "MainWindow#78"
 msgid "Update Database"
 msgstr "Aktualizuj bazę danych"
@@ -1719,7 +1743,6 @@ msgid "Quit"
 msgstr "Zakończ"
 
 #: MainWindow#84
-#, fuzzy
 msgctxt "MainWindow#84"
 msgid "Process Queue"
 msgstr "Przetwórz kolejkę"
@@ -1729,8 +1752,9 @@ msgid ""
 "Your Kernel has been updated.\n"
 "Please restart your PC soon to load the new Kernel."
 msgstr ""
-"Twój Kernel został zaktualizowany.\n"
-"Proszę zrestartować swój komputer, aby móc wczytać nowego Kernela."
+"Kernel został zaktualizowany.\n"
+"Proszę zrestartować komputer, aby rozpocząc korzystanie z nowej wersji "
+"Kernela."
 
 #. (obsolete)
 #: MainWindow#86
@@ -1944,7 +1968,6 @@ msgid "Deleting Cache..."
 msgstr "Usuwanie cache..."
 
 #: MaintenanceBar#10
-#, fuzzy
 msgctxt "MaintenanceBar#10"
 msgid "Optimizing Pacman Database..."
 msgstr "Optymalizacja bazy danych Pacmana..."
@@ -1986,12 +2009,12 @@ msgstr "Środowiska budowania oczyszczone pomyślnie!"
 #: MaintenanceBar#18
 msgctxt "MaintenanceBar#18"
 msgid "Database optimized successfully!"
-msgstr ""
+msgstr "Baza danych została pomyślnie zoptymalizowana!"
 
 #: MaintenanceBar#19
 msgctxt "MaintenanceBar#19"
 msgid "Could not optimize database!"
-msgstr ""
+msgstr "Nie udało się zoptymalizować bazy danych!"
 
 #: MaintenanceBar#20
 msgctxt "MaintenanceBar#20"
@@ -2141,7 +2164,7 @@ msgid ""
 "Maybe another application has a lock on it."
 msgstr ""
 "Miał miejsce problem podczas testowania libalpm.\n"
-"Może inna aplikacja obecnie z niego korzysta."
+"Możliwe, że inna aplikacja obecnie z niego korzysta."
 
 #: QObject#4
 msgid ""
@@ -2162,6 +2185,8 @@ msgstr "Proszę czekać..."
 msgid ""
 "Shaman can not be started as root. Please restart it as unprivileged user."
 msgstr ""
+"Shaman nie może być uruchamiany z uprawnieniami roota. Proszę, uruchomić "
+"program ponownie jako zwykły użytkownik."
 
 #: QObject#7
 msgid "Loading Databases..."
@@ -2323,11 +2348,11 @@ msgstr "Sprawdzanie spójności pakietów..."
 
 #: QueueDialog#17
 msgid "Checking delta integrity..."
-msgstr "Sprawdzanie spójności delta..."
+msgstr "Sprawdzanie spójności delt..."
 
 #: QueueDialog#18
 msgid "Applying deltas..."
-msgstr "Nanoszenie delt..."
+msgstr "Zastosowywanie delt..."
 
 #: QueueDialog#19
 msgid "Generating %1 with %2... "
@@ -2339,11 +2364,11 @@ msgstr "Sukces!"
 
 #: QueueDialog#21
 msgid "Failed!"
-msgstr "Klęska!"
+msgstr "Nie powiodło się!"
 
 #: QueueDialog#22
 msgid "Running package scripts..."
-msgstr ""
+msgstr "Uruchamianie skryptów instalacyjnych pakietu..."
 
 #: QueueDialog#23
 msgid "<br><b> * Package Downloading Started</b><br>"
@@ -2436,7 +2461,7 @@ msgstr "Przetwarzanie kolejki nie powiodło się!"
 # You just have to translate 'remaining' here. Leave everything else as it is.
 #: QueueDialog#41
 msgid "%p% (%1 KB/s, %2 remaining)"
-msgstr ""
+msgstr "%p% (%1 KB/s, %2 pozostało)"
 
 #: QueueDialog#42
 msgid "Queue processed successfully!"
@@ -2449,7 +2474,7 @@ msgstr "Obejrzyj kolejkę"
 #: QueueReadyDialog#2
 msgctxt "QueueReadyDialog#2"
 msgid "Turn off PC when Queue is done"
-msgstr "Wyłącz komputer, gdy kolejka zostanie ukończona"
+msgstr "Wyłącz komputer, gdy kolejka zostanie przetworzona"
 
 #: QueueReadyDialog#3
 msgid "Process in Tray"
@@ -2493,7 +2518,7 @@ msgstr ""
 
 #: QueueReadyDialog#9
 msgid "Keep Queue Dialog Open after the Queue is finished"
-msgstr "Pozostaw okno kolejki otwarte po ukończeniu kolejki"
+msgstr "Pozostaw okno kolejki otwarte po jej przetworzeniu"
 
 #: QueueReadyDialog#10
 msgctxt "QueueReadyDialog#10"
@@ -2560,7 +2585,7 @@ msgstr "Zainstaluj/Zaktualizuj <b> %1 pakiety</b><br />"
 
 #: ReviewQueueDialog#13
 msgid "Do you wish to continue?"
-msgstr "Chcesz kontynuować?"
+msgstr "Czy chcesz kontynuować?"
 
 #. (obsolete)
 #: ReviewQueueDialog#14
@@ -2688,8 +2713,7 @@ msgid ""
 "Click here to open the News Dialog for more details."
 msgstr ""
 "Wystąpił błąd podczas pobierania newsów!\n"
-"Kliknij tutaj, aby otworzyc Okno Newsów dla uzyskania większej ilości "
-"szczegółów."
+"Kliknij tutaj, aby otworzyc Okno Newsów dla uzyskania dalszych informacji."
 
 #: ShamanTrayIcon#16
 msgid ""
@@ -2726,7 +2750,6 @@ msgid "To be Upgraded"
 msgstr "Do aktualizacji"
 
 #: SysUpgradeDialog#4
-#, fuzzy
 msgctxt "SysUpgradeDialog#4"
 msgid "System Upgrade"
 msgstr "Aktualizacja systemu"
@@ -3496,7 +3519,7 @@ msgstr "Return"
 
 #: buildingDialog#1
 msgid "Shaman - Building Packages"
-msgstr "Shaman - Budowa pakietów"
+msgstr "Shaman - Budowanie pakietów"
 
 #: buildingDialog#2
 msgid ""
@@ -3577,7 +3600,7 @@ msgstr ""
 
 #: logViewer#1
 msgid "Shaman - Log Viewer"
-msgstr "Shaman - Podgląd Logu"
+msgstr "Shaman - Podgląd Logów"
 
 #: logViewer#2
 msgid "Show Only Logs From"
@@ -3780,7 +3803,7 @@ msgstr ""
 "family:'Liberation Sans'; font-size:10pt; font-weight:400; font-"
 "style:normal;\"><p style=\" margin-top:0px; margin-bottom:0px; margin-"
 "left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
-"family:'Sans Serif';\"><span style=\" font-weight:600;\">Zbuduj kolejkę ze "
+"family:'Sans Serif';\"><span style=\" font-weight:600;\">Przetwórz kolejkę ze "
 "źródeł</span></p></body></html>"
 
 #: reviewBuildingDialog#3
@@ -3789,16 +3812,16 @@ msgstr "Przetwórz wszystkie zależności najpierw z plików binarnych (zalecane
 
 #: reviewBuildingDialog#4
 msgid "This is useful if you want to review compiler's output"
-msgstr "Jest to użytecznie jeśli chcesz obejrzeć wyjście kompilatora"
+msgstr "Jest to użytecznie jeśli chcesz sprawdzić wyjście kompilatora"
 
 #: reviewBuildingDialog#5
 msgid "Do not install immediately when building is finished"
-msgstr "Nie instaluj po zakończeniu budowania"
+msgstr "Nie instaluj od razu po zakończeniu budowania pakietów"
 
 #: reviewBuildingDialog#6
 msgctxt "reviewBuildingDialog#6"
 msgid "Turn off PC when Queue is done"
-msgstr "Wyłącz komputer, gdy kolejka zostanie ukończona"
+msgstr "Wyłącz komputer, gdy kolejka zostanie przetworzona"
 
 #: reviewBuildingDialog#7
 msgctxt "reviewBuildingDialog#7"

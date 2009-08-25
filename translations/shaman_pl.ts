@@ -1852,6 +1852,20 @@ a valid package</source>
 prawidłowym pakietem</translation>
     </message>
     <message>
+        <location filename="../src/MainWindow.cpp" line="1899"/>
+        <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;A libalpm frontend in Qt&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;License: GPLv2+&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Libalpm Version: v.%1&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008-2009 Dario Freddi &amp;lt;drf@chakra-project.org&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@chakra-project.org&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../src/MainWindow.cpp" line="1964"/>
         <location filename="../src/MainWindow.cpp.orig" line="1965"/>
         <source>%1 requires installing %2 from IgnorePkg/IgnoreGroup.
@@ -2220,7 +2234,6 @@ Czy mimo wszystko chcesz zainstalować %1?</translation>
         <translation>&amp;Anuluj działanie</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1899"/>
         <location filename="../src/MainWindow.cpp.orig" line="1900"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -2502,48 +2515,48 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>PackageProperties</name>
     <message>
-        <location filename="../src/PackageProperties.cpp" line="49"/>
+        <location filename="../src/PackageProperties.cpp" line="47"/>
         <location filename="../src/PackageProperties.cpp.orig" line="49"/>
         <source>%1 GiB</source>
         <comment>Size is in Gib</comment>
         <translation>%1 GB</translation>
     </message>
     <message>
-        <location filename="../src/PackageProperties.cpp" line="51"/>
+        <location filename="../src/PackageProperties.cpp" line="49"/>
         <location filename="../src/PackageProperties.cpp.orig" line="51"/>
         <source>%1 MiB</source>
         <comment>Size is in MiB</comment>
         <translation>%1 MB</translation>
     </message>
     <message>
-        <location filename="../src/PackageProperties.cpp" line="53"/>
+        <location filename="../src/PackageProperties.cpp" line="51"/>
         <location filename="../src/PackageProperties.cpp.orig" line="53"/>
         <source>%1 KiB</source>
         <comment>Size is in KiB</comment>
         <translation>%1 KB</translation>
     </message>
     <message>
-        <location filename="../src/PackageProperties.cpp" line="55"/>
+        <location filename="../src/PackageProperties.cpp" line="53"/>
         <location filename="../src/PackageProperties.cpp.orig" line="55"/>
         <source>%1 Bytes</source>
         <comment>Size is in Bytes</comment>
         <translation>%1 Bajty</translation>
     </message>
     <message>
-        <location filename="../src/PackageProperties.cpp" line="70"/>
+        <location filename="../src/PackageProperties.cpp" line="69"/>
         <location filename="../src/PackageProperties.cpp.orig" line="70"/>
         <source>Shaman - %1 properties</source>
         <translation>Shaman - %1 właściwości</translation>
     </message>
     <message>
-        <location filename="../src/PackageProperties.cpp" line="85"/>
+        <location filename="../src/PackageProperties.cpp" line="84"/>
         <location filename="../src/PackageProperties.cpp.orig" line="85"/>
         <source>N/A</source>
         <comment>Stands for: Not Available</comment>
         <translation>N/A</translation>
     </message>
     <message>
-        <location filename="../src/PackageProperties.cpp" line="190"/>
+        <location filename="../src/PackageProperties.cpp" line="183"/>
         <location filename="../src/PackageProperties.cpp.orig" line="190"/>
         <source>Changelog not available for this package</source>
         <translation>Dziennik zmian niedostepny dla tego pakietu</translation>
@@ -2721,158 +2734,158 @@ po więcej informacji.</translation>
         <translation>&lt;br&gt;&lt;b&gt;* Sprawdzanie poprawności transakcji&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="127"/>
-        <location filename="../src/QueueDialog.cpp" line="128"/>
+        <location filename="../src/QueueDialog.cpp" line="120"/>
+        <location filename="../src/QueueDialog.cpp" line="121"/>
         <location filename="../src/QueueDialog.cpp.orig" line="127"/>
         <location filename="../src/QueueDialog.cpp.orig" line="128"/>
         <source>Validating Dependencies...</source>
         <translation>Sprawdzanie zależności...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="131"/>
-        <location filename="../src/QueueDialog.cpp" line="132"/>
+        <location filename="../src/QueueDialog.cpp" line="124"/>
+        <location filename="../src/QueueDialog.cpp" line="125"/>
         <location filename="../src/QueueDialog.cpp.orig" line="131"/>
         <location filename="../src/QueueDialog.cpp.orig" line="132"/>
         <source>Checking for Conflicts...</source>
         <translation>Sprawdzanie konfliktów...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="135"/>
-        <location filename="../src/QueueDialog.cpp" line="136"/>
+        <location filename="../src/QueueDialog.cpp" line="128"/>
+        <location filename="../src/QueueDialog.cpp" line="129"/>
         <location filename="../src/QueueDialog.cpp.orig" line="135"/>
         <location filename="../src/QueueDialog.cpp.orig" line="136"/>
         <source>Resolving Dependencies...</source>
         <translation>Rozwiązywanie zależności...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="139"/>
-        <location filename="../src/QueueDialog.cpp" line="140"/>
+        <location filename="../src/QueueDialog.cpp" line="132"/>
+        <location filename="../src/QueueDialog.cpp" line="133"/>
         <location filename="../src/QueueDialog.cpp.orig" line="139"/>
         <location filename="../src/QueueDialog.cpp.orig" line="140"/>
         <source>Looking for Inter-Conflicts...</source>
         <translation>Szukanie konfliktów międzypakietowych...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="145"/>
+        <location filename="../src/QueueDialog.cpp" line="138"/>
         <location filename="../src/QueueDialog.cpp.orig" line="145"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Installation Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Instalacja pakietów rozpoczęta&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="148"/>
-        <location filename="../src/QueueDialog.cpp" line="149"/>
+        <location filename="../src/QueueDialog.cpp" line="141"/>
+        <location filename="../src/QueueDialog.cpp" line="142"/>
         <location filename="../src/QueueDialog.cpp.orig" line="148"/>
         <location filename="../src/QueueDialog.cpp.orig" line="149"/>
         <source>Installing %1...</source>
         <translation>Instalowanie %1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="153"/>
+        <location filename="../src/QueueDialog.cpp" line="146"/>
         <location filename="../src/QueueDialog.cpp.orig" line="153"/>
         <source>%1 (%2) installed successfully!</source>
         <translation>%1 (%2) zainstalowany pomyślnie!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="163"/>
+        <location filename="../src/QueueDialog.cpp" line="156"/>
         <location filename="../src/QueueDialog.cpp.orig" line="163"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Removal Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Usuwanie pakietów rozpoczęte&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="166"/>
-        <location filename="../src/QueueDialog.cpp" line="167"/>
+        <location filename="../src/QueueDialog.cpp" line="159"/>
+        <location filename="../src/QueueDialog.cpp" line="160"/>
         <location filename="../src/QueueDialog.cpp.orig" line="166"/>
         <location filename="../src/QueueDialog.cpp.orig" line="167"/>
         <source>Removing %1...</source>
         <translation>Usuwanie %1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="170"/>
+        <location filename="../src/QueueDialog.cpp" line="163"/>
         <location filename="../src/QueueDialog.cpp.orig" line="170"/>
         <source>%1 (%2) removed successfully!</source>
         <translation>%1 (%2) usunięty pomyślnie!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="180"/>
+        <location filename="../src/QueueDialog.cpp" line="173"/>
         <location filename="../src/QueueDialog.cpp.orig" line="180"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Upgrading Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Aktualizacja pakietów rozpoczęta&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="183"/>
-        <location filename="../src/QueueDialog.cpp" line="184"/>
+        <location filename="../src/QueueDialog.cpp" line="176"/>
+        <location filename="../src/QueueDialog.cpp" line="177"/>
         <location filename="../src/QueueDialog.cpp.orig" line="183"/>
         <location filename="../src/QueueDialog.cpp.orig" line="184"/>
         <source>Upgrading %1...</source>
         <translation>Aktualizacja %1...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="187"/>
+        <location filename="../src/QueueDialog.cpp" line="180"/>
         <location filename="../src/QueueDialog.cpp.orig" line="187"/>
         <source>Upgraded %1 successfully (%2 -&gt; %3)</source>
         <translation>Zaktualizowano %1 pomyślnie (%2 -&gt; %3)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="198"/>
+        <location filename="../src/QueueDialog.cpp" line="191"/>
         <location filename="../src/QueueDialog.cpp.orig" line="198"/>
         <source>&lt;br&gt;&lt;b&gt; * Queue Processing Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Przetwarzanie kolejki rozpoczęte&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="201"/>
-        <location filename="../src/QueueDialog.cpp" line="202"/>
+        <location filename="../src/QueueDialog.cpp" line="194"/>
+        <location filename="../src/QueueDialog.cpp" line="195"/>
         <location filename="../src/QueueDialog.cpp.orig" line="201"/>
         <location filename="../src/QueueDialog.cpp.orig" line="202"/>
         <source>Checking package integrity...</source>
         <translation>Sprawdzanie spójności pakietów...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="205"/>
-        <location filename="../src/QueueDialog.cpp" line="206"/>
+        <location filename="../src/QueueDialog.cpp" line="198"/>
+        <location filename="../src/QueueDialog.cpp" line="199"/>
         <location filename="../src/QueueDialog.cpp.orig" line="205"/>
         <location filename="../src/QueueDialog.cpp.orig" line="206"/>
         <source>Checking delta integrity...</source>
         <translation>Sprawdzanie spójności delt...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="209"/>
+        <location filename="../src/QueueDialog.cpp" line="202"/>
         <location filename="../src/QueueDialog.cpp.orig" line="209"/>
         <source>Applying deltas...</source>
         <translation>Zastosowywanie delt...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="212"/>
+        <location filename="../src/QueueDialog.cpp" line="205"/>
         <location filename="../src/QueueDialog.cpp.orig" line="212"/>
         <source>Generating %1 with %2... </source>
         <translation>Generowanie %1 z %2...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="216"/>
+        <location filename="../src/QueueDialog.cpp" line="209"/>
         <location filename="../src/QueueDialog.cpp.orig" line="216"/>
         <source>Success!</source>
         <translation>Sukces!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="219"/>
+        <location filename="../src/QueueDialog.cpp" line="212"/>
         <location filename="../src/QueueDialog.cpp.orig" line="219"/>
         <source>Failed!</source>
         <translation>Nie powiodło się!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="222"/>
+        <location filename="../src/QueueDialog.cpp" line="215"/>
         <location filename="../src/QueueDialog.cpp.orig" line="222"/>
         <source>Running package scripts...</source>
         <translation>Uruchamianie skryptów instalacyjnych pakietu...</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="228"/>
+        <location filename="../src/QueueDialog.cpp" line="221"/>
         <location filename="../src/QueueDialog.cpp.orig" line="228"/>
         <source>&lt;br&gt;&lt;b&gt; * Package Downloading Started&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt; * Pobieranie pakietów rozpoczęte&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="231"/>
-        <location filename="../src/QueueDialog.cpp" line="232"/>
+        <location filename="../src/QueueDialog.cpp" line="224"/>
+        <location filename="../src/QueueDialog.cpp" line="225"/>
         <location filename="../src/QueueDialog.cpp.orig" line="231"/>
         <location filename="../src/QueueDialog.cpp.orig" line="232"/>
         <source>Starting downloading packages from %1...</source>
@@ -2884,19 +2897,19 @@ po więcej informacji.</translation>
         <translation type="obsolete">%p% (%1 KB/s, %4:%5:%6 pozostało)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="264"/>
+        <location filename="../src/QueueDialog.cpp" line="257"/>
         <location filename="../src/QueueDialog.cpp.orig" line="264"/>
         <source>Downloading %1... (%2 MB of %3 MB)</source>
         <translation>Pobieranie %1... (%2 MB z %3 MB)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="268"/>
+        <location filename="../src/QueueDialog.cpp" line="261"/>
         <location filename="../src/QueueDialog.cpp.orig" line="268"/>
         <source>Downloading %1... (%2 KB of %3 KB)</source>
         <translation>Pobieranie %1... (%2 KB z %3 KB)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="327"/>
+        <location filename="../src/QueueDialog.cpp" line="320"/>
         <location filename="../src/QueueDialog.cpp.orig" line="327"/>
         <source>Queue processed, please wait...</source>
         <translation>Kolejka przetworzona, proszę czekać...</translation>
@@ -2926,13 +2939,13 @@ po więcej informacji.</translation>
         <translation type="obsolete">Błąd podczas przetwarzania skryptu instalacyjnego!!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="355"/>
+        <location filename="../src/QueueDialog.cpp" line="348"/>
         <location filename="../src/QueueDialog.cpp.orig" line="355"/>
         <source>Queue Processing</source>
         <translation>Przetwarzanie kolejki</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="356"/>
+        <location filename="../src/QueueDialog.cpp" line="349"/>
         <location filename="../src/QueueDialog.cpp.orig" line="356"/>
         <source>Would you like to abort Queue Processing?
 This may damage your system.</source>
@@ -2950,29 +2963,29 @@ Może to spowodować uszkodzenie Twojego systemu.</translation>
         <translation type="obsolete">Miał miejsce błąd podczas zastosowywania transakcji.</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="345"/>
+        <location filename="../src/QueueDialog.cpp" line="338"/>
         <location filename="../src/QueueDialog.cpp.orig" line="345"/>
         <source>Close</source>
         <translation>Zamknij</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="334"/>
-        <location filename="../src/QueueDialog.cpp" line="335"/>
+        <location filename="../src/QueueDialog.cpp" line="327"/>
+        <location filename="../src/QueueDialog.cpp" line="328"/>
         <location filename="../src/QueueDialog.cpp.orig" line="334"/>
         <location filename="../src/QueueDialog.cpp.orig" line="335"/>
         <source>Queue processing failed!</source>
         <translation>Przetwarzanie kolejki nie powiodło się!</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="256"/>
+        <location filename="../src/QueueDialog.cpp" line="249"/>
         <location filename="../src/QueueDialog.cpp.orig" line="256"/>
         <source>%p% (%1 KB/s, %2 remaining)</source>
         <comment>You just have to translate &apos;remaining&apos; here. Leave everything else as it is.</comment>
         <translation>%p% (%1 KB/s, %2 pozostało)</translation>
     </message>
     <message>
-        <location filename="../src/QueueDialog.cpp" line="337"/>
-        <location filename="../src/QueueDialog.cpp" line="338"/>
+        <location filename="../src/QueueDialog.cpp" line="330"/>
+        <location filename="../src/QueueDialog.cpp" line="331"/>
         <location filename="../src/QueueDialog.cpp.orig" line="337"/>
         <location filename="../src/QueueDialog.cpp.orig" line="338"/>
         <source>Queue processed successfully!</source>

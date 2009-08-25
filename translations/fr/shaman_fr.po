@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-22 15:34+0200\n"
+"POT-Creation-Date: 2009-08-25 11:09+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -264,7 +264,6 @@ msgid "Shaman - Processing"
 msgstr "Shaman - Traitement"
 
 #: BuildingHandler#21
-#, fuzzy
 msgid ""
 "You are about to install <b>%n package(s)</b> from source. Building from "
 "source<br>can give some advantages, however is very slow.<br>If you are not "
@@ -273,6 +272,7 @@ msgid ""
 "configuration to improve your building performance."
 msgstr ""
 "\n"
+"            \n"
 "            \n"
 "        "
 
@@ -807,7 +807,6 @@ msgid "Process Selected"
 msgstr "Processus sélectionné"
 
 #: ConfigDialog#94
-#, fuzzy
 msgctxt "ConfigDialog#94"
 msgid "Optimizing Pacman Database..."
 msgstr "Optimisation de la base de données Pacman..."
@@ -1128,75 +1127,83 @@ msgid "KDEMod 4 Unstable Repository (Testers only!)"
 msgstr "Dépôt KDEMod 4 Unstable (Seulement pour les tests !)"
 
 #: ConfigDialog#141
-#, fuzzy
 msgid ""
 "Here you can choose what repositories to use between Arch Linux's official "
 "ones. Please note that packages from Unstable and Testing may break your "
 "system."
 msgstr ""
-"\n"
+"Ici vous pouvez choisir quels dépôts utiliser parmi les officiels de "
+"Archlinux. Notez, SVP, que les paquets forunis par Unstable et testing "
+"peuvent casser votre système\n"
 "            "
 
 #: ConfigDialog#142
-#, fuzzy
 msgid ""
 "KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
 "improved Qt build, compatible with Arch Linux standard Qt's, an improved "
 "theme, and lots of addons, KDEMod is the best way to taste the ease and the "
 "power of KDE with the simplicity and the power of Arch."
 msgstr ""
-"\n"
+"KDEMod est une version améliorée de KDE, une exculsivité pour Archlinux. "
+"Comprenant un Qt-build éprouvé, compatible avec les standards Archlinux de "
+"Qt, un thème éprouvé, et de nombreux ajouts. KDEMod est la meilleure manière "
+"de goûter à la facilité et à la puissance de KDE, alliée à celle de "
+"Archlinux.\n"
 "            "
 
 #: ConfigDialog#143
-#, fuzzy
 msgid ""
 "You can extend your packages choice by adding other repositories. Third-"
 "Party Repositories act just as normal ones, and will be accessible through "
 "both Shaman and Pacman."
 msgstr ""
-"\n"
+"Vous pouvez augmenter le choix de vos paquets en ajoutant d'autres dépôts. "
+"Les dépôts tierces agissent comme les normaux, et seront accessibles par "
+"Shaman aussi bien que par Pacman.\n"
 "            "
 
 #: ConfigDialog#144
-#, fuzzy
 msgid "Use the following language:"
 msgstr ""
-"\n"
+"Utiliser le langage suivant\n"
 "            "
 
 #: ConfigDialog#145
-#, fuzzy
 msgid "Disable Tray Icon"
 msgstr ""
-"\n"
+"Désactiver l'icone de la barre\n"
 "            "
 
 #: ConfigDialog#146
 msgctxt "ConfigDialog#146"
 msgid "Database optimized successfully!"
-msgstr ""
+msgstr "Basse de données optimisée avec succès !"
 
 #: ConfigDialog#147
 msgctxt "ConfigDialog#147"
 msgid "Could not optimize database!"
-msgstr ""
+msgstr "Impossible d'optimiser las base de données !"
 
 #: ConfigDialog#148
 msgid "Error saving configuration"
-msgstr ""
+msgstr "Erreur en enregistrant la configuration"
 
 #: ConfigDialog#149
 msgid ""
 "There was an error while saving the configuration. This is probably due to "
 "an internal error or you being not authorized to perform the operation"
 msgstr ""
+"Il y a eu une erreur durant la sauvegarde de la configuration. Cela est "
+"certainement du à une erreur interne ou vous n'avez pas été autorisés à "
+"effectuer cette action"
 
 #: ConfigDialog#150
 msgid ""
 "There was an error while trying to add the mirror! This could be due also to "
 "your system policy preventing you from performing this action"
 msgstr ""
+"Il y a eu une erreur en essaynt d'ajouter le mirroir ! Cela pourrait être du "
+"à la surveillance de votre système en effectuant cette action"
 
 #: ConfigDialog#151
 msgid ""
@@ -1214,6 +1221,19 @@ msgid ""
 "family:'Liberation Sans'; font-size:9pt;\">Please choose an action from the "
 "Drop-Down Menu.</span></p></body></html>"
 msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Serif'; font-size:10pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Liberation Sans'; font-size:9pt;\">Maintenance de Shaman.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Liberation Sans'; font-size:9pt;\">Choisissez SVP, une action dans le "
+"menu déroulant.</span></p></body></html>"
 
 #: EditPBuild#1
 msgid "Saving"
@@ -1229,38 +1249,37 @@ msgstr ""
 
 #: ErrorHandler#1
 msgid "There has been an error while preparing the transaction."
-msgstr ""
+msgstr "Il y a eu une erreur en préparant la transaction."
 
 #: ErrorHandler#2
 msgid "Some dependencies can not be satisfied"
-msgstr ""
+msgstr "Des dépendances sont non-satisfaites"
 
 #: ErrorHandler#3
 msgid "%1: requires %2"
-msgstr ""
+msgstr "%1: requiert %2"
 
 #: ErrorHandler#4
 msgid "Some dependencies create a conflict with already installed packages"
-msgstr ""
+msgstr "Des dépendances ont créé un conflit avec d'autres paquets existants"
 
 #: ErrorHandler#5
 msgid "%1: conflicts with %2"
-msgstr ""
+msgstr "%1: est en conflit avec %2"
 
 #: ErrorHandler#6
 msgid "No further details were given. Last error string was:"
-msgstr ""
+msgstr "Aucun autre détail n'a été donné. La dernière erreur était :"
 
 #: ErrorHandler#7
 msgid "There has been an error while committing the transaction."
-msgstr ""
+msgstr "Il y a eu une erreur en effectuant la transaction."
 
 #: ErrorHandler#8
 msgid "Some files in the packages being processed are conflicting"
-msgstr ""
+msgstr "Certains fichiers du paquet en cours sont en conflit"
 
 #: ErrorHandler#9
-#, fuzzy
 msgctxt "ErrorHandler#9"
 msgid "%1 exists in both '%2' and '%3'"
 msgstr "%1 existe dans '%2' et '%3'"
@@ -1270,32 +1289,36 @@ msgid ""
 "Some files in the packages being processed conflict with the local "
 "filesystem"
 msgstr ""
+"Certains fichiers du paquet en cours sont en conflit avec le système de "
+"fichiers local"
 
 #: ErrorHandler#11
 msgid "%1: %2 exists in the filesystem"
-msgstr ""
+msgstr "%1: %2 existe dans le système de fichiers"
 
 #: ErrorHandler#12
 msgid "Some downloaded packages are corrupted or invalid"
-msgstr ""
+msgstr "Certains paquets téléchargés sont corrompus ou invalides"
 
 #: ErrorHandler#13
 msgid "%1 is invalid or corrupted"
-msgstr ""
+msgstr "%1 est invalide ou corrompu"
 
 #: ErrorHandler#14
 msgid "There has been an error while adding a target."
-msgstr ""
+msgstr "Il y a eu une erreur en ajoutant la cible."
 
 #: ErrorHandler#15
 msgid ""
 "This is probably an internal Shaman error. Please report it to help the "
 "developers solving it"
 msgstr ""
+"C'est certainement une erreur interne de Shaman. Veuillez SVP la rapporter "
+"afin d'aider les développeurs à la résoudre"
 
 #: ErrorHandler#16
 msgid "You seem not authorized to perform this operation"
-msgstr ""
+msgstr "Vous semblez ne pas être autorisés à effectuer cette opération"
 
 #: ErrorHandler#17
 msgid ""
@@ -1303,10 +1326,13 @@ msgid ""
 "failed or refused to authenticate. Please contact your system administrator "
 "for further details"
 msgstr ""
+"Il semble que le system policy vous empêche d'effectuer cette action, ou "
+"votre authentification est refusée. Contactez SVP vous administrateur "
+"système pour plus de détails"
 
 #: ErrorHandler#18
 msgid "There was a problem initialiting Aqpm"
-msgstr ""
+msgstr "Il y a eu un problème lors de l'initialisation de Aqpm"
 
 #: ErrorHandler#19
 msgid ""
@@ -1314,34 +1340,38 @@ msgid ""
 "privileged operation. This is probably due to a bug in Shaman/Aqpm or to a "
 "misconfiguration of your system"
 msgstr ""
+"Aqpm, la librairie en dessous de Shaman a reporté qu'elle ne pouvait pas "
+"démarrer une opération privilégiée. Cela est probablement du à un bug de "
+"Shaman ou a une mauvaise configuration de votre système"
 
 #: ErrorHandler#20
 msgid "There was an error during the transaction"
-msgstr ""
+msgstr "Il y a eu une erreur lors de la transaction"
 
 #: ErrorHandler#21
 msgid ""
 "It looks like Aqpm's worker crashed or disappeared. This is probably an "
 "internal Shaman error. Please report it to help the developers solving it"
 msgstr ""
+"Il semble que Aqpm's worker se soit planté ou a disparu. Il s'agit "
+"probablement d'une erreur interne de Shaman. Veuillez SVP la rapporter afin "
+"d'aider les développeurs à la résoudre"
 
 #: ErrorHandler#22
 msgid "The transaction was interrupted"
-msgstr ""
+msgstr "La transaction a été interrompue"
 
 #: ErrorHandler#23
 msgid "Error occurred"
-msgstr ""
+msgstr "Il y a eu une erreur"
 
 #: LocalPackage#1
-#, fuzzy
 msgid "Install Package from File"
 msgstr ""
-"\n"
+"Installer le paquet depuis le fichier\n"
 "            "
 
 #: LocalPackage#2
-#, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -1354,71 +1384,72 @@ msgid ""
 "Sans';\"><span style=\" font-weight:600;\">Local Package "
 "Installation</span></p></body></html>"
 msgstr ""
-"\n"
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Bitstream Vera "
+"Sans';\"><span style=\" font-weight:600;\">Installation d'un paquet "
+"local</span></p></body></html>\n"
 "            "
 
 #: LocalPackage#3
-#, fuzzy
 msgid "Show..."
 msgstr ""
-"\n"
+"Montre...\n"
 "            "
 
 #: LocalPackage#4
-#, fuzzy
 msgctxt "LocalPackage#4"
 msgid "More Details..."
 msgstr "Plus de détails..."
 
 #: LocalPackage#5
-#, fuzzy
 msgctxt "LocalPackage#5"
 msgid "Cancel"
 msgstr "Annuler"
 
 #: LocalPackage#6
-#, fuzzy
 msgctxt "LocalPackage#6"
 msgid "Install Package"
 msgstr ""
-"\n"
+"Installation du paquet\n"
 "            "
 
 #: LocalPackageDialog#1
-#, fuzzy
 msgid "Package is not installed"
 msgstr ""
-"\n"
+"Le paquet n'est pas installé\n"
 "            "
 
 #: LocalPackageDialog#2
-#, fuzzy
 msgid "Version %1 of this package is already installed"
 msgstr ""
-"\n"
+"La version %1 de ce paquet est déjà installée\n"
 "            "
 
 #: LocalPackageDialog#3
-#, fuzzy
 msgid "All dependencies are satisfied"
 msgstr ""
-"\n"
+"Toutes les dépendances sont satisfaites\n"
 "            "
 
 #: LocalPackageDialog#4
-#, fuzzy
 msgid "%n package(s) will be installed as dependencies"
 msgstr ""
 "\n"
 "            \n"
+"            \n"
 "        "
 
 #: LocalPackageDialog#5
-#, fuzzy
 msgctxt "LocalPackageDialog#5"
 msgid "Install Package"
 msgstr ""
-"\n"
+"Installation du paquet\n"
 "            "
 
 #: MainWindow#1
@@ -1588,7 +1619,6 @@ msgid "About..."
 msgstr "A propos..."
 
 #: MainWindow#38
-#, fuzzy
 msgctxt "MainWindow#38"
 msgid "Update Database"
 msgstr "Mettre à jour la base de données"
@@ -1617,7 +1647,6 @@ msgid "Quit"
 msgstr "Quitter"
 
 #: MainWindow#44
-#, fuzzy
 msgctxt "MainWindow#44"
 msgid "Process Queue"
 msgstr "Effectuer la liste"
@@ -2373,14 +2402,12 @@ msgstr ""
 "Raccourci de sortie de Shaman"
 
 #: MainWindow#155
-#, fuzzy
 msgid "Name and Description"
 msgstr ""
-"\n"
+"Nom et description\n"
 "            "
 
 #: MainWindow#156
-#, fuzzy
 msgctxt "MainWindow#156"
 msgid ""
 "%1 requires installing %2 from IgnorePkg/IgnoreGroup.\n"
@@ -2390,7 +2417,6 @@ msgstr ""
 "      Installer tout de même ?"
 
 #: MainWindow#157
-#, fuzzy
 msgctxt "MainWindow#157"
 msgid ""
 "%1 is in IgnorePkg/IgnoreGroup.\n"
@@ -2400,7 +2426,6 @@ msgstr ""
 "      Installer tout de même ?"
 
 #: MainWindow#158
-#, fuzzy
 msgctxt "MainWindow#158"
 msgid "Replace %1 with %2/%3?"
 msgstr "Remplacer %1 par %2/%3?"
@@ -2410,9 +2435,10 @@ msgid ""
 "%1 conflicts with %2.\n"
 "Remove %2?"
 msgstr ""
+"%1 est en conflit avec %2.\n"
+"Remplacer %2?"
 
 #: MainWindow#160
-#, fuzzy
 msgid ""
 "The following package(s) cannot be upgraded due to unresolvable "
 "dependencies:\n"
@@ -2422,10 +2448,10 @@ msgid ""
 msgstr ""
 "\n"
 "            \n"
+"            \n"
 "        "
 
 #: MainWindow#161
-#, fuzzy
 msgctxt "MainWindow#161"
 msgid ""
 "%1-%2: local version is newer.\n"
@@ -2435,7 +2461,6 @@ msgstr ""
 "Mettre à jour tout de même ?"
 
 #: MainWindow#162
-#, fuzzy
 msgctxt "MainWindow#162"
 msgid ""
 "File %1 is corrupted.\n"
@@ -2446,7 +2471,7 @@ msgstr ""
 
 #: MainWindow#163
 msgid "Transaction Question"
-msgstr ""
+msgstr "Question de transaction"
 
 #: MainWindow#164
 msgid ""
@@ -2474,149 +2499,148 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Lukas Appelhans "
 "&lt;boom1992@chakra-project.org&gt;</p></body></html>"
 msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">A libalpm frontend in Qt</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">License: GPLv2+</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Libalpm Version: v.%1</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008-2009 Dario Freddi "
+"&lt;drf@chakra-project.org&gt;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Lukas Appelhans "
+"&lt;boom1992@chakra-project.org&gt;</p></body></html>"
 
 #: MaintenanceBar#1
-#, fuzzy
 msgid "Please choose an action to start maintenance..."
 msgstr ""
-"\n"
+"Choisissez SVP une action pour démarrer la maintenance...\n"
 "            "
 
 #: MaintenanceBar#2
-#, fuzzy
 msgctxt "MaintenanceBar#2"
 msgid "Clean Unused Databases"
 msgstr "Nettoyer les bases de données inutilisées"
 
 #: MaintenanceBar#3
-#, fuzzy
 msgctxt "MaintenanceBar#3"
 msgid "Clean Cache"
 msgstr "Nettoyer le cache"
 
 #: MaintenanceBar#4
-#, fuzzy
 msgctxt "MaintenanceBar#4"
 msgid "Empty Cache"
 msgstr "Vider le cache"
 
 #: MaintenanceBar#5
-#, fuzzy
 msgctxt "MaintenanceBar#5"
 msgid "Optimize Pacman Database"
 msgstr "Optimiser la base de données Pacman"
 
 #: MaintenanceBar#6
-#, fuzzy
 msgctxt "MaintenanceBar#6"
 msgid "Clean All Building Environments"
 msgstr "Nettoyer tous les environnements de construction"
 
 #: MaintenanceBar#7
-#, fuzzy
 msgctxt "MaintenanceBar#7"
 msgid "Cleaning up unused Databases..."
 msgstr "Nettoyer les bases de données non-utilisées..."
 
 #: MaintenanceBar#8
-#, fuzzy
 msgctxt "MaintenanceBar#8"
 msgid "Cleaning up Cache..."
 msgstr "Nettoyage du cache..."
 
 #: MaintenanceBar#9
-#, fuzzy
 msgctxt "MaintenanceBar#9"
 msgid "Deleting Cache..."
 msgstr "Suppression du cache..."
 
 #: MaintenanceBar#10
-#, fuzzy
 msgctxt "MaintenanceBar#10"
 msgid "Optimizing Pacman Database..."
 msgstr "Optimisation de la base de données Pacman..."
 
 #: MaintenanceBar#11
-#, fuzzy
 msgctxt "MaintenanceBar#11"
 msgid "Cleaning up building Environments..."
 msgstr "Nettoyage de l'environnement de construction..."
 
 #: MaintenanceBar#12
-#, fuzzy
 msgctxt "MaintenanceBar#12"
 msgid "Abort"
 msgstr "Annulation"
 
 #: MaintenanceBar#13
-#, fuzzy
 msgid "System Maintenance"
 msgstr ""
-"\n"
+"Maintenance du système\n"
 "            "
 
 #: MaintenanceBar#14
-#, fuzzy
 msgctxt "MaintenanceBar#14"
 msgid "Unused Databases Cleaned up successfully!"
 msgstr "Base de données inutilisée effacée avec succès !"
 
 #: MaintenanceBar#15
-#, fuzzy
 msgctxt "MaintenanceBar#15"
 msgid "Cache Cleaned Up Successfully!"
 msgstr "Cache nettoyé avec succès !"
 
 #: MaintenanceBar#16
-#, fuzzy
 msgctxt "MaintenanceBar#16"
 msgid "Cache Successfully Deleted!"
 msgstr "Cache supprimé avec succès !"
 
 #: MaintenanceBar#17
-#, fuzzy
 msgctxt "MaintenanceBar#17"
 msgid "Build Environments Successfully Cleaned!"
 msgstr "Environnement de construction nettoyé avec succès !"
 
 #: MaintenanceBar#18
-#, fuzzy
 msgctxt "MaintenanceBar#18"
 msgid "Close"
 msgstr "Fermer"
 
 #: MaintenanceBar#19
-#, fuzzy
 msgctxt "MaintenanceBar#19"
 msgid "Cleaning up Unused Databases Failed!"
 msgstr "Le nettoyage de la base de données inutilisée a échoué !"
 
 #: MaintenanceBar#20
-#, fuzzy
 msgctxt "MaintenanceBar#20"
 msgid "Cleaning up Cache Failed!"
 msgstr "Le nettoyage du cache à échoué !"
 
 #: MaintenanceBar#21
-#, fuzzy
 msgctxt "MaintenanceBar#21"
 msgid "Deleting Cache Failed!"
 msgstr "La suppression du cache a échoué !"
 
 #: MaintenanceBar#22
-#, fuzzy
 msgctxt "MaintenanceBar#22"
 msgid "Could not clean Build Environments!!"
 msgstr "Impossible de nettoyer l'environnement de la construction !"
 
 #: MaintenanceBar#23
-#, fuzzy
 msgctxt "MaintenanceBar#23"
 msgid "Pacman Database Optimized Successfully!"
 msgstr "La base de données Pacman a été optimisée avec succès !"
 
 #: MaintenanceBar#24
-#, fuzzy
 msgctxt "MaintenanceBar#24"
 msgid "Could not Optimize Pacman Database!"
 msgstr "Impossible d'optimiser la base de données de Pacman !"
@@ -2656,21 +2680,20 @@ msgid "Sync could not be executed!!"
 msgstr "Sync ne peut pas être exécutée !!"
 
 #: MaintenanceBar#30
-#, fuzzy
 msgid "Maintenance Actions"
 msgstr ""
-"\n"
+"Actions de naintenance\n"
 "            "
 
 #: MaintenanceBar#31
 msgctxt "MaintenanceBar#31"
 msgid "Database optimized successfully!"
-msgstr ""
+msgstr "Base de données optimisée avec succès !"
 
 #: MaintenanceBar#32
 msgctxt "MaintenanceBar#32"
 msgid "Could not optimize database!"
-msgstr ""
+msgstr "Impossible d'optimiser la base de données !"
 
 #: NewsViewer#1
 msgid "Please wait, fetching items..."
@@ -2824,7 +2847,6 @@ msgstr ""
 "Shaman vous demandera le mot de passe root si nécessaire."
 
 #: QObject#15
-#, fuzzy
 msgid ""
 "It looks like another copy of Shaman is running.\n"
 "You can only run one copy of Shaman at a time."
@@ -2891,7 +2913,7 @@ msgstr "Whoa, c'est co&ol !"
 #: QObject#25
 msgid ""
 "Shaman can not be started as root. Please restart it as unprivileged user."
-msgstr ""
+msgstr "Shaman ne peut pas être démarré en root. Redémarrez-le SVP en user."
 
 #: QueueDialog#1
 msgid "<br><b> * Validating Transaction</b><br>"
@@ -3113,12 +3135,12 @@ msgstr "Ok"
 
 #: QueueDialog#49
 msgid "Running package scripts..."
-msgstr ""
+msgstr "Lancement du script de paquet..."
 
 # You just have to translate 'remaining' here. Leave everything else as it is.
 #: QueueDialog#50
 msgid "%p% (%1 KB/s, %2 remaining)"
-msgstr ""
+msgstr "%p% (%1 KB/s, %2 restant)"
 
 #: QueueReadyDialog#1
 msgid "Review Queue"
@@ -3259,18 +3281,18 @@ msgid "<b>%1</b> will be freed"
 msgstr "<b>%1</b> sera libéré"
 
 #: ReviewQueueDialog#16
-#, fuzzy
 msgid "Remove <b>%n package(s)</b><br />"
 msgstr ""
 "\n"
 "            \n"
+"            \n"
 "        "
 
 #: ReviewQueueDialog#17
-#, fuzzy
 msgid "Install/Upgrade <b>%n package(s)</b><br />"
 msgstr ""
 "\n"
+"            \n"
 "            \n"
 "        "
 
@@ -3380,12 +3402,12 @@ msgstr ""
 "Clicker ici pour ouvrir le dialogue des news, pour plus de détails."
 
 #: ShamanTrayIcon#16
-#, fuzzy
 msgid ""
 "Upgradeable package(s): %n.\n"
 "Click here to upgrade your System."
 msgstr ""
 "\n"
+"            \n"
 "            \n"
 "        "
 
@@ -3415,17 +3437,16 @@ msgid "To be Upgraded"
 msgstr "A mettre à jour"
 
 #: SysUpgradeDialog#4
-#, fuzzy
 msgid ""
 "<b>Upgradeable package(s): %n</b> You can either<br> upgrade immediately or "
 "add it to the current Queue<br> and process it later."
 msgstr ""
 "\n"
 "            \n"
+"            \n"
 "        "
 
 #: SysUpgradeDialog#5
-#, fuzzy
 msgctxt "SysUpgradeDialog#5"
 msgid "System Upgrade"
 msgstr "Mise à jour du système"
@@ -4866,7 +4887,6 @@ msgstr ""
 "relatifs aux traductions.</p></body></html>"
 
 #: aboutDialog#17
-#, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -5051,7 +5071,188 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
 "style=\" font-weight:400;\">Macedonian Translator</span></p></body></html>"
 msgstr ""
-"\n"
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span "
+"style=\" font-size:10pt;\">Shaman a reçu l'aide de nombreuses personnes et "
+"c'est aussi grâce à eux si Shaman a vu le jour. Si nous vous avons oubliés, "
+"faites-le nous savoir.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Les nons sont classés par "
+"ordre alphabétique, car même la plus petite des contributions a été "
+"importante pour nous.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\">La "
+"communauté KDEmod</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Aide, tests, supports, tout est parti d'ici. Si "
+"KDEMod n'avaist pas existé, </span> <span style=\" font-weight:400;\">Shaman "
+"n'aurait pas vu le jour.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Giannis Antoniou</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">traduction grecque</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Carlos Berroteran</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Traduction espagnole</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Sander De Voogdt</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Traduction hollandaise</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Jacques Disner</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Traduction française</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Jan Dupal</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Traduction tchèque</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Stefano Giro</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Tests et suggestions</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Georg Grabler</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Auteur du patch proxy, aide dans le codage et bien "
+"plus.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Michael Knights</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Décorateur, ses icônes "
+"reposent dans Arxin, mais son splashscreen est ici :o)</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Till Luge</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Testeur de choc, merci !</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Rodrigo Mazak</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Traduction brésilienne et "
+"auteur du nom Shaman.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\">Jan "
+"Mette</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Traduction allemande et "
+"développeur KDENod, et créateur des icônes.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Atilla Ontas</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Traduction turque</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Martin Sandsmark</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Notre hébergeur et "
+"mainteneur de Trac.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Johannes Schriewer</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Développeur KDEmod, et aide au codage.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Xiang Yixiang</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Traduction chinoise</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Anton Gritsay</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Traduction russe et patchs "
+"relatifs au traductions.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Bartek Iwaniec</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Traduction polonaise</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Marko Doda</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Traduction macédonienne</span></p></body></html>\n"
 "            "
 
 #: authDialog#1
@@ -5226,10 +5427,9 @@ msgid "Close"
 msgstr "Fermer"
 
 #: logViewer#9
-#, fuzzy
 msgid "dd/MM/yyyy"
 msgstr ""
-"\n"
+"jj/MM/aaaa\n"
 "            "
 
 #: newsDialog#1
