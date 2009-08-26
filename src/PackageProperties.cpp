@@ -131,7 +131,7 @@ void PackageProperties::populateFileWidget()
 {
     treeWidget->clear();
     treeWidget->header()->hide();
-    QStringList files = Backend::instance()->getPackageFiles(curPkg);
+    QStringList files = curPkg.files();
     foreach(const QString &file, files) {
         QStringList splitted = file.split(QChar('/'));
         QTreeWidgetItem *parentItem = 0;

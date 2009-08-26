@@ -772,7 +772,7 @@ void MainWindow::showPkgInfo()
     else if (PkgInfos->currentIndex() == 1) {
         filesWidget->clear();
         filesWidget->header()->hide();
-        QStringList files = Backend::instance()->getPackageFiles(pkg);
+        QStringList files = pkg.files();
         foreach(const QString &file, files) {
             QStringList splitted = file.split('/');
             QTreeWidgetItem *parentItem = 0;
