@@ -23,6 +23,8 @@
 #include <aqpm/Backend.h>
 #include <aqpm/Configuration.h>
 
+#include <QDebug>
+
 #include "MirrorWidget.h"
 #include "ThirdPartyWidget.h"
 
@@ -82,6 +84,14 @@ DatabaseConfig::DatabaseConfig(QWidget *parent, const QVariantList &args)
 
 void DatabaseConfig::init()
 {
+    m_archLay = new QVBoxLayout();
+    m_kdemodLay = new QVBoxLayout();
+    m_thirdPartyLay = new QVBoxLayout();
+
+    m_ui->archScrollArea->setLayout(m_archLay);
+    m_ui->kdemodScrollArea->setLayout(m_kdemodLay);
+    m_ui->thirdPartyScrollArea->setLayout(m_thirdPartyLay);
+
     PolkitQt::ActionButton *but = new PolkitQt::ActionButton(m_ui->addMirrorButton, "org.chakraproject.aqpm.addmirror", this);
     connect(but, SIGNAL(clicked(QAbstractButton*)), but, SLOT(activate()));
     connect(but, SIGNAL(activated()), this, SLOT(addMirror()));
@@ -123,31 +133,48 @@ void DatabaseConfig::load()
         }
     }
 
+    qDebug() << "one";
+    qDebug() << Configuration::instance()->serversForMirror("arch");
+
     // Now the servers
-    foreach (const QString &string, Configuration::instance()->serversForMirror("arch")) {
+    foreach (QString string, Configuration::instance()->serversForMirror("arch")) {
         MirrorWidget *wg = new MirrorWidget(Configuration::ArchMirror);
         wg->setMirror(string);
+        qDebug() << "wg";
 
         m_archMirrors.append(wg);
         m_ui->archScrollArea->layout()->addWidget(wg);
+        qDebug() << "app";
     }
+    m_archLay->addStretch();
 
-    foreach (const QString &string, Configuration::instance()->serversForMirror("kdemod")) {
+    qDebug() << "one";
+    qDebug() << Configuration::instance()->serversForMirror("kdemod");
+
+    foreach (QString string, Configuration::instance()->serversForMirror("kdemod")) {
         MirrorWidget *wg = new MirrorWidget(Configuration::KdemodMirror);
         wg->setMirror(string);
+        qDebug() << "wg";
 
         m_kdemodMirrors.append(wg);
         m_ui->kdemodScrollArea->layout()->addWidget(wg);
+        qDebug() << "app";
     }
+    m_kdemodLay->addStretch();
+
+    qDebug() << "one";
 
     // Now third parties
-    foreach (const QString &string, Configuration::instance()->mirrors(true)) {
+    foreach (QString string, Configuration::instance()->mirrors(true)) {
         ThirdPartyWidget *tp = new ThirdPartyWidget();
         tp->setMirrorName(string);
 
         m_thirdParty.append(tp);
         m_ui->thirdPartyScrollArea->layout()->addWidget(tp);
     }
+    m_thirdPartyLay->addStretch();
+
+    qDebug() << "one";
 }
 
 void DatabaseConfig::save()

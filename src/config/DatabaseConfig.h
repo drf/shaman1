@@ -31,6 +31,7 @@ namespace Ui {
 
 class MirrorWidget;
 class ThirdPartyWidget;
+class QVBoxLayout;
 
 #ifndef KDE4_INTEGRATION
 #include <QWidget>
@@ -59,6 +60,9 @@ private:
     QList<MirrorWidget*> m_archMirrors;
     QList<MirrorWidget*> m_kdemodMirrors;
     QList<ThirdPartyWidget*> m_thirdParty;
+    QVBoxLayout *m_archLay;
+    QVBoxLayout *m_kdemodLay;
+    QVBoxLayout *m_thirdPartyLay;
 };
 
 #endif // DATABASECONFIG_H
