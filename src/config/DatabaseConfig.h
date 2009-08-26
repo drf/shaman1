@@ -55,6 +55,9 @@ public:
 private:
     void init();
 
+private Q_SLOTS:
+    void removeWidget();
+
 private:
     Ui::DatabaseConfig *m_ui;
     QList<MirrorWidget*> m_archMirrors;

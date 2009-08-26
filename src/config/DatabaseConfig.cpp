@@ -140,6 +140,7 @@ void DatabaseConfig::load()
     foreach (QString string, Configuration::instance()->serversForMirror("arch")) {
         MirrorWidget *wg = new MirrorWidget(Configuration::ArchMirror);
         wg->setMirror(string);
+        connect (wg, SIGNAL(remove()), this, SLOT(removeWidget()));
         qDebug() << "wg";
 
         m_archMirrors.append(wg);
@@ -154,6 +155,7 @@ void DatabaseConfig::load()
     foreach (QString string, Configuration::instance()->serversForMirror("kdemod")) {
         MirrorWidget *wg = new MirrorWidget(Configuration::KdemodMirror);
         wg->setMirror(string);
+        connect (wg, SIGNAL(remove()), this, SLOT(removeWidget()));
         qDebug() << "wg";
 
         m_kdemodMirrors.append(wg);
@@ -168,6 +170,7 @@ void DatabaseConfig::load()
     foreach (QString string, Configuration::instance()->mirrors(true)) {
         ThirdPartyWidget *tp = new ThirdPartyWidget();
         tp->setMirrorName(string);
+        connect (tp, SIGNAL(remove()), this, SLOT(removeWidget()));
 
         m_thirdParty.append(tp);
         m_ui->thirdPartyScrollArea->layout()->addWidget(tp);
@@ -183,4 +186,21 @@ void DatabaseConfig::save()
 
 void DatabaseConfig::defaults()
 {
+}
+
+void DatabaseConfig::removeWidget()
+{
+    if (qobject_cast<ThirdPartyWidget*>(sender()) != 0) {
+        m_thirdParty.removeOne(qobject_cast<ThirdPartyWidget*>(sender()));
+        sender()->deleteLater();
+    } else {
+        MirrorWidget *wg = qobject_cast<MirrorWidget*>(sender());
+        if (wg->type() == Configuration::ArchMirror) {
+            m_archMirrors.removeOne(wg);
+            wg->deleteLater();
+        } else {
+            m_kdemodMirrors.removeOne(wg);
+            wg->deleteLater();
+        }
+    }
 }

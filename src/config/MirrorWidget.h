@@ -39,6 +39,7 @@ public:
     void reloadMirrors();
     QString mirror() const;
     void setMirror(const QString &mirror);
+    Aqpm::Configuration::MirrorType type() const;
 
 Q_SIGNALS:
     void mirrorSelectionChanged(const QString &mirror);

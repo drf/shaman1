@@ -52,3 +52,8 @@ void MirrorWidget::setMirror(const QString &mirror)
 {
     m_ui->mirrorBox->setCurrentIndex(m_ui->mirrorBox->findText(mirror));
 }
+
+Aqpm::Configuration::MirrorType MirrorWidget::type() const
+{
+    return m_type;
+}
