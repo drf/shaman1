@@ -17,7 +17,7 @@
    <item>
     <widget class="QTabWidget" name="repoTab">
      <property name="currentIndex">
-      <number>1</number>
+      <number>3</number>
      </property>
      <widget class="QWidget" name="officialTab">
       <attribute name="icon">
@@ -295,7 +295,7 @@
             <item>
              <widget class="QScrollArea" name="kdemodScrollArea">
               <property name="widgetResizable">
-               <bool>true</bool>
+               <bool>false</bool>
               </property>
               <widget class="QWidget" name="scrollAreaWidgetContents_3">
                <property name="geometry">
@@ -306,21 +306,7 @@
                  <height>211</height>
                 </rect>
                </property>
-               <layout class="QVBoxLayout" name="verticalLayout_7">
-                <item>
-                 <spacer name="verticalSpacer_2">
-                  <property name="orientation">
-                   <enum>Qt::Vertical</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>20</width>
-                    <height>200</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-               </layout>
+               <layout class="QVBoxLayout" name="verticalLayout_7"/>
               </widget>
              </widget>
             </item>
@@ -464,7 +450,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QListWidget" name="listWidget_2">
+          <widget class="QListWidget" name="dbOrderList">
            <property name="dragDropMode">
             <enum>QAbstractItemView::InternalMove</enum>
            </property>

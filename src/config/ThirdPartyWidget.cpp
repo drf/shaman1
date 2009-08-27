@@ -46,3 +46,22 @@ QString ThirdPartyWidget::mirrorName() const
 {
     return m_ui->nameEdit->text();
 }
+
+QStringList ThirdPartyWidget::databases() const
+{
+    QStringList dbs;
+    for (int i = 0; i < m_ui->listWidget->count(); ++i) {
+        dbs.append(m_ui->listWidget->item(i)->text());
+    }
+
+    return dbs;
+}
+
+void ThirdPartyWidget::setDatabases(const QStringList &db)
+{
+    while (m_ui->listWidget->count()) {
+        QListWidgetItem *itm = m_ui->listWidget->takeItem(0);
+        delete itm;
+    }
+    m_ui->listWidget->addItems(db);
+}

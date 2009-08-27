@@ -103,11 +103,18 @@ void DatabaseConfig::init()
     connect(but, SIGNAL(activated()), this, SLOT(addKDEModMirror()));
     but->setText(tr("Add Mirror"));
     but->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
+
+    connect(m_ui->addKDEModServerButton, SIGNAL(clicked()), this, SLOT(addKdemodWidget()));
+    connect(m_ui->addServerButton, SIGNAL(clicked()), this, SLOT(addArchWidget()));
+    connect(m_ui->addThirdPartyButton, SIGNAL(clicked()), this, SLOT(addThirdPartyWidget()));
 }
 
 void DatabaseConfig::load()
 {
     Database::List repos = Backend::instance()->getAvailableDatabases();
+    
+    // Now set the databases
+    m_ui->dbOrderList->addItems(Configuration::instance()->databases());
 
     foreach (const Database &db, repos) {
         if (db.name() == "core") {
@@ -138,14 +145,7 @@ void DatabaseConfig::load()
 
     // Now the servers
     foreach (QString string, Configuration::instance()->serversForMirror("arch")) {
-        MirrorWidget *wg = new MirrorWidget(Configuration::ArchMirror);
-        wg->setMirror(string);
-        connect (wg, SIGNAL(remove()), this, SLOT(removeWidget()));
-        qDebug() << "wg";
-
-        m_archMirrors.append(wg);
-        m_ui->archScrollArea->layout()->addWidget(wg);
-        qDebug() << "app";
+        addArchWidget(string);
     }
     m_archLay->addStretch();
 
@@ -153,35 +153,29 @@ void DatabaseConfig::load()
     qDebug() << Configuration::instance()->serversForMirror("kdemod");
 
     foreach (QString string, Configuration::instance()->serversForMirror("kdemod")) {
-        MirrorWidget *wg = new MirrorWidget(Configuration::KdemodMirror);
-        wg->setMirror(string);
-        connect (wg, SIGNAL(remove()), this, SLOT(removeWidget()));
-        qDebug() << "wg";
-
-        m_kdemodMirrors.append(wg);
-        m_ui->kdemodScrollArea->layout()->addWidget(wg);
-        qDebug() << "app";
+        addKdemodWidget(string);
     }
-    m_kdemodLay->addStretch();
 
     qDebug() << "one";
 
     // Now third parties
     foreach (QString string, Configuration::instance()->mirrors(true)) {
-        ThirdPartyWidget *tp = new ThirdPartyWidget();
-        tp->setMirrorName(string);
-        connect (tp, SIGNAL(remove()), this, SLOT(removeWidget()));
-
-        m_thirdParty.append(tp);
-        m_ui->thirdPartyScrollArea->layout()->addWidget(tp);
+        addThirdPartyWidget(string);
     }
     m_thirdPartyLay->addStretch();
-
+    
     qDebug() << "one";
 }
 
 void DatabaseConfig::save()
 {
+    QStringList dbs;
+
+    for (int i = 0; i < m_ui->dbOrderList->count(); ++i) {
+        dbs.append(m_ui->dbOrderList->item(i)->text());
+    }
+
+    Configuration::instance()->setDatabases(dbs);
 }
 
 void DatabaseConfig::defaults()
@@ -201,6 +195,218 @@ void DatabaseConfig::removeWidget()
         } else {
             m_kdemodMirrors.removeOne(wg);
             wg->deleteLater();
+        }
+    }
+}
+
+void DatabaseConfig::preferWidget()
+{
+    if (qobject_cast<ThirdPartyWidget*>(sender()) != 0) {
+        ThirdPartyWidget *wg = qobject_cast<ThirdPartyWidget*>(sender());
+        if (m_thirdParty.indexOf(wg) > 0) {
+            m_thirdParty.move(m_thirdParty.indexOf(wg), m_thirdParty.indexOf(wg) - 1);
+
+            foreach (QWidget *widget, m_thirdParty) {
+                m_ui->thirdPartyScrollArea->layout()->removeWidget(widget);
+            }
+
+            foreach (QWidget *widget, m_thirdParty) {
+                m_ui->thirdPartyScrollArea->layout()->addWidget(widget);
+            }
+        }
+    } else {
+        MirrorWidget *wg = qobject_cast<MirrorWidget*>(sender());
+        if (wg->type() == Configuration::ArchMirror) {
+            if (m_archMirrors.indexOf(wg) > 0) {
+                m_archMirrors.move(m_archMirrors.indexOf(wg), m_archMirrors.indexOf(wg) - 1);
+
+                foreach (QWidget *widget, m_archMirrors) {
+                    m_ui->archScrollArea->layout()->removeWidget(widget);
+                }
+
+                foreach (QWidget *widget, m_archMirrors) {
+                    m_ui->archScrollArea->layout()->addWidget(widget);
+                }
+            }
+        } else {
+            if (m_kdemodMirrors.indexOf(wg) > 0) {
+                m_kdemodMirrors.move(m_kdemodMirrors.indexOf(wg), m_kdemodMirrors.indexOf(wg) - 1);
+
+                foreach (QWidget *widget, m_kdemodMirrors) {
+                    m_ui->kdemodScrollArea->layout()->removeWidget(widget);
+                }
+
+                foreach (QWidget *widget, m_kdemodMirrors) {
+                    m_ui->kdemodScrollArea->layout()->addWidget(widget);
+                }
+            }
+        }
+    }
+}
+
+void DatabaseConfig::deferWidget()
+{
+    if (qobject_cast<ThirdPartyWidget*>(sender()) != 0) {
+        ThirdPartyWidget *wg = qobject_cast<ThirdPartyWidget*>(sender());
+        if (m_thirdParty.indexOf(wg) != m_thirdParty.count() - 1) {
+            m_thirdParty.move(m_thirdParty.indexOf(wg), m_thirdParty.indexOf(wg) + 1);
+
+            foreach (QWidget *widget, m_thirdParty) {
+                m_ui->thirdPartyScrollArea->layout()->removeWidget(widget);
+            }
+
+            foreach (QWidget *widget, m_thirdParty) {
+                m_ui->thirdPartyScrollArea->layout()->addWidget(widget);
+            }
+        }
+    } else {
+        MirrorWidget *wg = qobject_cast<MirrorWidget*>(sender());
+        if (wg->type() == Configuration::ArchMirror) {
+            if (m_archMirrors.indexOf(wg) != m_archMirrors.count() - 1) {
+                m_archMirrors.move(m_archMirrors.indexOf(wg), m_archMirrors.indexOf(wg) + 1);
+
+                foreach (QWidget *widget, m_archMirrors) {
+                    m_ui->archScrollArea->layout()->removeWidget(widget);
+                }
+
+                foreach (QWidget *widget, m_archMirrors) {
+                    m_ui->archScrollArea->layout()->addWidget(widget);
+                }
+            }
+        } else {
+            if (m_kdemodMirrors.indexOf(wg) != m_kdemodMirrors.count() - 1) {
+                m_kdemodMirrors.move(m_kdemodMirrors.indexOf(wg), m_kdemodMirrors.indexOf(wg) + 1);
+
+                foreach (QWidget *widget, m_kdemodMirrors) {
+                    m_ui->kdemodScrollArea->layout()->removeWidget(widget);
+                }
+
+                foreach (QWidget *widget, m_kdemodMirrors) {
+                    m_ui->kdemodScrollArea->layout()->addWidget(widget);
+                }
+            }
+        }
+    }
+}
+
+void DatabaseConfig::addArchWidget(const QString &server)
+{
+    if (m_archMirrors.count() >= 3) {
+        return;
+    }
+
+    MirrorWidget *wg = new MirrorWidget(Configuration::ArchMirror);
+    wg->setMirror(server);
+    connect (wg, SIGNAL(remove()), this, SLOT(removeWidget()));
+    connect (wg, SIGNAL(prefer()), this, SLOT(preferWidget()));
+    connect (wg, SIGNAL(defer()), this, SLOT(deferWidget()));
+    qDebug() << "wg";
+
+    m_archMirrors.append(wg);
+    m_ui->archScrollArea->layout()->addWidget(wg);
+    qDebug() << "app";
+}
+
+void DatabaseConfig::addKdemodWidget(const QString &server)
+{
+    if (m_kdemodMirrors.count() >= 3) {
+        return;
+    }
+
+    MirrorWidget *wg = new MirrorWidget(Configuration::KdemodMirror);
+    wg->setMirror(server);
+    connect (wg, SIGNAL(remove()), this, SLOT(removeWidget()));
+    connect (wg, SIGNAL(prefer()), this, SLOT(preferWidget()));
+    connect (wg, SIGNAL(defer()), this, SLOT(deferWidget()));
+    qDebug() << "wg";
+
+    m_kdemodMirrors.append(wg);
+    m_ui->kdemodScrollArea->layout()->addWidget(wg);
+    qDebug() << "app";
+    updateDatabaseList();
+}
+
+void DatabaseConfig::addThirdPartyWidget(const QString &name)
+{
+    if (m_thirdParty.count() >= 3) {
+        return;
+    }
+
+    ThirdPartyWidget *tp = new ThirdPartyWidget();
+
+    if (name.isEmpty()) {
+
+    }
+
+    tp->setMirrorName(name);
+    connect (tp, SIGNAL(remove()), this, SLOT(removeWidget()));
+    connect (tp, SIGNAL(prefer()), this, SLOT(preferWidget()));
+    connect (tp, SIGNAL(defer()), this, SLOT(deferWidget()));
+
+    m_thirdParty.append(tp);
+    m_ui->thirdPartyScrollArea->layout()->addWidget(tp);
+}
+
+void DatabaseConfig::updateDatabaseList()
+{
+    qDebug() << "Updating dbs";
+    QStringList databases;
+
+    if (m_ui->coreBox->isChecked()) {
+        databases.append("core");
+    }
+    if (m_ui->extraBox->isChecked()) {
+        databases.append("extra");
+    }
+    if (m_ui->communityBox->isChecked()) {
+        databases.append("community");
+    }
+    if (m_ui->testingBox->isChecked()) {
+        databases.append("testing");
+    }
+    if (m_ui->KDEMod3Box->isChecked()) {
+        databases.append("kdemod-legacy");
+    }
+    if (m_ui->KDEMod4Box->isChecked()) {
+        databases.append("kdemod-core");
+    }
+    if (m_ui->KDEMod4ExtragearBox->isChecked()) {
+        databases.append("kdemod-extragear");
+    }
+    if (m_ui->KDEMod4PlaygroundBox->isChecked()) {
+        databases.append("kdemod-playground");
+    }
+    if (m_ui->KDEMod4TestingBox->isChecked()) {
+        databases.append("kdemod-testing");
+    }
+    if (m_ui->KDEMod4UnstableBox->isChecked()) {
+        databases.append("kdemod-unstable");
+    }
+
+    foreach (ThirdPartyWidget *tp, m_thirdParty) {
+        databases.append(tp->databases());
+    }
+
+    // Now check
+    foreach (const QString &db, databases) {
+        if (m_ui->dbOrderList->findItems(db, Qt::MatchRegExp).isEmpty()) {
+            m_ui->dbOrderList->addItem(db);
+        }
+    }
+
+    qDebug() << databases;
+    qDebug() << m_ui->dbOrderList->count();
+
+    // Any removals?
+    if (databases.count() < m_ui->dbOrderList->count() - 1) {
+        for (int i = 0; i < m_ui->dbOrderList->count(); ++i) {
+            qDebug() << m_ui->dbOrderList->item(i)->text();
+            if (!databases.contains(m_ui->dbOrderList->item(i)->text())) {
+                qDebug() << "Ditchit";
+                QListWidgetItem *old = m_ui->dbOrderList->takeItem(i);
+                delete old;
+                --i;
+            }
         }
     }
 }

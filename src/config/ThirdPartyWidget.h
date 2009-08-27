@@ -18,11 +18,15 @@ public:
 
     void setMirrorName(const QString &name);
     QString mirrorName() const;
+    QStringList databases() const;
+    void setDatabases(const QStringList &db);
 
 private:
     void reload();
 
 Q_SIGNALS:
+    void prefer();
+    void defer();
     void remove();
 
 private:

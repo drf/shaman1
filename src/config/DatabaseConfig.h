@@ -57,6 +57,14 @@ private:
 
 private Q_SLOTS:
     void removeWidget();
+    void preferWidget();
+    void deferWidget();
+
+    void addArchWidget(const QString &server = QString());
+    void addKdemodWidget(const QString &server = QString());
+    void addThirdPartyWidget(const QString &name = QString());
+
+    void updateDatabaseList();
 
 private:
     Ui::DatabaseConfig *m_ui;
