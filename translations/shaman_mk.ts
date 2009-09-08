@@ -577,7 +577,7 @@ Please note that packages from Unstable and Testing may break your system.</sour
     </message>
     <message>
         <source>Mirror:</source>
-        <translation>Огледало:</translation>
+        <translation type="obsolete">Огледало:</translation>
     </message>
     <message>
         <source>KDEMod Repositories</source>
@@ -611,7 +611,7 @@ and Pacman.</source>
     </message>
     <message>
         <source>Repository</source>
-        <translation>Репозитар</translation>
+        <translation type="obsolete">Репозитар</translation>
     </message>
     <message>
         <source>Add New Repository</source>
@@ -619,11 +619,11 @@ and Pacman.</source>
     </message>
     <message>
         <source>Edit Repository</source>
-        <translation>Уреди репозитар</translation>
+        <translation type="obsolete">Уреди репозитар</translation>
     </message>
     <message>
         <source>Remove Repository</source>
-        <translation>Отстрани репозитар</translation>
+        <translation type="obsolete">Отстрани репозитар</translation>
     </message>
     <message>
         <source>Preferences</source>
@@ -847,9 +847,141 @@ and Pacman.</source>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add another server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Repository Order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please order your repositories to define which one will be preferred over another.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>DatabaseConfig</name>
+    <message>
+        <source>Add Mirror</source>
+        <translation type="unfinished">Додај огледало</translation>
+    </message>
+    <message>
+        <source>Mirror Format is incorrect. Your mirror should look like this:
+http://mirror.org/$repo/os/i686</source>
+        <comment>Obviously keep the example as it is ;)</comment>
+        <translation type="unfinished">Форматот на огледалото е неточен. Вашето огледало треба да изгледа овака:
+http://mirror.org/$repo/$arch</translation>
+    </message>
+    <message>
+        <source>Your Mirror was successfully added!
+It is now available in mirrorlist.</source>
+        <comment>mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.</comment>
+        <translation type="unfinished">Вашето огледало беше успешно додадено!
+сега е достапно во mirrorlist.</translation>
+    </message>
+    <message>
+        <source>There was an error while trying to add the mirror! This could be due also to your system policy preventing you from performing this action</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Arch Linux Official Repositories</source>
+        <translation type="unfinished">Официјални репозитари на Arch Linux</translation>
+    </message>
+    <message>
+        <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones. Please note that packages from Unstable and Testing may break your system.</source>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>Core</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Core</translation>
+    </message>
+    <message>
+        <source>Extra</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Extra</translation>
+    </message>
+    <message>
+        <source>Community</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Community</translation>
+    </message>
+    <message>
+        <source>Testing</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Testing</translation>
+    </message>
+    <message>
+        <source>Server</source>
+        <translation type="unfinished">Сервер</translation>
+    </message>
+    <message>
+        <source>Add another server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KDEMod Repositories</source>
+        <translation type="unfinished">KDEMod репозитари</translation>
+    </message>
+    <message>
+        <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme, and lots of addons, KDEMod is the best way to taste the ease and the power of KDE with the simplicity and the power of Arch.</source>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Repository</source>
+        <translation type="unfinished">KDEMod 4 репозитар</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Extragear Repository</source>
+        <translation type="unfinished">KDEMod 4 Extragear репозитар</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Playground Repository</source>
+        <translation type="unfinished">KDEMod 4 Playground репозитар</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Testing Repository</source>
+        <translation type="unfinished">KDEMod 4 Testing репозитар</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Unstable Repository (Testers only!)</source>
+        <translation type="unfinished">KDEMod 4 Unstable репозитар (само за тестери)</translation>
+    </message>
+    <message>
+        <source>KDEMod 3 Repository</source>
+        <translation type="unfinished">KDEMod 3 репозитар</translation>
+    </message>
+    <message>
+        <source>Third-Party Repositories</source>
+        <translation type="unfinished">Неофицијални репозитари</translation>
+    </message>
+    <message>
+        <source>You can extend your packages choice by adding other repositories. Third-Party Repositories act just as normal ones, and will be accessible through both Shaman and Pacman.</source>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>Add New Repository</source>
+        <translation type="unfinished">Додај нов репозитар</translation>
+    </message>
+    <message>
+        <source>Repository Order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please order your repositories to define which one will be preferred over another.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -959,6 +1091,381 @@ Do you want to save it?</source>
     <message>
         <source>Error occurred</source>
         <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Form</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Favourite Actions</source>
+        <translation type="unfinished">Омилени акции</translation>
+    </message>
+    <message>
+        <source>When Upgrading System:</source>
+        <translation type="unfinished">Кога се надградува системот:</translation>
+    </message>
+    <message>
+        <source>Upgrade Immediately</source>
+        <translation type="unfinished">Надргради веднаш</translation>
+    </message>
+    <message>
+        <source>Add Upgradeable Packages To Queue</source>
+        <translation type="unfinished">Додади надградливи пакети во редицата</translation>
+    </message>
+    <message>
+        <source>Ask</source>
+        <translation type="unfinished">Прашај</translation>
+    </message>
+    <message>
+        <source>When Processing Queue</source>
+        <translation type="unfinished">Кога се обработува редицата</translation>
+    </message>
+    <message>
+        <source>Keep application running in System Tray only</source>
+        <translation type="unfinished">Задржи ја апликацијата да работи само во системска лента</translation>
+    </message>
+    <message>
+        <source>GUI Startup</source>
+        <translation type="unfinished">Стартување на GUI</translation>
+    </message>
+    <message>
+        <source>Start in the System Tray</source>
+        <translation type="unfinished">Стартувај во системската лента</translation>
+    </message>
+    <message>
+        <source>Show Splashscreen</source>
+        <translation type="unfinished">Прикажи поздравен екран</translation>
+    </message>
+    <message>
+        <source>Use the following language:</source>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>Disable Tray Icon</source>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>Maintenance</source>
+        <translation type="unfinished">Одржување</translation>
+    </message>
+    <message>
+        <source>Process Selected</source>
+        <translation type="unfinished">Обработи ги одбраните</translation>
+    </message>
+    <message>
+        <source>Waiting</source>
+        <comment>Waiting for a user action</comment>
+        <translation type="unfinished">Исчекувам</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Checkable Options</source>
+        <translation type="unfinished">Опции за чекирање</translation>
+    </message>
+    <message>
+        <source>Use Active FTP</source>
+        <translation type="unfinished">Користи активен FTP</translation>
+    </message>
+    <message>
+        <source>Use Deltas (needs xdelta to be installed)</source>
+        <translation type="unfinished">Користи Delta-и (потребно е да биде инсталирано xdelta)</translation>
+    </message>
+    <message>
+        <source>Use SysLog</source>
+        <translation type="unfinished">Користи SysLog</translation>
+    </message>
+    <message>
+        <source>Advanced Options</source>
+        <translation type="unfinished">Напредни опции</translation>
+    </message>
+    <message>
+        <source>HoldPkgs:</source>
+        <translation type="unfinished">HoldPkgs:</translation>
+    </message>
+    <message>
+        <source>IgnorePkgs:</source>
+        <translation type="unfinished">IgnorePkgs:</translation>
+    </message>
+    <message>
+        <source>IgnoreGroups:</source>
+        <translation type="unfinished">IgnoreGroups:</translation>
+    </message>
+    <message>
+        <source>NoUpgrade:</source>
+        <translation type="unfinished">NoUpgrade:</translation>
+    </message>
+    <message>
+        <source>NoExtract:</source>
+        <translation type="unfinished">NoExtract:</translation>
+    </message>
+    <message>
+        <source>Log File:</source>
+        <translation type="unfinished">Записничка датотека:</translation>
+    </message>
+    <message>
+        <source>XFerCommand: (example: /path/to/command %u) Blank for Default</source>
+        <translation type="unfinished">XFerCommand: ( пример: /патека/до/команда %u) Празно за предефинирано</translation>
+    </message>
+    <message>
+        <source>Arch Linux Official Repositories</source>
+        <translation type="unfinished">Официјални репозитари на Arch Linux</translation>
+    </message>
+    <message>
+        <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones. Please note that packages from Unstable and Testing may break your system.</source>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>Core</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Core</translation>
+    </message>
+    <message>
+        <source>Extra</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Extra</translation>
+    </message>
+    <message>
+        <source>Community</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Community</translation>
+    </message>
+    <message>
+        <source>Testing</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Testing</translation>
+    </message>
+    <message>
+        <source>Server</source>
+        <translation type="unfinished">Сервер</translation>
+    </message>
+    <message>
+        <source>Add Mirror</source>
+        <translation type="unfinished">Додај огледало</translation>
+    </message>
+    <message>
+        <source>Add another server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KDEMod Repositories</source>
+        <translation type="unfinished">KDEMod репозитари</translation>
+    </message>
+    <message>
+        <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme, and lots of addons, KDEMod is the best way to taste the ease and the power of KDE with the simplicity and the power of Arch.</source>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Repository</source>
+        <translation type="unfinished">KDEMod 4 репозитар</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Extragear Repository</source>
+        <translation type="unfinished">KDEMod 4 Extragear репозитар</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Playground Repository</source>
+        <translation type="unfinished">KDEMod 4 Playground репозитар</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Testing Repository</source>
+        <translation type="unfinished">KDEMod 4 Testing репозитар</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Unstable Repository (Testers only!)</source>
+        <translation type="unfinished">KDEMod 4 Unstable репозитар (само за тестери)</translation>
+    </message>
+    <message>
+        <source>KDEMod 3 Repository</source>
+        <translation type="unfinished">KDEMod 3 репозитар</translation>
+    </message>
+    <message>
+        <source>Third-Party Repositories</source>
+        <translation type="unfinished">Неофицијални репозитари</translation>
+    </message>
+    <message>
+        <source>You can extend your packages choice by adding other repositories. Third-Party Repositories act just as normal ones, and will be accessible through both Shaman and Pacman.</source>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>Add New Repository</source>
+        <translation type="unfinished">Додај нов репозитар</translation>
+    </message>
+    <message>
+        <source>Repository Order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please order your repositories to define which one will be preferred over another.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Preferences</source>
+        <translation type="unfinished">Преференции</translation>
+    </message>
+    <message>
+        <source>Process all dependencies and queue from binary first (recommended)</source>
+        <translation type="unfinished">Обработи ги сите зависности и прво обработи од бинарни пакети (recommended)</translation>
+    </message>
+    <message>
+        <source>Review Building output before installing</source>
+        <translation type="unfinished">Прегледај го излезот од создавањето на пакет пред инсталирање</translation>
+    </message>
+    <message>
+        <source>ABS Configuration</source>
+        <translation type="unfinished">Конфигурација на ABS</translation>
+    </message>
+    <message>
+        <source>Use supfiles that match your current repositories</source>
+        <translation type="unfinished">Користи supfiles кои одговараат на вашите сегашни репозитари</translation>
+    </message>
+    <message>
+        <source>Define supfiles manually</source>
+        <translation type="unfinished">Дефинирај supfiles рачно</translation>
+    </message>
+    <message>
+        <source>RSync Server:</source>
+        <translation type="unfinished">RSync сервер:</translation>
+    </message>
+    <message>
+        <source>Makepkg Configuration</source>
+        <translation type="unfinished">Конфигурација Makepkg</translation>
+    </message>
+    <message>
+        <source>CFlags</source>
+        <translation type="unfinished">CFlags</translation>
+    </message>
+    <message>
+        <source>CXXFlags</source>
+        <translation type="unfinished">CXXFlags</translation>
+    </message>
+    <message>
+        <source>BuildEnv</source>
+        <translation type="unfinished">BuildEnv</translation>
+    </message>
+    <message>
+        <source>Options</source>
+        <translation type="unfinished">Опции</translation>
+    </message>
+    <message>
+        <source>Doc_Dirs</source>
+        <translation type="unfinished">Doc_Dirs</translation>
+    </message>
+    <message>
+        <source>Build Environment</source>
+        <translation type="unfinished">Околина за создавање на пакети</translation>
+    </message>
+    <message>
+        <source>Building Path</source>
+        <translation type="unfinished">Патека за создавање на пакети</translation>
+    </message>
+    <message>
+        <source>Remove installed makedepends after build</source>
+        <translation type="unfinished">Отстрани ги инсталираните зависности за создавање кога пакетот ќе се создаде</translation>
+    </message>
+    <message>
+        <source>Clean Build Environment after installation</source>
+        <translation type="unfinished">Исчисти ја околината за создавање на пакети по инсталација</translation>
+    </message>
+    <message>
+        <source>When Application is in System Tray only</source>
+        <translation type="unfinished">Кога апликацијата е во системска лента</translation>
+    </message>
+    <message>
+        <source>Update Database every</source>
+        <translation type="unfinished">Ажурирај ја датабазата секои</translation>
+    </message>
+    <message>
+        <source>min</source>
+        <comment>As in &quot;minutes&quot;</comment>
+        <translation type="unfinished">мин</translation>
+    </message>
+    <message>
+        <source>Show tray notification Windows</source>
+        <translation type="unfinished">Покажи прозорци за известување од системска лента</translation>
+    </message>
+    <message>
+        <source>If upgrades are available:</source>
+        <translation type="unfinished">Доколку надградби се достапни:</translation>
+    </message>
+    <message>
+        <source>Just Notify</source>
+        <translation type="unfinished">Само извести</translation>
+    </message>
+    <message>
+        <source>Notify and add them to Queue</source>
+        <translation type="unfinished">Извести и додади ги во редица</translation>
+    </message>
+    <message>
+        <source>Update Database at</source>
+        <translation type="unfinished">Ажурирај ја датабазата во</translation>
+    </message>
+    <message>
+        <source>Use a proxy-server</source>
+        <translation type="unfinished">Користи прокси сервер</translation>
+    </message>
+    <message>
+        <source>IP:</source>
+        <translation type="unfinished">IP:</translation>
+    </message>
+    <message>
+        <source>Port:</source>
+        <translation type="unfinished">Порта:</translation>
+    </message>
+    <message>
+        <source>HTTP Proxy</source>
+        <translation type="unfinished">HTTP Прокси</translation>
+    </message>
+    <message>
+        <source>FTP Proxy</source>
+        <translation type="unfinished">FTP Прокси</translation>
+    </message>
+    <message>
+        <source>Use Shaman RSS Capabilities</source>
+        <translation type="unfinished">Користи ги RSS можностите на Shaman</translation>
+    </message>
+    <message>
+        <source>Update RSS Feed Every</source>
+        <translation type="unfinished">Ажурирај го RSS доводот секои</translation>
+    </message>
+    <message>
+        <source>Notify upon new items</source>
+        <translation type="unfinished">Извести при нови вести</translation>
+    </message>
+    <message>
+        <source>Check if there is an unread news about a package in Queue before processing it</source>
+        <translation type="unfinished">Провери дали има непрочитана вест за пакет во редицата пред да се обработи</translation>
+    </message>
+    <message>
+        <source>Interface</source>
+        <translation type="unfinished">Интерфејс</translation>
+    </message>
+    <message>
+        <source>Use Animated Tray Icon</source>
+        <translation type="unfinished">Користи анимирана икона во лента</translation>
+    </message>
+    <message>
+        <source>Start Shaman Automatically on X Startup</source>
+        <translation type="unfinished">Стартувај го Shaman автоматски при стартувањето на X</translation>
+    </message>
+    <message>
+        <source>Forbid starting Shaman as root</source>
+        <translation type="unfinished">Забрани стартување на Shaman како root</translation>
     </message>
 </context>
 <context>
@@ -1668,6 +2175,29 @@ p, li { white-space: pre-wrap; }
     </message>
 </context>
 <context>
+    <name>MirrorWidget</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mirror:</source>
+        <translation type="unfinished">Огледало:</translation>
+    </message>
+    <message>
+        <source>Prefer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Defer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>NewsViewer</name>
     <message>
         <source>Please wait, fetching items...</source>
@@ -2122,6 +2652,29 @@ p, li { white-space: pre-wrap; }
     </message>
 </context>
 <context>
+    <name>ServerWidget</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Server:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Prefer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Defer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ShamanStatusBar</name>
     <message>
         <source>%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages</source>
@@ -2223,6 +2776,29 @@ Click here to upgrade your System.</source>
     <message>
         <source>System Upgrade</source>
         <translation type="unfinished">Надградба на системот</translation>
+    </message>
+</context>
+<context>
+    <name>ThirdPartyWidget</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation type="unfinished">Име</translation>
+    </message>
+    <message>
+        <source>Databases</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-25 11:10+0200\n"
+"POT-Creation-Date: 2009-09-08 14:50+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -470,11 +470,13 @@ msgstr ""
 "Wilt u uw database bijwerken?"
 
 #: ConfigDialog#33
+msgctxt "ConfigDialog#33"
 msgid "Add Mirror"
 msgstr "Mirror toevoegen"
 
 # Obviously keep the example as it is ;)
 #: ConfigDialog#34
+msgctxt "ConfigDialog#34"
 msgid ""
 "Mirror Format is incorrect. Your mirror should look like this:\n"
 "http://mirror.org/$repo/os/i686"
@@ -484,6 +486,7 @@ msgstr ""
 
 # mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.
 #: ConfigDialog#35
+msgctxt "ConfigDialog#35"
 msgid ""
 "Your Mirror was successfully added!\n"
 "It is now available in mirrorlist."
@@ -557,55 +560,68 @@ msgid "Shaman - Configuration"
 msgstr "Shaman - Instellingen"
 
 #: ConfigDialog#46
+msgctxt "ConfigDialog#46"
 msgid "Favourite Actions"
 msgstr "Voorkeursacties"
 
 #: ConfigDialog#47
+msgctxt "ConfigDialog#47"
 msgid "When Upgrading System:"
 msgstr "Wanneer systeem bijgewerkt wordt:"
 
 #: ConfigDialog#48
+msgctxt "ConfigDialog#48"
 msgid "Upgrade Immediately"
 msgstr "Onmiddellijk bijwerken"
 
 #: ConfigDialog#49
+msgctxt "ConfigDialog#49"
 msgid "Add Upgradeable Packages To Queue"
 msgstr "Bij te werken paketten toevoegen aan de wachtrij"
 
 #: ConfigDialog#50
+msgctxt "ConfigDialog#50"
 msgid "Ask"
 msgstr "Vragen"
 
 #: ConfigDialog#51
+msgctxt "ConfigDialog#51"
 msgid "When Processing Queue"
 msgstr "Tijdens het bewerken van de wachtrij"
 
 #: ConfigDialog#52
+msgctxt "ConfigDialog#52"
 msgid "Keep application running in System Tray only"
 msgstr "Laat het programma enkel draaien in het systeemvak"
 
 #: ConfigDialog#53
+msgctxt "ConfigDialog#53"
 msgid "GUI Startup"
 msgstr "Met grafische interface starten"
 
 #: ConfigDialog#54
+msgctxt "ConfigDialog#54"
 msgid "Start in the System Tray"
 msgstr "In het systeemvak starten"
 
 #: ConfigDialog#55
+msgctxt "ConfigDialog#55"
 msgid "Show Splashscreen"
 msgstr "Opstartscherm tonen"
 
 #: ConfigDialog#56
+msgctxt "ConfigDialog#56"
 msgid "Maintenance"
 msgstr "Onderhoud"
 
 #: ConfigDialog#57
+msgctxt "ConfigDialog#57"
 msgid "Process Selected"
 msgstr "Proces geselecteerd"
 
 # Waiting for a user action
 #: ConfigDialog#58
+msgctxt "ConfigDialog#58"
 msgid "Waiting"
 msgstr "Aan het wachten"
 
@@ -640,55 +656,68 @@ msgstr ""
 "Sans'; font-size:9pt;\">Kies een optie uit het uitklapmenu.</p></body></html>"
 
 #: ConfigDialog#60
+msgctxt "ConfigDialog#60"
 msgid "Checkable Options"
 msgstr "Selecteerbare opties"
 
 #: ConfigDialog#61
+msgctxt "ConfigDialog#61"
 msgid "Use Active FTP"
 msgstr "Actieve FTP gebruiken"
 
 #: ConfigDialog#62
+msgctxt "ConfigDialog#62"
 msgid "Use Deltas (needs xdelta to be installed)"
 msgstr "Delta's gebruiken (xdelta dient geïnstalleerd te zijn)"
 
 #: ConfigDialog#63
+msgctxt "ConfigDialog#63"
 msgid "Use SysLog"
 msgstr "SysLog gebruiken"
 
 #: ConfigDialog#64
+msgctxt "ConfigDialog#64"
 msgid "Advanced Options"
 msgstr "Geavanceerde opties"
 
 #: ConfigDialog#65
+msgctxt "ConfigDialog#65"
 msgid "HoldPkgs:"
 msgstr "HoldPkgs:"
 
 #: ConfigDialog#66
+msgctxt "ConfigDialog#66"
 msgid "IgnorePkgs:"
 msgstr "IgnorePkgs:"
 
 #: ConfigDialog#67
+msgctxt "ConfigDialog#67"
 msgid "IgnoreGroups:"
 msgstr "IgnoreGroups:"
 
 #: ConfigDialog#68
+msgctxt "ConfigDialog#68"
 msgid "NoUpgrade:"
 msgstr "NoUpgrade:"
 
 #: ConfigDialog#69
+msgctxt "ConfigDialog#69"
 msgid "NoExtract:"
 msgstr "NoExtract:"
 
 #: ConfigDialog#70
+msgctxt "ConfigDialog#70"
 msgid "Log File:"
 msgstr "Logbestand:"
 
 #: ConfigDialog#71
+msgctxt "ConfigDialog#71"
 msgid "XFerCommand: (example: /path/to/command %u) Blank for Default"
 msgstr ""
 "XFerCommand: (bijvoorbeeld: /pad/naar/opdracht %u) Leeglaten voor standaard"
 
 #: ConfigDialog#72
+msgctxt "ConfigDialog#72"
 msgid "Arch Linux Official Repositories"
 msgstr "Arch Linux Officiële Repositories"
 
@@ -704,21 +733,25 @@ msgstr ""
 
 # Do not translate
 #: ConfigDialog#74
+msgctxt "ConfigDialog#74"
 msgid "Core"
 msgstr "Core"
 
 # Do not translate
 #: ConfigDialog#75
+msgctxt "ConfigDialog#75"
 msgid "Extra"
 msgstr "Extra"
 
 # Do not translate
 #: ConfigDialog#76
+msgctxt "ConfigDialog#76"
 msgid "Community"
 msgstr "Community"
 
 # Do not translate
 #: ConfigDialog#77
+msgctxt "ConfigDialog#77"
 msgid "Testing"
 msgstr "Testing"
 
@@ -729,14 +762,18 @@ msgid "Unstable"
 msgstr "Unstable"
 
 #: ConfigDialog#79
+msgctxt "ConfigDialog#79"
 msgid "Server"
 msgstr "Server"
 
+#. (obsolete)
 #: ConfigDialog#80
+msgctxt "ConfigDialog#80"
 msgid "Mirror:"
 msgstr "Mirror:"
 
 #: ConfigDialog#81
+msgctxt "ConfigDialog#81"
 msgid "KDEMod Repositories"
 msgstr "KDEMod Repositories"
 
@@ -758,6 +795,7 @@ msgstr ""
 "combineren met de eenvoud van Arch."
 
 #: ConfigDialog#83
+msgctxt "ConfigDialog#83"
 msgid "KDEMod 3 Repository"
 msgstr "KDEMod 3 Repository"
 
@@ -772,6 +810,7 @@ msgid "KDEMod 4 Repository (Unstable, testers only)"
 msgstr "KDEMod 4 Repository (Onstabiel, alleen voor testers)"
 
 #: ConfigDialog#86
+msgctxt "ConfigDialog#86"
 msgid "Third-Party Repositories"
 msgstr "Repositories van derden"
 
@@ -790,159 +829,197 @@ msgstr ""
 "Shaman \n"
 "als Pacman."
 
+#. (obsolete)
 #: ConfigDialog#88
 msgctxt "ConfigDialog#88"
 msgid "Repository"
 msgstr "Repository"
 
 #: ConfigDialog#89
+msgctxt "ConfigDialog#89"
 msgid "Add New Repository"
 msgstr "Nieuwe Repository toevoegen"
 
+#. (obsolete)
 #: ConfigDialog#90
 msgid "Edit Repository"
 msgstr "Repository bewerken"
 
+#. (obsolete)
 #: ConfigDialog#91
 msgid "Remove Repository"
 msgstr "Repository verwijderen"
 
 #: ConfigDialog#92
+msgctxt "ConfigDialog#92"
 msgid "Preferences"
 msgstr "Voorkeuren"
 
 #: ConfigDialog#93
+msgctxt "ConfigDialog#93"
 msgid "Process all dependencies and queue from binary first (recommended)"
 msgstr ""
 "Alle afhankelijkheden verwerken en eerst binaire pakketten gebruiken "
 "(aanbevolen)"
 
 #: ConfigDialog#94
+msgctxt "ConfigDialog#94"
 msgid "Review Building output before installing"
 msgstr "Uitvoer bouwproces bekijken alvorens pakket te installeren"
 
 #: ConfigDialog#95
+msgctxt "ConfigDialog#95"
 msgid "ABS Configuration"
 msgstr "ABS-instellingen"
 
 #: ConfigDialog#96
+msgctxt "ConfigDialog#96"
 msgid "Use supfiles that match your current repositories"
 msgstr "Gebruik supfiles die overeenkomen met uw huidige repositories"
 
 #: ConfigDialog#97
+msgctxt "ConfigDialog#97"
 msgid "Define supfiles manually"
 msgstr "supfiles handmatig opgeven"
 
 #: ConfigDialog#98
+msgctxt "ConfigDialog#98"
 msgid "RSync Server:"
 msgstr "RSync-server:"
 
 #: ConfigDialog#99
+msgctxt "ConfigDialog#99"
 msgid "Makepkg Configuration"
 msgstr "Makepkg-instellingen"
 
 #: ConfigDialog#100
+msgctxt "ConfigDialog#100"
 msgid "CFlags"
 msgstr "CFlags"
 
 #: ConfigDialog#101
+msgctxt "ConfigDialog#101"
 msgid "CXXFlags"
 msgstr "CXXFlags"
 
 #: ConfigDialog#102
+msgctxt "ConfigDialog#102"
 msgid "BuildEnv"
 msgstr "BuildEnv"
 
 #: ConfigDialog#103
+msgctxt "ConfigDialog#103"
 msgid "Options"
 msgstr "Opties"
 
 #: ConfigDialog#104
+msgctxt "ConfigDialog#104"
 msgid "Doc_Dirs"
 msgstr "Doc_Dirs"
 
 #: ConfigDialog#105
+msgctxt "ConfigDialog#105"
 msgid "Build Environment"
 msgstr "Build Environment"
 
 #: ConfigDialog#106
+msgctxt "ConfigDialog#106"
 msgid "Building Path"
 msgstr "Building Path"
 
 #: ConfigDialog#107
+msgctxt "ConfigDialog#107"
 msgid "Remove installed makedepends after build"
 msgstr "Geïnstalleerde bouwafhankelijkheden verwijderen na bouwen"
 
 #: ConfigDialog#108
+msgctxt "ConfigDialog#108"
 msgid "Clean Build Environment after installation"
 msgstr "Bouwomgeving opruimen na installatie"
 
 #: ConfigDialog#109
+msgctxt "ConfigDialog#109"
 msgid "When Application is in System Tray only"
 msgstr "Als het programma alleen in het systeemvak zit"
 
 #: ConfigDialog#110
+msgctxt "ConfigDialog#110"
 msgid "Update Database every"
 msgstr "Database vernieuwen iedere"
 
 # As in "minutes"
 #: ConfigDialog#111
+msgctxt "ConfigDialog#111"
 msgid "min"
 msgstr "minuut"
 
 #: ConfigDialog#112
+msgctxt "ConfigDialog#112"
 msgid "Show tray notification Windows"
 msgstr "Systeemvakmeldingen tonen"
 
 #: ConfigDialog#113
+msgctxt "ConfigDialog#113"
 msgid "If upgrades are available:"
 msgstr "Als upgrades beschikbaar zijn:"
 
 #: ConfigDialog#114
+msgctxt "ConfigDialog#114"
 msgid "Just Notify"
 msgstr "Alleen melden"
 
 #: ConfigDialog#115
+msgctxt "ConfigDialog#115"
 msgid "Notify and add them to Queue"
 msgstr "Melden en aan wachtrij toevoegen"
 
 #: ConfigDialog#116
+msgctxt "ConfigDialog#116"
 msgid "Update Database at"
 msgstr "Database updaten om"
 
 #: ConfigDialog#117
+msgctxt "ConfigDialog#117"
 msgid "Use a proxy-server"
 msgstr "Proxy-server gebruiken"
 
 #: ConfigDialog#118
+msgctxt "ConfigDialog#118"
 msgid "IP:"
 msgstr "IP-adres:"
 
 #: ConfigDialog#119
+msgctxt "ConfigDialog#119"
 msgid "Port:"
 msgstr "Poort:"
 
 #: ConfigDialog#120
+msgctxt "ConfigDialog#120"
 msgid "HTTP Proxy"
 msgstr "HTTP-proxy"
 
 #: ConfigDialog#121
+msgctxt "ConfigDialog#121"
 msgid "FTP Proxy"
 msgstr "FTP-proxy"
 
 #: ConfigDialog#122
+msgctxt "ConfigDialog#122"
 msgid "Use Shaman RSS Capabilities"
 msgstr "Shamans RSS-mogelijkheden gebruiken"
 
 #: ConfigDialog#123
+msgctxt "ConfigDialog#123"
 msgid "Update RSS Feed Every"
 msgstr "RSS-feed bijwerken iedere"
 
 #: ConfigDialog#124
+msgctxt "ConfigDialog#124"
 msgid "Notify upon new items"
 msgstr "Nieuwe items melden"
 
 #: ConfigDialog#125
+msgctxt "ConfigDialog#125"
 msgid ""
 "Check if there is an unread news about a package in Queue before processing "
 "it"
@@ -951,42 +1028,52 @@ msgstr ""
 "alvorens het te installeren"
 
 #: ConfigDialog#126
+msgctxt "ConfigDialog#126"
 msgid "Interface"
 msgstr "Interface"
 
 #: ConfigDialog#127
+msgctxt "ConfigDialog#127"
 msgid "Use Animated Tray Icon"
 msgstr "Bewegend systeemvak pictogram gebruiken"
 
 #: ConfigDialog#128
+msgctxt "ConfigDialog#128"
 msgid "Start Shaman Automatically on X Startup"
 msgstr "Shaman starten bij het starten van X"
 
 #: ConfigDialog#129
+msgctxt "ConfigDialog#129"
 msgid "Forbid starting Shaman as root"
 msgstr "Verhinderen dat Shaman als root gestart wordt"
 
 #: ConfigDialog#130
+msgctxt "ConfigDialog#130"
 msgid "KDEMod 4 Repository"
 msgstr "KDEMod 4 Repository"
 
 #: ConfigDialog#131
+msgctxt "ConfigDialog#131"
 msgid "KDEMod 4 Extragear Repository"
 msgstr "KDEMod 4 Extragear Repository"
 
 #: ConfigDialog#132
+msgctxt "ConfigDialog#132"
 msgid "KDEMod 4 Playground Repository"
 msgstr "KDEMod 4 Playground Repository"
 
 #: ConfigDialog#133
+msgctxt "ConfigDialog#133"
 msgid "KDEMod 4 Testing Repository"
 msgstr "KDEMod 4 Testing Repository"
 
 #: ConfigDialog#134
+msgctxt "ConfigDialog#134"
 msgid "KDEMod 4 Unstable Repository (Testers only!)"
 msgstr "KDEMod 4 Unstable Repository (alleen testers)"
 
 #: ConfigDialog#135
+msgctxt "ConfigDialog#135"
 msgid ""
 "Here you can choose what repositories to use between Arch Linux's official "
 "ones. Please note that packages from Unstable and Testing may break your "
@@ -997,6 +1084,7 @@ msgstr ""
 "schade aan uw systeem kunnen toebrengen."
 
 #: ConfigDialog#136
+msgctxt "ConfigDialog#136"
 msgid ""
 "KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
 "improved Qt build, compatible with Arch Linux standard Qt's, an improved "
@@ -1009,6 +1097,7 @@ msgstr ""
 "manier om van de kracht van KDE te proeven, met de eenvoudigheid van Arch."
 
 #: ConfigDialog#137
+msgctxt "ConfigDialog#137"
 msgid ""
 "You can extend your packages choice by adding other repositories. Third-"
 "Party Repositories act just as normal ones, and will be accessible through "
@@ -1019,10 +1108,12 @@ msgstr ""
 "benaderbaar via Shaman en Pacman."
 
 #: ConfigDialog#138
+msgctxt "ConfigDialog#138"
 msgid "Use the following language:"
 msgstr "De volgende taal gebruiken:"
 
 #: ConfigDialog#139
+msgctxt "ConfigDialog#139"
 msgid "Disable Tray Icon"
 msgstr "Systeemvakpictogram uitschakelen"
 
@@ -1047,26 +1138,234 @@ msgid ""
 msgstr ""
 
 #: ConfigDialog#144
+msgctxt "ConfigDialog#144"
 msgid ""
 "There was an error while trying to add the mirror! This could be due also to "
 "your system policy preventing you from performing this action"
 msgstr ""
 
 #: ConfigDialog#145
+msgctxt "ConfigDialog#145"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Liberation Serif'; font-size:10pt; "
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:8pt; "
 "font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"family:'Liberation Sans'; font-size:9pt;\">Shaman Manteinance.</span></p>\n"
+"size:9pt;\">Shaman Manteinance.</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"family:'Liberation Sans'; font-size:9pt;\">Please choose an action from the "
-"Drop-Down Menu.</span></p></body></html>"
+"size:9pt;\">Please choose an action from the Drop-Down "
+"Menu.</span></p></body></html>"
+msgstr ""
+
+#: ConfigDialog#146
+msgctxt "ConfigDialog#146"
+msgid "Add another server"
+msgstr ""
+
+#: ConfigDialog#147
+msgctxt "ConfigDialog#147"
+msgid "Repository Order"
+msgstr ""
+
+#: ConfigDialog#148
+msgctxt "ConfigDialog#148"
+msgid ""
+"Please order your repositories to define which one will be preferred over "
+"another."
+msgstr ""
+
+#: DatabaseConfig#1
+#, fuzzy
+msgctxt "DatabaseConfig#1"
+msgid "Add Mirror"
+msgstr "Mirror toevoegen"
+
+# Obviously keep the example as it is ;)
+#: DatabaseConfig#2
+#, fuzzy
+msgctxt "DatabaseConfig#2"
+msgid ""
+"Mirror Format is incorrect. Your mirror should look like this:\n"
+"http://mirror.org/$repo/os/i686"
+msgstr ""
+"Ongeldig mirrorformaat. De mirror dient er als volgt uit te zien:\n"
+"http://mirror.org/$repo/os/i686"
+
+# mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.
+#: DatabaseConfig#3
+#, fuzzy
+msgctxt "DatabaseConfig#3"
+msgid ""
+"Your Mirror was successfully added!\n"
+"It is now available in mirrorlist."
+msgstr ""
+"Uw mirror is succesvol toegevoegd.\n"
+"Het is nu beschikbaar in mirrorlist."
+
+#: DatabaseConfig#4
+msgctxt "DatabaseConfig#4"
+msgid ""
+"There was an error while trying to add the mirror! This could be due also to "
+"your system policy preventing you from performing this action"
+msgstr ""
+
+#: DatabaseConfig#5
+msgctxt "DatabaseConfig#5"
+msgid "Form"
+msgstr ""
+
+#: DatabaseConfig#6
+#, fuzzy
+msgctxt "DatabaseConfig#6"
+msgid "Arch Linux Official Repositories"
+msgstr "Arch Linux Officiële Repositories"
+
+#: DatabaseConfig#7
+#, fuzzy
+msgctxt "DatabaseConfig#7"
+msgid ""
+"Here you can choose what repositories to use between Arch Linux's official "
+"ones. Please note that packages from Unstable and Testing may break your "
+"system."
+msgstr ""
+"Hier kunt u repositories selecteren die naast Arch Linux' officiële "
+"repositories gebruikt worden. Merk op dat pakketten uit Unstable en Testing "
+"schade aan uw systeem kunnen toebrengen."
+
+# Do not translate
+#: DatabaseConfig#8
+#, fuzzy
+msgctxt "DatabaseConfig#8"
+msgid "Core"
+msgstr "Core"
+
+# Do not translate
+#: DatabaseConfig#9
+#, fuzzy
+msgctxt "DatabaseConfig#9"
+msgid "Extra"
+msgstr "Extra"
+
+# Do not translate
+#: DatabaseConfig#10
+#, fuzzy
+msgctxt "DatabaseConfig#10"
+msgid "Community"
+msgstr "Community"
+
+# Do not translate
+#: DatabaseConfig#11
+#, fuzzy
+msgctxt "DatabaseConfig#11"
+msgid "Testing"
+msgstr "Testing"
+
+#: DatabaseConfig#12
+#, fuzzy
+msgctxt "DatabaseConfig#12"
+msgid "Server"
+msgstr "Server"
+
+#: DatabaseConfig#13
+msgctxt "DatabaseConfig#13"
+msgid "Add another server"
+msgstr ""
+
+#: DatabaseConfig#14
+#, fuzzy
+msgctxt "DatabaseConfig#14"
+msgid "KDEMod Repositories"
+msgstr "KDEMod Repositories"
+
+#: DatabaseConfig#15
+#, fuzzy
+msgctxt "DatabaseConfig#15"
+msgid ""
+"KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
+"improved Qt build, compatible with Arch Linux standard Qt's, an improved "
+"theme, and lots of addons, KDEMod is the best way to taste the ease and the "
+"power of KDE with the simplicity and the power of Arch."
+msgstr ""
+"KDEMod is een verbeterde versie van KDE, exclusief voor Arch Linux. Het "
+"bevat een verbeterde Qt-installatie (compatibel met Arch Linux' standaard "
+"Qt-installaties), een verbeterde stijl en vele extra's. KDEMod is de beste "
+"manier om van de kracht van KDE te proeven, met de eenvoudigheid van Arch."
+
+#: DatabaseConfig#16
+#, fuzzy
+msgctxt "DatabaseConfig#16"
+msgid "KDEMod 4 Repository"
+msgstr "KDEMod 4 Repository"
+
+#: DatabaseConfig#17
+#, fuzzy
+msgctxt "DatabaseConfig#17"
+msgid "KDEMod 4 Extragear Repository"
+msgstr "KDEMod 4 Extragear Repository"
+
+#: DatabaseConfig#18
+#, fuzzy
+msgctxt "DatabaseConfig#18"
+msgid "KDEMod 4 Playground Repository"
+msgstr "KDEMod 4 Playground Repository"
+
+#: DatabaseConfig#19
+#, fuzzy
+msgctxt "DatabaseConfig#19"
+msgid "KDEMod 4 Testing Repository"
+msgstr "KDEMod 4 Testing Repository"
+
+#: DatabaseConfig#20
+#, fuzzy
+msgctxt "DatabaseConfig#20"
+msgid "KDEMod 4 Unstable Repository (Testers only!)"
+msgstr "KDEMod 4 Unstable Repository (alleen testers)"
+
+#: DatabaseConfig#21
+#, fuzzy
+msgctxt "DatabaseConfig#21"
+msgid "KDEMod 3 Repository"
+msgstr "KDEMod 3 Repository"
+
+#: DatabaseConfig#22
+#, fuzzy
+msgctxt "DatabaseConfig#22"
+msgid "Third-Party Repositories"
+msgstr "Repositories van derden"
+
+#: DatabaseConfig#23
+#, fuzzy
+msgctxt "DatabaseConfig#23"
+msgid ""
+"You can extend your packages choice by adding other repositories. Third-"
+"Party Repositories act just as normal ones, and will be accessible through "
+"both Shaman and Pacman."
+msgstr ""
+"U kunt het pakketaanbod uitbreiden door andere repositories toe te voegen. "
+"Repositories van derden gedragen zich als normale repositories, en zijn "
+"benaderbaar via Shaman en Pacman."
+
+#: DatabaseConfig#24
+#, fuzzy
+msgctxt "DatabaseConfig#24"
+msgid "Add New Repository"
+msgstr "Nieuwe Repository toevoegen"
+
+#: DatabaseConfig#25
+msgctxt "DatabaseConfig#25"
+msgid "Repository Order"
+msgstr ""
+
+#: DatabaseConfig#26
+msgctxt "DatabaseConfig#26"
+msgid ""
+"Please order your repositories to define which one will be preferred over "
+"another."
 msgstr ""
 
 #: EditPBuild#1
@@ -1186,6 +1485,583 @@ msgstr ""
 #: ErrorHandler#23
 msgid "Error occurred"
 msgstr ""
+
+#: Form#1
+msgctxt "Form#1"
+msgid "Form"
+msgstr ""
+
+#: Form#2
+#, fuzzy
+msgctxt "Form#2"
+msgid "Favourite Actions"
+msgstr "Voorkeursacties"
+
+#: Form#3
+#, fuzzy
+msgctxt "Form#3"
+msgid "When Upgrading System:"
+msgstr "Wanneer systeem bijgewerkt wordt:"
+
+#: Form#4
+#, fuzzy
+msgctxt "Form#4"
+msgid "Upgrade Immediately"
+msgstr "Onmiddellijk bijwerken"
+
+#: Form#5
+#, fuzzy
+msgctxt "Form#5"
+msgid "Add Upgradeable Packages To Queue"
+msgstr "Bij te werken paketten toevoegen aan de wachtrij"
+
+#: Form#6
+#, fuzzy
+msgctxt "Form#6"
+msgid "Ask"
+msgstr "Vragen"
+
+#: Form#7
+#, fuzzy
+msgctxt "Form#7"
+msgid "When Processing Queue"
+msgstr "Tijdens het bewerken van de wachtrij"
+
+#: Form#8
+#, fuzzy
+msgctxt "Form#8"
+msgid "Keep application running in System Tray only"
+msgstr "Laat het programma enkel draaien in het systeemvak"
+
+#: Form#9
+#, fuzzy
+msgctxt "Form#9"
+msgid "GUI Startup"
+msgstr "Met grafische interface starten"
+
+#: Form#10
+#, fuzzy
+msgctxt "Form#10"
+msgid "Start in the System Tray"
+msgstr "In het systeemvak starten"
+
+#: Form#11
+#, fuzzy
+msgctxt "Form#11"
+msgid "Show Splashscreen"
+msgstr "Opstartscherm tonen"
+
+#: Form#12
+#, fuzzy
+msgctxt "Form#12"
+msgid "Use the following language:"
+msgstr "De volgende taal gebruiken:"
+
+#: Form#13
+#, fuzzy
+msgctxt "Form#13"
+msgid "Disable Tray Icon"
+msgstr "Systeemvakpictogram uitschakelen"
+
+#: Form#14
+#, fuzzy
+msgctxt "Form#14"
+msgid "Maintenance"
+msgstr "Onderhoud"
+
+#: Form#15
+#, fuzzy
+msgctxt "Form#15"
+msgid "Process Selected"
+msgstr "Proces geselecteerd"
+
+# Waiting for a user action
+#: Form#16
+#, fuzzy
+msgctxt "Form#16"
+msgid "Waiting"
+msgstr "Aan het wachten"
+
+#: Form#17
+msgctxt "Form#17"
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:8pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Shaman Manteinance.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Please choose an action from the Drop-Down "
+"Menu.</span></p></body></html>"
+msgstr ""
+
+#: Form#18
+#, fuzzy
+msgctxt "Form#18"
+msgid "Checkable Options"
+msgstr "Selecteerbare opties"
+
+#: Form#19
+#, fuzzy
+msgctxt "Form#19"
+msgid "Use Active FTP"
+msgstr "Actieve FTP gebruiken"
+
+#: Form#20
+#, fuzzy
+msgctxt "Form#20"
+msgid "Use Deltas (needs xdelta to be installed)"
+msgstr "Delta's gebruiken (xdelta dient geïnstalleerd te zijn)"
+
+#: Form#21
+#, fuzzy
+msgctxt "Form#21"
+msgid "Use SysLog"
+msgstr "SysLog gebruiken"
+
+#: Form#22
+#, fuzzy
+msgctxt "Form#22"
+msgid "Advanced Options"
+msgstr "Geavanceerde opties"
+
+#: Form#23
+#, fuzzy
+msgctxt "Form#23"
+msgid "HoldPkgs:"
+msgstr "HoldPkgs:"
+
+#: Form#24
+#, fuzzy
+msgctxt "Form#24"
+msgid "IgnorePkgs:"
+msgstr "IgnorePkgs:"
+
+#: Form#25
+#, fuzzy
+msgctxt "Form#25"
+msgid "IgnoreGroups:"
+msgstr "IgnoreGroups:"
+
+#: Form#26
+#, fuzzy
+msgctxt "Form#26"
+msgid "NoUpgrade:"
+msgstr "NoUpgrade:"
+
+#: Form#27
+#, fuzzy
+msgctxt "Form#27"
+msgid "NoExtract:"
+msgstr "NoExtract:"
+
+#: Form#28
+#, fuzzy
+msgctxt "Form#28"
+msgid "Log File:"
+msgstr "Logbestand:"
+
+#: Form#29
+#, fuzzy
+msgctxt "Form#29"
+msgid "XFerCommand: (example: /path/to/command %u) Blank for Default"
+msgstr ""
+"XFerCommand: (bijvoorbeeld: /pad/naar/opdracht %u) Leeglaten voor standaard"
+
+#: Form#30
+#, fuzzy
+msgctxt "Form#30"
+msgid "Arch Linux Official Repositories"
+msgstr "Arch Linux Officiële Repositories"
+
+#: Form#31
+#, fuzzy
+msgctxt "Form#31"
+msgid ""
+"Here you can choose what repositories to use between Arch Linux's official "
+"ones. Please note that packages from Unstable and Testing may break your "
+"system."
+msgstr ""
+"Hier kunt u repositories selecteren die naast Arch Linux' officiële "
+"repositories gebruikt worden. Merk op dat pakketten uit Unstable en Testing "
+"schade aan uw systeem kunnen toebrengen."
+
+# Do not translate
+#: Form#32
+#, fuzzy
+msgctxt "Form#32"
+msgid "Core"
+msgstr "Core"
+
+# Do not translate
+#: Form#33
+#, fuzzy
+msgctxt "Form#33"
+msgid "Extra"
+msgstr "Extra"
+
+# Do not translate
+#: Form#34
+#, fuzzy
+msgctxt "Form#34"
+msgid "Community"
+msgstr "Community"
+
+# Do not translate
+#: Form#35
+#, fuzzy
+msgctxt "Form#35"
+msgid "Testing"
+msgstr "Testing"
+
+#: Form#36
+#, fuzzy
+msgctxt "Form#36"
+msgid "Server"
+msgstr "Server"
+
+#: Form#37
+#, fuzzy
+msgctxt "Form#37"
+msgid "Add Mirror"
+msgstr "Mirror toevoegen"
+
+#: Form#38
+msgctxt "Form#38"
+msgid "Add another server"
+msgstr ""
+
+#: Form#39
+#, fuzzy
+msgctxt "Form#39"
+msgid "KDEMod Repositories"
+msgstr "KDEMod Repositories"
+
+#: Form#40
+#, fuzzy
+msgctxt "Form#40"
+msgid ""
+"KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
+"improved Qt build, compatible with Arch Linux standard Qt's, an improved "
+"theme, and lots of addons, KDEMod is the best way to taste the ease and the "
+"power of KDE with the simplicity and the power of Arch."
+msgstr ""
+"KDEMod is een verbeterde versie van KDE, exclusief voor Arch Linux. Het "
+"bevat een verbeterde Qt-installatie (compatibel met Arch Linux' standaard "
+"Qt-installaties), een verbeterde stijl en vele extra's. KDEMod is de beste "
+"manier om van de kracht van KDE te proeven, met de eenvoudigheid van Arch."
+
+#: Form#41
+#, fuzzy
+msgctxt "Form#41"
+msgid "KDEMod 4 Repository"
+msgstr "KDEMod 4 Repository"
+
+#: Form#42
+#, fuzzy
+msgctxt "Form#42"
+msgid "KDEMod 4 Extragear Repository"
+msgstr "KDEMod 4 Extragear Repository"
+
+#: Form#43
+#, fuzzy
+msgctxt "Form#43"
+msgid "KDEMod 4 Playground Repository"
+msgstr "KDEMod 4 Playground Repository"
+
+#: Form#44
+#, fuzzy
+msgctxt "Form#44"
+msgid "KDEMod 4 Testing Repository"
+msgstr "KDEMod 4 Testing Repository"
+
+#: Form#45
+#, fuzzy
+msgctxt "Form#45"
+msgid "KDEMod 4 Unstable Repository (Testers only!)"
+msgstr "KDEMod 4 Unstable Repository (alleen testers)"
+
+#: Form#46
+#, fuzzy
+msgctxt "Form#46"
+msgid "KDEMod 3 Repository"
+msgstr "KDEMod 3 Repository"
+
+#: Form#47
+#, fuzzy
+msgctxt "Form#47"
+msgid "Third-Party Repositories"
+msgstr "Repositories van derden"
+
+#: Form#48
+#, fuzzy
+msgctxt "Form#48"
+msgid ""
+"You can extend your packages choice by adding other repositories. Third-"
+"Party Repositories act just as normal ones, and will be accessible through "
+"both Shaman and Pacman."
+msgstr ""
+"U kunt het pakketaanbod uitbreiden door andere repositories toe te voegen. "
+"Repositories van derden gedragen zich als normale repositories, en zijn "
+"benaderbaar via Shaman en Pacman."
+
+#: Form#49
+#, fuzzy
+msgctxt "Form#49"
+msgid "Add New Repository"
+msgstr "Nieuwe Repository toevoegen"
+
+#: Form#50
+msgctxt "Form#50"
+msgid "Repository Order"
+msgstr ""
+
+#: Form#51
+msgctxt "Form#51"
+msgid ""
+"Please order your repositories to define which one will be preferred over "
+"another."
+msgstr ""
+
+#: Form#52
+#, fuzzy
+msgctxt "Form#52"
+msgid "Preferences"
+msgstr "Voorkeuren"
+
+#: Form#53
+#, fuzzy
+msgctxt "Form#53"
+msgid "Process all dependencies and queue from binary first (recommended)"
+msgstr ""
+"Alle afhankelijkheden verwerken en eerst binaire pakketten gebruiken "
+"(aanbevolen)"
+
+#: Form#54
+#, fuzzy
+msgctxt "Form#54"
+msgid "Review Building output before installing"
+msgstr "Uitvoer bouwproces bekijken alvorens pakket te installeren"
+
+#: Form#55
+#, fuzzy
+msgctxt "Form#55"
+msgid "ABS Configuration"
+msgstr "ABS-instellingen"
+
+#: Form#56
+#, fuzzy
+msgctxt "Form#56"
+msgid "Use supfiles that match your current repositories"
+msgstr "Gebruik supfiles die overeenkomen met uw huidige repositories"
+
+#: Form#57
+#, fuzzy
+msgctxt "Form#57"
+msgid "Define supfiles manually"
+msgstr "supfiles handmatig opgeven"
+
+#: Form#58
+#, fuzzy
+msgctxt "Form#58"
+msgid "RSync Server:"
+msgstr "RSync-server:"
+
+#: Form#59
+#, fuzzy
+msgctxt "Form#59"
+msgid "Makepkg Configuration"
+msgstr "Makepkg-instellingen"
+
+#: Form#60
+#, fuzzy
+msgctxt "Form#60"
+msgid "CFlags"
+msgstr "CFlags"
+
+#: Form#61
+#, fuzzy
+msgctxt "Form#61"
+msgid "CXXFlags"
+msgstr "CXXFlags"
+
+#: Form#62
+#, fuzzy
+msgctxt "Form#62"
+msgid "BuildEnv"
+msgstr "BuildEnv"
+
+#: Form#63
+#, fuzzy
+msgctxt "Form#63"
+msgid "Options"
+msgstr "Opties"
+
+#: Form#64
+#, fuzzy
+msgctxt "Form#64"
+msgid "Doc_Dirs"
+msgstr "Doc_Dirs"
+
+#: Form#65
+#, fuzzy
+msgctxt "Form#65"
+msgid "Build Environment"
+msgstr "Build Environment"
+
+#: Form#66
+#, fuzzy
+msgctxt "Form#66"
+msgid "Building Path"
+msgstr "Building Path"
+
+#: Form#67
+#, fuzzy
+msgctxt "Form#67"
+msgid "Remove installed makedepends after build"
+msgstr "Geïnstalleerde bouwafhankelijkheden verwijderen na bouwen"
+
+#: Form#68
+#, fuzzy
+msgctxt "Form#68"
+msgid "Clean Build Environment after installation"
+msgstr "Bouwomgeving opruimen na installatie"
+
+#: Form#69
+#, fuzzy
+msgctxt "Form#69"
+msgid "When Application is in System Tray only"
+msgstr "Als het programma alleen in het systeemvak zit"
+
+#: Form#70
+#, fuzzy
+msgctxt "Form#70"
+msgid "Update Database every"
+msgstr "Database vernieuwen iedere"
+
+# As in "minutes"
+#: Form#71
+#, fuzzy
+msgctxt "Form#71"
+msgid "min"
+msgstr "minuut"
+
+#: Form#72
+#, fuzzy
+msgctxt "Form#72"
+msgid "Show tray notification Windows"
+msgstr "Systeemvakmeldingen tonen"
+
+#: Form#73
+#, fuzzy
+msgctxt "Form#73"
+msgid "If upgrades are available:"
+msgstr "Als upgrades beschikbaar zijn:"
+
+#: Form#74
+#, fuzzy
+msgctxt "Form#74"
+msgid "Just Notify"
+msgstr "Alleen melden"
+
+#: Form#75
+#, fuzzy
+msgctxt "Form#75"
+msgid "Notify and add them to Queue"
+msgstr "Melden en aan wachtrij toevoegen"
+
+#: Form#76
+#, fuzzy
+msgctxt "Form#76"
+msgid "Update Database at"
+msgstr "Database updaten om"
+
+#: Form#77
+#, fuzzy
+msgctxt "Form#77"
+msgid "Use a proxy-server"
+msgstr "Proxy-server gebruiken"
+
+#: Form#78
+#, fuzzy
+msgctxt "Form#78"
+msgid "IP:"
+msgstr "IP-adres:"
+
+#: Form#79
+#, fuzzy
+msgctxt "Form#79"
+msgid "Port:"
+msgstr "Poort:"
+
+#: Form#80
+#, fuzzy
+msgctxt "Form#80"
+msgid "HTTP Proxy"
+msgstr "HTTP-proxy"
+
+#: Form#81
+#, fuzzy
+msgctxt "Form#81"
+msgid "FTP Proxy"
+msgstr "FTP-proxy"
+
+#: Form#82
+#, fuzzy
+msgctxt "Form#82"
+msgid "Use Shaman RSS Capabilities"
+msgstr "Shamans RSS-mogelijkheden gebruiken"
+
+#: Form#83
+#, fuzzy
+msgctxt "Form#83"
+msgid "Update RSS Feed Every"
+msgstr "RSS-feed bijwerken iedere"
+
+#: Form#84
+#, fuzzy
+msgctxt "Form#84"
+msgid "Notify upon new items"
+msgstr "Nieuwe items melden"
+
+#: Form#85
+#, fuzzy
+msgctxt "Form#85"
+msgid ""
+"Check if there is an unread news about a package in Queue before processing "
+"it"
+msgstr ""
+"Eerst controleren of er ongelezen nieuwsberichten zijn over een pakket "
+"alvorens het te installeren"
+
+#: Form#86
+#, fuzzy
+msgctxt "Form#86"
+msgid "Interface"
+msgstr "Interface"
+
+#: Form#87
+#, fuzzy
+msgctxt "Form#87"
+msgid "Use Animated Tray Icon"
+msgstr "Bewegend systeemvak pictogram gebruiken"
+
+#: Form#88
+#, fuzzy
+msgctxt "Form#88"
+msgid "Start Shaman Automatically on X Startup"
+msgstr "Shaman starten bij het starten van X"
+
+#: Form#89
+#, fuzzy
+msgctxt "Form#89"
+msgid "Forbid starting Shaman as root"
+msgstr "Verhinderen dat Shaman als root gestart wordt"
 
 #: LocalPackage#1
 msgid "Install Package from File"
@@ -2063,6 +2939,32 @@ msgctxt "MaintenanceBar#32"
 msgid "Could not optimize database!"
 msgstr ""
 
+#: MirrorWidget#1
+msgctxt "MirrorWidget#1"
+msgid "Form"
+msgstr ""
+
+#: MirrorWidget#2
+#, fuzzy
+msgctxt "MirrorWidget#2"
+msgid "Mirror:"
+msgstr "Mirror:"
+
+#: MirrorWidget#3
+msgctxt "MirrorWidget#3"
+msgid "Prefer"
+msgstr ""
+
+#: MirrorWidget#4
+msgctxt "MirrorWidget#4"
+msgid "Defer"
+msgstr ""
+
+#: MirrorWidget#5
+msgctxt "MirrorWidget#5"
+msgid "Remove"
+msgstr ""
+
 #: NewsViewer#1
 msgid "Please wait, fetching items..."
 msgstr "Even geduld, items worden opgehaald..."
@@ -2586,6 +3488,30 @@ msgstr ""
 "            \n"
 "        "
 
+#: ServerWidget#1
+msgctxt "ServerWidget#1"
+msgid "Form"
+msgstr ""
+
+#: ServerWidget#2
+msgid "Server:"
+msgstr ""
+
+#: ServerWidget#3
+msgctxt "ServerWidget#3"
+msgid "Prefer"
+msgstr ""
+
+#: ServerWidget#4
+msgctxt "ServerWidget#4"
+msgid "Defer"
+msgstr ""
+
+#: ServerWidget#5
+msgctxt "ServerWidget#5"
+msgid "Remove"
+msgstr ""
+
 #: ShamanStatusBar#1
 msgid "%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages"
 msgstr ""
@@ -2736,6 +3662,30 @@ msgstr ""
 msgctxt "SysUpgradeDialog#5"
 msgid "System Upgrade"
 msgstr "Systeem bijwerken"
+
+#: ThirdPartyWidget#1
+msgctxt "ThirdPartyWidget#1"
+msgid "Form"
+msgstr ""
+
+#: ThirdPartyWidget#2
+#, fuzzy
+msgctxt "ThirdPartyWidget#2"
+msgid "Name"
+msgstr "Naam"
+
+#: ThirdPartyWidget#3
+msgid "Databases"
+msgstr ""
+
+#: ThirdPartyWidget#4
+msgid "Add"
+msgstr ""
+
+#: ThirdPartyWidget#5
+msgctxt "ThirdPartyWidget#5"
+msgid "Remove"
+msgstr ""
 
 #: aboutDialog#1
 msgid "About Shaman"

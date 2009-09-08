@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-25 11:09+0200\n"
+"POT-Creation-Date: 2009-09-08 14:50+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -349,46 +349,57 @@ msgid "Shaman - Configuration"
 msgstr "Shaman - Konfigurace"
 
 #: ConfigDialog#2
+msgctxt "ConfigDialog#2"
 msgid "Favourite Actions"
 msgstr "Upřednostněné akce"
 
 #: ConfigDialog#3
+msgctxt "ConfigDialog#3"
 msgid "When Upgrading System:"
 msgstr "Při aktualizaci systému:"
 
 #: ConfigDialog#4
+msgctxt "ConfigDialog#4"
 msgid "Upgrade Immediately"
 msgstr "Aktualizovat ihned"
 
 #: ConfigDialog#5
+msgctxt "ConfigDialog#5"
 msgid "Add Upgradeable Packages To Queue"
 msgstr "Zařadit aktualizovatelné balíčky do fronty"
 
 #: ConfigDialog#6
+msgctxt "ConfigDialog#6"
 msgid "Ask"
 msgstr "Dotázat se"
 
 #: ConfigDialog#7
+msgctxt "ConfigDialog#7"
 msgid "When Processing Queue"
 msgstr "Při zpracovávání fronty"
 
 #: ConfigDialog#8
+msgctxt "ConfigDialog#8"
 msgid "Keep application running in System Tray only"
 msgstr "Skrýt do systémové části panelu"
 
 #: ConfigDialog#9
+msgctxt "ConfigDialog#9"
 msgid "GUI Startup"
 msgstr "Spouštění uživatelského rozhraní"
 
 #: ConfigDialog#10
+msgctxt "ConfigDialog#10"
 msgid "Start in the System Tray"
 msgstr "Spustit v systémové části panelu"
 
 #: ConfigDialog#11
+msgctxt "ConfigDialog#11"
 msgid "When Application is in System Tray only"
 msgstr "Pokud je aplikace pouze v systémové části panelu"
 
 #: ConfigDialog#12
+msgctxt "ConfigDialog#12"
 msgid "Update Database every"
 msgstr "Aktualizovat databáze každých"
 
@@ -398,62 +409,77 @@ msgid "minutes"
 msgstr "Minuten"
 
 #: ConfigDialog#14
+msgctxt "ConfigDialog#14"
 msgid "If upgrades are available:"
 msgstr "Pokud jsou aktualizace k dispozici:"
 
 #: ConfigDialog#15
+msgctxt "ConfigDialog#15"
 msgid "Just Notify"
 msgstr "Jen upozornit"
 
 #: ConfigDialog#16
+msgctxt "ConfigDialog#16"
 msgid "Notify and add them to Queue"
 msgstr "Upozornit a zařadit do fronty"
 
 #: ConfigDialog#17
+msgctxt "ConfigDialog#17"
 msgid "Maintenance"
 msgstr "Údržba"
 
 #: ConfigDialog#18
+msgctxt "ConfigDialog#18"
 msgid "Checkable Options"
 msgstr "Možnosti"
 
 #: ConfigDialog#19
+msgctxt "ConfigDialog#19"
 msgid "Use Active FTP"
 msgstr "Použít aktivní FTP"
 
 #: ConfigDialog#20
+msgctxt "ConfigDialog#20"
 msgid "Use Deltas (needs xdelta to be installed)"
 msgstr "Použít Deltas (vyžaduje nainstalované xdelta)"
 
 #: ConfigDialog#21
+msgctxt "ConfigDialog#21"
 msgid "Advanced Options"
 msgstr "Pokročilé možnosti"
 
 #: ConfigDialog#22
+msgctxt "ConfigDialog#22"
 msgid "HoldPkgs:"
 msgstr "Držené balíčky:"
 
 #: ConfigDialog#23
+msgctxt "ConfigDialog#23"
 msgid "IgnorePkgs:"
 msgstr "Ignorované balíčky:"
 
 #: ConfigDialog#24
+msgctxt "ConfigDialog#24"
 msgid "IgnoreGroups:"
 msgstr "Ignorované skupiny balíčků:"
 
 #: ConfigDialog#25
+msgctxt "ConfigDialog#25"
 msgid "NoUpgrade:"
 msgstr "Neaktualizovat balíčky:"
 
 #: ConfigDialog#26
+msgctxt "ConfigDialog#26"
 msgid "NoExtract:"
 msgstr "Nerozbalovat:"
 
 #: ConfigDialog#27
+msgctxt "ConfigDialog#27"
 msgid "XFerCommand: (example: /path/to/command %u) Blank for Default"
 msgstr "XFerCommand: (příklad: /cesta/k/příkazu %u) Výchozí - prázdné"
 
 #: ConfigDialog#28
+msgctxt "ConfigDialog#28"
 msgid "Arch Linux Official Repositories"
 msgstr "Oficiální repozitáře Arch Linux"
 
@@ -469,18 +495,23 @@ msgstr ""
 "systém."
 
 #: ConfigDialog#30
+msgctxt "ConfigDialog#30"
 msgid "Server"
 msgstr "Server"
 
+#. (obsolete)
 #: ConfigDialog#31
+msgctxt "ConfigDialog#31"
 msgid "Mirror:"
 msgstr "Zrcadlo:"
 
 #: ConfigDialog#32
+msgctxt "ConfigDialog#32"
 msgid "Add Mirror"
 msgstr "Přidat zrcadlo"
 
 #: ConfigDialog#33
+msgctxt "ConfigDialog#33"
 msgid "KDEMod Repositories"
 msgstr "Repozitáře KDEmod"
 
@@ -498,6 +529,7 @@ msgstr ""
 "KDEmod je nejlepší cesta k vyzkoušení síly KDE a jednoduchosti Arch Linux."
 
 #: ConfigDialog#35
+msgctxt "ConfigDialog#35"
 msgid "KDEMod 3 Repository"
 msgstr "Repozitáře KDEmod 3"
 
@@ -507,6 +539,7 @@ msgid "KDEMod 4 Repository (Unstable, testers only)"
 msgstr "Repozitáře KDEmod 4 (Unstable, pouze pro testování)"
 
 #: ConfigDialog#37
+msgctxt "ConfigDialog#37"
 msgid "Third-Party Repositories"
 msgstr "Ostatní repozitáře"
 
@@ -523,24 +556,29 @@ msgstr ""
 "se chovají\n"
 "jako obyčejné repozitáře a jsou přístupné z aplikací Shaman i Pacman."
 
+#. (obsolete)
 #: ConfigDialog#39
 msgctxt "ConfigDialog#39"
 msgid "Repository"
 msgstr "Repozitáře"
 
 #: ConfigDialog#40
+msgctxt "ConfigDialog#40"
 msgid "Add New Repository"
 msgstr "Přidat nový repozitář"
 
+#. (obsolete)
 #: ConfigDialog#41
 msgid "Edit Repository"
 msgstr "Upravit repozitář"
 
+#. (obsolete)
 #: ConfigDialog#42
 msgid "Remove Repository"
 msgstr "Odstranit repozitář"
 
 #: ConfigDialog#43
+msgctxt "ConfigDialog#43"
 msgid "Preferences"
 msgstr "Nastavení"
 
@@ -550,58 +588,72 @@ msgid "Process all dependencies and queue from source first (recommended)"
 msgstr "Alle Abhängigkeiten zuerst aus Quellpaketen verarbeiten (empfohlen)"
 
 #: ConfigDialog#45
+msgctxt "ConfigDialog#45"
 msgid "Review Building output before installing"
 msgstr "Zkontrolovat výstup sestavení před instalací"
 
 #: ConfigDialog#46
+msgctxt "ConfigDialog#46"
 msgid "ABS Configuration"
 msgstr "Konfigurace ABS"
 
 #: ConfigDialog#47
+msgctxt "ConfigDialog#47"
 msgid "Use supfiles that match your current repositories"
 msgstr "Použít supfiles, které souhlasí s současnými repozitáři"
 
 #: ConfigDialog#48
+msgctxt "ConfigDialog#48"
 msgid "Define supfiles manually"
 msgstr "Definovat supfiles ručně"
 
 #: ConfigDialog#49
+msgctxt "ConfigDialog#49"
 msgid "Makepkg Configuration"
 msgstr "Konfigurace Makepkg"
 
 #: ConfigDialog#50
+msgctxt "ConfigDialog#50"
 msgid "CFlags"
 msgstr "Cflags"
 
 #: ConfigDialog#51
+msgctxt "ConfigDialog#51"
 msgid "CXXFlags"
 msgstr "CXXFlags"
 
 #: ConfigDialog#52
+msgctxt "ConfigDialog#52"
 msgid "BuildEnv"
 msgstr "BuildEnv"
 
 #: ConfigDialog#53
+msgctxt "ConfigDialog#53"
 msgid "Options"
 msgstr "Možnosti"
 
 #: ConfigDialog#54
+msgctxt "ConfigDialog#54"
 msgid "Doc_Dirs"
 msgstr "Doc_Dirs"
 
 #: ConfigDialog#55
+msgctxt "ConfigDialog#55"
 msgid "Build Environment"
 msgstr "Sestavovací prostředí"
 
 #: ConfigDialog#56
+msgctxt "ConfigDialog#56"
 msgid "Building Path"
 msgstr "Sestavovací adresář"
 
 #: ConfigDialog#57
+msgctxt "ConfigDialog#57"
 msgid "Remove installed makedepends after build"
 msgstr "Odstranit sestavovací závislosti po sestavení"
 
 #: ConfigDialog#58
+msgctxt "ConfigDialog#58"
 msgid "Clean Build Environment after installation"
 msgstr "Vyčistit sestavovací prostředí po instalaci"
 
@@ -734,6 +786,7 @@ msgstr ""
 
 # Obviously keep the example as it is ;)
 #: ConfigDialog#85
+msgctxt "ConfigDialog#85"
 msgid ""
 "Mirror Format is incorrect. Your mirror should look like this:\n"
 "http://mirror.org/$repo/os/i686"
@@ -743,6 +796,7 @@ msgstr ""
 
 # mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.
 #: ConfigDialog#86
+msgctxt "ConfigDialog#86"
 msgid ""
 "Your Mirror was successfully added!\n"
 "It is now available in mirrorlist."
@@ -788,6 +842,7 @@ msgid "Sync could not be executed!!"
 msgstr "Příkaz sync nemohl být vykonán!"
 
 #: ConfigDialog#93
+msgctxt "ConfigDialog#93"
 msgid "Process Selected"
 msgstr "Spustit údržbu"
 
@@ -799,6 +854,7 @@ msgstr "Probíhá optimalizace databáze aplikace Pacman..."
 
 # Waiting for a user action
 #: ConfigDialog#95
+msgctxt "ConfigDialog#95"
 msgid "Waiting"
 msgstr "Čekám"
 
@@ -831,6 +887,7 @@ msgstr ""
 # Do not translate
 #: ConfigDialog#97
 #, fuzzy
+msgctxt "ConfigDialog#97"
 msgid "Core"
 msgstr ""
 "\n"
@@ -839,6 +896,7 @@ msgstr ""
 # Do not translate
 #: ConfigDialog#98
 #, fuzzy
+msgctxt "ConfigDialog#98"
 msgid "Extra"
 msgstr ""
 "\n"
@@ -847,6 +905,7 @@ msgstr ""
 # Do not translate
 #: ConfigDialog#99
 #, fuzzy
+msgctxt "ConfigDialog#99"
 msgid "Community"
 msgstr ""
 "\n"
@@ -855,6 +914,7 @@ msgstr ""
 # Do not translate
 #: ConfigDialog#100
 #, fuzzy
+msgctxt "ConfigDialog#100"
 msgid "Testing"
 msgstr ""
 "\n"
@@ -867,10 +927,12 @@ msgid "Running sync..."
 msgstr "Probíhá příkaz sync..."
 
 #: ConfigDialog#102
+msgctxt "ConfigDialog#102"
 msgid "Show Splashscreen"
 msgstr "Zobrazit úvodní obrazovku"
 
 #: ConfigDialog#103
+msgctxt "ConfigDialog#103"
 msgid "Process all dependencies and queue from binary first (recommended)"
 msgstr "Zpracovat závislosti a frontu nejprve z binárních souborů (doporučeno)"
 
@@ -880,46 +942,57 @@ msgstr "Pokročilé"
 
 # As in "minutes"
 #: ConfigDialog#105
+msgctxt "ConfigDialog#105"
 msgid "min"
 msgstr "min"
 
 #: ConfigDialog#106
+msgctxt "ConfigDialog#106"
 msgid "Show tray notification Windows"
 msgstr "Zobazovat upozornění v systémové části panelu"
 
 #: ConfigDialog#107
+msgctxt "ConfigDialog#107"
 msgid "Use a proxy-server"
 msgstr "Použít proxy"
 
 #: ConfigDialog#108
+msgctxt "ConfigDialog#108"
 msgid "IP:"
 msgstr "IP:"
 
 #: ConfigDialog#109
+msgctxt "ConfigDialog#109"
 msgid "Port:"
 msgstr "Port:"
 
 #: ConfigDialog#110
+msgctxt "ConfigDialog#110"
 msgid "HTTP Proxy"
 msgstr "HTTP Proxy"
 
 #: ConfigDialog#111
+msgctxt "ConfigDialog#111"
 msgid "FTP Proxy"
 msgstr "FTP Proxy"
 
 #: ConfigDialog#112
+msgctxt "ConfigDialog#112"
 msgid "Use Shaman RSS Capabilities"
 msgstr "Použít RSS"
 
 #: ConfigDialog#113
+msgctxt "ConfigDialog#113"
 msgid "Update RSS Feed Every"
 msgstr "Aktualizovat RSS každých"
 
 #: ConfigDialog#114
+msgctxt "ConfigDialog#114"
 msgid "Notify upon new items"
 msgstr "Upozornit na nové položky"
 
 #: ConfigDialog#115
+msgctxt "ConfigDialog#115"
 msgid ""
 "Check if there is an unread news about a package in Queue before processing "
 "it"
@@ -928,10 +1001,12 @@ msgstr ""
 "zpracován"
 
 #: ConfigDialog#116
+msgctxt "ConfigDialog#116"
 msgid "Use SysLog"
 msgstr "Použít SysLog"
 
 #: ConfigDialog#117
+msgctxt "ConfigDialog#117"
 msgid "Log File:"
 msgstr "Soubor log:"
 
@@ -951,14 +1026,17 @@ msgid "KDEMod 3 Testing Repository"
 msgstr "Repozitář KDEMod 3 Testing"
 
 #: ConfigDialog#121
+msgctxt "ConfigDialog#121"
 msgid "Interface"
 msgstr "Rozhraní"
 
 #: ConfigDialog#122
+msgctxt "ConfigDialog#122"
 msgid "Start Shaman Automatically on X Startup"
 msgstr "Spusti aplikaci Shaman automaticky po startu X"
 
 #: ConfigDialog#123
+msgctxt "ConfigDialog#123"
 msgid "Forbid starting Shaman as root"
 msgstr "Zakázat spouštění aplikace Shaman pod uživatelem root"
 
@@ -1028,38 +1106,47 @@ msgstr ""
 "Sans'; font-size:9pt;\">Vyberte akci z výsuvného menu.</p></body></html>"
 
 #: ConfigDialog#130
+msgctxt "ConfigDialog#130"
 msgid "RSync Server:"
 msgstr "Rsinc Server:"
 
 #: ConfigDialog#131
+msgctxt "ConfigDialog#131"
 msgid "Update Database at"
 msgstr "Aktualizovat databáze v"
 
 #: ConfigDialog#132
+msgctxt "ConfigDialog#132"
 msgid "Use Animated Tray Icon"
 msgstr "Použít animovanou ikonu v systémové části panelu"
 
 #: ConfigDialog#133
+msgctxt "ConfigDialog#133"
 msgid "KDEMod 4 Repository"
 msgstr "Repozitáře KDEmod 4"
 
 #: ConfigDialog#134
+msgctxt "ConfigDialog#134"
 msgid "KDEMod 4 Extragear Repository"
 msgstr "Repozitář KDEmod 4 Extragear"
 
 #: ConfigDialog#135
+msgctxt "ConfigDialog#135"
 msgid "KDEMod 4 Playground Repository"
 msgstr "Repozitář KDEMod 4 Playground"
 
 #: ConfigDialog#136
+msgctxt "ConfigDialog#136"
 msgid "KDEMod 4 Testing Repository"
 msgstr "Repozitář KDEMod 4 Testing"
 
 #: ConfigDialog#137
+msgctxt "ConfigDialog#137"
 msgid "KDEMod 4 Unstable Repository (Testers only!)"
 msgstr "Repozitáře KDEmod 4 (Unstable, pouze pro testování)"
 
 #: ConfigDialog#138
+msgctxt "ConfigDialog#138"
 msgid ""
 "Here you can choose what repositories to use between Arch Linux's official "
 "ones. Please note that packages from Unstable and Testing may break your "
@@ -1070,6 +1157,7 @@ msgstr ""
 "systém."
 
 #: ConfigDialog#139
+msgctxt "ConfigDialog#139"
 msgid ""
 "KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
 "improved Qt build, compatible with Arch Linux standard Qt's, an improved "
@@ -1081,6 +1169,7 @@ msgstr ""
 "KDEmod je nejlepší cesta k vyzkoušení síly KDE a jednoduchosti Arch Linux."
 
 #: ConfigDialog#140
+msgctxt "ConfigDialog#140"
 msgid ""
 "You can extend your packages choice by adding other repositories. Third-"
 "Party Repositories act just as normal ones, and will be accessible through "
@@ -1091,10 +1180,12 @@ msgstr ""
 "Pacman."
 
 #: ConfigDialog#141
+msgctxt "ConfigDialog#141"
 msgid "Use the following language:"
 msgstr "Zvolte jazyk:"
 
 #: ConfigDialog#142
+msgctxt "ConfigDialog#142"
 msgid "Disable Tray Icon"
 msgstr "Vypnout ikonu v Systémové části panelu"
 
@@ -1119,26 +1210,241 @@ msgid ""
 msgstr ""
 
 #: ConfigDialog#147
+msgctxt "ConfigDialog#147"
 msgid ""
 "There was an error while trying to add the mirror! This could be due also to "
 "your system policy preventing you from performing this action"
 msgstr ""
 
 #: ConfigDialog#148
+msgctxt "ConfigDialog#148"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Liberation Serif'; font-size:10pt; "
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:8pt; "
 "font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"family:'Liberation Sans'; font-size:9pt;\">Shaman Manteinance.</span></p>\n"
+"size:9pt;\">Shaman Manteinance.</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"family:'Liberation Sans'; font-size:9pt;\">Please choose an action from the "
-"Drop-Down Menu.</span></p></body></html>"
+"size:9pt;\">Please choose an action from the Drop-Down "
+"Menu.</span></p></body></html>"
+msgstr ""
+
+#: ConfigDialog#149
+msgctxt "ConfigDialog#149"
+msgid "Add another server"
+msgstr ""
+
+#: ConfigDialog#150
+msgctxt "ConfigDialog#150"
+msgid "Repository Order"
+msgstr ""
+
+#: ConfigDialog#151
+msgctxt "ConfigDialog#151"
+msgid ""
+"Please order your repositories to define which one will be preferred over "
+"another."
+msgstr ""
+
+#: DatabaseConfig#1
+#, fuzzy
+msgctxt "DatabaseConfig#1"
+msgid "Add Mirror"
+msgstr "Přidat zrcadlo"
+
+# Obviously keep the example as it is ;)
+#: DatabaseConfig#2
+#, fuzzy
+msgctxt "DatabaseConfig#2"
+msgid ""
+"Mirror Format is incorrect. Your mirror should look like this:\n"
+"http://mirror.org/$repo/os/i686"
+msgstr ""
+"Zrcadlo není platné. Adresa by měla vypadat takto:\n"
+"http://mirror.org/$repo/os/i686"
+
+# mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.
+#: DatabaseConfig#3
+#, fuzzy
+msgctxt "DatabaseConfig#3"
+msgid ""
+"Your Mirror was successfully added!\n"
+"It is now available in mirrorlist."
+msgstr ""
+"Zrcadlo bylo úspěšně přidáno!\n"
+"Nyní je k dispozici v /etc/pacman.d/mirrorlist ."
+
+#: DatabaseConfig#4
+msgctxt "DatabaseConfig#4"
+msgid ""
+"There was an error while trying to add the mirror! This could be due also to "
+"your system policy preventing you from performing this action"
+msgstr ""
+
+#: DatabaseConfig#5
+msgctxt "DatabaseConfig#5"
+msgid "Form"
+msgstr ""
+
+#: DatabaseConfig#6
+#, fuzzy
+msgctxt "DatabaseConfig#6"
+msgid "Arch Linux Official Repositories"
+msgstr "Oficiální repozitáře Arch Linux"
+
+#: DatabaseConfig#7
+#, fuzzy
+msgctxt "DatabaseConfig#7"
+msgid ""
+"Here you can choose what repositories to use between Arch Linux's official "
+"ones. Please note that packages from Unstable and Testing may break your "
+"system."
+msgstr ""
+"Zde si můžete vybrat které oficiální repozitáře Arch Linux budou použity. "
+"Berte navědomí že balíčky z repozitářů Unstable a Testing mohou poškodit váš "
+"systém."
+
+# Do not translate
+#: DatabaseConfig#8
+#, fuzzy
+msgctxt "DatabaseConfig#8"
+msgid "Core"
+msgstr ""
+"\n"
+"            "
+
+# Do not translate
+#: DatabaseConfig#9
+#, fuzzy
+msgctxt "DatabaseConfig#9"
+msgid "Extra"
+msgstr ""
+"\n"
+"            "
+
+# Do not translate
+#: DatabaseConfig#10
+#, fuzzy
+msgctxt "DatabaseConfig#10"
+msgid "Community"
+msgstr ""
+"\n"
+"            "
+
+# Do not translate
+#: DatabaseConfig#11
+#, fuzzy
+msgctxt "DatabaseConfig#11"
+msgid "Testing"
+msgstr ""
+"\n"
+"            "
+
+#: DatabaseConfig#12
+#, fuzzy
+msgctxt "DatabaseConfig#12"
+msgid "Server"
+msgstr "Server"
+
+#: DatabaseConfig#13
+msgctxt "DatabaseConfig#13"
+msgid "Add another server"
+msgstr ""
+
+#: DatabaseConfig#14
+#, fuzzy
+msgctxt "DatabaseConfig#14"
+msgid "KDEMod Repositories"
+msgstr "Repozitáře KDEmod"
+
+#: DatabaseConfig#15
+#, fuzzy
+msgctxt "DatabaseConfig#15"
+msgid ""
+"KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
+"improved Qt build, compatible with Arch Linux standard Qt's, an improved "
+"theme, and lots of addons, KDEMod is the best way to taste the ease and the "
+"power of KDE with the simplicity and the power of Arch."
+msgstr ""
+"KDEMod je vylepšená verze KDE pouze pro Arch Linux. Obsahuje vylepšené Qt, "
+"kompatibilní se standardním Qt, vylepšené téma a mnoho dalších přídavků. "
+"KDEmod je nejlepší cesta k vyzkoušení síly KDE a jednoduchosti Arch Linux."
+
+#: DatabaseConfig#16
+#, fuzzy
+msgctxt "DatabaseConfig#16"
+msgid "KDEMod 4 Repository"
+msgstr "Repozitáře KDEmod 4"
+
+#: DatabaseConfig#17
+#, fuzzy
+msgctxt "DatabaseConfig#17"
+msgid "KDEMod 4 Extragear Repository"
+msgstr "Repozitář KDEmod 4 Extragear"
+
+#: DatabaseConfig#18
+#, fuzzy
+msgctxt "DatabaseConfig#18"
+msgid "KDEMod 4 Playground Repository"
+msgstr "Repozitář KDEMod 4 Playground"
+
+#: DatabaseConfig#19
+#, fuzzy
+msgctxt "DatabaseConfig#19"
+msgid "KDEMod 4 Testing Repository"
+msgstr "Repozitář KDEMod 4 Testing"
+
+#: DatabaseConfig#20
+#, fuzzy
+msgctxt "DatabaseConfig#20"
+msgid "KDEMod 4 Unstable Repository (Testers only!)"
+msgstr "Repozitáře KDEmod 4 (Unstable, pouze pro testování)"
+
+#: DatabaseConfig#21
+#, fuzzy
+msgctxt "DatabaseConfig#21"
+msgid "KDEMod 3 Repository"
+msgstr "Repozitáře KDEmod 3"
+
+#: DatabaseConfig#22
+#, fuzzy
+msgctxt "DatabaseConfig#22"
+msgid "Third-Party Repositories"
+msgstr "Ostatní repozitáře"
+
+#: DatabaseConfig#23
+#, fuzzy
+msgctxt "DatabaseConfig#23"
+msgid ""
+"You can extend your packages choice by adding other repositories. Third-"
+"Party Repositories act just as normal ones, and will be accessible through "
+"both Shaman and Pacman."
+msgstr ""
+"Můžete rozšířit výběr balíčků přidáním dalších repozitářů. Tyto repozitáře "
+"se chovají jako obyčejné repozitáře a jsou přístupné z aplikací Shaman i "
+"Pacman."
+
+#: DatabaseConfig#24
+#, fuzzy
+msgctxt "DatabaseConfig#24"
+msgid "Add New Repository"
+msgstr "Přidat nový repozitář"
+
+#: DatabaseConfig#25
+msgctxt "DatabaseConfig#25"
+msgid "Repository Order"
+msgstr ""
+
+#: DatabaseConfig#26
+msgctxt "DatabaseConfig#26"
+msgid ""
+"Please order your repositories to define which one will be preferred over "
+"another."
 msgstr ""
 
 #: EditPBuild#1
@@ -1258,6 +1564,587 @@ msgstr ""
 #: ErrorHandler#23
 msgid "Error occurred"
 msgstr ""
+
+#: Form#1
+msgctxt "Form#1"
+msgid "Form"
+msgstr ""
+
+#: Form#2
+#, fuzzy
+msgctxt "Form#2"
+msgid "Favourite Actions"
+msgstr "Upřednostněné akce"
+
+#: Form#3
+#, fuzzy
+msgctxt "Form#3"
+msgid "When Upgrading System:"
+msgstr "Při aktualizaci systému:"
+
+#: Form#4
+#, fuzzy
+msgctxt "Form#4"
+msgid "Upgrade Immediately"
+msgstr "Aktualizovat ihned"
+
+#: Form#5
+#, fuzzy
+msgctxt "Form#5"
+msgid "Add Upgradeable Packages To Queue"
+msgstr "Zařadit aktualizovatelné balíčky do fronty"
+
+#: Form#6
+#, fuzzy
+msgctxt "Form#6"
+msgid "Ask"
+msgstr "Dotázat se"
+
+#: Form#7
+#, fuzzy
+msgctxt "Form#7"
+msgid "When Processing Queue"
+msgstr "Při zpracovávání fronty"
+
+#: Form#8
+#, fuzzy
+msgctxt "Form#8"
+msgid "Keep application running in System Tray only"
+msgstr "Skrýt do systémové části panelu"
+
+#: Form#9
+#, fuzzy
+msgctxt "Form#9"
+msgid "GUI Startup"
+msgstr "Spouštění uživatelského rozhraní"
+
+#: Form#10
+#, fuzzy
+msgctxt "Form#10"
+msgid "Start in the System Tray"
+msgstr "Spustit v systémové části panelu"
+
+#: Form#11
+#, fuzzy
+msgctxt "Form#11"
+msgid "Show Splashscreen"
+msgstr "Zobrazit úvodní obrazovku"
+
+#: Form#12
+#, fuzzy
+msgctxt "Form#12"
+msgid "Use the following language:"
+msgstr "Zvolte jazyk:"
+
+#: Form#13
+#, fuzzy
+msgctxt "Form#13"
+msgid "Disable Tray Icon"
+msgstr "Vypnout ikonu v Systémové části panelu"
+
+#: Form#14
+#, fuzzy
+msgctxt "Form#14"
+msgid "Maintenance"
+msgstr "Údržba"
+
+#: Form#15
+#, fuzzy
+msgctxt "Form#15"
+msgid "Process Selected"
+msgstr "Spustit údržbu"
+
+# Waiting for a user action
+#: Form#16
+#, fuzzy
+msgctxt "Form#16"
+msgid "Waiting"
+msgstr "Čekám"
+
+#: Form#17
+msgctxt "Form#17"
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:8pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Shaman Manteinance.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Please choose an action from the Drop-Down "
+"Menu.</span></p></body></html>"
+msgstr ""
+
+#: Form#18
+#, fuzzy
+msgctxt "Form#18"
+msgid "Checkable Options"
+msgstr "Možnosti"
+
+#: Form#19
+#, fuzzy
+msgctxt "Form#19"
+msgid "Use Active FTP"
+msgstr "Použít aktivní FTP"
+
+#: Form#20
+#, fuzzy
+msgctxt "Form#20"
+msgid "Use Deltas (needs xdelta to be installed)"
+msgstr "Použít Deltas (vyžaduje nainstalované xdelta)"
+
+#: Form#21
+#, fuzzy
+msgctxt "Form#21"
+msgid "Use SysLog"
+msgstr "Použít SysLog"
+
+#: Form#22
+#, fuzzy
+msgctxt "Form#22"
+msgid "Advanced Options"
+msgstr "Pokročilé možnosti"
+
+#: Form#23
+#, fuzzy
+msgctxt "Form#23"
+msgid "HoldPkgs:"
+msgstr "Držené balíčky:"
+
+#: Form#24
+#, fuzzy
+msgctxt "Form#24"
+msgid "IgnorePkgs:"
+msgstr "Ignorované balíčky:"
+
+#: Form#25
+#, fuzzy
+msgctxt "Form#25"
+msgid "IgnoreGroups:"
+msgstr "Ignorované skupiny balíčků:"
+
+#: Form#26
+#, fuzzy
+msgctxt "Form#26"
+msgid "NoUpgrade:"
+msgstr "Neaktualizovat balíčky:"
+
+#: Form#27
+#, fuzzy
+msgctxt "Form#27"
+msgid "NoExtract:"
+msgstr "Nerozbalovat:"
+
+#: Form#28
+#, fuzzy
+msgctxt "Form#28"
+msgid "Log File:"
+msgstr "Soubor log:"
+
+#: Form#29
+#, fuzzy
+msgctxt "Form#29"
+msgid "XFerCommand: (example: /path/to/command %u) Blank for Default"
+msgstr "XFerCommand: (příklad: /cesta/k/příkazu %u) Výchozí - prázdné"
+
+#: Form#30
+#, fuzzy
+msgctxt "Form#30"
+msgid "Arch Linux Official Repositories"
+msgstr "Oficiální repozitáře Arch Linux"
+
+#: Form#31
+#, fuzzy
+msgctxt "Form#31"
+msgid ""
+"Here you can choose what repositories to use between Arch Linux's official "
+"ones. Please note that packages from Unstable and Testing may break your "
+"system."
+msgstr ""
+"Zde si můžete vybrat které oficiální repozitáře Arch Linux budou použity. "
+"Berte navědomí že balíčky z repozitářů Unstable a Testing mohou poškodit váš "
+"systém."
+
+# Do not translate
+#: Form#32
+#, fuzzy
+msgctxt "Form#32"
+msgid "Core"
+msgstr ""
+"\n"
+"            "
+
+# Do not translate
+#: Form#33
+#, fuzzy
+msgctxt "Form#33"
+msgid "Extra"
+msgstr ""
+"\n"
+"            "
+
+# Do not translate
+#: Form#34
+#, fuzzy
+msgctxt "Form#34"
+msgid "Community"
+msgstr ""
+"\n"
+"            "
+
+# Do not translate
+#: Form#35
+#, fuzzy
+msgctxt "Form#35"
+msgid "Testing"
+msgstr ""
+"\n"
+"            "
+
+#: Form#36
+#, fuzzy
+msgctxt "Form#36"
+msgid "Server"
+msgstr "Server"
+
+#: Form#37
+#, fuzzy
+msgctxt "Form#37"
+msgid "Add Mirror"
+msgstr "Přidat zrcadlo"
+
+#: Form#38
+msgctxt "Form#38"
+msgid "Add another server"
+msgstr ""
+
+#: Form#39
+#, fuzzy
+msgctxt "Form#39"
+msgid "KDEMod Repositories"
+msgstr "Repozitáře KDEmod"
+
+#: Form#40
+#, fuzzy
+msgctxt "Form#40"
+msgid ""
+"KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
+"improved Qt build, compatible with Arch Linux standard Qt's, an improved "
+"theme, and lots of addons, KDEMod is the best way to taste the ease and the "
+"power of KDE with the simplicity and the power of Arch."
+msgstr ""
+"KDEMod je vylepšená verze KDE pouze pro Arch Linux. Obsahuje vylepšené Qt, "
+"kompatibilní se standardním Qt, vylepšené téma a mnoho dalších přídavků. "
+"KDEmod je nejlepší cesta k vyzkoušení síly KDE a jednoduchosti Arch Linux."
+
+#: Form#41
+#, fuzzy
+msgctxt "Form#41"
+msgid "KDEMod 4 Repository"
+msgstr "Repozitáře KDEmod 4"
+
+#: Form#42
+#, fuzzy
+msgctxt "Form#42"
+msgid "KDEMod 4 Extragear Repository"
+msgstr "Repozitář KDEmod 4 Extragear"
+
+#: Form#43
+#, fuzzy
+msgctxt "Form#43"
+msgid "KDEMod 4 Playground Repository"
+msgstr "Repozitář KDEMod 4 Playground"
+
+#: Form#44
+#, fuzzy
+msgctxt "Form#44"
+msgid "KDEMod 4 Testing Repository"
+msgstr "Repozitář KDEMod 4 Testing"
+
+#: Form#45
+#, fuzzy
+msgctxt "Form#45"
+msgid "KDEMod 4 Unstable Repository (Testers only!)"
+msgstr "Repozitáře KDEmod 4 (Unstable, pouze pro testování)"
+
+#: Form#46
+#, fuzzy
+msgctxt "Form#46"
+msgid "KDEMod 3 Repository"
+msgstr "Repozitáře KDEmod 3"
+
+#: Form#47
+#, fuzzy
+msgctxt "Form#47"
+msgid "Third-Party Repositories"
+msgstr "Ostatní repozitáře"
+
+#: Form#48
+#, fuzzy
+msgctxt "Form#48"
+msgid ""
+"You can extend your packages choice by adding other repositories. Third-"
+"Party Repositories act just as normal ones, and will be accessible through "
+"both Shaman and Pacman."
+msgstr ""
+"Můžete rozšířit výběr balíčků přidáním dalších repozitářů. Tyto repozitáře "
+"se chovají jako obyčejné repozitáře a jsou přístupné z aplikací Shaman i "
+"Pacman."
+
+#: Form#49
+#, fuzzy
+msgctxt "Form#49"
+msgid "Add New Repository"
+msgstr "Přidat nový repozitář"
+
+#: Form#50
+msgctxt "Form#50"
+msgid "Repository Order"
+msgstr ""
+
+#: Form#51
+msgctxt "Form#51"
+msgid ""
+"Please order your repositories to define which one will be preferred over "
+"another."
+msgstr ""
+
+#: Form#52
+#, fuzzy
+msgctxt "Form#52"
+msgid "Preferences"
+msgstr "Nastavení"
+
+#: Form#53
+#, fuzzy
+msgctxt "Form#53"
+msgid "Process all dependencies and queue from binary first (recommended)"
+msgstr "Zpracovat závislosti a frontu nejprve z binárních souborů (doporučeno)"
+
+#: Form#54
+#, fuzzy
+msgctxt "Form#54"
+msgid "Review Building output before installing"
+msgstr "Zkontrolovat výstup sestavení před instalací"
+
+#: Form#55
+#, fuzzy
+msgctxt "Form#55"
+msgid "ABS Configuration"
+msgstr "Konfigurace ABS"
+
+#: Form#56
+#, fuzzy
+msgctxt "Form#56"
+msgid "Use supfiles that match your current repositories"
+msgstr "Použít supfiles, které souhlasí s současnými repozitáři"
+
+#: Form#57
+#, fuzzy
+msgctxt "Form#57"
+msgid "Define supfiles manually"
+msgstr "Definovat supfiles ručně"
+
+#: Form#58
+#, fuzzy
+msgctxt "Form#58"
+msgid "RSync Server:"
+msgstr "Rsinc Server:"
+
+#: Form#59
+#, fuzzy
+msgctxt "Form#59"
+msgid "Makepkg Configuration"
+msgstr "Konfigurace Makepkg"
+
+#: Form#60
+#, fuzzy
+msgctxt "Form#60"
+msgid "CFlags"
+msgstr "Cflags"
+
+#: Form#61
+#, fuzzy
+msgctxt "Form#61"
+msgid "CXXFlags"
+msgstr "CXXFlags"
+
+#: Form#62
+#, fuzzy
+msgctxt "Form#62"
+msgid "BuildEnv"
+msgstr "BuildEnv"
+
+#: Form#63
+#, fuzzy
+msgctxt "Form#63"
+msgid "Options"
+msgstr "Možnosti"
+
+#: Form#64
+#, fuzzy
+msgctxt "Form#64"
+msgid "Doc_Dirs"
+msgstr "Doc_Dirs"
+
+#: Form#65
+#, fuzzy
+msgctxt "Form#65"
+msgid "Build Environment"
+msgstr "Sestavovací prostředí"
+
+#: Form#66
+#, fuzzy
+msgctxt "Form#66"
+msgid "Building Path"
+msgstr "Sestavovací adresář"
+
+#: Form#67
+#, fuzzy
+msgctxt "Form#67"
+msgid "Remove installed makedepends after build"
+msgstr "Odstranit sestavovací závislosti po sestavení"
+
+#: Form#68
+#, fuzzy
+msgctxt "Form#68"
+msgid "Clean Build Environment after installation"
+msgstr "Vyčistit sestavovací prostředí po instalaci"
+
+#: Form#69
+#, fuzzy
+msgctxt "Form#69"
+msgid "When Application is in System Tray only"
+msgstr "Pokud je aplikace pouze v systémové části panelu"
+
+#: Form#70
+#, fuzzy
+msgctxt "Form#70"
+msgid "Update Database every"
+msgstr "Aktualizovat databáze každých"
+
+# As in "minutes"
+#: Form#71
+#, fuzzy
+msgctxt "Form#71"
+msgid "min"
+msgstr "min"
+
+#: Form#72
+#, fuzzy
+msgctxt "Form#72"
+msgid "Show tray notification Windows"
+msgstr "Zobazovat upozornění v systémové části panelu"
+
+#: Form#73
+#, fuzzy
+msgctxt "Form#73"
+msgid "If upgrades are available:"
+msgstr "Pokud jsou aktualizace k dispozici:"
+
+#: Form#74
+#, fuzzy
+msgctxt "Form#74"
+msgid "Just Notify"
+msgstr "Jen upozornit"
+
+#: Form#75
+#, fuzzy
+msgctxt "Form#75"
+msgid "Notify and add them to Queue"
+msgstr "Upozornit a zařadit do fronty"
+
+#: Form#76
+#, fuzzy
+msgctxt "Form#76"
+msgid "Update Database at"
+msgstr "Aktualizovat databáze v"
+
+#: Form#77
+#, fuzzy
+msgctxt "Form#77"
+msgid "Use a proxy-server"
+msgstr "Použít proxy"
+
+#: Form#78
+#, fuzzy
+msgctxt "Form#78"
+msgid "IP:"
+msgstr "IP:"
+
+#: Form#79
+#, fuzzy
+msgctxt "Form#79"
+msgid "Port:"
+msgstr "Port:"
+
+#: Form#80
+#, fuzzy
+msgctxt "Form#80"
+msgid "HTTP Proxy"
+msgstr "HTTP Proxy"
+
+#: Form#81
+#, fuzzy
+msgctxt "Form#81"
+msgid "FTP Proxy"
+msgstr "FTP Proxy"
+
+#: Form#82
+#, fuzzy
+msgctxt "Form#82"
+msgid "Use Shaman RSS Capabilities"
+msgstr "Použít RSS"
+
+#: Form#83
+#, fuzzy
+msgctxt "Form#83"
+msgid "Update RSS Feed Every"
+msgstr "Aktualizovat RSS každých"
+
+#: Form#84
+#, fuzzy
+msgctxt "Form#84"
+msgid "Notify upon new items"
+msgstr "Upozornit na nové položky"
+
+#: Form#85
+#, fuzzy
+msgctxt "Form#85"
+msgid ""
+"Check if there is an unread news about a package in Queue before processing "
+"it"
+msgstr ""
+"Zkontrolovat zda-li není něpřečtená zpráva o balíčku před tím než bude "
+"zpracován"
+
+#: Form#86
+#, fuzzy
+msgctxt "Form#86"
+msgid "Interface"
+msgstr "Rozhraní"
+
+#: Form#87
+#, fuzzy
+msgctxt "Form#87"
+msgid "Use Animated Tray Icon"
+msgstr "Použít animovanou ikonu v systémové části panelu"
+
+#: Form#88
+#, fuzzy
+msgctxt "Form#88"
+msgid "Start Shaman Automatically on X Startup"
+msgstr "Spusti aplikaci Shaman automaticky po startu X"
+
+#: Form#89
+#, fuzzy
+msgctxt "Form#89"
+msgid "Forbid starting Shaman as root"
+msgstr "Zakázat spouštění aplikace Shaman pod uživatelem root"
 
 #: LocalPackage#1
 msgid "Install Package from File"
@@ -2536,6 +3423,32 @@ msgctxt "MaintenanceBar#32"
 msgid "Could not optimize database!"
 msgstr ""
 
+#: MirrorWidget#1
+msgctxt "MirrorWidget#1"
+msgid "Form"
+msgstr ""
+
+#: MirrorWidget#2
+#, fuzzy
+msgctxt "MirrorWidget#2"
+msgid "Mirror:"
+msgstr "Zrcadlo:"
+
+#: MirrorWidget#3
+msgctxt "MirrorWidget#3"
+msgid "Prefer"
+msgstr ""
+
+#: MirrorWidget#4
+msgctxt "MirrorWidget#4"
+msgid "Defer"
+msgstr ""
+
+#: MirrorWidget#5
+msgctxt "MirrorWidget#5"
+msgid "Remove"
+msgstr ""
+
 #: NewsViewer#1
 msgid "Please wait, fetching items..."
 msgstr "Čekejte prosím, získávám zprávy..."
@@ -3129,6 +4042,30 @@ msgstr ""
 "            \n"
 "        "
 
+#: ServerWidget#1
+msgctxt "ServerWidget#1"
+msgid "Form"
+msgstr ""
+
+#: ServerWidget#2
+msgid "Server:"
+msgstr ""
+
+#: ServerWidget#3
+msgctxt "ServerWidget#3"
+msgid "Prefer"
+msgstr ""
+
+#: ServerWidget#4
+msgctxt "ServerWidget#4"
+msgid "Defer"
+msgstr ""
+
+#: ServerWidget#5
+msgctxt "ServerWidget#5"
+msgid "Remove"
+msgstr ""
+
 #: ShamanStatusBar#1
 msgid "%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages"
 msgstr ""
@@ -3284,6 +4221,29 @@ msgstr ""
 msgctxt "SysUpgradeDialog#5"
 msgid "System Upgrade"
 msgstr "Aktualizace systému"
+
+#: ThirdPartyWidget#1
+msgctxt "ThirdPartyWidget#1"
+msgid "Form"
+msgstr ""
+
+#: ThirdPartyWidget#2
+msgctxt "ThirdPartyWidget#2"
+msgid "Name"
+msgstr ""
+
+#: ThirdPartyWidget#3
+msgid "Databases"
+msgstr ""
+
+#: ThirdPartyWidget#4
+msgid "Add"
+msgstr ""
+
+#: ThirdPartyWidget#5
+msgctxt "ThirdPartyWidget#5"
+msgid "Remove"
+msgstr ""
 
 #: aboutDialog#1
 msgid "About Shaman"

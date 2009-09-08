@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-25 11:10+0200\n"
+"POT-Creation-Date: 2009-09-08 14:51+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -194,6 +194,7 @@ msgid "Clean All Building Environments"
 msgstr ""
 
 #: ConfigDialog#7
+msgctxt "ConfigDialog#7"
 msgid "Process Selected"
 msgstr ""
 
@@ -203,6 +204,7 @@ msgid "Repositories"
 msgstr ""
 
 #: ConfigDialog#9
+msgctxt "ConfigDialog#9"
 msgid "Add Mirror"
 msgstr ""
 
@@ -344,6 +346,7 @@ msgstr ""
 
 # Obviously keep the example as it is ;)
 #: ConfigDialog#38
+msgctxt "ConfigDialog#38"
 msgid ""
 "Mirror Format is incorrect. Your mirror should look like this:\n"
 "http://mirror.org/$repo/os/i686"
@@ -351,12 +354,14 @@ msgstr ""
 
 # mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.
 #: ConfigDialog#39
+msgctxt "ConfigDialog#39"
 msgid ""
 "Your Mirror was successfully added!\n"
 "It is now available in mirrorlist."
 msgstr ""
 
 #: ConfigDialog#40
+msgctxt "ConfigDialog#40"
 msgid ""
 "There was an error while trying to add the mirror! This could be due also to "
 "your system policy preventing you from performing this action"
@@ -396,132 +401,143 @@ msgid "Shaman - Configuration"
 msgstr ""
 
 #: ConfigDialog#47
+msgctxt "ConfigDialog#47"
 msgid "Favourite Actions"
 msgstr ""
 
 #: ConfigDialog#48
+msgctxt "ConfigDialog#48"
 msgid "When Upgrading System:"
 msgstr ""
 
 #: ConfigDialog#49
+msgctxt "ConfigDialog#49"
 msgid "Upgrade Immediately"
 msgstr ""
 
 #: ConfigDialog#50
+msgctxt "ConfigDialog#50"
 msgid "Add Upgradeable Packages To Queue"
 msgstr ""
 
 #: ConfigDialog#51
+msgctxt "ConfigDialog#51"
 msgid "Ask"
 msgstr ""
 
 #: ConfigDialog#52
+msgctxt "ConfigDialog#52"
 msgid "When Processing Queue"
 msgstr ""
 
 #: ConfigDialog#53
+msgctxt "ConfigDialog#53"
 msgid "Keep application running in System Tray only"
 msgstr ""
 
 #: ConfigDialog#54
+msgctxt "ConfigDialog#54"
 msgid "GUI Startup"
 msgstr ""
 
 #: ConfigDialog#55
+msgctxt "ConfigDialog#55"
 msgid "Start in the System Tray"
 msgstr ""
 
 #: ConfigDialog#56
+msgctxt "ConfigDialog#56"
 msgid "Show Splashscreen"
 msgstr ""
 
 #: ConfigDialog#57
+msgctxt "ConfigDialog#57"
 msgid "Use the following language:"
 msgstr ""
 
 #: ConfigDialog#58
+msgctxt "ConfigDialog#58"
 msgid "Disable Tray Icon"
 msgstr ""
 
 #: ConfigDialog#59
+msgctxt "ConfigDialog#59"
 msgid "Maintenance"
 msgstr ""
 
 # Waiting for a user action
 #: ConfigDialog#60
+msgctxt "ConfigDialog#60"
 msgid "Waiting"
 msgstr ""
 
 #: ConfigDialog#61
-msgid ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
-"html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Liberation Serif'; font-size:10pt; "
-"font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"family:'Liberation Sans'; font-size:9pt;\">Shaman Manteinance.</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"family:'Liberation Sans'; font-size:9pt;\">Please choose an action from the "
-"Drop-Down Menu.</span></p></body></html>"
-msgstr ""
-
-#: ConfigDialog#62
+msgctxt "ConfigDialog#61"
 msgid "Checkable Options"
 msgstr ""
 
-#: ConfigDialog#63
+#: ConfigDialog#62
+msgctxt "ConfigDialog#62"
 msgid "Use Active FTP"
 msgstr ""
 
-#: ConfigDialog#64
+#: ConfigDialog#63
+msgctxt "ConfigDialog#63"
 msgid "Use Deltas (needs xdelta to be installed)"
 msgstr ""
 
-#: ConfigDialog#65
+#: ConfigDialog#64
+msgctxt "ConfigDialog#64"
 msgid "Use SysLog"
 msgstr ""
 
-#: ConfigDialog#66
+#: ConfigDialog#65
+msgctxt "ConfigDialog#65"
 msgid "Advanced Options"
 msgstr ""
 
-#: ConfigDialog#67
+#: ConfigDialog#66
+msgctxt "ConfigDialog#66"
 msgid "HoldPkgs:"
 msgstr ""
 
-#: ConfigDialog#68
+#: ConfigDialog#67
+msgctxt "ConfigDialog#67"
 msgid "IgnorePkgs:"
 msgstr ""
 
-#: ConfigDialog#69
+#: ConfigDialog#68
+msgctxt "ConfigDialog#68"
 msgid "IgnoreGroups:"
 msgstr ""
 
-#: ConfigDialog#70
+#: ConfigDialog#69
+msgctxt "ConfigDialog#69"
 msgid "NoUpgrade:"
 msgstr ""
 
-#: ConfigDialog#71
+#: ConfigDialog#70
+msgctxt "ConfigDialog#70"
 msgid "NoExtract:"
 msgstr ""
 
-#: ConfigDialog#72
+#: ConfigDialog#71
+msgctxt "ConfigDialog#71"
 msgid "Log File:"
 msgstr ""
 
-#: ConfigDialog#73
+#: ConfigDialog#72
+msgctxt "ConfigDialog#72"
 msgid "XFerCommand: (example: /path/to/command %u) Blank for Default"
 msgstr ""
 
-#: ConfigDialog#74
+#: ConfigDialog#73
+msgctxt "ConfigDialog#73"
 msgid "Arch Linux Official Repositories"
 msgstr ""
 
-#: ConfigDialog#75
+#: ConfigDialog#74
+msgctxt "ConfigDialog#74"
 msgid ""
 "Here you can choose what repositories to use between Arch Linux's official "
 "ones. Please note that packages from Unstable and Testing may break your "
@@ -529,38 +545,41 @@ msgid ""
 msgstr ""
 
 # Do not translate
-#: ConfigDialog#76
+#: ConfigDialog#75
+msgctxt "ConfigDialog#75"
 msgid "Core"
 msgstr ""
 
 # Do not translate
-#: ConfigDialog#77
+#: ConfigDialog#76
+msgctxt "ConfigDialog#76"
 msgid "Extra"
 msgstr ""
 
 # Do not translate
-#: ConfigDialog#78
+#: ConfigDialog#77
+msgctxt "ConfigDialog#77"
 msgid "Community"
 msgstr ""
 
 # Do not translate
-#: ConfigDialog#79
+#: ConfigDialog#78
+msgctxt "ConfigDialog#78"
 msgid "Testing"
 msgstr ""
 
-#: ConfigDialog#80
+#: ConfigDialog#79
+msgctxt "ConfigDialog#79"
 msgid "Server"
 msgstr ""
 
-#: ConfigDialog#81
-msgid "Mirror:"
-msgstr ""
-
-#: ConfigDialog#82
+#: ConfigDialog#80
+msgctxt "ConfigDialog#80"
 msgid "KDEMod Repositories"
 msgstr ""
 
-#: ConfigDialog#83
+#: ConfigDialog#81
+msgctxt "ConfigDialog#81"
 msgid ""
 "KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
 "improved Qt build, compatible with Arch Linux standard Qt's, an improved "
@@ -568,211 +587,434 @@ msgid ""
 "power of KDE with the simplicity and the power of Arch."
 msgstr ""
 
-#: ConfigDialog#84
+#: ConfigDialog#82
+msgctxt "ConfigDialog#82"
 msgid "KDEMod 4 Repository"
 msgstr ""
 
-#: ConfigDialog#85
+#: ConfigDialog#83
+msgctxt "ConfigDialog#83"
 msgid "KDEMod 4 Extragear Repository"
 msgstr ""
 
-#: ConfigDialog#86
+#: ConfigDialog#84
+msgctxt "ConfigDialog#84"
 msgid "KDEMod 4 Playground Repository"
 msgstr ""
 
-#: ConfigDialog#87
+#: ConfigDialog#85
+msgctxt "ConfigDialog#85"
 msgid "KDEMod 4 Testing Repository"
 msgstr ""
 
-#: ConfigDialog#88
+#: ConfigDialog#86
+msgctxt "ConfigDialog#86"
 msgid "KDEMod 4 Unstable Repository (Testers only!)"
 msgstr ""
 
-#: ConfigDialog#89
+#: ConfigDialog#87
+msgctxt "ConfigDialog#87"
 msgid "KDEMod 3 Repository"
 msgstr ""
 
-#: ConfigDialog#90
+#: ConfigDialog#88
+msgctxt "ConfigDialog#88"
 msgid "Third-Party Repositories"
 msgstr ""
 
-#: ConfigDialog#91
+#: ConfigDialog#89
+msgctxt "ConfigDialog#89"
 msgid ""
 "You can extend your packages choice by adding other repositories. Third-"
 "Party Repositories act just as normal ones, and will be accessible through "
 "both Shaman and Pacman."
 msgstr ""
 
-#: ConfigDialog#92
-msgctxt "ConfigDialog#92"
-msgid "Repository"
-msgstr ""
-
-#: ConfigDialog#93
+#: ConfigDialog#90
+msgctxt "ConfigDialog#90"
 msgid "Add New Repository"
 msgstr ""
 
+#: ConfigDialog#91
+msgctxt "ConfigDialog#91"
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:8pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Shaman Manteinance.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Please choose an action from the Drop-Down "
+"Menu.</span></p></body></html>"
+msgstr ""
+
+#: ConfigDialog#92
+msgctxt "ConfigDialog#92"
+msgid "Add another server"
+msgstr ""
+
+#: ConfigDialog#93
+msgctxt "ConfigDialog#93"
+msgid "Repository Order"
+msgstr ""
+
 #: ConfigDialog#94
-msgid "Edit Repository"
+msgctxt "ConfigDialog#94"
+msgid ""
+"Please order your repositories to define which one will be preferred over "
+"another."
 msgstr ""
 
 #: ConfigDialog#95
-msgid "Remove Repository"
-msgstr ""
-
-#: ConfigDialog#96
+msgctxt "ConfigDialog#95"
 msgid "Preferences"
 msgstr ""
 
-#: ConfigDialog#97
+#: ConfigDialog#96
+msgctxt "ConfigDialog#96"
 msgid "Process all dependencies and queue from binary first (recommended)"
 msgstr ""
 
-#: ConfigDialog#98
+#: ConfigDialog#97
+msgctxt "ConfigDialog#97"
 msgid "Review Building output before installing"
 msgstr ""
 
-#: ConfigDialog#99
+#: ConfigDialog#98
+msgctxt "ConfigDialog#98"
 msgid "ABS Configuration"
 msgstr ""
 
-#: ConfigDialog#100
+#: ConfigDialog#99
+msgctxt "ConfigDialog#99"
 msgid "Use supfiles that match your current repositories"
 msgstr ""
 
-#: ConfigDialog#101
+#: ConfigDialog#100
+msgctxt "ConfigDialog#100"
 msgid "Define supfiles manually"
 msgstr ""
 
-#: ConfigDialog#102
+#: ConfigDialog#101
+msgctxt "ConfigDialog#101"
 msgid "RSync Server:"
 msgstr ""
 
-#: ConfigDialog#103
+#: ConfigDialog#102
+msgctxt "ConfigDialog#102"
 msgid "Makepkg Configuration"
 msgstr ""
 
-#: ConfigDialog#104
+#: ConfigDialog#103
+msgctxt "ConfigDialog#103"
 msgid "CFlags"
 msgstr ""
 
-#: ConfigDialog#105
+#: ConfigDialog#104
+msgctxt "ConfigDialog#104"
 msgid "CXXFlags"
 msgstr ""
 
-#: ConfigDialog#106
+#: ConfigDialog#105
+msgctxt "ConfigDialog#105"
 msgid "BuildEnv"
 msgstr ""
 
-#: ConfigDialog#107
+#: ConfigDialog#106
+msgctxt "ConfigDialog#106"
 msgid "Options"
 msgstr ""
 
-#: ConfigDialog#108
+#: ConfigDialog#107
+msgctxt "ConfigDialog#107"
 msgid "Doc_Dirs"
 msgstr ""
 
-#: ConfigDialog#109
+#: ConfigDialog#108
+msgctxt "ConfigDialog#108"
 msgid "Build Environment"
 msgstr ""
 
-#: ConfigDialog#110
+#: ConfigDialog#109
+msgctxt "ConfigDialog#109"
 msgid "Building Path"
 msgstr ""
 
-#: ConfigDialog#111
+#: ConfigDialog#110
+msgctxt "ConfigDialog#110"
 msgid "Remove installed makedepends after build"
 msgstr ""
 
-#: ConfigDialog#112
+#: ConfigDialog#111
+msgctxt "ConfigDialog#111"
 msgid "Clean Build Environment after installation"
 msgstr ""
 
-#: ConfigDialog#113
+#: ConfigDialog#112
+msgctxt "ConfigDialog#112"
 msgid "When Application is in System Tray only"
 msgstr ""
 
-#: ConfigDialog#114
+#: ConfigDialog#113
+msgctxt "ConfigDialog#113"
 msgid "Update Database every"
 msgstr ""
 
 # As in "minutes"
-#: ConfigDialog#115
+#: ConfigDialog#114
+msgctxt "ConfigDialog#114"
 msgid "min"
 msgstr ""
 
-#: ConfigDialog#116
+#: ConfigDialog#115
+msgctxt "ConfigDialog#115"
 msgid "Show tray notification Windows"
 msgstr ""
 
-#: ConfigDialog#117
+#: ConfigDialog#116
+msgctxt "ConfigDialog#116"
 msgid "If upgrades are available:"
 msgstr ""
 
-#: ConfigDialog#118
+#: ConfigDialog#117
+msgctxt "ConfigDialog#117"
 msgid "Just Notify"
 msgstr ""
 
-#: ConfigDialog#119
+#: ConfigDialog#118
+msgctxt "ConfigDialog#118"
 msgid "Notify and add them to Queue"
 msgstr ""
 
-#: ConfigDialog#120
+#: ConfigDialog#119
+msgctxt "ConfigDialog#119"
 msgid "Update Database at"
 msgstr ""
 
-#: ConfigDialog#121
+#: ConfigDialog#120
+msgctxt "ConfigDialog#120"
 msgid "Use a proxy-server"
 msgstr ""
 
-#: ConfigDialog#122
+#: ConfigDialog#121
+msgctxt "ConfigDialog#121"
 msgid "IP:"
 msgstr ""
 
-#: ConfigDialog#123
+#: ConfigDialog#122
+msgctxt "ConfigDialog#122"
 msgid "Port:"
 msgstr ""
 
-#: ConfigDialog#124
+#: ConfigDialog#123
+msgctxt "ConfigDialog#123"
 msgid "HTTP Proxy"
 msgstr ""
 
-#: ConfigDialog#125
+#: ConfigDialog#124
+msgctxt "ConfigDialog#124"
 msgid "FTP Proxy"
 msgstr ""
 
-#: ConfigDialog#126
+#: ConfigDialog#125
+msgctxt "ConfigDialog#125"
 msgid "Use Shaman RSS Capabilities"
 msgstr ""
 
-#: ConfigDialog#127
+#: ConfigDialog#126
+msgctxt "ConfigDialog#126"
 msgid "Update RSS Feed Every"
 msgstr ""
 
-#: ConfigDialog#128
+#: ConfigDialog#127
+msgctxt "ConfigDialog#127"
 msgid "Notify upon new items"
 msgstr ""
 
-#: ConfigDialog#129
+#: ConfigDialog#128
+msgctxt "ConfigDialog#128"
 msgid ""
 "Check if there is an unread news about a package in Queue before processing "
 "it"
 msgstr ""
 
-#: ConfigDialog#130
+#: ConfigDialog#129
+msgctxt "ConfigDialog#129"
 msgid "Interface"
 msgstr ""
 
-#: ConfigDialog#131
+#: ConfigDialog#130
+msgctxt "ConfigDialog#130"
 msgid "Use Animated Tray Icon"
 msgstr ""
 
-#: ConfigDialog#132
+#: ConfigDialog#131
+msgctxt "ConfigDialog#131"
 msgid "Start Shaman Automatically on X Startup"
 msgstr ""
 
-#: ConfigDialog#133
+#: ConfigDialog#132
+msgctxt "ConfigDialog#132"
 msgid "Forbid starting Shaman as root"
+msgstr ""
+
+#: DatabaseConfig#1
+msgctxt "DatabaseConfig#1"
+msgid "Add Mirror"
+msgstr ""
+
+# Obviously keep the example as it is ;)
+#: DatabaseConfig#2
+msgctxt "DatabaseConfig#2"
+msgid ""
+"Mirror Format is incorrect. Your mirror should look like this:\n"
+"http://mirror.org/$repo/os/i686"
+msgstr ""
+
+# mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.
+#: DatabaseConfig#3
+msgctxt "DatabaseConfig#3"
+msgid ""
+"Your Mirror was successfully added!\n"
+"It is now available in mirrorlist."
+msgstr ""
+
+#: DatabaseConfig#4
+msgctxt "DatabaseConfig#4"
+msgid ""
+"There was an error while trying to add the mirror! This could be due also to "
+"your system policy preventing you from performing this action"
+msgstr ""
+
+#: DatabaseConfig#5
+msgctxt "DatabaseConfig#5"
+msgid "Form"
+msgstr ""
+
+#: DatabaseConfig#6
+msgctxt "DatabaseConfig#6"
+msgid "Arch Linux Official Repositories"
+msgstr ""
+
+#: DatabaseConfig#7
+msgctxt "DatabaseConfig#7"
+msgid ""
+"Here you can choose what repositories to use between Arch Linux's official "
+"ones. Please note that packages from Unstable and Testing may break your "
+"system."
+msgstr ""
+
+# Do not translate
+#: DatabaseConfig#8
+msgctxt "DatabaseConfig#8"
+msgid "Core"
+msgstr ""
+
+# Do not translate
+#: DatabaseConfig#9
+msgctxt "DatabaseConfig#9"
+msgid "Extra"
+msgstr ""
+
+# Do not translate
+#: DatabaseConfig#10
+msgctxt "DatabaseConfig#10"
+msgid "Community"
+msgstr ""
+
+# Do not translate
+#: DatabaseConfig#11
+msgctxt "DatabaseConfig#11"
+msgid "Testing"
+msgstr ""
+
+#: DatabaseConfig#12
+msgctxt "DatabaseConfig#12"
+msgid "Server"
+msgstr ""
+
+#: DatabaseConfig#13
+msgctxt "DatabaseConfig#13"
+msgid "Add another server"
+msgstr ""
+
+#: DatabaseConfig#14
+msgctxt "DatabaseConfig#14"
+msgid "KDEMod Repositories"
+msgstr ""
+
+#: DatabaseConfig#15
+msgctxt "DatabaseConfig#15"
+msgid ""
+"KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
+"improved Qt build, compatible with Arch Linux standard Qt's, an improved "
+"theme, and lots of addons, KDEMod is the best way to taste the ease and the "
+"power of KDE with the simplicity and the power of Arch."
+msgstr ""
+
+#: DatabaseConfig#16
+msgctxt "DatabaseConfig#16"
+msgid "KDEMod 4 Repository"
+msgstr ""
+
+#: DatabaseConfig#17
+msgctxt "DatabaseConfig#17"
+msgid "KDEMod 4 Extragear Repository"
+msgstr ""
+
+#: DatabaseConfig#18
+msgctxt "DatabaseConfig#18"
+msgid "KDEMod 4 Playground Repository"
+msgstr ""
+
+#: DatabaseConfig#19
+msgctxt "DatabaseConfig#19"
+msgid "KDEMod 4 Testing Repository"
+msgstr ""
+
+#: DatabaseConfig#20
+msgctxt "DatabaseConfig#20"
+msgid "KDEMod 4 Unstable Repository (Testers only!)"
+msgstr ""
+
+#: DatabaseConfig#21
+msgctxt "DatabaseConfig#21"
+msgid "KDEMod 3 Repository"
+msgstr ""
+
+#: DatabaseConfig#22
+msgctxt "DatabaseConfig#22"
+msgid "Third-Party Repositories"
+msgstr ""
+
+#: DatabaseConfig#23
+msgctxt "DatabaseConfig#23"
+msgid ""
+"You can extend your packages choice by adding other repositories. Third-"
+"Party Repositories act just as normal ones, and will be accessible through "
+"both Shaman and Pacman."
+msgstr ""
+
+#: DatabaseConfig#24
+msgctxt "DatabaseConfig#24"
+msgid "Add New Repository"
+msgstr ""
+
+#: DatabaseConfig#25
+msgctxt "DatabaseConfig#25"
+msgid "Repository Order"
+msgstr ""
+
+#: DatabaseConfig#26
+msgctxt "DatabaseConfig#26"
+msgid ""
+"Please order your repositories to define which one will be preferred over "
+"another."
 msgstr ""
 
 #: EditPBuild#1
@@ -889,6 +1131,484 @@ msgstr ""
 msgid "Error occurred"
 msgstr ""
 
+#: Form#1
+msgctxt "Form#1"
+msgid "Form"
+msgstr ""
+
+#: Form#2
+msgctxt "Form#2"
+msgid "Favourite Actions"
+msgstr ""
+
+#: Form#3
+msgctxt "Form#3"
+msgid "When Upgrading System:"
+msgstr ""
+
+#: Form#4
+msgctxt "Form#4"
+msgid "Upgrade Immediately"
+msgstr ""
+
+#: Form#5
+msgctxt "Form#5"
+msgid "Add Upgradeable Packages To Queue"
+msgstr ""
+
+#: Form#6
+msgctxt "Form#6"
+msgid "Ask"
+msgstr ""
+
+#: Form#7
+msgctxt "Form#7"
+msgid "When Processing Queue"
+msgstr ""
+
+#: Form#8
+msgctxt "Form#8"
+msgid "Keep application running in System Tray only"
+msgstr ""
+
+#: Form#9
+msgctxt "Form#9"
+msgid "GUI Startup"
+msgstr ""
+
+#: Form#10
+msgctxt "Form#10"
+msgid "Start in the System Tray"
+msgstr ""
+
+#: Form#11
+msgctxt "Form#11"
+msgid "Show Splashscreen"
+msgstr ""
+
+#: Form#12
+msgctxt "Form#12"
+msgid "Use the following language:"
+msgstr ""
+
+#: Form#13
+msgctxt "Form#13"
+msgid "Disable Tray Icon"
+msgstr ""
+
+#: Form#14
+msgctxt "Form#14"
+msgid "Maintenance"
+msgstr ""
+
+#: Form#15
+msgctxt "Form#15"
+msgid "Process Selected"
+msgstr ""
+
+# Waiting for a user action
+#: Form#16
+msgctxt "Form#16"
+msgid "Waiting"
+msgstr ""
+
+#: Form#17
+msgctxt "Form#17"
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:8pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Shaman Manteinance.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Please choose an action from the Drop-Down "
+"Menu.</span></p></body></html>"
+msgstr ""
+
+#: Form#18
+msgctxt "Form#18"
+msgid "Checkable Options"
+msgstr ""
+
+#: Form#19
+msgctxt "Form#19"
+msgid "Use Active FTP"
+msgstr ""
+
+#: Form#20
+msgctxt "Form#20"
+msgid "Use Deltas (needs xdelta to be installed)"
+msgstr ""
+
+#: Form#21
+msgctxt "Form#21"
+msgid "Use SysLog"
+msgstr ""
+
+#: Form#22
+msgctxt "Form#22"
+msgid "Advanced Options"
+msgstr ""
+
+#: Form#23
+msgctxt "Form#23"
+msgid "HoldPkgs:"
+msgstr ""
+
+#: Form#24
+msgctxt "Form#24"
+msgid "IgnorePkgs:"
+msgstr ""
+
+#: Form#25
+msgctxt "Form#25"
+msgid "IgnoreGroups:"
+msgstr ""
+
+#: Form#26
+msgctxt "Form#26"
+msgid "NoUpgrade:"
+msgstr ""
+
+#: Form#27
+msgctxt "Form#27"
+msgid "NoExtract:"
+msgstr ""
+
+#: Form#28
+msgctxt "Form#28"
+msgid "Log File:"
+msgstr ""
+
+#: Form#29
+msgctxt "Form#29"
+msgid "XFerCommand: (example: /path/to/command %u) Blank for Default"
+msgstr ""
+
+#: Form#30
+msgctxt "Form#30"
+msgid "Arch Linux Official Repositories"
+msgstr ""
+
+#: Form#31
+msgctxt "Form#31"
+msgid ""
+"Here you can choose what repositories to use between Arch Linux's official "
+"ones. Please note that packages from Unstable and Testing may break your "
+"system."
+msgstr ""
+
+# Do not translate
+#: Form#32
+msgctxt "Form#32"
+msgid "Core"
+msgstr ""
+
+# Do not translate
+#: Form#33
+msgctxt "Form#33"
+msgid "Extra"
+msgstr ""
+
+# Do not translate
+#: Form#34
+msgctxt "Form#34"
+msgid "Community"
+msgstr ""
+
+# Do not translate
+#: Form#35
+msgctxt "Form#35"
+msgid "Testing"
+msgstr ""
+
+#: Form#36
+msgctxt "Form#36"
+msgid "Server"
+msgstr ""
+
+#: Form#37
+msgctxt "Form#37"
+msgid "Add Mirror"
+msgstr ""
+
+#: Form#38
+msgctxt "Form#38"
+msgid "Add another server"
+msgstr ""
+
+#: Form#39
+msgctxt "Form#39"
+msgid "KDEMod Repositories"
+msgstr ""
+
+#: Form#40
+msgctxt "Form#40"
+msgid ""
+"KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
+"improved Qt build, compatible with Arch Linux standard Qt's, an improved "
+"theme, and lots of addons, KDEMod is the best way to taste the ease and the "
+"power of KDE with the simplicity and the power of Arch."
+msgstr ""
+
+#: Form#41
+msgctxt "Form#41"
+msgid "KDEMod 4 Repository"
+msgstr ""
+
+#: Form#42
+msgctxt "Form#42"
+msgid "KDEMod 4 Extragear Repository"
+msgstr ""
+
+#: Form#43
+msgctxt "Form#43"
+msgid "KDEMod 4 Playground Repository"
+msgstr ""
+
+#: Form#44
+msgctxt "Form#44"
+msgid "KDEMod 4 Testing Repository"
+msgstr ""
+
+#: Form#45
+msgctxt "Form#45"
+msgid "KDEMod 4 Unstable Repository (Testers only!)"
+msgstr ""
+
+#: Form#46
+msgctxt "Form#46"
+msgid "KDEMod 3 Repository"
+msgstr ""
+
+#: Form#47
+msgctxt "Form#47"
+msgid "Third-Party Repositories"
+msgstr ""
+
+#: Form#48
+msgctxt "Form#48"
+msgid ""
+"You can extend your packages choice by adding other repositories. Third-"
+"Party Repositories act just as normal ones, and will be accessible through "
+"both Shaman and Pacman."
+msgstr ""
+
+#: Form#49
+msgctxt "Form#49"
+msgid "Add New Repository"
+msgstr ""
+
+#: Form#50
+msgctxt "Form#50"
+msgid "Repository Order"
+msgstr ""
+
+#: Form#51
+msgctxt "Form#51"
+msgid ""
+"Please order your repositories to define which one will be preferred over "
+"another."
+msgstr ""
+
+#: Form#52
+msgctxt "Form#52"
+msgid "Preferences"
+msgstr ""
+
+#: Form#53
+msgctxt "Form#53"
+msgid "Process all dependencies and queue from binary first (recommended)"
+msgstr ""
+
+#: Form#54
+msgctxt "Form#54"
+msgid "Review Building output before installing"
+msgstr ""
+
+#: Form#55
+msgctxt "Form#55"
+msgid "ABS Configuration"
+msgstr ""
+
+#: Form#56
+msgctxt "Form#56"
+msgid "Use supfiles that match your current repositories"
+msgstr ""
+
+#: Form#57
+msgctxt "Form#57"
+msgid "Define supfiles manually"
+msgstr ""
+
+#: Form#58
+msgctxt "Form#58"
+msgid "RSync Server:"
+msgstr ""
+
+#: Form#59
+msgctxt "Form#59"
+msgid "Makepkg Configuration"
+msgstr ""
+
+#: Form#60
+msgctxt "Form#60"
+msgid "CFlags"
+msgstr ""
+
+#: Form#61
+msgctxt "Form#61"
+msgid "CXXFlags"
+msgstr ""
+
+#: Form#62
+msgctxt "Form#62"
+msgid "BuildEnv"
+msgstr ""
+
+#: Form#63
+msgctxt "Form#63"
+msgid "Options"
+msgstr ""
+
+#: Form#64
+msgctxt "Form#64"
+msgid "Doc_Dirs"
+msgstr ""
+
+#: Form#65
+msgctxt "Form#65"
+msgid "Build Environment"
+msgstr ""
+
+#: Form#66
+msgctxt "Form#66"
+msgid "Building Path"
+msgstr ""
+
+#: Form#67
+msgctxt "Form#67"
+msgid "Remove installed makedepends after build"
+msgstr ""
+
+#: Form#68
+msgctxt "Form#68"
+msgid "Clean Build Environment after installation"
+msgstr ""
+
+#: Form#69
+msgctxt "Form#69"
+msgid "When Application is in System Tray only"
+msgstr ""
+
+#: Form#70
+msgctxt "Form#70"
+msgid "Update Database every"
+msgstr ""
+
+# As in "minutes"
+#: Form#71
+msgctxt "Form#71"
+msgid "min"
+msgstr ""
+
+#: Form#72
+msgctxt "Form#72"
+msgid "Show tray notification Windows"
+msgstr ""
+
+#: Form#73
+msgctxt "Form#73"
+msgid "If upgrades are available:"
+msgstr ""
+
+#: Form#74
+msgctxt "Form#74"
+msgid "Just Notify"
+msgstr ""
+
+#: Form#75
+msgctxt "Form#75"
+msgid "Notify and add them to Queue"
+msgstr ""
+
+#: Form#76
+msgctxt "Form#76"
+msgid "Update Database at"
+msgstr ""
+
+#: Form#77
+msgctxt "Form#77"
+msgid "Use a proxy-server"
+msgstr ""
+
+#: Form#78
+msgctxt "Form#78"
+msgid "IP:"
+msgstr ""
+
+#: Form#79
+msgctxt "Form#79"
+msgid "Port:"
+msgstr ""
+
+#: Form#80
+msgctxt "Form#80"
+msgid "HTTP Proxy"
+msgstr ""
+
+#: Form#81
+msgctxt "Form#81"
+msgid "FTP Proxy"
+msgstr ""
+
+#: Form#82
+msgctxt "Form#82"
+msgid "Use Shaman RSS Capabilities"
+msgstr ""
+
+#: Form#83
+msgctxt "Form#83"
+msgid "Update RSS Feed Every"
+msgstr ""
+
+#: Form#84
+msgctxt "Form#84"
+msgid "Notify upon new items"
+msgstr ""
+
+#: Form#85
+msgctxt "Form#85"
+msgid ""
+"Check if there is an unread news about a package in Queue before processing "
+"it"
+msgstr ""
+
+#: Form#86
+msgctxt "Form#86"
+msgid "Interface"
+msgstr ""
+
+#: Form#87
+msgctxt "Form#87"
+msgid "Use Animated Tray Icon"
+msgstr ""
+
+#: Form#88
+msgctxt "Form#88"
+msgid "Start Shaman Automatically on X Startup"
+msgstr ""
+
+#: Form#89
+msgctxt "Form#89"
+msgid "Forbid starting Shaman as root"
+msgstr ""
+
 #: LocalPackage#1
 msgid "Install Package from File"
 msgstr ""
@@ -952,6 +1672,7 @@ msgstr ""
 "        "
 
 #: MainWindow#1
+msgctxt "MainWindow#1"
 msgid "Name"
 msgstr ""
 
@@ -1379,7 +2100,6 @@ msgid "Size"
 msgstr ""
 
 #: MainWindow#81
-msgctxt "MainWindow#81"
 msgid "Repository"
 msgstr ""
 
@@ -1629,6 +2349,30 @@ msgstr ""
 #: MaintenanceBar#27
 msgctxt "MaintenanceBar#27"
 msgid "Could not Optimize Pacman Database!"
+msgstr ""
+
+#: MirrorWidget#1
+msgctxt "MirrorWidget#1"
+msgid "Form"
+msgstr ""
+
+#: MirrorWidget#2
+msgid "Mirror:"
+msgstr ""
+
+#: MirrorWidget#3
+msgctxt "MirrorWidget#3"
+msgid "Prefer"
+msgstr ""
+
+#: MirrorWidget#4
+msgctxt "MirrorWidget#4"
+msgid "Defer"
+msgstr ""
+
+#: MirrorWidget#5
+msgctxt "MirrorWidget#5"
+msgid "Remove"
 msgstr ""
 
 #: NewsViewer#1
@@ -2023,6 +2767,30 @@ msgstr ""
 msgid "Do you wish to continue?"
 msgstr ""
 
+#: ServerWidget#1
+msgctxt "ServerWidget#1"
+msgid "Form"
+msgstr ""
+
+#: ServerWidget#2
+msgid "Server:"
+msgstr ""
+
+#: ServerWidget#3
+msgctxt "ServerWidget#3"
+msgid "Prefer"
+msgstr ""
+
+#: ServerWidget#4
+msgctxt "ServerWidget#4"
+msgid "Defer"
+msgstr ""
+
+#: ServerWidget#5
+msgctxt "ServerWidget#5"
+msgid "Remove"
+msgstr ""
+
 #: ShamanStatusBar#1
 msgid "%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages"
 msgstr ""
@@ -2128,6 +2896,29 @@ msgstr ""
 #: SysUpgradeDialog#3
 msgctxt "SysUpgradeDialog#3"
 msgid "System Upgrade"
+msgstr ""
+
+#: ThirdPartyWidget#1
+msgctxt "ThirdPartyWidget#1"
+msgid "Form"
+msgstr ""
+
+#: ThirdPartyWidget#2
+msgctxt "ThirdPartyWidget#2"
+msgid "Name"
+msgstr ""
+
+#: ThirdPartyWidget#3
+msgid "Databases"
+msgstr ""
+
+#: ThirdPartyWidget#4
+msgid "Add"
+msgstr ""
+
+#: ThirdPartyWidget#5
+msgctxt "ThirdPartyWidget#5"
+msgid "Remove"
 msgstr ""
 
 #: aboutDialog#1

@@ -370,7 +370,7 @@ Please note that packages from Unstable and Testing may break your system.</sour
     </message>
     <message>
         <source>Mirror:</source>
-        <translation>Mirror:</translation>
+        <translation type="obsolete">Mirror:</translation>
     </message>
     <message>
         <source>Add Mirror</source>
@@ -413,7 +413,7 @@ Repositories τρίτων λειτουργούν όπως τα επίσημα κ
     </message>
     <message>
         <source>Repository</source>
-        <translation>Repository</translation>
+        <translation type="obsolete">Repository</translation>
     </message>
     <message>
         <source>Add New Repository</source>
@@ -421,11 +421,11 @@ Repositories τρίτων λειτουργούν όπως τα επίσημα κ
     </message>
     <message>
         <source>Edit Repository</source>
-        <translation>Επεξεργασία Repository</translation>
+        <translation type="obsolete">Επεξεργασία Repository</translation>
     </message>
     <message>
         <source>Remove Repository</source>
-        <translation>Αφαίρεση Repository</translation>
+        <translation type="obsolete">Αφαίρεση Repository</translation>
     </message>
     <message>
         <source>Preferences</source>
@@ -917,9 +917,144 @@ p, li { white-space: pre-wrap; }
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add another server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Repository Order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please order your repositories to define which one will be preferred over another.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>DatabaseConfig</name>
+    <message>
+        <source>Add Mirror</source>
+        <translation type="unfinished">Προσθήκη Mirror</translation>
+    </message>
+    <message>
+        <source>Mirror Format is incorrect. Your mirror should look like this:
+http://mirror.org/$repo/os/i686</source>
+        <comment>Obviously keep the example as it is ;)</comment>
+        <translation type="unfinished">Ο τύπος του mirror είναι λανθασμένος. Ο σωστός τύπος συντάσσεται ως εξής:
+http://mirror.org/$repo/os/i686</translation>
+    </message>
+    <message>
+        <source>Your Mirror was successfully added!
+It is now available in mirrorlist.</source>
+        <comment>mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.</comment>
+        <translation type="unfinished">Η προσθήκη του mirror έγινε με επιτυχία!
+Βρίσκεται διαθέσιμο στο αρχείο /etc/pacman.d/mirrorlist.</translation>
+    </message>
+    <message>
+        <source>There was an error while trying to add the mirror! This could be due also to your system policy preventing you from performing this action</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Arch Linux Official Repositories</source>
+        <translation type="unfinished">Επίσημα Repositories του Arch Linux</translation>
+    </message>
+    <message>
+        <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones. Please note that packages from Unstable and Testing may break your system.</source>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>Core</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Core</translation>
+    </message>
+    <message>
+        <source>Extra</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Extra</translation>
+    </message>
+    <message>
+        <source>Community</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Community</translation>
+    </message>
+    <message>
+        <source>Testing</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Testing</translation>
+    </message>
+    <message>
+        <source>Server</source>
+        <translation type="unfinished">Server</translation>
+    </message>
+    <message>
+        <source>Add another server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KDEMod Repositories</source>
+        <translation type="unfinished">Repositories του KDEMod</translation>
+    </message>
+    <message>
+        <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme, and lots of addons, KDEMod is the best way to taste the ease and the power of KDE with the simplicity and the power of Arch.</source>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Repository</source>
+        <translation type="unfinished">Repository του KDEMod 3 {4 ?}</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Extragear Repository</source>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Playground Repository</source>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Testing Repository</source>
+        <translation type="unfinished">KDEMod 3 Testing Repository {4 ?}</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Unstable Repository (Testers only!)</source>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>KDEMod 3 Repository</source>
+        <translation type="unfinished">Repository του KDEMod 3</translation>
+    </message>
+    <message>
+        <source>Third-Party Repositories</source>
+        <translation type="unfinished">Άλλα Repositories</translation>
+    </message>
+    <message>
+        <source>You can extend your packages choice by adding other repositories. Third-Party Repositories act just as normal ones, and will be accessible through both Shaman and Pacman.</source>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>Add New Repository</source>
+        <translation type="unfinished">Προσθήκη νέου Repository</translation>
+    </message>
+    <message>
+        <source>Repository Order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please order your repositories to define which one will be preferred over another.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1029,6 +1164,387 @@ Do you want to save it?</source>
     <message>
         <source>Error occurred</source>
         <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Form</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Favourite Actions</source>
+        <translation type="unfinished">Αγαπημένες Ενέργειες</translation>
+    </message>
+    <message>
+        <source>When Upgrading System:</source>
+        <translation type="unfinished">Όταν Αναβαθμίζετε το Σύστημα:</translation>
+    </message>
+    <message>
+        <source>Upgrade Immediately</source>
+        <translation type="unfinished">Αναβαθμίστε Άμεσα</translation>
+    </message>
+    <message>
+        <source>Add Upgradeable Packages To Queue</source>
+        <translation type="unfinished">Προσθήκη αναβαθμίσιμων πακέτων στην Ουρά</translation>
+    </message>
+    <message>
+        <source>Ask</source>
+        <translation type="unfinished">Ερώτηση</translation>
+    </message>
+    <message>
+        <source>When Processing Queue</source>
+        <translation type="unfinished">Όταν επεξεργάζεστε την Ουρά</translation>
+    </message>
+    <message>
+        <source>Keep application running in System Tray only</source>
+        <translation type="unfinished">Εμφάνιση εφαρμογής μόνο στο System Tray</translation>
+    </message>
+    <message>
+        <source>GUI Startup</source>
+        <translation type="unfinished">Εκκίνηση του GUI</translation>
+    </message>
+    <message>
+        <source>Start in the System Tray</source>
+        <translation type="unfinished">Εκκίνηση στο System Tray</translation>
+    </message>
+    <message>
+        <source>Show Splashscreen</source>
+        <translation type="unfinished">Εμφάνιση Εικόνας Εκκίνησης</translation>
+    </message>
+    <message>
+        <source>Use the following language:</source>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>Disable Tray Icon</source>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>Maintenance</source>
+        <translation type="unfinished">Συντήρηση</translation>
+    </message>
+    <message>
+        <source>Process Selected</source>
+        <translation type="unfinished">Επεξεργασία Επιλογής</translation>
+    </message>
+    <message>
+        <source>Waiting</source>
+        <comment>Waiting for a user action</comment>
+        <translation type="unfinished">Αναμονή</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Checkable Options</source>
+        <translation type="unfinished">Διαθέσιμες Επιλογές</translation>
+    </message>
+    <message>
+        <source>Use Active FTP</source>
+        <translation type="unfinished">Χρήση Ενεργού FTP</translation>
+    </message>
+    <message>
+        <source>Use Deltas (needs xdelta to be installed)</source>
+        <translation type="unfinished">Χρήση Deltas (χρειάζεται να είναι εγκατεστημένο το xdelta)</translation>
+    </message>
+    <message>
+        <source>Use SysLog</source>
+        <translation type="unfinished">Χρήση SysLog</translation>
+    </message>
+    <message>
+        <source>Advanced Options</source>
+        <translation type="unfinished">Προχωρημένες Επιλογές</translation>
+    </message>
+    <message>
+        <source>HoldPkgs:</source>
+        <translation type="unfinished">HoldPkgs:</translation>
+    </message>
+    <message>
+        <source>IgnorePkgs:</source>
+        <translation type="unfinished">IgnorePkgs:</translation>
+    </message>
+    <message>
+        <source>IgnoreGroups:</source>
+        <translation type="unfinished">IgnoreGroups:</translation>
+    </message>
+    <message>
+        <source>NoUpgrade:</source>
+        <translation type="unfinished">NoUpgrade:</translation>
+    </message>
+    <message>
+        <source>NoExtract:</source>
+        <translation type="unfinished">NoExtract:</translation>
+    </message>
+    <message>
+        <source>Log File:</source>
+        <translation type="unfinished">Αρχείο Log:</translation>
+    </message>
+    <message>
+        <source>XFerCommand: (example: /path/to/command %u) Blank for Default</source>
+        <translation type="unfinished">XFerCommand: (παράδειγμα: /path/to/command %u) Κενό για χρήση Προεπιλογής</translation>
+    </message>
+    <message>
+        <source>Arch Linux Official Repositories</source>
+        <translation type="unfinished">Επίσημα Repositories του Arch Linux</translation>
+    </message>
+    <message>
+        <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones. Please note that packages from Unstable and Testing may break your system.</source>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>Core</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Core</translation>
+    </message>
+    <message>
+        <source>Extra</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Extra</translation>
+    </message>
+    <message>
+        <source>Community</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Community</translation>
+    </message>
+    <message>
+        <source>Testing</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Testing</translation>
+    </message>
+    <message>
+        <source>Server</source>
+        <translation type="unfinished">Server</translation>
+    </message>
+    <message>
+        <source>Add Mirror</source>
+        <translation type="unfinished">Προσθήκη Mirror</translation>
+    </message>
+    <message>
+        <source>Add another server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KDEMod Repositories</source>
+        <translation type="unfinished">Repositories του KDEMod</translation>
+    </message>
+    <message>
+        <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme, and lots of addons, KDEMod is the best way to taste the ease and the power of KDE with the simplicity and the power of Arch.</source>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Repository</source>
+        <translation type="unfinished">Repository του KDEMod 3 {4 ?}</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Extragear Repository</source>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Playground Repository</source>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Testing Repository</source>
+        <translation type="unfinished">KDEMod 3 Testing Repository {4 ?}</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Unstable Repository (Testers only!)</source>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>KDEMod 3 Repository</source>
+        <translation type="unfinished">Repository του KDEMod 3</translation>
+    </message>
+    <message>
+        <source>Third-Party Repositories</source>
+        <translation type="unfinished">Άλλα Repositories</translation>
+    </message>
+    <message>
+        <source>You can extend your packages choice by adding other repositories. Third-Party Repositories act just as normal ones, and will be accessible through both Shaman and Pacman.</source>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>Add New Repository</source>
+        <translation type="unfinished">Προσθήκη νέου Repository</translation>
+    </message>
+    <message>
+        <source>Repository Order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please order your repositories to define which one will be preferred over another.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Preferences</source>
+        <translation type="unfinished">Επιλογές</translation>
+    </message>
+    <message>
+        <source>Process all dependencies and queue from binary first (recommended)</source>
+        <translation type="unfinished">Επεξεργασία όλων των εξαρτήσεων και ουρών πρώτα από έτοιμα πακέτα (προτείνεται)</translation>
+    </message>
+    <message>
+        <source>Review Building output before installing</source>
+        <translation type="unfinished">Ανασκόπιση του Χτισίματος πριν την εγκατάσταση</translation>
+    </message>
+    <message>
+        <source>ABS Configuration</source>
+        <translation type="unfinished">Ρύθμιση του ABS</translation>
+    </message>
+    <message>
+        <source>Use supfiles that match your current repositories</source>
+        <translation type="unfinished">Χρήση supfiles που ταιριάζουν με τα repositories</translation>
+    </message>
+    <message>
+        <source>Define supfiles manually</source>
+        <translation type="unfinished">Καθορισμός supfiles χειροκίνητα</translation>
+    </message>
+    <message>
+        <source>RSync Server:</source>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>Makepkg Configuration</source>
+        <translation type="unfinished">Ρύθμιση του  Makepkg</translation>
+    </message>
+    <message>
+        <source>CFlags</source>
+        <translation type="unfinished">CFlags</translation>
+    </message>
+    <message>
+        <source>CXXFlags</source>
+        <translation type="unfinished">CXXFlags</translation>
+    </message>
+    <message>
+        <source>BuildEnv</source>
+        <translation type="unfinished">BuildEnv</translation>
+    </message>
+    <message>
+        <source>Options</source>
+        <translation type="unfinished">Επιλογές</translation>
+    </message>
+    <message>
+        <source>Doc_Dirs</source>
+        <translation type="unfinished">Doc_Dirs</translation>
+    </message>
+    <message>
+        <source>Build Environment</source>
+        <translation type="unfinished">Περιβάλλον Χτισίματος</translation>
+    </message>
+    <message>
+        <source>Building Path</source>
+        <translation type="unfinished">Διαδρομή Χτισίματος</translation>
+    </message>
+    <message>
+        <source>Remove installed makedepends after build</source>
+        <translation type="unfinished">Αφαίρεση των εξαρτήσεων χτισίματος μετά το χτίσιμο</translation>
+    </message>
+    <message>
+        <source>Clean Build Environment after installation</source>
+        <translation type="unfinished">Καθαρισμός του Περιβάλλοντος Χτισίματος μετά την εγκατάσταση</translation>
+    </message>
+    <message>
+        <source>When Application is in System Tray only</source>
+        <translation type="unfinished">Όταν η εφαρμογή εμφανίζεται μόνο στο System Tray</translation>
+    </message>
+    <message>
+        <source>Update Database every</source>
+        <translation type="unfinished">Ανανέωση της Βάσης Δεδομένων κάθε</translation>
+    </message>
+    <message>
+        <source>min</source>
+        <comment>As in &quot;minutes&quot;</comment>
+        <translation type="unfinished">λεπτά</translation>
+    </message>
+    <message>
+        <source>Show tray notification Windows</source>
+        <translation type="unfinished">Εμφάνιση παραθύρων ειδοποίησης στο tray</translation>
+    </message>
+    <message>
+        <source>If upgrades are available:</source>
+        <translation type="unfinished">Εάν υπάρχουν αναβαθμίσεις:</translation>
+    </message>
+    <message>
+        <source>Just Notify</source>
+        <translation type="unfinished">Μόνο Ειδοποίηση</translation>
+    </message>
+    <message>
+        <source>Notify and add them to Queue</source>
+        <translation type="unfinished">Ειδοποίηση και προσθήκη στην Ουρά</translation>
+    </message>
+    <message>
+        <source>Update Database at</source>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>Use a proxy-server</source>
+        <translation type="unfinished">Χρήση proxy-server</translation>
+    </message>
+    <message>
+        <source>IP:</source>
+        <translation type="unfinished">IP:</translation>
+    </message>
+    <message>
+        <source>Port:</source>
+        <translation type="unfinished">Port:</translation>
+    </message>
+    <message>
+        <source>HTTP Proxy</source>
+        <translation type="unfinished">HTTP Proxy</translation>
+    </message>
+    <message>
+        <source>FTP Proxy</source>
+        <translation type="unfinished">FTP Proxy</translation>
+    </message>
+    <message>
+        <source>Use Shaman RSS Capabilities</source>
+        <translation type="unfinished">Χρήση λειτουργιών RSS του Shaman</translation>
+    </message>
+    <message>
+        <source>Update RSS Feed Every</source>
+        <translation type="unfinished">Ανανέωση του RSS κάθε</translation>
+    </message>
+    <message>
+        <source>Notify upon new items</source>
+        <translation type="unfinished">Ειδοποίηση για νέα αντικείμενα</translation>
+    </message>
+    <message>
+        <source>Check if there is an unread news about a package in Queue before processing it</source>
+        <translation type="unfinished">Έλεγχος για αδιάβαστα νέα των πακέτων ουράς πριν αυτά επεξεργαστούν</translation>
+    </message>
+    <message>
+        <source>Interface</source>
+        <translation type="unfinished">Περιβάλλον</translation>
+    </message>
+    <message>
+        <source>Use Animated Tray Icon</source>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>Start Shaman Automatically on X Startup</source>
+        <translation type="unfinished">Αυτόματη εκκίνηση του Shaman όταν ξεκινάει ο Χ</translation>
+    </message>
+    <message>
+        <source>Forbid starting Shaman as root</source>
+        <translation type="unfinished">Απαγόρευση εκκίνησης του Shaman ως root</translation>
     </message>
 </context>
 <context>
@@ -2026,6 +2542,29 @@ Pacman πραγματοποιήθηκε με επιτυχία!</translation>
     </message>
 </context>
 <context>
+    <name>MirrorWidget</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mirror:</source>
+        <translation type="unfinished">Mirror:</translation>
+    </message>
+    <message>
+        <source>Prefer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Defer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>NewsViewer</name>
     <message>
         <source>Please wait, fetching items...</source>
@@ -2556,6 +3095,29 @@ p, li { white-space: pre-wrap; }
     </message>
 </context>
 <context>
+    <name>ServerWidget</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Server:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Prefer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Defer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ShamanStatusBar</name>
     <message>
         <source>%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages</source>
@@ -2680,6 +3242,29 @@ Click here to upgrade your System.</source>
     <message>
         <source>System Upgrade</source>
         <translation type="unfinished">Αναβάθμιση Συστήματος</translation>
+    </message>
+</context>
+<context>
+    <name>ThirdPartyWidget</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation type="unfinished">Όνομα</translation>
+    </message>
+    <message>
+        <source>Databases</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

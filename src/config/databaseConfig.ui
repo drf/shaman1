@@ -17,7 +17,7 @@
    <item>
     <widget class="QTabWidget" name="repoTab">
      <property name="currentIndex">
-      <number>3</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="officialTab">
       <attribute name="icon">
@@ -129,8 +129,8 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>572</width>
-                 <height>289</height>
+                 <width>94</width>
+                 <height>24</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -277,7 +277,7 @@
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_4">
               <item>
-               <widget class="QLineEdit" name="addMirrorLine_2"/>
+               <widget class="QLineEdit" name="addKDEModMirrorLine"/>
               </item>
               <item>
                <widget class="QPushButton" name="addKDEModMirrorButton">
@@ -375,8 +375,8 @@
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>590</width>
-              <height>470</height>
+              <width>94</width>
+              <height>24</height>
              </rect>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_8">

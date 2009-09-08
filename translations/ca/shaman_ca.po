@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-25 11:10+0200\n"
+"POT-Creation-Date: 2009-09-08 14:51+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -334,11 +334,13 @@ msgstr ""
 "Desitgeu actualitzar les bases de dades?"
 
 #: ConfigDialog#32
+msgctxt "ConfigDialog#32"
 msgid "Add Mirror"
 msgstr "Afegeix mirror"
 
 # Obviously keep the example as it is ;)
 #: ConfigDialog#33
+msgctxt "ConfigDialog#33"
 msgid ""
 "Mirror Format is incorrect. Your mirror should look like this:\n"
 "http://mirror.org/$repo/os/i686"
@@ -348,6 +350,7 @@ msgstr ""
 
 # mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.
 #: ConfigDialog#34
+msgctxt "ConfigDialog#34"
 msgid ""
 "Your Mirror was successfully added!\n"
 "It is now available in mirrorlist."
@@ -393,63 +396,78 @@ msgid "Shaman - Configuration"
 msgstr "Shaman - Configuració"
 
 #: ConfigDialog#41
+msgctxt "ConfigDialog#41"
 msgid "Favourite Actions"
 msgstr "Accións preferides"
 
 #: ConfigDialog#42
+msgctxt "ConfigDialog#42"
 msgid "When Upgrading System:"
 msgstr "Quan s'actualtizarà el sistema:"
 
 #: ConfigDialog#43
+msgctxt "ConfigDialog#43"
 msgid "Upgrade Immediately"
 msgstr "Actualitza inmediatament"
 
 #: ConfigDialog#44
+msgctxt "ConfigDialog#44"
 msgid "Add Upgradeable Packages To Queue"
 msgstr "Afegeix paquets actualitzables a la pila"
 
 #: ConfigDialog#45
+msgctxt "ConfigDialog#45"
 msgid "Ask"
 msgstr "Pregunta"
 
 #: ConfigDialog#46
+msgctxt "ConfigDialog#46"
 msgid "When Processing Queue"
 msgstr "En processar la pila"
 
 #: ConfigDialog#47
+msgctxt "ConfigDialog#47"
 msgid "Keep application running in System Tray only"
 msgstr "Mantén l'aplicació a la safata del sistema"
 
 #: ConfigDialog#48
+msgctxt "ConfigDialog#48"
 msgid "GUI Startup"
 msgstr "Inici de l'IGU"
 
 #: ConfigDialog#49
+msgctxt "ConfigDialog#49"
 msgid "Start in the System Tray"
 msgstr "Comença a la safata"
 
 #: ConfigDialog#50
+msgctxt "ConfigDialog#50"
 msgid "Show Splashscreen"
 msgstr "Mostra la pantalla de benvinguda"
 
 #: ConfigDialog#51
+msgctxt "ConfigDialog#51"
 msgid "Use the following language:"
 msgstr "Fes servir el següent idioma:"
 
 #: ConfigDialog#52
+msgctxt "ConfigDialog#52"
 msgid "Disable Tray Icon"
 msgstr "Desactiva la icona de la safata"
 
 #: ConfigDialog#53
+msgctxt "ConfigDialog#53"
 msgid "Maintenance"
 msgstr "Manteniment"
 
 #: ConfigDialog#54
+msgctxt "ConfigDialog#54"
 msgid "Process Selected"
 msgstr "Procés seleccionat"
 
 # Waiting for a user action
 #: ConfigDialog#55
+msgctxt "ConfigDialog#55"
 msgid "Waiting"
 msgstr "S'està esperant"
 
@@ -483,58 +501,72 @@ msgstr ""
 "desplegable.</p></body></html>"
 
 #: ConfigDialog#57
+msgctxt "ConfigDialog#57"
 msgid "Checkable Options"
 msgstr "Opcións clicables"
 
 #: ConfigDialog#58
+msgctxt "ConfigDialog#58"
 msgid "Use Active FTP"
 msgstr "Fes servir FTP actiu"
 
 #: ConfigDialog#59
+msgctxt "ConfigDialog#59"
 msgid "Use Deltas (needs xdelta to be installed)"
 msgstr "Fes servir Deltas (s'ha de tenir xdelta instal·lat)"
 
 #: ConfigDialog#60
+msgctxt "ConfigDialog#60"
 msgid "Use SysLog"
 msgstr "Fes servir SysLog"
 
 #: ConfigDialog#61
+msgctxt "ConfigDialog#61"
 msgid "Advanced Options"
 msgstr "Opcions avançades"
 
 #: ConfigDialog#62
+msgctxt "ConfigDialog#62"
 msgid "HoldPkgs:"
 msgstr "HoldPkgs:"
 
 #: ConfigDialog#63
+msgctxt "ConfigDialog#63"
 msgid "IgnorePkgs:"
 msgstr "IgnorePkgs:"
 
 #: ConfigDialog#64
+msgctxt "ConfigDialog#64"
 msgid "IgnoreGroups:"
 msgstr "IgnoreGroups:"
 
 #: ConfigDialog#65
+msgctxt "ConfigDialog#65"
 msgid "NoUpgrade:"
 msgstr "NoUpgrade:"
 
 #: ConfigDialog#66
+msgctxt "ConfigDialog#66"
 msgid "NoExtract:"
 msgstr "NoExtract:"
 
 #: ConfigDialog#67
+msgctxt "ConfigDialog#67"
 msgid "Log File:"
 msgstr "Fitxer de registre:"
 
 #: ConfigDialog#68
+msgctxt "ConfigDialog#68"
 msgid "XFerCommand: (example: /path/to/command %u) Blank for Default"
 msgstr "XFerCommand: (exemple: /path/to/command %u) en blanc per defecte"
 
 #: ConfigDialog#69
+msgctxt "ConfigDialog#69"
 msgid "Arch Linux Official Repositories"
 msgstr "Repositoris oficials Arch Linux"
 
 #: ConfigDialog#70
+msgctxt "ConfigDialog#70"
 msgid ""
 "Here you can choose what repositories to use between Arch Linux's official "
 "ones. Please note that packages from Unstable and Testing may break your "
@@ -546,37 +578,46 @@ msgstr ""
 
 # Do not translate
 #: ConfigDialog#71
+msgctxt "ConfigDialog#71"
 msgid "Core"
 msgstr "Core"
 
 # Do not translate
 #: ConfigDialog#72
+msgctxt "ConfigDialog#72"
 msgid "Extra"
 msgstr "Extra"
 
 # Do not translate
 #: ConfigDialog#73
+msgctxt "ConfigDialog#73"
 msgid "Community"
 msgstr "Community"
 
 # Do not translate
 #: ConfigDialog#74
+msgctxt "ConfigDialog#74"
 msgid "Testing"
 msgstr "Testing"
 
 #: ConfigDialog#75
+msgctxt "ConfigDialog#75"
 msgid "Server"
 msgstr "Servidor"
 
+#. (obsolete)
 #: ConfigDialog#76
+msgctxt "ConfigDialog#76"
 msgid "Mirror:"
 msgstr "Mirror:"
 
 #: ConfigDialog#77
+msgctxt "ConfigDialog#77"
 msgid "KDEMod Repositories"
 msgstr "Repositoris KDEMod"
 
 #: ConfigDialog#78
+msgctxt "ConfigDialog#78"
 msgid ""
 "KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
 "improved Qt build, compatible with Arch Linux standard Qt's, an improved "
@@ -589,34 +630,42 @@ msgstr ""
 "la potència del KDE amb la simplicitat i la potència d'Arch Linux."
 
 #: ConfigDialog#79
+msgctxt "ConfigDialog#79"
 msgid "KDEMod 4 Repository"
 msgstr "Repositori KDEMod 4"
 
 #: ConfigDialog#80
+msgctxt "ConfigDialog#80"
 msgid "KDEMod 4 Extragear Repository"
 msgstr "Repositori KDEMod 4 Extragear"
 
 #: ConfigDialog#81
+msgctxt "ConfigDialog#81"
 msgid "KDEMod 4 Playground Repository"
 msgstr "Repositori KDEMod 4 Playground"
 
 #: ConfigDialog#82
+msgctxt "ConfigDialog#82"
 msgid "KDEMod 4 Testing Repository"
 msgstr "Repositori KDEMod 4 Testing"
 
 #: ConfigDialog#83
+msgctxt "ConfigDialog#83"
 msgid "KDEMod 4 Unstable Repository (Testers only!)"
 msgstr "Repositori KDEMod 4 Unstable (només testers!)"
 
 #: ConfigDialog#84
+msgctxt "ConfigDialog#84"
 msgid "KDEMod 3 Repository"
 msgstr "Repositori KDEMod 3"
 
 #: ConfigDialog#85
+msgctxt "ConfigDialog#85"
 msgid "Third-Party Repositories"
 msgstr "Repositoris de tercers"
 
 #: ConfigDialog#86
+msgctxt "ConfigDialog#86"
 msgid ""
 "You can extend your packages choice by adding other repositories. Third-"
 "Party Repositories act just as normal ones, and will be accessible through "
@@ -626,158 +675,196 @@ msgstr ""
 "repositoris de tercers funcionen igual que els altres i seran accesibles des "
 "de Pacman i Shaman."
 
+#. (obsolete)
 #: ConfigDialog#87
 msgctxt "ConfigDialog#87"
 msgid "Repository"
 msgstr "Repositori"
 
 #: ConfigDialog#88
+msgctxt "ConfigDialog#88"
 msgid "Add New Repository"
 msgstr "Afegeix repositori nou"
 
+#. (obsolete)
 #: ConfigDialog#89
 msgid "Edit Repository"
 msgstr "Modifica repositori"
 
+#. (obsolete)
 #: ConfigDialog#90
 msgid "Remove Repository"
 msgstr "Esborra repositori"
 
 #: ConfigDialog#91
+msgctxt "ConfigDialog#91"
 msgid "Preferences"
 msgstr "Arranjament"
 
 #: ConfigDialog#92
+msgctxt "ConfigDialog#92"
 msgid "Process all dependencies and queue from binary first (recommended)"
 msgstr ""
 "Processa totes les dependències i la pila primer des de binaris (recomanat) "
 
 #: ConfigDialog#93
+msgctxt "ConfigDialog#93"
 msgid "Review Building output before installing"
 msgstr "Revisa la sortida del contrustor abans d'instal·lar"
 
 #: ConfigDialog#94
+msgctxt "ConfigDialog#94"
 msgid "ABS Configuration"
 msgstr "Configuració ABS"
 
 #: ConfigDialog#95
+msgctxt "ConfigDialog#95"
 msgid "Use supfiles that match your current repositories"
 msgstr "Fes servir supfiles que coïncideixin amb els repositoris actuals"
 
 #: ConfigDialog#96
+msgctxt "ConfigDialog#96"
 msgid "Define supfiles manually"
 msgstr "Defineix supfiles manualment"
 
 #: ConfigDialog#97
+msgctxt "ConfigDialog#97"
 msgid "RSync Server:"
 msgstr "Servidor RSync:"
 
 #: ConfigDialog#98
+msgctxt "ConfigDialog#98"
 msgid "Makepkg Configuration"
 msgstr "Configuració Makepkg"
 
 #: ConfigDialog#99
+msgctxt "ConfigDialog#99"
 msgid "CFlags"
 msgstr "CFlags"
 
 #: ConfigDialog#100
+msgctxt "ConfigDialog#100"
 msgid "CXXFlags"
 msgstr "CXXFlags"
 
 #: ConfigDialog#101
+msgctxt "ConfigDialog#101"
 msgid "BuildEnv"
 msgstr "BuildEnv"
 
 #: ConfigDialog#102
+msgctxt "ConfigDialog#102"
 msgid "Options"
 msgstr "Opcións"
 
 #: ConfigDialog#103
+msgctxt "ConfigDialog#103"
 msgid "Doc_Dirs"
 msgstr "Doc_Dirs"
 
 #: ConfigDialog#104
+msgctxt "ConfigDialog#104"
 msgid "Build Environment"
 msgstr "Entorn de construcció"
 
 #: ConfigDialog#105
+msgctxt "ConfigDialog#105"
 msgid "Building Path"
 msgstr "Ruta de construcció"
 
 #: ConfigDialog#106
+msgctxt "ConfigDialog#106"
 msgid "Remove installed makedepends after build"
 msgstr "Esborra makedepends instal·lats després de contruïr"
 
 #: ConfigDialog#107
+msgctxt "ConfigDialog#107"
 msgid "Clean Build Environment after installation"
 msgstr "Neteja entorns de construcció després d'instal·lar"
 
 #: ConfigDialog#108
+msgctxt "ConfigDialog#108"
 msgid "When Application is in System Tray only"
 msgstr "Només quan l'aplicació sigui a la safata"
 
 #: ConfigDialog#109
+msgctxt "ConfigDialog#109"
 msgid "Update Database every"
 msgstr "Actualitza bade de dades cada"
 
 # As in "minutes"
 #: ConfigDialog#110
+msgctxt "ConfigDialog#110"
 msgid "min"
 msgstr "min"
 
 #: ConfigDialog#111
+msgctxt "ConfigDialog#111"
 msgid "Show tray notification Windows"
 msgstr "Mostra finestres de notificació"
 
 #: ConfigDialog#112
+msgctxt "ConfigDialog#112"
 msgid "If upgrades are available:"
 msgstr "Si hi ha actualitzacions:"
 
 #: ConfigDialog#113
+msgctxt "ConfigDialog#113"
 msgid "Just Notify"
 msgstr "Només notifica"
 
 #: ConfigDialog#114
+msgctxt "ConfigDialog#114"
 msgid "Notify and add them to Queue"
 msgstr "Notifica i afegeix-les a la pila"
 
 #: ConfigDialog#115
+msgctxt "ConfigDialog#115"
 msgid "Update Database at"
 msgstr "Actualitza la base de dades a les"
 
 #: ConfigDialog#116
+msgctxt "ConfigDialog#116"
 msgid "Use a proxy-server"
 msgstr "Fes servir servidor intermediari"
 
 #: ConfigDialog#117
+msgctxt "ConfigDialog#117"
 msgid "IP:"
 msgstr "IP:"
 
 #: ConfigDialog#118
+msgctxt "ConfigDialog#118"
 msgid "Port:"
 msgstr "Port:"
 
 #: ConfigDialog#119
+msgctxt "ConfigDialog#119"
 msgid "HTTP Proxy"
 msgstr "HTTP Proxy"
 
 #: ConfigDialog#120
+msgctxt "ConfigDialog#120"
 msgid "FTP Proxy"
 msgstr "FTP Proxy"
 
 #: ConfigDialog#121
+msgctxt "ConfigDialog#121"
 msgid "Use Shaman RSS Capabilities"
 msgstr "Fes servir RSS"
 
 #: ConfigDialog#122
+msgctxt "ConfigDialog#122"
 msgid "Update RSS Feed Every"
 msgstr "Actualitza RSS cada"
 
 #: ConfigDialog#123
+msgctxt "ConfigDialog#123"
 msgid "Notify upon new items"
 msgstr "Notifica els nous articles"
 
 #: ConfigDialog#124
+msgctxt "ConfigDialog#124"
 msgid ""
 "Check if there is an unread news about a package in Queue before processing "
 "it"
@@ -786,18 +873,22 @@ msgstr ""
 "lo"
 
 #: ConfigDialog#125
+msgctxt "ConfigDialog#125"
 msgid "Interface"
 msgstr "Interfície"
 
 #: ConfigDialog#126
+msgctxt "ConfigDialog#126"
 msgid "Use Animated Tray Icon"
 msgstr "Anima la icona de la safata"
 
 #: ConfigDialog#127
+msgctxt "ConfigDialog#127"
 msgid "Start Shaman Automatically on X Startup"
 msgstr "Llança Shaman automàticament en iniciar"
 
 #: ConfigDialog#128
+msgctxt "ConfigDialog#128"
 msgid "Forbid starting Shaman as root"
 msgstr "Prohibeix a Shaman començar com Root"
 
@@ -827,26 +918,234 @@ msgid ""
 msgstr ""
 
 #: ConfigDialog#134
+msgctxt "ConfigDialog#134"
 msgid ""
 "There was an error while trying to add the mirror! This could be due also to "
 "your system policy preventing you from performing this action"
 msgstr ""
 
 #: ConfigDialog#135
+msgctxt "ConfigDialog#135"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Liberation Serif'; font-size:10pt; "
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:8pt; "
 "font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"family:'Liberation Sans'; font-size:9pt;\">Shaman Manteinance.</span></p>\n"
+"size:9pt;\">Shaman Manteinance.</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"family:'Liberation Sans'; font-size:9pt;\">Please choose an action from the "
-"Drop-Down Menu.</span></p></body></html>"
+"size:9pt;\">Please choose an action from the Drop-Down "
+"Menu.</span></p></body></html>"
+msgstr ""
+
+#: ConfigDialog#136
+msgctxt "ConfigDialog#136"
+msgid "Add another server"
+msgstr ""
+
+#: ConfigDialog#137
+msgctxt "ConfigDialog#137"
+msgid "Repository Order"
+msgstr ""
+
+#: ConfigDialog#138
+msgctxt "ConfigDialog#138"
+msgid ""
+"Please order your repositories to define which one will be preferred over "
+"another."
+msgstr ""
+
+#: DatabaseConfig#1
+#, fuzzy
+msgctxt "DatabaseConfig#1"
+msgid "Add Mirror"
+msgstr "Afegeix mirror"
+
+# Obviously keep the example as it is ;)
+#: DatabaseConfig#2
+#, fuzzy
+msgctxt "DatabaseConfig#2"
+msgid ""
+"Mirror Format is incorrect. Your mirror should look like this:\n"
+"http://mirror.org/$repo/os/i686"
+msgstr ""
+"El format del mirror no es correcte. S'ha de veure així:\n"
+"http://mirror.org/$repo/os/i686"
+
+# mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.
+#: DatabaseConfig#3
+#, fuzzy
+msgctxt "DatabaseConfig#3"
+msgid ""
+"Your Mirror was successfully added!\n"
+"It is now available in mirrorlist."
+msgstr ""
+"S'ha afegit el mirror correctament!\n"
+"Està disponible a mirrorlist."
+
+#: DatabaseConfig#4
+msgctxt "DatabaseConfig#4"
+msgid ""
+"There was an error while trying to add the mirror! This could be due also to "
+"your system policy preventing you from performing this action"
+msgstr ""
+
+#: DatabaseConfig#5
+msgctxt "DatabaseConfig#5"
+msgid "Form"
+msgstr ""
+
+#: DatabaseConfig#6
+#, fuzzy
+msgctxt "DatabaseConfig#6"
+msgid "Arch Linux Official Repositories"
+msgstr "Repositoris oficials Arch Linux"
+
+#: DatabaseConfig#7
+#, fuzzy
+msgctxt "DatabaseConfig#7"
+msgid ""
+"Here you can choose what repositories to use between Arch Linux's official "
+"ones. Please note that packages from Unstable and Testing may break your "
+"system."
+msgstr ""
+"Aqui podeu escollir quins del repositoris oficials d'Arch Linux voleu fer "
+"servir. Els repositoris Unstable i Testing no són del tot segurs i poden "
+"espatllar el vostre sistema."
+
+# Do not translate
+#: DatabaseConfig#8
+#, fuzzy
+msgctxt "DatabaseConfig#8"
+msgid "Core"
+msgstr "Core"
+
+# Do not translate
+#: DatabaseConfig#9
+#, fuzzy
+msgctxt "DatabaseConfig#9"
+msgid "Extra"
+msgstr "Extra"
+
+# Do not translate
+#: DatabaseConfig#10
+#, fuzzy
+msgctxt "DatabaseConfig#10"
+msgid "Community"
+msgstr "Community"
+
+# Do not translate
+#: DatabaseConfig#11
+#, fuzzy
+msgctxt "DatabaseConfig#11"
+msgid "Testing"
+msgstr "Testing"
+
+#: DatabaseConfig#12
+#, fuzzy
+msgctxt "DatabaseConfig#12"
+msgid "Server"
+msgstr "Servidor"
+
+#: DatabaseConfig#13
+msgctxt "DatabaseConfig#13"
+msgid "Add another server"
+msgstr ""
+
+#: DatabaseConfig#14
+#, fuzzy
+msgctxt "DatabaseConfig#14"
+msgid "KDEMod Repositories"
+msgstr "Repositoris KDEMod"
+
+#: DatabaseConfig#15
+#, fuzzy
+msgctxt "DatabaseConfig#15"
+msgid ""
+"KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
+"improved Qt build, compatible with Arch Linux standard Qt's, an improved "
+"theme, and lots of addons, KDEMod is the best way to taste the ease and the "
+"power of KDE with the simplicity and the power of Arch."
+msgstr ""
+"KDEMod es una versió  millorada de KDE, exclusiva d'Arch Linux. Ofereix una "
+"construcció Qt millorada, compatible amb el Qt d'Arch Linux, un tema "
+"millorat i molts afegits,KDEMod és la millor manera de tastar la facilitat i "
+"la potència del KDE amb la simplicitat i la potència d'Arch Linux."
+
+#: DatabaseConfig#16
+#, fuzzy
+msgctxt "DatabaseConfig#16"
+msgid "KDEMod 4 Repository"
+msgstr "Repositori KDEMod 4"
+
+#: DatabaseConfig#17
+#, fuzzy
+msgctxt "DatabaseConfig#17"
+msgid "KDEMod 4 Extragear Repository"
+msgstr "Repositori KDEMod 4 Extragear"
+
+#: DatabaseConfig#18
+#, fuzzy
+msgctxt "DatabaseConfig#18"
+msgid "KDEMod 4 Playground Repository"
+msgstr "Repositori KDEMod 4 Playground"
+
+#: DatabaseConfig#19
+#, fuzzy
+msgctxt "DatabaseConfig#19"
+msgid "KDEMod 4 Testing Repository"
+msgstr "Repositori KDEMod 4 Testing"
+
+#: DatabaseConfig#20
+#, fuzzy
+msgctxt "DatabaseConfig#20"
+msgid "KDEMod 4 Unstable Repository (Testers only!)"
+msgstr "Repositori KDEMod 4 Unstable (només testers!)"
+
+#: DatabaseConfig#21
+#, fuzzy
+msgctxt "DatabaseConfig#21"
+msgid "KDEMod 3 Repository"
+msgstr "Repositori KDEMod 3"
+
+#: DatabaseConfig#22
+#, fuzzy
+msgctxt "DatabaseConfig#22"
+msgid "Third-Party Repositories"
+msgstr "Repositoris de tercers"
+
+#: DatabaseConfig#23
+#, fuzzy
+msgctxt "DatabaseConfig#23"
+msgid ""
+"You can extend your packages choice by adding other repositories. Third-"
+"Party Repositories act just as normal ones, and will be accessible through "
+"both Shaman and Pacman."
+msgstr ""
+"Podeu ampliar l'oferta de paquets afegint altres repositoris. Els "
+"repositoris de tercers funcionen igual que els altres i seran accesibles des "
+"de Pacman i Shaman."
+
+#: DatabaseConfig#24
+#, fuzzy
+msgctxt "DatabaseConfig#24"
+msgid "Add New Repository"
+msgstr "Afegeix repositori nou"
+
+#: DatabaseConfig#25
+msgctxt "DatabaseConfig#25"
+msgid "Repository Order"
+msgstr ""
+
+#: DatabaseConfig#26
+msgctxt "DatabaseConfig#26"
+msgid ""
+"Please order your repositories to define which one will be preferred over "
+"another."
 msgstr ""
 
 #: EditPBuild#1
@@ -965,6 +1264,581 @@ msgstr ""
 msgid "Error occurred"
 msgstr ""
 
+#: Form#1
+msgctxt "Form#1"
+msgid "Form"
+msgstr ""
+
+#: Form#2
+#, fuzzy
+msgctxt "Form#2"
+msgid "Favourite Actions"
+msgstr "Accións preferides"
+
+#: Form#3
+#, fuzzy
+msgctxt "Form#3"
+msgid "When Upgrading System:"
+msgstr "Quan s'actualtizarà el sistema:"
+
+#: Form#4
+#, fuzzy
+msgctxt "Form#4"
+msgid "Upgrade Immediately"
+msgstr "Actualitza inmediatament"
+
+#: Form#5
+#, fuzzy
+msgctxt "Form#5"
+msgid "Add Upgradeable Packages To Queue"
+msgstr "Afegeix paquets actualitzables a la pila"
+
+#: Form#6
+#, fuzzy
+msgctxt "Form#6"
+msgid "Ask"
+msgstr "Pregunta"
+
+#: Form#7
+#, fuzzy
+msgctxt "Form#7"
+msgid "When Processing Queue"
+msgstr "En processar la pila"
+
+#: Form#8
+#, fuzzy
+msgctxt "Form#8"
+msgid "Keep application running in System Tray only"
+msgstr "Mantén l'aplicació a la safata del sistema"
+
+#: Form#9
+#, fuzzy
+msgctxt "Form#9"
+msgid "GUI Startup"
+msgstr "Inici de l'IGU"
+
+#: Form#10
+#, fuzzy
+msgctxt "Form#10"
+msgid "Start in the System Tray"
+msgstr "Comença a la safata"
+
+#: Form#11
+#, fuzzy
+msgctxt "Form#11"
+msgid "Show Splashscreen"
+msgstr "Mostra la pantalla de benvinguda"
+
+#: Form#12
+#, fuzzy
+msgctxt "Form#12"
+msgid "Use the following language:"
+msgstr "Fes servir el següent idioma:"
+
+#: Form#13
+#, fuzzy
+msgctxt "Form#13"
+msgid "Disable Tray Icon"
+msgstr "Desactiva la icona de la safata"
+
+#: Form#14
+#, fuzzy
+msgctxt "Form#14"
+msgid "Maintenance"
+msgstr "Manteniment"
+
+#: Form#15
+#, fuzzy
+msgctxt "Form#15"
+msgid "Process Selected"
+msgstr "Procés seleccionat"
+
+# Waiting for a user action
+#: Form#16
+#, fuzzy
+msgctxt "Form#16"
+msgid "Waiting"
+msgstr "S'està esperant"
+
+#: Form#17
+msgctxt "Form#17"
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:8pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Shaman Manteinance.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Please choose an action from the Drop-Down "
+"Menu.</span></p></body></html>"
+msgstr ""
+
+#: Form#18
+#, fuzzy
+msgctxt "Form#18"
+msgid "Checkable Options"
+msgstr "Opcións clicables"
+
+#: Form#19
+#, fuzzy
+msgctxt "Form#19"
+msgid "Use Active FTP"
+msgstr "Fes servir FTP actiu"
+
+#: Form#20
+#, fuzzy
+msgctxt "Form#20"
+msgid "Use Deltas (needs xdelta to be installed)"
+msgstr "Fes servir Deltas (s'ha de tenir xdelta instal·lat)"
+
+#: Form#21
+#, fuzzy
+msgctxt "Form#21"
+msgid "Use SysLog"
+msgstr "Fes servir SysLog"
+
+#: Form#22
+#, fuzzy
+msgctxt "Form#22"
+msgid "Advanced Options"
+msgstr "Opcions avançades"
+
+#: Form#23
+#, fuzzy
+msgctxt "Form#23"
+msgid "HoldPkgs:"
+msgstr "HoldPkgs:"
+
+#: Form#24
+#, fuzzy
+msgctxt "Form#24"
+msgid "IgnorePkgs:"
+msgstr "IgnorePkgs:"
+
+#: Form#25
+#, fuzzy
+msgctxt "Form#25"
+msgid "IgnoreGroups:"
+msgstr "IgnoreGroups:"
+
+#: Form#26
+#, fuzzy
+msgctxt "Form#26"
+msgid "NoUpgrade:"
+msgstr "NoUpgrade:"
+
+#: Form#27
+#, fuzzy
+msgctxt "Form#27"
+msgid "NoExtract:"
+msgstr "NoExtract:"
+
+#: Form#28
+#, fuzzy
+msgctxt "Form#28"
+msgid "Log File:"
+msgstr "Fitxer de registre:"
+
+#: Form#29
+#, fuzzy
+msgctxt "Form#29"
+msgid "XFerCommand: (example: /path/to/command %u) Blank for Default"
+msgstr "XFerCommand: (exemple: /path/to/command %u) en blanc per defecte"
+
+#: Form#30
+#, fuzzy
+msgctxt "Form#30"
+msgid "Arch Linux Official Repositories"
+msgstr "Repositoris oficials Arch Linux"
+
+#: Form#31
+#, fuzzy
+msgctxt "Form#31"
+msgid ""
+"Here you can choose what repositories to use between Arch Linux's official "
+"ones. Please note that packages from Unstable and Testing may break your "
+"system."
+msgstr ""
+"Aqui podeu escollir quins del repositoris oficials d'Arch Linux voleu fer "
+"servir. Els repositoris Unstable i Testing no són del tot segurs i poden "
+"espatllar el vostre sistema."
+
+# Do not translate
+#: Form#32
+#, fuzzy
+msgctxt "Form#32"
+msgid "Core"
+msgstr "Core"
+
+# Do not translate
+#: Form#33
+#, fuzzy
+msgctxt "Form#33"
+msgid "Extra"
+msgstr "Extra"
+
+# Do not translate
+#: Form#34
+#, fuzzy
+msgctxt "Form#34"
+msgid "Community"
+msgstr "Community"
+
+# Do not translate
+#: Form#35
+#, fuzzy
+msgctxt "Form#35"
+msgid "Testing"
+msgstr "Testing"
+
+#: Form#36
+#, fuzzy
+msgctxt "Form#36"
+msgid "Server"
+msgstr "Servidor"
+
+#: Form#37
+#, fuzzy
+msgctxt "Form#37"
+msgid "Add Mirror"
+msgstr "Afegeix mirror"
+
+#: Form#38
+msgctxt "Form#38"
+msgid "Add another server"
+msgstr ""
+
+#: Form#39
+#, fuzzy
+msgctxt "Form#39"
+msgid "KDEMod Repositories"
+msgstr "Repositoris KDEMod"
+
+#: Form#40
+#, fuzzy
+msgctxt "Form#40"
+msgid ""
+"KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
+"improved Qt build, compatible with Arch Linux standard Qt's, an improved "
+"theme, and lots of addons, KDEMod is the best way to taste the ease and the "
+"power of KDE with the simplicity and the power of Arch."
+msgstr ""
+"KDEMod es una versió  millorada de KDE, exclusiva d'Arch Linux. Ofereix una "
+"construcció Qt millorada, compatible amb el Qt d'Arch Linux, un tema "
+"millorat i molts afegits,KDEMod és la millor manera de tastar la facilitat i "
+"la potència del KDE amb la simplicitat i la potència d'Arch Linux."
+
+#: Form#41
+#, fuzzy
+msgctxt "Form#41"
+msgid "KDEMod 4 Repository"
+msgstr "Repositori KDEMod 4"
+
+#: Form#42
+#, fuzzy
+msgctxt "Form#42"
+msgid "KDEMod 4 Extragear Repository"
+msgstr "Repositori KDEMod 4 Extragear"
+
+#: Form#43
+#, fuzzy
+msgctxt "Form#43"
+msgid "KDEMod 4 Playground Repository"
+msgstr "Repositori KDEMod 4 Playground"
+
+#: Form#44
+#, fuzzy
+msgctxt "Form#44"
+msgid "KDEMod 4 Testing Repository"
+msgstr "Repositori KDEMod 4 Testing"
+
+#: Form#45
+#, fuzzy
+msgctxt "Form#45"
+msgid "KDEMod 4 Unstable Repository (Testers only!)"
+msgstr "Repositori KDEMod 4 Unstable (només testers!)"
+
+#: Form#46
+#, fuzzy
+msgctxt "Form#46"
+msgid "KDEMod 3 Repository"
+msgstr "Repositori KDEMod 3"
+
+#: Form#47
+#, fuzzy
+msgctxt "Form#47"
+msgid "Third-Party Repositories"
+msgstr "Repositoris de tercers"
+
+#: Form#48
+#, fuzzy
+msgctxt "Form#48"
+msgid ""
+"You can extend your packages choice by adding other repositories. Third-"
+"Party Repositories act just as normal ones, and will be accessible through "
+"both Shaman and Pacman."
+msgstr ""
+"Podeu ampliar l'oferta de paquets afegint altres repositoris. Els "
+"repositoris de tercers funcionen igual que els altres i seran accesibles des "
+"de Pacman i Shaman."
+
+#: Form#49
+#, fuzzy
+msgctxt "Form#49"
+msgid "Add New Repository"
+msgstr "Afegeix repositori nou"
+
+#: Form#50
+msgctxt "Form#50"
+msgid "Repository Order"
+msgstr ""
+
+#: Form#51
+msgctxt "Form#51"
+msgid ""
+"Please order your repositories to define which one will be preferred over "
+"another."
+msgstr ""
+
+#: Form#52
+#, fuzzy
+msgctxt "Form#52"
+msgid "Preferences"
+msgstr "Arranjament"
+
+#: Form#53
+#, fuzzy
+msgctxt "Form#53"
+msgid "Process all dependencies and queue from binary first (recommended)"
+msgstr ""
+"Processa totes les dependències i la pila primer des de binaris (recomanat) "
+
+#: Form#54
+#, fuzzy
+msgctxt "Form#54"
+msgid "Review Building output before installing"
+msgstr "Revisa la sortida del contrustor abans d'instal·lar"
+
+#: Form#55
+#, fuzzy
+msgctxt "Form#55"
+msgid "ABS Configuration"
+msgstr "Configuració ABS"
+
+#: Form#56
+#, fuzzy
+msgctxt "Form#56"
+msgid "Use supfiles that match your current repositories"
+msgstr "Fes servir supfiles que coïncideixin amb els repositoris actuals"
+
+#: Form#57
+#, fuzzy
+msgctxt "Form#57"
+msgid "Define supfiles manually"
+msgstr "Defineix supfiles manualment"
+
+#: Form#58
+#, fuzzy
+msgctxt "Form#58"
+msgid "RSync Server:"
+msgstr "Servidor RSync:"
+
+#: Form#59
+#, fuzzy
+msgctxt "Form#59"
+msgid "Makepkg Configuration"
+msgstr "Configuració Makepkg"
+
+#: Form#60
+#, fuzzy
+msgctxt "Form#60"
+msgid "CFlags"
+msgstr "CFlags"
+
+#: Form#61
+#, fuzzy
+msgctxt "Form#61"
+msgid "CXXFlags"
+msgstr "CXXFlags"
+
+#: Form#62
+#, fuzzy
+msgctxt "Form#62"
+msgid "BuildEnv"
+msgstr "BuildEnv"
+
+#: Form#63
+#, fuzzy
+msgctxt "Form#63"
+msgid "Options"
+msgstr "Opcións"
+
+#: Form#64
+#, fuzzy
+msgctxt "Form#64"
+msgid "Doc_Dirs"
+msgstr "Doc_Dirs"
+
+#: Form#65
+#, fuzzy
+msgctxt "Form#65"
+msgid "Build Environment"
+msgstr "Entorn de construcció"
+
+#: Form#66
+#, fuzzy
+msgctxt "Form#66"
+msgid "Building Path"
+msgstr "Ruta de construcció"
+
+#: Form#67
+#, fuzzy
+msgctxt "Form#67"
+msgid "Remove installed makedepends after build"
+msgstr "Esborra makedepends instal·lats després de contruïr"
+
+#: Form#68
+#, fuzzy
+msgctxt "Form#68"
+msgid "Clean Build Environment after installation"
+msgstr "Neteja entorns de construcció després d'instal·lar"
+
+#: Form#69
+#, fuzzy
+msgctxt "Form#69"
+msgid "When Application is in System Tray only"
+msgstr "Només quan l'aplicació sigui a la safata"
+
+#: Form#70
+#, fuzzy
+msgctxt "Form#70"
+msgid "Update Database every"
+msgstr "Actualitza bade de dades cada"
+
+# As in "minutes"
+#: Form#71
+#, fuzzy
+msgctxt "Form#71"
+msgid "min"
+msgstr "min"
+
+#: Form#72
+#, fuzzy
+msgctxt "Form#72"
+msgid "Show tray notification Windows"
+msgstr "Mostra finestres de notificació"
+
+#: Form#73
+#, fuzzy
+msgctxt "Form#73"
+msgid "If upgrades are available:"
+msgstr "Si hi ha actualitzacions:"
+
+#: Form#74
+#, fuzzy
+msgctxt "Form#74"
+msgid "Just Notify"
+msgstr "Només notifica"
+
+#: Form#75
+#, fuzzy
+msgctxt "Form#75"
+msgid "Notify and add them to Queue"
+msgstr "Notifica i afegeix-les a la pila"
+
+#: Form#76
+#, fuzzy
+msgctxt "Form#76"
+msgid "Update Database at"
+msgstr "Actualitza la base de dades a les"
+
+#: Form#77
+#, fuzzy
+msgctxt "Form#77"
+msgid "Use a proxy-server"
+msgstr "Fes servir servidor intermediari"
+
+#: Form#78
+#, fuzzy
+msgctxt "Form#78"
+msgid "IP:"
+msgstr "IP:"
+
+#: Form#79
+#, fuzzy
+msgctxt "Form#79"
+msgid "Port:"
+msgstr "Port:"
+
+#: Form#80
+#, fuzzy
+msgctxt "Form#80"
+msgid "HTTP Proxy"
+msgstr "HTTP Proxy"
+
+#: Form#81
+#, fuzzy
+msgctxt "Form#81"
+msgid "FTP Proxy"
+msgstr "FTP Proxy"
+
+#: Form#82
+#, fuzzy
+msgctxt "Form#82"
+msgid "Use Shaman RSS Capabilities"
+msgstr "Fes servir RSS"
+
+#: Form#83
+#, fuzzy
+msgctxt "Form#83"
+msgid "Update RSS Feed Every"
+msgstr "Actualitza RSS cada"
+
+#: Form#84
+#, fuzzy
+msgctxt "Form#84"
+msgid "Notify upon new items"
+msgstr "Notifica els nous articles"
+
+#: Form#85
+#, fuzzy
+msgctxt "Form#85"
+msgid ""
+"Check if there is an unread news about a package in Queue before processing "
+"it"
+msgstr ""
+"Comprova les notícies sense llegir d'un paquet a la pila abans de processar-"
+"lo"
+
+#: Form#86
+#, fuzzy
+msgctxt "Form#86"
+msgid "Interface"
+msgstr "Interfície"
+
+#: Form#87
+#, fuzzy
+msgctxt "Form#87"
+msgid "Use Animated Tray Icon"
+msgstr "Anima la icona de la safata"
+
+#: Form#88
+#, fuzzy
+msgctxt "Form#88"
+msgid "Start Shaman Automatically on X Startup"
+msgstr "Llança Shaman automàticament en iniciar"
+
+#: Form#89
+#, fuzzy
+msgctxt "Form#89"
+msgid "Forbid starting Shaman as root"
+msgstr "Prohibeix a Shaman començar com Root"
+
 #: LocalPackage#1
 msgid "Install Package from File"
 msgstr "Instal·la paquet des de fitxer"
@@ -1037,6 +1911,7 @@ msgid "Install Package"
 msgstr "Instal·la paquet"
 
 #: MainWindow#1
+msgctxt "MainWindow#1"
 msgid "Name"
 msgstr "Nom"
 
@@ -1762,6 +2637,32 @@ msgctxt "MaintenanceBar#27"
 msgid "Could not optimize database!"
 msgstr ""
 
+#: MirrorWidget#1
+msgctxt "MirrorWidget#1"
+msgid "Form"
+msgstr ""
+
+#: MirrorWidget#2
+#, fuzzy
+msgctxt "MirrorWidget#2"
+msgid "Mirror:"
+msgstr "Mirror:"
+
+#: MirrorWidget#3
+msgctxt "MirrorWidget#3"
+msgid "Prefer"
+msgstr ""
+
+#: MirrorWidget#4
+msgctxt "MirrorWidget#4"
+msgid "Defer"
+msgstr ""
+
+#: MirrorWidget#5
+msgctxt "MirrorWidget#5"
+msgid "Remove"
+msgstr ""
+
 #: NewsViewer#1
 msgid "Please wait, fetching items..."
 msgstr "Espereu, s'estan descarregant elements..."
@@ -2208,6 +3109,30 @@ msgstr ""
 msgid "Do you wish to continue?"
 msgstr "Desitgeu continuar?"
 
+#: ServerWidget#1
+msgctxt "ServerWidget#1"
+msgid "Form"
+msgstr ""
+
+#: ServerWidget#2
+msgid "Server:"
+msgstr ""
+
+#: ServerWidget#3
+msgctxt "ServerWidget#3"
+msgid "Prefer"
+msgstr ""
+
+#: ServerWidget#4
+msgctxt "ServerWidget#4"
+msgid "Defer"
+msgstr ""
+
+#: ServerWidget#5
+msgctxt "ServerWidget#5"
+msgid "Remove"
+msgstr ""
+
 #: ShamanStatusBar#1
 msgid "%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages"
 msgstr ""
@@ -2320,6 +3245,30 @@ msgstr "Per actualitzar"
 msgctxt "SysUpgradeDialog#3"
 msgid "System Upgrade"
 msgstr "Actualització del  sistema"
+
+#: ThirdPartyWidget#1
+msgctxt "ThirdPartyWidget#1"
+msgid "Form"
+msgstr ""
+
+#: ThirdPartyWidget#2
+#, fuzzy
+msgctxt "ThirdPartyWidget#2"
+msgid "Name"
+msgstr "Nom"
+
+#: ThirdPartyWidget#3
+msgid "Databases"
+msgstr ""
+
+#: ThirdPartyWidget#4
+msgid "Add"
+msgstr ""
+
+#: ThirdPartyWidget#5
+msgctxt "ThirdPartyWidget#5"
+msgid "Remove"
+msgstr ""
 
 #: aboutDialog#1
 msgid "About Shaman"

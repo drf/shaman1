@@ -368,7 +368,7 @@ dañar su sistema.</translation>
     </message>
     <message>
         <source>Mirror:</source>
-        <translation>Mirror:</translation>
+        <translation type="obsolete">Mirror:</translation>
     </message>
     <message>
         <source>Add Mirror</source>
@@ -410,7 +410,7 @@ de Shaman y Pacman.</translation>
     </message>
     <message>
         <source>Repository</source>
-        <translation>Repositorio</translation>
+        <translation type="obsolete">Repositorio</translation>
     </message>
     <message>
         <source>Add New Repository</source>
@@ -418,11 +418,11 @@ de Shaman y Pacman.</translation>
     </message>
     <message>
         <source>Edit Repository</source>
-        <translation>Editar el repositorio</translation>
+        <translation type="obsolete">Editar el repositorio</translation>
     </message>
     <message>
         <source>Remove Repository</source>
-        <translation>Quitar el repositorio</translation>
+        <translation type="obsolete">Quitar el repositorio</translation>
     </message>
     <message>
         <source>Preferences</source>
@@ -897,12 +897,150 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Por favor, elija una acción del Menú desplegable.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add another server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Repository Order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please order your repositories to define which one will be preferred over another.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>DatabaseConfig</name>
+    <message>
+        <source>Add Mirror</source>
+        <translation type="unfinished">Agregar mirror</translation>
+    </message>
+    <message>
+        <source>Mirror Format is incorrect. Your mirror should look like this:
+http://mirror.org/$repo/os/i686</source>
+        <comment>Obviously keep the example as it is ;)</comment>
+        <translation type="unfinished">El formato del mirror es incorrecto. Debería verse así:
+http://mirror.org/$repo/os/i686</translation>
+    </message>
+    <message>
+        <source>Your Mirror was successfully added!
+It is now available in mirrorlist.</source>
+        <comment>mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.</comment>
+        <translation type="unfinished">¡Su mirror fue agregado correctamente!
+Ahora está disponible en el archivo mirrorlist.</translation>
+    </message>
+    <message>
+        <source>There was an error while trying to add the mirror! This could be due also to your system policy preventing you from performing this action</source>
+        <translation type="unfinished">Hubo un error al intentar añadir la replica! Esto puede ser debido a problemas de permisos que le impide realizar esta acción</translation>
+    </message>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Arch Linux Official Repositories</source>
+        <translation type="unfinished">Repositorios oficiales de Arch Linux</translation>
+    </message>
+    <message>
+        <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones. Please note that packages from Unstable and Testing may break your system.</source>
+        <translation type="unfinished">Aquí puede elegir qué repositorios oficial va a utilizar de Arch Linux. Tenga en cuenta que los paquetes inestables y en estado de pruebas pueden dañar el sistema.</translation>
+    </message>
+    <message>
+        <source>Core</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Base</translation>
+    </message>
+    <message>
+        <source>Extra</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Extra</translation>
+    </message>
+    <message>
+        <source>Community</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Community</translation>
+    </message>
+    <message>
+        <source>Testing</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Testing</translation>
+    </message>
+    <message>
+        <source>Server</source>
+        <translation type="unfinished">Servidor</translation>
+    </message>
+    <message>
+        <source>Add another server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KDEMod Repositories</source>
+        <translation type="unfinished">Repositorios de KDEmod</translation>
+    </message>
+    <message>
+        <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme, and lots of addons, KDEMod is the best way to taste the ease and the power of KDE with the simplicity and the power of Arch.</source>
+        <translation type="unfinished">KDEMod es una versión mejorada de KDE, exclusivo de Arch Linux. Ofreciendo una mejora de Qt, compatible con el Qt estándar de Arch Linux, una mejora de apariencia, y un montón de agregados, KDEMod es la mejor manera de probar la facilidad y el poder de KDE con la sencillez y la potencia de Arch.</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Repository</source>
+        <translation type="unfinished">Repositorio de KDEmod 4</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Extragear Repository</source>
+        <translation type="unfinished">KDEMod 4 Repositorio Extragear</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Playground Repository</source>
+        <translation type="unfinished">KDEMod 4 Repositorio Playground</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Testing Repository</source>
+        <translation type="unfinished">Repositorio de pruebas KDEmod 4</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Unstable Repository (Testers only!)</source>
+        <translation type="unfinished">KDEMod 4 Repositorio inestable (¡solo desarrolladores!)</translation>
+    </message>
+    <message>
+        <source>KDEMod 3 Repository</source>
+        <translation type="unfinished">Repositorio de KDEmod 3</translation>
+    </message>
+    <message>
+        <source>Third-Party Repositories</source>
+        <translation type="unfinished">Repositorios de terceros</translation>
+    </message>
+    <message>
+        <source>You can extend your packages choice by adding other repositories. Third-Party Repositories act just as normal ones, and will be accessible through both Shaman and Pacman.</source>
+        <translation type="unfinished">Puede ampliar su lista de paquetes mediante la adición de otros repositorios. Los repositorios de terceros pueden actuar como las normales, y serán accesibles a través de Shaman y Pacman.</translation>
+    </message>
+    <message>
+        <source>Add New Repository</source>
+        <translation type="unfinished">Agregar nuevo repositorio</translation>
+    </message>
+    <message>
+        <source>Repository Order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please order your repositories to define which one will be preferred over another.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1011,6 +1149,376 @@ Do you want to save it?</source>
     <message>
         <source>Error occurred</source>
         <translation>Ocurrio un error</translation>
+    </message>
+</context>
+<context>
+    <name>Form</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Favourite Actions</source>
+        <translation type="unfinished">Acciones favoritas</translation>
+    </message>
+    <message>
+        <source>When Upgrading System:</source>
+        <translation type="unfinished">Cuando se actualice el sistema:</translation>
+    </message>
+    <message>
+        <source>Upgrade Immediately</source>
+        <translation type="unfinished">Actualizar inmediatamente</translation>
+    </message>
+    <message>
+        <source>Add Upgradeable Packages To Queue</source>
+        <translation type="unfinished">Agregar paquetes por actualizar a la lista de tareas</translation>
+    </message>
+    <message>
+        <source>Ask</source>
+        <translation type="unfinished">Preguntar</translation>
+    </message>
+    <message>
+        <source>When Processing Queue</source>
+        <translation type="unfinished">Cuando se procese la lista de tareas</translation>
+    </message>
+    <message>
+        <source>Keep application running in System Tray only</source>
+        <translation type="unfinished">Mantener la aplicación en la bandeja de sistema</translation>
+    </message>
+    <message>
+        <source>GUI Startup</source>
+        <translation type="unfinished">Inicio de la Interfaz</translation>
+    </message>
+    <message>
+        <source>Start in the System Tray</source>
+        <translation type="unfinished">Iniciar en la bandeja de sistema</translation>
+    </message>
+    <message>
+        <source>Show Splashscreen</source>
+        <translation type="unfinished">Mostrar Pantalla de Bienvenida</translation>
+    </message>
+    <message>
+        <source>Use the following language:</source>
+        <translation type="unfinished">Utilizar el siguiente idioma:</translation>
+    </message>
+    <message>
+        <source>Disable Tray Icon</source>
+        <translation type="unfinished">Deshabilitar icono de la bandeja</translation>
+    </message>
+    <message>
+        <source>Maintenance</source>
+        <translation type="unfinished">Mantenimiento</translation>
+    </message>
+    <message>
+        <source>Process Selected</source>
+        <translation type="unfinished">Procesar selección</translation>
+    </message>
+    <message>
+        <source>Waiting</source>
+        <comment>Waiting for a user action</comment>
+        <translation type="unfinished">Esperando</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Checkable Options</source>
+        <translation type="unfinished">Opciones Seleccionables</translation>
+    </message>
+    <message>
+        <source>Use Active FTP</source>
+        <translation type="unfinished">Usar FTP activo</translation>
+    </message>
+    <message>
+        <source>Use Deltas (needs xdelta to be installed)</source>
+        <translation type="unfinished">Usar deltas (necesita tener instalado xdelta)</translation>
+    </message>
+    <message>
+        <source>Use SysLog</source>
+        <translation type="unfinished">Usar SysLog</translation>
+    </message>
+    <message>
+        <source>Advanced Options</source>
+        <translation type="unfinished">Opciones avanzadas</translation>
+    </message>
+    <message>
+        <source>HoldPkgs:</source>
+        <translation type="unfinished">HoldPkgs:</translation>
+    </message>
+    <message>
+        <source>IgnorePkgs:</source>
+        <translation type="unfinished">IgnorePkgs:</translation>
+    </message>
+    <message>
+        <source>IgnoreGroups:</source>
+        <translation type="unfinished">IgnoreGroups:</translation>
+    </message>
+    <message>
+        <source>NoUpgrade:</source>
+        <translation type="unfinished">NoUpgrade:</translation>
+    </message>
+    <message>
+        <source>NoExtract:</source>
+        <translation type="unfinished">NoExtract:</translation>
+    </message>
+    <message>
+        <source>Log File:</source>
+        <translation type="unfinished">Archivo de Registro:</translation>
+    </message>
+    <message>
+        <source>XFerCommand: (example: /path/to/command %u) Blank for Default</source>
+        <translation type="unfinished">XFerCommand: (ejemplo: /sitio/del/comando %u) Dejar vacío para usar el valor por defecto</translation>
+    </message>
+    <message>
+        <source>Arch Linux Official Repositories</source>
+        <translation type="unfinished">Repositorios oficiales de Arch Linux</translation>
+    </message>
+    <message>
+        <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones. Please note that packages from Unstable and Testing may break your system.</source>
+        <translation type="unfinished">Aquí puede elegir qué repositorios oficial va a utilizar de Arch Linux. Tenga en cuenta que los paquetes inestables y en estado de pruebas pueden dañar el sistema.</translation>
+    </message>
+    <message>
+        <source>Core</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Base</translation>
+    </message>
+    <message>
+        <source>Extra</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Extra</translation>
+    </message>
+    <message>
+        <source>Community</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Community</translation>
+    </message>
+    <message>
+        <source>Testing</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Testing</translation>
+    </message>
+    <message>
+        <source>Server</source>
+        <translation type="unfinished">Servidor</translation>
+    </message>
+    <message>
+        <source>Add Mirror</source>
+        <translation type="unfinished">Agregar mirror</translation>
+    </message>
+    <message>
+        <source>Add another server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KDEMod Repositories</source>
+        <translation type="unfinished">Repositorios de KDEmod</translation>
+    </message>
+    <message>
+        <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme, and lots of addons, KDEMod is the best way to taste the ease and the power of KDE with the simplicity and the power of Arch.</source>
+        <translation type="unfinished">KDEMod es una versión mejorada de KDE, exclusivo de Arch Linux. Ofreciendo una mejora de Qt, compatible con el Qt estándar de Arch Linux, una mejora de apariencia, y un montón de agregados, KDEMod es la mejor manera de probar la facilidad y el poder de KDE con la sencillez y la potencia de Arch.</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Repository</source>
+        <translation type="unfinished">Repositorio de KDEmod 4</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Extragear Repository</source>
+        <translation type="unfinished">KDEMod 4 Repositorio Extragear</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Playground Repository</source>
+        <translation type="unfinished">KDEMod 4 Repositorio Playground</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Testing Repository</source>
+        <translation type="unfinished">Repositorio de pruebas KDEmod 4</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Unstable Repository (Testers only!)</source>
+        <translation type="unfinished">KDEMod 4 Repositorio inestable (¡solo desarrolladores!)</translation>
+    </message>
+    <message>
+        <source>KDEMod 3 Repository</source>
+        <translation type="unfinished">Repositorio de KDEmod 3</translation>
+    </message>
+    <message>
+        <source>Third-Party Repositories</source>
+        <translation type="unfinished">Repositorios de terceros</translation>
+    </message>
+    <message>
+        <source>You can extend your packages choice by adding other repositories. Third-Party Repositories act just as normal ones, and will be accessible through both Shaman and Pacman.</source>
+        <translation type="unfinished">Puede ampliar su lista de paquetes mediante la adición de otros repositorios. Los repositorios de terceros pueden actuar como las normales, y serán accesibles a través de Shaman y Pacman.</translation>
+    </message>
+    <message>
+        <source>Add New Repository</source>
+        <translation type="unfinished">Agregar nuevo repositorio</translation>
+    </message>
+    <message>
+        <source>Repository Order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please order your repositories to define which one will be preferred over another.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Preferences</source>
+        <translation type="unfinished">Preferencias</translation>
+    </message>
+    <message>
+        <source>Process all dependencies and queue from binary first (recommended)</source>
+        <translation type="unfinished">Procesar todas las dependencias y tareas desde binarios (recomendado)</translation>
+    </message>
+    <message>
+        <source>Review Building output before installing</source>
+        <translation type="unfinished">Revisar los mensajes de la compilación antes de instalar</translation>
+    </message>
+    <message>
+        <source>ABS Configuration</source>
+        <translation type="unfinished">Configuración de ABS</translation>
+    </message>
+    <message>
+        <source>Use supfiles that match your current repositories</source>
+        <translation type="unfinished">Usar supfiles que concuerden con sus repositorios actuales</translation>
+    </message>
+    <message>
+        <source>Define supfiles manually</source>
+        <translation type="unfinished">Definir los supfiles manualmente</translation>
+    </message>
+    <message>
+        <source>RSync Server:</source>
+        <translation type="unfinished">Servidor de RSync:</translation>
+    </message>
+    <message>
+        <source>Makepkg Configuration</source>
+        <translation type="unfinished">Configuración de makepkg</translation>
+    </message>
+    <message>
+        <source>CFlags</source>
+        <translation type="unfinished">CFlags</translation>
+    </message>
+    <message>
+        <source>CXXFlags</source>
+        <translation type="unfinished">CXXFlags</translation>
+    </message>
+    <message>
+        <source>BuildEnv</source>
+        <translation type="unfinished">BuildEnv</translation>
+    </message>
+    <message>
+        <source>Options</source>
+        <translation type="unfinished">Opciones</translation>
+    </message>
+    <message>
+        <source>Doc_Dirs</source>
+        <translation type="unfinished">Doc_Dirs</translation>
+    </message>
+    <message>
+        <source>Build Environment</source>
+        <translation type="unfinished">Entorno de compilación</translation>
+    </message>
+    <message>
+        <source>Building Path</source>
+        <translation type="unfinished">Carpeta para compilaciones</translation>
+    </message>
+    <message>
+        <source>Remove installed makedepends after build</source>
+        <translation type="unfinished">Quitar las dependencias de compilación luego de crear el paquete</translation>
+    </message>
+    <message>
+        <source>Clean Build Environment after installation</source>
+        <translation type="unfinished">Limpiar el entorno de compilación luego de la instalación</translation>
+    </message>
+    <message>
+        <source>When Application is in System Tray only</source>
+        <translation type="unfinished">Cuando la aplicacion solo esté en la bandeja de sistema</translation>
+    </message>
+    <message>
+        <source>Update Database every</source>
+        <translation type="unfinished">Actualizar la base de datos cada</translation>
+    </message>
+    <message>
+        <source>min</source>
+        <comment>As in &quot;minutes&quot;</comment>
+        <translation type="unfinished">min</translation>
+    </message>
+    <message>
+        <source>Show tray notification Windows</source>
+        <translation type="unfinished">Mostrar Ventanas del área de notificación</translation>
+    </message>
+    <message>
+        <source>If upgrades are available:</source>
+        <translation type="unfinished">Si hay actualizaciones disponibles:</translation>
+    </message>
+    <message>
+        <source>Just Notify</source>
+        <translation type="unfinished">Solo notificar</translation>
+    </message>
+    <message>
+        <source>Notify and add them to Queue</source>
+        <translation type="unfinished">Notificar y agregarlas a la lista de tareas</translation>
+    </message>
+    <message>
+        <source>Update Database at</source>
+        <translation type="unfinished">Actualizar Base de Datos a las</translation>
+    </message>
+    <message>
+        <source>Use a proxy-server</source>
+        <translation type="unfinished">Usar un servidor proxy</translation>
+    </message>
+    <message>
+        <source>IP:</source>
+        <translation type="unfinished">IP:</translation>
+    </message>
+    <message>
+        <source>Port:</source>
+        <translation type="unfinished">Puerto:</translation>
+    </message>
+    <message>
+        <source>HTTP Proxy</source>
+        <translation type="unfinished">Proxy HTTP</translation>
+    </message>
+    <message>
+        <source>FTP Proxy</source>
+        <translation type="unfinished">Proxy FTP</translation>
+    </message>
+    <message>
+        <source>Use Shaman RSS Capabilities</source>
+        <translation type="unfinished">Usar Capacidades RSS de Shaman</translation>
+    </message>
+    <message>
+        <source>Update RSS Feed Every</source>
+        <translation type="unfinished">Actualizar fuente RSS cada</translation>
+    </message>
+    <message>
+        <source>Notify upon new items</source>
+        <translation type="unfinished">Notificar sobre nuevos objetos</translation>
+    </message>
+    <message>
+        <source>Check if there is an unread news about a package in Queue before processing it</source>
+        <translation type="unfinished">Revisar si hay una noticia sin leer sobre un paquete en la lista de tareas antes de procesarlo</translation>
+    </message>
+    <message>
+        <source>Interface</source>
+        <translation type="unfinished">Interfaz</translation>
+    </message>
+    <message>
+        <source>Use Animated Tray Icon</source>
+        <translation type="unfinished">Usar ícono animado en la bandeja de sistema</translation>
+    </message>
+    <message>
+        <source>Start Shaman Automatically on X Startup</source>
+        <translation type="unfinished">Iniciar automáticamente Shaman al cargar la sesión</translation>
+    </message>
+    <message>
+        <source>Forbid starting Shaman as root</source>
+        <translation type="unfinished">Prohibir a Shaman iniciar como root</translation>
     </message>
 </context>
 <context>
@@ -1980,6 +2488,29 @@ Do you want to skip the above package(s) for this upgrade?</source>
     </message>
 </context>
 <context>
+    <name>MirrorWidget</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mirror:</source>
+        <translation type="unfinished">Mirror:</translation>
+    </message>
+    <message>
+        <source>Prefer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Defer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>NewsViewer</name>
     <message>
         <source>Please wait, fetching items...</source>
@@ -2512,6 +3043,29 @@ p, li { white-space: pre-wrap; }
     </message>
 </context>
 <context>
+    <name>ServerWidget</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Server:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Prefer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Defer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ShamanStatusBar</name>
     <message>
         <source>%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages</source>
@@ -2632,6 +3186,29 @@ Haga clic aquí para actualizar su sistema.</numerusform>
     <message>
         <source>System Upgrade</source>
         <translation>Actualización del sistema</translation>
+    </message>
+</context>
+<context>
+    <name>ThirdPartyWidget</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation type="unfinished">Nombre</translation>
+    </message>
+    <message>
+        <source>Databases</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

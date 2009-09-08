@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-25 11:10+0200\n"
+"POT-Creation-Date: 2009-09-08 14:51+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -313,108 +313,134 @@ msgid "Shaman - Configuration"
 msgstr "Shaman - Настройки"
 
 #: ConfigDialog#2
+msgctxt "ConfigDialog#2"
 msgid "Favourite Actions"
 msgstr "Предпочтительные действия"
 
 #: ConfigDialog#3
+msgctxt "ConfigDialog#3"
 msgid "When Upgrading System:"
 msgstr "При обновлении системы:"
 
 #: ConfigDialog#4
+msgctxt "ConfigDialog#4"
 msgid "Upgrade Immediately"
 msgstr "Обновить немедленно"
 
 #: ConfigDialog#5
+msgctxt "ConfigDialog#5"
 msgid "Add Upgradeable Packages To Queue"
 msgstr "Добавить в очередь пакеты с доступными обновлениями"
 
 #: ConfigDialog#6
+msgctxt "ConfigDialog#6"
 msgid "Ask"
 msgstr "Спросить"
 
 #: ConfigDialog#7
+msgctxt "ConfigDialog#7"
 msgid "When Processing Queue"
 msgstr "При выполнении очереди"
 
 #: ConfigDialog#8
+msgctxt "ConfigDialog#8"
 msgid "Keep application running in System Tray only"
 msgstr "Работать только в области уведомлений"
 
 #: ConfigDialog#9
+msgctxt "ConfigDialog#9"
 msgid "GUI Startup"
 msgstr "Запуск приложения"
 
 #: ConfigDialog#10
+msgctxt "ConfigDialog#10"
 msgid "Start in the System Tray"
 msgstr "Запускать в области уведомлений"
 
 #: ConfigDialog#11
+msgctxt "ConfigDialog#11"
 msgid "When Application is in System Tray only"
 msgstr "Когда приложение свернуто в область уведомлений"
 
 #: ConfigDialog#12
+msgctxt "ConfigDialog#12"
 msgid "Update Database every"
 msgstr "Обновлять базу данных каждые"
 
 #: ConfigDialog#13
+msgctxt "ConfigDialog#13"
 msgid "If upgrades are available:"
 msgstr "Если доступны обновления:"
 
 #: ConfigDialog#14
+msgctxt "ConfigDialog#14"
 msgid "Just Notify"
 msgstr "Сообщать"
 
 #: ConfigDialog#15
+msgctxt "ConfigDialog#15"
 msgid "Notify and add them to Queue"
 msgstr "Сообщать и добавлять в очередь"
 
 #: ConfigDialog#16
+msgctxt "ConfigDialog#16"
 msgid "Maintenance"
 msgstr "Техническое обслуживание"
 
 #: ConfigDialog#17
+msgctxt "ConfigDialog#17"
 msgid "Checkable Options"
 msgstr "Опции"
 
 #: ConfigDialog#18
+msgctxt "ConfigDialog#18"
 msgid "Use Active FTP"
 msgstr "Использовать активный режим FTP"
 
 #: ConfigDialog#19
+msgctxt "ConfigDialog#19"
 msgid "Use Deltas (needs xdelta to be installed)"
 msgstr "Использовать дельты (требует xdelta)"
 
 #: ConfigDialog#20
+msgctxt "ConfigDialog#20"
 msgid "Advanced Options"
 msgstr "Дополнительно"
 
 #: ConfigDialog#21
+msgctxt "ConfigDialog#21"
 msgid "HoldPkgs:"
 msgstr "Замороженные пакеты:"
 
 #: ConfigDialog#22
+msgctxt "ConfigDialog#22"
 msgid "IgnorePkgs:"
 msgstr "Игнорируемые пакеты:"
 
 #: ConfigDialog#23
+msgctxt "ConfigDialog#23"
 msgid "IgnoreGroups:"
 msgstr "Игнорируемые группы:"
 
 #: ConfigDialog#24
+msgctxt "ConfigDialog#24"
 msgid "NoUpgrade:"
 msgstr "Не обновлять:"
 
 #: ConfigDialog#25
+msgctxt "ConfigDialog#25"
 msgid "NoExtract:"
 msgstr "Не извлекать:"
 
 #: ConfigDialog#26
+msgctxt "ConfigDialog#26"
 msgid "XFerCommand: (example: /path/to/command %u) Blank for Default"
 msgstr ""
 "XFerCommand: (например: /path/to/command %u) Оставьте пустым для выбора по "
 "умолчанию"
 
 #: ConfigDialog#27
+msgctxt "ConfigDialog#27"
 msgid "Arch Linux Official Repositories"
 msgstr "Официальные репозитории Arch Linux"
 
@@ -431,18 +457,23 @@ msgstr ""
 "ухудшению стабильности или даже полному отказу системы."
 
 #: ConfigDialog#29
+msgctxt "ConfigDialog#29"
 msgid "Server"
 msgstr "Сервер"
 
+#. (obsolete)
 #: ConfigDialog#30
+msgctxt "ConfigDialog#30"
 msgid "Mirror:"
 msgstr "Зеркало:"
 
 #: ConfigDialog#31
+msgctxt "ConfigDialog#31"
 msgid "Add Mirror"
 msgstr "Добавить зеркало"
 
 #: ConfigDialog#32
+msgctxt "ConfigDialog#32"
 msgid "KDEMod Repositories"
 msgstr "Репозитории KDEMod"
 
@@ -462,10 +493,12 @@ msgstr ""
 "и богатыми возможностями KDE, в совокупности с простотой и мощью Arch."
 
 #: ConfigDialog#34
+msgctxt "ConfigDialog#34"
 msgid "KDEMod 3 Repository"
 msgstr "Репозиторий KDEMod 3"
 
 #: ConfigDialog#35
+msgctxt "ConfigDialog#35"
 msgid "Third-Party Repositories"
 msgstr "Сторонние репозитории"
 
@@ -482,80 +515,99 @@ msgstr ""
 "С ними можно работать так же, как с обычными, и они доступны и для\n"
 "Shaman и для Pacman."
 
+#. (obsolete)
 #: ConfigDialog#37
 msgctxt "ConfigDialog#37"
 msgid "Repository"
 msgstr "Репозиторий"
 
 #: ConfigDialog#38
+msgctxt "ConfigDialog#38"
 msgid "Add New Repository"
 msgstr "Добавить новый репозиторий"
 
+#. (obsolete)
 #: ConfigDialog#39
 msgid "Edit Repository"
 msgstr "Изменить репозиторий"
 
+#. (obsolete)
 #: ConfigDialog#40
 msgid "Remove Repository"
 msgstr "Удалить репозиторий"
 
 #: ConfigDialog#41
+msgctxt "ConfigDialog#41"
 msgid "Preferences"
 msgstr "Предпочтения"
 
 #: ConfigDialog#42
+msgctxt "ConfigDialog#42"
 msgid "Review Building output before installing"
 msgstr "Просматривать вывод процесса сборки перед установкой"
 
 #: ConfigDialog#43
+msgctxt "ConfigDialog#43"
 msgid "ABS Configuration"
 msgstr "Настройки ABS"
 
 #: ConfigDialog#44
+msgctxt "ConfigDialog#44"
 msgid "Use supfiles that match your current repositories"
 msgstr "Использовать группы, совпадающие с выбранными репозиториями"
 
 #: ConfigDialog#45
+msgctxt "ConfigDialog#45"
 msgid "Define supfiles manually"
 msgstr "Вручную выбрать группы"
 
 #: ConfigDialog#46
+msgctxt "ConfigDialog#46"
 msgid "Makepkg Configuration"
 msgstr "Настройки makepkg"
 
 #: ConfigDialog#47
+msgctxt "ConfigDialog#47"
 msgid "CFlags"
 msgstr "Флаги компилятора C"
 
 #: ConfigDialog#48
+msgctxt "ConfigDialog#48"
 msgid "CXXFlags"
 msgstr "Флаги компилятора C++"
 
 #: ConfigDialog#49
+msgctxt "ConfigDialog#49"
 msgid "BuildEnv"
 msgstr "Среда сборки"
 
 #: ConfigDialog#50
+msgctxt "ConfigDialog#50"
 msgid "Options"
 msgstr "Опции"
 
 #: ConfigDialog#51
+msgctxt "ConfigDialog#51"
 msgid "Doc_Dirs"
 msgstr "Doc-папки"
 
 #: ConfigDialog#52
+msgctxt "ConfigDialog#52"
 msgid "Build Environment"
 msgstr "Среда сборки"
 
 #: ConfigDialog#53
+msgctxt "ConfigDialog#53"
 msgid "Building Path"
 msgstr "Директория для сборки"
 
 #: ConfigDialog#54
+msgctxt "ConfigDialog#54"
 msgid "Remove installed makedepends after build"
 msgstr "Удалить установленные для сборки зависимости после сборки"
 
 #: ConfigDialog#55
+msgctxt "ConfigDialog#55"
 msgid "Clean Build Environment after installation"
 msgstr "Очистить среду сборки после установки"
 
@@ -683,6 +735,7 @@ msgstr ""
 
 # Obviously keep the example as it is ;)
 #: ConfigDialog#81
+msgctxt "ConfigDialog#81"
 msgid ""
 "Mirror Format is incorrect. Your mirror should look like this:\n"
 "http://mirror.org/$repo/os/i686"
@@ -692,6 +745,7 @@ msgstr ""
 
 # mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.
 #: ConfigDialog#82
+msgctxt "ConfigDialog#82"
 msgid ""
 "Your Mirror was successfully added!\n"
 "It is now available in mirrorlist."
@@ -737,6 +791,7 @@ msgid "Sync could not be executed!!"
 msgstr "Не удалось выполнить Sync!"
 
 #: ConfigDialog#89
+msgctxt "ConfigDialog#89"
 msgid "Process Selected"
 msgstr "Выполнить выбранное"
 
@@ -748,12 +803,14 @@ msgstr "Оптимизация базы данных Pacman..."
 
 # Waiting for a user action
 #: ConfigDialog#91
+msgctxt "ConfigDialog#91"
 msgid "Waiting"
 msgstr "Ожидание"
 
 # Do not translate
 #: ConfigDialog#92
 #, fuzzy
+msgctxt "ConfigDialog#92"
 msgid "Core"
 msgstr ""
 "\n"
@@ -762,6 +819,7 @@ msgstr ""
 # Do not translate
 #: ConfigDialog#93
 #, fuzzy
+msgctxt "ConfigDialog#93"
 msgid "Extra"
 msgstr ""
 "\n"
@@ -770,6 +828,7 @@ msgstr ""
 # Do not translate
 #: ConfigDialog#94
 #, fuzzy
+msgctxt "ConfigDialog#94"
 msgid "Community"
 msgstr ""
 "\n"
@@ -778,6 +837,7 @@ msgstr ""
 # Do not translate
 #: ConfigDialog#95
 #, fuzzy
+msgctxt "ConfigDialog#95"
 msgid "Testing"
 msgstr ""
 "\n"
@@ -790,10 +850,12 @@ msgid "Running sync..."
 msgstr "Выполнение sync..."
 
 #: ConfigDialog#97
+msgctxt "ConfigDialog#97"
 msgid "Show Splashscreen"
 msgstr "Показывать заставку"
 
 #: ConfigDialog#98
+msgctxt "ConfigDialog#98"
 msgid "Process all dependencies and queue from binary first (recommended)"
 msgstr ""
 "Искать зависимости в первую очередь среди бинарных пакетов (рекомендуется)"
@@ -804,46 +866,57 @@ msgstr "Дополнительно"
 
 # As in "minutes"
 #: ConfigDialog#100
+msgctxt "ConfigDialog#100"
 msgid "min"
 msgstr "мин"
 
 #: ConfigDialog#101
+msgctxt "ConfigDialog#101"
 msgid "Show tray notification Windows"
 msgstr "Показывать уведомления в системной области уведомлений"
 
 #: ConfigDialog#102
+msgctxt "ConfigDialog#102"
 msgid "Use a proxy-server"
 msgstr "Использовать proxy-сервер"
 
 #: ConfigDialog#103
+msgctxt "ConfigDialog#103"
 msgid "IP:"
 msgstr "IP:"
 
 #: ConfigDialog#104
+msgctxt "ConfigDialog#104"
 msgid "Port:"
 msgstr "Порт:"
 
 #: ConfigDialog#105
+msgctxt "ConfigDialog#105"
 msgid "HTTP Proxy"
 msgstr "HTTP Proxy"
 
 #: ConfigDialog#106
+msgctxt "ConfigDialog#106"
 msgid "FTP Proxy"
 msgstr "FTP Proxy"
 
 #: ConfigDialog#107
+msgctxt "ConfigDialog#107"
 msgid "Use Shaman RSS Capabilities"
 msgstr "Использовать возможность Shaman принимать RSS"
 
 #: ConfigDialog#108
+msgctxt "ConfigDialog#108"
 msgid "Update RSS Feed Every"
 msgstr "Обновлять поток RSS каждые"
 
 #: ConfigDialog#109
+msgctxt "ConfigDialog#109"
 msgid "Notify upon new items"
 msgstr "Уведомлять о новых сообщениях"
 
 #: ConfigDialog#110
+msgctxt "ConfigDialog#110"
 msgid ""
 "Check if there is an unread news about a package in Queue before processing "
 "it"
@@ -852,10 +925,12 @@ msgstr ""
 "новостей"
 
 #: ConfigDialog#111
+msgctxt "ConfigDialog#111"
 msgid "Use SysLog"
 msgstr "Использовать SysLog"
 
 #: ConfigDialog#112
+msgctxt "ConfigDialog#112"
 msgid "Log File:"
 msgstr "Файл журнала:"
 
@@ -870,14 +945,17 @@ msgid "Cancel"
 msgstr "Отмена"
 
 #: ConfigDialog#115
+msgctxt "ConfigDialog#115"
 msgid "Interface"
 msgstr "Поведение"
 
 #: ConfigDialog#116
+msgctxt "ConfigDialog#116"
 msgid "Start Shaman Automatically on X Startup"
 msgstr "Запускать Shaman автоматически при старте X"
 
 #: ConfigDialog#117
+msgctxt "ConfigDialog#117"
 msgid "Forbid starting Shaman as root"
 msgstr "Запретить запуск Shaman от имени root"
 
@@ -949,39 +1027,48 @@ msgstr ""
 "списка.</p></body></html>"
 
 #: ConfigDialog#124
+msgctxt "ConfigDialog#124"
 msgid "RSync Server:"
 msgstr "Сервер Rsync:"
 
 #: ConfigDialog#125
+msgctxt "ConfigDialog#125"
 msgid "Update Database at"
 msgstr "Обновлять базу данных в"
 
 #: ConfigDialog#126
+msgctxt "ConfigDialog#126"
 msgid "Use Animated Tray Icon"
 msgstr "Анимировать иконку в области уведомлений"
 
 #: ConfigDialog#127
+msgctxt "ConfigDialog#127"
 msgid "KDEMod 4 Repository"
 msgstr "Репозиторий KDEMod 4"
 
 #: ConfigDialog#128
+msgctxt "ConfigDialog#128"
 msgid "KDEMod 4 Extragear Repository"
 msgstr "Репозиторий KDEMod 4 Extragear"
 
 #: ConfigDialog#129
+msgctxt "ConfigDialog#129"
 msgid "KDEMod 4 Playground Repository"
 msgstr "Репозиторий KDEMod 4 Playground"
 
 #: ConfigDialog#130
+msgctxt "ConfigDialog#130"
 msgid "KDEMod 4 Testing Repository"
 msgstr "Репозиторий KDEMod 4 Testing"
 
 #: ConfigDialog#131
+msgctxt "ConfigDialog#131"
 msgid "KDEMod 4 Unstable Repository (Testers only!)"
 msgstr "Репозиторий KDEMod 4 Unstable (только для тестеров!)"
 
 #: ConfigDialog#132
 #, fuzzy
+msgctxt "ConfigDialog#132"
 msgid ""
 "Here you can choose what repositories to use between Arch Linux's official "
 "ones. Please note that packages from Unstable and Testing may break your "
@@ -992,6 +1079,7 @@ msgstr ""
 
 #: ConfigDialog#133
 #, fuzzy
+msgctxt "ConfigDialog#133"
 msgid ""
 "KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
 "improved Qt build, compatible with Arch Linux standard Qt's, an improved "
@@ -1003,6 +1091,7 @@ msgstr ""
 
 #: ConfigDialog#134
 #, fuzzy
+msgctxt "ConfigDialog#134"
 msgid ""
 "You can extend your packages choice by adding other repositories. Third-"
 "Party Repositories act just as normal ones, and will be accessible through "
@@ -1013,6 +1102,7 @@ msgstr ""
 
 #: ConfigDialog#135
 #, fuzzy
+msgctxt "ConfigDialog#135"
 msgid "Use the following language:"
 msgstr ""
 "\n"
@@ -1020,6 +1110,7 @@ msgstr ""
 
 #: ConfigDialog#136
 #, fuzzy
+msgctxt "ConfigDialog#136"
 msgid "Disable Tray Icon"
 msgstr ""
 "\n"
@@ -1046,26 +1137,238 @@ msgid ""
 msgstr ""
 
 #: ConfigDialog#141
+msgctxt "ConfigDialog#141"
 msgid ""
 "There was an error while trying to add the mirror! This could be due also to "
 "your system policy preventing you from performing this action"
 msgstr ""
 
 #: ConfigDialog#142
+msgctxt "ConfigDialog#142"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Liberation Serif'; font-size:10pt; "
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:8pt; "
 "font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"family:'Liberation Sans'; font-size:9pt;\">Shaman Manteinance.</span></p>\n"
+"size:9pt;\">Shaman Manteinance.</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"family:'Liberation Sans'; font-size:9pt;\">Please choose an action from the "
-"Drop-Down Menu.</span></p></body></html>"
+"size:9pt;\">Please choose an action from the Drop-Down "
+"Menu.</span></p></body></html>"
+msgstr ""
+
+#: ConfigDialog#143
+msgctxt "ConfigDialog#143"
+msgid "Add another server"
+msgstr ""
+
+#: ConfigDialog#144
+msgctxt "ConfigDialog#144"
+msgid "Repository Order"
+msgstr ""
+
+#: ConfigDialog#145
+msgctxt "ConfigDialog#145"
+msgid ""
+"Please order your repositories to define which one will be preferred over "
+"another."
+msgstr ""
+
+#: DatabaseConfig#1
+#, fuzzy
+msgctxt "DatabaseConfig#1"
+msgid "Add Mirror"
+msgstr "Добавить зеркало"
+
+# Obviously keep the example as it is ;)
+#: DatabaseConfig#2
+#, fuzzy
+msgctxt "DatabaseConfig#2"
+msgid ""
+"Mirror Format is incorrect. Your mirror should look like this:\n"
+"http://mirror.org/$repo/os/i686"
+msgstr ""
+"Неверный формат адреса зеркала. Он должен выглядеть\n"
+"как-то так: http://mirror.org/$repo/os/i686"
+
+# mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.
+#: DatabaseConfig#3
+#, fuzzy
+msgctxt "DatabaseConfig#3"
+msgid ""
+"Your Mirror was successfully added!\n"
+"It is now available in mirrorlist."
+msgstr ""
+"Зеркало успешно добавлено!\n"
+"Теперь оно доступно в mirrorlist."
+
+#: DatabaseConfig#4
+msgctxt "DatabaseConfig#4"
+msgid ""
+"There was an error while trying to add the mirror! This could be due also to "
+"your system policy preventing you from performing this action"
+msgstr ""
+
+#: DatabaseConfig#5
+msgctxt "DatabaseConfig#5"
+msgid "Form"
+msgstr ""
+
+#: DatabaseConfig#6
+#, fuzzy
+msgctxt "DatabaseConfig#6"
+msgid "Arch Linux Official Repositories"
+msgstr "Официальные репозитории Arch Linux"
+
+#: DatabaseConfig#7
+#, fuzzy
+msgctxt "DatabaseConfig#7"
+msgid ""
+"Here you can choose what repositories to use between Arch Linux's official "
+"ones. Please note that packages from Unstable and Testing may break your "
+"system."
+msgstr ""
+"\n"
+"            "
+
+# Do not translate
+#: DatabaseConfig#8
+#, fuzzy
+msgctxt "DatabaseConfig#8"
+msgid "Core"
+msgstr ""
+"\n"
+"            "
+
+# Do not translate
+#: DatabaseConfig#9
+#, fuzzy
+msgctxt "DatabaseConfig#9"
+msgid "Extra"
+msgstr ""
+"\n"
+"            "
+
+# Do not translate
+#: DatabaseConfig#10
+#, fuzzy
+msgctxt "DatabaseConfig#10"
+msgid "Community"
+msgstr ""
+"\n"
+"            "
+
+# Do not translate
+#: DatabaseConfig#11
+#, fuzzy
+msgctxt "DatabaseConfig#11"
+msgid "Testing"
+msgstr ""
+"\n"
+"            "
+
+#: DatabaseConfig#12
+#, fuzzy
+msgctxt "DatabaseConfig#12"
+msgid "Server"
+msgstr "Сервер"
+
+#: DatabaseConfig#13
+msgctxt "DatabaseConfig#13"
+msgid "Add another server"
+msgstr ""
+
+#: DatabaseConfig#14
+#, fuzzy
+msgctxt "DatabaseConfig#14"
+msgid "KDEMod Repositories"
+msgstr "Репозитории KDEMod"
+
+#: DatabaseConfig#15
+#, fuzzy
+msgctxt "DatabaseConfig#15"
+msgid ""
+"KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
+"improved Qt build, compatible with Arch Linux standard Qt's, an improved "
+"theme, and lots of addons, KDEMod is the best way to taste the ease and the "
+"power of KDE with the simplicity and the power of Arch."
+msgstr ""
+"\n"
+"            "
+
+#: DatabaseConfig#16
+#, fuzzy
+msgctxt "DatabaseConfig#16"
+msgid "KDEMod 4 Repository"
+msgstr "Репозиторий KDEMod 4"
+
+#: DatabaseConfig#17
+#, fuzzy
+msgctxt "DatabaseConfig#17"
+msgid "KDEMod 4 Extragear Repository"
+msgstr "Репозиторий KDEMod 4 Extragear"
+
+#: DatabaseConfig#18
+#, fuzzy
+msgctxt "DatabaseConfig#18"
+msgid "KDEMod 4 Playground Repository"
+msgstr "Репозиторий KDEMod 4 Playground"
+
+#: DatabaseConfig#19
+#, fuzzy
+msgctxt "DatabaseConfig#19"
+msgid "KDEMod 4 Testing Repository"
+msgstr "Репозиторий KDEMod 4 Testing"
+
+#: DatabaseConfig#20
+#, fuzzy
+msgctxt "DatabaseConfig#20"
+msgid "KDEMod 4 Unstable Repository (Testers only!)"
+msgstr "Репозиторий KDEMod 4 Unstable (только для тестеров!)"
+
+#: DatabaseConfig#21
+#, fuzzy
+msgctxt "DatabaseConfig#21"
+msgid "KDEMod 3 Repository"
+msgstr "Репозиторий KDEMod 3"
+
+#: DatabaseConfig#22
+#, fuzzy
+msgctxt "DatabaseConfig#22"
+msgid "Third-Party Repositories"
+msgstr "Сторонние репозитории"
+
+#: DatabaseConfig#23
+#, fuzzy
+msgctxt "DatabaseConfig#23"
+msgid ""
+"You can extend your packages choice by adding other repositories. Third-"
+"Party Repositories act just as normal ones, and will be accessible through "
+"both Shaman and Pacman."
+msgstr ""
+"\n"
+"            "
+
+#: DatabaseConfig#24
+#, fuzzy
+msgctxt "DatabaseConfig#24"
+msgid "Add New Repository"
+msgstr "Добавить новый репозиторий"
+
+#: DatabaseConfig#25
+msgctxt "DatabaseConfig#25"
+msgid "Repository Order"
+msgstr ""
+
+#: DatabaseConfig#26
+msgctxt "DatabaseConfig#26"
+msgid ""
+"Please order your repositories to define which one will be preferred over "
+"another."
 msgstr ""
 
 #: EditPBuild#1
@@ -1185,6 +1488,591 @@ msgstr ""
 #: ErrorHandler#23
 msgid "Error occurred"
 msgstr ""
+
+#: Form#1
+msgctxt "Form#1"
+msgid "Form"
+msgstr ""
+
+#: Form#2
+#, fuzzy
+msgctxt "Form#2"
+msgid "Favourite Actions"
+msgstr "Предпочтительные действия"
+
+#: Form#3
+#, fuzzy
+msgctxt "Form#3"
+msgid "When Upgrading System:"
+msgstr "При обновлении системы:"
+
+#: Form#4
+#, fuzzy
+msgctxt "Form#4"
+msgid "Upgrade Immediately"
+msgstr "Обновить немедленно"
+
+#: Form#5
+#, fuzzy
+msgctxt "Form#5"
+msgid "Add Upgradeable Packages To Queue"
+msgstr "Добавить в очередь пакеты с доступными обновлениями"
+
+#: Form#6
+#, fuzzy
+msgctxt "Form#6"
+msgid "Ask"
+msgstr "Спросить"
+
+#: Form#7
+#, fuzzy
+msgctxt "Form#7"
+msgid "When Processing Queue"
+msgstr "При выполнении очереди"
+
+#: Form#8
+#, fuzzy
+msgctxt "Form#8"
+msgid "Keep application running in System Tray only"
+msgstr "Работать только в области уведомлений"
+
+#: Form#9
+#, fuzzy
+msgctxt "Form#9"
+msgid "GUI Startup"
+msgstr "Запуск приложения"
+
+#: Form#10
+#, fuzzy
+msgctxt "Form#10"
+msgid "Start in the System Tray"
+msgstr "Запускать в области уведомлений"
+
+#: Form#11
+#, fuzzy
+msgctxt "Form#11"
+msgid "Show Splashscreen"
+msgstr "Показывать заставку"
+
+#: Form#12
+#, fuzzy
+msgctxt "Form#12"
+msgid "Use the following language:"
+msgstr ""
+"\n"
+"            "
+
+#: Form#13
+#, fuzzy
+msgctxt "Form#13"
+msgid "Disable Tray Icon"
+msgstr ""
+"\n"
+"            "
+
+#: Form#14
+#, fuzzy
+msgctxt "Form#14"
+msgid "Maintenance"
+msgstr "Техническое обслуживание"
+
+#: Form#15
+#, fuzzy
+msgctxt "Form#15"
+msgid "Process Selected"
+msgstr "Выполнить выбранное"
+
+# Waiting for a user action
+#: Form#16
+#, fuzzy
+msgctxt "Form#16"
+msgid "Waiting"
+msgstr "Ожидание"
+
+#: Form#17
+msgctxt "Form#17"
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:8pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Shaman Manteinance.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Please choose an action from the Drop-Down "
+"Menu.</span></p></body></html>"
+msgstr ""
+
+#: Form#18
+#, fuzzy
+msgctxt "Form#18"
+msgid "Checkable Options"
+msgstr "Опции"
+
+#: Form#19
+#, fuzzy
+msgctxt "Form#19"
+msgid "Use Active FTP"
+msgstr "Использовать активный режим FTP"
+
+#: Form#20
+#, fuzzy
+msgctxt "Form#20"
+msgid "Use Deltas (needs xdelta to be installed)"
+msgstr "Использовать дельты (требует xdelta)"
+
+#: Form#21
+#, fuzzy
+msgctxt "Form#21"
+msgid "Use SysLog"
+msgstr "Использовать SysLog"
+
+#: Form#22
+#, fuzzy
+msgctxt "Form#22"
+msgid "Advanced Options"
+msgstr "Дополнительно"
+
+#: Form#23
+#, fuzzy
+msgctxt "Form#23"
+msgid "HoldPkgs:"
+msgstr "Замороженные пакеты:"
+
+#: Form#24
+#, fuzzy
+msgctxt "Form#24"
+msgid "IgnorePkgs:"
+msgstr "Игнорируемые пакеты:"
+
+#: Form#25
+#, fuzzy
+msgctxt "Form#25"
+msgid "IgnoreGroups:"
+msgstr "Игнорируемые группы:"
+
+#: Form#26
+#, fuzzy
+msgctxt "Form#26"
+msgid "NoUpgrade:"
+msgstr "Не обновлять:"
+
+#: Form#27
+#, fuzzy
+msgctxt "Form#27"
+msgid "NoExtract:"
+msgstr "Не извлекать:"
+
+#: Form#28
+#, fuzzy
+msgctxt "Form#28"
+msgid "Log File:"
+msgstr "Файл журнала:"
+
+#: Form#29
+#, fuzzy
+msgctxt "Form#29"
+msgid "XFerCommand: (example: /path/to/command %u) Blank for Default"
+msgstr ""
+"XFerCommand: (например: /path/to/command %u) Оставьте пустым для выбора по "
+"умолчанию"
+
+#: Form#30
+#, fuzzy
+msgctxt "Form#30"
+msgid "Arch Linux Official Repositories"
+msgstr "Официальные репозитории Arch Linux"
+
+#: Form#31
+#, fuzzy
+msgctxt "Form#31"
+msgid ""
+"Here you can choose what repositories to use between Arch Linux's official "
+"ones. Please note that packages from Unstable and Testing may break your "
+"system."
+msgstr ""
+"\n"
+"            "
+
+# Do not translate
+#: Form#32
+#, fuzzy
+msgctxt "Form#32"
+msgid "Core"
+msgstr ""
+"\n"
+"            "
+
+# Do not translate
+#: Form#33
+#, fuzzy
+msgctxt "Form#33"
+msgid "Extra"
+msgstr ""
+"\n"
+"            "
+
+# Do not translate
+#: Form#34
+#, fuzzy
+msgctxt "Form#34"
+msgid "Community"
+msgstr ""
+"\n"
+"            "
+
+# Do not translate
+#: Form#35
+#, fuzzy
+msgctxt "Form#35"
+msgid "Testing"
+msgstr ""
+"\n"
+"            "
+
+#: Form#36
+#, fuzzy
+msgctxt "Form#36"
+msgid "Server"
+msgstr "Сервер"
+
+#: Form#37
+#, fuzzy
+msgctxt "Form#37"
+msgid "Add Mirror"
+msgstr "Добавить зеркало"
+
+#: Form#38
+msgctxt "Form#38"
+msgid "Add another server"
+msgstr ""
+
+#: Form#39
+#, fuzzy
+msgctxt "Form#39"
+msgid "KDEMod Repositories"
+msgstr "Репозитории KDEMod"
+
+#: Form#40
+#, fuzzy
+msgctxt "Form#40"
+msgid ""
+"KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
+"improved Qt build, compatible with Arch Linux standard Qt's, an improved "
+"theme, and lots of addons, KDEMod is the best way to taste the ease and the "
+"power of KDE with the simplicity and the power of Arch."
+msgstr ""
+"\n"
+"            "
+
+#: Form#41
+#, fuzzy
+msgctxt "Form#41"
+msgid "KDEMod 4 Repository"
+msgstr "Репозиторий KDEMod 4"
+
+#: Form#42
+#, fuzzy
+msgctxt "Form#42"
+msgid "KDEMod 4 Extragear Repository"
+msgstr "Репозиторий KDEMod 4 Extragear"
+
+#: Form#43
+#, fuzzy
+msgctxt "Form#43"
+msgid "KDEMod 4 Playground Repository"
+msgstr "Репозиторий KDEMod 4 Playground"
+
+#: Form#44
+#, fuzzy
+msgctxt "Form#44"
+msgid "KDEMod 4 Testing Repository"
+msgstr "Репозиторий KDEMod 4 Testing"
+
+#: Form#45
+#, fuzzy
+msgctxt "Form#45"
+msgid "KDEMod 4 Unstable Repository (Testers only!)"
+msgstr "Репозиторий KDEMod 4 Unstable (только для тестеров!)"
+
+#: Form#46
+#, fuzzy
+msgctxt "Form#46"
+msgid "KDEMod 3 Repository"
+msgstr "Репозиторий KDEMod 3"
+
+#: Form#47
+#, fuzzy
+msgctxt "Form#47"
+msgid "Third-Party Repositories"
+msgstr "Сторонние репозитории"
+
+#: Form#48
+#, fuzzy
+msgctxt "Form#48"
+msgid ""
+"You can extend your packages choice by adding other repositories. Third-"
+"Party Repositories act just as normal ones, and will be accessible through "
+"both Shaman and Pacman."
+msgstr ""
+"\n"
+"            "
+
+#: Form#49
+#, fuzzy
+msgctxt "Form#49"
+msgid "Add New Repository"
+msgstr "Добавить новый репозиторий"
+
+#: Form#50
+msgctxt "Form#50"
+msgid "Repository Order"
+msgstr ""
+
+#: Form#51
+msgctxt "Form#51"
+msgid ""
+"Please order your repositories to define which one will be preferred over "
+"another."
+msgstr ""
+
+#: Form#52
+#, fuzzy
+msgctxt "Form#52"
+msgid "Preferences"
+msgstr "Предпочтения"
+
+#: Form#53
+#, fuzzy
+msgctxt "Form#53"
+msgid "Process all dependencies and queue from binary first (recommended)"
+msgstr ""
+"Искать зависимости в первую очередь среди бинарных пакетов (рекомендуется)"
+
+#: Form#54
+#, fuzzy
+msgctxt "Form#54"
+msgid "Review Building output before installing"
+msgstr "Просматривать вывод процесса сборки перед установкой"
+
+#: Form#55
+#, fuzzy
+msgctxt "Form#55"
+msgid "ABS Configuration"
+msgstr "Настройки ABS"
+
+#: Form#56
+#, fuzzy
+msgctxt "Form#56"
+msgid "Use supfiles that match your current repositories"
+msgstr "Использовать группы, совпадающие с выбранными репозиториями"
+
+#: Form#57
+#, fuzzy
+msgctxt "Form#57"
+msgid "Define supfiles manually"
+msgstr "Вручную выбрать группы"
+
+#: Form#58
+#, fuzzy
+msgctxt "Form#58"
+msgid "RSync Server:"
+msgstr "Сервер Rsync:"
+
+#: Form#59
+#, fuzzy
+msgctxt "Form#59"
+msgid "Makepkg Configuration"
+msgstr "Настройки makepkg"
+
+#: Form#60
+#, fuzzy
+msgctxt "Form#60"
+msgid "CFlags"
+msgstr "Флаги компилятора C"
+
+#: Form#61
+#, fuzzy
+msgctxt "Form#61"
+msgid "CXXFlags"
+msgstr "Флаги компилятора C++"
+
+#: Form#62
+#, fuzzy
+msgctxt "Form#62"
+msgid "BuildEnv"
+msgstr "Среда сборки"
+
+#: Form#63
+#, fuzzy
+msgctxt "Form#63"
+msgid "Options"
+msgstr "Опции"
+
+#: Form#64
+#, fuzzy
+msgctxt "Form#64"
+msgid "Doc_Dirs"
+msgstr "Doc-папки"
+
+#: Form#65
+#, fuzzy
+msgctxt "Form#65"
+msgid "Build Environment"
+msgstr "Среда сборки"
+
+#: Form#66
+#, fuzzy
+msgctxt "Form#66"
+msgid "Building Path"
+msgstr "Директория для сборки"
+
+#: Form#67
+#, fuzzy
+msgctxt "Form#67"
+msgid "Remove installed makedepends after build"
+msgstr "Удалить установленные для сборки зависимости после сборки"
+
+#: Form#68
+#, fuzzy
+msgctxt "Form#68"
+msgid "Clean Build Environment after installation"
+msgstr "Очистить среду сборки после установки"
+
+#: Form#69
+#, fuzzy
+msgctxt "Form#69"
+msgid "When Application is in System Tray only"
+msgstr "Когда приложение свернуто в область уведомлений"
+
+#: Form#70
+#, fuzzy
+msgctxt "Form#70"
+msgid "Update Database every"
+msgstr "Обновлять базу данных каждые"
+
+# As in "minutes"
+#: Form#71
+#, fuzzy
+msgctxt "Form#71"
+msgid "min"
+msgstr "мин"
+
+#: Form#72
+#, fuzzy
+msgctxt "Form#72"
+msgid "Show tray notification Windows"
+msgstr "Показывать уведомления в системной области уведомлений"
+
+#: Form#73
+#, fuzzy
+msgctxt "Form#73"
+msgid "If upgrades are available:"
+msgstr "Если доступны обновления:"
+
+#: Form#74
+#, fuzzy
+msgctxt "Form#74"
+msgid "Just Notify"
+msgstr "Сообщать"
+
+#: Form#75
+#, fuzzy
+msgctxt "Form#75"
+msgid "Notify and add them to Queue"
+msgstr "Сообщать и добавлять в очередь"
+
+#: Form#76
+#, fuzzy
+msgctxt "Form#76"
+msgid "Update Database at"
+msgstr "Обновлять базу данных в"
+
+#: Form#77
+#, fuzzy
+msgctxt "Form#77"
+msgid "Use a proxy-server"
+msgstr "Использовать proxy-сервер"
+
+#: Form#78
+#, fuzzy
+msgctxt "Form#78"
+msgid "IP:"
+msgstr "IP:"
+
+#: Form#79
+#, fuzzy
+msgctxt "Form#79"
+msgid "Port:"
+msgstr "Порт:"
+
+#: Form#80
+#, fuzzy
+msgctxt "Form#80"
+msgid "HTTP Proxy"
+msgstr "HTTP Proxy"
+
+#: Form#81
+#, fuzzy
+msgctxt "Form#81"
+msgid "FTP Proxy"
+msgstr "FTP Proxy"
+
+#: Form#82
+#, fuzzy
+msgctxt "Form#82"
+msgid "Use Shaman RSS Capabilities"
+msgstr "Использовать возможность Shaman принимать RSS"
+
+#: Form#83
+#, fuzzy
+msgctxt "Form#83"
+msgid "Update RSS Feed Every"
+msgstr "Обновлять поток RSS каждые"
+
+#: Form#84
+#, fuzzy
+msgctxt "Form#84"
+msgid "Notify upon new items"
+msgstr "Уведомлять о новых сообщениях"
+
+#: Form#85
+#, fuzzy
+msgctxt "Form#85"
+msgid ""
+"Check if there is an unread news about a package in Queue before processing "
+"it"
+msgstr ""
+"Перед обработкой пакета в очереди проверять, нет ли о нем непрочитанных "
+"новостей"
+
+#: Form#86
+#, fuzzy
+msgctxt "Form#86"
+msgid "Interface"
+msgstr "Поведение"
+
+#: Form#87
+#, fuzzy
+msgctxt "Form#87"
+msgid "Use Animated Tray Icon"
+msgstr "Анимировать иконку в области уведомлений"
+
+#: Form#88
+#, fuzzy
+msgctxt "Form#88"
+msgid "Start Shaman Automatically on X Startup"
+msgstr "Запускать Shaman автоматически при старте X"
+
+#: Form#89
+#, fuzzy
+msgctxt "Form#89"
+msgid "Forbid starting Shaman as root"
+msgstr "Запретить запуск Shaman от имени root"
 
 #: LocalPackage#1
 #, fuzzy
@@ -2115,6 +3003,32 @@ msgctxt "MaintenanceBar#32"
 msgid "Could not optimize database!"
 msgstr ""
 
+#: MirrorWidget#1
+msgctxt "MirrorWidget#1"
+msgid "Form"
+msgstr ""
+
+#: MirrorWidget#2
+#, fuzzy
+msgctxt "MirrorWidget#2"
+msgid "Mirror:"
+msgstr "Зеркало:"
+
+#: MirrorWidget#3
+msgctxt "MirrorWidget#3"
+msgid "Prefer"
+msgstr ""
+
+#: MirrorWidget#4
+msgctxt "MirrorWidget#4"
+msgid "Defer"
+msgstr ""
+
+#: MirrorWidget#5
+msgctxt "MirrorWidget#5"
+msgid "Remove"
+msgstr ""
+
 #: NewsViewer#1
 msgid "Please wait, fetching items..."
 msgstr "Подождите, загрузка сообщений..."
@@ -2642,6 +3556,30 @@ msgstr ""
 "            \n"
 "        "
 
+#: ServerWidget#1
+msgctxt "ServerWidget#1"
+msgid "Form"
+msgstr ""
+
+#: ServerWidget#2
+msgid "Server:"
+msgstr ""
+
+#: ServerWidget#3
+msgctxt "ServerWidget#3"
+msgid "Prefer"
+msgstr ""
+
+#: ServerWidget#4
+msgctxt "ServerWidget#4"
+msgid "Defer"
+msgstr ""
+
+#: ServerWidget#5
+msgctxt "ServerWidget#5"
+msgid "Remove"
+msgstr ""
+
 #: ShamanStatusBar#1
 msgid "%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages"
 msgstr "Пакетов доступно: %1, установлено: %2, может быть обновлено: %3"
@@ -2787,6 +3725,30 @@ msgstr ""
 #: SysUpgradeDialog#5
 msgctxt "SysUpgradeDialog#5"
 msgid "System Upgrade"
+msgstr ""
+
+#: ThirdPartyWidget#1
+msgctxt "ThirdPartyWidget#1"
+msgid "Form"
+msgstr ""
+
+#: ThirdPartyWidget#2
+#, fuzzy
+msgctxt "ThirdPartyWidget#2"
+msgid "Name"
+msgstr "Название"
+
+#: ThirdPartyWidget#3
+msgid "Databases"
+msgstr ""
+
+#: ThirdPartyWidget#4
+msgid "Add"
+msgstr ""
+
+#: ThirdPartyWidget#5
+msgctxt "ThirdPartyWidget#5"
+msgid "Remove"
 msgstr ""
 
 #: aboutDialog#1

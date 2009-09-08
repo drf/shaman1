@@ -329,7 +329,7 @@ Czy chcesz go usunąć?</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="81"/>
-        <location filename="../src/configDialog.cpp" line="577"/>
+        <location filename="../src/configDialog.cpp" line="455"/>
         <location filename="../src/configDialog.cpp.orig" line="126"/>
         <location filename="../src/configDialog.cpp.orig" line="608"/>
         <source>Clean Unused Databases</source>
@@ -337,7 +337,7 @@ Czy chcesz go usunąć?</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="81"/>
-        <location filename="../src/configDialog.cpp" line="584"/>
+        <location filename="../src/configDialog.cpp" line="462"/>
         <location filename="../src/configDialog.cpp.orig" line="126"/>
         <location filename="../src/configDialog.cpp.orig" line="618"/>
         <source>Clean Cache</source>
@@ -345,7 +345,7 @@ Czy chcesz go usunąć?</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="82"/>
-        <location filename="../src/configDialog.cpp" line="591"/>
+        <location filename="../src/configDialog.cpp" line="469"/>
         <location filename="../src/configDialog.cpp.orig" line="127"/>
         <location filename="../src/configDialog.cpp.orig" line="628"/>
         <source>Empty Cache</source>
@@ -353,7 +353,7 @@ Czy chcesz go usunąć?</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="82"/>
-        <location filename="../src/configDialog.cpp" line="598"/>
+        <location filename="../src/configDialog.cpp" line="476"/>
         <location filename="../src/configDialog.cpp.orig" line="127"/>
         <location filename="../src/configDialog.cpp.orig" line="638"/>
         <source>Optimize Pacman Database</source>
@@ -361,7 +361,7 @@ Czy chcesz go usunąć?</translation>
     </message>
     <message>
         <location filename="../src/configDialog.cpp" line="83"/>
-        <location filename="../src/configDialog.cpp" line="605"/>
+        <location filename="../src/configDialog.cpp" line="483"/>
         <location filename="../src/configDialog.cpp.orig" line="127"/>
         <location filename="../src/configDialog.cpp.orig" line="651"/>
         <source>Clean All Building Environments</source>
@@ -374,107 +374,107 @@ Czy chcesz go usunąć?</translation>
         <translation>Repozytoria</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="275"/>
+        <location filename="../src/configDialog.cpp" line="153"/>
         <location filename="../src/configDialog.cpp.orig" line="305"/>
         <source>Pacman</source>
         <translation>Pacman</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="341"/>
+        <location filename="../src/configDialog.cpp" line="219"/>
         <location filename="../src/configDialog.cpp.orig" line="372"/>
         <source>ABS</source>
         <translation>ABS</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="469"/>
-        <location filename="../src/configDialog.cpp" line="516"/>
+        <location filename="../src/configDialog.cpp" line="347"/>
+        <location filename="../src/configDialog.cpp" line="394"/>
         <location filename="../src/configDialog.cpp.orig" line="500"/>
         <location filename="../src/configDialog.cpp.orig" line="547"/>
         <source>Enter Here the Repository&apos;s Name</source>
         <translation>Podaj nazwę repozytorium</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="471"/>
-        <location filename="../src/configDialog.cpp" line="518"/>
+        <location filename="../src/configDialog.cpp" line="349"/>
+        <location filename="../src/configDialog.cpp" line="396"/>
         <location filename="../src/configDialog.cpp.orig" line="502"/>
         <location filename="../src/configDialog.cpp.orig" line="549"/>
         <source>Enter Here the Repository&apos;s Server</source>
         <translation>Podaj adres serwera repozytorium</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="580"/>
-        <location filename="../src/configDialog.cpp" line="581"/>
+        <location filename="../src/configDialog.cpp" line="458"/>
+        <location filename="../src/configDialog.cpp" line="459"/>
         <location filename="../src/configDialog.cpp.orig" line="611"/>
         <location filename="../src/configDialog.cpp.orig" line="612"/>
         <source>Cleaning up unused Databases...</source>
         <translation>Czyszczenie nieużywanych baz danych...</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="587"/>
-        <location filename="../src/configDialog.cpp" line="588"/>
+        <location filename="../src/configDialog.cpp" line="465"/>
+        <location filename="../src/configDialog.cpp" line="466"/>
         <location filename="../src/configDialog.cpp.orig" line="621"/>
         <location filename="../src/configDialog.cpp.orig" line="622"/>
         <source>Cleaning up Cache...</source>
         <translation>Czyszczenie cache...</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="594"/>
-        <location filename="../src/configDialog.cpp" line="595"/>
+        <location filename="../src/configDialog.cpp" line="472"/>
+        <location filename="../src/configDialog.cpp" line="473"/>
         <location filename="../src/configDialog.cpp.orig" line="631"/>
         <location filename="../src/configDialog.cpp.orig" line="632"/>
         <source>Deleting Cache...</source>
         <translation>Usuwanie cache...</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="601"/>
-        <location filename="../src/configDialog.cpp" line="602"/>
+        <location filename="../src/configDialog.cpp" line="479"/>
+        <location filename="../src/configDialog.cpp" line="480"/>
         <source>Optimizing Pacman Database...</source>
         <translation>Optymalizacja bazy danych Pacmana...</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="608"/>
-        <location filename="../src/configDialog.cpp" line="609"/>
+        <location filename="../src/configDialog.cpp" line="486"/>
+        <location filename="../src/configDialog.cpp" line="487"/>
         <location filename="../src/configDialog.cpp.orig" line="654"/>
         <location filename="../src/configDialog.cpp.orig" line="655"/>
         <source>Cleaning up building Environments...</source>
         <translation>Czyszczenie środowisk budowania...</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="626"/>
+        <location filename="../src/configDialog.cpp" line="504"/>
         <location filename="../src/configDialog.cpp.orig" line="670"/>
         <location filename="../src/configDialog.cpp.orig" line="671"/>
         <source>Cleaning up Unused Databases Failed!</source>
         <translation>Czyszczenie nieużywanych baz danych nie powiodło się!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="633"/>
+        <location filename="../src/configDialog.cpp" line="511"/>
         <location filename="../src/configDialog.cpp.orig" line="675"/>
         <location filename="../src/configDialog.cpp.orig" line="676"/>
         <source>Cleaning up Cache Failed!</source>
         <translation>Czyszczenie cache nie powiodło się!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="641"/>
+        <location filename="../src/configDialog.cpp" line="519"/>
         <location filename="../src/configDialog.cpp.orig" line="680"/>
         <location filename="../src/configDialog.cpp.orig" line="681"/>
         <source>Deleting Cache Failed!</source>
         <translation>Usuwanie cache nie powiodło się!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="649"/>
+        <location filename="../src/configDialog.cpp" line="527"/>
         <location filename="../src/configDialog.cpp.orig" line="685"/>
         <location filename="../src/configDialog.cpp.orig" line="686"/>
         <source>Could not clean Build Environments!!</source>
         <translation>Czyszczenie środowisk budowania nie powiodło się!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="976"/>
-        <location filename="../src/configDialog.cpp" line="1010"/>
+        <location filename="../src/configDialog.cpp" line="854"/>
+        <location filename="../src/configDialog.cpp" line="888"/>
         <source>There was an error while trying to add the mirror! This could be due also to your system policy preventing you from performing this action</source>
         <translation>Wystąpił błąd podczas próby dodawania serwera lustrzanego. Może to być spowodowane przez politykę systemu zapobiegającą wykonanie tej operacji</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="624"/>
+        <location filename="../src/configDialog.cpp" line="502"/>
         <location filename="../src/configDialog.cpp.orig" line="699"/>
         <location filename="../src/configDialog.cpp.orig" line="700"/>
         <location filename="../src/configDialog.cpp.orig" line="701"/>
@@ -482,7 +482,7 @@ Czy chcesz go usunąć?</translation>
         <translation>Czyszczenie nieużywanych baz danych zakończone pomyślnie!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="631"/>
+        <location filename="../src/configDialog.cpp" line="509"/>
         <location filename="../src/configDialog.cpp.orig" line="705"/>
         <location filename="../src/configDialog.cpp.orig" line="706"/>
         <location filename="../src/configDialog.cpp.orig" line="707"/>
@@ -490,7 +490,7 @@ Czy chcesz go usunąć?</translation>
         <translation>Cache oczyszczony pomyślnie!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="639"/>
+        <location filename="../src/configDialog.cpp" line="517"/>
         <location filename="../src/configDialog.cpp.orig" line="711"/>
         <location filename="../src/configDialog.cpp.orig" line="712"/>
         <location filename="../src/configDialog.cpp.orig" line="713"/>
@@ -498,7 +498,7 @@ Czy chcesz go usunąć?</translation>
         <translation>Cache usunięty pomyślnie!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="647"/>
+        <location filename="../src/configDialog.cpp" line="525"/>
         <location filename="../src/configDialog.cpp.orig" line="717"/>
         <location filename="../src/configDialog.cpp.orig" line="718"/>
         <location filename="../src/configDialog.cpp.orig" line="719"/>
@@ -506,35 +506,35 @@ Czy chcesz go usunąć?</translation>
         <translation>Środowiska budowania oczyszczone pomyślnie!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="655"/>
+        <location filename="../src/configDialog.cpp" line="533"/>
         <source>Database optimized successfully!</source>
         <translation>Baza danych została pomyślnie zoptymalizowana!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="657"/>
+        <location filename="../src/configDialog.cpp" line="535"/>
         <source>Could not optimize database!</source>
         <translation>Nie udało się zoptymalizować bazy danych!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="807"/>
+        <location filename="../src/configDialog.cpp" line="685"/>
         <location filename="../src/configDialog.cpp.orig" line="880"/>
         <source>Error saving configuration</source>
         <translation>Błąd podczas próby zapisania ustawień</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="808"/>
+        <location filename="../src/configDialog.cpp" line="686"/>
         <location filename="../src/configDialog.cpp.orig" line="881"/>
         <source>There was an error while saving the configuration. This is probably due to an internal error or you being not authorized to perform the operation</source>
         <translation>Wystąpił błąd podczas próby zapisania ustawień. Jest to prawdopodobnie spowodowane błędem wewnętrznym lub brakiem odpowiednich uprawnień do wykonania tej operacji</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="872"/>
+        <location filename="../src/configDialog.cpp" line="750"/>
         <location filename="../src/configDialog.cpp.orig" line="945"/>
         <source>Settings Changed</source>
         <translation>Ustawienia zostały zmienione</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="873"/>
+        <location filename="../src/configDialog.cpp" line="751"/>
         <location filename="../src/configDialog.cpp.orig" line="946"/>
         <source>Your repositories have changed.
 Do you want to Update Your Database?</source>
@@ -542,25 +542,23 @@ Do you want to Update Your Database?</source>
 Czy chcesz zaktualizować swoją bazę danych?</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="259"/>
-        <location filename="../src/configDialog.cpp" line="265"/>
-        <location filename="../src/configDialog.cpp" line="958"/>
-        <location filename="../src/configDialog.cpp" line="968"/>
-        <location filename="../src/configDialog.cpp" line="975"/>
-        <location filename="../src/configDialog.cpp" line="992"/>
-        <location filename="../src/configDialog.cpp" line="1002"/>
-        <location filename="../src/configDialog.cpp" line="1009"/>
+        <location filename="../src/config/configDialog.ui" line="514"/>
+        <location filename="../src/config/configDialog.ui" line="672"/>
+        <location filename="../src/configDialog.cpp" line="836"/>
+        <location filename="../src/configDialog.cpp" line="846"/>
+        <location filename="../src/configDialog.cpp" line="853"/>
+        <location filename="../src/configDialog.cpp" line="870"/>
+        <location filename="../src/configDialog.cpp" line="880"/>
+        <location filename="../src/configDialog.cpp" line="887"/>
         <location filename="../src/configDialog.cpp.orig" line="1030"/>
         <location filename="../src/configDialog.cpp.orig" line="1054"/>
         <location filename="../src/configDialog.cpp.orig" line="1071"/>
         <location filename="../src/configDialog.cpp.orig" line="1103"/>
-        <location filename="../ui/configDialog.ui" line="537"/>
-        <location filename="../ui/configDialog.ui" line="677"/>
         <source>Add Mirror</source>
         <translation>Dodaj serwer lustrzany</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="958"/>
+        <location filename="../src/configDialog.cpp" line="836"/>
         <location filename="../src/configDialog.cpp.orig" line="1030"/>
         <source>Mirror Format is incorrect. Your mirror should look like this:
 http://mirror.org/$repo/os/i686</source>
@@ -569,7 +567,7 @@ http://mirror.org/$repo/os/i686</source>
 http://mirror.org/$repo/os/i686</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="969"/>
+        <location filename="../src/configDialog.cpp" line="847"/>
         <location filename="../src/configDialog.cpp.orig" line="1055"/>
         <source>Your Mirror was successfully added!
 It is now available in mirrorlist.</source>
@@ -618,69 +616,68 @@ Jest on teraz dostępny w mirrorlist.</translation>
         <translation type="obsolete">Sync nie może zostać uruchomiony!</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="14"/>
+        <location filename="../src/config/configDialog.ui" line="14"/>
         <source>Shaman - Configuration</source>
         <translation>Shaman - Konfiguracja</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="80"/>
+        <location filename="../src/config/configDialog.ui" line="80"/>
         <source>Favourite Actions</source>
         <translation>Ulubione działania</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="89"/>
+        <location filename="../src/config/configDialog.ui" line="89"/>
         <source>When Upgrading System:</source>
         <translation>Gdy aktualizuję system:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="98"/>
+        <location filename="../src/config/configDialog.ui" line="98"/>
         <source>Upgrade Immediately</source>
         <translation>Aktualizuj natychmiast</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="105"/>
+        <location filename="../src/config/configDialog.ui" line="105"/>
         <source>Add Upgradeable Packages To Queue</source>
         <translation>Dodaj pakiety do aktualizacji do kolejki</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="112"/>
+        <location filename="../src/config/configDialog.ui" line="112"/>
         <source>Ask</source>
         <translation>Zapytaj</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="128"/>
+        <location filename="../src/config/configDialog.ui" line="128"/>
         <source>When Processing Queue</source>
         <translation>Gdy przetwarzam kolejkę</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="135"/>
+        <location filename="../src/config/configDialog.ui" line="135"/>
         <source>Keep application running in System Tray only</source>
         <translation>Pozostaw aplikację działającą tylko w tacce systemowej</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="145"/>
+        <location filename="../src/config/configDialog.ui" line="145"/>
         <source>GUI Startup</source>
         <translation>Uruchamianie GUI</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="151"/>
+        <location filename="../src/config/configDialog.ui" line="151"/>
         <source>Start in the System Tray</source>
         <translation>Startuj w tacce systemowej</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="158"/>
+        <location filename="../src/config/configDialog.ui" line="158"/>
         <source>Show Splashscreen</source>
         <translation>Pokazuj ekran powitalny</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="257"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -688,99 +685,109 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Proszę wybrać działanie z listy&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="956"/>
+        <location filename="../src/config/configDialog.ui" line="1001"/>
         <source>When Application is in System Tray only</source>
         <translation>Gdy aplikacja działa tylko w tacce systemowej</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="962"/>
+        <location filename="../src/config/configDialog.ui" line="1007"/>
         <source>Update Database every</source>
         <translation>Aktualizuj bazę danych co</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="989"/>
+        <location filename="../src/config/configDialog.ui" line="1034"/>
         <source>If upgrades are available:</source>
         <translation>Gdy aktualizacje są dostępne:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="996"/>
+        <location filename="../src/config/configDialog.ui" line="1041"/>
         <source>Just Notify</source>
         <translation>Tylko powiadom</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1003"/>
+        <location filename="../src/config/configDialog.ui" line="1048"/>
         <source>Notify and add them to Queue</source>
         <translation>Powiadom i dodaj je do kolejki</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="192"/>
+        <location filename="../src/config/configDialog.ui" line="192"/>
         <source>Maintenance</source>
         <translation>Konserwacja</translation>
     </message>
     <message>
+        <location filename="../src/config/configDialog.ui" line="211"/>
         <location filename="../src/configDialog.cpp" line="89"/>
-        <location filename="../ui/configDialog.ui" line="211"/>
         <source>Process Selected</source>
         <translation>Rozpocznij proces</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="239"/>
+        <location filename="../src/config/configDialog.ui" line="239"/>
         <source>Waiting</source>
         <comment>Waiting for a user action</comment>
         <translation>Oczekiwanie</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="284"/>
+        <location filename="../src/config/configDialog.ui" line="257"/>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/config/configDialog.ui" line="284"/>
         <source>Checkable Options</source>
         <translation>Opcje do zaznaczenia</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="290"/>
+        <location filename="../src/config/configDialog.ui" line="290"/>
         <source>Use Active FTP</source>
         <translation>Używaj aktywnego FTP</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="297"/>
+        <location filename="../src/config/configDialog.ui" line="297"/>
         <source>Use Deltas (needs xdelta to be installed)</source>
         <translation>Używaj delt (wymaga, aby xdelta było zainstalowane)</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="314"/>
+        <location filename="../src/config/configDialog.ui" line="314"/>
         <source>Advanced Options</source>
         <translation>Zaawansowane opcje</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="324"/>
+        <location filename="../src/config/configDialog.ui" line="324"/>
         <source>HoldPkgs:</source>
         <translation>HoldPkgs:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="334"/>
+        <location filename="../src/config/configDialog.ui" line="334"/>
         <source>IgnorePkgs:</source>
         <translation>IgnorePkgs:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="344"/>
+        <location filename="../src/config/configDialog.ui" line="344"/>
         <source>IgnoreGroups:</source>
         <translation>IgnoreGroups:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="354"/>
+        <location filename="../src/config/configDialog.ui" line="354"/>
         <source>NoUpgrade:</source>
         <translation>NoUpgrade:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="364"/>
+        <location filename="../src/config/configDialog.ui" line="364"/>
         <source>NoExtract:</source>
         <translation>NoExtract:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="388"/>
+        <location filename="../src/config/configDialog.ui" line="388"/>
         <source>XFerCommand: (example: /path/to/command %u) Blank for Default</source>
         <translation>XFerCommand: (przykład: /ścieżka/do/polecenia %u) Domyślnie puste</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="430"/>
+        <location filename="../src/config/configDialog.ui" line="430"/>
         <source>Arch Linux Official Repositories</source>
         <translation>Oficjalne repozytoria Arch Linux</translation>
     </message>
@@ -791,25 +798,25 @@ Please note that packages from Unstable and Testing may break your system.</sour
 Proszę zwrócić uwagę, że pakiety z Unstable i Testing mogą uszkodzić Twój system.</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="473"/>
+        <location filename="../src/config/configDialog.ui" line="473"/>
         <source>Core</source>
         <comment>Do not translate</comment>
         <translation>Core</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="480"/>
+        <location filename="../src/config/configDialog.ui" line="480"/>
         <source>Extra</source>
         <comment>Do not translate</comment>
         <translation>Extra</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="487"/>
+        <location filename="../src/config/configDialog.ui" line="487"/>
         <source>Community</source>
         <comment>Do not translate</comment>
         <translation>Community</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="494"/>
+        <location filename="../src/config/configDialog.ui" line="494"/>
         <source>Testing</source>
         <comment>Do not translate</comment>
         <translation>Testing</translation>
@@ -820,20 +827,17 @@ Proszę zwrócić uwagę, że pakiety z Unstable i Testing mogą uszkodzić Twó
         <translation type="obsolete">Unstable</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="516"/>
-        <location filename="../ui/configDialog.ui" line="656"/>
-        <location filename="../ui/configDialog.ui" line="733"/>
+        <location filename="../src/config/configDialog.ui" line="503"/>
+        <location filename="../src/config/configDialog.ui" line="661"/>
         <source>Server</source>
         <translation>Serwer</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="522"/>
-        <location filename="../ui/configDialog.ui" line="662"/>
         <source>Mirror:</source>
-        <translation>Serwer lustrzany:</translation>
+        <translation type="obsolete">Serwer lustrzany:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="560"/>
+        <location filename="../src/config/configDialog.ui" line="578"/>
         <source>KDEMod Repositories</source>
         <translation>Repozytoria KDEMod</translation>
     </message>
@@ -848,7 +852,7 @@ wiele różnych dodatków. KDEMod to najlepszy sposób na skosztowanie wygody i 
 zachowując jednocześnie prostote i potęgę Arch&apos;a.</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="636"/>
+        <location filename="../src/config/configDialog.ui" line="654"/>
         <source>KDEMod 3 Repository</source>
         <translation>Repozytorium KDEMod 3</translation>
     </message>
@@ -857,7 +861,7 @@ zachowując jednocześnie prostote i potęgę Arch&apos;a.</translation>
         <translation type="obsolete">Repozytorium KDEMod 4 (Unstable, testers only)</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="700"/>
+        <location filename="../src/config/configDialog.ui" line="736"/>
         <source>Third-Party Repositories</source>
         <translation>Repozytoria Third-Party</translation>
     </message>
@@ -870,193 +874,200 @@ Third-Party działają tak samo jak zwykłe i będą dostępne zarówno poprzez 
 jak i Pacmana.</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="728"/>
         <source>Repository</source>
-        <translation>Repozytorium</translation>
+        <translation type="obsolete">Repozytorium</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="756"/>
+        <location filename="../src/config/configDialog.ui" line="789"/>
         <source>Add New Repository</source>
         <translation>Dodaj nowe repozytorium</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="767"/>
         <source>Edit Repository</source>
-        <translation>Edytuj repozytorium</translation>
+        <translation type="obsolete">Edytuj repozytorium</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="778"/>
         <source>Remove Repository</source>
-        <translation>Usuń repozytorium</translation>
+        <translation type="obsolete">Usuń repozytorium</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="801"/>
+        <location filename="../src/config/configDialog.ui" line="846"/>
         <source>Preferences</source>
         <translation>Preferencje</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="807"/>
+        <location filename="../src/config/configDialog.ui" line="852"/>
         <source>Process all dependencies and queue from binary first (recommended)</source>
         <translation>Przetwórz wszystkie zależności najpierw z plików binarnych (zalecane)</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="814"/>
+        <location filename="../src/config/configDialog.ui" line="859"/>
         <source>Review Building output before installing</source>
         <translation>Wyświetl wyjście budowania pakietu, przed jego instalacją</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="824"/>
+        <location filename="../src/config/configDialog.ui" line="869"/>
         <source>ABS Configuration</source>
         <translation>Konfiguracja ABS</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="830"/>
+        <location filename="../src/config/configDialog.ui" line="875"/>
         <source>Use supfiles that match your current repositories</source>
         <translation>Używaj supfiles, które są zgodne z Twoimi obecnymi repozytoriami</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="837"/>
+        <location filename="../src/config/configDialog.ui" line="882"/>
         <source>Define supfiles manually</source>
         <translation>Zdefiniuj ręcznie supfiles</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="860"/>
+        <location filename="../src/config/configDialog.ui" line="905"/>
         <source>Makepkg Configuration</source>
         <translation>Konfiguracja Makepkg</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="866"/>
+        <location filename="../src/config/configDialog.ui" line="911"/>
         <source>CFlags</source>
         <translation>CFlags</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="876"/>
+        <location filename="../src/config/configDialog.ui" line="921"/>
         <source>CXXFlags</source>
         <translation>CXXFlags</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="886"/>
+        <location filename="../src/config/configDialog.ui" line="931"/>
         <source>BuildEnv</source>
         <translation>BuildEnv</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="896"/>
+        <location filename="../src/config/configDialog.ui" line="941"/>
         <source>Options</source>
         <translation>Opcje</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="906"/>
+        <location filename="../src/config/configDialog.ui" line="951"/>
         <source>Doc_Dirs</source>
         <translation>Doc_Dirs</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="919"/>
+        <location filename="../src/config/configDialog.ui" line="964"/>
         <source>Build Environment</source>
         <translation>Środowisko budowania</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="925"/>
+        <location filename="../src/config/configDialog.ui" line="970"/>
         <source>Building Path</source>
         <translation>Ścieżka budowania</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="935"/>
+        <location filename="../src/config/configDialog.ui" line="980"/>
         <source>Remove installed makedepends after build</source>
         <translation>Usuń zainstalowane zależności, które były wymagane do kompilacji, po zbudowaniu pakietu</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="942"/>
+        <location filename="../src/config/configDialog.ui" line="987"/>
         <source>Clean Build Environment after installation</source>
         <translation>Wyczyść środowisko budowania po instalacji</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="382"/>
+        <location filename="../src/configDialog.cpp" line="260"/>
         <location filename="../src/configDialog.cpp.orig" line="413"/>
         <source>Advanced</source>
         <translation>Zaawansowane</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="972"/>
-        <location filename="../ui/configDialog.ui" line="1136"/>
+        <location filename="../src/config/configDialog.ui" line="1017"/>
+        <location filename="../src/config/configDialog.ui" line="1181"/>
         <source>min</source>
         <comment>As in &quot;minutes&quot;</comment>
         <translation>min</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="979"/>
+        <location filename="../src/config/configDialog.ui" line="1024"/>
         <source>Show tray notification Windows</source>
         <translation>Pokaż okna powiadomień tacki systemowej</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1023"/>
+        <location filename="../src/config/configDialog.ui" line="1068"/>
         <source>Use a proxy-server</source>
         <translation>Użyj serwera proxy</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1035"/>
+        <location filename="../src/config/configDialog.ui" line="1080"/>
         <source>IP:</source>
         <translation>IP:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1058"/>
+        <location filename="../src/config/configDialog.ui" line="1103"/>
         <source>Port:</source>
         <translation>Port:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1100"/>
+        <location filename="../src/config/configDialog.ui" line="1145"/>
         <source>HTTP Proxy</source>
         <translation>HTTP Proxy</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1107"/>
+        <location filename="../src/config/configDialog.ui" line="1152"/>
         <source>FTP Proxy</source>
         <translation>FTP Proxy</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1117"/>
+        <location filename="../src/config/configDialog.ui" line="1162"/>
         <source>Use Shaman RSS Capabilities</source>
         <translation>Wykorzystaj możliwości Shaman do odczytu RSS</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1129"/>
+        <location filename="../src/config/configDialog.ui" line="1174"/>
         <source>Update RSS Feed Every</source>
         <translation>Aktualizuj RSS Feed co</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1143"/>
+        <location filename="../src/config/configDialog.ui" line="1188"/>
         <source>Notify upon new items</source>
         <translation>Powiadamiaj o nowych newsach</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1150"/>
+        <location filename="../src/config/configDialog.ui" line="1195"/>
         <source>Check if there is an unread news about a package in Queue before processing it</source>
         <translation>Sprawdź czy dostępny jest nieprzeczytany news o pakiecie z kolejki, przed jej przetworzeniem</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="304"/>
+        <location filename="../src/config/configDialog.ui" line="304"/>
         <source>Use SysLog</source>
         <translation>Używaj SysLog</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="374"/>
+        <location filename="../src/config/configDialog.ui" line="374"/>
         <source>Log File:</source>
         <translation>Plik Log:</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="478"/>
-        <location filename="../src/configDialog.cpp" line="525"/>
+        <location filename="../src/config/configDialog.ui" line="805"/>
+        <source>Repository Order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/config/configDialog.ui" line="819"/>
+        <source>Please order your repositories to define which one will be preferred over another.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/config/configDialog.ui" line="1284"/>
+        <location filename="../src/configDialog.cpp" line="356"/>
+        <location filename="../src/configDialog.cpp" line="403"/>
         <location filename="../src/configDialog.cpp.orig" line="509"/>
         <location filename="../src/configDialog.cpp.orig" line="556"/>
-        <location filename="../ui/configDialog.ui" line="1239"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="480"/>
-        <location filename="../src/configDialog.cpp" line="527"/>
+        <location filename="../src/config/configDialog.ui" line="1301"/>
+        <location filename="../src/configDialog.cpp" line="358"/>
+        <location filename="../src/configDialog.cpp" line="405"/>
         <location filename="../src/configDialog.cpp.orig" line="511"/>
         <location filename="../src/configDialog.cpp.orig" line="558"/>
-        <location filename="../ui/configDialog.ui" line="1256"/>
         <source>Cancel</source>
         <translation>Anuluj</translation>
     </message>
@@ -1065,22 +1076,22 @@ jak i Pacmana.</translation>
         <translation type="obsolete">Repozytorium KDEMod 3 Testing</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1186"/>
+        <location filename="../src/config/configDialog.ui" line="1231"/>
         <source>Interface</source>
         <translation>Interfejs</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1199"/>
+        <location filename="../src/config/configDialog.ui" line="1244"/>
         <source>Start Shaman Automatically on X Startup</source>
         <translation>Uruchamiaj Shamana automatycznie przy starcie X&apos;ów</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1206"/>
+        <location filename="../src/config/configDialog.ui" line="1251"/>
         <source>Forbid starting Shaman as root</source>
         <translation>Zabroń uruchamiania Shamana jako root</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="863"/>
+        <location filename="../src/configDialog.cpp" line="741"/>
         <location filename="../src/configDialog.cpp.orig" line="936"/>
         <source>Saving Configuration</source>
         <translation>Zapisywanie konfiguracji</translation>
@@ -1090,7 +1101,7 @@ jak i Pacmana.</translation>
         <translation type="obsolete">Nie można zapisać konfiguracji Pacmana!</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="992"/>
+        <location filename="../src/configDialog.cpp" line="870"/>
         <location filename="../src/configDialog.cpp.orig" line="1071"/>
         <source>Mirror Format is incorrect. Your mirror should look like this:
 http://mirror.org/$repo/$arch</source>
@@ -1099,7 +1110,7 @@ http://mirror.org/$repo/$arch</source>
 http://mirror.org/$repo/os/i686</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="1003"/>
+        <location filename="../src/configDialog.cpp" line="881"/>
         <location filename="../src/configDialog.cpp.orig" line="1104"/>
         <source>Your Mirror was successfully added!
 It is now available in kdemodmirrorlist.</source>
@@ -1108,7 +1119,7 @@ It is now available in kdemodmirrorlist.</source>
 Jest on teraz dostępny w mirrorlist.</translation>
     </message>
     <message>
-        <location filename="../src/configDialog.cpp" line="863"/>
+        <location filename="../src/configDialog.cpp" line="741"/>
         <location filename="../src/configDialog.cpp.orig" line="936"/>
         <source>Some of your changes have not been applied,
 since alpm needs to be released.
@@ -1127,69 +1138,232 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Konserwacja Shamana.&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Proszę o wybranie działania z rozwijanego menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="847"/>
+        <location filename="../src/config/configDialog.ui" line="892"/>
         <source>RSync Server:</source>
         <translation>RSync Serwer:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1010"/>
+        <location filename="../src/config/configDialog.ui" line="1055"/>
         <source>Update Database at</source>
         <translation>Aktualizuj bazę danych o</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="1192"/>
+        <location filename="../src/config/configDialog.ui" line="1237"/>
         <source>Use Animated Tray Icon</source>
         <translation>Użyj animowanej ikony w tacce systemowej</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="601"/>
+        <location filename="../src/config/configDialog.ui" line="619"/>
         <source>KDEMod 4 Repository</source>
         <translation>KDEMod 4 Repozytorium</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="608"/>
+        <location filename="../src/config/configDialog.ui" line="559"/>
+        <location filename="../src/config/configDialog.ui" line="717"/>
+        <source>Add another server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/config/configDialog.ui" line="626"/>
         <source>KDEMod 4 Extragear Repository</source>
         <translation>KDEMod 4 Extragear Repozytorium</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="615"/>
+        <location filename="../src/config/configDialog.ui" line="633"/>
         <source>KDEMod 4 Playground Repository</source>
         <translation>KDEMod 4 Playground Repozytorium</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="622"/>
+        <location filename="../src/config/configDialog.ui" line="640"/>
         <source>KDEMod 4 Testing Repository</source>
         <translation>KDEMod 4 Testing Repozytorium</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="629"/>
+        <location filename="../src/config/configDialog.ui" line="647"/>
         <source>KDEMod 4 Unstable Repository (Testers only!)</source>
         <translation>KDEMod 4 Unstable Repozytorium (tylko testerzy!)</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="458"/>
+        <location filename="../src/config/configDialog.ui" line="458"/>
         <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones. Please note that packages from Unstable and Testing may break your system.</source>
         <translation>Tutaj możesz wybrać repozytoria spośród oficjalnych dla Arch Linux. Pamiętaj, że pakiety z Unstable i Testing mogą uszkodzić Twój system.</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="586"/>
+        <location filename="../src/config/configDialog.ui" line="604"/>
         <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme, and lots of addons, KDEMod is the best way to taste the ease and the power of KDE with the simplicity and the power of Arch.</source>
         <translation>KDEMod to ulepszona wersja KDE, stworzona wyłącznie dla Arch Linux. Zawiera ona ulepszone Qt, kompatybilne ze standardowym Qt Arch Linux, ulepszony theme oraz wiele różnych dodatków. KDEMod to najlepszy sposób na skosztowanie wygody i potęgi KDE zachowując jednocześnie prostotę i potęgę Arch&apos;a.</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="708"/>
+        <location filename="../src/config/configDialog.ui" line="744"/>
         <source>You can extend your packages choice by adding other repositories. Third-Party Repositories act just as normal ones, and will be accessible through both Shaman and Pacman.</source>
         <translation>Możesz zwiększyć ilość dostępnych pakietów poprzez dodanie innych repozytoriów. Repozytoria Third-Party działają tak samo jak zwykłe i będą dostępne zarówno poprzez Shamana jak i Pacmana.</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="165"/>
+        <location filename="../src/config/configDialog.ui" line="165"/>
         <source>Use the following language:</source>
         <translation>Korzystaj z następujacęgo języka:</translation>
     </message>
     <message>
-        <location filename="../ui/configDialog.ui" line="182"/>
+        <location filename="../src/config/configDialog.ui" line="182"/>
         <source>Disable Tray Icon</source>
         <translation>Wyłącz ikonę tacki systemowej</translation>
+    </message>
+</context>
+<context>
+    <name>DatabaseConfig</name>
+    <message>
+        <location filename="../src/config/DatabaseConfig.cpp" line="100"/>
+        <location filename="../src/config/DatabaseConfig.cpp" line="106"/>
+        <location filename="../src/config/DatabaseConfig.cpp" line="441"/>
+        <location filename="../src/config/DatabaseConfig.cpp" line="449"/>
+        <location filename="../src/config/DatabaseConfig.cpp" line="456"/>
+        <location filename="../src/config/DatabaseConfig.cpp" line="474"/>
+        <location filename="../src/config/DatabaseConfig.cpp" line="482"/>
+        <location filename="../src/config/DatabaseConfig.cpp" line="489"/>
+        <location filename="../src/config/databaseConfig.ui" line="112"/>
+        <location filename="../src/config/databaseConfig.ui" line="285"/>
+        <source>Add Mirror</source>
+        <translation type="unfinished">Dodaj serwer lustrzany</translation>
+    </message>
+    <message>
+        <location filename="../src/config/DatabaseConfig.cpp" line="441"/>
+        <location filename="../src/config/DatabaseConfig.cpp" line="474"/>
+        <source>Mirror Format is incorrect. Your mirror should look like this:
+http://mirror.org/$repo/os/i686</source>
+        <comment>Obviously keep the example as it is ;)</comment>
+        <translation type="unfinished">Format serwera lustrzanego jest niepoprawny. Twój serwer lustrzany powinien wyglądać następujaco:
+http://mirror.org/$repo/os/i686</translation>
+    </message>
+    <message>
+        <location filename="../src/config/DatabaseConfig.cpp" line="450"/>
+        <location filename="../src/config/DatabaseConfig.cpp" line="483"/>
+        <source>Your Mirror was successfully added!
+It is now available in mirrorlist.</source>
+        <comment>mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.</comment>
+        <translation type="unfinished">Twój serwer lustrzany został pomyślnie dodany!
+Jest on teraz dostępny w mirrorlist.</translation>
+    </message>
+    <message>
+        <location filename="../src/config/DatabaseConfig.cpp" line="457"/>
+        <location filename="../src/config/DatabaseConfig.cpp" line="490"/>
+        <source>There was an error while trying to add the mirror! This could be due also to your system policy preventing you from performing this action</source>
+        <translation type="unfinished">Wystąpił błąd podczas próby dodawania serwera lustrzanego. Może to być spowodowane przez politykę systemu zapobiegającą wykonanie tej operacji</translation>
+    </message>
+    <message>
+        <location filename="../src/config/databaseConfig.ui" line="14"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/config/databaseConfig.ui" line="28"/>
+        <source>Arch Linux Official Repositories</source>
+        <translation type="unfinished">Oficjalne repozytoria Arch Linux</translation>
+    </message>
+    <message>
+        <location filename="../src/config/databaseConfig.ui" line="56"/>
+        <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones. Please note that packages from Unstable and Testing may break your system.</source>
+        <translation type="unfinished">Tutaj możesz wybrać repozytoria spośród oficjalnych dla Arch Linux. Pamiętaj, że pakiety z Unstable i Testing mogą uszkodzić Twój system.</translation>
+    </message>
+    <message>
+        <location filename="../src/config/databaseConfig.ui" line="71"/>
+        <source>Core</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Core</translation>
+    </message>
+    <message>
+        <location filename="../src/config/databaseConfig.ui" line="78"/>
+        <source>Extra</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Extra</translation>
+    </message>
+    <message>
+        <location filename="../src/config/databaseConfig.ui" line="85"/>
+        <source>Community</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Community</translation>
+    </message>
+    <message>
+        <location filename="../src/config/databaseConfig.ui" line="92"/>
+        <source>Testing</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Testing</translation>
+    </message>
+    <message>
+        <location filename="../src/config/databaseConfig.ui" line="101"/>
+        <location filename="../src/config/databaseConfig.ui" line="274"/>
+        <source>Server</source>
+        <translation type="unfinished">Serwer</translation>
+    </message>
+    <message>
+        <location filename="../src/config/databaseConfig.ui" line="172"/>
+        <location filename="../src/config/databaseConfig.ui" line="331"/>
+        <source>Add another server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/config/databaseConfig.ui" line="191"/>
+        <source>KDEMod Repositories</source>
+        <translation type="unfinished">Repozytoria KDEMod</translation>
+    </message>
+    <message>
+        <location filename="../src/config/databaseConfig.ui" line="217"/>
+        <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme, and lots of addons, KDEMod is the best way to taste the ease and the power of KDE with the simplicity and the power of Arch.</source>
+        <translation type="unfinished">KDEMod to ulepszona wersja KDE, stworzona wyłącznie dla Arch Linux. Zawiera ona ulepszone Qt, kompatybilne ze standardowym Qt Arch Linux, ulepszony theme oraz wiele różnych dodatków. KDEMod to najlepszy sposób na skosztowanie wygody i potęgi KDE zachowując jednocześnie prostotę i potęgę Arch&apos;a.</translation>
+    </message>
+    <message>
+        <location filename="../src/config/databaseConfig.ui" line="232"/>
+        <source>KDEMod 4 Repository</source>
+        <translation type="unfinished">KDEMod 4 Repozytorium</translation>
+    </message>
+    <message>
+        <location filename="../src/config/databaseConfig.ui" line="239"/>
+        <source>KDEMod 4 Extragear Repository</source>
+        <translation type="unfinished">KDEMod 4 Extragear Repozytorium</translation>
+    </message>
+    <message>
+        <location filename="../src/config/databaseConfig.ui" line="246"/>
+        <source>KDEMod 4 Playground Repository</source>
+        <translation type="unfinished">KDEMod 4 Playground Repozytorium</translation>
+    </message>
+    <message>
+        <location filename="../src/config/databaseConfig.ui" line="253"/>
+        <source>KDEMod 4 Testing Repository</source>
+        <translation type="unfinished">KDEMod 4 Testing Repozytorium</translation>
+    </message>
+    <message>
+        <location filename="../src/config/databaseConfig.ui" line="260"/>
+        <source>KDEMod 4 Unstable Repository (Testers only!)</source>
+        <translation type="unfinished">KDEMod 4 Unstable Repozytorium (tylko testerzy!)</translation>
+    </message>
+    <message>
+        <location filename="../src/config/databaseConfig.ui" line="267"/>
+        <source>KDEMod 3 Repository</source>
+        <translation type="unfinished">Repozytorium KDEMod 3</translation>
+    </message>
+    <message>
+        <location filename="../src/config/databaseConfig.ui" line="350"/>
+        <source>Third-Party Repositories</source>
+        <translation type="unfinished">Repozytoria Third-Party</translation>
+    </message>
+    <message>
+        <location filename="../src/config/databaseConfig.ui" line="358"/>
+        <source>You can extend your packages choice by adding other repositories. Third-Party Repositories act just as normal ones, and will be accessible through both Shaman and Pacman.</source>
+        <translation type="unfinished">Możesz zwiększyć ilość dostępnych pakietów poprzez dodanie innych repozytoriów. Repozytoria Third-Party działają tak samo jak zwykłe i będą dostępne zarówno poprzez Shamana jak i Pacmana.</translation>
+    </message>
+    <message>
+        <location filename="../src/config/databaseConfig.ui" line="418"/>
+        <source>Add New Repository</source>
+        <translation type="unfinished">Dodaj nowe repozytorium</translation>
+    </message>
+    <message>
+        <location filename="../src/config/databaseConfig.ui" line="434"/>
+        <source>Repository Order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/config/databaseConfig.ui" line="448"/>
+        <source>Please order your repositories to define which one will be preferred over another.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1360,6 +1534,522 @@ Czy chcesz go zapisać?</translation>
     </message>
 </context>
 <context>
+    <name>Form</name>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="14"/>
+        <location filename="../src/config/aqpmConfig.ui" line="14"/>
+        <location filename="../src/config/shamanAdvanced.ui" line="14"/>
+        <location filename="../src/config/shamanGeneral.ui" line="14"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="33"/>
+        <location filename="../src/config/shamanGeneral.ui" line="20"/>
+        <source>Favourite Actions</source>
+        <translation type="unfinished">Ulubione działania</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="42"/>
+        <location filename="../src/config/shamanGeneral.ui" line="29"/>
+        <source>When Upgrading System:</source>
+        <translation type="unfinished">Gdy aktualizuję system:</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="51"/>
+        <location filename="../src/config/shamanGeneral.ui" line="38"/>
+        <source>Upgrade Immediately</source>
+        <translation type="unfinished">Aktualizuj natychmiast</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="58"/>
+        <location filename="../src/config/shamanGeneral.ui" line="45"/>
+        <source>Add Upgradeable Packages To Queue</source>
+        <translation type="unfinished">Dodaj pakiety do aktualizacji do kolejki</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="65"/>
+        <location filename="../src/config/shamanGeneral.ui" line="52"/>
+        <source>Ask</source>
+        <translation type="unfinished">Zapytaj</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="81"/>
+        <location filename="../src/config/shamanGeneral.ui" line="68"/>
+        <source>When Processing Queue</source>
+        <translation type="unfinished">Gdy przetwarzam kolejkę</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="88"/>
+        <location filename="../src/config/shamanGeneral.ui" line="75"/>
+        <source>Keep application running in System Tray only</source>
+        <translation type="unfinished">Pozostaw aplikację działającą tylko w tacce systemowej</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="98"/>
+        <location filename="../src/config/shamanGeneral.ui" line="85"/>
+        <source>GUI Startup</source>
+        <translation type="unfinished">Uruchamianie GUI</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="104"/>
+        <location filename="../src/config/shamanGeneral.ui" line="91"/>
+        <source>Start in the System Tray</source>
+        <translation type="unfinished">Startuj w tacce systemowej</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="111"/>
+        <location filename="../src/config/shamanGeneral.ui" line="98"/>
+        <source>Show Splashscreen</source>
+        <translation type="unfinished">Pokazuj ekran powitalny</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="118"/>
+        <location filename="../src/config/shamanGeneral.ui" line="105"/>
+        <source>Use the following language:</source>
+        <translation type="unfinished">Korzystaj z następujacęgo języka:</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="135"/>
+        <location filename="../src/config/shamanGeneral.ui" line="122"/>
+        <source>Disable Tray Icon</source>
+        <translation type="unfinished">Wyłącz ikonę tacki systemowej</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="145"/>
+        <location filename="../src/config/shamanGeneral.ui" line="132"/>
+        <source>Maintenance</source>
+        <translation type="unfinished">Konserwacja</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="164"/>
+        <location filename="../src/config/shamanGeneral.ui" line="151"/>
+        <source>Process Selected</source>
+        <translation type="unfinished">Rozpocznij proces</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="192"/>
+        <location filename="../src/config/shamanGeneral.ui" line="179"/>
+        <source>Waiting</source>
+        <comment>Waiting for a user action</comment>
+        <translation type="unfinished">Oczekiwanie</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="210"/>
+        <location filename="../src/config/shamanGeneral.ui" line="197"/>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="237"/>
+        <location filename="../src/config/aqpmConfig.ui" line="117"/>
+        <source>Checkable Options</source>
+        <translation type="unfinished">Opcje do zaznaczenia</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="243"/>
+        <location filename="../src/config/aqpmConfig.ui" line="123"/>
+        <source>Use Active FTP</source>
+        <translation type="unfinished">Używaj aktywnego FTP</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="250"/>
+        <location filename="../src/config/aqpmConfig.ui" line="130"/>
+        <source>Use Deltas (needs xdelta to be installed)</source>
+        <translation type="unfinished">Używaj delt (wymaga, aby xdelta było zainstalowane)</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="257"/>
+        <location filename="../src/config/aqpmConfig.ui" line="137"/>
+        <source>Use SysLog</source>
+        <translation type="unfinished">Używaj SysLog</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="267"/>
+        <location filename="../src/config/aqpmConfig.ui" line="20"/>
+        <source>Advanced Options</source>
+        <translation type="unfinished">Zaawansowane opcje</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="277"/>
+        <location filename="../src/config/aqpmConfig.ui" line="30"/>
+        <source>HoldPkgs:</source>
+        <translation type="unfinished">HoldPkgs:</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="287"/>
+        <location filename="../src/config/aqpmConfig.ui" line="40"/>
+        <source>IgnorePkgs:</source>
+        <translation type="unfinished">IgnorePkgs:</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="297"/>
+        <location filename="../src/config/aqpmConfig.ui" line="50"/>
+        <source>IgnoreGroups:</source>
+        <translation type="unfinished">IgnoreGroups:</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="307"/>
+        <location filename="../src/config/aqpmConfig.ui" line="60"/>
+        <source>NoUpgrade:</source>
+        <translation type="unfinished">NoUpgrade:</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="317"/>
+        <location filename="../src/config/aqpmConfig.ui" line="70"/>
+        <source>NoExtract:</source>
+        <translation type="unfinished">NoExtract:</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="327"/>
+        <location filename="../src/config/aqpmConfig.ui" line="80"/>
+        <source>Log File:</source>
+        <translation type="unfinished">Plik Log:</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="341"/>
+        <location filename="../src/config/aqpmConfig.ui" line="94"/>
+        <source>XFerCommand: (example: /path/to/command %u) Blank for Default</source>
+        <translation type="unfinished">XFerCommand: (przykład: /ścieżka/do/polecenia %u) Domyślnie puste</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="383"/>
+        <source>Arch Linux Official Repositories</source>
+        <translation type="unfinished">Oficjalne repozytoria Arch Linux</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="411"/>
+        <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones. Please note that packages from Unstable and Testing may break your system.</source>
+        <translation type="unfinished">Tutaj możesz wybrać repozytoria spośród oficjalnych dla Arch Linux. Pamiętaj, że pakiety z Unstable i Testing mogą uszkodzić Twój system.</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="426"/>
+        <source>Core</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Core</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="433"/>
+        <source>Extra</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Extra</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="440"/>
+        <source>Community</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Community</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="447"/>
+        <source>Testing</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">Testing</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="456"/>
+        <location filename="../src/config/absConfig.ui" line="614"/>
+        <source>Server</source>
+        <translation type="unfinished">Serwer</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="467"/>
+        <location filename="../src/config/absConfig.ui" line="625"/>
+        <source>Add Mirror</source>
+        <translation type="unfinished">Dodaj serwer lustrzany</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="512"/>
+        <location filename="../src/config/absConfig.ui" line="670"/>
+        <source>Add another server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="531"/>
+        <source>KDEMod Repositories</source>
+        <translation type="unfinished">Repozytoria KDEMod</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="557"/>
+        <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme, and lots of addons, KDEMod is the best way to taste the ease and the power of KDE with the simplicity and the power of Arch.</source>
+        <translation type="unfinished">KDEMod to ulepszona wersja KDE, stworzona wyłącznie dla Arch Linux. Zawiera ona ulepszone Qt, kompatybilne ze standardowym Qt Arch Linux, ulepszony theme oraz wiele różnych dodatków. KDEMod to najlepszy sposób na skosztowanie wygody i potęgi KDE zachowując jednocześnie prostotę i potęgę Arch&apos;a.</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="572"/>
+        <source>KDEMod 4 Repository</source>
+        <translation type="unfinished">KDEMod 4 Repozytorium</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="579"/>
+        <source>KDEMod 4 Extragear Repository</source>
+        <translation type="unfinished">KDEMod 4 Extragear Repozytorium</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="586"/>
+        <source>KDEMod 4 Playground Repository</source>
+        <translation type="unfinished">KDEMod 4 Playground Repozytorium</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="593"/>
+        <source>KDEMod 4 Testing Repository</source>
+        <translation type="unfinished">KDEMod 4 Testing Repozytorium</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="600"/>
+        <source>KDEMod 4 Unstable Repository (Testers only!)</source>
+        <translation type="unfinished">KDEMod 4 Unstable Repozytorium (tylko testerzy!)</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="607"/>
+        <source>KDEMod 3 Repository</source>
+        <translation type="unfinished">Repozytorium KDEMod 3</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="689"/>
+        <source>Third-Party Repositories</source>
+        <translation type="unfinished">Repozytoria Third-Party</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="697"/>
+        <source>You can extend your packages choice by adding other repositories. Third-Party Repositories act just as normal ones, and will be accessible through both Shaman and Pacman.</source>
+        <translation type="unfinished">Możesz zwiększyć ilość dostępnych pakietów poprzez dodanie innych repozytoriów. Repozytoria Third-Party działają tak samo jak zwykłe i będą dostępne zarówno poprzez Shamana jak i Pacmana.</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="742"/>
+        <source>Add New Repository</source>
+        <translation type="unfinished">Dodaj nowe repozytorium</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="758"/>
+        <source>Repository Order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="772"/>
+        <source>Please order your repositories to define which one will be preferred over another.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="799"/>
+        <source>Preferences</source>
+        <translation type="unfinished">Preferencje</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="805"/>
+        <source>Process all dependencies and queue from binary first (recommended)</source>
+        <translation type="unfinished">Przetwórz wszystkie zależności najpierw z plików binarnych (zalecane)</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="812"/>
+        <source>Review Building output before installing</source>
+        <translation type="unfinished">Wyświetl wyjście budowania pakietu, przed jego instalacją</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="822"/>
+        <source>ABS Configuration</source>
+        <translation type="unfinished">Konfiguracja ABS</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="828"/>
+        <source>Use supfiles that match your current repositories</source>
+        <translation type="unfinished">Używaj supfiles, które są zgodne z Twoimi obecnymi repozytoriami</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="835"/>
+        <source>Define supfiles manually</source>
+        <translation type="unfinished">Zdefiniuj ręcznie supfiles</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="845"/>
+        <source>RSync Server:</source>
+        <translation type="unfinished">RSync Serwer:</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="858"/>
+        <source>Makepkg Configuration</source>
+        <translation type="unfinished">Konfiguracja Makepkg</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="864"/>
+        <source>CFlags</source>
+        <translation type="unfinished">CFlags</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="874"/>
+        <source>CXXFlags</source>
+        <translation type="unfinished">CXXFlags</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="884"/>
+        <source>BuildEnv</source>
+        <translation type="unfinished">BuildEnv</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="894"/>
+        <source>Options</source>
+        <translation type="unfinished">Opcje</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="904"/>
+        <source>Doc_Dirs</source>
+        <translation type="unfinished">Doc_Dirs</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="917"/>
+        <source>Build Environment</source>
+        <translation type="unfinished">Środowisko budowania</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="923"/>
+        <source>Building Path</source>
+        <translation type="unfinished">Ścieżka budowania</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="933"/>
+        <source>Remove installed makedepends after build</source>
+        <translation type="unfinished">Usuń zainstalowane zależności, które były wymagane do kompilacji, po zbudowaniu pakietu</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="940"/>
+        <source>Clean Build Environment after installation</source>
+        <translation type="unfinished">Wyczyść środowisko budowania po instalacji</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="954"/>
+        <location filename="../src/config/shamanAdvanced.ui" line="200"/>
+        <source>When Application is in System Tray only</source>
+        <translation type="unfinished">Gdy aplikacja działa tylko w tacce systemowej</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="960"/>
+        <location filename="../src/config/shamanAdvanced.ui" line="206"/>
+        <source>Update Database every</source>
+        <translation type="unfinished">Aktualizuj bazę danych co</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="970"/>
+        <location filename="../src/config/absConfig.ui" line="1134"/>
+        <location filename="../src/config/shamanAdvanced.ui" line="163"/>
+        <location filename="../src/config/shamanAdvanced.ui" line="216"/>
+        <source>min</source>
+        <comment>As in &quot;minutes&quot;</comment>
+        <translation type="unfinished">min</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="977"/>
+        <location filename="../src/config/shamanAdvanced.ui" line="223"/>
+        <source>Show tray notification Windows</source>
+        <translation type="unfinished">Pokaż okna powiadomień tacki systemowej</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="987"/>
+        <location filename="../src/config/shamanAdvanced.ui" line="233"/>
+        <source>If upgrades are available:</source>
+        <translation type="unfinished">Gdy aktualizacje są dostępne:</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="994"/>
+        <location filename="../src/config/shamanAdvanced.ui" line="240"/>
+        <source>Just Notify</source>
+        <translation type="unfinished">Tylko powiadom</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="1001"/>
+        <location filename="../src/config/shamanAdvanced.ui" line="247"/>
+        <source>Notify and add them to Queue</source>
+        <translation type="unfinished">Powiadom i dodaj je do kolejki</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="1008"/>
+        <location filename="../src/config/shamanAdvanced.ui" line="254"/>
+        <source>Update Database at</source>
+        <translation type="unfinished">Aktualizuj bazę danych o</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="1021"/>
+        <location filename="../src/config/shamanAdvanced.ui" line="50"/>
+        <source>Use a proxy-server</source>
+        <translation type="unfinished">Użyj serwera proxy</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="1033"/>
+        <location filename="../src/config/shamanAdvanced.ui" line="62"/>
+        <source>IP:</source>
+        <translation type="unfinished">IP:</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="1056"/>
+        <location filename="../src/config/shamanAdvanced.ui" line="85"/>
+        <source>Port:</source>
+        <translation type="unfinished">Port:</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="1098"/>
+        <location filename="../src/config/shamanAdvanced.ui" line="127"/>
+        <source>HTTP Proxy</source>
+        <translation type="unfinished">HTTP Proxy</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="1105"/>
+        <location filename="../src/config/shamanAdvanced.ui" line="134"/>
+        <source>FTP Proxy</source>
+        <translation type="unfinished">FTP Proxy</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="1115"/>
+        <location filename="../src/config/shamanAdvanced.ui" line="144"/>
+        <source>Use Shaman RSS Capabilities</source>
+        <translation type="unfinished">Wykorzystaj możliwości Shaman do odczytu RSS</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="1127"/>
+        <location filename="../src/config/shamanAdvanced.ui" line="156"/>
+        <source>Update RSS Feed Every</source>
+        <translation type="unfinished">Aktualizuj RSS Feed co</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="1141"/>
+        <location filename="../src/config/shamanAdvanced.ui" line="170"/>
+        <source>Notify upon new items</source>
+        <translation type="unfinished">Powiadamiaj o nowych newsach</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="1148"/>
+        <location filename="../src/config/shamanAdvanced.ui" line="177"/>
+        <source>Check if there is an unread news about a package in Queue before processing it</source>
+        <translation type="unfinished">Sprawdź czy dostępny jest nieprzeczytany news o pakiecie z kolejki, przed jej przetworzeniem</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="1184"/>
+        <location filename="../src/config/shamanAdvanced.ui" line="20"/>
+        <source>Interface</source>
+        <translation type="unfinished">Interfejs</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="1190"/>
+        <location filename="../src/config/shamanAdvanced.ui" line="26"/>
+        <source>Use Animated Tray Icon</source>
+        <translation type="unfinished">Użyj animowanej ikony w tacce systemowej</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="1197"/>
+        <location filename="../src/config/shamanAdvanced.ui" line="33"/>
+        <source>Start Shaman Automatically on X Startup</source>
+        <translation type="unfinished">Uruchamiaj Shamana automatycznie przy starcie X&apos;ów</translation>
+    </message>
+    <message>
+        <location filename="../src/config/absConfig.ui" line="1204"/>
+        <location filename="../src/config/shamanAdvanced.ui" line="40"/>
+        <source>Forbid starting Shaman as root</source>
+        <translation type="unfinished">Zabroń uruchamiania Shamana jako root</translation>
+    </message>
+</context>
+<context>
     <name>LocalPackage</name>
     <message>
         <location filename="../ui/fromFileDialog.ui" line="13"/>
@@ -1476,7 +2166,7 @@ Możesz zmienić to zachowanie w Ustawieniach.</translation>
         <location filename="../src/MainWindow.cpp" line="1555"/>
         <location filename="../src/MainWindow.cpp" line="1575"/>
         <location filename="../src/MainWindow.cpp" line="1782"/>
-        <location filename="../src/MainWindow.cpp" line="2046"/>
+        <location filename="../src/MainWindow.cpp" line="2040"/>
         <location filename="../src/MainWindow.cpp.orig" line="1556"/>
         <location filename="../src/MainWindow.cpp.orig" line="1576"/>
         <location filename="../src/MainWindow.cpp.orig" line="1783"/>
@@ -1567,7 +2257,7 @@ Możesz zmienić to zachowanie w Ustawieniach.</translation>
         <location filename="../src/MainWindow.cpp" line="1243"/>
         <location filename="../src/MainWindow.cpp" line="1246"/>
         <location filename="../src/MainWindow.cpp" line="1781"/>
-        <location filename="../src/MainWindow.cpp" line="2041"/>
+        <location filename="../src/MainWindow.cpp" line="2035"/>
         <location filename="../src/MainWindow.cpp.orig" line="711"/>
         <location filename="../src/MainWindow.cpp.orig" line="993"/>
         <location filename="../src/MainWindow.cpp.orig" line="1204"/>
@@ -1585,7 +2275,7 @@ Możesz zmienić to zachowanie w Ustawieniach.</translation>
         <location filename="../src/MainWindow.cpp" line="1298"/>
         <location filename="../src/MainWindow.cpp" line="1301"/>
         <location filename="../src/MainWindow.cpp" line="1779"/>
-        <location filename="../src/MainWindow.cpp" line="2051"/>
+        <location filename="../src/MainWindow.cpp" line="2045"/>
         <location filename="../src/MainWindow.cpp.orig" line="713"/>
         <location filename="../src/MainWindow.cpp.orig" line="995"/>
         <location filename="../src/MainWindow.cpp.orig" line="1299"/>
@@ -1599,7 +2289,7 @@ Możesz zmienić to zachowanie w Ustawieniach.</translation>
         <location filename="../src/MainWindow.cpp" line="714"/>
         <location filename="../src/MainWindow.cpp" line="1325"/>
         <location filename="../src/MainWindow.cpp" line="1780"/>
-        <location filename="../src/MainWindow.cpp" line="2052"/>
+        <location filename="../src/MainWindow.cpp" line="2046"/>
         <location filename="../src/MainWindow.cpp.orig" line="715"/>
         <location filename="../src/MainWindow.cpp.orig" line="1326"/>
         <location filename="../src/MainWindow.cpp.orig" line="1781"/>
@@ -1645,7 +2335,7 @@ Możesz zmienić to zachowanie w Ustawieniach.</translation>
     </message>
     <message>
         <location filename="../src/MainWindow.cpp" line="854"/>
-        <location filename="../src/MainWindow.cpp" line="1872"/>
+        <location filename="../src/MainWindow.cpp" line="1866"/>
         <location filename="../src/MainWindow.cpp.orig" line="855"/>
         <location filename="../src/MainWindow.cpp.orig" line="1873"/>
         <source>Error</source>
@@ -1832,19 +2522,19 @@ proszę ponownie go uruchomić aby rozpocząc korzystanie z nowej wersji</transl
         <translation>Twoja kolejka została pomyślnie przetworzona!!</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1858"/>
+        <location filename="../src/MainWindow.cpp" line="1852"/>
         <location filename="../src/MainWindow.cpp.orig" line="1859"/>
         <source>Install a Package</source>
         <translation>Zainstaluj pakiet</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1858"/>
+        <location filename="../src/MainWindow.cpp" line="1852"/>
         <location filename="../src/MainWindow.cpp.orig" line="1859"/>
         <source>Arch Linux Packages (*.pkg.tar.gz)</source>
         <translation>Pakiety Arch Linux (*.pkg.tar.gz)</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1872"/>
+        <location filename="../src/MainWindow.cpp" line="1866"/>
         <location filename="../src/MainWindow.cpp.orig" line="1873"/>
         <source>%1 does not seem
 a valid package</source>
@@ -1852,7 +2542,7 @@ a valid package</source>
 prawidłowym pakietem</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1899"/>
+        <location filename="../src/MainWindow.cpp" line="1893"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -1866,7 +2556,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1964"/>
+        <location filename="../src/MainWindow.cpp" line="1958"/>
         <location filename="../src/MainWindow.cpp.orig" line="1965"/>
         <source>%1 requires installing %2 from IgnorePkg/IgnoreGroup.
  Install anyway?</source>
@@ -1874,7 +2564,7 @@ p, li { white-space: pre-wrap; }
 Zainstalować mimo wszystko?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1967"/>
+        <location filename="../src/MainWindow.cpp" line="1961"/>
         <location filename="../src/MainWindow.cpp.orig" line="1968"/>
         <source>%1 is in IgnorePkg/IgnoreGroup.
  Install anyway?</source>
@@ -1882,13 +2572,13 @@ Zainstalować mimo wszystko?</translation>
 Zainstalować mimo wszystko?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1971"/>
+        <location filename="../src/MainWindow.cpp" line="1965"/>
         <location filename="../src/MainWindow.cpp.orig" line="1972"/>
         <source>Replace %1 with %2/%3?</source>
         <translation>Zastąpić %1 przez %2/%3?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1975"/>
+        <location filename="../src/MainWindow.cpp" line="1969"/>
         <location filename="../src/MainWindow.cpp.orig" line="1976"/>
         <source>%1 conflicts with %2.
 Remove %2?</source>
@@ -1896,7 +2586,7 @@ Remove %2?</source>
 Usunąć %2?</translation>
     </message>
     <message numerus="yes">
-        <location filename="../src/MainWindow.cpp" line="1979"/>
+        <location filename="../src/MainWindow.cpp" line="1973"/>
         <location filename="../src/MainWindow.cpp.orig" line="1980"/>
         <source>The following package(s) cannot be upgraded due to unresolvable dependencies:
 %1
@@ -1918,7 +2608,7 @@ Czy chcesz pominąć aktualizację tych pakietów?</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1986"/>
+        <location filename="../src/MainWindow.cpp" line="1980"/>
         <location filename="../src/MainWindow.cpp.orig" line="1987"/>
         <source>%1-%2: local version is newer.
 Upgrade anyway?</source>
@@ -1926,7 +2616,7 @@ Upgrade anyway?</source>
 Zaktualizować mimo wszystko?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1990"/>
+        <location filename="../src/MainWindow.cpp" line="1984"/>
         <location filename="../src/MainWindow.cpp.orig" line="1991"/>
         <source>File %1 is corrupted.
 Do you want to delete it?</source>
@@ -1934,7 +2624,7 @@ Do you want to delete it?</source>
 Czy chcesz go usunąć?</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1996"/>
+        <location filename="../src/MainWindow.cpp" line="1990"/>
         <location filename="../src/MainWindow.cpp.orig" line="1997"/>
         <source>Transaction Question</source>
         <translation>Transakcja</translation>
@@ -2480,6 +3170,34 @@ p, li { white-space: pre-wrap; }
     </message>
 </context>
 <context>
+    <name>MirrorWidget</name>
+    <message>
+        <location filename="../src/config/mirrorWidget.ui" line="14"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/config/mirrorWidget.ui" line="22"/>
+        <source>Mirror:</source>
+        <translation type="unfinished">Serwer lustrzany:</translation>
+    </message>
+    <message>
+        <location filename="../src/config/mirrorWidget.ui" line="56"/>
+        <source>Prefer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/config/mirrorWidget.ui" line="69"/>
+        <source>Defer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/config/mirrorWidget.ui" line="82"/>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>NewsViewer</name>
     <message>
         <location filename="../src/NewsViewer.cpp" line="47"/>
@@ -2719,7 +3437,7 @@ po więcej informacji.</translation>
         <translation>A&amp;nuluj</translation>
     </message>
     <message>
-        <location filename="../src/MainWindow.cpp" line="1934"/>
+        <location filename="../src/MainWindow.cpp" line="1928"/>
         <location filename="../src/MainWindow.cpp.orig" line="1935"/>
         <source>Whoa, that&apos;s co&amp;ol!</source>
         <translation>Hoho, to sup&amp;er!</translation>
@@ -3164,6 +3882,34 @@ p, li { white-space: pre-wrap; }
     </message>
 </context>
 <context>
+    <name>ServerWidget</name>
+    <message>
+        <location filename="../src/config/serverWidget.ui" line="14"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/config/serverWidget.ui" line="20"/>
+        <source>Server:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/config/serverWidget.ui" line="61"/>
+        <source>Prefer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/config/serverWidget.ui" line="74"/>
+        <source>Defer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/config/serverWidget.ui" line="87"/>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ShamanStatusBar</name>
     <message>
         <location filename="../src/ShamanStatusBar.cpp" line="83"/>
@@ -3332,6 +4078,34 @@ Kliknij tutaj aby zaktualizować swój system.</numerusform>
             <numerusform>Dostępne są &lt;b&gt;%n pakiety do zaktualizowania.&lt;/b&gt; Możesz&lt;br&gt; zaktualizować je natychmiast lub dodać do obecnej kolejki&lt;br&gt; i przetworzyć później.</numerusform>
             <numerusform>Dostępne jest &lt;b&gt;%n pakietów do zaktualizowania.&lt;/b&gt; Możesz&lt;br&gt; zaktualizować je natychmiast lub dodać do obecnej kolejki&lt;br&gt; i przetworzyć później.</numerusform>
         </translation>
+    </message>
+</context>
+<context>
+    <name>ThirdPartyWidget</name>
+    <message>
+        <location filename="../src/config/thirdPartyWidget.ui" line="14"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/config/thirdPartyWidget.ui" line="22"/>
+        <source>Name</source>
+        <translation type="unfinished">Nazwa</translation>
+    </message>
+    <message>
+        <location filename="../src/config/thirdPartyWidget.ui" line="40"/>
+        <source>Databases</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/config/thirdPartyWidget.ui" line="65"/>
+        <source>Add</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/config/thirdPartyWidget.ui" line="72"/>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

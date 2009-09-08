@@ -64,6 +64,9 @@ private Q_SLOTS:
     void addKdemodWidget(const QString &server = QString());
     void addThirdPartyWidget(const QString &name = QString());
 
+    void addMirror();
+    void addKdemodMirror();
+
     void updateDatabaseList();
 
 private:

@@ -544,7 +544,7 @@ Lütfen Unstable ve Testing depolarının sisteminize zarar verebileceğini unut
     </message>
     <message>
         <source>Mirror:</source>
-        <translation>Yansı:</translation>
+        <translation type="obsolete">Yansı:</translation>
     </message>
     <message>
         <source>KDEMod Repositories</source>
@@ -582,7 +582,7 @@ tarafından kullanılır.</translation>
     </message>
     <message>
         <source>Repository</source>
-        <translation>Depo</translation>
+        <translation type="obsolete">Depo</translation>
     </message>
     <message>
         <source>Add New Repository</source>
@@ -590,11 +590,11 @@ tarafından kullanılır.</translation>
     </message>
     <message>
         <source>Edit Repository</source>
-        <translation>Depoyu Düzenle</translation>
+        <translation type="obsolete">Depoyu Düzenle</translation>
     </message>
     <message>
         <source>Remove Repository</source>
-        <translation>Depoyu Kaldır</translation>
+        <translation type="obsolete">Depoyu Kaldır</translation>
     </message>
     <message>
         <source>Preferences</source>
@@ -871,9 +871,142 @@ p, li { white-space: pre-wrap; }
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add another server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Repository Order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please order your repositories to define which one will be preferred over another.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>DatabaseConfig</name>
+    <message>
+        <source>Add Mirror</source>
+        <translation type="unfinished">Yansı Ekle</translation>
+    </message>
+    <message>
+        <source>Mirror Format is incorrect. Your mirror should look like this:
+http://mirror.org/$repo/os/i686</source>
+        <comment>Obviously keep the example as it is ;)</comment>
+        <translation type="unfinished">Yansı biçimi yanlış.Yansı şöyle olmalı:
+http://mirror.org/$repo/os/i686</translation>
+    </message>
+    <message>
+        <source>Your Mirror was successfully added!
+It is now available in mirrorlist.</source>
+        <comment>mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.</comment>
+        <translation type="unfinished">Yansı başarıyla eklendi!
+Artık mirrorlist için yerini aldı.</translation>
+    </message>
+    <message>
+        <source>There was an error while trying to add the mirror! This could be due also to your system policy preventing you from performing this action</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Arch Linux Official Repositories</source>
+        <translation type="unfinished">Arch Linux Resmi Depoları</translation>
+    </message>
+    <message>
+        <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones. Please note that packages from Unstable and Testing may break your system.</source>
+        <translation type="unfinished">Burada Arh Linux&apos; un resmi depolarından birini seçebilirsiniz. Lütfen, Unstable ve Testing depolarından gelen paketlerin sisteminizi bozabileceğini unutmayın.</translation>
+    </message>
+    <message>
+        <source>Core</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>Extra</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>Community</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>Testing</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>Server</source>
+        <translation type="unfinished">Sunucu</translation>
+    </message>
+    <message>
+        <source>Add another server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KDEMod Repositories</source>
+        <translation type="unfinished">KDEMod Depoları</translation>
+    </message>
+    <message>
+        <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme, and lots of addons, KDEMod is the best way to taste the ease and the power of KDE with the simplicity and the power of Arch.</source>
+        <translation type="unfinished">KDEMod, KDE&apos; nin geliştirilmiş bir sürümü olup sadece Arch&apos; a özeldir. Arch Linux standart Qt paketi ile uyumlu geliştirilmiş bir Qt paketi, gelişmiş bir tema ve daha fazla eklenti sunar. KDEMod, Arch&apos; ın basitlik ve gücüyle birlikte KDE&apos; nin güç ve tadını en iyi şekilde deneyimleme yoludur.</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Repository</source>
+        <translation type="unfinished">KDEMod 4 Deposu</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Extragear Repository</source>
+        <translation type="unfinished">KDEMod 4 Extragear Deposu</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Playground Repository</source>
+        <translation type="unfinished">KDEMod 4 Playground Deposu</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Testing Repository</source>
+        <translation type="unfinished">KDEMod 4 Testing Deposu</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Unstable Repository (Testers only!)</source>
+        <translation type="unfinished">KDEMod 4 Unstable Deposu (Sadece denemek isteyenler için)</translation>
+    </message>
+    <message>
+        <source>KDEMod 3 Repository</source>
+        <translation type="unfinished">KDEMod 3 Deposu</translation>
+    </message>
+    <message>
+        <source>Third-Party Repositories</source>
+        <translation type="unfinished">Üçüncü Kısım Depolar</translation>
+    </message>
+    <message>
+        <source>You can extend your packages choice by adding other repositories. Third-Party Repositories act just as normal ones, and will be accessible through both Shaman and Pacman.</source>
+        <translation type="unfinished">Paket seçimlerinizi diğer depoları ekleyerek arttırabilirsiniz. Üçüncü-Kişi Depolarına normal depolar gibi Shaman ve Pacman aracılığıyla ulaşılabilir.</translation>
+    </message>
+    <message>
+        <source>Add New Repository</source>
+        <translation type="unfinished">Yeni Depo Ekle</translation>
+    </message>
+    <message>
+        <source>Repository Order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please order your repositories to define which one will be preferred over another.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -983,6 +1116,380 @@ Kaydetmek ister misiniz?</translation>
     <message>
         <source>Error occurred</source>
         <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Form</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Favourite Actions</source>
+        <translation type="unfinished">Sık Kullanılan Eylemler</translation>
+    </message>
+    <message>
+        <source>When Upgrading System:</source>
+        <translation type="unfinished">Sistem Yükseltilirken:</translation>
+    </message>
+    <message>
+        <source>Upgrade Immediately</source>
+        <translation type="unfinished">Derhal Yükselt</translation>
+    </message>
+    <message>
+        <source>Add Upgradeable Packages To Queue</source>
+        <translation type="unfinished">Yükseltilebilir Paketleri Sıraya Ekle</translation>
+    </message>
+    <message>
+        <source>Ask</source>
+        <translation type="unfinished">Sor</translation>
+    </message>
+    <message>
+        <source>When Processing Queue</source>
+        <translation type="unfinished">Sıra İşlenirken</translation>
+    </message>
+    <message>
+        <source>Keep application running in System Tray only</source>
+        <translation type="unfinished">Yazılımı sadece Sistem Çubuğunda çalıştır</translation>
+    </message>
+    <message>
+        <source>GUI Startup</source>
+        <translation type="unfinished">ARAYÜZ Başlangıcı</translation>
+    </message>
+    <message>
+        <source>Start in the System Tray</source>
+        <translation type="unfinished">Sistem Çubuğunda başlat</translation>
+    </message>
+    <message>
+        <source>Show Splashscreen</source>
+        <translation type="unfinished">Karşılama Ekranı Göster</translation>
+    </message>
+    <message>
+        <source>Use the following language:</source>
+        <translation type="unfinished">Şu dili kullan:</translation>
+    </message>
+    <message>
+        <source>Disable Tray Icon</source>
+        <translation type="unfinished">Sistem tablası simgesini devredışı bırak</translation>
+    </message>
+    <message>
+        <source>Maintenance</source>
+        <translation type="unfinished">Bakım</translation>
+    </message>
+    <message>
+        <source>Process Selected</source>
+        <translation type="unfinished">Seçilen İşlem</translation>
+    </message>
+    <message>
+        <source>Waiting</source>
+        <comment>Waiting for a user action</comment>
+        <translation type="unfinished">Kullanıcı Bekleniyor</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Checkable Options</source>
+        <translation type="unfinished">Uygulanabilir Seçenekler</translation>
+    </message>
+    <message>
+        <source>Use Active FTP</source>
+        <translation type="unfinished">Aktif FTP Kullan</translation>
+    </message>
+    <message>
+        <source>Use Deltas (needs xdelta to be installed)</source>
+        <translation type="unfinished">Delta Kullan (xdelta&apos;nın yüklü olması gerekir)</translation>
+    </message>
+    <message>
+        <source>Use SysLog</source>
+        <translation type="unfinished">SysLog Kullan</translation>
+    </message>
+    <message>
+        <source>Advanced Options</source>
+        <translation type="unfinished">Gelişmiş Seçenekler</translation>
+    </message>
+    <message>
+        <source>HoldPkgs:</source>
+        <translation type="unfinished">HoldPkgs:</translation>
+    </message>
+    <message>
+        <source>IgnorePkgs:</source>
+        <translation type="unfinished">IgnorePkgs:</translation>
+    </message>
+    <message>
+        <source>IgnoreGroups:</source>
+        <translation type="unfinished">IgnoreGroups:</translation>
+    </message>
+    <message>
+        <source>NoUpgrade:</source>
+        <translation type="unfinished">NoUpgrade:</translation>
+    </message>
+    <message>
+        <source>NoExtract:</source>
+        <translation type="unfinished">NoExtract:</translation>
+    </message>
+    <message>
+        <source>Log File:</source>
+        <translation type="unfinished">Kayıt Dosyası:</translation>
+    </message>
+    <message>
+        <source>XFerCommand: (example: /path/to/command %u) Blank for Default</source>
+        <translation type="unfinished">XFerCommand: (örnek: /path/to/command %u) Varsayılan için boş bırakın</translation>
+    </message>
+    <message>
+        <source>Arch Linux Official Repositories</source>
+        <translation type="unfinished">Arch Linux Resmi Depoları</translation>
+    </message>
+    <message>
+        <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones. Please note that packages from Unstable and Testing may break your system.</source>
+        <translation type="unfinished">Burada Arh Linux&apos; un resmi depolarından birini seçebilirsiniz. Lütfen, Unstable ve Testing depolarından gelen paketlerin sisteminizi bozabileceğini unutmayın.</translation>
+    </message>
+    <message>
+        <source>Core</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>Extra</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>Community</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>Testing</source>
+        <comment>Do not translate</comment>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>Server</source>
+        <translation type="unfinished">Sunucu</translation>
+    </message>
+    <message>
+        <source>Add Mirror</source>
+        <translation type="unfinished">Yansı Ekle</translation>
+    </message>
+    <message>
+        <source>Add another server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KDEMod Repositories</source>
+        <translation type="unfinished">KDEMod Depoları</translation>
+    </message>
+    <message>
+        <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme, and lots of addons, KDEMod is the best way to taste the ease and the power of KDE with the simplicity and the power of Arch.</source>
+        <translation type="unfinished">KDEMod, KDE&apos; nin geliştirilmiş bir sürümü olup sadece Arch&apos; a özeldir. Arch Linux standart Qt paketi ile uyumlu geliştirilmiş bir Qt paketi, gelişmiş bir tema ve daha fazla eklenti sunar. KDEMod, Arch&apos; ın basitlik ve gücüyle birlikte KDE&apos; nin güç ve tadını en iyi şekilde deneyimleme yoludur.</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Repository</source>
+        <translation type="unfinished">KDEMod 4 Deposu</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Extragear Repository</source>
+        <translation type="unfinished">KDEMod 4 Extragear Deposu</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Playground Repository</source>
+        <translation type="unfinished">KDEMod 4 Playground Deposu</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Testing Repository</source>
+        <translation type="unfinished">KDEMod 4 Testing Deposu</translation>
+    </message>
+    <message>
+        <source>KDEMod 4 Unstable Repository (Testers only!)</source>
+        <translation type="unfinished">KDEMod 4 Unstable Deposu (Sadece denemek isteyenler için)</translation>
+    </message>
+    <message>
+        <source>KDEMod 3 Repository</source>
+        <translation type="unfinished">KDEMod 3 Deposu</translation>
+    </message>
+    <message>
+        <source>Third-Party Repositories</source>
+        <translation type="unfinished">Üçüncü Kısım Depolar</translation>
+    </message>
+    <message>
+        <source>You can extend your packages choice by adding other repositories. Third-Party Repositories act just as normal ones, and will be accessible through both Shaman and Pacman.</source>
+        <translation type="unfinished">Paket seçimlerinizi diğer depoları ekleyerek arttırabilirsiniz. Üçüncü-Kişi Depolarına normal depolar gibi Shaman ve Pacman aracılığıyla ulaşılabilir.</translation>
+    </message>
+    <message>
+        <source>Add New Repository</source>
+        <translation type="unfinished">Yeni Depo Ekle</translation>
+    </message>
+    <message>
+        <source>Repository Order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please order your repositories to define which one will be preferred over another.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Preferences</source>
+        <translation type="unfinished">Seçenekler</translation>
+    </message>
+    <message>
+        <source>Process all dependencies and queue from binary first (recommended)</source>
+        <translation type="unfinished">Bütün bağımlılıkları ve sırayı öncelikle ikililerden işle (önerilen)</translation>
+    </message>
+    <message>
+        <source>Review Building output before installing</source>
+        <translation type="unfinished">Yüklemeden önce Derleme çıktısını incele</translation>
+    </message>
+    <message>
+        <source>ABS Configuration</source>
+        <translation type="unfinished">ABS Yapılandırması</translation>
+    </message>
+    <message>
+        <source>Use supfiles that match your current repositories</source>
+        <translation type="unfinished">Geçerli depolarla eşleşen supdosyaları kullan</translation>
+    </message>
+    <message>
+        <source>Define supfiles manually</source>
+        <translation type="unfinished">Supdosyalarını elle tanımla</translation>
+    </message>
+    <message>
+        <source>RSync Server:</source>
+        <translation type="unfinished">RSync Sunucusu:</translation>
+    </message>
+    <message>
+        <source>Makepkg Configuration</source>
+        <translation type="unfinished">Makepkg Yapılandırması</translation>
+    </message>
+    <message>
+        <source>CFlags</source>
+        <translation type="unfinished">CFlags</translation>
+    </message>
+    <message>
+        <source>CXXFlags</source>
+        <translation type="unfinished">CXXFlags</translation>
+    </message>
+    <message>
+        <source>BuildEnv</source>
+        <translation type="unfinished">BuildEnv</translation>
+    </message>
+    <message>
+        <source>Options</source>
+        <translation type="unfinished">Seçenekler</translation>
+    </message>
+    <message>
+        <source>Doc_Dirs</source>
+        <translation type="unfinished">Doc_Dirs</translation>
+    </message>
+    <message>
+        <source>Build Environment</source>
+        <translation type="unfinished">Derleme Ortamı</translation>
+    </message>
+    <message>
+        <source>Building Path</source>
+        <translation type="unfinished">Derleme Yolu</translation>
+    </message>
+    <message>
+        <source>Remove installed makedepends after build</source>
+        <translation type="unfinished">Yüklenmiş derleme bağımlılıklarını derleme işleminden sonra kaldır</translation>
+    </message>
+    <message>
+        <source>Clean Build Environment after installation</source>
+        <translation type="unfinished">Yüklemeden sonra derleme ortamını temizle</translation>
+    </message>
+    <message>
+        <source>When Application is in System Tray only</source>
+        <translation type="unfinished">Yazılım Sadece Sistem Çubuğundayken</translation>
+    </message>
+    <message>
+        <source>Update Database every</source>
+        <translation type="unfinished">Veritabanını şu kadar sürede bir güncelle</translation>
+    </message>
+    <message>
+        <source>min</source>
+        <comment>As in &quot;minutes&quot;</comment>
+        <translation type="unfinished">dk</translation>
+    </message>
+    <message>
+        <source>Show tray notification Windows</source>
+        <translation type="unfinished">Sistem Çubuğu Bilgi Pencereleri Göster</translation>
+    </message>
+    <message>
+        <source>If upgrades are available:</source>
+        <translation type="unfinished">Yükseltmeler varsa:</translation>
+    </message>
+    <message>
+        <source>Just Notify</source>
+        <translation type="unfinished">Sadece Uyar</translation>
+    </message>
+    <message>
+        <source>Notify and add them to Queue</source>
+        <translation type="unfinished">Uyar ve Sıraya ekle</translation>
+    </message>
+    <message>
+        <source>Update Database at</source>
+        <translation type="unfinished">Veritabanını güncelle</translation>
+    </message>
+    <message>
+        <source>Use a proxy-server</source>
+        <translation type="unfinished">Bir proksi-sunucusu kullan</translation>
+    </message>
+    <message>
+        <source>IP:</source>
+        <translation type="unfinished">IP:</translation>
+    </message>
+    <message>
+        <source>Port:</source>
+        <translation type="unfinished">Port:</translation>
+    </message>
+    <message>
+        <source>HTTP Proxy</source>
+        <translation type="unfinished">HTTP Proksi</translation>
+    </message>
+    <message>
+        <source>FTP Proxy</source>
+        <translation type="unfinished">FTP Proksi</translation>
+    </message>
+    <message>
+        <source>Use Shaman RSS Capabilities</source>
+        <translation type="unfinished">Shaman&apos;ın RSS Yeteneklerini Kullan</translation>
+    </message>
+    <message>
+        <source>Update RSS Feed Every</source>
+        <translation type="unfinished">RSS Beslemesini şu kadar sürede bi güncelle</translation>
+    </message>
+    <message>
+        <source>Notify upon new items</source>
+        <translation type="unfinished">Yeni haberlerde uyar</translation>
+    </message>
+    <message>
+        <source>Check if there is an unread news about a package in Queue before processing it</source>
+        <translation type="unfinished">Sıradaki bir paket hakkında, sıra işlenmeden önce, okunmamış bir haber olup olmadığını denetle</translation>
+    </message>
+    <message>
+        <source>Interface</source>
+        <translation type="unfinished">Arayüz</translation>
+    </message>
+    <message>
+        <source>Use Animated Tray Icon</source>
+        <translation type="unfinished">Hareketli sistem çubuğu simgesi kullan</translation>
+    </message>
+    <message>
+        <source>Start Shaman Automatically on X Startup</source>
+        <translation type="unfinished">Shaman&apos;ı otomatik olarak X başlangıcında çaılştır</translation>
+    </message>
+    <message>
+        <source>Forbid starting Shaman as root</source>
+        <translation type="unfinished">Shaman&apos;ın kök yetkileriyle çalışmasını yasakla</translation>
     </message>
 </context>
 <context>
@@ -1799,6 +2306,29 @@ p, li { white-space: pre-wrap; }
     </message>
 </context>
 <context>
+    <name>MirrorWidget</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mirror:</source>
+        <translation type="unfinished">Yansı:</translation>
+    </message>
+    <message>
+        <source>Prefer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Defer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>NewsViewer</name>
     <message>
         <source>Please wait, fetching items...</source>
@@ -2299,6 +2829,29 @@ p, li { white-space: pre-wrap; }
     </message>
 </context>
 <context>
+    <name>ServerWidget</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Server:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Prefer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Defer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ShamanStatusBar</name>
     <message>
         <source>%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages</source>
@@ -2420,6 +2973,29 @@ Click here to upgrade your System.</source>
     <message>
         <source>System Upgrade</source>
         <translation type="unfinished">Sistem Yükseltme</translation>
+    </message>
+</context>
+<context>
+    <name>ThirdPartyWidget</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation type="unfinished">Ad</translation>
+    </message>
+    <message>
+        <source>Databases</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -24,7 +24,9 @@
 #include <aqpm/Configuration.h>
 
 #include <QDebug>
+#include <QUrl>
 
+#include "ShamanDialog.h"
 #include "MirrorWidget.h"
 #include "ThirdPartyWidget.h"
 
@@ -100,7 +102,7 @@ void DatabaseConfig::init()
 
     but = new PolkitQt::ActionButton(m_ui->addKDEModMirrorButton, "org.chakraproject.aqpm.addmirror", this);
     connect(but, SIGNAL(clicked(QAbstractButton*)), but, SLOT(activate()));
-    connect(but, SIGNAL(activated()), this, SLOT(addKDEModMirror()));
+    connect(but, SIGNAL(activated()), this, SLOT(addKdemodMirror()));
     but->setText(tr("Add Mirror"));
     but->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
 
@@ -176,6 +178,20 @@ void DatabaseConfig::save()
     }
 
     Configuration::instance()->setDatabases(dbs);
+
+    // Save mirrors
+    QStringList mirrors;
+
+    foreach (MirrorWidget *wg, m_archMirrors) {
+        mirrors.append(wg->mirror());
+    }
+    Configuration::instance()->setServersForMirror(mirrors, "arch");
+
+    mirrors.clear();
+    foreach (MirrorWidget *wg, m_kdemodMirrors) {
+        mirrors.append(wg->mirror());
+    }
+    Configuration::instance()->setServersForMirror(mirrors, "kdemod");
 }
 
 void DatabaseConfig::defaults()
@@ -408,5 +424,71 @@ void DatabaseConfig::updateDatabaseList()
                 --i;
             }
         }
+    }
+}
+
+void DatabaseConfig::addMirror()
+{
+    if (m_ui->addMirrorLine->text().isEmpty()) {
+        return;
+    }
+
+    QString mirror(m_ui->addMirrorLine->text());
+
+    if (!mirror.contains(QString("$repo")) || (!mirror.startsWith(QString("http://")) &&
+            !mirror.startsWith(QString("ftp://")) && !mirror.startsWith(QString("file://"))) ||
+            mirror.contains(QString(" ")) || !QUrl(mirror).isValid()) {
+        ShamanDialog::popupDialog(tr("Add Mirror"), tr("Mirror Format is incorrect. "
+                                  "Your mirror should look like this:\nhttp://mirror.org/$repo/os/i686",
+                                  "Obviously keep the example as it is ;)"), this, ShamanProperties::ErrorDialog);
+        return;
+    }
+
+    /* Ok, our mirror should be valid. Let's add it to mirrorlist. */
+    if (Configuration::instance()->addMirrorToMirrorList(mirror, Configuration::ArchMirror)) {
+               ShamanDialog::popupDialog(tr("Add Mirror"),
+                                  tr("Your Mirror was successfully added!\nIt is now available in mirrorlist.",
+                                     "mirrorlist here means /etc/pacman.d/mirrorlist, so it should not "
+                                     "be translated."), this);
+
+        m_ui->addMirrorLine->clear();
+    } else {
+        ShamanDialog::popupDialog(tr("Add Mirror"),
+                                  tr("There was an error while trying to add the mirror! This could be due also "
+                                     "to your system policy preventing you from performing this action"),
+                                  this, ShamanProperties::ErrorDialog);
+    }
+}
+
+void DatabaseConfig::addKdemodMirror()
+{
+    if (m_ui->addKDEModMirrorLine->text().isEmpty()) {
+        return;
+    }
+
+    QString mirror(m_ui->addKDEModMirrorLine->text());
+
+    if (!mirror.contains(QString("$repo")) || (!mirror.startsWith(QString("http://")) &&
+            !mirror.startsWith(QString("ftp://")) && !mirror.startsWith(QString("file://"))) ||
+            mirror.contains(QString(" ")) || !QUrl(mirror).isValid()) {
+        ShamanDialog::popupDialog(tr("Add Mirror"), tr("Mirror Format is incorrect. "
+                                  "Your mirror should look like this:\nhttp://mirror.org/$repo/os/i686",
+                                  "Obviously keep the example as it is ;)"), this, ShamanProperties::ErrorDialog);
+        return;
+    }
+
+    /* Ok, our mirror should be valid. Let's add it to mirrorlist. */
+    if (Configuration::instance()->addMirrorToMirrorList(mirror, Configuration::KdemodMirror)) {
+               ShamanDialog::popupDialog(tr("Add Mirror"),
+                                  tr("Your Mirror was successfully added!\nIt is now available in mirrorlist.",
+                                     "mirrorlist here means /etc/pacman.d/mirrorlist, so it should not "
+                                     "be translated."), this);
+
+        m_ui->addKDEModMirrorLine->clear();
+    } else {
+        ShamanDialog::popupDialog(tr("Add Mirror"),
+                                  tr("There was an error while trying to add the mirror! This could be due also "
+                                     "to your system policy preventing you from performing this action"),
+                                  this, ShamanProperties::ErrorDialog);
     }
 }
