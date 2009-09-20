@@ -25,7 +25,7 @@
 #include "UpdateDbDialog.h"
 #include "SysUpgradeDialog.h"
 #include "QueueDialog.h"
-#include "config/databases/DatabaseConfig.h"
+#include "config/ConfigDialog.h"
 #include "BuildingDialog.h"
 #include "EditPBuild.h"
 #include "ABSHandler.h"
@@ -1796,7 +1796,7 @@ void MainWindow::widgetQueueToAlpmQueue()
 
 void MainWindow::showSettings()
 {
-    DatabaseConfig *dc = new DatabaseConfig(this, QVariantList());
+    ConfigDialog *dc = new ConfigDialog(this);
     dc->show();
 }
 

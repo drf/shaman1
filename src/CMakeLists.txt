@@ -9,6 +9,7 @@ SET(shaman_config_SRCS
     config/databases/MirrorWidget.cpp
     config/databases/ServerWidget.cpp
     config/databases/ThirdPartyWidget.cpp
+    config/ConfigDialog.cpp
 )
 
 SET(shaman_config_UIS
@@ -16,6 +17,7 @@ SET(shaman_config_UIS
     config/databases/mirrorWidget.ui
     config/databases/serverWidget.ui
     config/databases/thirdPartyWidget.ui
+    config/configDialog.ui
 )
 
 SET(shaman_SRCS ${shaman_adaptor_SRCS} ${shaman_config_SRCS}
