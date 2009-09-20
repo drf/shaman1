@@ -20,6 +20,7 @@ public:
     QString mirrorName() const;
     QStringList databases() const;
     void setDatabases(const QStringList &db);
+    QStringList servers() const;
 
 private:
     void reload();

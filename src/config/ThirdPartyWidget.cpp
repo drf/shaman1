@@ -65,3 +65,16 @@ void ThirdPartyWidget::setDatabases(const QStringList &db)
     }
     m_ui->listWidget->addItems(db);
 }
+
+
+QStringList ThirdPartyWidget::servers() const
+{
+    QStringList retlist;
+
+    foreach (const ServerWidget *wg, m_serverWidgets) {
+        retlist.append(wg->server());
+    }
+
+    return retlist;
+}
+

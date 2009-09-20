@@ -114,7 +114,7 @@ void DatabaseConfig::init()
 void DatabaseConfig::load()
 {
     Database::List repos = Backend::instance()->getAvailableDatabases();
-    
+
     // Now set the databases
     m_ui->dbOrderList->addItems(Configuration::instance()->databases());
 
@@ -142,7 +142,6 @@ void DatabaseConfig::load()
         }
     }
 
-    qDebug() << "one";
     qDebug() << Configuration::instance()->serversForMirror("arch");
 
     // Now the servers
@@ -151,7 +150,6 @@ void DatabaseConfig::load()
     }
     m_archLay->addStretch();
 
-    qDebug() << "one";
     qDebug() << Configuration::instance()->serversForMirror("kdemod");
 
     foreach (QString string, Configuration::instance()->serversForMirror("kdemod")) {
@@ -165,8 +163,6 @@ void DatabaseConfig::load()
         addThirdPartyWidget(string);
     }
     m_thirdPartyLay->addStretch();
-    
-    qDebug() << "one";
 }
 
 void DatabaseConfig::save()
@@ -192,6 +188,18 @@ void DatabaseConfig::save()
         mirrors.append(wg->mirror());
     }
     Configuration::instance()->setServersForMirror(mirrors, "kdemod");
+
+    // Third party stuff
+    foreach (ThirdPartyWidget *wg, m_thirdParty) {
+        Configuration::instance()->setDatabasesForMirror(wg->databases(), wg->mirrorName());
+        Configuration::instance()->setServersForMirror(wg->servers(), wg->mirrorName());
+    }
+
+    // That's it, let's do this
+    if (!Configuration::instance()->saveConfiguration()) {
+        ShamanDialog::popupDialog(tr("Error"), tr("There has been a problem while saving the configuration!"), this,
+                                  ShamanProperties::ErrorDialog);
+    }
 }
 
 void DatabaseConfig::defaults()

@@ -1,5 +1,3 @@
-INSTALL(CODE "MESSAGE(\"Installing Shaman DBus Configuration File...\")")
-INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/shaman.conf DESTINATION /etc/dbus-1/system.d)
 INSTALL(CODE "MESSAGE(\"Installing Shaman Desktop File...\")")
 INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/shaman.desktop DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications)
 
@@ -19,5 +17,9 @@ if (KDE4_INTEGRATION)
     install( FILES shaman.notifyrc DESTINATION ${DATA_INSTALL_DIR}/shaman )
 endif (KDE4_INTEGRATION)
 
-INSTALL(CODE "MESSAGE(\"Installing Miscellaneous Shaman Files...\")")
-INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/kdemodmirrorlist DESTINATION /etc/pacman.d)
+if (NOT NO_ROOT_INSTALL)
+    INSTALL(CODE "MESSAGE(\"Installing Shaman DBus Configuration File...\")")
+    INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/shaman.conf DESTINATION /etc/dbus-1/system.d)
+    INSTALL(CODE "MESSAGE(\"Installing Miscellaneous Shaman Files...\")")
+    INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/kdemodmirrorlist DESTINATION /etc/pacman.d)
+endif (NOT NO_ROOT_INSTALL)
