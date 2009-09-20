@@ -134,8 +134,7 @@ void AqpmConfig::load()
 
 void AqpmConfig::save()
 {
-    qDebug() << m_ui->ignorePkgLine->text().split(QChar(' '));
-    Configuration::instance()->setValue("options/IgnorePkg", QVariant::fromValue(m_ui->ignorePkgLine->text().split(QChar(' '))));
+    Configuration::instance()->setValue("options/IgnorePkg", m_ui->ignorePkgLine->text().split(QChar(' ')));
     Configuration::instance()->setValue("options/IgnoreGroup", m_ui->ignoreGrpsLine->text().split(QChar(' ')));
     Configuration::instance()->setValue("options/NoExtract", m_ui->noExtractLine->text().split(QChar(' ')));
     Configuration::instance()->setValue("options/NoUpgrade", m_ui->noUpgradeLine->text().split(QChar(' ')));
