@@ -4,18 +4,18 @@ qt4_add_dbus_adaptor(shaman_adaptor_SRCS ../dbus/org.archlinux.shaman.xml MainWi
 add_subdirectory(config)
 
 
-SET(shaman_config_SRCS ${shaman_config_adaptor_SRCS}
-    config/DatabaseConfig.cpp
-    config/MirrorWidget.cpp
-    config/ServerWidget.cpp
-    config/ThirdPartyWidget.cpp
+SET(shaman_config_SRCS
+    config/databases/DatabaseConfig.cpp
+    config/databases/MirrorWidget.cpp
+    config/databases/ServerWidget.cpp
+    config/databases/ThirdPartyWidget.cpp
 )
 
 SET(shaman_config_UIS
-    config/databaseConfig.ui
-    config/mirrorWidget.ui
-    config/serverWidget.ui
-    config/thirdPartyWidget.ui
+    config/databases/databaseConfig.ui
+    config/databases/mirrorWidget.ui
+    config/databases/serverWidget.ui
+    config/databases/thirdPartyWidget.ui
 )
 
 SET(shaman_SRCS ${shaman_adaptor_SRCS} ${shaman_config_SRCS}

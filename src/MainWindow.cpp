@@ -25,7 +25,7 @@
 #include "UpdateDbDialog.h"
 #include "SysUpgradeDialog.h"
 #include "QueueDialog.h"
-#include "config/DatabaseConfig.h"
+#include "config/databases/DatabaseConfig.h"
 #include "BuildingDialog.h"
 #include "EditPBuild.h"
 #include "ABSHandler.h"
