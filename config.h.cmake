@@ -34,8 +34,8 @@
 
 /* Defines the Version */
 
-#define SHAMAN_VERSION "1.2.1"
-#define SHAMAN_CODENAME "Apocalypse"
+#define SHAMAN_VERSION "1.2.70"
+#define SHAMAN_CODENAME "WIP"
 
 /* Defines the Revision */
 
