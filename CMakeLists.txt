@@ -3,6 +3,19 @@ PROJECT(shaman)
 CMAKE_MINIMUM_REQUIRED(VERSION 2.4.0)
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules")
 
+if(COMMAND cmake_policy)
+   cmake_policy(SET CMP0003 NEW)
+endif(COMMAND cmake_policy)
+
+# requires minimal Qt 4.4
+SET(QT_MIN_VERSION "4.4.0")
+
+FIND_PACKAGE(Automoc4 REQUIRED)
+find_package(Qt4 REQUIRED)
+include(FindSharedMimeInfo)
+find_package(PolkitQt REQUIRED)
+find_package(Aqpm REQUIRED)
+
 if (KDE4_INTEGRATION)
 find_package(KDE4 REQUIRED)
 
@@ -10,11 +23,6 @@ include (MacroLibrary)
 include (FindPackageHandleStandardArgs)
 include (KDE4Defaults)
 endif (KDE4_INTEGRATION)
-
-include(FindQt4)
-include(FindSharedMimeInfo)
-include(FindPkgConfig)
-include(FindPolkitQt)
 
 configure_file(config.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config.h )
 
@@ -158,19 +166,6 @@ macro (SHAMAN_INSTALL_ICONS _defaultpath )
 
 endmacro (SHAMAN_INSTALL_ICONS)
 
-# requires minimal Qt 4.4
-SET(QT_MIN_VERSION "4.4.0")
-
-FIND_PACKAGE(Qt4 REQUIRED)
-FIND_PACKAGE(Alpm REQUIRED)
-pkg_check_modules(AQPM aqpm)
-if(AQPM_FOUND)
-	MESSAGE("Aqpm Found")
-endif(AQPM_FOUND)
-FIND_PACKAGE(LibArchive REQUIRED)
-FIND_PACKAGE(PolkitQt REQUIRED)
-FIND_PACKAGE(Automoc4 REQUIRED)
-
 INCLUDE(${QT_USE_FILE})
 
 SET(QT_USE_QTXML)
@@ -178,13 +173,13 @@ SET(QT_USE_QTXML)
 INCLUDE_DIRECTORIES(
     ${QT_INCLUDES}
     ${ALPM_INCLUDE_DIR}
+    ${AQPM_INCLUDE_DIR}
     ${LIBARCHIVE_INCLUDE_DIR}
     ${CMAKE_SOURCE_DIR}
     ${CMAKE_CURRENT_BINARY_DIR}
     ${CMAKE_CURRENT_BINARY_DIR}/src
     ${CMAKE_SOURCE_DIR}/src
     ${POLKITQT_INCLUDE_DIR}
-    ${POLKIT_INCLUDE_DIRS}
 )
 
 add_definitions (${QT_DEFINITIONS} ${QT_QTDBUS_DEFINITIONS} ${KDE4_DEFINITIONS})
