@@ -48,7 +48,7 @@ AqpmConfig::AqpmConfig(QWidget *parent, const QVariantList &args)
 #ifndef KDE4_INTEGRATION
         : QWidget(parent)
 #else
-        : KCModule(parent, args)
+        : KCModule(AqpmConfigFactory::componentData(), parent, args)
 #endif
         , m_ui(new Ui::AqpmConfig)
 {
@@ -56,10 +56,10 @@ AqpmConfig::AqpmConfig(QWidget *parent, const QVariantList &args)
     QLayout *layout = new QVBoxLayout(this);
     layout->setMargin(0);
 
-    setButtons(Apply | Help);
+    setButtons(Apply);
 
     KAboutData *about =
-        new KAboutData("kcmaqpmconfig", "aqpmdatabaseconfig", ki18n("Aqpm Configuration"),
+        new KAboutData("kcmaqpmconfig", "aqpmconfig", ki18n("Aqpm Configuration"),
                        "bla", ki18n("Configures Aqpm global options"),
                        KAboutData::License_GPL, ki18n("(c), 2009 Dario Freddi"));
 
@@ -72,7 +72,17 @@ AqpmConfig::AqpmConfig(QWidget *parent, const QVariantList &args)
     m_ui->setupUi(widget);
     layout->addWidget(widget);
 
-    init();
+    // Initialize the backend correctly, if needed
+    if (!Backend::instance()->ready()) {
+        QEventLoop e;
+        connect(Backend::instance(), SIGNAL(backendReady()), &e, SLOT(quit()));
+        e.exec();
+
+        Backend::instance()->setUpAlpm();
+
+        Backend::instance()->setShouldHandleAuthorization(false);
+    }
+
 #else
     m_ui->setupUi(this);
 

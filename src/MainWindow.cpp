@@ -25,7 +25,11 @@
 #include "UpdateDbDialog.h"
 #include "SysUpgradeDialog.h"
 #include "QueueDialog.h"
+
+#ifndef KDE4_INTEGRATION
 #include "config/ConfigDialog.h"
+#endif
+
 #include "BuildingDialog.h"
 #include "EditPBuild.h"
 #include "ABSHandler.h"
@@ -1796,8 +1800,10 @@ void MainWindow::widgetQueueToAlpmQueue()
 
 void MainWindow::showSettings()
 {
+#ifndef KDE4_INTEGRATION
     ConfigDialog *dc = new ConfigDialog(this);
     dc->show();
+#endif
 }
 
 void MainWindow::settingsClosed()

@@ -1,0 +1,18 @@
+[Desktop Entry]
+Exec=kcmshell4 kcmaqpmdatabases
+Icon=network-server-database
+Type=Service
+X-KDE-ServiceTypes=KCModule
+
+X-KDE-Library=kcm_aqpmdatabases
+X-KDE-ParentApp=kcontrol
+
+X-KDE-System-Settings-Parent-Category=package-management
+
+Name=Aqpm Databases configuration
+
+Comment=Configure the databases for package management
+
+X-KDE-Keywords=shaman,package,install,upgrade,system,aqpm,pacman
+
+Categories=Qt;KDE;X-KDE-settings-system;
