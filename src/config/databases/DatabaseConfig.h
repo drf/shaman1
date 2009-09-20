@@ -23,7 +23,7 @@
 
 #include <QVariantList>
 
-#include <config.h>
+#include <config-shaman1.h>
 
 namespace Ui {
     class DatabaseConfig;

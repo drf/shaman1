@@ -20,7 +20,7 @@
 
 #include "ShamanIcon.h"
 
-#include <config.h>
+#include <config-shaman1.h>
 
 #ifdef KDE4_INTEGRATION
 #include <kicon.h>

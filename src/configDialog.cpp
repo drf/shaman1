@@ -30,7 +30,7 @@
 #include <aqpm/ConfigurationParser.h>
 #include <aqpm/Maintenance.h>
 
-#include <config.h>
+#include <config-shaman1.h>
 
 #include <QLineEdit>
 #include <QSettings>

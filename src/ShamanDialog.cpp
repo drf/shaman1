@@ -29,7 +29,7 @@
 #include <QCheckBox>
 #include <QBoxLayout>
 
-#include <config.h>
+#include <config-shaman1.h>
 
 #ifdef KDE4_INTEGRATION
 #include <kmessagebox.h>

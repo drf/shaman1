@@ -33,7 +33,7 @@
 #include "aqpm/AqpmConfig.h"
 #include "shamangeneral/ShamanGeneralConfig.h"
 
-#include <config.h>
+#include <config-shaman1.h>
 
 #include <QLineEdit>
 #include <QSettings>

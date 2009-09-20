@@ -14,12 +14,14 @@ that all Arch Linux installations have.
 First of all, enter in the Directory you unpacked Shaman in
 and issue:
 
-cmake .
+cmake . -DCMAKE_INSTALL_PREFIX=/usr
 
 Mind the ".", it's necessary. Cmake will now check your system
-for requirements, and if KDELibs4 are found, it will add to
-the MakeFile also the Plasmoid. Again, this is not a requirement,
-if you don't have KDELibs4 the Plasmoid will just be skipped.
+for requirements, and will generate the makefiles if the configure step
+was successful. Pass to cmake the parameter -DKDE4_INTEGRATION=TRUE
+to build Shaman with KDE4 integration. Please note this will require
+KDELibs at build time and runtime.
+
 Then it's time for
 
 make
@@ -29,18 +31,9 @@ as superuser
 
 make install
 
-To install Shaman Systemwide. This will also install a configuration
+To install Shaman system wide. This will also install a configuration
 file for DBus, to make Shaman able to connect to the System Bus,
 and a .desktop file for Shaman.
-
-Now, issue those two commands as root:
-
-chown root shaman
-chmod u+s shaman
-
-And change "shaman" with the path to your shaman executable, usually
-/usr/local/bin/shaman or /usr/bin/shaman. Doing that will let you
-start Shaman as normal user.
 
 That's it! You can now start Shaman from your menu, or from the
 terminal by issuing "shaman"

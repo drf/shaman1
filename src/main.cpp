@@ -23,7 +23,7 @@
 #include "Shaman.h"
 #include "ShamanDialog.h"
 
-#include <config.h>
+#include <config-shaman1.h>
 
 #include <aqpm/Backend.h>
 

@@ -51,7 +51,7 @@
 #include "LocalPackageDialog.h"
 #include "ErrorHandler.h"
 
-#include <config.h>
+#include <config-shaman1.h>
 
 #include <aqpm/Backend.h>
 #include <aqpm/Globals.h>

@@ -23,7 +23,7 @@ if (NOT KDE4_INTEGRATION)
     )
 endif (NOT KDE4_INTEGRATION)
 
-SET(shaman_SRCS ${shaman_adaptor_SRCS} ${shaman_config_SRCS}
+set(shaman_SRCS ${shaman_adaptor_SRCS} ${shaman_config_SRCS}
     main.cpp
     MainWindow.cpp
     Shaman.cpp
@@ -50,7 +50,7 @@ SET(shaman_SRCS ${shaman_adaptor_SRCS} ${shaman_config_SRCS}
     ShamanIcon.cpp
 )
 
-SET(shaman_UIS ${shaman_config_UIS}
+set(shaman_UIS ${shaman_config_UIS}
     ../ui/MainWindow.ui
     ../ui/aboutDialog.ui
     ../ui/buildingDialog.ui
@@ -66,21 +66,20 @@ SET(shaman_UIS ${shaman_config_UIS}
     ../ui/fromFileDialog.ui
 )
 
-SET(shaman_RESOUCES
+set(shaman_RESOUCES
     ../ui/shaman.qrc
 )
 
-QT4_ADD_RESOURCES (qtsourceview_RC_SRCS  ${shaman_RESOUCES})
-QT4_WRAP_UI(shaman_UIS_H ${shaman_UIS})
-QT4_AUTOMOC(${shaman_SRCS})
+qt4_add_resources (qtsourceview_RC_SRCS  ${shaman_RESOUCES})
+qt4_wrap_ui (shaman_UIS_H ${shaman_UIS})
 
-AUTOMOC4_ADD_EXECUTABLE(shaman
+automoc4_add_executable(shaman
     ${shaman_SRCS}
     ${shaman_UIS_H}
     ${qtsourceview_RC_SRCS}
 )
 
-TARGET_LINK_LIBRARIES(shaman
+target_link_libraries(shaman
     ${QT_QTCORE_LIBRARY}
     ${QT_QTGUI_LIBRARY}
     ${QT_QTDBUS_LIBRARY}
@@ -92,8 +91,8 @@ TARGET_LINK_LIBRARIES(shaman
 )
 
 if (KDE4_INTEGRATION)
-target_link_libraries(shaman ${KDE4_KDECORE_LIBS} ${KDE4_KDEUI_LIBS} ${KDE4_KUTILS_LIBS})
+    target_link_libraries(shaman ${KDE4_KDECORE_LIBS} ${KDE4_KDEUI_LIBS} ${KDE4_KUTILS_LIBS})
 endif (KDE4_INTEGRATION)
 
-INSTALL(CODE "MESSAGE(\"Installing Shaman executable...\")")
-INSTALL(TARGETS shaman DESTINATION bin)
+install(CODE "message(\"Installing Shaman executable...\")")
+install(TARGETS shaman DESTINATION bin)

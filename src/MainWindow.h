@@ -25,7 +25,7 @@
 #include "ui_MainWindow.h"
 #include "kanimatedsystemtrayicon.h"
 
-#include <config.h>
+#include <config-shaman1.h>
 
 #ifdef KDE4_INTEGRATION
 #include <kmainwindow.h>

@@ -25,7 +25,7 @@
 
 #include <aqpm/Backend.h>
 
-#include <config.h>
+#include <config-shaman1.h>
 
 #include <iostream>
 #include <sys/utsname.h>
