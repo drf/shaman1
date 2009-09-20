@@ -30,6 +30,7 @@
 #include <aqpm/ConfigurationParser.h>
 #include <aqpm/Maintenance.h>
 
+#include "ConfigModuleBase.h"
 #include "databases/DatabaseConfig.h"
 
 #include <config.h>
@@ -77,4 +78,10 @@ ConfigDialog::~ConfigDialog()
 void ConfigDialog::changeWidget(int position)
 {
     stackedWidget->setCurrentIndex(position);
+}
+
+void ConfigDialog::saveConfiguration()
+{
+    ConfigModuleBase *cmb = dynamic_cast<ConfigModuleBase*>(stackedWidget->currentWidget());
+    cmb->save();
 }

@@ -39,6 +39,7 @@ public:
 
 private slots:
     void changeWidget(int position);
+    void saveConfiguration();
 
 private:
     QStackedWidget *stackedWidget;
