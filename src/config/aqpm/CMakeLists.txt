@@ -4,13 +4,16 @@ if (KDE4_INTEGRATION)
 set(kcm_aqpm_PART_SRCS
     AqpmConfig.cpp
     ../../ShamanDialog.cpp
+    ../../ShamanIcon.cpp
 )
 
 kde4_add_ui_files(kcm_aqpm_PART_SRCS
     aqpmConfig.ui
 )
 
-kde4_add_plugin(kcm_aqpm ${kcm_aqpm_PART_SRCS})
+QT4_ADD_RESOURCES (qtsourceview_RC_SRCS  ../../../ui/shaman.qrc)
+
+kde4_add_plugin(kcm_aqpm ${kcm_aqpm_PART_SRCS} ${qtsourceview_RC_SRCS})
 
 target_link_libraries(kcm_aqpm ${KDE4_KDEUI_LIBS} ${POLKITQT_LIBRARIES} ${AQPM_LIBRARY})
 

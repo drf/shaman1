@@ -8,6 +8,7 @@ set(kcm_aqpmdatabases_PART_SRCS
     ServerWidget.cpp
     ThirdPartyWidget.cpp
     ../../ShamanDialog.cpp
+    ../../ShamanIcon.cpp
 )
 
 kde4_add_ui_files(kcm_aqpmdatabases_PART_SRCS 
@@ -17,7 +18,9 @@ kde4_add_ui_files(kcm_aqpmdatabases_PART_SRCS
     thirdPartyWidget.ui
 )
 
-kde4_add_plugin(kcm_aqpmdatabases ${kcm_aqpmdatabases_PART_SRCS})
+QT4_ADD_RESOURCES (qtsourceview_RC_SRCS  ../../../ui/shaman.qrc)
+
+kde4_add_plugin(kcm_aqpmdatabases ${kcm_aqpmdatabases_PART_SRCS} ${qtsourceview_RC_SRCS})
 
 target_link_libraries(kcm_aqpmdatabases ${KDE4_KDEUI_LIBS} ${POLKITQT_LIBRARIES} ${AQPM_LIBRARY})
 

@@ -47,6 +47,7 @@ SET(shaman_SRCS ${shaman_adaptor_SRCS} ${shaman_config_SRCS}
     MaintenanceBar.cpp
     LocalPackageDialog.cpp
     ErrorHandler.cpp
+    ShamanIcon.cpp
 )
 
 SET(shaman_UIS ${shaman_config_UIS}

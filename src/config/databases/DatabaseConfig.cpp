@@ -27,6 +27,7 @@
 #include <QUrl>
 
 #include "ShamanDialog.h"
+#include "ShamanIcon.h"
 #include "MirrorWidget.h"
 #include "ThirdPartyWidget.h"
 
@@ -111,13 +112,13 @@ void DatabaseConfig::init()
     connect(but, SIGNAL(clicked(QAbstractButton*)), but, SLOT(activate()));
     connect(but, SIGNAL(activated()), this, SLOT(addMirror()));
     but->setText(tr("Add Mirror"));
-    but->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
+    but->setIcon(ShamanIcon::getIconFromName("dialog-ok-apply"));
 
     but = new PolkitQt::ActionButton(m_ui->addKDEModMirrorButton, "org.chakraproject.aqpm.addmirror", this);
     connect(but, SIGNAL(clicked(QAbstractButton*)), but, SLOT(activate()));
     connect(but, SIGNAL(activated()), this, SLOT(addKdemodMirror()));
     but->setText(tr("Add Mirror"));
-    but->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
+    but->setIcon(ShamanIcon::getIconFromName("dialog-ok-apply"));
 
     connect(m_ui->addKDEModServerButton, SIGNAL(clicked()), this, SLOT(addKdemodWidget()));
     connect(m_ui->addServerButton, SIGNAL(clicked()), this, SLOT(addArchWidget()));
