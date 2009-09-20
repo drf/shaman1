@@ -18,66 +18,39 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.          *
  ***************************************************************************/
 
-#ifndef DATABASECONFIG_H
-#define DATABASECONFIG_H
+#ifndef AQPMCONFIG_H
+#define AQPMCONFIG_H
 
 #include <QVariantList>
 
 #include <config.h>
 
 namespace Ui {
-    class DatabaseConfig;
+    class AqpmConfig;
 }
-
-class MirrorWidget;
-class ThirdPartyWidget;
-class QVBoxLayout;
 
 #ifndef KDE4_INTEGRATION
 #include "config/ConfigModuleBase.h"
 #include <QWidget>
 
-class DatabaseConfig : public QWidget, public ConfigModuleBase
+class AqpmConfig : public QWidget, public ConfigModuleBase
 #else
 #include <kcmodule.h>
 
-class DatabaseConfig : public KCModule
+class AqpmConfig : public KCModule
 #endif
 {
     Q_OBJECT
 
 public:
-    DatabaseConfig(QWidget *parent, const QVariantList &args);
+    AqpmConfig(QWidget *parent, const QVariantList &args);
 
     void load();
     void save();
     void defaults();
 
 private:
-    void init();
-
-private Q_SLOTS:
-    void removeWidget();
-    void preferWidget();
-    void deferWidget();
-
-    void addArchWidget(const QString &server = QString());
-    void addKdemodWidget(const QString &server = QString());
-    void addThirdPartyWidget(const QString &name = QString());
-
-    void addMirror();
-    void addKdemodMirror();
-
-    void updateDatabaseList();
-
-private:
-    Ui::DatabaseConfig *m_ui;
-    QList<MirrorWidget*> m_archMirrors;
-    QList<MirrorWidget*> m_kdemodMirrors;
-    QList<ThirdPartyWidget*> m_thirdParty;
-    QVBoxLayout *m_archLay;
-    QVBoxLayout *m_kdemodLay;
-    QVBoxLayout *m_thirdPartyLay;
+    Ui::AqpmConfig *m_ui;
 };
 
-#endif // DATABASECONFIG_H
+#endif // AQPMCONFIG_H

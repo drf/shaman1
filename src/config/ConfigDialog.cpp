@@ -1,8 +1,6 @@
 /***************************************************************************
- *   Copyright (C) 2008 by Lukas Appelhans                                 *
- *   l.appelhans@gmx.de                           *
- *   Copyright (C) 2008 by Dario Freddi                                    *
- *   drf54321@yahoo.it                                                     *
+ *   Copyright (C) 2009 by Dario Freddi                                    *
+ *   drf@chakra-project.org                                                *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -32,6 +30,7 @@
 
 #include "ConfigModuleBase.h"
 #include "databases/DatabaseConfig.h"
+#include "aqpm/AqpmConfig.h"
 
 #include <config.h>
 
@@ -74,6 +73,8 @@ ConfigDialog::ConfigDialog(QWidget *parent)
 
     listWidget->addItem(new QListWidgetItem(QIcon(":/Icons/icons/network-server-database.png"), tr("Repositories")));
     stackedWidget->addWidget(new DatabaseConfig(this, QVariantList()));
+    listWidget->addItem(new QListWidgetItem(QIcon(":/Icons/icons/network-server-database.png"), tr("Aqpm Configuration")));
+    stackedWidget->addWidget(new AqpmConfig(this, QVariantList()));
 }
 
 ConfigDialog::~ConfigDialog()

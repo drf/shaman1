@@ -6,6 +6,7 @@ add_subdirectory(config)
 
 SET(shaman_config_SRCS
     config/databases/DatabaseConfig.cpp
+    config/aqpm/AqpmConfig.cpp
     config/databases/MirrorWidget.cpp
     config/databases/ServerWidget.cpp
     config/databases/ThirdPartyWidget.cpp
@@ -14,6 +15,7 @@ SET(shaman_config_SRCS
 
 SET(shaman_config_UIS
     config/databases/databaseConfig.ui
+    config/aqpm/aqpmConfig.ui
     config/databases/mirrorWidget.ui
     config/databases/serverWidget.ui
     config/databases/thirdPartyWidget.ui
