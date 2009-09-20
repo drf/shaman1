@@ -7,8 +7,6 @@ X-KDE-ServiceTypes=KCModule
 X-KDE-Library=kcm_shamangeneral
 X-KDE-ParentApp=kcontrol
 
-X-KDE-System-Settings-Parent-Category=package-management
-
 Name=Shaman configuration
 
 Comment=Configure Shaman settings

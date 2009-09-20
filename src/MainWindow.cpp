@@ -28,6 +28,8 @@
 
 #ifndef KDE4_INTEGRATION
 #include "config/ConfigDialog.h"
+#else
+#include <kcmultidialog.h>
 #endif
 
 #include "BuildingDialog.h"
@@ -1803,6 +1805,12 @@ void MainWindow::showSettings()
 #ifndef KDE4_INTEGRATION
     ConfigDialog *dc = new ConfigDialog(this);
     dc->show();
+#else
+    KCMultiDialog *md = new KCMultiDialog(this);
+    md->addModule("kcmshamangeneral");
+    md->addModule("kcmaqpmdatabases");
+    md->addModule("kcmaqpm");
+    md->exec();
 #endif
 }
 
