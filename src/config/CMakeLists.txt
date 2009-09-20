@@ -1,5 +1,6 @@
 add_subdirectory(databases)
 add_subdirectory(aqpm)
+add_subdirectory(shamangeneral)
 
 if (KDE4_INTEGRATION)
 

@@ -1,0 +1,18 @@
+[Desktop Entry]
+Exec=kcmshell4 kcmshamangeneral
+Icon=shaman
+Type=Service
+X-KDE-ServiceTypes=KCModule
+
+X-KDE-Library=kcm_shamangeneral
+X-KDE-ParentApp=kcontrol
+
+X-KDE-System-Settings-Parent-Category=package-management
+
+Name=Shaman configuration
+
+Comment=Configure Shaman settings
+
+X-KDE-Keywords=shaman,package,install,upgrade,system,aqpm,pacman
+
+Categories=Qt;KDE;X-KDE-settings-system;
