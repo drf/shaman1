@@ -31,6 +31,7 @@
 #include "ConfigModuleBase.h"
 #include "databases/DatabaseConfig.h"
 #include "aqpm/AqpmConfig.h"
+#include "shamangeneral/ShamanGeneralConfig.h"
 
 #include <config.h>
 
@@ -71,6 +72,8 @@ ConfigDialog::ConfigDialog(QWidget *parent)
     abut->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
     cancelButton->setText(QObject::tr("C&ancel"));
 
+    listWidget->addItem(new QListWidgetItem(QIcon(":/Icons/icons/network-server-database.png"), tr("Shaman Configuration")));
+    stackedWidget->addWidget(new ShamanGeneralConfig(this, QVariantList()));
     listWidget->addItem(new QListWidgetItem(QIcon(":/Icons/icons/network-server-database.png"), tr("Repositories")));
     stackedWidget->addWidget(new DatabaseConfig(this, QVariantList()));
     listWidget->addItem(new QListWidgetItem(QIcon(":/Icons/icons/network-server-database.png"), tr("Aqpm Configuration")));
