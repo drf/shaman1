@@ -84,8 +84,6 @@ target_link_libraries(shaman
     ${QT_QTGUI_LIBRARY}
     ${QT_QTDBUS_LIBRARY}
     ${QT_QTNETWORK_LIBRARY}
-    ${ALPM_LIBS}
-    ${LIBARCHIVE_LIBS}
     ${POLKITQT_LIBRARIES}
     ${AQPM_LIBRARY}
 )

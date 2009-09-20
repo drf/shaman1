@@ -39,7 +39,6 @@
 #include <QSplashScreen>
 #include <QtDBus>
 #include <signal.h>
-#include <alpm.h>
 
 using namespace Aqpm;
 
@@ -135,17 +134,6 @@ void Shaman::startShaman()
         QCoreApplication::exit(1);
     }
 
-    QString alversion(Backend::instance()->getAlpmVersion());
-    alversion[1];
-
-    if (alversion[0].digitValue() <= 2 && alversion[2].digitValue() < 1) {
-        ShamanDialog::popupDialog(QObject::tr("Shaman"), QString(QObject::tr("Pacman is not updated."
-                                  "\nShaman needs libalpm >= 2.1.0 to run.\nYours is %1. Please update Pacman.")).arg(alversion),
-                                  NULL, ShamanProperties::ErrorDialog);
-
-        QCoreApplication::exit(1);
-    }
-
     char agent[101];
     struct utsname un;
 
@@ -228,8 +216,6 @@ void Shaman::startShaman()
         splscr.close();
 
     settings->deleteLater();
-
-    qDebug() << "Log file is:" << alpm_option_get_logfile();
 
     m_mainwin->streamReadySignal();
 
