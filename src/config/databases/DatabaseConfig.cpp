@@ -81,7 +81,6 @@ DatabaseConfig::DatabaseConfig(QWidget *parent, const QVariantList &args)
 #endif
 
     init();
-    load();
 }
 
 void DatabaseConfig::init()

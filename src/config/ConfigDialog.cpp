@@ -65,10 +65,16 @@ ConfigDialog::ConfigDialog(QWidget *parent)
     connect(but, SIGNAL(activated()), this, SLOT(accept()));
     but->setText(QObject::tr("O&k"));
     but->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
+    PolkitQt::ActionButton *abut = new PolkitQt::ActionButton(applyButton, "org.chakraproject.aqpm.saveconfiguration", this);
+    connect(abut, SIGNAL(clicked(QAbstractButton*)), but, SLOT(activate()));
+    connect(abut, SIGNAL(activated()), this, SLOT(saveConfiguration()));
+    abut->setText(QObject::tr("&Apply"));
+    abut->setIcon(QIcon(":/Icons/icons/dialog-ok-apply.png"));
     cancelButton->setText(QObject::tr("C&ancel"));
 
     listWidget->addItem(new QListWidgetItem(QIcon(":/Icons/icons/network-server-database.png"), tr("Repositories")));
     stackedWidget->addWidget(new DatabaseConfig(this, QVariantList()));
+    changeWidget(0);
 }
 
 ConfigDialog::~ConfigDialog()
@@ -78,6 +84,8 @@ ConfigDialog::~ConfigDialog()
 void ConfigDialog::changeWidget(int position)
 {
     stackedWidget->setCurrentIndex(position);
+    ConfigModuleBase *cmb = dynamic_cast<ConfigModuleBase*>(stackedWidget->currentWidget());
+    cmb->load();
 }
 
 void ConfigDialog::saveConfiguration()
