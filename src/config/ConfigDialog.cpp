@@ -74,7 +74,6 @@ ConfigDialog::ConfigDialog(QWidget *parent)
 
     listWidget->addItem(new QListWidgetItem(QIcon(":/Icons/icons/network-server-database.png"), tr("Repositories")));
     stackedWidget->addWidget(new DatabaseConfig(this, QVariantList()));
-    changeWidget(0);
 }
 
 ConfigDialog::~ConfigDialog()
@@ -84,8 +83,6 @@ ConfigDialog::~ConfigDialog()
 void ConfigDialog::changeWidget(int position)
 {
     stackedWidget->setCurrentIndex(position);
-    ConfigModuleBase *cmb = dynamic_cast<ConfigModuleBase*>(stackedWidget->currentWidget());
-    cmb->load();
 }
 
 void ConfigDialog::saveConfiguration()

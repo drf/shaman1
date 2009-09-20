@@ -17,7 +17,7 @@
    <item>
     <widget class="QTabWidget" name="repoTab">
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="officialTab">
       <attribute name="icon">
@@ -129,8 +129,8 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>94</width>
-                 <height>24</height>
+                 <width>572</width>
+                 <height>288</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -375,8 +375,8 @@
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>94</width>
-              <height>24</height>
+              <width>590</width>
+              <height>469</height>
              </rect>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_8">

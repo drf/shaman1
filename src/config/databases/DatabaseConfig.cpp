@@ -76,11 +76,14 @@ DatabaseConfig::DatabaseConfig(QWidget *parent, const QVariantList &args)
     QWidget *widget = new QWidget(this);
     m_ui->setupUi(widget);
     layout->addWidget(widget);
-#else
-    m_ui->setupUi(this);
-#endif
 
     init();
+#else
+    m_ui->setupUi(this);
+
+    init();
+    load();
+#endif
 }
 
 void DatabaseConfig::init()
@@ -144,21 +147,21 @@ void DatabaseConfig::load()
     qDebug() << Configuration::instance()->serversForMirror("arch");
 
     // Now the servers
-    foreach (QString string, Configuration::instance()->serversForMirror("arch")) {
+    foreach (const QString &string, Configuration::instance()->serversForMirror("arch")) {
         addArchWidget(string);
     }
     m_archLay->addStretch();
 
     qDebug() << Configuration::instance()->serversForMirror("kdemod");
 
-    foreach (QString string, Configuration::instance()->serversForMirror("kdemod")) {
+    foreach (const QString &string, Configuration::instance()->serversForMirror("kdemod")) {
         addKdemodWidget(string);
     }
 
     qDebug() << "one";
 
     // Now third parties
-    foreach (QString string, Configuration::instance()->mirrors(true)) {
+    foreach (const QString &string, Configuration::instance()->mirrors(true)) {
         addThirdPartyWidget(string);
     }
     m_thirdPartyLay->addStretch();
