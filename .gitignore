@@ -13,3 +13,4 @@ ui_*
 *.stats
 *.user
 .directory
+*kdev4*

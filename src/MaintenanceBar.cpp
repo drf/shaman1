@@ -23,8 +23,6 @@
 #include <aqpm/Backend.h>
 #include <aqpm/Maintenance.h>
 
-#include "configDialog.h"
-
 #include <QComboBox>
 #include <QAction>
 #include <QDebug>
@@ -32,6 +30,7 @@
 #include <QLabel>
 #include <QVBoxLayout>
 #include <QPushButton>
+#include <QDialog>
 
 using namespace Aqpm;
 
