@@ -120,6 +120,8 @@ void DatabaseConfig::init()
     but->setText(tr("Add Mirror"));
     but->setIcon(ShamanIcon::getIconFromName("dialog-ok-apply"));
 
+    m_ui->repoTab->setTabIcon(3, ShamanIcon::getIconFromName("format-list-ordered"));
+
     connect(m_ui->addKDEModServerButton, SIGNAL(clicked()), this, SLOT(addKdemodWidget()));
     connect(m_ui->addServerButton, SIGNAL(clicked()), this, SLOT(addArchWidget()));
     connect(m_ui->addThirdPartyButton, SIGNAL(clicked()), this, SLOT(addThirdPartyWidget()));
