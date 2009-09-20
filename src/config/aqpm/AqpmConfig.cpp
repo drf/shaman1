@@ -80,7 +80,7 @@ AqpmConfig::AqpmConfig(QWidget *parent, const QVariantList &args)
 
         Backend::instance()->setUpAlpm();
 
-        Backend::instance()->setShouldHandleAuthorization(false);
+        Backend::instance()->setShouldHandleAuthorization(true);
     }
 
 #else

@@ -86,7 +86,7 @@ DatabaseConfig::DatabaseConfig(QWidget *parent, const QVariantList &args)
 
         Backend::instance()->setUpAlpm();
 
-        Backend::instance()->setShouldHandleAuthorization(false);
+        Backend::instance()->setShouldHandleAuthorization(true);
     }
 
     init();
@@ -123,6 +123,18 @@ void DatabaseConfig::init()
     connect(m_ui->addKDEModServerButton, SIGNAL(clicked()), this, SLOT(addKdemodWidget()));
     connect(m_ui->addServerButton, SIGNAL(clicked()), this, SLOT(addArchWidget()));
     connect(m_ui->addThirdPartyButton, SIGNAL(clicked()), this, SLOT(addThirdPartyWidget()));
+
+    connect(m_ui->coreBox, SIGNAL(stateChanged(int)), this, SLOT(changed()));
+    connect(m_ui->communityBox, SIGNAL(stateChanged(int)), this, SLOT(changed()));
+    connect(m_ui->extraBox, SIGNAL(stateChanged(int)), this, SLOT(changed()));
+    connect(m_ui->testingBox, SIGNAL(stateChanged(int)), this, SLOT(changed()));
+    connect(m_ui->KDEMod3Box, SIGNAL(stateChanged(int)), this, SLOT(changed()));
+    connect(m_ui->KDEMod4Box, SIGNAL(stateChanged(int)), this, SLOT(changed()));
+    connect(m_ui->KDEMod4ExtragearBox, SIGNAL(stateChanged(int)), this, SLOT(changed()));
+    connect(m_ui->KDEMod4PlaygroundBox, SIGNAL(stateChanged(int)), this, SLOT(changed()));
+    connect(m_ui->KDEMod4TestingBox, SIGNAL(stateChanged(int)), this, SLOT(changed()));
+    connect(m_ui->KDEMod4UnstableBox, SIGNAL(stateChanged(int)), this, SLOT(changed()));
+    connect(m_ui->dbOrderList, SIGNAL(indexesMoved(QModelIndexList)), this, SLOT(changed()));
 }
 
 void DatabaseConfig::load()
@@ -222,6 +234,10 @@ void DatabaseConfig::defaults()
 
 void DatabaseConfig::removeWidget()
 {
+#ifdef KDE4_INTEGRATION
+    changed();
+#endif
+
     if (qobject_cast<ThirdPartyWidget*>(sender()) != 0) {
         m_thirdParty.removeOne(qobject_cast<ThirdPartyWidget*>(sender()));
         sender()->deleteLater();
@@ -239,6 +255,10 @@ void DatabaseConfig::removeWidget()
 
 void DatabaseConfig::preferWidget()
 {
+#ifdef KDE4_INTEGRATION
+    changed();
+#endif
+
     if (qobject_cast<ThirdPartyWidget*>(sender()) != 0) {
         ThirdPartyWidget *wg = qobject_cast<ThirdPartyWidget*>(sender());
         if (m_thirdParty.indexOf(wg) > 0) {
@@ -284,6 +304,10 @@ void DatabaseConfig::preferWidget()
 
 void DatabaseConfig::deferWidget()
 {
+#ifdef KDE4_INTEGRATION
+    changed();
+#endif
+
     if (qobject_cast<ThirdPartyWidget*>(sender()) != 0) {
         ThirdPartyWidget *wg = qobject_cast<ThirdPartyWidget*>(sender());
         if (m_thirdParty.indexOf(wg) != m_thirdParty.count() - 1) {
@@ -329,6 +353,10 @@ void DatabaseConfig::deferWidget()
 
 void DatabaseConfig::addArchWidget(const QString &server)
 {
+#ifdef KDE4_INTEGRATION
+    changed();
+#endif
+
     if (m_archMirrors.count() >= 3) {
         return;
     }
@@ -347,6 +375,10 @@ void DatabaseConfig::addArchWidget(const QString &server)
 
 void DatabaseConfig::addKdemodWidget(const QString &server)
 {
+#ifdef KDE4_INTEGRATION
+    changed();
+#endif
+
     if (m_kdemodMirrors.count() >= 3) {
         return;
     }
@@ -366,6 +398,10 @@ void DatabaseConfig::addKdemodWidget(const QString &server)
 
 void DatabaseConfig::addThirdPartyWidget(const QString &name)
 {
+#ifdef KDE4_INTEGRATION
+    changed();
+#endif
+
     if (m_thirdParty.count() >= 3) {
         return;
     }
