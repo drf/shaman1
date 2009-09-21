@@ -177,9 +177,11 @@ int main(int argc, char **argv)
     shamanIcon.addFile(":/Icons/icons/shaman/hi128-app-shaman.png");
     app.setWindowIcon(shamanIcon);
 
+#ifndef KDE4_INTEGRATION
     signal(SIGINT, cleanup);
     signal(SIGTERM, cleanup);
     signal(SIGSEGV, cleanup);
+#endif
 
     QStringList arguments = app.arguments();
 
