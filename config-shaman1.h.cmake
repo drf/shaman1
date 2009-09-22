@@ -34,11 +34,11 @@
 
 /* Defines the Version */
 
-#define SHAMAN_VERSION "1.2.70"
-#define SHAMAN_CODENAME "WIP"
+#define SHAMAN_VERSION "${SHAMAN_VERSION_STRING}"
+#define SHAMAN_CODENAME "${SHAMAN_VERSION_CODENAME}"
 
 /* Defines the Revision */
 
-#define SHAMAN_REVISION "916"
+#define SHAMAN_REVISION "${SHAMAN_VERSION_REVISION}"
 
 #endif /*CONFIG_H*/

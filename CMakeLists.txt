@@ -7,6 +7,15 @@ if(COMMAND cmake_policy)
    cmake_policy(SET CMP0003 NEW)
 endif(COMMAND cmake_policy)
 
+# Versioning
+set(MAJOR_SHAMAN_VERSION "1")
+set(MINOR_SHAMAN_VERSION "2")
+set(PATCH_SHAMAN_VERSION "71")
+set(ADDENDUM_SHAMAN_VERSION "")
+set(SHAMAN_VERSION_STRING "${MAJOR_SHAMAN_VERSION}.${MINOR_SHAMAN_VERSION}.${PATCH_SHAMAN_VERSION}${ADDENDUM_SHAMAN_VERSION}")
+set(SHAMAN_VERSION_CODENAME "")
+set(SHAMAN_VERSION_REVISION "")
+
 # requires minimal Qt 4.4
 set(QT_MIN_VERSION "4.4.0")
 set(SHARED_MIME_INFO_MINIMUM_VERSION "0.20")
@@ -75,3 +84,10 @@ if(NOT NO_PLASMA)
 else(NOT NO_PLASMA)
 	message("Plasma components disabled by the user, they won't be built")
 endif(NOT NO_PLASMA)
+
+## Source tarball ##
+set(ARCHIVE_NAME ${CMAKE_PROJECT_NAME}-${SHAMAN_VERSION_STRING})
+add_custom_target(dist
+    COMMAND git archive --prefix=${ARCHIVE_NAME}/ HEAD
+        | bzip2 > ${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.tar.bz2
+    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR})
