@@ -51,6 +51,7 @@
 
 using namespace Aqpm;
 
+#ifndef KDE4_INTEGRATION
 static void cleanup(int signum)
 {
     if (signum == SIGSEGV) {
@@ -83,6 +84,7 @@ static void cleanup(int signum)
 
     exit(signum);
 }
+#endif
 
 void stdDebugOutput(QtMsgType type, const char *msg)
 {
@@ -157,6 +159,8 @@ int main(int argc, char **argv)
                          ki18n("<a href=\"mailto:shaman@chakra-project.org\">shaman@chakra-project.org</a>"));
     aboutData.addAuthor(ki18n("Dario Freddi"), ki18n("Maintainer"), "drf54321@gmail.com");
     aboutData.addAuthor(ki18n("Lukas Appelhans"), ki18n("Maintainer"), "l.appelhans@gmx.de");
+
+    aboutData.setBugAddress("http://chakra-project.org/bugs");
 
     KCmdLineArgs::init(argc, argv, &aboutData);
 
