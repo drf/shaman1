@@ -317,6 +317,6 @@ void ShamanGeneralConfig::maintenancePerformed(bool success)
 
 void ShamanGeneralConfig::mantProgress(const QString &progress)
 {
-    m_ui->mantDetails->append(QString("<b><i>" + progress + "</b></i>"));
+    m_ui->mantDetails->append(QString("<b><i>" + progress + "</i></b>"));
     m_ui->mantDetails->moveCursor( QTextCursor::End );
 }
