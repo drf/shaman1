@@ -58,6 +58,17 @@ DatabaseConfig::DatabaseConfig(QWidget *parent, const QVariantList &args)
 #endif
         , m_ui(new Ui::DatabaseConfig)
 {
+    // Initialize the backend correctly, if needed
+    if (!Backend::instance()->ready()) {
+        QEventLoop e;
+        connect(Backend::instance(), SIGNAL(backendReady()), &e, SLOT(quit()));
+        e.exec();
+
+        Backend::instance()->setUpAlpm();
+
+        Backend::instance()->setShouldHandleAuthorization(true);
+    }
+
 #ifdef KDE4_INTEGRATION
     QLayout *layout = new QVBoxLayout(this);
     layout->setMargin(0);
@@ -77,17 +88,6 @@ DatabaseConfig::DatabaseConfig(QWidget *parent, const QVariantList &args)
     QWidget *widget = new QWidget(this);
     m_ui->setupUi(widget);
     layout->addWidget(widget);
-
-    // Initialize the backend correctly, if needed
-    if (!Backend::instance()->ready()) {
-        QEventLoop e;
-        connect(Backend::instance(), SIGNAL(backendReady()), &e, SLOT(quit()));
-        e.exec();
-
-        Backend::instance()->setUpAlpm();
-
-        Backend::instance()->setShouldHandleAuthorization(true);
-    }
 
     init();
 #else

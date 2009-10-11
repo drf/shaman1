@@ -21,6 +21,7 @@
 #include "ShamanGeneralConfig.h"
 
 #include <aqpm/Maintenance.h>
+#include <aqpm/Backend.h>
 
 #include <ActionButton>
 
@@ -54,6 +55,17 @@ ShamanGeneralConfig::ShamanGeneralConfig(QWidget *parent, const QVariantList &ar
 #endif
         , m_ui(new Ui::ShamanGeneralConfig)
 {
+    // Initialize the backend correctly, if needed
+    if (!Backend::instance()->ready()) {
+        QEventLoop e;
+        connect(Backend::instance(), SIGNAL(backendReady()), &e, SLOT(quit()));
+        e.exec();
+
+        Backend::instance()->setUpAlpm();
+
+        Backend::instance()->setShouldHandleAuthorization(true);
+    }
+
 #ifdef KDE4_INTEGRATION
     QLayout *layout = new QVBoxLayout(this);
     layout->setMargin(0);
