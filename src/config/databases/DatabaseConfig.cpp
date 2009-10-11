@@ -191,6 +191,10 @@ void DatabaseConfig::load()
         addThirdPartyWidget(string);
     }
     m_thirdPartyLay->addStretch();
+
+#ifdef KDE4_INTEGRATION
+    emit changed(false);
+#endif
 }
 
 void DatabaseConfig::save()
@@ -224,10 +228,12 @@ void DatabaseConfig::save()
     }
 
     // That's it, let's do this
+    Backend::instance()->setShouldHandleAuthorization(true);
     if (!Configuration::instance()->saveConfiguration()) {
         ShamanDialog::popupDialog(tr("Error"), tr("There has been a problem while saving the configuration!"), this,
                                   ShamanProperties::ErrorDialog);
     }
+    Backend::instance()->setShouldHandleAuthorization(false);
 }
 
 void DatabaseConfig::defaults()

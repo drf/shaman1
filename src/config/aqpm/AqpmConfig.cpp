@@ -83,6 +83,16 @@ AqpmConfig::AqpmConfig(QWidget *parent, const QVariantList &args)
         Backend::instance()->setShouldHandleAuthorization(true);
     }
 
+    connect(m_ui->ignorePkgLine, SIGNAL(textChanged(QString)), this, SLOT(changed()));
+    connect(m_ui->ignoreGrpsLine, SIGNAL(textChanged(QString)), this, SLOT(changed()));
+    connect(m_ui->noExtractLine, SIGNAL(textChanged(QString)), this, SLOT(changed()));
+    connect(m_ui->noUpgradeLine, SIGNAL(textChanged(QString)), this, SLOT(changed()));
+
+    connect(m_ui->logFileLine, SIGNAL(textChanged(QString)), this, SLOT(changed()));
+    connect(m_ui->useDeltaBox, SIGNAL(stateChanged(int)), this, SLOT(changed()));
+    connect(m_ui->sysLogBox, SIGNAL(stateChanged(int)), this, SLOT(changed()));
+    connect(m_ui->multiServerBox, SIGNAL(stateChanged(int)), this, SLOT(changed()));
+
 #else
     m_ui->setupUi(this);
 
@@ -139,6 +149,10 @@ void AqpmConfig::load()
     m_ui->useDeltaBox->setChecked(Aqpm::Configuration::instance()->value("options/UseDelta").toBool());
     m_ui->sysLogBox->setChecked(Aqpm::Configuration::instance()->value("options/UseSyslog").toBool());
     m_ui->multiServerBox->setChecked(Aqpm::Configuration::instance()->value("options/MultiDownload").toBool());
+
+#ifdef KDE4_INTEGRATION
+    emit changed(false);
+#endif
 }
 
 
