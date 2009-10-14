@@ -25,8 +25,6 @@
 
 #include <config-shaman1.h>
 
-#include <aqpm/Backend.h>
-
 #include <iostream>
 #include <sys/utsname.h>
 #include <QApplication>
@@ -48,8 +46,6 @@
 #include <kcmdlineargs.h>
 #include <kaboutdata.h>
 #endif
-
-using namespace Aqpm;
 
 #ifndef KDE4_INTEGRATION
 static void cleanup(int signum)
@@ -313,7 +309,7 @@ int main(int argc, char **argv)
 
     Shaman *shaman = new Shaman(arguments);
 
-    shaman->init();
+    shaman->startShaman();
 
     int returncode = app.exec();
 

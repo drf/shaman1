@@ -34,8 +34,6 @@ public:
     virtual ~Shaman();
 
 public slots:
-    void init();
-
     void startShaman();
 
 private:

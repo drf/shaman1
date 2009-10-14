@@ -51,15 +51,10 @@ Shaman::~Shaman()
 {
 }
 
-void Shaman::init()
-{
-    connect(Backend::instance(), SIGNAL(backendReady()), this, SLOT(startShaman()));
-}
-
 void Shaman::startShaman()
 {
-    // Let's fire up aqpm
-    Backend::instance()->setUpAlpm();
+    // Initialize Aqpm
+    Backend::instance()->safeInitialization();
 
     // We manage polkit auth on our own
     Backend::instance()->setShouldHandleAuthorization(false);

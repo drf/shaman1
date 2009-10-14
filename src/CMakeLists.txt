@@ -10,6 +10,7 @@ if (NOT KDE4_INTEGRATION)
         config/databases/MirrorWidget.cpp
         config/databases/ServerWidget.cpp
         config/databases/ThirdPartyWidget.cpp
+        config/shamangeneral/ShamanGeneralConfig.cpp
         config/ConfigDialog.cpp
     )
 
@@ -19,6 +20,7 @@ if (NOT KDE4_INTEGRATION)
         config/databases/mirrorWidget.ui
         config/databases/serverWidget.ui
         config/databases/thirdPartyWidget.ui
+        config/shamangeneral/shamanGeneral.ui
         config/configDialog.ui
     )
 endif (NOT KDE4_INTEGRATION)

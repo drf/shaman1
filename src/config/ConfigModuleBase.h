@@ -24,7 +24,7 @@
 class ConfigModuleBase
 {
 public:
-    virtual ~ConfigModuleBase();
+    virtual ~ConfigModuleBase() {};
 
     virtual void save() = 0;
     virtual void load() = 0;

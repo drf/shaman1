@@ -55,16 +55,9 @@ ShamanGeneralConfig::ShamanGeneralConfig(QWidget *parent, const QVariantList &ar
 #endif
         , m_ui(new Ui::ShamanGeneralConfig)
 {
-    // Initialize the backend correctly, if needed
-    if (!Backend::instance()->ready()) {
-        QEventLoop e;
-        connect(Backend::instance(), SIGNAL(backendReady()), &e, SLOT(quit()));
-        e.exec();
-
-        Backend::instance()->setUpAlpm();
-
-        Backend::instance()->setShouldHandleAuthorization(true);
-    }
+    // Initialize the backend correctly
+    Backend::instance()->safeInitialization();
+    Backend::instance()->setShouldHandleAuthorization(true);
 
 #ifdef KDE4_INTEGRATION
     QLayout *layout = new QVBoxLayout(this);
