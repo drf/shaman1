@@ -25,7 +25,6 @@
 
 #include <aqpm/Backend.h>
 #include <aqpm/Configuration.h>
-#include <aqpm/ConfigurationParser.h>
 #include <aqpm/Maintenance.h>
 
 #include "ConfigModuleBase.h"
