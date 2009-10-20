@@ -85,6 +85,8 @@ else(NOT NO_PLASMA)
 	message("Plasma components disabled by the user, they won't be built")
 endif(NOT NO_PLASMA)
 
+add_subdirectory(firstrun)
+
 ## Source tarball ##
 set(ARCHIVE_NAME ${CMAKE_PROJECT_NAME}-${SHAMAN_VERSION_STRING})
 add_custom_target(dist
