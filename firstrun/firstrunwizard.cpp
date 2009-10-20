@@ -21,7 +21,16 @@
 #include "firstrunwizard.h"
 #include "intropage.h"
 #include "securitypage.h"
+
 #include <QAbstractButton>
+
+#include <config-shaman1.h>
+
+#ifdef KDE4_INTEGRATION
+#include <KIcon>
+#endif
+#include "configurationpage.h"
+#include "kdepage.h"
 
 FirstRunWizard::FirstRunWizard(QWidget* parent, Qt::WindowFlags flags)
         : QWizard(parent, flags)
@@ -30,8 +39,29 @@ FirstRunWizard::FirstRunWizard(QWidget* parent, Qt::WindowFlags flags)
 
     addPage(new IntroPage);
     addPage(new SecurityPage);
+    addPage(new ConfigurationPage);
+#ifdef KDE4_INTEGRATION
+    addPage(new KDEPage);
+#endif
+
+#ifdef KDE4_INTEGRATION
+    QAbstractButton *bt = button(CancelButton);
+    bt->setIcon(KIcon("dialog-close"));
+    setButton(CancelButton, bt);
+
+    bt = button(BackButton);
+    bt->setIcon(KIcon("go-previous"));
+    setButton(BackButton, bt);
+
+    bt = button(NextButton);
+    bt->setIcon(KIcon("go-next"));
+    bt->setLayoutDirection(Qt::RightToLeft);
+    setButton(NextButton, bt);
+#endif
 
     setButtonText(CancelButton, tr("Skip wizard"));
+    setButtonText(NextButton, tr("Next"));
+    setButtonText(BackButton, tr("Back"));
 }
 
 FirstRunWizard::~FirstRunWizard()

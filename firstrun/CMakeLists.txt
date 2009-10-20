@@ -3,6 +3,8 @@ set(shaman_firstrun_SRCS ${shaman_firstrun_adaptor_SRCS} ${shaman_firstrun_confi
     intropage.cpp
     securitypage.cpp
     firstrun_main.cpp
+    configurationpage.cpp
+    kdepage.cpp
 )
 
 # set(shaman_firstrun_UIS ${shaman_firstrun_config_UIS}
@@ -38,3 +40,7 @@ target_link_libraries(shaman_firstrun
 ${QT_QTCORE_LIBRARY}
 ${QT_QTGUI_LIBRARY}
 )
+
+if (KDE4_INTEGRATION)
+    target_link_libraries(shaman_firstrun ${KDE4_KDEUI_LIBRARY})
+endif (KDE4_INTEGRATION)
