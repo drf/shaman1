@@ -3,23 +3,29 @@ Name=Shaman
 
 IconName=shaman-32
 Comment=Package Manager
+Comment[pl]=Menedżer pakietów
 
 Version=1
 
 [Context/warningnot]
 Name=Warning
+Name[pl]=Ostrzeżenie
 
 Comment=Used for warning notifications
-
+Comment[pl]=Wykorzystywany do powiadamiania o ostrzeżeniach
 
 [Context/stdnot]
 Name=Notification
+Name[pl]=Powiadomienie
 
 Comment=Used for standard notifications
+Comment[pl]=Wykorzystywany do standardowych powiadomień
 
 [Event/standardevt]
 Name=Generic Notification
+Name[pl]=Ogólne powiadomienie
 Comment=A generic event
+Comment[pl]=Ogólne zdarzenie
 Contexts=warningnot
 Sound=KDE-Sys-Warning.ogg
 Action=Sound|Popup

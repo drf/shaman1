@@ -10,8 +10,10 @@ X-KDE-ParentApp=kcontrol
 X-KDE-System-Settings-Parent-Category=package-management
 
 Name=Aqpm Databases configuration
+Name[pl]=Konfiguracja baz danych Aqpm
 
 Comment=Configure the databases for package management
+Comment[pl=Skonfiguruj bazy danych dla menedżera pakietów
 
 X-KDE-Keywords=shaman,package,install,upgrade,system,aqpm,pacman
 

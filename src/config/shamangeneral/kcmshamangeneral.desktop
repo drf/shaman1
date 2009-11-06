@@ -8,8 +8,10 @@ X-KDE-Library=kcm_shamangeneral
 X-KDE-ParentApp=kcontrol
 
 Name=Shaman configuration
+Name[pl=Konfiguracja Shamana
 
 Comment=Configure Shaman settings
+Comment[pl]=Skonfiguruj ustawienia Shamana
 
 X-KDE-Keywords=shaman,package,install,upgrade,system,aqpm,pacman
 

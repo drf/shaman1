@@ -10,9 +10,9 @@ X-KDE-ParentApp=kcontrol
 X-KDE-System-Settings-Parent-Category=package-management
 
 Name=Aqpm global configuration
-
+Name[pl]=Ustawienia globalne Aqpm
 Comment=Configure the global settings for Aqpm
-
+Comment[pl]=Skonfiguruj ustawienia globalne dla Aqpm
 X-KDE-Keywords=shaman,package,install,upgrade,system,aqpm,pacman
 
 Categories=Qt;KDE;X-KDE-settings-system;

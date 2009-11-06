@@ -1,16 +1,18 @@
-#, fuzzy
+# Bartosz Iwaniec <hash87@gmail.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-08 14:50+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2009-11-06 17:56+0200\n"
+"PO-Revision-Date: 2009-11-06 18:13+0100\n"
+"Last-Translator: Bartosz Iwaniec <hash87@gmail.com>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.3.0\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || "
+"n%100>=20) ? 1 : 2);\n"
 
 #. (obsolete)
 #: AlpmHandler#1
@@ -139,7 +141,7 @@ msgid ""
 "build packages from official sources only."
 msgstr ""
 "Część Twoich pakietów nie należy do oficjalnego\n"
-"repozytorium Arch Linux. Shaman może budować\n"
+"repozytorium Arch Linuksa. Shaman może budować\n"
 "pakiety jedynie z oficjalnych źródeł."
 
 #. (obsolete)
@@ -213,7 +215,7 @@ msgid ""
 "Do you want to proceed anyway?"
 msgstr ""
 "Budowa niektórych pakietów nie powiodła się.\n"
-"Czy mimo wszystko chcesz kontynuować?"
+"Czy mimo tego chcesz kontynuować?"
 
 #: BuildingHandler#15
 msgid "Install Built Packages"
@@ -228,8 +230,7 @@ msgid "Packages Built Successfully!"
 msgstr "Pakiety zbudowane pomyślnie!"
 
 #: BuildingHandler#18
-msgid ""
-"Your Packages have been built successfully, and are ready to be installed"
+msgid "Your Packages have been built successfully, and are ready to be installed"
 msgstr "Twoje pakiety zostały pomyślnie zbudowane i są gotowe do instalacji"
 
 #: BuildingHandler#19
@@ -240,11 +241,11 @@ msgid ""
 "binary files. Before you continue, you are advised to<br>review your "
 "configuration to improve your building performance."
 msgstr ""
-"\n"
-"            \n"
-"            \n"
-"            \n"
-"        "
+"Zamierzasz zainstalować <b>%n pakiet</b> ze źródeł. Budowanie ze źródeł <br> "
+"może przynieść pewne korzyści, jednakżejest bardzo wolne. Jeśli nie jesteś "
+"pewien, prawdopodobnie wolalbyś przetworzyć <br>swoją kolejkę z plików "
+"binranych. Zanim będziesz kontynuował, zalecane jest abyś<br> przejrzał "
+"swoją konfigurację, aby usprawnić wydajność budowania pakietów."
 
 #. (obsolete)
 #: CallBacks#1
@@ -253,8 +254,9 @@ msgid ""
 "%1 requires installing %2 from IgnorePkg/IgnoreGroup.\n"
 " Install anyway?"
 msgstr ""
-"%1 wymaga instalacji %2 z IgnorePkg/IgnoreGroup\n"
-"Zainstalować mimo wszystko?"
+"%1 wymaga instalacji %2 pakietu oznaczonego jako ignorowany\n"
+"(lub pochodzącego z grupy ignorowanej)\n"
+"Zainstalować mimo to?"
 
 #. (obsolete)
 #: CallBacks#2
@@ -263,8 +265,9 @@ msgid ""
 "%1 is in IgnorePkg/IgnoreGroup.\n"
 " Install anyway?"
 msgstr ""
-"%1 jest w IgnorePkg/IgnoreGroup.\n"
-"Zainstalować mimo wszystko?"
+"%1 jest zaliczony jako pakiet ignorowany.\n"
+"(lub pochodzący z grupy ignorowanej)\n"
+" Zainstalować mimo tego?"
 
 #. (obsolete)
 #: CallBacks#3
@@ -272,8 +275,9 @@ msgid ""
 "%1 is designated as a HoldPkg.\n"
 " Remove anyway?"
 msgstr ""
-"%1 został oznaczony jako HoldPkg.\n"
-"Usunąć mimo wszystko?"
+"%1 został oznaczony jako pakiet, którego usunięcie\n"
+"musi zostać zatwierdzone.\n"
+"Usunąć ten pakiet?"
 
 #. (obsolete)
 #: CallBacks#4
@@ -298,7 +302,7 @@ msgid ""
 "Upgrade anyway?"
 msgstr ""
 "%1-%2: lokalna wersja jest nowsza.\n"
-"Zaktualizować mimo wszystko?"
+"Zaktualizować mimo tego?"
 
 #. (obsolete)
 #: CallBacks#7
@@ -681,6 +685,18 @@ msgid ""
 "size:9pt;\">Please choose an action from the Drop-Down "
 "Menu.</span></p></body></html>"
 msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:8pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Konserwacja Shamana.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Proszę wybrać akcję z rozwijanego menu.</span></p></body></html>"
 
 #: ConfigDialog#63
 msgctxt "ConfigDialog#63"
@@ -733,9 +749,11 @@ msgid "XFerCommand: (example: /path/to/command %u) Blank for Default"
 msgstr "XFerCommand: (przykład: /ścieżka/do/polecenia %u) Domyślnie puste"
 
 #: ConfigDialog#73
-msgctxt "ConfigDialog#73"
+msgctxt ""
+"ConfigDialog#73"
+"ConfigDialog#73"
 msgid "Arch Linux Official Repositories"
-msgstr "Oficjalne repozytoria Arch Linux"
+msgstr "Oficjalne repozytoria Archlinuksa"
 
 #. (obsolete)
 #: ConfigDialog#74
@@ -744,9 +762,9 @@ msgid ""
 "ones.\n"
 "Please note that packages from Unstable and Testing may break your system."
 msgstr ""
-"Tutaj możesz wybrać repozytoria spośród oficjalnych dla Arch Linux.\n"
-"Proszę zwrócić uwagę, że pakiety z Unstable i Testing mogą uszkodzić Twój "
-"system."
+"Tutaj możesz wybrać repozytoria z listy oficjalnych repozytoriów "
+"przeznaczonych dla Archlinuksa. Pamiętaj, że pakiety z Unstable i Testing "
+"mogą uszkodzić Twój system."
 
 # Do not translate
 #: ConfigDialog#75
@@ -803,13 +821,12 @@ msgid ""
 "and lots of addons, KDEMod is the best way to taste the ease and the power\n"
 "of KDE with the simplicity and the power of Arch."
 msgstr ""
-"KDEMod to ulepszona wersja KDE, stworzona wyłącznie dla Arch Linux. Zawiera "
-"ona\n"
-"ulepszone Qt, kompatybilne ze standardowym Qt Arch Linux, ulepszony theme "
-"oraz\n"
-"wiele różnych dodatków. KDEMod to najlepszy sposób na skosztowanie wygody i "
-"potęgi KDE \n"
-"zachowując jednocześnie prostote i potęgę Arch'a."
+"KDEMod jest ulepszona wersja KDE, stworzoną wyłącznie dla ArchLinuksa.\n"
+"Zawiera ona ulepszone Qt, kompatybilne ze standardowym Qt Archlinuksa, "
+"ulepszony temat wyglądu\n"
+"oraz wiele różnych dodatków. KDEMod to najlepszy sposób na\n"
+" poznanie wygody i możliwości KDE zachowując jednocześnie\n"
+"prostotę i potęgę Archa."
 
 #: ConfigDialog#84
 msgctxt "ConfigDialog#84"
@@ -822,7 +839,9 @@ msgid "KDEMod 4 Repository (Unstable, testers only)"
 msgstr "Repozytorium KDEMod 4 (Unstable, testers only)"
 
 #: ConfigDialog#86
-msgctxt "ConfigDialog#86"
+msgctxt ""
+"ConfigDialog#86"
+"ConfigDialog#86"
 msgid "Third-Party Repositories"
 msgstr "Repozytoria Third-Party"
 
@@ -837,7 +856,7 @@ msgid ""
 msgstr ""
 "Możesz zwiększyć ilość dostępnych pakietów poprzez dodanie innych "
 "repozytoriów. Repozytoria\n"
-"Third-Party działają tak samo jak zwykłe i będą dostępne zarówno poprzez "
+"nieoficjalne działają tak samo jak zwykłe i będą dostępne zarówno poprzez "
 "Shamana\n"
 "jak i Pacmana."
 
@@ -1011,24 +1030,24 @@ msgstr ""
 #: ConfigDialog#120
 msgctxt "ConfigDialog#120"
 msgid "Use SysLog"
-msgstr "Używaj SysLog"
+msgstr "Używaj pliku dziennika systemowego"
 
 #: ConfigDialog#121
 msgctxt "ConfigDialog#121"
 msgid "Log File:"
-msgstr "Plik Log:"
+msgstr "Plik dziennika:"
 
 #: ConfigDialog#122
 msgctxt "ConfigDialog#122"
 msgid "Repository Order"
-msgstr ""
+msgstr "Kolejność repozytoriów"
 
 #: ConfigDialog#123
 msgctxt "ConfigDialog#123"
 msgid ""
 "Please order your repositories to define which one will be preferred over "
 "another."
-msgstr ""
+msgstr "Proszę ustawić repozytoria w kolejności, w jakiej będą one sprawdzane."
 
 #: ConfigDialog#124
 msgctxt "ConfigDialog#124"
@@ -1149,7 +1168,7 @@ msgstr "KDEMod 4 Repozytorium"
 #: ConfigDialog#140
 msgctxt "ConfigDialog#140"
 msgid "Add another server"
-msgstr ""
+msgstr "Dodaj nowy serwer"
 
 #: ConfigDialog#141
 msgctxt "ConfigDialog#141"
@@ -1169,31 +1188,36 @@ msgstr "KDEMod 4 Testing Repozytorium"
 #: ConfigDialog#144
 msgctxt "ConfigDialog#144"
 msgid "KDEMod 4 Unstable Repository (Testers only!)"
-msgstr "KDEMod 4 Unstable Repozytorium (tylko testerzy!)"
+msgstr "KDEMod 4 Unstable Repozytorium (tylko dla testerów!)"
 
 #: ConfigDialog#145
-msgctxt "ConfigDialog#145"
+msgctxt ""
+"ConfigDialog#145"
+"ConfigDialog#145"
 msgid ""
 "Here you can choose what repositories to use between Arch Linux's official "
 "ones. Please note that packages from Unstable and Testing may break your "
 "system."
 msgstr ""
-"Tutaj możesz wybrać repozytoria spośród oficjalnych dla Arch Linux. "
-"Pamiętaj, że pakiety z Unstable i Testing mogą uszkodzić Twój system."
+"Tutaj możesz wybrać repozytoria z listy oficjalnych repozytoriów "
+"przeznaczonych dla Arch Linuksa. Pamiętaj, że pakiety z Unstable i Testing "
+"mogą uszkodzić Twój system."
 
 #: ConfigDialog#146
-msgctxt "ConfigDialog#146"
+msgctxt ""
+"ConfigDialog#146"
+"ConfigDialog#146"
 msgid ""
 "KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
 "improved Qt build, compatible with Arch Linux standard Qt's, an improved "
 "theme, and lots of addons, KDEMod is the best way to taste the ease and the "
 "power of KDE with the simplicity and the power of Arch."
 msgstr ""
-"KDEMod to ulepszona wersja KDE, stworzona wyłącznie dla Arch Linux. Zawiera "
-"ona ulepszone Qt, kompatybilne ze standardowym Qt Arch Linux, ulepszony "
-"theme oraz wiele różnych dodatków. KDEMod to najlepszy sposób na "
-"skosztowanie wygody i potęgi KDE zachowując jednocześnie prostotę i potęgę "
-"Arch'a."
+"KDEMod jest ulepszoną wersją KDE, stworzoną wyłącznie dla Arch Linuksa. "
+"Zawiera ona ulepszone Qt, kompatybilne ze standardowym Qt Arch Linuksa, "
+"ulepszony styl interfejsu oraz wiele różnych dodatków. KDEMod to najlepszy "
+"sposób na poznanie wygody i możliwości KDE zachowując jednocześnie prostotę "
+"i potęgę Arch'a."
 
 #: ConfigDialog#147
 msgctxt "ConfigDialog#147"
@@ -1203,7 +1227,7 @@ msgid ""
 "both Shaman and Pacman."
 msgstr ""
 "Możesz zwiększyć ilość dostępnych pakietów poprzez dodanie innych "
-"repozytoriów. Repozytoria Third-Party działają tak samo jak zwykłe i będą "
+"repozytoriów. Repozytoria nieoficjalne działają tak samo jak zwykłe i będą "
 "dostępne zarówno poprzez Shamana jak i Pacmana."
 
 #: ConfigDialog#148
@@ -1217,14 +1241,12 @@ msgid "Disable Tray Icon"
 msgstr "Wyłącz ikonę tacki systemowej"
 
 #: DatabaseConfig#1
-#, fuzzy
 msgctxt "DatabaseConfig#1"
 msgid "Add Mirror"
 msgstr "Dodaj serwer lustrzany"
 
 # Obviously keep the example as it is ;)
 #: DatabaseConfig#2
-#, fuzzy
 msgctxt "DatabaseConfig#2"
 msgid ""
 "Mirror Format is incorrect. Your mirror should look like this:\n"
@@ -1236,77 +1258,72 @@ msgstr ""
 
 # mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.
 #: DatabaseConfig#3
-#, fuzzy
 msgctxt "DatabaseConfig#3"
 msgid ""
 "Your Mirror was successfully added!\n"
 "It is now available in mirrorlist."
 msgstr ""
 "Twój serwer lustrzany został pomyślnie dodany!\n"
-"Jest on teraz dostępny w mirrorlist."
+"Znajduje się teraz na liście dostępnych serwerów lustrzanych."
 
 #: DatabaseConfig#4
-#, fuzzy
 msgctxt "DatabaseConfig#4"
 msgid ""
 "There was an error while trying to add the mirror! This could be due also to "
 "your system policy preventing you from performing this action"
 msgstr ""
 "Wystąpił błąd podczas próby dodawania serwera lustrzanego. Może to być "
-"spowodowane przez politykę systemu zapobiegającą wykonanie tej operacji"
+"spowodowane ustawienia systemu zapobiegające wykonywania operacji tego typu"
 
 #: DatabaseConfig#5
+#, fuzzy
 msgctxt "DatabaseConfig#5"
 msgid "Form"
 msgstr ""
+"\n"
+"            "
 
 #: DatabaseConfig#6
-#, fuzzy
 msgctxt "DatabaseConfig#6"
 msgid "Arch Linux Official Repositories"
-msgstr "Oficjalne repozytoria Arch Linux"
+msgstr "Oficjalne repozytoria Arch Linuksa"
 
 #: DatabaseConfig#7
-#, fuzzy
 msgctxt "DatabaseConfig#7"
 msgid ""
 "Here you can choose what repositories to use between Arch Linux's official "
 "ones. Please note that packages from Unstable and Testing may break your "
 "system."
 msgstr ""
-"Tutaj możesz wybrać repozytoria spośród oficjalnych dla Arch Linux. "
-"Pamiętaj, że pakiety z Unstable i Testing mogą uszkodzić Twój system."
+"Tutaj możesz wybrać repozytoria spośród listy oficjalnych repozytoriów "
+"przeznaczonych dla Arch Linuksa. Pamiętaj, że pakiety z Unstable i Testing "
+"mogą uszkodzić Twój system."
 
 # Do not translate
 #: DatabaseConfig#8
-#, fuzzy
 msgctxt "DatabaseConfig#8"
 msgid "Core"
 msgstr "Core"
 
 # Do not translate
 #: DatabaseConfig#9
-#, fuzzy
 msgctxt "DatabaseConfig#9"
 msgid "Extra"
 msgstr "Extra"
 
 # Do not translate
 #: DatabaseConfig#10
-#, fuzzy
 msgctxt "DatabaseConfig#10"
 msgid "Community"
 msgstr "Community"
 
 # Do not translate
 #: DatabaseConfig#11
-#, fuzzy
 msgctxt "DatabaseConfig#11"
 msgid "Testing"
 msgstr "Testing"
 
 #: DatabaseConfig#12
-#, fuzzy
 msgctxt "DatabaseConfig#12"
 msgid "Server"
 msgstr "Serwer"
@@ -1314,16 +1331,14 @@ msgstr "Serwer"
 #: DatabaseConfig#13
 msgctxt "DatabaseConfig#13"
 msgid "Add another server"
-msgstr ""
+msgstr "Dodaj nowy serwer"
 
 #: DatabaseConfig#14
-#, fuzzy
 msgctxt "DatabaseConfig#14"
 msgid "KDEMod Repositories"
 msgstr "Repozytoria KDEMod"
 
 #: DatabaseConfig#15
-#, fuzzy
 msgctxt "DatabaseConfig#15"
 msgid ""
 "KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
@@ -1331,56 +1346,48 @@ msgid ""
 "theme, and lots of addons, KDEMod is the best way to taste the ease and the "
 "power of KDE with the simplicity and the power of Arch."
 msgstr ""
-"KDEMod to ulepszona wersja KDE, stworzona wyłącznie dla Arch Linux. Zawiera "
-"ona ulepszone Qt, kompatybilne ze standardowym Qt Arch Linux, ulepszony "
-"theme oraz wiele różnych dodatków. KDEMod to najlepszy sposób na "
-"skosztowanie wygody i potęgi KDE zachowując jednocześnie prostotę i potęgę "
-"Arch'a."
+"KDEMod jest ulepszoną wersją KDE, stworzoną wyłącznie dla Arch Linuksa. "
+"Zawiera ona ulepszone Qt, kompatybilne ze standardowym Qt Arch Linuksa, "
+"ulepszony styl interfejsu oraz wiele różnych dodatków. KDEMod to najlepszy "
+"sposób na poznanie wygody i możliwości KDE zachowując jednocześnie prostotę "
+"i potęgę Arch Linuksa."
 
 #: DatabaseConfig#16
-#, fuzzy
 msgctxt "DatabaseConfig#16"
 msgid "KDEMod 4 Repository"
 msgstr "KDEMod 4 Repozytorium"
 
 #: DatabaseConfig#17
-#, fuzzy
 msgctxt "DatabaseConfig#17"
 msgid "KDEMod 4 Extragear Repository"
 msgstr "KDEMod 4 Extragear Repozytorium"
 
 #: DatabaseConfig#18
-#, fuzzy
 msgctxt "DatabaseConfig#18"
 msgid "KDEMod 4 Playground Repository"
 msgstr "KDEMod 4 Playground Repozytorium"
 
 #: DatabaseConfig#19
-#, fuzzy
 msgctxt "DatabaseConfig#19"
 msgid "KDEMod 4 Testing Repository"
 msgstr "KDEMod 4 Testing Repozytorium"
 
 #: DatabaseConfig#20
-#, fuzzy
 msgctxt "DatabaseConfig#20"
 msgid "KDEMod 4 Unstable Repository (Testers only!)"
-msgstr "KDEMod 4 Unstable Repozytorium (tylko testerzy!)"
+msgstr "KDEMod 4 Unstable Repozytorium (tylko dla testerów!)"
 
 #: DatabaseConfig#21
-#, fuzzy
 msgctxt "DatabaseConfig#21"
 msgid "KDEMod 3 Repository"
 msgstr "Repozytorium KDEMod 3"
 
 #: DatabaseConfig#22
-#, fuzzy
 msgctxt "DatabaseConfig#22"
 msgid "Third-Party Repositories"
-msgstr "Repozytoria Third-Party"
+msgstr "Repozytoria nieoficjalne"
 
 #: DatabaseConfig#23
-#, fuzzy
 msgctxt "DatabaseConfig#23"
 msgid ""
 "You can extend your packages choice by adding other repositories. Third-"
@@ -1388,11 +1395,10 @@ msgid ""
 "both Shaman and Pacman."
 msgstr ""
 "Możesz zwiększyć ilość dostępnych pakietów poprzez dodanie innych "
-"repozytoriów. Repozytoria Third-Party działają tak samo jak zwykłe i będą "
+"repozytoriów. Repozytoria nieoficjalne działają tak samo jak zwykłe i będą "
 "dostępne zarówno poprzez Shamana jak i Pacmana."
 
 #: DatabaseConfig#24
-#, fuzzy
 msgctxt "DatabaseConfig#24"
 msgid "Add New Repository"
 msgstr "Dodaj nowe repozytorium"
@@ -1400,14 +1406,14 @@ msgstr "Dodaj nowe repozytorium"
 #: DatabaseConfig#25
 msgctxt "DatabaseConfig#25"
 msgid "Repository Order"
-msgstr ""
+msgstr "Kolejność repozytoriów"
 
 #: DatabaseConfig#26
 msgctxt "DatabaseConfig#26"
 msgid ""
 "Please order your repositories to define which one will be preferred over "
 "another."
-msgstr ""
+msgstr "Proszę ustawić repozytoria w kolejności, w jakiej będą one sprawdzane."
 
 #: EditPBuild#1
 msgid "Saving"
@@ -1541,97 +1547,85 @@ msgid "Error occurred"
 msgstr "Wystąpił błąd"
 
 #: Form#1
+#, fuzzy
 msgctxt "Form#1"
 msgid "Form"
 msgstr ""
+"\n"
+"            "
 
 #: Form#2
-#, fuzzy
 msgctxt "Form#2"
 msgid "Favourite Actions"
 msgstr "Ulubione działania"
 
 #: Form#3
-#, fuzzy
 msgctxt "Form#3"
 msgid "When Upgrading System:"
 msgstr "Gdy aktualizuję system:"
 
 #: Form#4
-#, fuzzy
 msgctxt "Form#4"
 msgid "Upgrade Immediately"
 msgstr "Aktualizuj natychmiast"
 
 #: Form#5
-#, fuzzy
 msgctxt "Form#5"
 msgid "Add Upgradeable Packages To Queue"
-msgstr "Dodaj pakiety do aktualizacji do kolejki"
+msgstr "Dodaj pakiety przeznaczone do aktualizacji do kolejki"
 
 #: Form#6
-#, fuzzy
 msgctxt "Form#6"
 msgid "Ask"
 msgstr "Zapytaj"
 
 #: Form#7
-#, fuzzy
 msgctxt "Form#7"
 msgid "When Processing Queue"
 msgstr "Gdy przetwarzam kolejkę"
 
 #: Form#8
-#, fuzzy
 msgctxt "Form#8"
 msgid "Keep application running in System Tray only"
 msgstr "Pozostaw aplikację działającą tylko w tacce systemowej"
 
 #: Form#9
-#, fuzzy
 msgctxt "Form#9"
 msgid "GUI Startup"
-msgstr "Uruchamianie GUI"
+msgstr "Uruchamianie w trybie graficznym"
 
 #: Form#10
-#, fuzzy
 msgctxt "Form#10"
 msgid "Start in the System Tray"
-msgstr "Startuj w tacce systemowej"
+msgstr "Rozpoczynaj program w tacce systemowej"
 
 #: Form#11
-#, fuzzy
 msgctxt "Form#11"
 msgid "Show Splashscreen"
 msgstr "Pokazuj ekran powitalny"
 
 #: Form#12
-#, fuzzy
 msgctxt "Form#12"
 msgid "Use the following language:"
 msgstr "Korzystaj z następujacęgo języka:"
 
 #: Form#13
-#, fuzzy
 msgctxt "Form#13"
 msgid "Disable Tray Icon"
 msgstr "Wyłącz ikonę tacki systemowej"
 
 #: Form#14
-#, fuzzy
 msgctxt "Form#14"
 msgid "Maintenance"
 msgstr "Konserwacja"
 
 #: Form#15
-#, fuzzy
 msgctxt "Form#15"
 msgid "Process Selected"
-msgstr "Rozpocznij proces"
+msgstr "Wybrany proces"
 
 # Waiting for a user action
 #: Form#16
-#, fuzzy
 msgctxt "Form#16"
 msgid "Waiting"
 msgstr "Oczekiwanie"
@@ -1653,132 +1647,125 @@ msgid ""
 "size:9pt;\">Please choose an action from the Drop-Down "
 "Menu.</span></p></body></html>"
 msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:8pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Zarządzanie Shamanem.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Proszę wybrać akcję z rozwijanego menu.</span></p></body></html>"
 
 #: Form#18
-#, fuzzy
 msgctxt "Form#18"
 msgid "Checkable Options"
 msgstr "Opcje do zaznaczenia"
 
 #: Form#19
-#, fuzzy
 msgctxt "Form#19"
 msgid "Use Active FTP"
 msgstr "Używaj aktywnego FTP"
 
 #: Form#20
-#, fuzzy
 msgctxt "Form#20"
 msgid "Use Deltas (needs xdelta to be installed)"
-msgstr "Używaj delt (wymaga, aby xdelta było zainstalowane)"
+msgstr "Korzystaj z plików różnicowych (wymaga zainstalowanego pakietu xdelta)"
 
 #: Form#21
-#, fuzzy
 msgctxt "Form#21"
 msgid "Use SysLog"
-msgstr "Używaj SysLog"
+msgstr "Używaj pliku dziennika systemowego"
 
 #: Form#22
-#, fuzzy
 msgctxt "Form#22"
 msgid "Advanced Options"
-msgstr "Zaawansowane opcje"
+msgstr "Opcje zaawansowane"
 
 #: Form#23
-#, fuzzy
 msgctxt "Form#23"
 msgid "HoldPkgs:"
 msgstr "HoldPkgs:"
 
 #: Form#24
-#, fuzzy
 msgctxt "Form#24"
 msgid "IgnorePkgs:"
 msgstr "IgnorePkgs:"
 
 #: Form#25
-#, fuzzy
 msgctxt "Form#25"
 msgid "IgnoreGroups:"
 msgstr "IgnoreGroups:"
 
 #: Form#26
-#, fuzzy
 msgctxt "Form#26"
 msgid "NoUpgrade:"
 msgstr "NoUpgrade:"
 
 #: Form#27
-#, fuzzy
 msgctxt "Form#27"
 msgid "NoExtract:"
-msgstr "NoExtract:"
+msgstr "NoExtract"
 
 #: Form#28
-#, fuzzy
 msgctxt "Form#28"
 msgid "Log File:"
-msgstr "Plik Log:"
+msgstr "Plik dziennika:"
 
 #: Form#29
-#, fuzzy
 msgctxt "Form#29"
 msgid "XFerCommand: (example: /path/to/command %u) Blank for Default"
 msgstr "XFerCommand: (przykład: /ścieżka/do/polecenia %u) Domyślnie puste"
 
 #: Form#30
-#, fuzzy
 msgctxt "Form#30"
 msgid "Arch Linux Official Repositories"
-msgstr "Oficjalne repozytoria Arch Linux"
+msgstr "Oficjalne repozytoria Arch Linuksa"
 
 #: Form#31
-#, fuzzy
 msgctxt "Form#31"
 msgid ""
 "Here you can choose what repositories to use between Arch Linux's official "
 "ones. Please note that packages from Unstable and Testing may break your "
 "system."
 msgstr ""
-"Tutaj możesz wybrać repozytoria spośród oficjalnych dla Arch Linux. "
-"Pamiętaj, że pakiety z Unstable i Testing mogą uszkodzić Twój system."
+"Tutaj możesz wybrać repozytoria spośród listy oficjalnych repozytoriów "
+"przeznaczonych dla Arch Linuksa. Pamiętaj, że pakiety z Unstable i Testing "
+"mogą uszkodzić Twój system."
 
 # Do not translate
 #: Form#32
-#, fuzzy
 msgctxt "Form#32"
 msgid "Core"
 msgstr "Core"
 
 # Do not translate
 #: Form#33
-#, fuzzy
 msgctxt "Form#33"
 msgid "Extra"
 msgstr "Extra"
 
 # Do not translate
 #: Form#34
-#, fuzzy
 msgctxt "Form#34"
 msgid "Community"
 msgstr "Community"
 
 # Do not translate
 #: Form#35
-#, fuzzy
 msgctxt "Form#35"
 msgid "Testing"
 msgstr "Testing"
 
 #: Form#36
-#, fuzzy
 msgctxt "Form#36"
 msgid "Server"
 msgstr "Serwer"
 
 #: Form#37
-#, fuzzy
 msgctxt "Form#37"
 msgid "Add Mirror"
 msgstr "Dodaj serwer lustrzany"
@@ -1786,16 +1773,14 @@ msgstr "Dodaj serwer lustrzany"
 #: Form#38
 msgctxt "Form#38"
 msgid "Add another server"
-msgstr ""
+msgstr "Dodaj nowy serwer"
 
 #: Form#39
-#, fuzzy
 msgctxt "Form#39"
 msgid "KDEMod Repositories"
 msgstr "Repozytoria KDEMod"
 
 #: Form#40
-#, fuzzy
 msgctxt "Form#40"
 msgid ""
 "KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
@@ -1803,56 +1788,48 @@ msgid ""
 "theme, and lots of addons, KDEMod is the best way to taste the ease and the "
 "power of KDE with the simplicity and the power of Arch."
 msgstr ""
-"KDEMod to ulepszona wersja KDE, stworzona wyłącznie dla Arch Linux. Zawiera "
-"ona ulepszone Qt, kompatybilne ze standardowym Qt Arch Linux, ulepszony "
-"theme oraz wiele różnych dodatków. KDEMod to najlepszy sposób na "
-"skosztowanie wygody i potęgi KDE zachowując jednocześnie prostotę i potęgę "
-"Arch'a."
+"KDEMod jest ulepszona wersja KDE, stworzoną wyłącznie dla ArchLinuksa. "
+"Zawiera ona ulepszone Qt, kompatybilne ze standardowym Qt Archlinuksa, "
+"ulepszony temat wyglądu oraz wiele różnych dodatków. KDEMod to najlepszy "
+"sposób na poznanie wygody i możliwości KDE zachowując jednocześnie prostotę "
+"i potęgę Arch'a."
 
 #: Form#41
-#, fuzzy
 msgctxt "Form#41"
 msgid "KDEMod 4 Repository"
 msgstr "KDEMod 4 Repozytorium"
 
 #: Form#42
-#, fuzzy
 msgctxt "Form#42"
 msgid "KDEMod 4 Extragear Repository"
 msgstr "KDEMod 4 Extragear Repozytorium"
 
 #: Form#43
-#, fuzzy
 msgctxt "Form#43"
 msgid "KDEMod 4 Playground Repository"
 msgstr "KDEMod 4 Playground Repozytorium"
 
 #: Form#44
-#, fuzzy
 msgctxt "Form#44"
 msgid "KDEMod 4 Testing Repository"
 msgstr "KDEMod 4 Testing Repozytorium"
 
 #: Form#45
-#, fuzzy
 msgctxt "Form#45"
 msgid "KDEMod 4 Unstable Repository (Testers only!)"
-msgstr "KDEMod 4 Unstable Repozytorium (tylko testerzy!)"
+msgstr "KDEMod 4 Unstable Repozytorium (tylko dla testerów!)"
 
 #: Form#46
-#, fuzzy
 msgctxt "Form#46"
 msgid "KDEMod 3 Repository"
 msgstr "Repozytorium KDEMod 3"
 
 #: Form#47
-#, fuzzy
 msgctxt "Form#47"
 msgid "Third-Party Repositories"
-msgstr "Repozytoria Third-Party"
+msgstr "Repozytoria nieoficjalne"
 
 #: Form#48
-#, fuzzy
 msgctxt "Form#48"
 msgid ""
 "You can extend your packages choice by adding other repositories. Third-"
@@ -1860,11 +1837,10 @@ msgid ""
 "both Shaman and Pacman."
 msgstr ""
 "Możesz zwiększyć ilość dostępnych pakietów poprzez dodanie innych "
-"repozytoriów. Repozytoria Third-Party działają tak samo jak zwykłe i będą "
+"repozytoriów. Repozytoria nieoficjalne działają tak samo jak zwykłe i będą "
 "dostępne zarówno poprzez Shamana jak i Pacmana."
 
 #: Form#49
-#, fuzzy
 msgctxt "Form#49"
 msgid "Add New Repository"
 msgstr "Dodaj nowe repozytorium"
@@ -1872,107 +1848,92 @@ msgstr "Dodaj nowe repozytorium"
 #: Form#50
 msgctxt "Form#50"
 msgid "Repository Order"
-msgstr ""
+msgstr "Kolejność repozytoriów"
 
 #: Form#51
 msgctxt "Form#51"
 msgid ""
 "Please order your repositories to define which one will be preferred over "
 "another."
-msgstr ""
+msgstr "Proszę ustawić repozytoria w kolejności, w jakiej będą one sprawdzane."
 
 #: Form#52
-#, fuzzy
 msgctxt "Form#52"
 msgid "Preferences"
 msgstr "Preferencje"
 
 #: Form#53
-#, fuzzy
 msgctxt "Form#53"
 msgid "Process all dependencies and queue from binary first (recommended)"
-msgstr "Przetwórz wszystkie zależności najpierw z plików binarnych (zalecane)"
+msgstr ""
+"Przetwórz wszystkie zależności i kolejkę preferując pliki binarne (zalecane)"
 
 #: Form#54
-#, fuzzy
 msgctxt "Form#54"
 msgid "Review Building output before installing"
-msgstr "Wyświetl wyjście budowania pakietu, przed jego instalacją"
+msgstr "Wyświetl wyjście budowania pakietu przed jego instalacją"
 
 #: Form#55
-#, fuzzy
 msgctxt "Form#55"
 msgid "ABS Configuration"
 msgstr "Konfiguracja ABS"
 
 #: Form#56
-#, fuzzy
 msgctxt "Form#56"
 msgid "Use supfiles that match your current repositories"
-msgstr "Używaj supfiles, które są zgodne z Twoimi obecnymi repozytoriami"
+msgstr "Używaj plików supfiles, które są zgodne z Twoimi obecnymi repozytoriami"
 
 #: Form#57
-#, fuzzy
 msgctxt "Form#57"
 msgid "Define supfiles manually"
-msgstr "Zdefiniuj ręcznie supfiles"
+msgstr "Zdefiniuj ręcznie pliki supfiles"
 
 #: Form#58
-#, fuzzy
 msgctxt "Form#58"
 msgid "RSync Server:"
-msgstr "RSync Serwer:"
+msgstr "Serwer RSync:"
 
 #: Form#59
-#, fuzzy
 msgctxt "Form#59"
 msgid "Makepkg Configuration"
 msgstr "Konfiguracja Makepkg"
 
 #: Form#60
-#, fuzzy
 msgctxt "Form#60"
 msgid "CFlags"
 msgstr "CFlags"
 
 #: Form#61
-#, fuzzy
 msgctxt "Form#61"
 msgid "CXXFlags"
 msgstr "CXXFlags"
 
 #: Form#62
-#, fuzzy
 msgctxt "Form#62"
 msgid "BuildEnv"
 msgstr "BuildEnv"
 
 #: Form#63
-#, fuzzy
 msgctxt "Form#63"
 msgid "Options"
 msgstr "Opcje"
 
 #: Form#64
-#, fuzzy
 msgctxt "Form#64"
 msgid "Doc_Dirs"
 msgstr "Doc_Dirs"
 
 #: Form#65
-#, fuzzy
 msgctxt "Form#65"
 msgid "Build Environment"
 msgstr "Środowisko budowania"
 
 #: Form#66
-#, fuzzy
 msgctxt "Form#66"
 msgid "Building Path"
 msgstr "Ścieżka budowania"
 
 #: Form#67
-#, fuzzy
 msgctxt "Form#67"
 msgid "Remove installed makedepends after build"
 msgstr ""
@@ -1980,141 +1941,119 @@ msgstr ""
 "zbudowaniu pakietu"
 
 #: Form#68
-#, fuzzy
 msgctxt "Form#68"
 msgid "Clean Build Environment after installation"
 msgstr "Wyczyść środowisko budowania po instalacji"
 
 #: Form#69
-#, fuzzy
 msgctxt "Form#69"
 msgid "When Application is in System Tray only"
 msgstr "Gdy aplikacja działa tylko w tacce systemowej"
 
 #: Form#70
-#, fuzzy
 msgctxt "Form#70"
 msgid "Update Database every"
 msgstr "Aktualizuj bazę danych co"
 
 # As in "minutes"
 #: Form#71
-#, fuzzy
 msgctxt "Form#71"
 msgid "min"
 msgstr "min"
 
 #: Form#72
-#, fuzzy
 msgctxt "Form#72"
 msgid "Show tray notification Windows"
 msgstr "Pokaż okna powiadomień tacki systemowej"
 
 #: Form#73
-#, fuzzy
 msgctxt "Form#73"
 msgid "If upgrades are available:"
 msgstr "Gdy aktualizacje są dostępne:"
 
 #: Form#74
-#, fuzzy
 msgctxt "Form#74"
 msgid "Just Notify"
 msgstr "Tylko powiadom"
 
 #: Form#75
-#, fuzzy
 msgctxt "Form#75"
 msgid "Notify and add them to Queue"
 msgstr "Powiadom i dodaj je do kolejki"
 
 #: Form#76
-#, fuzzy
 msgctxt "Form#76"
 msgid "Update Database at"
 msgstr "Aktualizuj bazę danych o"
 
 #: Form#77
-#, fuzzy
 msgctxt "Form#77"
 msgid "Use a proxy-server"
-msgstr "Użyj serwera proxy"
+msgstr "Użyj serwera pośredniczącego"
 
 #: Form#78
-#, fuzzy
 msgctxt "Form#78"
 msgid "IP:"
 msgstr "IP:"
 
 #: Form#79
-#, fuzzy
 msgctxt "Form#79"
 msgid "Port:"
 msgstr "Port:"
 
 #: Form#80
-#, fuzzy
 msgctxt "Form#80"
 msgid "HTTP Proxy"
-msgstr "HTTP Proxy"
+msgstr "Serwer pośredniczący HTTP"
 
 #: Form#81
-#, fuzzy
 msgctxt "Form#81"
 msgid "FTP Proxy"
-msgstr "FTP Proxy"
+msgstr "Serwer pośredniczący FTP"
 
 #: Form#82
-#, fuzzy
 msgctxt "Form#82"
 msgid "Use Shaman RSS Capabilities"
-msgstr "Wykorzystaj możliwości Shaman do odczytu RSS"
+msgstr "Wykorzystaj możliwości Shamana do odczytu RSS"
 
 #: Form#83
-#, fuzzy
 msgctxt "Form#83"
 msgid "Update RSS Feed Every"
 msgstr "Aktualizuj RSS Feed co"
 
 #: Form#84
-#, fuzzy
 msgctxt "Form#84"
 msgid "Notify upon new items"
 msgstr "Powiadamiaj o nowych newsach"
 
 #: Form#85
-#, fuzzy
 msgctxt "Form#85"
 msgid ""
 "Check if there is an unread news about a package in Queue before processing "
 "it"
 msgstr ""
-"Sprawdź czy dostępny jest nieprzeczytany news o pakiecie z kolejki, przed "
-"jej przetworzeniem"
+"Przed przetworzeniem kolejki sprawdzaj, czy są dostępne newsy na temat "
+"pakietów w niej przetwarzanych"
 
 #: Form#86
-#, fuzzy
 msgctxt "Form#86"
 msgid "Interface"
 msgstr "Interfejs"
 
 #: Form#87
-#, fuzzy
 msgctxt "Form#87"
 msgid "Use Animated Tray Icon"
 msgstr "Użyj animowanej ikony w tacce systemowej"
 
 #: Form#88
-#, fuzzy
 msgctxt "Form#88"
 msgid "Start Shaman Automatically on X Startup"
-msgstr "Uruchamiaj Shamana automatycznie przy starcie X'ów"
+msgstr "Uruchamiaj Shamana automatycznie przy starcie serwera X"
 
 #: Form#89
-#, fuzzy
 msgctxt "Form#89"
 msgid "Forbid starting Shaman as root"
-msgstr "Zabroń uruchamiania Shamana jako root"
+msgstr "Zabroń uruchamiania Shamana jako administrator (root)"
 
 #: LocalPackage#1
 msgid "Install Package from File"
@@ -2182,10 +2121,7 @@ msgstr "Wszystkie zależności są spełnione"
 msgid "%n package(s) will be installed as dependencies"
 msgstr ""
 "\n"
-"            \n"
-"            \n"
-"            \n"
-"        "
+"            "
 
 #: MainWindow#1
 msgctxt "MainWindow#1"
@@ -2422,7 +2358,7 @@ msgstr "Zainstaluj pakiet"
 
 #: MainWindow#47
 msgid "Arch Linux Packages (*.pkg.tar.gz)"
-msgstr "Pakiety Arch Linux (*.pkg.tar.gz)"
+msgstr "Pakiety Arch Linuksa (*.pkg.tar.gz)"
 
 #: MainWindow#48
 msgid ""
@@ -2458,6 +2394,29 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Lukas Appelhans "
 "&lt;boom1992@chakra-project.org&gt;</p></body></html>"
 msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Nakładka graficzna na libalpm oparta na Qt</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Licencja: GPLv2+</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Wersja Libalpm: v.%1</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008-2009 Dario Freddi "
+"&lt;drf@chakra-project.org&gt;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Lukas Appelhans "
+"&lt;boom1992@chakra-project.org&gt;</p></body></html>"
 
 #: MainWindow#50
 msgctxt "MainWindow#50"
@@ -2465,8 +2424,9 @@ msgid ""
 "%1 requires installing %2 from IgnorePkg/IgnoreGroup.\n"
 " Install anyway?"
 msgstr ""
-"%1 wymaga instalacji %2 z IgnorePkg/IgnoreGroup\n"
-"Zainstalować mimo wszystko?"
+"%1 wymaga instalacji %2 pakietu oznaczonego jako ignorowany\n"
+"(lub pochodzącego z grupy ignorowanej)\n"
+"Zainstalować mimo tego?"
 
 #: MainWindow#51
 msgctxt "MainWindow#51"
@@ -2474,8 +2434,9 @@ msgid ""
 "%1 is in IgnorePkg/IgnoreGroup.\n"
 " Install anyway?"
 msgstr ""
-"%1 jest w IgnorePkg/IgnoreGroup.\n"
-"Zainstalować mimo wszystko?"
+"%1 jest zaliczony jako pakiet ignorowany.\n"
+"(lub pochodzący z grupy ignorowanej)\n"
+" Zainstalować mimo tego?"
 
 #: MainWindow#52
 msgctxt "MainWindow#52"
@@ -2495,14 +2456,12 @@ msgid ""
 "The following package(s) cannot be upgraded due to unresolvable "
 "dependencies:\n"
 "%1\n"
-"\n"
 "Do you want to skip the above package(s) for this upgrade?"
 msgstr ""
-"\n"
-"            \n"
-"            \n"
-"            \n"
-"        "
+"Następujące pakiety nie mogą zostać zaktualizowane ze względu na "
+"nierozwiązywalne zależności:\n"
+"%1\n"
+"Czy chcesz pominać powyższe pakiety podczas tej aktualizacji?"
 
 #: MainWindow#55
 msgctxt "MainWindow#55"
@@ -2511,7 +2470,7 @@ msgid ""
 "Upgrade anyway?"
 msgstr ""
 "%1-%2: lokalna wersja jest nowsza.\n"
-"Zaktualizować mimo wszystko?"
+"Zaktualizować mimo tego?"
 
 #: MainWindow#56
 msgctxt "MainWindow#56"
@@ -2676,7 +2635,7 @@ msgstr "Przeczytaj news"
 
 #: MainWindow#90
 msgid "View Log"
-msgstr "Przejrzyj Log"
+msgstr "Przejrzyj plik dziennika"
 
 #: MainWindow#91
 msgid ""
@@ -2700,7 +2659,7 @@ msgid ""
 "Do you want to install %1 anyway?"
 msgstr ""
 "Pakiet dostarczający %1 jest obecnie zainstalowany.\n"
-"Czy mimo wszystko chcesz zainstalować %1?"
+"Czy mimo tego chcesz zainstalować %1?"
 
 #: MainWindow#95
 msgid "&File"
@@ -2987,12 +2946,14 @@ msgid "Maintenance Actions"
 msgstr "Operacje konserwacyjne"
 
 #: MirrorWidget#1
+#, fuzzy
 msgctxt "MirrorWidget#1"
 msgid "Form"
 msgstr ""
+"\n"
+"            "
 
 #: MirrorWidget#2
-#, fuzzy
 msgctxt "MirrorWidget#2"
 msgid "Mirror:"
 msgstr "Serwer lustrzany:"
@@ -3000,17 +2961,19 @@ msgstr "Serwer lustrzany:"
 #: MirrorWidget#3
 msgctxt "MirrorWidget#3"
 msgid "Prefer"
-msgstr ""
+msgstr "Preferuj"
 
 #: MirrorWidget#4
 msgctxt "MirrorWidget#4"
 msgid "Defer"
 msgstr ""
+"Unikaj"
+"            "
 
 #: MirrorWidget#5
 msgctxt "MirrorWidget#5"
 msgid "Remove"
-msgstr ""
+msgstr "Usuń"
 
 #: NewsViewer#1
 msgid "Please wait, fetching items..."
@@ -3105,8 +3068,7 @@ msgid "Please Wait..."
 msgstr "Proszę czekać..."
 
 #: QObject#6
-msgid ""
-"Shaman can not be started as root. Please restart it as unprivileged user."
+msgid "Shaman can not be started as root. Please restart it as unprivileged user."
 msgstr ""
 "Shaman nie może być uruchamiany z uprawnieniami roota. Proszę, uruchomić "
 "program ponownie jako zwykły użytkownik."
@@ -3524,43 +3486,42 @@ msgstr "<b>%1</b> zostanie zwolnione"
 msgid "Remove <b>%n package(s)</b><br />"
 msgstr ""
 "\n"
-"            \n"
-"            \n"
-"            \n"
-"        "
+"            "
 
 #: ReviewQueueDialog#17
 msgid "Install/Upgrade <b>%n package(s)</b><br />"
 msgstr ""
 "\n"
-"            \n"
-"            \n"
-"            \n"
-"        "
+"            "
 
 #: ServerWidget#1
+#, fuzzy
 msgctxt "ServerWidget#1"
 msgid "Form"
 msgstr ""
+"\n"
+"            "
 
 #: ServerWidget#2
 msgid "Server:"
-msgstr ""
+msgstr "Serwer:"
 
 #: ServerWidget#3
 msgctxt "ServerWidget#3"
 msgid "Prefer"
-msgstr ""
+msgstr "Preferuj"
 
 #: ServerWidget#4
 msgctxt "ServerWidget#4"
 msgid "Defer"
 msgstr ""
+"Unikaj"
+"            "
 
 #: ServerWidget#5
 msgctxt "ServerWidget#5"
 msgid "Remove"
-msgstr ""
+msgstr "Usuń"
 
 #: ShamanStatusBar#1
 msgid "%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages"
@@ -3660,18 +3621,16 @@ msgid ""
 "Click here to open the News Dialog for more details."
 msgstr ""
 "Wystąpił błąd podczas pobierania newsów!\n"
-"Kliknij tutaj, aby otworzyc Okno Newsów dla uzyskania dalszych informacji."
+"Kliknij tutaj, aby otworzyć Okno Newsów w celu uzyskania dalszych "
+"informacji."
 
 #: ShamanTrayIcon#16
 msgid ""
 "Upgradeable package(s): %n.\n"
 "Click here to upgrade your System."
 msgstr ""
-"\n"
-"            \n"
-"            \n"
-"            \n"
-"        "
+"Pakiety do zaktualizowania: %n\n"
+"Kliknij tutaj, aby zaktualizować system."
 
 #. (obsolete)
 #: SysUpgradeDialog#1
@@ -3706,35 +3665,34 @@ msgid ""
 "<b>Upgradeable package(s): %n</b> You can either<br> upgrade immediately or "
 "add it to the current Queue<br> and process it later."
 msgstr ""
-"\n"
-"            \n"
-"            \n"
-"            \n"
-"        "
+"<b>Pakiet(y) do zaktualizowania: %n</b> Możesz<br> zaktualizować je "
+"natychmiast lub dodać do obecnej kolejki<br> i przetworzyć ją później."
 
 #: ThirdPartyWidget#1
+#, fuzzy
 msgctxt "ThirdPartyWidget#1"
 msgid "Form"
 msgstr ""
+"\n"
+"            "
 
 #: ThirdPartyWidget#2
-#, fuzzy
 msgctxt "ThirdPartyWidget#2"
 msgid "Name"
 msgstr "Nazwa"
 
 #: ThirdPartyWidget#3
 msgid "Databases"
-msgstr ""
+msgstr "Bazy danych"
 
 #: ThirdPartyWidget#4
 msgid "Add"
-msgstr ""
+msgstr "Dodaj"
 
 #: ThirdPartyWidget#5
 msgctxt "ThirdPartyWidget#5"
 msgid "Remove"
-msgstr ""
+msgstr "Usuń"
 
 #: aboutDialog#1
 msgid "About Shaman"
@@ -3959,132 +3917,194 @@ msgid ""
 "Translator</p></body></html>"
 msgstr ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
-"html40/strict.dtd\"><html><head><meta name=\"qrichtext\" content=\"1\" /><style "
-"type=\"text/css\">p, li { white-space: pre-wrap; }</style></head><body style=\" "
-"font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-"
-"style:normal;\"><p style=\" margin-top:0px; margin-bottom:0px; margin-"
-"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
-"size:9pt;\"><span style=\" font-size:10pt;\">Shaman otrzymał wiele wsparcia od "
-"dużej ilości osób i to między innymi dzięki nim Shaman ujrzał światło "
-"dzienne. Jeśli zapomnieliśmy Ciebie tutaj dodać, daj nam znać.</span></p><p "
-"style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Imiona są w kolejności "
-"alfabetycznej, ponieważ nawet najmniejsza pomoc jest dla nas bardzo "
-"ważna.</p><p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-"
-"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
-"indent:0px; font-weight:600;\"></p><p style=\" margin-top:0px; margin-"
-"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
-"indent:0px; font-weight:600;\">Społeczność KDEMod</p><p style=\" margin-"
-"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
-"indent:0; text-indent:0px; font-weight:600;\"><span style=\" font-"
-"weight:400;\">Pomoc, Testowanie, Wsparcie, wszystko zaczęło się tutaj. Gdyby "
-"nie było KDEmod, to prawdopodobnie</span> <span style=\" font-"
-"weight:400;\">nie było by też Shamana</span></p><p style=\"-qt-paragraph-"
-"type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"></p><p style=\" margin-"
-"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
-"indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Giannis "
-"Antoniou</span></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
-"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Greckie "
-"tłumaczenie</p><p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-"
-"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
-"indent:0px;\"></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
-"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
-"style=\" font-weight:600;\">Carlos Berroteran</span></p><p style=\" margin-"
-"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
-"indent:0; text-indent:0px;\">Hiszpańskie tłumaczenie</p><p style=\"-qt-"
-"paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; "
-"margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p><p style=\" "
-"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
-"block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Sander De "
-"Voogdt</span></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
-"left:0px; margin-right:0px; -qt-block-indent:0; text-"
-"indent:0px;\">Holenderskie tłumaczenie</p><p style=\"-qt-paragraph-type:empty; "
-"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
-"block-indent:0; text-indent:0px;\"></p><p style=\" margin-top:0px; margin-"
-"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
-"indent:0px;\"><span style=\" font-weight:600;\">Jacques Disner</span></p><p "
-"style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Francuskie "
-"tłumaczenie</p><p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-"
-"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
-"indent:0px;\"></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
-"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
-"style=\" font-weight:600;\">Jan Dupal</span></p><p style=\" margin-top:0px; "
-"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
-"text-indent:0px;\">Czeskie tłumaczenie</p><p style=\"-qt-paragraph-type:empty; "
-"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
-"block-indent:0; text-indent:0px;\"></p><p style=\" margin-top:0px; margin-"
-"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
-"indent:0px;\"><span style=\" font-weight:600;\">Stefano Giro</span></p><p "
-"style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span "
+"style=\" font-size:10pt;\">Shaman otrzymał mnóstwo pomocy od wielu ludzi, i to "
+"dzięki nim ujrzał światło dzienne. Jeśli zapomnieliśmy dodać Cię do tej "
+"listy, daj nam znać. </span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Imiona są posegregowane w "
+"kolejności alfabetycznej, ponieważ każda, nawet najmniejsza pomoc jest dla "
+"nas istotna.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\">The KDEmod "
+"Community</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
-"style=\" font-weight:400;\">Testowanie i sugestie</span></p><p style=\"-qt-"
-"paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; "
-"margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p><p style=\" "
-"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
-"block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Georg "
-"Grabler</span></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
-"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
-"weight:600;\"><span style=\" font-weight:400;\">Autor łatki Proxy, trochę "
-"pomocy w kodzie i więcej.</span></p><p style=\"-qt-paragraph-type:empty; "
-"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
-"block-indent:0; text-indent:0px;\"></p><p style=\" margin-top:0px; margin-"
-"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
-"indent:0px;\"><span style=\" font-weight:600;\">Michael Knights</span></p><p "
-"style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"style=\" font-weight:400;\">Pomoc, testowanie, wsparcie, wszystko zaczęło się "
+"tutaj. Bez KDEmod'a, zapewne </span> <span style=\" font-weight:400;\">nie "
+"byłoby Shamana.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Giannis Antoniou</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Tłumacz na język Grecki</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Carlos Berroteran</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Tłumacz na język "
+"Hiszpański</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Sander De Voogdt</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Tłumacz na język "
+"Holenderski</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Jacques Disner</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Tłumacz na język "
+"Francuski</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Jan Dupal</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Tłumacz na język Czeski</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Stefano Giro</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Testowanie i sugestie</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Georg Grabler</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Autor poprawki dotyczącej wsparcie serwerów proxy, "
+"pomoc przy kodowaniu i nie tylko.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Michael Knights</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">Twórca opracowania "
-"graficznego, jego propozycja ikony znajduje się teraz w Arxin, ale jego "
-"ekran powitalny jest tutaj wykorzystany ;)</p><p style=\"-qt-paragraph-"
-"type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"></p><p style=\" margin-"
-"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
-"indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Till "
-"Luge</span></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
-"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
-"weight:600;\"><span style=\" font-weight:400;\">Heavy tester, "
-"dzięki!</span></p><p style=\"-qt-paragraph-type:empty; margin-top:0px; "
-"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
-"text-indent:0px;\"></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
-"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
-"style=\" font-weight:600;\">Rodrigo Mazak</span></p><p style=\" margin-top:0px; "
-"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
-"text-indent:0px;\">Brazylijskie tłumaczenie, i to on nadał programowi nazwę "
-"Shaman</p><p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-"
-"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
-"indent:0px; font-weight:600;\"></p><p style=\" margin-top:0px; margin-"
-"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
-"indent:0px; font-weight:600;\">Jan Mette</p><p style=\" margin-top:0px; "
-"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
-"text-indent:0px;\">Niemieckie tłumaczenie i developer KDEMod, również twórca "
-"ikony</p><p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-"
-"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
-"indent:0px;\"></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
-"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
-"style=\" font-weight:600;\">Atilla Ontas</span></p><p style=\" margin-top:0px; "
-"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
-"text-indent:0px;\">Tureckie tłumaczenie</p><p style=\"-qt-paragraph-"
-"type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"></p><p style=\" margin-"
-"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
-"indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Martin "
-"Sandsmark</span></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
-"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Nasz host "
-"i opiekun Trac.</p><p style=\"-qt-paragraph-type:empty; margin-top:0px; "
-"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
-"text-indent:0px;\"></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
-"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
-"style=\" font-weight:600;\">Johannes Schriewer</span></p><p style=\" margin-"
-"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
-"indent:0; text-indent:0px; font-weight:600;\"><span style=\" font-"
-"weight:400;\">KDEmod Developer, oraz trochę pomocy w kodzie "
-"programu.</span></p><p style=\"-qt-paragraph-type:empty; margin-top:0px; "
-"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
-"text-indent:0px;\"></p><p style=\" margin-top:0px; margin-bottom:0px; margin-"
-"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
-"style=\" font-weight:600;\">Xiang Yixiang</span></p><p style=\" margin-top:0px; "
-"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
-"text-indent:0px;\">Chińskie tłumaczenie</p></body></html>"
+"graficznego, Jego ikona służy teraz Arxinowi, ale ekran ładowania znalazł "
+"użytek w Shamanie ;)</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Till Luge</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Bardzo pomocny tester, dzięki!</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Rodrigo Mazak</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Tłumacz na język "
+"Brazylijski, to on wymyślił nazwę Shaman</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\">Jan "
+"Mette</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Tłumacz na język Niemiecki "
+"i programista KDEmod'a, twórca ikony</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Atilla Ontas</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Tłumacz na język "
+"Turecki</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Martin Sandsmark</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Nasz hoster, zarządzający "
+"Trac.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Johannes Schriewer</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Programista KDEmod, a także pomoc przy "
+"kodowaniu.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Xiang Yixiang</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Tłumacz na język "
+"Chiński</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Anton Gritsay</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Tłumacz na język Rosyjski i "
+"autor poprawek odnośnie tłumaczeń</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Maciej Warnecki, Bartek Iwaniec</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Tłumacze na język Polski</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Marko Doda</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Tłumacz na język Polski</span></p></body></html>"
 
 #: aboutDialog#8
 msgid ""
@@ -4279,12 +4299,13 @@ msgstr ""
 "weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span "
-"style=\" font-size:10pt;\">Shaman has received a lot of help from a lot of "
-"people, and it is also thanks to them if Shaman has seen the light. If we "
-"forgot to add you here, let us know.</span></p>\n"
+"style=\" font-size:10pt;\">Shaman otrzymał mnóstwo pomocy od wielu ludzi, i to "
+"dzięki nim ujrzał światło dzienne. Jeśli zapomnieliśmy dodać Cię do tej "
+"listy, daj nam znać. </span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Names are in alphabetical "
-"order, because even the smallest contribution has been important to us.</p>\n"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Imiona są posegregowane w "
+"kolejności alfabetycznej, ponieważ każda, nawet najmniejsza pomoc jest dla "
+"nas istotna.</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
 "font-weight:600;\"></p>\n"
@@ -4293,9 +4314,9 @@ msgstr ""
 "Community</p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
-"style=\" font-weight:400;\">Help, Testing, Support, everything started from "
-"here. If there was no KDEmod, probably</span> <span style=\" font-"
-"weight:400;\">there would be no Shaman</span></p>\n"
+"style=\" font-weight:400;\">Pomoc, testowanie, wsparcie, wszystko zaczęło się "
+"tutaj. Bez KDEmod'a, zapewne </span> <span style=\" font-weight:400;\">nie "
+"byłoby Shamana.</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
 "indent:0px;\"></p>\n"
@@ -4303,7 +4324,7 @@ msgstr ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Giannis Antoniou</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Greek Translator</p>\n"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Tłumacz na język Grecki</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
 "indent:0px;\"></p>\n"
@@ -4311,7 +4332,8 @@ msgstr ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Carlos Berroteran</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Spanish Translator</p>\n"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Tłumacz na język "
+"Hiszpański</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
 "indent:0px;\"></p>\n"
@@ -4319,7 +4341,8 @@ msgstr ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Sander De Voogdt</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Dutch Translator</p>\n"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Tłumacz na język "
+"Holenderski</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
 "indent:0px;\"></p>\n"
@@ -4327,7 +4350,8 @@ msgstr ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Jacques Disner</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">French Translator</p>\n"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Tłumacz na język "
+"Francuski</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
 "indent:0px;\"></p>\n"
@@ -4335,7 +4359,7 @@ msgstr ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Jan Dupal</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Czech Translator</p>\n"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Tłumacz na język Czeski</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
 "indent:0px;\"></p>\n"
@@ -4344,7 +4368,7 @@ msgstr ""
 "weight:600;\">Stefano Giro</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
-"style=\" font-weight:400;\">Testing and Suggestions</span></p>\n"
+"style=\" font-weight:400;\">Testowanie i sugestie</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
 "indent:0px;\"></p>\n"
@@ -4353,8 +4377,8 @@ msgstr ""
 "weight:600;\">Georg Grabler</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
-"style=\" font-weight:400;\">Author of the Proxy patch, some help on the code "
-"and more.</span></p>\n"
+"style=\" font-weight:400;\">Autor poprawki dotyczącej wsparcie serwerów proxy, "
+"pomoc przy kodowaniu i nie tylko.</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
 "indent:0px;\"></p>\n"
@@ -4362,8 +4386,9 @@ msgstr ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Michael Knights</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Artwork creator, his icon "
-"proposal lies now in Arxin, but his splashscreen is in here ;)</p>\n"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Twórca opracowania "
+"graficznego, Jego ikona służy teraz Arxinowi, ale ekran ładowania znalazł "
+"użytek w Shamanie ;)</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
 "indent:0px;\"></p>\n"
@@ -4372,7 +4397,7 @@ msgstr ""
 "weight:600;\">Till Luge</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
-"style=\" font-weight:400;\">Heavy tester, thanks!</span></p>\n"
+"style=\" font-weight:400;\">Bardzo pomocny tester, dzięki!</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
 "indent:0px;\"></p>\n"
@@ -4380,8 +4405,8 @@ msgstr ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Rodrigo Mazak</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Brazilian Translator, and "
-"gave the name Shaman</p>\n"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Tłumacz na język "
+"Brazylijski, to on wymyślił nazwę Shaman</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
 "font-weight:600;\"></p>\n"
@@ -4389,8 +4414,8 @@ msgstr ""
 "right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\">Jan "
 "Mette</p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">German Translation and "
-"KDEmod Developer, also the creator of the Icon</p>\n"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Tłumacz na język Niemiecki "
+"i programista KDEmod'a, twórca ikony</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
 "indent:0px;\"></p>\n"
@@ -4398,7 +4423,8 @@ msgstr ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Atilla Ontas</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Turkish Translator</p>\n"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Tłumacz na język "
+"Turecki</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
 "indent:0px;\"></p>\n"
@@ -4406,8 +4432,8 @@ msgstr ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Martin Sandsmark</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Our hoster, and maintainer "
-"of Trac.</p>\n"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Nasz hoster, zarządzający "
+"Trac.</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
 "indent:0px;\"></p>\n"
@@ -4416,8 +4442,8 @@ msgstr ""
 "weight:600;\">Johannes Schriewer</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
-"style=\" font-weight:400;\">KDEmod Developer, and also some help on the "
-"code.</span></p>\n"
+"style=\" font-weight:400;\">Programista KDEmod, a także pomoc przy "
+"kodowaniu.</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
 "indent:0px;\"></p>\n"
@@ -4425,7 +4451,8 @@ msgstr ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Xiang Yixiang</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Chinese Translator</p>\n"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Tłumacz na język "
+"Chiński</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
 "indent:0px;\"></p>\n"
@@ -4433,17 +4460,17 @@ msgstr ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Anton Gritsay</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Russian Translator and "
-"Patches related to Translations</p>\n"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Tłumacz na język Rosyjski i "
+"autor poprawek odnośnie tłumaczeń</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
 "indent:0px;\"></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">Bartek Iwaniec</span></p>\n"
+"weight:600;\">Maciej Warnecki, Bartek Iwaniec</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
-"style=\" font-weight:400;\">Polish Translator</span></p>\n"
+"style=\" font-weight:400;\">Tłumacze na język Polski</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
 "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
 "indent:0px;\"></p>\n"
@@ -4452,7 +4479,8 @@ msgstr ""
 "weight:600;\">Marko Doda</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
-"style=\" font-weight:400;\">Macedonian Translator</span></p></body></html>"
+"style=\" font-weight:400;\">Tłumacz na język "
+"Macedoński</span></p></body></html>"
 
 #: authDialog#1
 msgid "Root Password Required"
@@ -4533,7 +4561,7 @@ msgstr "Edytowanie PKGBUILD"
 
 #: editPBDialog#2
 msgid "Editing PKGBUILD of:"
-msgstr "Edytowanie PKGBUILD:"
+msgstr "Edytowanie PKGBUILD pakietu:"
 
 #: editPBDialog#3
 msgid "Save"
@@ -4622,7 +4650,7 @@ msgstr "dd/MM/rrrr"
 
 #: newsDialog#1
 msgid "Arch Linux News"
-msgstr "Newsy Arch Linux"
+msgstr "Newsy Arch Linuksa"
 
 #: newsDialog#2
 msgid "Link"
@@ -4925,3 +4953,5 @@ msgstr "Pakiety do zaktualizowania"
 msgctxt "upgradeDialog#9"
 msgid "Force Queue Processing"
 msgstr "Wymuś przetworzenie kolejki"
+
+
