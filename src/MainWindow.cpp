@@ -1980,7 +1980,7 @@ void MainWindow::streamTransQuestion(Aqpm::Globals::TransactionQuestion event, Q
                   .arg(args["NewPackageRepo"].toString()).arg(args["NewPackage"].toString());
         break;
     case Aqpm::Globals::PackageConflict:
-        message = QString(tr("%1 conflicts with %2.\nRemove %2?")).arg(args["OldPackage"].toString())
+        message = QString(tr("%1 conflicts with %2.\nRemove %1?")).arg(args["OldPackage"].toString())
                   .arg(args["NewPackage"].toString());
         break;
     case Aqpm::Globals::UnresolvedDependencies:
