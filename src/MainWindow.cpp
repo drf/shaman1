@@ -51,6 +51,7 @@
 
 #include <aqpm/Backend.h>
 #include <aqpm/Globals.h>
+#include <aqpm/AbsBackend.h>
 
 #include <iostream>
 #include <alpm.h>
@@ -2020,7 +2021,24 @@ void MainWindow::streamTransQuestion(Aqpm::Globals::TransactionQuestion event, Q
 
 void MainWindow::updateABSTree()
 {
-
+    QDialog *dialog = new QDialog(this);
+    dialog->setModal(true);
+    dialog->setWindowTitle(tr("Updating ABS tree"));
+    QLabel *lbl = new QLabel("<b>Please wait, updating ABS tree...</b>");
+    QLabel *progress = new QLabel();
+    QProgressBar *pBar = new QProgressBar();
+    QVBoxLayout *lay = new QVBoxLayout();
+    pBar->setRange(0,0);
+    connect(Abs::Backend::instance(), SIGNAL(operationProgress(QString)), progress, SLOT(setText(QString)));
+    connect(Abs::Backend::instance(), SIGNAL(operationFinished(bool)), dialog, SLOT(deleteLater()));
+    lay->addWidget(lbl);
+    lay->addWidget(progress);
+    lay->addWidget(pBar);
+    lay->addStretch();
+    lay->setSpacing(15);
+    dialog->setLayout(lay);
+    dialog->show();
+    Abs::Backend::instance()->updateAll();
 }
 
 void MainWindow::initSourceQueue()
