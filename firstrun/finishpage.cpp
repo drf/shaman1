@@ -18,21 +18,19 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 
 */
 
-#include "kdepage.h"
+#include "finishpage.h"
 #include <QLabel>
 #include <QVBoxLayout>
 
-KDEPage::KDEPage(QWidget* parent)
-: QWizardPage(parent)
+FinishPage::FinishPage(QWidget* parent)
+        : QWizardPage(parent)
 {
-    setTitle(tr("Perfectly integrated with your desktop"));
-    setSubTitle(tr("We focused our efforts in integrating Shaman in KDE at its best"));
+    setTitle(tr("Dive in!"));
 
-    QLabel *lbl = new QLabel(tr("Even if Shaman is a Qt-only application, we are KDE fans, and you should know "
-                                "that. So, we made Shaman look better inside your KDE desktop, by using Plasma notifications and "
-                                "KDE icons.\n\nThere are also some killer features you will surely like: all package downloads through "
-                                "Aqpm will follow your KDE network settings (proxy included), and Shaman/Aqpm configuration "
-                                "is available in systemsettings, where you have a \"Package Management\" section."));
+    QLabel *lbl = new QLabel(tr("What you've seen are just some of the cool features in Shaman, and there's only "
+                                "one way to find your favorite one - trying it!\n\nWe sincerely hope you will enjoy"
+                                "using Shaman and Aqpm. To report bugs, share your opinion, getting involved, use "
+                                "the contacts below:\n\nhttp://chakra-project.org/bbs\n\nshaman@chakra-project.org"));
     lbl->setWordWrap(true);
 
     QVBoxLayout *lay = new QVBoxLayout();
@@ -40,8 +38,8 @@ KDEPage::KDEPage(QWidget* parent)
     setLayout(lay);
 }
 
-KDEPage::~KDEPage()
+FinishPage::~FinishPage()
 {
-    
+
 }
 

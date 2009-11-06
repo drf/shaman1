@@ -31,6 +31,7 @@
 #endif
 #include "configurationpage.h"
 #include "kdepage.h"
+#include "finishpage.h"
 
 FirstRunWizard::FirstRunWizard(QWidget* parent, Qt::WindowFlags flags)
         : QWizard(parent, flags)
@@ -43,6 +44,7 @@ FirstRunWizard::FirstRunWizard(QWidget* parent, Qt::WindowFlags flags)
 #ifdef KDE4_INTEGRATION
     addPage(new KDEPage);
 #endif
+    addPage(new FinishPage);
 
 #ifdef KDE4_INTEGRATION
     QAbstractButton *bt = button(CancelButton);

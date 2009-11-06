@@ -29,11 +29,11 @@ ConfigurationPage::ConfigurationPage(QWidget* parent)
     setSubTitle(tr("Aqpm's new configuration system lets you fine tune every preference for package management"));
 
     QLabel *lbl = new QLabel(tr("Shaman configuration system was rewritten from scratch, since the old one was "
-                                "not perfect and quite unmaintainable. The first main difference is that Shaman, "
+                                "not perfect and quite unmaintainable.\n\nThe first main difference is that Shaman, "
                                 "just like every other application using Aqpm, is no longer using pacman.conf, but "
                                 "aqpm.conf. The syntax is similar to pacman.conf's one, but it's mainly meant to be "
                                 "edited using the new configuration UI, that now lets you even order your repository "
-                                "to configure their priorities. Of course, you don't have to lose your old habits: "
+                                "to configure their priorities.\n\nOf course, you don't have to lose your old habits: "
                                 "as you are reading this paragraph, a new aqpm.conf was generated from your pacman.conf, "
                                 "if you had one."));
     lbl->setWordWrap(true);

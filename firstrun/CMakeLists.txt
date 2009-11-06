@@ -5,6 +5,7 @@ set(shaman_firstrun_SRCS ${shaman_firstrun_adaptor_SRCS} ${shaman_firstrun_confi
     firstrun_main.cpp
     configurationpage.cpp
     kdepage.cpp
+    finishpage.cpp
 )
 
 # set(shaman_firstrun_UIS ${shaman_firstrun_config_UIS}

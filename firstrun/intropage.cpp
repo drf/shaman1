@@ -30,7 +30,7 @@ IntroPage::IntroPage(QWidget* parent)
     QLabel *lbl = new QLabel("It looks like it is the first time you are starting Shaman. Shaman is an extremely powerful "
                              "package manager, based upon Aqpm, a library implementing and extending Arch Linux's package "
                              "management library, to provide you an integrated, easy and secure package management system. "
-                             "A lot of things are new in this version of Shaman, and there are also some things you surely "
+                             "\n\nA lot of things are new in this version of Shaman, and there are also some things you surely "
                              "need to know.\n\nWanna take a small tour?");
     lbl->setWordWrap(true);
 

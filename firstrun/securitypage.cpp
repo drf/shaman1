@@ -29,10 +29,10 @@ SecurityPage::SecurityPage(QWidget* parent)
     setSubTitle(tr("Using modern technologies such as PolicyKit, Shaman delivers a secure user experience"));
 
     QLabel *lbl = new QLabel(tr("When designing the new Shaman, security was one of the primary concerns, and one "
-                                "of the things which needed vast improvements against the previous versions. Aqpm, "
+                                "of the things which needed vast improvements against the previous versions.\n\nAqpm, "
                                 "the library underneath Shaman, is designed to be run as a standard user, and uses "
                                 "privilege elevation through PolicyKit, granting you both authorization fine tuning "
-                                "for package management, and total security over the whole process. With Shaman/Aqpm, "
+                                "for package management, and total security over the whole process.\n\nWith Shaman/Aqpm, "
                                 "even package download happens as unprivileged user."));
     lbl->setWordWrap(true);
 
