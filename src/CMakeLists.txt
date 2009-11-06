@@ -29,13 +29,9 @@ set(shaman_SRCS ${shaman_adaptor_SRCS} ${shaman_config_SRCS}
     main.cpp
     MainWindow.cpp
     Shaman.cpp
-    BuildingDialog.cpp
-    EditPBuild.cpp
     QueueDialog.cpp
     SysUpgradeDialog.cpp
     UpdateDbDialog.cpp
-    ABSHandler.cpp
-    BuildingHandler.cpp
     kanimatedsystemtrayicon.cpp
     ShamanTrayIcon.cpp
     ReviewQueueDialog.cpp
@@ -88,6 +84,7 @@ target_link_libraries(shaman
     ${QT_QTNETWORK_LIBRARY}
     ${POLKITQT_LIBRARIES}
     ${AQPM_LIBRARY}
+    aqpmabs
 )
 
 if (KDE4_INTEGRATION)

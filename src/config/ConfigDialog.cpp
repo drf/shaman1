@@ -20,7 +20,6 @@
 
 #include "ConfigDialog.h"
 
-#include "ABSHandler.h"
 #include "ShamanDialog.h"
 
 #include <aqpm/Backend.h>

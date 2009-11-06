@@ -1,7 +1,8 @@
-<ui version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>reviewBuildingDialog</class>
- <widget class="QDialog" name="reviewBuildingDialog" >
-  <property name="geometry" >
+ <widget class="QDialog" name="reviewBuildingDialog">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
@@ -9,62 +10,62 @@
     <height>294</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>Review Building Queue</string>
   </property>
-  <property name="windowIcon" >
-   <iconset resource="shaman.qrc" >
+  <property name="windowIcon">
+   <iconset resource="shaman.qrc">
     <normaloff>:/Icons/icons/shaman/shaman-yellow-icon-32.png</normaloff>:/Icons/icons/shaman/shaman-yellow-icon-32.png</iconset>
   </property>
-  <layout class="QGridLayout" >
-   <item row="0" column="0" >
-    <layout class="QVBoxLayout" >
+  <layout class="QGridLayout">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout">
      <item>
-      <widget class="QFrame" name="frame" >
-       <property name="sizePolicy" >
-        <sizepolicy vsizetype="Maximum" hsizetype="Minimum" >
+      <widget class="QFrame" name="frame">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
-       <property name="frameShape" >
+       <property name="frameShape">
         <enum>QFrame::StyledPanel</enum>
        </property>
-       <property name="frameShadow" >
+       <property name="frameShadow">
         <enum>QFrame::Sunken</enum>
        </property>
-       <layout class="QGridLayout" >
-        <item row="0" column="0" >
-         <widget class="QLabel" name="label" >
-          <property name="text" >
-           <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+       <layout class="QGridLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Liberation Sans'; font-size:10pt; font-weight:400; font-style:normal;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif';">&lt;span style=" font-weight:600;">Build Queue From Source&lt;/span>&lt;/p>&lt;/body>&lt;/html></string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Liberation Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif';&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Build Queue From Source&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>
-        <item row="0" column="1" >
-         <widget class="QLabel" name="label_2" >
-          <property name="sizePolicy" >
-           <sizepolicy vsizetype="Maximum" hsizetype="Maximum" >
+        <item row="0" column="1">
+         <widget class="QLabel" name="label_2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
-          <property name="minimumSize" >
+          <property name="minimumSize">
            <size>
             <width>32</width>
             <height>32</height>
            </size>
           </property>
-          <property name="text" >
+          <property name="text">
            <string/>
           </property>
-          <property name="pixmap" >
-           <pixmap resource="shaman.qrc" >:/Icons/icons/applications-development.png</pixmap>
+          <property name="pixmap">
+           <pixmap resource="shaman.qrc">:/Icons/icons/applications-development.png</pixmap>
           </property>
-          <property name="scaledContents" >
+          <property name="scaledContents">
            <bool>true</bool>
           </property>
          </widget>
@@ -73,64 +74,64 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="infoLabel" >
-       <property name="text" >
+      <widget class="QLabel" name="infoLabel">
+       <property name="text">
         <string/>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QCheckBox" name="depsWizardBox" >
-       <property name="text" >
+      <widget class="QCheckBox" name="depsWizardBox">
+       <property name="text">
         <string>Process All Dependencies from Binary First (advised)</string>
        </property>
-       <property name="checked" >
+       <property name="checked">
         <bool>false</bool>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QCheckBox" name="noProcessBox" >
-       <property name="toolTip" >
+      <widget class="QCheckBox" name="noProcessBox">
+       <property name="toolTip">
         <string>This is useful if you want to review compiler's output</string>
        </property>
-       <property name="text" >
+       <property name="text">
         <string>Do not install immediately when building is finished</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QCheckBox" name="turnOffBox" >
-       <property name="toolTip" >
+      <widget class="QCheckBox" name="turnOffBox">
+       <property name="toolTip">
         <string/>
        </property>
-       <property name="text" >
+       <property name="text">
         <string>Turn off PC when Queue is done</string>
        </property>
       </widget>
      </item>
      <item>
-      <layout class="QHBoxLayout" >
+      <layout class="QHBoxLayout">
        <item>
-        <widget class="QPushButton" name="showPackages" >
-         <property name="text" >
+        <widget class="QPushButton" name="showPackages">
+         <property name="text">
           <string>Show packages...</string>
          </property>
-         <property name="icon" >
-          <iconset resource="shaman.qrc" >
+         <property name="icon">
+          <iconset resource="shaman.qrc">
            <normaloff>:/Icons/icons/view-list-tree.png</normaloff>:/Icons/icons/view-list-tree.png</iconset>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>true</bool>
          </property>
         </widget>
        </item>
        <item>
         <spacer>
-         <property name="orientation" >
+         <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
-         <property name="sizeHint" stdset="0" >
+         <property name="sizeHint" stdset="0">
           <size>
            <width>40</width>
            <height>20</height>
@@ -141,44 +142,44 @@ p, li { white-space: pre-wrap; }
       </layout>
      </item>
      <item>
-      <widget class="QTreeWidget" name="treeWidget" >
+      <widget class="QTreeWidget" name="treeWidget">
        <column>
-        <property name="text" >
+        <property name="text">
          <string>Packages In Queue</string>
         </property>
        </column>
       </widget>
      </item>
      <item>
-      <layout class="QHBoxLayout" >
+      <layout class="QHBoxLayout">
        <item>
-        <widget class="QPushButton" name="abortButton" >
-         <property name="text" >
+        <widget class="QPushButton" name="abortButton">
+         <property name="text">
           <string>Abort</string>
          </property>
-         <property name="icon" >
-          <iconset resource="shaman.qrc" >
+         <property name="icon">
+          <iconset resource="shaman.qrc">
            <normaloff>:/Icons/icons/dialog-cancel.png</normaloff>:/Icons/icons/dialog-cancel.png</iconset>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="binaryButton" >
-         <property name="text" >
+        <widget class="QPushButton" name="binaryButton">
+         <property name="text">
           <string>Process From Binary</string>
          </property>
-         <property name="icon" >
-          <iconset resource="shaman.qrc" >
+         <property name="icon">
+          <iconset resource="shaman.qrc">
            <normaloff>:/Icons/icons/edit-redo.png</normaloff>:/Icons/icons/edit-redo.png</iconset>
          </property>
         </widget>
        </item>
        <item>
         <spacer>
-         <property name="orientation" >
+         <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
-         <property name="sizeHint" stdset="0" >
+         <property name="sizeHint" stdset="0">
           <size>
            <width>40</width>
            <height>20</height>
@@ -187,23 +188,23 @@ p, li { white-space: pre-wrap; }
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pBuildButton" >
-         <property name="text" >
-          <string>Review PKGBUILDs</string>
+        <widget class="QPushButton" name="pBuildButton">
+         <property name="text">
+          <string>Review Build options</string>
          </property>
-         <property name="icon" >
-          <iconset resource="shaman.qrc" >
+         <property name="icon">
+          <iconset resource="shaman.qrc">
            <normaloff>:/Icons/icons/draw-text.png</normaloff>:/Icons/icons/draw-text.png</iconset>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="sourceButton" >
-         <property name="text" >
+        <widget class="QPushButton" name="sourceButton">
+         <property name="text">
           <string>Process From Source</string>
          </property>
-         <property name="icon" >
-          <iconset resource="shaman.qrc" >
+         <property name="icon">
+          <iconset resource="shaman.qrc">
            <normaloff>:/Icons/icons/dialog-ok-apply.png</normaloff>:/Icons/icons/dialog-ok-apply.png</iconset>
          </property>
         </widget>
@@ -215,7 +216,7 @@ p, li { white-space: pre-wrap; }
   </layout>
  </widget>
  <resources>
-  <include location="shaman.qrc" />
+  <include location="shaman.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -32,10 +32,6 @@
 #include <kcmultidialog.h>
 #endif
 
-#include "BuildingDialog.h"
-#include "EditPBuild.h"
-#include "ABSHandler.h"
-#include "BuildingHandler.h"
 #include "ShamanTrayIcon.h"
 #include "ui_aboutDialog.h"
 #include "shamanadaptor.h"
@@ -285,6 +281,14 @@ MainWindow::MainWindow(QMainWindow *parent)
     mToolBar->insertAction(actionUpgrade_System, actionProcess_Queue);
     menuActions->insertAction(actionUpgrade_System, actionProcess_Queue);
 
+    PolkitQt::Action *actionUpdate_ABS_Tree = new PolkitQt::Action("org.chakraproject.aqpm.updateabs", this);
+    actionUpdate_ABS_Tree->setText(tr("Update ABS Tree"));
+    actionUpdate_ABS_Tree->setIcon(QIcon(":/Icons/icons/document-open-remote.png"));
+    connect(actionUpdate_ABS_Tree, SIGNAL(triggered(bool)), actionUpdate_ABS_Tree, SLOT(activate()));
+    connect(actionUpdate_ABS_Tree, SIGNAL(activated()), this, SLOT(updateABSTree()));
+    menuInstall_and_Build_from_Source->addAction(actionUpdate_ABS_Tree);
+    menuInstall_and_Build_from_Source->addSeparator();
+
     connect(Backend::instance(), SIGNAL(streamTransQuestion(Aqpm::Globals::TransactionQuestion, QVariantMap)), this,
             SLOT(streamTransQuestion(Aqpm::Globals::TransactionQuestion, QVariantMap)));
     connect(pkgsViewWG, SIGNAL(customContextMenuRequested(const QPoint &)),
@@ -305,7 +309,6 @@ MainWindow::MainWindow(QMainWindow *parent)
     connect(actionQuit, SIGNAL(triggered()), SLOT(quitApp()));
     connect(actionAbout, SIGNAL(triggered()), SLOT(showAboutDialog()));
     connect(actionInstall_Package_From_File, SIGNAL(triggered()), SLOT(getPackageFromFile()));
-    connect(actionUpdate_ABS_Tree, SIGNAL(triggered()), SLOT(updateABSTree()));
     connect(actionBuild_and_Install_Selected, SIGNAL(triggered()), SLOT(initSourceQueue()));
     connect(actionCancel_all_actions, SIGNAL(triggered()), SLOT(cancelAllActions()));
     connect(actionReadNews, SIGNAL(triggered()), SLOT(openNewsDialog()));
@@ -2017,31 +2020,15 @@ void MainWindow::streamTransQuestion(Aqpm::Globals::TransactionQuestion event, Q
 
 void MainWindow::updateABSTree()
 {
-    bHandler = new BuildingHandler(this);
 
-    bHandler->updateABSTree();
-
-    connect(bHandler, SIGNAL(outOfScope()), SLOT(terminatedBuildingHandling()));
-    connect(bHandler, SIGNAL(buildingFinished()), SIGNAL(buildingFinished()));
-    connect(bHandler, SIGNAL(buildingStarted()), SIGNAL(buildingStarted()));
 }
 
 void MainWindow::initSourceQueue()
 {
-    qDebug() << "Starting Building Handler";
-
-    bHandler = new BuildingHandler(this);
-
-    bHandler->validateSourceQueue();
-
-    connect(bHandler, SIGNAL(outOfScope()), SLOT(terminatedBuildingHandling()));
-    connect(bHandler, SIGNAL(buildingFinished()), SIGNAL(buildingFinished()));
-    connect(bHandler, SIGNAL(buildingStarted()), SIGNAL(buildingStarted()));
 }
 
 void MainWindow::terminatedBuildingHandling()
 {
-    bHandler->deleteLater();
 }
 
 QList<QTreeWidgetItem *> MainWindow::getInstallPackagesInWidgetQueue()

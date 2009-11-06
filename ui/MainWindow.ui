@@ -497,7 +497,7 @@
      <x>0</x>
      <y>0</y>
      <width>1195</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -520,8 +520,6 @@
      <property name="title">
       <string>Build and Install from Source</string>
      </property>
-     <addaction name="actionUpdate_ABS_Tree"/>
-     <addaction name="separator"/>
      <addaction name="actionBuild_and_Install_Selected"/>
     </widget>
     <addaction name="actionUpgrade_System"/>
@@ -607,15 +605,6 @@
    </property>
    <property name="menuRole">
     <enum>QAction::TextHeuristicRole</enum>
-   </property>
-  </action>
-  <action name="actionUpdate_ABS_Tree">
-   <property name="icon">
-    <iconset resource="shaman.qrc">
-     <normaloff>:/Icons/icons/document-open-remote.png</normaloff>:/Icons/icons/document-open-remote.png</iconset>
-   </property>
-   <property name="text">
-    <string>Update ABS Tree</string>
    </property>
   </action>
   <action name="actionBuild_and_Install_Selected">
