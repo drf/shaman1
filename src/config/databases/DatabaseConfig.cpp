@@ -130,14 +130,22 @@ void DatabaseConfig::init()
     connect(m_ui->KDEMod4TestingBox, SIGNAL(stateChanged(int)), this, SLOT(changed()));
     connect(m_ui->KDEMod4UnstableBox, SIGNAL(stateChanged(int)), this, SLOT(changed()));
     connect(m_ui->dbOrderList, SIGNAL(indexesMoved(QModelIndexList)), this, SLOT(changed()));
+
+    connect(m_ui->coreBox, SIGNAL(stateChanged(int)), this, SLOT(updateDatabaseList()));
+    connect(m_ui->communityBox, SIGNAL(stateChanged(int)), this, SLOT(updateDatabaseList()));
+    connect(m_ui->extraBox, SIGNAL(stateChanged(int)), this, SLOT(updateDatabaseList()));
+    connect(m_ui->testingBox, SIGNAL(stateChanged(int)), this, SLOT(updateDatabaseList()));
+    connect(m_ui->KDEMod3Box, SIGNAL(stateChanged(int)), this, SLOT(updateDatabaseList()));
+    connect(m_ui->KDEMod4Box, SIGNAL(stateChanged(int)), this, SLOT(updateDatabaseList()));
+    connect(m_ui->KDEMod4ExtragearBox, SIGNAL(stateChanged(int)), this, SLOT(updateDatabaseList()));
+    connect(m_ui->KDEMod4PlaygroundBox, SIGNAL(stateChanged(int)), this, SLOT(updateDatabaseList()));
+    connect(m_ui->KDEMod4TestingBox, SIGNAL(stateChanged(int)), this, SLOT(updateDatabaseList()));
+    connect(m_ui->KDEMod4UnstableBox, SIGNAL(stateChanged(int)), this, SLOT(updateDatabaseList()));
 }
 
 void DatabaseConfig::load()
 {
     Database::List repos = Backend::instance()->getAvailableDatabases();
-
-    // Now set the databases
-    m_ui->dbOrderList->addItems(Configuration::instance()->databases());
 
     foreach (const Database &db, repos) {
         if (db.name() == "core") {
@@ -184,6 +192,10 @@ void DatabaseConfig::load()
         addThirdPartyWidget(string);
     }
     m_thirdPartyLay->addStretch();
+
+    // Now set the databases
+    m_ui->dbOrderList->clear();
+    m_ui->dbOrderList->addItems(Configuration::instance()->databases());
 
 #ifdef KDE4_INTEGRATION
     emit changed(false);
@@ -473,7 +485,7 @@ void DatabaseConfig::updateDatabaseList()
     qDebug() << m_ui->dbOrderList->count();
 
     // Any removals?
-    if (databases.count() < m_ui->dbOrderList->count() - 1) {
+    if (databases.count() < m_ui->dbOrderList->count()) {
         for (int i = 0; i < m_ui->dbOrderList->count(); ++i) {
             qDebug() << m_ui->dbOrderList->item(i)->text();
             if (!databases.contains(m_ui->dbOrderList->item(i)->text())) {
