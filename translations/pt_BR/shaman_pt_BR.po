@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-08 14:50+0200\n"
+"POT-Creation-Date: 2009-11-07 17:51+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.3.0\n"
+"X-Generator: Translate Toolkit 1.4.1\n"
 
 #. (obsolete)
 #: AlpmHandler#1
@@ -38,11 +38,84 @@ msgstr ": %1 existe no sistema"
 msgid "Alpm did not give further details."
 msgstr "Alpm não deu detalhes adicionais."
 
+#: AqpmConfig#1
+msgid "Packages and Paths"
+msgstr ""
+
+#: AqpmConfig#2
+#, fuzzy
+msgctxt "AqpmConfig#2"
+msgid "IgnorePkgs:"
+msgstr "IgnorePkgs:"
+
+#: AqpmConfig#3
+#, fuzzy
+msgctxt "AqpmConfig#3"
+msgid "IgnoreGroups:"
+msgstr "IgnoreGroups:"
+
+#: AqpmConfig#4
+#, fuzzy
+msgctxt "AqpmConfig#4"
+msgid "NoUpgrade:"
+msgstr "NoUpgrade:"
+
+#: AqpmConfig#5
+#, fuzzy
+msgctxt "AqpmConfig#5"
+msgid "NoExtract:"
+msgstr "NoExtract:"
+
+#: AqpmConfig#6
+#, fuzzy
+msgctxt "AqpmConfig#6"
+msgid "Log File:"
+msgstr "Arquivo de log:"
+
+#: AqpmConfig#7
+#, fuzzy
+msgctxt "AqpmConfig#7"
+msgid "Advanced"
+msgstr "Avançado"
+
+#: AqpmConfig#8
+#, fuzzy
+msgctxt "AqpmConfig#8"
+msgid "Use SysLog"
+msgstr "Usar SysLog"
+
+#: AqpmConfig#9
+#, fuzzy
+msgctxt "AqpmConfig#9"
+msgid "Use Deltas (needs xdelta to be installed)"
+msgstr "Usar deltas (requer xdelta instalado)"
+
+#: AqpmConfig#10
+msgid "Aqpm Options"
+msgstr ""
+
+#: AqpmConfig#11
+msgid "Use multi-server download (EXPERIMENTAL)"
+msgstr ""
+
+#: AqpmConfig#12
+#, fuzzy
+msgctxt "AqpmConfig#12"
+msgid "Error"
+msgstr "Erro"
+
+#: AqpmConfig#13
+msgctxt "AqpmConfig#13"
+msgid "There has been a problem while saving the configuration!"
+msgstr ""
+
+#. (obsolete)
 #: BuildingDialog#1
 msgctxt "BuildingDialog#1"
 msgid "Error"
 msgstr "Erro"
 
+#. (obsolete)
 #: BuildingDialog#2
 msgid ""
 "Would you like to abort building?.\n"
@@ -51,6 +124,7 @@ msgstr ""
 "Gostaria de cancelar a construção?\n"
 "Todo o processo será perdido."
 
+#. (obsolete)
 #: BuildingDialog#3
 msgid "<br><br><b>Building Process Aborted by the User. Building Failed.</b>"
 msgstr "<br><br><b>Construção cancelada pelo usuário. Construção falhou.</b>"
@@ -65,51 +139,63 @@ msgstr "Atualizando árvore ABS..."
 msgid "<b>Starting ABS Tree Update...</b><br><br>"
 msgstr "<b>Iniciando atualização da árvore ABS...</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#6
 msgid "<br><br><b>ABS Tree Was Successfully Updated!</b>"
 msgstr "<br><br><b>Árvore do ABS atualizada com sucesso!</b>"
 
+#. (obsolete)
 #: BuildingDialog#7
 msgid "ABS Update"
 msgstr "Atualização do ABS"
 
+#. (obsolete)
 #: BuildingDialog#8
 msgid "Your ABS Tree was updated!"
 msgstr "Árvore ABS atualizada!"
 
+#. (obsolete)
 #: BuildingDialog#9
 msgid "<b>Building %1 failed!!</b><br><br>"
 msgstr "<b>Construção de %1 falhou!!</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#10
 msgid "<b>%1 was built successfully!!</b><br><br>"
 msgstr "<b>%1 foi construído com sucesso!!</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#11
 msgid "Processing Package %1 of %2..."
 msgstr "Processando pacote %1 de %2..."
 
+#. (obsolete)
 #: BuildingDialog#12
 msgid "Building %1..."
 msgstr "Construindo %1..."
 
+#. (obsolete)
 #: BuildingDialog#13
 msgid "<b>Building %1...</b><br><br>"
 msgstr "<b>Construindo %1...</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#14
 msgid "<b>Building operation has started.</b><br><br>"
 msgstr "<b>Operação de construção iniciada.</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#15
 msgid "<b>Could not set up the environment correctly for %1!!</b><br><br>"
 msgstr ""
 "<b>Não foi possível configurar o ambiente corretamente para %1!!</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#16
 msgid "Could not update the ABS Tree!"
 msgstr "não foi possível atualizar a árvore ABS!"
 
+#. (obsolete)
 #: BuildingHandler#1
 msgid ""
 "You need to have ABS installed to use Shaman's\n"
@@ -118,11 +204,13 @@ msgstr ""
 "Você precisa ter o ABS instalado para usar o recurso\n"
 "de construção do Shaman. Deseja instalá-lo agora?"
 
+#. (obsolete)
 #: BuildingHandler#2
 msgctxt "BuildingHandler#2"
 msgid "Error"
 msgstr "Erro"
 
+#. (obsolete)
 #: BuildingHandler#3
 msgid ""
 "You can not remove packages when processing\n"
@@ -131,6 +219,7 @@ msgstr ""
 "Você não pode remover pacotes durante o processo\n"
 "da fila da fonte"
 
+#. (obsolete)
 #: BuildingHandler#4
 msgid ""
 "Some of your packages do not belong to Arch\n"
@@ -171,26 +260,31 @@ msgstr ""
 "partir dos pacotes binários. Antes de continuar, é recomendado que "
 "você<br>reveja sua configuração para aumentar o desempenho na construção."
 
+#. (obsolete)
 #: BuildingHandler#7
 msgctxt "BuildingHandler#7"
 "BuildingHandler#7"
 msgid "To be Installed"
 msgstr "A ser instalado"
 
+#. (obsolete)
 #: BuildingHandler#8
 msgctxt "BuildingHandler#8"
 "BuildingHandler#8"
 msgid "To be Upgraded"
 msgstr "A ser atualizado"
 
+#. (obsolete)
 #: BuildingHandler#9
 msgid "Package Building"
 msgstr "Construção de pacotes"
 
+#. (obsolete)
 #: BuildingHandler#10
 msgid "Your Packages failed to build!"
 msgstr "A construção dos pacotes falhou!"
 
+#. (obsolete)
 #: BuildingHandler#11
 msgid ""
 "Your packages Failed to Build.\n"
@@ -199,15 +293,18 @@ msgstr ""
 "A construção dos pacotes falhou.\n"
 "Cheque o log para mais detalhes."
 
+#. (obsolete)
 #: BuildingHandler#12
 msgctxt "BuildingHandler#12"
 msgid "Close"
 msgstr "Fechar"
 
+#. (obsolete)
 #: BuildingHandler#13
 msgid "Building Packages Failed!!"
 msgstr "A construção de alguns pacotes falhou!!"
 
+#. (obsolete)
 #: BuildingHandler#14
 msgid ""
 "Some packages failed to build.\n"
@@ -216,18 +313,22 @@ msgstr ""
 "A construção de alguns pacotes falhou.\n"
 "Deseja proceder mesmo assim?"
 
+#. (obsolete)
 #: BuildingHandler#15
 msgid "Install Built Packages"
 msgstr "Instalar pacotes construídos"
 
+#. (obsolete)
 #: BuildingHandler#16
 msgid "Close Without Installing"
 msgstr "Fechar sem instalar"
 
+#. (obsolete)
 #: BuildingHandler#17
 msgid "Packages Built Successfully!"
 msgstr "Pacotes construídos com sucesso!"
 
+#. (obsolete)
 #: BuildingHandler#18
 msgid ""
 "Your Packages have been built successfully, and are ready to be installed"
@@ -235,8 +336,8 @@ msgstr ""
 "Seus pacotes foram construídos com sucesso, e estão prontos para serem "
 "instalados"
 
+#. (obsolete)
 #: BuildingHandler#19
-#, fuzzy
 msgid ""
 "You are about to install <b>%n package(s)</b> from source. Building from "
 "source<br>can give some advantages, however is very slow.<br>If you are not "
@@ -316,56 +417,67 @@ msgstr ""
 msgid "Shaman - Configuration"
 msgstr "Shaman - Configuração"
 
+#. (obsolete)
 #: ConfigDialog#2
 msgctxt "ConfigDialog#2"
 msgid "Favourite Actions"
 msgstr "Ações favoritas"
 
+#. (obsolete)
 #: ConfigDialog#3
 msgctxt "ConfigDialog#3"
 msgid "When Upgrading System:"
 msgstr "Quando o sistema estiver sendo atualizado:"
 
+#. (obsolete)
 #: ConfigDialog#4
 msgctxt "ConfigDialog#4"
 msgid "Upgrade Immediately"
 msgstr "Atualizar imediatamente"
 
+#. (obsolete)
 #: ConfigDialog#5
 msgctxt "ConfigDialog#5"
 msgid "Add Upgradeable Packages To Queue"
 msgstr "Colocar pacotes atualizáveis na fila"
 
+#. (obsolete)
 #: ConfigDialog#6
 msgctxt "ConfigDialog#6"
 msgid "Ask"
 msgstr "Perguntar"
 
+#. (obsolete)
 #: ConfigDialog#7
 msgctxt "ConfigDialog#7"
 msgid "When Processing Queue"
 msgstr "Enquanto a ação é processada"
 
+#. (obsolete)
 #: ConfigDialog#8
 msgctxt "ConfigDialog#8"
 msgid "Keep application running in System Tray only"
 msgstr "Manter execução no system tray apenas"
 
+#. (obsolete)
 #: ConfigDialog#9
 msgctxt "ConfigDialog#9"
 msgid "GUI Startup"
 msgstr "Inicialização do GUI"
 
+#. (obsolete)
 #: ConfigDialog#10
 msgctxt "ConfigDialog#10"
 msgid "Start in the System Tray"
 msgstr "Iniciar no system tray"
 
+#. (obsolete)
 #: ConfigDialog#11
 msgctxt "ConfigDialog#11"
 msgid "When Application is in System Tray only"
 msgstr "Quando o programa estiver no system tray"
 
+#. (obsolete)
 #: ConfigDialog#12
 msgctxt "ConfigDialog#12"
 msgid "Update Database every"
@@ -376,21 +488,25 @@ msgstr "Atualizar base de dados a cada"
 msgid "minutes"
 msgstr "minutos"
 
+#. (obsolete)
 #: ConfigDialog#14
 msgctxt "ConfigDialog#14"
 msgid "If upgrades are available:"
 msgstr "Se atualizações estiverem disponíveis:"
 
+#. (obsolete)
 #: ConfigDialog#15
 msgctxt "ConfigDialog#15"
 msgid "Just Notify"
 msgstr "Apenas notificar"
 
+#. (obsolete)
 #: ConfigDialog#16
 msgctxt "ConfigDialog#16"
 msgid "Notify and add them to Queue"
 msgstr "Notificar e colocá-los na fila"
 
+#. (obsolete)
 #: ConfigDialog#17
 msgctxt "ConfigDialog#17"
 msgid "Maintenance"
@@ -401,56 +517,67 @@ msgctxt "ConfigDialog#18"
 msgid "Process Selected"
 msgstr "Processar selecionado"
 
+#. (obsolete)
 #: ConfigDialog#19
 msgctxt "ConfigDialog#19"
 msgid "Checkable Options"
 msgstr "Opções marcáveis"
 
+#. (obsolete)
 #: ConfigDialog#20
 msgctxt "ConfigDialog#20"
 msgid "Use Active FTP"
 msgstr "Usar FTP ativo"
 
+#. (obsolete)
 #: ConfigDialog#21
 msgctxt "ConfigDialog#21"
 msgid "Use Deltas (needs xdelta to be installed)"
 msgstr "Usar deltas (requer xdelta instalado)"
 
+#. (obsolete)
 #: ConfigDialog#22
 msgctxt "ConfigDialog#22"
 msgid "Advanced Options"
 msgstr "Opções avançadas"
 
+#. (obsolete)
 #: ConfigDialog#23
 msgctxt "ConfigDialog#23"
 msgid "HoldPkgs:"
 msgstr "HoldPkgs:"
 
+#. (obsolete)
 #: ConfigDialog#24
 msgctxt "ConfigDialog#24"
 msgid "IgnorePkgs:"
 msgstr "IgnorePkgs:"
 
+#. (obsolete)
 #: ConfigDialog#25
 msgctxt "ConfigDialog#25"
 msgid "IgnoreGroups:"
 msgstr "IgnoreGroups:"
 
+#. (obsolete)
 #: ConfigDialog#26
 msgctxt "ConfigDialog#26"
 msgid "NoUpgrade:"
 msgstr "NoUpgrade:"
 
+#. (obsolete)
 #: ConfigDialog#27
 msgctxt "ConfigDialog#27"
 msgid "NoExtract:"
 msgstr "NoExtract:"
 
+#. (obsolete)
 #: ConfigDialog#28
 msgctxt "ConfigDialog#28"
 msgid "XFerCommand: (example: /path/to/command %u) Blank for Default"
 msgstr "XFerCommand: (exemplo: /path/to/command %u) Padrão: em branco"
 
+#. (obsolete)
 #: ConfigDialog#29
 msgctxt "ConfigDialog#29"
 msgid "Arch Linux Official Repositories"
@@ -467,6 +594,7 @@ msgstr ""
 "Atenção: pacotes dos repositórios Unstable e Testing podem corromper o "
 "Sistema."
 
+#. (obsolete)
 #: ConfigDialog#31
 msgctxt "ConfigDialog#31"
 msgid "Server"
@@ -483,6 +611,7 @@ msgctxt "ConfigDialog#33"
 msgid "Add Mirror"
 msgstr "Adicionar Mirror"
 
+#. (obsolete)
 #: ConfigDialog#34
 msgctxt "ConfigDialog#34"
 msgid "KDEMod Repositories"
@@ -504,6 +633,7 @@ msgstr ""
 "poder \n"
 "do KDE com a simplicidade e o poder do Arch."
 
+#. (obsolete)
 #: ConfigDialog#36
 msgctxt "ConfigDialog#36"
 msgid "KDEMod 3 Repository"
@@ -514,6 +644,7 @@ msgstr "KDEMod 3"
 msgid "KDEMod 4 Repository (Unstable, testers only)"
 msgstr "KDEMod 4 (instável, só para testers)"
 
+#. (obsolete)
 #: ConfigDialog#38
 msgctxt "ConfigDialog#38"
 msgid "Third-Party Repositories"
@@ -540,6 +671,7 @@ msgctxt "ConfigDialog#40"
 msgid "Repository"
 msgstr "Repositório"
 
+#. (obsolete)
 #: ConfigDialog#41
 msgctxt "ConfigDialog#41"
 msgid "Add New Repository"
@@ -555,88 +687,99 @@ msgstr "Editar repositório"
 msgid "Remove Repository"
 msgstr "Remover repositório"
 
+#. (obsolete)
 #: ConfigDialog#44
 msgctxt "ConfigDialog#44"
 msgid "Preferences"
 msgstr "Preferências"
 
+#. (obsolete)
 #: ConfigDialog#45
 msgctxt "ConfigDialog#45"
 msgid "Review Building output before installing"
 msgstr "Revisar construção antes de instalar"
 
+#. (obsolete)
 #: ConfigDialog#46
 msgctxt "ConfigDialog#46"
 msgid "ABS Configuration"
 msgstr "Configuração do ABS"
 
+#. (obsolete)
 #: ConfigDialog#47
 msgctxt "ConfigDialog#47"
 msgid "Use supfiles that match your current repositories"
 msgstr "Usar supfiles que batem com os repositórios atuais"
 
+#. (obsolete)
 #: ConfigDialog#48
 msgctxt "ConfigDialog#48"
 msgid "Define supfiles manually"
 msgstr "Definir supfiles manualmente"
 
+#. (obsolete)
 #: ConfigDialog#49
 msgctxt "ConfigDialog#49"
 msgid "Makepkg Configuration"
 msgstr "Configuração do Makepkg"
 
+#. (obsolete)
 #: ConfigDialog#50
-#, fuzzy
 msgctxt "ConfigDialog#50"
 msgid "CFlags"
 msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#51
-#, fuzzy
 msgctxt "ConfigDialog#51"
 msgid "CXXFlags"
 msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#52
-#, fuzzy
 msgctxt "ConfigDialog#52"
 msgid "BuildEnv"
 msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#53
 msgctxt "ConfigDialog#53"
 msgid "Options"
 msgstr "Opções"
 
+#. (obsolete)
 #: ConfigDialog#54
-#, fuzzy
 msgctxt "ConfigDialog#54"
 msgid "Doc_Dirs"
 msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#55
 msgctxt "ConfigDialog#55"
 msgid "Build Environment"
 msgstr "Construir ambiente"
 
+#. (obsolete)
 #: ConfigDialog#56
 msgctxt "ConfigDialog#56"
 msgid "Building Path"
 msgstr "Construindo diretório"
 
+#. (obsolete)
 #: ConfigDialog#57
 msgctxt "ConfigDialog#57"
 msgid "Remove installed makedepends after build"
 msgstr "Remover makedepends instaladas depois da construção"
 
+#. (obsolete)
 #: ConfigDialog#58
 msgctxt "ConfigDialog#58"
 msgid "Clean Build Environment after installation"
@@ -801,11 +944,13 @@ msgstr ""
 "Seu Mirror foi adicionado com sucesso!\n"
 "Ele está disponível no mirrorlist."
 
+#. (obsolete)
 #: ConfigDialog#88
 msgctxt "ConfigDialog#88"
 msgid "Pacman Database Optimized Successfully!"
 msgstr "Base de dados do Pacman otimizada com sucesso!"
 
+#. (obsolete)
 #: ConfigDialog#89
 msgctxt "ConfigDialog#89"
 msgid "Could not Optimize Pacman Database!"
@@ -839,14 +984,15 @@ msgid "Sync could not be executed!!"
 msgstr "Sync não pode ser executado!!"
 
 # Waiting for a user action
+#. (obsolete)
 #: ConfigDialog#94
 msgctxt "ConfigDialog#94"
 msgid "Waiting"
 msgstr "Aguardando"
 
 # Do not translate
+#. (obsolete)
 #: ConfigDialog#95
-#, fuzzy
 msgctxt "ConfigDialog#95"
 msgid "Core"
 msgstr ""
@@ -854,8 +1000,8 @@ msgstr ""
 "            "
 
 # Do not translate
+#. (obsolete)
 #: ConfigDialog#96
-#, fuzzy
 msgctxt "ConfigDialog#96"
 msgid "Extra"
 msgstr ""
@@ -863,8 +1009,8 @@ msgstr ""
 "            "
 
 # Do not translate
+#. (obsolete)
 #: ConfigDialog#97
-#, fuzzy
 msgctxt "ConfigDialog#97"
 msgid "Community"
 msgstr ""
@@ -872,8 +1018,8 @@ msgstr ""
 "            "
 
 # Do not translate
+#. (obsolete)
 #: ConfigDialog#98
-#, fuzzy
 msgctxt "ConfigDialog#98"
 msgid "Testing"
 msgstr ""
@@ -881,16 +1027,19 @@ msgstr ""
 "            "
 
 # sync is a command, so it should not be translated
+#. (obsolete)
 #: ConfigDialog#99
 msgctxt "ConfigDialog#99"
 msgid "Running sync..."
 msgstr "Executando sync..."
 
+#. (obsolete)
 #: ConfigDialog#100
 msgctxt "ConfigDialog#100"
 msgid "Show Splashscreen"
 msgstr "Mostrar splashscreen"
 
+#. (obsolete)
 #: ConfigDialog#101
 msgctxt "ConfigDialog#101"
 msgid "Process all dependencies and queue from binary first (recommended)"
@@ -948,60 +1097,72 @@ msgstr ""
 "escolha uma ação do menu \"drop-down\".</p></body></html>"
 
 #: ConfigDialog#104
+msgctxt "ConfigDialog#104"
 msgid "Advanced"
 msgstr "Avançado"
 
 # As in "minutes"
+#. (obsolete)
 #: ConfigDialog#105
 msgctxt "ConfigDialog#105"
 msgid "min"
 msgstr "min"
 
+#. (obsolete)
 #: ConfigDialog#106
 msgctxt "ConfigDialog#106"
 msgid "Show tray notification Windows"
 msgstr "Mostrar janelas de notificação no tray"
 
+#. (obsolete)
 #: ConfigDialog#107
 msgctxt "ConfigDialog#107"
 msgid "Use a proxy-server"
 msgstr "Usar um servidor proxy"
 
+#. (obsolete)
 #: ConfigDialog#108
 msgctxt "ConfigDialog#108"
 msgid "IP:"
 msgstr "IP:"
 
+#. (obsolete)
 #: ConfigDialog#109
 msgctxt "ConfigDialog#109"
 msgid "Port:"
 msgstr "Porta:"
 
+#. (obsolete)
 #: ConfigDialog#110
 msgctxt "ConfigDialog#110"
 msgid "HTTP Proxy"
 msgstr "Proxy HTTP"
 
+#. (obsolete)
 #: ConfigDialog#111
 msgctxt "ConfigDialog#111"
 msgid "FTP Proxy"
 msgstr "Proxy FTP"
 
+#. (obsolete)
 #: ConfigDialog#112
 msgctxt "ConfigDialog#112"
 msgid "Use Shaman RSS Capabilities"
 msgstr "Usar RSS do Shaman"
 
+#. (obsolete)
 #: ConfigDialog#113
 msgctxt "ConfigDialog#113"
 msgid "Update RSS Feed Every"
 msgstr "Atualizar RSS a cada"
 
+#. (obsolete)
 #: ConfigDialog#114
 msgctxt "ConfigDialog#114"
 msgid "Notify upon new items"
 msgstr "Notificar novos itens"
 
+#. (obsolete)
 #: ConfigDialog#115
 msgctxt "ConfigDialog#115"
 msgid ""
@@ -1010,11 +1171,13 @@ msgid ""
 msgstr ""
 "Checar se há notícias não lidas sobre um pacote da fila antes de processá-lo"
 
+#. (obsolete)
 #: ConfigDialog#116
 msgctxt "ConfigDialog#116"
 msgid "Use SysLog"
 msgstr "Usar SysLog"
 
+#. (obsolete)
 #: ConfigDialog#117
 msgctxt "ConfigDialog#117"
 msgid "Log File:"
@@ -1103,16 +1266,19 @@ msgstr ""
 msgid "KDEMod 3 Testing Repository"
 msgstr "Repositório Testing do KDEMod 3"
 
+#. (obsolete)
 #: ConfigDialog#127
 msgctxt "ConfigDialog#127"
 msgid "Interface"
 msgstr "Interface"
 
+#. (obsolete)
 #: ConfigDialog#128
 msgctxt "ConfigDialog#128"
 msgid "Start Shaman Automatically on X Startup"
 msgstr "Iniciar o Shaman junto com o X"
 
+#. (obsolete)
 #: ConfigDialog#129
 msgctxt "ConfigDialog#129"
 msgid "Forbid starting Shaman as root"
@@ -1149,48 +1315,56 @@ msgstr ""
 "Sans'; font-size:9pt;\">Por favor, escolha uma ação no menu Drop-"
 "Down.</p></body></html>"
 
+#. (obsolete)
 #: ConfigDialog#131
 msgctxt "ConfigDialog#131"
 msgid "RSync Server:"
 msgstr "Servidor RSync:"
 
+#. (obsolete)
 #: ConfigDialog#132
 msgctxt "ConfigDialog#132"
 msgid "Update Database at"
 msgstr "Atualizar base de dados em"
 
+#. (obsolete)
 #: ConfigDialog#133
 msgctxt "ConfigDialog#133"
 msgid "Use Animated Tray Icon"
 msgstr "Usar ícone tray animado"
 
+#. (obsolete)
 #: ConfigDialog#134
 msgctxt "ConfigDialog#134"
 msgid "KDEMod 4 Repository"
 msgstr "Repositório do KDEMod 4"
 
+#. (obsolete)
 #: ConfigDialog#135
 msgctxt "ConfigDialog#135"
 msgid "KDEMod 4 Extragear Repository"
 msgstr "Repositório Extragear do KDEMod 4"
 
+#. (obsolete)
 #: ConfigDialog#136
 msgctxt "ConfigDialog#136"
 msgid "KDEMod 4 Playground Repository"
 msgstr "Repositório Playground do KDEMod 4"
 
+#. (obsolete)
 #: ConfigDialog#137
 msgctxt "ConfigDialog#137"
 msgid "KDEMod 4 Testing Repository"
 msgstr "Repositório Testing do KDEMod 4"
 
+#. (obsolete)
 #: ConfigDialog#138
 msgctxt "ConfigDialog#138"
 msgid "KDEMod 4 Unstable Repository (Testers only!)"
 msgstr "Repositório Unstable do KDEMod 4 (só para testers!)"
 
+#. (obsolete)
 #: ConfigDialog#139
-#, fuzzy
 msgctxt "ConfigDialog#139"
 msgid ""
 "Here you can choose what repositories to use between Arch Linux's official "
@@ -1200,8 +1374,8 @@ msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#140
-#, fuzzy
 msgctxt "ConfigDialog#140"
 msgid ""
 "KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
@@ -1212,8 +1386,8 @@ msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#141
-#, fuzzy
 msgctxt "ConfigDialog#141"
 msgid ""
 "You can extend your packages choice by adding other repositories. Third-"
@@ -1223,16 +1397,16 @@ msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#142
-#, fuzzy
 msgctxt "ConfigDialog#142"
 msgid "Use the following language:"
 msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#143
-#, fuzzy
 msgctxt "ConfigDialog#143"
 msgid "Disable Tray Icon"
 msgstr ""
@@ -1267,38 +1441,15 @@ msgid ""
 msgstr ""
 
 #: ConfigDialog#149
-msgctxt "ConfigDialog#149"
-msgid ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
-"html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Liberation Sans'; font-size:8pt; "
-"font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"size:9pt;\">Shaman Manteinance.</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"size:9pt;\">Please choose an action from the Drop-Down "
-"Menu.</span></p></body></html>"
+msgid "Apply"
 msgstr ""
 
 #: ConfigDialog#150
-msgctxt "ConfigDialog#150"
-msgid "Add another server"
+msgid "Shaman Configuration"
 msgstr ""
 
 #: ConfigDialog#151
-msgctxt "ConfigDialog#151"
-msgid "Repository Order"
-msgstr ""
-
-#: ConfigDialog#152
-msgctxt "ConfigDialog#152"
-msgid ""
-"Please order your repositories to define which one will be preferred over "
-"another."
+msgid "Aqpm Configuration"
 msgstr ""
 
 #: DatabaseConfig#1
@@ -1494,10 +1645,23 @@ msgid ""
 "another."
 msgstr ""
 
+#: DatabaseConfig#27
+#, fuzzy
+msgctxt "DatabaseConfig#27"
+msgid "Error"
+msgstr "Erro"
+
+#: DatabaseConfig#28
+msgctxt "DatabaseConfig#28"
+msgid "There has been a problem while saving the configuration!"
+msgstr ""
+
+#. (obsolete)
 #: EditPBuild#1
 msgid "Saving"
 msgstr "Salvando"
 
+#. (obsolete)
 #: EditPBuild#2
 msgid ""
 "You modified this PKGBUILD.\n"
@@ -1713,7 +1877,6 @@ msgid "Waiting"
 msgstr "Aguardando"
 
 #: Form#17
-msgctxt "Form#17"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -2989,6 +3152,7 @@ msgstr "Marcar para Re&instalação"
 msgid "&Cancel Action"
 msgstr "&Cancelar"
 
+#. (obsolete)
 #: MainWindow#130
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
@@ -3088,12 +3252,6 @@ msgid "Replace %1 with %2/%3?"
 msgstr "Substituir %1 por %2/%3?"
 
 #: MainWindow#137
-msgid ""
-"%1 conflicts with %2.\n"
-"Remove %2?"
-msgstr ""
-
-#: MainWindow#138
 #, fuzzy
 msgid ""
 "The following package(s) cannot be upgraded due to unresolvable "
@@ -3106,9 +3264,9 @@ msgstr ""
 "            \n"
 "        "
 
-#: MainWindow#139
+#: MainWindow#138
 #, fuzzy
-msgctxt "MainWindow#139"
+msgctxt "MainWindow#138"
 msgid ""
 "%1-%2: local version is newer.\n"
 "Upgrade anyway?"
@@ -3116,9 +3274,9 @@ msgstr ""
 "%1-%2: versão local é mais nova.\n"
 "Atualizar mesmo assim?"
 
-#: MainWindow#140
+#: MainWindow#139
 #, fuzzy
-msgctxt "MainWindow#140"
+msgctxt "MainWindow#139"
 msgid ""
 "File %1 is corrupted.\n"
 "Do you want to delete it?"
@@ -3126,11 +3284,11 @@ msgstr ""
 "Arquivo %1 está corrompido.\n"
 "Deseja removê-lo?"
 
-#: MainWindow#141
+#: MainWindow#140
 msgid "Transaction Question"
 msgstr ""
 
-#: MainWindow#142
+#: MainWindow#141
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -3155,6 +3313,16 @@ msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Lukas Appelhans "
 "&lt;boom1992@chakra-project.org&gt;</p></body></html>"
+msgstr ""
+
+#: MainWindow#142
+msgid ""
+"%1 conflicts with %2.\n"
+"Remove %1?"
+msgstr ""
+
+#: MainWindow#143
+msgid "Updating ABS tree"
 msgstr ""
 
 #: MaintenanceBar#1
@@ -3291,14 +3459,14 @@ msgctxt "MaintenanceBar#22"
 msgid "Could not clean Build Environments!!"
 msgstr "Não foi possível limpar ambientes de construção!!"
 
+#. (obsolete)
 #: MaintenanceBar#23
-#, fuzzy
 msgctxt "MaintenanceBar#23"
 msgid "Pacman Database Optimized Successfully!"
 msgstr "Base de dados do Pacman otimizada com sucesso!"
 
+#. (obsolete)
 #: MaintenanceBar#24
-#, fuzzy
 msgctxt "MaintenanceBar#24"
 msgid "Could not Optimize Pacman Database!"
 msgstr "Não foi possível otimizar base de dados do Pacman!"
@@ -3487,6 +3655,7 @@ msgstr "Carregando pacotes..."
 msgid "Starting up Shaman..."
 msgstr "Inicializando o Shaman..."
 
+#. (obsolete)
 #: QObject#9
 msgid ""
 "Pacman is not updated.\n"
@@ -3599,6 +3768,10 @@ msgstr "Uau, isto é le&gal!"
 #: QObject#25
 msgid ""
 "Shaman can not be started as root. Please restart it as unprivileged user."
+msgstr ""
+
+#: QObject#26
+msgid "&Apply"
 msgstr ""
 
 #: QueueDialog#1
@@ -3962,6 +4135,236 @@ msgstr ""
 #: ServerWidget#5
 msgctxt "ServerWidget#5"
 msgid "Remove"
+msgstr ""
+
+#: ShamanGeneralConfig#1
+#, fuzzy
+msgctxt "ShamanGeneralConfig#1"
+msgid "Favourite Actions"
+msgstr "Ações favoritas"
+
+#: ShamanGeneralConfig#2
+#, fuzzy
+msgctxt "ShamanGeneralConfig#2"
+msgid "When Upgrading System:"
+msgstr "Quando o sistema estiver sendo atualizado:"
+
+#: ShamanGeneralConfig#3
+#, fuzzy
+msgctxt "ShamanGeneralConfig#3"
+msgid "Upgrade Immediately"
+msgstr "Atualizar imediatamente"
+
+#: ShamanGeneralConfig#4
+#, fuzzy
+msgctxt "ShamanGeneralConfig#4"
+msgid "Add Upgradeable Packages To Queue"
+msgstr "Colocar pacotes atualizáveis na fila"
+
+#: ShamanGeneralConfig#5
+#, fuzzy
+msgctxt "ShamanGeneralConfig#5"
+msgid "Ask"
+msgstr "Perguntar"
+
+#: ShamanGeneralConfig#6
+#, fuzzy
+msgctxt "ShamanGeneralConfig#6"
+msgid "When Processing Queue"
+msgstr "Enquanto a ação é processada"
+
+#: ShamanGeneralConfig#7
+#, fuzzy
+msgctxt "ShamanGeneralConfig#7"
+msgid "Keep application running in System Tray only"
+msgstr "Manter execução no system tray apenas"
+
+#: ShamanGeneralConfig#8
+#, fuzzy
+msgctxt "ShamanGeneralConfig#8"
+msgid "GUI Startup"
+msgstr "Inicialização do GUI"
+
+#: ShamanGeneralConfig#9
+#, fuzzy
+msgctxt "ShamanGeneralConfig#9"
+msgid "Start in the System Tray"
+msgstr "Iniciar no system tray"
+
+#: ShamanGeneralConfig#10
+#, fuzzy
+msgctxt "ShamanGeneralConfig#10"
+msgid "Show Splashscreen"
+msgstr "Mostrar splashscreen"
+
+#: ShamanGeneralConfig#11
+#, fuzzy
+msgctxt "ShamanGeneralConfig#11"
+msgid "Use the following language:"
+msgstr ""
+"\n"
+"            "
+
+#: ShamanGeneralConfig#12
+#, fuzzy
+msgctxt "ShamanGeneralConfig#12"
+msgid "Disable Tray Icon"
+msgstr ""
+"\n"
+"            "
+
+#: ShamanGeneralConfig#13
+#, fuzzy
+msgctxt "ShamanGeneralConfig#13"
+msgid "Maintenance"
+msgstr "Manutenção"
+
+#: ShamanGeneralConfig#14
+#, fuzzy
+msgctxt "ShamanGeneralConfig#14"
+msgid "Process Selected"
+msgstr "Processar selecionado"
+
+# Waiting for a user action
+#: ShamanGeneralConfig#15
+#, fuzzy
+msgctxt "ShamanGeneralConfig#15"
+msgid "Waiting"
+msgstr "Aguardando"
+
+#: ShamanGeneralConfig#16
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:7pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Shaman Manteinance.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Please choose an action from the Drop-Down "
+"Menu.</span></p></body></html>"
+msgstr ""
+
+#: ShamanGeneralConfig#17
+#, fuzzy
+msgctxt "ShamanGeneralConfig#17"
+msgid "Clean Unused Databases"
+msgstr "Limpar bases de dados não utilizadas"
+
+#: ShamanGeneralConfig#18
+#, fuzzy
+msgctxt "ShamanGeneralConfig#18"
+msgid "Clean Cache"
+msgstr "Limpar cache"
+
+#: ShamanGeneralConfig#19
+#, fuzzy
+msgctxt "ShamanGeneralConfig#19"
+msgid "Empty Cache"
+msgstr "Esvaziar cache"
+
+#: ShamanGeneralConfig#20
+#, fuzzy
+msgctxt "ShamanGeneralConfig#20"
+msgid "Optimize Pacman Database"
+msgstr "Otimizar base de dados do Pacman"
+
+#: ShamanGeneralConfig#21
+#, fuzzy
+msgctxt "ShamanGeneralConfig#21"
+msgid "Clean All Building Environments"
+msgstr "Limpar todos os ambientes de construção"
+
+#: ShamanGeneralConfig#22
+#, fuzzy
+msgctxt "ShamanGeneralConfig#22"
+msgid "Cleaning up unused Databases..."
+msgstr "Limpando bases de dados não utilizadas..."
+
+#: ShamanGeneralConfig#23
+#, fuzzy
+msgctxt "ShamanGeneralConfig#23"
+msgid "Cleaning up Cache..."
+msgstr "Limpando cache..."
+
+#: ShamanGeneralConfig#24
+#, fuzzy
+msgctxt "ShamanGeneralConfig#24"
+msgid "Deleting Cache..."
+msgstr "Deletando cache..."
+
+#: ShamanGeneralConfig#25
+#, fuzzy
+msgctxt "ShamanGeneralConfig#25"
+msgid "Optimizing Pacman Database..."
+msgstr "Otimizando base de dados do Pacman..."
+
+#: ShamanGeneralConfig#26
+#, fuzzy
+msgctxt "ShamanGeneralConfig#26"
+msgid "Cleaning up building Environments..."
+msgstr "Limpando ambientes de construção..."
+
+#: ShamanGeneralConfig#27
+#, fuzzy
+msgctxt "ShamanGeneralConfig#27"
+msgid "Unused Databases Cleaned up successfully!"
+msgstr "Bases de dados não utilizadas limpas com sucesso!"
+
+#: ShamanGeneralConfig#28
+#, fuzzy
+msgctxt "ShamanGeneralConfig#28"
+msgid "Cleaning up Unused Databases Failed!"
+msgstr "Limpeza das bases de dados não utilizadas falhou!"
+
+#: ShamanGeneralConfig#29
+#, fuzzy
+msgctxt "ShamanGeneralConfig#29"
+msgid "Cache Cleaned Up Successfully!"
+msgstr "Cache limpo com sucesso!"
+
+#: ShamanGeneralConfig#30
+#, fuzzy
+msgctxt "ShamanGeneralConfig#30"
+msgid "Cleaning up Cache Failed!"
+msgstr "Limpeza do cache falhou!"
+
+#: ShamanGeneralConfig#31
+#, fuzzy
+msgctxt "ShamanGeneralConfig#31"
+msgid "Cache Successfully Deleted!"
+msgstr "Cache deletado com sucesso!"
+
+#: ShamanGeneralConfig#32
+#, fuzzy
+msgctxt "ShamanGeneralConfig#32"
+msgid "Deleting Cache Failed!"
+msgstr "Deleção do cache falhou!"
+
+#: ShamanGeneralConfig#33
+#, fuzzy
+msgctxt "ShamanGeneralConfig#33"
+msgid "Build Environments Successfully Cleaned!"
+msgstr "Ambientes de construção limpos com sucesso!"
+
+#: ShamanGeneralConfig#34
+#, fuzzy
+msgctxt "ShamanGeneralConfig#34"
+msgid "Could not clean Build Environments!!"
+msgstr "Não foi possível limpar ambientes de construção!!"
+
+#: ShamanGeneralConfig#35
+msgctxt "ShamanGeneralConfig#35"
+msgid "Database optimized successfully!"
+msgstr ""
+
+#: ShamanGeneralConfig#36
+msgctxt "ShamanGeneralConfig#36"
+msgid "Could not optimize database!"
 msgstr ""
 
 #: ShamanStatusBar#1
@@ -5038,6 +5441,7 @@ msgstr "Atualizar base de dados.."
 msgid "Editing PKGBUILD"
 msgstr "Editando PKGBUILD"
 
+#. (obsolete)
 #: editPBDialog#2
 msgid "Editing PKGBUILD of:"
 msgstr "Editando PKGBUILD de:"
@@ -5059,6 +5463,7 @@ msgctxt "editPBDialog#6"
 msgid "Ok"
 msgstr "Ok"
 
+#. (obsolete)
 #: editPBDialog#7
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
@@ -5076,6 +5481,45 @@ msgstr ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Editar PKGBUILD</span></p></body></html>"
+
+#: editPBDialog#8
+msgid "Editing:"
+msgstr ""
+
+#: editPBDialog#9
+msgid "PKGBUILD"
+msgstr ""
+
+#: editPBDialog#10
+msgid "MakePkg options"
+msgstr ""
+
+#: editPBDialog#11
+msgid "Ignore arch"
+msgstr ""
+
+#: editPBDialog#12
+msgid "Skip integrity checks"
+msgstr ""
+
+#: editPBDialog#13
+msgid "Ignore dependency control"
+msgstr ""
+
+#: editPBDialog#14
+msgid "Hold version if this is a development PKGBUILD"
+msgstr ""
+
+#: editPBDialog#15
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Edit Package build options</span></p></body></html>"
+msgstr ""
 
 #: logViewer#1
 msgid "Shaman - Log Viewer"
@@ -5343,6 +5787,7 @@ msgstr "Cancelar"
 msgid "Process From Binary"
 msgstr "Processar a partir do pacote binário"
 
+#. (obsolete)
 #: reviewBuildingDialog#10
 msgid "Review PKGBUILDs"
 msgstr "Revisar PKGBUILDs"
@@ -5354,6 +5799,10 @@ msgstr "Processar a partir da fonte"
 #: reviewBuildingDialog#12
 msgid "Do not install immediately when building is finished"
 msgstr "Não instalar imediatamente após a construção do pacote"
+
+#: reviewBuildingDialog#13
+msgid "Review Build options"
+msgstr ""
 
 #: transactionDialog#1
 msgid "Processing Queue..."

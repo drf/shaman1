@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-08 14:51+0200\n"
+"POT-Creation-Date: 2009-11-07 17:51+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.3.0\n"
+"X-Generator: Translate Toolkit 1.4.1\n"
 
 #. (obsolete)
 #: AlpmHandler#1
@@ -38,11 +38,84 @@ msgstr "%1 egzistuoja ir '%2' ir '%3'"
 msgid ": %1 exists in filesystem"
 msgstr ": %1 egzistuoja failų sistemoje"
 
+#: AqpmConfig#1
+msgid "Packages and Paths"
+msgstr ""
+
+#: AqpmConfig#2
+#, fuzzy
+msgctxt "AqpmConfig#2"
+msgid "IgnorePkgs:"
+msgstr "IgnorePkgs:"
+
+#: AqpmConfig#3
+#, fuzzy
+msgctxt "AqpmConfig#3"
+msgid "IgnoreGroups:"
+msgstr "IgnoreGroups:"
+
+#: AqpmConfig#4
+#, fuzzy
+msgctxt "AqpmConfig#4"
+msgid "NoUpgrade:"
+msgstr "NoUpgrade:"
+
+#: AqpmConfig#5
+#, fuzzy
+msgctxt "AqpmConfig#5"
+msgid "NoExtract:"
+msgstr "NoExtract:"
+
+#: AqpmConfig#6
+#, fuzzy
+msgctxt "AqpmConfig#6"
+msgid "Log File:"
+msgstr "Žurnalo failas:"
+
+#: AqpmConfig#7
+#, fuzzy
+msgctxt "AqpmConfig#7"
+msgid "Advanced"
+msgstr "Įvaresnis"
+
+#: AqpmConfig#8
+#, fuzzy
+msgctxt "AqpmConfig#8"
+msgid "Use SysLog"
+msgstr "Naudoti 'SysLog'"
+
+#: AqpmConfig#9
+#, fuzzy
+msgctxt "AqpmConfig#9"
+msgid "Use Deltas (needs xdelta to be installed)"
+msgstr "Naudoti deltą (reikalingas paketas 'xdelta')"
+
+#: AqpmConfig#10
+msgid "Aqpm Options"
+msgstr ""
+
+#: AqpmConfig#11
+msgid "Use multi-server download (EXPERIMENTAL)"
+msgstr ""
+
+#: AqpmConfig#12
+#, fuzzy
+msgctxt "AqpmConfig#12"
+msgid "Error"
+msgstr "Klaida"
+
+#: AqpmConfig#13
+msgctxt "AqpmConfig#13"
+msgid "There has been a problem while saving the configuration!"
+msgstr ""
+
+#. (obsolete)
 #: BuildingDialog#1
 msgctxt "BuildingDialog#1"
 msgid "Error"
 msgstr "Klaida"
 
+#. (obsolete)
 #: BuildingDialog#2
 msgid ""
 "Would you like to abort building?.\n"
@@ -51,6 +124,7 @@ msgstr ""
 "Ar norite nutraukti statymą?\n"
 "Visi veiksmai bus prarasti."
 
+#. (obsolete)
 #: BuildingDialog#3
 msgid "<br><br><b>Building Process Aborted by the User. Building Failed.</b>"
 msgstr ""
@@ -66,55 +140,68 @@ msgstr "Atnaujinamas ABS medis..."
 msgid "<b>Starting ABS Tree Update...</b><br><br>"
 msgstr "<b>Pradedamas ABS medžio atnaujinimas...</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#6
 msgid "<br><br><b>ABS Tree Was Successfully Updated!</b>"
 msgstr "<br><br><b>ABS medis buvo sėkmingai atnaujintas!</b>"
 
+#. (obsolete)
 #: BuildingDialog#7
 msgid "ABS Update"
 msgstr "ABS atnaujinimas"
 
+#. (obsolete)
 #: BuildingDialog#8
 msgid "Your ABS Tree was updated!"
 msgstr "Jūsų ABS medis buvo atnaujintas!"
 
+#. (obsolete)
 #: BuildingDialog#9
 msgid "Could not update the ABS Tree!"
 msgstr "Negalima atnaujinti ABS medžio!"
 
+#. (obsolete)
 #: BuildingDialog#10
 msgid "<b>Building %1 failed!!</b><br><br>"
 msgstr "<b>Statmas %1 nepavyko!!</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#11
 msgid "<b>%1 was built successfully!!</b><br><br>"
 msgstr "<b>%1 buvo pastatytas sėkmingai!!</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#12
 msgid "Processing Package %1 of %2..."
 msgstr "Apdirbamas paketas %1 iš %2..."
 
+#. (obsolete)
 #: BuildingDialog#13
 msgid "Building %1..."
 msgstr "Statoma %1..."
 
+#. (obsolete)
 #: BuildingDialog#14
 msgid "<b>Could not set up the environment correctly for %1!!</b><br><br>"
 msgstr "<b> Negalima taisyklingai įkurti aplinkos %1!! </b> <br> <br>"
 
+#. (obsolete)
 #: BuildingDialog#15
 msgid "<b>Building %1...</b><br><br>"
 msgstr "<b>Statoma %1...</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#16
 msgid "<b>Building operation has started.</b><br><br>"
 msgstr "<b>Statymo operacija prasidėjo.</b><br><br>"
 
+#. (obsolete)
 #: BuildingHandler#1
 msgctxt "BuildingHandler#1"
 msgid "Error"
 msgstr "Klaida"
 
+#. (obsolete)
 #: BuildingHandler#2
 msgid ""
 "You need to have ABS installed to use Shaman's\n"
@@ -122,12 +209,14 @@ msgid ""
 msgstr ""
 "„Shaman“ statymo ypatybei reikalinga ABS sistema. Ar norite įdiegti dabar?"
 
+#. (obsolete)
 #: BuildingHandler#3
 msgid ""
 "You can not remove packages when processing\n"
 "your queue from Source"
 msgstr "Jūs negalite pašalinti paketų, apdirbdamas jūsų eilę iš šaltinio."
 
+#. (obsolete)
 #: BuildingHandler#4
 msgid ""
 "Some of your packages do not belong to Arch\n"
@@ -169,24 +258,29 @@ msgstr ""
 "patariame<br>peržiūrėti savo konfiguraciją, kad pagerintumėte jūsų statymo "
 "atlikimą."
 
+#. (obsolete)
 #: BuildingHandler#7
 msgctxt "BuildingHandler#7"
 msgid "To be Installed"
 msgstr "Bus įrašyta"
 
+#. (obsolete)
 #: BuildingHandler#8
 msgctxt "BuildingHandler#8"
 msgid "To be Upgraded"
 msgstr "Bus atnaujinta"
 
+#. (obsolete)
 #: BuildingHandler#9
 msgid "Package Building"
 msgstr "Paketų statymas"
 
+#. (obsolete)
 #: BuildingHandler#10
 msgid "Your Packages failed to build!"
 msgstr "Nepavyko pastatyti paketų!"
 
+#. (obsolete)
 #: BuildingHandler#11
 msgid ""
 "Your packages Failed to Build.\n"
@@ -195,15 +289,18 @@ msgstr ""
 "Nepavyko pastatyti paketų.\n"
 "Žiūrėkite išvestį detalėms."
 
+#. (obsolete)
 #: BuildingHandler#12
 msgctxt "BuildingHandler#12"
 msgid "Close"
 msgstr "Uždaryti"
 
+#. (obsolete)
 #: BuildingHandler#13
 msgid "Building Packages Failed!!"
 msgstr "Paketų statymas nepavyko!!"
 
+#. (obsolete)
 #: BuildingHandler#14
 msgid ""
 "Some packages failed to build.\n"
@@ -212,25 +309,29 @@ msgstr ""
 "Kai kurių paketų pastatyti nepavyko.\n"
 "Vistiek norite tęsti?"
 
+#. (obsolete)
 #: BuildingHandler#15
 msgid "Install Built Packages"
 msgstr "Įrašyti pastatytus paketus"
 
+#. (obsolete)
 #: BuildingHandler#16
 msgid "Close Without Installing"
 msgstr "Uždaryti neįrašant"
 
+#. (obsolete)
 #: BuildingHandler#17
 msgid "Packages Built Successfully!"
 msgstr "Paketai pastatyti sėkmingai!"
 
+#. (obsolete)
 #: BuildingHandler#18
 msgid ""
 "Your Packages have been built successfully, and are ready to be installed"
 msgstr "Paketai pastatyti sėkmingao, ir paruošti įrašymui"
 
+#. (obsolete)
 #: BuildingHandler#19
-#, fuzzy
 msgid ""
 "You are about to install <b>%n package(s)</b> from source. Building from "
 "source<br>can give some advantages, however is very slow.<br>If you are not "
@@ -347,6 +448,7 @@ msgid "ABS"
 msgstr "ABS"
 
 #: ConfigDialog#10
+msgctxt "ConfigDialog#10"
 msgid "Advanced"
 msgstr "Įvaresnis"
 
@@ -508,17 +610,20 @@ msgstr ""
 "Veidrodis sėkmingai pridėtas!\n"
 "Dabar jis kdemodmirrorlist'e (/etc/pacman.d/kdemodmirrorlist)."
 
+#. (obsolete)
 #: ConfigDialog#38
 msgctxt "ConfigDialog#38"
 msgid "Pacman Database Optimized Successfully!"
 msgstr "„Pacman“ duomenų bazė sėkmingai optimizuota!"
 
+#. (obsolete)
 #: ConfigDialog#39
 msgctxt "ConfigDialog#39"
 msgid "Could not Optimize Pacman Database!"
 msgstr "Negalima optimizuoti „Pacman“ duomenų bazės!"
 
 # sync is a command, so it should not be translated
+#. (obsolete)
 #: ConfigDialog#40
 msgctxt "ConfigDialog#40"
 msgid "Running sync..."
@@ -555,56 +660,67 @@ msgstr "Sync negalėjo būti atlikta!!"
 msgid "Shaman - Configuration"
 msgstr "„Shaman“ - nustatymai"
 
+#. (obsolete)
 #: ConfigDialog#46
 msgctxt "ConfigDialog#46"
 msgid "Favourite Actions"
 msgstr "Mėgstami veiksmai"
 
+#. (obsolete)
 #: ConfigDialog#47
 msgctxt "ConfigDialog#47"
 msgid "When Upgrading System:"
 msgstr "Kai atnaujinama sistemą:"
 
+#. (obsolete)
 #: ConfigDialog#48
 msgctxt "ConfigDialog#48"
 msgid "Upgrade Immediately"
 msgstr "Atnaujinti nedelsiant"
 
+#. (obsolete)
 #: ConfigDialog#49
 msgctxt "ConfigDialog#49"
 msgid "Add Upgradeable Packages To Queue"
 msgstr "Pridėkite atnaujinamus paketus į eilę"
 
+#. (obsolete)
 #: ConfigDialog#50
 msgctxt "ConfigDialog#50"
 msgid "Ask"
 msgstr "Klausti"
 
+#. (obsolete)
 #: ConfigDialog#51
 msgctxt "ConfigDialog#51"
 msgid "When Processing Queue"
 msgstr "Kai vykdoma eilė"
 
+#. (obsolete)
 #: ConfigDialog#52
 msgctxt "ConfigDialog#52"
 msgid "Keep application running in System Tray only"
 msgstr "Palikite programą vykdyti tik sistemos dėkle"
 
+#. (obsolete)
 #: ConfigDialog#53
 msgctxt "ConfigDialog#53"
 msgid "GUI Startup"
 msgstr "Paleidžiama vartotojo aplinka"
 
+#. (obsolete)
 #: ConfigDialog#54
 msgctxt "ConfigDialog#54"
 msgid "Start in the System Tray"
 msgstr "Paleisti sistemos dėkle"
 
+#. (obsolete)
 #: ConfigDialog#55
 msgctxt "ConfigDialog#55"
 msgid "Show Splashscreen"
 msgstr "Rodyti pasisveikinimo langą"
 
+#. (obsolete)
 #: ConfigDialog#56
 msgctxt "ConfigDialog#56"
 msgid "Maintenance"
@@ -616,6 +732,7 @@ msgid "Process Selected"
 msgstr "Išrinktas procesas"
 
 # Waiting for a user action
+#. (obsolete)
 #: ConfigDialog#58
 msgctxt "ConfigDialog#58"
 msgid "Waiting"
@@ -652,66 +769,79 @@ msgstr ""
 "Sans'; font-size:9pt;\">Pasirinkite veiksmą iš nusileidžiančio "
 "meniu.</p></body></html>"
 
+#. (obsolete)
 #: ConfigDialog#60
 msgctxt "ConfigDialog#60"
 msgid "Checkable Options"
 msgstr "Patikrinami pasirinkimai"
 
+#. (obsolete)
 #: ConfigDialog#61
 msgctxt "ConfigDialog#61"
 msgid "Use Active FTP"
 msgstr "Naudoti aktyvų FTP"
 
+#. (obsolete)
 #: ConfigDialog#62
 msgctxt "ConfigDialog#62"
 msgid "Use Deltas (needs xdelta to be installed)"
 msgstr "Naudoti deltą (reikalingas paketas 'xdelta')"
 
+#. (obsolete)
 #: ConfigDialog#63
 msgctxt "ConfigDialog#63"
 msgid "Use SysLog"
 msgstr "Naudoti 'SysLog'"
 
+#. (obsolete)
 #: ConfigDialog#64
 msgctxt "ConfigDialog#64"
 msgid "Advanced Options"
 msgstr "Daugiau pasirinkimų"
 
+#. (obsolete)
 #: ConfigDialog#65
 msgctxt "ConfigDialog#65"
 msgid "HoldPkgs:"
 msgstr "HoldPkgs:"
 
+#. (obsolete)
 #: ConfigDialog#66
 msgctxt "ConfigDialog#66"
 msgid "IgnorePkgs:"
 msgstr "IgnorePkgs:"
 
+#. (obsolete)
 #: ConfigDialog#67
 msgctxt "ConfigDialog#67"
 msgid "IgnoreGroups:"
 msgstr "IgnoreGroups:"
 
+#. (obsolete)
 #: ConfigDialog#68
 msgctxt "ConfigDialog#68"
 msgid "NoUpgrade:"
 msgstr "NoUpgrade:"
 
+#. (obsolete)
 #: ConfigDialog#69
 msgctxt "ConfigDialog#69"
 msgid "NoExtract:"
 msgstr "NoExtract:"
 
+#. (obsolete)
 #: ConfigDialog#70
 msgctxt "ConfigDialog#70"
 msgid "Log File:"
 msgstr "Žurnalo failas:"
 
+#. (obsolete)
 #: ConfigDialog#71
 msgctxt "ConfigDialog#71"
 msgid "XFerCommand: (example: /path/to/command %u) Blank for Default"
 msgstr "XFerCommand: (pavyzdys: /nuoroda/į/komandą %u) Tuščias numatytas,"
 
+#. (obsolete)
 #: ConfigDialog#72
 msgctxt "ConfigDialog#72"
 msgid "Arch Linux Official Repositories"
@@ -730,8 +860,8 @@ msgstr ""
 "sistemai."
 
 # Do not translate
+#. (obsolete)
 #: ConfigDialog#74
-#, fuzzy
 msgctxt "ConfigDialog#74"
 msgid "Core"
 msgstr ""
@@ -739,8 +869,8 @@ msgstr ""
 "            "
 
 # Do not translate
+#. (obsolete)
 #: ConfigDialog#75
-#, fuzzy
 msgctxt "ConfigDialog#75"
 msgid "Extra"
 msgstr ""
@@ -748,8 +878,8 @@ msgstr ""
 "            "
 
 # Do not translate
+#. (obsolete)
 #: ConfigDialog#76
-#, fuzzy
 msgctxt "ConfigDialog#76"
 msgid "Community"
 msgstr ""
@@ -757,14 +887,15 @@ msgstr ""
 "            "
 
 # Do not translate
+#. (obsolete)
 #: ConfigDialog#77
-#, fuzzy
 msgctxt "ConfigDialog#77"
 msgid "Testing"
 msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#78
 msgctxt "ConfigDialog#78"
 msgid "Server"
@@ -776,6 +907,7 @@ msgctxt "ConfigDialog#79"
 msgid "Mirror:"
 msgstr "Veidrodis:"
 
+#. (obsolete)
 #: ConfigDialog#80
 msgctxt "ConfigDialog#80"
 msgid "KDEMod Repositories"
@@ -795,6 +927,7 @@ msgstr ""
 "kitų įrankių, KDEMod yra geriausias būdas išbandyti lengvumą ir jėgą KDE "
 "aplinkoje Arch Linux distribucijoje."
 
+#. (obsolete)
 #: ConfigDialog#82
 msgctxt "ConfigDialog#82"
 msgid "KDEMod 3 Repository"
@@ -810,6 +943,7 @@ msgstr "KDEMod 3 bandomoji saugykla"
 msgid "KDEMod 4 Repository (Unstable, testers only)"
 msgstr "KDEMod 4 saugykla (Nestabili, tik bandymui)"
 
+#. (obsolete)
 #: ConfigDialog#85
 msgctxt "ConfigDialog#85"
 msgid "Third-Party Repositories"
@@ -834,6 +968,7 @@ msgctxt "ConfigDialog#87"
 msgid "Repository"
 msgstr "Saugykla"
 
+#. (obsolete)
 #: ConfigDialog#88
 msgctxt "ConfigDialog#88"
 msgid "Add New Repository"
@@ -849,11 +984,13 @@ msgstr "Redaguoti saugyklą"
 msgid "Remove Repository"
 msgstr "Pašalinti saugyklą"
 
+#. (obsolete)
 #: ConfigDialog#91
 msgctxt "ConfigDialog#91"
 msgid "Preferences"
 msgstr "Nustatymai"
 
+#. (obsolete)
 #: ConfigDialog#92
 msgctxt "ConfigDialog#92"
 msgid "Process all dependencies and queue from binary first (recommended)"
@@ -861,177 +998,204 @@ msgstr ""
 "Iš pradžių vykdykite visas priklausomybes ir eilę nuo binaro "
 "(rekomenduojama)"
 
+#. (obsolete)
 #: ConfigDialog#93
 msgctxt "ConfigDialog#93"
 msgid "Review Building output before installing"
 msgstr "Review Building output before installing"
 
+#. (obsolete)
 #: ConfigDialog#94
 msgctxt "ConfigDialog#94"
 msgid "ABS Configuration"
 msgstr "ABS nustatymai"
 
+#. (obsolete)
 #: ConfigDialog#95
 msgctxt "ConfigDialog#95"
 msgid "Use supfiles that match your current repositories"
 msgstr "Panaudokite rinkmenas, kurios atitinka jūsų einamąsias saugyklas"
 
+#. (obsolete)
 #: ConfigDialog#96
 msgctxt "ConfigDialog#96"
 msgid "Define supfiles manually"
 msgstr "Apibrėžkite rinkmenas rankiniu būdu"
 
+#. (obsolete)
 #: ConfigDialog#97
 msgctxt "ConfigDialog#97"
 msgid "RSync Server:"
 msgstr "RSync serveris:"
 
+#. (obsolete)
 #: ConfigDialog#98
 msgctxt "ConfigDialog#98"
 msgid "Makepkg Configuration"
 msgstr "Makepkg nustatymai"
 
+#. (obsolete)
 #: ConfigDialog#99
-#, fuzzy
 msgctxt "ConfigDialog#99"
 msgid "CFlags"
 msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#100
-#, fuzzy
 msgctxt "ConfigDialog#100"
 msgid "CXXFlags"
 msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#101
-#, fuzzy
 msgctxt "ConfigDialog#101"
 msgid "BuildEnv"
 msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#102
 msgctxt "ConfigDialog#102"
 msgid "Options"
 msgstr "Nustatymai"
 
+#. (obsolete)
 #: ConfigDialog#103
-#, fuzzy
 msgctxt "ConfigDialog#103"
 msgid "Doc_Dirs"
 msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#104
 msgctxt "ConfigDialog#104"
 msgid "Build Environment"
 msgstr "Statymo aplinka"
 
+#. (obsolete)
 #: ConfigDialog#105
 msgctxt "ConfigDialog#105"
 msgid "Building Path"
 msgstr "Statymo kelias"
 
+#. (obsolete)
 #: ConfigDialog#106
 msgctxt "ConfigDialog#106"
 msgid "Remove installed makedepends after build"
 msgstr "Pašalinti įrašytus 'makedepends' po statymo"
 
+#. (obsolete)
 #: ConfigDialog#107
 msgctxt "ConfigDialog#107"
 msgid "Clean Build Environment after installation"
 msgstr "Išvalyti statymo aplinką po įrašymo"
 
+#. (obsolete)
 #: ConfigDialog#108
 msgctxt "ConfigDialog#108"
 msgid "When Application is in System Tray only"
 msgstr "Tik kai programa sistemos dėkle"
 
+#. (obsolete)
 #: ConfigDialog#109
 msgctxt "ConfigDialog#109"
 msgid "Update Database every"
 msgstr "Atnaujinti duomenų bazę visada"
 
 # As in "minutes"
+#. (obsolete)
 #: ConfigDialog#110
-#, fuzzy
 msgctxt "ConfigDialog#110"
 msgid "min"
 msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#111
 msgctxt "ConfigDialog#111"
 msgid "Show tray notification Windows"
 msgstr "Rodyti dėklo pranešimo langus"
 
+#. (obsolete)
 #: ConfigDialog#112
 msgctxt "ConfigDialog#112"
 msgid "If upgrades are available:"
 msgstr "Jei yra atnaujinimų:"
 
+#. (obsolete)
 #: ConfigDialog#113
 msgctxt "ConfigDialog#113"
 msgid "Just Notify"
 msgstr "Tik skelbti"
 
+#. (obsolete)
 #: ConfigDialog#114
 msgctxt "ConfigDialog#114"
 msgid "Notify and add them to Queue"
 msgstr "Skelbti ir įdėti juos į eilę"
 
+#. (obsolete)
 #: ConfigDialog#115
 msgctxt "ConfigDialog#115"
 msgid "Update Database at"
 msgstr "Atnaujinti duomenų bazę"
 
+#. (obsolete)
 #: ConfigDialog#116
 msgctxt "ConfigDialog#116"
 msgid "Use a proxy-server"
 msgstr "Naudoti proxy serverį"
 
+#. (obsolete)
 #: ConfigDialog#117
 msgctxt "ConfigDialog#117"
 msgid "IP:"
 msgstr "IP:"
 
+#. (obsolete)
 #: ConfigDialog#118
 msgctxt "ConfigDialog#118"
 msgid "Port:"
 msgstr "Port:"
 
+#. (obsolete)
 #: ConfigDialog#119
 msgctxt "ConfigDialog#119"
 msgid "HTTP Proxy"
 msgstr "HTTP proxy"
 
+#. (obsolete)
 #: ConfigDialog#120
 msgctxt "ConfigDialog#120"
 msgid "FTP Proxy"
 msgstr "FTP proxy"
 
+#. (obsolete)
 #: ConfigDialog#121
 msgctxt "ConfigDialog#121"
 msgid "Use Shaman RSS Capabilities"
 msgstr "Naudoti „Shaman“ RSS galimybes"
 
+#. (obsolete)
 #: ConfigDialog#122
 msgctxt "ConfigDialog#122"
 msgid "Update RSS Feed Every"
 msgstr "Atnaujinti RSS įrašus visada"
 
+#. (obsolete)
 #: ConfigDialog#123
 msgctxt "ConfigDialog#123"
 msgid "Notify upon new items"
 msgstr "Pranešti apie naujienas"
 
+#. (obsolete)
 #: ConfigDialog#124
 msgctxt "ConfigDialog#124"
 msgid ""
@@ -1040,64 +1204,68 @@ msgid ""
 msgstr ""
 "Patikrinti ar nėra neskaitytų naujienų apie paketą eilėje prieš pradėdami"
 
+#. (obsolete)
 #: ConfigDialog#125
 msgctxt "ConfigDialog#125"
 msgid "Interface"
 msgstr "Interfeisas"
 
+#. (obsolete)
 #: ConfigDialog#126
 msgctxt "ConfigDialog#126"
 msgid "Use Animated Tray Icon"
 msgstr "Naudoti animuotą ženkliuką"
 
+#. (obsolete)
 #: ConfigDialog#127
 msgctxt "ConfigDialog#127"
 msgid "Start Shaman Automatically on X Startup"
 msgstr "Automatiškai pradėti „Shaman“ kai paleista grafinė aplinka"
 
+#. (obsolete)
 #: ConfigDialog#128
 msgctxt "ConfigDialog#128"
 msgid "Forbid starting Shaman as root"
 msgstr "Uždrausti paleisti „Shaman“ kaip 'root'."
 
+#. (obsolete)
 #: ConfigDialog#129
-#, fuzzy
 msgctxt "ConfigDialog#129"
 msgid "KDEMod 4 Repository"
 msgstr "KDEMod 3 saugykla {4 ?}"
 
+#. (obsolete)
 #: ConfigDialog#130
-#, fuzzy
 msgctxt "ConfigDialog#130"
 msgid "KDEMod 4 Extragear Repository"
 msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#131
-#, fuzzy
 msgctxt "ConfigDialog#131"
 msgid "KDEMod 4 Playground Repository"
 msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#132
-#, fuzzy
 msgctxt "ConfigDialog#132"
 msgid "KDEMod 4 Testing Repository"
 msgstr "KDEMod 3 bandomoji saugykla {4 ?}"
 
+#. (obsolete)
 #: ConfigDialog#133
-#, fuzzy
 msgctxt "ConfigDialog#133"
 msgid "KDEMod 4 Unstable Repository (Testers only!)"
 msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#134
-#, fuzzy
 msgctxt "ConfigDialog#134"
 msgid ""
 "Here you can choose what repositories to use between Arch Linux's official "
@@ -1107,8 +1275,8 @@ msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#135
-#, fuzzy
 msgctxt "ConfigDialog#135"
 msgid ""
 "KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
@@ -1119,8 +1287,8 @@ msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#136
-#, fuzzy
 msgctxt "ConfigDialog#136"
 msgid ""
 "You can extend your packages choice by adding other repositories. Third-"
@@ -1130,16 +1298,16 @@ msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#137
-#, fuzzy
 msgctxt "ConfigDialog#137"
 msgid "Use the following language:"
 msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#138
-#, fuzzy
 msgctxt "ConfigDialog#138"
 msgid "Disable Tray Icon"
 msgstr ""
@@ -1174,38 +1342,15 @@ msgid ""
 msgstr ""
 
 #: ConfigDialog#144
-msgctxt "ConfigDialog#144"
-msgid ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
-"html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Liberation Sans'; font-size:8pt; "
-"font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"size:9pt;\">Shaman Manteinance.</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"size:9pt;\">Please choose an action from the Drop-Down "
-"Menu.</span></p></body></html>"
+msgid "Apply"
 msgstr ""
 
 #: ConfigDialog#145
-msgctxt "ConfigDialog#145"
-msgid "Add another server"
+msgid "Shaman Configuration"
 msgstr ""
 
 #: ConfigDialog#146
-msgctxt "ConfigDialog#146"
-msgid "Repository Order"
-msgstr ""
-
-#: ConfigDialog#147
-msgctxt "ConfigDialog#147"
-msgid ""
-"Please order your repositories to define which one will be preferred over "
-"another."
+msgid "Aqpm Configuration"
 msgstr ""
 
 #: DatabaseConfig#1
@@ -1407,10 +1552,23 @@ msgid ""
 "another."
 msgstr ""
 
+#: DatabaseConfig#27
+#, fuzzy
+msgctxt "DatabaseConfig#27"
+msgid "Error"
+msgstr "Klaida"
+
+#: DatabaseConfig#28
+msgctxt "DatabaseConfig#28"
+msgid "There has been a problem while saving the configuration!"
+msgstr ""
+
+#. (obsolete)
 #: EditPBuild#1
 msgid "Saving"
 msgstr "Išsaugoma"
 
+#. (obsolete)
 #: EditPBuild#2
 msgid ""
 "You modified this PKGBUILD.\n"
@@ -1624,7 +1782,6 @@ msgid "Waiting"
 msgstr "Laukiama"
 
 #: Form#17
-msgctxt "Form#17"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -2525,8 +2682,8 @@ msgid ""
 "a valid package"
 msgstr "%1 neteisingas paketas"
 
+#. (obsolete)
 #: MainWindow#63
-#, fuzzy
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -2754,12 +2911,6 @@ msgid "Replace %1 with %2/%3?"
 msgstr "Pakeisti %1 į %2/%3?"
 
 #: MainWindow#106
-msgid ""
-"%1 conflicts with %2.\n"
-"Remove %2?"
-msgstr ""
-
-#: MainWindow#107
 #, fuzzy
 msgid ""
 "The following package(s) cannot be upgraded due to unresolvable "
@@ -2772,9 +2923,9 @@ msgstr ""
 "            \n"
 "        "
 
-#: MainWindow#108
+#: MainWindow#107
 #, fuzzy
-msgctxt "MainWindow#108"
+msgctxt "MainWindow#107"
 msgid ""
 "%1-%2: local version is newer.\n"
 "Upgrade anyway?"
@@ -2782,19 +2933,19 @@ msgstr ""
 "%1-%2: vietinė versija naujesnė.\n"
 "Vistiek atnaujinti?"
 
-#: MainWindow#109
+#: MainWindow#108
 #, fuzzy
-msgctxt "MainWindow#109"
+msgctxt "MainWindow#108"
 msgid ""
 "File %1 is corrupted.\n"
 "Do you want to delete it?"
 msgstr "%1 rinkmena yra sugadinta. Ar norite ištrinti?"
 
-#: MainWindow#110
+#: MainWindow#109
 msgid "Transaction Question"
 msgstr ""
 
-#: MainWindow#111
+#: MainWindow#110
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -2819,6 +2970,16 @@ msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Lukas Appelhans "
 "&lt;boom1992@chakra-project.org&gt;</p></body></html>"
+msgstr ""
+
+#: MainWindow#111
+msgid ""
+"%1 conflicts with %2.\n"
+"Remove %1?"
+msgstr ""
+
+#: MainWindow#112
+msgid "Updating ABS tree"
 msgstr ""
 
 #: MaintenanceBar#1
@@ -2960,14 +3121,14 @@ msgctxt "MaintenanceBar#22"
 msgid "Could not clean Build Environments!!"
 msgstr "Negalima išvalyti statymo aplinkos!!"
 
+#. (obsolete)
 #: MaintenanceBar#23
-#, fuzzy
 msgctxt "MaintenanceBar#23"
 msgid "Pacman Database Optimized Successfully!"
 msgstr "„Pacman“ duomenų bazė sėkmingai optimizuota!"
 
+#. (obsolete)
 #: MaintenanceBar#24
-#, fuzzy
 msgctxt "MaintenanceBar#24"
 msgid "Could not Optimize Pacman Database!"
 msgstr "Negalima optimizuoti „Pacman“ duomenų bazės!"
@@ -3224,6 +3385,7 @@ msgstr ""
 "Rekomenduotina pradėti kaip paprastam vartotojui.\n"
 "„Shaman“ paklaus root slaptažodžio kai jam reikės."
 
+#. (obsolete)
 #: QObject#17
 msgid ""
 "Pacman is not updated.\n"
@@ -3249,6 +3411,10 @@ msgstr "Pradedamas „Shaman“..."
 #: QObject#21
 msgid ""
 "Shaman can not be started as root. Please restart it as unprivileged user."
+msgstr ""
+
+#: QObject#22
+msgid "&Apply"
 msgstr ""
 
 #: QueueDialog#1
@@ -3605,6 +3771,236 @@ msgstr ""
 #: ServerWidget#5
 msgctxt "ServerWidget#5"
 msgid "Remove"
+msgstr ""
+
+#: ShamanGeneralConfig#1
+#, fuzzy
+msgctxt "ShamanGeneralConfig#1"
+msgid "Favourite Actions"
+msgstr "Mėgstami veiksmai"
+
+#: ShamanGeneralConfig#2
+#, fuzzy
+msgctxt "ShamanGeneralConfig#2"
+msgid "When Upgrading System:"
+msgstr "Kai atnaujinama sistemą:"
+
+#: ShamanGeneralConfig#3
+#, fuzzy
+msgctxt "ShamanGeneralConfig#3"
+msgid "Upgrade Immediately"
+msgstr "Atnaujinti nedelsiant"
+
+#: ShamanGeneralConfig#4
+#, fuzzy
+msgctxt "ShamanGeneralConfig#4"
+msgid "Add Upgradeable Packages To Queue"
+msgstr "Pridėkite atnaujinamus paketus į eilę"
+
+#: ShamanGeneralConfig#5
+#, fuzzy
+msgctxt "ShamanGeneralConfig#5"
+msgid "Ask"
+msgstr "Klausti"
+
+#: ShamanGeneralConfig#6
+#, fuzzy
+msgctxt "ShamanGeneralConfig#6"
+msgid "When Processing Queue"
+msgstr "Kai vykdoma eilė"
+
+#: ShamanGeneralConfig#7
+#, fuzzy
+msgctxt "ShamanGeneralConfig#7"
+msgid "Keep application running in System Tray only"
+msgstr "Palikite programą vykdyti tik sistemos dėkle"
+
+#: ShamanGeneralConfig#8
+#, fuzzy
+msgctxt "ShamanGeneralConfig#8"
+msgid "GUI Startup"
+msgstr "Paleidžiama vartotojo aplinka"
+
+#: ShamanGeneralConfig#9
+#, fuzzy
+msgctxt "ShamanGeneralConfig#9"
+msgid "Start in the System Tray"
+msgstr "Paleisti sistemos dėkle"
+
+#: ShamanGeneralConfig#10
+#, fuzzy
+msgctxt "ShamanGeneralConfig#10"
+msgid "Show Splashscreen"
+msgstr "Rodyti pasisveikinimo langą"
+
+#: ShamanGeneralConfig#11
+#, fuzzy
+msgctxt "ShamanGeneralConfig#11"
+msgid "Use the following language:"
+msgstr ""
+"\n"
+"            "
+
+#: ShamanGeneralConfig#12
+#, fuzzy
+msgctxt "ShamanGeneralConfig#12"
+msgid "Disable Tray Icon"
+msgstr ""
+"\n"
+"            "
+
+#: ShamanGeneralConfig#13
+#, fuzzy
+msgctxt "ShamanGeneralConfig#13"
+msgid "Maintenance"
+msgstr "Palaikymas"
+
+#: ShamanGeneralConfig#14
+#, fuzzy
+msgctxt "ShamanGeneralConfig#14"
+msgid "Process Selected"
+msgstr "Išrinktas procesas"
+
+# Waiting for a user action
+#: ShamanGeneralConfig#15
+#, fuzzy
+msgctxt "ShamanGeneralConfig#15"
+msgid "Waiting"
+msgstr "Laukiama"
+
+#: ShamanGeneralConfig#16
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:7pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Shaman Manteinance.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Please choose an action from the Drop-Down "
+"Menu.</span></p></body></html>"
+msgstr ""
+
+#: ShamanGeneralConfig#17
+#, fuzzy
+msgctxt "ShamanGeneralConfig#17"
+msgid "Clean Unused Databases"
+msgstr "Išvalyti nenaudojamas duomenų bazes"
+
+#: ShamanGeneralConfig#18
+#, fuzzy
+msgctxt "ShamanGeneralConfig#18"
+msgid "Clean Cache"
+msgstr "Išvalyti atsargas"
+
+#: ShamanGeneralConfig#19
+#, fuzzy
+msgctxt "ShamanGeneralConfig#19"
+msgid "Empty Cache"
+msgstr "Nėra atsargų"
+
+#: ShamanGeneralConfig#20
+#, fuzzy
+msgctxt "ShamanGeneralConfig#20"
+msgid "Optimize Pacman Database"
+msgstr "Optimizuoti „Pacman“ duomenų bazę"
+
+#: ShamanGeneralConfig#21
+#, fuzzy
+msgctxt "ShamanGeneralConfig#21"
+msgid "Clean All Building Environments"
+msgstr "Išvalyti visas statymo aplinkas"
+
+#: ShamanGeneralConfig#22
+#, fuzzy
+msgctxt "ShamanGeneralConfig#22"
+msgid "Cleaning up unused Databases..."
+msgstr "Išvalomos nenaudojamos duomenų bazės"
+
+#: ShamanGeneralConfig#23
+#, fuzzy
+msgctxt "ShamanGeneralConfig#23"
+msgid "Cleaning up Cache..."
+msgstr "Išvalomos atsargos..."
+
+#: ShamanGeneralConfig#24
+#, fuzzy
+msgctxt "ShamanGeneralConfig#24"
+msgid "Deleting Cache..."
+msgstr "Ištrinamos atsargos..."
+
+#: ShamanGeneralConfig#25
+#, fuzzy
+msgctxt "ShamanGeneralConfig#25"
+msgid "Optimizing Pacman Database..."
+msgstr "Optimizuojamos „Pacman“ duomenų bazės"
+
+#: ShamanGeneralConfig#26
+#, fuzzy
+msgctxt "ShamanGeneralConfig#26"
+msgid "Cleaning up building Environments..."
+msgstr "Išvalomos statymo aplinkos..."
+
+#: ShamanGeneralConfig#27
+#, fuzzy
+msgctxt "ShamanGeneralConfig#27"
+msgid "Unused Databases Cleaned up successfully!"
+msgstr "Nenaudojamos duomenų bazės išvalytos sėkmingai!"
+
+#: ShamanGeneralConfig#28
+#, fuzzy
+msgctxt "ShamanGeneralConfig#28"
+msgid "Cleaning up Unused Databases Failed!"
+msgstr "Duomenų bazės išvalymas nepavyko!"
+
+#: ShamanGeneralConfig#29
+#, fuzzy
+msgctxt "ShamanGeneralConfig#29"
+msgid "Cache Cleaned Up Successfully!"
+msgstr "Atsargos išvalytos sėkmingai!"
+
+#: ShamanGeneralConfig#30
+#, fuzzy
+msgctxt "ShamanGeneralConfig#30"
+msgid "Cleaning up Cache Failed!"
+msgstr "Atsargų išvalymas nepavyko!"
+
+#: ShamanGeneralConfig#31
+#, fuzzy
+msgctxt "ShamanGeneralConfig#31"
+msgid "Cache Successfully Deleted!"
+msgstr "Atsargos sėkmingai ištrintos!"
+
+#: ShamanGeneralConfig#32
+#, fuzzy
+msgctxt "ShamanGeneralConfig#32"
+msgid "Deleting Cache Failed!"
+msgstr "Atsargų ištrynimas nepavyko!"
+
+#: ShamanGeneralConfig#33
+#, fuzzy
+msgctxt "ShamanGeneralConfig#33"
+msgid "Build Environments Successfully Cleaned!"
+msgstr "Statymo aplinkos sėkmingai išvalytos!"
+
+#: ShamanGeneralConfig#34
+#, fuzzy
+msgctxt "ShamanGeneralConfig#34"
+msgid "Could not clean Build Environments!!"
+msgstr "Negalima išvalyti statymo aplinkos!!"
+
+#: ShamanGeneralConfig#35
+msgctxt "ShamanGeneralConfig#35"
+msgid "Database optimized successfully!"
+msgstr ""
+
+#: ShamanGeneralConfig#36
+msgctxt "ShamanGeneralConfig#36"
+msgid "Could not optimize database!"
 msgstr ""
 
 #: ShamanStatusBar#1
@@ -4400,6 +4796,7 @@ msgstr "Atnaujinti duomenų bazę.."
 msgid "Editing PKGBUILD"
 msgstr "Redaguojama PKGBUILD"
 
+#. (obsolete)
 #: editPBDialog#2
 msgid "Editing PKGBUILD of:"
 msgstr "Redaguojama PKGBUILD iš:"
@@ -4421,6 +4818,7 @@ msgctxt "editPBDialog#6"
 msgid "Ok"
 msgstr "Gerai"
 
+#. (obsolete)
 #: editPBDialog#7
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
@@ -4438,6 +4836,45 @@ msgstr ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Redaguoti PKGBUILD</span></p></body></html>"
+
+#: editPBDialog#8
+msgid "Editing:"
+msgstr ""
+
+#: editPBDialog#9
+msgid "PKGBUILD"
+msgstr ""
+
+#: editPBDialog#10
+msgid "MakePkg options"
+msgstr ""
+
+#: editPBDialog#11
+msgid "Ignore arch"
+msgstr ""
+
+#: editPBDialog#12
+msgid "Skip integrity checks"
+msgstr ""
+
+#: editPBDialog#13
+msgid "Ignore dependency control"
+msgstr ""
+
+#: editPBDialog#14
+msgid "Hold version if this is a development PKGBUILD"
+msgstr ""
+
+#: editPBDialog#15
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Edit Package build options</span></p></body></html>"
+msgstr ""
 
 #: logViewer#1
 msgid "Shaman - Log Viewer"
@@ -4681,6 +5118,7 @@ msgstr "Atšaukti"
 msgid "Process From Binary"
 msgstr "Atlikti iš binar'o"
 
+#. (obsolete)
 #: reviewBuildingDialog#11
 msgid "Review PKGBUILDs"
 msgstr "Peržiūrėti 'PKGBUILD'"
@@ -4688,6 +5126,10 @@ msgstr "Peržiūrėti 'PKGBUILD'"
 #: reviewBuildingDialog#12
 msgid "Process From Source"
 msgstr "Atlikti iš šaltinio"
+
+#: reviewBuildingDialog#13
+msgid "Review Build options"
+msgstr ""
 
 #: transactionDialog#1
 msgid "Processing Queue..."

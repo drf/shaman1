@@ -3,20 +3,93 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-08 14:51+0200\n"
+"POT-Creation-Date: 2009-11-07 17:52+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.3.0\n"
+"X-Generator: Translate Toolkit 1.4.1\n"
 
+#: AqpmConfig#1
+msgid "Packages and Paths"
+msgstr ""
+
+#: AqpmConfig#2
+#, fuzzy
+msgctxt "AqpmConfig#2"
+msgid "IgnorePkgs:"
+msgstr "Игнориши пакете (IgnorePkgs):"
+
+#: AqpmConfig#3
+#, fuzzy
+msgctxt "AqpmConfig#3"
+msgid "IgnoreGroups:"
+msgstr "Игнориши групе (IgnoreGroups):"
+
+#: AqpmConfig#4
+#, fuzzy
+msgctxt "AqpmConfig#4"
+msgid "NoUpgrade:"
+msgstr "Не надограђуј (NoUpgrade):"
+
+#: AqpmConfig#5
+#, fuzzy
+msgctxt "AqpmConfig#5"
+msgid "NoExtract:"
+msgstr "Не распакуј (NoExtract):"
+
+#: AqpmConfig#6
+#, fuzzy
+msgctxt "AqpmConfig#6"
+msgid "Log File:"
+msgstr "Фајл записа:"
+
+#: AqpmConfig#7
+#, fuzzy
+msgctxt "AqpmConfig#7"
+msgid "Advanced"
+msgstr "Напредно"
+
+#: AqpmConfig#8
+#, fuzzy
+msgctxt "AqpmConfig#8"
+msgid "Use SysLog"
+msgstr "Користи SysLog"
+
+#: AqpmConfig#9
+msgctxt "AqpmConfig#9"
+"AqpmConfig#9"
+msgid "Use Deltas (needs xdelta to be installed)"
+msgstr ""
+
+#: AqpmConfig#10
+msgid "Aqpm Options"
+msgstr ""
+
+#: AqpmConfig#11
+msgid "Use multi-server download (EXPERIMENTAL)"
+msgstr ""
+
+#: AqpmConfig#12
+#, fuzzy
+msgctxt "AqpmConfig#12"
+msgid "Error"
+msgstr "Грешка"
+
+#: AqpmConfig#13
+msgctxt "AqpmConfig#13"
+msgid "There has been a problem while saving the configuration!"
+msgstr ""
+
+#. (obsolete)
 #: BuildingDialog#1
 msgctxt "BuildingDialog#1"
 msgid "Error"
 msgstr "Грешка"
 
+#. (obsolete)
 #: BuildingDialog#2
 msgid ""
 "Would you like to abort building?.\n"
@@ -25,59 +98,73 @@ msgstr ""
 "Желите ли да откажете градњу?\n"
 "Цео напредак ће бити изгубљен."
 
+#. (obsolete)
 #: BuildingDialog#3
 msgid "<br><br><b>Building Process Aborted by the User. Building Failed.</b>"
 msgstr "<br><br><b>Градњу отказао корисник. Градња није успела.</b>"
 
+#. (obsolete)
 #: BuildingDialog#4
 msgid "<br><br><b>ABS Tree Was Successfully Updated!</b>"
 msgstr "<br><br><b>Успешно ажурирано стабло ABS-а</b>"
 
+#. (obsolete)
 #: BuildingDialog#5
 msgid "ABS Update"
 msgstr "Ажурирање ABS-а"
 
+#. (obsolete)
 #: BuildingDialog#6
 msgid "Your ABS Tree was updated!"
 msgstr "ABS-ово стабло је ажурирано!"
 
+#. (obsolete)
 #: BuildingDialog#7
 msgid "Could not update the ABS Tree!"
 msgstr "Не могу да ажурирам стабло ABS-а!"
 
+#. (obsolete)
 #: BuildingDialog#8
 msgid "<b>Building %1 failed!!</b><br><br>"
 msgstr "<b>Градња %1 није успела !!</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#9
 msgid "<b>%1 was built successfully!!</b><br><br>"
 msgstr "<b>Успешна градња %1!!</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#10
 msgid "Processing Package %1 of %2..."
 msgstr "Обрађујем пакете: %1 од %2..."
 
+#. (obsolete)
 #: BuildingDialog#11
 msgid "Building %1..."
 msgstr "Градим %1..."
 
+#. (obsolete)
 #: BuildingDialog#12
 msgid "<b>Could not set up the environment correctly for %1!!</b><br><br>"
 msgstr "<b>Не могу правилно поставити окружење за %1!!</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#13
 msgid "<b>Building %1...</b><br><br>"
 msgstr "<b>Градим %1...</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#14
 msgid "<b>Building operation has started.</b><br><br>"
 msgstr "<b>Отпочет процес градње.</b><br><br>"
 
+#. (obsolete)
 #: BuildingHandler#1
 msgctxt "BuildingHandler#1"
 msgid "Error"
 msgstr "Грешка"
 
+#. (obsolete)
 #: BuildingHandler#2
 msgid ""
 "You need to have ABS installed to use Shaman's\n"
@@ -86,6 +173,7 @@ msgstr ""
 "Да би користили Шаманову могућност градње \n"
 "потребан је ABS. Инсталирати одмах?"
 
+#. (obsolete)
 #: BuildingHandler#3
 msgid ""
 "You can not remove packages when processing\n"
@@ -94,6 +182,7 @@ msgstr ""
 "Не можете уклањати пакете док обрађујете\n"
 "низ из изворног кода"
 
+#. (obsolete)
 #: BuildingHandler#4
 msgid ""
 "Some of your packages do not belong to Arch\n"
@@ -104,6 +193,7 @@ msgstr ""
 "званичним ризницама. Шаман може градити\n"
 "пакете само из званичног изворног кода."
 
+#. (obsolete)
 #: BuildingHandler#5
 msgid ""
 "You are about to install <b>%n package(s)</b> from source. Building from "
@@ -118,24 +208,29 @@ msgstr ""
 "            \n"
 "        "
 
+#. (obsolete)
 #: BuildingHandler#6
 msgctxt "BuildingHandler#6"
 msgid "To be Installed"
 msgstr "За инсталацију"
 
+#. (obsolete)
 #: BuildingHandler#7
 msgctxt "BuildingHandler#7"
 msgid "To be Upgraded"
 msgstr "За надоградњу"
 
+#. (obsolete)
 #: BuildingHandler#8
 msgid "Package Building"
 msgstr "Градња пакета"
 
+#. (obsolete)
 #: BuildingHandler#9
 msgid "Your Packages failed to build!"
 msgstr "Градња пакета није успела1!!"
 
+#. (obsolete)
 #: BuildingHandler#10
 msgid ""
 "Your packages Failed to Build.\n"
@@ -144,15 +239,18 @@ msgstr ""
 "Градња пакета није успела.\n"
 "За више инфорамација погледајте излазне инфорамације."
 
+#. (obsolete)
 #: BuildingHandler#11
 msgctxt "BuildingHandler#11"
 msgid "Close"
 msgstr "Затвори"
 
+#. (obsolete)
 #: BuildingHandler#12
 msgid "Building Packages Failed!!"
 msgstr "Градња пакета није успела!!"
 
+#. (obsolete)
 #: BuildingHandler#13
 msgid ""
 "Some packages failed to build.\n"
@@ -161,18 +259,22 @@ msgstr ""
 "Неуспешна градња неких пакета.\n"
 "Свеједно наставити?"
 
+#. (obsolete)
 #: BuildingHandler#14
 msgid "Install Built Packages"
 msgstr "Инсталирај изграђене пакете"
 
+#. (obsolete)
 #: BuildingHandler#15
 msgid "Close Without Installing"
 msgstr "Затвори без инсталирања"
 
+#. (obsolete)
 #: BuildingHandler#16
 msgid "Packages Built Successfully!"
 msgstr "Успешна градња пакета!!"
 
+#. (obsolete)
 #: BuildingHandler#17
 msgid ""
 "Your Packages have been built successfully, and are ready to be installed"
@@ -199,6 +301,7 @@ msgstr "Испразни кеш"
 
 #: ConfigDialog#5
 msgctxt "ConfigDialog#5"
+"ConfigDialog#5"
 msgid "Optimize Pacman Database"
 msgstr "Оптимизуј Пакменове базе"
 
@@ -208,120 +311,140 @@ msgid "Clean All Building Environments"
 msgstr "Очисти сва окружења за градњу"
 
 #: ConfigDialog#7
-msgctxt "ConfigDialog#7"
+msgid "Shaman Configuration"
+msgstr ""
+
+#: ConfigDialog#8
+msgctxt "ConfigDialog#8"
 msgid "Repositories"
 msgstr "Ризнице"
 
-#: ConfigDialog#8
+#: ConfigDialog#9
+msgid "Aqpm Configuration"
+msgstr ""
+
+#: ConfigDialog#10
 msgid "Pacman"
 msgstr "Пакмен"
 
-#: ConfigDialog#9
+#: ConfigDialog#11
 msgid "ABS"
 msgstr "ABS"
 
-#: ConfigDialog#10
+#: ConfigDialog#12
+msgctxt "ConfigDialog#12"
 msgid "Advanced"
 msgstr "Напредно"
 
-#: ConfigDialog#11
+#: ConfigDialog#13
 msgid "Enter Here the Repository's Name"
 msgstr "Унестите назив ризнице"
 
-#: ConfigDialog#12
+#: ConfigDialog#14
 msgid "Enter Here the Repository's Server"
 msgstr "Унесите ризницин сервер"
 
-#: ConfigDialog#13
-msgctxt "ConfigDialog#13"
+#: ConfigDialog#15
+msgctxt "ConfigDialog#15"
 msgid "Ok"
 msgstr "У реду"
 
-#: ConfigDialog#14
-msgctxt "ConfigDialog#14"
-msgid "Cancel"
-msgstr "Откажи"
-
-#: ConfigDialog#15
-msgctxt "ConfigDialog#15"
-msgid "Cleaning up unused Databases..."
-msgstr "Чистим неупотребљаване базе..."
-
 #: ConfigDialog#16
-msgctxt "ConfigDialog#16"
-msgid "Cleaning up Cache..."
-msgstr "Чистим кеш..."
+msgid "Apply"
+msgstr ""
 
 #: ConfigDialog#17
 msgctxt "ConfigDialog#17"
-msgid "Deleting Cache..."
-msgstr "Бришем кеш..."
+msgid "Cancel"
+msgstr "Откажи"
 
 #: ConfigDialog#18
 msgctxt "ConfigDialog#18"
-msgid "Optimizing Pacman Database..."
-msgstr "Оптимизујем Пакменову базу..."
+"ConfigDialog#18"
+msgid "Cleaning up unused Databases..."
+msgstr "Чистим неупотребљаване базе..."
 
 #: ConfigDialog#19
 msgctxt "ConfigDialog#19"
-msgid "Cleaning up building Environments..."
-msgstr "Чистим окружења за градњу..."
+msgid "Cleaning up Cache..."
+msgstr "Чистим кеш..."
 
 #: ConfigDialog#20
 msgctxt "ConfigDialog#20"
-msgid "Cleaning up Unused Databases Failed!"
-msgstr "Неуспело чишћење неупотребљених база!"
+msgid "Deleting Cache..."
+msgstr "Бришем кеш..."
 
 #: ConfigDialog#21
 msgctxt "ConfigDialog#21"
-msgid "Cleaning up Cache Failed!"
-msgstr "Неуспело чишћење кеша!"
+msgid "Optimizing Pacman Database..."
+msgstr "Оптимизујем Пакменову базу..."
 
 #: ConfigDialog#22
 msgctxt "ConfigDialog#22"
-msgid "Deleting Cache Failed!"
-msgstr "Неуспело брисање кеша!"
+msgid "Cleaning up building Environments..."
+msgstr "Чистим окружења за градњу..."
 
 #: ConfigDialog#23
 msgctxt "ConfigDialog#23"
-msgid "Could not clean Build Environments!!"
-msgstr "Не могу да очитим окружења за градњу!!"
+"ConfigDialog#23"
+msgid "Cleaning up Unused Databases Failed!"
+msgstr "Неуспело чишћење неупотребљених база!"
 
 #: ConfigDialog#24
 msgctxt "ConfigDialog#24"
-msgid "Unused Databases Cleaned up successfully!"
-msgstr "Успешно чишћење неупотребљаваних база!"
+"ConfigDialog#24"
+msgid "Cleaning up Cache Failed!"
+msgstr "Неуспело чишћење кеша!"
 
 #: ConfigDialog#25
 msgctxt "ConfigDialog#25"
-msgid "Cache Cleaned Up Successfully!"
-msgstr "Успешно чишћење кеша!"
+"ConfigDialog#25"
+msgid "Deleting Cache Failed!"
+msgstr "Неуспело брисање кеша!"
 
 #: ConfigDialog#26
 msgctxt "ConfigDialog#26"
-msgid "Cache Successfully Deleted!"
-msgstr "Успешно брисање кеша!"
+"ConfigDialog#26"
+msgid "Could not clean Build Environments!!"
+msgstr "Не могу да очитим окружења за градњу!!"
 
 #: ConfigDialog#27
 msgctxt "ConfigDialog#27"
-msgid "Build Environments Successfully Cleaned!"
-msgstr "Успешно чишћење окружења за градњу!"
+"ConfigDialog#27"
+msgid "Unused Databases Cleaned up successfully!"
+msgstr "Успешно чишћење неупотребљаваних база!"
 
 #: ConfigDialog#28
 msgctxt "ConfigDialog#28"
-msgid "Database optimized successfully!"
-msgstr "Успешна оптимизација базе!"
+msgid "Cache Cleaned Up Successfully!"
+msgstr "Успешно чишћење кеша!"
 
 #: ConfigDialog#29
 msgctxt "ConfigDialog#29"
+msgid "Cache Successfully Deleted!"
+msgstr "Успешно брисање кеша!"
+
+#: ConfigDialog#30
+msgctxt "ConfigDialog#30"
+msgid "Build Environments Successfully Cleaned!"
+msgstr "Успешно чишћење окружења за градњу!"
+
+#: ConfigDialog#31
+msgctxt "ConfigDialog#31"
+"ConfigDialog#31"
+msgid "Database optimized successfully!"
+msgstr "Успешна оптимизација базе!"
+
+#: ConfigDialog#32
+msgctxt "ConfigDialog#32"
 msgid "Could not optimize database!"
 msgstr "Не могу да оптимизујем базу!"
 
-#: ConfigDialog#30
+#: ConfigDialog#33
 msgid "Error saving configuration"
 msgstr "Грешка при снимању поставки"
 
-#: ConfigDialog#31
+#: ConfigDialog#34
 msgid ""
 "There was an error while saving the configuration. This is probably due to "
 "an internal error or you being not authorized to perform the operation"
@@ -329,11 +452,11 @@ msgstr ""
 "Појавила се грешка при снимању поставки. Вероватно услед унутрашње грешке "
 "или недостатка дозвола за извршавање ове радње"
 
-#: ConfigDialog#32
+#: ConfigDialog#35
 msgid "Saving Configuration"
 msgstr "Смнимам поставке"
 
-#: ConfigDialog#33
+#: ConfigDialog#36
 msgid ""
 "Some of your changes have not been applied,\n"
 "since alpm needs to be released.\n"
@@ -343,24 +466,24 @@ msgstr ""
 "јер се мора ослободти alpm .\n"
 "Поново покрените Шамана да би ступиле на снагу."
 
-#: ConfigDialog#34
+#: ConfigDialog#37
 msgid "Settings Changed"
 msgstr "Мењане су поставке"
 
-#: ConfigDialog#35
+#: ConfigDialog#38
 msgid ""
 "Your repositories have changed.\n"
 "Do you want to Update Your Database?"
 msgstr "Мењали сте ризнице. Желите ли да ажурирате базу?"
 
-#: ConfigDialog#36
-msgctxt "ConfigDialog#36"
+#: ConfigDialog#39
+msgctxt "ConfigDialog#39"
 msgid "Add Mirror"
 msgstr "Додај мирор"
 
 # Obviously keep the example as it is ;)
-#: ConfigDialog#37
-msgctxt "ConfigDialog#37"
+#: ConfigDialog#40
+msgctxt "ConfigDialog#40"
 msgid ""
 "Mirror Format is incorrect. Your mirror should look like this:\n"
 "http://mirror.org/$repo/os/i686"
@@ -369,8 +492,8 @@ msgstr ""
 "http://mirror.org/$repo/os/i686"
 
 # mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.
-#: ConfigDialog#38
-msgctxt "ConfigDialog#38"
+#: ConfigDialog#41
+msgctxt "ConfigDialog#41"
 msgid ""
 "Your Mirror was successfully added!\n"
 "It is now available in mirrorlist."
@@ -378,8 +501,8 @@ msgstr ""
 "Мирор је успешно додат!\n"
 "Сада је доступан у mirrorlist фајлу."
 
-#: ConfigDialog#39
-msgctxt "ConfigDialog#39"
+#: ConfigDialog#42
+msgctxt "ConfigDialog#42"
 msgid ""
 "There was an error while trying to add the mirror! This could be due also to "
 "your system policy preventing you from performing this action"
@@ -388,7 +511,7 @@ msgstr ""
 "вас спречавају да изведете ову радњу"
 
 # Obviously keep the example as it is ;)
-#: ConfigDialog#40
+#: ConfigDialog#43
 msgid ""
 "Mirror Format is incorrect. Your mirror should look like this:\n"
 "http://mirror.org/$repo/$arch"
@@ -397,7 +520,7 @@ msgstr ""
 "http://mirror.org/$repo/os/i686"
 
 # mirrorlist here means /etc/pacman.d/kdemodmirrorlist, so it should not be translated.
-#: ConfigDialog#41
+#: ConfigDialog#44
 msgid ""
 "Your Mirror was successfully added!\n"
 "It is now available in kdemodmirrorlist."
@@ -405,78 +528,92 @@ msgstr ""
 "Мирор је успешно додат!\n"
 "Сада је доступан у kdemodmirrorlist фајлу."
 
-#: ConfigDialog#42
+#: ConfigDialog#45
 msgid "Shaman - Configuration"
 msgstr "Шаман - подешавања"
 
-#: ConfigDialog#43
-msgctxt "ConfigDialog#43"
+#. (obsolete)
+#: ConfigDialog#46
+msgctxt "ConfigDialog#46"
+"ConfigDialog#46"
 msgid "Favourite Actions"
 msgstr "Пожељне радње"
 
-#: ConfigDialog#44
-msgctxt "ConfigDialog#44"
+#. (obsolete)
+#: ConfigDialog#47
+msgctxt "ConfigDialog#47"
 msgid "When Upgrading System:"
 msgstr "При надоградњи система:"
 
-#: ConfigDialog#45
-msgctxt "ConfigDialog#45"
+#. (obsolete)
+#: ConfigDialog#48
+msgctxt "ConfigDialog#48"
 msgid "Upgrade Immediately"
 msgstr "надогради одмах"
 
-#: ConfigDialog#46
-msgctxt "ConfigDialog#46"
+#. (obsolete)
+#: ConfigDialog#49
+msgctxt "ConfigDialog#49"
 msgid "Add Upgradeable Packages To Queue"
 msgstr "додај надоградиве пакете у низ"
 
-#: ConfigDialog#47
-msgctxt "ConfigDialog#47"
+#. (obsolete)
+#: ConfigDialog#50
+msgctxt "ConfigDialog#50"
 msgid "Ask"
 msgstr "питај"
 
-#: ConfigDialog#48
-msgctxt "ConfigDialog#48"
+#. (obsolete)
+#: ConfigDialog#51
+msgctxt "ConfigDialog#51"
 msgid "When Processing Queue"
 msgstr "При обради низа"
 
-#: ConfigDialog#49
-msgctxt "ConfigDialog#49"
+#. (obsolete)
+#: ConfigDialog#52
+msgctxt "ConfigDialog#52"
 msgid "Keep application running in System Tray only"
 msgstr "нек програм ради само у системској касети"
 
-#: ConfigDialog#50
-msgctxt "ConfigDialog#50"
+#. (obsolete)
+#: ConfigDialog#53
+msgctxt "ConfigDialog#53"
 msgid "GUI Startup"
 msgstr "Покретање сучеља"
 
-#: ConfigDialog#51
-msgctxt "ConfigDialog#51"
+#. (obsolete)
+#: ConfigDialog#54
+msgctxt "ConfigDialog#54"
 msgid "Start in the System Tray"
 msgstr "Покрени у системској касети"
 
-#: ConfigDialog#52
-msgctxt "ConfigDialog#52"
+#. (obsolete)
+#: ConfigDialog#55
+msgctxt "ConfigDialog#55"
 msgid "Show Splashscreen"
 msgstr "Прикажи уводни екран"
 
-#: ConfigDialog#53
-msgctxt "ConfigDialog#53"
+#. (obsolete)
+#: ConfigDialog#56
+msgctxt "ConfigDialog#56"
 msgid "Maintenance"
 msgstr "Одржавање"
 
-#: ConfigDialog#54
-msgctxt "ConfigDialog#54"
+#: ConfigDialog#57
+msgctxt "ConfigDialog#57"
 msgid "Process Selected"
 msgstr "Обради изабрано"
 
 # Waiting for a user action
-#: ConfigDialog#55
-msgctxt "ConfigDialog#55"
+#. (obsolete)
+#: ConfigDialog#58
+msgctxt "ConfigDialog#58"
 msgid "Waiting"
 msgstr "Чекам"
 
-#: ConfigDialog#56
-msgctxt "ConfigDialog#56"
+#. (obsolete)
+#: ConfigDialog#59
+msgctxt "ConfigDialog#59"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -505,361 +642,430 @@ msgstr ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "size:9pt;\">Изаберите радњу из падајућег менија.</span></p></body></html>"
 
-#: ConfigDialog#57
-msgctxt "ConfigDialog#57"
+#. (obsolete)
+#: ConfigDialog#60
+msgctxt "ConfigDialog#60"
 msgid "Checkable Options"
 msgstr "Изборне поставке"
 
-#: ConfigDialog#58
-msgctxt "ConfigDialog#58"
+#. (obsolete)
+#: ConfigDialog#61
+msgctxt "ConfigDialog#61"
 msgid "Use Active FTP"
 msgstr "Користи активни ФТП"
 
-#: ConfigDialog#59
-msgctxt "ConfigDialog#59"
+#. (obsolete)
+#: ConfigDialog#62
+msgctxt "ConfigDialog#62"
 msgid "Use Deltas (needs xdelta to be installed)"
 msgstr "Користи делте (потребно инсталирати xdelta)"
 
-#: ConfigDialog#60
-msgctxt "ConfigDialog#60"
+#. (obsolete)
+#: ConfigDialog#63
+msgctxt "ConfigDialog#63"
 msgid "Use SysLog"
 msgstr "Користи SysLog"
 
-#: ConfigDialog#61
-msgctxt "ConfigDialog#61"
+#. (obsolete)
+#: ConfigDialog#64
+msgctxt "ConfigDialog#64"
 msgid "Advanced Options"
 msgstr "Напредне поставке"
 
-#: ConfigDialog#62
-msgctxt "ConfigDialog#62"
+#. (obsolete)
+#: ConfigDialog#65
+msgctxt "ConfigDialog#65"
 msgid "HoldPkgs:"
 msgstr "Задржи пакете (HoldPkgs):"
 
-#: ConfigDialog#63
-msgctxt "ConfigDialog#63"
+#. (obsolete)
+#: ConfigDialog#66
+msgctxt "ConfigDialog#66"
 msgid "IgnorePkgs:"
 msgstr "Игнориши пакете (IgnorePkgs):"
 
-#: ConfigDialog#64
-msgctxt "ConfigDialog#64"
+#. (obsolete)
+#: ConfigDialog#67
+msgctxt "ConfigDialog#67"
 msgid "IgnoreGroups:"
 msgstr "Игнориши групе (IgnoreGroups):"
 
-#: ConfigDialog#65
-msgctxt "ConfigDialog#65"
+#. (obsolete)
+#: ConfigDialog#68
+msgctxt "ConfigDialog#68"
 msgid "NoUpgrade:"
 msgstr "Не надограђуј (NoUpgrade):"
 
-#: ConfigDialog#66
-msgctxt "ConfigDialog#66"
+#. (obsolete)
+#: ConfigDialog#69
+msgctxt "ConfigDialog#69"
 msgid "NoExtract:"
 msgstr "Не распакуј (NoExtract):"
 
-#: ConfigDialog#67
-msgctxt "ConfigDialog#67"
+#. (obsolete)
+#: ConfigDialog#70
+msgctxt "ConfigDialog#70"
 msgid "Log File:"
 msgstr "Фајл записа:"
 
-#: ConfigDialog#68
-msgctxt "ConfigDialog#68"
+#. (obsolete)
+#: ConfigDialog#71
+msgctxt "ConfigDialog#71"
 msgid "XFerCommand: (example: /path/to/command %u) Blank for Default"
 msgstr ""
 "Иксфер наредба (XFerCommand): (пример: /путања/до/наредбе %u) Празно је "
 "подразумевано"
 
-#: ConfigDialog#69
-msgctxt "ConfigDialog#69"
+#. (obsolete)
+#: ConfigDialog#72
+msgctxt "ConfigDialog#72"
 msgid "Arch Linux Official Repositories"
 msgstr "Арчлинуксове званичне ризнице"
 
 # Do not translate
-#: ConfigDialog#70
-msgctxt "ConfigDialog#70"
+#. (obsolete)
+#: ConfigDialog#73
+msgctxt "ConfigDialog#73"
 msgid "Core"
 msgstr "Core"
 
 # Do not translate
-#: ConfigDialog#71
-msgctxt "ConfigDialog#71"
+#. (obsolete)
+#: ConfigDialog#74
+msgctxt "ConfigDialog#74"
 msgid "Extra"
 msgstr "Extra"
 
 # Do not translate
-#: ConfigDialog#72
-msgctxt "ConfigDialog#72"
+#. (obsolete)
+#: ConfigDialog#75
+msgctxt "ConfigDialog#75"
 msgid "Community"
 msgstr "Community"
 
 # Do not translate
-#: ConfigDialog#73
-msgctxt "ConfigDialog#73"
+#. (obsolete)
+#: ConfigDialog#76
+msgctxt "ConfigDialog#76"
 msgid "Testing"
 msgstr "Testing"
 
-#: ConfigDialog#74
-msgctxt "ConfigDialog#74"
+#. (obsolete)
+#: ConfigDialog#77
+msgctxt "ConfigDialog#77"
 msgid "Server"
 msgstr "Сервер"
 
-#: ConfigDialog#75
-msgctxt "ConfigDialog#75"
+#. (obsolete)
+#: ConfigDialog#78
+msgctxt "ConfigDialog#78"
 msgid "KDEMod Repositories"
 msgstr "КДЕмодове ризнице"
 
-#: ConfigDialog#76
-msgctxt "ConfigDialog#76"
+#. (obsolete)
+#: ConfigDialog#79
+msgctxt "ConfigDialog#79"
 msgid "KDEMod 4 Repository"
 msgstr "Ризница КДЕмод 4"
 
-#: ConfigDialog#77
-msgctxt "ConfigDialog#77"
+#. (obsolete)
+#: ConfigDialog#80
+msgctxt "ConfigDialog#80"
 msgid "KDEMod 4 Extragear Repository"
 msgstr "Ризница КДЕмод 4 (екстраопрема)"
 
-#: ConfigDialog#78
-msgctxt "ConfigDialog#78"
+#. (obsolete)
+#: ConfigDialog#81
+msgctxt "ConfigDialog#81"
 msgid "KDEMod 4 Playground Repository"
 msgstr "Ризница КДЕмод 4 (игралиште)"
 
-#: ConfigDialog#79
-msgctxt "ConfigDialog#79"
+#. (obsolete)
+#: ConfigDialog#82
+msgctxt "ConfigDialog#82"
 msgid "KDEMod 4 Testing Repository"
 msgstr "Ризница КДЕмод 4 (тестирање)"
 
-#: ConfigDialog#80
-msgctxt "ConfigDialog#80"
+#. (obsolete)
+#: ConfigDialog#83
+msgctxt "ConfigDialog#83"
 msgid "KDEMod 4 Unstable Repository (Testers only!)"
 msgstr "Ризница КДЕмод 4 (нестабилна - само за тестирање!)"
 
-#: ConfigDialog#81
-msgctxt "ConfigDialog#81"
+#. (obsolete)
+#: ConfigDialog#84
+msgctxt "ConfigDialog#84"
 msgid "KDEMod 3 Repository"
 msgstr "Ризница КДЕмод 3"
 
-#: ConfigDialog#82
-msgctxt "ConfigDialog#82"
+#. (obsolete)
+#: ConfigDialog#85
+msgctxt "ConfigDialog#85"
 msgid "Third-Party Repositories"
 msgstr "Незваничне ризнице"
 
-#: ConfigDialog#83
-msgctxt "ConfigDialog#83"
+#. (obsolete)
+#: ConfigDialog#86
+msgctxt "ConfigDialog#86"
 msgid "Add New Repository"
 msgstr "Додај нову ризницу"
 
-#: ConfigDialog#84
-msgctxt "ConfigDialog#84"
+#. (obsolete)
+#: ConfigDialog#87
+msgctxt "ConfigDialog#87"
 msgid "Add another server"
 msgstr "Додај други сервер"
 
-#: ConfigDialog#85
-msgctxt "ConfigDialog#85"
-"ConfigDialog#85"
+#. (obsolete)
+#: ConfigDialog#88
+msgctxt "ConfigDialog#88"
+"ConfigDialog#88"
 msgid "Repository Order"
 msgstr "Ређање ризница"
 
-#: ConfigDialog#86
-msgctxt "ConfigDialog#86"
-"ConfigDialog#86"
+#. (obsolete)
+#: ConfigDialog#89
+msgctxt "ConfigDialog#89"
+"ConfigDialog#89"
 msgid ""
 "Please order your repositories to define which one will be preferred over "
 "another."
 msgstr "Посложите ризнице да би одредили које имају предност над осталима."
 
-#: ConfigDialog#87
-msgctxt "ConfigDialog#87"
+#. (obsolete)
+#: ConfigDialog#90
+msgctxt "ConfigDialog#90"
 msgid "Preferences"
 msgstr "Поставке"
 
-#: ConfigDialog#88
-msgctxt "ConfigDialog#88"
+#. (obsolete)
+#: ConfigDialog#91
+msgctxt "ConfigDialog#91"
 msgid "Process all dependencies and queue from binary first (recommended)"
 msgstr "Прво обради све зависности и низ из бинарних пакета (препоручено)"
 
-#: ConfigDialog#89
-msgctxt "ConfigDialog#89"
+#. (obsolete)
+#: ConfigDialog#92
+msgctxt "ConfigDialog#92"
 msgid "Review Building output before installing"
 msgstr "Преглед излазне информације пре инсталације"
 
-#: ConfigDialog#90
-msgctxt "ConfigDialog#90"
+#. (obsolete)
+#: ConfigDialog#93
+msgctxt "ConfigDialog#93"
 msgid "ABS Configuration"
 msgstr "Подешавања ABS-а"
 
-#: ConfigDialog#91
-msgctxt "ConfigDialog#91"
+#. (obsolete)
+#: ConfigDialog#94
+msgctxt "ConfigDialog#94"
 msgid "Use supfiles that match your current repositories"
 msgstr "Користи супфајлове који одговарају тренутној ризници"
 
-#: ConfigDialog#92
-msgctxt "ConfigDialog#92"
+#. (obsolete)
+#: ConfigDialog#95
+msgctxt "ConfigDialog#95"
 msgid "Define supfiles manually"
 msgstr "Ручно одреди супфајлове"
 
-#: ConfigDialog#93
-msgctxt "ConfigDialog#93"
+#. (obsolete)
+#: ConfigDialog#96
+msgctxt "ConfigDialog#96"
 msgid "RSync Server:"
 msgstr "Сервер за синхронизацију:"
 
-#: ConfigDialog#94
-msgctxt "ConfigDialog#94"
+#. (obsolete)
+#: ConfigDialog#97
+msgctxt "ConfigDialog#97"
 msgid "Makepkg Configuration"
 msgstr "Поставке Makepkg-а"
 
-#: ConfigDialog#95
-msgctxt "ConfigDialog#95"
+#. (obsolete)
+#: ConfigDialog#98
+msgctxt "ConfigDialog#98"
 msgid "CFlags"
 msgstr "CFlags"
 
-#: ConfigDialog#96
-msgctxt "ConfigDialog#96"
+#. (obsolete)
+#: ConfigDialog#99
+msgctxt "ConfigDialog#99"
 msgid "CXXFlags"
 msgstr "CXXFlags"
 
-#: ConfigDialog#97
-msgctxt "ConfigDialog#97"
+#. (obsolete)
+#: ConfigDialog#100
+msgctxt "ConfigDialog#100"
 msgid "BuildEnv"
 msgstr "BuildEnv"
 
-#: ConfigDialog#98
-msgctxt "ConfigDialog#98"
+#. (obsolete)
+#: ConfigDialog#101
+msgctxt "ConfigDialog#101"
 msgid "Options"
 msgstr "Options"
 
-#: ConfigDialog#99
-msgctxt "ConfigDialog#99"
+#. (obsolete)
+#: ConfigDialog#102
+msgctxt "ConfigDialog#102"
 msgid "Doc_Dirs"
 msgstr "Doc_Dirs"
 
-#: ConfigDialog#100
-msgctxt "ConfigDialog#100"
+#. (obsolete)
+#: ConfigDialog#103
+msgctxt "ConfigDialog#103"
 msgid "Build Environment"
 msgstr "Окружење за градњу"
 
-#: ConfigDialog#101
-msgctxt "ConfigDialog#101"
+#. (obsolete)
+#: ConfigDialog#104
+msgctxt "ConfigDialog#104"
 msgid "Building Path"
 msgstr "Путања за градњу"
 
-#: ConfigDialog#102
-msgctxt "ConfigDialog#102"
+#. (obsolete)
+#: ConfigDialog#105
+msgctxt "ConfigDialog#105"
 msgid "Remove installed makedepends after build"
 msgstr "Уклони зависности градње након завршетка"
 
-#: ConfigDialog#103
-msgctxt "ConfigDialog#103"
+#. (obsolete)
+#: ConfigDialog#106
+msgctxt "ConfigDialog#106"
 msgid "Clean Build Environment after installation"
 msgstr "Очисти окружења за градњу по инсталацији"
 
-#: ConfigDialog#104
-msgctxt "ConfigDialog#104"
+#. (obsolete)
+#: ConfigDialog#107
+msgctxt "ConfigDialog#107"
 msgid "When Application is in System Tray only"
 msgstr "Кад је програм у ситемској касети"
 
-#: ConfigDialog#105
-msgctxt "ConfigDialog#105"
+#. (obsolete)
+#: ConfigDialog#108
+msgctxt "ConfigDialog#108"
 msgid "Update Database every"
 msgstr "Ажуруирај базу сваких"
 
 # As in "minutes"
-#: ConfigDialog#106
-msgctxt "ConfigDialog#106"
+#. (obsolete)
+#: ConfigDialog#109
+msgctxt "ConfigDialog#109"
 msgid "min"
 msgstr "мин"
 
-#: ConfigDialog#107
-msgctxt "ConfigDialog#107"
+#. (obsolete)
+#: ConfigDialog#110
+msgctxt "ConfigDialog#110"
 msgid "Show tray notification Windows"
 msgstr "Прикажи касетине прозорчиће за обавештења"
 
-#: ConfigDialog#108
-msgctxt "ConfigDialog#108"
+#. (obsolete)
+#: ConfigDialog#111
+msgctxt "ConfigDialog#111"
 msgid "If upgrades are available:"
 msgstr "За доступне надоградње:"
 
-#: ConfigDialog#109
-msgctxt "ConfigDialog#109"
+#. (obsolete)
+#: ConfigDialog#112
+msgctxt "ConfigDialog#112"
 msgid "Just Notify"
 msgstr "само обавести"
 
-#: ConfigDialog#110
-msgctxt "ConfigDialog#110"
+#. (obsolete)
+#: ConfigDialog#113
+msgctxt "ConfigDialog#113"
 msgid "Notify and add them to Queue"
 msgstr "обавести и додај у низ"
 
-#: ConfigDialog#111
-msgctxt "ConfigDialog#111"
+#. (obsolete)
+#: ConfigDialog#114
+msgctxt "ConfigDialog#114"
 msgid "Update Database at"
 msgstr "Ажурирај базу у"
 
-#: ConfigDialog#112
-msgctxt "ConfigDialog#112"
+#. (obsolete)
+#: ConfigDialog#115
+msgctxt "ConfigDialog#115"
 msgid "Use a proxy-server"
 msgstr "Користи прокси сервер"
 
-#: ConfigDialog#113
-msgctxt "ConfigDialog#113"
+#. (obsolete)
+#: ConfigDialog#116
+msgctxt "ConfigDialog#116"
 msgid "IP:"
 msgstr "IP:"
 
-#: ConfigDialog#114
-msgctxt "ConfigDialog#114"
+#. (obsolete)
+#: ConfigDialog#117
+msgctxt "ConfigDialog#117"
 msgid "Port:"
 msgstr "Порт:"
 
-#: ConfigDialog#115
-msgctxt "ConfigDialog#115"
+#. (obsolete)
+#: ConfigDialog#118
+msgctxt "ConfigDialog#118"
 msgid "HTTP Proxy"
 msgstr "ХТТП прокси"
 
-#: ConfigDialog#116
-msgctxt "ConfigDialog#116"
+#. (obsolete)
+#: ConfigDialog#119
+msgctxt "ConfigDialog#119"
 msgid "FTP Proxy"
 msgstr "ФТП прокси"
 
-#: ConfigDialog#117
-msgctxt "ConfigDialog#117"
+#. (obsolete)
+#: ConfigDialog#120
+msgctxt "ConfigDialog#120"
 msgid "Use Shaman RSS Capabilities"
 msgstr "Користи Шаманове RSS могућности"
 
-#: ConfigDialog#118
-msgctxt "ConfigDialog#118"
+#. (obsolete)
+#: ConfigDialog#121
+msgctxt "ConfigDialog#121"
 msgid "Update RSS Feed Every"
 msgstr "Освежи RSS довод сваких"
 
-#: ConfigDialog#119
-msgctxt "ConfigDialog#119"
+#. (obsolete)
+#: ConfigDialog#122
+msgctxt "ConfigDialog#122"
 msgid "Notify upon new items"
 msgstr "Обавести о новим ставкама"
 
-#: ConfigDialog#120
-msgctxt "ConfigDialog#120"
+#. (obsolete)
+#: ConfigDialog#123
+msgctxt "ConfigDialog#123"
 msgid ""
 "Check if there is an unread news about a package in Queue before processing "
 "it"
 msgstr "Провери има ли нових вести о пакету из задатог низа пре његове обраде"
 
-#: ConfigDialog#121
-msgctxt "ConfigDialog#121"
+#. (obsolete)
+#: ConfigDialog#124
+msgctxt "ConfigDialog#124"
 msgid "Interface"
 msgstr "Сучеље"
 
-#: ConfigDialog#122
-msgctxt "ConfigDialog#122"
+#. (obsolete)
+#: ConfigDialog#125
+msgctxt "ConfigDialog#125"
 msgid "Use Animated Tray Icon"
 msgstr "Користи анимирану касетну икону"
 
-#: ConfigDialog#123
-msgctxt "ConfigDialog#123"
+#. (obsolete)
+#: ConfigDialog#126
+msgctxt "ConfigDialog#126"
 msgid "Start Shaman Automatically on X Startup"
 msgstr "Аутоматски покрени Шамана при покретању X-а"
 
-#: ConfigDialog#124
-msgctxt "ConfigDialog#124"
+#. (obsolete)
+#: ConfigDialog#127
+msgctxt "ConfigDialog#127"
 msgid "Forbid starting Shaman as root"
 msgstr "Забрани корено покретање Шамана"
 
-#: ConfigDialog#125
-msgctxt "ConfigDialog#125"
+#. (obsolete)
+#: ConfigDialog#128
+msgctxt "ConfigDialog#128"
 msgid ""
 "Here you can choose what repositories to use between Arch Linux's official "
 "ones. Please note that packages from Unstable and Testing may break your "
@@ -868,8 +1074,9 @@ msgstr ""
 "Овде изаберите које од Арчлинуксових званичних ризница користити. Водите "
 "рачуна да пакети из „Unstable“ и „Testing“ могу нашкодити систему."
 
-#: ConfigDialog#126
-msgctxt "ConfigDialog#126"
+#. (obsolete)
+#: ConfigDialog#129
+msgctxt "ConfigDialog#129"
 msgid ""
 "KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
 "improved Qt build, compatible with Arch Linux standard Qt's, an improved "
@@ -881,9 +1088,10 @@ msgstr ""
 "и мноштво додатака. КДЕмод је најбољи начин да осетите лакоћу и снагу КДЕ-а "
 "уз једноставност и могућности Арча. "
 
-#: ConfigDialog#127
-msgctxt "ConfigDialog#127"
-"ConfigDialog#127"
+#. (obsolete)
+#: ConfigDialog#130
+msgctxt "ConfigDialog#130"
+"ConfigDialog#130"
 msgid ""
 "You can extend your packages choice by adding other repositories. Third-"
 "Party Repositories act just as normal ones, and will be accessible through "
@@ -892,40 +1100,38 @@ msgstr ""
 "Можете проширити избор пакета додавањем других ризница. Ризнице са треће "
 "стране се понашају попут осталих, и биће доступне и у Шаману и у Пакмену."
 
-#: ConfigDialog#128
-msgctxt "ConfigDialog#128"
+#. (obsolete)
+#: ConfigDialog#131
+msgctxt "ConfigDialog#131"
 msgid "Use the following language:"
 msgstr "Користи следећи језик:"
 
-#: ConfigDialog#129
-msgctxt "ConfigDialog#129"
+#. (obsolete)
+#: ConfigDialog#132
+msgctxt "ConfigDialog#132"
 msgid "Disable Tray Icon"
 msgstr "Онемогући касетну икону"
-
-#: ConfigDialog#130
-msgctxt "ConfigDialog#130"
-msgid "Pacman Database Optimized Successfully!"
-msgstr ""
-
-#: ConfigDialog#131
-msgctxt "ConfigDialog#131"
-msgid "Could not Optimize Pacman Database!"
-msgstr ""
-
-# sync is a command, so it should not be translated
-#: ConfigDialog#132
-msgid "Running sync..."
-msgstr ""
 
 #: DatabaseConfig#1
 msgctxt "DatabaseConfig#1"
 msgid "Add Mirror"
 msgstr "Додај мирор"
 
-# Obviously keep the example as it is ;)
 #: DatabaseConfig#2
 #, fuzzy
 msgctxt "DatabaseConfig#2"
+msgid "Error"
+msgstr "Грешка"
+
+#: DatabaseConfig#3
+msgctxt "DatabaseConfig#3"
+msgid "There has been a problem while saving the configuration!"
+msgstr ""
+
+# Obviously keep the example as it is ;)
+#: DatabaseConfig#4
+#, fuzzy
+msgctxt "DatabaseConfig#4"
 msgid ""
 "Mirror Format is incorrect. Your mirror should look like this:\n"
 "http://mirror.org/$repo/os/i686"
@@ -934,9 +1140,9 @@ msgstr ""
 "http://mirror.org/$repo/os/i686"
 
 # mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.
-#: DatabaseConfig#3
+#: DatabaseConfig#5
 #, fuzzy
-msgctxt "DatabaseConfig#3"
+msgctxt "DatabaseConfig#5"
 msgid ""
 "Your Mirror was successfully added!\n"
 "It is now available in mirrorlist."
@@ -944,9 +1150,9 @@ msgstr ""
 "Мирор је успешно додат!\n"
 "Сада је доступан у mirrorlist фајлу."
 
-#: DatabaseConfig#4
+#: DatabaseConfig#6
 #, fuzzy
-msgctxt "DatabaseConfig#4"
+msgctxt "DatabaseConfig#6"
 msgid ""
 "There was an error while trying to add the mirror! This could be due also to "
 "your system policy preventing you from performing this action"
@@ -954,18 +1160,18 @@ msgstr ""
 "Појавила се грешка при додавању мирора! Могуће због системских дозвола које "
 "вас спречавају да изведете ову радњу"
 
-#: DatabaseConfig#5
-msgctxt "DatabaseConfig#5"
+#: DatabaseConfig#7
+msgctxt "DatabaseConfig#7"
 msgid "Form"
 msgstr "Облик"
 
-#: DatabaseConfig#6
-msgctxt "DatabaseConfig#6"
+#: DatabaseConfig#8
+msgctxt "DatabaseConfig#8"
 msgid "Arch Linux Official Repositories"
 msgstr "Арчлинуксове званичне ризнице"
 
-#: DatabaseConfig#7
-msgctxt "DatabaseConfig#7"
+#: DatabaseConfig#9
+msgctxt "DatabaseConfig#9"
 msgid ""
 "Here you can choose what repositories to use between Arch Linux's official "
 "ones. Please note that packages from Unstable and Testing may break your "
@@ -975,46 +1181,46 @@ msgstr ""
 "рачуна да пакети из „Unstable“ и „Testing“ могу нашкодити систему."
 
 # Do not translate
-#: DatabaseConfig#8
-msgctxt "DatabaseConfig#8"
+#: DatabaseConfig#10
+msgctxt "DatabaseConfig#10"
 msgid "Core"
 msgstr "Core"
 
 # Do not translate
-#: DatabaseConfig#9
-msgctxt "DatabaseConfig#9"
+#: DatabaseConfig#11
+msgctxt "DatabaseConfig#11"
 msgid "Extra"
 msgstr "Extra"
 
 # Do not translate
-#: DatabaseConfig#10
-msgctxt "DatabaseConfig#10"
+#: DatabaseConfig#12
+msgctxt "DatabaseConfig#12"
 msgid "Community"
 msgstr "Community"
 
 # Do not translate
-#: DatabaseConfig#11
-msgctxt "DatabaseConfig#11"
+#: DatabaseConfig#13
+msgctxt "DatabaseConfig#13"
 msgid "Testing"
 msgstr "Testing"
 
-#: DatabaseConfig#12
-msgctxt "DatabaseConfig#12"
+#: DatabaseConfig#14
+msgctxt "DatabaseConfig#14"
 msgid "Server"
 msgstr "Сервер"
 
-#: DatabaseConfig#13
-msgctxt "DatabaseConfig#13"
+#: DatabaseConfig#15
+msgctxt "DatabaseConfig#15"
 msgid "Add another server"
 msgstr "Додај други сервер"
 
-#: DatabaseConfig#14
-msgctxt "DatabaseConfig#14"
+#: DatabaseConfig#16
+msgctxt "DatabaseConfig#16"
 msgid "KDEMod Repositories"
 msgstr "КДЕмодове ризнице"
 
-#: DatabaseConfig#15
-msgctxt "DatabaseConfig#15"
+#: DatabaseConfig#17
+msgctxt "DatabaseConfig#17"
 msgid ""
 "KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
 "improved Qt build, compatible with Arch Linux standard Qt's, an improved "
@@ -1026,43 +1232,43 @@ msgstr ""
 "и мноштво додатака. КДЕмод је најбољи начин да осетите лакоћу и снагу КДЕ-а "
 "уз једноставност и могућности Арча. "
 
-#: DatabaseConfig#16
-msgctxt "DatabaseConfig#16"
+#: DatabaseConfig#18
+msgctxt "DatabaseConfig#18"
 msgid "KDEMod 4 Repository"
 msgstr "Ризница КДЕмод 4"
 
-#: DatabaseConfig#17
-msgctxt "DatabaseConfig#17"
+#: DatabaseConfig#19
+msgctxt "DatabaseConfig#19"
 msgid "KDEMod 4 Extragear Repository"
 msgstr "Ризница КДЕмод 4 (екстраопрема)"
 
-#: DatabaseConfig#18
-msgctxt "DatabaseConfig#18"
+#: DatabaseConfig#20
+msgctxt "DatabaseConfig#20"
 msgid "KDEMod 4 Playground Repository"
 msgstr "Ризница КДЕмод 4 (игралиште)"
 
-#: DatabaseConfig#19
-msgctxt "DatabaseConfig#19"
+#: DatabaseConfig#21
+msgctxt "DatabaseConfig#21"
 msgid "KDEMod 4 Testing Repository"
 msgstr "Ризница КДЕмод 4 (тестирање)"
 
-#: DatabaseConfig#20
-msgctxt "DatabaseConfig#20"
+#: DatabaseConfig#22
+msgctxt "DatabaseConfig#22"
 msgid "KDEMod 4 Unstable Repository (Testers only!)"
 msgstr "Ризница КДЕмод 4 (нестабилна - само за тестирање!)"
 
-#: DatabaseConfig#21
-msgctxt "DatabaseConfig#21"
+#: DatabaseConfig#23
+msgctxt "DatabaseConfig#23"
 msgid "KDEMod 3 Repository"
 msgstr "Ризница КДЕмод 3"
 
-#: DatabaseConfig#22
-msgctxt "DatabaseConfig#22"
+#: DatabaseConfig#24
+msgctxt "DatabaseConfig#24"
 msgid "Third-Party Repositories"
 msgstr "Незваничне ризнице"
 
-#: DatabaseConfig#23
-msgctxt "DatabaseConfig#23"
+#: DatabaseConfig#25
+msgctxt "DatabaseConfig#25"
 msgid ""
 "You can extend your packages choice by adding other repositories. Third-"
 "Party Repositories act just as normal ones, and will be accessible through "
@@ -1071,27 +1277,29 @@ msgstr ""
 "Можете проширити избор пакета додавањем незваничних ризница. Оне се понашају "
 "попут осталих, и биће доступне и у Шаману и у Пакмену."
 
-#: DatabaseConfig#24
-msgctxt "DatabaseConfig#24"
+#: DatabaseConfig#26
+msgctxt "DatabaseConfig#26"
 msgid "Add New Repository"
 msgstr "Додај нову ризницу"
 
-#: DatabaseConfig#25
-msgctxt "DatabaseConfig#25"
+#: DatabaseConfig#27
+msgctxt "DatabaseConfig#27"
 msgid "Repository Order"
 msgstr "Редослед ризница"
 
-#: DatabaseConfig#26
-msgctxt "DatabaseConfig#26"
+#: DatabaseConfig#28
+msgctxt "DatabaseConfig#28"
 msgid ""
 "Please order your repositories to define which one will be preferred over "
 "another."
 msgstr "Поређајте ризнице да би одредили које имају предност над осталима."
 
+#. (obsolete)
 #: EditPBuild#1
 msgid "Saving"
 msgstr "Снимам"
 
+#. (obsolete)
 #: EditPBuild#2
 msgid ""
 "You modified this PKGBUILD.\n"
@@ -2176,12 +2384,23 @@ msgstr "Заменити %1 са %2/%3?"
 #: MainWindow#67
 msgid ""
 "%1 conflicts with %2.\n"
+"Remove %1?"
+msgstr ""
+
+#: MainWindow#68
+msgid "Updating ABS tree"
+msgstr ""
+
+#. (obsolete)
+#: MainWindow#69
+msgid ""
+"%1 conflicts with %2.\n"
 "Remove %2?"
 msgstr ""
 "%1 је у сукобу са %2.\n"
 "Уклонити %2?"
 
-#: MainWindow#68
+#: MainWindow#70
 msgid ""
 "The following package(s) cannot be upgraded due to unresolvable "
 "dependencies:\n"
@@ -2195,7 +2414,7 @@ msgstr ""
 "            \n"
 "        "
 
-#: MainWindow#69
+#: MainWindow#71
 msgid ""
 "%1-%2: local version is newer.\n"
 "Upgrade anyway?"
@@ -2203,196 +2422,169 @@ msgstr ""
 "%1-%2: локална верзија је новија.\n"
 "Ипак надогради?"
 
-#: MainWindow#70
+#: MainWindow#72
 msgid ""
 "File %1 is corrupted.\n"
 "Do you want to delete it?"
 msgstr "Фајл %1 је искварен. Обристи га?"
 
-#: MainWindow#71
+#: MainWindow#73
 msgid "Transaction Question"
 msgstr "Питање о преносу"
 
-#: MainWindow#72
+#: MainWindow#74
 msgid "All packages"
 msgstr "Сви пакети"
 
-#: MainWindow#73
+#: MainWindow#75
 msgid "Status"
 msgstr "Стање"
 
-#: MainWindow#74
+#: MainWindow#76
 msgid "Action"
 msgstr "Радња"
 
-#: MainWindow#75
+#: MainWindow#77
 msgid "Version"
 msgstr "Верзија"
 
-#: MainWindow#76
+#: MainWindow#78
 msgid "Size"
 msgstr "Величина"
 
-#: MainWindow#77
+#: MainWindow#79
 msgid "Repository"
 msgstr "Ризница"
 
-#: MainWindow#78
+#: MainWindow#80
 msgid "Groups"
 msgstr "Групе"
 
-#: MainWindow#79
+#: MainWindow#81
 msgid "Action-Text"
 msgstr "Текст радње"
 
-#: MainWindow#80
+#: MainWindow#82
 msgid "Re&positories"
 msgstr "Ри&знице"
 
-#: MainWindow#81
+#: MainWindow#83
 msgid "Package &Groups"
 msgstr "&Групе пакета"
 
-#: MainWindow#82
+#: MainWindow#84
 msgid "Install selected package"
 msgstr "Инсталирај одабрани пакет"
 
-#: MainWindow#83
+#: MainWindow#85
 msgid "Remove selected package"
 msgstr "Уклони одабрани пакет"
 
-#: MainWindow#84
+#: MainWindow#86
 msgid "Complete Remove selected package (pacman -Rcs)"
 msgstr "Потпуно уклони одабрани пакет (pacman -Rcs)"
 
-#: MainWindow#85
+#: MainWindow#87
 msgid "Mark for complete re&moval"
 msgstr "За потпуно у&клањање"
 
-#: MainWindow#86
+#: MainWindow#88
 msgid "Cancel action for selected package"
 msgstr "Откажи радњу за одабрани пакет"
 
-#: MainWindow#87
+#: MainWindow#89
 msgid "Package I&nformation"
 msgstr "Подаци о &пакету"
 
-#: MainWindow#88
+#: MainWindow#90
 msgid "File&s"
 msgstr "Фајло&ви"
 
-#: MainWindow#89
-msgctxt "MainWindow#89"
+#: MainWindow#91
+msgctxt "MainWindow#91"
 msgid "1"
 msgstr "неинсталиран"
 
-#: MainWindow#90
+#: MainWindow#92
 msgid "&Dependencies"
 msgstr "&Зависности"
 
-#: MainWindow#91
+#: MainWindow#93
 msgid "&File"
 msgstr "&Фајл"
 
-#: MainWindow#92
+#: MainWindow#94
 msgid "&Help"
 msgstr "&Помоћ"
 
-#: MainWindow#93
+#: MainWindow#95
 msgid "&Actions"
 msgstr "&Радње"
 
-#: MainWindow#94
+#: MainWindow#96
 msgid "Build and Install from Source"
 msgstr "Изгради и инсталирај из кода"
 
-#: MainWindow#95
+#: MainWindow#97
 msgid "&Tools"
 msgstr "&Алатке"
 
-#: MainWindow#96
+#: MainWindow#98
 msgid "Quick Actions"
 msgstr "Брзе радње"
 
-#: MainWindow#97
+#: MainWindow#99
 msgid "Settings..."
 msgstr "Поставке..."
 
-#: MainWindow#98
+#: MainWindow#100
 msgid "About..."
 msgstr "О програму..."
 
-#: MainWindow#99
-msgctxt "MainWindow#99"
+#: MainWindow#101
+msgctxt "MainWindow#101"
 msgid "Update Database"
 msgstr "Ажурирај базу"
 
-#: MainWindow#100
-msgctxt "MainWindow#100"
+#: MainWindow#102
+msgctxt "MainWindow#102"
 msgid "Upgrade System"
 msgstr "Надогради систем"
 
-#: MainWindow#101
+#: MainWindow#103
 msgid "Install Package From File"
 msgstr "Инсталирај пакет из фајла"
 
-#: MainWindow#102
+#: MainWindow#104
 msgid "Update ABS Tree"
 msgstr "Ажурирај стабло ABS-а"
 
-#: MainWindow#103
+#: MainWindow#105
 msgid "Build and Install Queue"
 msgstr "Изгради и инсталирај низ"
 
 # Quit the application
-#: MainWindow#104
-msgctxt "MainWindow#104"
+#: MainWindow#106
+msgctxt "MainWindow#106"
 msgid "Quit"
 msgstr "Напусти"
 
-#: MainWindow#105
-msgctxt "MainWindow#105"
+#: MainWindow#107
+msgctxt "MainWindow#107"
 msgid "Process Queue"
 msgstr "Обради задати низ"
 
-#: MainWindow#106
+#: MainWindow#108
 msgid "Read News"
 msgstr "Читање вести"
 
-#: MainWindow#107
+#: MainWindow#109
 msgid "View Log"
 msgstr "Преглед записа"
 
-#: MainWindow#108
+#: MainWindow#110
 msgid "Name and Description"
 msgstr "Име и опис"
-
-#: MainWindow#109
-msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
-"weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">A libalpm frontend in Qt</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
-"font-weight:600;\"></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">License: GPLv2+</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Libalpm Version: v.%1</p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
-"indent:0px;\"></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Dario Freddi "
-"&lt;drf@kdemod.ath.cx&gt;</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Lukas Appelhans "
-"&lt;boom1992@kdemod.ath.cx&gt;</p></body></html>"
-msgstr ""
 
 #: MaintenanceBar#1
 msgid "Please choose an action to start maintenance..."
@@ -2518,16 +2710,6 @@ msgstr "Не могу да очистим окружења за градњу!"
 msgid "Maintenance Actions"
 msgstr "Радње одржавања"
 
-#: MaintenanceBar#26
-msgctxt "MaintenanceBar#26"
-msgid "Pacman Database Optimized Successfully!"
-msgstr ""
-
-#: MaintenanceBar#27
-msgctxt "MaintenanceBar#27"
-msgid "Could not Optimize Pacman Database!"
-msgstr ""
-
 #: MirrorWidget#1
 msgctxt "MirrorWidget#1"
 msgid "Form"
@@ -2608,40 +2790,44 @@ msgid "Changelog not available for this package"
 msgstr "Запис измена није доступан за овај пакет"
 
 #: QObject#1
+msgid "&Apply"
+msgstr ""
+
+#: QObject#2
 msgid "Whoa, that's co&ol!"
 msgstr "Опа, то је &сјајно!"
 
-#: QObject#2
-msgctxt "QObject#2"
+#: QObject#3
+msgctxt "QObject#3"
 msgid "Ok"
 msgstr "У реду"
 
-#: QObject#3
+#: QObject#4
 msgid "O&k"
 msgstr "&У реду"
 
-#: QObject#4
+#: QObject#5
 msgid "&Yes"
 msgstr "&Да"
 
-#: QObject#5
+#: QObject#6
 msgid "&No"
 msgstr "&Не"
 
-#: QObject#6
+#: QObject#7
 msgid "Do not &show this Again"
 msgstr "Не приказуј ово оп&ет"
 
-#: QObject#7
+#: QObject#8
 msgid "C&ancel"
 msgstr "&Откажи"
 
-#: QObject#8
-msgctxt "QObject#8"
+#: QObject#9
+msgctxt "QObject#9"
 msgid "Shaman"
 msgstr "Шаман"
 
-#: QObject#9
+#: QObject#10
 msgid ""
 "There was a problem while testing libalpm.\n"
 "Maybe another application has a lock on it."
@@ -2653,12 +2839,12 @@ msgstr ""
 # Dario: drf54321@gmail.com
 # Lukas: l.appelhans@gmx.de
 # Thanks again, and enjoy your translation!
-#: QObject#10
-msgctxt "QObject#10"
+#: QObject#11
+msgctxt "QObject#11"
 msgid "Shaman"
 msgstr "Шаман"
 
-#: QObject#11
+#: QObject#12
 msgid ""
 "Your settings file seems unwritable.\n"
 "Please check permissions on it."
@@ -2666,19 +2852,20 @@ msgstr ""
 "У фајл поставки се не може писати.\n"
 "Проверите му дозволе."
 
-#: QObject#12
-msgctxt "QObject#12"
+#: QObject#13
+msgctxt "QObject#13"
 msgid "Please Wait..."
 msgstr "Сачекајте..."
 
-#: QObject#13
+#: QObject#14
 msgid ""
 "Shaman can not be started as root. Please restart it as unprivileged user."
 msgstr ""
 "Није дозвољено корено покретање Шамана. Поново га покрените као обичан "
 "корисник."
 
-#: QObject#14
+#. (obsolete)
+#: QObject#15
 msgid ""
 "Pacman is not updated.\n"
 "Shaman needs libalpm >= 2.1.0 to run.\n"
@@ -2688,19 +2875,19 @@ msgstr ""
 "Шаман захтева libalpm >= 2.1.0 да би могао радити.\n"
 "Ваша је %1. Надоградите Пакмена ."
 
-#: QObject#15
+#: QObject#16
 msgid "Loading Databases..."
 msgstr "Учитавам базе..."
 
-#: QObject#16
+#: QObject#17
 msgid "Loading Packages..."
 msgstr "Учитавам пакете..."
 
-#: QObject#17
+#: QObject#18
 msgid "Starting up Shaman..."
 msgstr "Покрећем Шамана..."
 
-#: QObject#18
+#: QObject#19
 msgid ""
 "It looks like another copy of Shaman is running.\n"
 "You can only run one copy of Shaman at a time."
@@ -2989,6 +3176,225 @@ msgstr "Нема предност"
 msgctxt "ServerWidget#5"
 msgid "Remove"
 msgstr "Уклони"
+
+#: ShamanGeneralConfig#1
+msgctxt "ShamanGeneralConfig#1"
+msgid "Favourite Actions"
+msgstr ""
+
+#: ShamanGeneralConfig#2
+#, fuzzy
+msgctxt "ShamanGeneralConfig#2"
+msgid "When Upgrading System:"
+msgstr "При надоградњи система:"
+
+#: ShamanGeneralConfig#3
+#, fuzzy
+msgctxt "ShamanGeneralConfig#3"
+msgid "Upgrade Immediately"
+msgstr "надогради одмах"
+
+#: ShamanGeneralConfig#4
+#, fuzzy
+msgctxt "ShamanGeneralConfig#4"
+msgid "Add Upgradeable Packages To Queue"
+msgstr "додај надоградиве пакете у низ"
+
+#: ShamanGeneralConfig#5
+#, fuzzy
+msgctxt "ShamanGeneralConfig#5"
+msgid "Ask"
+msgstr "питај"
+
+#: ShamanGeneralConfig#6
+#, fuzzy
+msgctxt "ShamanGeneralConfig#6"
+msgid "When Processing Queue"
+msgstr "При обради низа"
+
+#: ShamanGeneralConfig#7
+#, fuzzy
+msgctxt "ShamanGeneralConfig#7"
+msgid "Keep application running in System Tray only"
+msgstr "нек програм ради само у системској касети"
+
+#: ShamanGeneralConfig#8
+#, fuzzy
+msgctxt "ShamanGeneralConfig#8"
+msgid "GUI Startup"
+msgstr "Покретање сучеља"
+
+#: ShamanGeneralConfig#9
+#, fuzzy
+msgctxt "ShamanGeneralConfig#9"
+msgid "Start in the System Tray"
+msgstr "Покрени у системској касети"
+
+#: ShamanGeneralConfig#10
+#, fuzzy
+msgctxt "ShamanGeneralConfig#10"
+msgid "Show Splashscreen"
+msgstr "Прикажи уводни екран"
+
+#: ShamanGeneralConfig#11
+#, fuzzy
+msgctxt "ShamanGeneralConfig#11"
+msgid "Use the following language:"
+msgstr "Користи следећи језик:"
+
+#: ShamanGeneralConfig#12
+#, fuzzy
+msgctxt "ShamanGeneralConfig#12"
+msgid "Disable Tray Icon"
+msgstr "Онемогући касетну икону"
+
+#: ShamanGeneralConfig#13
+#, fuzzy
+msgctxt "ShamanGeneralConfig#13"
+msgid "Maintenance"
+msgstr "Одржавање"
+
+#: ShamanGeneralConfig#14
+#, fuzzy
+msgctxt "ShamanGeneralConfig#14"
+msgid "Process Selected"
+msgstr "Обради изабрано"
+
+# Waiting for a user action
+#: ShamanGeneralConfig#15
+#, fuzzy
+msgctxt "ShamanGeneralConfig#15"
+msgid "Waiting"
+msgstr "Чекам"
+
+#: ShamanGeneralConfig#16
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:7pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Shaman Manteinance.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Please choose an action from the Drop-Down "
+"Menu.</span></p></body></html>"
+msgstr ""
+
+#: ShamanGeneralConfig#17
+#, fuzzy
+msgctxt "ShamanGeneralConfig#17"
+msgid "Clean Unused Databases"
+msgstr "Очисти неупотребљаване базе"
+
+#: ShamanGeneralConfig#18
+#, fuzzy
+msgctxt "ShamanGeneralConfig#18"
+msgid "Clean Cache"
+msgstr "Очисти кеш"
+
+#: ShamanGeneralConfig#19
+#, fuzzy
+msgctxt "ShamanGeneralConfig#19"
+msgid "Empty Cache"
+msgstr "Испразни кеш"
+
+#: ShamanGeneralConfig#20
+msgctxt "ShamanGeneralConfig#20"
+msgid "Optimize Pacman Database"
+msgstr ""
+
+#: ShamanGeneralConfig#21
+#, fuzzy
+msgctxt "ShamanGeneralConfig#21"
+msgid "Clean All Building Environments"
+msgstr "Очисти сва окружења за градњу"
+
+#: ShamanGeneralConfig#22
+msgctxt "ShamanGeneralConfig#22"
+msgid "Cleaning up unused Databases..."
+msgstr ""
+
+#: ShamanGeneralConfig#23
+#, fuzzy
+msgctxt "ShamanGeneralConfig#23"
+msgid "Cleaning up Cache..."
+msgstr "Чистим кеш..."
+
+#: ShamanGeneralConfig#24
+#, fuzzy
+msgctxt "ShamanGeneralConfig#24"
+msgid "Deleting Cache..."
+msgstr "Бришем кеш..."
+
+#: ShamanGeneralConfig#25
+#, fuzzy
+msgctxt "ShamanGeneralConfig#25"
+msgid "Optimizing Pacman Database..."
+msgstr "Оптимизујем Пакменову базу..."
+
+#: ShamanGeneralConfig#26
+#, fuzzy
+msgctxt "ShamanGeneralConfig#26"
+msgid "Cleaning up building Environments..."
+msgstr "Чистим окружења за градњу..."
+
+#: ShamanGeneralConfig#27
+msgctxt "ShamanGeneralConfig#27"
+msgid "Unused Databases Cleaned up successfully!"
+msgstr ""
+
+#: ShamanGeneralConfig#28
+msgctxt "ShamanGeneralConfig#28"
+msgid "Cleaning up Unused Databases Failed!"
+msgstr ""
+
+#: ShamanGeneralConfig#29
+#, fuzzy
+msgctxt "ShamanGeneralConfig#29"
+msgid "Cache Cleaned Up Successfully!"
+msgstr "Успешно чишћење кеша!"
+
+#: ShamanGeneralConfig#30
+msgctxt "ShamanGeneralConfig#30"
+msgid "Cleaning up Cache Failed!"
+msgstr ""
+
+#: ShamanGeneralConfig#31
+#, fuzzy
+msgctxt "ShamanGeneralConfig#31"
+msgid "Cache Successfully Deleted!"
+msgstr "Успешно брисање кеша!"
+
+#: ShamanGeneralConfig#32
+msgctxt "ShamanGeneralConfig#32"
+msgid "Deleting Cache Failed!"
+msgstr ""
+
+#: ShamanGeneralConfig#33
+#, fuzzy
+msgctxt "ShamanGeneralConfig#33"
+msgid "Build Environments Successfully Cleaned!"
+msgstr "Успешно чишћење окружења за градњу!"
+
+#: ShamanGeneralConfig#34
+msgctxt "ShamanGeneralConfig#34"
+msgid "Could not clean Build Environments!!"
+msgstr ""
+
+#: ShamanGeneralConfig#35
+msgctxt "ShamanGeneralConfig#35"
+msgid "Database optimized successfully!"
+msgstr ""
+
+#: ShamanGeneralConfig#36
+#, fuzzy
+msgctxt "ShamanGeneralConfig#36"
+msgid "Could not optimize database!"
+msgstr "Не могу да оптимизујем базу!"
 
 #: ShamanStatusBar#1
 msgid "%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages"
@@ -3639,28 +4045,69 @@ msgstr "Ажурирам базу.."
 msgid "Editing PKGBUILD"
 msgstr "Уређивање PKGBUILD-а"
 
+#. (obsolete)
 #: editPBDialog#2
 msgid "Editing PKGBUILD of:"
 msgstr "Уређујем PKGBUILD од:"
 
 #: editPBDialog#3
+msgid "Editing:"
+msgstr ""
+
+#: editPBDialog#4
+msgid "PKGBUILD"
+msgstr ""
+
+#: editPBDialog#5
 msgid "Save"
 msgstr "Сачувај"
 
-#: editPBDialog#4
+#: editPBDialog#6
 msgid "Undo"
 msgstr "Опозови"
 
-#: editPBDialog#5
+#: editPBDialog#7
 msgid "Redo"
 msgstr "Понови"
 
-#: editPBDialog#6
-msgctxt "editPBDialog#6"
+#: editPBDialog#8
+msgid "MakePkg options"
+msgstr ""
+
+#: editPBDialog#9
+msgid "Ignore arch"
+msgstr ""
+
+#: editPBDialog#10
+msgid "Skip integrity checks"
+msgstr ""
+
+#: editPBDialog#11
+msgid "Ignore dependency control"
+msgstr ""
+
+#: editPBDialog#12
+msgid "Hold version if this is a development PKGBUILD"
+msgstr ""
+
+#: editPBDialog#13
+msgctxt "editPBDialog#13"
 msgid "Ok"
 msgstr "У реду"
 
-#: editPBDialog#7
+#: editPBDialog#14
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Edit Package build options</span></p></body></html>"
+msgstr ""
+
+#. (obsolete)
+#: editPBDialog#15
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -3929,10 +4376,15 @@ msgid "Process From Binary"
 msgstr "Обради из бинарних пакета"
 
 #: reviewBuildingDialog#11
+msgid "Review Build options"
+msgstr ""
+
+#. (obsolete)
+#: reviewBuildingDialog#12
 msgid "Review PKGBUILDs"
 msgstr "Прегледај PKGBUILD-ове"
 
-#: reviewBuildingDialog#12
+#: reviewBuildingDialog#13
 msgid "Process From Source"
 msgstr "Обради из изворног кода"
 

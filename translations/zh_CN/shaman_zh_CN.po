@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-08 14:50+0200\n"
+"POT-Creation-Date: 2009-11-07 17:51+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.3.0\n"
+"X-Generator: Translate Toolkit 1.4.1\n"
 
 #. (obsolete)
 #: AlpmHandler#1
@@ -38,11 +38,84 @@ msgstr ": %1 在文件系统中存在"
 msgid "Alpm did not give further details."
 msgstr "Alpm 无法获取详情。"
 
+#: AqpmConfig#1
+msgid "Packages and Paths"
+msgstr ""
+
+#: AqpmConfig#2
+#, fuzzy
+msgctxt "AqpmConfig#2"
+msgid "IgnorePkgs:"
+msgstr "IgnorePkgs :"
+
+#: AqpmConfig#3
+#, fuzzy
+msgctxt "AqpmConfig#3"
+msgid "IgnoreGroups:"
+msgstr "IgnoreGroups:"
+
+#: AqpmConfig#4
+#, fuzzy
+msgctxt "AqpmConfig#4"
+msgid "NoUpgrade:"
+msgstr "NoUpgrade:"
+
+#: AqpmConfig#5
+#, fuzzy
+msgctxt "AqpmConfig#5"
+msgid "NoExtract:"
+msgstr "NoExtract :"
+
+#: AqpmConfig#6
+#, fuzzy
+msgctxt "AqpmConfig#6"
+msgid "Log File:"
+msgstr "日志文件 :"
+
+#: AqpmConfig#7
+#, fuzzy
+msgctxt "AqpmConfig#7"
+msgid "Advanced"
+msgstr "高级"
+
+#: AqpmConfig#8
+#, fuzzy
+msgctxt "AqpmConfig#8"
+msgid "Use SysLog"
+msgstr "使用 SysLog"
+
+#: AqpmConfig#9
+#, fuzzy
+msgctxt "AqpmConfig#9"
+msgid "Use Deltas (needs xdelta to be installed)"
+msgstr "使用 Deltas (要求xdelta已安装)"
+
+#: AqpmConfig#10
+msgid "Aqpm Options"
+msgstr ""
+
+#: AqpmConfig#11
+msgid "Use multi-server download (EXPERIMENTAL)"
+msgstr ""
+
+#: AqpmConfig#12
+#, fuzzy
+msgctxt "AqpmConfig#12"
+msgid "Error"
+msgstr "错误"
+
+#: AqpmConfig#13
+msgctxt "AqpmConfig#13"
+msgid "There has been a problem while saving the configuration!"
+msgstr ""
+
+#. (obsolete)
 #: BuildingDialog#1
 msgctxt "BuildingDialog#1"
 msgid "Error"
 msgstr "错误"
 
+#. (obsolete)
 #: BuildingDialog#2
 msgid ""
 "Would you like to abort building?.\n"
@@ -51,6 +124,7 @@ msgstr ""
 "您真的要放弃编译吗 ?\n"
 "所有的处理将会丢失。"
 
+#. (obsolete)
 #: BuildingDialog#3
 msgid "<br><br><b>Building Process Aborted by the User. Building Failed.</b>"
 msgstr "<br><br><b>用户放弃处理编译，编译失败。</b>"
@@ -65,50 +139,62 @@ msgstr "更新ABS tree..."
 msgid "<b>Starting ABS Tree Update...</b><br><br>"
 msgstr "<b>开始更新ABS Tree...</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#6
 msgid "<br><br><b>ABS Tree Was Successfully Updated!</b>"
 msgstr "<br><br><b>ABS tree 更新成功!</b>"
 
+#. (obsolete)
 #: BuildingDialog#7
 msgid "ABS Update"
 msgstr "更新 ABS"
 
+#. (obsolete)
 #: BuildingDialog#8
 msgid "Your ABS Tree was updated!"
 msgstr "您的ABS Tree 已经更新!"
 
+#. (obsolete)
 #: BuildingDialog#9
 msgid "<b>Building %1 failed!!</b><br><br>"
 msgstr "<b>编译%1 失败 !!</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#10
 msgid "<b>%1 was built successfully!!</b><br><br>"
 msgstr "<b>%1 编译成功  !!</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#11
 msgid "Processing Package %1 of %2..."
 msgstr " 处理软件包 %1 的 %2..."
 
+#. (obsolete)
 #: BuildingDialog#12
 msgid "Building %1..."
 msgstr "编译 %1..."
 
+#. (obsolete)
 #: BuildingDialog#13
 msgid "<b>Building %1...</b><br><br>"
 msgstr "<b>编译 %1...</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#14
 msgid "<b>Building operation has started.</b><br><br>"
 msgstr "<b>编译操作已经开始。</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#15
 msgid "<b>Could not set up the environment correctly for %1!!</b><br><br>"
 msgstr "<b>无法为%1设定适当的环境!!</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#16
 msgid "Could not update the ABS Tree!"
 msgstr "无法更新 ABS Tree !"
 
+#. (obsolete)
 #: BuildingHandler#1
 msgctxt "BuildingHandler#1"
 msgid ""
@@ -118,11 +204,13 @@ msgstr ""
 "您需要安装ABS才能够使用Shaman的编译功能。\n"
 "现在就安装ABS吗 ?"
 
+#. (obsolete)
 #: BuildingHandler#2
 msgctxt "BuildingHandler#2"
 msgid "Error"
 msgstr "错误"
 
+#. (obsolete)
 #: BuildingHandler#3
 msgctxt "BuildingHandler#3"
 msgid ""
@@ -132,6 +220,7 @@ msgstr ""
 "从源文件处理队列时\n"
 "您将无法卸载软件包"
 
+#. (obsolete)
 #: BuildingHandler#4
 msgctxt "BuildingHandler#4"
 msgid ""
@@ -169,26 +258,31 @@ msgstr ""
 "您将安装 <b>%1 个软件包</b> 从源文件。从源文件编译<br>能够获得一些高级特征,但是编译过程是很慢的。<br>如果您不确定, "
 "您最好选择处理<br>您的队列从二进制文件。 在您继续之前, 建议<br>查看您的编译配置以便改善编译效果。"
 
+#. (obsolete)
 #: BuildingHandler#7
 msgctxt "BuildingHandler#7"
 msgid "To be Installed"
 msgstr "将安装"
 
+#. (obsolete)
 #: BuildingHandler#8
 msgctxt "BuildingHandler#8"
 msgid "To be Upgraded"
 msgstr "将更新"
 
+#. (obsolete)
 #: BuildingHandler#9
 msgctxt "BuildingHandler#9"
 msgid "Package Building"
 msgstr "软件包编译"
 
+#. (obsolete)
 #: BuildingHandler#10
 msgctxt "BuildingHandler#10"
 msgid "Your Packages failed to build!"
 msgstr "软件包编译失败 !"
 
+#. (obsolete)
 #: BuildingHandler#11
 msgctxt "BuildingHandler#11"
 msgid ""
@@ -198,11 +292,13 @@ msgstr ""
 "软件包编译失败， \n"
 "请查看输出获得更多信息。"
 
+#. (obsolete)
 #: BuildingHandler#12
 msgctxt "BuildingHandler#12"
 msgid "Close"
 msgstr "关闭"
 
+#. (obsolete)
 #: BuildingHandler#13
 msgctxt "BuildingHandler#13"
 msgid "Building Packages Failed!!"
@@ -214,6 +310,7 @@ msgctxt "BuildingHandler#14"
 msgid "Shaman - Idle"
 msgstr "Shaman - Idle"
 
+#. (obsolete)
 #: BuildingHandler#15
 msgctxt "BuildingHandler#15"
 msgid ""
@@ -223,21 +320,25 @@ msgstr ""
 "某些软件包编译失败。\n"
 "无论如何您要处理它吗 ?"
 
+#. (obsolete)
 #: BuildingHandler#16
 msgctxt "BuildingHandler#16"
 msgid "Install Built Packages"
 msgstr "安装编译的软件包"
 
+#. (obsolete)
 #: BuildingHandler#17
 msgctxt "BuildingHandler#17"
 msgid "Close Without Installing"
 msgstr "关闭并不安装"
 
+#. (obsolete)
 #: BuildingHandler#18
 msgctxt "BuildingHandler#18"
 msgid "Packages Built Successfully!"
 msgstr "软件包编译成功 !"
 
+#. (obsolete)
 #: BuildingHandler#19
 msgctxt "BuildingHandler#19"
 msgid ""
@@ -250,8 +351,8 @@ msgctxt "BuildingHandler#20"
 msgid "Shaman - Processing"
 msgstr "Shaman - 处理"
 
+#. (obsolete)
 #: BuildingHandler#21
-#, fuzzy
 msgid ""
 "You are about to install <b>%n package(s)</b> from source. Building from "
 "source<br>can give some advantages, however is very slow.<br>If you are not "
@@ -340,56 +441,67 @@ msgstr ""
 msgid "Shaman - Configuration"
 msgstr "Shaman - 配置"
 
+#. (obsolete)
 #: ConfigDialog#2
 msgctxt "ConfigDialog#2"
 msgid "Favourite Actions"
 msgstr "常用操作"
 
+#. (obsolete)
 #: ConfigDialog#3
 msgctxt "ConfigDialog#3"
 msgid "When Upgrading System:"
 msgstr "更新系统方式 :"
 
+#. (obsolete)
 #: ConfigDialog#4
 msgctxt "ConfigDialog#4"
 msgid "Upgrade Immediately"
 msgstr "立即更新"
 
+#. (obsolete)
 #: ConfigDialog#5
 msgctxt "ConfigDialog#5"
 msgid "Add Upgradeable Packages To Queue"
 msgstr "添加可更新软件包到队列"
 
+#. (obsolete)
 #: ConfigDialog#6
 msgctxt "ConfigDialog#6"
 msgid "Ask"
 msgstr "询问"
 
+#. (obsolete)
 #: ConfigDialog#7
 msgctxt "ConfigDialog#7"
 msgid "When Processing Queue"
 msgstr "处理队列方式"
 
+#. (obsolete)
 #: ConfigDialog#8
 msgctxt "ConfigDialog#8"
 msgid "Keep application running in System Tray only"
 msgstr "在系统托盘中运行应用程序"
 
+#. (obsolete)
 #: ConfigDialog#9
 msgctxt "ConfigDialog#9"
 msgid "GUI Startup"
 msgstr "GUI 启动"
 
+#. (obsolete)
 #: ConfigDialog#10
 msgctxt "ConfigDialog#10"
 msgid "Start in the System Tray"
 msgstr "系统托盘形式启动"
 
+#. (obsolete)
 #: ConfigDialog#11
 msgctxt "ConfigDialog#11"
 msgid "When Application is in System Tray only"
 msgstr "系统托盘中运行应用程序方式"
 
+#. (obsolete)
 #: ConfigDialog#12
 msgctxt "ConfigDialog#12"
 msgid "Update Database every"
@@ -400,76 +512,91 @@ msgstr "更新数据库间隔"
 msgid "minutes"
 msgstr "分钟"
 
+#. (obsolete)
 #: ConfigDialog#14
 msgctxt "ConfigDialog#14"
 msgid "If upgrades are available:"
 msgstr "可用的更新 :"
 
+#. (obsolete)
 #: ConfigDialog#15
 msgctxt "ConfigDialog#15"
 msgid "Just Notify"
 msgstr "仅通知"
 
+#. (obsolete)
 #: ConfigDialog#16
 msgctxt "ConfigDialog#16"
 msgid "Notify and add them to Queue"
 msgstr "通知然后添加至队列"
 
+#. (obsolete)
 #: ConfigDialog#17
 msgctxt "ConfigDialog#17"
 msgid "Maintenance"
 msgstr "维护"
 
+#. (obsolete)
 #: ConfigDialog#18
 msgctxt "ConfigDialog#18"
 msgid "Checkable Options"
 msgstr "选项"
 
+#. (obsolete)
 #: ConfigDialog#19
 msgctxt "ConfigDialog#19"
 msgid "Use Active FTP"
 msgstr "使用激活的 FTP"
 
+#. (obsolete)
 #: ConfigDialog#20
 msgctxt "ConfigDialog#20"
 msgid "Use Deltas (needs xdelta to be installed)"
 msgstr "使用 Deltas (要求xdelta已安装)"
 
+#. (obsolete)
 #: ConfigDialog#21
 msgctxt "ConfigDialog#21"
 msgid "Advanced Options"
 msgstr "高级选项"
 
+#. (obsolete)
 #: ConfigDialog#22
 msgctxt "ConfigDialog#22"
 msgid "HoldPkgs:"
 msgstr "HoldPkgs :"
 
+#. (obsolete)
 #: ConfigDialog#23
 msgctxt "ConfigDialog#23"
 msgid "IgnorePkgs:"
 msgstr "IgnorePkgs :"
 
+#. (obsolete)
 #: ConfigDialog#24
 msgctxt "ConfigDialog#24"
 msgid "IgnoreGroups:"
 msgstr "IgnoreGroups:"
 
+#. (obsolete)
 #: ConfigDialog#25
 msgctxt "ConfigDialog#25"
 msgid "NoUpgrade:"
 msgstr "NoUpgrade:"
 
+#. (obsolete)
 #: ConfigDialog#26
 msgctxt "ConfigDialog#26"
 msgid "NoExtract:"
 msgstr "NoExtract :"
 
+#. (obsolete)
 #: ConfigDialog#27
 msgctxt "ConfigDialog#27"
 msgid "XFerCommand: (example: /path/to/command %u) Blank for Default"
 msgstr "XFerCommand : (exemple: /path/to/command %u) Blank for Default"
 
+#. (obsolete)
 #: ConfigDialog#28
 msgctxt "ConfigDialog#28"
 msgid "Arch Linux Official Repositories"
@@ -485,6 +612,7 @@ msgstr ""
 "从这里选择属于Arch Linux's 官方的仓库，请注意使用\n"
 "来自Unstable和Testing的软件包可能会损坏您的系统。"
 
+#. (obsolete)
 #: ConfigDialog#30
 msgctxt "ConfigDialog#30"
 msgid "Server"
@@ -501,6 +629,7 @@ msgctxt "ConfigDialog#32"
 msgid "Add Mirror"
 msgstr "添加镜像"
 
+#. (obsolete)
 #: ConfigDialog#33
 msgctxt "ConfigDialog#33"
 msgid "KDEMod Repositories"
@@ -519,6 +648,7 @@ msgstr ""
 "和Arch linux 标准的QT兼容，拥有改进的主题，和许多的附加特性。\n"
 "使用KDEMod，是感受强大的KDE魅力和简洁强大的Arch最好方式。"
 
+#. (obsolete)
 #: ConfigDialog#35
 msgctxt "ConfigDialog#35"
 msgid "KDEMod 3 Repository"
@@ -529,6 +659,7 @@ msgstr "KDEMod 3 仓库"
 msgid "KDEMod 4 Repository (Unstable, testers only)"
 msgstr "KDEMod 4 仓库 (不稳定，仅供测试者) "
 
+#. (obsolete)
 #: ConfigDialog#37
 msgctxt "ConfigDialog#37"
 msgid "Third-Party Repositories"
@@ -552,6 +683,7 @@ msgctxt "ConfigDialog#39"
 msgid "Repository"
 msgstr "仓库"
 
+#. (obsolete)
 #: ConfigDialog#40
 msgctxt "ConfigDialog#40"
 msgid "Add New Repository"
@@ -567,6 +699,7 @@ msgstr "编辑仓库"
 msgid "Remove Repository"
 msgstr "移处仓库"
 
+#. (obsolete)
 #: ConfigDialog#43
 msgctxt "ConfigDialog#43"
 msgid "Preferences"
@@ -577,71 +710,85 @@ msgstr "首选项"
 msgid "Process all dependencies and queue from source first (recommended)"
 msgstr "优先从源文件处理所有依赖和队列 (推荐)"
 
+#. (obsolete)
 #: ConfigDialog#45
 msgctxt "ConfigDialog#45"
 msgid "Review Building output before installing"
 msgstr "在安装之前查看编译输出 "
 
+#. (obsolete)
 #: ConfigDialog#46
 msgctxt "ConfigDialog#46"
 msgid "ABS Configuration"
 msgstr "ABS 配置"
 
+#. (obsolete)
 #: ConfigDialog#47
 msgctxt "ConfigDialog#47"
 msgid "Use supfiles that match your current repositories"
 msgstr "使用符合您当前仓库的supfiles"
 
+#. (obsolete)
 #: ConfigDialog#48
 msgctxt "ConfigDialog#48"
 msgid "Define supfiles manually"
 msgstr "手动定义supfiles"
 
+#. (obsolete)
 #: ConfigDialog#49
 msgctxt "ConfigDialog#49"
 msgid "Makepkg Configuration"
 msgstr "Makepkg 配置"
 
+#. (obsolete)
 #: ConfigDialog#50
 msgctxt "ConfigDialog#50"
 msgid "CFlags"
 msgstr "CFlags"
 
+#. (obsolete)
 #: ConfigDialog#51
 msgctxt "ConfigDialog#51"
 msgid "CXXFlags"
 msgstr "CXXFlags"
 
+#. (obsolete)
 #: ConfigDialog#52
 msgctxt "ConfigDialog#52"
 msgid "BuildEnv"
 msgstr "BuildEnv"
 
+#. (obsolete)
 #: ConfigDialog#53
 msgctxt "ConfigDialog#53"
 msgid "Options"
 msgstr "选项"
 
+#. (obsolete)
 #: ConfigDialog#54
 msgctxt "ConfigDialog#54"
 msgid "Doc_Dirs"
 msgstr "Doc_Dirs"
 
+#. (obsolete)
 #: ConfigDialog#55
 msgctxt "ConfigDialog#55"
 msgid "Build Environment"
 msgstr "编译环境"
 
+#. (obsolete)
 #: ConfigDialog#56
 msgctxt "ConfigDialog#56"
 msgid "Building Path"
 msgstr "编译路径"
 
+#. (obsolete)
 #: ConfigDialog#57
 msgctxt "ConfigDialog#57"
 msgid "Remove installed makedepends after build"
 msgstr "编译后移除已安装依赖关系"
 
+#. (obsolete)
 #: ConfigDialog#58
 msgctxt "ConfigDialog#58"
 msgid "Clean Build Environment after installation"
@@ -734,6 +881,7 @@ msgstr "删除缓存失败 !"
 
 #: ConfigDialog#77
 msgctxt "ConfigDialog#77"
+"ConfigDialog#77"
 msgid "Could not clean Build Environments!!"
 msgstr "无法清除编译环境 !!"
 
@@ -792,11 +940,13 @@ msgstr ""
 "成功添加镜像，\n"
 "现在在mirrorlist可用。"
 
+#. (obsolete)
 #: ConfigDialog#87
 msgctxt "ConfigDialog#87"
 msgid "Pacman Database Optimized Successfully!"
 msgstr "Pacman数据库优化成功 !"
 
+#. (obsolete)
 #: ConfigDialog#88
 msgctxt "ConfigDialog#88"
 msgid "Could not Optimize Pacman Database!"
@@ -841,6 +991,7 @@ msgid "Optimizing Pacman Database..."
 msgstr "优化Pacman数据库..."
 
 # Waiting for a user action
+#. (obsolete)
 #: ConfigDialog#95
 msgctxt "ConfigDialog#95"
 msgid "Waiting"
@@ -873,24 +1024,28 @@ msgstr ""
 "Sans'; font-size:9pt;\">请从下拉菜单中选择一个操作。</p></body></html>"
 
 # Do not translate
+#. (obsolete)
 #: ConfigDialog#97
 msgctxt "ConfigDialog#97"
 msgid "Core"
 msgstr "Core"
 
 # Do not translate
+#. (obsolete)
 #: ConfigDialog#98
 msgctxt "ConfigDialog#98"
 msgid "Extra"
 msgstr "Extra"
 
 # Do not translate
+#. (obsolete)
 #: ConfigDialog#99
 msgctxt "ConfigDialog#99"
 msgid "Community"
 msgstr "Community"
 
 # Do not translate
+#. (obsolete)
 #: ConfigDialog#100
 msgctxt "ConfigDialog#100"
 msgid "Testing"
@@ -903,11 +1058,13 @@ msgid "Unstable"
 msgstr "Unstable"
 
 # sync is a command, so it should not be translated
+#. (obsolete)
 #: ConfigDialog#102
 msgctxt "ConfigDialog#102"
 msgid "Running sync..."
 msgstr "运行Sync..."
 
+#. (obsolete)
 #: ConfigDialog#103
 msgctxt "ConfigDialog#103"
 msgid "Show Splashscreen"
@@ -936,12 +1093,14 @@ msgstr ""
 "right:0px; -qt-block-indent:0; text-"
 "indent:0px;\">请从下拉菜单中选择一个操作。</p></body></html>"
 
+#. (obsolete)
 #: ConfigDialog#105
 msgctxt "ConfigDialog#105"
 msgid "Process all dependencies and queue from binary first (recommended)"
 msgstr "优先从二进制文件处理所有依赖关系和队列 (推荐)"
 
 #: ConfigDialog#106
+msgctxt "ConfigDialog#106"
 msgid "Advanced"
 msgstr "高级"
 
@@ -955,11 +1114,13 @@ msgctxt "ConfigDialog#108"
 msgid "Cancel"
 msgstr "取消"
 
+#. (obsolete)
 #: ConfigDialog#109
 msgctxt "ConfigDialog#109"
 msgid "Use SysLog"
 msgstr "使用 SysLog"
 
+#. (obsolete)
 #: ConfigDialog#110
 msgctxt "ConfigDialog#110"
 msgid "Log File:"
@@ -971,56 +1132,67 @@ msgid "KDEMod 3 Testing Repository"
 msgstr "KDEMod 3 测试 仓库"
 
 # As in "minutes"
+#. (obsolete)
 #: ConfigDialog#112
 msgctxt "ConfigDialog#112"
 msgid "min"
 msgstr "min"
 
+#. (obsolete)
 #: ConfigDialog#113
 msgctxt "ConfigDialog#113"
 msgid "Show tray notification Windows"
 msgstr "显示托盘窗口消息"
 
+#. (obsolete)
 #: ConfigDialog#114
 msgctxt "ConfigDialog#114"
 msgid "Use a proxy-server"
 msgstr "使用代理服务器"
 
+#. (obsolete)
 #: ConfigDialog#115
 msgctxt "ConfigDialog#115"
 msgid "IP:"
 msgstr "IP :"
 
+#. (obsolete)
 #: ConfigDialog#116
 msgctxt "ConfigDialog#116"
 msgid "Port:"
 msgstr "端口 :"
 
+#. (obsolete)
 #: ConfigDialog#117
 msgctxt "ConfigDialog#117"
 msgid "HTTP Proxy"
 msgstr "HTTP 代理"
 
+#. (obsolete)
 #: ConfigDialog#118
 msgctxt "ConfigDialog#118"
 msgid "FTP Proxy"
 msgstr "FTP 代理"
 
+#. (obsolete)
 #: ConfigDialog#119
 msgctxt "ConfigDialog#119"
 msgid "Use Shaman RSS Capabilities"
 msgstr "使用Shaman RSS 功能"
 
+#. (obsolete)
 #: ConfigDialog#120
 msgctxt "ConfigDialog#120"
 msgid "Update RSS Feed Every"
 msgstr "更新RSS推送间隔"
 
+#. (obsolete)
 #: ConfigDialog#121
 msgctxt "ConfigDialog#121"
 msgid "Notify upon new items"
 msgstr "通知新的项目"
 
+#. (obsolete)
 #: ConfigDialog#122
 msgctxt "ConfigDialog#122"
 msgid ""
@@ -1028,16 +1200,19 @@ msgid ""
 "it"
 msgstr "在处理队列之前，检查是否有关于软件包的未读消息"
 
+#. (obsolete)
 #: ConfigDialog#123
 msgctxt "ConfigDialog#123"
 msgid "Interface"
 msgstr "Interface"
 
+#. (obsolete)
 #: ConfigDialog#124
 msgctxt "ConfigDialog#124"
 msgid "Start Shaman Automatically on X Startup"
 msgstr "启动X时自动运行Shaman"
 
+#. (obsolete)
 #: ConfigDialog#125
 msgctxt "ConfigDialog#125"
 msgid "Forbid starting Shaman as root"
@@ -1140,46 +1315,55 @@ msgstr ""
 "right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Liberation "
 "Sans'; font-size:9pt;\">请从下拉菜单中选择一个操作。</p></body></html>"
 
+#. (obsolete)
 #: ConfigDialog#133
 msgctxt "ConfigDialog#133"
 msgid "RSync Server:"
 msgstr "RSync 服务器:"
 
+#. (obsolete)
 #: ConfigDialog#134
 msgctxt "ConfigDialog#134"
 msgid "Update Database at"
 msgstr "更新数据库在"
 
+#. (obsolete)
 #: ConfigDialog#135
 msgctxt "ConfigDialog#135"
 msgid "Use Animated Tray Icon"
 msgstr "使用动态托盘图标"
 
+#. (obsolete)
 #: ConfigDialog#136
 msgctxt "ConfigDialog#136"
 msgid "KDEMod 4 Repository"
 msgstr "KDEMod 4 仓库 "
 
+#. (obsolete)
 #: ConfigDialog#137
 msgctxt "ConfigDialog#137"
 msgid "KDEMod 4 Extragear Repository"
 msgstr "KDEMod 4 Extragear 仓库"
 
+#. (obsolete)
 #: ConfigDialog#138
 msgctxt "ConfigDialog#138"
 msgid "KDEMod 4 Playground Repository"
 msgstr "KDEMod 4 Playground 仓库"
 
+#. (obsolete)
 #: ConfigDialog#139
 msgctxt "ConfigDialog#139"
 msgid "KDEMod 4 Testing Repository"
 msgstr "KDEMod 4 测试 仓库 "
 
+#. (obsolete)
 #: ConfigDialog#140
 msgctxt "ConfigDialog#140"
 msgid "KDEMod 4 Unstable Repository (Testers only!)"
 msgstr "KDEMod 4 Unstable 仓库 (仅供测试者!)"
 
+#. (obsolete)
 #: ConfigDialog#141
 msgctxt "ConfigDialog#141"
 msgid ""
@@ -1188,6 +1372,7 @@ msgid ""
 "system."
 msgstr "从这里选择属于Arch Linux's 官方的仓库，请注意使用来自Unstable和Testing的软件包可能会损坏您的系统。"
 
+#. (obsolete)
 #: ConfigDialog#142
 msgctxt "ConfigDialog#142"
 msgid ""
@@ -1199,6 +1384,7 @@ msgstr ""
 "Kdemod是为Arch linux 定制KDE的一个改进版本， 基于改善的QT，和Arch linux "
 "标准的QT兼容，拥有改进的主题，和许多的附加特性。使用KDEMod，是感受强大的KDE魅力和简洁强大的Arch最好方式。"
 
+#. (obsolete)
 #: ConfigDialog#143
 msgctxt "ConfigDialog#143"
 msgid ""
@@ -1207,11 +1393,13 @@ msgid ""
 "both Shaman and Pacman."
 msgstr "通过添加其他仓库，您可以扩展您的软件包选择。第三方仓库的作用和正常的仓库一样,可以通过Pacman和Shaman来使用。"
 
+#. (obsolete)
 #: ConfigDialog#144
 msgctxt "ConfigDialog#144"
 msgid "Use the following language:"
 msgstr "使用下列语言:"
 
+#. (obsolete)
 #: ConfigDialog#145
 msgctxt "ConfigDialog#145"
 msgid "Disable Tray Icon"
@@ -1245,38 +1433,15 @@ msgid ""
 msgstr ""
 
 #: ConfigDialog#151
-msgctxt "ConfigDialog#151"
-msgid ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
-"html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Liberation Sans'; font-size:8pt; "
-"font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"size:9pt;\">Shaman Manteinance.</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"size:9pt;\">Please choose an action from the Drop-Down "
-"Menu.</span></p></body></html>"
+msgid "Apply"
 msgstr ""
 
 #: ConfigDialog#152
-msgctxt "ConfigDialog#152"
-msgid "Add another server"
+msgid "Shaman Configuration"
 msgstr ""
 
 #: ConfigDialog#153
-msgctxt "ConfigDialog#153"
-msgid "Repository Order"
-msgstr ""
-
-#: ConfigDialog#154
-msgctxt "ConfigDialog#154"
-msgid ""
-"Please order your repositories to define which one will be preferred over "
-"another."
+msgid "Aqpm Configuration"
 msgstr ""
 
 #: DatabaseConfig#1
@@ -1460,10 +1625,23 @@ msgid ""
 "another."
 msgstr ""
 
+#: DatabaseConfig#27
+#, fuzzy
+msgctxt "DatabaseConfig#27"
+msgid "Error"
+msgstr "错误"
+
+#: DatabaseConfig#28
+msgctxt "DatabaseConfig#28"
+msgid "There has been a problem while saving the configuration!"
+msgstr ""
+
+#. (obsolete)
 #: EditPBuild#1
 msgid "Saving"
 msgstr "保存"
 
+#. (obsolete)
 #: EditPBuild#2
 msgid ""
 "You modified this PKGBUILD.\n"
@@ -1675,7 +1853,6 @@ msgid "Waiting"
 msgstr "等待"
 
 #: Form#17
-msgctxt "Form#17"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -3086,6 +3263,7 @@ msgstr "标记以便重新安装(&I)"
 msgid "&Cancel Action"
 msgstr "取消操作(&C)"
 
+#. (obsolete)
 #: MainWindow#152
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
@@ -3179,12 +3357,6 @@ msgid "Replace %1 with %2/%3?"
 msgstr "替换 %1 用 %2/%3?"
 
 #: MainWindow#159
-msgid ""
-"%1 conflicts with %2.\n"
-"Remove %2?"
-msgstr ""
-
-#: MainWindow#160
 #, fuzzy
 msgid ""
 "The following package(s) cannot be upgraded due to unresolvable "
@@ -3197,9 +3369,9 @@ msgstr ""
 "            \n"
 "        "
 
-#: MainWindow#161
+#: MainWindow#160
 #, fuzzy
-msgctxt "MainWindow#161"
+msgctxt "MainWindow#160"
 msgid ""
 "%1-%2: local version is newer.\n"
 "Upgrade anyway?"
@@ -3207,9 +3379,9 @@ msgstr ""
 "%1-%2: 本地版本比较新，\n"
 "无论如何安装吗 ?"
 
-#: MainWindow#162
+#: MainWindow#161
 #, fuzzy
-msgctxt "MainWindow#162"
+msgctxt "MainWindow#161"
 msgid ""
 "File %1 is corrupted.\n"
 "Do you want to delete it?"
@@ -3217,11 +3389,11 @@ msgstr ""
 "文件 %1 损坏,\n"
 "您想删除它吗?"
 
-#: MainWindow#163
+#: MainWindow#162
 msgid "Transaction Question"
 msgstr ""
 
-#: MainWindow#164
+#: MainWindow#163
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -3246,6 +3418,16 @@ msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Lukas Appelhans "
 "&lt;boom1992@chakra-project.org&gt;</p></body></html>"
+msgstr ""
+
+#: MainWindow#164
+msgid ""
+"%1 conflicts with %2.\n"
+"Remove %1?"
+msgstr ""
+
+#: MainWindow#165
+msgid "Updating ABS tree"
 msgstr ""
 
 #: MaintenanceBar#1
@@ -3357,11 +3539,13 @@ msgctxt "MaintenanceBar#22"
 msgid "Could not clean Build Environments!!"
 msgstr "无法清除编译环境 !"
 
+#. (obsolete)
 #: MaintenanceBar#23
 msgctxt "MaintenanceBar#23"
 msgid "Pacman Database Optimized Successfully!"
 msgstr "Pacman数据库优化成功 !"
 
+#. (obsolete)
 #: MaintenanceBar#24
 msgctxt "MaintenanceBar#24"
 msgid "Could not Optimize Pacman Database!"
@@ -3548,6 +3732,7 @@ msgstr "载入软件包..."
 msgid "Starting up Shaman..."
 msgstr "启动Shaman..."
 
+#. (obsolete)
 #: QObject#9
 msgid ""
 "Pacman is not updated.\n"
@@ -3659,6 +3844,10 @@ msgstr "哇,这么&酷!"
 #: QObject#25
 msgid ""
 "Shaman can not be started as root. Please restart it as unprivileged user."
+msgstr ""
+
+#: QObject#26
+msgid "&Apply"
 msgstr ""
 
 #: QueueDialog#1
@@ -4063,6 +4252,231 @@ msgstr ""
 #: ServerWidget#5
 msgctxt "ServerWidget#5"
 msgid "Remove"
+msgstr ""
+
+#: ShamanGeneralConfig#1
+#, fuzzy
+msgctxt "ShamanGeneralConfig#1"
+msgid "Favourite Actions"
+msgstr "常用操作"
+
+#: ShamanGeneralConfig#2
+#, fuzzy
+msgctxt "ShamanGeneralConfig#2"
+msgid "When Upgrading System:"
+msgstr "更新系统方式 :"
+
+#: ShamanGeneralConfig#3
+#, fuzzy
+msgctxt "ShamanGeneralConfig#3"
+msgid "Upgrade Immediately"
+msgstr "立即更新"
+
+#: ShamanGeneralConfig#4
+#, fuzzy
+msgctxt "ShamanGeneralConfig#4"
+msgid "Add Upgradeable Packages To Queue"
+msgstr "添加可更新软件包到队列"
+
+#: ShamanGeneralConfig#5
+#, fuzzy
+msgctxt "ShamanGeneralConfig#5"
+msgid "Ask"
+msgstr "询问"
+
+#: ShamanGeneralConfig#6
+#, fuzzy
+msgctxt "ShamanGeneralConfig#6"
+msgid "When Processing Queue"
+msgstr "处理队列方式"
+
+#: ShamanGeneralConfig#7
+#, fuzzy
+msgctxt "ShamanGeneralConfig#7"
+msgid "Keep application running in System Tray only"
+msgstr "在系统托盘中运行应用程序"
+
+#: ShamanGeneralConfig#8
+#, fuzzy
+msgctxt "ShamanGeneralConfig#8"
+msgid "GUI Startup"
+msgstr "GUI 启动"
+
+#: ShamanGeneralConfig#9
+#, fuzzy
+msgctxt "ShamanGeneralConfig#9"
+msgid "Start in the System Tray"
+msgstr "系统托盘形式启动"
+
+#: ShamanGeneralConfig#10
+#, fuzzy
+msgctxt "ShamanGeneralConfig#10"
+msgid "Show Splashscreen"
+msgstr "显示飞溅屏幕"
+
+#: ShamanGeneralConfig#11
+#, fuzzy
+msgctxt "ShamanGeneralConfig#11"
+msgid "Use the following language:"
+msgstr "使用下列语言:"
+
+#: ShamanGeneralConfig#12
+#, fuzzy
+msgctxt "ShamanGeneralConfig#12"
+msgid "Disable Tray Icon"
+msgstr "禁用托盘图标"
+
+#: ShamanGeneralConfig#13
+#, fuzzy
+msgctxt "ShamanGeneralConfig#13"
+msgid "Maintenance"
+msgstr "维护"
+
+#: ShamanGeneralConfig#14
+#, fuzzy
+msgctxt "ShamanGeneralConfig#14"
+msgid "Process Selected"
+msgstr "处理"
+
+# Waiting for a user action
+#: ShamanGeneralConfig#15
+#, fuzzy
+msgctxt "ShamanGeneralConfig#15"
+msgid "Waiting"
+msgstr "等待"
+
+#: ShamanGeneralConfig#16
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:7pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Shaman Manteinance.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Please choose an action from the Drop-Down "
+"Menu.</span></p></body></html>"
+msgstr ""
+
+#: ShamanGeneralConfig#17
+#, fuzzy
+msgctxt "ShamanGeneralConfig#17"
+msgid "Clean Unused Databases"
+msgstr "清理未使用的数据库"
+
+#: ShamanGeneralConfig#18
+#, fuzzy
+msgctxt "ShamanGeneralConfig#18"
+msgid "Clean Cache"
+msgstr "清除缓存"
+
+#: ShamanGeneralConfig#19
+#, fuzzy
+msgctxt "ShamanGeneralConfig#19"
+msgid "Empty Cache"
+msgstr "清空缓存"
+
+#: ShamanGeneralConfig#20
+#, fuzzy
+msgctxt "ShamanGeneralConfig#20"
+msgid "Optimize Pacman Database"
+msgstr "优化Pacman数据库"
+
+#: ShamanGeneralConfig#21
+#, fuzzy
+msgctxt "ShamanGeneralConfig#21"
+msgid "Clean All Building Environments"
+msgstr "清除所有的编译环境"
+
+#: ShamanGeneralConfig#22
+#, fuzzy
+msgctxt "ShamanGeneralConfig#22"
+msgid "Cleaning up unused Databases..."
+msgstr "清理未使用的数据库..."
+
+#: ShamanGeneralConfig#23
+#, fuzzy
+msgctxt "ShamanGeneralConfig#23"
+msgid "Cleaning up Cache..."
+msgstr "清除缓存..."
+
+#: ShamanGeneralConfig#24
+#, fuzzy
+msgctxt "ShamanGeneralConfig#24"
+msgid "Deleting Cache..."
+msgstr "删除缓存..."
+
+#: ShamanGeneralConfig#25
+#, fuzzy
+msgctxt "ShamanGeneralConfig#25"
+msgid "Optimizing Pacman Database..."
+msgstr "优化Pacman数据库..."
+
+#: ShamanGeneralConfig#26
+#, fuzzy
+msgctxt "ShamanGeneralConfig#26"
+msgid "Cleaning up building Environments..."
+msgstr "清除编译环境..."
+
+#: ShamanGeneralConfig#27
+#, fuzzy
+msgctxt "ShamanGeneralConfig#27"
+msgid "Unused Databases Cleaned up successfully!"
+msgstr "成功清除未使用的数据库 !"
+
+#: ShamanGeneralConfig#28
+#, fuzzy
+msgctxt "ShamanGeneralConfig#28"
+msgid "Cleaning up Unused Databases Failed!"
+msgstr "清理未使用的数据库失败!"
+
+#: ShamanGeneralConfig#29
+#, fuzzy
+msgctxt "ShamanGeneralConfig#29"
+msgid "Cache Cleaned Up Successfully!"
+msgstr "清除缓存成功 !"
+
+#: ShamanGeneralConfig#30
+#, fuzzy
+msgctxt "ShamanGeneralConfig#30"
+msgid "Cleaning up Cache Failed!"
+msgstr "清除缓存失败!"
+
+#: ShamanGeneralConfig#31
+#, fuzzy
+msgctxt "ShamanGeneralConfig#31"
+msgid "Cache Successfully Deleted!"
+msgstr "删除缓存成功 !"
+
+#: ShamanGeneralConfig#32
+#, fuzzy
+msgctxt "ShamanGeneralConfig#32"
+msgid "Deleting Cache Failed!"
+msgstr "删除缓存失败 !"
+
+#: ShamanGeneralConfig#33
+#, fuzzy
+msgctxt "ShamanGeneralConfig#33"
+msgid "Build Environments Successfully Cleaned!"
+msgstr "编译环境成功清除!"
+
+#: ShamanGeneralConfig#34
+msgctxt "ShamanGeneralConfig#34"
+msgid "Could not clean Build Environments!!"
+msgstr ""
+
+#: ShamanGeneralConfig#35
+msgctxt "ShamanGeneralConfig#35"
+msgid "Database optimized successfully!"
+msgstr ""
+
+#: ShamanGeneralConfig#36
+msgctxt "ShamanGeneralConfig#36"
+msgid "Could not optimize database!"
 msgstr ""
 
 #: ShamanStatusBar#1
@@ -6091,6 +6505,7 @@ msgstr "更新数据库.."
 msgid "Editing PKGBUILD"
 msgstr "编辑 PKGBUILD"
 
+#. (obsolete)
 #: editPBDialog#2
 msgid "Editing PKGBUILD of:"
 msgstr "编辑 PKGBUILD 的 :"
@@ -6112,6 +6527,7 @@ msgctxt "editPBDialog#6"
 msgid "Ok"
 msgstr "确定"
 
+#. (obsolete)
 #: editPBDialog#7
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
@@ -6129,6 +6545,45 @@ msgstr ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">编辑 PKGBUILD</span></p></body></html>"
+
+#: editPBDialog#8
+msgid "Editing:"
+msgstr ""
+
+#: editPBDialog#9
+msgid "PKGBUILD"
+msgstr ""
+
+#: editPBDialog#10
+msgid "MakePkg options"
+msgstr ""
+
+#: editPBDialog#11
+msgid "Ignore arch"
+msgstr ""
+
+#: editPBDialog#12
+msgid "Skip integrity checks"
+msgstr ""
+
+#: editPBDialog#13
+msgid "Ignore dependency control"
+msgstr ""
+
+#: editPBDialog#14
+msgid "Hold version if this is a development PKGBUILD"
+msgstr ""
+
+#: editPBDialog#15
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Edit Package build options</span></p></body></html>"
+msgstr ""
 
 #: logViewer#1
 msgid "Shaman - Log Viewer"
@@ -6387,6 +6842,7 @@ msgstr "放弃"
 msgid "Process From Binary"
 msgstr "从二进制处理"
 
+#. (obsolete)
 #: reviewBuildingDialog#10
 msgid "Review PKGBUILDs"
 msgstr "查看 PKGBUILDs"
@@ -6398,6 +6854,10 @@ msgstr "从源文件处理"
 #: reviewBuildingDialog#12
 msgid "Do not install immediately when building is finished"
 msgstr "编译结束时，不要立即安装软件包"
+
+#: reviewBuildingDialog#13
+msgid "Review Build options"
+msgstr ""
 
 #: transactionDialog#1
 msgid "Processing Queue..."

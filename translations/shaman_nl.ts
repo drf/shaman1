@@ -25,20 +25,75 @@
     </message>
 </context>
 <context>
+    <name>AqpmConfig</name>
+    <message>
+        <source>Packages and Paths</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>IgnorePkgs:</source>
+        <translation type="unfinished">IgnorePkgs:</translation>
+    </message>
+    <message>
+        <source>IgnoreGroups:</source>
+        <translation type="unfinished">IgnoreGroups:</translation>
+    </message>
+    <message>
+        <source>NoUpgrade:</source>
+        <translation type="unfinished">NoUpgrade:</translation>
+    </message>
+    <message>
+        <source>NoExtract:</source>
+        <translation type="unfinished">NoExtract:</translation>
+    </message>
+    <message>
+        <source>Log File:</source>
+        <translation type="unfinished">Logbestand:</translation>
+    </message>
+    <message>
+        <source>Advanced</source>
+        <translation type="unfinished">Geavanceerd</translation>
+    </message>
+    <message>
+        <source>Use SysLog</source>
+        <translation type="unfinished">SysLog gebruiken</translation>
+    </message>
+    <message>
+        <source>Use Deltas (needs xdelta to be installed)</source>
+        <translation type="unfinished">Delta&apos;s gebruiken (xdelta dient geïnstalleerd te zijn)</translation>
+    </message>
+    <message>
+        <source>Aqpm Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use multi-server download (EXPERIMENTAL)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished">Fout</translation>
+    </message>
+    <message>
+        <source>There has been a problem while saving the configuration!</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>BuildingDialog</name>
     <message>
         <source>Error</source>
-        <translation>Fout</translation>
+        <translation type="obsolete">Fout</translation>
     </message>
     <message>
         <source>Would you like to abort building?.
 All Process will be lost.</source>
-        <translation>Wilt u het bouwen van het pakket afsluiten?
+        <translation type="obsolete">Wilt u het bouwen van het pakket afsluiten?
 Alle vooruitgang zal verloren gaan.</translation>
     </message>
     <message>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Building Process Aborted by the User. Building Failed.&lt;/b&gt;</source>
-        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Pakketbouw afgesloten door gebruiker. Pakketbouw mislukt.&lt;/b&gt;</translation>
+        <translation type="obsolete">&lt;br&gt;&lt;br&gt;&lt;b&gt;Pakketbouw afgesloten door gebruiker. Pakketbouw mislukt.&lt;/b&gt;</translation>
     </message>
     <message>
         <source>Updating ABS Tree...</source>
@@ -50,72 +105,72 @@ Alle vooruitgang zal verloren gaan.</translation>
     </message>
     <message>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;ABS Tree Was Successfully Updated!&lt;/b&gt;</source>
-        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;ABS-lijst is succesvol bijgewerkt.&lt;/b&gt;</translation>
+        <translation type="obsolete">&lt;br&gt;&lt;br&gt;&lt;b&gt;ABS-lijst is succesvol bijgewerkt.&lt;/b&gt;</translation>
     </message>
     <message>
         <source>ABS Update</source>
-        <translation>ABS Update</translation>
+        <translation type="obsolete">ABS Update</translation>
     </message>
     <message>
         <source>Your ABS Tree was updated!</source>
-        <translation>Uw ABS lijst is bijgewerkt.</translation>
+        <translation type="obsolete">Uw ABS lijst is bijgewerkt.</translation>
     </message>
     <message>
         <source>Could not update the ABS Tree!</source>
-        <translation>Kon de ABS-lijst niet bijwerken.</translation>
+        <translation type="obsolete">Kon de ABS-lijst niet bijwerken.</translation>
     </message>
     <message>
         <source>&lt;b&gt;Building %1 failed!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;Het bouwen van %1 is mislukt.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Het bouwen van %1 is mislukt.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <source>&lt;b&gt;%1 was built successfully!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;%1 is succesvol gebouwd.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;%1 is succesvol gebouwd.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <source>Processing Package %1 of %2...</source>
-        <translation>Pakket %1 van %2 wordt verwerkt...</translation>
+        <translation type="obsolete">Pakket %1 van %2 wordt verwerkt...</translation>
     </message>
     <message>
         <source>Building %1...</source>
-        <translation>%1 aan het bouwen...</translation>
+        <translation type="obsolete">%1 aan het bouwen...</translation>
     </message>
     <message>
         <source>&lt;b&gt;Could not set up the environment correctly for %1!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;Kon de omgeving voor %1 niet correct bepalen.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Kon de omgeving voor %1 niet correct bepalen.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <source>&lt;b&gt;Building %1...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;%1 aan het bouwen...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;%1 aan het bouwen...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <source>&lt;b&gt;Building operation has started.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;Begonnen met bouwen van pakket.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Begonnen met bouwen van pakket.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
 </context>
 <context>
     <name>BuildingHandler</name>
     <message>
         <source>Error</source>
-        <translation>Fout</translation>
+        <translation type="obsolete">Fout</translation>
     </message>
     <message>
         <source>You need to have ABS installed to use Shaman&apos;s
 building feature. Do you want to install it now?</source>
-        <translation>U dient ABS geïnstalleerd te hebben om Shamans
+        <translation type="obsolete">U dient ABS geïnstalleerd te hebben om Shamans
 bouwfunctionaliteit te gebruiken. Wilt u deze nu installeren?</translation>
     </message>
     <message>
         <source>You can not remove packages when processing
 your queue from Source</source>
-        <translation>U kan geen pakketten verwijderen tijdens het
+        <translation type="obsolete">U kan geen pakketten verwijderen tijdens het
 bewerken van uw broncode-wachtrij</translation>
     </message>
     <message>
         <source>Some of your packages do not belong to Arch
 Linux&apos;s official repository. Shaman is able to
 build packages from official sources only.</source>
-        <translation>Sommige van uw pakketten behoren niet tot de
+        <translation type="obsolete">Sommige van uw pakketten behoren niet tot de
 officiële Arch Linux-repository. Shaman kan alleen
 pakketten bouwen uit officiële bron.</translation>
     </message>
@@ -129,59 +184,59 @@ pakketten bouwen uit officiële bron.</translation>
     </message>
     <message>
         <source>To be Installed</source>
-        <translation>Te installeren</translation>
+        <translation type="obsolete">Te installeren</translation>
     </message>
     <message>
         <source>To be Upgraded</source>
-        <translation>Bij te werken</translation>
+        <translation type="obsolete">Bij te werken</translation>
     </message>
     <message>
         <source>Package Building</source>
-        <translation>Pakket aan het bouwen</translation>
+        <translation type="obsolete">Pakket aan het bouwen</translation>
     </message>
     <message>
         <source>Your Packages failed to build!</source>
-        <translation>De bouw van uw pakket is mislukt.</translation>
+        <translation type="obsolete">De bouw van uw pakket is mislukt.</translation>
     </message>
     <message>
         <source>Your packages Failed to Build.
 Look at the output for more details.</source>
-        <translation>De bouw van uw pakket is mislukt.
+        <translation type="obsolete">De bouw van uw pakket is mislukt.
 Bekijk de uitvoer voor meer details.</translation>
     </message>
     <message>
         <source>Close</source>
-        <translation>Sluiten</translation>
+        <translation type="obsolete">Sluiten</translation>
     </message>
     <message>
         <source>Building Packages Failed!!</source>
-        <translation>De bouw van de paketten is mislukt.</translation>
+        <translation type="obsolete">De bouw van de paketten is mislukt.</translation>
     </message>
     <message>
         <source>Some packages failed to build.
 Do you want to proceed anyway?</source>
-        <translation>Sommige pakketten konden niet gebouwd worden.
+        <translation type="obsolete">Sommige pakketten konden niet gebouwd worden.
 Toch verder gaan?</translation>
     </message>
     <message>
         <source>Install Built Packages</source>
-        <translation>De gebouwde pakketten installeren</translation>
+        <translation type="obsolete">De gebouwde pakketten installeren</translation>
     </message>
     <message>
         <source>Close Without Installing</source>
-        <translation>Sluiten zonder te installeren</translation>
+        <translation type="obsolete">Sluiten zonder te installeren</translation>
     </message>
     <message>
         <source>Packages Built Successfully!</source>
-        <translation>Pakketten succesvol gebouwd.</translation>
+        <translation type="obsolete">Pakketten succesvol gebouwd.</translation>
     </message>
     <message>
         <source>Your Packages have been built successfully, and are ready to be installed</source>
-        <translation>Uw pakketten zijn succesvol gebouwd en kunnen geïnstalleerd worden</translation>
+        <translation type="obsolete">Uw pakketten zijn succesvol gebouwd en kunnen geïnstalleerd worden</translation>
     </message>
     <message numerus="yes">
         <source>You are about to install &lt;b&gt;%n package(s)&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             <numerusform>
             </numerusform>
         </translation>
@@ -400,16 +455,16 @@ Het is nu beschikbaar in kdemodmirrorlist.</translation>
     </message>
     <message>
         <source>Pacman Database Optimized Successfully!</source>
-        <translation>De Pacman-database is succesvol geoptimaliseerd.</translation>
+        <translation type="obsolete">De Pacman-database is succesvol geoptimaliseerd.</translation>
     </message>
     <message>
         <source>Could not Optimize Pacman Database!</source>
-        <translation>Kon de Pacman-database niet optimaliseren.</translation>
+        <translation type="obsolete">Kon de Pacman-database niet optimaliseren.</translation>
     </message>
     <message>
         <source>Running sync...</source>
         <comment>sync is a command, so it should not be translated</comment>
-        <translation>sync wordt uitgevoerd...</translation>
+        <translation type="obsolete">sync wordt uitgevoerd...</translation>
     </message>
     <message>
         <source>Operation Completed Successfully!</source>
@@ -436,47 +491,47 @@ Het is nu beschikbaar in kdemodmirrorlist.</translation>
     </message>
     <message>
         <source>Favourite Actions</source>
-        <translation>Voorkeursacties</translation>
+        <translation type="obsolete">Voorkeursacties</translation>
     </message>
     <message>
         <source>When Upgrading System:</source>
-        <translation>Wanneer systeem bijgewerkt wordt:</translation>
+        <translation type="obsolete">Wanneer systeem bijgewerkt wordt:</translation>
     </message>
     <message>
         <source>Upgrade Immediately</source>
-        <translation>Onmiddellijk bijwerken</translation>
+        <translation type="obsolete">Onmiddellijk bijwerken</translation>
     </message>
     <message>
         <source>Add Upgradeable Packages To Queue</source>
-        <translation>Bij te werken paketten toevoegen aan de wachtrij</translation>
+        <translation type="obsolete">Bij te werken paketten toevoegen aan de wachtrij</translation>
     </message>
     <message>
         <source>Ask</source>
-        <translation>Vragen</translation>
+        <translation type="obsolete">Vragen</translation>
     </message>
     <message>
         <source>When Processing Queue</source>
-        <translation>Tijdens het bewerken van de wachtrij</translation>
+        <translation type="obsolete">Tijdens het bewerken van de wachtrij</translation>
     </message>
     <message>
         <source>Keep application running in System Tray only</source>
-        <translation>Laat het programma enkel draaien in het systeemvak</translation>
+        <translation type="obsolete">Laat het programma enkel draaien in het systeemvak</translation>
     </message>
     <message>
         <source>GUI Startup</source>
-        <translation>Met grafische interface starten</translation>
+        <translation type="obsolete">Met grafische interface starten</translation>
     </message>
     <message>
         <source>Start in the System Tray</source>
-        <translation>In het systeemvak starten</translation>
+        <translation type="obsolete">In het systeemvak starten</translation>
     </message>
     <message>
         <source>Show Splashscreen</source>
-        <translation>Opstartscherm tonen</translation>
+        <translation type="obsolete">Opstartscherm tonen</translation>
     </message>
     <message>
         <source>Maintenance</source>
-        <translation>Onderhoud</translation>
+        <translation type="obsolete">Onderhoud</translation>
     </message>
     <message>
         <source>Process Selected</source>
@@ -485,7 +540,7 @@ Het is nu beschikbaar in kdemodmirrorlist.</translation>
     <message>
         <source>Waiting</source>
         <comment>Waiting for a user action</comment>
-        <translation>Aan het wachten</translation>
+        <translation type="obsolete">Aan het wachten</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -503,55 +558,55 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Checkable Options</source>
-        <translation>Selecteerbare opties</translation>
+        <translation type="obsolete">Selecteerbare opties</translation>
     </message>
     <message>
         <source>Use Active FTP</source>
-        <translation>Actieve FTP gebruiken</translation>
+        <translation type="obsolete">Actieve FTP gebruiken</translation>
     </message>
     <message>
         <source>Use Deltas (needs xdelta to be installed)</source>
-        <translation>Delta&apos;s gebruiken (xdelta dient geïnstalleerd te zijn)</translation>
+        <translation type="obsolete">Delta&apos;s gebruiken (xdelta dient geïnstalleerd te zijn)</translation>
     </message>
     <message>
         <source>Use SysLog</source>
-        <translation>SysLog gebruiken</translation>
+        <translation type="obsolete">SysLog gebruiken</translation>
     </message>
     <message>
         <source>Advanced Options</source>
-        <translation>Geavanceerde opties</translation>
+        <translation type="obsolete">Geavanceerde opties</translation>
     </message>
     <message>
         <source>HoldPkgs:</source>
-        <translation>HoldPkgs:</translation>
+        <translation type="obsolete">HoldPkgs:</translation>
     </message>
     <message>
         <source>IgnorePkgs:</source>
-        <translation>IgnorePkgs:</translation>
+        <translation type="obsolete">IgnorePkgs:</translation>
     </message>
     <message>
         <source>IgnoreGroups:</source>
-        <translation>IgnoreGroups:</translation>
+        <translation type="obsolete">IgnoreGroups:</translation>
     </message>
     <message>
         <source>NoUpgrade:</source>
-        <translation>NoUpgrade:</translation>
+        <translation type="obsolete">NoUpgrade:</translation>
     </message>
     <message>
         <source>NoExtract:</source>
-        <translation>NoExtract:</translation>
+        <translation type="obsolete">NoExtract:</translation>
     </message>
     <message>
         <source>Log File:</source>
-        <translation>Logbestand:</translation>
+        <translation type="obsolete">Logbestand:</translation>
     </message>
     <message>
         <source>XFerCommand: (example: /path/to/command %u) Blank for Default</source>
-        <translation>XFerCommand: (bijvoorbeeld: /pad/naar/opdracht %u) Leeglaten voor standaard</translation>
+        <translation type="obsolete">XFerCommand: (bijvoorbeeld: /pad/naar/opdracht %u) Leeglaten voor standaard</translation>
     </message>
     <message>
         <source>Arch Linux Official Repositories</source>
-        <translation>Arch Linux Officiële Repositories</translation>
+        <translation type="obsolete">Arch Linux Officiële Repositories</translation>
     </message>
     <message>
         <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones.
@@ -562,22 +617,22 @@ Opgelet: paketten uit Unstable en Testing kunnen uw systeem beschadigen.</transl
     <message>
         <source>Core</source>
         <comment>Do not translate</comment>
-        <translation>Core</translation>
+        <translation type="obsolete">Core</translation>
     </message>
     <message>
         <source>Extra</source>
         <comment>Do not translate</comment>
-        <translation>Extra</translation>
+        <translation type="obsolete">Extra</translation>
     </message>
     <message>
         <source>Community</source>
         <comment>Do not translate</comment>
-        <translation>Community</translation>
+        <translation type="obsolete">Community</translation>
     </message>
     <message>
         <source>Testing</source>
         <comment>Do not translate</comment>
-        <translation>Testing</translation>
+        <translation type="obsolete">Testing</translation>
     </message>
     <message>
         <source>Unstable</source>
@@ -586,7 +641,7 @@ Opgelet: paketten uit Unstable en Testing kunnen uw systeem beschadigen.</transl
     </message>
     <message>
         <source>Server</source>
-        <translation>Server</translation>
+        <translation type="obsolete">Server</translation>
     </message>
     <message>
         <source>Mirror:</source>
@@ -594,7 +649,7 @@ Opgelet: paketten uit Unstable en Testing kunnen uw systeem beschadigen.</transl
     </message>
     <message>
         <source>KDEMod Repositories</source>
-        <translation>KDEMod Repositories</translation>
+        <translation type="obsolete">KDEMod Repositories</translation>
     </message>
     <message>
         <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an 
@@ -608,7 +663,7 @@ combineren met de eenvoud van Arch.</translation>
     </message>
     <message>
         <source>KDEMod 3 Repository</source>
-        <translation>KDEMod 3 Repository</translation>
+        <translation type="obsolete">KDEMod 3 Repository</translation>
     </message>
     <message>
         <source>KDEMod 3 Testing Repository</source>
@@ -620,7 +675,7 @@ combineren met de eenvoud van Arch.</translation>
     </message>
     <message>
         <source>Third-Party Repositories</source>
-        <translation>Repositories van derden</translation>
+        <translation type="obsolete">Repositories van derden</translation>
     </message>
     <message>
         <source>You can extend your packages choice by adding other repositories. Third-Party 
@@ -636,7 +691,7 @@ als Pacman.</translation>
     </message>
     <message>
         <source>Add New Repository</source>
-        <translation>Nieuwe Repository toevoegen</translation>
+        <translation type="obsolete">Nieuwe Repository toevoegen</translation>
     </message>
     <message>
         <source>Edit Repository</source>
@@ -648,196 +703,196 @@ als Pacman.</translation>
     </message>
     <message>
         <source>Preferences</source>
-        <translation>Voorkeuren</translation>
+        <translation type="obsolete">Voorkeuren</translation>
     </message>
     <message>
         <source>Process all dependencies and queue from binary first (recommended)</source>
-        <translation>Alle afhankelijkheden verwerken en eerst binaire pakketten gebruiken (aanbevolen)</translation>
+        <translation type="obsolete">Alle afhankelijkheden verwerken en eerst binaire pakketten gebruiken (aanbevolen)</translation>
     </message>
     <message>
         <source>Review Building output before installing</source>
-        <translation>Uitvoer bouwproces bekijken alvorens pakket te installeren</translation>
+        <translation type="obsolete">Uitvoer bouwproces bekijken alvorens pakket te installeren</translation>
     </message>
     <message>
         <source>ABS Configuration</source>
-        <translation>ABS-instellingen</translation>
+        <translation type="obsolete">ABS-instellingen</translation>
     </message>
     <message>
         <source>Use supfiles that match your current repositories</source>
-        <translation>Gebruik supfiles die overeenkomen met uw huidige repositories</translation>
+        <translation type="obsolete">Gebruik supfiles die overeenkomen met uw huidige repositories</translation>
     </message>
     <message>
         <source>Define supfiles manually</source>
-        <translation>supfiles handmatig opgeven</translation>
+        <translation type="obsolete">supfiles handmatig opgeven</translation>
     </message>
     <message>
         <source>RSync Server:</source>
-        <translation>RSync-server:</translation>
+        <translation type="obsolete">RSync-server:</translation>
     </message>
     <message>
         <source>Makepkg Configuration</source>
-        <translation>Makepkg-instellingen</translation>
+        <translation type="obsolete">Makepkg-instellingen</translation>
     </message>
     <message>
         <source>CFlags</source>
-        <translation>CFlags</translation>
+        <translation type="obsolete">CFlags</translation>
     </message>
     <message>
         <source>CXXFlags</source>
-        <translation>CXXFlags</translation>
+        <translation type="obsolete">CXXFlags</translation>
     </message>
     <message>
         <source>BuildEnv</source>
-        <translation>BuildEnv</translation>
+        <translation type="obsolete">BuildEnv</translation>
     </message>
     <message>
         <source>Options</source>
-        <translation>Opties</translation>
+        <translation type="obsolete">Opties</translation>
     </message>
     <message>
         <source>Doc_Dirs</source>
-        <translation>Doc_Dirs</translation>
+        <translation type="obsolete">Doc_Dirs</translation>
     </message>
     <message>
         <source>Build Environment</source>
-        <translation>Build Environment</translation>
+        <translation type="obsolete">Build Environment</translation>
     </message>
     <message>
         <source>Building Path</source>
-        <translation>Building Path</translation>
+        <translation type="obsolete">Building Path</translation>
     </message>
     <message>
         <source>Remove installed makedepends after build</source>
-        <translation>Geïnstalleerde bouwafhankelijkheden verwijderen na bouwen</translation>
+        <translation type="obsolete">Geïnstalleerde bouwafhankelijkheden verwijderen na bouwen</translation>
     </message>
     <message>
         <source>Clean Build Environment after installation</source>
-        <translation>Bouwomgeving opruimen na installatie</translation>
+        <translation type="obsolete">Bouwomgeving opruimen na installatie</translation>
     </message>
     <message>
         <source>When Application is in System Tray only</source>
-        <translation>Als het programma alleen in het systeemvak zit</translation>
+        <translation type="obsolete">Als het programma alleen in het systeemvak zit</translation>
     </message>
     <message>
         <source>Update Database every</source>
-        <translation>Database vernieuwen iedere</translation>
+        <translation type="obsolete">Database vernieuwen iedere</translation>
     </message>
     <message>
         <source>min</source>
         <comment>As in &quot;minutes&quot;</comment>
-        <translation>minuut</translation>
+        <translation type="obsolete">minuut</translation>
     </message>
     <message>
         <source>Show tray notification Windows</source>
-        <translation>Systeemvakmeldingen tonen</translation>
+        <translation type="obsolete">Systeemvakmeldingen tonen</translation>
     </message>
     <message>
         <source>If upgrades are available:</source>
-        <translation>Als upgrades beschikbaar zijn:</translation>
+        <translation type="obsolete">Als upgrades beschikbaar zijn:</translation>
     </message>
     <message>
         <source>Just Notify</source>
-        <translation>Alleen melden</translation>
+        <translation type="obsolete">Alleen melden</translation>
     </message>
     <message>
         <source>Notify and add them to Queue</source>
-        <translation>Melden en aan wachtrij toevoegen</translation>
+        <translation type="obsolete">Melden en aan wachtrij toevoegen</translation>
     </message>
     <message>
         <source>Update Database at</source>
-        <translation>Database updaten om</translation>
+        <translation type="obsolete">Database updaten om</translation>
     </message>
     <message>
         <source>Use a proxy-server</source>
-        <translation>Proxy-server gebruiken</translation>
+        <translation type="obsolete">Proxy-server gebruiken</translation>
     </message>
     <message>
         <source>IP:</source>
-        <translation>IP-adres:</translation>
+        <translation type="obsolete">IP-adres:</translation>
     </message>
     <message>
         <source>Port:</source>
-        <translation>Poort:</translation>
+        <translation type="obsolete">Poort:</translation>
     </message>
     <message>
         <source>HTTP Proxy</source>
-        <translation>HTTP-proxy</translation>
+        <translation type="obsolete">HTTP-proxy</translation>
     </message>
     <message>
         <source>FTP Proxy</source>
-        <translation>FTP-proxy</translation>
+        <translation type="obsolete">FTP-proxy</translation>
     </message>
     <message>
         <source>Use Shaman RSS Capabilities</source>
-        <translation>Shamans RSS-mogelijkheden gebruiken</translation>
+        <translation type="obsolete">Shamans RSS-mogelijkheden gebruiken</translation>
     </message>
     <message>
         <source>Update RSS Feed Every</source>
-        <translation>RSS-feed bijwerken iedere</translation>
+        <translation type="obsolete">RSS-feed bijwerken iedere</translation>
     </message>
     <message>
         <source>Notify upon new items</source>
-        <translation>Nieuwe items melden</translation>
+        <translation type="obsolete">Nieuwe items melden</translation>
     </message>
     <message>
         <source>Check if there is an unread news about a package in Queue before processing it</source>
-        <translation>Eerst controleren of er ongelezen nieuwsberichten zijn over een pakket alvorens het te installeren</translation>
+        <translation type="obsolete">Eerst controleren of er ongelezen nieuwsberichten zijn over een pakket alvorens het te installeren</translation>
     </message>
     <message>
         <source>Interface</source>
-        <translation>Interface</translation>
+        <translation type="obsolete">Interface</translation>
     </message>
     <message>
         <source>Use Animated Tray Icon</source>
-        <translation>Bewegend systeemvak pictogram gebruiken</translation>
+        <translation type="obsolete">Bewegend systeemvak pictogram gebruiken</translation>
     </message>
     <message>
         <source>Start Shaman Automatically on X Startup</source>
-        <translation>Shaman starten bij het starten van X</translation>
+        <translation type="obsolete">Shaman starten bij het starten van X</translation>
     </message>
     <message>
         <source>Forbid starting Shaman as root</source>
-        <translation>Verhinderen dat Shaman als root gestart wordt</translation>
+        <translation type="obsolete">Verhinderen dat Shaman als root gestart wordt</translation>
     </message>
     <message>
         <source>KDEMod 4 Repository</source>
-        <translation>KDEMod 4 Repository</translation>
+        <translation type="obsolete">KDEMod 4 Repository</translation>
     </message>
     <message>
         <source>KDEMod 4 Extragear Repository</source>
-        <translation>KDEMod 4 Extragear Repository</translation>
+        <translation type="obsolete">KDEMod 4 Extragear Repository</translation>
     </message>
     <message>
         <source>KDEMod 4 Playground Repository</source>
-        <translation>KDEMod 4 Playground Repository</translation>
+        <translation type="obsolete">KDEMod 4 Playground Repository</translation>
     </message>
     <message>
         <source>KDEMod 4 Testing Repository</source>
-        <translation>KDEMod 4 Testing Repository</translation>
+        <translation type="obsolete">KDEMod 4 Testing Repository</translation>
     </message>
     <message>
         <source>KDEMod 4 Unstable Repository (Testers only!)</source>
-        <translation>KDEMod 4 Unstable Repository (alleen testers)</translation>
+        <translation type="obsolete">KDEMod 4 Unstable Repository (alleen testers)</translation>
     </message>
     <message>
         <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones. Please note that packages from Unstable and Testing may break your system.</source>
-        <translation>Hier kunt u repositories selecteren die naast Arch Linux&apos; officiële repositories gebruikt worden. Merk op dat pakketten uit Unstable en Testing schade aan uw systeem kunnen toebrengen.</translation>
+        <translation type="obsolete">Hier kunt u repositories selecteren die naast Arch Linux&apos; officiële repositories gebruikt worden. Merk op dat pakketten uit Unstable en Testing schade aan uw systeem kunnen toebrengen.</translation>
     </message>
     <message>
         <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme, and lots of addons, KDEMod is the best way to taste the ease and the power of KDE with the simplicity and the power of Arch.</source>
-        <translation>KDEMod is een verbeterde versie van KDE, exclusief voor Arch Linux. Het bevat een verbeterde Qt-installatie (compatibel met Arch Linux&apos; standaard Qt-installaties), een verbeterde stijl en vele extra&apos;s. KDEMod is de beste manier om van de kracht van KDE te proeven, met de eenvoudigheid van Arch.</translation>
+        <translation type="obsolete">KDEMod is een verbeterde versie van KDE, exclusief voor Arch Linux. Het bevat een verbeterde Qt-installatie (compatibel met Arch Linux&apos; standaard Qt-installaties), een verbeterde stijl en vele extra&apos;s. KDEMod is de beste manier om van de kracht van KDE te proeven, met de eenvoudigheid van Arch.</translation>
     </message>
     <message>
         <source>You can extend your packages choice by adding other repositories. Third-Party Repositories act just as normal ones, and will be accessible through both Shaman and Pacman.</source>
-        <translation>U kunt het pakketaanbod uitbreiden door andere repositories toe te voegen. Repositories van derden gedragen zich als normale repositories, en zijn benaderbaar via Shaman en Pacman.</translation>
+        <translation type="obsolete">U kunt het pakketaanbod uitbreiden door andere repositories toe te voegen. Repositories van derden gedragen zich als normale repositories, en zijn benaderbaar via Shaman en Pacman.</translation>
     </message>
     <message>
         <source>Use the following language:</source>
-        <translation>De volgende taal gebruiken:</translation>
+        <translation type="obsolete">De volgende taal gebruiken:</translation>
     </message>
     <message>
         <source>Disable Tray Icon</source>
-        <translation>Systeemvakpictogram uitschakelen</translation>
+        <translation type="obsolete">Systeemvakpictogram uitschakelen</translation>
     </message>
     <message>
         <source>Database optimized successfully!</source>
@@ -860,24 +915,15 @@ als Pacman.</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>Apply</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Add another server</source>
+        <source>Shaman Configuration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Repository Order</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Please order your repositories to define which one will be preferred over another.</source>
+        <source>Aqpm Configuration</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -997,17 +1043,25 @@ Het is nu beschikbaar in mirrorlist.</translation>
         <source>Please order your repositories to define which one will be preferred over another.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished">Fout</translation>
+    </message>
+    <message>
+        <source>There has been a problem while saving the configuration!</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>EditPBuild</name>
     <message>
         <source>Saving</source>
-        <translation>Bezig met opslaan</translation>
+        <translation type="obsolete">Bezig met opslaan</translation>
     </message>
     <message>
         <source>You modified this PKGBUILD.
 Do you want to save it?</source>
-        <translation>U hebt deze PKGBUILD gewijzigd.
+        <translation type="obsolete">U hebt deze PKGBUILD gewijzigd.
 Wilt u het opslaan?</translation>
     </message>
 </context>
@@ -1828,7 +1882,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf@kdemod.ath.cx&amp;gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+        <translation type="obsolete">&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Een libalpm-frontend in Qt&lt;/span&gt;&lt;/p&gt;
@@ -2018,11 +2072,6 @@ p, li { white-space: pre-wrap; }
         <source>Replace %1 with %2/%3?</source>
         <translation type="unfinished">%1 vervangen door %2/%3?</translation>
     </message>
-    <message>
-        <source>%1 conflicts with %2.
-Remove %2?</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message numerus="yes">
         <source>The following package(s) cannot be upgraded due to unresolvable dependencies:
 %1
@@ -2059,6 +2108,15 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008-2009 Dario Freddi &amp;lt;drf@chakra-project.org&amp;gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@chakra-project.org&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 conflicts with %2.
+Remove %1?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Updating ABS tree</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2154,11 +2212,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Pacman Database Optimized Successfully!</source>
-        <translation>Pacman-database succesvol geoptimaliseerd.</translation>
+        <translation type="obsolete">Pacman-database succesvol geoptimaliseerd.</translation>
     </message>
     <message>
         <source>Could not Optimize Pacman Database!</source>
-        <translation>Kon Pacman-database niet optimaliseren.</translation>
+        <translation type="obsolete">Kon Pacman-database niet optimaliseren.</translation>
     </message>
     <message>
         <source>Running sync...</source>
@@ -2375,7 +2433,7 @@ Shaman zal u uw root-wachtwoord vragen indien nodig.</translation>
         <source>Pacman is not updated.
 Shaman needs libalpm &gt;= 2.1.0 to run.
 Yours is %1. Please update Pacman.</source>
-        <translation>Pacman is niet bijgewerkt.
+        <translation type="obsolete">Pacman is niet bijgewerkt.
 Shaman heeft libalpm &gt;= 2.1.0 nodig om te kunnen werken.
 Uw versie is %1. Gelieve Pacman bij te werken.</translation>
     </message>
@@ -2393,6 +2451,10 @@ Uw versie is %1. Gelieve Pacman bij te werken.</translation>
     </message>
     <message>
         <source>Shaman can not be started as root. Please restart it as unprivileged user.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Apply</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2724,6 +2786,159 @@ p, li { white-space: pre-wrap; }
     </message>
 </context>
 <context>
+    <name>ShamanGeneralConfig</name>
+    <message>
+        <source>Favourite Actions</source>
+        <translation type="unfinished">Voorkeursacties</translation>
+    </message>
+    <message>
+        <source>When Upgrading System:</source>
+        <translation type="unfinished">Wanneer systeem bijgewerkt wordt:</translation>
+    </message>
+    <message>
+        <source>Upgrade Immediately</source>
+        <translation type="unfinished">Onmiddellijk bijwerken</translation>
+    </message>
+    <message>
+        <source>Add Upgradeable Packages To Queue</source>
+        <translation type="unfinished">Bij te werken paketten toevoegen aan de wachtrij</translation>
+    </message>
+    <message>
+        <source>Ask</source>
+        <translation type="unfinished">Vragen</translation>
+    </message>
+    <message>
+        <source>When Processing Queue</source>
+        <translation type="unfinished">Tijdens het bewerken van de wachtrij</translation>
+    </message>
+    <message>
+        <source>Keep application running in System Tray only</source>
+        <translation type="unfinished">Laat het programma enkel draaien in het systeemvak</translation>
+    </message>
+    <message>
+        <source>GUI Startup</source>
+        <translation type="unfinished">Met grafische interface starten</translation>
+    </message>
+    <message>
+        <source>Start in the System Tray</source>
+        <translation type="unfinished">In het systeemvak starten</translation>
+    </message>
+    <message>
+        <source>Show Splashscreen</source>
+        <translation type="unfinished">Opstartscherm tonen</translation>
+    </message>
+    <message>
+        <source>Use the following language:</source>
+        <translation type="unfinished">De volgende taal gebruiken:</translation>
+    </message>
+    <message>
+        <source>Disable Tray Icon</source>
+        <translation type="unfinished">Systeemvakpictogram uitschakelen</translation>
+    </message>
+    <message>
+        <source>Maintenance</source>
+        <translation type="unfinished">Onderhoud</translation>
+    </message>
+    <message>
+        <source>Process Selected</source>
+        <translation type="unfinished">Proces geselecteerd</translation>
+    </message>
+    <message>
+        <source>Waiting</source>
+        <comment>Waiting for a user action</comment>
+        <translation type="unfinished">Aan het wachten</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:7pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clean Unused Databases</source>
+        <translation type="unfinished">Niet-gebruikte databases opruimen</translation>
+    </message>
+    <message>
+        <source>Clean Cache</source>
+        <translation type="unfinished">Cache opruimen</translation>
+    </message>
+    <message>
+        <source>Empty Cache</source>
+        <translation type="unfinished">Cache leegmaken</translation>
+    </message>
+    <message>
+        <source>Optimize Pacman Database</source>
+        <translation type="unfinished">Pacman-database optimaliseren</translation>
+    </message>
+    <message>
+        <source>Clean All Building Environments</source>
+        <translation type="unfinished">Alle bouwomgevingen opruimen</translation>
+    </message>
+    <message>
+        <source>Cleaning up unused Databases...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cleaning up Cache...</source>
+        <translation type="unfinished">Cache wordt opgeruimd...</translation>
+    </message>
+    <message>
+        <source>Deleting Cache...</source>
+        <translation type="unfinished">Cache wordt verwijderd...</translation>
+    </message>
+    <message>
+        <source>Optimizing Pacman Database...</source>
+        <translation type="unfinished">Pacman-database wordt geoptimaliseerd...</translation>
+    </message>
+    <message>
+        <source>Cleaning up building Environments...</source>
+        <translation type="unfinished">Bouwomgevingen worden opgeruimd...</translation>
+    </message>
+    <message>
+        <source>Unused Databases Cleaned up successfully!</source>
+        <translation type="unfinished">Ongebruikte databases succesvol opgeruimd.</translation>
+    </message>
+    <message>
+        <source>Cleaning up Unused Databases Failed!</source>
+        <translation type="unfinished">Opruimen van ongebruikte databases mislukt.</translation>
+    </message>
+    <message>
+        <source>Cache Cleaned Up Successfully!</source>
+        <translation type="unfinished">Cache succesvol opgeruimd.</translation>
+    </message>
+    <message>
+        <source>Cleaning up Cache Failed!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cache Successfully Deleted!</source>
+        <translation type="unfinished">Cache succesvol verwijderd.</translation>
+    </message>
+    <message>
+        <source>Deleting Cache Failed!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Build Environments Successfully Cleaned!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Could not clean Build Environments!!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Database optimized successfully!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Could not optimize database!</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ShamanStatusBar</name>
     <message>
         <source>%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages</source>
@@ -3048,7 +3263,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Editing PKGBUILD of:</source>
-        <translation>PKGBUILD bewerken van:</translation>
+        <translation type="obsolete">PKGBUILD bewerken van:</translation>
     </message>
     <message>
         <source>Save</source>
@@ -3071,10 +3286,45 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Edit PKGBUILD&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+        <translation type="obsolete">&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;PKGBUILD bewerken&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>Editing:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PKGBUILD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MakePkg options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ignore arch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Skip integrity checks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ignore dependency control</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hold version if this is a development PKGBUILD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Edit Package build options&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3294,11 +3544,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Review PKGBUILDs</source>
-        <translation>PKGBUILD-bestanden bekijken</translation>
+        <translation type="obsolete">PKGBUILD-bestanden bekijken</translation>
     </message>
     <message>
         <source>Process From Source</source>
         <translation>Vanuit broncode verwerken</translation>
+    </message>
+    <message>
+        <source>Review Build options</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

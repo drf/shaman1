@@ -25,20 +25,75 @@
     </message>
 </context>
 <context>
+    <name>AqpmConfig</name>
+    <message>
+        <source>Packages and Paths</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>IgnorePkgs:</source>
+        <translation type="unfinished">Ignorované balíčky:</translation>
+    </message>
+    <message>
+        <source>IgnoreGroups:</source>
+        <translation type="unfinished">Ignorované skupiny balíčků:</translation>
+    </message>
+    <message>
+        <source>NoUpgrade:</source>
+        <translation type="unfinished">Neaktualizovat balíčky:</translation>
+    </message>
+    <message>
+        <source>NoExtract:</source>
+        <translation type="unfinished">Nerozbalovat:</translation>
+    </message>
+    <message>
+        <source>Log File:</source>
+        <translation type="unfinished">Soubor log:</translation>
+    </message>
+    <message>
+        <source>Advanced</source>
+        <translation type="unfinished">Pokročilé</translation>
+    </message>
+    <message>
+        <source>Use SysLog</source>
+        <translation type="unfinished">Použít SysLog</translation>
+    </message>
+    <message>
+        <source>Use Deltas (needs xdelta to be installed)</source>
+        <translation type="unfinished">Použít Deltas (vyžaduje nainstalované xdelta)</translation>
+    </message>
+    <message>
+        <source>Aqpm Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use multi-server download (EXPERIMENTAL)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished">Chyba</translation>
+    </message>
+    <message>
+        <source>There has been a problem while saving the configuration!</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>BuildingDialog</name>
     <message>
         <source>Error</source>
-        <translation>Chyba</translation>
+        <translation type="obsolete">Chyba</translation>
     </message>
     <message>
         <source>Would you like to abort building?.
 All Process will be lost.</source>
-        <translation>Chcete přerušit sestavování?
+        <translation type="obsolete">Chcete přerušit sestavování?
 Všechna data budou ztracena.</translation>
     </message>
     <message>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Building Process Aborted by the User. Building Failed.&lt;/b&gt;</source>
-        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Sestavování přerušeno uživatelem. Sestavování selhalo.&lt;/b&gt;</translation>
+        <translation type="obsolete">&lt;br&gt;&lt;br&gt;&lt;b&gt;Sestavování přerušeno uživatelem. Sestavování selhalo.&lt;/b&gt;</translation>
     </message>
     <message>
         <source>Updating ABS Tree...</source>
@@ -50,47 +105,47 @@ Všechna data budou ztracena.</translation>
     </message>
     <message>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;ABS Tree Was Successfully Updated!&lt;/b&gt;</source>
-        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;ABS strom byl úspěžně aktualizován!&lt;/b&gt;</translation>
+        <translation type="obsolete">&lt;br&gt;&lt;br&gt;&lt;b&gt;ABS strom byl úspěžně aktualizován!&lt;/b&gt;</translation>
     </message>
     <message>
         <source>ABS Update</source>
-        <translation>ABS aktualice</translation>
+        <translation type="obsolete">ABS aktualice</translation>
     </message>
     <message>
         <source>Your ABS Tree was updated!</source>
-        <translation>ABS strom byl aktualizován!</translation>
+        <translation type="obsolete">ABS strom byl aktualizován!</translation>
     </message>
     <message>
         <source>&lt;b&gt;Building %1 failed!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;Sestavování %1 selhalo!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Sestavování %1 selhalo!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <source>&lt;b&gt;%1 was built successfully!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;%1 byl úspěšně sestaven!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;%1 byl úspěšně sestaven!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <source>Processing Package %1 of %2...</source>
-        <translation>Zoracovávání balíčeku %1 z %2...</translation>
+        <translation type="obsolete">Zoracovávání balíčeku %1 z %2...</translation>
     </message>
     <message>
         <source>Building %1...</source>
-        <translation>Sestavování %1...</translation>
+        <translation type="obsolete">Sestavování %1...</translation>
     </message>
     <message>
         <source>&lt;b&gt;Building %1...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;Sestavování %1...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Sestavování %1...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <source>&lt;b&gt;Building operation has started.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;Sestavování začalo.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Sestavování začalo.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <source>&lt;b&gt;Could not set up the environment correctly for %1!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;Nebylo možné nastavit prostředí pro %1!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Nebylo možné nastavit prostředí pro %1!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <source>Could not update the ABS Tree!</source>
-        <translation>Nebylo možné aktualizovat ABS strom!</translation>
+        <translation type="obsolete">Nebylo možné aktualizovat ABS strom!</translation>
     </message>
 </context>
 <context>
@@ -98,23 +153,23 @@ Všechna data budou ztracena.</translation>
     <message>
         <source>You need to have ABS installed to use Shaman&apos;s
 building feature. Do you want to install it now?</source>
-        <translation>Musíte mít nainstalován ABS, aby jste mohli používat
+        <translation type="obsolete">Musíte mít nainstalován ABS, aby jste mohli používat
 sestavování. Chcete nainstalovat ABS?</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation>Chyba</translation>
+        <translation type="obsolete">Chyba</translation>
     </message>
     <message>
         <source>You can not remove packages when processing
 your queue from Source</source>
-        <translation>Nemůžete odstranit balíček při zpracovavání zdroje</translation>
+        <translation type="obsolete">Nemůžete odstranit balíček při zpracovavání zdroje</translation>
     </message>
     <message>
         <source>Some of your packages do not belong to Arch
 Linux&apos;s official repository. Shaman is able to
 build packages from official sources only.</source>
-        <translation>Některé balíčka nejsou obsaženy v oficiálních 
+        <translation type="obsolete">Některé balíčka nejsou obsaženy v oficiálních 
 repozitářích Arch Linux. Shaman může tyto bylíčky
 sestavit pouze z oficiálních zdrojů.</translation>
     </message>
@@ -128,33 +183,33 @@ sestavit pouze z oficiálních zdrojů.</translation>
     </message>
     <message>
         <source>To be Installed</source>
-        <translation>K instalaci</translation>
+        <translation type="obsolete">K instalaci</translation>
     </message>
     <message>
         <source>To be Upgraded</source>
-        <translation>K atualizaci</translation>
+        <translation type="obsolete">K atualizaci</translation>
     </message>
     <message>
         <source>Package Building</source>
-        <translation>Sestavování balíčku</translation>
+        <translation type="obsolete">Sestavování balíčku</translation>
     </message>
     <message>
         <source>Your Packages failed to build!</source>
-        <translation>Sestavování balíčku selhalo!!</translation>
+        <translation type="obsolete">Sestavování balíčku selhalo!!</translation>
     </message>
     <message>
         <source>Your packages Failed to Build.
 Look at the output for more details.</source>
-        <translation>Sestavování balíčku selhalo. 
+        <translation type="obsolete">Sestavování balíčku selhalo. 
 Další detaily najdete ve výstupu.</translation>
     </message>
     <message>
         <source>Close</source>
-        <translation>Zavřít</translation>
+        <translation type="obsolete">Zavřít</translation>
     </message>
     <message>
         <source>Building Packages Failed!!</source>
-        <translation>Sestavování balíčků selhalo!!</translation>
+        <translation type="obsolete">Sestavování balíčků selhalo!!</translation>
     </message>
     <message>
         <source>Shaman - Idle</source>
@@ -163,24 +218,24 @@ Další detaily najdete ve výstupu.</translation>
     <message>
         <source>Some packages failed to build.
 Do you want to proceed anyway?</source>
-        <translation>Sestavování některých balíčků
+        <translation type="obsolete">Sestavování některých balíčků
 selhalo. Chcete přesto pokračovat?</translation>
     </message>
     <message>
         <source>Install Built Packages</source>
-        <translation>Instalovat sestavené balíčky</translation>
+        <translation type="obsolete">Instalovat sestavené balíčky</translation>
     </message>
     <message>
         <source>Close Without Installing</source>
-        <translation>Zavřít bez instalace</translation>
+        <translation type="obsolete">Zavřít bez instalace</translation>
     </message>
     <message>
         <source>Packages Built Successfully!</source>
-        <translation>Balíčky byly úspěšně sestaveny!</translation>
+        <translation type="obsolete">Balíčky byly úspěšně sestaveny!</translation>
     </message>
     <message>
         <source>Your Packages have been built successfully, and are ready to be installed</source>
-        <translation>Baličky byly úspěšně sestaveny a jsou připraveny k instalaci</translation>
+        <translation type="obsolete">Baličky byly úspěšně sestaveny a jsou připraveny k instalaci</translation>
     </message>
     <message>
         <source>Shaman - Processing</source>
@@ -188,7 +243,7 @@ selhalo. Chcete přesto pokračovat?</translation>
     </message>
     <message numerus="yes">
         <source>You are about to install &lt;b&gt;%n package(s)&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             <numerusform>
             </numerusform>
         </translation>
@@ -251,47 +306,47 @@ Chcete ho odstranit?</translation>
     </message>
     <message>
         <source>Favourite Actions</source>
-        <translation>Upřednostněné akce</translation>
+        <translation type="obsolete">Upřednostněné akce</translation>
     </message>
     <message>
         <source>When Upgrading System:</source>
-        <translation>Při aktualizaci systému:</translation>
+        <translation type="obsolete">Při aktualizaci systému:</translation>
     </message>
     <message>
         <source>Upgrade Immediately</source>
-        <translation>Aktualizovat ihned</translation>
+        <translation type="obsolete">Aktualizovat ihned</translation>
     </message>
     <message>
         <source>Add Upgradeable Packages To Queue</source>
-        <translation>Zařadit aktualizovatelné balíčky do fronty</translation>
+        <translation type="obsolete">Zařadit aktualizovatelné balíčky do fronty</translation>
     </message>
     <message>
         <source>Ask</source>
-        <translation>Dotázat se</translation>
+        <translation type="obsolete">Dotázat se</translation>
     </message>
     <message>
         <source>When Processing Queue</source>
-        <translation>Při zpracovávání fronty</translation>
+        <translation type="obsolete">Při zpracovávání fronty</translation>
     </message>
     <message>
         <source>Keep application running in System Tray only</source>
-        <translation>Skrýt do systémové části panelu</translation>
+        <translation type="obsolete">Skrýt do systémové části panelu</translation>
     </message>
     <message>
         <source>GUI Startup</source>
-        <translation>Spouštění uživatelského rozhraní</translation>
+        <translation type="obsolete">Spouštění uživatelského rozhraní</translation>
     </message>
     <message>
         <source>Start in the System Tray</source>
-        <translation>Spustit v systémové části panelu</translation>
+        <translation type="obsolete">Spustit v systémové části panelu</translation>
     </message>
     <message>
         <source>When Application is in System Tray only</source>
-        <translation>Pokud je aplikace pouze v systémové části panelu</translation>
+        <translation type="obsolete">Pokud je aplikace pouze v systémové části panelu</translation>
     </message>
     <message>
         <source>Update Database every</source>
-        <translation>Aktualizovat databáze každých</translation>
+        <translation type="obsolete">Aktualizovat databáze každých</translation>
     </message>
     <message>
         <source>minutes</source>
@@ -299,63 +354,63 @@ Chcete ho odstranit?</translation>
     </message>
     <message>
         <source>If upgrades are available:</source>
-        <translation>Pokud jsou aktualizace k dispozici:</translation>
+        <translation type="obsolete">Pokud jsou aktualizace k dispozici:</translation>
     </message>
     <message>
         <source>Just Notify</source>
-        <translation>Jen upozornit</translation>
+        <translation type="obsolete">Jen upozornit</translation>
     </message>
     <message>
         <source>Notify and add them to Queue</source>
-        <translation>Upozornit a zařadit do fronty</translation>
+        <translation type="obsolete">Upozornit a zařadit do fronty</translation>
     </message>
     <message>
         <source>Maintenance</source>
-        <translation>Údržba</translation>
+        <translation type="obsolete">Údržba</translation>
     </message>
     <message>
         <source>Checkable Options</source>
-        <translation>Možnosti</translation>
+        <translation type="obsolete">Možnosti</translation>
     </message>
     <message>
         <source>Use Active FTP</source>
-        <translation>Použít aktivní FTP</translation>
+        <translation type="obsolete">Použít aktivní FTP</translation>
     </message>
     <message>
         <source>Use Deltas (needs xdelta to be installed)</source>
-        <translation>Použít Deltas (vyžaduje nainstalované xdelta)</translation>
+        <translation type="obsolete">Použít Deltas (vyžaduje nainstalované xdelta)</translation>
     </message>
     <message>
         <source>Advanced Options</source>
-        <translation>Pokročilé možnosti</translation>
+        <translation type="obsolete">Pokročilé možnosti</translation>
     </message>
     <message>
         <source>HoldPkgs:</source>
-        <translation>Držené balíčky:</translation>
+        <translation type="obsolete">Držené balíčky:</translation>
     </message>
     <message>
         <source>IgnorePkgs:</source>
-        <translation>Ignorované balíčky:</translation>
+        <translation type="obsolete">Ignorované balíčky:</translation>
     </message>
     <message>
         <source>IgnoreGroups:</source>
-        <translation>Ignorované skupiny balíčků:</translation>
+        <translation type="obsolete">Ignorované skupiny balíčků:</translation>
     </message>
     <message>
         <source>NoUpgrade:</source>
-        <translation>Neaktualizovat balíčky:</translation>
+        <translation type="obsolete">Neaktualizovat balíčky:</translation>
     </message>
     <message>
         <source>NoExtract:</source>
-        <translation>Nerozbalovat:</translation>
+        <translation type="obsolete">Nerozbalovat:</translation>
     </message>
     <message>
         <source>XFerCommand: (example: /path/to/command %u) Blank for Default</source>
-        <translation>XFerCommand: (příklad: /cesta/k/příkazu %u) Výchozí - prázdné</translation>
+        <translation type="obsolete">XFerCommand: (příklad: /cesta/k/příkazu %u) Výchozí - prázdné</translation>
     </message>
     <message>
         <source>Arch Linux Official Repositories</source>
-        <translation>Oficiální repozitáře Arch Linux</translation>
+        <translation type="obsolete">Oficiální repozitáře Arch Linux</translation>
     </message>
     <message>
         <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones.
@@ -365,7 +420,7 @@ Berte navědomí že balíčky z repozitářů Unstable a Testing mohou poškodi
     </message>
     <message>
         <source>Server</source>
-        <translation>Server</translation>
+        <translation type="obsolete">Server</translation>
     </message>
     <message>
         <source>Mirror:</source>
@@ -377,7 +432,7 @@ Berte navědomí že balíčky z repozitářů Unstable a Testing mohou poškodi
     </message>
     <message>
         <source>KDEMod Repositories</source>
-        <translation>Repozitáře KDEmod</translation>
+        <translation type="obsolete">Repozitáře KDEmod</translation>
     </message>
     <message>
         <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an 
@@ -390,7 +445,7 @@ KDEmod je nejlepší cesta k vyzkoušení síly KDE a jednoduchosti Arch Linux.<
     </message>
     <message>
         <source>KDEMod 3 Repository</source>
-        <translation>Repozitáře KDEmod 3</translation>
+        <translation type="obsolete">Repozitáře KDEmod 3</translation>
     </message>
     <message>
         <source>KDEMod 4 Repository (Unstable, testers only)</source>
@@ -398,7 +453,7 @@ KDEmod je nejlepší cesta k vyzkoušení síly KDE a jednoduchosti Arch Linux.<
     </message>
     <message>
         <source>Third-Party Repositories</source>
-        <translation>Ostatní repozitáře</translation>
+        <translation type="obsolete">Ostatní repozitáře</translation>
     </message>
     <message>
         <source>You can extend your packages choice by adding other repositories. Third-Party 
@@ -413,7 +468,7 @@ jako obyčejné repozitáře a jsou přístupné z aplikací Shaman i Pacman.</t
     </message>
     <message>
         <source>Add New Repository</source>
-        <translation>Přidat nový repozitář</translation>
+        <translation type="obsolete">Přidat nový repozitář</translation>
     </message>
     <message>
         <source>Edit Repository</source>
@@ -425,7 +480,7 @@ jako obyčejné repozitáře a jsou přístupné z aplikací Shaman i Pacman.</t
     </message>
     <message>
         <source>Preferences</source>
-        <translation>Nastavení</translation>
+        <translation type="obsolete">Nastavení</translation>
     </message>
     <message>
         <source>Process all dependencies and queue from source first (recommended)</source>
@@ -433,59 +488,59 @@ jako obyčejné repozitáře a jsou přístupné z aplikací Shaman i Pacman.</t
     </message>
     <message>
         <source>Review Building output before installing</source>
-        <translation>Zkontrolovat výstup sestavení před instalací</translation>
+        <translation type="obsolete">Zkontrolovat výstup sestavení před instalací</translation>
     </message>
     <message>
         <source>ABS Configuration</source>
-        <translation>Konfigurace ABS</translation>
+        <translation type="obsolete">Konfigurace ABS</translation>
     </message>
     <message>
         <source>Use supfiles that match your current repositories</source>
-        <translation>Použít supfiles, které souhlasí s současnými repozitáři</translation>
+        <translation type="obsolete">Použít supfiles, které souhlasí s současnými repozitáři</translation>
     </message>
     <message>
         <source>Define supfiles manually</source>
-        <translation>Definovat supfiles ručně</translation>
+        <translation type="obsolete">Definovat supfiles ručně</translation>
     </message>
     <message>
         <source>Makepkg Configuration</source>
-        <translation>Konfigurace Makepkg</translation>
+        <translation type="obsolete">Konfigurace Makepkg</translation>
     </message>
     <message>
         <source>CFlags</source>
-        <translation>Cflags</translation>
+        <translation type="obsolete">Cflags</translation>
     </message>
     <message>
         <source>CXXFlags</source>
-        <translation>CXXFlags</translation>
+        <translation type="obsolete">CXXFlags</translation>
     </message>
     <message>
         <source>BuildEnv</source>
-        <translation>BuildEnv</translation>
+        <translation type="obsolete">BuildEnv</translation>
     </message>
     <message>
         <source>Options</source>
-        <translation>Možnosti</translation>
+        <translation type="obsolete">Možnosti</translation>
     </message>
     <message>
         <source>Doc_Dirs</source>
-        <translation>Doc_Dirs</translation>
+        <translation type="obsolete">Doc_Dirs</translation>
     </message>
     <message>
         <source>Build Environment</source>
-        <translation>Sestavovací prostředí</translation>
+        <translation type="obsolete">Sestavovací prostředí</translation>
     </message>
     <message>
         <source>Building Path</source>
-        <translation>Sestavovací adresář</translation>
+        <translation type="obsolete">Sestavovací adresář</translation>
     </message>
     <message>
         <source>Remove installed makedepends after build</source>
-        <translation>Odstranit sestavovací závislosti po sestavení</translation>
+        <translation type="obsolete">Odstranit sestavovací závislosti po sestavení</translation>
     </message>
     <message>
         <source>Clean Build Environment after installation</source>
-        <translation>Vyčistit sestavovací prostředí po instalaci</translation>
+        <translation type="obsolete">Vyčistit sestavovací prostředí po instalaci</translation>
     </message>
     <message>
         <source>General</source>
@@ -609,11 +664,11 @@ Nyní je k dispozici v /etc/pacman.d/mirrorlist .</translation>
     </message>
     <message>
         <source>Pacman Database Optimized Successfully!</source>
-        <translation>Databáze aplikace Pacman byla úspěšně aktualizována!</translation>
+        <translation type="obsolete">Databáze aplikace Pacman byla úspěšně aktualizována!</translation>
     </message>
     <message>
         <source>Could not Optimize Pacman Database!</source>
-        <translation>Nebylo možné optimalizovat databáze aplikace Pacman!</translation>
+        <translation type="obsolete">Nebylo možné optimalizovat databáze aplikace Pacman!</translation>
     </message>
     <message>
         <source>Operation Completed Successfully!</source>
@@ -645,7 +700,7 @@ Nyní je k dispozici v /etc/pacman.d/mirrorlist .</translation>
     <message>
         <source>Waiting</source>
         <comment>Waiting for a user action</comment>
-        <translation>Čekám</translation>
+        <translation type="obsolete">Čekám</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -662,39 +717,39 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Core</source>
         <comment>Do not translate</comment>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>Extra</source>
         <comment>Do not translate</comment>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>Community</source>
         <comment>Do not translate</comment>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>Testing</source>
         <comment>Do not translate</comment>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>Running sync...</source>
         <comment>sync is a command, so it should not be translated</comment>
-        <translation>Probíhá příkaz sync...</translation>
+        <translation type="obsolete">Probíhá příkaz sync...</translation>
     </message>
     <message>
         <source>Show Splashscreen</source>
-        <translation>Zobrazit úvodní obrazovku</translation>
+        <translation type="obsolete">Zobrazit úvodní obrazovku</translation>
     </message>
     <message>
         <source>Process all dependencies and queue from binary first (recommended)</source>
-        <translation>Zpracovat závislosti a frontu nejprve z binárních souborů (doporučeno)</translation>
+        <translation type="obsolete">Zpracovat závislosti a frontu nejprve z binárních souborů (doporučeno)</translation>
     </message>
     <message>
         <source>Advanced</source>
@@ -703,55 +758,55 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>min</source>
         <comment>As in &quot;minutes&quot;</comment>
-        <translation>min</translation>
+        <translation type="obsolete">min</translation>
     </message>
     <message>
         <source>Show tray notification Windows</source>
-        <translation>Zobazovat upozornění v systémové části panelu</translation>
+        <translation type="obsolete">Zobazovat upozornění v systémové části panelu</translation>
     </message>
     <message>
         <source>Use a proxy-server</source>
-        <translation>Použít proxy</translation>
+        <translation type="obsolete">Použít proxy</translation>
     </message>
     <message>
         <source>IP:</source>
-        <translation>IP:</translation>
+        <translation type="obsolete">IP:</translation>
     </message>
     <message>
         <source>Port:</source>
-        <translation>Port:</translation>
+        <translation type="obsolete">Port:</translation>
     </message>
     <message>
         <source>HTTP Proxy</source>
-        <translation>HTTP Proxy</translation>
+        <translation type="obsolete">HTTP Proxy</translation>
     </message>
     <message>
         <source>FTP Proxy</source>
-        <translation>FTP Proxy</translation>
+        <translation type="obsolete">FTP Proxy</translation>
     </message>
     <message>
         <source>Use Shaman RSS Capabilities</source>
-        <translation>Použít RSS</translation>
+        <translation type="obsolete">Použít RSS</translation>
     </message>
     <message>
         <source>Update RSS Feed Every</source>
-        <translation>Aktualizovat RSS každých</translation>
+        <translation type="obsolete">Aktualizovat RSS každých</translation>
     </message>
     <message>
         <source>Notify upon new items</source>
-        <translation>Upozornit na nové položky</translation>
+        <translation type="obsolete">Upozornit na nové položky</translation>
     </message>
     <message>
         <source>Check if there is an unread news about a package in Queue before processing it</source>
-        <translation>Zkontrolovat zda-li není něpřečtená zpráva o balíčku před tím než bude zpracován</translation>
+        <translation type="obsolete">Zkontrolovat zda-li není něpřečtená zpráva o balíčku před tím než bude zpracován</translation>
     </message>
     <message>
         <source>Use SysLog</source>
-        <translation>Použít SysLog</translation>
+        <translation type="obsolete">Použít SysLog</translation>
     </message>
     <message>
         <source>Log File:</source>
-        <translation>Soubor log:</translation>
+        <translation type="obsolete">Soubor log:</translation>
     </message>
     <message>
         <source>Ok</source>
@@ -767,15 +822,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Interface</source>
-        <translation>Rozhraní</translation>
+        <translation type="obsolete">Rozhraní</translation>
     </message>
     <message>
         <source>Start Shaman Automatically on X Startup</source>
-        <translation>Spusti aplikaci Shaman automaticky po startu X</translation>
+        <translation type="obsolete">Spusti aplikaci Shaman automaticky po startu X</translation>
     </message>
     <message>
         <source>Forbid starting Shaman as root</source>
-        <translation>Zakázat spouštění aplikace Shaman pod uživatelem root</translation>
+        <translation type="obsolete">Zakázat spouštění aplikace Shaman pod uživatelem root</translation>
     </message>
     <message>
         <source>Saving Configuration</source>
@@ -817,55 +872,55 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>RSync Server:</source>
-        <translation>Rsinc Server:</translation>
+        <translation type="obsolete">Rsinc Server:</translation>
     </message>
     <message>
         <source>Update Database at</source>
-        <translation>Aktualizovat databáze v</translation>
+        <translation type="obsolete">Aktualizovat databáze v</translation>
     </message>
     <message>
         <source>Use Animated Tray Icon</source>
-        <translation>Použít animovanou ikonu v systémové části panelu</translation>
+        <translation type="obsolete">Použít animovanou ikonu v systémové části panelu</translation>
     </message>
     <message>
         <source>KDEMod 4 Repository</source>
-        <translation>Repozitáře KDEmod 4</translation>
+        <translation type="obsolete">Repozitáře KDEmod 4</translation>
     </message>
     <message>
         <source>KDEMod 4 Extragear Repository</source>
-        <translation>Repozitář KDEmod 4 Extragear</translation>
+        <translation type="obsolete">Repozitář KDEmod 4 Extragear</translation>
     </message>
     <message>
         <source>KDEMod 4 Playground Repository</source>
-        <translation>Repozitář KDEMod 4 Playground</translation>
+        <translation type="obsolete">Repozitář KDEMod 4 Playground</translation>
     </message>
     <message>
         <source>KDEMod 4 Testing Repository</source>
-        <translation>Repozitář KDEMod 4 Testing</translation>
+        <translation type="obsolete">Repozitář KDEMod 4 Testing</translation>
     </message>
     <message>
         <source>KDEMod 4 Unstable Repository (Testers only!)</source>
-        <translation>Repozitáře KDEmod 4 (Unstable, pouze pro testování)</translation>
+        <translation type="obsolete">Repozitáře KDEmod 4 (Unstable, pouze pro testování)</translation>
     </message>
     <message>
         <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones. Please note that packages from Unstable and Testing may break your system.</source>
-        <translation>Zde si můžete vybrat které oficiální repozitáře Arch Linux budou použity. Berte navědomí že balíčky z repozitářů Unstable a Testing mohou poškodit váš systém.</translation>
+        <translation type="obsolete">Zde si můžete vybrat které oficiální repozitáře Arch Linux budou použity. Berte navědomí že balíčky z repozitářů Unstable a Testing mohou poškodit váš systém.</translation>
     </message>
     <message>
         <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme, and lots of addons, KDEMod is the best way to taste the ease and the power of KDE with the simplicity and the power of Arch.</source>
-        <translation>KDEMod je vylepšená verze KDE pouze pro Arch Linux. Obsahuje vylepšené Qt, kompatibilní se standardním Qt, vylepšené téma a mnoho dalších přídavků. KDEmod je nejlepší cesta k vyzkoušení síly KDE a jednoduchosti Arch Linux.</translation>
+        <translation type="obsolete">KDEMod je vylepšená verze KDE pouze pro Arch Linux. Obsahuje vylepšené Qt, kompatibilní se standardním Qt, vylepšené téma a mnoho dalších přídavků. KDEmod je nejlepší cesta k vyzkoušení síly KDE a jednoduchosti Arch Linux.</translation>
     </message>
     <message>
         <source>You can extend your packages choice by adding other repositories. Third-Party Repositories act just as normal ones, and will be accessible through both Shaman and Pacman.</source>
-        <translation>Můžete rozšířit výběr balíčků přidáním dalších repozitářů. Tyto repozitáře se chovají jako obyčejné repozitáře a jsou přístupné z aplikací Shaman i Pacman.</translation>
+        <translation type="obsolete">Můžete rozšířit výběr balíčků přidáním dalších repozitářů. Tyto repozitáře se chovají jako obyčejné repozitáře a jsou přístupné z aplikací Shaman i Pacman.</translation>
     </message>
     <message>
         <source>Use the following language:</source>
-        <translation>Zvolte jazyk:</translation>
+        <translation type="obsolete">Zvolte jazyk:</translation>
     </message>
     <message>
         <source>Disable Tray Icon</source>
-        <translation>Vypnout ikonu v Systémové části panelu</translation>
+        <translation type="obsolete">Vypnout ikonu v Systémové části panelu</translation>
     </message>
     <message>
         <source>Database optimized successfully!</source>
@@ -888,24 +943,15 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>Apply</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Add another server</source>
+        <source>Shaman Configuration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Repository Order</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Please order your repositories to define which one will be preferred over another.</source>
+        <source>Aqpm Configuration</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1029,17 +1075,25 @@ Nyní je k dispozici v /etc/pacman.d/mirrorlist .</translation>
         <source>Please order your repositories to define which one will be preferred over another.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished">Chyba</translation>
+    </message>
+    <message>
+        <source>There has been a problem while saving the configuration!</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>EditPBuild</name>
     <message>
         <source>Saving</source>
-        <translation>Ukládání</translation>
+        <translation type="obsolete">Ukládání</translation>
     </message>
     <message>
         <source>You modified this PKGBUILD.
 Do you want to save it?</source>
-        <translation>Upravili jste PKGBUILD.
+        <translation type="obsolete">Upravili jste PKGBUILD.
 Chcete ho uložit?</translation>
     </message>
 </context>
@@ -2262,7 +2316,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf@kdemod.ath.cx&amp;gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;libalpm frontend pro Qt&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;License: GPLv2+&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Libalpm verze: v.%1&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="obsolete">&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;libalpm frontend pro Qt&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;License: GPLv2+&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Libalpm verze: v.%1&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Name</source>
@@ -2293,11 +2347,6 @@ Přesto instalovat?</translation>
     <message>
         <source>Replace %1 with %2/%3?</source>
         <translation type="unfinished">Nahradit %1 za %2/%3?</translation>
-    </message>
-    <message>
-        <source>%1 conflicts with %2.
-Remove %2?</source>
-        <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
         <source>The following package(s) cannot be upgraded due to unresolvable dependencies:
@@ -2335,6 +2384,15 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008-2009 Dario Freddi &amp;lt;drf@chakra-project.org&amp;gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@chakra-project.org&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 conflicts with %2.
+Remove %1?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Updating ABS tree</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2430,11 +2488,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Pacman Database Optimized Successfully!</source>
-        <translation>Databáze aplikace Pacman byla úspěšně aktualizována!</translation>
+        <translation type="obsolete">Databáze aplikace Pacman byla úspěšně aktualizována!</translation>
     </message>
     <message>
         <source>Could not Optimize Pacman Database!</source>
-        <translation>Nebylo možné optimalizovat databáze aplikace Pacman!</translation>
+        <translation type="obsolete">Nebylo možné optimalizovat databáze aplikace Pacman!</translation>
     </message>
     <message>
         <source>Running sync...</source>
@@ -2585,7 +2643,7 @@ Thanks again, and enjoy your translation!</comment>
         <source>Pacman is not updated.
 Shaman needs libalpm &gt;= 2.1.0 to run.
 Yours is %1. Please update Pacman.</source>
-        <translation>Pacman nebyl aktualizován.
+        <translation type="obsolete">Pacman nebyl aktualizován.
 Shaman potřebuje k běhu libalpm &gt;= 2.1.0.
 Nynější verze je %1. Aktualizujte pposím Pacman.</translation>
     </message>
@@ -2682,6 +2740,10 @@ Je možné spustit pouze jednu instanci.</translation>
     </message>
     <message>
         <source>Shaman can not be started as root. Please restart it as unprivileged user.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Apply</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3042,6 +3104,159 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ShamanGeneralConfig</name>
+    <message>
+        <source>Favourite Actions</source>
+        <translation type="unfinished">Upřednostněné akce</translation>
+    </message>
+    <message>
+        <source>When Upgrading System:</source>
+        <translation type="unfinished">Při aktualizaci systému:</translation>
+    </message>
+    <message>
+        <source>Upgrade Immediately</source>
+        <translation type="unfinished">Aktualizovat ihned</translation>
+    </message>
+    <message>
+        <source>Add Upgradeable Packages To Queue</source>
+        <translation type="unfinished">Zařadit aktualizovatelné balíčky do fronty</translation>
+    </message>
+    <message>
+        <source>Ask</source>
+        <translation type="unfinished">Dotázat se</translation>
+    </message>
+    <message>
+        <source>When Processing Queue</source>
+        <translation type="unfinished">Při zpracovávání fronty</translation>
+    </message>
+    <message>
+        <source>Keep application running in System Tray only</source>
+        <translation type="unfinished">Skrýt do systémové části panelu</translation>
+    </message>
+    <message>
+        <source>GUI Startup</source>
+        <translation type="unfinished">Spouštění uživatelského rozhraní</translation>
+    </message>
+    <message>
+        <source>Start in the System Tray</source>
+        <translation type="unfinished">Spustit v systémové části panelu</translation>
+    </message>
+    <message>
+        <source>Show Splashscreen</source>
+        <translation type="unfinished">Zobrazit úvodní obrazovku</translation>
+    </message>
+    <message>
+        <source>Use the following language:</source>
+        <translation type="unfinished">Zvolte jazyk:</translation>
+    </message>
+    <message>
+        <source>Disable Tray Icon</source>
+        <translation type="unfinished">Vypnout ikonu v Systémové části panelu</translation>
+    </message>
+    <message>
+        <source>Maintenance</source>
+        <translation type="unfinished">Údržba</translation>
+    </message>
+    <message>
+        <source>Process Selected</source>
+        <translation type="unfinished">Spustit údržbu</translation>
+    </message>
+    <message>
+        <source>Waiting</source>
+        <comment>Waiting for a user action</comment>
+        <translation type="unfinished">Čekám</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:7pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clean Unused Databases</source>
+        <translation type="unfinished">Vyčistit nepoužívané databáze</translation>
+    </message>
+    <message>
+        <source>Clean Cache</source>
+        <translation type="unfinished">Vyčistit cache</translation>
+    </message>
+    <message>
+        <source>Empty Cache</source>
+        <translation type="unfinished">Vyprázdnit cache</translation>
+    </message>
+    <message>
+        <source>Optimize Pacman Database</source>
+        <translation type="unfinished">Optimalizovat databáze aplikace Pacman</translation>
+    </message>
+    <message>
+        <source>Clean All Building Environments</source>
+        <translation type="unfinished">Vyčistit všechny sestavovací prostředí</translation>
+    </message>
+    <message>
+        <source>Cleaning up unused Databases...</source>
+        <translation type="unfinished">Čistím nepoužívané databáze...</translation>
+    </message>
+    <message>
+        <source>Cleaning up Cache...</source>
+        <translation type="unfinished">Čistím cache...</translation>
+    </message>
+    <message>
+        <source>Deleting Cache...</source>
+        <translation type="unfinished">Mažu cache...</translation>
+    </message>
+    <message>
+        <source>Optimizing Pacman Database...</source>
+        <translation type="unfinished">Probíhá optimalizace databáze aplikace Pacman...</translation>
+    </message>
+    <message>
+        <source>Cleaning up building Environments...</source>
+        <translation type="unfinished">Čistím sestavovací prostředí...</translation>
+    </message>
+    <message>
+        <source>Unused Databases Cleaned up successfully!</source>
+        <translation type="unfinished">Nepoužívané databáze úspěšně vyčištěny!</translation>
+    </message>
+    <message>
+        <source>Cleaning up Unused Databases Failed!</source>
+        <translation type="unfinished">Čištění nepoužívaných databází selhalo!</translation>
+    </message>
+    <message>
+        <source>Cache Cleaned Up Successfully!</source>
+        <translation type="unfinished">Cache úspěšně vyčištěna!</translation>
+    </message>
+    <message>
+        <source>Cleaning up Cache Failed!</source>
+        <translation type="unfinished">Čištění cache selhalo!</translation>
+    </message>
+    <message>
+        <source>Cache Successfully Deleted!</source>
+        <translation type="unfinished">Cache úspěšně smazána!</translation>
+    </message>
+    <message>
+        <source>Deleting Cache Failed!</source>
+        <translation type="unfinished">Mazaní cache selhalo!</translation>
+    </message>
+    <message>
+        <source>Build Environments Successfully Cleaned!</source>
+        <translation type="unfinished">Sestavovací prostředí úspěšně vyčištěno!</translation>
+    </message>
+    <message>
+        <source>Could not clean Build Environments!!</source>
+        <translation type="unfinished">Čištění nepoužívaných databází selhalo!!</translation>
+    </message>
+    <message>
+        <source>Database optimized successfully!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Could not optimize database!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3547,7 +3762,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Editing PKGBUILD of:</source>
-        <translation>Bearbeite PKGBUILD von:</translation>
+        <translation type="obsolete">Bearbeite PKGBUILD von:</translation>
     </message>
     <message>
         <source>Save</source>
@@ -3570,10 +3785,45 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Edit PKGBUILD&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+        <translation type="obsolete">&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;PKGBUILD bearbeiten&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>Editing:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PKGBUILD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MakePkg options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ignore arch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Skip integrity checks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ignore dependency control</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hold version if this is a development PKGBUILD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Edit Package build options&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3793,7 +4043,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Review PKGBUILDs</source>
-        <translation>Zkontrolovat PKGBUILD</translation>
+        <translation type="obsolete">Zkontrolovat PKGBUILD</translation>
     </message>
     <message>
         <source>Process From Source</source>
@@ -3802,6 +4052,10 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Do not install immediately when building is finished</source>
         <translation>Neinstalovat ihned po sestavení</translation>
+    </message>
+    <message>
+        <source>Review Build options</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

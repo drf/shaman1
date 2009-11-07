@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-08 14:50+0200\n"
+"POT-Creation-Date: 2009-11-07 17:51+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.3.0\n"
+"X-Generator: Translate Toolkit 1.4.1\n"
 
 #. (obsolete)
 #: AlpmHandler#1
@@ -38,11 +38,84 @@ msgstr ": %1 existuje v souborovém systému"
 msgid "Alpm did not give further details."
 msgstr "Alpm nepředal další informace."
 
+#: AqpmConfig#1
+msgid "Packages and Paths"
+msgstr ""
+
+#: AqpmConfig#2
+#, fuzzy
+msgctxt "AqpmConfig#2"
+msgid "IgnorePkgs:"
+msgstr "Ignorované balíčky:"
+
+#: AqpmConfig#3
+#, fuzzy
+msgctxt "AqpmConfig#3"
+msgid "IgnoreGroups:"
+msgstr "Ignorované skupiny balíčků:"
+
+#: AqpmConfig#4
+#, fuzzy
+msgctxt "AqpmConfig#4"
+msgid "NoUpgrade:"
+msgstr "Neaktualizovat balíčky:"
+
+#: AqpmConfig#5
+#, fuzzy
+msgctxt "AqpmConfig#5"
+msgid "NoExtract:"
+msgstr "Nerozbalovat:"
+
+#: AqpmConfig#6
+#, fuzzy
+msgctxt "AqpmConfig#6"
+msgid "Log File:"
+msgstr "Soubor log:"
+
+#: AqpmConfig#7
+#, fuzzy
+msgctxt "AqpmConfig#7"
+msgid "Advanced"
+msgstr "Pokročilé"
+
+#: AqpmConfig#8
+#, fuzzy
+msgctxt "AqpmConfig#8"
+msgid "Use SysLog"
+msgstr "Použít SysLog"
+
+#: AqpmConfig#9
+#, fuzzy
+msgctxt "AqpmConfig#9"
+msgid "Use Deltas (needs xdelta to be installed)"
+msgstr "Použít Deltas (vyžaduje nainstalované xdelta)"
+
+#: AqpmConfig#10
+msgid "Aqpm Options"
+msgstr ""
+
+#: AqpmConfig#11
+msgid "Use multi-server download (EXPERIMENTAL)"
+msgstr ""
+
+#: AqpmConfig#12
+#, fuzzy
+msgctxt "AqpmConfig#12"
+msgid "Error"
+msgstr "Chyba"
+
+#: AqpmConfig#13
+msgctxt "AqpmConfig#13"
+msgid "There has been a problem while saving the configuration!"
+msgstr ""
+
+#. (obsolete)
 #: BuildingDialog#1
 msgctxt "BuildingDialog#1"
 msgid "Error"
 msgstr "Chyba"
 
+#. (obsolete)
 #: BuildingDialog#2
 msgid ""
 "Would you like to abort building?.\n"
@@ -51,6 +124,7 @@ msgstr ""
 "Chcete přerušit sestavování?\n"
 "Všechna data budou ztracena."
 
+#. (obsolete)
 #: BuildingDialog#3
 msgid "<br><br><b>Building Process Aborted by the User. Building Failed.</b>"
 msgstr "<br><br><b>Sestavování přerušeno uživatelem. Sestavování selhalo.</b>"
@@ -65,50 +139,62 @@ msgstr "Aktualizace ABS stromu..."
 msgid "<b>Starting ABS Tree Update...</b><br><br>"
 msgstr "<b>Začíná aktualizace ABS stromu...</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#6
 msgid "<br><br><b>ABS Tree Was Successfully Updated!</b>"
 msgstr "<br><br><b>ABS strom byl úspěžně aktualizován!</b>"
 
+#. (obsolete)
 #: BuildingDialog#7
 msgid "ABS Update"
 msgstr "ABS aktualice"
 
+#. (obsolete)
 #: BuildingDialog#8
 msgid "Your ABS Tree was updated!"
 msgstr "ABS strom byl aktualizován!"
 
+#. (obsolete)
 #: BuildingDialog#9
 msgid "<b>Building %1 failed!!</b><br><br>"
 msgstr "<b>Sestavování %1 selhalo!!</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#10
 msgid "<b>%1 was built successfully!!</b><br><br>"
 msgstr "<b>%1 byl úspěšně sestaven!!</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#11
 msgid "Processing Package %1 of %2..."
 msgstr "Zoracovávání balíčeku %1 z %2..."
 
+#. (obsolete)
 #: BuildingDialog#12
 msgid "Building %1..."
 msgstr "Sestavování %1..."
 
+#. (obsolete)
 #: BuildingDialog#13
 msgid "<b>Building %1...</b><br><br>"
 msgstr "<b>Sestavování %1...</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#14
 msgid "<b>Building operation has started.</b><br><br>"
 msgstr "<b>Sestavování začalo.</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#15
 msgid "<b>Could not set up the environment correctly for %1!!</b><br><br>"
 msgstr "<b>Nebylo možné nastavit prostředí pro %1!!</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#16
 msgid "Could not update the ABS Tree!"
 msgstr "Nebylo možné aktualizovat ABS strom!"
 
+#. (obsolete)
 #: BuildingHandler#1
 msgctxt "BuildingHandler#1"
 msgid ""
@@ -118,11 +204,13 @@ msgstr ""
 "Musíte mít nainstalován ABS, aby jste mohli používat\n"
 "sestavování. Chcete nainstalovat ABS?"
 
+#. (obsolete)
 #: BuildingHandler#2
 msgctxt "BuildingHandler#2"
 msgid "Error"
 msgstr "Chyba"
 
+#. (obsolete)
 #: BuildingHandler#3
 msgctxt "BuildingHandler#3"
 msgid ""
@@ -130,6 +218,7 @@ msgid ""
 "your queue from Source"
 msgstr "Nemůžete odstranit balíček při zpracovavání zdroje"
 
+#. (obsolete)
 #: BuildingHandler#4
 msgctxt "BuildingHandler#4"
 msgid ""
@@ -173,12 +262,14 @@ msgstr ""
 "začnete byste měli zkontrolovat vaše nastavení pro zlepšení výkonu "
 "sesstavení."
 
+#. (obsolete)
 #: BuildingHandler#7
 msgctxt "BuildingHandler#7"
 "BuildingHandler#7"
 msgid "To be Installed"
 msgstr "K instalaci"
 
+#. (obsolete)
 #: BuildingHandler#8
 msgctxt "BuildingHandler#8"
 "BuildingHandler#8"
@@ -186,16 +277,19 @@ msgctxt "BuildingHandler#8"
 msgid "To be Upgraded"
 msgstr "K atualizaci"
 
+#. (obsolete)
 #: BuildingHandler#9
 msgctxt "BuildingHandler#9"
 msgid "Package Building"
 msgstr "Sestavování balíčku"
 
+#. (obsolete)
 #: BuildingHandler#10
 msgctxt "BuildingHandler#10"
 msgid "Your Packages failed to build!"
 msgstr "Sestavování balíčku selhalo!!"
 
+#. (obsolete)
 #: BuildingHandler#11
 msgctxt "BuildingHandler#11"
 msgid ""
@@ -205,12 +299,14 @@ msgstr ""
 "Sestavování balíčku selhalo. \n"
 "Další detaily najdete ve výstupu."
 
+#. (obsolete)
 #: BuildingHandler#12
 msgctxt "BuildingHandler#12"
 "BuildingHandler#12"
 msgid "Close"
 msgstr "Zavřít"
 
+#. (obsolete)
 #: BuildingHandler#13
 msgctxt "BuildingHandler#13"
 msgid "Building Packages Failed!!"
@@ -222,6 +318,7 @@ msgctxt "BuildingHandler#14"
 msgid "Shaman - Idle"
 msgstr "Shaman - untätig"
 
+#. (obsolete)
 #: BuildingHandler#15
 msgctxt "BuildingHandler#15"
 msgid ""
@@ -231,21 +328,25 @@ msgstr ""
 "Sestavování některých balíčků\n"
 "selhalo. Chcete přesto pokračovat?"
 
+#. (obsolete)
 #: BuildingHandler#16
 msgctxt "BuildingHandler#16"
 msgid "Install Built Packages"
 msgstr "Instalovat sestavené balíčky"
 
+#. (obsolete)
 #: BuildingHandler#17
 msgctxt "BuildingHandler#17"
 msgid "Close Without Installing"
 msgstr "Zavřít bez instalace"
 
+#. (obsolete)
 #: BuildingHandler#18
 msgctxt "BuildingHandler#18"
 msgid "Packages Built Successfully!"
 msgstr "Balíčky byly úspěšně sestaveny!"
 
+#. (obsolete)
 #: BuildingHandler#19
 msgctxt "BuildingHandler#19"
 msgid ""
@@ -258,8 +359,8 @@ msgctxt "BuildingHandler#20"
 msgid "Shaman - Processing"
 msgstr "Shaman - Arbeite"
 
+#. (obsolete)
 #: BuildingHandler#21
-#, fuzzy
 msgid ""
 "You are about to install <b>%n package(s)</b> from source. Building from "
 "source<br>can give some advantages, however is very slow.<br>If you are not "
@@ -348,56 +449,67 @@ msgstr ""
 msgid "Shaman - Configuration"
 msgstr "Shaman - Konfigurace"
 
+#. (obsolete)
 #: ConfigDialog#2
 msgctxt "ConfigDialog#2"
 msgid "Favourite Actions"
 msgstr "Upřednostněné akce"
 
+#. (obsolete)
 #: ConfigDialog#3
 msgctxt "ConfigDialog#3"
 msgid "When Upgrading System:"
 msgstr "Při aktualizaci systému:"
 
+#. (obsolete)
 #: ConfigDialog#4
 msgctxt "ConfigDialog#4"
 msgid "Upgrade Immediately"
 msgstr "Aktualizovat ihned"
 
+#. (obsolete)
 #: ConfigDialog#5
 msgctxt "ConfigDialog#5"
 msgid "Add Upgradeable Packages To Queue"
 msgstr "Zařadit aktualizovatelné balíčky do fronty"
 
+#. (obsolete)
 #: ConfigDialog#6
 msgctxt "ConfigDialog#6"
 msgid "Ask"
 msgstr "Dotázat se"
 
+#. (obsolete)
 #: ConfigDialog#7
 msgctxt "ConfigDialog#7"
 msgid "When Processing Queue"
 msgstr "Při zpracovávání fronty"
 
+#. (obsolete)
 #: ConfigDialog#8
 msgctxt "ConfigDialog#8"
 msgid "Keep application running in System Tray only"
 msgstr "Skrýt do systémové části panelu"
 
+#. (obsolete)
 #: ConfigDialog#9
 msgctxt "ConfigDialog#9"
 msgid "GUI Startup"
 msgstr "Spouštění uživatelského rozhraní"
 
+#. (obsolete)
 #: ConfigDialog#10
 msgctxt "ConfigDialog#10"
 msgid "Start in the System Tray"
 msgstr "Spustit v systémové části panelu"
 
+#. (obsolete)
 #: ConfigDialog#11
 msgctxt "ConfigDialog#11"
 msgid "When Application is in System Tray only"
 msgstr "Pokud je aplikace pouze v systémové části panelu"
 
+#. (obsolete)
 #: ConfigDialog#12
 msgctxt "ConfigDialog#12"
 msgid "Update Database every"
@@ -408,76 +520,91 @@ msgstr "Aktualizovat databáze každých"
 msgid "minutes"
 msgstr "Minuten"
 
+#. (obsolete)
 #: ConfigDialog#14
 msgctxt "ConfigDialog#14"
 msgid "If upgrades are available:"
 msgstr "Pokud jsou aktualizace k dispozici:"
 
+#. (obsolete)
 #: ConfigDialog#15
 msgctxt "ConfigDialog#15"
 msgid "Just Notify"
 msgstr "Jen upozornit"
 
+#. (obsolete)
 #: ConfigDialog#16
 msgctxt "ConfigDialog#16"
 msgid "Notify and add them to Queue"
 msgstr "Upozornit a zařadit do fronty"
 
+#. (obsolete)
 #: ConfigDialog#17
 msgctxt "ConfigDialog#17"
 msgid "Maintenance"
 msgstr "Údržba"
 
+#. (obsolete)
 #: ConfigDialog#18
 msgctxt "ConfigDialog#18"
 msgid "Checkable Options"
 msgstr "Možnosti"
 
+#. (obsolete)
 #: ConfigDialog#19
 msgctxt "ConfigDialog#19"
 msgid "Use Active FTP"
 msgstr "Použít aktivní FTP"
 
+#. (obsolete)
 #: ConfigDialog#20
 msgctxt "ConfigDialog#20"
 msgid "Use Deltas (needs xdelta to be installed)"
 msgstr "Použít Deltas (vyžaduje nainstalované xdelta)"
 
+#. (obsolete)
 #: ConfigDialog#21
 msgctxt "ConfigDialog#21"
 msgid "Advanced Options"
 msgstr "Pokročilé možnosti"
 
+#. (obsolete)
 #: ConfigDialog#22
 msgctxt "ConfigDialog#22"
 msgid "HoldPkgs:"
 msgstr "Držené balíčky:"
 
+#. (obsolete)
 #: ConfigDialog#23
 msgctxt "ConfigDialog#23"
 msgid "IgnorePkgs:"
 msgstr "Ignorované balíčky:"
 
+#. (obsolete)
 #: ConfigDialog#24
 msgctxt "ConfigDialog#24"
 msgid "IgnoreGroups:"
 msgstr "Ignorované skupiny balíčků:"
 
+#. (obsolete)
 #: ConfigDialog#25
 msgctxt "ConfigDialog#25"
 msgid "NoUpgrade:"
 msgstr "Neaktualizovat balíčky:"
 
+#. (obsolete)
 #: ConfigDialog#26
 msgctxt "ConfigDialog#26"
 msgid "NoExtract:"
 msgstr "Nerozbalovat:"
 
+#. (obsolete)
 #: ConfigDialog#27
 msgctxt "ConfigDialog#27"
 msgid "XFerCommand: (example: /path/to/command %u) Blank for Default"
 msgstr "XFerCommand: (příklad: /cesta/k/příkazu %u) Výchozí - prázdné"
 
+#. (obsolete)
 #: ConfigDialog#28
 msgctxt "ConfigDialog#28"
 msgid "Arch Linux Official Repositories"
@@ -494,6 +621,7 @@ msgstr ""
 "Berte navědomí že balíčky z repozitářů Unstable a Testing mohou poškodit váš "
 "systém."
 
+#. (obsolete)
 #: ConfigDialog#30
 msgctxt "ConfigDialog#30"
 msgid "Server"
@@ -510,6 +638,7 @@ msgctxt "ConfigDialog#32"
 msgid "Add Mirror"
 msgstr "Přidat zrcadlo"
 
+#. (obsolete)
 #: ConfigDialog#33
 msgctxt "ConfigDialog#33"
 msgid "KDEMod Repositories"
@@ -528,6 +657,7 @@ msgstr ""
 "kompatibilní se standardním Qt, vylepšené téma a mnoho dalších přídavků.\n"
 "KDEmod je nejlepší cesta k vyzkoušení síly KDE a jednoduchosti Arch Linux."
 
+#. (obsolete)
 #: ConfigDialog#35
 msgctxt "ConfigDialog#35"
 msgid "KDEMod 3 Repository"
@@ -538,6 +668,7 @@ msgstr "Repozitáře KDEmod 3"
 msgid "KDEMod 4 Repository (Unstable, testers only)"
 msgstr "Repozitáře KDEmod 4 (Unstable, pouze pro testování)"
 
+#. (obsolete)
 #: ConfigDialog#37
 msgctxt "ConfigDialog#37"
 msgid "Third-Party Repositories"
@@ -562,6 +693,7 @@ msgctxt "ConfigDialog#39"
 msgid "Repository"
 msgstr "Repozitáře"
 
+#. (obsolete)
 #: ConfigDialog#40
 msgctxt "ConfigDialog#40"
 msgid "Add New Repository"
@@ -577,6 +709,7 @@ msgstr "Upravit repozitář"
 msgid "Remove Repository"
 msgstr "Odstranit repozitář"
 
+#. (obsolete)
 #: ConfigDialog#43
 msgctxt "ConfigDialog#43"
 msgid "Preferences"
@@ -587,71 +720,85 @@ msgstr "Nastavení"
 msgid "Process all dependencies and queue from source first (recommended)"
 msgstr "Alle Abhängigkeiten zuerst aus Quellpaketen verarbeiten (empfohlen)"
 
+#. (obsolete)
 #: ConfigDialog#45
 msgctxt "ConfigDialog#45"
 msgid "Review Building output before installing"
 msgstr "Zkontrolovat výstup sestavení před instalací"
 
+#. (obsolete)
 #: ConfigDialog#46
 msgctxt "ConfigDialog#46"
 msgid "ABS Configuration"
 msgstr "Konfigurace ABS"
 
+#. (obsolete)
 #: ConfigDialog#47
 msgctxt "ConfigDialog#47"
 msgid "Use supfiles that match your current repositories"
 msgstr "Použít supfiles, které souhlasí s současnými repozitáři"
 
+#. (obsolete)
 #: ConfigDialog#48
 msgctxt "ConfigDialog#48"
 msgid "Define supfiles manually"
 msgstr "Definovat supfiles ručně"
 
+#. (obsolete)
 #: ConfigDialog#49
 msgctxt "ConfigDialog#49"
 msgid "Makepkg Configuration"
 msgstr "Konfigurace Makepkg"
 
+#. (obsolete)
 #: ConfigDialog#50
 msgctxt "ConfigDialog#50"
 msgid "CFlags"
 msgstr "Cflags"
 
+#. (obsolete)
 #: ConfigDialog#51
 msgctxt "ConfigDialog#51"
 msgid "CXXFlags"
 msgstr "CXXFlags"
 
+#. (obsolete)
 #: ConfigDialog#52
 msgctxt "ConfigDialog#52"
 msgid "BuildEnv"
 msgstr "BuildEnv"
 
+#. (obsolete)
 #: ConfigDialog#53
 msgctxt "ConfigDialog#53"
 msgid "Options"
 msgstr "Možnosti"
 
+#. (obsolete)
 #: ConfigDialog#54
 msgctxt "ConfigDialog#54"
 msgid "Doc_Dirs"
 msgstr "Doc_Dirs"
 
+#. (obsolete)
 #: ConfigDialog#55
 msgctxt "ConfigDialog#55"
 msgid "Build Environment"
 msgstr "Sestavovací prostředí"
 
+#. (obsolete)
 #: ConfigDialog#56
 msgctxt "ConfigDialog#56"
 msgid "Building Path"
 msgstr "Sestavovací adresář"
 
+#. (obsolete)
 #: ConfigDialog#57
 msgctxt "ConfigDialog#57"
 msgid "Remove installed makedepends after build"
 msgstr "Odstranit sestavovací závislosti po sestavení"
 
+#. (obsolete)
 #: ConfigDialog#58
 msgctxt "ConfigDialog#58"
 msgid "Clean Build Environment after installation"
@@ -804,11 +951,13 @@ msgstr ""
 "Zrcadlo bylo úspěšně přidáno!\n"
 "Nyní je k dispozici v /etc/pacman.d/mirrorlist ."
 
+#. (obsolete)
 #: ConfigDialog#87
 msgctxt "ConfigDialog#87"
 msgid "Pacman Database Optimized Successfully!"
 msgstr "Databáze aplikace Pacman byla úspěšně aktualizována!"
 
+#. (obsolete)
 #: ConfigDialog#88
 msgctxt "ConfigDialog#88"
 msgid "Could not Optimize Pacman Database!"
@@ -853,6 +1002,7 @@ msgid "Optimizing Pacman Database..."
 msgstr "Probíhá optimalizace databáze aplikace Pacman..."
 
 # Waiting for a user action
+#. (obsolete)
 #: ConfigDialog#95
 msgctxt "ConfigDialog#95"
 msgid "Waiting"
@@ -885,8 +1035,8 @@ msgstr ""
 "Sans'; font-size:9pt;\">Bitte Aktion im Menü wählen.</p></body></html>"
 
 # Do not translate
+#. (obsolete)
 #: ConfigDialog#97
-#, fuzzy
 msgctxt "ConfigDialog#97"
 msgid "Core"
 msgstr ""
@@ -894,8 +1044,8 @@ msgstr ""
 "            "
 
 # Do not translate
+#. (obsolete)
 #: ConfigDialog#98
-#, fuzzy
 msgctxt "ConfigDialog#98"
 msgid "Extra"
 msgstr ""
@@ -903,8 +1053,8 @@ msgstr ""
 "            "
 
 # Do not translate
+#. (obsolete)
 #: ConfigDialog#99
-#, fuzzy
 msgctxt "ConfigDialog#99"
 msgid "Community"
 msgstr ""
@@ -912,8 +1062,8 @@ msgstr ""
 "            "
 
 # Do not translate
+#. (obsolete)
 #: ConfigDialog#100
-#, fuzzy
 msgctxt "ConfigDialog#100"
 msgid "Testing"
 msgstr ""
@@ -921,76 +1071,91 @@ msgstr ""
 "            "
 
 # sync is a command, so it should not be translated
+#. (obsolete)
 #: ConfigDialog#101
 msgctxt "ConfigDialog#101"
 msgid "Running sync..."
 msgstr "Probíhá příkaz sync..."
 
+#. (obsolete)
 #: ConfigDialog#102
 msgctxt "ConfigDialog#102"
 msgid "Show Splashscreen"
 msgstr "Zobrazit úvodní obrazovku"
 
+#. (obsolete)
 #: ConfigDialog#103
 msgctxt "ConfigDialog#103"
 msgid "Process all dependencies and queue from binary first (recommended)"
 msgstr "Zpracovat závislosti a frontu nejprve z binárních souborů (doporučeno)"
 
 #: ConfigDialog#104
+msgctxt "ConfigDialog#104"
 msgid "Advanced"
 msgstr "Pokročilé"
 
 # As in "minutes"
+#. (obsolete)
 #: ConfigDialog#105
 msgctxt "ConfigDialog#105"
 msgid "min"
 msgstr "min"
 
+#. (obsolete)
 #: ConfigDialog#106
 msgctxt "ConfigDialog#106"
 msgid "Show tray notification Windows"
 msgstr "Zobazovat upozornění v systémové části panelu"
 
+#. (obsolete)
 #: ConfigDialog#107
 msgctxt "ConfigDialog#107"
 msgid "Use a proxy-server"
 msgstr "Použít proxy"
 
+#. (obsolete)
 #: ConfigDialog#108
 msgctxt "ConfigDialog#108"
 msgid "IP:"
 msgstr "IP:"
 
+#. (obsolete)
 #: ConfigDialog#109
 msgctxt "ConfigDialog#109"
 msgid "Port:"
 msgstr "Port:"
 
+#. (obsolete)
 #: ConfigDialog#110
 msgctxt "ConfigDialog#110"
 msgid "HTTP Proxy"
 msgstr "HTTP Proxy"
 
+#. (obsolete)
 #: ConfigDialog#111
 msgctxt "ConfigDialog#111"
 msgid "FTP Proxy"
 msgstr "FTP Proxy"
 
+#. (obsolete)
 #: ConfigDialog#112
 msgctxt "ConfigDialog#112"
 msgid "Use Shaman RSS Capabilities"
 msgstr "Použít RSS"
 
+#. (obsolete)
 #: ConfigDialog#113
 msgctxt "ConfigDialog#113"
 msgid "Update RSS Feed Every"
 msgstr "Aktualizovat RSS každých"
 
+#. (obsolete)
 #: ConfigDialog#114
 msgctxt "ConfigDialog#114"
 msgid "Notify upon new items"
 msgstr "Upozornit na nové položky"
 
+#. (obsolete)
 #: ConfigDialog#115
 msgctxt "ConfigDialog#115"
 msgid ""
@@ -1000,11 +1165,13 @@ msgstr ""
 "Zkontrolovat zda-li není něpřečtená zpráva o balíčku před tím než bude "
 "zpracován"
 
+#. (obsolete)
 #: ConfigDialog#116
 msgctxt "ConfigDialog#116"
 msgid "Use SysLog"
 msgstr "Použít SysLog"
 
+#. (obsolete)
 #: ConfigDialog#117
 msgctxt "ConfigDialog#117"
 msgid "Log File:"
@@ -1025,16 +1192,19 @@ msgstr "Zrušit"
 msgid "KDEMod 3 Testing Repository"
 msgstr "Repozitář KDEMod 3 Testing"
 
+#. (obsolete)
 #: ConfigDialog#121
 msgctxt "ConfigDialog#121"
 msgid "Interface"
 msgstr "Rozhraní"
 
+#. (obsolete)
 #: ConfigDialog#122
 msgctxt "ConfigDialog#122"
 msgid "Start Shaman Automatically on X Startup"
 msgstr "Spusti aplikaci Shaman automaticky po startu X"
 
+#. (obsolete)
 #: ConfigDialog#123
 msgctxt "ConfigDialog#123"
 msgid "Forbid starting Shaman as root"
@@ -1105,46 +1275,55 @@ msgstr ""
 "right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Liberation "
 "Sans'; font-size:9pt;\">Vyberte akci z výsuvného menu.</p></body></html>"
 
+#. (obsolete)
 #: ConfigDialog#130
 msgctxt "ConfigDialog#130"
 msgid "RSync Server:"
 msgstr "Rsinc Server:"
 
+#. (obsolete)
 #: ConfigDialog#131
 msgctxt "ConfigDialog#131"
 msgid "Update Database at"
 msgstr "Aktualizovat databáze v"
 
+#. (obsolete)
 #: ConfigDialog#132
 msgctxt "ConfigDialog#132"
 msgid "Use Animated Tray Icon"
 msgstr "Použít animovanou ikonu v systémové části panelu"
 
+#. (obsolete)
 #: ConfigDialog#133
 msgctxt "ConfigDialog#133"
 msgid "KDEMod 4 Repository"
 msgstr "Repozitáře KDEmod 4"
 
+#. (obsolete)
 #: ConfigDialog#134
 msgctxt "ConfigDialog#134"
 msgid "KDEMod 4 Extragear Repository"
 msgstr "Repozitář KDEmod 4 Extragear"
 
+#. (obsolete)
 #: ConfigDialog#135
 msgctxt "ConfigDialog#135"
 msgid "KDEMod 4 Playground Repository"
 msgstr "Repozitář KDEMod 4 Playground"
 
+#. (obsolete)
 #: ConfigDialog#136
 msgctxt "ConfigDialog#136"
 msgid "KDEMod 4 Testing Repository"
 msgstr "Repozitář KDEMod 4 Testing"
 
+#. (obsolete)
 #: ConfigDialog#137
 msgctxt "ConfigDialog#137"
 msgid "KDEMod 4 Unstable Repository (Testers only!)"
 msgstr "Repozitáře KDEmod 4 (Unstable, pouze pro testování)"
 
+#. (obsolete)
 #: ConfigDialog#138
 msgctxt "ConfigDialog#138"
 msgid ""
@@ -1156,6 +1335,7 @@ msgstr ""
 "Berte navědomí že balíčky z repozitářů Unstable a Testing mohou poškodit váš "
 "systém."
 
+#. (obsolete)
 #: ConfigDialog#139
 msgctxt "ConfigDialog#139"
 msgid ""
@@ -1168,6 +1348,7 @@ msgstr ""
 "kompatibilní se standardním Qt, vylepšené téma a mnoho dalších přídavků. "
 "KDEmod je nejlepší cesta k vyzkoušení síly KDE a jednoduchosti Arch Linux."
 
+#. (obsolete)
 #: ConfigDialog#140
 msgctxt "ConfigDialog#140"
 msgid ""
@@ -1179,11 +1360,13 @@ msgstr ""
 "se chovají jako obyčejné repozitáře a jsou přístupné z aplikací Shaman i "
 "Pacman."
 
+#. (obsolete)
 #: ConfigDialog#141
 msgctxt "ConfigDialog#141"
 msgid "Use the following language:"
 msgstr "Zvolte jazyk:"
 
+#. (obsolete)
 #: ConfigDialog#142
 msgctxt "ConfigDialog#142"
 msgid "Disable Tray Icon"
@@ -1217,38 +1400,15 @@ msgid ""
 msgstr ""
 
 #: ConfigDialog#148
-msgctxt "ConfigDialog#148"
-msgid ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
-"html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Liberation Sans'; font-size:8pt; "
-"font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"size:9pt;\">Shaman Manteinance.</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"size:9pt;\">Please choose an action from the Drop-Down "
-"Menu.</span></p></body></html>"
+msgid "Apply"
 msgstr ""
 
 #: ConfigDialog#149
-msgctxt "ConfigDialog#149"
-msgid "Add another server"
+msgid "Shaman Configuration"
 msgstr ""
 
 #: ConfigDialog#150
-msgctxt "ConfigDialog#150"
-msgid "Repository Order"
-msgstr ""
-
-#: ConfigDialog#151
-msgctxt "ConfigDialog#151"
-msgid ""
-"Please order your repositories to define which one will be preferred over "
-"another."
+msgid "Aqpm Configuration"
 msgstr ""
 
 #: DatabaseConfig#1
@@ -1447,10 +1607,23 @@ msgid ""
 "another."
 msgstr ""
 
+#: DatabaseConfig#27
+#, fuzzy
+msgctxt "DatabaseConfig#27"
+msgid "Error"
+msgstr "Chyba"
+
+#: DatabaseConfig#28
+msgctxt "DatabaseConfig#28"
+msgid "There has been a problem while saving the configuration!"
+msgstr ""
+
+#. (obsolete)
 #: EditPBuild#1
 msgid "Saving"
 msgstr "Ukládání"
 
+#. (obsolete)
 #: EditPBuild#2
 msgid ""
 "You modified this PKGBUILD.\n"
@@ -1662,7 +1835,6 @@ msgid "Waiting"
 msgstr "Čekám"
 
 #: Form#17
-msgctxt "Form#17"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -3098,6 +3270,7 @@ msgstr "Onzačit pro &Reinstalaci"
 msgid "&Cancel Action"
 msgstr "Zr&ušit akci"
 
+#. (obsolete)
 #: MainWindow#151
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
@@ -3187,12 +3360,6 @@ msgid "Replace %1 with %2/%3?"
 msgstr "Nahradit %1 za %2/%3?"
 
 #: MainWindow#158
-msgid ""
-"%1 conflicts with %2.\n"
-"Remove %2?"
-msgstr ""
-
-#: MainWindow#159
 #, fuzzy
 msgid ""
 "The following package(s) cannot be upgraded due to unresolvable "
@@ -3205,9 +3372,9 @@ msgstr ""
 "            \n"
 "        "
 
-#: MainWindow#160
+#: MainWindow#159
 #, fuzzy
-msgctxt "MainWindow#160"
+msgctxt "MainWindow#159"
 msgid ""
 "%1-%2: local version is newer.\n"
 "Upgrade anyway?"
@@ -3215,9 +3382,9 @@ msgstr ""
 "%1-%2: Místní verze je novější.\n"
 "Přesto aktualizovat?"
 
-#: MainWindow#161
+#: MainWindow#160
 #, fuzzy
-msgctxt "MainWindow#161"
+msgctxt "MainWindow#160"
 msgid ""
 "File %1 is corrupted.\n"
 "Do you want to delete it?"
@@ -3225,11 +3392,11 @@ msgstr ""
 "Soubor %1 je porušený.\n"
 "Chcete ho odstranit?"
 
-#: MainWindow#162
+#: MainWindow#161
 msgid "Transaction Question"
 msgstr ""
 
-#: MainWindow#163
+#: MainWindow#162
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -3254,6 +3421,16 @@ msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Lukas Appelhans "
 "&lt;boom1992@chakra-project.org&gt;</p></body></html>"
+msgstr ""
+
+#: MainWindow#163
+msgid ""
+"%1 conflicts with %2.\n"
+"Remove %1?"
+msgstr ""
+
+#: MainWindow#164
+msgid "Updating ABS tree"
 msgstr ""
 
 #: MaintenanceBar#1
@@ -3365,11 +3542,13 @@ msgctxt "MaintenanceBar#22"
 msgid "Could not clean Build Environments!!"
 msgstr "Čištění nepoužívaných databází selhalo!!"
 
+#. (obsolete)
 #: MaintenanceBar#23
 msgctxt "MaintenanceBar#23"
 msgid "Pacman Database Optimized Successfully!"
 msgstr "Databáze aplikace Pacman byla úspěšně aktualizována!"
 
+#. (obsolete)
 #: MaintenanceBar#24
 msgctxt "MaintenanceBar#24"
 msgid "Could not Optimize Pacman Database!"
@@ -3539,6 +3718,7 @@ msgctxt "QObject#4"
 msgid "Shaman"
 msgstr "Shaman"
 
+#. (obsolete)
 #: QObject#5
 msgid ""
 "Pacman is not updated.\n"
@@ -3660,6 +3840,10 @@ msgstr ""
 #: QObject#23
 msgid ""
 "Shaman can not be started as root. Please restart it as unprivileged user."
+msgstr ""
+
+#: QObject#24
+msgid "&Apply"
 msgstr ""
 
 #: QueueDialog#1
@@ -4064,6 +4248,232 @@ msgstr ""
 #: ServerWidget#5
 msgctxt "ServerWidget#5"
 msgid "Remove"
+msgstr ""
+
+#: ShamanGeneralConfig#1
+#, fuzzy
+msgctxt "ShamanGeneralConfig#1"
+msgid "Favourite Actions"
+msgstr "Upřednostněné akce"
+
+#: ShamanGeneralConfig#2
+#, fuzzy
+msgctxt "ShamanGeneralConfig#2"
+msgid "When Upgrading System:"
+msgstr "Při aktualizaci systému:"
+
+#: ShamanGeneralConfig#3
+#, fuzzy
+msgctxt "ShamanGeneralConfig#3"
+msgid "Upgrade Immediately"
+msgstr "Aktualizovat ihned"
+
+#: ShamanGeneralConfig#4
+#, fuzzy
+msgctxt "ShamanGeneralConfig#4"
+msgid "Add Upgradeable Packages To Queue"
+msgstr "Zařadit aktualizovatelné balíčky do fronty"
+
+#: ShamanGeneralConfig#5
+#, fuzzy
+msgctxt "ShamanGeneralConfig#5"
+msgid "Ask"
+msgstr "Dotázat se"
+
+#: ShamanGeneralConfig#6
+#, fuzzy
+msgctxt "ShamanGeneralConfig#6"
+msgid "When Processing Queue"
+msgstr "Při zpracovávání fronty"
+
+#: ShamanGeneralConfig#7
+#, fuzzy
+msgctxt "ShamanGeneralConfig#7"
+msgid "Keep application running in System Tray only"
+msgstr "Skrýt do systémové části panelu"
+
+#: ShamanGeneralConfig#8
+#, fuzzy
+msgctxt "ShamanGeneralConfig#8"
+msgid "GUI Startup"
+msgstr "Spouštění uživatelského rozhraní"
+
+#: ShamanGeneralConfig#9
+#, fuzzy
+msgctxt "ShamanGeneralConfig#9"
+msgid "Start in the System Tray"
+msgstr "Spustit v systémové části panelu"
+
+#: ShamanGeneralConfig#10
+#, fuzzy
+msgctxt "ShamanGeneralConfig#10"
+msgid "Show Splashscreen"
+msgstr "Zobrazit úvodní obrazovku"
+
+#: ShamanGeneralConfig#11
+#, fuzzy
+msgctxt "ShamanGeneralConfig#11"
+msgid "Use the following language:"
+msgstr "Zvolte jazyk:"
+
+#: ShamanGeneralConfig#12
+#, fuzzy
+msgctxt "ShamanGeneralConfig#12"
+msgid "Disable Tray Icon"
+msgstr "Vypnout ikonu v Systémové části panelu"
+
+#: ShamanGeneralConfig#13
+#, fuzzy
+msgctxt "ShamanGeneralConfig#13"
+msgid "Maintenance"
+msgstr "Údržba"
+
+#: ShamanGeneralConfig#14
+#, fuzzy
+msgctxt "ShamanGeneralConfig#14"
+msgid "Process Selected"
+msgstr "Spustit údržbu"
+
+# Waiting for a user action
+#: ShamanGeneralConfig#15
+#, fuzzy
+msgctxt "ShamanGeneralConfig#15"
+msgid "Waiting"
+msgstr "Čekám"
+
+#: ShamanGeneralConfig#16
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:7pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Shaman Manteinance.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Please choose an action from the Drop-Down "
+"Menu.</span></p></body></html>"
+msgstr ""
+
+#: ShamanGeneralConfig#17
+#, fuzzy
+msgctxt "ShamanGeneralConfig#17"
+msgid "Clean Unused Databases"
+msgstr "Vyčistit nepoužívané databáze"
+
+#: ShamanGeneralConfig#18
+#, fuzzy
+msgctxt "ShamanGeneralConfig#18"
+msgid "Clean Cache"
+msgstr "Vyčistit cache"
+
+#: ShamanGeneralConfig#19
+#, fuzzy
+msgctxt "ShamanGeneralConfig#19"
+msgid "Empty Cache"
+msgstr "Vyprázdnit cache"
+
+#: ShamanGeneralConfig#20
+#, fuzzy
+msgctxt "ShamanGeneralConfig#20"
+msgid "Optimize Pacman Database"
+msgstr "Optimalizovat databáze aplikace Pacman"
+
+#: ShamanGeneralConfig#21
+#, fuzzy
+msgctxt "ShamanGeneralConfig#21"
+msgid "Clean All Building Environments"
+msgstr "Vyčistit všechny sestavovací prostředí"
+
+#: ShamanGeneralConfig#22
+#, fuzzy
+msgctxt "ShamanGeneralConfig#22"
+msgid "Cleaning up unused Databases..."
+msgstr "Čistím nepoužívané databáze..."
+
+#: ShamanGeneralConfig#23
+#, fuzzy
+msgctxt "ShamanGeneralConfig#23"
+msgid "Cleaning up Cache..."
+msgstr "Čistím cache..."
+
+#: ShamanGeneralConfig#24
+#, fuzzy
+msgctxt "ShamanGeneralConfig#24"
+msgid "Deleting Cache..."
+msgstr "Mažu cache..."
+
+#: ShamanGeneralConfig#25
+#, fuzzy
+msgctxt "ShamanGeneralConfig#25"
+msgid "Optimizing Pacman Database..."
+msgstr "Probíhá optimalizace databáze aplikace Pacman..."
+
+#: ShamanGeneralConfig#26
+#, fuzzy
+msgctxt "ShamanGeneralConfig#26"
+msgid "Cleaning up building Environments..."
+msgstr "Čistím sestavovací prostředí..."
+
+#: ShamanGeneralConfig#27
+#, fuzzy
+msgctxt "ShamanGeneralConfig#27"
+msgid "Unused Databases Cleaned up successfully!"
+msgstr "Nepoužívané databáze úspěšně vyčištěny!"
+
+#: ShamanGeneralConfig#28
+#, fuzzy
+msgctxt "ShamanGeneralConfig#28"
+msgid "Cleaning up Unused Databases Failed!"
+msgstr "Čištění nepoužívaných databází selhalo!"
+
+#: ShamanGeneralConfig#29
+#, fuzzy
+msgctxt "ShamanGeneralConfig#29"
+msgid "Cache Cleaned Up Successfully!"
+msgstr "Cache úspěšně vyčištěna!"
+
+#: ShamanGeneralConfig#30
+#, fuzzy
+msgctxt "ShamanGeneralConfig#30"
+msgid "Cleaning up Cache Failed!"
+msgstr "Čištění cache selhalo!"
+
+#: ShamanGeneralConfig#31
+#, fuzzy
+msgctxt "ShamanGeneralConfig#31"
+msgid "Cache Successfully Deleted!"
+msgstr "Cache úspěšně smazána!"
+
+#: ShamanGeneralConfig#32
+#, fuzzy
+msgctxt "ShamanGeneralConfig#32"
+msgid "Deleting Cache Failed!"
+msgstr "Mazaní cache selhalo!"
+
+#: ShamanGeneralConfig#33
+#, fuzzy
+msgctxt "ShamanGeneralConfig#33"
+msgid "Build Environments Successfully Cleaned!"
+msgstr "Sestavovací prostředí úspěšně vyčištěno!"
+
+#: ShamanGeneralConfig#34
+#, fuzzy
+msgctxt "ShamanGeneralConfig#34"
+msgid "Could not clean Build Environments!!"
+msgstr "Čištění nepoužívaných databází selhalo!!"
+
+#: ShamanGeneralConfig#35
+msgctxt "ShamanGeneralConfig#35"
+msgid "Database optimized successfully!"
+msgstr ""
+
+#: ShamanGeneralConfig#36
+msgctxt "ShamanGeneralConfig#36"
+msgid "Could not optimize database!"
 msgstr ""
 
 #: ShamanStatusBar#1
@@ -5061,6 +5471,7 @@ msgstr "Probíhá aktualizace databáze..."
 msgid "Editing PKGBUILD"
 msgstr "Bearbeite PKGBUILD"
 
+#. (obsolete)
 #: editPBDialog#2
 msgid "Editing PKGBUILD of:"
 msgstr "Bearbeite PKGBUILD von:"
@@ -5082,6 +5493,7 @@ msgctxt "editPBDialog#6"
 msgid "Ok"
 msgstr "Ok"
 
+#. (obsolete)
 #: editPBDialog#7
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
@@ -5099,6 +5511,45 @@ msgstr ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">PKGBUILD bearbeiten</span></p></body></html>"
+
+#: editPBDialog#8
+msgid "Editing:"
+msgstr ""
+
+#: editPBDialog#9
+msgid "PKGBUILD"
+msgstr ""
+
+#: editPBDialog#10
+msgid "MakePkg options"
+msgstr ""
+
+#: editPBDialog#11
+msgid "Ignore arch"
+msgstr ""
+
+#: editPBDialog#12
+msgid "Skip integrity checks"
+msgstr ""
+
+#: editPBDialog#13
+msgid "Ignore dependency control"
+msgstr ""
+
+#: editPBDialog#14
+msgid "Hold version if this is a development PKGBUILD"
+msgstr ""
+
+#: editPBDialog#15
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Edit Package build options</span></p></body></html>"
+msgstr ""
 
 #: logViewer#1
 msgid "Shaman - Log Viewer"
@@ -5349,6 +5800,7 @@ msgstr "Zrušit"
 msgid "Process From Binary"
 msgstr "Zpracovat z binárních souborů"
 
+#. (obsolete)
 #: reviewBuildingDialog#10
 msgid "Review PKGBUILDs"
 msgstr "Zkontrolovat PKGBUILD"
@@ -5360,6 +5812,10 @@ msgstr "Sestavit ze zdroje"
 #: reviewBuildingDialog#12
 msgid "Do not install immediately when building is finished"
 msgstr "Neinstalovat ihned po sestavení"
+
+#: reviewBuildingDialog#13
+msgid "Review Build options"
+msgstr ""
 
 #: transactionDialog#1
 msgid "Processing Queue..."

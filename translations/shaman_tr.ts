@@ -25,20 +25,75 @@
     </message>
 </context>
 <context>
+    <name>AqpmConfig</name>
+    <message>
+        <source>Packages and Paths</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>IgnorePkgs:</source>
+        <translation type="unfinished">IgnorePkgs:</translation>
+    </message>
+    <message>
+        <source>IgnoreGroups:</source>
+        <translation type="unfinished">IgnoreGroups:</translation>
+    </message>
+    <message>
+        <source>NoUpgrade:</source>
+        <translation type="unfinished">NoUpgrade:</translation>
+    </message>
+    <message>
+        <source>NoExtract:</source>
+        <translation type="unfinished">NoExtract:</translation>
+    </message>
+    <message>
+        <source>Log File:</source>
+        <translation type="unfinished">Kayıt Dosyası:</translation>
+    </message>
+    <message>
+        <source>Advanced</source>
+        <translation type="unfinished">Gelişmiş</translation>
+    </message>
+    <message>
+        <source>Use SysLog</source>
+        <translation type="unfinished">SysLog Kullan</translation>
+    </message>
+    <message>
+        <source>Use Deltas (needs xdelta to be installed)</source>
+        <translation type="unfinished">Delta Kullan (xdelta&apos;nın yüklü olması gerekir)</translation>
+    </message>
+    <message>
+        <source>Aqpm Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use multi-server download (EXPERIMENTAL)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished">Hata</translation>
+    </message>
+    <message>
+        <source>There has been a problem while saving the configuration!</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>BuildingDialog</name>
     <message>
         <source>Error</source>
-        <translation>Hata</translation>
+        <translation type="obsolete">Hata</translation>
     </message>
     <message>
         <source>Would you like to abort building?.
 All Process will be lost.</source>
-        <translation>Derlemeyi iptal etmek ister msiniz?.
+        <translation type="obsolete">Derlemeyi iptal etmek ister msiniz?.
 Tüm işlem kaybedilecek.</translation>
     </message>
     <message>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Building Process Aborted by the User. Building Failed.&lt;/b&gt;</source>
-        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Derleme işlemi kullanıcı tarafından iptal edildi.Derleme başarısız.&lt;/b&gt;</translation>
+        <translation type="obsolete">&lt;br&gt;&lt;br&gt;&lt;b&gt;Derleme işlemi kullanıcı tarafından iptal edildi.Derleme başarısız.&lt;/b&gt;</translation>
     </message>
     <message>
         <source>Updating ABS Tree...</source>
@@ -50,47 +105,47 @@ Tüm işlem kaybedilecek.</translation>
     </message>
     <message>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;ABS Tree Was Successfully Updated!&lt;/b&gt;</source>
-        <translation>&lt;br&gt;&lt;br&gt;&lt;br&gt;ABS Ağacı Başarıyla Güncellendi!&lt;/br&gt;</translation>
+        <translation type="obsolete">&lt;br&gt;&lt;br&gt;&lt;br&gt;ABS Ağacı Başarıyla Güncellendi!&lt;/br&gt;</translation>
     </message>
     <message>
         <source>ABS Update</source>
-        <translation>ABS Güncellemesi</translation>
+        <translation type="obsolete">ABS Güncellemesi</translation>
     </message>
     <message>
         <source>Your ABS Tree was updated!</source>
-        <translation>ABS Ağacınız Güncellendi!</translation>
+        <translation type="obsolete">ABS Ağacınız Güncellendi!</translation>
     </message>
     <message>
         <source>&lt;b&gt;Building %1 failed!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;br&gt;%1 derlemesi başarısız!!&lt;/br&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation type="obsolete">&lt;br&gt;%1 derlemesi başarısız!!&lt;/br&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <source>&lt;b&gt;%1 was built successfully!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;%1 başarıyla derlendi!!&lt;/b&gt;&lt;b&gt;&lt;b&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;%1 başarıyla derlendi!!&lt;/b&gt;&lt;b&gt;&lt;b&gt;</translation>
     </message>
     <message>
         <source>Processing Package %1 of %2...</source>
-        <translation>Paket %2 nin %1&apos;i işleniyor...</translation>
+        <translation type="obsolete">Paket %2 nin %1&apos;i işleniyor...</translation>
     </message>
     <message>
         <source>Building %1...</source>
-        <translation>%1 Derleniyor...</translation>
+        <translation type="obsolete">%1 Derleniyor...</translation>
     </message>
     <message>
         <source>&lt;b&gt;Could not set up the environment correctly for %1!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;%1 için yapısallıklar doğru kurulamıyor!!&lt;/b&gt;&lt;b&gt;&lt;b&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;%1 için yapısallıklar doğru kurulamıyor!!&lt;/b&gt;&lt;b&gt;&lt;b&gt;</translation>
     </message>
     <message>
         <source>&lt;b&gt;Building %1...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;%1 derleniyor...&lt;/b&gt;&lt;b&gt;&lt;b&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;%1 derleniyor...&lt;/b&gt;&lt;b&gt;&lt;b&gt;</translation>
     </message>
     <message>
         <source>&lt;b&gt;Building operation has started.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;Derleme işlemi başladı.&lt;/b&gt;&lt;b&gt;&lt;b&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Derleme işlemi başladı.&lt;/b&gt;&lt;b&gt;&lt;b&gt;</translation>
     </message>
     <message>
         <source>Could not update the ABS Tree!</source>
-        <translation>ABS Ağacı güncellenemiyor!</translation>
+        <translation type="obsolete">ABS Ağacı güncellenemiyor!</translation>
     </message>
 </context>
 <context>
@@ -98,23 +153,23 @@ Tüm işlem kaybedilecek.</translation>
     <message>
         <source>You need to have ABS installed to use Shaman&apos;s
 building feature. Do you want to install it now?</source>
-        <translation>Shaman&apos;ın derleme özelliğini kullanabilmek için
+        <translation type="obsolete">Shaman&apos;ın derleme özelliğini kullanabilmek için
 sisteminizde ABS yüklü olmalı.Yüklensin mi?</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation>Hata</translation>
+        <translation type="obsolete">Hata</translation>
     </message>
     <message>
         <source>You can not remove packages when processing
 your queue from Source</source>
-        <translation>Kaynak sıra işlenirken paket kaldıramazsınız</translation>
+        <translation type="obsolete">Kaynak sıra işlenirken paket kaldıramazsınız</translation>
     </message>
     <message>
         <source>Some of your packages do not belong to Arch
 Linux&apos;s official repository. Shaman is able to
 build packages from official sources only.</source>
-        <translation>Bazı paketleriniz Arch Linux&apos;un resmi depolarına ait
+        <translation type="obsolete">Bazı paketleriniz Arch Linux&apos;un resmi depolarına ait
 değil. Shaman sadece resmi kaynaktan gelen paketleri
 derleyebilir.</translation>
     </message>
@@ -128,59 +183,59 @@ derleyebilir.</translation>
     </message>
     <message>
         <source>To be Installed</source>
-        <translation>Yüklenecek</translation>
+        <translation type="obsolete">Yüklenecek</translation>
     </message>
     <message>
         <source>To be Upgraded</source>
-        <translation>Yükseltilecek</translation>
+        <translation type="obsolete">Yükseltilecek</translation>
     </message>
     <message>
         <source>Package Building</source>
-        <translation>Paket Derleme</translation>
+        <translation type="obsolete">Paket Derleme</translation>
     </message>
     <message>
         <source>Your Packages failed to build!</source>
-        <translation>Paketinizin derlenmesi başarısız!</translation>
+        <translation type="obsolete">Paketinizin derlenmesi başarısız!</translation>
     </message>
     <message>
         <source>Your packages Failed to Build.
 Look at the output for more details.</source>
-        <translation>Paketlerinizin derlenmesi başarısız oldu.
+        <translation type="obsolete">Paketlerinizin derlenmesi başarısız oldu.
 Ayrıntılar için çıktılara göz atın.</translation>
     </message>
     <message>
         <source>Close</source>
-        <translation>Kapat</translation>
+        <translation type="obsolete">Kapat</translation>
     </message>
     <message>
         <source>Building Packages Failed!!</source>
-        <translation>Paketlerin Derlenmesi Başarısız!!</translation>
+        <translation type="obsolete">Paketlerin Derlenmesi Başarısız!!</translation>
     </message>
     <message>
         <source>Some packages failed to build.
 Do you want to proceed anyway?</source>
-        <translation>Bazı paketlerin derlenmesi başarısız oldu.
+        <translation type="obsolete">Bazı paketlerin derlenmesi başarısız oldu.
 Yine de devam etmek istiyor musunuz?</translation>
     </message>
     <message>
         <source>Install Built Packages</source>
-        <translation>Derlenmiş Paketleri Yükle</translation>
+        <translation type="obsolete">Derlenmiş Paketleri Yükle</translation>
     </message>
     <message>
         <source>Close Without Installing</source>
-        <translation>Yüklemeden Kapat</translation>
+        <translation type="obsolete">Yüklemeden Kapat</translation>
     </message>
     <message>
         <source>Packages Built Successfully!</source>
-        <translation>Paketler Başarıyla Derlendi!</translation>
+        <translation type="obsolete">Paketler Başarıyla Derlendi!</translation>
     </message>
     <message>
         <source>Your Packages have been built successfully, and are ready to be installed</source>
-        <translation>Paketlerininz başarıyla derlendi ve yüklenmeye hazır</translation>
+        <translation type="obsolete">Paketlerininz başarıyla derlendi ve yüklenmeye hazır</translation>
     </message>
     <message numerus="yes">
         <source>You are about to install &lt;b&gt;%n package(s)&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             <numerusform>
             </numerusform>
         </translation>
@@ -357,16 +412,16 @@ Artık mirrorlist için yerini aldı.</translation>
     </message>
     <message>
         <source>Pacman Database Optimized Successfully!</source>
-        <translation>Pacman Veritabanı başarıyla İyileştirildi!</translation>
+        <translation type="obsolete">Pacman Veritabanı başarıyla İyileştirildi!</translation>
     </message>
     <message>
         <source>Could not Optimize Pacman Database!</source>
-        <translation>Pacman Veritabanı iyileştirilemiyor!</translation>
+        <translation type="obsolete">Pacman Veritabanı iyileştirilemiyor!</translation>
     </message>
     <message>
         <source>Running sync...</source>
         <comment>sync is a command, so it should not be translated</comment>
-        <translation>sync çalıştırılıyor...</translation>
+        <translation type="obsolete">sync çalıştırılıyor...</translation>
     </message>
     <message>
         <source>Operation Completed Successfully!</source>
@@ -393,67 +448,67 @@ Artık mirrorlist için yerini aldı.</translation>
     </message>
     <message>
         <source>Favourite Actions</source>
-        <translation>Sık Kullanılan Eylemler</translation>
+        <translation type="obsolete">Sık Kullanılan Eylemler</translation>
     </message>
     <message>
         <source>When Upgrading System:</source>
-        <translation>Sistem Yükseltilirken:</translation>
+        <translation type="obsolete">Sistem Yükseltilirken:</translation>
     </message>
     <message>
         <source>Upgrade Immediately</source>
-        <translation>Derhal Yükselt</translation>
+        <translation type="obsolete">Derhal Yükselt</translation>
     </message>
     <message>
         <source>Add Upgradeable Packages To Queue</source>
-        <translation>Yükseltilebilir Paketleri Sıraya Ekle</translation>
+        <translation type="obsolete">Yükseltilebilir Paketleri Sıraya Ekle</translation>
     </message>
     <message>
         <source>Ask</source>
-        <translation>Sor</translation>
+        <translation type="obsolete">Sor</translation>
     </message>
     <message>
         <source>When Processing Queue</source>
-        <translation>Sıra İşlenirken</translation>
+        <translation type="obsolete">Sıra İşlenirken</translation>
     </message>
     <message>
         <source>Keep application running in System Tray only</source>
-        <translation>Yazılımı sadece Sistem Çubuğunda çalıştır</translation>
+        <translation type="obsolete">Yazılımı sadece Sistem Çubuğunda çalıştır</translation>
     </message>
     <message>
         <source>GUI Startup</source>
-        <translation>ARAYÜZ Başlangıcı</translation>
+        <translation type="obsolete">ARAYÜZ Başlangıcı</translation>
     </message>
     <message>
         <source>Start in the System Tray</source>
-        <translation>Sistem Çubuğunda başlat</translation>
+        <translation type="obsolete">Sistem Çubuğunda başlat</translation>
     </message>
     <message>
         <source>Show Splashscreen</source>
-        <translation>Karşılama Ekranı Göster</translation>
+        <translation type="obsolete">Karşılama Ekranı Göster</translation>
     </message>
     <message>
         <source>When Application is in System Tray only</source>
-        <translation>Yazılım Sadece Sistem Çubuğundayken</translation>
+        <translation type="obsolete">Yazılım Sadece Sistem Çubuğundayken</translation>
     </message>
     <message>
         <source>Update Database every</source>
-        <translation>Veritabanını şu kadar sürede bir güncelle</translation>
+        <translation type="obsolete">Veritabanını şu kadar sürede bir güncelle</translation>
     </message>
     <message>
         <source>If upgrades are available:</source>
-        <translation>Yükseltmeler varsa:</translation>
+        <translation type="obsolete">Yükseltmeler varsa:</translation>
     </message>
     <message>
         <source>Just Notify</source>
-        <translation>Sadece Uyar</translation>
+        <translation type="obsolete">Sadece Uyar</translation>
     </message>
     <message>
         <source>Notify and add them to Queue</source>
-        <translation>Uyar ve Sıraya ekle</translation>
+        <translation type="obsolete">Uyar ve Sıraya ekle</translation>
     </message>
     <message>
         <source>Maintenance</source>
-        <translation>Bakım</translation>
+        <translation type="obsolete">Bakım</translation>
     </message>
     <message>
         <source>Process Selected</source>
@@ -462,51 +517,51 @@ Artık mirrorlist için yerini aldı.</translation>
     <message>
         <source>Waiting</source>
         <comment>Waiting for a user action</comment>
-        <translation>Kullanıcı Bekleniyor</translation>
+        <translation type="obsolete">Kullanıcı Bekleniyor</translation>
     </message>
     <message>
         <source>Checkable Options</source>
-        <translation>Uygulanabilir Seçenekler</translation>
+        <translation type="obsolete">Uygulanabilir Seçenekler</translation>
     </message>
     <message>
         <source>Use Active FTP</source>
-        <translation>Aktif FTP Kullan</translation>
+        <translation type="obsolete">Aktif FTP Kullan</translation>
     </message>
     <message>
         <source>Use Deltas (needs xdelta to be installed)</source>
-        <translation>Delta Kullan (xdelta&apos;nın yüklü olması gerekir)</translation>
+        <translation type="obsolete">Delta Kullan (xdelta&apos;nın yüklü olması gerekir)</translation>
     </message>
     <message>
         <source>Advanced Options</source>
-        <translation>Gelişmiş Seçenekler</translation>
+        <translation type="obsolete">Gelişmiş Seçenekler</translation>
     </message>
     <message>
         <source>HoldPkgs:</source>
-        <translation>HoldPkgs:</translation>
+        <translation type="obsolete">HoldPkgs:</translation>
     </message>
     <message>
         <source>IgnorePkgs:</source>
-        <translation>IgnorePkgs:</translation>
+        <translation type="obsolete">IgnorePkgs:</translation>
     </message>
     <message>
         <source>IgnoreGroups:</source>
-        <translation>IgnoreGroups:</translation>
+        <translation type="obsolete">IgnoreGroups:</translation>
     </message>
     <message>
         <source>NoUpgrade:</source>
-        <translation>NoUpgrade:</translation>
+        <translation type="obsolete">NoUpgrade:</translation>
     </message>
     <message>
         <source>NoExtract:</source>
-        <translation>NoExtract:</translation>
+        <translation type="obsolete">NoExtract:</translation>
     </message>
     <message>
         <source>XFerCommand: (example: /path/to/command %u) Blank for Default</source>
-        <translation>XFerCommand: (örnek: /path/to/command %u) Varsayılan için boş bırakın</translation>
+        <translation type="obsolete">XFerCommand: (örnek: /path/to/command %u) Varsayılan için boş bırakın</translation>
     </message>
     <message>
         <source>Arch Linux Official Repositories</source>
-        <translation>Arch Linux Resmi Depoları</translation>
+        <translation type="obsolete">Arch Linux Resmi Depoları</translation>
     </message>
     <message>
         <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones.
@@ -517,30 +572,30 @@ Lütfen Unstable ve Testing depolarının sisteminize zarar verebileceğini unut
     <message>
         <source>Core</source>
         <comment>Do not translate</comment>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>Extra</source>
         <comment>Do not translate</comment>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>Community</source>
         <comment>Do not translate</comment>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>Testing</source>
         <comment>Do not translate</comment>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>Server</source>
-        <translation>Sunucu</translation>
+        <translation type="obsolete">Sunucu</translation>
     </message>
     <message>
         <source>Mirror:</source>
@@ -548,7 +603,7 @@ Lütfen Unstable ve Testing depolarının sisteminize zarar verebileceğini unut
     </message>
     <message>
         <source>KDEMod Repositories</source>
-        <translation>KDEMod Depoları</translation>
+        <translation type="obsolete">KDEMod Depoları</translation>
     </message>
     <message>
         <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an 
@@ -562,7 +617,7 @@ birleştiren yeni bir ortam sunar.</translation>
     </message>
     <message>
         <source>KDEMod 3 Repository</source>
-        <translation>KDEMod 3 Deposu</translation>
+        <translation type="obsolete">KDEMod 3 Deposu</translation>
     </message>
     <message>
         <source>KDEMod 4 Repository (Unstable, testers only)</source>
@@ -570,7 +625,7 @@ birleştiren yeni bir ortam sunar.</translation>
     </message>
     <message>
         <source>Third-Party Repositories</source>
-        <translation>Üçüncü Kısım Depolar</translation>
+        <translation type="obsolete">Üçüncü Kısım Depolar</translation>
     </message>
     <message>
         <source>You can extend your packages choice by adding other repositories. Third-Party 
@@ -586,7 +641,7 @@ tarafından kullanılır.</translation>
     </message>
     <message>
         <source>Add New Repository</source>
-        <translation>Yeni Depo Ekle</translation>
+        <translation type="obsolete">Yeni Depo Ekle</translation>
     </message>
     <message>
         <source>Edit Repository</source>
@@ -598,67 +653,67 @@ tarafından kullanılır.</translation>
     </message>
     <message>
         <source>Preferences</source>
-        <translation>Seçenekler</translation>
+        <translation type="obsolete">Seçenekler</translation>
     </message>
     <message>
         <source>Process all dependencies and queue from binary first (recommended)</source>
-        <translation>Bütün bağımlılıkları ve sırayı öncelikle ikililerden işle (önerilen)</translation>
+        <translation type="obsolete">Bütün bağımlılıkları ve sırayı öncelikle ikililerden işle (önerilen)</translation>
     </message>
     <message>
         <source>Review Building output before installing</source>
-        <translation>Yüklemeden önce Derleme çıktısını incele</translation>
+        <translation type="obsolete">Yüklemeden önce Derleme çıktısını incele</translation>
     </message>
     <message>
         <source>ABS Configuration</source>
-        <translation>ABS Yapılandırması</translation>
+        <translation type="obsolete">ABS Yapılandırması</translation>
     </message>
     <message>
         <source>Use supfiles that match your current repositories</source>
-        <translation>Geçerli depolarla eşleşen supdosyaları kullan</translation>
+        <translation type="obsolete">Geçerli depolarla eşleşen supdosyaları kullan</translation>
     </message>
     <message>
         <source>Define supfiles manually</source>
-        <translation>Supdosyalarını elle tanımla</translation>
+        <translation type="obsolete">Supdosyalarını elle tanımla</translation>
     </message>
     <message>
         <source>Makepkg Configuration</source>
-        <translation>Makepkg Yapılandırması</translation>
+        <translation type="obsolete">Makepkg Yapılandırması</translation>
     </message>
     <message>
         <source>CFlags</source>
-        <translation>CFlags</translation>
+        <translation type="obsolete">CFlags</translation>
     </message>
     <message>
         <source>CXXFlags</source>
-        <translation>CXXFlags</translation>
+        <translation type="obsolete">CXXFlags</translation>
     </message>
     <message>
         <source>BuildEnv</source>
-        <translation>BuildEnv</translation>
+        <translation type="obsolete">BuildEnv</translation>
     </message>
     <message>
         <source>Options</source>
-        <translation>Seçenekler</translation>
+        <translation type="obsolete">Seçenekler</translation>
     </message>
     <message>
         <source>Doc_Dirs</source>
-        <translation>Doc_Dirs</translation>
+        <translation type="obsolete">Doc_Dirs</translation>
     </message>
     <message>
         <source>Build Environment</source>
-        <translation>Derleme Ortamı</translation>
+        <translation type="obsolete">Derleme Ortamı</translation>
     </message>
     <message>
         <source>Building Path</source>
-        <translation>Derleme Yolu</translation>
+        <translation type="obsolete">Derleme Yolu</translation>
     </message>
     <message>
         <source>Remove installed makedepends after build</source>
-        <translation>Yüklenmiş derleme bağımlılıklarını derleme işleminden sonra kaldır</translation>
+        <translation type="obsolete">Yüklenmiş derleme bağımlılıklarını derleme işleminden sonra kaldır</translation>
     </message>
     <message>
         <source>Clean Build Environment after installation</source>
-        <translation>Yüklemeden sonra derleme ortamını temizle</translation>
+        <translation type="obsolete">Yüklemeden sonra derleme ortamını temizle</translation>
     </message>
     <message>
         <source>Advanced</source>
@@ -675,55 +730,55 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>min</source>
         <comment>As in &quot;minutes&quot;</comment>
-        <translation>dk</translation>
+        <translation type="obsolete">dk</translation>
     </message>
     <message>
         <source>Show tray notification Windows</source>
-        <translation>Sistem Çubuğu Bilgi Pencereleri Göster</translation>
+        <translation type="obsolete">Sistem Çubuğu Bilgi Pencereleri Göster</translation>
     </message>
     <message>
         <source>Use a proxy-server</source>
-        <translation>Bir proksi-sunucusu kullan</translation>
+        <translation type="obsolete">Bir proksi-sunucusu kullan</translation>
     </message>
     <message>
         <source>IP:</source>
-        <translation>IP:</translation>
+        <translation type="obsolete">IP:</translation>
     </message>
     <message>
         <source>Port:</source>
-        <translation>Port:</translation>
+        <translation type="obsolete">Port:</translation>
     </message>
     <message>
         <source>HTTP Proxy</source>
-        <translation>HTTP Proksi</translation>
+        <translation type="obsolete">HTTP Proksi</translation>
     </message>
     <message>
         <source>FTP Proxy</source>
-        <translation>FTP Proksi</translation>
+        <translation type="obsolete">FTP Proksi</translation>
     </message>
     <message>
         <source>Use Shaman RSS Capabilities</source>
-        <translation>Shaman&apos;ın RSS Yeteneklerini Kullan</translation>
+        <translation type="obsolete">Shaman&apos;ın RSS Yeteneklerini Kullan</translation>
     </message>
     <message>
         <source>Update RSS Feed Every</source>
-        <translation>RSS Beslemesini şu kadar sürede bi güncelle</translation>
+        <translation type="obsolete">RSS Beslemesini şu kadar sürede bi güncelle</translation>
     </message>
     <message>
         <source>Notify upon new items</source>
-        <translation>Yeni haberlerde uyar</translation>
+        <translation type="obsolete">Yeni haberlerde uyar</translation>
     </message>
     <message>
         <source>Check if there is an unread news about a package in Queue before processing it</source>
-        <translation>Sıradaki bir paket hakkında, sıra işlenmeden önce, okunmamış bir haber olup olmadığını denetle</translation>
+        <translation type="obsolete">Sıradaki bir paket hakkında, sıra işlenmeden önce, okunmamış bir haber olup olmadığını denetle</translation>
     </message>
     <message>
         <source>Use SysLog</source>
-        <translation>SysLog Kullan</translation>
+        <translation type="obsolete">SysLog Kullan</translation>
     </message>
     <message>
         <source>Log File:</source>
-        <translation>Kayıt Dosyası:</translation>
+        <translation type="obsolete">Kayıt Dosyası:</translation>
     </message>
     <message>
         <source>Ok</source>
@@ -739,15 +794,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Interface</source>
-        <translation>Arayüz</translation>
+        <translation type="obsolete">Arayüz</translation>
     </message>
     <message>
         <source>Start Shaman Automatically on X Startup</source>
-        <translation>Shaman&apos;ı otomatik olarak X başlangıcında çaılştır</translation>
+        <translation type="obsolete">Shaman&apos;ı otomatik olarak X başlangıcında çaılştır</translation>
     </message>
     <message>
         <source>Forbid starting Shaman as root</source>
-        <translation>Shaman&apos;ın kök yetkileriyle çalışmasını yasakla</translation>
+        <translation type="obsolete">Shaman&apos;ın kök yetkileriyle çalışmasını yasakla</translation>
     </message>
     <message>
         <source>Saving Configuration</source>
@@ -797,55 +852,55 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>RSync Server:</source>
-        <translation>RSync Sunucusu:</translation>
+        <translation type="obsolete">RSync Sunucusu:</translation>
     </message>
     <message>
         <source>Update Database at</source>
-        <translation>Veritabanını güncelle</translation>
+        <translation type="obsolete">Veritabanını güncelle</translation>
     </message>
     <message>
         <source>Use Animated Tray Icon</source>
-        <translation>Hareketli sistem çubuğu simgesi kullan</translation>
+        <translation type="obsolete">Hareketli sistem çubuğu simgesi kullan</translation>
     </message>
     <message>
         <source>KDEMod 4 Repository</source>
-        <translation>KDEMod 4 Deposu</translation>
+        <translation type="obsolete">KDEMod 4 Deposu</translation>
     </message>
     <message>
         <source>KDEMod 4 Extragear Repository</source>
-        <translation>KDEMod 4 Extragear Deposu</translation>
+        <translation type="obsolete">KDEMod 4 Extragear Deposu</translation>
     </message>
     <message>
         <source>KDEMod 4 Playground Repository</source>
-        <translation>KDEMod 4 Playground Deposu</translation>
+        <translation type="obsolete">KDEMod 4 Playground Deposu</translation>
     </message>
     <message>
         <source>KDEMod 4 Testing Repository</source>
-        <translation>KDEMod 4 Testing Deposu</translation>
+        <translation type="obsolete">KDEMod 4 Testing Deposu</translation>
     </message>
     <message>
         <source>KDEMod 4 Unstable Repository (Testers only!)</source>
-        <translation>KDEMod 4 Unstable Deposu (Sadece denemek isteyenler için)</translation>
+        <translation type="obsolete">KDEMod 4 Unstable Deposu (Sadece denemek isteyenler için)</translation>
     </message>
     <message>
         <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones. Please note that packages from Unstable and Testing may break your system.</source>
-        <translation>Burada Arh Linux&apos; un resmi depolarından birini seçebilirsiniz. Lütfen, Unstable ve Testing depolarından gelen paketlerin sisteminizi bozabileceğini unutmayın.</translation>
+        <translation type="obsolete">Burada Arh Linux&apos; un resmi depolarından birini seçebilirsiniz. Lütfen, Unstable ve Testing depolarından gelen paketlerin sisteminizi bozabileceğini unutmayın.</translation>
     </message>
     <message>
         <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme, and lots of addons, KDEMod is the best way to taste the ease and the power of KDE with the simplicity and the power of Arch.</source>
-        <translation>KDEMod, KDE&apos; nin geliştirilmiş bir sürümü olup sadece Arch&apos; a özeldir. Arch Linux standart Qt paketi ile uyumlu geliştirilmiş bir Qt paketi, gelişmiş bir tema ve daha fazla eklenti sunar. KDEMod, Arch&apos; ın basitlik ve gücüyle birlikte KDE&apos; nin güç ve tadını en iyi şekilde deneyimleme yoludur.</translation>
+        <translation type="obsolete">KDEMod, KDE&apos; nin geliştirilmiş bir sürümü olup sadece Arch&apos; a özeldir. Arch Linux standart Qt paketi ile uyumlu geliştirilmiş bir Qt paketi, gelişmiş bir tema ve daha fazla eklenti sunar. KDEMod, Arch&apos; ın basitlik ve gücüyle birlikte KDE&apos; nin güç ve tadını en iyi şekilde deneyimleme yoludur.</translation>
     </message>
     <message>
         <source>You can extend your packages choice by adding other repositories. Third-Party Repositories act just as normal ones, and will be accessible through both Shaman and Pacman.</source>
-        <translation>Paket seçimlerinizi diğer depoları ekleyerek arttırabilirsiniz. Üçüncü-Kişi Depolarına normal depolar gibi Shaman ve Pacman aracılığıyla ulaşılabilir.</translation>
+        <translation type="obsolete">Paket seçimlerinizi diğer depoları ekleyerek arttırabilirsiniz. Üçüncü-Kişi Depolarına normal depolar gibi Shaman ve Pacman aracılığıyla ulaşılabilir.</translation>
     </message>
     <message>
         <source>Use the following language:</source>
-        <translation>Şu dili kullan:</translation>
+        <translation type="obsolete">Şu dili kullan:</translation>
     </message>
     <message>
         <source>Disable Tray Icon</source>
-        <translation>Sistem tablası simgesini devredışı bırak</translation>
+        <translation type="obsolete">Sistem tablası simgesini devredışı bırak</translation>
     </message>
     <message>
         <source>Database optimized successfully!</source>
@@ -868,24 +923,15 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>Apply</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Add another server</source>
+        <source>Shaman Configuration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Repository Order</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Please order your repositories to define which one will be preferred over another.</source>
+        <source>Aqpm Configuration</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1009,17 +1055,25 @@ Artık mirrorlist için yerini aldı.</translation>
         <source>Please order your repositories to define which one will be preferred over another.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished">Hata</translation>
+    </message>
+    <message>
+        <source>There has been a problem while saving the configuration!</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>EditPBuild</name>
     <message>
         <source>Saving</source>
-        <translation>Kaydediliyor</translation>
+        <translation type="obsolete">Kaydediliyor</translation>
     </message>
     <message>
         <source>You modified this PKGBUILD.
 Do you want to save it?</source>
-        <translation>Bu PKGBUILD&apos;i değiştirdiniz.
+        <translation type="obsolete">Bu PKGBUILD&apos;i değiştirdiniz.
 Kaydetmek ister misiniz?</translation>
     </message>
 </context>
@@ -2094,7 +2148,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf@kdemod.ath.cx&amp;gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Qt üzerinde bir libalpm ön yüzü&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Lisans: GPLv2+&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Libalpm Sürümü: v.%1&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="obsolete">&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Qt üzerinde bir libalpm ön yüzü&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Lisans: GPLv2+&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Libalpm Sürümü: v.%1&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Name</source>
@@ -2125,11 +2179,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Replace %1 with %2/%3?</source>
         <translation type="unfinished">%1, %2/%3 ile değiştirilsin mi?</translation>
-    </message>
-    <message>
-        <source>%1 conflicts with %2.
-Remove %2?</source>
-        <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
         <source>The following package(s) cannot be upgraded due to unresolvable dependencies:
@@ -2167,6 +2216,15 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008-2009 Dario Freddi &amp;lt;drf@chakra-project.org&amp;gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@chakra-project.org&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 conflicts with %2.
+Remove %1?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Updating ABS tree</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2262,11 +2320,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Pacman Database Optimized Successfully!</source>
-        <translation>Pacman Veritabanı başarıyla İyileştirildi!</translation>
+        <translation type="obsolete">Pacman Veritabanı başarıyla İyileştirildi!</translation>
     </message>
     <message>
         <source>Could not Optimize Pacman Database!</source>
-        <translation>Pacman Veritabanı iyileştirilemiyor!</translation>
+        <translation type="obsolete">Pacman Veritabanı iyileştirilemiyor!</translation>
     </message>
     <message>
         <source>Running sync...</source>
@@ -2417,7 +2475,7 @@ Başka bir uygulama kilitlemiş olabilir.</translation>
         <source>Pacman is not updated.
 Shaman needs libalpm &gt;= 2.1.0 to run.
 Yours is %1. Please update Pacman.</source>
-        <translation>Pacman güncellenmedi.
+        <translation type="obsolete">Pacman güncellenmedi.
 Shaman libalpm &gt;= 2.1.0 gerektirir.
 Sizinki %1. Lütfen Pacman&apos;ı güncelleyin.</translation>
     </message>
@@ -2519,6 +2577,10 @@ okuyabilirsiniz.</translation>
     </message>
     <message>
         <source>Shaman can not be started as root. Please restart it as unprivileged user.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Apply</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2848,6 +2910,159 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ShamanGeneralConfig</name>
+    <message>
+        <source>Favourite Actions</source>
+        <translation type="unfinished">Sık Kullanılan Eylemler</translation>
+    </message>
+    <message>
+        <source>When Upgrading System:</source>
+        <translation type="unfinished">Sistem Yükseltilirken:</translation>
+    </message>
+    <message>
+        <source>Upgrade Immediately</source>
+        <translation type="unfinished">Derhal Yükselt</translation>
+    </message>
+    <message>
+        <source>Add Upgradeable Packages To Queue</source>
+        <translation type="unfinished">Yükseltilebilir Paketleri Sıraya Ekle</translation>
+    </message>
+    <message>
+        <source>Ask</source>
+        <translation type="unfinished">Sor</translation>
+    </message>
+    <message>
+        <source>When Processing Queue</source>
+        <translation type="unfinished">Sıra İşlenirken</translation>
+    </message>
+    <message>
+        <source>Keep application running in System Tray only</source>
+        <translation type="unfinished">Yazılımı sadece Sistem Çubuğunda çalıştır</translation>
+    </message>
+    <message>
+        <source>GUI Startup</source>
+        <translation type="unfinished">ARAYÜZ Başlangıcı</translation>
+    </message>
+    <message>
+        <source>Start in the System Tray</source>
+        <translation type="unfinished">Sistem Çubuğunda başlat</translation>
+    </message>
+    <message>
+        <source>Show Splashscreen</source>
+        <translation type="unfinished">Karşılama Ekranı Göster</translation>
+    </message>
+    <message>
+        <source>Use the following language:</source>
+        <translation type="unfinished">Şu dili kullan:</translation>
+    </message>
+    <message>
+        <source>Disable Tray Icon</source>
+        <translation type="unfinished">Sistem tablası simgesini devredışı bırak</translation>
+    </message>
+    <message>
+        <source>Maintenance</source>
+        <translation type="unfinished">Bakım</translation>
+    </message>
+    <message>
+        <source>Process Selected</source>
+        <translation type="unfinished">Seçilen İşlem</translation>
+    </message>
+    <message>
+        <source>Waiting</source>
+        <comment>Waiting for a user action</comment>
+        <translation type="unfinished">Kullanıcı Bekleniyor</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:7pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clean Unused Databases</source>
+        <translation type="unfinished">Kullanılmayan Veritabanlarını Temizle</translation>
+    </message>
+    <message>
+        <source>Clean Cache</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Empty Cache</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Optimize Pacman Database</source>
+        <translation type="unfinished">Pacman Veritabanını İyileştir</translation>
+    </message>
+    <message>
+        <source>Clean All Building Environments</source>
+        <translation type="unfinished">Tüm Derleme Ortamlarını Temizle</translation>
+    </message>
+    <message>
+        <source>Cleaning up unused Databases...</source>
+        <translation type="unfinished">Kullanılmayan Veritabanları temizleniyor...</translation>
+    </message>
+    <message>
+        <source>Cleaning up Cache...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Deleting Cache...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Optimizing Pacman Database...</source>
+        <translation type="unfinished">Pacman Veritabanı İyileştiriliyor...</translation>
+    </message>
+    <message>
+        <source>Cleaning up building Environments...</source>
+        <translation type="unfinished">Derleme Ortamları temizleniyor...</translation>
+    </message>
+    <message>
+        <source>Unused Databases Cleaned up successfully!</source>
+        <translation type="unfinished">Kullanılmayan Veritabanları başarıyla Temizlendi!</translation>
+    </message>
+    <message>
+        <source>Cleaning up Unused Databases Failed!</source>
+        <translation type="unfinished">Kullanılmayan Veritabanlarını Silme Başarısız!</translation>
+    </message>
+    <message>
+        <source>Cache Cleaned Up Successfully!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cleaning up Cache Failed!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cache Successfully Deleted!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Deleting Cache Failed!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Build Environments Successfully Cleaned!</source>
+        <translation type="unfinished">Derleme Ortamları Başarıyla Temizlendi!</translation>
+    </message>
+    <message>
+        <source>Could not clean Build Environments!!</source>
+        <translation type="unfinished">Derleme Ortamları Temizlenemiyor!</translation>
+    </message>
+    <message>
+        <source>Database optimized successfully!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Could not optimize database!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3244,7 +3459,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Editing PKGBUILD of:</source>
-        <translation>Şunun PKGBUILD&apos;i düzenleniyor:</translation>
+        <translation type="obsolete">Şunun PKGBUILD&apos;i düzenleniyor:</translation>
     </message>
     <message>
         <source>Save</source>
@@ -3267,7 +3482,42 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Edit PKGBUILD&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;PKGBUILD Düzenle&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="obsolete">&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;PKGBUILD Düzenle&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>Editing:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PKGBUILD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MakePkg options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ignore arch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Skip integrity checks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ignore dependency control</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hold version if this is a development PKGBUILD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Edit Package build options&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3501,11 +3751,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Review PKGBUILDs</source>
-        <translation>PKGBUILD&apos;leri gözden geçir</translation>
+        <translation type="obsolete">PKGBUILD&apos;leri gözden geçir</translation>
     </message>
     <message>
         <source>Process From Source</source>
         <translation>Kaynaktan İşle</translation>
+    </message>
+    <message>
+        <source>Review Build options</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

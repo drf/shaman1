@@ -25,20 +25,75 @@
     </message>
 </context>
 <context>
+    <name>AqpmConfig</name>
+    <message>
+        <source>Packages and Paths</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>IgnorePkgs:</source>
+        <translation type="unfinished">IgnorePkgs:</translation>
+    </message>
+    <message>
+        <source>IgnoreGroups:</source>
+        <translation type="unfinished">IgnoreGroups:</translation>
+    </message>
+    <message>
+        <source>NoUpgrade:</source>
+        <translation type="unfinished">NoUpgrade:</translation>
+    </message>
+    <message>
+        <source>NoExtract:</source>
+        <translation type="unfinished">NoExtract:</translation>
+    </message>
+    <message>
+        <source>Log File:</source>
+        <translation type="unfinished">Αρχείο Log:</translation>
+    </message>
+    <message>
+        <source>Advanced</source>
+        <translation type="unfinished">Προχωρημένες</translation>
+    </message>
+    <message>
+        <source>Use SysLog</source>
+        <translation type="unfinished">Χρήση SysLog</translation>
+    </message>
+    <message>
+        <source>Use Deltas (needs xdelta to be installed)</source>
+        <translation type="unfinished">Χρήση Deltas (χρειάζεται να είναι εγκατεστημένο το xdelta)</translation>
+    </message>
+    <message>
+        <source>Aqpm Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use multi-server download (EXPERIMENTAL)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished">Σφάλμα</translation>
+    </message>
+    <message>
+        <source>There has been a problem while saving the configuration!</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>BuildingDialog</name>
     <message>
         <source>Error</source>
-        <translation>Σφάλμα</translation>
+        <translation type="obsolete">Σφάλμα</translation>
     </message>
     <message>
         <source>Would you like to abort building?.
 All Process will be lost.</source>
-        <translation>Θέλετε να ακυρώσετε το χτίσιμο;
+        <translation type="obsolete">Θέλετε να ακυρώσετε το χτίσιμο;
 Όλη η διεργασία θα χαθεί.</translation>
     </message>
     <message>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Building Process Aborted by the User. Building Failed.&lt;/b&gt;</source>
-        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Η διεργασία χτισίματος ακυρώθηκε απ&apos;τον χρήστη. Το χτίσιμο απέτυχε.&lt;/b&gt;</translation>
+        <translation type="obsolete">&lt;br&gt;&lt;br&gt;&lt;b&gt;Η διεργασία χτισίματος ακυρώθηκε απ&apos;τον χρήστη. Το χτίσιμο απέτυχε.&lt;/b&gt;</translation>
     </message>
     <message>
         <source>Updating ABS Tree...</source>
@@ -50,47 +105,47 @@ All Process will be lost.</source>
     </message>
     <message>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;ABS Tree Was Successfully Updated!&lt;/b&gt;</source>
-        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Ο κατάλογος ABS ενημερώθηκε με επιτυχία!&lt;/b&gt;</translation>
+        <translation type="obsolete">&lt;br&gt;&lt;br&gt;&lt;b&gt;Ο κατάλογος ABS ενημερώθηκε με επιτυχία!&lt;/b&gt;</translation>
     </message>
     <message>
         <source>ABS Update</source>
-        <translation>Ενημέρωση ABS</translation>
+        <translation type="obsolete">Ενημέρωση ABS</translation>
     </message>
     <message>
         <source>Your ABS Tree was updated!</source>
-        <translation>Ο κατάλογος ABS ενημερώθηκε!</translation>
+        <translation type="obsolete">Ο κατάλογος ABS ενημερώθηκε!</translation>
     </message>
     <message>
         <source>&lt;b&gt;Building %1 failed!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;Το χτίσιμο του πακέτου %1 απέτυχε!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Το χτίσιμο του πακέτου %1 απέτυχε!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <source>&lt;b&gt;%1 was built successfully!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;Το πακέτο %1 χτίστηκε με επιτυχία!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Το πακέτο %1 χτίστηκε με επιτυχία!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <source>Processing Package %1 of %2...</source>
-        <translation>Επεξεργασία πακέτου %1 από %2...</translation>
+        <translation type="obsolete">Επεξεργασία πακέτου %1 από %2...</translation>
     </message>
     <message>
         <source>Building %1...</source>
-        <translation>Χτίσιμο του %1...</translation>
+        <translation type="obsolete">Χτίσιμο του %1...</translation>
     </message>
     <message>
         <source>&lt;b&gt;Building %1...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;Χτίσιμο του %1...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Χτίσιμο του %1...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <source>&lt;b&gt;Building operation has started.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;Η διεργασία χτισίματος ξεκίνησε.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Η διεργασία χτισίματος ξεκίνησε.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <source>&lt;b&gt;Could not set up the environment correctly for %1!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;Το στήσιμο του περιβάλλοντος δεν ήταν δυνατό για το %1!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Το στήσιμο του περιβάλλοντος δεν ήταν δυνατό για το %1!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <source>Could not update the ABS Tree!</source>
-        <translation>Η ενημέρωση του ABS καταλόγου ήταν αδύνατη.</translation>
+        <translation type="obsolete">Η ενημέρωση του ABS καταλόγου ήταν αδύνατη.</translation>
     </message>
 </context>
 <context>
@@ -98,24 +153,24 @@ All Process will be lost.</source>
     <message>
         <source>You need to have ABS installed to use Shaman&apos;s
 building feature. Do you want to install it now?</source>
-        <translation>Πρέπει να έχετε εγκατεστημένο το ABS για να μπορείτε
+        <translation type="obsolete">Πρέπει να έχετε εγκατεστημένο το ABS για να μπορείτε
 να χτίσετε πακέτα με το Shaman. Εγκατάσταση τώρα;</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation>Σφάλμα</translation>
+        <translation type="obsolete">Σφάλμα</translation>
     </message>
     <message>
         <source>You can not remove packages when processing
 your queue from Source</source>
-        <translation>Δεν μπορείτε να αφαιρέσετε πακέτα όταν γίνεται
+        <translation type="obsolete">Δεν μπορείτε να αφαιρέσετε πακέτα όταν γίνεται
 επεξεργασία της ουράς από την Πηγή</translation>
     </message>
     <message>
         <source>Some of your packages do not belong to Arch
 Linux&apos;s official repository. Shaman is able to
 build packages from official sources only.</source>
-        <translation>Κάποια από τα πακέτα σας δεν ανήκουν στα επίσημα
+        <translation type="obsolete">Κάποια από τα πακέτα σας δεν ανήκουν στα επίσημα
 repositories του Arch Linux. Το Shaman μπορεί να χτίσει
 πακέτα μόνο από τις επίσημες πηγές.</translation>
     </message>
@@ -129,33 +184,33 @@ repositories του Arch Linux. Το Shaman μπορεί να χτίσει
     </message>
     <message>
         <source>To be Installed</source>
-        <translation>Προς Εγκατάσταση</translation>
+        <translation type="obsolete">Προς Εγκατάσταση</translation>
     </message>
     <message>
         <source>To be Upgraded</source>
-        <translation>Προς Αναβάθμιση</translation>
+        <translation type="obsolete">Προς Αναβάθμιση</translation>
     </message>
     <message>
         <source>Package Building</source>
-        <translation>Χτίσιμο Πακέτου</translation>
+        <translation type="obsolete">Χτίσιμο Πακέτου</translation>
     </message>
     <message>
         <source>Your Packages failed to build!</source>
-        <translation>Το χτίσιμο των πακέτων σας απέτυχε!</translation>
+        <translation type="obsolete">Το χτίσιμο των πακέτων σας απέτυχε!</translation>
     </message>
     <message>
         <source>Your packages Failed to Build.
 Look at the output for more details.</source>
-        <translation>Το χτίσιμο των πακέτων σας απέτυχε.
+        <translation type="obsolete">Το χτίσιμο των πακέτων σας απέτυχε.
 Κοιτάξτε τα μηνύματα εξόδου για λεπτομέρειες.</translation>
     </message>
     <message>
         <source>Close</source>
-        <translation>Κλείσιμο</translation>
+        <translation type="obsolete">Κλείσιμο</translation>
     </message>
     <message>
         <source>Building Packages Failed!!</source>
-        <translation>Το χτίσιμο των πακέτων σας απέτυχε!!</translation>
+        <translation type="obsolete">Το χτίσιμο των πακέτων σας απέτυχε!!</translation>
     </message>
     <message>
         <source>Shaman - Idle</source>
@@ -164,24 +219,24 @@ Look at the output for more details.</source>
     <message>
         <source>Some packages failed to build.
 Do you want to proceed anyway?</source>
-        <translation>Κάποια πακέτα απέτυχαν να χτιστούν.
+        <translation type="obsolete">Κάποια πακέτα απέτυχαν να χτιστούν.
 Θέλετε να συνεχίσετε;</translation>
     </message>
     <message>
         <source>Install Built Packages</source>
-        <translation>Εγκατάσταση Χτισμένων Πακέτων</translation>
+        <translation type="obsolete">Εγκατάσταση Χτισμένων Πακέτων</translation>
     </message>
     <message>
         <source>Close Without Installing</source>
-        <translation>Κλείσιμο χωρίς εγκατάσταση</translation>
+        <translation type="obsolete">Κλείσιμο χωρίς εγκατάσταση</translation>
     </message>
     <message>
         <source>Packages Built Successfully!</source>
-        <translation>Τα πακέτα χτίστηκαν με επιτυχία!</translation>
+        <translation type="obsolete">Τα πακέτα χτίστηκαν με επιτυχία!</translation>
     </message>
     <message>
         <source>Your Packages have been built successfully, and are ready to be installed</source>
-        <translation>Τα πακέτα σας χτίστηκαν με επιτυχία και είναι έτοιμα για εγκατάσταση</translation>
+        <translation type="obsolete">Τα πακέτα σας χτίστηκαν με επιτυχία και είναι έτοιμα για εγκατάσταση</translation>
     </message>
     <message>
         <source>Shaman - Processing</source>
@@ -189,7 +244,7 @@ Do you want to proceed anyway?</source>
     </message>
     <message numerus="yes">
         <source>You are about to install &lt;b&gt;%n package(s)&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             <numerusform>
             </numerusform>
         </translation>
@@ -252,47 +307,47 @@ Do you want to delete it?</source>
     </message>
     <message>
         <source>Favourite Actions</source>
-        <translation>Αγαπημένες Ενέργειες</translation>
+        <translation type="obsolete">Αγαπημένες Ενέργειες</translation>
     </message>
     <message>
         <source>When Upgrading System:</source>
-        <translation>Όταν Αναβαθμίζετε το Σύστημα:</translation>
+        <translation type="obsolete">Όταν Αναβαθμίζετε το Σύστημα:</translation>
     </message>
     <message>
         <source>Upgrade Immediately</source>
-        <translation>Αναβαθμίστε Άμεσα</translation>
+        <translation type="obsolete">Αναβαθμίστε Άμεσα</translation>
     </message>
     <message>
         <source>Add Upgradeable Packages To Queue</source>
-        <translation>Προσθήκη αναβαθμίσιμων πακέτων στην Ουρά</translation>
+        <translation type="obsolete">Προσθήκη αναβαθμίσιμων πακέτων στην Ουρά</translation>
     </message>
     <message>
         <source>Ask</source>
-        <translation>Ερώτηση</translation>
+        <translation type="obsolete">Ερώτηση</translation>
     </message>
     <message>
         <source>When Processing Queue</source>
-        <translation>Όταν επεξεργάζεστε την Ουρά</translation>
+        <translation type="obsolete">Όταν επεξεργάζεστε την Ουρά</translation>
     </message>
     <message>
         <source>Keep application running in System Tray only</source>
-        <translation>Εμφάνιση εφαρμογής μόνο στο System Tray</translation>
+        <translation type="obsolete">Εμφάνιση εφαρμογής μόνο στο System Tray</translation>
     </message>
     <message>
         <source>GUI Startup</source>
-        <translation>Εκκίνηση του GUI</translation>
+        <translation type="obsolete">Εκκίνηση του GUI</translation>
     </message>
     <message>
         <source>Start in the System Tray</source>
-        <translation>Εκκίνηση στο System Tray</translation>
+        <translation type="obsolete">Εκκίνηση στο System Tray</translation>
     </message>
     <message>
         <source>When Application is in System Tray only</source>
-        <translation>Όταν η εφαρμογή εμφανίζεται μόνο στο System Tray</translation>
+        <translation type="obsolete">Όταν η εφαρμογή εμφανίζεται μόνο στο System Tray</translation>
     </message>
     <message>
         <source>Update Database every</source>
-        <translation>Ανανέωση της Βάσης Δεδομένων κάθε</translation>
+        <translation type="obsolete">Ανανέωση της Βάσης Δεδομένων κάθε</translation>
     </message>
     <message>
         <source>minutes</source>
@@ -300,63 +355,63 @@ Do you want to delete it?</source>
     </message>
     <message>
         <source>If upgrades are available:</source>
-        <translation>Εάν υπάρχουν αναβαθμίσεις:</translation>
+        <translation type="obsolete">Εάν υπάρχουν αναβαθμίσεις:</translation>
     </message>
     <message>
         <source>Just Notify</source>
-        <translation>Μόνο Ειδοποίηση</translation>
+        <translation type="obsolete">Μόνο Ειδοποίηση</translation>
     </message>
     <message>
         <source>Notify and add them to Queue</source>
-        <translation>Ειδοποίηση και προσθήκη στην Ουρά</translation>
+        <translation type="obsolete">Ειδοποίηση και προσθήκη στην Ουρά</translation>
     </message>
     <message>
         <source>Maintenance</source>
-        <translation>Συντήρηση</translation>
+        <translation type="obsolete">Συντήρηση</translation>
     </message>
     <message>
         <source>Checkable Options</source>
-        <translation>Διαθέσιμες Επιλογές</translation>
+        <translation type="obsolete">Διαθέσιμες Επιλογές</translation>
     </message>
     <message>
         <source>Use Active FTP</source>
-        <translation>Χρήση Ενεργού FTP</translation>
+        <translation type="obsolete">Χρήση Ενεργού FTP</translation>
     </message>
     <message>
         <source>Use Deltas (needs xdelta to be installed)</source>
-        <translation>Χρήση Deltas (χρειάζεται να είναι εγκατεστημένο το xdelta)</translation>
+        <translation type="obsolete">Χρήση Deltas (χρειάζεται να είναι εγκατεστημένο το xdelta)</translation>
     </message>
     <message>
         <source>Advanced Options</source>
-        <translation>Προχωρημένες Επιλογές</translation>
+        <translation type="obsolete">Προχωρημένες Επιλογές</translation>
     </message>
     <message>
         <source>HoldPkgs:</source>
-        <translation>HoldPkgs:</translation>
+        <translation type="obsolete">HoldPkgs:</translation>
     </message>
     <message>
         <source>IgnorePkgs:</source>
-        <translation>IgnorePkgs:</translation>
+        <translation type="obsolete">IgnorePkgs:</translation>
     </message>
     <message>
         <source>IgnoreGroups:</source>
-        <translation>IgnoreGroups:</translation>
+        <translation type="obsolete">IgnoreGroups:</translation>
     </message>
     <message>
         <source>NoUpgrade:</source>
-        <translation>NoUpgrade:</translation>
+        <translation type="obsolete">NoUpgrade:</translation>
     </message>
     <message>
         <source>NoExtract:</source>
-        <translation>NoExtract:</translation>
+        <translation type="obsolete">NoExtract:</translation>
     </message>
     <message>
         <source>XFerCommand: (example: /path/to/command %u) Blank for Default</source>
-        <translation>XFerCommand: (παράδειγμα: /path/to/command %u) Κενό για χρήση Προεπιλογής</translation>
+        <translation type="obsolete">XFerCommand: (παράδειγμα: /path/to/command %u) Κενό για χρήση Προεπιλογής</translation>
     </message>
     <message>
         <source>Arch Linux Official Repositories</source>
-        <translation>Επίσημα Repositories του Arch Linux</translation>
+        <translation type="obsolete">Επίσημα Repositories του Arch Linux</translation>
     </message>
     <message>
         <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones.
@@ -366,7 +421,7 @@ Please note that packages from Unstable and Testing may break your system.</sour
     </message>
     <message>
         <source>Server</source>
-        <translation>Server</translation>
+        <translation type="obsolete">Server</translation>
     </message>
     <message>
         <source>Mirror:</source>
@@ -378,7 +433,7 @@ Please note that packages from Unstable and Testing may break your system.</sour
     </message>
     <message>
         <source>KDEMod Repositories</source>
-        <translation>Repositories του KDEMod</translation>
+        <translation type="obsolete">Repositories του KDEMod</translation>
     </message>
     <message>
         <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an 
@@ -393,7 +448,7 @@ Arch Linux, βελτιωμένο θέμα εμφάνισης και πολλές
     </message>
     <message>
         <source>KDEMod 3 Repository</source>
-        <translation>Repository του KDEMod 3</translation>
+        <translation type="obsolete">Repository του KDEMod 3</translation>
     </message>
     <message>
         <source>KDEMod 4 Repository (Unstable, testers only)</source>
@@ -401,7 +456,7 @@ Arch Linux, βελτιωμένο θέμα εμφάνισης και πολλές
     </message>
     <message>
         <source>Third-Party Repositories</source>
-        <translation>Άλλα Repositories</translation>
+        <translation type="obsolete">Άλλα Repositories</translation>
     </message>
     <message>
         <source>You can extend your packages choice by adding other repositories. Third-Party 
@@ -417,7 +472,7 @@ Repositories τρίτων λειτουργούν όπως τα επίσημα κ
     </message>
     <message>
         <source>Add New Repository</source>
-        <translation>Προσθήκη νέου Repository</translation>
+        <translation type="obsolete">Προσθήκη νέου Repository</translation>
     </message>
     <message>
         <source>Edit Repository</source>
@@ -429,7 +484,7 @@ Repositories τρίτων λειτουργούν όπως τα επίσημα κ
     </message>
     <message>
         <source>Preferences</source>
-        <translation>Επιλογές</translation>
+        <translation type="obsolete">Επιλογές</translation>
     </message>
     <message>
         <source>Process all dependencies and queue from source first (recommended)</source>
@@ -437,59 +492,59 @@ Repositories τρίτων λειτουργούν όπως τα επίσημα κ
     </message>
     <message>
         <source>Review Building output before installing</source>
-        <translation>Ανασκόπιση του Χτισίματος πριν την εγκατάσταση</translation>
+        <translation type="obsolete">Ανασκόπιση του Χτισίματος πριν την εγκατάσταση</translation>
     </message>
     <message>
         <source>ABS Configuration</source>
-        <translation>Ρύθμιση του ABS</translation>
+        <translation type="obsolete">Ρύθμιση του ABS</translation>
     </message>
     <message>
         <source>Use supfiles that match your current repositories</source>
-        <translation>Χρήση supfiles που ταιριάζουν με τα repositories</translation>
+        <translation type="obsolete">Χρήση supfiles που ταιριάζουν με τα repositories</translation>
     </message>
     <message>
         <source>Define supfiles manually</source>
-        <translation>Καθορισμός supfiles χειροκίνητα</translation>
+        <translation type="obsolete">Καθορισμός supfiles χειροκίνητα</translation>
     </message>
     <message>
         <source>Makepkg Configuration</source>
-        <translation>Ρύθμιση του  Makepkg</translation>
+        <translation type="obsolete">Ρύθμιση του  Makepkg</translation>
     </message>
     <message>
         <source>CFlags</source>
-        <translation>CFlags</translation>
+        <translation type="obsolete">CFlags</translation>
     </message>
     <message>
         <source>CXXFlags</source>
-        <translation>CXXFlags</translation>
+        <translation type="obsolete">CXXFlags</translation>
     </message>
     <message>
         <source>BuildEnv</source>
-        <translation>BuildEnv</translation>
+        <translation type="obsolete">BuildEnv</translation>
     </message>
     <message>
         <source>Options</source>
-        <translation>Επιλογές</translation>
+        <translation type="obsolete">Επιλογές</translation>
     </message>
     <message>
         <source>Doc_Dirs</source>
-        <translation>Doc_Dirs</translation>
+        <translation type="obsolete">Doc_Dirs</translation>
     </message>
     <message>
         <source>Build Environment</source>
-        <translation>Περιβάλλον Χτισίματος</translation>
+        <translation type="obsolete">Περιβάλλον Χτισίματος</translation>
     </message>
     <message>
         <source>Building Path</source>
-        <translation>Διαδρομή Χτισίματος</translation>
+        <translation type="obsolete">Διαδρομή Χτισίματος</translation>
     </message>
     <message>
         <source>Remove installed makedepends after build</source>
-        <translation>Αφαίρεση των εξαρτήσεων χτισίματος μετά το χτίσιμο</translation>
+        <translation type="obsolete">Αφαίρεση των εξαρτήσεων χτισίματος μετά το χτίσιμο</translation>
     </message>
     <message>
         <source>Clean Build Environment after installation</source>
-        <translation>Καθαρισμός του Περιβάλλοντος Χτισίματος μετά την εγκατάσταση</translation>
+        <translation type="obsolete">Καθαρισμός του Περιβάλλοντος Χτισίματος μετά την εγκατάσταση</translation>
     </message>
     <message>
         <source>General</source>
@@ -614,12 +669,12 @@ It is now available in mirrorlist.</source>
     </message>
     <message>
         <source>Pacman Database Optimized Successfully!</source>
-        <translation>Η βελτιστοποίηση της Βάσης Δεδομένων του
+        <translation type="obsolete">Η βελτιστοποίηση της Βάσης Δεδομένων του
 Pacman πραγματοποιήθηκε με επιτυχία!</translation>
     </message>
     <message>
         <source>Could not Optimize Pacman Database!</source>
-        <translation>Η βελτιστοποίηση της Βάσης Δεδομένων
+        <translation type="obsolete">Η βελτιστοποίηση της Βάσης Δεδομένων
 του Pacman δεν ήταν δυνατή!</translation>
     </message>
     <message>
@@ -652,7 +707,7 @@ Pacman πραγματοποιήθηκε με επιτυχία!</translation>
     <message>
         <source>Waiting</source>
         <comment>Waiting for a user action</comment>
-        <translation>Αναμονή</translation>
+        <translation type="obsolete">Αναμονή</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -665,22 +720,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Core</source>
         <comment>Do not translate</comment>
-        <translation>Core</translation>
+        <translation type="obsolete">Core</translation>
     </message>
     <message>
         <source>Extra</source>
         <comment>Do not translate</comment>
-        <translation>Extra</translation>
+        <translation type="obsolete">Extra</translation>
     </message>
     <message>
         <source>Community</source>
         <comment>Do not translate</comment>
-        <translation>Community</translation>
+        <translation type="obsolete">Community</translation>
     </message>
     <message>
         <source>Testing</source>
         <comment>Do not translate</comment>
-        <translation>Testing</translation>
+        <translation type="obsolete">Testing</translation>
     </message>
     <message>
         <source>Unstable</source>
@@ -690,15 +745,15 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Running sync...</source>
         <comment>sync is a command, so it should not be translated</comment>
-        <translation>Εκτέλεση του sync...</translation>
+        <translation type="obsolete">Εκτέλεση του sync...</translation>
     </message>
     <message>
         <source>Show Splashscreen</source>
-        <translation>Εμφάνιση Εικόνας Εκκίνησης</translation>
+        <translation type="obsolete">Εμφάνιση Εικόνας Εκκίνησης</translation>
     </message>
     <message>
         <source>Process all dependencies and queue from binary first (recommended)</source>
-        <translation>Επεξεργασία όλων των εξαρτήσεων και ουρών πρώτα από έτοιμα πακέτα (προτείνεται)</translation>
+        <translation type="obsolete">Επεξεργασία όλων των εξαρτήσεων και ουρών πρώτα από έτοιμα πακέτα (προτείνεται)</translation>
     </message>
     <message>
         <source>Advanced</source>
@@ -706,56 +761,56 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Use SysLog</source>
-        <translation>Χρήση SysLog</translation>
+        <translation type="obsolete">Χρήση SysLog</translation>
     </message>
     <message>
         <source>Log File:</source>
-        <translation>Αρχείο Log:</translation>
+        <translation type="obsolete">Αρχείο Log:</translation>
     </message>
     <message>
         <source>min</source>
         <comment>As in &quot;minutes&quot;</comment>
-        <translation>λεπτά</translation>
+        <translation type="obsolete">λεπτά</translation>
     </message>
     <message>
         <source>Show tray notification Windows</source>
-        <translation>Εμφάνιση παραθύρων ειδοποίησης στο tray</translation>
+        <translation type="obsolete">Εμφάνιση παραθύρων ειδοποίησης στο tray</translation>
     </message>
     <message>
         <source>Use a proxy-server</source>
-        <translation>Χρήση proxy-server</translation>
+        <translation type="obsolete">Χρήση proxy-server</translation>
     </message>
     <message>
         <source>IP:</source>
-        <translation>IP:</translation>
+        <translation type="obsolete">IP:</translation>
     </message>
     <message>
         <source>Port:</source>
-        <translation>Port:</translation>
+        <translation type="obsolete">Port:</translation>
     </message>
     <message>
         <source>HTTP Proxy</source>
-        <translation>HTTP Proxy</translation>
+        <translation type="obsolete">HTTP Proxy</translation>
     </message>
     <message>
         <source>FTP Proxy</source>
-        <translation>FTP Proxy</translation>
+        <translation type="obsolete">FTP Proxy</translation>
     </message>
     <message>
         <source>Use Shaman RSS Capabilities</source>
-        <translation>Χρήση λειτουργιών RSS του Shaman</translation>
+        <translation type="obsolete">Χρήση λειτουργιών RSS του Shaman</translation>
     </message>
     <message>
         <source>Update RSS Feed Every</source>
-        <translation>Ανανέωση του RSS κάθε</translation>
+        <translation type="obsolete">Ανανέωση του RSS κάθε</translation>
     </message>
     <message>
         <source>Notify upon new items</source>
-        <translation>Ειδοποίηση για νέα αντικείμενα</translation>
+        <translation type="obsolete">Ειδοποίηση για νέα αντικείμενα</translation>
     </message>
     <message>
         <source>Check if there is an unread news about a package in Queue before processing it</source>
-        <translation>Έλεγχος για αδιάβαστα νέα των πακέτων ουράς πριν αυτά επεξεργαστούν</translation>
+        <translation type="obsolete">Έλεγχος για αδιάβαστα νέα των πακέτων ουράς πριν αυτά επεξεργαστούν</translation>
     </message>
     <message>
         <source>Ok</source>
@@ -771,15 +826,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Interface</source>
-        <translation>Περιβάλλον</translation>
+        <translation type="obsolete">Περιβάλλον</translation>
     </message>
     <message>
         <source>Start Shaman Automatically on X Startup</source>
-        <translation>Αυτόματη εκκίνηση του Shaman όταν ξεκινάει ο Χ</translation>
+        <translation type="obsolete">Αυτόματη εκκίνηση του Shaman όταν ξεκινάει ο Χ</translation>
     </message>
     <message>
         <source>Forbid starting Shaman as root</source>
-        <translation>Απαγόρευση εκκίνησης του Shaman ως root</translation>
+        <translation type="obsolete">Απαγόρευση εκκίνησης του Shaman ως root</translation>
     </message>
     <message>
         <source>Saving Configuration</source>
@@ -832,65 +887,65 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>RSync Server:</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>Update Database at</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>Use Animated Tray Icon</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>KDEMod 4 Repository</source>
-        <translation type="unfinished">Repository του KDEMod 3 {4 ?}</translation>
+        <translation type="obsolete">Repository του KDEMod 3 {4 ?}</translation>
     </message>
     <message>
         <source>KDEMod 4 Extragear Repository</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>KDEMod 4 Playground Repository</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>KDEMod 4 Testing Repository</source>
-        <translation type="unfinished">KDEMod 3 Testing Repository {4 ?}</translation>
+        <translation type="obsolete">KDEMod 3 Testing Repository {4 ?}</translation>
     </message>
     <message>
         <source>KDEMod 4 Unstable Repository (Testers only!)</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones. Please note that packages from Unstable and Testing may break your system.</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme, and lots of addons, KDEMod is the best way to taste the ease and the power of KDE with the simplicity and the power of Arch.</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>You can extend your packages choice by adding other repositories. Third-Party Repositories act just as normal ones, and will be accessible through both Shaman and Pacman.</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>Use the following language:</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>Disable Tray Icon</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
@@ -914,24 +969,15 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>Apply</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Add another server</source>
+        <source>Shaman Configuration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Repository Order</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Please order your repositories to define which one will be preferred over another.</source>
+        <source>Aqpm Configuration</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1057,17 +1103,25 @@ It is now available in mirrorlist.</source>
         <source>Please order your repositories to define which one will be preferred over another.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished">Σφάλμα</translation>
+    </message>
+    <message>
+        <source>There has been a problem while saving the configuration!</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>EditPBuild</name>
     <message>
         <source>Saving</source>
-        <translation>Αποθήκευση</translation>
+        <translation type="obsolete">Αποθήκευση</translation>
     </message>
     <message>
         <source>You modified this PKGBUILD.
 Do you want to save it?</source>
-        <translation>Επεξεργαστήκατε το PKGBUILD.
+        <translation type="obsolete">Επεξεργαστήκατε το PKGBUILD.
 Θέλετε να το αποθηκεύσετε;</translation>
     </message>
 </context>
@@ -2321,7 +2375,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf@kdemod.ath.cx&amp;gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
@@ -2355,11 +2409,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Replace %1 with %2/%3?</source>
         <translation type="unfinished">Αντικατάσταση του πακέτου %1 με %2/%3;</translation>
-    </message>
-    <message>
-        <source>%1 conflicts with %2.
-Remove %2?</source>
-        <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
         <source>The following package(s) cannot be upgraded due to unresolvable dependencies:
@@ -2397,6 +2446,15 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008-2009 Dario Freddi &amp;lt;drf@chakra-project.org&amp;gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@chakra-project.org&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 conflicts with %2.
+Remove %1?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Updating ABS tree</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2495,12 +2553,12 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Pacman Database Optimized Successfully!</source>
-        <translation type="unfinished">Η βελτιστοποίηση της Βάσης Δεδομένων του
+        <translation type="obsolete">Η βελτιστοποίηση της Βάσης Δεδομένων του
 Pacman πραγματοποιήθηκε με επιτυχία!</translation>
     </message>
     <message>
         <source>Could not Optimize Pacman Database!</source>
-        <translation type="unfinished">Η βελτιστοποίηση της Βάσης Δεδομένων
+        <translation type="obsolete">Η βελτιστοποίηση της Βάσης Δεδομένων
 του Pacman δεν ήταν δυνατή!</translation>
     </message>
     <message>
@@ -2654,7 +2712,7 @@ Thanks again, and enjoy your translation!</comment>
         <source>Pacman is not updated.
 Shaman needs libalpm &gt;= 2.1.0 to run.
 Yours is %1. Please update Pacman.</source>
-        <translation>Το Pacman δεν βρίσκεται στην τελευταία έκδοση.
+        <translation type="obsolete">Το Pacman δεν βρίσκεται στην τελευταία έκδοση.
 Το Shaman χρειάζεται το libalpm, έκδοση &gt;= 2.1.0 για να τρέξει.
 Η έκδοσή σας είναι η %1. Παρακαλώ αναβαθμίστε το Pacman.</translation>
     </message>
@@ -2762,6 +2820,10 @@ chown root shaman &amp;&amp; chmod u+s shaman.
     </message>
     <message>
         <source>Shaman can not be started as root. Please restart it as unprivileged user.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Apply</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3114,6 +3176,162 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ShamanGeneralConfig</name>
+    <message>
+        <source>Favourite Actions</source>
+        <translation type="unfinished">Αγαπημένες Ενέργειες</translation>
+    </message>
+    <message>
+        <source>When Upgrading System:</source>
+        <translation type="unfinished">Όταν Αναβαθμίζετε το Σύστημα:</translation>
+    </message>
+    <message>
+        <source>Upgrade Immediately</source>
+        <translation type="unfinished">Αναβαθμίστε Άμεσα</translation>
+    </message>
+    <message>
+        <source>Add Upgradeable Packages To Queue</source>
+        <translation type="unfinished">Προσθήκη αναβαθμίσιμων πακέτων στην Ουρά</translation>
+    </message>
+    <message>
+        <source>Ask</source>
+        <translation type="unfinished">Ερώτηση</translation>
+    </message>
+    <message>
+        <source>When Processing Queue</source>
+        <translation type="unfinished">Όταν επεξεργάζεστε την Ουρά</translation>
+    </message>
+    <message>
+        <source>Keep application running in System Tray only</source>
+        <translation type="unfinished">Εμφάνιση εφαρμογής μόνο στο System Tray</translation>
+    </message>
+    <message>
+        <source>GUI Startup</source>
+        <translation type="unfinished">Εκκίνηση του GUI</translation>
+    </message>
+    <message>
+        <source>Start in the System Tray</source>
+        <translation type="unfinished">Εκκίνηση στο System Tray</translation>
+    </message>
+    <message>
+        <source>Show Splashscreen</source>
+        <translation type="unfinished">Εμφάνιση Εικόνας Εκκίνησης</translation>
+    </message>
+    <message>
+        <source>Use the following language:</source>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>Disable Tray Icon</source>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>Maintenance</source>
+        <translation type="unfinished">Συντήρηση</translation>
+    </message>
+    <message>
+        <source>Process Selected</source>
+        <translation type="unfinished">Επεξεργασία Επιλογής</translation>
+    </message>
+    <message>
+        <source>Waiting</source>
+        <comment>Waiting for a user action</comment>
+        <translation type="unfinished">Αναμονή</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:7pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clean Unused Databases</source>
+        <translation type="unfinished">Καθαρισμός αχρησιμοποίητων Βάσεων Δεδομένων</translation>
+    </message>
+    <message>
+        <source>Clean Cache</source>
+        <translation type="unfinished">Καθαρισμός της Cache</translation>
+    </message>
+    <message>
+        <source>Empty Cache</source>
+        <translation type="unfinished">Άδειασμα της Cache</translation>
+    </message>
+    <message>
+        <source>Optimize Pacman Database</source>
+        <translation type="unfinished">Βελτιστοποίηση Βάσεως Δεδομένων του Pacman</translation>
+    </message>
+    <message>
+        <source>Clean All Building Environments</source>
+        <translation type="unfinished">Καθαρισμός όλων των Περιβάλλοντων Χτισίματος</translation>
+    </message>
+    <message>
+        <source>Cleaning up unused Databases...</source>
+        <translation type="unfinished">Καθαρισμός αχρησιμοποίητων Βάσεων Δεδομένων...</translation>
+    </message>
+    <message>
+        <source>Cleaning up Cache...</source>
+        <translation type="unfinished">Καθαρισμός της Cache...</translation>
+    </message>
+    <message>
+        <source>Deleting Cache...</source>
+        <translation type="unfinished">Διαγραφή της Cache...</translation>
+    </message>
+    <message>
+        <source>Optimizing Pacman Database...</source>
+        <translation type="unfinished">Βελτιστοποίηση της Βάσης Δεδομένων του Pacman...</translation>
+    </message>
+    <message>
+        <source>Cleaning up building Environments...</source>
+        <translation type="unfinished">Εκκαθάριση των περιβάλλοντων χτισίματος...</translation>
+    </message>
+    <message>
+        <source>Unused Databases Cleaned up successfully!</source>
+        <translation type="unfinished">Η εκκαθάριση των Αχρησιμοποίητων Βάσεων Δεδομένων
+έγινε με επιτυχία!</translation>
+    </message>
+    <message>
+        <source>Cleaning up Unused Databases Failed!</source>
+        <translation type="unfinished">Ο καθαρισμός των Αχρησιμοποίητων Βάσεων Δεδομένων Απέτυχε!</translation>
+    </message>
+    <message>
+        <source>Cache Cleaned Up Successfully!</source>
+        <translation type="unfinished">Η εκκαθάριση της Cache έγινε με επιτυχία!</translation>
+    </message>
+    <message>
+        <source>Cleaning up Cache Failed!</source>
+        <translation type="unfinished">Ο καθαρισμός της Cache Απέτυχε!</translation>
+    </message>
+    <message>
+        <source>Cache Successfully Deleted!</source>
+        <translation type="unfinished">Η διαγραφή της Cache έγινε με επιτυχία!</translation>
+    </message>
+    <message>
+        <source>Deleting Cache Failed!</source>
+        <translation type="unfinished">Η Διαγραφή της Cache Απέτυχε!</translation>
+    </message>
+    <message>
+        <source>Build Environments Successfully Cleaned!</source>
+        <translation type="unfinished">Τα Περιβάλλοντα Χτισίματος καθαρίστικαν με επιτυχία!</translation>
+    </message>
+    <message>
+        <source>Could not clean Build Environments!!</source>
+        <translation type="unfinished">Η εκκαθάριση του Περιβάλλοντος Χτισίματος απέτυχε!!</translation>
+    </message>
+    <message>
+        <source>Database optimized successfully!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Could not optimize database!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3735,7 +3953,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Editing PKGBUILD of:</source>
-        <translation>Επεξεργασία του PKGBUILD
+        <translation type="obsolete">Επεξεργασία του PKGBUILD
 του πακέτου:</translation>
     </message>
     <message>
@@ -3759,10 +3977,45 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Edit PKGBUILD&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+        <translation type="obsolete">&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Επεξεργασία του  PKGBUILD&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>Editing:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PKGBUILD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MakePkg options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ignore arch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Skip integrity checks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ignore dependency control</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hold version if this is a development PKGBUILD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Edit Package build options&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3992,7 +4245,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Review PKGBUILDs</source>
-        <translation>Επισκόπιση των PKGBUILDs</translation>
+        <translation type="obsolete">Επισκόπιση των PKGBUILDs</translation>
     </message>
     <message>
         <source>Process From Source</source>
@@ -4001,6 +4254,10 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Do not install immediately when building is finished</source>
         <translation>Να μην γίνει εγκατάσταση αμέσως μετά το χτίσιμο</translation>
+    </message>
+    <message>
+        <source>Review Build options</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

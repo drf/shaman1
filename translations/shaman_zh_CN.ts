@@ -25,20 +25,75 @@
     </message>
 </context>
 <context>
+    <name>AqpmConfig</name>
+    <message>
+        <source>Packages and Paths</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>IgnorePkgs:</source>
+        <translation type="unfinished">IgnorePkgs :</translation>
+    </message>
+    <message>
+        <source>IgnoreGroups:</source>
+        <translation type="unfinished">IgnoreGroups:</translation>
+    </message>
+    <message>
+        <source>NoUpgrade:</source>
+        <translation type="unfinished">NoUpgrade:</translation>
+    </message>
+    <message>
+        <source>NoExtract:</source>
+        <translation type="unfinished">NoExtract :</translation>
+    </message>
+    <message>
+        <source>Log File:</source>
+        <translation type="unfinished">日志文件 :</translation>
+    </message>
+    <message>
+        <source>Advanced</source>
+        <translation type="unfinished">高级</translation>
+    </message>
+    <message>
+        <source>Use SysLog</source>
+        <translation type="unfinished">使用 SysLog</translation>
+    </message>
+    <message>
+        <source>Use Deltas (needs xdelta to be installed)</source>
+        <translation type="unfinished">使用 Deltas (要求xdelta已安装)</translation>
+    </message>
+    <message>
+        <source>Aqpm Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use multi-server download (EXPERIMENTAL)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished">错误</translation>
+    </message>
+    <message>
+        <source>There has been a problem while saving the configuration!</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>BuildingDialog</name>
     <message>
         <source>Error</source>
-        <translation>错误</translation>
+        <translation type="obsolete">错误</translation>
     </message>
     <message>
         <source>Would you like to abort building?.
 All Process will be lost.</source>
-        <translation>您真的要放弃编译吗 ?
+        <translation type="obsolete">您真的要放弃编译吗 ?
 所有的处理将会丢失。</translation>
     </message>
     <message>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Building Process Aborted by the User. Building Failed.&lt;/b&gt;</source>
-        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;用户放弃处理编译，编译失败。&lt;/b&gt;</translation>
+        <translation type="obsolete">&lt;br&gt;&lt;br&gt;&lt;b&gt;用户放弃处理编译，编译失败。&lt;/b&gt;</translation>
     </message>
     <message>
         <source>Updating ABS Tree...</source>
@@ -50,47 +105,47 @@ All Process will be lost.</source>
     </message>
     <message>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;ABS Tree Was Successfully Updated!&lt;/b&gt;</source>
-        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;ABS tree 更新成功!&lt;/b&gt;</translation>
+        <translation type="obsolete">&lt;br&gt;&lt;br&gt;&lt;b&gt;ABS tree 更新成功!&lt;/b&gt;</translation>
     </message>
     <message>
         <source>ABS Update</source>
-        <translation>更新 ABS</translation>
+        <translation type="obsolete">更新 ABS</translation>
     </message>
     <message>
         <source>Your ABS Tree was updated!</source>
-        <translation>您的ABS Tree 已经更新!</translation>
+        <translation type="obsolete">您的ABS Tree 已经更新!</translation>
     </message>
     <message>
         <source>&lt;b&gt;Building %1 failed!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;编译%1 失败 !!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;编译%1 失败 !!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <source>&lt;b&gt;%1 was built successfully!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;%1 编译成功  !!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;%1 编译成功  !!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <source>Processing Package %1 of %2...</source>
-        <translation> 处理软件包 %1 的 %2...</translation>
+        <translation type="obsolete"> 处理软件包 %1 的 %2...</translation>
     </message>
     <message>
         <source>Building %1...</source>
-        <translation>编译 %1...</translation>
+        <translation type="obsolete">编译 %1...</translation>
     </message>
     <message>
         <source>&lt;b&gt;Building %1...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;编译 %1...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;编译 %1...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <source>&lt;b&gt;Building operation has started.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;编译操作已经开始。&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;编译操作已经开始。&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <source>&lt;b&gt;Could not set up the environment correctly for %1!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;无法为%1设定适当的环境!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;无法为%1设定适当的环境!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <source>Could not update the ABS Tree!</source>
-        <translation>无法更新 ABS Tree !</translation>
+        <translation type="obsolete">无法更新 ABS Tree !</translation>
     </message>
 </context>
 <context>
@@ -98,24 +153,24 @@ All Process will be lost.</source>
     <message>
         <source>You need to have ABS installed to use Shaman&apos;s
 building feature. Do you want to install it now?</source>
-        <translation>您需要安装ABS才能够使用Shaman的编译功能。
+        <translation type="obsolete">您需要安装ABS才能够使用Shaman的编译功能。
 现在就安装ABS吗 ?</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation>错误</translation>
+        <translation type="obsolete">错误</translation>
     </message>
     <message>
         <source>You can not remove packages when processing
 your queue from Source</source>
-        <translation>从源文件处理队列时
+        <translation type="obsolete">从源文件处理队列时
 您将无法卸载软件包</translation>
     </message>
     <message>
         <source>Some of your packages do not belong to Arch
 Linux&apos;s official repository. Shaman is able to
 build packages from official sources only.</source>
-        <translation>您的一些软件包不属于Arch
+        <translation type="obsolete">您的一些软件包不属于Arch
 Linux&apos;s官方仓库。 Shaman 仅仅只能
 从官方源文件编译软件包。</translation>
     </message>
@@ -129,33 +184,33 @@ Linux&apos;s官方仓库。 Shaman 仅仅只能
     </message>
     <message>
         <source>To be Installed</source>
-        <translation>将安装</translation>
+        <translation type="obsolete">将安装</translation>
     </message>
     <message>
         <source>To be Upgraded</source>
-        <translation>将更新</translation>
+        <translation type="obsolete">将更新</translation>
     </message>
     <message>
         <source>Package Building</source>
-        <translation>软件包编译</translation>
+        <translation type="obsolete">软件包编译</translation>
     </message>
     <message>
         <source>Your Packages failed to build!</source>
-        <translation>软件包编译失败 !</translation>
+        <translation type="obsolete">软件包编译失败 !</translation>
     </message>
     <message>
         <source>Your packages Failed to Build.
 Look at the output for more details.</source>
-        <translation>软件包编译失败， 
+        <translation type="obsolete">软件包编译失败， 
 请查看输出获得更多信息。</translation>
     </message>
     <message>
         <source>Close</source>
-        <translation>关闭</translation>
+        <translation type="obsolete">关闭</translation>
     </message>
     <message>
         <source>Building Packages Failed!!</source>
-        <translation>编译软件包失败 !</translation>
+        <translation type="obsolete">编译软件包失败 !</translation>
     </message>
     <message>
         <source>Shaman - Idle</source>
@@ -164,24 +219,24 @@ Look at the output for more details.</source>
     <message>
         <source>Some packages failed to build.
 Do you want to proceed anyway?</source>
-        <translation>某些软件包编译失败。
+        <translation type="obsolete">某些软件包编译失败。
 无论如何您要处理它吗 ?</translation>
     </message>
     <message>
         <source>Install Built Packages</source>
-        <translation>安装编译的软件包</translation>
+        <translation type="obsolete">安装编译的软件包</translation>
     </message>
     <message>
         <source>Close Without Installing</source>
-        <translation>关闭并不安装</translation>
+        <translation type="obsolete">关闭并不安装</translation>
     </message>
     <message>
         <source>Packages Built Successfully!</source>
-        <translation>软件包编译成功 !</translation>
+        <translation type="obsolete">软件包编译成功 !</translation>
     </message>
     <message>
         <source>Your Packages have been built successfully, and are ready to be installed</source>
-        <translation>您的软件包编译成功,准备安装</translation>
+        <translation type="obsolete">您的软件包编译成功,准备安装</translation>
     </message>
     <message>
         <source>Shaman - Processing</source>
@@ -189,7 +244,7 @@ Do you want to proceed anyway?</source>
     </message>
     <message numerus="yes">
         <source>You are about to install &lt;b&gt;%n package(s)&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             <numerusform>您即将从源代码安装&lt;b&gt;%n软件包&lt;/b&gt;。从源代码&lt;br&gt;编译您可以获得一些优势,不过速度比较慢。&lt;br&gt;如果您不确定，您可以偏向选择从二进制文件处理&lt;br&gt;您的队列。在您继续之前，建议您&lt;br&gt;查看您的配置来改善编译性能。        </numerusform>
         </translation>
     </message>
@@ -251,47 +306,47 @@ Do you want to delete it?</source>
     </message>
     <message>
         <source>Favourite Actions</source>
-        <translation>常用操作</translation>
+        <translation type="obsolete">常用操作</translation>
     </message>
     <message>
         <source>When Upgrading System:</source>
-        <translation>更新系统方式 :</translation>
+        <translation type="obsolete">更新系统方式 :</translation>
     </message>
     <message>
         <source>Upgrade Immediately</source>
-        <translation>立即更新</translation>
+        <translation type="obsolete">立即更新</translation>
     </message>
     <message>
         <source>Add Upgradeable Packages To Queue</source>
-        <translation>添加可更新软件包到队列</translation>
+        <translation type="obsolete">添加可更新软件包到队列</translation>
     </message>
     <message>
         <source>Ask</source>
-        <translation>询问</translation>
+        <translation type="obsolete">询问</translation>
     </message>
     <message>
         <source>When Processing Queue</source>
-        <translation>处理队列方式</translation>
+        <translation type="obsolete">处理队列方式</translation>
     </message>
     <message>
         <source>Keep application running in System Tray only</source>
-        <translation>在系统托盘中运行应用程序</translation>
+        <translation type="obsolete">在系统托盘中运行应用程序</translation>
     </message>
     <message>
         <source>GUI Startup</source>
-        <translation>GUI 启动</translation>
+        <translation type="obsolete">GUI 启动</translation>
     </message>
     <message>
         <source>Start in the System Tray</source>
-        <translation>系统托盘形式启动</translation>
+        <translation type="obsolete">系统托盘形式启动</translation>
     </message>
     <message>
         <source>When Application is in System Tray only</source>
-        <translation>系统托盘中运行应用程序方式</translation>
+        <translation type="obsolete">系统托盘中运行应用程序方式</translation>
     </message>
     <message>
         <source>Update Database every</source>
-        <translation>更新数据库间隔</translation>
+        <translation type="obsolete">更新数据库间隔</translation>
     </message>
     <message>
         <source>minutes</source>
@@ -299,63 +354,63 @@ Do you want to delete it?</source>
     </message>
     <message>
         <source>If upgrades are available:</source>
-        <translation>可用的更新 :</translation>
+        <translation type="obsolete">可用的更新 :</translation>
     </message>
     <message>
         <source>Just Notify</source>
-        <translation>仅通知</translation>
+        <translation type="obsolete">仅通知</translation>
     </message>
     <message>
         <source>Notify and add them to Queue</source>
-        <translation>通知然后添加至队列</translation>
+        <translation type="obsolete">通知然后添加至队列</translation>
     </message>
     <message>
         <source>Maintenance</source>
-        <translation>维护</translation>
+        <translation type="obsolete">维护</translation>
     </message>
     <message>
         <source>Checkable Options</source>
-        <translation>选项</translation>
+        <translation type="obsolete">选项</translation>
     </message>
     <message>
         <source>Use Active FTP</source>
-        <translation>使用激活的 FTP</translation>
+        <translation type="obsolete">使用激活的 FTP</translation>
     </message>
     <message>
         <source>Use Deltas (needs xdelta to be installed)</source>
-        <translation>使用 Deltas (要求xdelta已安装)</translation>
+        <translation type="obsolete">使用 Deltas (要求xdelta已安装)</translation>
     </message>
     <message>
         <source>Advanced Options</source>
-        <translation>高级选项</translation>
+        <translation type="obsolete">高级选项</translation>
     </message>
     <message>
         <source>HoldPkgs:</source>
-        <translation>HoldPkgs :</translation>
+        <translation type="obsolete">HoldPkgs :</translation>
     </message>
     <message>
         <source>IgnorePkgs:</source>
-        <translation>IgnorePkgs :</translation>
+        <translation type="obsolete">IgnorePkgs :</translation>
     </message>
     <message>
         <source>IgnoreGroups:</source>
-        <translation>IgnoreGroups:</translation>
+        <translation type="obsolete">IgnoreGroups:</translation>
     </message>
     <message>
         <source>NoUpgrade:</source>
-        <translation>NoUpgrade:</translation>
+        <translation type="obsolete">NoUpgrade:</translation>
     </message>
     <message>
         <source>NoExtract:</source>
-        <translation>NoExtract :</translation>
+        <translation type="obsolete">NoExtract :</translation>
     </message>
     <message>
         <source>XFerCommand: (example: /path/to/command %u) Blank for Default</source>
-        <translation>XFerCommand : (exemple: /path/to/command %u) Blank for Default</translation>
+        <translation type="obsolete">XFerCommand : (exemple: /path/to/command %u) Blank for Default</translation>
     </message>
     <message>
         <source>Arch Linux Official Repositories</source>
-        <translation>Arch Linux 官方仓库</translation>
+        <translation type="obsolete">Arch Linux 官方仓库</translation>
     </message>
     <message>
         <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones.
@@ -365,7 +420,7 @@ Please note that packages from Unstable and Testing may break your system.</sour
     </message>
     <message>
         <source>Server</source>
-        <translation>服务器</translation>
+        <translation type="obsolete">服务器</translation>
     </message>
     <message>
         <source>Mirror:</source>
@@ -377,7 +432,7 @@ Please note that packages from Unstable and Testing may break your system.</sour
     </message>
     <message>
         <source>KDEMod Repositories</source>
-        <translation>KDEMod 仓库</translation>
+        <translation type="obsolete">KDEMod 仓库</translation>
     </message>
     <message>
         <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an 
@@ -390,7 +445,7 @@ of KDE with the simplicity and the power of Arch.</source>
     </message>
     <message>
         <source>KDEMod 3 Repository</source>
-        <translation>KDEMod 3 仓库</translation>
+        <translation type="obsolete">KDEMod 3 仓库</translation>
     </message>
     <message>
         <source>KDEMod 4 Repository (Unstable, testers only)</source>
@@ -398,7 +453,7 @@ of KDE with the simplicity and the power of Arch.</source>
     </message>
     <message>
         <source>Third-Party Repositories</source>
-        <translation>第三方仓库</translation>
+        <translation type="obsolete">第三方仓库</translation>
     </message>
     <message>
         <source>You can extend your packages choice by adding other repositories. Third-Party 
@@ -413,7 +468,7 @@ and Pacman.</source>
     </message>
     <message>
         <source>Add New Repository</source>
-        <translation>添加新的仓库</translation>
+        <translation type="obsolete">添加新的仓库</translation>
     </message>
     <message>
         <source>Edit Repository</source>
@@ -425,7 +480,7 @@ and Pacman.</source>
     </message>
     <message>
         <source>Preferences</source>
-        <translation>首选项</translation>
+        <translation type="obsolete">首选项</translation>
     </message>
     <message>
         <source>Process all dependencies and queue from source first (recommended)</source>
@@ -433,59 +488,59 @@ and Pacman.</source>
     </message>
     <message>
         <source>Review Building output before installing</source>
-        <translation>在安装之前查看编译输出 </translation>
+        <translation type="obsolete">在安装之前查看编译输出 </translation>
     </message>
     <message>
         <source>ABS Configuration</source>
-        <translation>ABS 配置</translation>
+        <translation type="obsolete">ABS 配置</translation>
     </message>
     <message>
         <source>Use supfiles that match your current repositories</source>
-        <translation>使用符合您当前仓库的supfiles</translation>
+        <translation type="obsolete">使用符合您当前仓库的supfiles</translation>
     </message>
     <message>
         <source>Define supfiles manually</source>
-        <translation>手动定义supfiles</translation>
+        <translation type="obsolete">手动定义supfiles</translation>
     </message>
     <message>
         <source>Makepkg Configuration</source>
-        <translation>Makepkg 配置</translation>
+        <translation type="obsolete">Makepkg 配置</translation>
     </message>
     <message>
         <source>CFlags</source>
-        <translation>CFlags</translation>
+        <translation type="obsolete">CFlags</translation>
     </message>
     <message>
         <source>CXXFlags</source>
-        <translation>CXXFlags</translation>
+        <translation type="obsolete">CXXFlags</translation>
     </message>
     <message>
         <source>BuildEnv</source>
-        <translation>BuildEnv</translation>
+        <translation type="obsolete">BuildEnv</translation>
     </message>
     <message>
         <source>Options</source>
-        <translation>选项</translation>
+        <translation type="obsolete">选项</translation>
     </message>
     <message>
         <source>Doc_Dirs</source>
-        <translation>Doc_Dirs</translation>
+        <translation type="obsolete">Doc_Dirs</translation>
     </message>
     <message>
         <source>Build Environment</source>
-        <translation>编译环境</translation>
+        <translation type="obsolete">编译环境</translation>
     </message>
     <message>
         <source>Building Path</source>
-        <translation>编译路径</translation>
+        <translation type="obsolete">编译路径</translation>
     </message>
     <message>
         <source>Remove installed makedepends after build</source>
-        <translation>编译后移除已安装依赖关系</translation>
+        <translation type="obsolete">编译后移除已安装依赖关系</translation>
     </message>
     <message>
         <source>Clean Build Environment after installation</source>
-        <translation>安装后清除编译环境</translation>
+        <translation type="obsolete">安装后清除编译环境</translation>
     </message>
     <message>
         <source>General</source>
@@ -608,11 +663,11 @@ It is now available in mirrorlist.</source>
     </message>
     <message>
         <source>Pacman Database Optimized Successfully!</source>
-        <translation>Pacman数据库优化成功 !</translation>
+        <translation type="obsolete">Pacman数据库优化成功 !</translation>
     </message>
     <message>
         <source>Could not Optimize Pacman Database!</source>
-        <translation>无法优化Pacman数据库!</translation>
+        <translation type="obsolete">无法优化Pacman数据库!</translation>
     </message>
     <message>
         <source>Operation Completed Successfully!</source>
@@ -644,7 +699,7 @@ It is now available in mirrorlist.</source>
     <message>
         <source>Waiting</source>
         <comment>Waiting for a user action</comment>
-        <translation>等待</translation>
+        <translation type="obsolete">等待</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -661,22 +716,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Core</source>
         <comment>Do not translate</comment>
-        <translation>Core</translation>
+        <translation type="obsolete">Core</translation>
     </message>
     <message>
         <source>Extra</source>
         <comment>Do not translate</comment>
-        <translation>Extra</translation>
+        <translation type="obsolete">Extra</translation>
     </message>
     <message>
         <source>Community</source>
         <comment>Do not translate</comment>
-        <translation>Community</translation>
+        <translation type="obsolete">Community</translation>
     </message>
     <message>
         <source>Testing</source>
         <comment>Do not translate</comment>
-        <translation>Testing</translation>
+        <translation type="obsolete">Testing</translation>
     </message>
     <message>
         <source>Unstable</source>
@@ -686,11 +741,11 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Running sync...</source>
         <comment>sync is a command, so it should not be translated</comment>
-        <translation>运行Sync...</translation>
+        <translation type="obsolete">运行Sync...</translation>
     </message>
     <message>
         <source>Show Splashscreen</source>
-        <translation>显示飞溅屏幕</translation>
+        <translation type="obsolete">显示飞溅屏幕</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -706,7 +761,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Process all dependencies and queue from binary first (recommended)</source>
-        <translation>优先从二进制文件处理所有依赖关系和队列 (推荐)</translation>
+        <translation type="obsolete">优先从二进制文件处理所有依赖关系和队列 (推荐)</translation>
     </message>
     <message>
         <source>Advanced</source>
@@ -722,11 +777,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Use SysLog</source>
-        <translation>使用 SysLog</translation>
+        <translation type="obsolete">使用 SysLog</translation>
     </message>
     <message>
         <source>Log File:</source>
-        <translation>日志文件 :</translation>
+        <translation type="obsolete">日志文件 :</translation>
     </message>
     <message>
         <source>KDEMod 3 Testing Repository</source>
@@ -735,59 +790,59 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>min</source>
         <comment>As in &quot;minutes&quot;</comment>
-        <translation>min</translation>
+        <translation type="obsolete">min</translation>
     </message>
     <message>
         <source>Show tray notification Windows</source>
-        <translation>显示托盘窗口消息</translation>
+        <translation type="obsolete">显示托盘窗口消息</translation>
     </message>
     <message>
         <source>Use a proxy-server</source>
-        <translation>使用代理服务器</translation>
+        <translation type="obsolete">使用代理服务器</translation>
     </message>
     <message>
         <source>IP:</source>
-        <translation>IP :</translation>
+        <translation type="obsolete">IP :</translation>
     </message>
     <message>
         <source>Port:</source>
-        <translation>端口 :</translation>
+        <translation type="obsolete">端口 :</translation>
     </message>
     <message>
         <source>HTTP Proxy</source>
-        <translation>HTTP 代理</translation>
+        <translation type="obsolete">HTTP 代理</translation>
     </message>
     <message>
         <source>FTP Proxy</source>
-        <translation>FTP 代理</translation>
+        <translation type="obsolete">FTP 代理</translation>
     </message>
     <message>
         <source>Use Shaman RSS Capabilities</source>
-        <translation>使用Shaman RSS 功能</translation>
+        <translation type="obsolete">使用Shaman RSS 功能</translation>
     </message>
     <message>
         <source>Update RSS Feed Every</source>
-        <translation>更新RSS推送间隔</translation>
+        <translation type="obsolete">更新RSS推送间隔</translation>
     </message>
     <message>
         <source>Notify upon new items</source>
-        <translation>通知新的项目</translation>
+        <translation type="obsolete">通知新的项目</translation>
     </message>
     <message>
         <source>Check if there is an unread news about a package in Queue before processing it</source>
-        <translation>在处理队列之前，检查是否有关于软件包的未读消息</translation>
+        <translation type="obsolete">在处理队列之前，检查是否有关于软件包的未读消息</translation>
     </message>
     <message>
         <source>Interface</source>
-        <translation>Interface</translation>
+        <translation type="obsolete">Interface</translation>
     </message>
     <message>
         <source>Start Shaman Automatically on X Startup</source>
-        <translation>启动X时自动运行Shaman</translation>
+        <translation type="obsolete">启动X时自动运行Shaman</translation>
     </message>
     <message>
         <source>Forbid starting Shaman as root</source>
-        <translation>禁止以root身份启动Shaman</translation>
+        <translation type="obsolete">禁止以root身份启动Shaman</translation>
     </message>
     <message>
         <source>Saving Configuration</source>
@@ -849,55 +904,55 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>RSync Server:</source>
-        <translation>RSync 服务器:</translation>
+        <translation type="obsolete">RSync 服务器:</translation>
     </message>
     <message>
         <source>Update Database at</source>
-        <translation>更新数据库在</translation>
+        <translation type="obsolete">更新数据库在</translation>
     </message>
     <message>
         <source>Use Animated Tray Icon</source>
-        <translation>使用动态托盘图标</translation>
+        <translation type="obsolete">使用动态托盘图标</translation>
     </message>
     <message>
         <source>KDEMod 4 Repository</source>
-        <translation>KDEMod 4 仓库 </translation>
+        <translation type="obsolete">KDEMod 4 仓库 </translation>
     </message>
     <message>
         <source>KDEMod 4 Extragear Repository</source>
-        <translation>KDEMod 4 Extragear 仓库</translation>
+        <translation type="obsolete">KDEMod 4 Extragear 仓库</translation>
     </message>
     <message>
         <source>KDEMod 4 Playground Repository</source>
-        <translation>KDEMod 4 Playground 仓库</translation>
+        <translation type="obsolete">KDEMod 4 Playground 仓库</translation>
     </message>
     <message>
         <source>KDEMod 4 Testing Repository</source>
-        <translation>KDEMod 4 测试 仓库 </translation>
+        <translation type="obsolete">KDEMod 4 测试 仓库 </translation>
     </message>
     <message>
         <source>KDEMod 4 Unstable Repository (Testers only!)</source>
-        <translation>KDEMod 4 Unstable 仓库 (仅供测试者!)</translation>
+        <translation type="obsolete">KDEMod 4 Unstable 仓库 (仅供测试者!)</translation>
     </message>
     <message>
         <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones. Please note that packages from Unstable and Testing may break your system.</source>
-        <translation>从这里选择属于Arch Linux&apos;s 官方的仓库，请注意使用来自Unstable和Testing的软件包可能会损坏您的系统。</translation>
+        <translation type="obsolete">从这里选择属于Arch Linux&apos;s 官方的仓库，请注意使用来自Unstable和Testing的软件包可能会损坏您的系统。</translation>
     </message>
     <message>
         <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme, and lots of addons, KDEMod is the best way to taste the ease and the power of KDE with the simplicity and the power of Arch.</source>
-        <translation>Kdemod是为Arch linux 定制KDE的一个改进版本， 基于改善的QT，和Arch linux 标准的QT兼容，拥有改进的主题，和许多的附加特性。使用KDEMod，是感受强大的KDE魅力和简洁强大的Arch最好方式。</translation>
+        <translation type="obsolete">Kdemod是为Arch linux 定制KDE的一个改进版本， 基于改善的QT，和Arch linux 标准的QT兼容，拥有改进的主题，和许多的附加特性。使用KDEMod，是感受强大的KDE魅力和简洁强大的Arch最好方式。</translation>
     </message>
     <message>
         <source>You can extend your packages choice by adding other repositories. Third-Party Repositories act just as normal ones, and will be accessible through both Shaman and Pacman.</source>
-        <translation>通过添加其他仓库，您可以扩展您的软件包选择。第三方仓库的作用和正常的仓库一样,可以通过Pacman和Shaman来使用。</translation>
+        <translation type="obsolete">通过添加其他仓库，您可以扩展您的软件包选择。第三方仓库的作用和正常的仓库一样,可以通过Pacman和Shaman来使用。</translation>
     </message>
     <message>
         <source>Use the following language:</source>
-        <translation>使用下列语言:</translation>
+        <translation type="obsolete">使用下列语言:</translation>
     </message>
     <message>
         <source>Disable Tray Icon</source>
-        <translation>禁用托盘图标</translation>
+        <translation type="obsolete">禁用托盘图标</translation>
     </message>
     <message>
         <source>Database optimized successfully!</source>
@@ -920,24 +975,15 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>Apply</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Add another server</source>
+        <source>Shaman Configuration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Repository Order</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Please order your repositories to define which one will be preferred over another.</source>
+        <source>Aqpm Configuration</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1057,17 +1103,25 @@ It is now available in mirrorlist.</source>
         <source>Please order your repositories to define which one will be preferred over another.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished">错误</translation>
+    </message>
+    <message>
+        <source>There has been a problem while saving the configuration!</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>EditPBuild</name>
     <message>
         <source>Saving</source>
-        <translation>保存</translation>
+        <translation type="obsolete">保存</translation>
     </message>
     <message>
         <source>You modified this PKGBUILD.
 Do you want to save it?</source>
-        <translation>您修改了PKGBUILD，
+        <translation type="obsolete">您修改了PKGBUILD，
 您想保存它吗?</translation>
     </message>
 </context>
@@ -2287,7 +2341,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf@kdemod.ath.cx&amp;gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+        <translation type="obsolete">&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;A libalpm frontend in Qt&lt;/span&gt;&lt;/p&gt;
@@ -2328,11 +2382,6 @@ p, li { white-space: pre-wrap; }
         <source>Replace %1 with %2/%3?</source>
         <translation type="unfinished">替换 %1 用 %2/%3?</translation>
     </message>
-    <message>
-        <source>%1 conflicts with %2.
-Remove %2?</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message numerus="yes">
         <source>The following package(s) cannot be upgraded due to unresolvable dependencies:
 %1
@@ -2369,6 +2418,15 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008-2009 Dario Freddi &amp;lt;drf@chakra-project.org&amp;gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@chakra-project.org&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 conflicts with %2.
+Remove %1?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Updating ABS tree</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2464,11 +2522,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Pacman Database Optimized Successfully!</source>
-        <translation>Pacman数据库优化成功 !</translation>
+        <translation type="obsolete">Pacman数据库优化成功 !</translation>
     </message>
     <message>
         <source>Could not Optimize Pacman Database!</source>
-        <translation>无法优化Pacman数据库!</translation>
+        <translation type="obsolete">无法优化Pacman数据库!</translation>
     </message>
     <message>
         <source>Running sync...</source>
@@ -2635,7 +2693,7 @@ Thanks again, and enjoy your translation!</comment>
         <source>Pacman is not updated.
 Shaman needs libalpm &gt;= 2.1.0 to run.
 Yours is %1. Please update Pacman.</source>
-        <translation>Pacman 没有被更新。
+        <translation type="obsolete">Pacman 没有被更新。
 Shaman 要求 libalpm &gt;= 2.1.0 才能运行。
 你的版本是 %1. 请更新Pacman。</translation>
     </message>
@@ -2721,6 +2779,10 @@ for more details.</translation>
     </message>
     <message>
         <source>Shaman can not be started as root. Please restart it as unprivileged user.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Apply</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3079,6 +3141,159 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ShamanGeneralConfig</name>
+    <message>
+        <source>Favourite Actions</source>
+        <translation type="unfinished">常用操作</translation>
+    </message>
+    <message>
+        <source>When Upgrading System:</source>
+        <translation type="unfinished">更新系统方式 :</translation>
+    </message>
+    <message>
+        <source>Upgrade Immediately</source>
+        <translation type="unfinished">立即更新</translation>
+    </message>
+    <message>
+        <source>Add Upgradeable Packages To Queue</source>
+        <translation type="unfinished">添加可更新软件包到队列</translation>
+    </message>
+    <message>
+        <source>Ask</source>
+        <translation type="unfinished">询问</translation>
+    </message>
+    <message>
+        <source>When Processing Queue</source>
+        <translation type="unfinished">处理队列方式</translation>
+    </message>
+    <message>
+        <source>Keep application running in System Tray only</source>
+        <translation type="unfinished">在系统托盘中运行应用程序</translation>
+    </message>
+    <message>
+        <source>GUI Startup</source>
+        <translation type="unfinished">GUI 启动</translation>
+    </message>
+    <message>
+        <source>Start in the System Tray</source>
+        <translation type="unfinished">系统托盘形式启动</translation>
+    </message>
+    <message>
+        <source>Show Splashscreen</source>
+        <translation type="unfinished">显示飞溅屏幕</translation>
+    </message>
+    <message>
+        <source>Use the following language:</source>
+        <translation type="unfinished">使用下列语言:</translation>
+    </message>
+    <message>
+        <source>Disable Tray Icon</source>
+        <translation type="unfinished">禁用托盘图标</translation>
+    </message>
+    <message>
+        <source>Maintenance</source>
+        <translation type="unfinished">维护</translation>
+    </message>
+    <message>
+        <source>Process Selected</source>
+        <translation type="unfinished">处理</translation>
+    </message>
+    <message>
+        <source>Waiting</source>
+        <comment>Waiting for a user action</comment>
+        <translation type="unfinished">等待</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:7pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clean Unused Databases</source>
+        <translation type="unfinished">清理未使用的数据库</translation>
+    </message>
+    <message>
+        <source>Clean Cache</source>
+        <translation type="unfinished">清除缓存</translation>
+    </message>
+    <message>
+        <source>Empty Cache</source>
+        <translation type="unfinished">清空缓存</translation>
+    </message>
+    <message>
+        <source>Optimize Pacman Database</source>
+        <translation type="unfinished">优化Pacman数据库</translation>
+    </message>
+    <message>
+        <source>Clean All Building Environments</source>
+        <translation type="unfinished">清除所有的编译环境</translation>
+    </message>
+    <message>
+        <source>Cleaning up unused Databases...</source>
+        <translation type="unfinished">清理未使用的数据库...</translation>
+    </message>
+    <message>
+        <source>Cleaning up Cache...</source>
+        <translation type="unfinished">清除缓存...</translation>
+    </message>
+    <message>
+        <source>Deleting Cache...</source>
+        <translation type="unfinished">删除缓存...</translation>
+    </message>
+    <message>
+        <source>Optimizing Pacman Database...</source>
+        <translation type="unfinished">优化Pacman数据库...</translation>
+    </message>
+    <message>
+        <source>Cleaning up building Environments...</source>
+        <translation type="unfinished">清除编译环境...</translation>
+    </message>
+    <message>
+        <source>Unused Databases Cleaned up successfully!</source>
+        <translation type="unfinished">成功清除未使用的数据库 !</translation>
+    </message>
+    <message>
+        <source>Cleaning up Unused Databases Failed!</source>
+        <translation type="unfinished">清理未使用的数据库失败!</translation>
+    </message>
+    <message>
+        <source>Cache Cleaned Up Successfully!</source>
+        <translation type="unfinished">清除缓存成功 !</translation>
+    </message>
+    <message>
+        <source>Cleaning up Cache Failed!</source>
+        <translation type="unfinished">清除缓存失败!</translation>
+    </message>
+    <message>
+        <source>Cache Successfully Deleted!</source>
+        <translation type="unfinished">删除缓存成功 !</translation>
+    </message>
+    <message>
+        <source>Deleting Cache Failed!</source>
+        <translation type="unfinished">删除缓存失败 !</translation>
+    </message>
+    <message>
+        <source>Build Environments Successfully Cleaned!</source>
+        <translation type="unfinished">编译环境成功清除!</translation>
+    </message>
+    <message>
+        <source>Could not clean Build Environments!!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Database optimized successfully!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Could not optimize database!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3915,7 +4130,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Editing PKGBUILD of:</source>
-        <translation>编辑 PKGBUILD 的 :</translation>
+        <translation type="obsolete">编辑 PKGBUILD 的 :</translation>
     </message>
     <message>
         <source>Save</source>
@@ -3938,10 +4153,45 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Edit PKGBUILD&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+        <translation type="obsolete">&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;编辑 PKGBUILD&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>Editing:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PKGBUILD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MakePkg options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ignore arch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Skip integrity checks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ignore dependency control</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hold version if this is a development PKGBUILD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Edit Package build options&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4169,7 +4419,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Review PKGBUILDs</source>
-        <translation>查看 PKGBUILDs</translation>
+        <translation type="obsolete">查看 PKGBUILDs</translation>
     </message>
     <message>
         <source>Process From Source</source>
@@ -4178,6 +4428,10 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Do not install immediately when building is finished</source>
         <translation>编译结束时，不要立即安装软件包</translation>
+    </message>
+    <message>
+        <source>Review Build options</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

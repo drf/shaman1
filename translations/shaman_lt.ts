@@ -25,20 +25,75 @@
     </message>
 </context>
 <context>
+    <name>AqpmConfig</name>
+    <message>
+        <source>Packages and Paths</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>IgnorePkgs:</source>
+        <translation type="unfinished">IgnorePkgs:</translation>
+    </message>
+    <message>
+        <source>IgnoreGroups:</source>
+        <translation type="unfinished">IgnoreGroups:</translation>
+    </message>
+    <message>
+        <source>NoUpgrade:</source>
+        <translation type="unfinished">NoUpgrade:</translation>
+    </message>
+    <message>
+        <source>NoExtract:</source>
+        <translation type="unfinished">NoExtract:</translation>
+    </message>
+    <message>
+        <source>Log File:</source>
+        <translation type="unfinished">Žurnalo failas:</translation>
+    </message>
+    <message>
+        <source>Advanced</source>
+        <translation type="unfinished">Įvaresnis</translation>
+    </message>
+    <message>
+        <source>Use SysLog</source>
+        <translation type="unfinished">Naudoti &apos;SysLog&apos;</translation>
+    </message>
+    <message>
+        <source>Use Deltas (needs xdelta to be installed)</source>
+        <translation type="unfinished">Naudoti deltą (reikalingas paketas &apos;xdelta&apos;)</translation>
+    </message>
+    <message>
+        <source>Aqpm Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use multi-server download (EXPERIMENTAL)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished">Klaida</translation>
+    </message>
+    <message>
+        <source>There has been a problem while saving the configuration!</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>BuildingDialog</name>
     <message>
         <source>Error</source>
-        <translation>Klaida</translation>
+        <translation type="obsolete">Klaida</translation>
     </message>
     <message>
         <source>Would you like to abort building?.
 All Process will be lost.</source>
-        <translation>Ar norite nutraukti statymą?
+        <translation type="obsolete">Ar norite nutraukti statymą?
 Visi veiksmai bus prarasti.</translation>
     </message>
     <message>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Building Process Aborted by the User. Building Failed.&lt;/b&gt;</source>
-        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Statymo procesas nutrauktas vartotojo. Statymas nepavyko.&lt;/b&gt;</translation>
+        <translation type="obsolete">&lt;br&gt;&lt;br&gt;&lt;b&gt;Statymo procesas nutrauktas vartotojo. Statymas nepavyko.&lt;/b&gt;</translation>
     </message>
     <message>
         <source>Updating ABS Tree...</source>
@@ -50,70 +105,70 @@ Visi veiksmai bus prarasti.</translation>
     </message>
     <message>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;ABS Tree Was Successfully Updated!&lt;/b&gt;</source>
-        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;ABS medis buvo sėkmingai atnaujintas!&lt;/b&gt;</translation>
+        <translation type="obsolete">&lt;br&gt;&lt;br&gt;&lt;b&gt;ABS medis buvo sėkmingai atnaujintas!&lt;/b&gt;</translation>
     </message>
     <message>
         <source>ABS Update</source>
-        <translation>ABS atnaujinimas</translation>
+        <translation type="obsolete">ABS atnaujinimas</translation>
     </message>
     <message>
         <source>Your ABS Tree was updated!</source>
-        <translation>Jūsų ABS medis buvo atnaujintas!</translation>
+        <translation type="obsolete">Jūsų ABS medis buvo atnaujintas!</translation>
     </message>
     <message>
         <source>Could not update the ABS Tree!</source>
-        <translation>Negalima atnaujinti ABS medžio!</translation>
+        <translation type="obsolete">Negalima atnaujinti ABS medžio!</translation>
     </message>
     <message>
         <source>&lt;b&gt;Building %1 failed!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;Statmas %1 nepavyko!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Statmas %1 nepavyko!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <source>&lt;b&gt;%1 was built successfully!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;%1 buvo pastatytas sėkmingai!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;%1 buvo pastatytas sėkmingai!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <source>Processing Package %1 of %2...</source>
-        <translation>Apdirbamas paketas %1 iš %2...</translation>
+        <translation type="obsolete">Apdirbamas paketas %1 iš %2...</translation>
     </message>
     <message>
         <source>Building %1...</source>
-        <translation>Statoma %1...</translation>
+        <translation type="obsolete">Statoma %1...</translation>
     </message>
     <message>
         <source>&lt;b&gt;Could not set up the environment correctly for %1!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt; Negalima taisyklingai įkurti aplinkos %1!! &lt;/b&gt; &lt;br&gt; &lt;br&gt;</translation>
+        <translation type="obsolete">&lt;b&gt; Negalima taisyklingai įkurti aplinkos %1!! &lt;/b&gt; &lt;br&gt; &lt;br&gt;</translation>
     </message>
     <message>
         <source>&lt;b&gt;Building %1...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;Statoma %1...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Statoma %1...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <source>&lt;b&gt;Building operation has started.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;Statymo operacija prasidėjo.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Statymo operacija prasidėjo.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
 </context>
 <context>
     <name>BuildingHandler</name>
     <message>
         <source>Error</source>
-        <translation>Klaida</translation>
+        <translation type="obsolete">Klaida</translation>
     </message>
     <message>
         <source>You need to have ABS installed to use Shaman&apos;s
 building feature. Do you want to install it now?</source>
-        <translation>„Shaman“ statymo ypatybei reikalinga ABS sistema. Ar norite įdiegti dabar?</translation>
+        <translation type="obsolete">„Shaman“ statymo ypatybei reikalinga ABS sistema. Ar norite įdiegti dabar?</translation>
     </message>
     <message>
         <source>You can not remove packages when processing
 your queue from Source</source>
-        <translation>Jūs negalite pašalinti paketų, apdirbdamas jūsų eilę iš šaltinio.</translation>
+        <translation type="obsolete">Jūs negalite pašalinti paketų, apdirbdamas jūsų eilę iš šaltinio.</translation>
     </message>
     <message>
         <source>Some of your packages do not belong to Arch
 Linux&apos;s official repository. Shaman is able to
 build packages from official sources only.</source>
-        <translation>Kai kurie iš jūsų paketų nepriklauso „Arch Linux“ oficialiai saugyklai. „Shaman“ sugeba pastatyti paketus tik iš oficialių šaltinių.</translation>
+        <translation type="obsolete">Kai kurie iš jūsų paketų nepriklauso „Arch Linux“ oficialiai saugyklai. „Shaman“ sugeba pastatyti paketus tik iš oficialių šaltinių.</translation>
     </message>
     <message>
         <source>You are about to install &lt;b&gt;%1 package&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
@@ -125,59 +180,59 @@ build packages from official sources only.</source>
     </message>
     <message>
         <source>To be Installed</source>
-        <translation>Bus įrašyta</translation>
+        <translation type="obsolete">Bus įrašyta</translation>
     </message>
     <message>
         <source>To be Upgraded</source>
-        <translation>Bus atnaujinta</translation>
+        <translation type="obsolete">Bus atnaujinta</translation>
     </message>
     <message>
         <source>Package Building</source>
-        <translation>Paketų statymas</translation>
+        <translation type="obsolete">Paketų statymas</translation>
     </message>
     <message>
         <source>Your Packages failed to build!</source>
-        <translation>Nepavyko pastatyti paketų!</translation>
+        <translation type="obsolete">Nepavyko pastatyti paketų!</translation>
     </message>
     <message>
         <source>Your packages Failed to Build.
 Look at the output for more details.</source>
-        <translation>Nepavyko pastatyti paketų.
+        <translation type="obsolete">Nepavyko pastatyti paketų.
 Žiūrėkite išvestį detalėms.</translation>
     </message>
     <message>
         <source>Close</source>
-        <translation>Uždaryti</translation>
+        <translation type="obsolete">Uždaryti</translation>
     </message>
     <message>
         <source>Building Packages Failed!!</source>
-        <translation>Paketų statymas nepavyko!!</translation>
+        <translation type="obsolete">Paketų statymas nepavyko!!</translation>
     </message>
     <message>
         <source>Some packages failed to build.
 Do you want to proceed anyway?</source>
-        <translation>Kai kurių paketų pastatyti nepavyko.
+        <translation type="obsolete">Kai kurių paketų pastatyti nepavyko.
 Vistiek norite tęsti?</translation>
     </message>
     <message>
         <source>Install Built Packages</source>
-        <translation>Įrašyti pastatytus paketus</translation>
+        <translation type="obsolete">Įrašyti pastatytus paketus</translation>
     </message>
     <message>
         <source>Close Without Installing</source>
-        <translation>Uždaryti neįrašant</translation>
+        <translation type="obsolete">Uždaryti neįrašant</translation>
     </message>
     <message>
         <source>Packages Built Successfully!</source>
-        <translation>Paketai pastatyti sėkmingai!</translation>
+        <translation type="obsolete">Paketai pastatyti sėkmingai!</translation>
     </message>
     <message>
         <source>Your Packages have been built successfully, and are ready to be installed</source>
-        <translation>Paketai pastatyti sėkmingao, ir paruošti įrašymui</translation>
+        <translation type="obsolete">Paketai pastatyti sėkmingao, ir paruošti įrašymui</translation>
     </message>
     <message numerus="yes">
         <source>You are about to install &lt;b&gt;%n package(s)&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             <numerusform>
             </numerusform>
         </translation>
@@ -395,16 +450,16 @@ Dabar jis kdemodmirrorlist&apos;e (/etc/pacman.d/kdemodmirrorlist).</translation
     </message>
     <message>
         <source>Pacman Database Optimized Successfully!</source>
-        <translation>„Pacman“ duomenų bazė sėkmingai optimizuota!</translation>
+        <translation type="obsolete">„Pacman“ duomenų bazė sėkmingai optimizuota!</translation>
     </message>
     <message>
         <source>Could not Optimize Pacman Database!</source>
-        <translation>Negalima optimizuoti „Pacman“ duomenų bazės!</translation>
+        <translation type="obsolete">Negalima optimizuoti „Pacman“ duomenų bazės!</translation>
     </message>
     <message>
         <source>Running sync...</source>
         <comment>sync is a command, so it should not be translated</comment>
-        <translation>Paleidžiama sync...</translation>
+        <translation type="obsolete">Paleidžiama sync...</translation>
     </message>
     <message>
         <source>Operation Completed Successfully!</source>
@@ -431,47 +486,47 @@ Dabar jis kdemodmirrorlist&apos;e (/etc/pacman.d/kdemodmirrorlist).</translation
     </message>
     <message>
         <source>Favourite Actions</source>
-        <translation>Mėgstami veiksmai</translation>
+        <translation type="obsolete">Mėgstami veiksmai</translation>
     </message>
     <message>
         <source>When Upgrading System:</source>
-        <translation>Kai atnaujinama sistemą:</translation>
+        <translation type="obsolete">Kai atnaujinama sistemą:</translation>
     </message>
     <message>
         <source>Upgrade Immediately</source>
-        <translation>Atnaujinti nedelsiant</translation>
+        <translation type="obsolete">Atnaujinti nedelsiant</translation>
     </message>
     <message>
         <source>Add Upgradeable Packages To Queue</source>
-        <translation>Pridėkite atnaujinamus paketus į eilę</translation>
+        <translation type="obsolete">Pridėkite atnaujinamus paketus į eilę</translation>
     </message>
     <message>
         <source>Ask</source>
-        <translation>Klausti</translation>
+        <translation type="obsolete">Klausti</translation>
     </message>
     <message>
         <source>When Processing Queue</source>
-        <translation>Kai vykdoma eilė</translation>
+        <translation type="obsolete">Kai vykdoma eilė</translation>
     </message>
     <message>
         <source>Keep application running in System Tray only</source>
-        <translation>Palikite programą vykdyti tik sistemos dėkle</translation>
+        <translation type="obsolete">Palikite programą vykdyti tik sistemos dėkle</translation>
     </message>
     <message>
         <source>GUI Startup</source>
-        <translation>Paleidžiama vartotojo aplinka</translation>
+        <translation type="obsolete">Paleidžiama vartotojo aplinka</translation>
     </message>
     <message>
         <source>Start in the System Tray</source>
-        <translation>Paleisti sistemos dėkle</translation>
+        <translation type="obsolete">Paleisti sistemos dėkle</translation>
     </message>
     <message>
         <source>Show Splashscreen</source>
-        <translation>Rodyti pasisveikinimo langą</translation>
+        <translation type="obsolete">Rodyti pasisveikinimo langą</translation>
     </message>
     <message>
         <source>Maintenance</source>
-        <translation>Palaikymas</translation>
+        <translation type="obsolete">Palaikymas</translation>
     </message>
     <message>
         <source>Process Selected</source>
@@ -480,7 +535,7 @@ Dabar jis kdemodmirrorlist&apos;e (/etc/pacman.d/kdemodmirrorlist).</translation
     <message>
         <source>Waiting</source>
         <comment>Waiting for a user action</comment>
-        <translation>Laukiama</translation>
+        <translation type="obsolete">Laukiama</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -497,55 +552,55 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Checkable Options</source>
-        <translation>Patikrinami pasirinkimai</translation>
+        <translation type="obsolete">Patikrinami pasirinkimai</translation>
     </message>
     <message>
         <source>Use Active FTP</source>
-        <translation>Naudoti aktyvų FTP</translation>
+        <translation type="obsolete">Naudoti aktyvų FTP</translation>
     </message>
     <message>
         <source>Use Deltas (needs xdelta to be installed)</source>
-        <translation>Naudoti deltą (reikalingas paketas &apos;xdelta&apos;)</translation>
+        <translation type="obsolete">Naudoti deltą (reikalingas paketas &apos;xdelta&apos;)</translation>
     </message>
     <message>
         <source>Use SysLog</source>
-        <translation>Naudoti &apos;SysLog&apos;</translation>
+        <translation type="obsolete">Naudoti &apos;SysLog&apos;</translation>
     </message>
     <message>
         <source>Advanced Options</source>
-        <translation>Daugiau pasirinkimų</translation>
+        <translation type="obsolete">Daugiau pasirinkimų</translation>
     </message>
     <message>
         <source>HoldPkgs:</source>
-        <translation>HoldPkgs:</translation>
+        <translation type="obsolete">HoldPkgs:</translation>
     </message>
     <message>
         <source>IgnorePkgs:</source>
-        <translation>IgnorePkgs:</translation>
+        <translation type="obsolete">IgnorePkgs:</translation>
     </message>
     <message>
         <source>IgnoreGroups:</source>
-        <translation>IgnoreGroups:</translation>
+        <translation type="obsolete">IgnoreGroups:</translation>
     </message>
     <message>
         <source>NoUpgrade:</source>
-        <translation>NoUpgrade:</translation>
+        <translation type="obsolete">NoUpgrade:</translation>
     </message>
     <message>
         <source>NoExtract:</source>
-        <translation>NoExtract:</translation>
+        <translation type="obsolete">NoExtract:</translation>
     </message>
     <message>
         <source>Log File:</source>
-        <translation>Žurnalo failas:</translation>
+        <translation type="obsolete">Žurnalo failas:</translation>
     </message>
     <message>
         <source>XFerCommand: (example: /path/to/command %u) Blank for Default</source>
-        <translation>XFerCommand: (pavyzdys: /nuoroda/į/komandą %u) Tuščias numatytas,</translation>
+        <translation type="obsolete">XFerCommand: (pavyzdys: /nuoroda/į/komandą %u) Tuščias numatytas,</translation>
     </message>
     <message>
         <source>Arch Linux Official Repositories</source>
-        <translation>„Arch Linux“ oficialios saugyklos</translation>
+        <translation type="obsolete">„Arch Linux“ oficialios saugyklos</translation>
     </message>
     <message>
         <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones.
@@ -556,30 +611,30 @@ Primename, kad paketai iš Unstable ir Testing saugyklų, gali pakenkti jūsų s
     <message>
         <source>Core</source>
         <comment>Do not translate</comment>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>Extra</source>
         <comment>Do not translate</comment>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>Community</source>
         <comment>Do not translate</comment>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>Testing</source>
         <comment>Do not translate</comment>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>Server</source>
-        <translation>Serveris</translation>
+        <translation type="obsolete">Serveris</translation>
     </message>
     <message>
         <source>Mirror:</source>
@@ -587,7 +642,7 @@ Primename, kad paketai iš Unstable ir Testing saugyklų, gali pakenkti jūsų s
     </message>
     <message>
         <source>KDEMod Repositories</source>
-        <translation>KDEMod saugyklos</translation>
+        <translation type="obsolete">KDEMod saugyklos</translation>
     </message>
     <message>
         <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an 
@@ -598,7 +653,7 @@ of KDE with the simplicity and the power of Arch.</source>
     </message>
     <message>
         <source>KDEMod 3 Repository</source>
-        <translation>KDEMod 3 saugykla</translation>
+        <translation type="obsolete">KDEMod 3 saugykla</translation>
     </message>
     <message>
         <source>KDEMod 3 Testing Repository</source>
@@ -610,7 +665,7 @@ of KDE with the simplicity and the power of Arch.</source>
     </message>
     <message>
         <source>Third-Party Repositories</source>
-        <translation>Trečios rūšies saugyklos</translation>
+        <translation type="obsolete">Trečios rūšies saugyklos</translation>
     </message>
     <message>
         <source>You can extend your packages choice by adding other repositories. Third-Party 
@@ -624,7 +679,7 @@ and Pacman.</source>
     </message>
     <message>
         <source>Add New Repository</source>
-        <translation>Pridėti naują saugyklą</translation>
+        <translation type="obsolete">Pridėti naują saugyklą</translation>
     </message>
     <message>
         <source>Edit Repository</source>
@@ -636,208 +691,208 @@ and Pacman.</source>
     </message>
     <message>
         <source>Preferences</source>
-        <translation>Nustatymai</translation>
+        <translation type="obsolete">Nustatymai</translation>
     </message>
     <message>
         <source>Process all dependencies and queue from binary first (recommended)</source>
-        <translation>Iš pradžių vykdykite visas priklausomybes ir eilę nuo binaro (rekomenduojama)</translation>
+        <translation type="obsolete">Iš pradžių vykdykite visas priklausomybes ir eilę nuo binaro (rekomenduojama)</translation>
     </message>
     <message>
         <source>Review Building output before installing</source>
-        <translation>Review Building output before installing</translation>
+        <translation type="obsolete">Review Building output before installing</translation>
     </message>
     <message>
         <source>ABS Configuration</source>
-        <translation>ABS nustatymai</translation>
+        <translation type="obsolete">ABS nustatymai</translation>
     </message>
     <message>
         <source>Use supfiles that match your current repositories</source>
-        <translation>Panaudokite rinkmenas, kurios atitinka jūsų einamąsias saugyklas</translation>
+        <translation type="obsolete">Panaudokite rinkmenas, kurios atitinka jūsų einamąsias saugyklas</translation>
     </message>
     <message>
         <source>Define supfiles manually</source>
-        <translation>Apibrėžkite rinkmenas rankiniu būdu</translation>
+        <translation type="obsolete">Apibrėžkite rinkmenas rankiniu būdu</translation>
     </message>
     <message>
         <source>RSync Server:</source>
-        <translation>RSync serveris:</translation>
+        <translation type="obsolete">RSync serveris:</translation>
     </message>
     <message>
         <source>Makepkg Configuration</source>
-        <translation>Makepkg nustatymai</translation>
+        <translation type="obsolete">Makepkg nustatymai</translation>
     </message>
     <message>
         <source>CFlags</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>CXXFlags</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>BuildEnv</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>Options</source>
-        <translation>Nustatymai</translation>
+        <translation type="obsolete">Nustatymai</translation>
     </message>
     <message>
         <source>Doc_Dirs</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>Build Environment</source>
-        <translation>Statymo aplinka</translation>
+        <translation type="obsolete">Statymo aplinka</translation>
     </message>
     <message>
         <source>Building Path</source>
-        <translation>Statymo kelias</translation>
+        <translation type="obsolete">Statymo kelias</translation>
     </message>
     <message>
         <source>Remove installed makedepends after build</source>
-        <translation>Pašalinti įrašytus &apos;makedepends&apos; po statymo</translation>
+        <translation type="obsolete">Pašalinti įrašytus &apos;makedepends&apos; po statymo</translation>
     </message>
     <message>
         <source>Clean Build Environment after installation</source>
-        <translation>Išvalyti statymo aplinką po įrašymo</translation>
+        <translation type="obsolete">Išvalyti statymo aplinką po įrašymo</translation>
     </message>
     <message>
         <source>When Application is in System Tray only</source>
-        <translation>Tik kai programa sistemos dėkle</translation>
+        <translation type="obsolete">Tik kai programa sistemos dėkle</translation>
     </message>
     <message>
         <source>Update Database every</source>
-        <translation>Atnaujinti duomenų bazę visada</translation>
+        <translation type="obsolete">Atnaujinti duomenų bazę visada</translation>
     </message>
     <message>
         <source>min</source>
         <comment>As in &quot;minutes&quot;</comment>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>Show tray notification Windows</source>
-        <translation>Rodyti dėklo pranešimo langus</translation>
+        <translation type="obsolete">Rodyti dėklo pranešimo langus</translation>
     </message>
     <message>
         <source>If upgrades are available:</source>
-        <translation>Jei yra atnaujinimų:</translation>
+        <translation type="obsolete">Jei yra atnaujinimų:</translation>
     </message>
     <message>
         <source>Just Notify</source>
-        <translation>Tik skelbti</translation>
+        <translation type="obsolete">Tik skelbti</translation>
     </message>
     <message>
         <source>Notify and add them to Queue</source>
-        <translation>Skelbti ir įdėti juos į eilę</translation>
+        <translation type="obsolete">Skelbti ir įdėti juos į eilę</translation>
     </message>
     <message>
         <source>Update Database at</source>
-        <translation>Atnaujinti duomenų bazę</translation>
+        <translation type="obsolete">Atnaujinti duomenų bazę</translation>
     </message>
     <message>
         <source>Use a proxy-server</source>
-        <translation>Naudoti proxy serverį</translation>
+        <translation type="obsolete">Naudoti proxy serverį</translation>
     </message>
     <message>
         <source>IP:</source>
-        <translation>IP:</translation>
+        <translation type="obsolete">IP:</translation>
     </message>
     <message>
         <source>Port:</source>
-        <translation>Port:</translation>
+        <translation type="obsolete">Port:</translation>
     </message>
     <message>
         <source>HTTP Proxy</source>
-        <translation>HTTP proxy</translation>
+        <translation type="obsolete">HTTP proxy</translation>
     </message>
     <message>
         <source>FTP Proxy</source>
-        <translation>FTP proxy</translation>
+        <translation type="obsolete">FTP proxy</translation>
     </message>
     <message>
         <source>Use Shaman RSS Capabilities</source>
-        <translation>Naudoti „Shaman“ RSS galimybes</translation>
+        <translation type="obsolete">Naudoti „Shaman“ RSS galimybes</translation>
     </message>
     <message>
         <source>Update RSS Feed Every</source>
-        <translation>Atnaujinti RSS įrašus visada</translation>
+        <translation type="obsolete">Atnaujinti RSS įrašus visada</translation>
     </message>
     <message>
         <source>Notify upon new items</source>
-        <translation>Pranešti apie naujienas</translation>
+        <translation type="obsolete">Pranešti apie naujienas</translation>
     </message>
     <message>
         <source>Check if there is an unread news about a package in Queue before processing it</source>
-        <translation>Patikrinti ar nėra neskaitytų naujienų apie paketą eilėje prieš pradėdami</translation>
+        <translation type="obsolete">Patikrinti ar nėra neskaitytų naujienų apie paketą eilėje prieš pradėdami</translation>
     </message>
     <message>
         <source>Interface</source>
-        <translation>Interfeisas</translation>
+        <translation type="obsolete">Interfeisas</translation>
     </message>
     <message>
         <source>Use Animated Tray Icon</source>
-        <translation>Naudoti animuotą ženkliuką</translation>
+        <translation type="obsolete">Naudoti animuotą ženkliuką</translation>
     </message>
     <message>
         <source>Start Shaman Automatically on X Startup</source>
-        <translation>Automatiškai pradėti „Shaman“ kai paleista grafinė aplinka</translation>
+        <translation type="obsolete">Automatiškai pradėti „Shaman“ kai paleista grafinė aplinka</translation>
     </message>
     <message>
         <source>Forbid starting Shaman as root</source>
-        <translation>Uždrausti paleisti „Shaman“ kaip &apos;root&apos;.</translation>
+        <translation type="obsolete">Uždrausti paleisti „Shaman“ kaip &apos;root&apos;.</translation>
     </message>
     <message>
         <source>KDEMod 4 Repository</source>
-        <translation type="unfinished">KDEMod 3 saugykla {4 ?}</translation>
+        <translation type="obsolete">KDEMod 3 saugykla {4 ?}</translation>
     </message>
     <message>
         <source>KDEMod 4 Extragear Repository</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>KDEMod 4 Playground Repository</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>KDEMod 4 Testing Repository</source>
-        <translation type="unfinished">KDEMod 3 bandomoji saugykla {4 ?}</translation>
+        <translation type="obsolete">KDEMod 3 bandomoji saugykla {4 ?}</translation>
     </message>
     <message>
         <source>KDEMod 4 Unstable Repository (Testers only!)</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones. Please note that packages from Unstable and Testing may break your system.</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme, and lots of addons, KDEMod is the best way to taste the ease and the power of KDE with the simplicity and the power of Arch.</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>You can extend your packages choice by adding other repositories. Third-Party Repositories act just as normal ones, and will be accessible through both Shaman and Pacman.</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>Use the following language:</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
         <source>Disable Tray Icon</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
@@ -861,24 +916,15 @@ and Pacman.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>Apply</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Add another server</source>
+        <source>Shaman Configuration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Repository Order</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Please order your repositories to define which one will be preferred over another.</source>
+        <source>Aqpm Configuration</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1008,17 +1054,25 @@ Dabar jis mirrorlist&apos;e (/etc/pacman.d/mirrorlist).</translation>
         <source>Please order your repositories to define which one will be preferred over another.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished">Klaida</translation>
+    </message>
+    <message>
+        <source>There has been a problem while saving the configuration!</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>EditPBuild</name>
     <message>
         <source>Saving</source>
-        <translation>Išsaugoma</translation>
+        <translation type="obsolete">Išsaugoma</translation>
     </message>
     <message>
         <source>You modified this PKGBUILD.
 Do you want to save it?</source>
-        <translation>Jūs redagavote PKGBUILD. Ar norite išsaugoti?</translation>
+        <translation type="obsolete">Jūs redagavote PKGBUILD. Ar norite išsaugoti?</translation>
     </message>
 </context>
 <context>
@@ -1858,7 +1912,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf@kdemod.ath.cx&amp;gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             </translation>
     </message>
     <message>
@@ -2036,11 +2090,6 @@ Vistiek įdiekti?</translation>
         <source>Replace %1 with %2/%3?</source>
         <translation type="unfinished">Pakeisti %1 į %2/%3?</translation>
     </message>
-    <message>
-        <source>%1 conflicts with %2.
-Remove %2?</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message numerus="yes">
         <source>The following package(s) cannot be upgraded due to unresolvable dependencies:
 %1
@@ -2076,6 +2125,15 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008-2009 Dario Freddi &amp;lt;drf@chakra-project.org&amp;gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@chakra-project.org&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 conflicts with %2.
+Remove %1?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Updating ABS tree</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2174,11 +2232,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Pacman Database Optimized Successfully!</source>
-        <translation type="unfinished">„Pacman“ duomenų bazė sėkmingai optimizuota!</translation>
+        <translation type="obsolete">„Pacman“ duomenų bazė sėkmingai optimizuota!</translation>
     </message>
     <message>
         <source>Could not Optimize Pacman Database!</source>
-        <translation type="unfinished">Negalima optimizuoti „Pacman“ duomenų bazės!</translation>
+        <translation type="obsolete">Negalima optimizuoti „Pacman“ duomenų bazės!</translation>
     </message>
     <message>
         <source>Running sync...</source>
@@ -2397,7 +2455,7 @@ Rekomenduotina pradėti kaip paprastam vartotojui.
         <source>Pacman is not updated.
 Shaman needs libalpm &gt;= 2.1.0 to run.
 Yours is %1. Please update Pacman.</source>
-        <translation>„Pacman“ ne atnaujintas.
+        <translation type="obsolete">„Pacman“ ne atnaujintas.
 „Shaman“ reikalingas libalpm &gt;= 2.1.0 paleidimui.
 Jūsų versija %1. Prašome atnaujinti „Pacman“.</translation>
     </message>
@@ -2415,6 +2473,10 @@ Jūsų versija %1. Prašome atnaujinti „Pacman“.</translation>
     </message>
     <message>
         <source>Shaman can not be started as root. Please restart it as unprivileged user.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Apply</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2741,6 +2803,161 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ShamanGeneralConfig</name>
+    <message>
+        <source>Favourite Actions</source>
+        <translation type="unfinished">Mėgstami veiksmai</translation>
+    </message>
+    <message>
+        <source>When Upgrading System:</source>
+        <translation type="unfinished">Kai atnaujinama sistemą:</translation>
+    </message>
+    <message>
+        <source>Upgrade Immediately</source>
+        <translation type="unfinished">Atnaujinti nedelsiant</translation>
+    </message>
+    <message>
+        <source>Add Upgradeable Packages To Queue</source>
+        <translation type="unfinished">Pridėkite atnaujinamus paketus į eilę</translation>
+    </message>
+    <message>
+        <source>Ask</source>
+        <translation type="unfinished">Klausti</translation>
+    </message>
+    <message>
+        <source>When Processing Queue</source>
+        <translation type="unfinished">Kai vykdoma eilė</translation>
+    </message>
+    <message>
+        <source>Keep application running in System Tray only</source>
+        <translation type="unfinished">Palikite programą vykdyti tik sistemos dėkle</translation>
+    </message>
+    <message>
+        <source>GUI Startup</source>
+        <translation type="unfinished">Paleidžiama vartotojo aplinka</translation>
+    </message>
+    <message>
+        <source>Start in the System Tray</source>
+        <translation type="unfinished">Paleisti sistemos dėkle</translation>
+    </message>
+    <message>
+        <source>Show Splashscreen</source>
+        <translation type="unfinished">Rodyti pasisveikinimo langą</translation>
+    </message>
+    <message>
+        <source>Use the following language:</source>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>Disable Tray Icon</source>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>Maintenance</source>
+        <translation type="unfinished">Palaikymas</translation>
+    </message>
+    <message>
+        <source>Process Selected</source>
+        <translation type="unfinished">Išrinktas procesas</translation>
+    </message>
+    <message>
+        <source>Waiting</source>
+        <comment>Waiting for a user action</comment>
+        <translation type="unfinished">Laukiama</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:7pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clean Unused Databases</source>
+        <translation type="unfinished">Išvalyti nenaudojamas duomenų bazes</translation>
+    </message>
+    <message>
+        <source>Clean Cache</source>
+        <translation type="unfinished">Išvalyti atsargas</translation>
+    </message>
+    <message>
+        <source>Empty Cache</source>
+        <translation type="unfinished">Nėra atsargų</translation>
+    </message>
+    <message>
+        <source>Optimize Pacman Database</source>
+        <translation type="unfinished">Optimizuoti „Pacman“ duomenų bazę</translation>
+    </message>
+    <message>
+        <source>Clean All Building Environments</source>
+        <translation type="unfinished">Išvalyti visas statymo aplinkas</translation>
+    </message>
+    <message>
+        <source>Cleaning up unused Databases...</source>
+        <translation type="unfinished">Išvalomos nenaudojamos duomenų bazės</translation>
+    </message>
+    <message>
+        <source>Cleaning up Cache...</source>
+        <translation type="unfinished">Išvalomos atsargos...</translation>
+    </message>
+    <message>
+        <source>Deleting Cache...</source>
+        <translation type="unfinished">Ištrinamos atsargos...</translation>
+    </message>
+    <message>
+        <source>Optimizing Pacman Database...</source>
+        <translation type="unfinished">Optimizuojamos „Pacman“ duomenų bazės</translation>
+    </message>
+    <message>
+        <source>Cleaning up building Environments...</source>
+        <translation type="unfinished">Išvalomos statymo aplinkos...</translation>
+    </message>
+    <message>
+        <source>Unused Databases Cleaned up successfully!</source>
+        <translation type="unfinished">Nenaudojamos duomenų bazės išvalytos sėkmingai!</translation>
+    </message>
+    <message>
+        <source>Cleaning up Unused Databases Failed!</source>
+        <translation type="unfinished">Duomenų bazės išvalymas nepavyko!</translation>
+    </message>
+    <message>
+        <source>Cache Cleaned Up Successfully!</source>
+        <translation type="unfinished">Atsargos išvalytos sėkmingai!</translation>
+    </message>
+    <message>
+        <source>Cleaning up Cache Failed!</source>
+        <translation type="unfinished">Atsargų išvalymas nepavyko!</translation>
+    </message>
+    <message>
+        <source>Cache Successfully Deleted!</source>
+        <translation type="unfinished">Atsargos sėkmingai ištrintos!</translation>
+    </message>
+    <message>
+        <source>Deleting Cache Failed!</source>
+        <translation type="unfinished">Atsargų ištrynimas nepavyko!</translation>
+    </message>
+    <message>
+        <source>Build Environments Successfully Cleaned!</source>
+        <translation type="unfinished">Statymo aplinkos sėkmingai išvalytos!</translation>
+    </message>
+    <message>
+        <source>Could not clean Build Environments!!</source>
+        <translation type="unfinished">Negalima išvalyti statymo aplinkos!!</translation>
+    </message>
+    <message>
+        <source>Database optimized successfully!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Could not optimize database!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3125,7 +3342,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Editing PKGBUILD of:</source>
-        <translation>Redaguojama PKGBUILD iš:</translation>
+        <translation type="obsolete">Redaguojama PKGBUILD iš:</translation>
     </message>
     <message>
         <source>Save</source>
@@ -3148,10 +3365,45 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Edit PKGBUILD&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+        <translation type="obsolete">&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Redaguoti PKGBUILD&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>Editing:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PKGBUILD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MakePkg options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ignore arch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Skip integrity checks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ignore dependency control</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hold version if this is a development PKGBUILD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Edit Package build options&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3371,11 +3623,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Review PKGBUILDs</source>
-        <translation>Peržiūrėti &apos;PKGBUILD&apos;</translation>
+        <translation type="obsolete">Peržiūrėti &apos;PKGBUILD&apos;</translation>
     </message>
     <message>
         <source>Process From Source</source>
         <translation>Atlikti iš šaltinio</translation>
+    </message>
+    <message>
+        <source>Review Build options</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

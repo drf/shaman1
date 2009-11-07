@@ -25,21 +25,76 @@
     </message>
 </context>
 <context>
+    <name>AqpmConfig</name>
+    <message>
+        <source>Packages and Paths</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>IgnorePkgs:</source>
+        <translation type="unfinished">IgnorePkgs:</translation>
+    </message>
+    <message>
+        <source>IgnoreGroups:</source>
+        <translation type="unfinished">IgnoreGroups:</translation>
+    </message>
+    <message>
+        <source>NoUpgrade:</source>
+        <translation type="unfinished">NoUpgrade:</translation>
+    </message>
+    <message>
+        <source>NoExtract:</source>
+        <translation type="unfinished">NoExtract:</translation>
+    </message>
+    <message>
+        <source>Log File:</source>
+        <translation type="unfinished">Archivo de Registro:</translation>
+    </message>
+    <message>
+        <source>Advanced</source>
+        <translation type="unfinished">Avanzado</translation>
+    </message>
+    <message>
+        <source>Use SysLog</source>
+        <translation type="unfinished">Usar SysLog</translation>
+    </message>
+    <message>
+        <source>Use Deltas (needs xdelta to be installed)</source>
+        <translation type="unfinished">Usar deltas (necesita tener instalado xdelta)</translation>
+    </message>
+    <message>
+        <source>Aqpm Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use multi-server download (EXPERIMENTAL)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished">Error</translation>
+    </message>
+    <message>
+        <source>There has been a problem while saving the configuration!</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>BuildingDialog</name>
     <message>
         <source>Error</source>
-        <translation>Error</translation>
+        <translation type="obsolete">Error</translation>
     </message>
     <message>
         <source>Would you like to abort building?.
 All Process will be lost.</source>
-        <translation>¿Quiere cancelar la construcción
+        <translation type="obsolete">¿Quiere cancelar la construcción
 del paquete? Todo el progreso 
 se perderá.</translation>
     </message>
     <message>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Building Process Aborted by the User. Building Failed.&lt;/b&gt;</source>
-        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;La construcción del paquete fue cancelada por el usuario y ha fallado.&lt;/b&gt;</translation>
+        <translation type="obsolete">&lt;br&gt;&lt;br&gt;&lt;b&gt;La construcción del paquete fue cancelada por el usuario y ha fallado.&lt;/b&gt;</translation>
     </message>
     <message>
         <source>Updating ABS Tree...</source>
@@ -51,47 +106,47 @@ se perderá.</translation>
     </message>
     <message>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;ABS Tree Was Successfully Updated!&lt;/b&gt;</source>
-        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;El árbol del ABS fue actualizado correctamente&lt;/b&gt;</translation>
+        <translation type="obsolete">&lt;br&gt;&lt;br&gt;&lt;b&gt;El árbol del ABS fue actualizado correctamente&lt;/b&gt;</translation>
     </message>
     <message>
         <source>ABS Update</source>
-        <translation>Actualización del ABS</translation>
+        <translation type="obsolete">Actualización del ABS</translation>
     </message>
     <message>
         <source>Your ABS Tree was updated!</source>
-        <translation>¡El arbol del ABS fue actualizado!</translation>
+        <translation type="obsolete">¡El arbol del ABS fue actualizado!</translation>
     </message>
     <message>
         <source>&lt;b&gt;Building %1 failed!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;La construcción de %1 falló&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;La construcción de %1 falló&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <source>&lt;b&gt;%1 was built successfully!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;%1 fue construido correctamente&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;%1 fue construido correctamente&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <source>Processing Package %1 of %2...</source>
-        <translation>Procesando el paquete %1 de %2...</translation>
+        <translation type="obsolete">Procesando el paquete %1 de %2...</translation>
     </message>
     <message>
         <source>Building %1...</source>
-        <translation>Construyendo %1...</translation>
+        <translation type="obsolete">Construyendo %1...</translation>
     </message>
     <message>
         <source>&lt;b&gt;Building %1...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;Construyendo %1...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Construyendo %1...&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <source>&lt;b&gt;Building operation has started.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;La construcción ha empezado.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;La construcción ha empezado.&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <source>&lt;b&gt;Could not set up the environment correctly for %1!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</source>
-        <translation>&lt;b&gt;¡No se pudo establecer correctamente el ambiente para %1!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;¡No se pudo establecer correctamente el ambiente para %1!&lt;/b&gt;&lt;br&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <source>Could not update the ABS Tree!</source>
-        <translation>¡No se pudo actualizar el árbol del ABS!</translation>
+        <translation type="obsolete">¡No se pudo actualizar el árbol del ABS!</translation>
     </message>
 </context>
 <context>
@@ -99,24 +154,24 @@ se perderá.</translation>
     <message>
         <source>You need to have ABS installed to use Shaman&apos;s
 building feature. Do you want to install it now?</source>
-        <translation>Debe instalar ABS para construir paquetes con Shaman.
+        <translation type="obsolete">Debe instalar ABS para construir paquetes con Shaman.
 ¿Quiere instalarlo ahora?</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation>Error</translation>
+        <translation type="obsolete">Error</translation>
     </message>
     <message>
         <source>You can not remove packages when processing
 your queue from Source</source>
-        <translation>No puede eliminar paquetes cuando se procesa
+        <translation type="obsolete">No puede eliminar paquetes cuando se procesa
 la lista de tareas desde el código fuente</translation>
     </message>
     <message>
         <source>Some of your packages do not belong to Arch
 Linux&apos;s official repository. Shaman is able to
 build packages from official sources only.</source>
-        <translation>Algunos de sus paquetes no pertenecen a los
+        <translation type="obsolete">Algunos de sus paquetes no pertenecen a los
 repositorios oficiales de Arch Linux. Shaman
 solo puede construir paquetes desde fuentes
 oficiales.</translation>
@@ -131,59 +186,59 @@ oficiales.</translation>
     </message>
     <message>
         <source>To be Installed</source>
-        <translation>Serán instalados</translation>
+        <translation type="obsolete">Serán instalados</translation>
     </message>
     <message>
         <source>To be Upgraded</source>
-        <translation>Serán actualizados</translation>
+        <translation type="obsolete">Serán actualizados</translation>
     </message>
     <message>
         <source>Package Building</source>
-        <translation>Construcción de paquete</translation>
+        <translation type="obsolete">Construcción de paquete</translation>
     </message>
     <message>
         <source>Your Packages failed to build!</source>
-        <translation>¡Fallo al construir los paquetes!</translation>
+        <translation type="obsolete">¡Fallo al construir los paquetes!</translation>
     </message>
     <message>
         <source>Your packages Failed to Build.
 Look at the output for more details.</source>
-        <translation>Hubo un fallo al construir los paquetes.
+        <translation type="obsolete">Hubo un fallo al construir los paquetes.
 Revise los mensajes para más detalles.</translation>
     </message>
     <message>
         <source>Close</source>
-        <translation>Cerrar</translation>
+        <translation type="obsolete">Cerrar</translation>
     </message>
     <message>
         <source>Building Packages Failed!!</source>
-        <translation>¡Falló la construcción del paquete!</translation>
+        <translation type="obsolete">¡Falló la construcción del paquete!</translation>
     </message>
     <message>
         <source>Some packages failed to build.
 Do you want to proceed anyway?</source>
-        <translation>La construcción de algunos paquetes
+        <translation type="obsolete">La construcción de algunos paquetes
 falló. ¿Quiere seguir de todas formas?</translation>
     </message>
     <message>
         <source>Install Built Packages</source>
-        <translation>Instalar paquetes creados</translation>
+        <translation type="obsolete">Instalar paquetes creados</translation>
     </message>
     <message>
         <source>Close Without Installing</source>
-        <translation>Cerrar sin instalar</translation>
+        <translation type="obsolete">Cerrar sin instalar</translation>
     </message>
     <message>
         <source>Packages Built Successfully!</source>
-        <translation>¡Paquetes creados satisfactoriamente!</translation>
+        <translation type="obsolete">¡Paquetes creados satisfactoriamente!</translation>
     </message>
     <message>
         <source>Your Packages have been built successfully, and are ready to be installed</source>
-        <translation>Los paquetes fueron creados satisfactoriamente, y están listos para ser instalados</translation>
+        <translation type="obsolete">Los paquetes fueron creados satisfactoriamente, y están listos para ser instalados</translation>
     </message>
     <message numerus="yes">
         <source>You are about to install &lt;b&gt;%n package(s)&lt;/b&gt; from source. Building from source&lt;br&gt;can give some advantages, however is very slow.&lt;br&gt;If you are not sure about that, you would probably prefer to process&lt;br&gt;your queue from binary files. Before you continue, you are advised to&lt;br&gt;review your configuration to improve your building performance.</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             <numerusform>Estás a punto de instalar &lt;b&gt;%n paquete(s)&lt;/b&gt; desde la fuente. Compilar desde el codigo fuente puede dar algunas ventajas, sin embargo es muy lento.&lt;br&gt;Si no estás seguro, es probable que prefieren procesar paquetes binarios&lt;br&gt;ya compilados. Antes de continuar, le recomendamos que revise su&lt;br&gt;configuración para mejorar el rendimiento de la compilación.</numerusform>
         </translation>
     </message>
@@ -245,47 +300,47 @@ Do you want to delete it?</source>
     </message>
     <message>
         <source>Favourite Actions</source>
-        <translation>Acciones favoritas</translation>
+        <translation type="obsolete">Acciones favoritas</translation>
     </message>
     <message>
         <source>When Upgrading System:</source>
-        <translation>Cuando se actualice el sistema:</translation>
+        <translation type="obsolete">Cuando se actualice el sistema:</translation>
     </message>
     <message>
         <source>Upgrade Immediately</source>
-        <translation>Actualizar inmediatamente</translation>
+        <translation type="obsolete">Actualizar inmediatamente</translation>
     </message>
     <message>
         <source>Add Upgradeable Packages To Queue</source>
-        <translation>Agregar paquetes por actualizar a la lista de tareas</translation>
+        <translation type="obsolete">Agregar paquetes por actualizar a la lista de tareas</translation>
     </message>
     <message>
         <source>Ask</source>
-        <translation>Preguntar</translation>
+        <translation type="obsolete">Preguntar</translation>
     </message>
     <message>
         <source>When Processing Queue</source>
-        <translation>Cuando se procese la lista de tareas</translation>
+        <translation type="obsolete">Cuando se procese la lista de tareas</translation>
     </message>
     <message>
         <source>Keep application running in System Tray only</source>
-        <translation>Mantener la aplicación en la bandeja de sistema</translation>
+        <translation type="obsolete">Mantener la aplicación en la bandeja de sistema</translation>
     </message>
     <message>
         <source>GUI Startup</source>
-        <translation>Inicio de la Interfaz</translation>
+        <translation type="obsolete">Inicio de la Interfaz</translation>
     </message>
     <message>
         <source>Start in the System Tray</source>
-        <translation>Iniciar en la bandeja de sistema</translation>
+        <translation type="obsolete">Iniciar en la bandeja de sistema</translation>
     </message>
     <message>
         <source>When Application is in System Tray only</source>
-        <translation>Cuando la aplicacion solo esté en la bandeja de sistema</translation>
+        <translation type="obsolete">Cuando la aplicacion solo esté en la bandeja de sistema</translation>
     </message>
     <message>
         <source>Update Database every</source>
-        <translation>Actualizar la base de datos cada</translation>
+        <translation type="obsolete">Actualizar la base de datos cada</translation>
     </message>
     <message>
         <source>minutes</source>
@@ -293,19 +348,19 @@ Do you want to delete it?</source>
     </message>
     <message>
         <source>If upgrades are available:</source>
-        <translation>Si hay actualizaciones disponibles:</translation>
+        <translation type="obsolete">Si hay actualizaciones disponibles:</translation>
     </message>
     <message>
         <source>Just Notify</source>
-        <translation>Solo notificar</translation>
+        <translation type="obsolete">Solo notificar</translation>
     </message>
     <message>
         <source>Notify and add them to Queue</source>
-        <translation>Notificar y agregarlas a la lista de tareas</translation>
+        <translation type="obsolete">Notificar y agregarlas a la lista de tareas</translation>
     </message>
     <message>
         <source>Maintenance</source>
-        <translation>Mantenimiento</translation>
+        <translation type="obsolete">Mantenimiento</translation>
     </message>
     <message>
         <source>Process Selected</source>
@@ -313,47 +368,47 @@ Do you want to delete it?</source>
     </message>
     <message>
         <source>Checkable Options</source>
-        <translation>Opciones Seleccionables</translation>
+        <translation type="obsolete">Opciones Seleccionables</translation>
     </message>
     <message>
         <source>Use Active FTP</source>
-        <translation>Usar FTP activo</translation>
+        <translation type="obsolete">Usar FTP activo</translation>
     </message>
     <message>
         <source>Use Deltas (needs xdelta to be installed)</source>
-        <translation>Usar deltas (necesita tener instalado xdelta)</translation>
+        <translation type="obsolete">Usar deltas (necesita tener instalado xdelta)</translation>
     </message>
     <message>
         <source>Advanced Options</source>
-        <translation>Opciones avanzadas</translation>
+        <translation type="obsolete">Opciones avanzadas</translation>
     </message>
     <message>
         <source>HoldPkgs:</source>
-        <translation>HoldPkgs:</translation>
+        <translation type="obsolete">HoldPkgs:</translation>
     </message>
     <message>
         <source>IgnorePkgs:</source>
-        <translation>IgnorePkgs:</translation>
+        <translation type="obsolete">IgnorePkgs:</translation>
     </message>
     <message>
         <source>IgnoreGroups:</source>
-        <translation>IgnoreGroups:</translation>
+        <translation type="obsolete">IgnoreGroups:</translation>
     </message>
     <message>
         <source>NoUpgrade:</source>
-        <translation>NoUpgrade:</translation>
+        <translation type="obsolete">NoUpgrade:</translation>
     </message>
     <message>
         <source>NoExtract:</source>
-        <translation>NoExtract:</translation>
+        <translation type="obsolete">NoExtract:</translation>
     </message>
     <message>
         <source>XFerCommand: (example: /path/to/command %u) Blank for Default</source>
-        <translation>XFerCommand: (ejemplo: /sitio/del/comando %u) Dejar vacío para usar el valor por defecto</translation>
+        <translation type="obsolete">XFerCommand: (ejemplo: /sitio/del/comando %u) Dejar vacío para usar el valor por defecto</translation>
     </message>
     <message>
         <source>Arch Linux Official Repositories</source>
-        <translation>Repositorios oficiales de Arch Linux</translation>
+        <translation type="obsolete">Repositorios oficiales de Arch Linux</translation>
     </message>
     <message>
         <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones.
@@ -364,7 +419,7 @@ dañar su sistema.</translation>
     </message>
     <message>
         <source>Server</source>
-        <translation>Servidor</translation>
+        <translation type="obsolete">Servidor</translation>
     </message>
     <message>
         <source>Mirror:</source>
@@ -376,7 +431,7 @@ dañar su sistema.</translation>
     </message>
     <message>
         <source>KDEMod Repositories</source>
-        <translation>Repositorios de KDEmod</translation>
+        <translation type="obsolete">Repositorios de KDEmod</translation>
     </message>
     <message>
         <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an 
@@ -390,7 +445,7 @@ forma de probar la facilidad y el poder de KDE con la simplicidad de Arch.</tran
     </message>
     <message>
         <source>KDEMod 3 Repository</source>
-        <translation>Repositorio de KDEmod 3</translation>
+        <translation type="obsolete">Repositorio de KDEmod 3</translation>
     </message>
     <message>
         <source>KDEMod 4 Repository (Unstable, testers only)</source>
@@ -398,7 +453,7 @@ forma de probar la facilidad y el poder de KDE con la simplicidad de Arch.</tran
     </message>
     <message>
         <source>Third-Party Repositories</source>
-        <translation>Repositorios de terceros</translation>
+        <translation type="obsolete">Repositorios de terceros</translation>
     </message>
     <message>
         <source>You can extend your packages choice by adding other repositories. Third-Party 
@@ -414,7 +469,7 @@ de Shaman y Pacman.</translation>
     </message>
     <message>
         <source>Add New Repository</source>
-        <translation>Agregar nuevo repositorio</translation>
+        <translation type="obsolete">Agregar nuevo repositorio</translation>
     </message>
     <message>
         <source>Edit Repository</source>
@@ -426,7 +481,7 @@ de Shaman y Pacman.</translation>
     </message>
     <message>
         <source>Preferences</source>
-        <translation>Preferencias</translation>
+        <translation type="obsolete">Preferencias</translation>
     </message>
     <message>
         <source>Process all dependencies and queue from source first (recommended)</source>
@@ -434,59 +489,59 @@ de Shaman y Pacman.</translation>
     </message>
     <message>
         <source>Review Building output before installing</source>
-        <translation>Revisar los mensajes de la compilación antes de instalar</translation>
+        <translation type="obsolete">Revisar los mensajes de la compilación antes de instalar</translation>
     </message>
     <message>
         <source>ABS Configuration</source>
-        <translation>Configuración de ABS</translation>
+        <translation type="obsolete">Configuración de ABS</translation>
     </message>
     <message>
         <source>Use supfiles that match your current repositories</source>
-        <translation>Usar supfiles que concuerden con sus repositorios actuales</translation>
+        <translation type="obsolete">Usar supfiles que concuerden con sus repositorios actuales</translation>
     </message>
     <message>
         <source>Define supfiles manually</source>
-        <translation>Definir los supfiles manualmente</translation>
+        <translation type="obsolete">Definir los supfiles manualmente</translation>
     </message>
     <message>
         <source>Makepkg Configuration</source>
-        <translation>Configuración de makepkg</translation>
+        <translation type="obsolete">Configuración de makepkg</translation>
     </message>
     <message>
         <source>CFlags</source>
-        <translation>CFlags</translation>
+        <translation type="obsolete">CFlags</translation>
     </message>
     <message>
         <source>CXXFlags</source>
-        <translation>CXXFlags</translation>
+        <translation type="obsolete">CXXFlags</translation>
     </message>
     <message>
         <source>BuildEnv</source>
-        <translation>BuildEnv</translation>
+        <translation type="obsolete">BuildEnv</translation>
     </message>
     <message>
         <source>Options</source>
-        <translation>Opciones</translation>
+        <translation type="obsolete">Opciones</translation>
     </message>
     <message>
         <source>Doc_Dirs</source>
-        <translation>Doc_Dirs</translation>
+        <translation type="obsolete">Doc_Dirs</translation>
     </message>
     <message>
         <source>Build Environment</source>
-        <translation>Entorno de compilación</translation>
+        <translation type="obsolete">Entorno de compilación</translation>
     </message>
     <message>
         <source>Building Path</source>
-        <translation>Carpeta para compilaciones</translation>
+        <translation type="obsolete">Carpeta para compilaciones</translation>
     </message>
     <message>
         <source>Remove installed makedepends after build</source>
-        <translation>Quitar las dependencias de compilación luego de crear el paquete</translation>
+        <translation type="obsolete">Quitar las dependencias de compilación luego de crear el paquete</translation>
     </message>
     <message>
         <source>Clean Build Environment after installation</source>
-        <translation>Limpiar el entorno de compilación luego de la instalación</translation>
+        <translation type="obsolete">Limpiar el entorno de compilación luego de la instalación</translation>
     </message>
     <message>
         <source>General</source>
@@ -610,11 +665,11 @@ Ahora está disponible en el archivo mirrorlist.</translation>
     </message>
     <message>
         <source>Pacman Database Optimized Successfully!</source>
-        <translation>¡La base de datos de pacman fue actualizada satisfactoriamente!</translation>
+        <translation type="obsolete">¡La base de datos de pacman fue actualizada satisfactoriamente!</translation>
     </message>
     <message>
         <source>Could not Optimize Pacman Database!</source>
-        <translation>¡No se pudo optimizar la base de datos de Pacman!</translation>
+        <translation type="obsolete">¡No se pudo optimizar la base de datos de Pacman!</translation>
     </message>
     <message>
         <source>Operation Completed Successfully!</source>
@@ -642,7 +697,7 @@ Ahora está disponible en el archivo mirrorlist.</translation>
     <message>
         <source>Waiting</source>
         <comment>Waiting for a user action</comment>
-        <translation>Esperando</translation>
+        <translation type="obsolete">Esperando</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -659,35 +714,35 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Core</source>
         <comment>Do not translate</comment>
-        <translation>Base</translation>
+        <translation type="obsolete">Base</translation>
     </message>
     <message>
         <source>Extra</source>
         <comment>Do not translate</comment>
-        <translation>Extra</translation>
+        <translation type="obsolete">Extra</translation>
     </message>
     <message>
         <source>Community</source>
         <comment>Do not translate</comment>
-        <translation>Community</translation>
+        <translation type="obsolete">Community</translation>
     </message>
     <message>
         <source>Testing</source>
         <comment>Do not translate</comment>
-        <translation>Testing</translation>
+        <translation type="obsolete">Testing</translation>
     </message>
     <message>
         <source>Running sync...</source>
         <comment>sync is a command, so it should not be translated</comment>
-        <translation>Ejecutando sync...</translation>
+        <translation type="obsolete">Ejecutando sync...</translation>
     </message>
     <message>
         <source>Show Splashscreen</source>
-        <translation>Mostrar Pantalla de Bienvenida</translation>
+        <translation type="obsolete">Mostrar Pantalla de Bienvenida</translation>
     </message>
     <message>
         <source>Process all dependencies and queue from binary first (recommended)</source>
-        <translation>Procesar todas las dependencias y tareas desde binarios (recomendado)</translation>
+        <translation type="obsolete">Procesar todas las dependencias y tareas desde binarios (recomendado)</translation>
     </message>
     <message>
         <source>Advanced</source>
@@ -696,55 +751,55 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>min</source>
         <comment>As in &quot;minutes&quot;</comment>
-        <translation>min</translation>
+        <translation type="obsolete">min</translation>
     </message>
     <message>
         <source>Show tray notification Windows</source>
-        <translation>Mostrar Ventanas del área de notificación</translation>
+        <translation type="obsolete">Mostrar Ventanas del área de notificación</translation>
     </message>
     <message>
         <source>Use a proxy-server</source>
-        <translation>Usar un servidor proxy</translation>
+        <translation type="obsolete">Usar un servidor proxy</translation>
     </message>
     <message>
         <source>IP:</source>
-        <translation>IP:</translation>
+        <translation type="obsolete">IP:</translation>
     </message>
     <message>
         <source>Port:</source>
-        <translation>Puerto:</translation>
+        <translation type="obsolete">Puerto:</translation>
     </message>
     <message>
         <source>HTTP Proxy</source>
-        <translation>Proxy HTTP</translation>
+        <translation type="obsolete">Proxy HTTP</translation>
     </message>
     <message>
         <source>FTP Proxy</source>
-        <translation>Proxy FTP</translation>
+        <translation type="obsolete">Proxy FTP</translation>
     </message>
     <message>
         <source>Use Shaman RSS Capabilities</source>
-        <translation>Usar Capacidades RSS de Shaman</translation>
+        <translation type="obsolete">Usar Capacidades RSS de Shaman</translation>
     </message>
     <message>
         <source>Update RSS Feed Every</source>
-        <translation>Actualizar fuente RSS cada</translation>
+        <translation type="obsolete">Actualizar fuente RSS cada</translation>
     </message>
     <message>
         <source>Notify upon new items</source>
-        <translation>Notificar sobre nuevos objetos</translation>
+        <translation type="obsolete">Notificar sobre nuevos objetos</translation>
     </message>
     <message>
         <source>Check if there is an unread news about a package in Queue before processing it</source>
-        <translation>Revisar si hay una noticia sin leer sobre un paquete en la lista de tareas antes de procesarlo</translation>
+        <translation type="obsolete">Revisar si hay una noticia sin leer sobre un paquete en la lista de tareas antes de procesarlo</translation>
     </message>
     <message>
         <source>Use SysLog</source>
-        <translation>Usar SysLog</translation>
+        <translation type="obsolete">Usar SysLog</translation>
     </message>
     <message>
         <source>Log File:</source>
-        <translation>Archivo de Registro:</translation>
+        <translation type="obsolete">Archivo de Registro:</translation>
     </message>
     <message>
         <source>Ok</source>
@@ -760,15 +815,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Interface</source>
-        <translation>Interfaz</translation>
+        <translation type="obsolete">Interfaz</translation>
     </message>
     <message>
         <source>Start Shaman Automatically on X Startup</source>
-        <translation>Iniciar automáticamente Shaman al cargar la sesión</translation>
+        <translation type="obsolete">Iniciar automáticamente Shaman al cargar la sesión</translation>
     </message>
     <message>
         <source>Forbid starting Shaman as root</source>
-        <translation>Prohibir a Shaman iniciar como root</translation>
+        <translation type="obsolete">Prohibir a Shaman iniciar como root</translation>
     </message>
     <message>
         <source>Saving Configuration</source>
@@ -820,55 +875,55 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>RSync Server:</source>
-        <translation>Servidor de RSync:</translation>
+        <translation type="obsolete">Servidor de RSync:</translation>
     </message>
     <message>
         <source>Update Database at</source>
-        <translation>Actualizar Base de Datos a las</translation>
+        <translation type="obsolete">Actualizar Base de Datos a las</translation>
     </message>
     <message>
         <source>Use Animated Tray Icon</source>
-        <translation>Usar ícono animado en la bandeja de sistema</translation>
+        <translation type="obsolete">Usar ícono animado en la bandeja de sistema</translation>
     </message>
     <message>
         <source>KDEMod 4 Repository</source>
-        <translation>Repositorio de KDEmod 4</translation>
+        <translation type="obsolete">Repositorio de KDEmod 4</translation>
     </message>
     <message>
         <source>KDEMod 4 Extragear Repository</source>
-        <translation>KDEMod 4 Repositorio Extragear</translation>
+        <translation type="obsolete">KDEMod 4 Repositorio Extragear</translation>
     </message>
     <message>
         <source>KDEMod 4 Playground Repository</source>
-        <translation>KDEMod 4 Repositorio Playground</translation>
+        <translation type="obsolete">KDEMod 4 Repositorio Playground</translation>
     </message>
     <message>
         <source>KDEMod 4 Testing Repository</source>
-        <translation>Repositorio de pruebas KDEmod 4</translation>
+        <translation type="obsolete">Repositorio de pruebas KDEmod 4</translation>
     </message>
     <message>
         <source>KDEMod 4 Unstable Repository (Testers only!)</source>
-        <translation>KDEMod 4 Repositorio inestable (¡solo desarrolladores!)</translation>
+        <translation type="obsolete">KDEMod 4 Repositorio inestable (¡solo desarrolladores!)</translation>
     </message>
     <message>
         <source>Here you can choose what repositories to use between Arch Linux&apos;s official ones. Please note that packages from Unstable and Testing may break your system.</source>
-        <translation>Aquí puede elegir qué repositorios oficial va a utilizar de Arch Linux. Tenga en cuenta que los paquetes inestables y en estado de pruebas pueden dañar el sistema.</translation>
+        <translation type="obsolete">Aquí puede elegir qué repositorios oficial va a utilizar de Arch Linux. Tenga en cuenta que los paquetes inestables y en estado de pruebas pueden dañar el sistema.</translation>
     </message>
     <message>
         <source>KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an improved Qt build, compatible with Arch Linux standard Qt&apos;s, an improved theme, and lots of addons, KDEMod is the best way to taste the ease and the power of KDE with the simplicity and the power of Arch.</source>
-        <translation>KDEMod es una versión mejorada de KDE, exclusivo de Arch Linux. Ofreciendo una mejora de Qt, compatible con el Qt estándar de Arch Linux, una mejora de apariencia, y un montón de agregados, KDEMod es la mejor manera de probar la facilidad y el poder de KDE con la sencillez y la potencia de Arch.</translation>
+        <translation type="obsolete">KDEMod es una versión mejorada de KDE, exclusivo de Arch Linux. Ofreciendo una mejora de Qt, compatible con el Qt estándar de Arch Linux, una mejora de apariencia, y un montón de agregados, KDEMod es la mejor manera de probar la facilidad y el poder de KDE con la sencillez y la potencia de Arch.</translation>
     </message>
     <message>
         <source>You can extend your packages choice by adding other repositories. Third-Party Repositories act just as normal ones, and will be accessible through both Shaman and Pacman.</source>
-        <translation>Puede ampliar su lista de paquetes mediante la adición de otros repositorios. Los repositorios de terceros pueden actuar como las normales, y serán accesibles a través de Shaman y Pacman.</translation>
+        <translation type="obsolete">Puede ampliar su lista de paquetes mediante la adición de otros repositorios. Los repositorios de terceros pueden actuar como las normales, y serán accesibles a través de Shaman y Pacman.</translation>
     </message>
     <message>
         <source>Use the following language:</source>
-        <translation>Utilizar el siguiente idioma:</translation>
+        <translation type="obsolete">Utilizar el siguiente idioma:</translation>
     </message>
     <message>
         <source>Disable Tray Icon</source>
-        <translation>Deshabilitar icono de la bandeja</translation>
+        <translation type="obsolete">Deshabilitar icono de la bandeja</translation>
     </message>
     <message>
         <source>Database optimized successfully!</source>
@@ -905,24 +960,15 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:9pt;&quot;&gt;Por favor, elija una acción del Menú desplegable.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>Apply</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Add another server</source>
+        <source>Shaman Configuration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Repository Order</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Please order your repositories to define which one will be preferred over another.</source>
+        <source>Aqpm Configuration</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1042,17 +1088,25 @@ Ahora está disponible en el archivo mirrorlist.</translation>
         <source>Please order your repositories to define which one will be preferred over another.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished">Error</translation>
+    </message>
+    <message>
+        <source>There has been a problem while saving the configuration!</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>EditPBuild</name>
     <message>
         <source>Saving</source>
-        <translation>Guardando</translation>
+        <translation type="obsolete">Guardando</translation>
     </message>
     <message>
         <source>You modified this PKGBUILD.
 Do you want to save it?</source>
-        <translation>Modificó este PKGBUILD.
+        <translation type="obsolete">Modificó este PKGBUILD.
 ¿Quiere guardarlo?</translation>
     </message>
 </context>
@@ -2258,7 +2312,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf@kdemod.ath.cx&amp;gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Una interfaz de libalpm en Qt&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Licencia: GPLv2+&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Versión de Libalpm: v.%1&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="obsolete">&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Una interfaz de libalpm en Qt&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Licencia: GPLv2+&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Versión de Libalpm: v.%1&lt;/p&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Dario Freddi &amp;lt;drf@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(C) 2008 Lukas Appelhans &amp;lt;boom1992@kdemod.ath.cx&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Name</source>
@@ -2293,7 +2347,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>%1 conflicts with %2.
 Remove %2?</source>
-        <translation>%1 tiene conflictos con %2.
+        <translation type="obsolete">%1 tiene conflictos con %2.
 Eliminar %2?</translation>
     </message>
     <message>
@@ -2350,6 +2404,15 @@ Do you want to skip the above package(s) for this upgrade?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
         </translation>
+    </message>
+    <message>
+        <source>%1 conflicts with %2.
+Remove %1?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Updating ABS tree</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2444,11 +2507,11 @@ Do you want to skip the above package(s) for this upgrade?</source>
     </message>
     <message>
         <source>Pacman Database Optimized Successfully!</source>
-        <translation>¡La base de datos de pacman fue actualizada satisfactoriamente!</translation>
+        <translation type="obsolete">¡La base de datos de pacman fue actualizada satisfactoriamente!</translation>
     </message>
     <message>
         <source>Could not Optimize Pacman Database!</source>
-        <translation>¡No se pudo optimizar la base de datos de Pacman!</translation>
+        <translation type="obsolete">¡No se pudo optimizar la base de datos de Pacman!</translation>
     </message>
     <message>
         <source>Running sync...</source>
@@ -2601,7 +2664,7 @@ Thanks again, and enjoy your translation!</comment>
         <source>Pacman is not updated.
 Shaman needs libalpm &gt;= 2.1.0 to run.
 Yours is %1. Please update Pacman.</source>
-        <translation>Pacman no está actualizado.
+        <translation type="obsolete">Pacman no está actualizado.
 Shaman necesita libalpm &gt;= 2.1.0.
 El suyo es %1. Por favor actualice Pacman.</translation>
     </message>
@@ -2708,6 +2771,10 @@ de Shaman para más detalles.</translation>
     <message>
         <source>Shaman can not be started as root. Please restart it as unprivileged user.</source>
         <translation>Shaman no puede ser inicializado como root. Por favor, reinicie como usuario sin privilegios.</translation>
+    </message>
+    <message>
+        <source>&amp;Apply</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3063,6 +3130,159 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Remove</source>
         <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ShamanGeneralConfig</name>
+    <message>
+        <source>Favourite Actions</source>
+        <translation type="unfinished">Acciones favoritas</translation>
+    </message>
+    <message>
+        <source>When Upgrading System:</source>
+        <translation type="unfinished">Cuando se actualice el sistema:</translation>
+    </message>
+    <message>
+        <source>Upgrade Immediately</source>
+        <translation type="unfinished">Actualizar inmediatamente</translation>
+    </message>
+    <message>
+        <source>Add Upgradeable Packages To Queue</source>
+        <translation type="unfinished">Agregar paquetes por actualizar a la lista de tareas</translation>
+    </message>
+    <message>
+        <source>Ask</source>
+        <translation type="unfinished">Preguntar</translation>
+    </message>
+    <message>
+        <source>When Processing Queue</source>
+        <translation type="unfinished">Cuando se procese la lista de tareas</translation>
+    </message>
+    <message>
+        <source>Keep application running in System Tray only</source>
+        <translation type="unfinished">Mantener la aplicación en la bandeja de sistema</translation>
+    </message>
+    <message>
+        <source>GUI Startup</source>
+        <translation type="unfinished">Inicio de la Interfaz</translation>
+    </message>
+    <message>
+        <source>Start in the System Tray</source>
+        <translation type="unfinished">Iniciar en la bandeja de sistema</translation>
+    </message>
+    <message>
+        <source>Show Splashscreen</source>
+        <translation type="unfinished">Mostrar Pantalla de Bienvenida</translation>
+    </message>
+    <message>
+        <source>Use the following language:</source>
+        <translation type="unfinished">Utilizar el siguiente idioma:</translation>
+    </message>
+    <message>
+        <source>Disable Tray Icon</source>
+        <translation type="unfinished">Deshabilitar icono de la bandeja</translation>
+    </message>
+    <message>
+        <source>Maintenance</source>
+        <translation type="unfinished">Mantenimiento</translation>
+    </message>
+    <message>
+        <source>Process Selected</source>
+        <translation type="unfinished">Procesar selección</translation>
+    </message>
+    <message>
+        <source>Waiting</source>
+        <comment>Waiting for a user action</comment>
+        <translation type="unfinished">Esperando</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Liberation Sans&apos;; font-size:7pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Shaman Manteinance.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Please choose an action from the Drop-Down Menu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clean Unused Databases</source>
+        <translation type="unfinished">Limpiar las bases de datos sin usar</translation>
+    </message>
+    <message>
+        <source>Clean Cache</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Empty Cache</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Optimize Pacman Database</source>
+        <translation type="unfinished">Optimizar la base de datos de Pacman</translation>
+    </message>
+    <message>
+        <source>Clean All Building Environments</source>
+        <translation type="unfinished">Limpiar todos los entornos de compilación</translation>
+    </message>
+    <message>
+        <source>Cleaning up unused Databases...</source>
+        <translation type="unfinished">Limpiando las bases de datos sin usar...</translation>
+    </message>
+    <message>
+        <source>Cleaning up Cache...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Deleting Cache...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Optimizing Pacman Database...</source>
+        <translation type="unfinished">Optimizando la base de datos de Pacman...</translation>
+    </message>
+    <message>
+        <source>Cleaning up building Environments...</source>
+        <translation type="unfinished">Limpiando entornos de compilación...</translation>
+    </message>
+    <message>
+        <source>Unused Databases Cleaned up successfully!</source>
+        <translation type="unfinished">¡Las bases de datos sin usar fueron limpiadas satisfactoriamente!</translation>
+    </message>
+    <message>
+        <source>Cleaning up Unused Databases Failed!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cache Cleaned Up Successfully!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cleaning up Cache Failed!</source>
+        <translation type="unfinished">¡La limpieza del cache falló!</translation>
+    </message>
+    <message>
+        <source>Cache Successfully Deleted!</source>
+        <translation type="unfinished">¡El cache se borró satisfactoriamente!</translation>
+    </message>
+    <message>
+        <source>Deleting Cache Failed!</source>
+        <translation type="unfinished">¡La eliminación del cache falló!</translation>
+    </message>
+    <message>
+        <source>Build Environments Successfully Cleaned!</source>
+        <translation type="unfinished">¡Los entornos de compilación se limpiaron satisfactoriamente!</translation>
+    </message>
+    <message>
+        <source>Could not clean Build Environments!!</source>
+        <translation type="unfinished">¡No se pudo limpiar los entornos de compilación!</translation>
+    </message>
+    <message>
+        <source>Database optimized successfully!</source>
+        <translation type="unfinished">Base de datos optimizado con éxito!</translation>
+    </message>
+    <message>
+        <source>Could not optimize database!</source>
+        <translation type="unfinished">No se puede optimizar la base de datos!</translation>
     </message>
 </context>
 <context>
@@ -3556,7 +3776,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Editing PKGBUILD of:</source>
-        <translation>Editando el PKGBUILD de:</translation>
+        <translation type="obsolete">Editando el PKGBUILD de:</translation>
     </message>
     <message>
         <source>Save</source>
@@ -3579,10 +3799,45 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Edit PKGBUILD&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+        <translation type="obsolete">&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Editar el PKGBUILD&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>Editing:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PKGBUILD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MakePkg options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ignore arch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Skip integrity checks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ignore dependency control</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hold version if this is a development PKGBUILD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Edit Package build options&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3806,7 +4061,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Review PKGBUILDs</source>
-        <translation>Revisar los PKGBUILDs</translation>
+        <translation type="obsolete">Revisar los PKGBUILDs</translation>
     </message>
     <message>
         <source>Process From Source</source>
@@ -3815,6 +4070,10 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Do not install immediately when building is finished</source>
         <translation>No instalar inmediatamente luego de finalizada la construcción</translation>
+    </message>
+    <message>
+        <source>Review Build options</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

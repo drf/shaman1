@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-08 14:50+0200\n"
+"POT-Creation-Date: 2009-11-07 17:51+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.3.0\n"
+"X-Generator: Translate Toolkit 1.4.1\n"
 
 #. (obsolete)
 #: AlpmHandler#1
@@ -38,11 +38,84 @@ msgstr ": το %1 υπάρχει ήδη στον δίσκο"
 msgid "Alpm did not give further details."
 msgstr "Το Alpm δεν έδωσε περαιτέρω πληροφορίες."
 
+#: AqpmConfig#1
+msgid "Packages and Paths"
+msgstr ""
+
+#: AqpmConfig#2
+#, fuzzy
+msgctxt "AqpmConfig#2"
+msgid "IgnorePkgs:"
+msgstr "IgnorePkgs:"
+
+#: AqpmConfig#3
+#, fuzzy
+msgctxt "AqpmConfig#3"
+msgid "IgnoreGroups:"
+msgstr "IgnoreGroups:"
+
+#: AqpmConfig#4
+#, fuzzy
+msgctxt "AqpmConfig#4"
+msgid "NoUpgrade:"
+msgstr "NoUpgrade:"
+
+#: AqpmConfig#5
+#, fuzzy
+msgctxt "AqpmConfig#5"
+msgid "NoExtract:"
+msgstr "NoExtract:"
+
+#: AqpmConfig#6
+#, fuzzy
+msgctxt "AqpmConfig#6"
+msgid "Log File:"
+msgstr "Αρχείο Log:"
+
+#: AqpmConfig#7
+#, fuzzy
+msgctxt "AqpmConfig#7"
+msgid "Advanced"
+msgstr "Προχωρημένες"
+
+#: AqpmConfig#8
+#, fuzzy
+msgctxt "AqpmConfig#8"
+msgid "Use SysLog"
+msgstr "Χρήση SysLog"
+
+#: AqpmConfig#9
+#, fuzzy
+msgctxt "AqpmConfig#9"
+msgid "Use Deltas (needs xdelta to be installed)"
+msgstr "Χρήση Deltas (χρειάζεται να είναι εγκατεστημένο το xdelta)"
+
+#: AqpmConfig#10
+msgid "Aqpm Options"
+msgstr ""
+
+#: AqpmConfig#11
+msgid "Use multi-server download (EXPERIMENTAL)"
+msgstr ""
+
+#: AqpmConfig#12
+#, fuzzy
+msgctxt "AqpmConfig#12"
+msgid "Error"
+msgstr "Σφάλμα"
+
+#: AqpmConfig#13
+msgctxt "AqpmConfig#13"
+msgid "There has been a problem while saving the configuration!"
+msgstr ""
+
+#. (obsolete)
 #: BuildingDialog#1
 msgctxt "BuildingDialog#1"
 msgid "Error"
 msgstr "Σφάλμα"
 
+#. (obsolete)
 #: BuildingDialog#2
 msgid ""
 "Would you like to abort building?.\n"
@@ -51,6 +124,7 @@ msgstr ""
 "Θέλετε να ακυρώσετε το χτίσιμο;\n"
 "Όλη η διεργασία θα χαθεί."
 
+#. (obsolete)
 #: BuildingDialog#3
 msgid "<br><br><b>Building Process Aborted by the User. Building Failed.</b>"
 msgstr ""
@@ -67,50 +141,62 @@ msgstr "Ενημέρωση του καταλόγου ABS..."
 msgid "<b>Starting ABS Tree Update...</b><br><br>"
 msgstr "<b>Έναρξη ενημέρωσης του καταλόγου ABS...</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#6
 msgid "<br><br><b>ABS Tree Was Successfully Updated!</b>"
 msgstr "<br><br><b>Ο κατάλογος ABS ενημερώθηκε με επιτυχία!</b>"
 
+#. (obsolete)
 #: BuildingDialog#7
 msgid "ABS Update"
 msgstr "Ενημέρωση ABS"
 
+#. (obsolete)
 #: BuildingDialog#8
 msgid "Your ABS Tree was updated!"
 msgstr "Ο κατάλογος ABS ενημερώθηκε!"
 
+#. (obsolete)
 #: BuildingDialog#9
 msgid "<b>Building %1 failed!!</b><br><br>"
 msgstr "<b>Το χτίσιμο του πακέτου %1 απέτυχε!</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#10
 msgid "<b>%1 was built successfully!!</b><br><br>"
 msgstr "<b>Το πακέτο %1 χτίστηκε με επιτυχία!</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#11
 msgid "Processing Package %1 of %2..."
 msgstr "Επεξεργασία πακέτου %1 από %2..."
 
+#. (obsolete)
 #: BuildingDialog#12
 msgid "Building %1..."
 msgstr "Χτίσιμο του %1..."
 
+#. (obsolete)
 #: BuildingDialog#13
 msgid "<b>Building %1...</b><br><br>"
 msgstr "<b>Χτίσιμο του %1...</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#14
 msgid "<b>Building operation has started.</b><br><br>"
 msgstr "<b>Η διεργασία χτισίματος ξεκίνησε.</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#15
 msgid "<b>Could not set up the environment correctly for %1!!</b><br><br>"
 msgstr "<b>Το στήσιμο του περιβάλλοντος δεν ήταν δυνατό για το %1!!</b><br><br>"
 
+#. (obsolete)
 #: BuildingDialog#16
 msgid "Could not update the ABS Tree!"
 msgstr "Η ενημέρωση του ABS καταλόγου ήταν αδύνατη."
 
+#. (obsolete)
 #: BuildingHandler#1
 msgctxt "BuildingHandler#1"
 msgid ""
@@ -120,11 +206,13 @@ msgstr ""
 "Πρέπει να έχετε εγκατεστημένο το ABS για να μπορείτε\n"
 "να χτίσετε πακέτα με το Shaman. Εγκατάσταση τώρα;"
 
+#. (obsolete)
 #: BuildingHandler#2
 msgctxt "BuildingHandler#2"
 msgid "Error"
 msgstr "Σφάλμα"
 
+#. (obsolete)
 #: BuildingHandler#3
 msgctxt "BuildingHandler#3"
 msgid ""
@@ -134,6 +222,7 @@ msgstr ""
 "Δεν μπορείτε να αφαιρέσετε πακέτα όταν γίνεται\n"
 "επεξεργασία της ουράς από την Πηγή"
 
+#. (obsolete)
 #: BuildingHandler#4
 msgctxt "BuildingHandler#4"
 msgid ""
@@ -177,26 +266,31 @@ msgstr ""
 "ουρά από έτοιμα πακέτα. Πριν συνεχίσετε, προτείνεται να<br>κοιτάξετε τις "
 "ρυθμίσεις σας ώστε να αυξήσετε την επίδοση του χτισίματος."
 
+#. (obsolete)
 #: BuildingHandler#7
 msgctxt "BuildingHandler#7"
 msgid "To be Installed"
 msgstr "Προς Εγκατάσταση"
 
+#. (obsolete)
 #: BuildingHandler#8
 msgctxt "BuildingHandler#8"
 msgid "To be Upgraded"
 msgstr "Προς Αναβάθμιση"
 
+#. (obsolete)
 #: BuildingHandler#9
 msgctxt "BuildingHandler#9"
 msgid "Package Building"
 msgstr "Χτίσιμο Πακέτου"
 
+#. (obsolete)
 #: BuildingHandler#10
 msgctxt "BuildingHandler#10"
 msgid "Your Packages failed to build!"
 msgstr "Το χτίσιμο των πακέτων σας απέτυχε!"
 
+#. (obsolete)
 #: BuildingHandler#11
 msgctxt "BuildingHandler#11"
 msgid ""
@@ -206,11 +300,13 @@ msgstr ""
 "Το χτίσιμο των πακέτων σας απέτυχε.\n"
 "Κοιτάξτε τα μηνύματα εξόδου για λεπτομέρειες."
 
+#. (obsolete)
 #: BuildingHandler#12
 msgctxt "BuildingHandler#12"
 msgid "Close"
 msgstr "Κλείσιμο"
 
+#. (obsolete)
 #: BuildingHandler#13
 msgctxt "BuildingHandler#13"
 msgid "Building Packages Failed!!"
@@ -222,6 +318,7 @@ msgctxt "BuildingHandler#14"
 msgid "Shaman - Idle"
 msgstr "Shaman - Αδράνεια"
 
+#. (obsolete)
 #: BuildingHandler#15
 msgctxt "BuildingHandler#15"
 msgid ""
@@ -231,21 +328,25 @@ msgstr ""
 "Κάποια πακέτα απέτυχαν να χτιστούν.\n"
 "Θέλετε να συνεχίσετε;"
 
+#. (obsolete)
 #: BuildingHandler#16
 msgctxt "BuildingHandler#16"
 msgid "Install Built Packages"
 msgstr "Εγκατάσταση Χτισμένων Πακέτων"
 
+#. (obsolete)
 #: BuildingHandler#17
 msgctxt "BuildingHandler#17"
 msgid "Close Without Installing"
 msgstr "Κλείσιμο χωρίς εγκατάσταση"
 
+#. (obsolete)
 #: BuildingHandler#18
 msgctxt "BuildingHandler#18"
 msgid "Packages Built Successfully!"
 msgstr "Τα πακέτα χτίστηκαν με επιτυχία!"
 
+#. (obsolete)
 #: BuildingHandler#19
 msgctxt "BuildingHandler#19"
 msgid ""
@@ -258,8 +359,8 @@ msgctxt "BuildingHandler#20"
 msgid "Shaman - Processing"
 msgstr "Shaman - Επεξεργασία"
 
+#. (obsolete)
 #: BuildingHandler#21
-#, fuzzy
 msgid ""
 "You are about to install <b>%n package(s)</b> from source. Building from "
 "source<br>can give some advantages, however is very slow.<br>If you are not "
@@ -349,56 +450,67 @@ msgstr ""
 msgid "Shaman - Configuration"
 msgstr "Shaman - Ρυθμίσεις"
 
+#. (obsolete)
 #: ConfigDialog#2
 msgctxt "ConfigDialog#2"
 msgid "Favourite Actions"
 msgstr "Αγαπημένες Ενέργειες"
 
+#. (obsolete)
 #: ConfigDialog#3
 msgctxt "ConfigDialog#3"
 msgid "When Upgrading System:"
 msgstr "Όταν Αναβαθμίζετε το Σύστημα:"
 
+#. (obsolete)
 #: ConfigDialog#4
 msgctxt "ConfigDialog#4"
 msgid "Upgrade Immediately"
 msgstr "Αναβαθμίστε Άμεσα"
 
+#. (obsolete)
 #: ConfigDialog#5
 msgctxt "ConfigDialog#5"
 msgid "Add Upgradeable Packages To Queue"
 msgstr "Προσθήκη αναβαθμίσιμων πακέτων στην Ουρά"
 
+#. (obsolete)
 #: ConfigDialog#6
 msgctxt "ConfigDialog#6"
 msgid "Ask"
 msgstr "Ερώτηση"
 
+#. (obsolete)
 #: ConfigDialog#7
 msgctxt "ConfigDialog#7"
 msgid "When Processing Queue"
 msgstr "Όταν επεξεργάζεστε την Ουρά"
 
+#. (obsolete)
 #: ConfigDialog#8
 msgctxt "ConfigDialog#8"
 msgid "Keep application running in System Tray only"
 msgstr "Εμφάνιση εφαρμογής μόνο στο System Tray"
 
+#. (obsolete)
 #: ConfigDialog#9
 msgctxt "ConfigDialog#9"
 msgid "GUI Startup"
 msgstr "Εκκίνηση του GUI"
 
+#. (obsolete)
 #: ConfigDialog#10
 msgctxt "ConfigDialog#10"
 msgid "Start in the System Tray"
 msgstr "Εκκίνηση στο System Tray"
 
+#. (obsolete)
 #: ConfigDialog#11
 msgctxt "ConfigDialog#11"
 msgid "When Application is in System Tray only"
 msgstr "Όταν η εφαρμογή εμφανίζεται μόνο στο System Tray"
 
+#. (obsolete)
 #: ConfigDialog#12
 msgctxt "ConfigDialog#12"
 msgid "Update Database every"
@@ -409,77 +521,92 @@ msgstr "Ανανέωση της Βάσης Δεδομένων κάθε"
 msgid "minutes"
 msgstr "λεπτά"
 
+#. (obsolete)
 #: ConfigDialog#14
 msgctxt "ConfigDialog#14"
 msgid "If upgrades are available:"
 msgstr "Εάν υπάρχουν αναβαθμίσεις:"
 
+#. (obsolete)
 #: ConfigDialog#15
 msgctxt "ConfigDialog#15"
 msgid "Just Notify"
 msgstr "Μόνο Ειδοποίηση"
 
+#. (obsolete)
 #: ConfigDialog#16
 msgctxt "ConfigDialog#16"
 msgid "Notify and add them to Queue"
 msgstr "Ειδοποίηση και προσθήκη στην Ουρά"
 
+#. (obsolete)
 #: ConfigDialog#17
 msgctxt "ConfigDialog#17"
 msgid "Maintenance"
 msgstr "Συντήρηση"
 
+#. (obsolete)
 #: ConfigDialog#18
 msgctxt "ConfigDialog#18"
 msgid "Checkable Options"
 msgstr "Διαθέσιμες Επιλογές"
 
+#. (obsolete)
 #: ConfigDialog#19
 msgctxt "ConfigDialog#19"
 msgid "Use Active FTP"
 msgstr "Χρήση Ενεργού FTP"
 
+#. (obsolete)
 #: ConfigDialog#20
 msgctxt "ConfigDialog#20"
 msgid "Use Deltas (needs xdelta to be installed)"
 msgstr "Χρήση Deltas (χρειάζεται να είναι εγκατεστημένο το xdelta)"
 
+#. (obsolete)
 #: ConfigDialog#21
 msgctxt "ConfigDialog#21"
 msgid "Advanced Options"
 msgstr "Προχωρημένες Επιλογές"
 
+#. (obsolete)
 #: ConfigDialog#22
 msgctxt "ConfigDialog#22"
 msgid "HoldPkgs:"
 msgstr "HoldPkgs:"
 
+#. (obsolete)
 #: ConfigDialog#23
 msgctxt "ConfigDialog#23"
 msgid "IgnorePkgs:"
 msgstr "IgnorePkgs:"
 
+#. (obsolete)
 #: ConfigDialog#24
 msgctxt "ConfigDialog#24"
 msgid "IgnoreGroups:"
 msgstr "IgnoreGroups:"
 
+#. (obsolete)
 #: ConfigDialog#25
 msgctxt "ConfigDialog#25"
 msgid "NoUpgrade:"
 msgstr "NoUpgrade:"
 
+#. (obsolete)
 #: ConfigDialog#26
 msgctxt "ConfigDialog#26"
 msgid "NoExtract:"
 msgstr "NoExtract:"
 
+#. (obsolete)
 #: ConfigDialog#27
 msgctxt "ConfigDialog#27"
 msgid "XFerCommand: (example: /path/to/command %u) Blank for Default"
 msgstr ""
 "XFerCommand: (παράδειγμα: /path/to/command %u) Κενό για χρήση Προεπιλογής"
 
+#. (obsolete)
 #: ConfigDialog#28
 msgctxt "ConfigDialog#28"
 msgid "Arch Linux Official Repositories"
@@ -497,6 +624,7 @@ msgstr ""
 "Σημειώστε ότι τα πακέτα από το Unstable και το Testing μπορεί να σπάσουν το "
 "σύστημά σας."
 
+#. (obsolete)
 #: ConfigDialog#30
 msgctxt "ConfigDialog#30"
 msgid "Server"
@@ -513,6 +641,7 @@ msgctxt "ConfigDialog#32"
 msgid "Add Mirror"
 msgstr "Προσθήκη Mirror"
 
+#. (obsolete)
 #: ConfigDialog#33
 msgctxt "ConfigDialog#33"
 msgid "KDEMod Repositories"
@@ -537,6 +666,7 @@ msgstr ""
 "ακολουθώντας \n"
 "την απλότητα και τη δύναμη του Arch."
 
+#. (obsolete)
 #: ConfigDialog#35
 msgctxt "ConfigDialog#35"
 msgid "KDEMod 3 Repository"
@@ -547,6 +677,7 @@ msgstr "Repository του KDEMod 3"
 msgid "KDEMod 4 Repository (Unstable, testers only)"
 msgstr "Repository του KDEMod 4 (Ασταθές, μόνο για δοκιμή)"
 
+#. (obsolete)
 #: ConfigDialog#37
 msgctxt "ConfigDialog#37"
 msgid "Third-Party Repositories"
@@ -573,6 +704,7 @@ msgctxt "ConfigDialog#39"
 msgid "Repository"
 msgstr "Repository"
 
+#. (obsolete)
 #: ConfigDialog#40
 msgctxt "ConfigDialog#40"
 msgid "Add New Repository"
@@ -588,6 +720,7 @@ msgstr "Επεξεργασία Repository"
 msgid "Remove Repository"
 msgstr "Αφαίρεση Repository"
 
+#. (obsolete)
 #: ConfigDialog#43
 msgctxt "ConfigDialog#43"
 msgid "Preferences"
@@ -599,71 +732,85 @@ msgid "Process all dependencies and queue from source first (recommended)"
 msgstr ""
 "Επεξεργασία όλων των εξαρτήσεων και ουρών πρώτα από την πηγή (προτείνεται)"
 
+#. (obsolete)
 #: ConfigDialog#45
 msgctxt "ConfigDialog#45"
 msgid "Review Building output before installing"
 msgstr "Ανασκόπιση του Χτισίματος πριν την εγκατάσταση"
 
+#. (obsolete)
 #: ConfigDialog#46
 msgctxt "ConfigDialog#46"
 msgid "ABS Configuration"
 msgstr "Ρύθμιση του ABS"
 
+#. (obsolete)
 #: ConfigDialog#47
 msgctxt "ConfigDialog#47"
 msgid "Use supfiles that match your current repositories"
 msgstr "Χρήση supfiles που ταιριάζουν με τα repositories"
 
+#. (obsolete)
 #: ConfigDialog#48
 msgctxt "ConfigDialog#48"
 msgid "Define supfiles manually"
 msgstr "Καθορισμός supfiles χειροκίνητα"
 
+#. (obsolete)
 #: ConfigDialog#49
 msgctxt "ConfigDialog#49"
 msgid "Makepkg Configuration"
 msgstr "Ρύθμιση του  Makepkg"
 
+#. (obsolete)
 #: ConfigDialog#50
 msgctxt "ConfigDialog#50"
 msgid "CFlags"
 msgstr "CFlags"
 
+#. (obsolete)
 #: ConfigDialog#51
 msgctxt "ConfigDialog#51"
 msgid "CXXFlags"
 msgstr "CXXFlags"
 
+#. (obsolete)
 #: ConfigDialog#52
 msgctxt "ConfigDialog#52"
 msgid "BuildEnv"
 msgstr "BuildEnv"
 
+#. (obsolete)
 #: ConfigDialog#53
 msgctxt "ConfigDialog#53"
 msgid "Options"
 msgstr "Επιλογές"
 
+#. (obsolete)
 #: ConfigDialog#54
 msgctxt "ConfigDialog#54"
 msgid "Doc_Dirs"
 msgstr "Doc_Dirs"
 
+#. (obsolete)
 #: ConfigDialog#55
 msgctxt "ConfigDialog#55"
 msgid "Build Environment"
 msgstr "Περιβάλλον Χτισίματος"
 
+#. (obsolete)
 #: ConfigDialog#56
 msgctxt "ConfigDialog#56"
 msgid "Building Path"
 msgstr "Διαδρομή Χτισίματος"
 
+#. (obsolete)
 #: ConfigDialog#57
 msgctxt "ConfigDialog#57"
 msgid "Remove installed makedepends after build"
 msgstr "Αφαίρεση των εξαρτήσεων χτισίματος μετά το χτίσιμο"
 
+#. (obsolete)
 #: ConfigDialog#58
 msgctxt "ConfigDialog#58"
 msgid "Clean Build Environment after installation"
@@ -818,6 +965,7 @@ msgstr ""
 "Η προσθήκη του mirror έγινε με επιτυχία!\n"
 "Βρίσκεται διαθέσιμο στο αρχείο /etc/pacman.d/mirrorlist."
 
+#. (obsolete)
 #: ConfigDialog#87
 msgctxt "ConfigDialog#87"
 msgid "Pacman Database Optimized Successfully!"
@@ -825,6 +973,7 @@ msgstr ""
 "Η βελτιστοποίηση της Βάσης Δεδομένων του\n"
 "Pacman πραγματοποιήθηκε με επιτυχία!"
 
+#. (obsolete)
 #: ConfigDialog#88
 msgctxt "ConfigDialog#88"
 msgid "Could not Optimize Pacman Database!"
@@ -871,6 +1020,7 @@ msgid "Optimizing Pacman Database..."
 msgstr "Βελτιστοποίηση της Βάσης Δεδομένων του Pacman..."
 
 # Waiting for a user action
+#. (obsolete)
 #: ConfigDialog#95
 msgctxt "ConfigDialog#95"
 msgid "Waiting"
@@ -902,24 +1052,28 @@ msgstr ""
 "λειτουργία από το μενού επιλογών.</p></body></html>"
 
 # Do not translate
+#. (obsolete)
 #: ConfigDialog#97
 msgctxt "ConfigDialog#97"
 msgid "Core"
 msgstr "Core"
 
 # Do not translate
+#. (obsolete)
 #: ConfigDialog#98
 msgctxt "ConfigDialog#98"
 msgid "Extra"
 msgstr "Extra"
 
 # Do not translate
+#. (obsolete)
 #: ConfigDialog#99
 msgctxt "ConfigDialog#99"
 msgid "Community"
 msgstr "Community"
 
 # Do not translate
+#. (obsolete)
 #: ConfigDialog#100
 msgctxt "ConfigDialog#100"
 msgid "Testing"
@@ -932,16 +1086,19 @@ msgid "Unstable"
 msgstr "Unstable"
 
 # sync is a command, so it should not be translated
+#. (obsolete)
 #: ConfigDialog#102
 msgctxt "ConfigDialog#102"
 msgid "Running sync..."
 msgstr "Εκτέλεση του sync..."
 
+#. (obsolete)
 #: ConfigDialog#103
 msgctxt "ConfigDialog#103"
 msgid "Show Splashscreen"
 msgstr "Εμφάνιση Εικόνας Εκκίνησης"
 
+#. (obsolete)
 #: ConfigDialog#104
 msgctxt "ConfigDialog#104"
 msgid "Process all dependencies and queue from binary first (recommended)"
@@ -950,70 +1107,84 @@ msgstr ""
 "(προτείνεται)"
 
 #: ConfigDialog#105
+msgctxt "ConfigDialog#105"
 msgid "Advanced"
 msgstr "Προχωρημένες"
 
+#. (obsolete)
 #: ConfigDialog#106
 msgctxt "ConfigDialog#106"
 msgid "Use SysLog"
 msgstr "Χρήση SysLog"
 
+#. (obsolete)
 #: ConfigDialog#107
 msgctxt "ConfigDialog#107"
 msgid "Log File:"
 msgstr "Αρχείο Log:"
 
 # As in "minutes"
+#. (obsolete)
 #: ConfigDialog#108
 msgctxt "ConfigDialog#108"
 msgid "min"
 msgstr "λεπτά"
 
+#. (obsolete)
 #: ConfigDialog#109
 msgctxt "ConfigDialog#109"
 msgid "Show tray notification Windows"
 msgstr "Εμφάνιση παραθύρων ειδοποίησης στο tray"
 
+#. (obsolete)
 #: ConfigDialog#110
 msgctxt "ConfigDialog#110"
 msgid "Use a proxy-server"
 msgstr "Χρήση proxy-server"
 
+#. (obsolete)
 #: ConfigDialog#111
 msgctxt "ConfigDialog#111"
 msgid "IP:"
 msgstr "IP:"
 
+#. (obsolete)
 #: ConfigDialog#112
 msgctxt "ConfigDialog#112"
 msgid "Port:"
 msgstr "Port:"
 
+#. (obsolete)
 #: ConfigDialog#113
 msgctxt "ConfigDialog#113"
 msgid "HTTP Proxy"
 msgstr "HTTP Proxy"
 
+#. (obsolete)
 #: ConfigDialog#114
 msgctxt "ConfigDialog#114"
 msgid "FTP Proxy"
 msgstr "FTP Proxy"
 
+#. (obsolete)
 #: ConfigDialog#115
 msgctxt "ConfigDialog#115"
 msgid "Use Shaman RSS Capabilities"
 msgstr "Χρήση λειτουργιών RSS του Shaman"
 
+#. (obsolete)
 #: ConfigDialog#116
 msgctxt "ConfigDialog#116"
 msgid "Update RSS Feed Every"
 msgstr "Ανανέωση του RSS κάθε"
 
+#. (obsolete)
 #: ConfigDialog#117
 msgctxt "ConfigDialog#117"
 msgid "Notify upon new items"
 msgstr "Ειδοποίηση για νέα αντικείμενα"
 
+#. (obsolete)
 #: ConfigDialog#118
 msgctxt "ConfigDialog#118"
 msgid ""
@@ -1036,16 +1207,19 @@ msgstr "Ακύρωση"
 msgid "KDEMod 3 Testing Repository"
 msgstr "KDEMod 3 Testing Repository"
 
+#. (obsolete)
 #: ConfigDialog#122
 msgctxt "ConfigDialog#122"
 msgid "Interface"
 msgstr "Περιβάλλον"
 
+#. (obsolete)
 #: ConfigDialog#123
 msgctxt "ConfigDialog#123"
 msgid "Start Shaman Automatically on X Startup"
 msgstr "Αυτόματη εκκίνηση του Shaman όταν ξεκινάει ο Χ"
 
+#. (obsolete)
 #: ConfigDialog#124
 msgctxt "ConfigDialog#124"
 msgid "Forbid starting Shaman as root"
@@ -1137,68 +1311,68 @@ msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#132
-#, fuzzy
 msgctxt "ConfigDialog#132"
 msgid "RSync Server:"
 msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#133
-#, fuzzy
 msgctxt "ConfigDialog#133"
 msgid "Update Database at"
 msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#134
-#, fuzzy
 msgctxt "ConfigDialog#134"
 msgid "Use Animated Tray Icon"
 msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#135
-#, fuzzy
 msgctxt "ConfigDialog#135"
 msgid "KDEMod 4 Repository"
 msgstr "Repository του KDEMod 3 {4 ?}"
 
+#. (obsolete)
 #: ConfigDialog#136
-#, fuzzy
 msgctxt "ConfigDialog#136"
 msgid "KDEMod 4 Extragear Repository"
 msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#137
-#, fuzzy
 msgctxt "ConfigDialog#137"
 msgid "KDEMod 4 Playground Repository"
 msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#138
-#, fuzzy
 msgctxt "ConfigDialog#138"
 msgid "KDEMod 4 Testing Repository"
 msgstr "KDEMod 3 Testing Repository {4 ?}"
 
+#. (obsolete)
 #: ConfigDialog#139
-#, fuzzy
 msgctxt "ConfigDialog#139"
 msgid "KDEMod 4 Unstable Repository (Testers only!)"
 msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#140
-#, fuzzy
 msgctxt "ConfigDialog#140"
 msgid ""
 "Here you can choose what repositories to use between Arch Linux's official "
@@ -1208,8 +1382,8 @@ msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#141
-#, fuzzy
 msgctxt "ConfigDialog#141"
 msgid ""
 "KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
@@ -1220,8 +1394,8 @@ msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#142
-#, fuzzy
 msgctxt "ConfigDialog#142"
 msgid ""
 "You can extend your packages choice by adding other repositories. Third-"
@@ -1231,16 +1405,16 @@ msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#143
-#, fuzzy
 msgctxt "ConfigDialog#143"
 msgid "Use the following language:"
 msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: ConfigDialog#144
-#, fuzzy
 msgctxt "ConfigDialog#144"
 msgid "Disable Tray Icon"
 msgstr ""
@@ -1275,38 +1449,15 @@ msgid ""
 msgstr ""
 
 #: ConfigDialog#150
-msgctxt "ConfigDialog#150"
-msgid ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
-"html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Liberation Sans'; font-size:8pt; "
-"font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"size:9pt;\">Shaman Manteinance.</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"size:9pt;\">Please choose an action from the Drop-Down "
-"Menu.</span></p></body></html>"
+msgid "Apply"
 msgstr ""
 
 #: ConfigDialog#151
-msgctxt "ConfigDialog#151"
-msgid "Add another server"
+msgid "Shaman Configuration"
 msgstr ""
 
 #: ConfigDialog#152
-msgctxt "ConfigDialog#152"
-msgid "Repository Order"
-msgstr ""
-
-#: ConfigDialog#153
-msgctxt "ConfigDialog#153"
-msgid ""
-"Please order your repositories to define which one will be preferred over "
-"another."
+msgid "Aqpm Configuration"
 msgstr ""
 
 #: DatabaseConfig#1
@@ -1500,10 +1651,23 @@ msgid ""
 "another."
 msgstr ""
 
+#: DatabaseConfig#27
+#, fuzzy
+msgctxt "DatabaseConfig#27"
+msgid "Error"
+msgstr "Σφάλμα"
+
+#: DatabaseConfig#28
+msgctxt "DatabaseConfig#28"
+msgid "There has been a problem while saving the configuration!"
+msgstr ""
+
+#. (obsolete)
 #: EditPBuild#1
 msgid "Saving"
 msgstr "Αποθήκευση"
 
+#. (obsolete)
 #: EditPBuild#2
 msgid ""
 "You modified this PKGBUILD.\n"
@@ -1719,7 +1883,6 @@ msgid "Waiting"
 msgstr "Αναμονή"
 
 #: Form#17
-msgctxt "Form#17"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
 "html40/strict.dtd\">\n"
@@ -3222,8 +3385,8 @@ msgstr ""
 "\n"
 "            "
 
+#. (obsolete)
 #: MainWindow#152
-#, fuzzy
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -3302,12 +3465,6 @@ msgid "Replace %1 with %2/%3?"
 msgstr "Αντικατάσταση του πακέτου %1 με %2/%3;"
 
 #: MainWindow#159
-msgid ""
-"%1 conflicts with %2.\n"
-"Remove %2?"
-msgstr ""
-
-#: MainWindow#160
 #, fuzzy
 msgid ""
 "The following package(s) cannot be upgraded due to unresolvable "
@@ -3320,9 +3477,9 @@ msgstr ""
 "            \n"
 "        "
 
-#: MainWindow#161
+#: MainWindow#160
 #, fuzzy
-msgctxt "MainWindow#161"
+msgctxt "MainWindow#160"
 msgid ""
 "%1-%2: local version is newer.\n"
 "Upgrade anyway?"
@@ -3330,9 +3487,9 @@ msgstr ""
 "%1-%2: η τοπική έκδοση είναι νεώτερη.\n"
 "Συνέχεια αναβάθμισης;"
 
-#: MainWindow#162
+#: MainWindow#161
 #, fuzzy
-msgctxt "MainWindow#162"
+msgctxt "MainWindow#161"
 msgid ""
 "File %1 is corrupted.\n"
 "Do you want to delete it?"
@@ -3340,11 +3497,11 @@ msgstr ""
 "Το αρχείο %1 είναι κατεστραμένο.\n"
 "Θέλετε να το διαγράψετε?"
 
-#: MainWindow#163
+#: MainWindow#162
 msgid "Transaction Question"
 msgstr ""
 
-#: MainWindow#164
+#: MainWindow#163
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -3369,6 +3526,16 @@ msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Lukas Appelhans "
 "&lt;boom1992@chakra-project.org&gt;</p></body></html>"
+msgstr ""
+
+#: MainWindow#164
+msgid ""
+"%1 conflicts with %2.\n"
+"Remove %1?"
+msgstr ""
+
+#: MainWindow#165
+msgid "Updating ABS tree"
 msgstr ""
 
 #: MaintenanceBar#1
@@ -3507,16 +3674,16 @@ msgctxt "MaintenanceBar#22"
 msgid "Could not clean Build Environments!!"
 msgstr "Η εκκαθάριση του Περιβάλλοντος Χτισίματος απέτυχε!!"
 
+#. (obsolete)
 #: MaintenanceBar#23
-#, fuzzy
 msgctxt "MaintenanceBar#23"
 msgid "Pacman Database Optimized Successfully!"
 msgstr ""
 "Η βελτιστοποίηση της Βάσης Δεδομένων του\n"
 "Pacman πραγματοποιήθηκε με επιτυχία!"
 
+#. (obsolete)
 #: MaintenanceBar#24
-#, fuzzy
 msgctxt "MaintenanceBar#24"
 msgid "Could not Optimize Pacman Database!"
 msgstr ""
@@ -3692,6 +3859,7 @@ msgctxt "QObject#4"
 msgid "Shaman"
 msgstr "Shaman"
 
+#. (obsolete)
 #: QObject#5
 msgid ""
 "Pacman is not updated.\n"
@@ -3839,6 +4007,10 @@ msgstr ""
 #: QObject#25
 msgid ""
 "Shaman can not be started as root. Please restart it as unprivileged user."
+msgstr ""
+
+#: QObject#26
+msgid "&Apply"
 msgstr ""
 
 #: QueueDialog#1
@@ -4238,6 +4410,238 @@ msgstr ""
 #: ServerWidget#5
 msgctxt "ServerWidget#5"
 msgid "Remove"
+msgstr ""
+
+#: ShamanGeneralConfig#1
+#, fuzzy
+msgctxt "ShamanGeneralConfig#1"
+msgid "Favourite Actions"
+msgstr "Αγαπημένες Ενέργειες"
+
+#: ShamanGeneralConfig#2
+#, fuzzy
+msgctxt "ShamanGeneralConfig#2"
+msgid "When Upgrading System:"
+msgstr "Όταν Αναβαθμίζετε το Σύστημα:"
+
+#: ShamanGeneralConfig#3
+#, fuzzy
+msgctxt "ShamanGeneralConfig#3"
+msgid "Upgrade Immediately"
+msgstr "Αναβαθμίστε Άμεσα"
+
+#: ShamanGeneralConfig#4
+#, fuzzy
+msgctxt "ShamanGeneralConfig#4"
+msgid "Add Upgradeable Packages To Queue"
+msgstr "Προσθήκη αναβαθμίσιμων πακέτων στην Ουρά"
+
+#: ShamanGeneralConfig#5
+#, fuzzy
+msgctxt "ShamanGeneralConfig#5"
+msgid "Ask"
+msgstr "Ερώτηση"
+
+#: ShamanGeneralConfig#6
+#, fuzzy
+msgctxt "ShamanGeneralConfig#6"
+msgid "When Processing Queue"
+msgstr "Όταν επεξεργάζεστε την Ουρά"
+
+#: ShamanGeneralConfig#7
+#, fuzzy
+msgctxt "ShamanGeneralConfig#7"
+msgid "Keep application running in System Tray only"
+msgstr "Εμφάνιση εφαρμογής μόνο στο System Tray"
+
+#: ShamanGeneralConfig#8
+#, fuzzy
+msgctxt "ShamanGeneralConfig#8"
+msgid "GUI Startup"
+msgstr "Εκκίνηση του GUI"
+
+#: ShamanGeneralConfig#9
+#, fuzzy
+msgctxt "ShamanGeneralConfig#9"
+msgid "Start in the System Tray"
+msgstr "Εκκίνηση στο System Tray"
+
+#: ShamanGeneralConfig#10
+#, fuzzy
+msgctxt "ShamanGeneralConfig#10"
+msgid "Show Splashscreen"
+msgstr "Εμφάνιση Εικόνας Εκκίνησης"
+
+#: ShamanGeneralConfig#11
+#, fuzzy
+msgctxt "ShamanGeneralConfig#11"
+msgid "Use the following language:"
+msgstr ""
+"\n"
+"            "
+
+#: ShamanGeneralConfig#12
+#, fuzzy
+msgctxt "ShamanGeneralConfig#12"
+msgid "Disable Tray Icon"
+msgstr ""
+"\n"
+"            "
+
+#: ShamanGeneralConfig#13
+#, fuzzy
+msgctxt "ShamanGeneralConfig#13"
+msgid "Maintenance"
+msgstr "Συντήρηση"
+
+#: ShamanGeneralConfig#14
+#, fuzzy
+msgctxt "ShamanGeneralConfig#14"
+msgid "Process Selected"
+msgstr "Επεξεργασία Επιλογής"
+
+# Waiting for a user action
+#: ShamanGeneralConfig#15
+#, fuzzy
+msgctxt "ShamanGeneralConfig#15"
+msgid "Waiting"
+msgstr "Αναμονή"
+
+#: ShamanGeneralConfig#16
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:7pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Shaman Manteinance.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Please choose an action from the Drop-Down "
+"Menu.</span></p></body></html>"
+msgstr ""
+
+#: ShamanGeneralConfig#17
+#, fuzzy
+msgctxt "ShamanGeneralConfig#17"
+msgid "Clean Unused Databases"
+msgstr "Καθαρισμός αχρησιμοποίητων Βάσεων Δεδομένων"
+
+#: ShamanGeneralConfig#18
+#, fuzzy
+msgctxt "ShamanGeneralConfig#18"
+msgid "Clean Cache"
+msgstr "Καθαρισμός της Cache"
+
+#: ShamanGeneralConfig#19
+#, fuzzy
+msgctxt "ShamanGeneralConfig#19"
+msgid "Empty Cache"
+msgstr "Άδειασμα της Cache"
+
+#: ShamanGeneralConfig#20
+#, fuzzy
+msgctxt "ShamanGeneralConfig#20"
+msgid "Optimize Pacman Database"
+msgstr "Βελτιστοποίηση Βάσεως Δεδομένων του Pacman"
+
+#: ShamanGeneralConfig#21
+#, fuzzy
+msgctxt "ShamanGeneralConfig#21"
+msgid "Clean All Building Environments"
+msgstr "Καθαρισμός όλων των Περιβάλλοντων Χτισίματος"
+
+#: ShamanGeneralConfig#22
+#, fuzzy
+msgctxt "ShamanGeneralConfig#22"
+msgid "Cleaning up unused Databases..."
+msgstr "Καθαρισμός αχρησιμοποίητων Βάσεων Δεδομένων..."
+
+#: ShamanGeneralConfig#23
+#, fuzzy
+msgctxt "ShamanGeneralConfig#23"
+msgid "Cleaning up Cache..."
+msgstr "Καθαρισμός της Cache..."
+
+#: ShamanGeneralConfig#24
+#, fuzzy
+msgctxt "ShamanGeneralConfig#24"
+msgid "Deleting Cache..."
+msgstr "Διαγραφή της Cache..."
+
+#: ShamanGeneralConfig#25
+#, fuzzy
+msgctxt "ShamanGeneralConfig#25"
+msgid "Optimizing Pacman Database..."
+msgstr "Βελτιστοποίηση της Βάσης Δεδομένων του Pacman..."
+
+#: ShamanGeneralConfig#26
+#, fuzzy
+msgctxt "ShamanGeneralConfig#26"
+msgid "Cleaning up building Environments..."
+msgstr "Εκκαθάριση των περιβάλλοντων χτισίματος..."
+
+#: ShamanGeneralConfig#27
+#, fuzzy
+msgctxt "ShamanGeneralConfig#27"
+msgid "Unused Databases Cleaned up successfully!"
+msgstr ""
+"Η εκκαθάριση των Αχρησιμοποίητων Βάσεων Δεδομένων\n"
+"έγινε με επιτυχία!"
+
+#: ShamanGeneralConfig#28
+#, fuzzy
+msgctxt "ShamanGeneralConfig#28"
+msgid "Cleaning up Unused Databases Failed!"
+msgstr "Ο καθαρισμός των Αχρησιμοποίητων Βάσεων Δεδομένων Απέτυχε!"
+
+#: ShamanGeneralConfig#29
+#, fuzzy
+msgctxt "ShamanGeneralConfig#29"
+msgid "Cache Cleaned Up Successfully!"
+msgstr "Η εκκαθάριση της Cache έγινε με επιτυχία!"
+
+#: ShamanGeneralConfig#30
+#, fuzzy
+msgctxt "ShamanGeneralConfig#30"
+msgid "Cleaning up Cache Failed!"
+msgstr "Ο καθαρισμός της Cache Απέτυχε!"
+
+#: ShamanGeneralConfig#31
+#, fuzzy
+msgctxt "ShamanGeneralConfig#31"
+msgid "Cache Successfully Deleted!"
+msgstr "Η διαγραφή της Cache έγινε με επιτυχία!"
+
+#: ShamanGeneralConfig#32
+#, fuzzy
+msgctxt "ShamanGeneralConfig#32"
+msgid "Deleting Cache Failed!"
+msgstr "Η Διαγραφή της Cache Απέτυχε!"
+
+#: ShamanGeneralConfig#33
+#, fuzzy
+msgctxt "ShamanGeneralConfig#33"
+msgid "Build Environments Successfully Cleaned!"
+msgstr "Τα Περιβάλλοντα Χτισίματος καθαρίστικαν με επιτυχία!"
+
+#: ShamanGeneralConfig#34
+#, fuzzy
+msgctxt "ShamanGeneralConfig#34"
+msgid "Could not clean Build Environments!!"
+msgstr "Η εκκαθάριση του Περιβάλλοντος Χτισίματος απέτυχε!!"
+
+#: ShamanGeneralConfig#35
+msgctxt "ShamanGeneralConfig#35"
+msgid "Database optimized successfully!"
+msgstr ""
+
+#: ShamanGeneralConfig#36
+msgctxt "ShamanGeneralConfig#36"
+msgid "Could not optimize database!"
 msgstr ""
 
 #: ShamanStatusBar#1
@@ -5550,6 +5954,7 @@ msgstr "Ανανέωση Βάσης Δεδομένων.."
 msgid "Editing PKGBUILD"
 msgstr "Επεξεργασία του PKGBUILD"
 
+#. (obsolete)
 #: editPBDialog#2
 msgid "Editing PKGBUILD of:"
 msgstr ""
@@ -5573,6 +5978,7 @@ msgctxt "editPBDialog#6"
 msgid "Ok"
 msgstr "Ok"
 
+#. (obsolete)
 #: editPBDialog#7
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
@@ -5590,6 +5996,45 @@ msgstr ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Επεξεργασία του  PKGBUILD</span></p></body></html>"
+
+#: editPBDialog#8
+msgid "Editing:"
+msgstr ""
+
+#: editPBDialog#9
+msgid "PKGBUILD"
+msgstr ""
+
+#: editPBDialog#10
+msgid "MakePkg options"
+msgstr ""
+
+#: editPBDialog#11
+msgid "Ignore arch"
+msgstr ""
+
+#: editPBDialog#12
+msgid "Skip integrity checks"
+msgstr ""
+
+#: editPBDialog#13
+msgid "Ignore dependency control"
+msgstr ""
+
+#: editPBDialog#14
+msgid "Hold version if this is a development PKGBUILD"
+msgstr ""
+
+#: editPBDialog#15
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Edit Package build options</span></p></body></html>"
+msgstr ""
 
 #: logViewer#1
 msgid "Shaman - Log Viewer"
@@ -5854,6 +6299,7 @@ msgstr "Ακύρωση"
 msgid "Process From Binary"
 msgstr "Επεξεργασία από Έτοιμα πακέτα"
 
+#. (obsolete)
 #: reviewBuildingDialog#10
 msgid "Review PKGBUILDs"
 msgstr "Επισκόπιση των PKGBUILDs"
@@ -5865,6 +6311,10 @@ msgstr "Επεξεργασία από την Πηγή"
 #: reviewBuildingDialog#12
 msgid "Do not install immediately when building is finished"
 msgstr "Να μην γίνει εγκατάσταση αμέσως μετά το χτίσιμο"
+
+#: reviewBuildingDialog#13
+msgid "Review Build options"
+msgstr ""
 
 #: transactionDialog#1
 msgid "Processing Queue..."
