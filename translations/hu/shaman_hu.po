@@ -1,0 +1,3579 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-11-07 17:52+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 1.4.1\n"
+
+#: AqpmConfig#1
+msgid "Packages and Paths"
+msgstr "Csomagok és Útvonalak"
+
+#: AqpmConfig#2
+msgctxt "AqpmConfig#2"
+msgid "IgnorePkgs:"
+msgstr "MellőzöttCsomagok"
+
+#: AqpmConfig#3
+msgctxt "AqpmConfig#3"
+msgid "IgnoreGroups:"
+msgstr "MellőzöttCsoportok:"
+
+#: AqpmConfig#4
+msgctxt "AqpmConfig#4"
+msgid "NoUpgrade:"
+msgstr "NincsFrissítés:"
+
+#: AqpmConfig#5
+msgctxt "AqpmConfig#5"
+msgid "NoExtract:"
+msgstr "NincsKicsomagolás:"
+
+#: AqpmConfig#6
+msgctxt "AqpmConfig#6"
+msgid "Log File:"
+msgstr "Log fájl:"
+
+#: AqpmConfig#7
+msgctxt "AqpmConfig#7"
+msgid "Advanced"
+msgstr "Speciális:"
+
+#: AqpmConfig#8
+msgctxt "AqpmConfig#8"
+msgid "Use SysLog"
+msgstr "Használd a Syslogot"
+
+#: AqpmConfig#9
+msgctxt "AqpmConfig#9"
+msgid "Use Deltas (needs xdelta to be installed)"
+msgstr "Használj Deltákat (xdelta telepítése szükséges)"
+
+#: AqpmConfig#10
+msgid "Aqpm Options"
+msgstr "Aqpm Opciók"
+
+#: AqpmConfig#11
+msgid "Use multi-server download (EXPERIMENTAL)"
+msgstr "Használj több-szerveres letöltést (Kísérleti)"
+
+#: AqpmConfig#12
+msgctxt "AqpmConfig#12"
+msgid "Error"
+msgstr "Hiba"
+
+#: AqpmConfig#13
+msgctxt "AqpmConfig#13"
+msgid "There has been a problem while saving the configuration!"
+msgstr "Hiba történt a konfiguráció mentése közben"
+
+#: ConfigDialog#1
+msgid "General"
+msgstr "Általános"
+
+#: ConfigDialog#2
+msgctxt "ConfigDialog#2"
+msgid "Clean Unused Databases"
+msgstr "Töröld a nem használt adatbázist"
+
+#: ConfigDialog#3
+msgctxt "ConfigDialog#3"
+msgid "Clean Cache"
+msgstr "Töröld a gyorsítótár tartalmát"
+
+#: ConfigDialog#4
+msgctxt "ConfigDialog#4"
+msgid "Empty Cache"
+msgstr "Ürítsd ki a gyorsítótárat"
+
+#: ConfigDialog#5
+msgctxt "ConfigDialog#5"
+msgid "Optimize Pacman Database"
+msgstr "Optimitzáld a Pacman Adatbázist"
+
+#: ConfigDialog#6
+msgctxt "ConfigDialog#6"
+msgid "Clean All Building Environments"
+msgstr "Törölj Minden Fordítási Környezetet"
+
+#: ConfigDialog#7
+msgctxt "ConfigDialog#7"
+msgid "Process Selected"
+msgstr "Folyamat kiválasztva"
+
+#: ConfigDialog#8
+msgid "Shaman Configuration"
+msgstr "Shaman Konfiguráció"
+
+#: ConfigDialog#9
+msgctxt "ConfigDialog#9"
+msgid "Repositories"
+msgstr "Tárolók"
+
+#: ConfigDialog#10
+msgid "Aqpm Configuration"
+msgstr "Aqpm Konfiguráció"
+
+#: ConfigDialog#11
+msgctxt "ConfigDialog#11"
+msgid "Add Mirror"
+msgstr "Tükör hozzáadása"
+
+#: ConfigDialog#12
+msgid "Pacman"
+msgstr "Pacman"
+
+#: ConfigDialog#13
+msgid "ABS"
+msgstr "ABS"
+
+#: ConfigDialog#14
+msgctxt "ConfigDialog#14"
+msgid "Advanced"
+msgstr "Speciális"
+
+#: ConfigDialog#15
+msgid "Enter Here the Repository's Name"
+msgstr "Gépelje be a Tároló nevét"
+
+#: ConfigDialog#16
+msgid "Enter Here the Repository's Server"
+msgstr "Gépelje be a Tároló szervert"
+
+#: ConfigDialog#17
+msgctxt "ConfigDialog#17"
+msgid "Ok"
+msgstr "Rendben"
+
+#: ConfigDialog#18
+msgid "Apply"
+msgstr "Alkalmazd"
+
+#: ConfigDialog#19
+msgctxt "ConfigDialog#19"
+msgid "Cancel"
+msgstr "Töröld"
+
+#: ConfigDialog#20
+msgctxt "ConfigDialog#20"
+msgid "Cleaning up unused Databases..."
+msgstr "Töröld a nem használt adatbázisokat..."
+
+#: ConfigDialog#21
+msgctxt "ConfigDialog#21"
+msgid "Cleaning up Cache..."
+msgstr "Ürítsd ki a Gyorsítótárat..."
+
+#: ConfigDialog#22
+msgctxt "ConfigDialog#22"
+msgid "Deleting Cache..."
+msgstr "Töröld a Gyorsítótárat..."
+
+#: ConfigDialog#23
+msgctxt "ConfigDialog#23"
+msgid "Optimizing Pacman Database..."
+msgstr "Optimalizáld a Pacman Adatbázist..."
+
+#: ConfigDialog#24
+msgctxt "ConfigDialog#24"
+msgid "Cleaning up building Environments..."
+msgstr "Üritsd ki a Fordítási Környezetet..."
+
+#: ConfigDialog#25
+msgctxt "ConfigDialog#25"
+msgid "Unused Databases Cleaned up successfully!"
+msgstr "Nem használt Adatbázis kiürítése sikeresen megtörtént!"
+
+#: ConfigDialog#26
+msgctxt "ConfigDialog#26"
+msgid "Cleaning up Unused Databases Failed!"
+msgstr "Nem használt Adatbázis kiürítése nem sikerült!"
+
+#: ConfigDialog#27
+msgctxt "ConfigDialog#27"
+msgid "Cache Cleaned Up Successfully!"
+msgstr "Gyorsítótár kiürítése sikeresen megtörtént!"
+
+#: ConfigDialog#28
+msgctxt "ConfigDialog#28"
+msgid "Cleaning up Cache Failed!"
+msgstr "Gyorsítótár kiürítése nem sikerült!"
+
+#: ConfigDialog#29
+msgctxt "ConfigDialog#29"
+msgid "Cache Successfully Deleted!"
+msgstr "Gyorsítótár törlése sikeresen megtörtént!"
+
+#: ConfigDialog#30
+msgctxt "ConfigDialog#30"
+msgid "Deleting Cache Failed!"
+msgstr "Gyorsítótár Törlése nem sikerült!"
+
+#: ConfigDialog#31
+msgctxt "ConfigDialog#31"
+msgid "Build Environments Successfully Cleaned!"
+msgstr "Fordítási Környezet Kiürítése Sikeresen megtörtént!"
+
+#: ConfigDialog#32
+msgctxt "ConfigDialog#32"
+msgid "Could not clean Build Environments!!"
+msgstr "Fordítási Környezet kiürítése nem sikerült!!"
+
+#: ConfigDialog#33
+msgctxt "ConfigDialog#33"
+msgid "Database optimized successfully!"
+msgstr "Az Adatbázis optimalizálása sikeresen megtörtént!"
+
+#: ConfigDialog#34
+msgctxt "ConfigDialog#34"
+msgid "Could not optimize database!"
+msgstr "Az Adatbázis optimalizálása nem sikerült"
+
+#: ConfigDialog#35
+msgid "Error saving configuration"
+msgstr "Konfiguráció lementése nem sikerült"
+
+#: ConfigDialog#36
+msgid ""
+"There was an error while saving the configuration. This is probably due to "
+"an internal error or you being not authorized to perform the operation"
+msgstr ""
+"Hiba történt a konfiguráció elmentése közben. Ez valószínűleg egy "
+"belső hibának köszönhető vagy nincs joga a művelet végrehajtására"
+
+#: ConfigDialog#37
+msgid "Saving Configuration"
+msgstr "Konfiguráció mentése"
+
+#: ConfigDialog#38
+msgid ""
+"Some of your changes have not been applied,\n"
+"since alpm needs to be released.\n"
+"You need to restart Shaman to make them effective."
+msgstr ""
+"Néhány változtatást nem sikerült alkalmazni, \n"
+"mivel az alpm új kiadása szükséges hozzá.\n"
+"Újra kell indítania a Shaman-t, hogy életbe lépjenek"
+
+#: ConfigDialog#39
+msgid "Settings Changed"
+msgstr "Beállítások megváltoztatva"
+
+#: ConfigDialog#40
+msgid ""
+"Your repositories have changed.\n"
+"Do you want to Update Your Database?"
+msgstr ""
+"Tároló elmentve.\n"
+"Szeretné frissíteni az adatbázisát?"
+
+# Obviously keep the example as it is ;)
+#: ConfigDialog#41
+msgctxt "ConfigDialog#41"
+msgid ""
+"Mirror Format is incorrect. Your mirror should look like this:\n"
+"http://mirror.org/$repo/os/i686"
+msgstr ""
+
+# mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.
+#: ConfigDialog#42
+msgctxt "ConfigDialog#42"
+msgid ""
+"Your Mirror was successfully added!\n"
+"It is now available in mirrorlist."
+msgstr ""
+"Tükör hozzáadása sikeresen megtörtént!\n"
+"Mostmár elérhető a tükrök listájában."
+
+#: ConfigDialog#43
+msgctxt "ConfigDialog#43"
+msgid ""
+"There was an error while trying to add the mirror! This could be due also to "
+"your system policy preventing you from performing this action"
+msgstr ""
+"Hiba történt a tükör hozzáadása közben! Ez a rendszerpolitikának köszönhető "
+"hogy megelőzze a művelet végrehajtásától"
+
+# Obviously keep the example as it is ;)
+#: ConfigDialog#44
+msgid ""
+"Mirror Format is incorrect. Your mirror should look like this:\n"
+"http://mirror.org/$repo/$arch"
+msgstr ""
+"Tükör Forma nem megfelelő. A Tükörnek a következőképp kell kinéznie:\n"
+"http://mirror.org/$repo/$arch"
+
+# mirrorlist here means /etc/pacman.d/kdemodmirrorlist, so it should not be translated.
+#: ConfigDialog#45
+msgid ""
+"Your Mirror was successfully added!\n"
+"It is now available in kdemodmirrorlist."
+msgstr ""
+"A Tükör hozzáadása sikeresen megtörtént\n"
+"Mostantól elérhető a kdemod tükörlistában."
+
+#: ConfigDialog#46
+msgid "Shaman - Configuration"
+msgstr "Shaman - Konfiguráció"
+
+#: DatabaseConfig#1
+msgctxt "DatabaseConfig#1"
+msgid "Add Mirror"
+msgstr "Tükör Hozzáadása"
+
+#: DatabaseConfig#2
+msgctxt "DatabaseConfig#2"
+msgid "Error"
+msgstr "Hiba"
+
+#: DatabaseConfig#3
+msgctxt "DatabaseConfig#3"
+msgid "There has been a problem while saving the configuration!"
+msgstr "Hiba történt a konfiguráció elmentése közben!"
+
+# Obviously keep the example as it is ;)
+#: DatabaseConfig#4
+msgctxt "DatabaseConfig#4"
+msgid ""
+"Mirror Format is incorrect. Your mirror should look like this:\n"
+"http://mirror.org/$repo/os/i686"
+msgstr ""
+"Tükör Forma nem megfelelő. A Tükörnek a következőképp kell kinéznie:\n"
+"http://mirror.org/$repo/os/i686"
+
+# mirrorlist here means /etc/pacman.d/mirrorlist, so it should not be translated.
+#: DatabaseConfig#5
+msgctxt "DatabaseConfig#5"
+msgid ""
+"Your Mirror was successfully added!\n"
+"It is now available in mirrorlist."
+msgstr ""
+"A Tükör hozzáadása sikeresen megtörtént\n"
+"Mostantól elérhető a kdemod tükörlistában."
+
+#: DatabaseConfig#6
+msgctxt "DatabaseConfig#6"
+msgid ""
+"There was an error while trying to add the mirror! This could be due also to "
+"your system policy preventing you from performing this action"
+msgstr ""
+
+#: DatabaseConfig#7
+msgctxt "DatabaseConfig#7"
+msgid "Form"
+msgstr "Forma"
+
+#: DatabaseConfig#8
+msgctxt "DatabaseConfig#8"
+msgid "Arch Linux Official Repositories"
+msgstr "Arch Linux Hivatalos Tárolók"
+
+#: DatabaseConfig#9
+msgctxt "DatabaseConfig#9"
+msgid ""
+"Here you can choose what repositories to use between Arch Linux's official "
+"ones. Please note that packages from Unstable and Testing may break your "
+"system."
+msgstr ""
+"Itt lehet kiválasztani, hogy melyik tároló legyen használva az Arch Linux"
+"hivatalos tárolói közül. Kérem ne felejtse el, hogy a csomagok a Labilis és"
+"Tesztelési tárolóból rendszerösszeomlást okozhatnak."
+
+# Do not translate
+#: DatabaseConfig#10
+msgctxt "DatabaseConfig#10"
+msgid "Core"
+msgstr "Mag"
+
+# Do not translate
+#: DatabaseConfig#11
+msgctxt "DatabaseConfig#11"
+msgid "Extra"
+msgstr "Extra"
+
+# Do not translate
+#: DatabaseConfig#12
+msgctxt "DatabaseConfig#12"
+msgid "Community"
+msgstr "Közösség"
+
+# Do not translate
+#: DatabaseConfig#13
+msgctxt "DatabaseConfig#13"
+msgid "Testing"
+msgstr "Tesztelés"
+
+#: DatabaseConfig#14
+msgctxt "DatabaseConfig#14"
+msgid "Server"
+msgstr "Szerver"
+
+#: DatabaseConfig#15
+msgctxt "DatabaseConfig#15"
+msgid "Add another server"
+msgstr "További szerver hozzáadása"
+
+#: DatabaseConfig#16
+msgctxt "DatabaseConfig#16"
+msgid "KDEMod Repositories"
+msgstr "KDEMod Tároló"
+
+#: DatabaseConfig#17
+msgctxt "DatabaseConfig#17"
+msgid ""
+"KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
+"improved Qt build, compatible with Arch Linux standard Qt's, an improved "
+"theme, and lots of addons, KDEMod is the best way to taste the ease and the "
+"power of KDE with the simplicity and the power of Arch."
+msgstr ""
+"KDEMod egy továbbfejlesztett változata a KDE-nek, kizárólagosan Arch Linuxra. "
+"Továbbfejlesztett QT build jellemzi, kompatibilis az Arch Linux standard"
+"Qt-jével, egy továbbfejlesztett téma, nagyon sok kiegészítővel, KDEMod a"
+"legmegfelelőbb arra, hogy megízleljük az egyszerűségét és erejét a KDE-nek az"
+"Arch egyszerűségével és erejével együtt"
+
+#: DatabaseConfig#18
+msgctxt "DatabaseConfig#18"
+msgid "KDEMod 4 Repository"
+msgstr "KDEMod 4 Tároló"
+
+#: DatabaseConfig#19
+msgctxt "DatabaseConfig#19"
+msgid "KDEMod 4 Extragear Repository"
+msgstr "KDEMod 4 Extragear Tároló"
+
+#: DatabaseConfig#20
+msgctxt "DatabaseConfig#20"
+msgid "KDEMod 4 Playground Repository"
+msgstr "KDEMod 4 Játszótár Tároló"
+
+#: DatabaseConfig#21
+msgctxt "DatabaseConfig#21"
+msgid "KDEMod 4 Testing Repository"
+msgstr "KDEMod 4 Tesztelési Tároló"
+
+#: DatabaseConfig#22
+msgctxt "DatabaseConfig#22"
+msgid "KDEMod 4 Unstable Repository (Testers only!)"
+msgstr "KDEMod 4 Labilis Tároló (kizárólag Tesztelőknek!)"
+
+#: DatabaseConfig#23
+msgctxt "DatabaseConfig#23"
+msgid "KDEMod 3 Repository"
+msgstr "KDEMod 3 Tároló"
+
+#: DatabaseConfig#24
+msgctxt "DatabaseConfig#24"
+msgid "Third-Party Repositories"
+msgstr "Harmadik-Fél tároló"
+
+#: DatabaseConfig#25
+msgctxt "DatabaseConfig#25"
+msgid ""
+"You can extend your packages choice by adding other repositories. Third-"
+"Party Repositories act just as normal ones, and will be accessible through "
+"both Shaman and Pacman."
+msgstr ""
+"Kibővítheti csomagválasztékát további tárolók hozzáadásával. Harmadik-Fél"
+"tárolók úgy kell tekinteni, mint a normálisakat, és elérhetőek lesznek a"
+"Pacman és Shaman-n keresztül is."
+
+#: DatabaseConfig#26
+msgctxt "DatabaseConfig#26"
+msgid "Add New Repository"
+msgstr "Új Tároló hozzáadása"
+
+#: DatabaseConfig#27
+msgctxt "DatabaseConfig#27"
+msgid "Repository Order"
+msgstr "Tároló Sorrend"
+
+#: DatabaseConfig#28
+msgctxt "DatabaseConfig#28"
+msgid ""
+"Please order your repositories to define which one will be preferred over "
+"another."
+msgstr ""
+"Kérem rendezze úgy a tárolóit, hogy határozza meg melyiket helyezi előnybe a"
+"másikkal szemben"
+
+#: ErrorHandler#1
+msgid "There has been an error while preparing the transaction."
+msgstr "Hiba történt a tranzakcióra felkészüléskor."
+
+#: ErrorHandler#2
+msgid "Some dependencies can not be satisfied"
+msgstr "Néhány függőség kiegélítése nem sikerült"
+
+#: ErrorHandler#3
+msgid "%1: requires %2"
+msgstr "%1: igényli %2-t"
+
+#: ErrorHandler#4
+msgid "Some dependencies create a conflict with already installed packages"
+msgstr "Néhány függőség konfliktusba ütközött korábban installált csomagokkal"
+
+#: ErrorHandler#5
+msgid "%1: conflicts with %2"
+msgstr "%1: ütközik %2-vel"
+
+#: ErrorHandler#6
+msgid "No further details were given. Last error string was:"
+msgstr "További részlet nincs megadva. Utolsó hiba szó:"
+
+#: ErrorHandler#7
+msgid "There has been an error while committing the transaction."
+msgstr "Hiba történt a commit tranzakció közben"
+
+#: ErrorHandler#8
+msgid "Some files in the packages being processed are conflicting"
+msgstr "Néhány fájl a csomag feldolgozása közben konfliktusba került"
+
+#: ErrorHandler#9
+msgid "%1 exists in both '%2' and '%3'"
+msgstr "%1 létezik '%2' és '%3'-ban is"
+
+#: ErrorHandler#10
+msgid ""
+"Some files in the packages being processed conflict with the local "
+"filesystem"
+msgstr ""
+"Néhány fájl a csomag feldolgozása közben konfliktusba került a helyi"
+"fájlrendszerrel"
+
+#: ErrorHandler#11
+msgid "%1: %2 exists in the filesystem"
+msgstr "%1: %2 létezik a fájlrendszeren"
+
+#: ErrorHandler#12
+msgid "Some downloaded packages are corrupted or invalid"
+msgstr "Néhány letöltött csomag sérült vagy érvénytelen"
+
+#: ErrorHandler#13
+msgid "%1 is invalid or corrupted"
+msgstr "%1 érvénytelen vagy sérült"
+
+#: ErrorHandler#14
+msgid "There has been an error while adding a target."
+msgstr "Hiba történt a cél hozzáadása közben"
+
+#: ErrorHandler#15
+msgid ""
+"This is probably an internal Shaman error. Please report it to help the "
+"developers solving it"
+msgstr ""
+"Ez valószínűleg egy belső Shaman hiba. Kérem jelentse, hogy segítse a"
+"fejlesztőket, hogy megoldhassák"
+
+#: ErrorHandler#16
+msgid "You seem not authorized to perform this operation"
+msgstr "Nincs joga ilyen művelet végrehajtásához"
+
+#: ErrorHandler#17
+msgid ""
+"It looks like the system policy prevents you from doing this action, or you "
+"failed or refused to authenticate. Please contact your system administrator "
+"for further details"
+msgstr ""
+"Úgy tűnik, a rendszer politika megelőzi ilyen műveletek végrehajtásáról, vagy "
+"nem sikerült/meg lett tagadva a hitelesítés. Kérem keresse fel a rendszergazdát "
+"a további részletekért"
+
+#: ErrorHandler#18
+msgid "There was a problem initialiting Aqpm"
+msgstr "Hiba történt az Aqpm inicializálása közben"
+
+#: ErrorHandler#19
+msgid ""
+"Aqpm, the library underneath Shaman, reported that it could not start a "
+"privileged operation. This is probably due to a bug in Shaman/Aqpm or to a "
+"misconfiguration of your system"
+msgstr ""
+"Aqpm, a könyvtár a Shaman alatt, be lett jelentve, hogy nem tudott elindítani"
+"egy kiváltságos műveletet. Ez valószínűleg egy bugnak köszönhető vagy egy"
+"rosszul konfigurált rendszernek"
+
+#: ErrorHandler#20
+msgid "There was an error during the transaction"
+msgstr "Hiba törtánt a tranzakció közben"
+
+#: ErrorHandler#21
+msgid ""
+"It looks like Aqpm's worker crashed or disappeared. This is probably an "
+"internal Shaman error. Please report it to help the developers solving it"
+msgstr ""
+"Úgy tűnik, hogy az Aqpm munkái ütköztek, vagy eltűntek. Ez valószínűleg egy "
+"belső hiba. Kérjük jelentse be a fejlesztőknek, hogy kijavíthassák"
+
+#: ErrorHandler#22
+msgid "The transaction was interrupted"
+msgstr "A tranzakció meg lett szakítva"
+
+#: ErrorHandler#23
+msgid "Error occurred"
+msgstr "Hiba történt"
+
+#: Form#1
+msgctxt "Form#1"
+msgid "Form"
+msgstr "Forma"
+
+#: Form#2
+msgctxt "Form#2"
+msgid "Favourite Actions"
+msgstr "Kedvenc Művelet"
+
+#: Form#3
+msgctxt "Form#3"
+msgid "When Upgrading System:"
+msgstr "Mikor Rendszer Frissítés van:"
+
+#: Form#4
+msgctxt "Form#4"
+msgid "Upgrade Immediately"
+msgstr "Frissíts azonnal"
+
+#: Form#5
+msgctxt "Form#5"
+msgid "Add Upgradeable Packages To Queue"
+msgstr "Frissíthető csomagok hozzáadása a sorhoz"
+
+#: Form#6
+msgctxt "Form#6"
+msgid "Ask"
+msgstr "Kérd"
+
+#: Form#7
+msgctxt "Form#7"
+msgid "When Processing Queue"
+msgstr "Mikor Feldolgozza a Sort"
+
+#: Form#8
+msgctxt "Form#8"
+msgid "Keep application running in System Tray only"
+msgstr "Futasd az alkalmazást kizárólag a rendszertálcán."
+
+#: Form#9
+msgctxt "Form#9"
+msgid "GUI Startup"
+msgstr "GUI Betöltés"
+
+#: Form#10
+msgctxt "Form#10"
+msgid "Start in the System Tray"
+msgstr "Indítsd a Rendszer Tálcán"
+
+#: Form#11
+msgctxt "Form#11"
+msgid "Show Splashscreen"
+msgstr "Mutasd a Betöltőképernyőt"
+
+#: Form#12
+msgctxt "Form#12"
+msgid "Use the following language:"
+msgstr "Használd a következő nyelvet:"
+
+#: Form#13
+msgctxt "Form#13"
+msgid "Disable Tray Icon"
+msgstr "Ne engedélyezd a Tálca Ikont"
+
+#: Form#14
+msgctxt "Form#14"
+msgid "Maintenance"
+msgstr "Karbantartás"
+
+#: Form#15
+msgctxt "Form#15"
+msgid "Process Selected"
+msgstr "Folyamat kiválasztva"
+
+# Waiting for a user action
+#: Form#16
+msgctxt "Form#16"
+msgid "Waiting"
+msgstr "Várakozás"
+
+#: Form#17
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:8pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Shaman Manteinance.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Please choose an action from the Drop-Down "
+"Menu.</span></p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:8pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Shaman Karbantartás</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Kérem válasszon egy műveletet a legördülő"
+"Menüből.</span></p></body></html>"
+
+#: Form#18
+msgid "Checkable Options"
+msgstr "Ellenőrizhető Opciók"
+
+#: Form#19
+msgid "Use Active FTP"
+msgstr "Használjon Aktív FTP-t"
+
+#: Form#20
+msgctxt "Form#20"
+msgid "Use Deltas (needs xdelta to be installed)"
+msgstr "Használjon Deltát(xdelta installálása szükséges)"
+
+#: Form#21
+msgctxt "Form#21"
+msgid "Use SysLog"
+msgstr "Használjon Syslogt"
+
+#: Form#22
+msgid "Advanced Options"
+msgstr "Speciális Opciók"
+
+#: Form#23
+msgid "HoldPkgs:"
+msgstr "VisszatartottCsomagok:"
+
+#: Form#24
+msgctxt "Form#24"
+msgid "IgnorePkgs:"
+msgstr "MellőzöttCsomagok:"
+
+#: Form#25
+msgctxt "Form#25"
+msgid "IgnoreGroups:"
+msgstr "MellőzöttCsoportok:"
+
+#: Form#26
+msgctxt "Form#26"
+msgid "NoUpgrade:"
+msgstr "NincsFrissítés:"
+
+#: Form#27
+msgctxt "Form#27"
+msgid "NoExtract:"
+msgstr "NincsKitömörítés:"
+
+#: Form#28
+msgctxt "Form#28"
+msgid "Log File:"
+msgstr "Log fájl:"
+
+#: Form#29
+msgid "XFerCommand: (example: /path/to/command %u) Blank for Default"
+msgstr "XFerCommand: (például: /útvonal/a/parancshoz %u) Öres alapértelmezetten"
+
+#: Form#30
+msgctxt "Form#30"
+msgid "Arch Linux Official Repositories"
+msgstr "Arch Linux Hivatalos Tárolók"
+
+#: Form#31
+msgctxt "Form#31"
+msgid ""
+"Here you can choose what repositories to use between Arch Linux's official "
+"ones. Please note that packages from Unstable and Testing may break your "
+"system."
+msgstr ""
+"Itt lehet kiválasztani, hogy melyik tároló legyen használva az Arch Linux"
+"hivatalos tárolói közül. Kérem ne felejtse el, hogy a csomagok a Labilis és"
+"Tesztelési tárolóból rendszerösszeomlást okozhatnak."
+
+# Do not translate
+#: Form#32
+msgctxt "Form#32"
+msgid "Core"
+msgstr "Mag"
+
+# Do not translate
+#: Form#33
+msgctxt "Form#33"
+msgid "Extra"
+msgstr "Extra"
+
+# Do not translate
+#: Form#34
+msgctxt "Form#34"
+msgid "Community"
+msgstr "Közösség"
+
+# Do not translate
+#: Form#35
+msgctxt "Form#35"
+msgid "Testing"
+msgstr "Tesztelés"
+
+#: Form#36
+msgctxt "Form#36"
+msgid "Server"
+msgstr "Szerver"
+
+#: Form#37
+msgctxt "Form#37"
+msgid "Add Mirror"
+msgstr "Tükör hozzáadása"
+
+#: Form#38
+msgctxt "Form#38"
+msgid "Add another server"
+msgstr "További szerver hozzáadása"
+
+#: Form#39
+msgctxt "Form#39"
+msgid "KDEMod Repositories"
+msgstr "KDEMod Tárolók"
+
+#: Form#40
+msgctxt "Form#40"
+msgid ""
+"KDEMod is an improved version of KDE, an Arch Linux exclusive. Featuring an "
+"improved Qt build, compatible with Arch Linux standard Qt's, an improved "
+"theme, and lots of addons, KDEMod is the best way to taste the ease and the "
+"power of KDE with the simplicity and the power of Arch."
+msgstr ""
+"KDEMod egy továbbfejlesztett változata a KDE-nek, kizárólagosan Arch Linuxra. "
+"Továbbfejlesztett QT build jellemzi, kompatibilis az Arch Linux standard"
+"Qt-jével, egy továbbfejlesztett téma, nagyon sok kiegészítővel, KDEMod a"
+"legmegfelelőbb arra, hogy megízleljük az egyszerűségét és erejét a KDE-nek az"
+"Arch egyszerűségével és erejével együtt"
+
+#: Form#41
+msgctxt "Form#41"
+msgid "KDEMod 4 Repository"
+msgstr "KDEMod 4 Tároló"
+
+#: Form#42
+msgctxt "Form#42"
+msgid "KDEMod 4 Extragear Repository"
+msgstr "KDEMod 4 Extragear Tároló"
+
+#: Form#43
+msgctxt "Form#43"
+msgid "KDEMod 4 Playground Repository"
+msgstr "KDEMod 4 Játszótér Tároló"
+
+#: Form#44
+msgctxt "Form#44"
+msgid "KDEMod 4 Testing Repository"
+msgstr "KDEMod 4 Tesztelési Tároló"
+
+#: Form#45
+msgctxt "Form#45"
+msgid "KDEMod 4 Unstable Repository (Testers only!)"
+msgstr "KDEMod 4 Labilis Tároló (Kizárólag Tesztelőknek)"
+
+#: Form#46
+msgctxt "Form#46"
+msgid "KDEMod 3 Repository"
+msgstr "KDEMod 3 Tároló"
+
+#: Form#47
+msgctxt "Form#47"
+msgid "Third-Party Repositories"
+msgstr "Harmadik-Fél Tárolók"
+
+#: Form#48
+msgctxt "Form#48"
+msgid ""
+"You can extend your packages choice by adding other repositories. Third-"
+"Party Repositories act just as normal ones, and will be accessible through "
+"both Shaman and Pacman."
+msgstr ""
+"Kibővítheti csomagválasztékát további tárolók hozzáadásával. Harmadik-Fél"
+"tárolók úgy kell tekinteni, mint a normálisakat, és elérhetőek lesznek a"
+"Pacman és Shaman-n keresztül is."
+
+#: Form#49
+msgctxt "Form#49"
+msgid "Add New Repository"
+msgstr "Új Tároló hozzáadása"
+
+#: Form#50
+msgctxt "Form#50"
+msgid "Repository Order"
+msgstr "Tároló Sorrend"
+
+#: Form#51
+msgctxt "Form#51"
+msgid ""
+"Please order your repositories to define which one will be preferred over "
+"another."
+msgstr ""
+"Kérem rendezze úgy a tárolóit, hogy határozza meg melyiket helyezi előnybe a"
+"másikkal szemben"
+
+#: Form#52
+msgid "Preferences"
+msgstr "Beállítások"
+
+#: Form#53
+msgid "Process all dependencies and queue from binary first (recommended)"
+msgstr "Minden függőséget és sort binárisokból dolgozzon fel először (ajánlott)"
+
+#: Form#54
+msgid "Review Building output before installing"
+msgstr "Átvizsgálni a Fordítás kimenetét telepítés előtt"
+
+#: Form#55
+msgid "ABS Configuration"
+msgstr "ABS Konfiguráció"
+
+#: Form#56
+msgid "Use supfiles that match your current repositories"
+msgstr ""
+
+#: Form#57
+msgid "Define supfiles manually"
+msgstr "Határozza meg a supfájlokat kézzel"
+
+#: Form#58
+msgid "RSync Server:"
+msgstr "RSync Szerver:"
+
+#: Form#59
+msgid "Makepkg Configuration"
+msgstr "Makepkg Konfiguráció"
+
+#: Form#60
+msgid "CFlags"
+msgstr "CFlags"
+
+#: Form#61
+msgid "CXXFlags"
+msgstr "CXXFlags"
+
+#: Form#62
+msgid "BuildEnv"
+msgstr "FordításiKörny"
+
+#: Form#63
+msgid "Options"
+msgstr "Opciók"
+
+#: Form#64
+msgid "Doc_Dirs"
+msgstr "Doku_Könyvtárak"
+
+#: Form#65
+msgid "Build Environment"
+msgstr "Fordítási Környezet"
+
+#: Form#66
+msgid "Building Path"
+msgstr "Fordítási Útvonal"
+
+#: Form#67
+msgid "Remove installed makedepends after build"
+msgstr "Távolítson el minden telepített fordítási függőséget a fordítás után"
+
+#: Form#68
+msgid "Clean Build Environment after installation"
+msgstr "Töröld a Fordítási Környezetet a telepítés után"
+
+#: Form#69
+msgid "When Application is in System Tray only"
+msgstr "Mikor az alkalmazás kizárólag a rendszer tálcán van"
+
+#: Form#70
+msgid "Update Database every"
+msgstr "Frissíts minden Adatbázist"
+
+# As in "minutes"
+#: Form#71
+msgid "min"
+msgstr "min"
+
+#: Form#72
+msgid "Show tray notification Windows"
+msgstr "Mutasd a Tálca értesítési Ablakot"
+
+#: Form#73
+msgid "If upgrades are available:"
+msgstr "Ha a frissítések elérhetőek:"
+
+#: Form#74
+msgid "Just Notify"
+msgstr "Csak Értesítés"
+
+#: Form#75
+msgid "Notify and add them to Queue"
+msgstr "Értesíts és tedd be őket a sorba"
+
+#: Form#76
+msgid "Update Database at"
+msgstr "Frissítse az Adatbázist"
+
+#: Form#77
+msgid "Use a proxy-server"
+msgstr "Használjon egy proxy-szervert"
+
+#: Form#78
+msgid "IP:"
+msgstr "IP:"
+
+#: Form#79
+msgid "Port:"
+msgstr "Port:"
+
+#: Form#80
+msgid "HTTP Proxy"
+msgstr "HTTP Proxy"
+
+#: Form#81
+msgid "FTP Proxy"
+msgstr "FTP Proxy"
+
+#: Form#82
+msgid "Use Shaman RSS Capabilities"
+msgstr "Használja a Shaman RSS Lehetőségeit"
+
+#: Form#83
+msgid "Update RSS Feed Every"
+msgstr "Frissítse minden RSS Feed-t"
+
+#: Form#84
+msgid "Notify upon new items"
+msgstr "Értesítsen minden új elemre"
+
+#: Form#85
+msgid ""
+"Check if there is an unread news about a package in Queue before processing "
+"it"
+msgstr ""
+"Ellenőrizze, vajon található-e olvasatlan hír egy csomagról a sorban mielőtt "
+"fel lenne dolgozva"
+
+#: Form#86
+msgid "Interface"
+msgstr "Interfész"
+
+#: Form#87
+msgid "Use Animated Tray Icon"
+msgstr "Animált Tálca Ikon használata"
+
+#: Form#88
+msgid "Start Shaman Automatically on X Startup"
+msgstr "Shaman Automatikus indítása az X betöltésekor"
+
+#: Form#89
+msgid "Forbid starting Shaman as root"
+msgstr "Shaman rootként való indításának megtiltása"
+
+#: LocalPackage#1
+msgid "Install Package from File"
+msgstr "Csomagok Fáljból installálása"
+
+#: LocalPackage#2
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Bitstream Vera "
+"Sans';\"><span style=\" font-weight:600;\">Local Package "
+"Installation</span></p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Bitstream Vera "
+"Sans';\"><span style=\" font-weight:600;\">Helyi Csomag "
+"Telepítése</span></p></body></html>"
+
+#: LocalPackage#3
+msgid "Show..."
+msgstr "Mutassa..."
+
+#: LocalPackage#4
+msgctxt "LocalPackage#4"
+msgid "More Details..."
+msgstr "További Részletek..."
+
+#: LocalPackage#5
+msgctxt "LocalPackage#5"
+msgid "Cancel"
+msgstr "Törlés"
+
+#: LocalPackage#6
+msgctxt "LocalPackage#6"
+msgid "Install Package"
+msgstr "Csomag telepítése"
+
+#: LocalPackageDialog#1
+msgctxt "LocalPackageDialog#1"
+msgid "Install Package"
+msgstr "Csomag telepítése"
+
+#: LocalPackageDialog#2
+msgid "Package is not installed"
+msgstr "A csomag nincs telepítve"
+
+#: LocalPackageDialog#3
+msgid "Version %1 of this package is already installed"
+msgstr "A csomag %1 verziója már telepítve van"
+
+#: LocalPackageDialog#4
+msgid "All dependencies are satisfied"
+msgstr "Minden függőség kielégítve"
+
+#: LocalPackageDialog#5
+#, fuzzy
+msgid "%n package(s) will be installed as dependencies"
+msgstr "%n csomag(ok), mint függőség(ek), telepítve lesz(nek)"
+
+#: MainWindow#1
+msgctxt "MainWindow#1"
+msgid "Name"
+msgstr "Név"
+
+#: MainWindow#2
+msgid "Description"
+msgstr "Leírás"
+
+#: MainWindow#3
+msgid "Name and Description"
+msgstr "Név és Leírás"
+
+#: MainWindow#4
+msgctxt "MainWindow#4"
+msgid "Update Database"
+msgstr "Adatbázis frissítése"
+
+#: MainWindow#5
+msgctxt "MainWindow#5"
+msgid "Process Queue"
+msgstr "Végrehajtási Sor"
+
+# Exit Shaman Shortcut
+#: MainWindow#6
+msgid "Ctrl+Q"
+msgstr "Ctrl+Q"
+
+#: MainWindow#7
+msgid "Shaman - Reducing To Tray"
+msgstr "Shaman - Tálcára csökkentés"
+
+#: MainWindow#8
+msgid ""
+"Shaman will keep running in the system tray.\n"
+"To close it, click Quit in the file menu or in the tray icon context menu.\n"
+"While in the System Tray, Shaman will update your Databases\n"
+"at a regular interval and notify you about available upgrades.\n"
+"You can change this behaviour in Settings."
+msgstr ""
+"A Shaman a rendszertálcán fog futni.\n"
+"Bezáráshoz kattintson a Quit-re a fájl menüben vagy a tálcaikon tartalom.\n"
+"menüre. Miközben a rendszertálcán, a Shaman frissíteni fogja az adatbázisát\n"
+"rendszeres időközönként és értesíti a lehetséges frissítésekről.\n"
+"Ez a viselkedés megváltoztatható a Beállításokban."
+
+#: MainWindow#9
+msgctxt "MainWindow#9"
+msgid "Repositories"
+msgstr "Tárolók"
+
+#: MainWindow#10
+msgid "All Repositories"
+msgstr "Az összes tároló"
+
+#: MainWindow#11
+msgid "Local Packages"
+msgstr "Helyi Csomagok"
+
+#: MainWindow#12
+msgid "Package Groups"
+msgstr "Csomag Csoportok"
+
+#: MainWindow#13
+msgid "All Groups"
+msgstr "Minden Csoport"
+
+#: MainWindow#14
+msgid "Installed packages"
+msgstr "Telepített Csomagok"
+
+#: MainWindow#15
+msgid "Not installed packages"
+msgstr "Nem telepített csomagok"
+
+#: MainWindow#16
+msgid "Upgradeable packages"
+msgstr "Frissíthető csomagok"
+
+#: MainWindow#17
+msgid "Packages in Queue"
+msgstr "Csomagok a sorban"
+
+#: MainWindow#18
+msgid "Mark for Re&installation"
+msgstr "Jelölje meg újratelepítésre"
+
+#: MainWindow#19
+msgid "Mark for &Installation"
+msgstr "Jelölje meg telepitésre"
+
+#: MainWindow#20
+msgctxt "MainWindow#20"
+msgid "Install"
+msgstr "Telepítés"
+
+#: MainWindow#21
+msgctxt "MainWindow#21"
+msgid "Uninstall"
+msgstr "Eltávolítás"
+
+#: MainWindow#22
+msgctxt "MainWindow#22"
+msgid "Complete Uninstall"
+msgstr "Teljes Eltávolítás"
+
+#: MainWindow#23
+msgid "Status: "
+msgstr "Státusz:"
+
+#: MainWindow#24
+msgid "Installed"
+msgstr "Telepítve"
+
+#: MainWindow#25
+msgid "Not installed"
+msgstr "Nincs Telepítve"
+
+#: MainWindow#26
+msgid "Local Version: "
+msgstr "Helyi Verzió: "
+
+#: MainWindow#27
+msgid "Version in the Repository: "
+msgstr "Verzió a Tárolóban: "
+
+#: MainWindow#28
+msgid "Action: "
+msgstr "Tevékenység: "
+
+#: MainWindow#29
+msgctxt "MainWindow#29"
+msgid "Error"
+msgstr "Hiba"
+
+#: MainWindow#30
+msgid ""
+"One or more Databases could not be updated.\n"
+"Last error reported was:\n"
+"%1"
+msgstr ""
+"Egy vagy több Adatbázis frissítése nem sikerült.\n"
+"Utolsó bejelentett hiba:\n"
+"%1"
+
+#: MainWindow#31
+msgctxt "MainWindow#31"
+msgid "Database Update"
+msgstr "Adatbázis frissítés"
+
+#: MainWindow#32
+msgid "One or more databases failed to update!"
+msgstr "Egy vagy több adatbázis frissítése nem sikerült!"
+
+#: MainWindow#33
+msgid "Databases Updated Successfully"
+msgstr "Adatbázis Frissítése sikerült"
+
+#: MainWindow#34
+msgid "Pacman Update"
+msgstr "Pacman frissítés"
+
+#: MainWindow#35
+msgid ""
+"Pacman can be upgraded. It is advised to process it alone\n"
+"to avoid version conflicts.\n"
+"Do you want to Upgrade Pacman now?"
+msgstr ""
+"Pacman frissíthető. Ajánlott egyedül végrehajtani a verzió ütközések\n"
+"elkerülése végett.\n"
+"Akarja frissíteni a Pacman-t most?"
+
+#: MainWindow#36
+msgid "Shaman Update"
+msgstr "Shaman Frissítés"
+
+#: MainWindow#37
+msgid ""
+"Shaman can be upgraded. It is advised to process it alone\n"
+"to avoid version conflicts.\n"
+"Do you want to Upgrade Shaman now?"
+msgstr ""
+"Shaman frissíthető. Ajánlott egyedül végrehajtani a verzió ütközések\n"
+"elkerülése végett.\n"
+"Akarja frissíteni a Shaman-t most?"
+
+#: MainWindow#38
+msgid "Mark for &Removal"
+msgstr "Jelölje meg eltávolításra"
+
+#: MainWindow#39
+msgid "Mark for Upgrade"
+msgstr "Jelölje meg frissítésre"
+
+#: MainWindow#40
+msgid "&Cancel Action"
+msgstr "Tevékenység törlése"
+
+#: MainWindow#41
+msgctxt "MainWindow#41"
+msgid "Package Information"
+msgstr "Csomag információ"
+
+#: MainWindow#42
+msgid "Mark all for installation"
+msgstr "Jelölje meg telepítésre"
+
+#: MainWindow#43
+msgid "Mark all for reinstallation"
+msgstr "Jelölje meg mindet újratelepítésre"
+
+#: MainWindow#44
+msgid "Mark all for removal"
+msgstr "Jelölje meg minden eltávolításra"
+
+#: MainWindow#45
+msgid "Cancel all actions"
+msgstr "Töröljön minden tevékenységet"
+
+#: MainWindow#46
+msgctxt "MainWindow#46"
+msgid "Shaman"
+msgstr "Shaman"
+
+#: MainWindow#47
+msgid ""
+"A package providing %1 is already installed.\n"
+"Do you want to install %1 anyway?"
+msgstr ""
+"Egy csomag, mely biztosítja a %1-t, már installálva van."
+"Akarja telepíteni %1-t?"
+
+#: MainWindow#48
+msgctxt "MainWindow#48"
+msgid "System Upgrade"
+msgstr "Rendszer frissítés"
+
+#: MainWindow#49
+msgid "Your system is up to date!"
+msgstr "A rendszer napra kész!"
+
+#: MainWindow#50
+msgid "News Alert"
+msgstr "Hír riasztás"
+
+#: MainWindow#51
+msgid ""
+"There is an unread news about %1.\n"
+"Do you want to read it?"
+msgstr ""
+"Van olvasatlan hír %1-ról.\n"
+"El akarja olvasni?"
+
+#: MainWindow#52
+msgctxt "MainWindow#52"
+msgid "Upgrade"
+msgstr "Frissítés"
+
+#: MainWindow#53
+msgctxt "MainWindow#53"
+msgid "Queue Processing"
+msgstr "Sor végrehajtás"
+
+#: MainWindow#54
+msgid ""
+"Your Queue is being processed.\n"
+"Please wait."
+msgstr ""
+"A sor feldolgozás alatt van.\n"
+"Kérem várjon."
+
+#: MainWindow#55
+msgid "Queue Processed"
+msgstr "Sor végrehajtás"
+
+#: MainWindow#56
+msgid ""
+"One or more errors occurred, your Queue\n"
+"was not successfully processed"
+msgstr ""
+"Egy vagy több hiba történt, a sor feldolzása\n"
+"nem sikerült"
+
+#: MainWindow#57
+msgid "Error Processing Queue!!"
+msgstr "Hiba történt a sor feldolgozása közben!!"
+
+#: MainWindow#58
+msgid "Restart required"
+msgstr "Újraindítás szükségeltetik"
+
+#: MainWindow#59
+msgid ""
+"Pacman or Shaman was updated. Shaman will now quit,\n"
+"please restart it to use the new version"
+msgstr ""
+"Pacman vagy Shaman frissítés történt. Shaman most kilép,\n"
+"kérem indítsa újra az új verzió használatához"
+
+#: MainWindow#60
+msgid ""
+"Your Kernel has been updated.\n"
+"Please restart your PC soon to load the new Kernel."
+msgstr ""
+"A kernel frissítve lett.\n"
+"Kérem indítsa újra a számítógépét hamarosan az új Kernel betöltéséhez."
+
+#: MainWindow#61
+msgid "Your Queue was successfully processed!"
+msgstr "A sor feldolgozása sikeresen megtörtént"
+
+#: MainWindow#62
+msgid "Your Queue was successfully processed!!"
+msgstr "A sor feldolgozása sikeresen megtörtént!!"
+
+#: MainWindow#63
+msgid "Install a Package"
+msgstr "Egy csomag telepítése"
+
+#: MainWindow#64
+msgid "Arch Linux Packages (*.pkg.tar.gz)"
+msgstr "Arch Linux csomagok ((.pkg.tar.gz)"
+
+#: MainWindow#65
+msgid ""
+"%1 does not seem\n"
+"a valid package"
+msgstr ""
+"%1 nem tűnik\n"
+"érvényes csomagnak"
+
+#: MainWindow#66
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">A libalpm frontend in Qt</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">License: GPLv2+</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Libalpm Version: v.%1</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008-2009 Dario Freddi "
+"&lt;drf@chakra-project.org&gt;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Lukas Appelhans "
+"&lt;boom1992@chakra-project.org&gt;</p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Egy libalpm frontend Qt-ben</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Licensz: GPLv2+</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Libalpm verzió: v.%1</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008-2009 Dario Freddi "
+"&lt;drf@chakra-project.org&gt;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">(C) 2008 Lukas Appelhans "
+"&lt;boom1992@chakra-project.org&gt;</p></body></html>"
+
+#: MainWindow#67
+msgid ""
+"%1 conflicts with %2.\n"
+"Remove %1?"
+msgstr ""
+"%1 ütközik a %2-vel.\n"
+"Eltávolítja %1-t?"
+
+#: MainWindow#68
+msgid "Updating ABS tree"
+msgstr "ABS fa frissítése"
+
+#: MainWindow#69
+msgid ""
+"%1 requires installing %2 from IgnorePkg/IgnoreGroup.\n"
+" Install anyway?"
+msgstr ""
+"%1 igényli a %2 telepítését MellőzöttCsomagból/MellőzöttCsoportból.\n"
+" Telepíti mégis?"
+
+#: MainWindow#70
+msgid ""
+"%1 is in IgnorePkg/IgnoreGroup.\n"
+" Install anyway?"
+msgstr ""
+"%1 a MellőzöttCsomag/MellőzöttCsoportban van.\n"
+" Telepti mégis?"
+
+#: MainWindow#71
+msgid "Replace %1 with %2/%3?"
+msgstr "Cserélje ki %1-t %2/%3-mal?"
+
+#: MainWindow#72
+#, fuzzy
+msgid ""
+"The following package(s) cannot be upgraded due to unresolvable "
+"dependencies:\n"
+"%1\n"
+"\n"
+"Do you want to skip the above package(s) for this upgrade?"
+msgstr ""
+"A következő csomago(ka)t nem lehet frissíteni feloldhatatlan függőségek miatt\n"
+" %1\n"
+"\n"
+
+#: MainWindow#73
+msgid ""
+"%1-%2: local version is newer.\n"
+"Upgrade anyway?"
+msgstr ""
+"%1-%2: helyi verzió újabb.\n"
+"Frissítse mégis?"
+
+#: MainWindow#74
+msgid ""
+"File %1 is corrupted.\n"
+"Do you want to delete it?"
+msgstr ""
+"%1 fájl sérült.\n"
+"Törölni szeretné?"
+
+#: MainWindow#75
+msgid "Transaction Question"
+msgstr "Tranzakció kérdés"
+
+#: MainWindow#76
+msgid "All packages"
+msgstr "Minden csomag"
+
+#: MainWindow#77
+msgid "Status"
+msgstr "Státusz"
+
+#: MainWindow#78
+msgid "Action"
+msgstr "Művelet"
+
+#: MainWindow#79
+msgid "Version"
+msgstr "Verzió"
+
+#: MainWindow#80
+msgid "Size"
+msgstr "Méret"
+
+#: MainWindow#81
+msgid "Repository"
+msgstr "Tároló"
+
+#: MainWindow#82
+msgid "Groups"
+msgstr "Csoportok"
+
+#: MainWindow#83
+msgid "Action-Text"
+msgstr "Tevékenység-Text"
+
+#: MainWindow#84
+msgid "Re&positories"
+msgstr "Tá&rolók"
+
+#: MainWindow#85
+msgid "Package &Groups"
+msgstr "Csomag &Csoportok"
+
+#: MainWindow#86
+msgid "Install selected package"
+msgstr "Kiválasztott csomag telepítése"
+
+#: MainWindow#87
+msgid "Remove selected package"
+msgstr "Kiválasztott csomag eltávolítása"
+
+#: MainWindow#88
+msgid "Complete Remove selected package (pacman -Rcs)"
+msgstr "Kiválasztott csomag teljes eltávolítása (pacman -Rcs)"
+
+#: MainWindow#89
+msgid "Mark for complete re&moval"
+msgstr "Megjelölés teljes eltá&volításra"
+
+#: MainWindow#90
+msgid "Cancel action for selected package"
+msgstr "Művelet törlése a kiválasztott csomagra"
+
+#: MainWindow#91
+msgid "Package I&nformation"
+msgstr "Csomag I&nformáció"
+
+#: MainWindow#92
+msgid "File&s"
+msgstr "Fájlo&k"
+
+#: MainWindow#93
+msgctxt "MainWindow#93"
+msgid "1"
+msgstr "1"
+
+#: MainWindow#94
+msgid "&Dependencies"
+msgstr "&Függőségek"
+
+#: MainWindow#95
+msgid "&File"
+msgstr "&Fájl"
+
+#: MainWindow#96
+msgid "&Help"
+msgstr "&Segítség"
+
+#: MainWindow#97
+msgid "&Actions"
+msgstr "&Műveletek"
+
+#: MainWindow#98
+msgid "Build and Install from Source"
+msgstr "Fordítás és Telepítés forrásból"
+
+#: MainWindow#99
+msgid "&Tools"
+msgstr "&Eszközök"
+
+#: MainWindow#100
+msgid "Quick Actions"
+msgstr "Gyors Művelet"
+
+#: MainWindow#101
+msgid "Settings..."
+msgstr "Beállítások..."
+
+#: MainWindow#102
+msgid "About..."
+msgstr "Névjegy..."
+
+#: MainWindow#103
+msgctxt "MainWindow#103"
+msgid "Upgrade System"
+msgstr "Rendszer Frissítés"
+
+#: MainWindow#104
+msgid "Install Package From File"
+msgstr "Csomag telepítése fájlból"
+
+#: MainWindow#105
+msgid "Update ABS Tree"
+msgstr "ABS fa frissítése"
+
+#: MainWindow#106
+msgid "Build and Install Queue"
+msgstr "Lista fordítása és telepítése"
+
+# Quit the application
+#: MainWindow#107
+msgctxt "MainWindow#107"
+msgid "Quit"
+msgstr "Kilépés"
+
+#: MainWindow#108
+msgid "Read News"
+msgstr "Hírek olvasása"
+
+#: MainWindow#109
+msgid "View Log"
+msgstr "Log megtekintése"
+
+#: MaintenanceBar#1
+msgid "Maintenance Actions"
+msgstr "Karbantartó Művelet"
+
+#: MaintenanceBar#2
+msgid "Please choose an action to start maintenance..."
+msgstr "Kérem válasszon egy műveletet a karbantartás megkezdéséhez"
+
+#: MaintenanceBar#3
+msgctxt "MaintenanceBar#3"
+msgid "Clean Unused Databases"
+msgstr "Nem használt adatbázisok törlése"
+
+#: MaintenanceBar#4
+msgctxt "MaintenanceBar#4"
+msgid "Clean Cache"
+msgstr "Gyorsítótár kiürítése"
+
+#: MaintenanceBar#5
+msgctxt "MaintenanceBar#5"
+msgid "Empty Cache"
+msgstr "Gyorsítótár törlése"
+
+#: MaintenanceBar#6
+msgctxt "MaintenanceBar#6"
+msgid "Optimize Pacman Database"
+msgstr "Pacman Adatbázis optimalizálása"
+
+#: MaintenanceBar#7
+msgctxt "MaintenanceBar#7"
+msgid "Clean All Building Environments"
+msgstr "Az összes fordítási környezet törlése"
+
+#: MaintenanceBar#8
+msgctxt "MaintenanceBar#8"
+msgid "Cleaning up unused Databases..."
+msgstr "Nem használt adatbázisok törlése..."
+
+#: MaintenanceBar#9
+msgctxt "MaintenanceBar#9"
+msgid "Cleaning up Cache..."
+msgstr "Gyorsítótár kiürítése..."
+
+#: MaintenanceBar#10
+msgctxt "MaintenanceBar#10"
+msgid "Deleting Cache..."
+msgstr "Gyorsítótár törlése..."
+
+#: MaintenanceBar#11
+msgctxt "MaintenanceBar#11"
+msgid "Optimizing Pacman Database..."
+msgstr "Pacman Adatbázis optimalizálása..."
+
+#: MaintenanceBar#12
+msgctxt "MaintenanceBar#12"
+msgid "Cleaning up building Environments..."
+msgstr "Fordítási Környezet kitakarírása..."
+
+#: MaintenanceBar#13
+msgctxt "MaintenanceBar#13"
+msgid "Abort"
+msgstr "Megszakítás"
+
+#: MaintenanceBar#14
+msgid "System Maintenance"
+msgstr "Rendszer karbantartás"
+
+#: MaintenanceBar#15
+msgctxt "MaintenanceBar#15"
+msgid "Unused Databases Cleaned up successfully!"
+msgstr "Nem használt Adatbázisok kitakarítása sikeresen megtörtént!"
+
+#: MaintenanceBar#16
+msgctxt "MaintenanceBar#16"
+msgid "Cleaning up Unused Databases Failed!"
+msgstr "Nem használt Adatbázisok kitakarítása nem sikerült!"
+
+#: MaintenanceBar#17
+msgctxt "MaintenanceBar#17"
+msgid "Cache Cleaned Up Successfully!"
+msgstr "Gyorsítótár kitakarítása sikeresen megtörtént!"
+
+#: MaintenanceBar#18
+msgctxt "MaintenanceBar#18"
+msgid "Cleaning up Cache Failed!"
+msgstr "Gyorsítótár kitakarítása nem sikerült!"
+
+#: MaintenanceBar#19
+msgctxt "MaintenanceBar#19"
+msgid "Cache Successfully Deleted!"
+msgstr "Gyorsítótár törlése sikeresen megtörtént!"
+
+#: MaintenanceBar#20
+msgctxt "MaintenanceBar#20"
+msgid "Deleting Cache Failed!"
+msgstr "Gyorsítótár törlése nem sikerült!"
+
+#: MaintenanceBar#21
+msgctxt "MaintenanceBar#21"
+msgid "Build Environments Successfully Cleaned!"
+msgstr "Fordítási környezet kitakarítása sikeresen megtörtént!"
+
+#: MaintenanceBar#22
+msgctxt "MaintenanceBar#22"
+msgid "Could not clean Build Environments!!"
+msgstr "Fordítási környezet kitakarítása nem sikerült!"
+
+#: MaintenanceBar#23
+msgctxt "MaintenanceBar#23"
+msgid "Database optimized successfully!"
+msgstr "Adatbázis optimalizálása sikeresen megtörtént!"
+
+#: MaintenanceBar#24
+msgctxt "MaintenanceBar#24"
+msgid "Could not optimize database!"
+msgstr "Adatbázis optimalizálása nem sikerült!"
+
+#: MaintenanceBar#25
+msgctxt "MaintenanceBar#25"
+msgid "Close"
+msgstr "Bezár"
+
+#: MirrorWidget#1
+msgctxt "MirrorWidget#1"
+msgid "Form"
+msgstr "Forma"
+
+#: MirrorWidget#2
+msgid "Mirror:"
+msgstr "Tükör:"
+
+#: MirrorWidget#3
+msgctxt "MirrorWidget#3"
+msgid "Prefer"
+msgstr "Jobb szeret"
+
+#: MirrorWidget#4
+msgctxt "MirrorWidget#4"
+msgid "Defer"
+msgstr "Elhalaszt"
+
+#: MirrorWidget#5
+msgctxt "MirrorWidget#5"
+msgid "Remove"
+msgstr "Eltávolítás"
+
+#: NewsViewer#1
+msgid "Please wait, fetching items..."
+msgstr "Kérem várjon, elemek letöltése..."
+
+#: NewsViewer#2
+msgctxt "NewsViewer#2"
+msgid "Mark as Read"
+msgstr "Olvasottnak jelölés"
+
+#: NewsViewer#3
+msgid "Mark as Unread"
+msgstr "Olvasatlannak jelölés"
+
+#: NewsViewer#4
+msgctxt "NewsViewer#4"
+msgid "Error"
+msgstr "Hiba"
+
+#: NewsViewer#5
+msgid "Could not fetch the RSS feed! Error reported was:"
+msgstr "Nem sikerült letölteni az RSS feed-t! Hiba bejelentve:"
+
+# Size is in Gib
+#: PackageProperties#1
+msgid "%1 GiB"
+msgstr "%1 GiB"
+
+# Size is in MiB
+#: PackageProperties#2
+msgid "%1 MiB"
+msgstr "%1 MiB"
+
+# Size is in KiB
+#: PackageProperties#3
+msgid "%1 KiB"
+msgstr "%1 KiB"
+
+# Size is in Bytes
+#: PackageProperties#4
+msgid "%1 Bytes"
+msgstr "%1 Bytes"
+
+#: PackageProperties#5
+msgid "Shaman - %1 properties"
+msgstr "Shaman - %1 tulajdonságok"
+
+# Stands for: Not Available
+#: PackageProperties#6
+msgid "N/A"
+msgstr "N/A"
+
+#: PackageProperties#7
+msgid "Changelog not available for this package"
+msgstr "Changelog nem elárhető erre a csomagra"
+
+#: QObject#1
+msgid "&Apply"
+msgstr "&Alkalmazza"
+
+#: QObject#2
+msgctxt "QObject#2"
+msgid "Ok"
+msgstr "Rendben"
+
+#: QObject#3
+msgid "Whoa, that's co&ol!"
+msgstr "Whoa, Re&mek"
+
+#: QObject#4
+msgctxt "QObject#4"
+msgid "Shaman"
+msgstr "Shaman"
+
+#: QObject#5
+msgid ""
+"There was a problem while testing libalpm.\n"
+"Maybe another application has a lock on it."
+msgstr ""
+"Hiba történt a libalpm tesztelése közben.\n"
+"Talán egy másik alkalmazás zárolja.\n"
+
+# Hey! If you are reading this, first of all thanks for helping us in making Shaman better. There are not many comments unless where needed, since all the strings are pretty self-explanatory. You will see a lot of HTML in some cases: do not let that scare you, but please edit text only. Editing HTML tags too may break our layout, so be careful. A good practice could be copying the whole string, and then translating just what's outside the tags, usually just a few words. If you have any doubts, or if you just want to drop us a line, there goes our email addresses:
+# Dario: drf54321@gmail.com
+# Lukas: l.appelhans@gmx.de
+# Thanks again, and enjoy your translation!
+#: QObject#6
+msgctxt "QObject#6"
+msgid "Shaman"
+msgstr "Shaman"
+
+#: QObject#7
+msgid ""
+"Your settings file seems unwritable.\n"
+"Please check permissions on it."
+msgstr ""
+"Úgy tűnik a beállítási fájl nem írható.\n"
+"Kérem ellenőrizze ennek jogait."
+
+#: QObject#8
+msgctxt "QObject#8"
+msgid "Please Wait..."
+msgstr "Kérem várjon..."
+
+#: QObject#9
+msgid ""
+"Shaman can not be started as root. Please restart it as unprivileged user."
+msgstr ""
+"Nem sikerült a Shaman rootként történő indítása. Kérem indítása újra normál"
+"felhasználóként."
+
+#: QObject#10
+msgid "Loading Databases..."
+msgstr "Adatbázis töltése..."
+
+#: QObject#11
+msgid "Loading Packages..."
+msgstr "Csomagok betöltése"
+
+#: QObject#12
+msgid "Starting up Shaman..."
+msgstr "Shaman betöltése..."
+
+#: QObject#13
+msgid "O&k"
+msgstr "&Rendben"
+
+#: QObject#14
+msgid "&Yes"
+msgstr "&Igen"
+
+#: QObject#15
+msgid "&No"
+msgstr "&Nem"
+
+#: QObject#16
+msgid "Do not &show this Again"
+msgstr "Ne &mutassa ezt újra"
+
+#: QObject#17
+msgid "C&ancel"
+msgstr "T&örlés"
+
+#: QObject#18
+msgid ""
+"It looks like another copy of Shaman is running.\n"
+"You can only run one copy of Shaman at a time."
+msgstr ""
+
+#: QueueDialog#1
+msgid "<br><b> * Validating Transaction</b><br>"
+msgstr "<br><b> * Tranzakció jóváhagyása</b><br>"
+
+#: QueueDialog#2
+msgid "Validating Dependencies..."
+msgstr "Függőségek jóváhagyása..."
+
+#: QueueDialog#3
+msgid "Checking for Conflicts..."
+msgstr "Konfliktusok ellenőrzése..."
+
+#: QueueDialog#4
+msgid "Resolving Dependencies..."
+msgstr "Függőségek feloldása..."
+
+#: QueueDialog#5
+msgid "Looking for Inter-Conflicts..."
+msgstr "Inter-Konfliktok keresése..."
+
+#: QueueDialog#6
+msgid "<br><b> * Package Installation Started</b><br>"
+msgstr "<br><b> * Csomag telepítése elkezdve</b><br>"
+
+#: QueueDialog#7
+msgid "Installing %1..."
+msgstr "%1 telepítése..."
+
+#: QueueDialog#8
+msgid "%1 (%2) installed successfully!"
+msgstr "%1 (%2) sikeresen telepítve!"
+
+#: QueueDialog#9
+msgid "<br><b> * Package Removal Started</b><br>"
+msgstr "<br><b> * Csomag eltávolítása elkezdve</b><br>"
+
+#: QueueDialog#10
+msgid "Removing %1..."
+msgstr "%1 eltávolítása..."
+
+#: QueueDialog#11
+msgid "%1 (%2) removed successfully!"
+msgstr "%1 (%2) sikeresen eltávolítva!"
+
+#: QueueDialog#12
+msgid "<br><b> * Package Upgrading Started</b><br>"
+msgstr "<br><b> * Csomag frissítése elkezdve</b><br>"
+
+#: QueueDialog#13
+msgid "Upgrading %1..."
+msgstr "%1 Frissítése..."
+
+#: QueueDialog#14
+msgid "Upgraded %1 successfully (%2 -> %3)"
+msgstr "%1 sikeresen frissítve (%2 -> %3)"
+
+#: QueueDialog#15
+msgid "<br><b> * Queue Processing Started</b><br>"
+msgstr "<br><b> * Lista feldolgozása elkezdve</b><br>"
+
+#: QueueDialog#16
+msgid "Checking package integrity..."
+msgstr "Csomag sértetlenségének ellenőrzése..."
+
+#: QueueDialog#17
+msgid "Checking delta integrity..."
+msgstr "Delta sértetlenság ellenőrzése..."
+
+#: QueueDialog#18
+msgid "Applying deltas..."
+msgstr "Delták alkalmazása..."
+
+#: QueueDialog#19
+msgid "Generating %1 with %2... "
+msgstr "%1 generálása %2-vel"
+
+#: QueueDialog#20
+msgid "Success!"
+msgstr "Sikerült!"
+
+#: QueueDialog#21
+msgid "Failed!"
+msgstr "Nem sikerült!"
+
+#: QueueDialog#22
+msgid "Running package scripts..."
+msgstr "Csomag szkript futtatása..."
+
+#: QueueDialog#23
+msgid "<br><b> * Package Downloading Started</b><br>"
+msgstr ""
+
+#: QueueDialog#24
+msgid "Starting downloading packages from %1..."
+msgstr ""
+
+# You just have to translate 'remaining' here. Leave everything else as it is.
+#: QueueDialog#25
+msgid "%p% (%1 KB/s, %2 remaining)"
+msgstr "%p% (%1 KB/s, %2 van hátra)"
+
+#: QueueDialog#26
+msgid "Downloading %1... (%2 MB of %3 MB)"
+msgstr "%1 letöltése... (%2 MB a %3 M-bólB)"
+
+#: QueueDialog#27
+msgid "Downloading %1... (%2 KB of %3 KB)"
+msgstr "%1 letöltése... (%2 KB a %3 KB-ból)"
+
+#: QueueDialog#28
+msgid "Queue processed, please wait..."
+msgstr "Lista feldolgozva, kérem várjon..."
+
+#: QueueDialog#29
+msgid "Queue processing failed!"
+msgstr "Lista feldolgozása nem sikerült!"
+
+#: QueueDialog#30
+msgid "Queue processed successfully!"
+msgstr "Lista feldolgozása sikerült!"
+
+#: QueueDialog#31
+msgctxt "QueueDialog#31"
+msgid "Close"
+msgstr "Bezárás"
+
+#: QueueDialog#32
+msgctxt "QueueDialog#32"
+msgid "Queue Processing"
+msgstr "Lista feldolgozás"
+
+#: QueueDialog#33
+msgid ""
+"Would you like to abort Queue Processing?\n"
+"This may damage your system."
+msgstr ""
+"Meg szeretné szakítani a lista feldolgozását?\n"
+"Ez sérülét okozhat a rendszerben."
+
+#: QueueReadyDialog#1
+msgid "Review Queue"
+msgstr "Lista áttekintése"
+
+#: QueueReadyDialog#2
+msgctxt "QueueReadyDialog#2"
+msgid "Force Queue Processing"
+msgstr "Lista feldolgozás kényszerítése"
+
+#: QueueReadyDialog#3
+msgctxt "QueueReadyDialog#3"
+msgid "Turn off PC when Queue is done"
+msgstr "Számítógép kikapcsolása a lista elkészülte után"
+
+#: QueueReadyDialog#4
+msgid "Process in Tray"
+msgstr "Tálcán történő feldolgozás"
+
+#: QueueReadyDialog#5
+msgid "Keep Queue Dialog Open after the Queue is finished"
+msgstr "Hagyja nyitva a lista párbeszédet a lista teljesítése után"
+
+#: QueueReadyDialog#6
+msgctxt "QueueReadyDialog#6"
+msgid "Show packages..."
+msgstr "Mutassa a csomagokat..."
+
+#: QueueReadyDialog#7
+msgctxt "QueueReadyDialog#7"
+msgid "Packages In Queue"
+msgstr "Csomagok a listában"
+
+#: QueueReadyDialog#8
+msgctxt "QueueReadyDialog#8"
+msgid "Cancel"
+msgstr "Törölje"
+
+#: QueueReadyDialog#9
+msgid "Process"
+msgstr "Dolgozza fel"
+
+#: QueueReadyDialog#10
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Review Queue</span></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Lista áttekintése</span></p></body></html>"
+
+#: ReviewQueueDialog#1
+msgctxt "ReviewQueueDialog#1"
+msgid "Install"
+msgstr "Telepítse"
+
+#: ReviewQueueDialog#2
+msgid "To be Installed"
+msgstr "Telepítve"
+
+#: ReviewQueueDialog#3
+msgctxt "ReviewQueueDialog#3"
+msgid "Upgrade"
+msgstr "Frissítse"
+
+#: ReviewQueueDialog#4
+msgctxt "ReviewQueueDialog#4"
+msgid "To be Upgraded"
+msgstr "Frissítve"
+
+#: ReviewQueueDialog#5
+msgctxt "ReviewQueueDialog#5"
+msgid "Uninstall"
+msgstr "Eltávolítás"
+
+#: ReviewQueueDialog#6
+msgid "To be Removed"
+msgstr "Eltávolítva"
+
+#: ReviewQueueDialog#7
+msgctxt "ReviewQueueDialog#7"
+msgid "Complete Uninstall"
+msgstr "Eltávolítás teljesítése"
+
+#: ReviewQueueDialog#8
+msgid "Your Queue is about to be processed. You are going to:<br />"
+msgstr "A lista feldolgozás alatt áll. A következőt fogja csinálni: <br />"
+
+#: ReviewQueueDialog#9
+#, fuzzy
+msgid "Remove <b>%n package(s)</b><br />"
+msgstr "<b>%n Csomag(ok)<></b><br /> eltávolítása"
+
+#: ReviewQueueDialog#10
+#, fuzzy
+msgid "Install/Upgrade <b>%n package(s)</b><br />"
+msgstr "<b>%n Csomag(ok)</b><br /> telepítése/eltávolítása"
+
+#: ReviewQueueDialog#11
+msgid "Do you wish to continue?"
+msgstr "Kívánja folytatni?"
+
+#: ServerWidget#1
+msgctxt "ServerWidget#1"
+msgid "Form"
+msgstr "Forma"
+
+#: ServerWidget#2
+msgid "Server:"
+msgstr "Szerver:"
+
+#: ServerWidget#3
+msgctxt "ServerWidget#3"
+msgid "Prefer"
+msgstr "Jobb szeret"
+
+#: ServerWidget#4
+msgctxt "ServerWidget#4"
+msgid "Defer"
+msgstr "Elhalaszt"
+
+#: ServerWidget#5
+msgctxt "ServerWidget#5"
+msgid "Remove"
+msgstr "Eltávolítás"
+
+#: ShamanGeneralConfig#1
+msgctxt "ShamanGeneralConfig#1"
+msgid "Favourite Actions"
+msgstr "Kedvenc művelet"
+
+#: ShamanGeneralConfig#2
+msgctxt "ShamanGeneralConfig#2"
+msgid "When Upgrading System:"
+msgstr "Mikor rendszer frissítés:"
+
+#: ShamanGeneralConfig#3
+msgctxt "ShamanGeneralConfig#3"
+msgid "Upgrade Immediately"
+msgstr "Azonnali frissítés"
+
+#: ShamanGeneralConfig#4
+msgctxt "ShamanGeneralConfig#4"
+msgid "Add Upgradeable Packages To Queue"
+msgstr "Frissíthető csomagok hozzáadása a listához"
+
+#: ShamanGeneralConfig#5
+msgctxt "ShamanGeneralConfig#5"
+msgid "Ask"
+msgstr "Kérje"
+
+#: ShamanGeneralConfig#6
+msgctxt "ShamanGeneralConfig#6"
+msgid "When Processing Queue"
+msgstr "Mikor a lista feldolgozása"
+
+#: ShamanGeneralConfig#7
+msgctxt "ShamanGeneralConfig#7"
+msgid "Keep application running in System Tray only"
+msgstr "Rendszertálcán futó alkalmazások megtartása"
+
+#: ShamanGeneralConfig#8
+msgctxt "ShamanGeneralConfig#8"
+msgid "GUI Startup"
+msgstr "GUI Betöltés"
+
+#: ShamanGeneralConfig#9
+msgctxt "ShamanGeneralConfig#9"
+msgid "Start in the System Tray"
+msgstr "Rendszertálcán történő indítás"
+
+#: ShamanGeneralConfig#10
+msgctxt "ShamanGeneralConfig#10"
+msgid "Show Splashscreen"
+msgstr "A betöltőképernyő mutatása:"
+
+#: ShamanGeneralConfig#11
+msgctxt "ShamanGeneralConfig#11"
+msgid "Use the following language:"
+msgstr "A következő nyelv használata:"
+
+#: ShamanGeneralConfig#12
+msgctxt "ShamanGeneralConfig#12"
+msgid "Disable Tray Icon"
+msgstr "Tálca ikon tiltása"
+
+#: ShamanGeneralConfig#13
+msgctxt "ShamanGeneralConfig#13"
+msgid "Maintenance"
+msgstr "Karbantartás"
+
+#: ShamanGeneralConfig#14
+msgctxt "ShamanGeneralConfig#14"
+msgid "Process Selected"
+msgstr "Folyamat kiválasztva"
+
+# Waiting for a user action
+#: ShamanGeneralConfig#15
+msgctxt "ShamanGeneralConfig#15"
+msgid "Waiting"
+msgstr "Várakozás"
+
+#: ShamanGeneralConfig#16
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:7pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Shaman Manteinance.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Please choose an action from the Drop-Down "
+"Menu.</span></p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:7pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Shaman Karbantartás.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:9pt;\">Kérem válasszon egy műveletet a legördülő "
+"Menüből.</span></p></body></html>"
+
+#: ShamanGeneralConfig#17
+msgctxt "ShamanGeneralConfig#17"
+msgid "Clean Unused Databases"
+msgstr "Nem használt adatbázisok kitakarítása"
+
+#: ShamanGeneralConfig#18
+msgctxt "ShamanGeneralConfig#18"
+msgid "Clean Cache"
+msgstr "Gyorsítótár kiürítése"
+
+#: ShamanGeneralConfig#19
+msgctxt "ShamanGeneralConfig#19"
+msgid "Empty Cache"
+msgstr "Gyorsítótár törlése"
+
+#: ShamanGeneralConfig#20
+msgctxt "ShamanGeneralConfig#20"
+msgid "Optimize Pacman Database"
+msgstr "Pacman Adatbázis optimalizálása"
+
+#: ShamanGeneralConfig#21
+msgctxt "ShamanGeneralConfig#21"
+msgid "Clean All Building Environments"
+msgstr "Minden fordítási környezet kitakarítása"
+
+#: ShamanGeneralConfig#22
+msgctxt "ShamanGeneralConfig#22"
+msgid "Cleaning up unused Databases..."
+msgstr "Nem használt Adatbázisok kitakarítása..."
+
+#: ShamanGeneralConfig#23
+msgctxt "ShamanGeneralConfig#23"
+msgid "Cleaning up Cache..."
+msgstr "Gyorsítótár kitakarítása..."
+
+#: ShamanGeneralConfig#24
+msgctxt "ShamanGeneralConfig#24"
+msgid "Deleting Cache..."
+msgstr "Gyorsítótár törlése..."
+
+#: ShamanGeneralConfig#25
+msgctxt "ShamanGeneralConfig#25"
+msgid "Optimizing Pacman Database..."
+msgstr "Pacman Adatbázis optimalizálása..."
+
+#: ShamanGeneralConfig#26
+msgctxt "ShamanGeneralConfig#26"
+msgid "Cleaning up building Environments..."
+msgstr "Fordítási környezet kitakarítása..."
+
+#: ShamanGeneralConfig#27
+msgctxt "ShamanGeneralConfig#27"
+msgid "Unused Databases Cleaned up successfully!"
+msgstr "Nem használt Adatbázisok kitakarítása sikeresen megtörtént!"
+
+#: ShamanGeneralConfig#28
+msgctxt "ShamanGeneralConfig#28"
+msgid "Cleaning up Unused Databases Failed!"
+msgstr "Nem használt Adatbázisok kitakarítása sikeresen megtörtént!"
+
+#: ShamanGeneralConfig#29
+msgctxt "ShamanGeneralConfig#29"
+msgid "Cache Cleaned Up Successfully!"
+msgstr "Gyorsítótár kitakarítása sikeresen megtörtént!"
+
+#: ShamanGeneralConfig#30
+msgctxt "ShamanGeneralConfig#30"
+msgid "Cleaning up Cache Failed!"
+msgstr "Gyorsítótár kitakarítása nem sikerült!"
+
+#: ShamanGeneralConfig#31
+msgctxt "ShamanGeneralConfig#31"
+msgid "Cache Successfully Deleted!"
+msgstr "Gyorsítótár törlése sikeresen megtörtént!"
+
+#: ShamanGeneralConfig#32
+msgctxt "ShamanGeneralConfig#32"
+msgid "Deleting Cache Failed!"
+msgstr "Gyorsítótár törlése nem sikerült!"
+
+#: ShamanGeneralConfig#33
+msgctxt "ShamanGeneralConfig#33"
+msgid "Build Environments Successfully Cleaned!"
+msgstr "Fordítási környezet kitakarítása sikeresen megtörtént!"
+
+#: ShamanGeneralConfig#34
+msgctxt "ShamanGeneralConfig#34"
+msgid "Could not clean Build Environments!!"
+msgstr "Fordítási környezet kitakarítása nem sikerült!"
+
+#: ShamanGeneralConfig#35
+msgctxt "ShamanGeneralConfig#35"
+msgid "Database optimized successfully!"
+msgstr "Adatbázis optimalizálása sikeresen megtörtént!"
+
+#: ShamanGeneralConfig#36
+msgctxt "ShamanGeneralConfig#36"
+msgid "Could not optimize database!"
+msgstr "Adatbázis optimalizálása nem sikerült!"
+
+#: ShamanStatusBar#1
+msgid "%1 Available Packages, %2 Installed Packages, %3 Upgradeable Packages"
+msgstr "%1 Elérhető csomagok, %2 Telepített csomagok, %3 Frissíthető csomagok"
+
+#: ShamanStatusBar#2
+msgid "%1 will be used"
+msgstr "%1 lesz használva"
+
+#: ShamanStatusBar#3
+msgid "%1 will be freed"
+msgstr "%1 fel lesz szabadítva"
+
+#: ShamanStatusBar#4
+msgid "%1 to be Installed, %2 to be Removed"
+msgstr "%1 telepítve, %2 eltávolítva"
+
+#: ShamanTrayIcon#1
+msgctxt "ShamanTrayIcon#1"
+msgid "Update Database"
+msgstr "Adatbázis frissítés"
+
+#: ShamanTrayIcon#2
+msgctxt "ShamanTrayIcon#2"
+msgid "Upgrade System"
+msgstr "Rendszer frissítés"
+
+#: ShamanTrayIcon#3
+msgctxt "ShamanTrayIcon#3"
+msgid "Process Queue"
+msgstr "Lista feldolgozása"
+
+#: ShamanTrayIcon#4
+msgid "Settings"
+msgstr "Beállítások"
+
+#: ShamanTrayIcon#5
+msgctxt "ShamanTrayIcon#5"
+msgid "Quit"
+msgstr "Kilépés"
+
+#: ShamanTrayIcon#6
+msgid "Shaman - Idle"
+msgstr "Shaman - Tétlen"
+
+#: ShamanTrayIcon#7
+msgid "Shaman - Processing"
+msgstr "Shaman - Feldolgozás"
+
+#: ShamanTrayIcon#8
+msgid "Shaman - Idle (Upgrades Available)"
+msgstr "Shaman - Tétlen (Frissítések rendelkezésre állnak)"
+
+#: ShamanTrayIcon#9
+msgctxt "ShamanTrayIcon#9"
+msgid "System Upgrade"
+msgstr "Rendszer frissítés"
+
+#: ShamanTrayIcon#10
+#, fuzzy
+msgid ""
+"Upgradeable package(s): %n.\n"
+"Click here to upgrade your System."
+msgstr ""
+"Frissíthető csomag(ok): %n\n"
+"Kattintson ide a rendszer frissítéséhez."
+
+#: ShamanTrayIcon#11
+msgid "New News Available"
+msgstr "Új Hírek elérhetőek"
+
+#: ShamanTrayIcon#12
+msgid ""
+"There are new news available.\n"
+"Click here to review them."
+msgstr ""
+"Új elérhető hírek vannak.\n"
+"Kattintson ide, hogy meg tekinthesse őket."
+
+#: ShamanTrayIcon#13
+msgid "Failed Fetching News"
+msgstr "Hírek letöltése nem sikerült"
+
+#: ShamanTrayIcon#14
+msgid ""
+"An error occourred while fetching news!\n"
+"Click here to open the News Dialog for more details."
+msgstr ""
+"Hiba történt a hírek letöltése közben!\n"
+"Kattintson ide, hogy megnyíljon a Hir párbeszéd a további részletekért."
+
+#: SysUpgradeDialog#1
+#, fuzzy
+msgid ""
+"<b>Upgradeable package(s): %n</b> You can either<br> upgrade immediately or "
+"add it to the current Queue<br> and process it later."
+msgstr ""
+"<b>Frissíthető csomag(ok): %n</b> Frissítheti<br> azonnal vagy "
+"hozzáadhatja a jelenlegi listához<br> és később lesz feldolgozva."
+
+#: SysUpgradeDialog#2
+msgctxt "SysUpgradeDialog#2"
+msgid "To be Upgraded"
+msgstr "Frissítve"
+
+#: SysUpgradeDialog#3
+msgctxt "SysUpgradeDialog#3"
+msgid "System Upgrade"
+msgstr "Rendszer frissítés"
+
+#: ThirdPartyWidget#1
+msgctxt "ThirdPartyWidget#1"
+msgid "Form"
+msgstr "Forma"
+
+#: ThirdPartyWidget#2
+msgctxt "ThirdPartyWidget#2"
+msgid "Name"
+msgstr "Név"
+
+#: ThirdPartyWidget#3
+msgid "Databases"
+msgstr "Adatbázis"
+
+#: ThirdPartyWidget#4
+msgid "Add"
+msgstr "Hozzáad"
+
+#: ThirdPartyWidget#5
+msgctxt "ThirdPartyWidget#5"
+msgid "Remove"
+msgstr "Eltávolít"
+
+#: aboutDialog#1
+msgid "About Shaman"
+msgstr "Shamanról"
+
+#: aboutDialog#2
+msgid "About"
+msgstr "A szoftverről"
+
+#: aboutDialog#3
+msgid "Authors"
+msgstr "Szerzők"
+
+#: aboutDialog#4
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Dario Freddi</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Developer</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Lukas Appelhans</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Developer</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Dario Freddi</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Fejlesztő</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Lukas Appelhans</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Fejlesztő</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p></body></html>"
+
+#: aboutDialog#5
+msgid "Thanks To"
+msgstr "Köszönet"
+
+#: aboutDialog#6
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span "
+"style=\" font-size:10pt;\">Shaman has received a lot of help from a lot of "
+"people, and it is also thanks to them if Shaman has seen the light. If we "
+"forgot to add you here, let us know.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Names are in alphabetical "
+"order, because even the smallest contribution has been important to us.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\">The KDEmod "
+"Community</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Help, Testing, Support, everything started from "
+"here. If there was no KDEmod, probably</span> <span style=\" font-"
+"weight:400;\">there would be no Shaman</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Giannis Antoniou</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Greek Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Carlos Berroteran</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Spanish Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Sander De Voogdt</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Dutch Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Jacques Disner</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">French Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Jan Dupal</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Czech Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Stefano Giro</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Testing and Suggestions</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Georg Grabler</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Author of the Proxy patch, some help on the code "
+"and more.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Michael Knights</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Artwork creator, his icon "
+"proposal lies now in Arxin, but his splashscreen is in here ;)</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Till Luge</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Heavy tester, thanks!</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Rodrigo Mazak</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Brazilian Translator, and "
+"gave the name Shaman</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\">Jan "
+"Mette</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">German Translation and "
+"KDEmod Developer, also the creator of the Icon</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Atilla Ontas</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Turkish Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Martin Sandsmark</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Our hoster, and maintainer "
+"of Trac.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Johannes Schriewer</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">KDEmod Developer, and also some help on the "
+"code.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Xiang Yixiang</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Chinese Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Anton Gritsay</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Russian Translator and "
+"Patches related to Translations</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Bartek Iwaniec</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Polish Translator</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Marko Doda</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Macedonian Translator</span></p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><span "
+"style=\" font-size:10pt;\">A Shaman project nagyon sok segítséget kapott az"
+"emberektől, és köszöni is nekik, hogy megláthatta a fényt. Ha esetleg nem lenne
+"hozzáadva a listához, tudassa velünk.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">A nevek ábécé sorrendben"
+"vannak, mert még a legkisebb közreműködés is fontos nekünk.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\">A KDEmod "
+"Közösség</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Help, Testing, Support, everything started from "
+"here. If there was no KDEmod, probably</span> <span style=\" font-"
+"weight:400;\">there would be no Shaman</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Giannis Antoniou</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Greek Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Carlos Berroteran</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Spanish Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Sander De Voogdt</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Dutch Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Jacques Disner</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">French Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Jan Dupal</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Czech Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Stefano Giro</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Testing and Suggestions</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Georg Grabler</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Author of the Proxy patch, some help on the code "
+"and more.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Michael Knights</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Artwork creator, his icon "
+"proposal lies now in Arxin, but his splashscreen is in here ;)</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Till Luge</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Heavy tester, thanks!</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Rodrigo Mazak</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Brazilian Translator, and "
+"gave the name Shaman</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\">Jan "
+"Mette</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">German Translation and "
+"KDEmod Developer, also the creator of the Icon</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Atilla Ontas</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Turkish Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Martin Sandsmark</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Our hoster, and maintainer "
+"of Trac.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Johannes Schriewer</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">KDEmod Developer, and also some help on the "
+"code.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Xiang Yixiang</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Chinese Translator</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Anton Gritsay</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Russian Translator and "
+"Patches related to Translations</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Bartek Iwaniec</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Polish Translator</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Marko Doda</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;\"><span "
+"style=\" font-weight:400;\">Macedonian Translator</span></p></body></html>"
+
+#: aboutDialog#7
+msgid "Visit &Website..."
+msgstr "Weboldal meglátogatása"
+
+#: authDialog#1
+msgid "Root Password Required"
+msgstr "Root jelszó igényeltetik"
+
+#: authDialog#2
+msgid ""
+"Shaman needs root privileges to perform this action.\n"
+"Please enter in the field below the root password to continue."
+msgstr ""
+
+#: authDialog#3
+msgid "Never ask for this anymore"
+msgstr "Soha ne kérdezd ezt többé"
+
+#: authDialog#4
+msgctxt "authDialog#4"
+msgid "Ok"
+msgstr "Rendben"
+
+#: authDialog#5
+msgid "Return"
+msgstr "Visszatér"
+
+#: authDialog#6
+msgctxt "authDialog#6"
+msgid "Cancel"
+msgstr "Töröl"
+
+#: authDialog#7
+msgid "Backspace"
+msgstr "Visszalép"
+
+#: buildingDialog#1
+msgid "Shaman - Building Packages"
+msgstr "Shaman - Csomagok fordítása"
+
+#: buildingDialog#2
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:10pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Building Packages...</span></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:10pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Csomagok fordítása...</span></p></body></html>"
+
+#: buildingDialog#3
+msgctxt "buildingDialog#3"
+msgid "Abort"
+msgstr "Megszakítás"
+
+#: buildingDialog#4
+msgid "Reduce To Tray"
+msgstr "Tálcára csökkentés"
+
+#: dbUpdateDialog#1
+msgctxt "dbUpdateDialog#1"
+msgid "Database Update"
+msgstr "Adatbázis frissítés"
+
+#: dbUpdateDialog#2
+msgid "Update Database.."
+msgstr "Adatbázis frissítés.."
+
+#: editPBDialog#1
+msgid "Editing PKGBUILD"
+msgstr "PKGBUILD szerkesztés"
+
+#: editPBDialog#2
+msgid "Editing:"
+msgstr "Szerkesztés:"
+
+#: editPBDialog#3
+msgid "PKGBUILD"
+msgstr "PKGBUILD"
+
+#: editPBDialog#4
+msgid "Save"
+msgstr "Mentés"
+
+#: editPBDialog#5
+msgid "Undo"
+msgstr "Visszacsinál"
+
+#: editPBDialog#6
+msgid "Redo"
+msgstr "Újracsinál"
+
+#: editPBDialog#7
+msgid "MakePkg options"
+msgstr "MakePkg opciók"
+
+#: editPBDialog#8
+msgid "Ignore arch"
+msgstr "Arch mellőzése"
+
+#: editPBDialog#9
+msgid "Skip integrity checks"
+msgstr "Sértetlenség ellenőrzés átugrása"
+
+#: editPBDialog#10
+msgid "Ignore dependency control"
+msgstr "Függőség vezérlés mellőzése"
+
+#: editPBDialog#11
+msgid "Hold version if this is a development PKGBUILD"
+msgstr "Verzió megtartása, ha ez egy fejlesztői PKGBUILD"
+
+#: editPBDialog#12
+msgctxt "editPBDialog#12"
+msgid "Ok"
+msgstr "Rendben"
+
+#: editPBDialog#13
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Edit Package build options</span></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Csomag fordítási opciók szerkesztése</span></p></body></html>"
+
+#: logViewer#1
+msgid "Shaman - Log Viewer"
+msgstr "Shaman - Log nézet"
+
+#: logViewer#2
+msgid "Show Only Logs From"
+msgstr "Mutassa kizárólag a logokat innentől"
+
+#: logViewer#3
+msgid "dd/MM/yyyy"
+msgstr "dd/MM/yyyy"
+
+#: logViewer#4
+msgid "Show Only Logs Until"
+msgstr "Mutassa kizárólag a logokat amíg"
+
+#: logViewer#5
+msgid "Filter"
+msgstr "Szűrő"
+
+#: logViewer#6
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Liberation Sans'; font-size:9pt;\"></p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+"font-family:'Liberation Sans'; font-size:9pt;\"></p></body></html>"
+
+#: logViewer#7
+msgid "Refresh View"
+msgstr "Nézet frissítés"
+
+# close the dialog
+#: logViewer#8
+msgctxt "logViewer#8"
+msgid "Close"
+msgstr "Bezár"
+
+#: newsDialog#1
+msgid "Arch Linux News"
+msgstr "Arch Linux Hírek"
+
+#: newsDialog#2
+msgid "News-Title"
+msgstr "Hír-cím"
+
+#: newsDialog#3
+msgid "Link"
+msgstr "Link"
+
+#: newsDialog#4
+msgid "status"
+msgstr "Státusz"
+
+#: newsDialog#5
+msgctxt "newsDialog#5"
+msgid "Mark as Read"
+msgstr "Olvasottnak jelölés"
+
+#: newsDialog#6
+msgid "Open in Browser"
+msgstr "Megnyitás böngészőben"
+
+#: newsDialog#7
+msgid "Refresh"
+msgstr "Felfrissít"
+
+# close the dialog
+#: newsDialog#8
+msgctxt "newsDialog#8"
+msgid "Close"
+msgstr "Bezár"
+
+#: pkgProperties#1
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
+"size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Package Information</span></p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-"
+"html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-"
+"size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Csomag Információ</span></p></body></html>"
+
+#: pkgProperties#2
+msgctxt "pkgProperties#2"
+msgid "Package Information"
+msgstr "Csomag információ"
+
+#: pkgProperties#3
+msgid "Installed:"
+msgstr "Telepítve:"
+
+#: pkgProperties#4
+msgid "Description:"
+msgstr "Leírás"
+
+#: pkgProperties#5
+msgid "Upgradeable"
+msgstr "Frissíthető"
+
+#: pkgProperties#6
+msgid "Build Date:"
+msgstr "Fordítás dátuma:"
+
+#: pkgProperties#7
+msgid "Provides:"
+msgstr "Biztosít:"
+
+#: pkgProperties#8
+msgid "Install Date:"
+msgstr "Telepítés dátuma:"
+
+#: pkgProperties#9
+msgid "Packager:"
+msgstr "Csomagoló:"
+
+#: pkgProperties#10
+msgid "Size:"
+msgstr "Méret:"
+
+#: pkgProperties#11
+msgid "Has a Scriptlet"
+msgstr "Scripletet tartalmaz"
+
+#: pkgProperties#12
+msgid "Version:"
+msgstr "Verzió:"
+
+#: pkgProperties#13
+msgid "Changelog"
+msgstr "Változtatások"
+
+#: pkgProperties#14
+msgid "Files"
+msgstr "Fájlok"
+
+#: pkgProperties#15
+msgctxt "pkgProperties#15"
+msgid "1"
+msgstr "1"
+
+#: pkgProperties#16
+msgid "Dependencies"
+msgstr "Függőségek"
+
+#: pkgProperties#17
+msgid "Depends on"
+msgstr "Függ a következőn"
+
+#: pkgProperties#18
+msgid "Is Required by"
+msgstr "Erre épül a"
+
+#: pkgProperties#19
+msgid "Actions Performed"
+msgstr "Művelet végrehajtva"
+
+#: pkgProperties#20
+msgctxt "pkgProperties#20"
+msgid "Ok"
+msgstr "Rendben"
+
+#: reviewBuildingDialog#1
+msgid "Review Building Queue"
+msgstr "Fordítási sor áttekintése"
+
+#: reviewBuildingDialog#2
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:10pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans "
+"Serif';\"><span style=\" font-weight:600;\">Build Queue From "
+"Source</span></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Sans'; font-size:10pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans "
+"Serif';\"><span style=\" font-weight:600;\">Forrásból történő"
+"Fordítás</span></p></body></html>"
+
+#: reviewBuildingDialog#3
+msgid "Process All Dependencies from Binary First (advised)"
+msgstr "Minden függőséget binárisból dolgozzon fel először (ajánlatos)"
+
+#: reviewBuildingDialog#4
+msgid "This is useful if you want to review compiler's output"
+msgstr "Ez hasznos, ha meg akarja tekinteni a fordító kimenetét"
+
+#: reviewBuildingDialog#5
+msgid "Do not install immediately when building is finished"
+msgstr "Ne telepítse rögtön, amikor a fordítás elkészült"
+
+#: reviewBuildingDialog#6
+msgctxt "reviewBuildingDialog#6"
+msgid "Turn off PC when Queue is done"
+msgstr "Kapcsolja ki a számítógépet amikor a sor elkészült"
+
+#: reviewBuildingDialog#7
+msgctxt "reviewBuildingDialog#7"
+msgid "Show packages..."
+msgstr "Mutassa a csomagokat..."
+
+#: reviewBuildingDialog#8
+msgctxt "reviewBuildingDialog#8"
+msgid "Packages In Queue"
+msgstr "Csomagok a sorban"
+
+#: reviewBuildingDialog#9
+msgctxt "reviewBuildingDialog#9"
+msgid "Abort"
+msgstr "Megszakítás"
+
+#: reviewBuildingDialog#10
+msgid "Process From Binary"
+msgstr "Binárisból történő feldolgozás"
+
+#: reviewBuildingDialog#11
+msgid "Review Build options"
+msgstr "Fordítási opciók áttekintése"
+
+#: reviewBuildingDialog#12
+msgid "Process From Source"
+msgstr "Forrásból történő feldolgozás"
+
+#: transactionDialog#1
+msgid "Processing Queue..."
+msgstr "Sor feldolgozása..."
+
+#: transactionDialog#2
+msgid "Check transaction validity"
+msgstr "Tranzakció érvényességének ellenőrzése"
+
+#: transactionDialog#3
+msgid "Download Packages"
+msgstr "Csomagok letöltése"
+
+#: transactionDialog#4
+msgid "Process queue"
+msgstr "Sor feldolgozás"
+
+#: transactionDialog#5
+msgid "Cleanup"
+msgstr "Takarítás"
+
+#: transactionDialog#6
+msgctxt "transactionDialog#6"
+msgid "More Details..."
+msgstr "További részletek..."
+
+#: transactionDialog#7
+msgctxt "transactionDialog#7"
+msgid "Abort"
+msgstr "Megszakítás"
+
+#: transactionDialog#8
+msgctxt "transactionDialog#8"
+msgid "Please Wait..."
+msgstr "Kérem várjon..."
+
+#: transactionDialog#9
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Process Queue</span></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Sor végrehajtás</span></p></body></html>"
+
+#: upgradeDialog#1
+msgctxt "upgradeDialog#1"
+msgid "System Upgrade"
+msgstr "Rendszer frissítés"
+
+#: upgradeDialog#2
+msgctxt "upgradeDialog#2"
+msgid "Force Queue Processing"
+msgstr "Sor feldolgozás kényszerítése"
+
+#: upgradeDialog#3
+msgid "Remember my choice"
+msgstr "Emlékezzen a választásomra"
+
+#: upgradeDialog#4
+msgctxt "upgradeDialog#4"
+msgid "Abort"
+msgstr "Megszakítás"
+
+#: upgradeDialog#5
+msgctxt "upgradeDialog#5"
+msgid "Show packages..."
+msgstr "Mutassa a csomagokat..."
+
+#: upgradeDialog#6
+msgid "Add to Queue"
+msgstr "Sorhoz hozzáadás"
+
+#: upgradeDialog#7
+msgid "Upgrade Now"
+msgstr "Frissítse most"
+
+#: upgradeDialog#8
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">System-Upgrade</span></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Rendszer-Frissítés</span></p></body></html>"
+
+#: upgradeDialog#9
+msgid "Packages to Upgrade"
+msgstr "Frissíteni kívánt csomagok"
